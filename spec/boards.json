@@ -1,6 +1,6 @@
 {
  "format": "rule60-boards/2",
- "about": "GH60-class PCBs for the Rule 60 V3 housing, from design files, vendor drawings, product photos and owner reports (surveyed 2026-10-31). Only usb.centre_x feeds the build so far (top-case notch); the rest is kept for the bottom case. fit.verdict: fits = on-board USB-C at the back edge and a GH60-size outline; check = needs something extra (daughterboard mount, non-MX plate, slightly larger outline, HE mount); no = will not fit; unknown = USB position not found. null = not published / not found.",
+ "about": "GH60-class PCBs for the Rule 60 V3 housing, from design files, vendor drawings, product photos and owner reports (surveyed 2026-10-31; AliExpress listings and two oshwhub EasyEDA projects added via the Aside browser). Only usb.centre_x feeds the build so far (top-case notch); the rest is kept for the bottom case. fit.verdict: fits = on-board USB-C at the back edge and a GH60-size outline; check = needs something extra (daughterboard mount, non-MX plate, slightly larger outline, HE mount); no = will not fit; unknown = USB position not found. null = not published / not found.",
  "frames": {
   "own": "A board in its own design frame: top view (switch side up), origin at its back-left corner (Esc side), X right, Y toward the front, mm. esc_centre_own, antenna_own, battery and bottom_parts positions use it.",
   "gh60": "GH60 grid frame: the own frame shifted so the Esc switch centre lands on the GH60 one, (9.1475, 9.19875). For a GH60-size board it equals the own frame. usb.centre_x is in this frame unless usb.frame says plate; usb.normalised shows the conversion.",
@@ -3372,6 +3372,77 @@
    }
   },
   {
+   "id": "dk6064-trimode",
+   "name": "DK6064 tri-mode hotswap GH60 PCB (ISO/ANSI, VIAL)",
+   "maker": "unbranded (NoEnName)",
+   "kind": "commercial",
+   "switch": "MX hotswap",
+   "wireless": "BT + 2.4G + USB (tri-mode)",
+   "radio_mcu": "STM32F401 + nRF51822 (vendor text)",
+   "layouts": null,
+   "outline": {
+    "width": 284.5,
+    "depth": 94.7,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "top: X 0.5..284.45, Y 0.9..95.5; bottom: X -0.3..284.7, Y 0.8..95.6 (+-0.6). Vendor: 1.2 mm thick black-core PCB (not 1.6)."
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": {
+    "centre_x": 18.5,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": false,
+    "status": "photo-scaled",
+    "source": "dk6064-trimode/desc-05.webp top view (95 px/u): USB-C 4 shell-leg pads X 14.5/22.9 -> 18.68 (homography, 61 pts res 0.42) / 18.53 (affine); desc-02.webp bottom view mirrored (90.3 px/u, 74 pts res 0.29): shell legs -> 18.13 (homog) / 18.61 (affine) +-0.5 mm"
+   },
+   "battery": {
+    "connector": "2-pin header on bottom near gh60 (43-48,74-82) (photo)",
+    "connector_pcb": null,
+    "size_max": null
+   },
+   "bottom_parts": [
+    {
+     "part": "radio module/shield",
+     "xy_gh60": [
+      [
+       67.5,
+       78
+      ],
+      [
+       77.6,
+       96
+      ]
+     ],
+     "source": "desc-02.webp"
+    }
+   ],
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://ko.aliexpress.com/item/1005007782045970.html"
+   ],
+   "confidence": "medium",
+   "notes": "Radio module sits at the front edge (Y 78-96) left of centre. 1.2 mm PCB may need plate/case spacer check.",
+   "fit": {
+    "verdict": "check",
+    "reasons": [
+     "1.2 mm PCB thickness",
+     "battery/module space unverified"
+    ]
+   },
+   "surveyed_by": [
+    "PhotoScale (Aside AliExpress capture)"
+   ],
+   "rule60_reports": null
+  },
+  {
    "id": "dz60-rev3",
    "name": "KBDfans DZ60 Rev 3.0 / 'DZ60 V2 flex cut' (solder, multi-layout)",
    "maker": "KBDfans / DZTECH",
@@ -3654,6 +3725,94 @@
    }
   },
   {
+   "id": "ezkb-gh60-64rgb",
+   "name": "EZKB 63/64-key GH60 RGB hotswap (not DZ60RGB)",
+   "maker": "EZKB",
+   "kind": "commercial",
+   "switch": "MX hotswap",
+   "wireless": null,
+   "radio_mcu": null,
+   "layouts": null,
+   "outline": {
+    "width": null,
+    "depth": 94.9,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "Y -0.04..94.86 in grid frame; left edge -0.2; right side cropped"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": {
+    "centre_x": 18.37,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": false,
+    "status": "photo-scaled",
+    "source": "gh60-not-dz60rgb/desc-01.webp top view (70.6 px/u): 26 holes homography res 0.22; USB-C 4 shell legs X 14.0/22.8 -> 18.38; Esc 9.16,9.02 +-0.4 mm"
+   },
+   "battery": null,
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://ko.aliexpress.com/item/1005005661864697.html"
+   ],
+   "confidence": "medium",
+   "notes": "Wired RGB VIA. Possibly the same EZKB board as vial-64-gh60-hotswap (text 283 x 94.3 x 1.6).",
+   "fit": {
+    "verdict": "fits",
+    "reasons": []
+   },
+   "surveyed_by": [
+    "PhotoScale (Aside AliExpress capture)"
+   ],
+   "rule60_reports": null
+  },
+  {
+   "id": "ezkb-vial-64-hotswap",
+   "name": "EZKB VIAL 64-key wired hotswap RGB GH60",
+   "maker": "EZKB",
+   "kind": "commercial",
+   "switch": "MX hotswap",
+   "wireless": null,
+   "radio_mcu": null,
+   "layouts": null,
+   "outline": {
+    "width": 283.0,
+    "depth": 94.3,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "vendor text: PCB 283 x 94.3 x 1.6 mm"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": null,
+   "battery": null,
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://ko.aliexpress.com/item/1005008910391795.html"
+   ],
+   "confidence": "medium",
+   "notes": "No images. Possibly same board as ezkb-gh60-64rgb.",
+   "fit": {
+    "verdict": "unknown",
+    "reasons": [
+     "USB position unknown"
+    ]
+   },
+   "surveyed_by": [
+    "PhotoScale (Aside AliExpress capture)"
+   ],
+   "rule60_reports": null
+  },
+  {
    "id": "flux60-hs",
    "name": "Flux60-HS (v0.4)",
    "maker": "Sagit-chu",
@@ -3781,6 +3940,61 @@
    }
   },
   {
+   "id": "gh60-60ble-trimode-solder",
+   "name": "GH60 60BLE tri-mode solder VIAL PCB",
+   "maker": "unbranded (NoEnName)",
+   "kind": "commercial",
+   "switch": "MX solder",
+   "wireless": "BT + 2.4G receiver + USB",
+   "radio_mcu": null,
+   "layouts": null,
+   "outline": {
+    "width": 283.0,
+    "depth": 94.0,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "X 0.8..283.8, Y 0.7..94.6 (+-0.6)"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": {
+    "centre_x": 18.65,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": false,
+    "status": "photo-scaled",
+    "source": "gh60-trimode-solder/desc-02.webp bottom view mirrored (53.4 px/u): 61 holes homography res 0.30; USB-C shell 13.6-23.6 centre 18.57 with Esc 9.01 -> 18.71; affine 18.58 +-0.5 mm"
+   },
+   "battery": {
+    "connector": "MX1.25 2-pin (vendor)",
+    "connector_pcb": null,
+    "size_max": null
+   },
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://ko.aliexpress.com/item/1005011547096791.html"
+   ],
+   "confidence": "medium",
+   "notes": "Battery not included; not ultra-thin per vendor.",
+   "fit": {
+    "verdict": "check",
+    "reasons": [
+     "battery placement unknown"
+    ]
+   },
+   "surveyed_by": [
+    "PhotoScale (Aside AliExpress capture)"
+   ],
+   "rule60_reports": null
+  },
+  {
    "id": "gk64-pcb",
    "name": "GK61X/GK64X (wired) and GK61XS/GK64XS (BT) RGB hot-swap PCB",
    "maker": "Skyloong (sold by YMDK)",
@@ -3826,13 +4040,15 @@
     "https://ymdkey.com/products/gk61-gk64-gk61xs-gk64xs-rgb-hot-swap-pcb-plate-independent-driver-bluetooth-or-wired",
     "https://cdn.shopify.com/s/files/1/0006/5227/9869/files/GK64XS_2.jpg",
     "https://cdn.shopify.com/s/files/1/0006/5227/9869/files/MG_3366.jpg",
-    "https://github.com/qmk/qmk_firmware/tree/master/keyboards/skyloong/gk61"
+    "https://github.com/qmk/qmk_firmware/tree/master/keyboards/skyloong/gk61",
+    "https://ko.aliexpress.com/item/33023266078.html"
    ],
    "confidence": "medium: photo-scaled; H1-H4 overlay on gold round/slot holes",
-   "notes": "[CommercialAsia] Extra plated holes ~(24.8,20.1),(43.6,18.6),(131.6,18.1),(246.2,17.4),(246.3,74.7),(47.0,87.9) mm (GK plate screws). Vendor: microphone under spacebar, RGB strip connector at back. USB X 18.7 vs GH60 18.2 within photo error; verify on hardware.",
+   "notes": "[CommercialAsia] Extra plated holes ~(24.8,20.1),(43.6,18.6),(131.6,18.1),(246.2,17.4),(246.3,74.7),(47.0,87.9) mm (GK plate screws). Vendor: microphone under spacebar, RGB strip connector at back. USB X 18.7 vs GH60 18.2 within photo error; verify on hardware. | [PhotoScale, AliExpress] USB 19.0 (photo-scaled): gk64-hotswap/desc-02.webp top view (118.7 px/u, only 40 holes, res 0.45): USB-C shell legs X 15.8/22.3 -> 19.04 grid; through measured Esc (8.3-8.9) 19.3-19.9 +-0.8 mm; outline {\"width\": 286.0, \"depth\": 94.0, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"X -0.1..285.8, Y 0.4..94.3 (+-0.8)\"}; Adds an AliExpress top photo; slightly right of existing 18.72; low confidence (dark board, few holes).",
    "rule60_reports": null,
    "surveyed_by": [
-    "CommercialAsia"
+    "CommercialAsia",
+    "PhotoScale (Aside AliExpress capture)"
    ],
    "fit": {
     "verdict": "fits",
@@ -4517,42 +4733,138 @@
   },
   {
    "id": "hl6095",
-   "name": "HL6095 (QMK双模/三模)",
-   "maker": "mjl_xpy / keymagichorse",
+   "name": "HL6095 V4 (oshwhub mjl_xpy/hl6095, PCB1_6 '修复Ctrl键打架'; STM32F411 + BHQ (CH582-based) tri-mode, Kailh hotswap)",
+   "maker": "mjl_xpy (oshwhub)",
    "kind": "open-design",
-   "switch": "MX",
-   "wireless": "tri-mode",
-   "radio_mcu": "STM32F411 + WCH CH582 'BHQ' Bluetooth/2.4G chip (closed firmware, bought pre-flashed)",
+   "switch": "MX hotswap (Kailh, '凯华热插拔（非金属化）', 90 sockets on bottom)",
+   "wireless": "tri-mode (USB + BLE + 2.4G) [INFERENCE from BHQ module; page title/description per brief]",
+   "radio_mcu": "BHQ01_IC (MJL_Studio, QFN-28 4x4, CH582-class) on 'ch582模块' footprint M1; chip antenna U114 Walsin RFANT3216120A5T; main MCU STM32F411CEU6",
    "layouts": [
-    "60% multi-layout, 95 switch positions (readme: 'there are 95 keys in total')"
+    "60_hhkb",
+    "60_ansi_tsangan_split_bs_rshift",
+    "split backspace",
+    "2u backspace",
+    "ANSI enter",
+    "ISO enter",
+    "split right shift (1.75+1)",
+    "7u Tsangan bottom row",
+    "6.25u bottom row (1.25x3 left, 1u x5 right)",
+    "split space"
    ],
-   "outline": null,
-   "esc_centre_own": null,
-   "mount_holes": null,
-   "usb": null,
+   "outline": {
+    "width": 285.749,
+    "depth": 95.25,
+    "corner_r": 2.286,
+    "gh60_match": false,
+    "notes": "GKO rect 0..285.749 x 0..95.250, arcs r 2.286 (= 15u x 5u at 19.05; editor dialog 285.751 x 95.250). Extra GKO cutouts: right-edge notch for slide switch SW1 (own X 283.636..286.511, Y 71.037..76.607, i.e. 2.11 mm deep into the right edge); front-edge features at the antenna: rect own X 110.109..117.221, Y 94.615..95.631 (0.635 into the front edge) and rect X 115.570..117.475, Y 91.694..95.631 [INFERENCE: milled antenna-clearance notch; they are Multi-Layer regions in the DXF but are exported into the GKO]; LED window 3.6x3.2 at own (16.637, 52.324) for reverse-mount WS2812B-3528 U13. No USB tab/notch."
+   },
+   "esc_centre_own": [
+    9.525,
+    9.525
+   ],
+   "mount_holes": [
+    {
+     "c": [
+      26.289,
+      28.48
+     ],
+     "drill": "oval 5.0x2.52 (GKO cutout)",
+     "ref": "H1 (GH60 round 2.5); gh60-frame (25.912, 28.154) = +0.713/+0.253 vs GH60"
+    },
+    {
+     "c": [
+      128.841,
+      47.657
+     ],
+     "drill": "oval 5.0x2.52 (GKO cutout)",
+     "ref": "H2; gh60-frame (128.464, 47.331) = +0.264/+0.331"
+    },
+    {
+     "c": [
+      191.072,
+      85.786
+     ],
+     "drill": "oval 5.0x2.52 (GKO cutout)",
+     "ref": "H3; gh60-frame (190.695, 85.460) = +0.196/+0.259"
+    },
+    {
+     "c": [
+      260.731,
+      28.48
+     ],
+     "drill": "oval 5.0x2.52 (GKO cutout)",
+     "ref": "H4; gh60-frame (260.353, 28.154) = +0.303/+0.253"
+    },
+    {
+     "c": [
+      2.064,
+      57.087
+     ],
+     "drill": "oval 7.0x2.52 edge slot (open, X -1.436..5.564)",
+     "ref": "SL; gh60-frame (1.687, 56.761) = +0.228/+0.260"
+    },
+    {
+     "c": [
+      284.258,
+      57.087
+     ],
+     "drill": "oval 7.0x2.52 edge slot (open, X 280.758..287.758)",
+     "ref": "SR; gh60-frame (283.880, 56.761) = +0.339/+0.260; 1.491 from right edge vs GH60 1.459"
+    }
+   ],
+   "usb": {
+    "centre_x": 18.673,
+    "frame": "gh60",
+    "centre_x_own": 19.05,
+    "normalised": "own X 19.050 - Esc X 9.525 + 9.1475",
+    "edge": "back",
+    "side": "bottom",
+    "part": "SHOU HAN TYPE-C 16PIN 2MD(073), LCSC C2765186 (USB1, footprint USB-C-SMD_TYPE-C-6PIN-2MD-073)",
+    "body_height": 3.261,
+    "daughterboard": false,
+    "status": "design",
+    "source": "PnP USB1 Mid (19.050, 91.567) layer B -> own (19.050, 3.683); shell slots PTH 0.6 at X 14.725/23.375, posts NPTH 0.7 at X 16.160/21.940 (centre 19.050). STEP USB1 bbox X 14.58..23.52, Y 88.977..96.557, Z -3.261..0.9: face 1.307 mm past the back edge (96.557 - 95.250), body 3.261 below the PCB bottom."
+   },
    "battery": {
-    "connector": "MX1.25 2P (project text: '买电池的时候备注：mx1.25 左正 右负')",
-    "connector_pcb": null,
+    "connector": "SHOU HAN 1.25-2P WT (MX1.25 2-pin SMD horizontal), LCSC C668614, CN1 on bottom; page: 'mx1.25 左正 右负'",
+    "connector_pcb": [
+     241.427,
+     35.306
+    ],
     "size_max": null
    },
-   "bottom_parts": null,
-   "antenna_own": null,
-   "license": "MIT License (oshwhub)",
+   "bottom_parts": {
+    "max_height": 3.401,
+    "part": "CN1 MX1.25 2P WT (3.401); USB1 3.261; M1 BHQ/ch582 module 2.36 (own X 108.0..117.97, Y 78.16..91.14); U2/U3/U17 2-pin tact switches 2.01; Kailh hotswap sockets 1.80; SW1 MSK12C02 slide switch 1.35 at right edge (own 282.067, 73.787)",
+    "basis": "STEP per-part bbox (board Z 0..1.6, bottom parts negative Z)"
+   },
+   "antenna_own": [
+    109.74,
+    91.14,
+    117.84,
+    95.25
+   ],
+   "license": "MIT (page '开源协议：MIT License'; description: '硬件工程允许商用、允许二次修改商用')",
    "sources": [
     "https://oshwhub.com/mjl_xpy/hl6095",
     "https://pro.lceda.cn/api/v2/projects/e0dd9fdd56d64aadb3788d36200b82fa",
     "https://github.com/LinKeyDream/qmk_firmware_wireless/tree/master/keyboards/keymagichorse/hl6095"
    ],
-   "confidence": "metadata only; mechanics unknown",
-   "notes": "[OpenCnPlatforms] Most relevant find: an open tri-mode '6095' PCB (matrix 5x14, QMK keyboard.json). EasyEDA Pro project, board 'V4_修复Ctrl键打架' pcb doc 5cc0d97d9e364ebca4448e50c0bae4e2; pro.lceda.cn/api/v2/documents/<uuid> returns 401 (login required), no attachments/Gerbers, so outline/USB/holes could not be extracted. Needs an EasyEDA Pro login to export Gerbers.",
+   "confidence": "high for geometry (EasyEDA Pro Gerber/PnP/DXF/STEP export of PCB1_6, V4)",
+   "notes": "[OpenCnPlatforms] Most relevant find: an open tri-mode '6095' PCB (matrix 5x14, QMK keyboard.json). EasyEDA Pro project, board 'V4_修复Ctrl键打架' pcb doc 5cc0d97d9e364ebca4448e50c0bae4e2; pro.lceda.cn/api/v2/documents/<uuid> returns 401 (login required), no attachments/Gerbers, so outline/USB/holes could not be extracted. Needs an EasyEDA Pro login to export Gerbers. | [EasyedaParse] [EasyedaParse] Frame: Gerber/PnP/STEP share one frame with Y up, origin at the front-left corner; outline 0..285.749 x 0..95.250, so own = (X, 95.250 - Y); bottom parts are not X-mirrored (U13 PnP (16.637, 42.926) = LED window centre in GKO). gh60 = own + (-0.3775, -0.326). Switch centres from 90 NPTH 4.2 mm holes on a 19.05 grid with Esc at 0.5u/0.5u. No 2.75u right shift (no centre at 13.625u, no stab) and no 1.25u right mods (only 1u at 10.5..14.5u or 1.5/1/1.5u), so stock 60_ansi is not supported. ISO enter footprint (centre (273.812, 38.1)) and ISO '#' at 13.25u exist, but no 1.25u ISO left shift/extra key (left shift options 2.25u at 21.431 or 2u at 19.036 with an 11-key row offset). Antenna: chip antenna U114 at own (112.903, 93.218) at the front edge under the spacebar row; antenna_own = Multi-Layer region (DXF) X 109.74..117.84, Y 91.14..95.25 [INFERENCE: copper keep-out]. Top side: 5-pin PZ2.0 header H1 (HX PZ2.0-1x5P) at own (124.206, 76.835) whose STEP model reaches Z 7.3 (5.7 above the PCB top), above the ~5 mm plate height [INFERENCE: programming header, likely left unpopulated or the plate must clear it]. SWD footprint U15 on top at own (62.865, 38.609) (no 3D model). [INFERENCE] '6095' naming suggests this may be the family of the owner's '6095' board; not verified.",
    "rule60_reports": null,
    "surveyed_by": [
-    "OpenCnPlatforms"
+    "OpenCnPlatforms",
+    "EasyedaParse (Aside export)"
    ],
    "fit": {
-    "verdict": "unknown",
+    "verdict": "check",
     "reasons": [
-     "USB position unknown"
+     "Outline 285.749 x 95.250 exceeds 285.2 x 94.8 by 0.55 x 0.45 mm (15u x 5u board)",
+     "On-board USB-C on the bottom at the back edge, gh60 X 18.673 (GH60 18.2), face 1.307 past the back edge",
+     "Holes at all four GH60 positions + both edge slots, but 0.2..0.7 mm off in the Esc-aligned frame; H1 is a 5.0x2.52 oval",
+     "Right-edge notch for the power slide switch SW1 at own Y 71.0..76.6; chip antenna at the front edge (case must not shield it)",
+     "Tallest bottom part MX1.25 battery connector 3.40 mm; top-side 5-pin header reaches 5.7 mm above PCB"
     ]
    }
   },
@@ -4984,13 +5296,15 @@
    "sources": [
     "https://cdn.shopify.com/s/files/1/1473/3902/files/1_babef4a3-5f3c-4990-93c8-8f2c7a0be399.jpg",
     "https://cdn.shopify.com/s/files/1/1473/3902/files/2_f512ecf6-197c-412d-a369-9834767fba12.jpg",
-    "https://kbdfans.com/products/k-kbdfans-redux-60-rgb-ansi-pcb"
+    "https://kbdfans.com/products/k-kbdfans-redux-60-rgb-ansi-pcb",
+    "https://ko.aliexpress.com/item/1005007429298814.html"
    ],
    "confidence": "medium: single clean top photo, grid fit rms 0.2 mm",
-   "notes": "[CommercialWest] Firmware ydkb_kbdfans_redux60rgb_ansi (Vial). Vendor: compatible with Tofu60 Redux, Holy60, 461E cases. Per-key RGB + underglow.",
+   "notes": "[CommercialWest] Firmware ydkb_kbdfans_redux60rgb_ansi (Vial). Vendor: compatible with Tofu60 Redux, Holy60, 461E cases. Per-key RGB + underglow. | [PhotoScale, AliExpress] USB None (None): ; outline {\"width\": null, \"depth\": null, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"listing text only: 1.6 mm\"}; No images in listing; nothing new beyond text.",
    "rule60_reports": null,
    "surveyed_by": [
-    "CommercialWest"
+    "CommercialWest",
+    "PhotoScale (Aside AliExpress capture)"
    ],
    "fit": {
     "verdict": "fits",
@@ -5053,6 +5367,55 @@
    }
   },
   {
+   "id": "keebox-box60",
+   "name": "Keebox BOX60 GH60 PCB (onboard USB-C or ai03/Fly daughterboard)",
+   "maker": "Keebox (EOENKK)",
+   "kind": "commercial",
+   "switch": "MX hotswap (JWICK)",
+   "wireless": null,
+   "radio_mcu": null,
+   "layouts": null,
+   "outline": {
+    "width": 284.3,
+    "depth": 94.4,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "X 0.7..285.0, Y -0.1..94.2 (+-0.5)"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": {
+    "centre_x": 18.29,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": true,
+    "status": "photo-scaled",
+    "source": "keebox-box60/desc-02.webp top view (138.6 px/u): 52 holes homography res 0.24; USB-C shell-leg rings X 13.7/22.5 -> 18.14 with Esc 9.00 +-0.4 mm"
+   },
+   "battery": null,
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://ko.aliexpress.com/item/1005012001923430.html"
+   ],
+   "confidence": "medium",
+   "notes": "Onboard USB-C is removable for ai03 (included) / Fly daughterboard; then USB position follows the daughterboard.",
+   "fit": {
+    "verdict": "fits",
+    "reasons": []
+   },
+   "surveyed_by": [
+    "PhotoScale (Aside AliExpress capture)"
+   ],
+   "rule60_reports": null
+  },
+  {
    "id": "kprepublic-bm60hsrgb",
    "name": "KPrepublic BM60 HS RGB (ANSI arrow, hotswap)",
    "maker": "KPrepublic",
@@ -5098,14 +5461,16 @@
     "https://kprepublic.com/products/bm60-rgb-60-gh60-hot-swappable-pcb-programmed-qmk-firmware-type-c",
     "https://github.com/qmk/qmk_firmware/tree/master/keyboards/kprepublic/bm60hsrgb/rev2",
     "https://cdn.shopify.com/s/files/1/2711/4238/products/BM60V2PCB.jpg",
-    "https://github.com/qmk/qmk_firmware/tree/master/keyboards/kprepublic/bm60hsrgb"
+    "https://github.com/qmk/qmk_firmware/tree/master/keyboards/kprepublic/bm60hsrgb",
+    "https://ko.aliexpress.com/item/4000467492920.html"
    ],
    "confidence": "low-medium: cross-photo calibration",
-   "notes": "[CommercialWest] ATmega32U4; QMK rev1/rev2 differ (VID 4B50 PID EF8C/1121). Vendor title says 'gh60'. | [CommercialAsia] QMK bm60hsrgb rev1/rev2: atmega32u4, atmel-dfu. Vendor: Type-C, per-key RGB, 6 underglow LEDs, ICSP. Siblings bm60hsrgb_iso (PID 0x1123), bm60hsrgb_poker (0x1122), bm60hsrgb_ec: atmega32u4 per QMK; not measured. GH60 H1-H4 overlay lands ~1 mm from plated holes (perspective).",
+   "notes": "[CommercialWest] ATmega32U4; QMK rev1/rev2 differ (VID 4B50 PID EF8C/1121). Vendor title says 'gh60'. | [CommercialAsia] QMK bm60hsrgb rev1/rev2: atmega32u4, atmel-dfu. Vendor: Type-C, per-key RGB, 6 underglow LEDs, ICSP. Siblings bm60hsrgb_iso (PID 0x1123), bm60hsrgb_poker (0x1122), bm60hsrgb_ec: atmega32u4 per QMK; not measured. GH60 H1-H4 overlay lands ~1 mm from plated holes (perspective). | [PhotoScale, AliExpress] USB 18.4 (photo-scaled): bm60-v2/desc-05.webp (top view, 1000 px): 55 switch-hole centres, homography res max 0.37 mm (47 px/u, ~2.47 px/mm); USB-C shell THT leg pair X 14.1/22.8 at Y 0 and 4 -> 18.43; Esc fits 9.08,9.13 +-0.5 mm; outline {\"width\": 285.4, \"depth\": 95.0, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"desc-05 edges in grid frame X -0.2..285.4, Y -0.5..95 (+-0.6; low-res)\"}; Adds: BM60 V2 (V2.json firmware) AliExpress top photo; agrees with existing 18.33. Underglow, per-key RGB, no battery.",
    "rule60_reports": null,
    "surveyed_by": [
     "CommercialAsia",
-    "CommercialWest"
+    "CommercialWest",
+    "PhotoScale (Aside AliExpress capture)"
    ],
    "fit": {
     "verdict": "fits",
@@ -6103,45 +6468,196 @@
   },
   {
    "id": "open60-he",
-   "name": "OPEN60 (寒梅 M60)",
-   "maker": "乐山居士 / Merafour",
+   "name": "OPEN60 (oshwhub yaoshan-ju-shi/open60, PCB 'OPEN60'; 61-key Hall-effect, AT32F425)",
+   "maker": "yaoshan-ju-shi (oshwhub)",
    "kind": "open-design",
-   "switch": "HE",
+   "switch": "HE (magnetic; 61 TI DRV5055A2QDBZR linear Hall sensors on the PCB bottom under each switch centre)",
    "wireless": null,
    "radio_mcu": null,
    "layouts": [
-    "61 (GH60)",
-    "68 (schematic only)"
+    "60_ansi",
+    "ANSI 60% fixed (61 keys)"
    ],
    "outline": {
-    "width": null,
-    "depth": null,
-    "corner_r": null,
-    "gh60_match": null,
-    "notes": "project text: '保持对 GH60 公版孔位的兼容' (GH60 hole-compatible); 60HE variant uses Wooting 60HE outline"
+    "width": 284.999,
+    "depth": 94.6,
+    "corner_r": 2.0,
+    "gh60_match": true,
+    "notes": "GKO outline Gerber X 0.540..285.539, Y -0.092..94.508, arcs r 2.000 (editor dialog 284.989 x 94.500). No USB tab/notch. 61 LED windows 3.706x2.966 (one per key, 5.0 mm in front of each switch centre) for reverse-mount WS2812B-3528."
    },
-   "esc_centre_own": null,
-   "mount_holes": "gh60",
-   "usb": null,
+   "esc_centre_own": [
+    8.96,
+    9.007
+   ],
+   "mount_holes": [
+    {
+     "c": [
+      25.2,
+      27.902
+     ],
+     "drill": "plated slot 5.0x3.2",
+     "ref": "H1 (GH60 round 2.5) exact in own frame"
+    },
+    {
+     "c": [
+      128.2,
+      47.0
+     ],
+     "drill": "plated slot 5.0x3.2",
+     "ref": "H2 exact"
+    },
+    {
+     "c": [
+      190.498,
+      85.201
+     ],
+     "drill": "plated slot 5.0x3.2",
+     "ref": "H3 exact"
+    },
+    {
+     "c": [
+      260.049,
+      27.902
+     ],
+     "drill": "plated slot 5.0x3.2",
+     "ref": "H4 exact"
+    },
+    {
+     "c": [
+      3.491,
+      56.502
+     ],
+     "drill": "plated slot 6.2x3.2, closed (X 0.39..6.59)",
+     "ref": "SL moved 2.03 inward (GH60 1.459, open edge slot)"
+    },
+    {
+     "c": [
+      281.509,
+      56.502
+     ],
+     "drill": "plated slot 6.2x3.2, closed (X 278.41..284.61)",
+     "ref": "SR moved 2.03 inward (GH60 283.541)"
+    },
+    {
+     "c": [
+      23.581,
+      85.302
+     ],
+     "drill": 3.5,
+     "kind": "NPTH extra"
+    },
+    {
+     "c": [
+      66.38,
+      37.302
+     ],
+     "drill": 3.5,
+     "kind": "NPTH extra"
+    },
+    {
+     "c": [
+      133.08,
+      18.302
+     ],
+     "drill": 3.5,
+     "kind": "NPTH extra"
+    },
+    {
+     "c": [
+      142.58,
+      90.701
+     ],
+     "drill": 3.5,
+     "kind": "NPTH extra"
+    },
+    {
+     "c": [
+      199.78,
+      37.302
+     ],
+     "drill": 3.5,
+     "kind": "NPTH extra"
+    },
+    {
+     "c": [
+      261.58,
+      85.302
+     ],
+     "drill": 3.5,
+     "kind": "NPTH extra"
+    },
+    {
+     "c": [
+      282.08,
+      21.802
+     ],
+     "drill": 3.5,
+     "kind": "NPTH extra"
+    },
+    {
+     "c": [
+      4.081,
+      37.602
+     ],
+     "drill": 2.8,
+     "kind": "NPTH extra"
+    },
+    {
+     "c": [
+      142.58,
+      37.602
+     ],
+     "drill": 2.8,
+     "kind": "NPTH extra"
+    },
+    {
+     "c": [
+      4.081,
+      19.302
+     ],
+     "drill": 3.7,
+     "kind": "NPTH extra"
+    }
+   ],
+   "usb": {
+    "centre_x": 18.388,
+    "frame": "gh60",
+    "centre_x_own": 18.2,
+    "normalised": "own X 18.200 - Esc X 8.960 + 9.1475 (board-aligned, i.e. own frame = GH60 PCB frame since outline and holes are exact GH60: X 18.200)",
+    "edge": "back",
+    "side": "bottom",
+    "part": "HCTL HC-TYPE-C-16P-01A-R, LCSC C2997433 (USB1, footprint USB-C-SMD_G-SWITCH_GT-USB-7010EN)",
+    "body_height": 3.17,
+    "daughterboard": false,
+    "status": "design",
+    "source": "PnP USB1 Mid (18.740, 90.653) layer B -> own (18.200, 3.855); shell slots PTH 0.6 at Gerber X 14.420/23.060, posts NPTH 0.7 at 15.850/21.630 (centre 18.740). STEP USB1 bbox X 14.27..23.21, Y 87.997..95.897, Z -3.17..1.5: face 1.389 mm past the back edge (95.897 - 94.508), body 3.17 below the PCB bottom."
+   },
    "battery": null,
-   "bottom_parts": null,
+   "bottom_parts": {
+    "max_height": 3.17,
+    "part": "USB1 HC-TYPE-C-16P-01A-R (3.17); reverse-mount WS2812B-3528 LEDs 1.80 (in windows); U2 ME6210A33PG SOT-89 1.51; U1 AT32F425K8T7 LQFP-32 1.45 (U6 QFN alternative on the same spot); Hall sensors 1.05. Unpopulated (no BOM/3D model) TH headers H2 PZ200V-11-04P 4P 2.0 at own (68.952, 80.296) and U4 1x2 1.0 at own (73.532, 66.894)",
+    "basis": "STEP per-part bbox (board Z 0..1.6, bottom parts negative Z)"
+   },
    "antenna_own": null,
-   "license": "GPL 3.0",
+   "license": "GPL 3.0 (page '开源协议：GPL 3.0'; editor banner 'open source project(license:GPL 3.0)')",
    "sources": [
     "https://oshwhub.com/yaoshan-ju-shi/open60",
     "https://pro.lceda.cn/api/v2/projects/971920265a984f47834f8155c937d250"
    ],
-   "confidence": "claim only (author text); pro design needs login",
-   "notes": "[OpenCnPlatforms] mount_holes='gh60' is the author's claim, not verified. PCB docs fb893bf9.../734ad385... behind login; attachments are manual PDF/BOM/firmware zip only.",
+   "confidence": "high for geometry (EasyEDA Pro Gerber/PnP/DXF/STEP export of PCB 'OPEN60'); switch stack height not derivable",
+   "notes": "[OpenCnPlatforms] mount_holes='gh60' is the author's claim, not verified. PCB docs fb893bf9.../734ad385... behind login; attachments are manual PDF/BOM/firmware zip only. | [EasyedaParse] [EasyedaParse] Frame: Gerber/PnP/STEP share one frame with Y up; outline X 0.540..285.539, Y -0.092..94.508, so own = (X - 0.540, 94.508 - Y); bottom parts not mirrored (LEDB1 PnP (9.500, 80.502) = LED window centre in GKO). Switch centres from 61 pairs of 1.75 mm NPTH pegs spaced 10.00 mm (not MX 10.16) plus Hall sensor UKxx positions; Esc pegs (4.4995/14.4995, 85.5013) -> own (8.960, 9.007), gh60 = own + (+0.1875, +0.192). KEY PITCH IS 19.00 mm, not 19.05: Esc row centres own 8.960, 27.961, 46.960 ... 236.960, backspace 265.460 (= 14.0u x 19.0 - 0.54); row pitch 19.000 (Y 9.007/28.008/47.008/66.008/85.008). The grid spans 15 x 19.0 = 285.0 from Gerber X 0 (0.54 left of the board edge). Against a 19.05 grid anchored at the same Esc the right-hand keys are up to 0.69 mm short (right Ctrl own 272.587 vs 8.960 + 13.875 x 19.05 = 273.279; backspace 265.460 vs 266.135), so a standard 19.05 plate does not match. No PCB stabilizer holes (plate-mount stabs needed). HE stack: sensors DRV5055A2 SOT-23 on the bottom (STEP Z -1.05..0), 1.6 mm PCB between switch and sensor; magnet height above the PCB depends on the switch (no switch model in the STEP) -> null. Same project also has OPEN60HE, OPEN60V2, OPEN68 PCBs (not exported). Extra NPTH 3.5/2.8/3.7 holes sit in key gaps [INFERENCE: plate/case fixings]. MCU AT32F425K8T7 (LQFP-32) or AT32F425K8U7-4 (QFN-32) alternate footprints at own (78.200, 83.078); TM1926D SOP-16 U5.",
    "rule60_reports": null,
    "surveyed_by": [
-    "OpenCnPlatforms"
+    "OpenCnPlatforms",
+    "EasyedaParse (Aside export)"
    ],
    "fit": {
-    "verdict": "unknown",
+    "verdict": "check",
     "reasons": [
-     "USB position unknown",
-     "HE switches: the creator recommends top mount; check the plate"
+     "HE switches (Hall sensors on the PCB bottom); plate/switch stack not derivable",
+     "Key pitch 19.00 mm instead of 19.05: a standard GH60 plate is up to 0.69 mm off at the right-hand keys; no PCB stab holes",
+     "Outline 285.0 x 94.6 r2.0 and H1-H4 exactly GH60; side slots are closed 6.2x3.2 slots 2.03 mm inboard of the GH60 edge slots",
+     "On-board USB-C on the bottom at the back edge, own X 18.200 (gh60 Esc-aligned 18.388), face 1.389 past the back edge; tallest bottom part USB 3.17 mm"
     ]
    }
   },
@@ -6938,16 +7454,29 @@
    },
    "esc_centre_own": null,
    "mount_holes": "gh60",
-   "usb": null,
+   "usb": {
+    "centre_x": 18.7,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": true,
+    "status": "vendor-drawing",
+    "source": "hiney-h60-v2/pcb-outline-01.webp vendor line drawing: 19 switch holes affine res 0.04 (55.35 px/u); USB-C outline X 14.8..23.4 (centre 19.0), pads below 18.36; Esc 9.08 +-0.5 mm"
+   },
    "battery": null,
    "bottom_parts": null,
    "antenna_own": null,
    "license": null,
    "sources": [
-    "https://www.bilibili.com/video/BV18ez7BhEEH"
+    "https://www.bilibili.com/video/BV18ez7BhEEH",
+    "https://ko.aliexpress.com/item/1005010142886813.html"
    ],
    "confidence": "Single owner build report.",
-   "notes": "",
+   "notes": "[PhotoScale, AliExpress] USB 18.7 (vendor-drawing): hiney-h60-v2/pcb-outline-01.webp vendor line drawing: 19 switch holes affine res 0.04 (55.35 px/u); USB-C outline X 14.8..23.4 (centre 19.0), pads below 18.36; Esc 9.08 +-0.5 mm; outline {\"width\": 282.9, \"depth\": 93.5, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"drawing X 1.0..283.9, Y 0.6..94.1 (+-0.5); Hiney-style O-ring notches\"}; Spec card: 板载C口 + 分离小板 (onboard USB-C and daughterboard), 1.6 mm, 26 underglow LEDs, PTG Studio. Same product as xl-hiney-h60-clone (18.3).",
    "rule60_reports": [
     {
      "source": "https://www.bilibili.com/video/BV18ez7BhEEH",
@@ -6956,13 +7485,12 @@
     }
    ],
    "surveyed_by": [
-    "CommercialAsia"
+    "CommercialAsia",
+    "PhotoScale (Aside AliExpress capture)"
    ],
    "fit": {
-    "verdict": "unknown",
-    "reasons": [
-     "USB position unknown"
-    ]
+    "verdict": "fits",
+    "reasons": []
    }
   },
   {
@@ -10410,18 +10938,69 @@
    "license": null,
    "sources": [
     "https://ymdkey.com/products/ymdk-dk61-64-gh60-wired-hot-swappable-60-pcb-support-iso-ansi-fully-programmable-via-vial",
-    "https://cdn.shopify.com/s/files/1/0006/5227/9869/files/MG_0486_dec1d186-8a78-4b71-b8e4-b47b75e67fd8.jpg"
+    "https://cdn.shopify.com/s/files/1/0006/5227/9869/files/MG_0486_dec1d186-8a78-4b71-b8e4-b47b75e67fd8.jpg",
+    "https://ko.aliexpress.com/item/1005005823139275.html"
    ],
    "confidence": "medium-high: Esc-referenced photo; H1-H4 overlay lands in slots",
-   "notes": "[CommercialAsia] Plated holes measured at (24.7,28.2) and (258.9,26.8) mm ~ GH60 H1/H4. Vendor: 'Fit GH60 aluminum / wooden / acrylic case'. Not in QMK (VIA/VIAL).",
+   "notes": "[CommercialAsia] Plated holes measured at (24.7,28.2) and (258.9,26.8) mm ~ GH60 H1/H4. Vendor: 'Fit GH60 aluminum / wooden / acrylic case'. Not in QMK (VIA/VIAL). | [PhotoScale, AliExpress] USB 18.4 (photo-scaled): dk61-gh60-via/desc-07.webp (2000 px, top view, 123 px/u): 54-59 switch holes, homography res 0.45 / quadratic 0.39; USB-C shell leg slots X 14.5/22.9 -> 18.67-18.89 in grid frame with Esc measured 9.37-9.67 -> through Esc 18.37-18.45 +-0.5 mm; outline {\"width\": 285.9, \"depth\": 94.6, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"desc-07 edges X 1.0..286.9 (+-1, background contrast), Y 0.7..95.3\"}; Adds an independent AliExpress photo; existing 18.19 (+-0.5) agrees.",
    "rule60_reports": null,
    "surveyed_by": [
-    "CommercialAsia"
+    "CommercialAsia",
+    "PhotoScale (Aside AliExpress capture)"
    ],
    "fit": {
     "verdict": "fits",
     "reasons": []
    }
+  },
+  {
+   "id": "ymdk-oni-hhkb",
+   "name": "YMDK GH60 Tsangan/HHKB Oni hotswap RGB PCB (Tokyo60 compatible)",
+   "maker": "YMDK",
+   "kind": "commercial",
+   "switch": "MX hotswap",
+   "wireless": null,
+   "radio_mcu": null,
+   "layouts": null,
+   "outline": {
+    "width": 286.3,
+    "depth": 94.6,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "X -0.45..285.9, Y 0..94.6 (+-0.6)"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": {
+    "centre_x": 18.4,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": false,
+    "status": "photo-scaled",
+    "source": "gh60-oni-hhkb/desc-05.webp top view (110 px/u): 43 switch LED windows homography res 0.15; USB-C shell slots X 13.8/22.6 -> 18.37 (legs 18.32); Esc 9.03 +-0.4 mm"
+   },
+   "battery": null,
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://ko.aliexpress.com/item/1005003449331961.html"
+   ],
+   "confidence": "medium",
+   "notes": "Vendor: Tokyo60 needs a pad under middle screw hole.",
+   "fit": {
+    "verdict": "fits",
+    "reasons": []
+   },
+   "surveyed_by": [
+    "PhotoScale (Aside AliExpress capture)"
+   ],
+   "rule60_reports": null
   },
   {
    "id": "ymdk-yd60mq",
@@ -10480,10 +11059,11 @@
     "https://github.com/qmk/qmk_firmware/tree/master/keyboards/ymdk/yd60mq/16led",
     "https://www.bilibili.com/video/BV1AH3tzAEDj",
     "https://cdn.shopify.com/s/files/1/0006/5227/9869/files/GH60_PCB.jpg",
-    "https://github.com/qmk/qmk_firmware/tree/master/keyboards/ymdk/yd60mq"
+    "https://github.com/qmk/qmk_firmware/tree/master/keyboards/ymdk/yd60mq",
+    "https://ko.aliexpress.com/item/32799437588.html"
    ],
    "confidence": "low: one bottom photo; parallax not removable",
-   "notes": "[CommercialWest] ATmega32U4; QMK variants 12led / 16led. Vendor: fits GH60 cases. FLAG: Esc offset ~0.7 mm left / 0.6 mm back of GH60 in the photo (outline probably narrower like DZ60). | [CommercialAsia] 16 underglow LEDs per owner. | QMK ymdk/yd60mq: atmega32u4, atmel-dfu, VID 0x594D PID 0x604D.",
+   "notes": "[CommercialWest] ATmega32U4; QMK variants 12led / 16led. Vendor: fits GH60 cases. FLAG: Esc offset ~0.7 mm left / 0.6 mm back of GH60 in the photo (outline probably narrower like DZ60). | [CommercialAsia] 16 underglow LEDs per owner. | QMK ymdk/yd60mq: atmega32u4, atmel-dfu, VID 0x594D PID 0x604D. | [PhotoScale, AliExpress] USB 18.4 (photo-scaled): yd60mq/desc-05.webp oblique bottom view: 15-point manual grid homography res 0.04; USB-C SMD pin row centre 18.31, shell legs 14.06/23.15 -> 18.6; Esc on grid +-0.6 mm; outline {\"width\": null, \"depth\": null, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"oblique photo, no edge measurement\"}; Adds an oblique bottom photo; shell overhangs the back edge (confirms existing note). Existing 18.14.",
    "rule60_reports": [
     {
      "source": "https://www.bilibili.com/video/BV1AH3tzAEDj",
@@ -10493,7 +11073,8 @@
    ],
    "surveyed_by": [
     "CommercialAsia",
-    "CommercialWest"
+    "CommercialWest",
+    "PhotoScale (Aside AliExpress capture)"
    ],
    "fit": {
     "verdict": "fits",
@@ -10565,6 +11146,55 @@
      "outline 285.7 x 94.9 slightly larger than GH60"
     ]
    }
+  },
+  {
+   "id": "ymdk-ymd62",
+   "name": "YMDK YMD62 GH60 ISO RGB VIAL hotswap",
+   "maker": "YMDK",
+   "kind": "commercial",
+   "switch": "MX hotswap (Kailh)",
+   "wireless": null,
+   "radio_mcu": "STM32 128k (vendor)",
+   "layouts": null,
+   "outline": {
+    "width": 285.6,
+    "depth": 94.4,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "desc-03: X -0.5..285.1, Y -0.05..94.4 (+-0.5)"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": {
+    "centre_x": 18.3,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": false,
+    "status": "photo-scaled",
+    "source": "ymd62-gh60/desc-04.webp top view (121 px/u, 60 LED windows res 0.37): shell leg pads X 14.0/22.9 -> 18.51; desc-03.webp bottom mirrored (117.6 px/u, 50 holes res 0.31): pin centre 17.79 with Esc 8.92 -> 18.02 +-0.5 mm"
+   },
+   "battery": null,
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://ko.aliexpress.com/item/1005005552949984.html"
+   ],
+   "confidence": "medium",
+   "notes": "",
+   "fit": {
+    "verdict": "fits",
+    "reasons": []
+   },
+   "surveyed_by": [
+    "PhotoScale (Aside AliExpress capture)"
+   ],
+   "rule60_reports": null
   },
   {
    "id": "yr6095",
