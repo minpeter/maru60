@@ -335,6 +335,11 @@ the stock plate is assumed to match the DWG; the outer corner radius is not
 measured. Clearance to the plate (0.30 mm per side) and keycaps (0.32 mm)
 tolerates up to about 0.2% print shrinkage.
 
+The USB notch keeps the stock 12.8 mm width and moves with `--board`; it is
+not widened for cable plugs. A plug body up to the USB-C maximum of 12.35 mm
+fits with 0.2 mm per side. Some retail cables are wider (about 13 mm
+measured) and will not seat fully, the same as in the stock case.
+
 ## License and design history
 
 Copyright 2026 minpeter. The authored source, model exports, documentation and
