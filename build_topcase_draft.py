@@ -1021,7 +1021,7 @@ def write_3mf(path: Path, title: str, named_meshes: list[tuple[str, trimesh.Trim
     model = ET.Element("model", {"unit": "millimeter", "xmlns": "http://schemas.microsoft.com/3dmanufacturing/core/2015/02"})
     ET.SubElement(model, "metadata", {"name": "Title"}).text = title
     ET.SubElement(model, "metadata", {"name": "Designer"}).text = "minpeter"
-    ET.SubElement(model, "metadata", {"name": "License"}).text = "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/"
+    ET.SubElement(model, "metadata", {"name": "License"}).text = "CC BY-NC 4.0 (non-commercial use only) — https://creativecommons.org/licenses/by-nc/4.0/"
     resources, build = ET.SubElement(model, "resources"), ET.SubElement(model, "build")
     for idx, (name, m) in enumerate(named_meshes, 1):
         obj = ET.SubElement(resources, "object", {"id": str(idx), "type": "model", "name": name})

@@ -145,6 +145,10 @@ and four ball-catch strike plates. The case outline and Z levels follow the
 owner's caliper measurements of the stock top case; the gasket-cap and
 ball-catch pockets follow photo metrology of the same part.
 
+**License: [CC BY-NC 4.0](LICENSE-topcase)**, personal and other non-commercial
+use only (the wrist rest above stays CC BY 4.0; see
+[License](#license-and-design-history)).
+
 | Assembled | Top |
 | --- | --- |
 | ![Assembled top case with wrist rest](images/topcase-assembled.png) | ![Top view](images/topcase-top.png) |
@@ -343,17 +347,31 @@ measured) and will not seat fully, the same as in the stock case.
 
 ## License and design history
 
-Copyright 2026 minpeter. The authored source, model exports, documentation and
-renders are released under **[CC BY 4.0](LICENSE)**. Attribute this project,
-link to the license and identify your changes. Commercial use is permitted.
+Copyright 2026 minpeter. Two licenses apply:
+
+- **Wrist rest — [CC BY 4.0](LICENSE).** Everything not listed under the top
+  case below: the wrist-rest generator, its model exports, documentation and
+  renders. Attribute this project, link to the license and identify your
+  changes. Commercial use is permitted.
+- **HHKB top case — [CC BY-NC 4.0](LICENSE-topcase), personal and other
+  non-commercial use only.** `build_topcase_draft.py`, `export_topcase.py`,
+  `render_topcase_draft.py`, `verify_topcase.py`, `models/rule60-hhkb-topcase*`,
+  `images/topcase-*` and `evidence/topcase*`. You may print, modify and share
+  it for non-commercial purposes with attribution. Selling the files, prints
+  or derived designs requires the owner's permission.
+
+The top-case license applies to every version of the top case in this
+repository, including all earlier commits and branches, which previously
+stated CC BY 4.0.
+
 Third-party tools retain their own licenses. No affiliation with keyboard or
 printer manufacturers is implied. The Rule 60 V3 is designed by INKC STUDIO;
 the top case is an independent re-creation from measurements of the owner's
 stock part and is not an official file.
 [`third_party/inkc-rule60-v3/rule60-v3.dwg`](third_party/inkc-rule60-v3/README.md)
 is INKC STUDIO's plate drawing, redistributed on the creator's statement that
-the plate drawings are open source; it is not covered by this repository's
-CC BY 4.0 license.
+the plate drawings are open source; it is not covered by either of this
+repository's licenses.
 
 Early experiments took inspiration from [Shanhj's palm rest](https://makerworld.com/en/models/1326999).
 The final v9 generator constructs its geometry in code and embeds neither
