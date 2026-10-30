@@ -245,7 +245,7 @@ status (caliper, photo, fit, drawing, datasheet, derived, assumed) and source:
   [`rule60-v3.dwg`](third_party/inkc-rule60-v3/README.md), which is
   redistributed here with its provenance.
 - [`spec/boards.json`](spec/boards.json): GH60 reference geometry (285.0 ×
-  94.6 mm, holes, USB) and 139 GH60-class boards surveyed from design files,
+  94.6 mm, holes, USB) and 143 GH60-class boards surveyed from design files,
   vendor drawings, product photos and Rule 60 owner reports. A GH60-grid PCB
   maps into the plate frame as `X_plate = X_gh60 + 0.4525`,
   `Y_plate = 101.068 − Y_gh60`.
@@ -262,18 +262,19 @@ position, or `universal`):
 | `wish60-ble` | 19.12 | Maker's STEP, mid-mount USB-C |
 | `wooting-60he` / `venom-60he` | 19.11 / 19.10 | Vendor 3D models |
 | `gt-ble60-nrf51` (highest found) | 19.43 | KiCad, mini-USB |
-| `universal` | 18.39, 14.88 mm wide | Every on-board back-edge USB below |
+| `universal` | 18.39, 14.88 mm wide | Every measured on-board back-edge USB below (guesses left out) |
 
-**Survey result** (2026-10-31): 139 boards, 80 open designs and 54
-commercial; 98 have a USB position, 70 of them from design files. Two
-oshwhub projects behind the EasyEDA Pro login (HL6095, OPEN60) and 13
-AliExpress listings were captured with the Aside browser and measured.
+**Survey result** (2026-10-31): 143 boards, 80 open designs and 58
+commercial; 102 have a USB position, 70 of them from design files. Two
+oshwhub projects behind the EasyEDA Pro login (HL6095, OPEN60), 13
+AliExpress and 10 Taobao listings were captured with the Aside browser and
+measured.
 
 | Verdict | Boards | Meaning |
 | --- | --- | --- |
-| fits | 65 | On-board USB at the back edge, GH60-size outline, MX plate |
-| check | 45 | Daughterboard-only USB (needs a case mount), HE/EC/Alps plate and mount, or an outline up to 0.75 mm larger than GH60 |
-| unknown | 22 | No published USB position (e.g. PTG64, YR6095, AE61 PRO) |
+| fits | 68 | On-board USB at the back edge, GH60-size outline, MX plate |
+| check | 47 | Daughterboard-only USB (needs a case mount), HE/EC/Alps plate and mount, or an outline up to 0.75 mm larger than GH60 |
+| unknown | 21 | No published USB position (e.g. YR6095, LH60R2, AE61 PRO) |
 | no | 7 | USB on another edge, outline far larger than GH60, or low-profile switches |
 
 On-board USB centres range from 17.35 (the owner's board) to 19.43 in plate

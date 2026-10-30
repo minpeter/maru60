@@ -1,6 +1,6 @@
 {
  "format": "rule60-boards/2",
- "about": "GH60-class PCBs for the Rule 60 V3 housing, from design files, vendor drawings, product photos and owner reports (surveyed 2026-10-31; AliExpress listings and two oshwhub EasyEDA projects added via the Aside browser). Only usb.centre_x feeds the build so far (top-case notch); the rest is kept for the bottom case. fit.verdict: fits = on-board USB-C at the back edge and a GH60-size outline; check = needs something extra (daughterboard mount, non-MX plate, slightly larger outline, HE mount); no = will not fit; unknown = USB position not found. null = not published / not found.",
+ "about": "GH60-class PCBs for the Rule 60 V3 housing, from design files, vendor drawings, product photos and owner reports (surveyed 2026-10-31; AliExpress and Taobao listings and two oshwhub EasyEDA projects added via the Aside browser). Only usb.centre_x feeds the build so far (top-case notch); the rest is kept for the bottom case. fit.verdict: fits = on-board USB-C at the back edge and a GH60-size outline; check = needs something extra (daughterboard mount, non-MX plate, slightly larger outline, HE mount); no = will not fit; unknown = USB position not found. null = not published / not found.",
  "frames": {
   "own": "A board in its own design frame: top view (switch side up), origin at its back-left corner (Esc side), X right, Y toward the front, mm. esc_centre_own, antenna_own, battery and bottom_parts positions use it.",
   "gh60": "GH60 grid frame: the own frame shifted so the Esc switch centre lands on the GH60 one, (9.1475, 9.19875). For a GH60-size board it equals the own frame. usb.centre_x is in this frame unless usb.frame says plate; usb.normalised shows the conversion.",
@@ -4869,6 +4869,56 @@
    }
   },
   {
+   "id": "huoge-hiney60",
+   "name": "火哥PCB 复刻Hiney60 1.6 不开槽 hotswap wired (onboard USB-C or ai03 子板)",
+   "maker": "火哥PCB",
+   "kind": "commercial",
+   "switch": "MX hotswap",
+   "wireless": null,
+   "radio_mcu": null,
+   "layouts": null,
+   "outline": {
+    "width": 282.9,
+    "depth": 93.8,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "X 1.16..284.04, Y 0.51..94.31 (+-0.3)"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": {
+    "centre_x": 18.4,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": true,
+    "status": "vendor-drawing",
+    "source": "hiney60-huoge/01-gal.jpg render (7.58 px/mm): 67 holes affine res 0.03; Esc 9.14,9.20; USB-C shell slots X 13.9-14.1/22.8 -> 18.40 (row midpoints 18.42) +-0.3 mm"
+   },
+   "battery": null,
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://item.taobao.com/item.htm?id=1073823207594"
+   ],
+   "confidence": "medium",
+   "notes": "[INFERENCE] may be the existing huoxingge-gh60 (火星哥) build PCB; seller is 火哥PCB, not confirmed. 1.6 mm 不开槽, purple, underglow, VIA, wired single mode; SKUs onboard USB-C / ai03 normal / ai03 slim + cable.",
+   "fit": {
+    "verdict": "fits",
+    "reasons": []
+   },
+   "new_images_add": null,
+   "surveyed_by": [
+    "PhotoScale (Aside Taobao capture)"
+   ],
+   "rule60_reports": null
+  },
+  {
    "id": "huoxingge-gh60",
    "name": "火星哥 GH60 PCB",
    "maker": null,
@@ -5385,7 +5435,7 @@
    "esc_centre_own": null,
    "mount_holes": null,
    "usb": {
-    "centre_x": 18.29,
+    "centre_x": 18.1,
     "frame": "gh60",
     "centre_x_own": null,
     "normalised": "measured in switch-grid frame through Esc centre",
@@ -5395,23 +5445,25 @@
     "body_height": null,
     "daughterboard": true,
     "status": "photo-scaled",
-    "source": "keebox-box60/desc-02.webp top view (138.6 px/u): 52 holes homography res 0.24; USB-C shell-leg rings X 13.7/22.5 -> 18.14 with Esc 9.00 +-0.4 mm"
+    "source": "keebox60-pcb/04-gal.jpg bottom view mirrored (139 px/u, 64 holes homog res 0.09): USB-C pin row 17.69, shell 13.1/22.5 -> 17.8; Esc 9.09 -> ~17.9. AliExpress desc-02 (identical to Taobao 02-gal) gave 18.29 -> combined 18.1 +-0.4 mm"
    },
    "battery": null,
    "bottom_parts": null,
    "antenna_own": null,
    "license": null,
    "sources": [
-    "https://ko.aliexpress.com/item/1005012001923430.html"
+    "https://ko.aliexpress.com/item/1005012001923430.html",
+    "https://item.taobao.com/item.htm?id=1040241936836"
    ],
    "confidence": "medium",
-   "notes": "Onboard USB-C is removable for ai03 (included) / Fly daughterboard; then USB position follows the daughterboard.",
+   "notes": "Onboard USB-C is removable for ai03 (included) / Fly daughterboard; then USB position follows the daughterboard. | [PhotoScale, Taobao] USB 18.1 (photo-scaled): keebox60-pcb/04-gal.jpg bottom view mirrored (139 px/u, 64 holes homog res 0.09): USB-C pin row 17.69, shell 13.1/22.5 -> 17.8; Esc 9.09 -> ~17.9. AliExpress desc-02 (identical to Taobao 02-gal) gave 18.29 -> combined 18.1 +-0.4 mm; outline {\"width\": 284.5, \"depth\": 94.2, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"Taobao 04: Y 0.3..94.3 (back/front); width as AliExpress record\"}; Taobao adds CEM3 vs FR4 material options and a bottom view showing the onboard USB-C body. 02-gal is the same image as AliExpress desc-02.",
    "fit": {
     "verdict": "fits",
     "reasons": []
    },
    "surveyed_by": [
-    "PhotoScale (Aside AliExpress capture)"
+    "PhotoScale (Aside AliExpress capture)",
+    "PhotoScale (Aside Taobao capture)"
    ],
    "rule60_reports": null
   },
@@ -5634,13 +5686,15 @@
    "antenna_own": null,
    "license": null,
    "sources": [
-    "https://www.taobao.com/list/item/SGhQcWZpMnpUTjhJS05RcnBQQlU4Zz09.htm"
+    "https://www.taobao.com/list/item/SGhQcWZpMnpUTjhJS05RcnBQQlU4Zz09.htm",
+    "https://item.taobao.com/item.htm?id=993074518432"
    ],
    "confidence": "Listing title only.",
-   "notes": "[CommercialAsia] Tri-mode GH60-compatible board, 1.6 mm non-flexcut variant per review SKU; no geometry.",
+   "notes": "[CommercialAsia] Tri-mode GH60-compatible board, 1.6 mm non-flexcut variant per review SKU; no geometry. | [PhotoScale, Taobao] USB None (None): ; outline {\"width\": null, \"depth\": null, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"no measurable view; text only\"}; SKUs: LH60R2 1.6mm不开槽 / 1.2mm开槽 (字母区开槽, black core, gold traces). Silk LH60, layouts 60/61/WK/WKL/HHKB. Battery not stated.",
    "rule60_reports": null,
    "surveyed_by": [
-    "CommercialAsia"
+    "CommercialAsia",
+    "PhotoScale (Aside Taobao capture)"
    ],
    "fit": {
     "verdict": "unknown",
@@ -7559,7 +7613,19 @@
    },
    "esc_centre_own": null,
    "mount_holes": "gh60",
-   "usb": null,
+   "usb": {
+    "centre_x": 18.0,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": false,
+    "status": "photo-scaled",
+    "source": "ptg64b/04-gal.jpg top view (white PCB on plates, 45.75 px/u = 2.40 px/mm): 47-55 switch holes affine/homog res 0.42/0.35; Esc centre hole 9.42/8.92, 2 gold pads at X 14.2/22.2 (affine) -> through Esc 17.92 (affine) / 17.99 (homog). [INFERENCE] the 2 pads are the USB-C shell legs (cable enters there in 02-gal.jpg). +-0.6 mm"
+   },
    "battery": null,
    "bottom_parts": null,
    "antenna_own": null,
@@ -7568,10 +7634,12 @@
     "https://www.zfrontier.com/app/flow/GJ7JjlX8qwxY",
     "https://www.zfrontier.com/app/flow/daWn5PAnGgxG",
     "https://www.bilibili.com/video/BV1SANTzwEv9",
-    "https://www.bilibili.com/video/BV1Vb1fBqEb9"
+    "https://www.bilibili.com/video/BV1Vb1fBqEb9",
+    "https://item.taobao.com/item.htm?id=983989317416",
+    "https://item.taobao.com/item.htm?id=827553427396"
    ],
    "confidence": "Fit certain (stock option); no geometry found.",
-   "notes": "[CommercialAsia] Kit sound pack differs (adds 0.1 mm PET). A PTG64 三模 RGB variant exists (BV1Vb1fBqEb9 build in an AIM60-like case) — no battery/USB data found.",
+   "notes": "[CommercialAsia] Kit sound pack differs (adds 0.1 mm PET). A PTG64 三模 RGB variant exists (BV1Vb1fBqEb9 build in an AIM60-like case) — no battery/USB data found. | [PhotoScale, Taobao] USB 18.0 (photo-scaled): ptg64b/04-gal.jpg top view (white PCB on plates, 45.75 px/u = 2.40 px/mm): 47-55 switch holes affine/homog res 0.42/0.35; Esc centre hole 9.42/8.92, 2 gold pads at X 14.2/22.2 (affine) -> through Esc 17.92 (affine) / 17.99 (homog). [INFERENCE] the 2 pads are the USB-C shell legs (cable enters there in 02-gal.jpg). +-0.6 mm; outline {\"width\": 286.0, \"depth\": 94.3, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"04-gal: X 1.0..285.5-287.1, Y -0.2..94.0-94.3 (+-1, 2.4 px/mm)\"}; [INFERENCE] PTG64B is the kit PTG64 单模 RGB 内胆 (same name/era, wired, RGB, left-shift 64). Listing: VIA, per-key RGB, hotswap, 上灯位, 兼容GH60外壳. No battery.",
    "rule60_reports": [
     {
      "source": "https://www.zfrontier.com/app/flow/daWn5PAnGgxG",
@@ -7585,14 +7653,53 @@
     }
    ],
    "surveyed_by": [
-    "CommercialAsia"
+    "CommercialAsia",
+    "PhotoScale (Aside Taobao capture)"
    ],
+   "fit": {
+    "verdict": "fits",
+    "reasons": []
+   }
+  },
+  {
+   "id": "ptg64a-trimode",
+   "name": "PTG64A 三模 left-shift 64 PCB (silk PTG64A QMK_YR 2023-01-07)",
+   "maker": "PTG / YR firmware",
+   "kind": "commercial",
+   "switch": null,
+   "wireless": "tri-mode",
+   "radio_mcu": null,
+   "layouts": null,
+   "outline": {
+    "width": null,
+    "depth": null,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "no measurable view in the 3 images (800/600 px)"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": null,
+   "battery": null,
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://item.taobao.com/item.htm?id=1039657482900"
+   ],
+   "confidence": "medium",
+   "notes": "Title: 三模 左移64. Silkscreen names QMK_YR. 0 sales. MCU on the right per capture note. No battery/USB geometry.",
    "fit": {
     "verdict": "unknown",
     "reasons": [
      "USB position unknown"
     ]
-   }
+   },
+   "new_images_add": null,
+   "surveyed_by": [
+    "PhotoScale (Aside Taobao capture)"
+   ],
+   "rule60_reports": null
   },
   {
    "id": "qmk-kb-q60dv3",
@@ -8326,6 +8433,58 @@
      "outline 285.369 x 94.996 slightly larger than GH60"
     ]
    }
+  },
+  {
+   "id": "sky-gh60-trimode",
+   "name": "Sky 黑透 GH60 左移64/61 三模 kit (Wooting-mod 推荐, 腹灵同方案)",
+   "maker": "Sky客制化外设店",
+   "kind": "commercial",
+   "switch": null,
+   "wireless": "tri-mode (some SKUs)",
+   "radio_mcu": null,
+   "layouts": null,
+   "outline": {
+    "width": null,
+    "depth": null,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "assembled only"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": {
+    "centre_x": 19.3,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": false,
+    "status": "inferred",
+    "source": "sky-gh60-trimode/01-gal.jpg assembled kit: plug sleeve X 214-241 px vs plate cutouts (Esc 184.2 px, 81.1 px/u) -> 19.3 (plug, perspective; not the PCB connector) +-1.5 mm"
+   },
+   "battery": null,
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://item.taobao.com/item.htm?id=678482365489"
+   ],
+   "confidence": "low",
+   "notes": "Wired-only and tri-mode SKUs; 2.4G receiver stored in the bottom; battery-door-like cover on the case bottom; label 5V 300mA. Case is part of the kit.",
+   "fit": {
+    "verdict": "check",
+    "reasons": [
+     "USB from plug only (+-1.5)"
+    ]
+   },
+   "new_images_add": null,
+   "surveyed_by": [
+    "PhotoScale (Aside Taobao capture)"
+   ],
+   "rule60_reports": null
   },
   {
    "id": "steezy60-alps",
@@ -10059,6 +10218,58 @@
    }
   },
   {
+   "id": "xilou-h60-ext",
+   "name": "西楼 Hiney H60 外接小板 hotswap/solder PCB (ai03/Fly daughterboard, no onboard USB)",
+   "maker": "西楼客制化",
+   "kind": "commercial",
+   "switch": "MX hotswap + solder",
+   "wireless": null,
+   "radio_mcu": null,
+   "layouts": null,
+   "outline": {
+    "width": 283.0,
+    "depth": 92.6,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "X 0.86..283.8, Y 1.0..93.6 (+-0.4), same board as xilou-h60-solder"
+   },
+   "esc_centre_own": null,
+   "mount_holes": null,
+   "usb": {
+    "centre_x": null,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "JST-SH to ai03/Fly daughterboard",
+    "body_height": null,
+    "daughterboard": true,
+    "status": "photo-scaled",
+    "source": "hiney-h60-xilou-ext/03-gal.jpg: no onboard USB-C. Daughterboard JST socket at gh60 ~(25.3,17.1) top view (shell 23.9..26.7 x 14.2..20.0) +-None mm"
+   },
+   "battery": null,
+   "bottom_parts": null,
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://item.taobao.com/item.htm?id=829035089541"
+   ],
+   "confidence": "medium",
+   "notes": "Daughterboard-only: USB position set by the case daughterboard mount; 15 cm + 10 cm cable by default. Same PCB family as xilou-h60-solder.",
+   "fit": {
+    "verdict": "check",
+    "reasons": [
+     "daughterboard-only: USB follows case daughterboard mount"
+    ]
+   },
+   "new_images_add": null,
+   "surveyed_by": [
+    "PhotoScale (Aside Taobao capture)"
+   ],
+   "rule60_reports": null
+  },
+  {
    "id": "xilou-h60-solder",
    "name": "西楼 H60 solder PCB",
    "maker": null,
@@ -10076,16 +10287,29 @@
    },
    "esc_centre_own": null,
    "mount_holes": "gh60",
-   "usb": null,
+   "usb": {
+    "centre_x": 18.17,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C",
+    "body_height": null,
+    "daughterboard": false,
+    "status": "photo-scaled",
+    "source": "hiney-h60-xilou-onboard/02-gal.jpg bottom view mirrored (5.0 px/mm): 71 holes affine res 0.07; USB-C 4 shell slots X 13.8/22.5 -> 18.18, posts 18.16; Esc 9.15 +-0.3 mm"
+   },
    "battery": null,
    "bottom_parts": null,
    "antenna_own": null,
    "license": null,
    "sources": [
-    "https://www.bilibili.com/video/BV1EXRVY7Egn"
+    "https://www.bilibili.com/video/BV1EXRVY7Egn",
+    "https://item.taobao.com/item.htm?id=982297088905"
    ],
    "confidence": "Single owner build report.",
-   "notes": "",
+   "notes": "[PhotoScale, Taobao] USB 18.17 (photo-scaled): hiney-h60-xilou-onboard/02-gal.jpg bottom view mirrored (5.0 px/mm): 71 holes affine res 0.07; USB-C 4 shell slots X 13.8/22.5 -> 18.18, posts 18.16; Esc 9.15 +-0.3 mm; outline {\"width\": 283.1, \"depth\": 92.5, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"X 1.01..284.1, Y 1.05..93.55 (+-0.4); red mask edge\"}; Hotswap + solder footprints (white=both, gray=solder only), FR4 加硬, 1K polling, 6U/6.25U/7U/3U+1U+3U, RGB underglow, VIA. No battery.",
    "rule60_reports": [
     {
      "source": "https://www.bilibili.com/video/BV1EXRVY7Egn",
@@ -10094,13 +10318,12 @@
     }
    ],
    "surveyed_by": [
-    "CommercialAsia"
+    "CommercialAsia",
+    "PhotoScale (Aside Taobao capture)"
    ],
    "fit": {
-    "verdict": "unknown",
-    "reasons": [
-     "USB position unknown"
-    ]
+    "verdict": "fits",
+    "reasons": []
    }
   },
   {
@@ -10368,17 +10591,17 @@
    "esc_centre_own": null,
    "mount_holes": "gh60",
    "usb": {
-    "centre_x": 18.3,
+    "centre_x": 18.2,
     "frame": "gh60",
-    "centre_x_own": 18.3,
-    "normalised": "as given (board assumed GH60-size)",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through Esc centre",
     "edge": "back",
-    "side": null,
-    "part": "USB-C (2 slotted shield pads visible)",
+    "side": "bottom",
+    "part": "USB-C",
     "body_height": null,
-    "daughterboard": false,
+    "daughterboard": true,
     "status": "photo-scaled",
-    "source": "https://img.alicdn.com/imgextra/i2/2849689564/O1CN01uhNjW42KWN4z2TYzV_!!2849689564.png (2250px top-view render). Scale/offset fitted on GH60 holes H1/H4 (x=324,1924 px -> 25.199/260.05 mm => 6.813 px/mm, x0=152.3 px; y0 from H1 y=998 px -> 807.9 px). USB slotted pads at x=248/306 px -> centre X 18.30 mm (±0.5). Back edge line at y≈810 px -> 0.3 mm (consistent). Other holes in render: (128.24,47.28) and (190.18,85.44) vs GH60 (128.2,47.0),(190.499,85.201) -> within 0.3 mm. Consistent with the hineybush h60 render (hiney-h60, 18.1 +-0.3). Side not visible; [INFERENCE] bottom like the h60."
+    "source": "hiney-h60-solder/front-blackred.png top view (2250 px, 6.81 px/mm): 67 switch holes affine res 0.22; Esc 9.14,9.20; USB-C shell slot rings X 13.92/22.51 -> 18.22 (slot centroids 18.18) +-0.3 mm"
    },
    "battery": null,
    "bottom_parts": null,
@@ -10392,10 +10615,11 @@
     "https://world.taobao.com/item/VHRuL2dIazVnQjN6dEZlZ3ZWd2dudz09.htm",
     "https://www.jadeship.com/item/taobao/979613649655",
     "https://img.alicdn.com/imgextra/i2/2849689564/O1CN01uhNjW42KWN4z2TYzV_!!2849689564.png",
-    "https://www.bilibili.com/video/BV1xeNB6wEJo"
+    "https://www.bilibili.com/video/BV1xeNB6wEJo",
+    "https://item.taobao.com/item.htm?id=800581973894"
    ],
    "confidence": "USB X +-0.5 from the vendor render, holes match GH60 within 0.3 mm; several V3 owner builds",
-   "notes": "[CommercialAsia] New USB-C version ships without the JST connector. VIA json supplied by the owner (H60.json). | Price ~¥55 (jadeship). A 'Hiney H60 焊接PCB 兼容Rule60 v3 ORING GH60 PTG6095' solder listing also exists (mobile-phone.taobao.com/detail/MlZ4d1Y2aERpRWlmNHoxdHpxU0lidz09.html, title only).",
+   "notes": "[CommercialAsia] New USB-C version ships without the JST connector. VIA json supplied by the owner (H60.json). | Price ~¥55 (jadeship). A 'Hiney H60 焊接PCB 兼容Rule60 v3 ORING GH60 PTG6095' solder listing also exists (mobile-phone.taobao.com/detail/MlZ4d1Y2aERpRWlmNHoxdHpxU0lidz09.html, title only). | [PhotoScale, Taobao] USB 18.2 (photo-scaled): hiney-h60-solder/front-blackred.png top view (2250 px, 6.81 px/mm): 67 switch holes affine res 0.22; Esc 9.14,9.20; USB-C shell slot rings X 13.92/22.51 -> 18.22 (slot centroids 18.18) +-0.3 mm; outline {\"width\": 283.2, \"depth\": 94.1, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"X 1.0..284.2, Y 0.34..94.43 (+-0.3); Hiney O-ring notches\"}; Variants: blue / black-red, onboard USB-C or 分离端子 (ai03 daughterboard included). 1.6 mm. Compatible: Hiney H60 / Rule60 V3 / ORING GH60 / PTG6095; QMK/VIA. No battery.",
    "rule60_reports": [
     {
      "source": "https://blog.naver.com/keun17xm/223915870747",
@@ -10429,7 +10653,8 @@
     }
    ],
    "surveyed_by": [
-    "CommercialAsia"
+    "CommercialAsia",
+    "PhotoScale (Aside Taobao capture)"
    ],
    "fit": {
     "verdict": "fits",
@@ -11314,10 +11539,11 @@
     "https://www.bilibili.com/video/BV1h19NBvEgf",
     "https://www.aliexpress.com/item/1005007951799865.html",
     "https://product.hstatic.net/200000538213/product/z5779271860197_8aa939b53adf44bd520c3fc97219d234_0b8aeb4a8d7c43888d6b18a4b84d1952.jpg",
-    "https://product.hstatic.net/200000538213/product/z5779271845790_d304d515960812d89fb45de31098bd13_baac5048dfef4614ba19e440b2df6720.jpg"
+    "https://product.hstatic.net/200000538213/product/z5779271845790_d304d515960812d89fb45de31098bd13_baac5048dfef4614ba19e440b2df6720.jpg",
+    "https://item.taobao.com/item.htm?id=983989317416"
    ],
    "confidence": "USB +-1 mm from two perspective photos; battery connector +-5 mm; tri-mode + 3000 mAh from vendors",
-   "notes": "[CommercialAsia] TKS: '1.6mm Noncut, 3 Modes kèm pin 3000mah, Hotswap, jack for underglow mod, PCB-mount stab support, VIA'. Manual: power switch is SMD on the back (bottom side) next to left Shift on the left frame; BLE names '6095ble-1..3'; 2.4G receiver pairing via Fn+V. Photo: large 64-pin QFP MCU near the right end of the back row (top-view frame), CON1 at the left edge ≈ y 31 mm (connector_pcb from photo, ±5 mm). Radio chip not identified. Taobao 火星之钥X键客良品 Rule60v3 tri-mode kit review shows SKU '电池：3000毫安时电池'. | thekeebs.store: '1.6mm Noncut - 3 Modes kèm pin 3000mah - Hotswap - Có sẵn jack cắm để mod thêm led gầm - Hỗ trợ PCB Mount Stab' (1.6 mm no-cut, 3 modes with 3000 mAh battery, underglow jack, PCB-mount stabs). Keebox Rule60 V3 AliExpress 1005007951799865 (search snippet): '6095 three-mode kit no light: 1.6mm PCB, supports three-mode connection'. | Battery: 3000 mAh per thekeebs.store and a Taobao review SKU; Rule60 V3 bay 140 x 45 x 4.5 mm (maker, zFrontier daWn5PAnGgxG).",
+   "notes": "[CommercialAsia] TKS: '1.6mm Noncut, 3 Modes kèm pin 3000mah, Hotswap, jack for underglow mod, PCB-mount stab support, VIA'. Manual: power switch is SMD on the back (bottom side) next to left Shift on the left frame; BLE names '6095ble-1..3'; 2.4G receiver pairing via Fn+V. Photo: large 64-pin QFP MCU near the right end of the back row (top-view frame), CON1 at the left edge ≈ y 31 mm (connector_pcb from photo, ±5 mm). Radio chip not identified. Taobao 火星之钥X键客良品 Rule60v3 tri-mode kit review shows SKU '电池：3000毫安时电池'. | thekeebs.store: '1.6mm Noncut - 3 Modes kèm pin 3000mah - Hotswap - Có sẵn jack cắm để mod thêm led gầm - Hỗ trợ PCB Mount Stab' (1.6 mm no-cut, 3 modes with 3000 mAh battery, underglow jack, PCB-mount stabs). Keebox Rule60 V3 AliExpress 1005007951799865 (search snippet): '6095 three-mode kit no light: 1.6mm PCB, supports three-mode connection'. | Battery: 3000 mAh per thekeebs.store and a Taobao review SKU; Rule60 V3 bay 140 x 45 x 4.5 mm (maker, zFrontier daWn5PAnGgxG). | [PhotoScale, Taobao] USB None (None): ; outline {\"width\": null, \"depth\": null, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"text only: 1.2 mm (kit SKU 内胆：6095三模1.2mm内胆)\"}; Kit listing SKUs: 6095三模1.2mm内胆 / PTG64单模RGB内胆 / 7U空格三模RGB内胆; kits WK配列单模RGB灯, WK配列三模无灯. Its 5 images are a case render, assembled boards, an empty shell and plates; none shows a bare PCB, so no USB centre or outline is possible from this capture.",
    "rule60_reports": [
     {
      "source": "https://www.bilibili.com/video/BV15ypn6VEJS",
@@ -11361,7 +11587,8 @@
     }
    ],
    "surveyed_by": [
-    "CommercialAsia"
+    "CommercialAsia",
+    "PhotoScale (Aside Taobao capture)"
    ],
    "fit": {
     "verdict": "fits",
