@@ -59,10 +59,13 @@ Readings not used:
 | Front strike distance from the inner front wall | 4.26 | **Not measured**: centred between the front wall and the plate edge |
 | Silicone gasket cap | 8.3 × 5.5 × 4.5 free; 8.2 × 4.0 compressed footprint | Rectified underside photo, 28 px/mm ([annotated](analysis/underside-photo-annotated.jpg)) |
 
-The plate outline and tab positions come from the `6095(gas)` drawing in
-`rule60-v3.dwg` of [minjunkim0205/Hobby-CustomKeyboard @ ecf3575](https://github.com/minjunkim0205/Hobby-CustomKeyboard/tree/ecf3575e9fb844d32f57b42ce6f7f23f30294396/keyboards/housings/Rule60)
+The plate outline and tab positions come from the `6095(gas)` drawing in INKC
+STUDIO's `rule60-v3.dwg`, obtained from [minjunkim0205/Hobby-CustomKeyboard @ ecf3575](https://github.com/minjunkim0205/Hobby-CustomKeyboard/tree/ecf3575e9fb844d32f57b42ce6f7f23f30294396/keyboards/housings/Rule60)
 (file hashes in [dwg-source-manifest.json](analysis/dwg-source-manifest.json)).
-The drawing is not redistributed.
+The drawing is redistributed in [third_party/inkc-rule60-v3](../../third_party/inkc-rule60-v3/README.md);
+[spec/rule60-v3-outlines.json](../../spec/rule60-v3-outlines.json) holds the
+outlines extracted from it, and [spec/rule60-v3.json](../../spec/rule60-v3.json)
+the values on this page in machine-readable form.
 
 ## Photos
 
@@ -103,6 +106,7 @@ strikes are nearly symmetric, so it could not reveal the v6.2 mirror image.
 | File | Content |
 | --- | --- |
 | [../topcase-verification.json](../topcase-verification.json) | `verify_topcase.py` output on the exported halves |
+| [../topcase-verification-usb-universal.json](../topcase-verification-usb-universal.json) | Same checks on the `--board universal` build (14.8 mm USB-C notch, only the right half differs) |
 | [../topcase-report.json](../topcase-report.json) | Build report: Z stack, pocket outlines, back seam, dovetails, USB-C notch |
 | [checks/as-printed-check.json](checks/as-printed-check.json) | v7.4: same checks on both halves rebuilt at the printed layer heights, plan clearances to the stock parts, slicer estimates. One finding: the wedge-key tip bears after ~0.15 mm of its 0.20 mm vertical glue line. v7.5–v7.7 changed only the wrist-rest bumpon pads and the USB-C notch position, away from every joint. |
 | [checks/seams-v7.4.png](checks/seams-v7.4.png) | Split line, back-seam plan at the BL strike, and sections through the 3 dovetails and the wedge key (unchanged since v7.4) |

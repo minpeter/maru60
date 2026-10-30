@@ -188,7 +188,8 @@ printing:
 | File | Use |
 | --- | --- |
 | [Left half — 3MF](models/rule60-hhkb-topcase-left.3mf) | 206 × 197 mm print, ~78 g |
-| [Right half — 3MF](models/rule60-hhkb-topcase-right.3mf) | 149 × 197 mm print, ~67 g |
+| [Right half — 3MF](models/rule60-hhkb-topcase-right.3mf) | 149 × 197 mm print, ~67 g; USB-C notch for the owner's 6095 wireless board |
+| [Right half, universal USB-C — 3MF](models/rule60-hhkb-topcase-right-usb-universal.3mf) | Same, with a 14.8 mm notch covering every USB-C position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
 | [Fit coupons — 3MF](models/rule60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
 | [CAD — STEP](models/rule60-hhkb-topcase.step) | Both halves, for remixing |
 
@@ -231,25 +232,58 @@ moves the USB-C notch, same volume): left 4 h 25 min / 78 g, right
 3 h 57 min / 67 g; coupons (unchanged since v7.4) 1 h 47 min / 33 g. The CLI
 slice reported ZFiller diagnostics.
 
+### Interface spec and PCB boards
+
+Every value a compatible part has to match lives in [`spec/`](spec), with its
+status (caliper, photo, fit, drawing, datasheet, derived, assumed) and source:
+
+- [`spec/rule60-v3.json`](spec/rule60-v3.json): stock top case, plate tabs,
+  gasket caps, ball-catch strikes, keycap gauge, battery bay, bumpons.
+- [`spec/rule60-v3-outlines.json`](spec/rule60-v3-outlines.json): plate
+  outlines, the 8 top-mount holes, the battery-bay filler and the back
+  decoration plate, extracted from INKC STUDIO's
+  [`rule60-v3.dwg`](third_party/inkc-rule60-v3/README.md), which is
+  redistributed here with its provenance.
+- [`spec/boards.json`](spec/boards.json): GH60 reference geometry (285.0 ×
+  94.6 mm, holes, USB) and GH60-class boards. A GH60-grid PCB maps into the
+  plate frame as `X_plate = X_pcb + 0.4525`, `Y_plate = 101.068 − Y_pcb`.
+
+`build_topcase_draft.py` and `verify_topcase.py` read these files. The PCB's
+USB-C position sets the notch, chosen with `--board`:
+
+| `--board` | Notch centre, plate X | Basis |
+| --- | --- | --- |
+| `6095-wireless-owner` (default, published files) | 17.35 | Fit on the owner's v7.4 print |
+| `rule60-kit-6095` | 19.35 | Stock notch, assumed centred on the kit PCB |
+| `gh60` | 18.65 | GH60 rev C KiCad, 18.2 mm from the PCB edge |
+| `co60` | 18.68 | CO60 KiCad |
+| `lost60-v3` | 19.23 | LOST60 V3 Eagle |
+| `venom-60he` | 18.55 (±0.5) | Scaled from the vendor render |
+| `universal` | 18.35, 14.8 mm wide | Spans every board above with the stock clearance |
+
+PTG64, AE61 PRO, DZ60 and wish60 BLE publish no USB-C position; use
+`universal` or add the board. Only the right half changes between boards.
+
 ### Reproduce
 
 The build drives the SolidCraft v0.22.0 headless CLI
-(`~/.local/bin/solidcraft-cli`), which is not included. The checks need the
-`6095(gas)` plate outline from `rule60-v3.dwg` in
-[minjunkim0205/Hobby-CustomKeyboard](https://github.com/minjunkim0205/Hobby-CustomKeyboard/tree/ecf3575e9fb844d32f57b42ce6f7f23f30294396/keyboards/housings/Rule60),
-converted to JSON with [`@mlightcad/libredwg-web`](https://www.npmjs.com/package/@mlightcad/libredwg-web);
-the drawing is not redistributed here.
+(`~/.local/bin/solidcraft-cli`), which is not included.
 
 ```sh
-uv run build_topcase_draft.py
-RULE60_DWG_JSON=/path/to/rule60-v3.json uv run verify_topcase.py
+uv run build_topcase_draft.py [--board BOARD]
+uv run verify_topcase.py
 blender -b -P render_topcase_draft.py   # optional renders
 uv run export_topcase.py
 ```
 
 Outputs go to the ignored `topcase-draft/`; `export_topcase.py` copies the
 downloads, STEP, [report](evidence/topcase-report.json),
-[verification](evidence/topcase-verification.json) and renders.
+[verification](evidence/topcase-verification.json) and renders; a build for
+another `--board` exports only its right half,
+`models/rule60-hhkb-topcase-right-usb-<board>.3mf`. To
+re-extract the outlines from the drawing, see
+[third_party/inkc-rule60-v3](third_party/inkc-rule60-v3/README.md) (needs
+[Bun](https://bun.sh)).
 
 ### Measurements and evidence
 
@@ -263,7 +297,7 @@ images and the check outputs, including the as-printed re-check.
 The verification checks closed single-shell exports, a 91-step insertion
 path with contact only on the compression ribs, 0 mm side faces and 0.20 mm
 glue lines, the back-seam strike screws, layer islands and flat overhangs, and
-virtual stock parts: the DWG plate through 0.25 mm upward flex, 12 caps,
+virtual stock parts: the INKC plate through 0.25 mm upward flex, 12 caps,
 four strikes, 60 HHKB keycaps through full travel and the stock bottom-case
 pocket, the USB-C notch side, width and depth, and an Ø13.2 mm bumpon
 (3M Bumpon SJ5012 at its +0.5 mm tolerance) fitting each of the eight wrist-rest pockets
@@ -290,6 +324,10 @@ Third-party tools retain their own licenses. No affiliation with keyboard or
 printer manufacturers is implied. The Rule 60 V3 is designed by INKC STUDIO;
 the top case is an independent re-creation from measurements of the owner's
 stock part and is not an official file.
+[`third_party/inkc-rule60-v3/rule60-v3.dwg`](third_party/inkc-rule60-v3/README.md)
+is INKC STUDIO's plate drawing, redistributed on the creator's statement that
+the plate drawings are open source; it is not covered by this repository's
+CC BY 4.0 license.
 
 Early experiments took inspiration from [Shanhj's palm rest](https://makerworld.com/en/models/1326999).
 The final v9 generator constructs its geometry in code and embeds neither

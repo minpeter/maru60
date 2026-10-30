@@ -1,0 +1,106 @@
+{
+  "format": "rule60-boards/1",
+  "about": "GH60-class PCBs for the Rule 60 V3 housing. Only the USB-C centre feeds the build so far (top-case notch); the rest is recorded for the bottom case. null = not published / not found. USB centres are given in the frame they were found in: 'pcb' from design files, 'plate' from fits against a case.",
+  "frames": {
+    "pcb": "PCB top view, origin at the back-left corner (Esc side, USB edge), X right, Y toward the front, mm",
+    "pcb_to_plate": {
+      "dx": 0.4525,
+      "y0": 101.06775,
+      "rule": "X_plate = X_pcb + dx, Y_plate = y0 - Y_pcb",
+      "derivation": "GH60 Esc switch centre at PCB (9.1475, 9.19875) (komar007/gh60 rev C) onto the INKC plate Esc cutout centre (9.600, 91.869) (spec/rule60-v3-outlines.json). The 285.0 x 94.6 PCB then sits 0.45 mm inside the plate at each side, 5.45 front and 5.40 back."
+    }
+  },
+  "gh60": {
+    "source": "https://github.com/komar007/gh60 keyboard.kicad_pcb rev C (Edge.Cuts, hole modules, usb:67503, dimension objects)",
+    "outline": {"width": 285.0, "depth": 94.6, "corner_r": 2.0, "thickness": 1.6},
+    "esc_switch_centre": [9.1475, 9.19875],
+    "mount_holes": [
+      {"id": "H1", "c": [25.199, 27.901], "drill": 2.5},
+      {"id": "H2", "c": [128.2, 47.0], "drill": [5.0, 2.5]},
+      {"id": "H3", "c": [190.499, 85.201], "drill": [5.0, 2.5]},
+      {"id": "H4", "c": [260.05, 27.901], "drill": [5.0, 2.5]},
+      {"id": "SL", "c": [1.459, 56.501], "drill": [7.0, 2.5]},
+      {"id": "SR", "c": [283.541, 56.501], "drill": [7.0, 2.5]}
+    ],
+    "usb_centre_x": 18.2,
+    "usb_side": "back edge, connector on the PCB bottom side",
+    "plate_top_above_pcb": 5.0,
+    "plate_top_above_pcb_source": "Cherry MX plate-mount drawing value (not re-checked here)"
+  },
+  "default": "6095-wireless-owner",
+  "boards": [
+    {
+      "id": "6095-wireless-owner",
+      "name": "\"6095\" tri-mode wireless PCB (owner's board; vendor not identified)",
+      "usb": {"centre_x": 17.35, "frame": "plate", "status": "fit", "source": "v7.4 print: the connector sat ~2 mm toward the keyboard centre of the stock-position notch (owner, 2026-10-31); v7.7 moved the notch 2 mm outward"},
+      "battery": null,
+      "sources": []
+    },
+    {
+      "id": "rule60-kit-6095",
+      "name": "Rule 60 V3 kit PCB 6095 单模无光 (wired, no RGB; reportedly Y&R 6095)",
+      "usb": {"centre_x": 19.35, "frame": "plate", "status": "inferred", "source": "centre of the stock top-case notch (photo overlay), assumed centred on the kit PCB connector"},
+      "battery": "none (wired)",
+      "sources": ["https://www.zfrontier.com/app/flow/GJ7JjlX8qwxY", "https://www.zfrontier.com/app/flow/daWn5PAnGgxG"]
+    },
+    {
+      "id": "gh60",
+      "name": "GH60 rev C (komar007), mini-B",
+      "usb": {"centre_x": 18.2, "frame": "pcb", "status": "design", "source": "keyboard.kicad_pcb J1 usb:67503, dimensioned 7.0 from H1"},
+      "battery": "none",
+      "sources": ["https://github.com/komar007/gh60"]
+    },
+    {
+      "id": "co60",
+      "name": "CO60 (jmdaly)",
+      "usb": {"centre_x": 18.226, "frame": "pcb", "status": "design", "source": "co60.kicad_pcb, HRO TYPE-C-31-M-12 on the bottom side"},
+      "battery": "none",
+      "sources": ["https://github.com/jmdaly/CO60"]
+    },
+    {
+      "id": "lost60-v3",
+      "name": "LOST60 V3 (coyt, Bluetooth, BMD-340)",
+      "usb": {"centre_x": 18.78, "frame": "pcb", "status": "design", "source": "lost60V3.brd, JAE DX07S024JJ2 on the bottom side"},
+      "battery": "2x Molex PicoBlade 53261-02 at the left edge, PCB (4.58, 23.83) and (4.58, 71.40); cell size not specified",
+      "sources": ["https://github.com/coyt/LOST60HARDWARE"]
+    },
+    {
+      "id": "venom-60he",
+      "name": "GEONWORKS Venom 60 HE (6.25U / 7U)",
+      "usb": {"centre_x": 18.1, "frame": "pcb", "status": "inferred", "source": "scaled from the vendor render (+-0.5 mm); USB-C on a breakaway tab, daughterboard + JST cable included"},
+      "battery": "none (wired)",
+      "notes": "HE: the creator recommends top mount. 8 x M2 plate screws, positions in the community Rule60 Venom HE plate drawing",
+      "sources": ["https://geon.works/products/venom-60-he"]
+    },
+    {
+      "id": "ptg64-rgb",
+      "name": "PTG64 单模RGB (Rule 60 V3 kit option)",
+      "usb": null,
+      "battery": "none (wired)",
+      "sources": ["https://www.zfrontier.com/app/flow/daWn5PAnGgxG"]
+    },
+    {
+      "id": "ae61-pro",
+      "name": "Everglide AE61 PRO / AE64 PRO (HE)",
+      "usb": null,
+      "battery": "none (wired)",
+      "notes": "vendor states GH60 compatible; 10 x M2 plate screws in the community Rule60 AE61 PRO plate drawing",
+      "sources": ["https://neomacro.in/products/everglide-ae61-ae64-hall-effect-pcb"]
+    },
+    {
+      "id": "dz60",
+      "name": "KBDfans / DZtech DZ60, DZ60RGB, DZ60RGB-WKL",
+      "usb": null,
+      "battery": "none",
+      "sources": ["https://github.com/qmk/qmk_firmware/tree/master/keyboards/dz60", "https://github.com/qmk/qmk_firmware/tree/master/keyboards/dztech/dz60rgb_wkl"]
+    },
+    {
+      "id": "wish60-ble",
+      "name": "wish60 BLE",
+      "usb": null,
+      "battery": null,
+      "notes": "builders report the USB port off-centre in the Rule 60 V3; no dimensions found",
+      "sources": []
+    }
+  ]
+}

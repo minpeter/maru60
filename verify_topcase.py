@@ -13,11 +13,11 @@ Verifies exported CAD files (not in-memory construction) across 6 independent su
   5. 0.20 mm FDM Layer-Slice Connectivity (both halves + all fit-test coupons): zero floating / unsupported islands and
      no unsupported flat overhang wider than 2.0 mm across all layers.
   6. 3D Virtual Rule60 V3 Hardware Mating Gauges:
-       - Real DWG `6095(gas)` 1.50 mm PC plate through full +/-0.55 mm gasket travel
-       - All 12 Silicone End-Caps (`8.3 x 4.0 x 3.9 mm` compressed) seated in 6 open rounded cap pockets cut straight from
+       - INKC `6095(gas)` 1.50 mm PC plate (spec/rule60-v3-outlines.json) through full +/-0.55 mm gasket travel
+       - All 12 Silicone End-Caps (compressed size from spec/rule60-v3.json) seated in 6 open rounded cap pockets cut straight from
          the floor: walls on the skirt side and both ends up to the floor, no wall toward the plate; plate relief at the
          cap-pocket level
-       - All 4 Stock Metal Ball-Catch Strike Plates (`20.5 x 6.55 x 1.45 mm` + `3.55 mm` tongue)
+       - All 4 Stock Metal Ball-Catch Strike Plates and their tongues (spec/rule60-v3.json)
        - Full 60-Key HHKB Cherry/OEM Keycap Array + >= 0.35 mm perimeter clearance
        - Stock base pocket: empty from the 9.69 mm floor to the skirt lip inside the skirt (bottom-case seat); the frame
          at the 9.69 mm floor (IMG_0334) outside the declared cuts
@@ -27,12 +27,11 @@ Verifies exported CAD files (not in-memory construction) across 6 independent su
   Z levels come from `draft-report.json` (`calibrated_z_stack_mm`), written by the build.
 
 Usage:
-    RULE60_DWG_JSON=/path/to/rule60-v3.json uv run verify_topcase.py
+    uv run verify_topcase.py
 """
 from __future__ import annotations
 
 import json
-import os
 import math
 from pathlib import Path
 
@@ -45,10 +44,9 @@ from shapely.ops import polylabel, unary_union
 from shapely.geometry import MultiLineString
 import trimesh
 
+import rule60_spec as spec
+
 ROOT = Path(__file__).resolve().parent / "topcase-draft"
-# `rule60-v3.dwg` (minjunkim0205/Hobby-CustomKeyboard @ ecf3575, keyboards/housings/Rule60) converted to JSON with
-# @mlightcad/libredwg-web; not redistributed here. Point RULE60_DWG_JSON at the converted file.
-DWG_JSON = Path(os.environ.get("RULE60_DWG_JSON", ""))
 
 REPORT = json.loads((ROOT / "draft-report.json").read_text())
 GEOM = REPORT["geometry_mm"]
@@ -79,51 +77,10 @@ def to_manifold(tm: trimesh.Trimesh) -> md.Manifold:
     return mf
 
 
-def bulge_arc(p0: tuple[float, float], p1: tuple[float, float], bulge: float, steps: int = 12) -> list[tuple[float, float]]:
-    if abs(bulge) < 1e-7:
-        return [p0, p1]
-    theta = 4.0 * math.atan(bulge)
-    dx, dy = p1[0] - p0[0], p1[1] - p0[1]
-    chord = math.hypot(dx, dy)
-    r = chord / (2.0 * abs(math.sin(theta / 2.0)))
-    mx, my = 0.5 * (p0[0] + p1[0]), 0.5 * (p0[1] + p1[1])
-    nx, ny = -dy / chord, dx / chord
-    d = r * math.cos(theta / 2.0)
-    if bulge < 0:
-        nx, ny = -nx, -ny
-    cx, cy = mx + nx * d, my + ny * d
-    a0 = math.atan2(p0[1] - cy, p0[0] - cx)
-    return [(cx + r * math.cos(a0 + theta * t / steps), cy + r * math.sin(a0 + theta * t / steps)) for t in range(steps + 1)]
-
-
-def load_dwg_plate_poly_world(target_w: float, target_h: float, y_shift_to_top: float) -> np.ndarray:
-    """Extract exact outer LWPOLYLINE of `6095(gas)` or `6095(top)` from rule60-v3.json."""
-    if not DWG_JSON.is_file():
-        raise FileNotFoundError(f"Set RULE60_DWG_JSON to the libredwg-web JSON of rule60-v3.dwg (got {str(DWG_JSON)!r})")
-    data = json.loads(DWG_JSON.read_text())
-    ents = data.get("entities") or data.get("database", {}).get("entities", [])
-    best = None
-    for e in ents:
-        vs = e.get("vertices", [])
-        if len(vs) >= 70:
-            xs = [v["x"] for v in vs]
-            ys = [v["y"] for v in vs]
-            w, h = max(xs) - min(xs), max(ys) - min(ys)
-            if abs(w - target_w) < 0.2 and abs(h - target_h) < 0.2 and min(xs) > 4500:
-                best = (vs, min(xs), min(ys))
-                break
-    assert best is not None, f"Could not find DWG plate {target_w}x{target_h}"
-    vs, x0, y0 = best
-    pts: list[tuple[float, float]] = []
-    for k in range(len(vs)):
-        v0, v1 = vs[k], vs[(k + 1) % len(vs)]
-        seg = bulge_arc((v0["x"], v0["y"]), (v1["x"], v1["y"]), float(v0.get("bulge", 0.0)))
-        pts.extend(seg[:-1])
-    arr = np.asarray(pts, dtype=np.float64)
-    world = np.column_stack([PW_SX * (arr[:, 0] - x0 + DX_PW), arr[:, 1] - y0 + y_shift_to_top + DY_PW])
-    if not sg.LinearRing(world).is_ccw:
-        world = world[::-1]
-    return world
+def plate_gas_world() -> np.ndarray:
+    """INKC `6095(gas)` plate outline (spec/rule60-v3-outlines.json) in the print frame, counter-clockwise."""
+    world = np.asarray([pw(x, y) for x, y in spec.outline_points("plate_gas")], dtype=np.float64)
+    return world if sg.LinearRing(world).is_ccw else world[::-1]
 
 
 def main() -> None:
@@ -336,28 +293,25 @@ def main() -> None:
     def material_at(z: float) -> sg.base.BaseGeometry:
         return slice_material(full_case_mf, z)
 
-    # 6a. Real DWG `6095(gas)` 1.50 mm PC Plate + 12 Silicone End-Caps (`8.3 x 4.0 x 3.9 mm` compressed):
+    # 6a. INKC `6095(gas)` PC Plate + 12 Silicone End-Caps (compressed, spec/rule60-v3.json):
     #     The compressed cap top sits on the trough floor `z_gasket`, the plate top at `z_plate`.
     #     Check BOTH seated AND `0.25 mm` upward flex.
-    gas_world = load_dwg_plate_poly_world(285.90, 105.45, y_shift_to_top=1.018)
-    pc_plate_mf = md.CrossSection([np.asarray(gas_world, dtype=np.float64)]).extrude(1.50)
+    gas_world = plate_gas_world()
+    pc_plate_mf = md.CrossSection([gas_world]).extrude(spec.value("plate.thickness"))
 
+    cap_l, cap_w = spec.value("gasket.cap_footprint")
+    cap_h, cap_inset = spec.value("gasket.cap_height_compressed"), spec.value("gasket.cap_inset")
     caps_mf = md.Manifold()
-    for y_wing_mid, tabs_p in [
-        (2.55,   [(17.52, 58.52), (122.51, 163.51), (227.50, 268.50)]),
-        (105.00, [(27.52, 68.52), (122.51, 163.51), (227.50, 268.50)]),
-    ]:
+    for y_wing_mid, tabs_p in zip(spec.value("plate.tab_mid_y"), (spec.value("plate.front_tabs_x"), spec.value("plate.back_tabs_x"))):
         for xLp, xRp in tabs_p:
-            for cx_p in (xLp + 3.2, xRp - 3.2):
-                caps_mf += md.Manifold.cube([8.2, 4.0, 3.90], center=True).translate(
-                    [*pw(cx_p, y_wing_mid), 0.0]
-                )
+            for cx_p in (xLp + cap_inset, xRp - cap_inset):
+                caps_mf += md.Manifold.cube([cap_l, cap_w, cap_h], center=True).translate([*pw(cx_p, y_wing_mid), 0.0])
 
     plate_seated_ov = float((pc_plate_mf.translate([0, 0, z_plate]) ^ full_case_mf).volume())
     plate_upflex_ov = float((pc_plate_mf.translate([0, 0, z_plate - 0.25]) ^ full_case_mf).volume())
-    caps_seated_ov = float((caps_mf.translate([0, 0, z_gasket + 0.01 + 1.95]) ^ full_case_mf).volume())
+    caps_seated_ov = float((caps_mf.translate([0, 0, z_gasket + 0.01 + cap_h / 2]) ^ full_case_mf).volume())
     # Verify positive Z-support: moving caps 0.25 mm further into the trough floor MUST contact all 6 trough floors!
-    caps_floor_contact = float((caps_mf.translate([0, 0, z_gasket - 0.25 + 1.95]) ^ full_case_mf).volume())
+    caps_floor_contact = float((caps_mf.translate([0, 0, z_gasket - 0.25 + cap_h / 2]) ^ full_case_mf).volume())
 
     assert plate_seated_ov < 0.01, f"PC plate collides at seated height Z_p={z_plate}: {plate_seated_ov} mm^3"
     assert plate_upflex_ov < 0.01, f"PC plate collides during 0.25mm upward gasket flex: {plate_upflex_ov} mm^3"
@@ -378,30 +332,25 @@ def main() -> None:
     orange_overlap = float((orange_mf.extrude(z_floor - z_gasket + 0.3).translate([0, 0, z_gasket + 0.01]) ^ full_case_mf).volume())
     assert orange_overlap < 0.01, f"Material left inside the {z_gasket} mm cap-pocket/relief cut: {orange_overlap} mm^3"
 
-    # 6c. 4 Stock Metal Ball-Catch Strike Plates (`20.5 x 6.55 x 1.45 mm`, width from the f = 1485 px two-view fit,
-    #     + `3.55 x 5.4 x 5.7 mm` tongue):
+    # 6c. 4 Stock Metal Ball-Catch Strike Plates and their tongues (spec/rule60-v3.json, two-view photo fit):
+    strike = spec.value("ball_catch.strike_plate")
+    tongue_x, tongue_y, tongue_z = spec.value("ball_catch.strike_tongue")
     strikes_mf = md.Manifold()
     tongue_plate_gap: list[float] = []
     for sx_w, sy_w in strikes_w:
-        tongue_plate_gap.append(round(sg.box(sx_w - 1.775, sy_w - 2.7, sx_w + 1.775, sy_w + 2.7).distance(sg.Polygon(gas_world)), 3))
-        strikes_mf += md.Manifold.cube([20.5, 6.55, 1.45], center=True).translate([sx_w, sy_w, z_strike + 0.01 + 0.725])
-        strikes_mf += md.Manifold.cube([3.55, 5.4, 5.70], center=True).translate([sx_w, sy_w, z_strike + 0.01 + 1.45 + 2.85])
+        tongue = sg.box(sx_w - tongue_x / 2, sy_w - tongue_y / 2, sx_w + tongue_x / 2, sy_w + tongue_y / 2)
+        tongue_plate_gap.append(round(tongue.distance(sg.Polygon(gas_world)), 3))
+        strikes_mf += md.Manifold.cube([strike["length"], strike["width"], strike["thickness"]], center=True).translate(
+            [sx_w, sy_w, z_strike + 0.01 + strike["thickness"] / 2])
+        strikes_mf += md.Manifold.cube([tongue_x, tongue_y, tongue_z], center=True).translate(
+            [sx_w, sy_w, z_strike + 0.01 + strike["thickness"] + tongue_z / 2])
     strikes_ov = float((strikes_mf ^ full_case_mf).volume())
     assert strikes_ov < 0.01, f"Metal ball-catch strike plate collision: {strikes_ov} mm^3"
     # The strike tongue rises through the gasket-plate level: keep it clear of the plate edge in plan.
     assert min(tongue_plate_gap) >= 0.4, f"Strike tongue too close to the gasket plate: {tongue_plate_gap} mm"
 
-    # 6d. Full 60-Key HHKB Cherry/OEM Keycap Array + +0.18 mm Extra Clearance Margin through 10 mm Stroke:
-    kc_poly_p = sg.Polygon([
-        (0.475, 25.594),
-        (29.050, 25.594),
-        (29.050, 6.544),
-        (256.850, 6.544),
-        (256.850, 25.594),
-        (285.425, 25.594),
-        (285.425, 100.994),
-        (0.475, 100.994),
-    ]).buffer(0.18, join_style="mitre")
+    # 6d. Full 60-Key HHKB Cherry/OEM Keycap Array (spec/rule60-v3.json) + 0.18 mm Extra Clearance through 10 mm Stroke:
+    kc_poly_p = sg.Polygon(spec.value("keycaps.hhkb_gauge")).buffer(0.18, join_style="mitre")
     kc_pts_w = np.column_stack([
         PW_SX * (np.asarray(kc_poly_p.exterior.coords[:-1])[:, 0] + DX_PW),
         np.asarray(kc_poly_p.exterior.coords[:-1])[:, 1] + DY_PW,

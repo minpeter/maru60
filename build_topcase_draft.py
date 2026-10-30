@@ -26,8 +26,11 @@ ball-catch pockets (IMG_0201..IMG_0222, 28 px/mm rectified):
     join the back seam. Each male part keeps its 45-deg print ramp and the female side fills under it, so every joint
     closes over all faces with a 0.20 mm glue line and nothing needs support.
 
+Interface values (stock top case, INKC plate, gasket caps, ball catches, bumpons) come from `spec/` via rule60_spec.py;
+`--board` picks the PCB whose USB-C position sets the notch (spec/boards.json, or `universal` for all known boards).
+
 Usage:
-    uv run build_topcase_draft.py
+    uv run build_topcase_draft.py [--board BOARD]
 """
 from __future__ import annotations
 
@@ -46,6 +49,8 @@ from shapely.ops import unary_union
 import shapely.geometry as sg
 import trimesh
 
+import rule60_spec as spec
+
 SOLIDCRAFT_CLI = Path.home() / ".local/bin/solidcraft-cli"
 OUT = Path(__file__).resolve().parent / "topcase-draft"
 OUT.mkdir(exist_ok=True)
@@ -57,11 +62,11 @@ OUT.mkdir(exist_ok=True)
 # Y = WRIST_D, and X mirrored: X_world = -(X_plate + DX_PW), Y_world = Y_plate + DY_PW. v6.2 and earlier skipped the
 # mirror and printed the mirror image (USB on the wrong side, back gasket pockets 10 mm off the tabs).
 # ---------------------------------------------------------------------------
-OPENING_P = (-0.45, 6.20, 286.35, 101.65)  # HHKB keycap opening bounds (plate frame); front edge = bottom-row middle
-BEZEL_SIDE, BEZEL_BACK, BEZEL_FRONT = 5.65, 10.90, 11.02  # Top-face bezel, outer edge to the opening (caliper)
-SKIRT_WALL = 2.85       # Skirt wall thickness, sides and back (caliper, flipped)
-FRONT_WALL = 2.80       # Skirt wall thickness, front (caliper, flipped)
-RIM_SEAT_W = 2.05       # Floor ledge (bottom-case rim seat) inside the skirt: short side 4.90 - 2.85 mm (caliper)
+OPENING_P = tuple(spec.value("top.keycap_opening_hhkb"))  # HHKB keycap opening bounds (plate frame); front edge = bottom-row middle
+BEZEL_SIDE, BEZEL_BACK, BEZEL_FRONT = (spec.value("top.bezel")[k] for k in ("side", "back", "front"))  # Top-face bezel
+SKIRT_WALL = spec.value("top.skirt_wall")["side_back"]  # Skirt wall thickness, sides and back (caliper, flipped)
+FRONT_WALL = spec.value("top.skirt_wall")["front"]      # Skirt wall thickness, front (caliper, flipped)
+RIM_SEAT_W = spec.value("top.rim_seat_w")  # Floor ledge (bottom-case rim seat) inside the skirt: short side 4.90 - 2.85 mm
 OUTER_P = (round(OPENING_P[0] - BEZEL_SIDE, 3), round(OPENING_P[1] - BEZEL_FRONT, 3),
            round(OPENING_P[2] + BEZEL_SIDE, 3), round(OPENING_P[3] + BEZEL_BACK, 3))  # (-6.10, -4.82, 292.00, 112.55)
 INNER_P = (round(OUTER_P[0] + SKIRT_WALL, 3), round(OUTER_P[1] + FRONT_WALL, 3),
@@ -80,25 +85,26 @@ def pw(xp: float, yp: float) -> tuple[float, float]:
     return round(PW_SX * (xp + DX_PW), 4), round(yp + DY_PW, 4)
 
 
-TILT_DEG = 6.0          # IC spec: 6.0 deg typing angle
-JUNC_H = 20.01          # Installed height of the top face at the Y=80 junction = stock top-case height (caliper 20.01 mm)
+TILT_DEG = spec.value("top.tilt_deg")  # IC spec: 6.0 deg typing angle
+JUNC_H = spec.value("top.height")      # Installed height of the top face at the Y=80 junction = stock top-case height
 
-SKIRT_H = 20.01         # Caliper-measured total stock top-case height (IMG_0333: 20.01 mm)
-Z_FLOOR = 9.69          # Base pocket floor: block pocketed 10.32 mm deep from the lip inside the skirt (caliper, IMG_0334)
-Z_GASKET = 6.30         # 6 silicone-cap pockets, 3.39 mm below the floor (caliper)
-Z_STRIKE = 5.55         # 4 ball-catch strike pockets, 4.14 mm below the floor (caliper, IMG_0337)
-FRONT_TABS_P = [(17.52, 58.52), (122.51, 163.51), (227.50, 268.50)]  # DWG `6095(gas)` front tab X spans (plate frame)
-BACK_TABS_P = [(27.52, 68.52), (122.51, 163.51), (227.50, 268.50)]   # DWG `6095(gas)` back tab X spans (plate frame)
-WING_MID_Y_P = (2.55, 105.00)  # Front / back cap centerline Y (plate frame), on DWG wings 1.07..4.07 / 103.42..106.42
-CAP_FOOT_L, CAP_FOOT_W = 8.20, 4.00  # Compressed silicone-cap footprint (X along the tab, Y across it)
-CAP_INSET = 3.20        # Cap center inset from each tab end (2 caps per 41.00 mm tab, 26.2 mm bare tab between)
+SKIRT_H = spec.value("top.height")    # Caliper-measured total stock top-case height (IMG_0333: 20.01 mm)
+Z_FLOOR = spec.value("top.bottom_seat_z")    # Base pocket floor: pocketed 10.32 mm deep from the lip inside the skirt
+Z_GASKET = spec.value("top.gasket_seat_z")   # 6 silicone-cap pockets, 3.39 mm below the floor (caliper)
+Z_STRIKE = spec.value("top.strike_floor_z")  # 4 ball-catch strike pockets, 4.14 mm below the floor (caliper, IMG_0337)
+FRONT_TABS_P = [tuple(t) for t in spec.value("plate.front_tabs_x")]  # DWG `6095(gas)` front tab X spans (plate frame)
+BACK_TABS_P = [tuple(t) for t in spec.value("plate.back_tabs_x")]    # DWG `6095(gas)` back tab X spans (plate frame)
+WING_MID_Y_P = tuple(spec.value("plate.tab_mid_y"))  # Front / back cap centerline Y (plate frame) on the DWG tabs
+CAP_FOOT_L, CAP_FOOT_W = spec.value("gasket.cap_footprint")  # Compressed silicone-cap footprint (X along the tab, Y across)
+CAP_INSET = spec.value("gasket.cap_inset")  # Cap center inset from each tab end (2 caps per 41.00 mm tab)
 CAP_CLEAR = 0.65        # Pocket room per side around the cap footprint for the compressed silicone to bulge
 CAP_POCKET_R = 1.80     # Pocket skirt-side corner radius; every cap footprint must stay >= 0.03 mm inside its pocket
-RELIEF_Y_P = (5.27, 102.22)  # Plate-body travel relief Y span (plate frame)
+PLATE_RELIEF_CLEAR = 0.30  # Plate-body travel relief past the DWG plate body, front and back
+RELIEF_Y_P = tuple(round(y + d, 2) for y, d in zip(spec.value("plate.body_y"), (-PLATE_RELIEF_CLEAR, PLATE_RELIEF_CLEAR)))
 RELIEF_X_P = (LEDGE_P[0], LEDGE_P[2])  # Relief X span: from the floor ledge, a 0.76 mm strip beside the opening (caliper)
 JUNCTION_R = 1.00       # Where a cap pocket end meets the relief edge
 RELIEF_CORNER_R = 0.50  # Relief outer corners (0.35 mm from the plate edge)
-CAP_TOP_COMPRESSED = 1.20  # Silicone cap top flange: 1.5 mm free, 0.30 mm preload (unmeasured)
+CAP_TOP_COMPRESSED = spec.value("gasket.top_flange_compressed")  # Silicone cap top flange: 1.5 free, 0.30 preload (assumed)
 Z_PLATE = round(Z_GASKET + CAP_TOP_COMPRESSED, 2)  # Seated gasket-plate top face (7.50 mm)
 Z_RELIEF = Z_GASKET     # Plate-body travel relief: same level as the cap pockets (owner), 1.20 mm plate travel
 KERNEL_WORKAROUND_W = (30.257, 87.070)  # Temporary bore site in the RightHalf front floor face (print frame), step 10b
@@ -106,8 +112,7 @@ KERNEL_WORKAROUND_W = (30.257, 87.070)  # Temporary bore site in the RightHalf f
 # fitted to IMG_0218/0222 (kept when the measured outline moves the wall). Front pair: the measured front bezel narrows
 # the band between the inner wall and the gasket-plate edge to 7.6 mm, so they sit centred in it (0.63 mm pocket-to-wall
 # and tongue-to-plate); the fitted 4.65 mm would leave the tongue 0.24 mm from the plate.
-STRIKE_SITES = [("BL", 89.85, "back", 4.15), ("BR", 196.70, "back", 4.30),
-                ("FL", 90.22, "front", 4.26), ("FR", 196.28, "front", 4.26)]
+STRIKE_SITES = [tuple(s) for s in spec.value("ball_catch.strike_sites")]
 JOINT_YC = {  # Dovetail centers (world Y): wrist / front wall joints across X = 0
     "WristFrontJoint": 23.50,
     "WristMidJoint": 50.00,
@@ -206,9 +211,9 @@ FINE_LAYER_H = 0.10
 SKIN_T = 2.20           # Honeycomb wrist-rest top skin thickness
 WRIST_WALL = 2.20       # Wrist-rest outer perimeter wall thickness
 CORNER_R = 4.85         # Outer vertical corner radius: concentric with the R2.0 inner skirt corner (+ 2.85 mm wall)
-INNER_SKIRT_R = 2.00    # Inner skirt (bottom-case pocket) vertical corner radius. The R5.0 of v6.2 held the stock bottom
-                        # case ~2.3 mm off its seat at the corners (owner, printed part): its corners are about
-                        # R5.0 - 2.3 = R2.7, so the pocket takes R2.0 to clear them with the straight walls line-to-line.
+INNER_SKIRT_R = spec.value("top.inner_corner_r")  # Inner skirt (bottom-case pocket) vertical corner radius: the R5.0 of
+                        # v6.2 held the stock bottom case ~2.3 mm off its seat at the corners (owner, printed part): its
+                        # corners are about R2.7, so the pocket takes R2.0 to clear them with the straight walls line-to-line.
 RIB = 2.40              # Honeycomb rib width (matches v9)
 # Bumpon pads: 8 sites on the wrist-rest underside, each with a pocket for a 3M Bumpon Protective Products SJ5012
 # (cylindrical, flat top, Ø12.7 x 3.5 mm, +-0.5 mm; same shape as SJ5312 transparent and SJ5412 true white). The bumpons
@@ -216,11 +221,10 @@ RIB = 2.40              # Honeycomb rib width (matches v9)
 # face (`DESK_GAP`) and holds them against sideways shear. Each pad runs `PAD_D` in from the front face (front row) or
 # the junction wall (back row): full height near the wall, then a 45-deg corbel that prints without support. v7.4 had
 # 6 mm deep flat pads, v7.5 11 mm deep flat pads for the hemispherical Ø7.9 x 2.2 mm SJ5302.
-BUMPON_D = 12.7         # 3M SJ5012 diameter (datasheet nominal)
-BUMPON_D_MAX = 13.2     # Diameter at the +0.5 mm datasheet tolerance
-BUMPON_H = 3.5          # 3M SJ5012 height (datasheet nominal)
-DESK_GAP = 2.0          # Pad face to desk with the keyboard on its stock feet: estimated from the v9 wrist rest, 22 mm
-                        # installed to match the keyboard front edge, against the 20.01 mm case height; not measured
+BUMPON_D = spec.value("bumpon.sj5012")["diameter"]  # 3M SJ5012 diameter (datasheet nominal)
+BUMPON_D_MAX = BUMPON_D + spec.value("bumpon.sj5012")["tolerance"]  # Diameter at the +0.5 mm datasheet tolerance
+BUMPON_H = spec.value("bumpon.sj5012")["height"]  # 3M SJ5012 height (datasheet nominal)
+DESK_GAP = spec.value("desk.gap")  # Pad face to desk with the keyboard on its stock feet: estimated, not measured
 POCKET_DEPTH = round(BUMPON_H - DESK_GAP, 3)  # Pocket depth along the desk-plane normal (1.50 mm)
 POCKET_D = round(BUMPON_D_MAX + 0.4, 3)       # Pocket diameter (13.60 mm): 0.2 mm per side at the largest bumpon
 PAD_X = (30.0, 119.0)   # Pad centres, |X| (print frame)
@@ -235,17 +239,20 @@ def pad_centres() -> list[tuple[float, float]]:
     return [(s * c, y) for y in (PAD_D / 2, WRIST_D - PAD_D / 2) for c in PAD_X for s in (-1.0, 1.0)]
 
 
-# USB-C centre: plate X 17.35 (stock back-left, Esc side) -> print X +125.60. v7.6 and earlier had plate X 19.35; on the
-# v7.4 print the connector sat ~2 mm toward the keyboard centre of the notch (owner), so the notch moved 2 mm outward.
-USB_X = pw(17.35, 0.0)[0]
+def usb_notch_print(board_id: str) -> tuple[float, float]:
+    """Print X of the USB-C notch centre and its width for a board (spec/boards.json). The stock top-case notch sits at
+    plate X 19.35; the owner's 6095 wireless board (v7.4 print) needed it 2 mm outward, at 17.35."""
+    centre_p, width = spec.usb_notch(board_id)
+    return pw(centre_p, 0.0)[0], width
+
+
 # Width and corner shape from the stock notch measured against the v6.2 print (owner photos IMG_0378/0379, scaled from
 # the printed 14.2 mm notch): 12.6 / 12.75 wide, rounded closed-end corners (CNC endmill); 0.1-0.2 mm generous. Depth
 # from the v7.3 full-print fit: the photo-estimated 5.7 mm hit the USB-C connector until the owner cut the notch ~3 mm
 # deeper by hand, so it is 8.7 mm (closed end 1.62 mm above the 9.69 floor).
-USB_W = 12.8            # USB-C notch width
-USB_TOP_ZP = round(SKIRT_H - 8.7, 2)  # USB-C notch closed end (Z_p 11.31): 8.70 mm deep from the skirt lip
+USB_TOP_ZP = round(SKIRT_H - spec.value("top.usb_notch")["depth_from_lip"], 2)  # Notch closed end (Z_p 11.31)
 USB_DEPTH = round(SKIRT_H - USB_TOP_ZP, 2)  # USB-C notch depth from skirt lip
-USB_END_R = 1.50        # Closed-end corner radius (3 mm endmill); the lip-side corners stay sharp
+USB_END_R = spec.value("top.usb_notch")["end_r"]  # Closed-end corner radius (3 mm endmill); the lip-side corners stay sharp
 
 JOINT_CLEAR = 0.0       # Base dovetail socket clearance per face: line-to-line, as in the published v9 tight fit
 JOINT_Z_CLEAR = 0.20    # Vertical gap between each tongue landing and its socket roof, so both halves rest on the desk
@@ -272,14 +279,15 @@ def poly_to_pts(poly: Any) -> list[list[float]]:
 # The strike plate measures ~20.5 x 6.55 mm; its 7.25 mm wide pocket ends in the CNC "mushroom" relief —
 # a 4.1 mm semicircular lobe tangent to the skirt-side wall reaching 4.55 mm past the plate end, beside an
 # interior-half end wall 2.15 mm past the plate end, joined by an R0.85 shoulder. Pocket depth is not re-fitted.
-STRIKE_PLATE_HALF_LEN = 10.25
-STRIKE_PLATE_HALF_W = 3.275
-STRIKE_POCKET_HALF_W = 3.625
-STRIKE_END_WALL_GAP = 2.15
-STRIKE_LOBE_REACH = 4.55
-STRIKE_LOBE_R = 2.05
-STRIKE_SHOULDER_R = 0.85
-STRIKE_TOOL_R = 0.3
+_STRIKE_PLATE, _STRIKE_POCKET = spec.value("ball_catch.strike_plate"), spec.value("ball_catch.strike_pocket")
+STRIKE_PLATE_HALF_LEN = _STRIKE_PLATE["length"] / 2
+STRIKE_PLATE_HALF_W = _STRIKE_PLATE["width"] / 2
+STRIKE_POCKET_HALF_W = _STRIKE_POCKET["half_w"]
+STRIKE_END_WALL_GAP = _STRIKE_POCKET["end_wall_gap"]
+STRIKE_LOBE_REACH = _STRIKE_POCKET["lobe_reach"]
+STRIKE_LOBE_R = _STRIKE_POCKET["lobe_r"]
+STRIKE_SHOULDER_R = _STRIKE_POCKET["shoulder_r"]
+STRIKE_TOOL_R = _STRIKE_POCKET["tool_r"]
 
 
 def strike_pocket_poly(sx_p: float, sy_p: float, skirt_sign: float) -> sg.Polygon:
@@ -353,8 +361,9 @@ def socket_rib_polys(yc: float, neck_half: float, head_half: float, proj: float,
     ]
 
 
-def build_solidcraft_commands() -> list[dict[str, Any]]:
+def build_solidcraft_commands(board_id: str) -> list[dict[str, Any]]:
     cmds: list[dict[str, Any]] = []
+    usb_x, usb_w = usb_notch_print(board_id)
 
     def add_param(name: str, expr: str, comment: str = "") -> None:
         p: dict[str, Any] = {"name": name, "expression": expr}
@@ -377,8 +386,8 @@ def build_solidcraft_commands() -> list[dict[str, Any]]:
     add_param("front_wall", f"{FRONT_WALL} mm", f"Skirt wall thickness, front ({FRONT_WALL:.2f} mm, caliper)")
     add_param("wrist_wall", f"{WRIST_WALL} mm", "Wrist-rest perimeter wall thickness")
     add_param("corner_r", f"{CORNER_R} mm", f"Outer vertical corner fillet radius ({CORNER_R:.2f} mm)")
-    add_param("usb_x", f"{USB_X} mm", f"USB-C center X ({USB_X:.2f} mm)")
-    add_param("usb_w", f"{USB_W} mm", f"USB-C opening width ({USB_W:.2f} mm)")
+    add_param("usb_x", f"{usb_x} mm", f"USB-C center X ({usb_x:.2f} mm)")
+    add_param("usb_w", f"{usb_w} mm", f"USB-C opening width ({usb_w:.2f} mm)")
     add_param("usb_depth", f"{USB_DEPTH} mm", f"USB-C notch depth from skirt lip ({USB_DEPTH:.2f} mm, top at Z_p {USB_TOP_ZP:.2f})")
     add_param("joint_clear", f"{JOINT_CLEAR} mm", "Base dovetail clearance per face")
     add_param("joint_z_clear", f"{JOINT_Z_CLEAR} mm", "Vertical tongue-landing to socket-roof clearance")
@@ -614,9 +623,9 @@ def build_solidcraft_commands() -> list[dict[str, Any]]:
 
     # 11. USB-C notch through the back skirt wall: open at the lip, `USB_END_R` corners at its closed end (Z_p
     #     `USB_TOP_ZP`). XZ sketch coordinates are (X, -Z_p); the profile runs 1 mm past the lip and is cut through the wall.
-    usb_xz = sg.box(USB_X - USB_W / 2, USB_TOP_ZP, USB_X + USB_W / 2, SKIRT_H + 1.0)
+    usb_xz = sg.box(usb_x - usb_w / 2, USB_TOP_ZP, usb_x + usb_w / 2, SKIRT_H + 1.0)
     usb_xz = usb_xz.buffer(-USB_END_R).buffer(USB_END_R, quad_segs=12).union(
-        sg.box(USB_X - USB_W / 2, USB_TOP_ZP + USB_END_R, USB_X + USB_W / 2, SKIRT_H + 1.0)).simplify(1e-4)
+        sg.box(usb_x - usb_w / 2, USB_TOP_ZP + USB_END_R, usb_x + usb_w / 2, SKIRT_H + 1.0)).simplify(1e-4)
     usb_sk = sg.Polygon([(x, -z) for x, z in usb_xz.exterior.coords[:-1]])
     back_inner_y = round(WRIST_D + CASE_D - SKIRT_WALL, 3)
     cmds.extend([
@@ -1061,9 +1070,12 @@ def write_3mf(path: Path, title: str, named_meshes: list[tuple[str, trimesh.Trim
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--reuse-solidcraft", action="store_true", help="Reuse existing .solidcraft/.step/.3mf if present")
+    ap.add_argument("--board", choices=spec.board_ids(), default=spec.default_board(),
+                    help="PCB whose USB-C position sets the notch (spec/boards.json); default: %(default)s")
     args = ap.parse_args()
 
-    cmds = build_solidcraft_commands()
+    cmds = build_solidcraft_commands(args.board)
+    usb_x, usb_w = usb_notch_print(args.board)
     script_path = OUT / "rule60-hhkb-unibody-draft.script.json"
     design_path = OUT / "rule60-hhkb-unibody-draft.solidcraft"
     step_path = OUT / "rule60-hhkb-unibody-draft.step"
@@ -1240,8 +1252,8 @@ def main() -> None:
             "inner_skirt_world": [round(-(INNER_P[2] - INNER_P[0]) / 2, 3), round(INNER_P[1] + DY_PW, 3),
                                   round((INNER_P[2] - INNER_P[0]) / 2, 3), round(INNER_P[3] + DY_PW, 3)],
             "back_seam_strike": BACK_SEAM_STRIKE,
-            "usb_notch": {"x_world": USB_X, "width": USB_W, "closed_end_zp": USB_TOP_ZP, "depth_from_lip": USB_DEPTH,
-                          "closed_end_corner_r": USB_END_R},
+            "usb_notch": {"board": args.board, "x_world": usb_x, "width": usb_w, "closed_end_zp": USB_TOP_ZP,
+                          "depth_from_lip": USB_DEPTH, "closed_end_corner_r": USB_END_R},
             "inner_skirt_corner_r": INNER_SKIRT_R,
             "outer_corner_r": CORNER_R,
             "floor_ledge_width": RIM_SEAT_W,

@@ -1,0 +1,45 @@
+{
+  "format": "rule60-interface/1",
+  "about": "Interface values a replacement Rule 60 V3 part must match: the stock top case it replaces or mates with, the INKC plate, the stock gasket caps and ball catches, and fitted hardware. Lengths in mm, angles in degrees. Status: caliper (owner, digital caliper on the stock part), photo (photo metrology), fit (found by printing and fitting), dwg (INKC drawing), published (creator post), datasheet, derived (computed from other entries), assumed, estimated. Design choices of this housing (joints, wrist rest, pockets' clearances) live in build_topcase_draft.py, not here.",
+  "frames": {
+    "plate": "Plate frame: top view, X right, Y back (away from the typist); origin at the bounding-box lower-left of the INKC 6095(top) plate. The 6095(gas) plate sits at (0, +1.018). See spec/rule60-v3-outlines.json.",
+    "z_p": "Z_p: height through the top case, 0 at the top face, growing toward the skirt lip (the print frame: top face on the bed)."
+  },
+  "values": {
+    "top.height": {"value": 20.01, "status": "caliper", "source": "evidence/topcase/photos/IMG_0333.jpg"},
+    "top.bottom_seat_z": {"value": 9.69, "status": "caliper", "source": "evidence/topcase/photos/IMG_0334.jpg: floor the bottom-case rim seats on, pocketed 10.32 deep from the lip"},
+    "top.gasket_seat_z": {"value": 6.30, "status": "caliper", "source": "owner, 2026-10-28: silicone-cap seat level"},
+    "top.strike_floor_z": {"value": 5.55, "status": "caliper", "source": "evidence/topcase/photos/IMG_0337.jpg: ball-catch strike pocket floor"},
+    "top.bezel": {"value": {"side": 5.65, "back": 10.90, "front": 11.02}, "status": "caliper", "source": "owner, 2026-10-29: top-face bezel from the outer edge to the keycap opening (front: outside the HHKB blockers)"},
+    "top.skirt_wall": {"value": {"side_back": 2.85, "front": 2.80}, "status": "caliper", "source": "owner, 2026-10-29"},
+    "top.rim_seat_w": {"value": 2.05, "status": "derived", "source": "short-side underside steps 2.85 / 4.90 / 5.66 from the outer edge (caliper, owner 2026-10-29): 4.90 - 2.85"},
+    "top.inner_corner_r": {"value": 2.0, "status": "fit", "source": "v6.2 print: an R5.0 pocket held the stock bottom case ~2.3 mm off at the corners, so its corners are about R2.7; R2.0 clears them (evidence/topcase/photos/IMG_0370-0373)"},
+    "top.tilt_deg": {"value": 6.0, "status": "published", "source": "INKC group-buy post https://www.zfrontier.com/app/flow/daWn5PAnGgxG: 输入角度 6°, 前高 20mm"},
+    "top.keycap_opening_hhkb": {"value": [-0.45, 6.20, 286.35, 101.65], "status": "derived", "source": "HHKB keycap opening bounds (plate frame, x0 y0 x1 y1) around the DWG switch grid (Esc centre 9.600, 91.869; pitch 19.05); front edge at the bottom-row middle, HHKB blockers 30 deep from the outer edge (caliper 30.02)"},
+    "top.usb_notch": {"value": {"width": 12.8, "depth_from_lip": 8.7, "end_r": 1.5}, "status": "fit", "source": "width and R1.5 closed-end corners from the stock notch photographed lip to lip on the v6.2 print (evidence/topcase/photos/IMG_0378-0379, stock 12.6 / 12.75); depth from the v7.3 full-print fit. The centre depends on the PCB: spec/boards.json"},
+
+    "plate.thickness": {"value": 1.5, "status": "photo", "source": "silicone-cap stack 1.5 top flange + 1.5 PC plate + 1.5 bottom flange (evidence/topcase/analysis/underside-photo-annotated.jpg)"},
+    "plate.front_tabs_x": {"value": [[17.52, 58.52], [122.51, 163.51], [227.50, 268.50]], "status": "dwg", "source": "rule60-v3.dwg 6095(gas) front T-tab X spans, 41.0 wide (spec/rule60-v3-outlines.json plate_gas)"},
+    "plate.back_tabs_x": {"value": [[27.52, 68.52], [122.51, 163.51], [227.50, 268.50]], "status": "dwg", "source": "rule60-v3.dwg 6095(gas) back T-tab X spans (the USB-side tab sits 10 mm inward)"},
+    "plate.tab_mid_y": {"value": [2.55, 105.00], "status": "dwg", "source": "centre lines of the gas tabs, Y 1.07-4.07 front and 103.42-106.42 back"},
+    "plate.body_y": {"value": [5.57, 101.916], "status": "dwg", "source": "gas plate body Y span between the tab relief slots"},
+
+    "gasket.cap_free": {"value": [8.3, 5.5, 4.5], "status": "photo", "source": "stock silicone gasket cap L x W x H, rectified underside photo at 28 px/mm (evidence/topcase/analysis/underside-photo-annotated.jpg); 2 per 41 mm tab, 12 installed"},
+    "gasket.cap_footprint": {"value": [8.2, 4.0], "status": "photo", "source": "compressed cap footprint L x W on the tab, same photo"},
+    "gasket.cap_inset": {"value": 3.2, "status": "photo", "source": "cap centre from each tab end: 43.0 mm outer span over a 41.0 mm tab, 26.2 mm bare tab between caps"},
+    "gasket.top_flange_compressed": {"value": 1.20, "status": "assumed", "source": "1.5 mm free top flange with 0.30 mm preload; not measured"},
+    "gasket.cap_height_compressed": {"value": 3.9, "status": "assumed", "source": "4.5 mm free height less 0.30 mm preload per flange; not measured"},
+
+    "ball_catch.strike_sites": {"value": [["BL", 89.85, "back", 4.15], ["BR", 196.70, "back", 4.30], ["FL", 90.22, "front", 4.26], ["FR", 196.28, "front", 4.26]], "status": "photo", "source": "[name, plate X, inner skirt wall faced, centre distance from that wall]. X: homography of IMG_0201 on the 8 top-mount holes, RMS 0.13 mm (evidence/topcase/analysis/ball-catch-analysis.json). Back distances: two-view fit IMG_0218/0222. Front distances are not measured: centred in the 7.6 mm band between the inner front wall and the plate edge"},
+    "ball_catch.strike_plate": {"value": {"length": 20.5, "width": 6.55, "thickness": 1.45, "screw_pitch": 13.0, "screw": "M2"}, "status": "photo", "source": "stock strike plate, ball-catch-analysis.json + two-view silhouette fit IMG_0218/0222"},
+    "ball_catch.strike_tongue": {"value": [3.55, 5.4, 5.70], "status": "photo", "source": "tongue X x Y x Z rising from the strike plate toward the bottom case, same fit"},
+    "ball_catch.strike_pocket": {"value": {"half_w": 3.625, "end_wall_gap": 2.15, "lobe_reach": 4.55, "lobe_r": 2.05, "shoulder_r": 0.85, "tool_r": 0.3}, "status": "photo", "source": "stock CNC strike pocket: 7.25 wide, 'mushroom' end reliefs (4.1 lobe 4.55 past the plate end on the skirt half, end wall 2.15 past it, R0.85 shoulder); two-view ray-cast fit IMG_0218 + IMG_0222 (evidence/topcase/analysis/strike-pocket-fit-v4.3.png)"},
+
+    "keycaps.hhkb_gauge": {"value": [[0.475, 25.594], [29.05, 25.594], [29.05, 6.544], [256.85, 6.544], [256.85, 25.594], [285.425, 25.594], [285.425, 100.994], [0.475, 100.994]], "status": "derived", "source": "HHKB 60-key keycap footprint (plate frame): DWG switch grid with each 19.05 cell inset 0.4 mm, bottom-row blockers 1.5u from each side"},
+
+    "bottom.battery_bay": {"value": {"length": 140.0, "width": 45.0, "height": 4.5, "corner_r": 2.0}, "status": "published", "source": "INKC interest-check post https://www.zfrontier.com/app/flow/GJ7JjlX8qwxY: 电池仓 45x140x4.5mm r2; position not published. The filler block is outline battery_bay_filler in spec/rule60-v3-outlines.json"},
+
+    "bumpon.sj5012": {"value": {"diameter": 12.7, "height": 3.5, "tolerance": 0.5}, "status": "datasheet", "source": "3M Bumpon Protective Products SJ5012 (same shape: SJ5312 transparent, SJ5412 true white), cylindrical flat top; https://multimedia.3m.com/mws/media/117314O/3m-bumpon-protective-products-molded-shapes-colored-and-clear.pdf"},
+    "desk.gap": {"value": 2.0, "status": "estimated", "source": "gap between the desk and the top-case skirt lip with the keyboard on its stock feet: the v9 wrist rest was sized to 22 mm installed against the 20.01 mm case. Not measured"}
+  }
+}
