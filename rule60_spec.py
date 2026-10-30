@@ -54,22 +54,26 @@ def board(board_id: str) -> dict[str, Any]:
 
 
 def usb_centre_plate_x(board_id: str) -> float | None:
+    """Plate X of a board's on-board USB connector at the back edge, or None (unknown, daughterboard, other edge)."""
     usb = board(board_id)["usb"]
-    if usb is None:
+    if usb is None or usb["centre_x"] is None or usb.get("edge") not in (None, "back") or usb.get("daughterboard"):
         return None
     if usb["frame"] == "plate":
         return usb["centre_x"]
+    assert usb["frame"] == "gh60", usb["frame"]
     return round(usb["centre_x"] + _BOARDS["frames"]["pcb_to_plate"]["dx"], 4)
 
 
 def usb_notch(board_id: str) -> tuple[float, float]:
-    """USB-C notch centre (plate X) and width for a board. `universal` widens the stock notch width by the spread of
-    every known USB-C centre and centres it on that spread, so each listed board keeps at least the stock clearance."""
+    """USB notch centre (plate X) and width for a board. `universal` widens the stock notch by the spread of every known
+    on-board USB centre (boards whose fit verdict is not `no`) and centres it on that spread, so each of those boards
+    keeps at least the stock clearance."""
     width = value("top.usb_notch")["width"]
     if board_id != UNIVERSAL:
         centre = usb_centre_plate_x(board_id)
         if centre is None:
-            raise SystemExit(f"Board {board_id!r} has no USB-C position in spec/boards.json; use --board {UNIVERSAL}")
+            raise SystemExit(f"Board {board_id!r} has no on-board USB position in spec/boards.json; use --board {UNIVERSAL}")
         return centre, width
-    xs = [x for b in _BOARDS["boards"] if (x := usb_centre_plate_x(b["id"])) is not None]
+    xs = [x for b in _BOARDS["boards"]
+          if b["fit"]["verdict"] != "no" and (x := usb_centre_plate_x(b["id"])) is not None]
     return round((min(xs) + max(xs)) / 2, 4), round(width + max(xs) - min(xs), 4)

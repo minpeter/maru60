@@ -189,7 +189,7 @@ printing:
 | --- | --- |
 | [Left half — 3MF](models/rule60-hhkb-topcase-left.3mf) | 206 × 197 mm print, ~78 g |
 | [Right half — 3MF](models/rule60-hhkb-topcase-right.3mf) | 149 × 197 mm print, ~67 g; USB-C notch for the owner's 6095 wireless board |
-| [Right half, universal USB-C — 3MF](models/rule60-hhkb-topcase-right-usb-universal.3mf) | Same, with a 14.8 mm notch covering every USB-C position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
+| [Right half, universal USB — 3MF](models/rule60-hhkb-topcase-right-usb-universal.3mf) | Same, with a 14.88 mm notch covering every on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
 | [Fit coupons — 3MF](models/rule60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
 | [CAD — STEP](models/rule60-hhkb-topcase.step) | Both halves, for remixing |
 
@@ -245,24 +245,42 @@ status (caliper, photo, fit, drawing, datasheet, derived, assumed) and source:
   [`rule60-v3.dwg`](third_party/inkc-rule60-v3/README.md), which is
   redistributed here with its provenance.
 - [`spec/boards.json`](spec/boards.json): GH60 reference geometry (285.0 ×
-  94.6 mm, holes, USB) and GH60-class boards. A GH60-grid PCB maps into the
-  plate frame as `X_plate = X_pcb + 0.4525`, `Y_plate = 101.068 − Y_pcb`.
+  94.6 mm, holes, USB) and 132 GH60-class boards surveyed from design files,
+  vendor drawings, product photos and Rule 60 owner reports. A GH60-grid PCB
+  maps into the plate frame as `X_plate = X_gh60 + 0.4525`,
+  `Y_plate = 101.068 − Y_gh60`.
 
 `build_topcase_draft.py` and `verify_topcase.py` read these files. The PCB's
-USB-C position sets the notch, chosen with `--board`:
+USB position sets the notch, chosen with `--board` (any board id with a USB
+position, or `universal`):
 
 | `--board` | Notch centre, plate X | Basis |
 | --- | --- | --- |
 | `6095-wireless-owner` (default, published files) | 17.35 | Fit on the owner's v7.4 print |
 | `rule60-kit-6095` | 19.35 | Stock notch, assumed centred on the kit PCB |
-| `gh60` | 18.65 | GH60 rev C KiCad, 18.2 mm from the PCB edge |
-| `co60` | 18.68 | CO60 KiCad |
-| `lost60-v3` | 19.23 | LOST60 V3 Eagle |
-| `venom-60he` | 18.55 (±0.5) | Scaled from the vendor render |
-| `universal` | 18.35, 14.8 mm wide | Spans every board above with the stock clearance |
+| `gh60` and most open designs | 18.65 | GH60 rev C KiCad, 18.2 mm from the PCB edge |
+| `wish60-ble` | 19.12 | Maker's STEP, mid-mount USB-C |
+| `wooting-60he` / `venom-60he` | 19.11 / 19.10 | Vendor 3D models |
+| `gt-ble60-nrf51` (highest found) | 19.43 | KiCad, mini-USB |
+| `universal` | 18.39, 14.88 mm wide | Every on-board back-edge USB below |
 
-PTG64, AE61 PRO, DZ60 and wish60 BLE publish no USB-C position; use
-`universal` or add the board. Only the right half changes between boards.
+**Survey result** (2026-10-31): 132 boards, 80 open designs and 47
+commercial; 89 have a USB position, 68 of them from design files.
+
+| Verdict | Boards | Meaning |
+| --- | --- | --- |
+| fits | 60 | On-board USB at the back edge, GH60-size outline, MX plate |
+| check | 41 | Daughterboard-only USB (needs a case mount), HE/EC/Alps plate and mount, or an outline up to 0.75 mm larger than GH60 |
+| unknown | 24 | No published USB position (e.g. PTG64, YR6095, AE61 PRO) |
+| no | 7 | USB on another edge, outline far larger than GH60, or low-profile switches |
+
+On-board USB centres range from 17.35 (the owner's board) to 19.43 in plate
+X; design files cluster at 18.65. Every surveyed connector sits on the PCB
+bottom side or mid-mount, which the notch depth suits. `fit.reasons`,
+per-board sources and 51 owner reports from Rule 60 builds are in
+`spec/boards.json`. The universal right half covers every board that is not
+`no` and has an on-board USB position. Only the right half changes between
+boards.
 
 ### Reproduce
 
