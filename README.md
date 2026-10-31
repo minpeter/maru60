@@ -260,34 +260,39 @@ position, or `universal`):
 
 | `--board` | Notch centre, plate X | Basis |
 | --- | --- | --- |
-| `6095-wireless-owner` (default, published files) | 17.35 | Fit on the owner's v7.4 print |
-| `rule60-kit-6095` | 19.35 | Stock notch, assumed centred on the kit PCB |
+| `6095-wireless-owner` (default, published files) | 17.35 | Fit on the owner's v7.4 print, judged by eye; not yet measured on the PCB |
+| `yr6095-trimode` | 18.45 | 6095 tri-mode kit PCB, top-side photos (±0.3) |
+| `rule60-kit-6095` / `yr6095` | 18.55 | Y&R 6095 wired kit PCB, three top-side photos (±0.3); the stock notch at 19.35 sits 0.8 mm right of it |
 | `gh60` and most open designs | 18.65 | GH60 rev C KiCad, 18.2 mm from the PCB edge |
 | `wish60-ble` | 19.12 | Maker's STEP, mid-mount USB-C |
 | `wooting-60he` / `venom-60he` | 19.11 / 19.10 | Vendor 3D models |
-| `gt-ble60-nrf51` (highest found) | 19.43 | KiCad, mini-USB |
-| `universal` | 18.39, 14.88 mm wide | Every measured on-board back-edge USB below (guesses left out) |
+| `ae61-pro` (highest found) | 19.45 | Photo (±0.5) |
+| `universal` | 18.40, 14.90 mm wide | Every measured on-board back-edge USB below (guesses left out) |
 
-**Survey result** (2026-10-31): 143 boards, 80 open designs and 58
-commercial; 102 have a USB position, 70 of them from design files. Two
+**Survey result** (2026-10-31): 145 boards, 79 open designs and 61
+commercial; 118 have a USB position, 69 of them from design files. Two
 oshwhub projects behind the EasyEDA Pro login (HL6095, OPEN60), 13
 AliExpress and 10 Taobao listings were captured with the Aside browser and
-measured.
+measured. An audit re-parsed 36 design files (29 matched within 0.005 mm,
+the rest were corrected), re-measured every uncertain photo value and merged
+duplicates.
 
 | Verdict | Boards | Meaning |
 | --- | --- | --- |
-| fits | 68 | On-board USB at the back edge, GH60-size outline, MX plate |
-| check | 47 | Daughterboard-only USB (needs a case mount), HE/EC/Alps plate and mount, or an outline up to 0.75 mm larger than GH60 |
-| unknown | 21 | No published USB position (e.g. YR6095, LH60R2, AE61 PRO) |
+| fits | 76 | On-board USB at the back edge, GH60-size outline, MX plate |
+| check | 57 | Daughterboard-only USB (needs a case mount), HE/EC/Alps plate and mount, or an outline larger than GH60 |
+| unknown | 5 | No USB position found (XD60 rev3, Basic IO F60, PieStar64 and two Taobao boards) |
 | no | 7 | USB on another edge, outline far larger than GH60, or low-profile switches |
 
-On-board USB centres range from 17.35 (the owner's board) to 19.43 in plate
-X; design files cluster at 18.65. Every surveyed connector sits on the PCB
-bottom side or mid-mount, which the notch depth suits. `fit.reasons`,
+On-board USB centres range from 17.35 (the owner's board) to 19.45 in plate
+X; design files cluster at 18.65. "6095" names a layout, not one PCB: the
+wired Y&R 6095 and the 6095 tri-mode kit boards are different designs whose
+connectors still agree within 0.3 mm. Every surveyed connector sits on the
+PCB bottom side or mid-mount, which the notch depth suits. `fit.reasons`,
 per-board sources and 51 owner reports from Rule 60 builds are in
 `spec/boards.json`. The universal right half covers every board that is not
-`no` and has an on-board USB position. Only the right half changes between
-boards.
+`no` and has a measured on-board USB position. Only the right half changes
+between boards.
 
 ### Reproduce
 

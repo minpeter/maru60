@@ -56,7 +56,7 @@ def board(board_id: str) -> dict[str, Any]:
 def usb_centre_plate_x(board_id: str) -> float | None:
     """Plate X of a board's on-board USB connector at the back edge, or None (unknown, daughterboard, other edge)."""
     usb = board(board_id)["usb"]
-    if usb is None or usb["centre_x"] is None or usb.get("edge") not in (None, "back") or usb.get("daughterboard"):
+    if usb is None or usb["centre_x"] is None or usb.get("edge") not in (None, "back") or usb.get("daughterboard") is True:
         return None
     if usb["frame"] == "plate":
         return usb["centre_x"]
