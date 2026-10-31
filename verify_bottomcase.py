@@ -12,6 +12,7 @@ from pathlib import Path
 
 import manifold3d as md
 import numpy as np
+import shapely.affinity as sa
 import shapely.geometry as sg
 from shapely import build_area
 from shapely.geometry import MultiLineString
@@ -189,27 +190,35 @@ def main() -> None:
             "top_case_min_z": round(float(top_mf.transform(to_p).bounding_box()[2]), 4),
             "wrist_pad_face_area_mm2": round(float(slice_material(top_mf.transform(to_p), 0.02).area), 1)}
     assert abs(desk["bottom_min_z"]) < 1e-3 and abs(desk["top_case_min_z"]) < 0.02 and desk["wrist_pad_face_area_mm2"] > 1000.0, desk
-    # 7b. Back face (stock part): below the lip level nothing behind the slope plane or inside the step, the back rail
-    #     face stays full height up to the lip, the step's inner edge sits `BACK_LEDGE_W` in, and the desk face ends
-    #     `BACK_BEVEL_INSET` in from the rail face.
+    # 7b. ㄷ tray + triangular base (stock part): every section below the tray bottom lies inside the base outline
+    #     (the steps all round stay empty), nothing sits behind the back slope plane, the base fills its outline just
+    #     under the tray bottom, the tray keeps the full rail outline down to its bottom, and the desk face ends
+    #     `BACK_BEVEL_INSET` in from the back rail face.
     n, off = bc.back_bevel()
-    below_lip = box(-200.0, bc.Y_BACK - bc.BACK_BEVEL_INSET - 1.0, 200.0, bc.Y_BACK + 1.0, top.SKIRT_H + 0.02, 40.0)
-    behind_bevel = vol(bottom ^ below_lip.trim_by_plane([-v for v in n], -off + 0.02))  # n . x <= off - 0.02
-    in_step = vol(bottom ^ box(-200.0, bc.Y_BACK - bc.BACK_LEDGE_W + 0.02, 200.0, bc.Y_BACK + 1.0,
-                               top.SKIRT_H + 0.02, 40.0))
+    base_ol = bc.base_outline()
+    tz = bc.TRAY_BOTTOM_ZP                     # tray bottom at the back rail (highest)
+    tz_low = bc.tray_bottom_zp(bc.Y_FRONT)     # tray bottom at the front rail (lowest: tilted 0.2 deg)
+    outside_base = {f"z_p_{z:g}": round(slice_material(bottom, z).difference(base_ol.buffer(0.01)).area, 4)
+                    for z in (tz_low + 0.05, tz_low + 2.0, tz_low + 6.0, tz_low + 10.0)}
+    below_tray = box(-200.0, bc.Y_BACK - bc.BACK_BEVEL_INSET - 1.0, 200.0, bc.Y_BACK + 1.0, tz + 0.05, 40.0)
+    behind_bevel = vol(bottom ^ below_tray.trim_by_plane([-v for v in n], -off + 0.02))  # n . x <= off - 0.02
+    under = slice_material(bottom, tz_low + 0.6)  # under the whole tray, above the desk at the base front; the bay
+                                                  # runs through here, so compare outlines, not fill
+    tray = slice_material(bottom, tz - 0.05)
+    rail_outline_p = bc.plate_box(*bc.RIM_P, r=bc.RIM_CORNER_R)
     desk_slice = slice_material(bottom.transform(to_p), 0.05)
-    step_slice = slice_material(bottom, top.SKIRT_H + 0.05).intersection(sg.box(-100.0, 150.0, 100.0, 250.0))
-    bevel = {"material_behind_slope_mm3": behind_bevel, "material_in_step_mm3": in_step,
-             "step_inner_edge_world_y": round(step_slice.bounds[3], 3),
-             "expected_step_y": round(bc.Y_BACK - bc.BACK_LEDGE_W, 3),
-             "desk_face_back_edge_print_y": round(desk_slice.bounds[1], 3),
-             "expected_print_y": round(bc.print_y(bc.Y_BACK - bc.BACK_BEVEL_INSET), 3),
-             "rail_face_at_lip_mm2": round(slice_material(bottom, top.SKIRT_H - 0.05).intersection(
-                 sg.box(-200.0, bc.Y_BACK - 1.0, 200.0, bc.Y_BACK + 0.01)).area, 1)}
-    assert behind_bevel < 0.01 and in_step < 0.01, bevel
-    assert abs(bevel["step_inner_edge_world_y"] - bevel["expected_step_y"]) < 0.1, bevel
-    assert abs(bevel["desk_face_back_edge_print_y"] - bevel["expected_print_y"]) < 0.1, bevel
-    assert bevel["rail_face_at_lip_mm2"] > 200.0, bevel
+    tray_base = {"material_outside_base_outline_mm2": outside_base, "material_behind_slope_mm3": behind_bevel,
+                 "base_bounds_world": [round(v, 2) for v in under.bounds],
+                 "expected_base_bounds": [round(v, 2) for v in base_ol.bounds],
+                 "tray_bottom_bounds_world": [round(v, 2) for v in tray.bounds],
+                 "rail_outline_bounds": [round(v, 2) for v in rail_outline_p.bounds],
+                 "desk_face_back_edge_print_y": round(desk_slice.bounds[1], 3),
+                 "expected_print_y": round(bc.print_y(bc.Y_BACK - bc.BACK_BEVEL_INSET), 3)}
+    assert max(outside_base.values()) < 0.01 and behind_bevel < 0.01, tray_base
+    assert all(abs(a - b) < 0.1 for a, b in zip(tray_base["base_bounds_world"][:3],  # ends and front; the back is
+                                                tray_base["expected_base_bounds"][:3])), tray_base  # sloped here
+    assert all(abs(a - b) < 0.1 for a, b in zip(tray_base["tray_bottom_bounds_world"], tray_base["rail_outline_bounds"])), tray_base
+    assert abs(tray_base["desk_face_back_edge_print_y"] - tray_base["expected_print_y"]) < 0.1, tray_base
 
     # 8. USB slot under the top-case notch (keyboard left = world +X), same centre and width.
     z_usb = (Z["catch_floor"] + Z["cavity_floor"]) / 2  # below the catch notches, through the plug's height band
@@ -234,12 +243,13 @@ def main() -> None:
 
     # 9. Printability, desk face down at 0.20 mm layers: no island without the layer below; no flat overhang wider than
     #    2 mm per layer, and no down-facing surface shallower than 45 deg above the bed, except the declared ones:
-    #    bumpon-pocket roofs and decoration-recess roof (bridges), and the back step (a cantilever at 6 deg, as wide as
-    #    `BACK_LEDGE_W`; the per-layer test misses it because each 0.20 mm layer grows only ~1.9 mm).
+    #    bumpon-pocket roofs and decoration-recess roof (bridges), and the tray bottom showing round the base (the steps:
+    #    a cantilever at 6 deg; the per-layer test alone misses it because each 0.20 mm layer grows only ~1.9 mm).
     bridges = unary_union([sg.Point(x, bc.print_y(y)).buffer(pocket_r + 0.3) for x, y in bc.bumpon_centres_world()]
                           + [deco_poly.buffer(bc.DECO_CLEAR + 0.3)])
-    step_band = sg.box(-200.0, bc.print_y(bc.Y_BACK) - 0.6, 200.0,
-                       -((bc.Y_BACK - bc.BACK_LEDGE_W) * bc.COS + bc.BACK_BEVEL_START_ZP * bc.SIN) + 0.3)
+    steps_world = bc.plate_box(*bc.RIM_P, r=bc.RIM_CORNER_R).difference(base_ol)
+    to_print_xy = [1.0, 0.0, 0.0, -bc.COS, 0.0, -bc.SIN * tz]  # tray-bottom points (x, y, tz) -> print (x', y')
+    step_band = sa.affine_transform(steps_world, to_print_xy).buffer(0.3)
     declared = unary_union([bridges, step_band])
     printability = {}
     for name in ("bottom-left", "bottom-right", "coupon-front-left"):
@@ -259,7 +269,7 @@ def main() -> None:
                 for g in getattr(grown, "geoms", [grown]):
                     if not g.buffer(-1.0).is_empty:
                         g_model = sg.Polygon([(x - shift[0], y - shift[1]) for x, y in g.exterior.coords])
-                        if not bridges.contains(g_model):
+                        if not declared.contains(g_model):
                             wide.append({"z": round(float(z), 2), "bounds": [round(v, 1) for v in g_model.bounds]})
             prev = cur
         # Down-facing faces off the bed steeper than 45 deg from vertical, outside the declared regions (model XY).
@@ -270,7 +280,7 @@ def main() -> None:
                                                for c in pm.triangles_center[down]]].sum())
         printability[name] = {"islands": islands, "undeclared_overhangs": wide + [
             {"down_facing_face_at": [round(float(v), 1) for v in c]} for c in shallow[:5]],
-            "back_step_cantilever_mm2": round(step_area, 1)}
+            "tray_step_cantilever_mm2": round(step_area, 1)}
     assert not any(v["islands"] or v["undeclared_overhangs"] for v in printability.values()), printability
 
     verification = {
@@ -285,11 +295,11 @@ def main() -> None:
         "pcb": {"gh60_pcb_and_usb_free_mm3": pcb_free, "usb_body_to_floor_mm": floor_gap, "usb_plug_free_mm3": plug_free},
         "drop_in_parts": fits,
         "desk_plane": desk,
-        "back_bevel": bevel,
+        "tray_and_base": tray_base,
         "usb_slot_x_world": [round(v, 3) for v in gaps[0]],
         "open_ends_material_above_floor_mm3": open_ends,
         "printability_0p20mm": {k: {"islands": len(v["islands"]), "undeclared_overhangs": len(v["undeclared_overhangs"]),
-                                    "back_step_cantilever_mm2": v["back_step_cantilever_mm2"]}
+                                    "tray_step_cantilever_mm2": v["tray_step_cantilever_mm2"]}
                                 for k, v in printability.items()},
     }
     (OUT / "verification.json").write_text(json.dumps(verification, indent=2) + "\n")

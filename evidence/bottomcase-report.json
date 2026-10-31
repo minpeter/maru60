@@ -120,14 +120,14 @@
             65.85,
             191.945
           ],
-          "depth": 3.91
+          "depth": 3.92
         },
         {
           "world": [
             40.35,
             191.945
           ],
-          "depth": 3.91
+          "depth": 3.92
         }
       ]
     },
@@ -160,14 +160,14 @@
             -41.0,
             191.795
           ],
-          "depth": 3.91
+          "depth": 3.92
         },
         {
           "world": [
             -66.5,
             191.795
           ],
-          "depth": 3.91
+          "depth": 3.92
         }
       ]
     },
@@ -267,27 +267,27 @@
   "bumpons_world": [
     [
       130.0,
-      93.95
+      97.95
     ],
     [
       -130.0,
-      93.95
+      97.95
     ],
     [
       130.0,
-      170.56
+      170.54
     ],
     [
       -130.0,
-      170.56
+      170.54
     ],
     [
       15.0,
-      93.95
+      97.95
     ],
     [
       -15.0,
-      93.95
+      97.95
     ]
   ],
   "bumpon_pocket": {
@@ -307,12 +307,22 @@
   "split_x_world": 0.0,
   "split_gap": 0.1,
   "rim_clear": 0.15,
-  "back_bevel": {
-    "step_z_p": 20.01,
-    "step_width": 5.2,
-    "slope_length": 14.59,
-    "inset_at_desk_face": 15.307,
-    "desk_face_back_edge_world_y": 179.063
+  "tray_and_base": {
+    "tray_bottom_z_p_front_back": [
+      20.43,
+      20.01
+    ],
+    "back_step": 5.2,
+    "back_slope_length": 14.59,
+    "front_step": 6.5,
+    "end_step": 4.5,
+    "desk_face_back_inset": 15.33,
+    "base_outline_world": [
+      -141.55,
+      89.45,
+      141.55,
+      189.17
+    ]
   },
   "parts": {
     "bottom-left": {
@@ -321,7 +331,7 @@
         111.89,
         22.33
       ],
-      "volume_cm3": 101.6
+      "volume_cm3": 98.7
     },
     "bottom-right": {
       "print_extents": [
@@ -329,7 +339,7 @@
         111.89,
         22.33
       ],
-      "volume_cm3": 102.5
+      "volume_cm3": 99.7
     },
     "coupon-front-left": {
       "print_extents": [
@@ -337,7 +347,7 @@
         21.23,
         11.41
       ],
-      "volume_cm3": 12.8
+      "volume_cm3": 12.5
     }
   }
 }

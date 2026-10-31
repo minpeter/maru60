@@ -42,10 +42,10 @@
     "tongue_tip_past_barrel_axis_mm": 1.75,
     "barrel_top_under_strike_plate_mm": 0.6,
     "pilot_depths_mm": [
-      3.91,
-      3.91,
-      3.91,
-      3.91,
+      3.92,
+      3.92,
+      3.92,
+      3.92,
       4.0,
       4.0,
       4.0,
@@ -98,14 +98,40 @@
     "top_case_min_z": -0.0,
     "wrist_pad_face_area_mm2": 2770.4
   },
-  "back_bevel": {
+  "tray_and_base": {
+    "material_outside_base_outline_mm2": {
+      "z_p_20.4803": 0.0,
+      "z_p_22.4303": 0.0,
+      "z_p_26.4303": 0.0,
+      "z_p_30.4303": 0.0
+    },
     "material_behind_slope_mm3": 0.0,
-    "material_in_step_mm3": 0.0,
-    "step_inner_edge_world_y": 189.122,
-    "expected_step_y": 189.17,
-    "desk_face_back_edge_print_y": -181.312,
-    "expected_print_y": -181.274,
-    "rail_face_at_lip_mm2": 276.7
+    "base_bounds_world": [
+      -141.55,
+      89.45,
+      141.55,
+      188.2
+    ],
+    "expected_base_bounds": [
+      -141.55,
+      89.45,
+      141.55,
+      189.17
+    ],
+    "tray_bottom_bounds_world": [
+      -146.05,
+      82.95,
+      146.05,
+      194.37
+    ],
+    "rail_outline_bounds": [
+      -146.05,
+      82.95,
+      146.05,
+      194.37
+    ],
+    "desk_face_back_edge_print_y": -181.289,
+    "expected_print_y": -181.25
   },
   "usb_slot_x_world": [
     118.098,
@@ -119,17 +145,17 @@
     "bottom-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "back_step_cantilever_mm2": 691.1
+      "tray_step_cantilever_mm2": 2155.5
     },
     "bottom-right": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "back_step_cantilever_mm2": 757.6
+      "tray_step_cantilever_mm2": 2155.5
     },
     "coupon-front-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "back_step_cantilever_mm2": 0.0
+      "tray_step_cantilever_mm2": 814.4
     }
   }
 }

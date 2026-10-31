@@ -62,13 +62,18 @@ PILOT_D, PILOT_MAX, PILOT_SKIN = 1.70, 4.00, 0.80  # M2 self-tapping pilots in P
 FLOOR_ZP = 18.20         # Cavity floor: PCB 12.50-14.10 (1.6 mm), bottom USB-C body to ~17.36, ~0.8 mm gasket travel
 _BAY = spec.value("bottom.battery_bay")
 BAY_BACK_GAP = 4.0       # Battery bay from the back ledge face (IMG_0474: filler block against the back, centred in X)
-# Back face (owner caliper + IMG_0465 edge trace, both approximate): vertical from the rail up to the top-case lip
-# (A 10.12 measured, 10.32 kept), then a flat step `BACK_LEDGE_W` inward at the lip level, then one straight slope
-# `BACK_SLOPE_LEN` long down to the desk face. The photo trace gives 5.0 / 14.5 mm and a 47 deg slope, matching both
-# lengths; the desk-face inset then follows from the case height (~15.3 mm; the owner's direct B reading was 18.61).
-BACK_BEVEL_START_ZP = top.SKIRT_H  # Step level on the back rail face (Z_p 20.01, the top-case lip)
-BACK_LEDGE_W = 5.2       # Flat step inward from the back rail face at the lip level
+# Two bodies (owner): a ㄷ tray (both rails + floor, rail outline, from the rail tops down to `TRAY_BOTTOM_ZP`) and a
+# triangular base under it, inset from the tray on every side so the tray bottom shows as a step all round. Back: the
+# base leaves `BACK_LEDGE_W`, then one straight slope `BACK_SLOPE_LEN` long runs to the desk face (owner caliper +
+# IMG_0465 edge trace 5.0 / 14.5 mm at 47 deg; the desk-face inset then follows, ~15.3 mm; the owner's direct reading
+# was 18.61). Front: a vertical face `FRONT_STEP_W` in (IMG_0465 trace ~6.6). Ends: `END_STEP_W` in (IMG_0463: the
+# desk face reads ~283 mm long against 292 mm rails). All approximate.
+TRAY_BOTTOM_ZP = top.SKIRT_H  # ㄷ tray bottom at the back rail: 10.32 below the rail tops (owner 10.12 +-), at the lip
+BACK_LEDGE_W = 5.2       # Tray bottom showing behind the base, from the back rail face
 BACK_SLOPE_LEN = 14.59   # Straight slope from the step's inner edge to the desk face
+FRONT_STEP_W = 6.5       # Tray bottom showing in front of the base, from the front rail face
+END_STEP_W = 4.5         # Tray bottom showing past each end of the base, from the rail ends
+BASE_CORNER_R = 2.0      # Base vertical corners
 DECO_CLEAR = 0.20        # Recess around the 3 mm decoration plate outline, per side
 DECO_BACK_D = 16.5       # Plate straight edge from the back rail face (IMG_0463: ~16): 1.2 mm in from the slope edge;
                          # further forward its centre bump leaves less than 1 mm over the battery bay
@@ -89,9 +94,25 @@ def desk_zp(y: float) -> float:
     return DESK_A + y * TAN
 
 
+def tray_bottom_zp(y: float) -> float:
+    """Z_p of the ㄷ tray bottom at world Y: `TRAY_BOTTOM_ZP` at the back rail face, tilted 0.2 deg so the front rail
+    edge meets the desk plane. Level with the rail tops, the front edge would hang 0.42 mm over the bed when printed
+    desk face down, with nothing under its first layers."""
+    k = (TRAY_BOTTOM_ZP - desk_zp(Y_FRONT)) / (Y_BACK - Y_FRONT)
+    return desk_zp(Y_FRONT) + k * (y - Y_FRONT)
+
+
+def tray_bottom_plane() -> tuple[list[float], float]:
+    """Plane (normal, offset) keeping Z_p <= `tray_bottom_zp(y)`."""
+    k = (TRAY_BOTTOM_ZP - desk_zp(Y_FRONT)) / (Y_BACK - Y_FRONT)
+    n = np.array([0.0, k, -1.0]) / math.hypot(k, 1.0)
+    return n.tolist(), float(n[1] * Y_FRONT + n[2] * desk_zp(Y_FRONT))
+
+
 def _back_slope_inset() -> float:
     """Desk-face back edge, horizontally in from the back rail face: the step plus the slope's horizontal run."""
-    y0, z0 = Y_BACK - BACK_LEDGE_W, BACK_BEVEL_START_ZP
+    y0 = Y_BACK - BACK_LEDGE_W
+    z0 = tray_bottom_zp(y0)
     lo, hi = 0.0, BACK_SLOPE_LEN
     for _ in range(60):  # run h with h^2 + (desk_zp(y0 - h) - z0)^2 = L^2; the left side grows with h
         h = (lo + hi) / 2
@@ -100,15 +121,17 @@ def _back_slope_inset() -> float:
 
 
 BACK_BEVEL_INSET = _back_slope_inset()
-BUMPON_SITES = [(130.0, "front", 11.0), (-130.0, "front", 11.0), (130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2)),
-                (-130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2)), (15.0, "front", 11.0), (-15.0, "front", 11.0)]
-# ^ world X, edge, centre distance from that rail face; the back row clears the slope by a 1.2 mm wall + 0.5 mm.
+BUMPON_SITES = [(130.0, "front", round(FRONT_STEP_W + 8.5, 2)), (-130.0, "front", round(FRONT_STEP_W + 8.5, 2)),
+                (130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2)), (-130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2)),
+                (15.0, "front", round(FRONT_STEP_W + 8.5, 2)), (-15.0, "front", round(FRONT_STEP_W + 8.5, 2))]
+# ^ world X, edge, centre distance from that rail face; each row clears the base edge by a 1.2 mm wall + 0.5 mm.
 
 
 def back_bevel() -> tuple[list[float], float]:
     """Plane (normal, offset) of the back slope: material keeps n . (x, y, z_p) >= offset. It runs from the step's
     inner edge at the lip level to the desk face `BACK_BEVEL_INSET` in from the rail face."""
-    ya, za = Y_BACK - BACK_LEDGE_W, BACK_BEVEL_START_ZP
+    ya = Y_BACK - BACK_LEDGE_W
+    za = tray_bottom_zp(ya)
     yb = Y_BACK - BACK_BEVEL_INSET
     zb = desk_zp(yb)
     n = np.array([0.0, -(zb - za), -(ya - yb)])  # perpendicular to (0, yb - ya, zb - za), toward the front/top
@@ -116,26 +139,28 @@ def back_bevel() -> tuple[list[float], float]:
     return n.tolist(), float(n[1] * ya + n[2] * za)
 
 
-def back_cut() -> md.Manifold:
-    """Everything removed behind the back face below the lip level: the step and the slope."""
+def base_outline() -> Any:
+    """Plan (world XY) of the triangular base at the tray bottom: the rail outline inset by the steps."""
+    x1 = abs(top.pw(RIM_P[0], 0.0)[0]) - END_STEP_W
+    b = sg.box(-x1, Y_FRONT + FRONT_STEP_W, x1, Y_BACK - BACK_LEDGE_W)
+    return orient(b.buffer(-BASE_CORNER_R).buffer(BASE_CORNER_R, quad_segs=16))
+
+
+def base_body() -> md.Manifold:
+    """The triangular base: the base outline from the tray bottom down, cut by the back slope (the desk plane trims
+    it with the tray in `build`)."""
     deep = desk_zp(Y_BACK) + 2.0
-    z0 = BACK_BEVEL_START_ZP
-    behind_slope = md.Manifold.cube([400.0, BACK_BEVEL_INSET + 6.0, deep - z0]).translate(
-        [-200.0, Y_BACK - BACK_BEVEL_INSET - 1.0, z0])
-    n, off = back_bevel()
-    behind_slope = behind_slope.trim_by_plane([-v for v in n], -off)
-    step = md.Manifold.cube([400.0, BACK_LEDGE_W + 5.0, deep - z0]).translate([-200.0, Y_BACK - BACK_LEDGE_W, z0])
-    return behind_slope + step
+    return prism(base_outline(), TRAY_BOTTOM_ZP - 1.0, deep).trim_by_plane(*back_bevel())
 
 
 def underside_zp(y: float) -> float:
-    """Z_p of the case underside at world Y: the desk face, the back slope, or the step at the lip level."""
+    """Z_p of the case underside at world Y away from the ends: tray bottom, desk face or back slope."""
+    if y < Y_FRONT + FRONT_STEP_W or y >= Y_BACK - BACK_LEDGE_W:
+        return tray_bottom_zp(y)
     if y <= Y_BACK - BACK_BEVEL_INSET:
         return desk_zp(y)
-    if y >= Y_BACK - BACK_LEDGE_W:
-        return BACK_BEVEL_START_ZP
-    t = (y - (Y_BACK - BACK_BEVEL_INSET)) / (BACK_BEVEL_INSET - BACK_LEDGE_W)
-    return desk_zp(Y_BACK - BACK_BEVEL_INSET) + t * (BACK_BEVEL_START_ZP - desk_zp(Y_BACK - BACK_BEVEL_INSET))
+    y0, y1 = Y_BACK - BACK_BEVEL_INSET, Y_BACK - BACK_LEDGE_W
+    return desk_zp(y0) + (y - y0) / (y1 - y0) * (tray_bottom_zp(y1) - desk_zp(y0))
 
 
 def print_y(y: float) -> float:
@@ -211,12 +236,11 @@ def deco_poly_print() -> Any:
 
 
 def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
-    # One outline from the rail tops to the desk face: no step at the top-case lip, the skirt wraps it from outside.
+    # ㄷ tray (rail outline, rail tops to the tray bottom) + the inset triangular base, both cut by the desk plane.
     rim = plate_box(*RIM_P, r=RIM_CORNER_R)
-    deep = desk_zp(Y_BACK) + 1.0
-    body = prism(rim, Z_RIM_TOP, deep)
+    tray = prism(rim, Z_RIM_TOP, desk_zp(Y_FRONT) + 1.0).trim_by_plane(*tray_bottom_plane())
+    body = tray + base_body()
     body = body.trim_by_plane([0.0, SIN, -COS], -DESK_A * COS)  # keep Z_p <= desk plane
-    body = body - back_cut()  # back face: step inward at the lip level, then a straight slope to the desk face
 
     # Cavity between the rails, through both short ends (no end walls).
     cuts = [prism(plate_box(RIM_P[0] - 1.0, LEDGE_FRONT_P, RIM_P[2] + 1.0, LEDGE_BACK_P), Z_RIM_TOP - 1.0, FLOOR_ZP)]
@@ -265,9 +289,11 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "deco_recess_print": {"outline_bounds": [round(v, 3) for v in deco_poly_print().bounds], "depth": deco_t,
                               "clear": DECO_CLEAR},
         "split_x_world": 0.0, "split_gap": SPLIT_GAP, "rim_clear": RIM_CLEAR,
-        "back_bevel": {"step_z_p": BACK_BEVEL_START_ZP, "step_width": BACK_LEDGE_W, "slope_length": BACK_SLOPE_LEN,
-                       "inset_at_desk_face": BACK_BEVEL_INSET,
-                       "desk_face_back_edge_world_y": round(Y_BACK - BACK_BEVEL_INSET, 3)},
+        "tray_and_base": {"tray_bottom_z_p_front_back": [round(tray_bottom_zp(Y_FRONT), 3), TRAY_BOTTOM_ZP],
+                          "back_step": BACK_LEDGE_W, "back_slope_length": BACK_SLOPE_LEN,
+                          "front_step": FRONT_STEP_W, "end_step": END_STEP_W,
+                          "desk_face_back_inset": BACK_BEVEL_INSET,
+                          "base_outline_world": [round(v, 3) for v in base_outline().bounds]},
     }
     return body, report
 
