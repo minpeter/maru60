@@ -54,21 +54,25 @@ def main() -> None:
     bottom = world["bottom-left"] + world["bottom-right"]
 
     # 2. Nesting in the top-case pocket: free when seated and 0.10 mm off centre (0.15 per side), located at 0.25 mm,
-    #    and only the rim top bears on the 9.69 floor: lifting the bottom case 0.05 mm into the top case touches a wide
-    #    band there and nothing at the skirt lip (20.01), which keeps `LIP_GAP`.
+    #    and only the rail tops bear on the 9.69 floor: lifting the bottom case 0.05 mm into the top case touches a wide
+    #    band there and nothing at the skirt lip (20.01). No outer step (stock part): at every height below the rail tops
+    #    the case stays inside the rail outline, so the top-case skirt wraps it from outside.
     seated = vol(bottom ^ top_mf)
     lateral = {f"{ax}{d:+.2f}": vol(bottom.translate([d if ax == "x" else 0.0, d if ax == "y" else 0.0, 0.0]) ^ top_mf)
                for ax in ("x", "y") for d in (-0.10, 0.10, -0.25, 0.25)}
     lifted = bottom.translate([0.0, 0.0, -0.05]) ^ top_mf
     bearing_mm2 = round(vol(lifted) / 0.05, 1)
     lip_contact = vol(lifted ^ box(-200.0, 0.0, 200.0, 250.0, top.SKIRT_H - 1.0, top.SKIRT_H + 1.0))
-    lip_gap_free = vol(bottom.translate([0.0, 0.0, -(bc.LIP_GAP - 0.02)]) ^ top_mf
-                       ^ box(-200.0, 0.0, 200.0, 250.0, top.SKIRT_H - 1.0, top.SKIRT_H + 1.0))
+    rail_outline = bc.plate_box(*bc.RIM_P, r=bc.RIM_CORNER_R).buffer(0.01)
+    outside_rails = {f"z_p_{z:g}": round(slice_material(bottom, z).difference(rail_outline).area, 4)
+                     for z in (Z["rim_top"] + 0.3, top.SKIRT_H - 0.3, top.SKIRT_H + 0.3, top.SKIRT_H + 5.0,
+                               top.SKIRT_H + 10.0)}
     assert seated < 0.01, f"Bottom case collides with the top case when seated: {seated} mm^3"
     assert max(v for k, v in lateral.items() if "0.10" in k) < 0.01, lateral
     assert min(v for k, v in lateral.items() if "0.25" in k) > 0.1, lateral
     assert bearing_mm2 > 1000.0, f"Rim top bearing on the 9.69 floor only {bearing_mm2} mm^2"
-    assert lip_contact < 0.01 and lip_gap_free < 0.01, (lip_contact, lip_gap_free)
+    assert lip_contact < 0.01, f"Bottom case touches the top-case skirt lip: {lip_contact} mm^3"
+    assert max(outside_rails.values()) < 0.01, f"Material outside the rail outline (outer step): {outside_rails}"
 
     # 3. Gasket plate and caps: the plate floats free seated and 1.0 mm down; the 12 cap bottom flanges (compressed
     #    footprint, 9.00..10.20) clear every wall and bear on the recess floors.
@@ -240,7 +244,7 @@ def main() -> None:
         "board": REPORT["board"],
         "top_case_pocket": {"seated_overlap_mm3": seated, "lateral_shift_overlap_mm3": lateral,
                             "rim_top_bearing_on_9p69_floor_mm2": bearing_mm2, "skirt_lip_contact_mm3": lip_contact,
-                            "skirt_lip_gap_mm": bc.LIP_GAP},
+                            "material_outside_rail_outline_mm2": outside_rails},
         "gasket": {"plate_free_mm3": plate_free, "cap_flanges_seated_mm3": caps_seated,
                    "cap_flanges_bearing_0p10_mm3": caps_bear, "cap_seat_z_p": Z["cap_seat"]},
         "ball_catches": catch_gauge,

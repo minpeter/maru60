@@ -3,10 +3,11 @@ battery-bay filler and back decoration plate, and nests in the stock top case or
 
 No caliper reading of the stock bottom case exists yet (the caliper displays in IMG_0462-0465 are out of frame), so the
 geometry comes from the parts it mates with, plus the owner's photos IMG_0462-0474 for layout:
-  - Rim: the top-case base pocket (caliper) less `RIM_CLEAR` per side, R2.7 corners (the stock rim held off an R5.0
-    pocket by ~2.3 mm at the corners), top at the 9.69 pocket floor it bears on.
-  - Below the lip: the top-case outline, cut by the desk plane the wrist rest stands on (6 deg, 0.11 mm at the front
-    edge, as photographed), so keyboard and wrist rest share one plane and the same SJ5012 bumpons (1.5 deep pockets).
+  - Outline: the top-case base pocket (caliper) less `RIM_CLEAR` per side, R2.7 corners (the stock rim held off an R5.0
+    pocket by ~2.3 mm at the corners), from the rail tops at the 9.69 pocket floor they bear on straight down to the
+    desk face: no step at the top-case lip, so the top-case skirt wraps the case from outside (owner, IMG_0463-0465).
+  - Desk face on the plane the wrist rest stands on (6 deg): the floor is a wedge, ~0.4 mm below the lip at the front
+    rail and ~12 mm at the back, so keyboard and wrist rest share one plane and the same SJ5012 bumpons (1.5 deep pockets).
   - Open ends, as the stock part (IMG_0462, 0472, 0473): only the front and back rails rise to the rim, full length;
     between them the cavity runs out through both short ends, closed there by the top-case side skirts.
   - The long rails carry the 6 gasket tabs: one open recess per tab whose floor holds the cap bottom flanges at
@@ -44,8 +45,8 @@ OUT.mkdir(exist_ok=True)
 RIM_CLEAR = 0.15         # Rim to top-case pocket wall, per side
 RIM_CORNER_R = 2.70      # Stock bottom-case rim corner radius (v6.2 fit: held ~2.3 mm off an R5.0 pocket)
 Z_RIM_TOP = top.Z_FLOOR  # Rim top bears on the top-case pocket floor (9.69)
-LIP_GAP = 0.20           # Base top below the top-case skirt lip (Z_p 20.01): only the rim top bears, so the 9.69 seat alone
-                         # sets the gasket stack; the base starts ~1 mm behind the front edge where the desk drops past it
+# No outer step (owner): below the top-case lip the case stays inside the top-case skirt; the rail faces run straight
+# down to the desk face, and the floor between them is a 6-deg wedge, thin at the front and thick at the back.
 PLATE_EDGE_CLEAR = 0.50  # Rail inner faces from the INKC 6095(gas) plate body edge (body Y)
 # Gasket caps: top flange on the 6.30 top-case seat, PC plate, bottom flange on this seat (both flanges compressed alike).
 CAP_SEAT_ZP = round(top.Z_PLATE + spec.value("plate.thickness") + spec.value("gasket.top_flange_compressed"), 2)  # 10.20
@@ -71,7 +72,8 @@ BED = 256.0
 
 COS, SIN, TAN = math.cos(top.TILT_RAD), math.sin(top.TILT_RAD), math.tan(top.TILT_RAD)
 DESK_A = top.z_desk_in_print_frame(0.0)  # Desk plane: Z_p = DESK_A + Y * TAN (the wrist-rest pad faces)
-Y_FRONT, Y_BACK = top.WRIST_D, round(top.WRIST_D + top.CASE_D, 3)  # Outer front / back faces (world Y)
+Y_FRONT = round(top.INNER_P[1] + RIM_CLEAR + top.DY_PW, 3)  # Front rail outer face (world Y)
+Y_BACK = round(top.INNER_P[3] - RIM_CLEAR + top.DY_PW, 3)   # Back rail outer face (world Y)
 # World -> print frame: desk face on the bed (Z' = height above it), X kept, Y' = -(Y cos + Z_p sin); a proper rotation.
 TO_PRINT = np.array([[1.0, 0.0, 0.0, 0.0], [0.0, -COS, -SIN, 0.0], [0.0, SIN, -COS, DESK_A * COS]])
 FROM_PRINT = np.array([[1.0, 0.0, 0.0, 0.0], [0.0, -COS, SIN, -DESK_A * COS * SIN], [0.0, -SIN, -COS, DESK_A * COS * COS]])
@@ -154,13 +156,10 @@ def deco_poly_print() -> Any:
 
 
 def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
-    # Below the lip: the top-case outline, its front face set back `RIM_CLEAR` from the wrist-rest junction wall.
-    outer = sg.box(top.OUTER_P[0], top.OUTER_P[1] + RIM_CLEAR, top.OUTER_P[2], top.OUTER_P[3])
-    outer = plate_to_world(outer.buffer(-top.CORNER_R).buffer(top.CORNER_R, quad_segs=24))
+    # One outline from the rail tops to the desk face: no step at the top-case lip, the skirt wraps it from outside.
     rim = plate_box(*RIM_P, r=RIM_CORNER_R)
     deep = desk_zp(Y_BACK) + 1.0
-    z_base = round(top.SKIRT_H + LIP_GAP, 2)
-    body = prism(rim, Z_RIM_TOP, z_base + 0.5) + prism(outer, z_base, deep)
+    body = prism(rim, Z_RIM_TOP, deep)
     body = body.trim_by_plane([0.0, SIN, -COS], -DESK_A * COS)  # keep Z_p <= desk plane
 
     # Cavity between the rails, through both short ends (no end walls).
@@ -178,7 +177,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
                 [xw, yw, CATCH_FLOOR_ZP - 0.5]))
     usb_x, usb_w = top.usb_notch_print(board)
     usb_y0, usb_y1 = top.pw(0.0, LEDGE_BACK_P - 1.0)[1], top.pw(0.0, RIM_P[3] + 1.0)[1]
-    cuts.append(prism(sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1), Z_RIM_TOP - 1.0, z_base))
+    cuts.append(prism(sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1), Z_RIM_TOP - 1.0, top.SKIRT_H))
     bay_y1 = LEDGE_BACK_P - BAY_BACK_GAP
     bay_cx = -top.DX_PW  # plate X of the case centre line (world X = 0)
     bay_p = (bay_cx - _BAY["length"] / 2, bay_y1 - _BAY["width"], bay_cx + _BAY["length"] / 2, bay_y1)
