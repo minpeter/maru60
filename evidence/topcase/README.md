@@ -100,6 +100,7 @@ strikes are nearly symmetric, so it could not reveal the v6.2 mirror image.
 | [outline-overlay-v4.png](analysis/outline-overlay-v4.png) | v4 model outline over the rectified photo (superseded outline; shows the method) |
 | [strike-pocket-fit-v4.3.png](analysis/strike-pocket-fit-v4.3.png) | Two-view strike-pocket silhouette fit |
 | [measurement-guide.png](analysis/measurement-guide.png) / [.svg](analysis/measurement-guide.svg) | Guide sent to the owner for what to measure |
+| [bottom-measurement-guide.png](analysis/bottom-measurement-guide.png) / [.svg](analysis/bottom-measurement-guide.svg) | Bottom-case guide; the end section is cut from the draft model |
 | [ball-catch-analysis.json](analysis/ball-catch-analysis.json) | Strike/catch positions and hardware size estimates |
 | [dwg-source-manifest.json](analysis/dwg-source-manifest.json) | Source URLs and SHA-256 of the downloaded Rule60 drawings |
 
