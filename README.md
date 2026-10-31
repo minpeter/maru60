@@ -7,7 +7,8 @@ separate connectors. Optional adhesive anti-slip pads are not included.
 [View on MakerWorld](https://makerworld.com/en/models/3490864-rule-60-v3-honeycomb-wrist-rest#profileId-3986872)
 
 Also in this repository: an experimental [HHKB top case with the wrist rest
-built in](#hhkb-top-case-with-integrated-wrist-rest-experimental).
+built in](#hhkb-top-case-with-integrated-wrist-rest-experimental) and a
+[draft bottom case](#hhkb-bottom-case-draft) that takes the stock internals.
 
 ![Dovetail joint detail; overview predates the small compression ribs](images/joint-underside.png)
 
@@ -352,18 +353,85 @@ not widened for cable plugs. A plug body up to the USB-C maximum of 12.35 mm
 fits with 0.2 mm per side. Some retail cables are wider (about 13 mm
 measured) and will not seat fully, the same as in the stock case.
 
+## HHKB bottom case (draft)
+
+A printable Rule 60 V3 bottom case for the stock PC gasket plate, 12 silicone
+caps, four double-ball catches, battery-bay filler and back decoration plate.
+It nests in the stock top case or the printed one above. **Draft: print the
+fit coupon first.** Same license as the top case
+([CC BY-NC 4.0](LICENSE-topcase)).
+
+No caliper reading of the stock bottom case exists yet: the caliper displays
+in the owner's bottom-case photos are out of frame. The geometry is derived
+from the parts it mates with; the photos set the layout.
+
+| Feature | Source |
+| --- | --- |
+| Rim: 292.1 × 111.4 mm, R2.7 corners, top bears on the 9.69 mm top-case floor | Top-case pocket (caliper) less 0.15 mm per side; corner radius from the v6.2 fit |
+| Below the lip: top-case outline, 0.20 mm below the skirt lip | Only the rim top bears, so the 9.69 seat alone sets the gasket stack |
+| Desk face on the wrist rest's 6° plane | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons |
+| Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange (assumed preload, as the top case) |
+| Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](evidence/topcase/analysis/ball-catch-analysis.json)); pilots on the top-case strike-pocket lobe centres |
+| Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
+| 140 × 45 × 4.5 mm R2 battery bay, back centre | INKC post; position from the owner's photos |
+| Back decoration plate recess, 3.0 mm | INKC drawing outline + 0.20 mm per side |
+| USB-C slot | Same centre and width as the top-case notch (`--board`) |
+
+Z is measured from the top case's top face, as in the top-case evidence. The
+catches stand on their notch floor with the barrels 0.60 mm under the strike
+plate, so the balls close on the tongue 1.75 mm past their axis. With the catch
+flush with the rim top, the balls would sit below the tongue tip.
+
+| File | Use |
+| --- | --- |
+| [Fit coupon — 3MF](models/rule60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: rim, front-left catch, cap recess, bumpon pocket. 119 × 19 mm, 0 h 29 min / 9 g |
+| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot. 149 × 117 mm, 3 h 26 min / 73 g |
+| [Right half — 3MF](models/rule60-hhkb-bottomcase-right.3mf) | 149 × 117 mm, 3 h 26 min / 73 g |
+
+Print desk face down, no supports or brim; owner's top-case settings
+(Bambu Studio CLI estimates above). The halves split at the centre with a
+0.10 mm gap and no joint: glue them, and the decoration plate bridges the
+seam underneath. Move the four catches from the stock case with their M2
+screws. Press six SJ5012 bumpons into the underside pockets.
+
+Fit on the coupon, in order: the rim slides into the top-case pocket and the
+top case sits flat on the rim; the catch clicks onto its strike and holds;
+the gasket plate with its caps closes without rattling or springing open.
+
+```sh
+uv run build_bottomcase_draft.py [--board BOARD]
+uv run verify_bottomcase.py   # needs topcase-draft/ from build_topcase_draft.py
+uv run export_bottomcase.py
+```
+
+The [verification](evidence/bottomcase-verification.json) checks the halves
+against the printed top case and virtual stock parts: free nesting at ±0.10 mm
+with rim-only bearing, the plate free through 1.0 mm of travel, all 12 cap
+flanges bearing, catches clear of both cases, a GH60 PCB with 2.0 mm
+bottom-side parts and the USB-C receptacle, the cable plug through both
+cases, the filler, the decoration plate and six bumpons, one desk plane with
+the wrist rest, and 0.20 mm layers without islands or undeclared overhangs.
+The [report](evidence/bottomcase-report.json) lists every level and position.
+
+Not measured, so the coupon decides: cap-seat level (sets gasket preload),
+catch notch depth, the catch screw pitch (photos read 25.5–26.8 mm), and the
+decoration plate position. The stock floor screws that hold the decoration
+plate are not modelled: fix the plate with double-sided tape.
+
 ## License and design history
 
 Copyright 2026 minpeter. Two licenses apply:
 
-- **Wrist rest — [CC BY 4.0](LICENSE).** Everything not listed under the top
-  case below: the wrist-rest generator, its model exports, documentation and
+- **Wrist rest — [CC BY 4.0](LICENSE).** Everything not listed under the cases
+  below: the wrist-rest generator, its model exports, documentation and
   renders. Attribute this project, link to the license and identify your
   changes. Commercial use is permitted.
-- **HHKB top case — [CC BY-NC 4.0](LICENSE-topcase), personal and other
-  non-commercial use only.** `build_topcase_draft.py`, `export_topcase.py`,
+- **HHKB top and bottom case — [CC BY-NC 4.0](LICENSE-topcase), personal and
+  other non-commercial use only.** `build_topcase_draft.py`, `export_topcase.py`,
   `render_topcase_draft.py`, `verify_topcase.py`, `models/rule60-hhkb-topcase*`,
-  `images/topcase-*` and `evidence/topcase*`. You may print, modify and share
+  `images/topcase-*`, `evidence/topcase*`, `build_bottomcase_draft.py`,
+  `verify_bottomcase.py`, `export_bottomcase.py`, `models/rule60-hhkb-bottomcase*`
+  and `evidence/bottomcase*`. You may print, modify and share
   it for non-commercial purposes with attribution. Selling the files, prints
   or derived designs requires the owner's permission.
 
@@ -373,8 +441,8 @@ stated CC BY 4.0.
 
 Third-party tools retain their own licenses. No affiliation with keyboard or
 printer manufacturers is implied. The Rule 60 V3 is designed by INKC STUDIO;
-the top case is an independent re-creation from measurements of the owner's
-stock part and is not an official file.
+the top and bottom cases are independent re-creations from measurements of the
+owner's stock parts and are not official files.
 [`third_party/inkc-rule60-v3/rule60-v3.dwg`](third_party/inkc-rule60-v3/README.md)
 is INKC STUDIO's plate drawing, redistributed on the creator's statement that
 the plate drawings are open source; it is not covered by either of this

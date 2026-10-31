@@ -1017,7 +1017,8 @@ def build_solidcraft_commands(board_id: str) -> list[dict[str, Any]]:
     return cmds
 
 
-def write_3mf(path: Path, title: str, named_meshes: list[tuple[str, trimesh.Trimesh]]) -> None:
+def write_3mf(path: Path, title: str, named_meshes: list[tuple[str, trimesh.Trimesh]],
+              fine_layer_z: tuple[float, float] | None = FINE_LAYER_Z) -> None:
     model = ET.Element("model", {"unit": "millimeter", "xmlns": "http://schemas.microsoft.com/3dmanufacturing/core/2015/02"})
     ET.SubElement(model, "metadata", {"name": "Title"}).text = title
     ET.SubElement(model, "metadata", {"name": "Designer"}).text = "minpeter"
@@ -1051,6 +1052,8 @@ def write_3mf(path: Path, title: str, named_meshes: list[tuple[str, trimesh.Trim
                 "</Relationships>"
             ),
         )
+        if fine_layer_z is None:
+            return
         # Bambu Studio / Orca height-range modifier on every object: 0.10 mm layers across the strike, cap-pocket and
         # base-pocket floors. With 0.20 mm layers the 6.30 cap floor prints at 6.4 and the 9.69 rim floor at 9.6, so the
         # silicone caps sit 0.19 mm tighter between top and bottom case; at 0.10 mm they print at 6.3 / 9.7 (sliced).
@@ -1058,7 +1061,7 @@ def write_3mf(path: Path, title: str, named_meshes: list[tuple[str, trimesh.Trim
             "Metadata/layer_config_ranges.xml",
             '<?xml version="1.0" encoding="utf-8"?>\n<objects>\n'
             + "".join(
-                f' <object id="{idx}">\n  <range min_z="{FINE_LAYER_Z[0]}" max_z="{FINE_LAYER_Z[1]}">\n'
+                f' <object id="{idx}">\n  <range min_z="{fine_layer_z[0]}" max_z="{fine_layer_z[1]}">\n'
                 '   <option opt_key="extruder">0</option>\n'
                 f'   <option opt_key="layer_height">{FINE_LAYER_H}</option>\n  </range>\n </object>\n'
                 for idx in range(1, len(named_meshes) + 1)

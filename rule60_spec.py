@@ -18,9 +18,14 @@ def value(key: str) -> Any:
     return _VALUES[key]
 
 
+def outline(name: str) -> dict[str, Any]:
+    """Outline record `name` from spec/rule60-v3-outlines.json (bbox, thickness, label, verts)."""
+    return next(o for o in _OUTLINES["outlines"] if o["name"] == name)
+
+
 def outline_points(name: str, arc_steps: int = 12) -> list[tuple[float, float]]:
     """Closed outline `name` in the plate frame, arcs (DWG bulges) split into `arc_steps` chords; first point not repeated."""
-    verts = next(o for o in _OUTLINES["outlines"] if o["name"] == name)["verts"]
+    verts = outline(name)["verts"]
     pts: list[tuple[float, float]] = []
     for k, (x0, y0, bulge) in enumerate(verts):
         x1, y1, _ = verts[(k + 1) % len(verts)]

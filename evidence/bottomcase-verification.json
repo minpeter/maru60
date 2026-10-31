@@ -1,0 +1,113 @@
+{
+  "status": "ALL_PASSED",
+  "board": "6095-trimode",
+  "top_case_pocket": {
+    "seated_overlap_mm3": 0.0066,
+    "lateral_shift_overlap_mm3": {
+      "x-0.10": 0.0066,
+      "x+0.10": 0.0066,
+      "x-0.25": 110.3943,
+      "x+0.25": 110.3943,
+      "y-0.10": 0.0066,
+      "y+0.10": 0.0066,
+      "y-0.25": 260.4046,
+      "y+0.25": 247.1749
+    },
+    "rim_top_bearing_on_9p69_floor_mm2": 2103.7,
+    "skirt_lip_contact_mm3": 0.0,
+    "skirt_lip_gap_mm": 0.2
+  },
+  "gasket": {
+    "plate_free_mm3": {
+      "down_0.0": 0.0,
+      "down_0.5": 0.0,
+      "down_1.0": 0.0
+    },
+    "cap_flanges_seated_mm3": 0.0,
+    "cap_flanges_bearing_0p10_mm3": 35.4241,
+    "cap_seat_z_p": 10.2
+  },
+  "ball_catches": {
+    "strikes_and_tongues_vs_bottom_mm3": 0.0,
+    "catch_bodies_vs_bottom_mm3": 0.0,
+    "catch_bodies_vs_top_case_mm3": 0.0,
+    "catch_bodies_vs_strike_plates_mm3": 0.0,
+    "catch_floor_bearing_mm3": 31.3082,
+    "tongue_tip_past_barrel_axis_mm": 1.75,
+    "barrel_top_under_strike_plate_mm": 0.6,
+    "pilot_depths_mm": [
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0
+    ]
+  },
+  "pcb": {
+    "gh60_pcb_and_usb_free_mm3": {
+      "down_0.0": 0.0,
+      "down_0.8": 0.0
+    },
+    "usb_body_to_floor_mm": 0.84,
+    "usb_plug_free_mm3": {
+      "bottom_mm3": 0.0,
+      "top_mm3": 0.0
+    }
+  },
+  "drop_in_parts": {
+    "filler_overlap_mm3": 0.0,
+    "deco_plate_overlap_mm3": 0.0029,
+    "deco_roof_1mm_void_mm3": 0.0,
+    "bumpon_overlap_mm3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bumpon_roof_1mm_void_mm3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bumpon_wall_1mm_void_mm3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bumpon_protrusion_mm": 2.0
+  },
+  "desk_plane": {
+    "bottom_min_z": -0.0,
+    "top_case_min_z": -0.0,
+    "wrist_pad_face_area_mm2": 2770.4
+  },
+  "usb_slot_x_world": [
+    118.098,
+    130.898
+  ],
+  "printability_0p20mm": {
+    "bottom-left": {
+      "islands": 0,
+      "undeclared_overhangs": 0
+    },
+    "bottom-right": {
+      "islands": 0,
+      "undeclared_overhangs": 0
+    },
+    "coupon-front-left": {
+      "islands": 0,
+      "undeclared_overhangs": 0
+    }
+  }
+}
