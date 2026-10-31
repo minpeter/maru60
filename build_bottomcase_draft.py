@@ -7,7 +7,9 @@ geometry comes from the parts it mates with, plus the owner's photos IMG_0462-04
     pocket by ~2.3 mm at the corners), top at the 9.69 pocket floor it bears on.
   - Below the lip: the top-case outline, cut by the desk plane the wrist rest stands on (6 deg, 0.11 mm at the front
     edge, as photographed), so keyboard and wrist rest share one plane and the same SJ5012 bumpons (1.5 deep pockets).
-  - Long-side ledges carry the 6 gasket tabs: one open recess per tab whose floor holds the cap bottom flanges at
+  - Open ends, as the stock part (IMG_0462, 0472, 0473): only the front and back rails rise to the rim, full length;
+    between them the cavity runs out through both short ends, closed there by the top-case side skirts.
+  - The long rails carry the 6 gasket tabs: one open recess per tab whose floor holds the cap bottom flanges at
     `CAP_SEAT_ZP` (6.30 top-case seat + compressed caps + 1.5 plate), and a through notch per ball catch below the
     top-case strike pocket. The catch barrels rise past the rim top into that pocket: with the catch flush the balls
     would sit below the 12.7 strike-tongue tip; the stock pocket's end walls and screw-head lobes fit a raised catch.
@@ -44,8 +46,7 @@ RIM_CORNER_R = 2.70      # Stock bottom-case rim corner radius (v6.2 fit: held ~
 Z_RIM_TOP = top.Z_FLOOR  # Rim top bears on the top-case pocket floor (9.69)
 LIP_GAP = 0.20           # Base top below the top-case skirt lip (Z_p 20.01): only the rim top bears, so the 9.69 seat alone
                          # sets the gasket stack; the base starts ~1 mm behind the front edge where the desk drops past it
-PLATE_EDGE_CLEAR = 0.50  # Ledge and short-wall faces from the INKC 6095(gas) plate edge (plate X 0..285.9, body Y)
-CAVITY_R = 2.0           # Cavity vertical corners
+PLATE_EDGE_CLEAR = 0.50  # Rail inner faces from the INKC 6095(gas) plate body edge (body Y)
 # Gasket caps: top flange on the 6.30 top-case seat, PC plate, bottom flange on this seat (both flanges compressed alike).
 CAP_SEAT_ZP = round(top.Z_PLATE + spec.value("plate.thickness") + spec.value("gasket.top_flange_compressed"), 2)  # 10.20
 CAP_REACH = round(top.CAP_FOOT_L / 2 + top.CAP_CLEAR - top.CAP_INSET, 3)  # Recess end past the tab end (1.55), as top
@@ -103,12 +104,10 @@ def from_print(m: md.Manifold) -> md.Manifold:
     return m.transform(FROM_PRINT)
 
 
-# Plate-frame faces of the ledges and short walls, from the 6095(gas) plate (body Y 5.57..101.916, X 0..285.9).
+# Plate-frame inner faces of the front and back rails, from the 6095(gas) plate body (Y 5.57..101.916).
 _BODY_Y = spec.value("plate.body_y")
-_PLATE_X = (0.0, 285.9)
 LEDGE_FRONT_P = round(_BODY_Y[0] - PLATE_EDGE_CLEAR, 3)
 LEDGE_BACK_P = round(_BODY_Y[1] + PLATE_EDGE_CLEAR, 3)
-WALL_LEFT_P, WALL_RIGHT_P = _PLATE_X[0] - PLATE_EDGE_CLEAR, _PLATE_X[1] + PLATE_EDGE_CLEAR
 RIM_P = tuple(round(v + d, 3) for v, d in zip(top.INNER_P, (RIM_CLEAR, RIM_CLEAR, -RIM_CLEAR, -RIM_CLEAR)))
 
 
@@ -164,7 +163,8 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     body = prism(rim, Z_RIM_TOP, z_base + 0.5) + prism(outer, z_base, deep)
     body = body.trim_by_plane([0.0, SIN, -COS], -DESK_A * COS)  # keep Z_p <= desk plane
 
-    cuts = [prism(plate_box(WALL_LEFT_P, LEDGE_FRONT_P, WALL_RIGHT_P, LEDGE_BACK_P, r=CAVITY_R), Z_RIM_TOP - 1.0, FLOOR_ZP)]
+    # Cavity between the rails, through both short ends (no end walls).
+    cuts = [prism(plate_box(RIM_P[0] - 1.0, LEDGE_FRONT_P, RIM_P[2] + 1.0, LEDGE_BACK_P), Z_RIM_TOP - 1.0, FLOOR_ZP)]
     cuts += [prism(plate_to_world(p), Z_RIM_TOP - 1.0, CAP_SEAT_ZP) for p in cap_recesses_p()]
     sites = catch_sites_p()
     pilots = []
@@ -200,7 +200,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
                 "cavity_floor": FLOOR_ZP, "bay_floor": round(FLOOR_ZP + _BAY["height"], 2), "lip": top.SKIRT_H,
                 "desk_at_y0": round(DESK_A, 6), "desk_tan": round(TAN, 9)},
         "plate_frame": {"rim": RIM_P, "rim_corner_r": RIM_CORNER_R, "ledge_front_y": LEDGE_FRONT_P,
-                        "ledge_back_y": LEDGE_BACK_P, "short_wall_x": [WALL_LEFT_P, WALL_RIGHT_P],
+                        "ledge_back_y": LEDGE_BACK_P, "open_ends": "no short walls: the cavity runs through both ends",
                         "battery_bay": [round(v, 3) for v in bay_p], "cap_recesses": [[round(v, 3) for v in p.bounds]
                                                                                       for p in cap_recesses_p()]},
         "catches": [{**s, "pilots": pilots[2 * k:2 * k + 2]} for k, s in enumerate(sites)],

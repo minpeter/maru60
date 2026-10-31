@@ -195,6 +195,18 @@ def main() -> None:
     assert len(gaps) == 1 and abs((gaps[0][0] + gaps[0][1]) / 2 - notch["x_world"]) < 0.05, (gaps, notch)
     assert abs(gaps[0][1] - gaps[0][0] - notch["width"]) < 0.05 and gaps[0][0] > 0.0, (gaps, notch)
 
+    # 8b. Open ends (stock part, IMG_0462/0472/0473): between the rail faces nothing rises above the cavity floor over
+    #     the last 10 mm of either end, while both rails run on to the rim ends at the rim top.
+    (_, ry0), (_, ry1) = top.pw(0.0, bc.LEDGE_FRONT_P), top.pw(0.0, bc.LEDGE_BACK_P)
+    rim_x = abs(top.pw(bc.RIM_P[0], 0.0)[0])
+    open_ends = {side: vol(bottom ^ box(min(s * (rim_x - 10.0), s * (rim_x + 1.0)), ry0 + 0.05,
+                                           max(s * (rim_x - 10.0), s * (rim_x + 1.0)), ry1 - 0.05,
+                                           Z["rim_top"] - 1.0, Z["cavity_floor"] - 0.05))
+                 for side, s in (("left", 1.0), ("right", -1.0))}
+    rail_ends = slice_material(bottom, Z["rim_top"] + 0.3).bounds
+    assert max(open_ends.values()) < 0.01, f"Material between the rails at an end: {open_ends}"
+    assert rail_ends[0] < -rim_x + 0.05 and rail_ends[2] > rim_x - 0.05, (rail_ends, rim_x)
+
     # 9. Printability, desk face down at 0.20 mm layers: no island without the layer below; no flat overhang wider than
     #    2 mm except the declared bridges (bumpon-pocket roofs, decoration-recess roof).
     bridges = unary_union([sg.Point(x, bc.print_y(y)).buffer(pocket_r + 0.3) for x, y in bc.bumpon_centres_world()]
@@ -236,6 +248,7 @@ def main() -> None:
         "drop_in_parts": fits,
         "desk_plane": desk,
         "usb_slot_x_world": [round(v, 3) for v in gaps[0]],
+        "open_ends_material_above_floor_mm3": open_ends,
         "printability_0p20mm": {k: {"islands": len(v["islands"]), "undeclared_overhangs": len(v["undeclared_overhangs"])}
                                 for k, v in printability.items()},
     }

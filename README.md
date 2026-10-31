@@ -367,7 +367,8 @@ from the parts it mates with; the photos set the layout.
 
 | Feature | Source |
 | --- | --- |
-| Rim: 292.1 × 111.4 mm, R2.7 corners, top bears on the 9.69 mm top-case floor | Top-case pocket (caliper) less 0.15 mm per side; corner radius from the v6.2 fit |
+| Front and back rails: 292.1 mm long, R2.7 corners, top bears on the 9.69 mm top-case floor | Top-case pocket (caliper) less 0.15 mm per side; corner radius from the v6.2 fit |
+| Open ends: no wall at either short end; the floor runs out between the rails | Stock bottom case (owner's photos IMG_0462, 0472, 0473); the top-case side skirts close the ends |
 | Below the lip: top-case outline, 0.20 mm below the skirt lip | Only the rim top bears, so the 9.69 seat alone sets the gasket stack |
 | Desk face on the wrist rest's 6° plane | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons |
 | Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange (assumed preload, as the top case) |
@@ -384,9 +385,9 @@ flush with the rim top, the balls would sit below the tongue tip.
 
 | File | Use |
 | --- | --- |
-| [Fit coupon — 3MF](models/rule60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: rim, front-left catch, cap recess, bumpon pocket. 119 × 19 mm, 0 h 29 min / 9 g |
-| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot. 149 × 117 mm, 3 h 26 min / 73 g |
-| [Right half — 3MF](models/rule60-hhkb-bottomcase-right.3mf) | 149 × 117 mm, 3 h 26 min / 73 g |
+| [Fit coupon — 3MF](models/rule60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front-left catch, cap recess, bumpon pocket. 119 × 19 mm, 0 h 27 min / 9 g |
+| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot. 149 × 117 mm, 3 h 23 min / 71 g |
+| [Right half — 3MF](models/rule60-hhkb-bottomcase-right.3mf) | 149 × 117 mm, 3 h 19 min / 71 g |
 
 Print desk face down, no supports or brim; owner's top-case settings
 (Bambu Studio CLI estimates above). The halves split at the centre with a
@@ -406,7 +407,7 @@ uv run export_bottomcase.py
 
 The [verification](evidence/bottomcase-verification.json) checks the halves
 against the printed top case and virtual stock parts: free nesting at ±0.10 mm
-with rim-only bearing, the plate free through 1.0 mm of travel, all 12 cap
+with rail-only bearing, both ends open, the plate free through 1.0 mm of travel, all 12 cap
 flanges bearing, catches clear of both cases, a GH60 PCB with 2.0 mm
 bottom-side parts and the USB-C receptacle, the cable plug through both
 cases, the filler, the decoration plate and six bumpons, one desk plane with
