@@ -42,10 +42,10 @@
     "tongue_tip_past_barrel_axis_mm": 1.75,
     "barrel_top_under_strike_plate_mm": 0.6,
     "pilot_depths_mm": [
-      4.0,
-      4.0,
-      4.0,
-      4.0,
+      3.91,
+      3.91,
+      3.91,
+      3.91,
       4.0,
       4.0,
       4.0,
@@ -65,8 +65,8 @@
   },
   "drop_in_parts": {
     "filler_overlap_mm3": 0.0,
-    "deco_plate_overlap_mm3": 0.0014,
-    "deco_roof_1mm_void_mm3": 0.0,
+    "deco_plate_overlap_mm3": 0.0007,
+    "deco_roof_1mm_void_mm3": 0.0025,
     "bumpon_overlap_mm3": [
       0.0,
       0.0,
@@ -99,9 +99,12 @@
     "wrist_pad_face_area_mm2": 2770.4
   },
   "back_bevel": {
-    "material_behind_bevel_mm3": 0.0,
-    "desk_face_back_edge_print_y": -184.644,
-    "expected_print_y": -184.599,
+    "material_behind_slope_mm3": 0.0,
+    "material_in_step_mm3": 0.0,
+    "step_inner_edge_world_y": 189.122,
+    "expected_step_y": 189.17,
+    "desk_face_back_edge_print_y": -181.312,
+    "expected_print_y": -181.274,
     "rail_face_at_lip_mm2": 276.7
   },
   "usb_slot_x_world": [
@@ -115,15 +118,18 @@
   "printability_0p20mm": {
     "bottom-left": {
       "islands": 0,
-      "undeclared_overhangs": 0
+      "undeclared_overhangs": 0,
+      "back_step_cantilever_mm2": 691.1
     },
     "bottom-right": {
       "islands": 0,
-      "undeclared_overhangs": 0
+      "undeclared_overhangs": 0,
+      "back_step_cantilever_mm2": 757.6
     },
     "coupon-front-left": {
       "islands": 0,
-      "undeclared_overhangs": 0
+      "undeclared_overhangs": 0,
+      "back_step_cantilever_mm2": 0.0
     }
   }
 }

@@ -189,18 +189,25 @@ def main() -> None:
             "top_case_min_z": round(float(top_mf.transform(to_p).bounding_box()[2]), 4),
             "wrist_pad_face_area_mm2": round(float(slice_material(top_mf.transform(to_p), 0.02).area), 1)}
     assert abs(desk["bottom_min_z"]) < 1e-3 and abs(desk["top_case_min_z"]) < 0.02 and desk["wrist_pad_face_area_mm2"] > 1000.0, desk
-    # 7b. Back bevel (stock part): nothing behind the bevel plane, the back rail face stays full height up to the lip,
-    #     and the desk face ends `BACK_BEVEL_INSET` in from the rail face.
+    # 7b. Back face (stock part): below the lip level nothing behind the slope plane or inside the step, the back rail
+    #     face stays full height up to the lip, the step's inner edge sits `BACK_LEDGE_W` in, and the desk face ends
+    #     `BACK_BEVEL_INSET` in from the rail face.
     n, off = bc.back_bevel()
-    region = box(-200.0, bc.Y_BACK - bc.BACK_BEVEL_INSET - 1.0, 200.0, bc.Y_BACK + 1.0, top.SKIRT_H - 1.0, 40.0)
-    behind_bevel = vol(bottom ^ region.trim_by_plane([-v for v in n], -off + 0.02))  # n . x <= off - 0.02
+    below_lip = box(-200.0, bc.Y_BACK - bc.BACK_BEVEL_INSET - 1.0, 200.0, bc.Y_BACK + 1.0, top.SKIRT_H + 0.02, 40.0)
+    behind_bevel = vol(bottom ^ below_lip.trim_by_plane([-v for v in n], -off + 0.02))  # n . x <= off - 0.02
+    in_step = vol(bottom ^ box(-200.0, bc.Y_BACK - bc.BACK_LEDGE_W + 0.02, 200.0, bc.Y_BACK + 1.0,
+                               top.SKIRT_H + 0.02, 40.0))
     desk_slice = slice_material(bottom.transform(to_p), 0.05)
-    bevel = {"material_behind_bevel_mm3": behind_bevel,
+    step_slice = slice_material(bottom, top.SKIRT_H + 0.05).intersection(sg.box(-100.0, 150.0, 100.0, 250.0))
+    bevel = {"material_behind_slope_mm3": behind_bevel, "material_in_step_mm3": in_step,
+             "step_inner_edge_world_y": round(step_slice.bounds[3], 3),
+             "expected_step_y": round(bc.Y_BACK - bc.BACK_LEDGE_W, 3),
              "desk_face_back_edge_print_y": round(desk_slice.bounds[1], 3),
              "expected_print_y": round(bc.print_y(bc.Y_BACK - bc.BACK_BEVEL_INSET), 3),
              "rail_face_at_lip_mm2": round(slice_material(bottom, top.SKIRT_H - 0.05).intersection(
                  sg.box(-200.0, bc.Y_BACK - 1.0, 200.0, bc.Y_BACK + 0.01)).area, 1)}
-    assert behind_bevel < 0.01, bevel
+    assert behind_bevel < 0.01 and in_step < 0.01, bevel
+    assert abs(bevel["step_inner_edge_world_y"] - bevel["expected_step_y"]) < 0.1, bevel
     assert abs(bevel["desk_face_back_edge_print_y"] - bevel["expected_print_y"]) < 0.1, bevel
     assert bevel["rail_face_at_lip_mm2"] > 200.0, bevel
 
@@ -226,9 +233,14 @@ def main() -> None:
     assert rail_ends[0] < -rim_x + 0.05 and rail_ends[2] > rim_x - 0.05, (rail_ends, rim_x)
 
     # 9. Printability, desk face down at 0.20 mm layers: no island without the layer below; no flat overhang wider than
-    #    2 mm except the declared bridges (bumpon-pocket roofs, decoration-recess roof).
+    #    2 mm per layer, and no down-facing surface shallower than 45 deg above the bed, except the declared ones:
+    #    bumpon-pocket roofs and decoration-recess roof (bridges), and the back step (a cantilever at 6 deg, as wide as
+    #    `BACK_LEDGE_W`; the per-layer test misses it because each 0.20 mm layer grows only ~1.9 mm).
     bridges = unary_union([sg.Point(x, bc.print_y(y)).buffer(pocket_r + 0.3) for x, y in bc.bumpon_centres_world()]
                           + [deco_poly.buffer(bc.DECO_CLEAR + 0.3)])
+    step_band = sg.box(-200.0, bc.print_y(bc.Y_BACK) - 0.6, 200.0,
+                       -((bc.Y_BACK - bc.BACK_LEDGE_W) * bc.COS + bc.BACK_BEVEL_START_ZP * bc.SIN) + 0.3)
+    declared = unary_union([bridges, step_band])
     printability = {}
     for name in ("bottom-left", "bottom-right", "coupon-front-left"):
         pm = trimesh.load_mesh(OUT / f"{name}-print.stl")
@@ -250,7 +262,15 @@ def main() -> None:
                         if not bridges.contains(g_model):
                             wide.append({"z": round(float(z), 2), "bounds": [round(v, 1) for v in g_model.bounds]})
             prev = cur
-        printability[name] = {"islands": islands, "undeclared_overhangs": wide}
+        # Down-facing faces off the bed steeper than 45 deg from vertical, outside the declared regions (model XY).
+        down = (pm.face_normals[:, 2] < -0.707) & (pm.triangles_center[:, 2] > 0.05)
+        shallow = [c for c in pm.triangles_center[down] - [shift[0], shift[1], 0.0]
+                   if not declared.contains(sg.Point(c[0], c[1]))]
+        step_area = float(pm.area_faces[down][[step_band.contains(sg.Point(c[0] - shift[0], c[1] - shift[1]))
+                                               for c in pm.triangles_center[down]]].sum())
+        printability[name] = {"islands": islands, "undeclared_overhangs": wide + [
+            {"down_facing_face_at": [round(float(v), 1) for v in c]} for c in shallow[:5]],
+            "back_step_cantilever_mm2": round(step_area, 1)}
     assert not any(v["islands"] or v["undeclared_overhangs"] for v in printability.values()), printability
 
     verification = {
@@ -268,7 +288,8 @@ def main() -> None:
         "back_bevel": bevel,
         "usb_slot_x_world": [round(v, 3) for v in gaps[0]],
         "open_ends_material_above_floor_mm3": open_ends,
-        "printability_0p20mm": {k: {"islands": len(v["islands"]), "undeclared_overhangs": len(v["undeclared_overhangs"])}
+        "printability_0p20mm": {k: {"islands": len(v["islands"]), "undeclared_overhangs": len(v["undeclared_overhangs"]),
+                                    "back_step_cantilever_mm2": v["back_step_cantilever_mm2"]}
                                 for k, v in printability.items()},
     }
     (OUT / "verification.json").write_text(json.dumps(verification, indent=2) + "\n")

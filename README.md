@@ -370,7 +370,7 @@ from the parts it mates with; the photos set the layout.
 | Front and back rails: 292.1 mm long, R2.7 corners, top bears on the 9.69 mm top-case floor | Top-case pocket (caliper) less 0.15 mm per side; corner radius from the v6.2 fit |
 | Open ends: no wall at either short end; the floor runs out between the rails | Stock bottom case (owner's photos IMG_0462, 0472, 0473); the top-case side skirts close the ends |
 | No outer step: the rail outline runs straight down to the desk face, so the floor is a 6° wedge (0.4 mm below the top-case lip at the front, 12 mm at the back) inside the top-case skirt | Stock bottom case (owner); only the rail tops bear, so the 9.69 seat alone sets the gasket stack |
-| Back bevel: the back face is vertical up to the top-case lip, then cut inward to the desk face 12 mm in from the rail face | Stock bottom case (owner, IMG_0463/0465); the 12 mm inset is a photo estimate (11–16 mm) |
+| Back face: vertical up to the top-case lip, a 5.2 mm flat step inward, then a 14.59 mm straight slope to the desk face (15.3 mm in from the rail face) | Owner's caliper readings (approximate) and an edge trace of IMG_0465 (5.0 / 14.5 mm, 47°). The owner's direct inset reading, 18.61 mm, does not fit those lengths at this case height. The step prints as a 5.2 mm cantilever at 6° |
 | Desk face on the wrist rest's 6° plane | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons |
 | Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange (assumed preload, as the top case) |
 | Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](evidence/topcase/analysis/ball-catch-analysis.json)); pilots on the top-case strike-pocket lobe centres |
@@ -387,8 +387,8 @@ flush with the rim top, the balls would sit below the tongue tip.
 | File | Use |
 | --- | --- |
 | [Fit coupon — 3MF](models/rule60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 29 min / 10 g |
-| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot. 146 × 112 mm, 3 h 3 min / 64 g |
-| [Right half — 3MF](models/rule60-hhkb-bottomcase-right.3mf) | 146 × 112 mm, 3 h 2 min / 64 g |
+| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot. 146 × 112 mm, 3 h 0 min / 62 g |
+| [Right half — 3MF](models/rule60-hhkb-bottomcase-right.3mf) | 146 × 112 mm, 2 h 59 min / 62 g |
 
 Print desk face down, no supports or brim; owner's top-case settings
 (Bambu Studio CLI estimates above). The halves split at the centre with a
