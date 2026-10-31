@@ -189,6 +189,20 @@ def main() -> None:
             "top_case_min_z": round(float(top_mf.transform(to_p).bounding_box()[2]), 4),
             "wrist_pad_face_area_mm2": round(float(slice_material(top_mf.transform(to_p), 0.02).area), 1)}
     assert abs(desk["bottom_min_z"]) < 1e-3 and abs(desk["top_case_min_z"]) < 0.02 and desk["wrist_pad_face_area_mm2"] > 1000.0, desk
+    # 7b. Back bevel (stock part): nothing behind the bevel plane, the back rail face stays full height up to the lip,
+    #     and the desk face ends `BACK_BEVEL_INSET` in from the rail face.
+    n, off = bc.back_bevel()
+    region = box(-200.0, bc.Y_BACK - bc.BACK_BEVEL_INSET - 1.0, 200.0, bc.Y_BACK + 1.0, top.SKIRT_H - 1.0, 40.0)
+    behind_bevel = vol(bottom ^ region.trim_by_plane([-v for v in n], -off + 0.02))  # n . x <= off - 0.02
+    desk_slice = slice_material(bottom.transform(to_p), 0.05)
+    bevel = {"material_behind_bevel_mm3": behind_bevel,
+             "desk_face_back_edge_print_y": round(desk_slice.bounds[1], 3),
+             "expected_print_y": round(bc.print_y(bc.Y_BACK - bc.BACK_BEVEL_INSET), 3),
+             "rail_face_at_lip_mm2": round(slice_material(bottom, top.SKIRT_H - 0.05).intersection(
+                 sg.box(-200.0, bc.Y_BACK - 1.0, 200.0, bc.Y_BACK + 0.01)).area, 1)}
+    assert behind_bevel < 0.01, bevel
+    assert abs(bevel["desk_face_back_edge_print_y"] - bevel["expected_print_y"]) < 0.1, bevel
+    assert bevel["rail_face_at_lip_mm2"] > 200.0, bevel
 
     # 8. USB slot under the top-case notch (keyboard left = world +X), same centre and width.
     z_usb = (Z["catch_floor"] + Z["cavity_floor"]) / 2  # below the catch notches, through the plug's height band
@@ -251,6 +265,7 @@ def main() -> None:
         "pcb": {"gh60_pcb_and_usb_free_mm3": pcb_free, "usb_body_to_floor_mm": floor_gap, "usb_plug_free_mm3": plug_free},
         "drop_in_parts": fits,
         "desk_plane": desk,
+        "back_bevel": bevel,
         "usb_slot_x_world": [round(v, 3) for v in gaps[0]],
         "open_ends_material_above_floor_mm3": open_ends,
         "printability_0p20mm": {k: {"islands": len(v["islands"]), "undeclared_overhangs": len(v["undeclared_overhangs"])}

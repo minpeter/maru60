@@ -62,10 +62,16 @@ PILOT_D, PILOT_MAX, PILOT_SKIN = 1.70, 4.00, 0.80  # M2 self-tapping pilots in P
 FLOOR_ZP = 18.20         # Cavity floor: PCB 12.50-14.10 (1.6 mm), bottom USB-C body to ~17.36, ~0.8 mm gasket travel
 _BAY = spec.value("bottom.battery_bay")
 BAY_BACK_GAP = 4.0       # Battery bay from the back ledge face (IMG_0474: filler block against the back, centred in X)
-BUMPON_SITES = [(130.0, "front", 11.0), (-130.0, "front", 11.0), (130.0, "back", 9.5), (-130.0, "back", 9.5),
-                (15.0, "front", 11.0), (-15.0, "front", 11.0)]  # world X, edge, centre distance from that outer edge
+# Back bevel (owner, IMG_0463/0465): the back face runs vertical from the rail up to the top-case lip, then cuts inward
+# in a straight bevel to the desk face `BACK_BEVEL_INSET` in from the rail face. Photo estimate 11-16 mm; not measured.
+BACK_BEVEL_START_ZP = top.SKIRT_H  # Bevel top edge on the back rail face (Z_p 20.01, the top-case lip)
+BACK_BEVEL_INSET = 12.0   # Desk-face back edge, horizontally in from the back rail face
+BUMPON_SITES = [(130.0, "front", 11.0), (-130.0, "front", 11.0), (130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2)),
+                (-130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2)), (15.0, "front", 11.0), (-15.0, "front", 11.0)]
+# ^ world X, edge, centre distance from that rail face; the back row clears the bevel by a 1.2 mm wall + 0.5 mm.
 DECO_CLEAR = 0.20        # Recess around the 3 mm decoration plate outline, per side
-DECO_BACK_D = 15.0       # Plate straight edge from the back outer edge along the desk face; trapezoid toward the front
+DECO_BACK_D = 15.5       # Plate straight edge from the back rail face (IMG_0463: ~16, past the bevel); bump forward,
+                         # its front edge keeps 1 mm over the battery bay
 DECO = spec.outline("back_deco_plate")
 SPLIT_GAP = 0.10         # Gap between the halves at X = 0
 BED = 256.0
@@ -81,6 +87,25 @@ FROM_PRINT = np.array([[1.0, 0.0, 0.0, 0.0], [0.0, -COS, SIN, -DESK_A * COS * SI
 
 def desk_zp(y: float) -> float:
     return DESK_A + y * TAN
+
+
+def back_bevel() -> tuple[list[float], float]:
+    """Plane (normal, offset) of the back bevel: material keeps n . (x, y, z_p) >= offset. It runs from the back rail
+    face at `BACK_BEVEL_START_ZP` to the desk face `BACK_BEVEL_INSET` in from it."""
+    ya, za = Y_BACK, BACK_BEVEL_START_ZP
+    yb = Y_BACK - BACK_BEVEL_INSET
+    zb = desk_zp(yb)
+    n = np.array([0.0, -(zb - za), -BACK_BEVEL_INSET])  # perpendicular to (0, yb - ya, zb - za), toward the front/top
+    n /= np.linalg.norm(n)
+    return n.tolist(), float(n[1] * ya + n[2] * za)
+
+
+def underside_zp(y: float) -> float:
+    """Z_p of the case underside at world Y: the desk face, or the back bevel behind it."""
+    if y <= Y_BACK - BACK_BEVEL_INSET:
+        return desk_zp(y)
+    t = (Y_BACK - y) / BACK_BEVEL_INSET
+    return BACK_BEVEL_START_ZP + t * (desk_zp(Y_BACK - BACK_BEVEL_INSET) - BACK_BEVEL_START_ZP)
 
 
 def print_y(y: float) -> float:
@@ -161,6 +186,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     deep = desk_zp(Y_BACK) + 1.0
     body = prism(rim, Z_RIM_TOP, deep)
     body = body.trim_by_plane([0.0, SIN, -COS], -DESK_A * COS)  # keep Z_p <= desk plane
+    body = body.trim_by_plane(*back_bevel())  # back face cut inward from the top-case lip to the desk face
 
     # Cavity between the rails, through both short ends (no end walls).
     cuts = [prism(plate_box(RIM_P[0] - 1.0, LEDGE_FRONT_P, RIM_P[2] + 1.0, LEDGE_BACK_P), Z_RIM_TOP - 1.0, FLOOR_ZP)]
@@ -171,7 +197,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         cuts.append(prism(plate_box(*s["notch_p"]), Z_RIM_TOP - 1.0, CATCH_FLOOR_ZP))
         for xp, yp in s["screws_p"]:
             xw, yw = top.pw(xp, yp)
-            depth = round(min(PILOT_MAX, desk_zp(yw) - CATCH_FLOOR_ZP - PILOT_SKIN), 2)
+            depth = round(min(PILOT_MAX, underside_zp(yw) - CATCH_FLOOR_ZP - PILOT_SKIN), 2)
             pilots.append({"world": [xw, yw], "depth": depth})
             cuts.append(md.Manifold.cylinder(depth + 0.5, PILOT_D / 2, PILOT_D / 2, 24).translate(
                 [xw, yw, CATCH_FLOOR_ZP - 0.5]))
@@ -209,6 +235,8 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "deco_recess_print": {"outline_bounds": [round(v, 3) for v in deco_poly_print().bounds], "depth": deco_t,
                               "clear": DECO_CLEAR},
         "split_x_world": 0.0, "split_gap": SPLIT_GAP, "rim_clear": RIM_CLEAR,
+        "back_bevel": {"start_z_p": BACK_BEVEL_START_ZP, "inset_at_desk_face": BACK_BEVEL_INSET,
+                       "desk_face_back_edge_world_y": round(Y_BACK - BACK_BEVEL_INSET, 3)},
     }
     return body, report
 

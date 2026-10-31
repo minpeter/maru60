@@ -65,7 +65,7 @@
   },
   "drop_in_parts": {
     "filler_overlap_mm3": 0.0,
-    "deco_plate_overlap_mm3": 0.0038,
+    "deco_plate_overlap_mm3": 0.0014,
     "deco_roof_1mm_void_mm3": 0.0,
     "bumpon_overlap_mm3": [
       0.0,
@@ -97,6 +97,12 @@
     "bottom_min_z": -0.0,
     "top_case_min_z": -0.0,
     "wrist_pad_face_area_mm2": 2770.4
+  },
+  "back_bevel": {
+    "material_behind_bevel_mm3": 0.0,
+    "desk_face_back_edge_print_y": -184.644,
+    "expected_print_y": -184.599,
+    "rail_face_at_lip_mm2": 276.7
   },
   "usb_slot_x_world": [
     118.098,
