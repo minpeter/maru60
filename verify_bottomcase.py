@@ -155,9 +155,10 @@ def main() -> None:
     filler_p = sg.Polygon([(x + fx0, y + fy0) for x, y in spec.outline_points("battery_bay_filler")])
     filler = bc.prism(bc.plate_to_world(filler_p), Z["cavity_floor"], Z["bay_floor"] - 0.01)
     deco_poly = bc.deco_poly_print()
-    deco = bc.from_print(bc.prism(deco_poly, 0.01, bc.DECO["thickness"]))
-    deco_cover = bc.from_print(bc.prism(deco_poly.buffer(bc.DECO_CLEAR), bc.DECO["thickness"] + 0.05,
-                                        bc.DECO["thickness"] + 1.0))
+    deco_t, deco_d = bc.DECO["thickness"], bc.DECO_RECESS  # the plate stands deco_t - deco_d proud of the desk face
+    deco = bc.from_print(bc.prism(deco_poly, deco_d - deco_t, deco_d - 0.01))
+    deco_cover = bc.from_print(bc.prism(deco_poly.buffer(bc.DECO_CLEAR), deco_d + 0.05, deco_d + 1.0))
+    assert deco_t - deco_d < top.BUMPON_H - top.POCKET_DEPTH - 1.0, "weight plate stands within 1 mm of the desk"
     pocket_r = top.POCKET_D / 2
     bumpons = [bc.from_print(md.Manifold.cylinder(top.BUMPON_H, top.BUMPON_D_MAX / 2, top.BUMPON_D_MAX / 2, 64)
                              .translate([x, bc.print_y(y), top.POCKET_DEPTH - top.BUMPON_H - 0.01]))
@@ -202,8 +203,8 @@ def main() -> None:
                     for z in (tz_low + 0.05, tz_low + 2.0, tz_low + 6.0, tz_low + 10.0)}
     below_tray = box(-200.0, bc.Y_BACK - bc.BACK_BEVEL_INSET - 1.0, 200.0, bc.Y_BACK + 1.0, tz + 0.05, 40.0)
     behind_bevel = vol(bottom ^ below_tray.trim_by_plane([-v for v in n], -off + 0.02))  # n . x <= off - 0.02
-    under = slice_material(bottom, tz_low + 0.6)  # under the whole tray, above the desk at the base front; the bay
-                                                  # runs through here, so compare outlines, not fill
+    under = slice_material(bottom, tz_low + 0.05)  # just under the whole tray; the bay runs through here, so compare
+                                                   # outlines, not fill
     tray = slice_material(bottom, tz - 0.05)
     rail_outline_p = bc.plate_box(*bc.RIM_P, r=bc.RIM_CORNER_R)
     desk_slice = slice_material(bottom.transform(to_p), 0.05)

@@ -267,11 +267,11 @@
   "bumpons_world": [
     [
       130.0,
-      97.95
+      95.95
     ],
     [
       -130.0,
-      97.95
+      95.95
     ],
     [
       130.0,
@@ -283,11 +283,11 @@
     ],
     [
       15.0,
-      97.95
+      95.95
     ],
     [
       -15.0,
-      97.95
+      95.95
     ]
   ],
   "bumpon_pocket": {
@@ -297,11 +297,13 @@
   "deco_recess_print": {
     "outline_bounds": [
       -119.8,
-      -180.165,
+      -174.75,
       119.8,
-      -144.565
+      -139.15
     ],
-    "depth": 3.0,
+    "depth": 2.5,
+    "plate_thickness": 3.0,
+    "from_slope_edge": 6.5,
     "clear": 0.2
   },
   "split_x_world": 0.0,
@@ -314,12 +316,12 @@
     ],
     "back_step": 5.2,
     "back_slope_length": 14.59,
-    "front_step": 6.5,
+    "front_step": 4.5,
     "end_step": 4.5,
     "desk_face_back_inset": 15.33,
     "base_outline_world": [
       -141.55,
-      89.45,
+      87.45,
       141.55,
       189.17
     ]
@@ -331,7 +333,7 @@
         111.89,
         22.33
       ],
-      "volume_cm3": 98.7
+      "volume_cm3": 100.8
     },
     "bottom-right": {
       "print_extents": [
@@ -339,7 +341,7 @@
         111.89,
         22.33
       ],
-      "volume_cm3": 99.7
+      "volume_cm3": 101.7
     },
     "coupon-front-left": {
       "print_extents": [
@@ -347,7 +349,7 @@
         21.23,
         11.41
       ],
-      "volume_cm3": 12.5
+      "volume_cm3": 12.6
     }
   }
 }

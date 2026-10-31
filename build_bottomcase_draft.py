@@ -66,17 +66,17 @@ BAY_BACK_GAP = 4.0       # Battery bay from the back ledge face (IMG_0474: fille
 # triangular base under it, inset from the tray on every side so the tray bottom shows as a step all round. Back: the
 # base leaves `BACK_LEDGE_W`, then one straight slope `BACK_SLOPE_LEN` long runs to the desk face (owner caliper +
 # IMG_0465 edge trace 5.0 / 14.5 mm at 47 deg; the desk-face inset then follows, ~15.3 mm; the owner's direct reading
-# was 18.61). Front: a vertical face `FRONT_STEP_W` in (IMG_0465 trace ~6.6). Ends: `END_STEP_W` in (IMG_0463: the
+# was 18.61). Front: a vertical face `FRONT_STEP_W` in (owner ~4.5). Ends: `END_STEP_W` in (IMG_0463: the
 # desk face reads ~283 mm long against 292 mm rails). All approximate.
 TRAY_BOTTOM_ZP = top.SKIRT_H  # ㄷ tray bottom at the back rail: 10.32 below the rail tops (owner 10.12 +-), at the lip
 BACK_LEDGE_W = 5.2       # Tray bottom showing behind the base, from the back rail face
 BACK_SLOPE_LEN = 14.59   # Straight slope from the step's inner edge to the desk face
-FRONT_STEP_W = 6.5       # Tray bottom showing in front of the base, from the front rail face
+FRONT_STEP_W = 4.5       # Tray bottom showing in front of the base, from the front rail face (owner, approximate)
 END_STEP_W = 4.5         # Tray bottom showing past each end of the base, from the rail ends
-BASE_CORNER_R = 2.0      # Base vertical corners
-DECO_CLEAR = 0.20        # Recess around the 3 mm decoration plate outline, per side
-DECO_BACK_D = 16.5       # Plate straight edge from the back rail face (IMG_0463: ~16): 1.2 mm in from the slope edge;
-                         # further forward its centre bump leaves less than 1 mm over the battery bay
+DECO_CLEAR = 0.20        # Recess around the 3 mm steel weight / decoration plate outline (INKC drawing), per side
+DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, along the desk face (owner)
+DECO_RECESS = 2.5        # Recess depth: the 3 mm plate stands 0.5 proud of the desk face (1.5 under the bumpons'
+                         # 2.0); a flush 3.0 recess would leave 0.5 mm over the battery bay under the plate's bump
 DECO = spec.outline("back_deco_plate")
 SPLIT_GAP = 0.10         # Gap between the halves at X = 0
 BED = 256.0
@@ -140,10 +140,10 @@ def back_bevel() -> tuple[list[float], float]:
 
 
 def base_outline() -> Any:
-    """Plan (world XY) of the triangular base at the tray bottom: the rail outline inset by the steps."""
+    """Plan (world XY) of the triangular base at the tray bottom: the rail outline inset by the steps. The ends are
+    clean square cuts (owner): vertical faces, sharp corners."""
     x1 = abs(top.pw(RIM_P[0], 0.0)[0]) - END_STEP_W
-    b = sg.box(-x1, Y_FRONT + FRONT_STEP_W, x1, Y_BACK - BACK_LEDGE_W)
-    return orient(b.buffer(-BASE_CORNER_R).buffer(BASE_CORNER_R, quad_segs=16))
+    return orient(sg.box(-x1, Y_FRONT + FRONT_STEP_W, x1, Y_BACK - BACK_LEDGE_W))
 
 
 def base_body() -> md.Manifold:
@@ -231,7 +231,7 @@ def deco_poly_print() -> Any:
     """Back decoration plate outline (INKC drawing) in the print frame, true size on the desk face."""
     pts = spec.outline_points("back_deco_plate")
     w, h = DECO["bbox"][2], DECO["bbox"][3]
-    y_edge = print_y(Y_BACK) + DECO_BACK_D  # print Y' grows toward the front
+    y_edge = print_y(Y_BACK - BACK_BEVEL_INSET) + DECO_FROM_SLOPE  # print Y' grows toward the front
     return orient(sg.Polygon([(x - w / 2, y_edge + (h - y)) for x, y in pts]))
 
 
@@ -267,8 +267,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     for xw, yw in bumpon_centres_world():
         cuts.append(from_print(md.Manifold.cylinder(top.POCKET_DEPTH + 1.0, pocket_r, pocket_r, 64).translate(
             [xw, print_y(yw), -1.0])))
-    deco_t = DECO["thickness"]
-    cuts.append(from_print(prism(deco_poly_print().buffer(DECO_CLEAR, quad_segs=8), -1.0, deco_t)))
+    cuts.append(from_print(prism(deco_poly_print().buffer(DECO_CLEAR, quad_segs=8), -1.0, DECO_RECESS)))
     body = body - md.Manifold.batch_boolean(cuts, md.OpType.Add)
 
     report = {
@@ -286,7 +285,8 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, top.SKIRT_H]},
         "bumpons_world": [[x, round(y, 3)] for x, y in bumpon_centres_world()],
         "bumpon_pocket": {"d": top.POCKET_D, "depth": top.POCKET_DEPTH},
-        "deco_recess_print": {"outline_bounds": [round(v, 3) for v in deco_poly_print().bounds], "depth": deco_t,
+        "deco_recess_print": {"outline_bounds": [round(v, 3) for v in deco_poly_print().bounds], "depth": DECO_RECESS,
+                              "plate_thickness": DECO["thickness"], "from_slope_edge": DECO_FROM_SLOPE,
                               "clear": DECO_CLEAR},
         "split_x_world": 0.0, "split_gap": SPLIT_GAP, "rim_clear": RIM_CLEAR,
         "tray_and_base": {"tray_bottom_z_p_front_back": [round(tray_bottom_zp(Y_FRONT), 3), TRAY_BOTTOM_ZP],

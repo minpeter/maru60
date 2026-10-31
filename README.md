@@ -369,14 +369,14 @@ from the parts it mates with; the photos set the layout.
 | --- | --- |
 | Front and back rails: 292.1 mm long, R2.7 corners, top bears on the 9.69 mm top-case floor | Top-case pocket (caliper) less 0.15 mm per side; corner radius from the v6.2 fit |
 | Open ends: no wall at either short end; the floor runs out between the rails | Stock bottom case (owner's photos IMG_0462, 0472, 0473); the top-case side skirts close the ends |
-| Two bodies: a ㄷ tray (both rails and the floor, rail outline, 10.32 mm from the rail tops at the back, tilted 0.2° so its front edge meets the desk plane) and a triangular base under it, inset so the tray bottom shows as a step all round: 5.2 mm at the back, 6.5 mm at the front, 4.5 mm at each end | Stock bottom case (owner); the step widths are approximate (owner's calipers, IMG_0463/0465). Only the rail tops bear, so the 9.69 seat alone sets the gasket stack. The steps print as cantilevers at 6° |
+| Two bodies: a ㄷ tray (both rails and the floor, rail outline, 10.32 mm from the rail tops at the back, tilted 0.2° so its front edge meets the desk plane) and a triangular base under it, inset so the tray bottom shows as a step all round: 5.2 mm at the back, 4.5 mm at the front and at each end, where the base ends in clean square cuts | Stock bottom case (owner's calipers, approximate). Only the rail tops bear, so the 9.69 seat alone sets the gasket stack. The steps print as cantilevers at 6° |
 | Base back face: one 14.59 mm straight slope from the back step to the desk face (15.3 mm in from the rail face) | Owner's caliper readings and an edge trace of IMG_0465 (5.0 / 14.5 mm, 47°). The owner's direct inset reading, 18.61 mm, does not fit those lengths at this case height |
 | Desk face on the wrist rest's 6° plane | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons |
 | Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange (assumed preload, as the top case) |
 | Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](evidence/topcase/analysis/ball-catch-analysis.json)); pilots on the top-case strike-pocket lobe centres |
 | Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
 | 140 × 45 × 4.5 mm R2 battery bay, back centre | INKC post; position from the owner's photos |
-| Back decoration plate recess, 3.0 mm | INKC drawing outline + 0.20 mm per side |
+| Steel weight plate recess, 2.5 mm deep (the 3 mm plate stands 0.5 mm proud, 1.5 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. A 3.0 mm recess would leave 0.5 mm of floor over the battery bay under the plate's centre bump |
 | USB-C slot | Same centre and width as the top-case notch (`--board`) |
 
 Z is measured from the top case's top face, as in the top-case evidence. The
@@ -386,8 +386,8 @@ flush with the rim top, the balls would sit below the tongue tip.
 
 | File | Use |
 | --- | --- |
-| [Fit coupon — 3MF](models/rule60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front step, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 31 min / 10 g |
-| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot. 146 × 112 mm, 3 h 2 min / 61 g |
+| [Fit coupon — 3MF](models/rule60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front step, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 30 min / 10 g |
+| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot. 146 × 112 mm, 3 h 2 min / 62 g |
 | [Right half — 3MF](models/rule60-hhkb-bottomcase-right.3mf) | 146 × 112 mm, 3 h 2 min / 62 g |
 
 Print desk face down, no supports or brim; owner's top-case settings
@@ -416,9 +416,9 @@ the wrist rest, and 0.20 mm layers without islands or undeclared overhangs.
 The [report](evidence/bottomcase-report.json) lists every level and position.
 
 Not measured, so the coupon decides: cap-seat level (sets gasket preload),
-catch notch depth, the catch screw pitch (photos read 25.5–26.8 mm), and the
-decoration plate position. The stock floor screws that hold the decoration
-plate are not modelled: fix the plate with double-sided tape.
+catch notch depth and the catch screw pitch (photos read 25.5–26.8 mm). The
+stock floor screws that hold the weight plate are not modelled: fix the plate
+with double-sided tape.
 
 ## License and design history
 
