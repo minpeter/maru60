@@ -165,8 +165,9 @@ On the desk the wrist rest sits slightly high and creaks when pressed, most
 likely because the stock bottom-case feet hold the keyboard about 2 mm above
 the desk (estimated, not measured) while the model puts the wrist-rest
 underside level with the top-case lip. Bumpons under the wrist rest fill that
-gap. v7.6 adds bumpon pockets and v7.9 sets the USB-C notch from public PCB
-data; neither has been printed yet. Fixes found by printing:
+gap. v7.6 adds bumpon pockets, v7.9 sets the USB-C notch from public PCB
+data and v7.10 keeps only the front pad row; none has been printed yet. Fixes
+found by printing:
 
 - **v7.0:** v6.2 and earlier printed the mirror image: the DWG plate frame is a
   top view, the print frame the underside. The USB-C notch came out on the
@@ -188,15 +189,18 @@ data; neither has been printed yet. Fixes found by printing:
   print, 2 mm outward and then back to the stock position.
 - **v7.9:** the notch follows public data only: the 6095 tri-mode kit PCB
   (the default board) measures plate X 18.45 in top-side photos, 0.9 mm toward
-  the Esc-side edge of the stock notch (19.35). The left half is unchanged
-  since v7.6.
+  the Esc-side edge of the stock notch (19.35).
+- **v7.10:** only the four front bumpon pads remain. On the printed bottom
+  case the back row along the keyboard junction stood 24 mm in front of the
+  bottom case's own front bumpons, so the assembly stood on 14; the front row
+  and the bottom case's four corners (8 in all) carry every load case.
 
 [Fit photos](evidence/topcase/README.md#photos) are in the evidence folder.
 
 | File | Use |
 | --- | --- |
-| [Left half — 3MF](models/rule60-hhkb-topcase-left.3mf) | 206 × 197 mm print, ~78 g |
-| [Right half — 3MF](models/rule60-hhkb-topcase-right.3mf) | 149 × 197 mm print, ~67 g; USB-C notch for the 6095 tri-mode kit PCB |
+| [Left half — 3MF](models/rule60-hhkb-topcase-left.3mf) | 206 × 197 mm print, 4 h 16 min / 76 g |
+| [Right half — 3MF](models/rule60-hhkb-topcase-right.3mf) | 149 × 197 mm print, 3 h 48 min / 65 g; USB-C notch for the 6095 tri-mode kit PCB |
 | [Right half, universal USB — 3MF](models/rule60-hhkb-topcase-right-usb-universal.3mf) | Same, with a 14.75 mm notch covering every measured on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
 | [Fit coupons — 3MF](models/rule60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
 | [CAD — STEP](models/rule60-hhkb-topcase.step) | Both halves, for remixing |
@@ -212,12 +216,13 @@ print ramp keep a 0.20 mm vertical glue line. Use epoxy or gel cyanoacrylate.
 Strike-plate screws must not exceed **5.0 mm under the head** (1.45 mm plate +
 3.55 mm pilot).
 
-**Bumpons:** eight **3M™ Bumpon™ Protective Products SJ5012**: cylindrical,
+**Bumpons:** four **3M™ Bumpon™ Protective Products SJ5012** under the wrist
+rest (four more go under the bottom case's corners): cylindrical,
 flat top, Ø12.7 × 3.5 mm (±0.5 mm), black, white, grey or brown. The same
 shape is sold as **SJ5312** (transparent) and **SJ5412** (true white); any of
 the three fits ([3M datasheet](https://multimedia.3m.com/mws/media/117314O/3m-bumpon-protective-products-molded-shapes-colored-and-clear.pdf)).
-Press one into each pocket under the wrist rest, four along the front edge and
-four along the keyboard junction. Each stands 2.0 mm proud of the pad, to fill
+Press one into each pocket along the wrist rest's front edge. Each stands
+2.0 mm proud of the pad, to fill
 the ~2 mm the stock feet lift the keyboard (estimated, not measured). The
 hemispherical **SJ5302** (Ø7.9 × 2.2 mm, transparent; SJ5302BL is its
 80-piece blister pack) does not suit the pockets: it would stand only 0.7 mm
@@ -333,7 +338,7 @@ glue lines, the back-seam strike screws, layer islands and flat overhangs, and
 virtual stock parts: the INKC plate through 0.25 mm upward flex, 12 caps,
 four strikes, 60 HHKB keycaps through full travel and the stock bottom-case
 pocket, the USB-C notch side, width and depth, and an Ø13.2 mm bumpon
-(3M Bumpon SJ5012 at its +0.5 mm tolerance) fitting each of the eight wrist-rest pockets
+(3M Bumpon SJ5012 at its +0.5 mm tolerance) fitting each of the four wrist-rest pockets
 on a full floor with at least 1 mm of wall. The v7.4 halves, rebuilt at the printed
 layer heights, passed the same checks except one: the wedge-key tip's top
 0.10 mm layer reaches 0.05 mm into the notch layer below it, so the key tip
@@ -371,7 +376,7 @@ from the parts it mates with; the photos set the layout.
 | Open ends: no wall at either short end; the floor runs out between the rails | Stock bottom case (owner's photos IMG_0462, 0472, 0473); the top-case side skirts close the ends |
 | Two bodies: a ㄷ tray (both rails and the floor, rail outline, 10.32 mm from the rail tops at the back, tilted 0.2° so its front edge meets the desk plane) and a triangular base under it, inset so the tray bottom shows as a step all round: 5.2 mm at the back, 4.5 mm at the front and at each end, where the base ends in clean square cuts | Stock bottom case (owner's calipers, approximate). Only the rail tops bear, so the 9.69 seat alone sets the gasket stack. The steps print as cantilevers at 6° |
 | Base back face: one 14.59 mm straight slope from the back step to the desk face (15.3 mm in from the rail face) | Owner's caliper readings and an edge trace of IMG_0465 (5.0 / 14.5 mm, 47°). The owner's direct inset reading, 18.61 mm, does not fit those lengths at this case height |
-| Desk face on the wrist rest's 6° plane | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons |
+| Desk face on the wrist rest's 6° plane, four bumpon pockets at the corners (X ±130; 13.0 mm from the front rail face, 8.5 mm in from the back slope's desk-face edge) | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons, 8 in all with the wrist rest's front row. Rigid-body load share (self weight 9 N, wrists 15 N, typing 5 N; assumed): 3.7–5.6 N each with both wrists down, all 8 loaded |
 | Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange (assumed preload, as the top case) |
 | Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](evidence/topcase/analysis/ball-catch-analysis.json)); pilots on the top-case strike-pocket lobe centres |
 | Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
@@ -398,7 +403,7 @@ Print desk face down, no supports or brim; owner's top-case settings
 pieces should press together by hand along the desk-face normal and not move
 sideways. Join the halves with glue in the seam, screw the two seam catches
 across it, then tape the steel weight plate over the back leg. Move the four
-catches from the stock case with their M2 screws. Press six SJ5012 bumpons
+catches from the stock case with their M2 screws. Press four SJ5012 bumpons
 into the underside pockets.
 
 Fit on the coupon, in order: the rim slides into the top-case pocket and the
@@ -416,7 +421,7 @@ against the printed top case and virtual stock parts: free nesting at ±0.10 mm
 with rail-only bearing, no material outside the rail outline, both ends open, the plate free through 1.0 mm of travel, all 12 cap
 flanges bearing, catches clear of both cases, a GH60 PCB with 2.0 mm
 bottom-side parts and the USB-C receptacle, the cable plug through both
-cases, the filler, the decoration plate and six bumpons, one desk plane with
+cases, the filler, the decoration plate and four corner bumpons, one desk plane with
 the wrist rest, the split seam (no overlap when seated or along the insertion
 path, over 40 mm³ of collision for any 0.3 mm sideways shift, and one screw
 per half in each seam catch), and 0.20 mm layers without islands or

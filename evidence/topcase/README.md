@@ -40,6 +40,7 @@ increasing toward the skirt lip.
 | v7.4 | USB-C cable plugs in, but the connector first looked off the notch centre toward the Esc-side edge; the owner asked to move the notch about 2 mm outward, judged by eye (2026-10-31) | v7.7 (not printed): notch centre plate X 19.35 → 17.35 (print X 123.60 → 125.60) |
 | v7.4 | Re-inspected: the connector looks nearly or exactly centred in the stock-position notch (owner, 2026-10-31) | v7.8 (not printed): notch back at plate X 19.35 |
 | — | Owner: design from public PCB data only, not from fits on his own board | v7.9: default board `6095-trimode` (6095 tri-mode kit PCB, top-side photos, plate X 18.45 ±0.3), 0.9 mm toward the Esc-side edge of the stock notch; the owner-fit board entry is removed from spec/boards.json |
+| — | Owner, reviewing the underside with the printed bottom case: too many bumpons (14). The wrist rest's back row stood 24 mm in front of the bottom case's front row (2026-10-31) | v7.10: back pad row removed (pads, hollow notches, undercuts, pockets); 4 front pads + 4 bottom-case corners. A rigid-body load share (self weight, two wrists, typing at the centre and the Esc corner) leaves every one of the 8 loaded |
 
 Readings not used:
 
@@ -111,7 +112,7 @@ strikes are nearly symmetric, so it could not reveal the v6.2 mirror image.
 | [../topcase-verification.json](../topcase-verification.json) | `verify_topcase.py` output on the exported halves |
 | [../topcase-verification-usb-universal.json](../topcase-verification-usb-universal.json) | Same checks on the `--board universal` build (14.75 mm USB notch, only the right half differs) |
 | [../topcase-report.json](../topcase-report.json) | Build report: Z stack, pocket outlines, back seam, dovetails, USB-C notch |
-| [checks/as-printed-check.json](checks/as-printed-check.json) | v7.4: same checks on both halves rebuilt at the printed layer heights, plan clearances to the stock parts, slicer estimates. One finding: the wedge-key tip bears after ~0.15 mm of its 0.20 mm vertical glue line. v7.5–v7.9 changed only the wrist-rest bumpon pads and the USB-C notch position, away from every joint. |
+| [checks/as-printed-check.json](checks/as-printed-check.json) | v7.4: same checks on both halves rebuilt at the printed layer heights, plan clearances to the stock parts, slicer estimates. One finding: the wedge-key tip bears after ~0.15 mm of its 0.20 mm vertical glue line. v7.5–v7.10 changed only the wrist-rest bumpon pads and the USB-C notch position, away from every joint. |
 | [checks/seams-v7.4.png](checks/seams-v7.4.png) | Split line, back-seam plan at the BL strike, and sections through the 3 dovetails and the wedge key (unchanged since v7.4) |
 
 `as-printed-check.json` and the seam image were produced during the design

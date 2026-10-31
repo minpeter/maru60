@@ -1,5 +1,5 @@
 {
-  "version": "v7.9-usb-notch-public-6095-trimode",
+  "version": "v7.10-front-row-bumpons",
   "generator": "SolidCraft v0.22.0 parametric timeline + 28px/mm gasket metrology",
   "solidcraft_design": "topcase-draft/rule60-hhkb-unibody-draft.solidcraft",
   "step_export": "topcase-draft/rule60-hhkb-unibody-draft.step",
@@ -4130,22 +4130,6 @@
         [
           119.0,
           8.0
-        ],
-        [
-          -30.0,
-          72.0
-        ],
-        [
-          30.0,
-          72.0
-        ],
-        [
-          -119.0,
-          72.0
-        ],
-        [
-          119.0,
-          72.0
         ]
       ],
       "desk_plane_zp_at_y0": 11.711881852811848,
@@ -4155,9 +4139,9 @@
   "bodies": [
     {
       "name": "RightHalf",
-      "volume_mm3": 82936.99,
-      "mass_petg_g": 105.3,
-      "faces": 1865,
+      "volume_mm3": 78678.37,
+      "mass_petg_g": 99.9,
+      "faces": 1705,
       "print_plate_bounds_mm": [
         [
           53.47,
@@ -4173,9 +4157,9 @@
     },
     {
       "name": "LeftHalf",
-      "volume_mm3": 94767.14,
-      "mass_petg_g": 120.4,
-      "faces": 2009,
+      "volume_mm3": 90508.52,
+      "mass_petg_g": 114.9,
+      "faces": 1849,
       "print_plate_bounds_mm": [
         [
           25.15,
@@ -4198,7 +4182,7 @@
   "verification": {
     "watertight": true,
     "compression_rib_intentional_interference_mm3": 0.512,
-    "disengaged_overlap_mm3": -0.0,
+    "disengaged_overlap_mm3": 0.0,
     "blocked_x_separation_1mm_overlap_mm3": 79.869,
     "blocked_z_overtravel_0p3mm_past_clearance_overlap_mm3": 61.892,
     "dovetail_z_stop_clearance_mm": 0.2,

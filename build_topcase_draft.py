@@ -215,12 +215,14 @@ INNER_SKIRT_R = spec.value("top.inner_corner_r")  # Inner skirt (bottom-case poc
                         # v6.2 held the stock bottom case ~2.3 mm off its seat at the corners (owner, printed part): its
                         # corners are about R2.7, so the pocket takes R2.0 to clear them with the straight walls line-to-line.
 RIB = 2.40              # Honeycomb rib width (matches v9)
-# Bumpon pads: 8 sites on the wrist-rest underside, each with a pocket for a 3M Bumpon Protective Products SJ5012
+# Bumpon pads: 4 sites along the wrist-rest front edge, each with a pocket for a 3M Bumpon Protective Products SJ5012
 # (cylindrical, flat top, Ø12.7 x 3.5 mm, +-0.5 mm; same shape as SJ5312 transparent and SJ5412 true white). The bumpons
 # fill the gap the stock bottom-case feet leave under the wrist rest; the pocket sets how far they stand proud of the pad
-# face (`DESK_GAP`) and holds them against sideways shear. Each pad runs `PAD_D` in from the front face (front row) or
-# the junction wall (back row): full height near the wall, then a 45-deg corbel that prints without support. v7.4 had
-# 6 mm deep flat pads, v7.5 11 mm deep flat pads for the hemispherical Ø7.9 x 2.2 mm SJ5302.
+# face (`DESK_GAP`) and holds them against sideways shear. Each pad runs `PAD_D` in from the front face: full height
+# near the wall, then a 45-deg corbel that prints without support. v7.4 had 6 mm deep flat pads, v7.5 11 mm deep flat
+# pads for the hemispherical Ø7.9 x 2.2 mm SJ5302. v7.10 drops the back row along the junction (owner): the printed
+# bottom case's front bumpons stand 24 mm behind it, so with it the assembly stood on 14 bumpons where 8 carry every
+# load case.
 BUMPON_D = spec.value("bumpon.sj5012")["diameter"]  # 3M SJ5012 diameter (datasheet nominal)
 BUMPON_D_MAX = BUMPON_D + spec.value("bumpon.sj5012")["tolerance"]  # Diameter at the +0.5 mm datasheet tolerance
 BUMPON_H = spec.value("bumpon.sj5012")["height"]  # 3M SJ5012 height (datasheet nominal)
@@ -235,8 +237,8 @@ PAD_TIP_T = round(POCKET_DEPTH + 1.0, 3)      # Vertical land at the pad's inner
 
 
 def pad_centres() -> list[tuple[float, float]]:
-    """Print-frame X, Y of the 8 bumpon pad centres: front row, then back row."""
-    return [(s * c, y) for y in (PAD_D / 2, WRIST_D - PAD_D / 2) for c in PAD_X for s in (-1.0, 1.0)]
+    """Print-frame X, Y of the 4 bumpon pad centres along the front edge."""
+    return [(s * c, PAD_D / 2) for c in PAD_X for s in (-1.0, 1.0)]
 
 
 def usb_notch_print(board_id: str) -> tuple[float, float]:
@@ -639,24 +641,19 @@ def build_solidcraft_commands(board_id: str) -> list[dict[str, Any]]:
         },
     ])
 
-    # 12. Wrist-Rest Symmetric Interior Hollows (contoured around the 8 bumpon pads) + Right-Side Undercut Boss Strip
-    #     + 45-deg pad undercuts
+    # 12. Wrist-Rest Symmetric Interior Hollows (contoured around the 4 front bumpon pads) + Right-Side Undercut Boss
+    #     Strip + 45-deg pad undercuts
     assert (PAD_D - BUMPON_D_MAX) / 2 >= 1.0 and PAD_W >= BUMPON_D_MAX + 2.0, "bumpon pad too small"
     w_in_x = round(CASE_W / 2 - WRIST_WALL, 3)
-    y_back_wall = round(WRIST_D - WRIST_WALL, 3)
-    y_back_pad = round(WRIST_D - PAD_D, 3)
     front_notches: list[list[float]] = []
-    back_notches: list[list[float]] = []
     for c in sorted(PAD_X, reverse=True):  # left half, outer pad first along the front (X rising)
         x0, x1 = -(c + PAD_W / 2), -(c - PAD_W / 2)
         front_notches += [[x0, WRIST_WALL], [x0, PAD_D], [x1, PAD_D], [x1, WRIST_WALL]]
-        back_notches = [[x1, y_back_wall], [x1, y_back_pad], [x0, y_back_pad], [x0, y_back_wall], *back_notches]
     left_hollow_pts = [
         [-w_in_x + 5.5, 2.2],
         *front_notches,
         [-4.0, 2.2],
         [-4.0, 77.8],
-        *back_notches,
         [-w_in_x, 77.8],
         [-w_in_x, 7.7],
         [-w_in_x + 5.5, 2.2],
@@ -711,25 +708,22 @@ def build_solidcraft_commands(board_id: str) -> list[dict[str, Any]]:
     # without support; the pad stays full height where that slope meets the skin, at least `PAD_COLUMN_D` from the wall.
     # Only cuts: the pad face stays the step-3 desk plane and the pad sides the hollow notch, and the cut reaches 1 mm
     # into the empty bay past the pad's sides and inner edge (no coincident faces).
-    undercuts = []
-    for y_col, y_tip, sign in ((PAD_COLUMN_D, PAD_D, 1.0), (WRIST_D - PAD_COLUMN_D, WRIST_D - PAD_D, -1.0)):
-        z_tip = z_desk_in_print_frame(y_tip) - PAD_TIP_T  # underside at the pad's inner edge
-        y_out = y_tip + sign
-        below_slope = sg.Polygon([(y_out, z_tip + 1.0), (y_tip - sign * 100.0, z_tip - 100.0), (y_out, z_tip - 100.0)])
-        band = sg.box(min(y_col, y_out), SKIN_T, max(y_col, y_out), z_tip + 1.0)
-        cut = band.intersection(below_slope)
-        assert cut.geom_type == "Polygon" and cut.area > 1.0, (y_tip, cut)
-        undercuts.append(sg.Polygon([(round(y, 4), round(z, 4)) for y, z in cut.exterior.coords[:-1]]))
+    z_tip = z_desk_in_print_frame(PAD_D) - PAD_TIP_T  # underside at the pad's inner edge
+    y_out = PAD_D + 1.0
+    below_slope = sg.Polygon([(y_out, z_tip + 1.0), (PAD_D - 100.0, z_tip - 100.0), (y_out, z_tip - 100.0)])
+    cut = sg.box(PAD_COLUMN_D, SKIN_T, y_out, z_tip + 1.0).intersection(below_slope)
+    assert cut.geom_type == "Polygon" and cut.area > 1.0, cut
+    undercut = sg.Polygon([(round(y, 4), round(z, 4)) for y, z in cut.exterior.coords[:-1]])
     for i, x0 in enumerate(sorted(s * c - PAD_W / 2 for c in PAD_X for s in (-1.0, 1.0))):
         cmds.extend([
             {"command": "sketch.create", "params": {"plane": "YZ", "offset": str(x0 - 1.0), "name": f"PadUndercutSk{i}"}},
-            *({"command": "sketch.line", "params": {"points": poly_to_pts(poly)}} for poly in undercuts),
+            {"command": "sketch.line", "params": {"points": poly_to_pts(undercut)}},
             {"command": "sketch.finish", "params": {}},
             {
                 "command": "solid.extrude",
                 "params": {
                     "sketch": f"PadUndercutSk{i}",
-                    "profiles": [{"point": [round(p.centroid.x, 4), round(p.centroid.y, 4)]} for p in undercuts],
+                    "profiles": [{"point": [round(undercut.centroid.x, 4), round(undercut.centroid.y, 4)]}],
                     "distance": PAD_W + 2.0,
                     "operation": "cut",
                     "targets": ["Unibody"],
@@ -1212,7 +1206,7 @@ def main() -> None:
     )
 
     report = {
-        "version": "v7.9-usb-notch-public-6095-trimode",
+        "version": "v7.10-front-row-bumpons",
         "generator": "SolidCraft v0.22.0 parametric timeline + 28px/mm gasket metrology",
         "solidcraft_design": str(design_path.relative_to(Path(__file__).resolve().parent)),
         "step_export": str(step_path.relative_to(Path(__file__).resolve().parent)),
