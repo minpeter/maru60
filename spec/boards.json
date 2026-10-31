@@ -105,10 +105,10 @@
    "id": "6095-wireless-owner",
    "name": "\"6095\" tri-mode wireless PCB (owner's board; vendor not identified)",
    "usb": {
-    "centre_x": 17.35,
+    "centre_x": 19.35,
     "frame": "plate",
     "status": "fit",
-    "source": "v7.4 print: the connector sat about 2 mm outward of the stock-position notch centre (toward the Esc-side edge); the owner asked to move the notch 2 mm away from the keyboard centre (2026-10-31), v7.7 did. Judged by eye; photos of the 6095 tri-mode (1.6 mm) put its connector at gh60 18.0 = plate 18.45, 0.9 mm outward of stock, so the owner's board needs a direct measurement"
+    "source": "v7.4 print assembled on the owner's board: with the notch at the stock position (plate X 19.35) the connector looks nearly or exactly centred (owner, 2026-10-31, re-inspected). The earlier '~2 mm outward' impression moved the notch to 17.35 in v7.7; v7.8 returns it to 19.35. Photos of the 1.6 mm 6095 tri-mode PCB read plate 18.45, 0.9 mm left of this fit: either a different revision (the kit lists 1.2 mm) or photo error"
    },
    "battery": null,
    "sources": [],
@@ -116,7 +116,7 @@
     "verdict": "fits",
     "reasons": []
    },
-   "notes": "[KitBoards] [INFERENCE] most likely the 6095 三模 kit board (yr6095-trimode) or its 1.2 mm flex-cut v1. The photographed 1.6 mm v2 measures gh60 18.0 +-0.3 top view (plate 18.45), 17.5 from bottom views; the owner fit (gh60 16.9) is 1.1 mm lower than the top view and 0.6 below the bottom views. Either the 1.2 mm v1 places the connector differently (no bare photo found) or the '~2 mm' eyeball fit over-corrected. Asking the owner for a top-side photo with a ruler, or the silk text/thickness, would settle it.",
+   "notes": "[KitBoards] [INFERENCE] most likely the 6095 三模 kit board (yr6095-trimode) or its 1.2 mm flex-cut v1. The photographed 1.6 mm v2 measures gh60 18.0 +-0.3 top view (plate 18.45), 17.5 from bottom views; the owner fit (gh60 16.9) is 1.1 mm lower than the top view and 0.6 below the bottom views. Either the 1.2 mm v1 places the connector differently (no bare photo found) or the '~2 mm' eyeball fit over-corrected. Asking the owner for a top-side photo with a ruler, or the silk text/thickness, would settle it. | [owner 2026-10-31] Board believed to be the 6095 tri-mode; v7.4 (stock notch) fits centred.",
    "evidence": [
     {
      "image_or_url": "owner fit report (spec/boards.json)",

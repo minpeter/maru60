@@ -241,7 +241,7 @@ def pad_centres() -> list[tuple[float, float]]:
 
 def usb_notch_print(board_id: str) -> tuple[float, float]:
     """Print X of the USB-C notch centre and its width for a board (spec/boards.json). The stock top-case notch sits at
-    plate X 19.35; the owner's 6095 wireless board (v7.4 print) needed it 2 mm outward, at 17.35."""
+    plate X 19.35, which the owner's 6095 board fits centred (v7.4 print); v7.7 had moved it to 17.35 by eye."""
     centre_p, width = spec.usb_notch(board_id)
     return pw(centre_p, 0.0)[0], width
 
@@ -1209,7 +1209,7 @@ def main() -> None:
     )
 
     report = {
-        "version": "v7.7-usb-notch-2mm-out",
+        "version": "v7.8-usb-notch-stock",
         "generator": "SolidCraft v0.22.0 parametric timeline + 28px/mm gasket metrology",
         "solidcraft_design": str(design_path.relative_to(Path(__file__).resolve().parent)),
         "step_export": str(step_path.relative_to(Path(__file__).resolve().parent)),
