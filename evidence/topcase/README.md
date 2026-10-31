@@ -38,7 +38,8 @@ increasing toward the skirt lip.
 | v7.4 | Both halves printed and assembled; joints fit well. The wrist rest feels slightly raised and creaks when pressed (owner, 2026-10-30), likely the ~2 mm the stock bottom-case feet lift the keyboard (estimated, not measured). Fix chosen: 3M Bumpon SJ5302 (hemispherical, transparent, Ø7.9 × 2.2 mm) under the wrist rest, but a centred one hung ~1 mm past the 6 mm pads | v7.5 (not printed): the 8 pads run 11 mm in (6 mm full height + 45° corbel) |
 | — | Owner also bought 3M Bumpon SJ5012 (cylindrical, flat top, Ø12.7 × 3.5 mm; same shape as SJ5312 transparent and SJ5412 true white) and asked for the pads to take that type instead, for stability | v7.6: 16 × 16 mm pads with a Ø13.6 × 1.5 mm pocket square to the desk plane (2.0 mm proud, the estimated gap); `bumpon_pockets_sj5012` checks an Ø13.2 mm bumpon fits each pocket, bears on its whole floor with ≥ 1 mm of material under it, and keeps ≥ 1 mm of wall (1.2 mm) to every pad edge |
 | v7.4 | USB-C cable plugs in, but the connector first looked off the notch centre toward the Esc-side edge; the owner asked to move the notch about 2 mm outward, judged by eye (2026-10-31) | v7.7 (not printed): notch centre plate X 19.35 → 17.35 (print X 123.60 → 125.60) |
-| v7.4 | Re-inspected: the connector sits nearly or exactly centred in the stock-position notch (owner, 2026-10-31). Photos of a 1.6 mm 6095 tri-mode PCB read plate X 18.45, 0.9 mm left; the owner's board may be another revision | v7.8: notch back at plate X 19.35; right half matches v7.6 again |
+| v7.4 | Re-inspected: the connector looks nearly or exactly centred in the stock-position notch (owner, 2026-10-31) | v7.8 (not printed): notch back at plate X 19.35 |
+| — | Owner: design from public PCB data only, not from fits on his own board | v7.9: default board `6095-trimode` (6095 tri-mode kit PCB, top-side photos, plate X 18.45 ±0.3), 0.9 mm toward the Esc-side edge of the stock notch; the owner-fit board entry is removed from spec/boards.json |
 
 Readings not used:
 
@@ -109,7 +110,7 @@ strikes are nearly symmetric, so it could not reveal the v6.2 mirror image.
 | [../topcase-verification.json](../topcase-verification.json) | `verify_topcase.py` output on the exported halves |
 | [../topcase-verification-usb-universal.json](../topcase-verification-usb-universal.json) | Same checks on the `--board universal` build (14.75 mm USB notch, only the right half differs) |
 | [../topcase-report.json](../topcase-report.json) | Build report: Z stack, pocket outlines, back seam, dovetails, USB-C notch |
-| [checks/as-printed-check.json](checks/as-printed-check.json) | v7.4: same checks on both halves rebuilt at the printed layer heights, plan clearances to the stock parts, slicer estimates. One finding: the wedge-key tip bears after ~0.15 mm of its 0.20 mm vertical glue line. v7.5–v7.8 changed only the wrist-rest bumpon pads and the USB-C notch position, away from every joint. |
+| [checks/as-printed-check.json](checks/as-printed-check.json) | v7.4: same checks on both halves rebuilt at the printed layer heights, plan clearances to the stock parts, slicer estimates. One finding: the wedge-key tip bears after ~0.15 mm of its 0.20 mm vertical glue line. v7.5–v7.9 changed only the wrist-rest bumpon pads and the USB-C notch position, away from every joint. |
 | [checks/seams-v7.4.png](checks/seams-v7.4.png) | Split line, back-seam plan at the BL strike, and sections through the 3 dovetails and the wedge key (unchanged since v7.4) |
 
 `as-printed-check.json` and the seam image were produced during the design

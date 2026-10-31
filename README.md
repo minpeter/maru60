@@ -164,9 +164,8 @@ On the desk the wrist rest sits slightly high and creaks when pressed, most
 likely because the stock bottom-case feet hold the keyboard about 2 mm above
 the desk (estimated, not measured) while the model puts the wrist-rest
 underside level with the top-case lip. Bumpons under the wrist rest fill that
-gap. The USB-C connector sits centred in the stock-position notch (owner,
-re-inspected). v7.6 adds bumpon pockets and has not been printed yet. Fixes
-found by printing:
+gap. v7.6 adds bumpon pockets and v7.9 sets the USB-C notch from public PCB
+data; neither has been printed yet. Fixes found by printing:
 
 - **v7.0:** v6.2 and earlier printed the mirror image: the DWG plate frame is a
   top view, the print frame the underside. The USB-C notch came out on the
@@ -184,18 +183,19 @@ found by printing:
   instead: 16 × 16 mm pads, each with a Ø13.6 × 1.5 mm pocket square to the
   desk, so the bumpon stands 2.0 mm proud and the pocket wall resists sideways
   push. Past ~6 mm each pad is a 45° corbel (no supports).
-- **v7.7 (reverted):** USB-C notch centre moved 2 mm toward the Esc-side edge
-  on a first impression of the v7.4 print.
-- **v7.8:** notch back at the stock position (plate X 19.35): re-inspected,
-  the v7.4 print shows the owner's connector nearly or exactly centred there.
-  The right half matches v7.6 again; the left half is unchanged since v7.6.
+- **v7.7 and v7.8 (superseded):** the USB-C notch moved by eye on the owner's
+  print, 2 mm outward and then back to the stock position.
+- **v7.9:** the notch follows public data only: the 6095 tri-mode kit PCB
+  (the default board) measures plate X 18.45 in top-side photos, 0.9 mm toward
+  the Esc-side edge of the stock notch (19.35). The left half is unchanged
+  since v7.6.
 
 [Fit photos](evidence/topcase/README.md#photos) are in the evidence folder.
 
 | File | Use |
 | --- | --- |
 | [Left half — 3MF](models/rule60-hhkb-topcase-left.3mf) | 206 × 197 mm print, ~78 g |
-| [Right half — 3MF](models/rule60-hhkb-topcase-right.3mf) | 149 × 197 mm print, ~67 g; USB-C notch at the stock position, centred on the owner's 6095 board |
+| [Right half — 3MF](models/rule60-hhkb-topcase-right.3mf) | 149 × 197 mm print, ~67 g; USB-C notch for the 6095 tri-mode kit PCB |
 | [Right half, universal USB — 3MF](models/rule60-hhkb-topcase-right-usb-universal.3mf) | Same, with a 14.75 mm notch covering every measured on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
 | [Fit coupons — 3MF](models/rule60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
 | [CAD — STEP](models/rule60-hhkb-topcase.step) | Both halves, for remixing |
@@ -263,8 +263,7 @@ position, or `universal`):
 
 | `--board` | Notch centre, plate X | Basis |
 | --- | --- | --- |
-| `6095-wireless-owner` (default, published files) | 19.35 | Stock position; the owner's v7.4 print shows the connector centred there |
-| `yr6095-trimode` | 18.45 | 6095 tri-mode kit PCB, top-side photos (±0.3) |
+| `6095-trimode` (default, published files) | 18.45 | 6095 tri-mode kit PCB, top-side photos (±0.3) |
 | `rule60-kit-6095` / `yr6095` | 18.55 | Y&R 6095 wired kit PCB, three top-side photos (±0.3); the stock notch at 19.35 sits 0.8 mm right of it |
 | `gh60` and most open designs | 18.65 | GH60 rev C KiCad, 18.2 mm from the PCB edge |
 | `wish60-ble` | 19.12 | Maker's STEP, mid-mount USB-C |
@@ -272,8 +271,8 @@ position, or `universal`):
 | `ae61-pro` (highest found) | 19.45 | Photo (±0.5) |
 | `universal` | 18.48, 14.75 mm wide | Every measured on-board back-edge USB below (guesses left out) |
 
-**Survey result** (2026-10-31): 145 boards, 79 open designs and 61
-commercial; 118 have a USB position, 69 of them from design files. Two
+**Survey result** (2026-10-31): 144 boards, 79 open designs and 61
+commercial; 117 have a USB position, 69 of them from design files. Two
 oshwhub projects behind the EasyEDA Pro login (HL6095, OPEN60), 13
 AliExpress and 10 Taobao listings were captured with the Aside browser and
 measured. An audit re-parsed 36 design files (29 matched within 0.005 mm,
@@ -282,7 +281,7 @@ duplicates.
 
 | Verdict | Boards | Meaning |
 | --- | --- | --- |
-| fits | 76 | On-board USB at the back edge, GH60-size outline, MX plate |
+| fits | 75 | On-board USB at the back edge, GH60-size outline, MX plate |
 | check | 57 | Daughterboard-only USB (needs a case mount), HE/EC/Alps plate and mount, or an outline larger than GH60 |
 | unknown | 5 | No USB position found (XD60 rev3, Basic IO F60, PieStar64 and two Taobao boards) |
 | no | 7 | USB on another edge, outline far larger than GH60, or low-profile switches |

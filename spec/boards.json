@@ -93,46 +93,185 @@
   "plate_top_above_pcb": 5.0,
   "plate_top_above_pcb_source": "Cherry MX plate-mount drawing value (not re-checked here)"
  },
- "default": "6095-wireless-owner",
+ "default": "6095-trimode",
  "boards": [
   {
-   "maker": null,
-   "kind": null,
-   "switch": null,
-   "wireless": null,
-   "layouts": null,
-   "outline": null,
-   "id": "6095-wireless-owner",
-   "name": "\"6095\" tri-mode wireless PCB (owner's board; vendor not identified)",
-   "usb": {
-    "centre_x": 19.35,
-    "frame": "plate",
-    "status": "fit",
-    "source": "v7.4 print assembled on the owner's board: with the notch at the stock position (plate X 19.35) the connector looks nearly or exactly centred (owner, 2026-10-31, re-inspected). The earlier '~2 mm outward' impression moved the notch to 17.35 in v7.7; v7.8 returns it to 19.35. Photos of the 1.6 mm 6095 tri-mode PCB read plate 18.45, 0.9 mm left of this fit: either a different revision (the kit lists 1.2 mm) or photo error"
+   "id": "6095-trimode",
+   "name": "6095 三模 (tri-mode) multi-layout hotswap PCB, no backlight ('6095-ARGB-QMK-HFD 20240708 V1.0' silkscreen)",
+   "maker": "Y&R / Keebox 6095 family, sold as Rule60 V3 tri-mode kit option [INFERENCE: id match by name]",
+   "kind": "commercial",
+   "switch": "MX hotswap",
+   "wireless": "tri-mode (USB / BLE '6095ble-1..3' / 2.4G dongle)",
+   "radio_mcu": "64-pin QFP near the left end of the back row (bottom view mirrored: own ~(29.5, 36)); part number not legible",
+   "layouts": [
+    "GH60 multi-layout",
+    "WK/WKL/HHKB",
+    "64 left-shift",
+    "split space",
+    "ISO enter (v2)"
+   ],
+   "outline": {
+    "width": 284.0,
+    "depth": 94.2,
+    "corner_r": null,
+    "gh60_match": true,
+    "notes": "tk_1 top-view edge scans: X 0.3-0.6 .. 284.4-284.7, Y 0.1-0.3 .. ~94.4 (gh60 frame, +-0.5); v2 = 1.6 mm no flex-cut, v1 = 1.2 mm flex-cut (Reddit u/geniuslogitech)"
    },
-   "battery": null,
-   "sources": [],
+   "esc_centre_own": null,
+   "mount_holes": "gh60",
+   "usb": {
+    "centre_x": 18.0,
+    "frame": "gh60",
+    "centre_x_own": null,
+    "normalised": "measured in switch-grid frame through the Esc centre (homography to the 19.05 grid)",
+    "edge": "back",
+    "side": "bottom",
+    "part": "USB-C 16-pin (4 shell THT legs/slots)",
+    "body_height": null,
+    "daughterboard": false,
+    "status": "photo-scaled",
+    "source": "tk_1 top view (thekeebs z5779271860197): 62-hole homography rms 0.13, shell slot pairs 18.00/17.84, posts 18.12 -> 18.0 +-0.3 (PCB plane). Bottom views (tk_3, BV1K5n6zZExc kit frame) give 17.5 +-0.8/1.0 from the connector body, which hangs below the PCB (parallax)."
+   },
+   "battery": {
+    "connector": "CON1: white 2-pin side-entry wire-to-board header on the PCB bottom at the left edge (JST-style [INFERENCE: pitch not legible])",
+    "connector_pcb": [
+     4,
+     34.5
+    ],
+    "size_max": null,
+    "capacity_mAh": 3000,
+    "notes": "CON1 own (gh60) X -0.2..8.0, Y 32.6..36.7 on tk_3 (+-1); (4.9,34.7) on the BV1K5n6zZExc frame. Flat pouch cell with leads plugged into CON1 (BV1K5n6zZExc t=143.6 s). 3000 mAh: thekeebs ('kèm pin 3000mah') and Taobao 火星之钥 SKU '电池：3000毫安时电池'; cell size not published (V3 bay 45x140x4.5)."
+   },
+   "bottom_parts": [
+    {
+     "part": "USB-C receptacle body",
+     "gh60": [
+      17.5,
+      3
+     ],
+     "height": null
+    },
+    {
+     "part": "CON1 battery header",
+     "gh60": [
+      4,
+      34.5
+     ],
+     "height": null
+    },
+    {
+     "part": "slide power switch at left edge",
+     "gh60": [
+      2.3,
+      65.2
+     ],
+     "height": null
+    },
+    {
+     "part": "64-pin QFP MCU",
+     "gh60": [
+      29.5,
+      36
+     ],
+     "height": null
+    }
+   ],
+   "antenna_own": null,
+   "license": null,
+   "sources": [
+    "https://thekeebs.store/products/pcb-6095-3-modes",
+    "https://thekeebs.store/blogs/huong-dan-su-dung/huong-dan-su-dung-rule60-v3-mach-6095-3-modes",
+    "https://www.taobao.com/list/item/bUd3K2NMSHN0cFlFdmd2SXNxMHZOQT09.htm",
+    "https://www.bilibili.com/video/BV15ypn6VEJS",
+    "https://www.bilibili.com/video/BV1h19NBvEgf",
+    "https://www.aliexpress.com/item/1005007951799865.html",
+    "https://product.hstatic.net/200000538213/product/z5779271860197_8aa939b53adf44bd520c3fc97219d234_0b8aeb4a8d7c43888d6b18a4b84d1952.jpg",
+    "https://product.hstatic.net/200000538213/product/z5779271845790_d304d515960812d89fb45de31098bd13_baac5048dfef4614ba19e440b2df6720.jpg",
+    "https://item.taobao.com/item.htm?id=983989317416",
+    "https://www.bilibili.com/video/BV1K5n6zZExc",
+    "https://gall.dcinside.com/mgallery/board/view/?id=mechanicalkeyboard&no=2404546",
+    "https://www.reddit.com/r/MechanicalKeyboards/comments/1l1p209/help_i_am_confused_first_time_building_a/mvmxv8f/"
+   ],
+   "confidence": "USB +-1 mm from two perspective photos; battery connector +-5 mm; tri-mode + 3000 mAh from vendors",
+   "notes": "[CommercialAsia] TKS: '1.6mm Noncut, 3 Modes kèm pin 3000mah, Hotswap, jack for underglow mod, PCB-mount stab support, VIA'. Manual: power switch is SMD on the back (bottom side) next to left Shift on the left frame; BLE names '6095ble-1..3'; 2.4G receiver pairing via Fn+V. Photo: large 64-pin QFP MCU near the right end of the back row (top-view frame), CON1 at the left edge ≈ y 31 mm (connector_pcb from photo, ±5 mm). Radio chip not identified. Taobao 火星之钥X键客良品 Rule60v3 tri-mode kit review shows SKU '电池：3000毫安时电池'. | thekeebs.store: '1.6mm Noncut - 3 Modes kèm pin 3000mah - Hotswap - Có sẵn jack cắm để mod thêm led gầm - Hỗ trợ PCB Mount Stab' (1.6 mm no-cut, 3 modes with 3000 mAh battery, underglow jack, PCB-mount stabs). Keebox Rule60 V3 AliExpress 1005007951799865 (search snippet): '6095 three-mode kit no light: 1.6mm PCB, supports three-mode connection'. | Battery: 3000 mAh per thekeebs.store and a Taobao review SKU; Rule60 V3 bay 140 x 45 x 4.5 mm (maker, zFrontier daWn5PAnGgxG). | [PhotoScale, Taobao] USB None (None): ; outline {\"width\": null, \"depth\": null, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"text only: 1.2 mm (kit SKU 内胆：6095三模1.2mm内胆)\"}; Kit listing SKUs: 6095三模1.2mm内胆 / PTG64单模RGB内胆 / 7U空格三模RGB内胆; kits WK配列单模RGB灯, WK配列三模无灯. Its 5 images are a case render, assembled boards, an empty shell and plates; none shows a bare PCB, so no USB centre or outline is possible from this capture. | [KitBoards] Different PCB design from the wired YR6095 (64-pin QFP + CON1 + side switch vs LQFP-48, other silk). DCinside Rule60 V3 owner photo shows the same silk/date (1.6 mm). Taobao kit SKU says '6095三模1.2mm内胆' while Keebox/thekeebs ship 1.6 mm: the 1.2 mm flex-cut v1 was not photographed bare, so its USB position is unmeasured. | [2026-10-31] Renamed from yr6095-trimode: the tri-mode board is a different design from the Y&R YR6095 (KitBoards). Default board of the published files (public data only).",
+   "rule60_reports": [
+    {
+     "source": "https://www.bilibili.com/video/BV15ypn6VEJS",
+     "quote": "外壳：rule60v3 hhkb 内胆：6095三模多配列热插拔无灯 PC定 (case Rule60v3 HHKB; internals 6095 tri-mode multi-layout hotswap no-light, PC plate)",
+     "finding": "6095 tri-mode built in Rule60 V3 HHKB."
+    },
+    {
+     "source": "https://www.bilibili.com/video/BV1h19NBvEgf",
+     "quote": "外壳：Rule60v3 WK 喷砂版 内胆：6095三模多配列 定制FR4 全棉 钢卫 (Rule60v3 WK frosted; 6095 tri-mode multi-layout, custom FR4, full foam)",
+     "finding": "6095 tri-mode in V3 WK with 64/split-space/7-enter layout."
+    },
+    {
+     "source": "https://www.bilibili.com/video/BV1F2RyBwEHD",
+     "quote": "外壳：rule60v3-wk喷砂-不锈钢拉丝配重 内胆：6095三模无光-fr4-全棉",
+     "finding": "6095 tri-mode no-light in V3 WK."
+    },
+    {
+     "source": "https://www.bilibili.com/video/BV1sq4k6wEjP",
+     "quote": "外壳：rule60v3 内胆：三模6095 FR4 全棉 构思者",
+     "finding": "6095 tri-mode in V3."
+    },
+    {
+     "source": "https://www.bilibili.com/video/BV1TDBQB9ETJ",
+     "quote": "外壳：rule60v2喷砂wk 黑色刀纹背板 内胆：6095三模1.2mm开槽 fr4定 面条gasket (Rule60 V2 WK; 6095 tri-mode 1.2 mm flex-cut)",
+     "finding": "6095 tri-mode (1.2 mm flex-cut variant) in Rule60 V2."
+    },
+    {
+     "source": "https://www.taobao.com/list/item/bUd3K2NMSHN0cFlFdmd2SXNxMHZOQT09.htm",
+     "quote": "颜色分类:电池：3000毫安时电池 (SKU: battery: 3000 mAh)",
+     "finding": "Buyer review on official 2nd store Rule60v3 HHKB/WKL/WK 三模 kit listing: tri-mode kit ships with 3000 mAh battery (cell dimensions not given)."
+    },
+    {
+     "source": "https://www.reddit.com/r/BudgetKeebs/comments/1jbh6ax/rule_60_surpassed_my_expectations/",
+     "quote": "that's old one, it uses this one the three mode for wireless and some other wired one with rgb  https://thekeebs.store/products/pcb-6095-3-modes",
+     "finding": "The Rule60 kit uses the 6095 three-mode PCB in wireless versions."
+    },
+    {
+     "source": "https://www.reddit.com/r/BudgetKeebs/comments/1jbh6ax/rule_60_surpassed_my_expectations/",
+     "quote": "I got three mode, it comes in both 1.6mm no flex cuts version I got and 1.2mm with flex cuts",
+     "finding": "The tri-mode 6095 comes as 1.6 mm no-cut and 1.2 mm flex-cut."
+    }
+   ],
+   "surveyed_by": [
+    "CommercialAsia",
+    "KitBoards",
+    "PhotoScale (Aside Taobao capture)"
+   ],
    "fit": {
     "verdict": "fits",
     "reasons": []
    },
-   "notes": "[KitBoards] [INFERENCE] most likely the 6095 三模 kit board (yr6095-trimode) or its 1.2 mm flex-cut v1. The photographed 1.6 mm v2 measures gh60 18.0 +-0.3 top view (plate 18.45), 17.5 from bottom views; the owner fit (gh60 16.9) is 1.1 mm lower than the top view and 0.6 below the bottom views. Either the 1.2 mm v1 places the connector differently (no bare photo found) or the '~2 mm' eyeball fit over-corrected. Asking the owner for a top-side photo with a ruler, or the silk text/thickness, would settle it. | [owner 2026-10-31] Board believed to be the 6095 tri-mode; v7.4 (stock notch) fits centred.",
    "evidence": [
     {
-     "image_or_url": "owner fit report (spec/boards.json)",
-     "what_it_shows": "v7.4 notch offset",
-     "measured_usb_gh60": 16.9,
-     "plusminus": 1.0
+     "image_or_url": "https://product.hstatic.net/200000538213/product/z5779271860197_8aa939b53adf44bd520c3fc97219d234_0b8aeb4a8d7c43888d6b18a4b84d1952.jpg (= /tmp/CommercialAsia/tk_1.jpg, thekeebs.store 'PCB 6095 3 Modes')",
+     "what_it_shows": "white 6095 tri-mode 1.6 mm, TOP (switch) side, whole board, hand-held, mild perspective, 2048x1152 (~5.9 px/mm)",
+     "measured_usb_gh60": 18.0,
+     "plusminus": 0.3,
+     "method": "62 switch-centre holes -> homography rms 0.13 mm (max 0.30); Esc hole maps to (9.13, 9.07). USB-C shell slots (dark-weighted centroids) front pair X 13.75/22.25 -> mid 18.00, back pair 13.49/22.19 -> 17.84; inner posts 14.90/21.34 -> 18.12. Plane of the PCB, no parallax.",
+     "outline_gh60": "left edge X 0.3-0.6, right edge X 284.4-284.7, back edge Y 0.1-0.3, front edge Y ~94.4 (edge scans) -> ~284.0 x 94.2, centred on the GH60 grid within 0.5"
     },
     {
-     "image_or_url": "see yr6095-trimode evidence",
-     "what_it_shows": "candidate identity: white 6095 tri-mode v2 1.6 mm",
-     "measured_usb_gh60": 18.0,
-     "plusminus": 0.3
+     "image_or_url": "https://product.hstatic.net/200000538213/product/z5779271845790_d304d515960812d89fb45de31098bd13_baac5048dfef4614ba19e440b2df6720.jpg (= /tmp/CommercialAsia/tk_3.jpg)",
+     "what_it_shows": "same board, BOTTOM side (silk '6095-ARGB-QMK-HFD 20240708 V1.0'), mirrored for measurement, 2048x1152 (~6.7 px/mm)",
+     "measured_usb_gh60": 17.5,
+     "plusminus": 0.8,
+     "method": "36 holes homography rms 0.145 (rows 0-2); connector body X 12.23..22.75 at Y 4.8 -> 17.49; shell rear corners 12.95/21.56 -> 17.26. The body hangs ~3 mm below the PCB plane so tilt shifts it (parallax) -> lower weight than the top view.",
+     "outline_gh60": "left edge X 1.0-1.1 (Y 15-60), back edge Y -0.1..-0.4"
+    },
+    {
+     "image_or_url": "https://www.bilibili.com/video/BV1K5n6zZExc t=130.7 s (/tmp/KitBoards/BiliHunt/out/6095-trimode__BV1K5n6zZExc__1.jpg)",
+     "what_it_shows": "'Rule60V3-HHKB组装记录&教程-多佩列三模亚克力套件': the Rule60 V3 tri-mode KIT board, bare bottom side, mirrored; same white board (CON1 at left edge, 64-pin QFP, same part layout as tk_3), 852x480 (~2.2 px/mm)",
+     "measured_usb_gh60": 17.5,
+     "plusminus": 1.0,
+     "method": "22 hole pairs rows 0-1 homography rms 0.33; connector body X 12.23..22.78 at Y 3.0 -> 17.48 (parallax as above). CON1 maps to (4.9, 34.7) vs (3.9, 34.5) on tk_3; MCU centre (29.8, 37.8) vs (29.3, 35.2) -> same PCB design."
     }
    ],
-   "surveyed_by": [
-    "KitBoards"
+   "aliases": [
+    "yr6095-trimode"
    ]
   },
   {
@@ -11927,182 +12066,6 @@
      "measured_usb_gh60": null,
      "plusminus": null,
      "method": "identity only (too oblique to scale)"
-    }
-   ]
-  },
-  {
-   "id": "yr6095-trimode",
-   "name": "6095 三模 (tri-mode) multi-layout hotswap PCB, no backlight ('6095-ARGB-QMK-HFD 20240708 V1.0' silkscreen)",
-   "maker": "Y&R / Keebox 6095 family, sold as Rule60 V3 tri-mode kit option [INFERENCE: id match by name]",
-   "kind": "commercial",
-   "switch": "MX hotswap",
-   "wireless": "tri-mode (USB / BLE '6095ble-1..3' / 2.4G dongle)",
-   "radio_mcu": "64-pin QFP near the left end of the back row (bottom view mirrored: own ~(29.5, 36)); part number not legible",
-   "layouts": [
-    "GH60 multi-layout",
-    "WK/WKL/HHKB",
-    "64 left-shift",
-    "split space",
-    "ISO enter (v2)"
-   ],
-   "outline": {
-    "width": 284.0,
-    "depth": 94.2,
-    "corner_r": null,
-    "gh60_match": true,
-    "notes": "tk_1 top-view edge scans: X 0.3-0.6 .. 284.4-284.7, Y 0.1-0.3 .. ~94.4 (gh60 frame, +-0.5); v2 = 1.6 mm no flex-cut, v1 = 1.2 mm flex-cut (Reddit u/geniuslogitech)"
-   },
-   "esc_centre_own": null,
-   "mount_holes": "gh60",
-   "usb": {
-    "centre_x": 18.0,
-    "frame": "gh60",
-    "centre_x_own": null,
-    "normalised": "measured in switch-grid frame through the Esc centre (homography to the 19.05 grid)",
-    "edge": "back",
-    "side": "bottom",
-    "part": "USB-C 16-pin (4 shell THT legs/slots)",
-    "body_height": null,
-    "daughterboard": false,
-    "status": "photo-scaled",
-    "source": "tk_1 top view (thekeebs z5779271860197): 62-hole homography rms 0.13, shell slot pairs 18.00/17.84, posts 18.12 -> 18.0 +-0.3 (PCB plane). Bottom views (tk_3, BV1K5n6zZExc kit frame) give 17.5 +-0.8/1.0 from the connector body, which hangs below the PCB (parallax)."
-   },
-   "battery": {
-    "connector": "CON1: white 2-pin side-entry wire-to-board header on the PCB bottom at the left edge (JST-style [INFERENCE: pitch not legible])",
-    "connector_pcb": [
-     4,
-     34.5
-    ],
-    "size_max": null,
-    "capacity_mAh": 3000,
-    "notes": "CON1 own (gh60) X -0.2..8.0, Y 32.6..36.7 on tk_3 (+-1); (4.9,34.7) on the BV1K5n6zZExc frame. Flat pouch cell with leads plugged into CON1 (BV1K5n6zZExc t=143.6 s). 3000 mAh: thekeebs ('kèm pin 3000mah') and Taobao 火星之钥 SKU '电池：3000毫安时电池'; cell size not published (V3 bay 45x140x4.5)."
-   },
-   "bottom_parts": [
-    {
-     "part": "USB-C receptacle body",
-     "gh60": [
-      17.5,
-      3
-     ],
-     "height": null
-    },
-    {
-     "part": "CON1 battery header",
-     "gh60": [
-      4,
-      34.5
-     ],
-     "height": null
-    },
-    {
-     "part": "slide power switch at left edge",
-     "gh60": [
-      2.3,
-      65.2
-     ],
-     "height": null
-    },
-    {
-     "part": "64-pin QFP MCU",
-     "gh60": [
-      29.5,
-      36
-     ],
-     "height": null
-    }
-   ],
-   "antenna_own": null,
-   "license": null,
-   "sources": [
-    "https://thekeebs.store/products/pcb-6095-3-modes",
-    "https://thekeebs.store/blogs/huong-dan-su-dung/huong-dan-su-dung-rule60-v3-mach-6095-3-modes",
-    "https://www.taobao.com/list/item/bUd3K2NMSHN0cFlFdmd2SXNxMHZOQT09.htm",
-    "https://www.bilibili.com/video/BV15ypn6VEJS",
-    "https://www.bilibili.com/video/BV1h19NBvEgf",
-    "https://www.aliexpress.com/item/1005007951799865.html",
-    "https://product.hstatic.net/200000538213/product/z5779271860197_8aa939b53adf44bd520c3fc97219d234_0b8aeb4a8d7c43888d6b18a4b84d1952.jpg",
-    "https://product.hstatic.net/200000538213/product/z5779271845790_d304d515960812d89fb45de31098bd13_baac5048dfef4614ba19e440b2df6720.jpg",
-    "https://item.taobao.com/item.htm?id=983989317416",
-    "https://www.bilibili.com/video/BV1K5n6zZExc",
-    "https://gall.dcinside.com/mgallery/board/view/?id=mechanicalkeyboard&no=2404546",
-    "https://www.reddit.com/r/MechanicalKeyboards/comments/1l1p209/help_i_am_confused_first_time_building_a/mvmxv8f/"
-   ],
-   "confidence": "USB +-1 mm from two perspective photos; battery connector +-5 mm; tri-mode + 3000 mAh from vendors",
-   "notes": "[CommercialAsia] TKS: '1.6mm Noncut, 3 Modes kèm pin 3000mah, Hotswap, jack for underglow mod, PCB-mount stab support, VIA'. Manual: power switch is SMD on the back (bottom side) next to left Shift on the left frame; BLE names '6095ble-1..3'; 2.4G receiver pairing via Fn+V. Photo: large 64-pin QFP MCU near the right end of the back row (top-view frame), CON1 at the left edge ≈ y 31 mm (connector_pcb from photo, ±5 mm). Radio chip not identified. Taobao 火星之钥X键客良品 Rule60v3 tri-mode kit review shows SKU '电池：3000毫安时电池'. | thekeebs.store: '1.6mm Noncut - 3 Modes kèm pin 3000mah - Hotswap - Có sẵn jack cắm để mod thêm led gầm - Hỗ trợ PCB Mount Stab' (1.6 mm no-cut, 3 modes with 3000 mAh battery, underglow jack, PCB-mount stabs). Keebox Rule60 V3 AliExpress 1005007951799865 (search snippet): '6095 three-mode kit no light: 1.6mm PCB, supports three-mode connection'. | Battery: 3000 mAh per thekeebs.store and a Taobao review SKU; Rule60 V3 bay 140 x 45 x 4.5 mm (maker, zFrontier daWn5PAnGgxG). | [PhotoScale, Taobao] USB None (None): ; outline {\"width\": null, \"depth\": null, \"corner_r\": null, \"gh60_match\": true, \"notes\": \"text only: 1.2 mm (kit SKU 内胆：6095三模1.2mm内胆)\"}; Kit listing SKUs: 6095三模1.2mm内胆 / PTG64单模RGB内胆 / 7U空格三模RGB内胆; kits WK配列单模RGB灯, WK配列三模无灯. Its 5 images are a case render, assembled boards, an empty shell and plates; none shows a bare PCB, so no USB centre or outline is possible from this capture. | [KitBoards] Different PCB design from the wired YR6095 (64-pin QFP + CON1 + side switch vs LQFP-48, other silk). DCinside Rule60 V3 owner photo shows the same silk/date (1.6 mm). Taobao kit SKU says '6095三模1.2mm内胆' while Keebox/thekeebs ship 1.6 mm: the 1.2 mm flex-cut v1 was not photographed bare, so its USB position is unmeasured.",
-   "rule60_reports": [
-    {
-     "source": "https://www.bilibili.com/video/BV15ypn6VEJS",
-     "quote": "外壳：rule60v3 hhkb 内胆：6095三模多配列热插拔无灯 PC定 (case Rule60v3 HHKB; internals 6095 tri-mode multi-layout hotswap no-light, PC plate)",
-     "finding": "6095 tri-mode built in Rule60 V3 HHKB."
-    },
-    {
-     "source": "https://www.bilibili.com/video/BV1h19NBvEgf",
-     "quote": "外壳：Rule60v3 WK 喷砂版 内胆：6095三模多配列 定制FR4 全棉 钢卫 (Rule60v3 WK frosted; 6095 tri-mode multi-layout, custom FR4, full foam)",
-     "finding": "6095 tri-mode in V3 WK with 64/split-space/7-enter layout."
-    },
-    {
-     "source": "https://www.bilibili.com/video/BV1F2RyBwEHD",
-     "quote": "外壳：rule60v3-wk喷砂-不锈钢拉丝配重 内胆：6095三模无光-fr4-全棉",
-     "finding": "6095 tri-mode no-light in V3 WK."
-    },
-    {
-     "source": "https://www.bilibili.com/video/BV1sq4k6wEjP",
-     "quote": "外壳：rule60v3 内胆：三模6095 FR4 全棉 构思者",
-     "finding": "6095 tri-mode in V3."
-    },
-    {
-     "source": "https://www.bilibili.com/video/BV1TDBQB9ETJ",
-     "quote": "外壳：rule60v2喷砂wk 黑色刀纹背板 内胆：6095三模1.2mm开槽 fr4定 面条gasket (Rule60 V2 WK; 6095 tri-mode 1.2 mm flex-cut)",
-     "finding": "6095 tri-mode (1.2 mm flex-cut variant) in Rule60 V2."
-    },
-    {
-     "source": "https://www.taobao.com/list/item/bUd3K2NMSHN0cFlFdmd2SXNxMHZOQT09.htm",
-     "quote": "颜色分类:电池：3000毫安时电池 (SKU: battery: 3000 mAh)",
-     "finding": "Buyer review on official 2nd store Rule60v3 HHKB/WKL/WK 三模 kit listing: tri-mode kit ships with 3000 mAh battery (cell dimensions not given)."
-    },
-    {
-     "source": "https://www.reddit.com/r/BudgetKeebs/comments/1jbh6ax/rule_60_surpassed_my_expectations/",
-     "quote": "that's old one, it uses this one the three mode for wireless and some other wired one with rgb  https://thekeebs.store/products/pcb-6095-3-modes",
-     "finding": "The Rule60 kit uses the 6095 three-mode PCB in wireless versions."
-    },
-    {
-     "source": "https://www.reddit.com/r/BudgetKeebs/comments/1jbh6ax/rule_60_surpassed_my_expectations/",
-     "quote": "I got three mode, it comes in both 1.6mm no flex cuts version I got and 1.2mm with flex cuts",
-     "finding": "The tri-mode 6095 comes as 1.6 mm no-cut and 1.2 mm flex-cut."
-    }
-   ],
-   "surveyed_by": [
-    "CommercialAsia",
-    "KitBoards",
-    "PhotoScale (Aside Taobao capture)"
-   ],
-   "fit": {
-    "verdict": "fits",
-    "reasons": []
-   },
-   "evidence": [
-    {
-     "image_or_url": "https://product.hstatic.net/200000538213/product/z5779271860197_8aa939b53adf44bd520c3fc97219d234_0b8aeb4a8d7c43888d6b18a4b84d1952.jpg (= /tmp/CommercialAsia/tk_1.jpg, thekeebs.store 'PCB 6095 3 Modes')",
-     "what_it_shows": "white 6095 tri-mode 1.6 mm, TOP (switch) side, whole board, hand-held, mild perspective, 2048x1152 (~5.9 px/mm)",
-     "measured_usb_gh60": 18.0,
-     "plusminus": 0.3,
-     "method": "62 switch-centre holes -> homography rms 0.13 mm (max 0.30); Esc hole maps to (9.13, 9.07). USB-C shell slots (dark-weighted centroids) front pair X 13.75/22.25 -> mid 18.00, back pair 13.49/22.19 -> 17.84; inner posts 14.90/21.34 -> 18.12. Plane of the PCB, no parallax.",
-     "outline_gh60": "left edge X 0.3-0.6, right edge X 284.4-284.7, back edge Y 0.1-0.3, front edge Y ~94.4 (edge scans) -> ~284.0 x 94.2, centred on the GH60 grid within 0.5"
-    },
-    {
-     "image_or_url": "https://product.hstatic.net/200000538213/product/z5779271845790_d304d515960812d89fb45de31098bd13_baac5048dfef4614ba19e440b2df6720.jpg (= /tmp/CommercialAsia/tk_3.jpg)",
-     "what_it_shows": "same board, BOTTOM side (silk '6095-ARGB-QMK-HFD 20240708 V1.0'), mirrored for measurement, 2048x1152 (~6.7 px/mm)",
-     "measured_usb_gh60": 17.5,
-     "plusminus": 0.8,
-     "method": "36 holes homography rms 0.145 (rows 0-2); connector body X 12.23..22.75 at Y 4.8 -> 17.49; shell rear corners 12.95/21.56 -> 17.26. The body hangs ~3 mm below the PCB plane so tilt shifts it (parallax) -> lower weight than the top view.",
-     "outline_gh60": "left edge X 1.0-1.1 (Y 15-60), back edge Y -0.1..-0.4"
-    },
-    {
-     "image_or_url": "https://www.bilibili.com/video/BV1K5n6zZExc t=130.7 s (/tmp/KitBoards/BiliHunt/out/6095-trimode__BV1K5n6zZExc__1.jpg)",
-     "what_it_shows": "'Rule60V3-HHKB组装记录&教程-多佩列三模亚克力套件': the Rule60 V3 tri-mode KIT board, bare bottom side, mirrored; same white board (CON1 at left edge, 64-pin QFP, same part layout as tk_3), 852x480 (~2.2 px/mm)",
-     "measured_usb_gh60": 17.5,
-     "plusminus": 1.0,
-     "method": "22 hole pairs rows 0-1 homography rms 0.33; connector body X 12.23..22.78 at Y 3.0 -> 17.48 (parallax as above). CON1 maps to (4.9, 34.7) vs (3.9, 34.5) on tk_3; MCU centre (29.8, 37.8) vs (29.3, 35.2) -> same PCB design."
     }
    ]
   },
