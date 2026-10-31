@@ -306,9 +306,68 @@
     "from_slope_edge": 6.5,
     "clear": 0.2
   },
-  "split_x_world": 0.0,
-  "split_gap": 0.1,
   "rim_clear": 0.15,
+  "split": {
+    "shape": "\u3134\u3131",
+    "back_catch": "BR",
+    "back_x_world": -53.75,
+    "front_catch": "FL",
+    "front_x_world": 52.73,
+    "cross_y_world": 120.0,
+    "dovetails": [
+      {
+        "leg": "cross",
+        "at": -30.0,
+        "male": "left",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      },
+      {
+        "leg": "cross",
+        "at": 0.0,
+        "male": "right",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      },
+      {
+        "leg": "cross",
+        "at": 30.0,
+        "male": "left",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      },
+      {
+        "leg": "back",
+        "at": 130.0,
+        "male": "left",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      },
+      {
+        "leg": "front",
+        "at": 106.0,
+        "male": "right",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      }
+    ],
+    "clearance": 0.0,
+    "insertion_axis_world": [
+      0.0,
+      0.104528463,
+      -0.994521895
+    ]
+  },
   "tray_and_base": {
     "tray_bottom_z_p_front_back": [
       20.43,
@@ -329,19 +388,19 @@
   "parts": {
     "bottom-left": {
       "print_extents": [
-        146.0,
+        205.8,
         111.89,
         22.33
       ],
-      "volume_cm3": 100.8
+      "volume_cm3": 111.7
     },
     "bottom-right": {
       "print_extents": [
-        146.0,
+        204.78,
         111.89,
         22.33
       ],
-      "volume_cm3": 101.7
+      "volume_cm3": 90.8
     },
     "coupon-front-left": {
       "print_extents": [
@@ -350,6 +409,22 @@
         11.41
       ],
       "volume_cm3": 12.6
+    },
+    "joint-test-left": {
+      "print_extents": [
+        44.0,
+        16.09,
+        7.76
+      ],
+      "volume_cm3": 4.4
+    },
+    "joint-test-right": {
+      "print_extents": [
+        44.0,
+        22.55,
+        6.79
+      ],
+      "volume_cm3": 4.2
     }
   }
 }

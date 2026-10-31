@@ -378,6 +378,8 @@ from the parts it mates with; the photos set the layout.
 | 140 × 45 × 4.5 mm R2 battery bay, back centre | INKC post; position from the owner's photos |
 | Steel weight plate recess, 2.5 mm deep (the 3 mm plate stands 0.5 mm proud, 1.5 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. A 3.0 mm recess would leave 0.5 mm of floor over the battery bay under the plate's centre bump |
 | USB-C slot | Same centre and width as the top-case notch (`--board`) |
+| ㄴㄱ split: the seam runs through the back-right catch (53.75 mm right of centre), crosses the floor 37.3 mm behind the front rail face, and leaves through the front-left catch (52.73 mm left of centre) | Owner. Both seam catches bridge it with one M2 screw in each half; the other two stay in one half. Staggered against the top-case seams |
+| Hybrid joint: five line-to-line dovetails (three across the floor, one on each leg) that slide together normal to the desk face and lock both in-plane directions, plus the two seam catches, glue and the weight plate | Top-case joint profile (5.2/6.6 mm half widths, 6.0 mm projection). Where the back leg runs under the battery bay and weight-plate recess the floor is only 1.8–4.3 mm, so that stretch is a glued butt that the taped plate spans |
 
 Z is measured from the top case's top face, as in the top-case evidence. The
 catches stand on their notch floor with the barrels 0.60 mm under the strike
@@ -387,14 +389,17 @@ flush with the rim top, the balls would sit below the tongue tip.
 | File | Use |
 | --- | --- |
 | [Fit coupon — 3MF](models/rule60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front step, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 30 min / 10 g |
-| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot. 146 × 112 mm, 3 h 2 min / 62 g |
-| [Right half — 3MF](models/rule60-hhkb-bottomcase-right.3mf) | 146 × 112 mm, 3 h 2 min / 62 g |
+| [Joint test — 3MF](models/rule60-hhkb-bottomcase-joint-test.3mf) | Both sides of the middle floor dovetail, 44 × 32 mm cut-outs. 0 h 18 min / 6 g |
+| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot, back-left catch. 206 × 112 mm, 3 h 28 min / 70 g |
+| [Right half — 3MF](models/rule60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 44 min / 55 g |
 
 Print desk face down, no supports or brim; owner's top-case settings
-(Bambu Studio CLI estimates above). The halves split at the centre with a
-0.10 mm gap and no joint: glue them, and the decoration plate bridges the
-seam underneath. Move the four catches from the stock case with their M2
-screws. Press six SJ5012 bumpons into the underside pockets.
+(Bambu Studio CLI estimates above). Print the joint test first: the two
+pieces should press together by hand along the desk-face normal and not move
+sideways. Join the halves with glue in the seam, screw the two seam catches
+across it, then tape the steel weight plate over the back leg. Move the four
+catches from the stock case with their M2 screws. Press six SJ5012 bumpons
+into the underside pockets.
 
 Fit on the coupon, in order: the rim slides into the top-case pocket and the
 top case sits flat on the rim; the catch clicks onto its strike and holds;
@@ -412,7 +417,10 @@ with rail-only bearing, no material outside the rail outline, both ends open, th
 flanges bearing, catches clear of both cases, a GH60 PCB with 2.0 mm
 bottom-side parts and the USB-C receptacle, the cable plug through both
 cases, the filler, the decoration plate and six bumpons, one desk plane with
-the wrist rest, and 0.20 mm layers without islands or undeclared overhangs.
+the wrist rest, the split seam (no overlap when seated or along the insertion
+path, over 40 mm³ of collision for any 0.3 mm sideways shift, and one screw
+per half in each seam catch), and 0.20 mm layers without islands or
+undeclared overhangs.
 The [report](evidence/bottomcase-report.json) lists every level and position.
 
 Not measured, so the coupon decides: cap-seat level (sets gasket preload),

@@ -10,10 +10,10 @@
       "x+0.25": 27.5501,
       "y-0.10": 0.0065,
       "y+0.10": 0.0065,
-      "y-0.25": 260.4044,
-      "y+0.25": 247.1748
+      "y-0.25": 260.5076,
+      "y+0.25": 247.278
     },
-    "rim_top_bearing_on_9p69_floor_mm2": 1731.8,
+    "rim_top_bearing_on_9p69_floor_mm2": 1732.2,
     "skirt_lip_contact_mm3": 0.0,
     "material_outside_rail_outline_mm2": {
       "z_p_9.99": 0.0,
@@ -133,6 +133,34 @@
     "desk_face_back_edge_print_y": -181.289,
     "expected_print_y": -181.25
   },
+  "split_seam": {
+    "seated_overlap_mm3": 0.0,
+    "insertion_path_max_overlap_mm3": 0.0001,
+    "in_plane_shift_overlap_mm3": {
+      "x+0.3": 45.9297,
+      "x-0.3": 208.8083,
+      "print_y+0.3": 235.5866,
+      "print_y-0.3": 41.4416
+    },
+    "catch_screw_owner": {
+      "BL": [
+        "left",
+        "left"
+      ],
+      "BR": [
+        "left",
+        "right"
+      ],
+      "FL": [
+        "left",
+        "right"
+      ],
+      "FR": [
+        "right",
+        "right"
+      ]
+    }
+  },
   "usb_slot_x_world": [
     118.098,
     130.898
@@ -145,17 +173,27 @@
     "bottom-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "tray_step_cantilever_mm2": 1870.8
+      "tray_step_cantilever_mm2": 1913.5
     },
     "bottom-right": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "tray_step_cantilever_mm2": 1870.8
+      "tray_step_cantilever_mm2": 1829.1
     },
     "coupon-front-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
       "tray_step_cantilever_mm2": 590.4
+    },
+    "joint-test-left": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "tray_step_cantilever_mm2": 0.0
+    },
+    "joint-test-right": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "tray_step_cantilever_mm2": 0.0
     }
   }
 }

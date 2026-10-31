@@ -78,7 +78,23 @@ DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, 
 DECO_RECESS = 2.5        # Recess depth: the 3 mm plate stands 0.5 proud of the desk face (1.5 under the bumpons'
                          # 2.0); a flush 3.0 recess would leave 0.5 mm over the battery bay under the plate's bump
 DECO = spec.outline("back_deco_plate")
-SPLIT_GAP = 0.10         # Gap between the halves at X = 0
+# ㄴㄱ split (owner): the seam runs through one back and one front ball catch, so each of those two stock catch bodies
+# bridges it with one M2 screw in each half; between them it crosses the floor in front of the battery bay. Staggered
+# against the top-case seams (back at its BL strike, front at X = 0). Hybrid joint as on the top case: the two catch
+# bodies, line-to-line plan dovetails on the floor seam (the halves slide together along the print Z axis, normal to
+# the desk face, and the tongues lock both in-plane directions), glue, and the steel weight plate under the back leg.
+_STRIKES_W = {n: top.pw(x, y) for n, x, y in top.strike_centers_p()}
+SEAM_BACK_CATCH = next(n for n, (x, y) in _STRIKES_W.items() if y > 150.0 and x < 0.0)
+SEAM_FRONT_CATCH = next(n for n, (x, y) in _STRIKES_W.items() if y < 150.0 and x > 0.0)
+SEAM_BACK_X, SEAM_FRONT_X = _STRIKES_W[SEAM_BACK_CATCH][0], _STRIKES_W[SEAM_FRONT_CATCH][0]
+SEAM_CROSS_Y = 120.0     # World Y (desk face) of the floor crossing: 18 mm in front of the bay, floor ~6 mm thick
+DOVETAIL = {"neck_half": 5.2, "head_half": 6.6, "proj": 6.0, "neck_taper": 0.55}  # top-case wrist-rest profile
+SEAM_DOVETAILS = [("cross", -30.0, "left"), ("cross", 0.0, "right"), ("cross", 30.0, "left"),
+                  ("back", 130.0, "left"), ("front", 106.0, "right")]
+# ^ (seam leg, world X on the crossing / world Y on a leg, half carrying the tongue). Floor at the seam: crossing 6.2 mm,
+#   front leg 3.2-6.2 mm (tongue in ~4.7), back leg ~7 mm at its tongue but only 1.8-4.3 mm where it runs under the
+#   battery bay and the weight-plate recess: a plain glued butt there, which the taped steel plate spans.
+JOINT_TEST_BOX = (-22.0, 104.0, 22.0, 136.0)  # World XY around the middle crossing tongue: the joint test pair
 BED = 256.0
 
 COS, SIN, TAN = math.cos(top.TILT_RAD), math.sin(top.TILT_RAD), math.tan(top.TILT_RAD)
@@ -288,7 +304,11 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "deco_recess_print": {"outline_bounds": [round(v, 3) for v in deco_poly_print().bounds], "depth": DECO_RECESS,
                               "plate_thickness": DECO["thickness"], "from_slope_edge": DECO_FROM_SLOPE,
                               "clear": DECO_CLEAR},
-        "split_x_world": 0.0, "split_gap": SPLIT_GAP, "rim_clear": RIM_CLEAR,
+        "rim_clear": RIM_CLEAR,
+        "split": {"shape": "ㄴㄱ", "back_catch": SEAM_BACK_CATCH, "back_x_world": SEAM_BACK_X,
+                  "front_catch": SEAM_FRONT_CATCH, "front_x_world": SEAM_FRONT_X, "cross_y_world": SEAM_CROSS_Y,
+                  "dovetails": [{"leg": leg, "at": at, "male": male, **DOVETAIL} for leg, at, male in SEAM_DOVETAILS],
+                  "clearance": top.JOINT_CLEAR, "insertion_axis_world": FROM_PRINT[:, 2].round(9).tolist()},
         "tray_and_base": {"tray_bottom_z_p_front_back": [round(tray_bottom_zp(Y_FRONT), 3), TRAY_BOTTOM_ZP],
                           "back_step": BACK_LEDGE_W, "back_slope_length": BACK_SLOPE_LEN,
                           "front_step": FRONT_STEP_W, "end_step": END_STEP_W,
@@ -296,6 +316,33 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
                           "base_outline_world": [round(v, 3) for v in base_outline().bounds]},
     }
     return body, report
+
+
+def left_region_print() -> Any:
+    """Print-plane (X, Y') region of the left half (world +X, keyboard left): X > `SEAM_BACK_X` behind the crossing,
+    X > `SEAM_FRONT_X` in front of it, with the dovetail tongues added (left male) or taken out (right male)."""
+    yc = print_y(SEAM_CROSS_Y)  # Y' grows toward the front
+    region = sg.Polygon([(SEAM_BACK_X, -1e3), (1e3, -1e3), (1e3, 1e3), (SEAM_FRONT_X, 1e3), (SEAM_FRONT_X, yc),
+                         (SEAM_BACK_X, yc)])
+    for leg, at, male in SEAM_DOVETAILS:
+        into_right = male == "left"
+        if leg == "cross":  # tongue along +-Y' from the crossing; the left half owns its back side
+            tongue = top.dovetail_poly(at, clear=0.0, **DOVETAIL)
+            m = [0.0, 1.0, 1.0 if into_right else -1.0, 0.0, 0.0, yc]
+        else:  # tongue along +-X from a leg at X = x0; the left half owns X > x0
+            x0 = SEAM_BACK_X if leg == "back" else SEAM_FRONT_X
+            tongue = top.dovetail_poly(print_y(at), clear=0.0, **DOVETAIL)
+            m = [-1.0 if into_right else 1.0, 0.0, 0.0, 1.0, x0, 0.0]
+        tongue = sa.affine_transform(tongue, m)
+        region = region.union(tongue) if into_right else region.difference(tongue)
+    assert region.geom_type == "Polygon" and not region.interiors, region.geom_type
+    return orient(region)
+
+
+def split(body: md.Manifold) -> tuple[md.Manifold, md.Manifold]:
+    """Left and right halves along the ㄴㄱ seam, line-to-line (`top.JOINT_CLEAR` = 0), cut normal to the desk face."""
+    region = from_print(prism(left_region_print(), -20.0, 80.0))
+    return body ^ region, body - region
 
 
 def to_trimesh(m: md.Manifold) -> trimesh.Trimesh:
@@ -319,10 +366,12 @@ def main() -> None:
                     help="PCB whose USB-C position sets the slot (spec/boards.json); default: %(default)s")
     args = ap.parse_args()
     body, report = build(args.board)
-    halves = {"left": body.trim_by_plane([1.0, 0.0, 0.0], SPLIT_GAP / 2),     # world +X: keyboard left, USB side
-              "right": body.trim_by_plane([-1.0, 0.0, 0.0], SPLIT_GAP / 2)}
+    left, right = split(body)
     coupon = body ^ md.Manifold.cube([120.0, 21.0, 60.0]).translate([30.0, Y_FRONT - 1.0, -5.0])
-    world = {"bottom-left": halves["left"], "bottom-right": halves["right"], "coupon-front-left": coupon}
+    jx0, jy0, jx1, jy1 = JOINT_TEST_BOX
+    jbox = md.Manifold.cube([jx1 - jx0, jy1 - jy0, 80.0]).translate([jx0, jy0, -10.0])
+    world = {"bottom-left": left, "bottom-right": right, "coupon-front-left": coupon,
+             "joint-test-left": left ^ jbox, "joint-test-right": right ^ jbox}
     for name, m in world.items():
         to_trimesh(m).export(OUT / f"{name}-world.stl")
     printed = {name: on_bed(m) for name, m in world.items()}
@@ -336,6 +385,11 @@ def main() -> None:
                   [("BottomRight", printed["bottom-right"])], fine_layer_z=None)
     top.write_3mf(OUT / "rule60-hhkb-bottomcase-fit-coupon.3mf", f"Rule 60 V3 bottom case fit coupon ({lic})",
                   [("CouponFrontLeft", printed["coupon-front-left"])], fine_layer_z=None)
+    pair = [printed["joint-test-left"].copy(), printed["joint-test-right"].copy()]
+    pair[0].apply_translation([-25.0, 0.0, 0.0])
+    pair[1].apply_translation([25.0, 0.0, 0.0])
+    top.write_3mf(OUT / "rule60-hhkb-bottomcase-joint-test.3mf", f"Rule 60 V3 bottom case joint test ({lic})",
+                  [("JointTestLeft", pair[0]), ("JointTestRight", pair[1])], fine_layer_z=None)
     report["parts"] = {name: {"print_extents": [round(v, 2) for v in tm.extents], "volume_cm3": round(tm.volume / 1e3, 1)}
                        for name, tm in printed.items()}
     (OUT / "draft-report.json").write_text(json.dumps(report, indent=2) + "\n")

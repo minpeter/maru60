@@ -40,18 +40,18 @@ def vol(m: md.Manifold) -> float:
 
 def main() -> None:
     # 1. Exports: closed single shells on the 256 mm bed.
-    for name in ("bottom-left", "bottom-right", "coupon-front-left"):
+    parts = ("bottom-left", "bottom-right", "coupon-front-left", "joint-test-left", "joint-test-right")
+    for name in parts:
         m = trimesh.load_mesh(OUT / f"{name}-print.stl")
         assert m.is_watertight and m.is_winding_consistent and len(m.split()) == 1, name
         assert np.all(m.bounds[0] >= -1e-6) and np.all(m.bounds[1] <= [256.0, 256.0, 256.0]), (name, m.bounds)
-    for name in ("left", "right", "fit-coupon"):
+    for name, n_obj in (("left", 1), ("right", 1), ("fit-coupon", 1), ("joint-test", 2)):
         sc = trimesh.load(OUT / f"rule60-hhkb-bottomcase-{name}.3mf", force="scene")
-        assert len(sc.geometry) == 1 and np.all(sc.bounds[1] <= 256.0), name
+        assert len(sc.geometry) == n_obj and np.all(sc.bounds[0] >= -1e-6) and np.all(sc.bounds[1] <= 256.0), name
 
     sc = trimesh.load(ROOT / "topcase-draft" / "solidcraft-export.3mf", force="scene")
     top_mf = md.Manifold.batch_boolean([to_manifold(t) for t in sc.dump(concatenate=False)], md.OpType.Add)
-    world = {name: to_manifold(trimesh.load_mesh(OUT / f"{name}-world.stl"))
-             for name in ("bottom-left", "bottom-right", "coupon-front-left")}
+    world = {name: to_manifold(trimesh.load_mesh(OUT / f"{name}-world.stl")) for name in parts}
     bottom = world["bottom-left"] + world["bottom-right"]
 
     # 2. Nesting in the top-case pocket: free when seated and 0.10 mm off centre (0.15 per side), located at 0.25 mm,
@@ -170,11 +170,10 @@ def main() -> None:
                             - md.Manifold.cylinder(top.POCKET_DEPTH, pocket_r + 0.05, pocket_r + 0.05, 64).translate(
                                 [0.0, 0.0, -0.05])).translate([x, bc.print_y(y), 0.05]))
              for x, y in bc.bumpon_centres_world()]
-    split_gap = box(-0.06, -1e3, 0.06, 1e3, -1e3, 1e3)  # the 0.10 mm gap between the halves is not a missing wall
     fits = {
         "filler_overlap_mm3": vol(filler ^ bottom),
         "deco_plate_overlap_mm3": vol(deco ^ bottom),
-        "deco_roof_1mm_void_mm3": vol(deco_cover - split_gap - bottom),
+        "deco_roof_1mm_void_mm3": vol(deco_cover - bottom),
         "bumpon_overlap_mm3": [vol(b ^ bottom) for b in bumpons],
         "bumpon_roof_1mm_void_mm3": [vol(r - bottom) for r in roofs],
         "bumpon_wall_1mm_void_mm3": [vol(w - bottom) for w in walls],
@@ -221,6 +220,33 @@ def main() -> None:
     assert all(abs(a - b) < 0.1 for a, b in zip(tray_base["tray_bottom_bounds_world"], tray_base["rail_outline_bounds"])), tray_base
     assert abs(tray_base["desk_face_back_edge_print_y"] - tray_base["expected_print_y"]) < 0.1, tray_base
 
+    # 7c. ㄴㄱ seam, hybrid joint: the halves meet line-to-line without overlap, slide together freely along the
+    #     insertion axis (normal to the desk face), and every in-plane shift of 0.3 mm collides on the dovetails. Each
+    #     seam catch has one screw pilot in each half (its body bridges the seam); the other two sit in one half.
+    hl, hr = world["bottom-left"], world["bottom-right"]
+    axis, yp_axis = np.asarray(bc.FROM_PRINT)[:, 2], np.asarray(bc.FROM_PRINT)[:, 1]
+    shifts = {"x+0.3": [0.3, 0.0, 0.0], "x-0.3": [-0.3, 0.0, 0.0],
+              "print_y+0.3": (0.3 * yp_axis).tolist(), "print_y-0.3": (-0.3 * yp_axis).tolist()}
+    seam = {"seated_overlap_mm3": vol(hl ^ hr),
+            "insertion_path_max_overlap_mm3": max(vol(hl.translate((t * axis).tolist()) ^ hr)
+                                                  for t in (0.2, 1.0, 3.0, 6.0, 12.0, 24.0)),
+            "in_plane_shift_overlap_mm3": {k: vol(hl.translate(v) ^ hr) for k, v in shifts.items()}}
+    sl, sr = slice_material(hl, Z["catch_floor"] + 1.0), slice_material(hr, Z["catch_floor"] + 1.0)
+    owners = {}
+    for c in REPORT["catches"]:
+        owners[c["name"]] = []
+        for p in c["pilots"]:
+            ring = sg.Point(*p["world"]).buffer(1.6).difference(sg.Point(*p["world"]).buffer(0.95))
+            cover = [ring.intersection(s).area / ring.area for s in (sl, sr)]
+            owners[c["name"]].append("left" if cover[0] > 0.95 > 0.01 > cover[1] else
+                                     "right" if cover[1] > 0.95 > 0.01 > cover[0] else f"? {cover}")
+    seam["catch_screw_owner"] = owners
+    assert seam["seated_overlap_mm3"] < 0.01 and seam["insertion_path_max_overlap_mm3"] < 0.01, seam
+    assert min(seam["in_plane_shift_overlap_mm3"].values()) > 5.0, seam
+    for name, o in owners.items():
+        assert all(v in ("left", "right") for v in o), owners
+        assert (len(set(o)) == 2) == (name in (bc.SEAM_BACK_CATCH, bc.SEAM_FRONT_CATCH)), owners
+
     # 8. USB slot under the top-case notch (keyboard left = world +X), same centre and width.
     z_usb = (Z["catch_floor"] + Z["cavity_floor"]) / 2  # below the catch notches, through the plug's height band
     back = slice_material(bottom, z_usb).intersection(sg.box(-200.0, top.pw(0.0, bc.LEDGE_BACK_P)[1] - 0.5, 200.0, 250.0))
@@ -253,7 +279,7 @@ def main() -> None:
     step_band = sa.affine_transform(steps_world, to_print_xy).buffer(0.3)
     declared = unary_union([bridges, step_band])
     printability = {}
-    for name in ("bottom-left", "bottom-right", "coupon-front-left"):
+    for name in parts:
         pm = trimesh.load_mesh(OUT / f"{name}-print.stl")
         shift = pm.bounds[0] - np.asarray(world[name].transform(bc.TO_PRINT).bounding_box()[:3])
         prev, islands, wide = None, [], []
@@ -297,6 +323,7 @@ def main() -> None:
         "drop_in_parts": fits,
         "desk_plane": desk,
         "tray_and_base": tray_base,
+        "split_seam": seam,
         "usb_slot_x_world": [round(v, 3) for v in gaps[0]],
         "open_ends_material_above_floor_mm3": open_ends,
         "printability_0p20mm": {k: {"islands": len(v["islands"]), "undeclared_overhangs": len(v["undeclared_overhangs"]),
