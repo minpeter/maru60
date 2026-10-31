@@ -147,13 +147,15 @@ def main() -> None:
     assert max(plug_free.values()) < 0.01, plug_free
     floor_gap = round(Z["cavity_floor"] - (z_pcb + 1.6 + 3.26), 2)
 
-    # 6. Battery-bay filler (INKC drawing, 4.5 mm) drops in flush; the decoration plate (3 mm) sits in its underside
-    #    recess within the desk face; >= 1.0 mm of material between that recess and the bay, and over each bumpon pocket.
+    # 6. Battery-bay filler (INKC drawing, 4.5 mm) drops onto the floor of the 4.69 mm bay, its top below the cavity
+    #    floor; the decoration plate (3 mm) sits in its underside recess within the desk face; >= 1.0 mm of material
+    #    between that recess and the bay, and over each bumpon pocket.
     fil = spec.outline("battery_bay_filler")
     bay = REPORT["plate_frame"]["battery_bay"]
     fx0, fy0 = (bay[0] + bay[2]) / 2 - fil["bbox"][2] / 2, (bay[1] + bay[3]) / 2 - fil["bbox"][3] / 2
     filler_p = sg.Polygon([(x + fx0, y + fy0) for x, y in spec.outline_points("battery_bay_filler")])
-    filler = bc.prism(bc.plate_to_world(filler_p), Z["cavity_floor"], Z["bay_floor"] - 0.01)
+    filler = bc.prism(bc.plate_to_world(filler_p), Z["bay_floor"] - fil["thickness"], Z["bay_floor"] - 0.01)
+    assert Z["bay_floor"] - fil["thickness"] >= Z["cavity_floor"], "filler stands above the cavity floor"
     deco_poly = bc.deco_poly_print()
     deco_t, deco_d = bc.DECO["thickness"], bc.DECO_RECESS  # the plate stands deco_t - deco_d proud of the desk face
     deco = bc.from_print(bc.prism(deco_poly, deco_d - deco_t, deco_d - 0.01))

@@ -38,7 +38,7 @@
 
     "keycaps.hhkb_gauge": {"value": [[0.475, 25.594], [29.05, 25.594], [29.05, 6.544], [256.85, 6.544], [256.85, 25.594], [285.425, 25.594], [285.425, 100.994], [0.475, 100.994]], "status": "derived", "source": "HHKB 60-key keycap footprint (plate frame): DWG switch grid with each 19.05 cell inset 0.4 mm, bottom-row blockers 1.5u from each side"},
 
-    "bottom.battery_bay": {"value": {"length": 140.0, "width": 45.0, "height": 4.5, "corner_r": 2.0}, "status": "published", "source": "INKC interest-check post https://www.zfrontier.com/app/flow/GJ7JjlX8qwxY: 电池仓 45x140x4.5mm r2; position not published. The filler block is outline battery_bay_filler in spec/rule60-v3-outlines.json"},
+    "bottom.battery_bay": {"value": {"length": 140.0, "width": 45.0, "height": 4.69, "corner_r": 2.0}, "status": "caliper", "source": "Depth: owner caliper on the stock bottom case, 2026-10-31 (4.69; the INKC interest-check post https://www.zfrontier.com/app/flow/GJ7JjlX8qwxY publishes 电池仓 45x140x4.5mm r2). Length, width, corner radius: published; position not published. The 4.5 mm filler block is outline battery_bay_filler in spec/rule60-v3-outlines.json"},
 
     "bumpon.sj5012": {"value": {"diameter": 12.7, "height": 3.5, "tolerance": 0.5}, "status": "datasheet", "source": "3M Bumpon Protective Products SJ5012 (same shape: SJ5312 transparent, SJ5412 true white), cylindrical flat top; https://multimedia.3m.com/mws/media/117314O/3m-bumpon-protective-products-molded-shapes-colored-and-clear.pdf"},
     "desk.gap": {"value": 2.0, "status": "estimated", "source": "gap between the desk and the top-case skirt lip with the keyboard on its stock feet: the v9 wrist rest was sized to 22 mm installed against the 20.01 mm case. Not measured"}

@@ -14,8 +14,9 @@ geometry comes from the parts it mates with, plus the owner's photos IMG_0462-04
     `CAP_SEAT_ZP` (6.30 top-case seat + compressed caps + 1.5 plate), and a through notch per ball catch below the
     top-case strike pocket. The catch barrels rise past the rim top into that pocket: with the catch flush the balls
     would sit below the 12.7 strike-tongue tip; the stock pocket's end walls and screw-head lobes fit a raised catch.
-  - Cavity floor under the MX stack (plate top 7.50, PCB top 12.50); 140 x 45 x 4.5 battery bay (published) at the
-    back, back decoration plate recess (INKC drawing) on the underside, USB-C slot under the top-case notch.
+  - Cavity floor under the MX stack (plate top 7.50, PCB top 12.50); 140 x 45 battery bay, 4.69 deep as the stock bay
+    (owner caliper; published 4.5), at the back, back decoration plate recess (INKC drawing) on the underside, USB-C
+    slot under the top-case notch.
   - Split at X = 0 into two halves for a 256 mm bed, each printed desk face down without supports.
 
 Frames: the top-case print frame (`world`: X mirrored from the plate frame, Y from the wrist-rest front, Z_p down from the
@@ -75,8 +76,9 @@ FRONT_STEP_W = 4.5       # Tray bottom showing in front of the base, from the fr
 END_STEP_W = 4.5         # Tray bottom showing past each end of the base, from the rail ends
 DECO_CLEAR = 0.20        # Recess around the 3 mm steel weight / decoration plate outline (INKC drawing), per side
 DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, along the desk face (owner)
-DECO_RECESS = 2.5        # Recess depth: the 3 mm plate stands 0.5 proud of the desk face (1.5 under the bumpons'
-                         # 2.0); a flush 3.0 recess would leave 0.5 mm over the battery bay under the plate's bump
+DECO_RECESS = 2.3        # Recess depth: the 3 mm plate stands 0.7 proud of the desk face (1.3 under the bumpons'
+                         # 2.0). The plate's centre bump lies over the front of the 4.69 deep battery bay: 2.3 leaves
+                         # 1.03 mm of floor between them; 2.5 left 0.83 and a flush 3.0 would leave 0.33
 DECO = spec.outline("back_deco_plate")
 # ㄴㄱ split (owner): the seam runs through one back and one front ball catch, so each of those two stock catch bodies
 # bridges it with one M2 screw in each half; between them it crosses the floor in front of the battery bay. Staggered
