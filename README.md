@@ -209,7 +209,6 @@ found by printing:
 | [Right half — 3MF](models/maru60-hhkb-topcase-right.3mf) | 149 × 197 mm print, 3 h 48 min / 65 g; USB-C notch for the 6095 tri-mode kit PCB |
 | [Right half, universal USB — 3MF](models/maru60-hhkb-topcase-right-usb-universal.3mf) | Same, with a 14.75 mm notch covering every measured on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
 | [Fit coupons — 3MF](models/maru60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
-| [CAD — STEP](models/maru60-hhkb-topcase.step) | Both halves, for remixing |
 
 Assembled: **298.1 × 198.3 mm**, 20.01 mm case height. The halves split at the
 centre through the wrist rest and front bezel, joined by three sliding
@@ -318,8 +317,12 @@ between boards.
 
 ### Reproduce
 
-The build drives the SolidCraft v0.22.0 headless CLI
-(`~/.local/bin/solidcraft-cli`), which is not included.
+The build is Python only: [manifold3d](https://github.com/elalish/manifold)
+mesh CSG in the same CNC order as the stock part, about 2 s per board. It used
+to drive the SolidCraft v0.22.0 CLI (about 24 min a build); the manifold3d
+build matches that geometry within 0.045 mm (finer tessellation of the arcs:
+corners, keycap-opening fillets, screw pilots) and gives the same check values.
+No CAD (STEP) file is published.
 
 ```sh
 uv run build_topcase_draft.py [--board BOARD]
@@ -329,7 +332,7 @@ uv run export_topcase.py
 ```
 
 Outputs go to the ignored `topcase-draft/`; `export_topcase.py` copies the
-downloads, STEP, [report](evidence/topcase-report.json),
+downloads, [report](evidence/topcase-report.json),
 [verification](evidence/topcase-verification.json) and renders; a build for
 another `--board` exports only its right half,
 `models/maru60-hhkb-topcase-right-usb-<board>.3mf`. To

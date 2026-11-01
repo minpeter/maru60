@@ -10,21 +10,21 @@
   ],
   "dovetail_insertion_path": {
     "steps_checked": 91,
-    "free_slide_drag_dz_ge_3p2mm_mm3": 0.000247,
-    "max_overlap_outside_compression_ribs_mm3": 0.000255,
-    "seated_compression_rib_bite_mm3": 0.5123
+    "free_slide_drag_dz_ge_3p2mm_mm3": 3e-06,
+    "max_overlap_outside_compression_ribs_mm3": 3e-06,
+    "seated_compression_rib_bite_mm3": 0.5115
   },
   "six_dof_retention_mm3": {
     "pull_apart_x_1mm": 79.869,
-    "push_together_x_0p5mm": 728.804,
-    "shear_y_plus_0p5mm": 86.206,
+    "push_together_x_0p5mm": 728.801,
+    "shear_y_plus_0p5mm": 86.205,
     "shear_y_minus_0p5mm": 84.471,
-    "overtravel_z_stop_0p3mm_past_clearance": 61.892,
-    "clean_release_dz_18mm": -0.0
+    "overtravel_z_stop_0p3mm_past_clearance": 61.888,
+    "clean_release_dz_18mm": 0.0
   },
   "dovetail_z_stop_clearance": {
     "design_mm": 0.2,
-    "overlap_at_0p18mm_mm3": 0.000237,
+    "overlap_at_0p18mm_mm3": 3e-06,
     "landing_overlap_at_0p25mm_mm3": 2.408
   },
   "back_seam": {
@@ -70,8 +70,8 @@
       1.0
     ],
     "seam_strike_bearing_left_right_mm2": [
-      75.2,
-      53.6
+      75.1,
+      53.5
     ],
     "key_side_shift_0p05mm_overlap_mm3": [
       0.315,
@@ -103,7 +103,7 @@
     "BackSeamLeft": 0,
     "BackSeamRight": 0
   },
-  "wrist_mirror_asymmetry_mm3": 0.0,
+  "wrist_mirror_asymmetry_mm3": 8e-05,
   "cap_pocket_wall_cover_skirt_side_and_ends": [
     1.0,
     1.0,
