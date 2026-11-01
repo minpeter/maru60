@@ -46,6 +46,23 @@ def outline_points(name: str, arc_steps: int = 12) -> list[tuple[float, float]]:
     return pts
 
 
+def gasket_outlines_plate(arc_steps: int = 16) -> list[list[tuple[float, float]]]:
+    """Plan outlines (plate frame) of the 12 gasket caps (`gasket.cap_free`) pushed fully onto the gas-plate tab ends,
+    two per tab: the rounded end stands `length - slot_depth` past the tab end, the cap centred on the tab centre line.
+    First point not repeated; winding not normalised."""
+    cap = value("gasket.cap_free")
+    r, over = cap["width"] / 2, cap["length"] - cap["slot_depth"]
+    outlines = []
+    for y, tabs in zip(value("plate.tab_mid_y"), (value("plate.front_tabs_x"), value("plate.back_tabs_x"))):
+        for x_left, x_right in tabs:
+            for x_end, inward in ((x_left, 1.0), (x_right, -1.0)):
+                x_open, xc = x_end + inward * cap["slot_depth"], x_end - inward * (over - r)  # open end, tip arc centre
+                arc = [(xc - inward * r * math.cos(t), y + r * math.sin(t))
+                       for t in (math.pi * (k / arc_steps - 0.5) for k in range(arc_steps + 1))]
+                outlines.append([(x_open, y - r), *arc, (x_open, y + r)])
+    return outlines
+
+
 def board_ids() -> list[str]:
     return [b["id"] for b in _BOARDS["boards"]] + [UNIVERSAL]
 

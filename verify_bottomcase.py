@@ -14,6 +14,7 @@ import manifold3d as md
 import numpy as np
 import shapely.affinity as sa
 import shapely.geometry as sg
+from shapely.geometry.polygon import orient
 from shapely import build_area
 from shapely.geometry import MultiLineString
 from shapely.ops import unary_union
@@ -75,25 +76,23 @@ def main() -> None:
     assert lip_contact < 0.01, f"Bottom case touches the top-case skirt lip: {lip_contact} mm^3"
     assert max(outside_rails.values()) < 0.01, f"Material outside the rail outline (outer step): {outside_rails}"
 
-    # 3. Gasket plate and caps: the plate floats free seated and 1.0 mm down; the 12 cap bottom flanges (compressed
-    #    footprint, 9.00..10.20) clear every wall and bear on the recess floors.
+    # 3. Gasket plate and caps: the plate floats free seated and 1.0 mm down; the 12 cap bottom flanges (`gasket.cap_free`
+    #    pushed fully onto the tab ends, compressed to 9.00..10.20) clear every wall and bear on the recess floors.
     plate_t = spec.value("plate.thickness")
     plate = md.CrossSection([plate_gas_world()]).extrude(plate_t).translate([0.0, 0.0, top.Z_PLATE])
     plate_free = {f"down_{d:.1f}": vol(plate.translate([0.0, 0.0, d]) ^ bottom) for d in (0.0, 0.5, 1.0)}
     assert max(plate_free.values()) < 0.01, plate_free
-    cap_l, cap_w = spec.value("gasket.cap_footprint")
+    caps_plan = [orient(sg.Polygon([top.pw(x, y) for x, y in pts])) for pts in spec.gasket_outlines_plate()]
     flange = spec.value("gasket.top_flange_compressed")
     z_flange = top.Z_PLATE + plate_t
     caps = md.Manifold()
-    for y_mid, tabs in zip(spec.value("plate.tab_mid_y"), (spec.value("plate.front_tabs_x"), spec.value("plate.back_tabs_x"))):
-        for xl, xr in tabs:
-            for cx in (xl + top.CAP_INSET, xr - top.CAP_INSET):
-                x, y = top.pw(cx, y_mid)
-                caps += box(x - cap_l / 2, y - cap_w / 2, x + cap_l / 2, y + cap_w / 2, z_flange, z_flange + flange - 0.01)
+    for ring in caps_plan:
+        caps += md.CrossSection([np.asarray(ring.exterior.coords[:-1], dtype=np.float64)]).extrude(flange - 0.01).translate(
+            [0.0, 0.0, z_flange])
     caps_seated = vol(caps ^ bottom)
     caps_bear = vol(caps.translate([0.0, 0.0, 0.10]) ^ bottom)
     assert caps_seated < 0.01, f"Cap flanges collide with the recess walls: {caps_seated} mm^3"
-    assert caps_bear > 12 * cap_l * cap_w * 0.09 * 0.95, f"Cap flanges do not all bear on the recess floors: {caps_bear}"
+    assert caps_bear > sum(c.area for c in caps_plan) * 0.09 * 0.95, f"Cap flanges do not all bear on the recess floors: {caps_bear}"
 
     # 4. Ball catches: strike plates and tongues clear; each catch body (31.8 x 6.7 x 7.7: barrels over +-10.6 rising to
     #    the catch top, ears with the screws held below the rim top) sits on its notch floor, clear of both cases and of

@@ -228,6 +228,14 @@ hemispherical **SJ5302** (Ø7.9 × 2.2 mm, transparent; SJ5302BL is its
 80-piece blister pack) does not suit the pockets: it would stand only 0.7 mm
 proud.
 
+**Gasket caps:** the stock caps are sold separately as Keebox **Silicone
+Gaskets, 20 pcs** ([AliExpress 1005008463912507](https://www.aliexpress.com/item/1005008463912507.html)):
+a semi-clear U-sock with a rounded end, 8 × 5 × 5 mm, with a 6.5 × 2.8 × 1.2 mm
+slot for 1.2–1.6 mm plates. Push one fully onto each end of the six plate tabs
+(12 in all). Pushed fully on, a cap clears the pockets of both printed cases by
+0.02–0.05 mm. The 3.90 mm gap between the two seats squeezes each 1.9 mm flange
+by 0.70 mm; a stock case measures about 4 mm (one owner's reading).
+
 ### Printing
 
 Print each half on its own plate in the supplied orientation, top face on the
@@ -377,7 +385,7 @@ from the parts it mates with; the photos set the layout.
 | Two bodies: a ㄷ tray (both rails and the floor, rail outline, 10.32 mm from the rail tops at the back, tilted 0.2° so its front edge meets the desk plane) and a triangular base under it, inset so the tray bottom shows as a step all round: 5.2 mm at the back, 4.5 mm at the front and at each end, where the base ends in clean square cuts | Stock bottom case (owner's calipers, approximate). Only the rail tops bear, so the 9.69 seat alone sets the gasket stack. The steps print as cantilevers at 6° |
 | Base back face: one 14.59 mm straight slope from the back step to the desk face (15.3 mm in from the rail face) | Owner's caliper readings and an edge trace of IMG_0465 (5.0 / 14.5 mm, 47°). The owner's direct inset reading, 18.61 mm, does not fit those lengths at this case height |
 | Desk face on the wrist rest's 6° plane, four bumpon pockets at the corners (X ±130; 13.0 mm from the front rail face, 8.5 mm in from the back slope's desk-face edge) | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons, 8 in all with the wrist rest's front row. Rigid-body load share (self weight 9 N, wrists 15 N, typing 5 N; assumed): 3.7–5.6 N each with both wrists down, all 8 loaded |
-| Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange (assumed preload, as the top case) |
+| Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange: the Keebox cap's 1.9 mm flanges each squeeze 0.70 mm. A stock case reads about 4 mm between the seats (one owner, not ours); 4.00 here would leave the USB-C body 0.79 mm above the floor, short of the 0.8 mm plate travel |
 | Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](evidence/topcase/analysis/ball-catch-analysis.json)); pilots on the top-case strike-pocket lobe centres |
 | Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
 | 140 × 45 mm R2 battery bay, 4.69 mm deep, back centre | Length, width, radius: INKC post (which gives 4.5 deep); depth: owner's caliper on the stock bay; position from the owner's photos. The 4.5 mm filler rests on the bay floor, 0.19 mm under the cavity floor |

@@ -2,9 +2,9 @@
 
 Built from caliper measurements of the owner's stock top case plus photo metrology of the silicone gasket caps and
 ball-catch pockets (IMG_0201..IMG_0222, 28 px/mm rectified):
-  - Silicone gasket cap ("gasket bean/sock", 12 installed = 2 per 41 mm tab):
-      * 8.3 mm long x 5.5 mm wide x 4.5 mm free height (1.5 mm top + 1.5 mm PC + 1.5 mm bottom)
-      * Total outer span across both caps on each 41.00 mm tab = 43.00 mm (26.2 mm bare tab between caps)
+  - Silicone gasket cap ("gasket bean/sock", 12 installed = 2 per 41 mm tab): the Keebox 8.0 x 5.0 x 5.0 mm U-sock with a
+    rounded end and a 6.5 x 2.8 x 1.2 mm slot (`gasket.cap_free`), 1.9 mm flanges either side of the 1.5 mm PC tab.
+    Pockets are sized from the stock underside photo (`gasket.pocket_footprint`, 43.00 mm outer span per tab).
   - CNC order as on the stock part (caliper; top face down = `Z_p 0`, `Z_p` grows toward the skirt lip):
       1. Block with the 6-deg top face + 0.70 mm 45-deg outer chamfer, skirt lip at `Z_p = 20.01 mm` (IMG_0333)
       2. Base pocket from the lip down to the `Z_p = 9.69 mm` floor (IMG_0334) inside the skirt (`2.85 mm` sides and back,
@@ -13,7 +13,7 @@ ball-catch pockets (IMG_0201..IMG_0222, 28 px/mm rectified):
       3. HHKB keycap opening through the floor
       4. Plate-body relief + 6 open rounded-rectangle silicone-cap pockets, one level `Z_p = 6.30 mm` (caliper), cut
          straight from the floor inside a `2.05 mm` floor ledge along the skirt (short side: ledge 2.85..4.90 mm and the
-         6.30 strip 4.90..5.66 mm from the outer edge, caliper). One pocket per DWG `6095(gas)` tab: the compressed cap
+         6.30 strip 4.90..5.66 mm from the outer edge, caliper). One pocket per DWG `6095(gas)` tab: the photo-read cap
          footprint (`8.2 x 4.0 mm`, two per tab) plus `0.65 mm` room per side (front: up to the ledge), `R1.8` skirt-side
          corners, no wall toward the plate. `R1.0` where a pocket meets the relief, `R0.5` on the relief corners
       5. 4 ball-catch strike pockets cut from the floor to `Z_p = 5.55 mm` (IMG_0337): `7.25 mm` wide for the ~20.5 x
@@ -95,8 +95,9 @@ Z_STRIKE = spec.value("top.strike_floor_z")  # 4 ball-catch strike pockets, 4.14
 FRONT_TABS_P = [tuple(t) for t in spec.value("plate.front_tabs_x")]  # DWG `6095(gas)` front tab X spans (plate frame)
 BACK_TABS_P = [tuple(t) for t in spec.value("plate.back_tabs_x")]    # DWG `6095(gas)` back tab X spans (plate frame)
 WING_MID_Y_P = tuple(spec.value("plate.tab_mid_y"))  # Front / back cap centerline Y (plate frame) on the DWG tabs
-CAP_FOOT_L, CAP_FOOT_W = spec.value("gasket.cap_footprint")  # Compressed silicone-cap footprint (X along the tab, Y across)
-CAP_INSET = spec.value("gasket.cap_inset")  # Cap center inset from each tab end (2 caps per 41.00 mm tab)
+CAP_FOOT_L, CAP_FOOT_W = spec.value("gasket.pocket_footprint")  # Photo-read cap footprint the pockets are sized from
+CAP_INSET = spec.value("gasket.pocket_inset")  # Pocket centre inset from each tab end (2 caps per 41.00 mm tab)
+_CAP = spec.value("gasket.cap_free")  # The part (Keebox drawing), reported only
 CAP_CLEAR = 0.65        # Pocket room per side around the cap footprint for the compressed silicone to bulge
 CAP_POCKET_R = 1.80     # Pocket skirt-side corner radius; every cap footprint must stay >= 0.03 mm inside its pocket
 PLATE_RELIEF_CLEAR = 0.30  # Plate-body travel relief past the DWG plate body, front and back
@@ -104,7 +105,7 @@ RELIEF_Y_P = tuple(round(y + d, 2) for y, d in zip(spec.value("plate.body_y"), (
 RELIEF_X_P = (LEDGE_P[0], LEDGE_P[2])  # Relief X span: from the floor ledge, a 0.76 mm strip beside the opening (caliper)
 JUNCTION_R = 1.00       # Where a cap pocket end meets the relief edge
 RELIEF_CORNER_R = 0.50  # Relief outer corners (0.35 mm from the plate edge)
-CAP_TOP_COMPRESSED = spec.value("gasket.top_flange_compressed")  # Silicone cap top flange: 1.5 free, 0.30 preload (assumed)
+CAP_TOP_COMPRESSED = spec.value("gasket.top_flange_compressed")  # Cap top flange: 1.9 free, 1.20 seated (derived)
 Z_PLATE = round(Z_GASKET + CAP_TOP_COMPRESSED, 2)  # Seated gasket-plate top face (7.50 mm)
 Z_RELIEF = Z_GASKET     # Plate-body travel relief: same level as the cap pockets (owner), 1.20 mm plate travel
 KERNEL_WORKAROUND_W = (30.257, 87.070)  # Temporary bore site in the RightHalf front floor face (print frame), step 10b
@@ -1223,8 +1224,12 @@ def main() -> None:
         "silicone_gasket_cap_spec_mm": {
             "count_installed": 12,
             "arrangement": "2 end-caps per 41.00 mm PC tab (26.2 mm bare tab between caps)",
-            "cap_length_x_width_x_height": [8.3, 5.5, 4.5],
-            "top_flange_pc_tab_bottom_flange": [1.5, 1.5, 1.5],
+            "cap_length_x_width_x_height": [_CAP["length"], _CAP["width"], _CAP["height"]],
+            "cap_slot_depth_x_width_x_thickness": [_CAP["slot_depth"], _CAP["slot_width"], _CAP["slot_thickness"]],
+            "top_flange_pc_tab_bottom_flange_free": [round((_CAP["height"] - _CAP["slot_thickness"]) / 2, 2),
+                                                    spec.value("plate.thickness"),
+                                                    round((_CAP["height"] - _CAP["slot_thickness"]) / 2, 2)],
+            "flange_compressed": CAP_TOP_COMPRESSED,
             "outer_span_across_pair": 43.0,
             "cap_pocket_clearance_per_side": CAP_CLEAR,
             "cap_pocket_corner_radius": CAP_POCKET_R,

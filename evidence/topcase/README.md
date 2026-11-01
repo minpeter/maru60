@@ -60,7 +60,7 @@ Readings not used:
 | Strike pocket "mushroom" end reliefs | 7.25 wide, 4.1 lobe 4.55 past the plate end, end wall 2.15 past, R0.85 shoulder | Two-view ray-cast silhouette fit, IMG_0218 + IMG_0222 (13 mm-eq. ultra-wide, f = 1485 px) ([fit](analysis/strike-pocket-fit-v4.3.png)) |
 | Back strike distance from the inner back wall | BL 4.15, BR 4.30 | Same fit; kept when the measured outline moved the wall |
 | Front strike distance from the inner front wall | 4.26 | **Not measured**: centred between the front wall and the plate edge |
-| Silicone gasket cap | 8.3 × 5.5 × 4.5 free; 8.2 × 4.0 compressed footprint | Rectified underside photo, 28 px/mm ([annotated](analysis/underside-photo-annotated.jpg)) |
+| Silicone gasket cap | 8.3 × 5.5 × 4.5 free; 8.2 × 4.0 footprint (the pocket basis). The part itself is the Keebox cap, 8.0 × 5.0 × 5.0 with a 6.5 × 2.8 × 1.2 slot (listing drawing; the owner confirmed it as the stock cap, 2026-11-01) | Rectified underside photo, 28 px/mm ([annotated](analysis/underside-photo-annotated.jpg)) |
 
 The plate outline and tab positions come from the `6095(gas)` drawing in INKC
 STUDIO's `rule60-v3.dwg`, obtained from [minjunkim0205/Hobby-CustomKeyboard @ ecf3575](https://github.com/minjunkim0205/Hobby-CustomKeyboard/tree/ecf3575e9fb844d32f57b42ce6f7f23f30294396/keyboards/housings/Rule60)

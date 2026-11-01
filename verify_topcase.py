@@ -293,19 +293,18 @@ def main() -> None:
     def material_at(z: float) -> sg.base.BaseGeometry:
         return slice_material(full_case_mf, z)
 
-    # 6a. INKC `6095(gas)` PC Plate + 12 Silicone End-Caps (compressed, spec/rule60-v3.json):
-    #     The compressed cap top sits on the trough floor `z_gasket`, the plate top at `z_plate`.
+    # 6a. INKC `6095(gas)` PC Plate + 12 silicone end-caps (`gasket.cap_free`, pushed fully onto the tab ends, as tall as
+    #     the compressed stack): the cap top sits on the trough floor `z_gasket`, the plate top at `z_plate`.
     #     Check BOTH seated AND `0.25 mm` upward flex.
     gas_world = plate_gas_world()
     pc_plate_mf = md.CrossSection([gas_world]).extrude(spec.value("plate.thickness"))
 
-    cap_l, cap_w = spec.value("gasket.cap_footprint")
-    cap_h, cap_inset = spec.value("gasket.cap_height_compressed"), spec.value("gasket.cap_inset")
+    cap_h = spec.value("gasket.cap_height_compressed")
     caps_mf = md.Manifold()
-    for y_wing_mid, tabs_p in zip(spec.value("plate.tab_mid_y"), (spec.value("plate.front_tabs_x"), spec.value("plate.back_tabs_x"))):
-        for xLp, xRp in tabs_p:
-            for cx_p in (xLp + cap_inset, xRp - cap_inset):
-                caps_mf += md.Manifold.cube([cap_l, cap_w, cap_h], center=True).translate([*pw(cx_p, y_wing_mid), 0.0])
+    for pts in spec.gasket_outlines_plate():
+        ring = orient(sg.Polygon([pw(x, y) for x, y in pts]))
+        caps_mf += md.CrossSection([np.asarray(ring.exterior.coords[:-1], dtype=np.float64)]).extrude(cap_h).translate(
+            [0.0, 0.0, -cap_h / 2])
 
     plate_seated_ov = float((pc_plate_mf.translate([0, 0, z_plate]) ^ full_case_mf).volume())
     plate_upflex_ov = float((pc_plate_mf.translate([0, 0, z_plate - 0.25]) ^ full_case_mf).volume())
