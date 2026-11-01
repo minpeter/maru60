@@ -1,33 +1,31 @@
-# Maru60 PCB — RP2350A (engineering draft)
+# Maru60 RP2350A PCB — engineering draft
 
-This directory is the independent PCB workstream. It does not change or merge the housing proposal.
+This independent PCB workstream is kept under `pcb/`; it does not merge or alter housing work.
 
-## Target
+## Product requirements
 
-- GH60-class 285.0 × 94.6 mm, 1.6 mm PCB envelope (reference profile: komar007/gh60 rev C as recorded in the mechanical interface data).
-- RP2350A MCU; USB-C; QMK with VIA remapping; MX hot-swap; per-key RGB and a separately addressable underglow chain.
-- One PCB must provide selectable WK, WKL, and HHKB layouts. The bottom row must provide 6.25U and 7U space bars, and alternate/split Backspace, right Shift, and stepped Caps Lock positions. PCB-mount and plate-mount stabilizers require compatible, separately specified plate cutouts.
-- Wireless/Bluetooth is undecided. No battery, radio, or wireless circuitry is committed.
+GH60-class PCB; RP2350A; USB-C; MX hot-swap; switchable WK/WKL/HHKB physical layouts; 6.25U and 7U space bars; split/non-split Backspace and right Shift; stepped Caps; PCB-mount and plate-mount stabilizer support using compatible plates; VIA remapping; per-key RGB and underglow. Wireless/Bluetooth remains undecided; no radio or battery is committed.
 
-## Mechanical reference and provenance
+## Mechanical reference
 
-The work is based on repository `main` at `03c92914fb0acad659a554024d689673794ea5a9`. The case reference is the open PR #1 proposal at `1d89453825131438929ad887e2b0264f8f620cd2` (top case v7.10, bottom case draft v0.11); its plate-frame mapping and USB notch are in `spec/rule60-v3.json`, `spec/boards.json`, and `spec/rule60-v3-outlines.json`. Those files are not copied into this subtree.
+The branch is based on `main` at `03c92914fb0acad659a554024d689673794ea5a9`. Mechanical fit reference is open PR #1 head `1d89453825131438929ad887e2b0264f8f620cd2`: top case v7.10 and bottom-case draft v0.11. The stored interface spec defines the Rule60 plate frame and board transform:
+`X_plate = X_GH60 + 0.4525`, `Y_plate = 101.06775 - Y_GH60`.
+The current plate has plate-mount stabilizer cutouts. A PCB-mount option needs a different plate or verified shared cutouts. USB notch and connector clearance must be checked against the selected receptacle and actual CAD.
 
-The recorded transform is `X_plate = X_GH60 + 0.4525`, `Y_plate = 101.06775 - Y_GH60`. The PR's USB-C notch is 12.8 mm wide and 8.7 mm deep from the lip; the surveyed 6095 connector center is about 18.0 mm in GH60 X (photo-scaled, ±0.3 mm). This is a case-fit reference, not a connector selection for our PCB. Connector body dimensions, shell legs, board-edge position, and cable plug clearance must be checked against the selected part and the actual case CAD before committing the outline.
+## Engineering artifacts
 
-The current mechanical plate has plate-mount stabilizer cutouts. PCB-mount support therefore requires a second plate variant or verified shared geometry. No switch/socket/LED/stabilizer combination has yet been proven collision-free.
+- `feasibility/layout_model.json`: explicit draft key envelopes and switch-center transforms for WK, WKL, and HHKB; 6.25U/7U; split-space, split/non-split Backspace, split/non-split right Shift, and stepped/non-stepped Caps.
+- `feasibility/validate_layout.mjs`: executable validator and SVG generator. Run with `node pcb/feasibility/validate_layout.mjs`.
+- `feasibility/validation-report.json`: latest run summary.
+- `feasibility/layout-preview.svg` and `layout-preview.png`: WK 6.25U visual draft. It shows keycap envelopes and switch centers only.
+- `firmware/qmk`: minimal RP2350/VIA overlay scaffold pinned to the investigated QMK fork revision.
 
-## What exists in this iteration
+## Validation boundary
 
-- `feasibility/layout_model.py`: editable bottom-row position model for the 6.25U and 7U layouts, with split space-bar, split right Shift, split Backspace, and stepped Caps sites. It checks board bounds and generates a labeled SVG preview. Its checks are limited to key-center envelopes; it does not prove switch, socket, LED, stabilizer, screw, or plate clearance.
-- `firmware/README.md`: pinned RP2350 QMK/VIA starting point and the required integration/validation steps.
+The Node model checks 96 combinations for switch-center bounds, plate/GH60 coordinate round-trip, minimum 0.5U center spacing, and nominal row envelope width. It does **not** check switch body, hot-swap socket, diode, LED, stabilizer, mounting-hole, plate or case collision. No licensed socket footprint geometry or PCB/plate/case solids are in this workstream yet. Do not read the passing layout report as clearance proof.
 
-## Next engineering steps
+No schematic or KiCad PCB has been made. KiCad is unavailable in the current execution environment. Firmware scaffold, QMK compilation, VIA GUI remapping/persistence, electrical validation, and physical fit remain unverified. This is not manufacturing-ready.
 
-1. Confirm the case mechanical revision and export the plate, PCB seat, USB opening, catch/screw, and interior keep-out geometry to a neutral measured interface file.
-2. Replace illustrative layout sites with the chosen GH60 source grid and create actual switch, hot-swap socket, diode, stabilizer, RGB, mounting-hole, and USB-C footprints. Verify every selectable combination against plate and housing solids.
-3. Select a USB-C receptacle, ESD protection, power budget, RGB topology, and RP2350A package/pin map. Check USB routing, decoupling, flash, boot/reset access, and thermal/power constraints.
-4. Choose a hardware license after provenance review. The repository's root license currently covers the housing source; it is not silently applied as the final PCB hardware license. Do not reuse PH60 (CC BY-NC-SA) or Waffling60 (CERN-OHL-S2) design files in this board without resolving the applicable license and attribution obligations.
-5. Run schematic/ERC, PCB/DRC, assembly, QMK build, VIA GUI remap/persistence, then prototype fit and electrical tests. Source-level checks are not physical validation.
+## License and design provenance
 
-This is a draft engineering iteration. It is not routed, electrically complete, validated against the case solids, or ready to fabricate.
+The owner intends open hardware, but has not selected the PCB hardware license. The repository root license is not silently asserted as the PCB license. This draft does not copy third-party PCB CAD. PH60 (CC BY-NC-SA) and Waffling60 (CERN-OHL-S2) were identified during research and are excluded from this design. Record component-datasheet and footprint licenses when parts are selected.

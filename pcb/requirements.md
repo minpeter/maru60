@@ -1,28 +1,28 @@
 # PCB requirements and evidence ledger
 
-| Requirement | Draft implementation / evidence | State |
+| Requirement | Evidence / implementation | Status |
 |---|---|---|
-| GH60 size | 285.0 × 94.6 mm reference from `spec/boards.json` (komar007/gh60 rev C) | Reference recorded; own Edge.Cuts not designed |
-| RP2350A | QMK `em-rp2350` port is the firmware investigation baseline | Target selected; schematic/pin map pending |
-| USB-C | Rule60 v7.10 notch 12.8 mm wide; surveyed 6095 center X ≈18.0 mm in GH60 frame | Need own connector selection and actual CAD fit |
-| MX hot-swap | Required | Socket footprints and collision study pending |
-| WK / WKL / HHKB | Required as selectable mechanical layouts | Need complete multi-layout switch-site model |
-| Spacebar | 6.25U and 7U | Bottom row envelope model included |
-| Alternate keys | Split/non-split Backspace, right Shift, stepped Caps | Sites are illustrative; plate geometry pending |
-| Stabilizers | PCB-mount and plate-mount | Require compatible alternate plate cutouts |
-| VIA | Required; QMK Raw HID/dynamic keymap path identified | No Maru60 build or GUI remap/persistence validation |
-| Per-key RGB + underglow | Required, separate chains contemplated | LED count/topology, power, thermal and timing checks pending |
-| Wireless | Undecided | No battery/radio committed |
-| Hardware license | Open hardware intended | Exact license not selected; source/provenance audit pending |
+| GH60 envelope | Model references 285.0 × 94.6 mm profile and 19.05 mm pitch | Draft key-center model; own Edge.Cuts pending |
+| RP2350A | QMK fork's `handwired/onekey/rp2350` metadata uses `processor: RP2350` | Target scaffold added; no build |
+| USB-C | v7.10 case notch is 12.8 mm wide; existing surveyed 6095 center is photo-scaled ≈18.0 mm GH60 X | Receptacle/board-edge design and physical fit pending |
+| MX hot-swap | Required | Socket/footprint and electrical topology pending |
+| WK / WKL / HHKB | `layout_model.json` enumerates each | Nominal switch/keycap envelopes only |
+| 6.25U / 7U | Model enumerates both for each layout | Envelope checks pass; plate check pending |
+| Split/non-split Backspace and right Shift | Model enumerates both choices | Envelope checks pass; actual switch/socket sites pending |
+| Stepped/non-stepped Caps Lock | Model enumerates both choices | Offset is provisional; plate/keycap check pending |
+| PCB-mount and plate-mount stabilizers | Both retained as requirements; current case plate is plate-mount style | Footprints and compatible plate variants pending; no clearance claim |
+| VIA | QMK fork pinned in firmware manifest; `VIA_ENABLE = yes` scaffold | QMK build and VIA layout/GUI/persistence test pending |
+| Per-key RGB + underglow | Both are mandatory product requirements | LED count/topology, separate control zones, pins and power budget pending |
+| Wireless/Bluetooth | Explicitly undecided | No battery or radio committed |
+| Open hardware license | Intent recorded | Exact license and provenance review pending |
 
-## Provenance and reuse
+## Model test result
 
-- The GH60 dimensions/grid and Rule60 case interface values are referenced from this repository's recorded interface spec. The proposed board is a new design; no third-party PCB CAD is copied in this draft.
-- PH60 was identified during research as CC BY-NC-SA; do not copy its CAD into this design.
-- Waffling60 was identified as CERN-OHL-S2; no source geometry has been imported. Redrawing does not itself establish a different provenance.
-- Manufacturer drawings/datasheets may be used to place chosen components, with sources and revisions logged when selected.
-- Repository root licensing currently pertains to existing project content. This draft does not assert that the PCB inherits a final hardware license.
+`node pcb/feasibility/validate_layout.mjs` checked 96 combinations. It confirms only: key switch centers are inside the nominal board envelope, the plate↔GH60 transform round-trips, adjacent switch centers in each modeled row are at least 0.5U apart, and modeled row width stays within 15.05U.
 
-## Mechanical revision provenance
+## Mechanical provenance
 
-The PCB work starts from `main` `03c92914fb0acad659a554024d689673794ea5a9`, preserving the housing branch separately. Mechanical reference for fit planning is open PR #1, head `1d89453825131438929ad887e2b0264f8f620cd2`: top case v7.10 and bottom case draft v0.11, as described in that PR and its interface spec.
+- Base: repository `main` `03c92914fb0acad659a554024d689673794ea5a9`.
+- Case reference: open PR #1 head `1d89453825131438929ad887e2b0264f8f620cd2` (top v7.10, bottom draft v0.11).
+- GH60 frame and Rule60 plate transform: existing `spec/rule60-v3.json`, `spec/boards.json`, and `spec/rule60-v3-outlines.json`.
+- No PH60 or Waffling60 board geometry was copied. No socket footprint geometry is present in the source tree, so no genuine socket collision study has been performed.
