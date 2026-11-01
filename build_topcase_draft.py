@@ -1,4 +1,4 @@
-"""Rule 60 V3 HHKB top case + integrated honeycomb wrist rest (stock bottom case, plate, gaskets and ball catches).
+"""Maru60 HHKB top case + integrated honeycomb wrist rest, for the Rule60 V3 (stock bottom case, plate, gaskets, catches).
 
 Built from caliper measurements of the owner's stock top case plus photo metrology of the silicone gasket caps and
 ball-catch pockets (IMG_0201..IMG_0222, 28 px/mm rectified):
@@ -1074,9 +1074,9 @@ def main() -> None:
 
     cmds = build_solidcraft_commands(args.board)
     usb_x, usb_w = usb_notch_print(args.board)
-    script_path = OUT / "rule60-hhkb-unibody-draft.script.json"
-    design_path = OUT / "rule60-hhkb-unibody-draft.solidcraft"
-    step_path = OUT / "rule60-hhkb-unibody-draft.step"
+    script_path = OUT / "maru60-hhkb-unibody-draft.script.json"
+    design_path = OUT / "maru60-hhkb-unibody-draft.solidcraft"
+    step_path = OUT / "maru60-hhkb-unibody-draft.step"
     threemf_raw = OUT / "solidcraft-export.3mf"
     eval_path = OUT / "solidcraft-eval.json"
 
@@ -1153,8 +1153,8 @@ def main() -> None:
     right_plate_tm = place_on_x2d(right_mf)
     left_plate_tm.export(OUT / "left-half-print.stl")
     right_plate_tm.export(OUT / "right-half-print.stl")
-    write_3mf(OUT / "rule60-hhkb-left-plate.3mf", "Rule 60 V3 HHKB top case + wrist rest - Left half (X2D)", [("LeftHalf", left_plate_tm)])
-    write_3mf(OUT / "rule60-hhkb-right-plate.3mf", "Rule 60 V3 HHKB top case + wrist rest - Right half (X2D)", [("RightHalf", right_plate_tm)])
+    write_3mf(OUT / "maru60-hhkb-left-plate.3mf", "Maru60 HHKB top case + wrist rest, for Rule60 V3 - Left half (X2D)", [("LeftHalf", left_plate_tm)])
+    write_3mf(OUT / "maru60-hhkb-right-plate.3mf", "Maru60 HHKB top case + wrist rest, for Rule60 V3 - Right half (X2D)", [("RightHalf", right_plate_tm)])
 
     rot_deg = 180.0 - TILT_DEG
     left_inst_tm = to_trimesh(left_mf.rotate([rot_deg, 0.0, 0.0]))
@@ -1195,8 +1195,8 @@ def main() -> None:
 
     catch_tm.export(OUT / "coupon-ballcatch-gasket-left.stl")
     write_3mf(
-        OUT / "rule60-fit-test-coupons.3mf",
-        "Rule 60 V3 HHKB top case + wrist rest - fit-test coupons",
+        OUT / "maru60-fit-test-coupons.3mf",
+        "Maru60 HHKB top case + wrist rest, for Rule60 V3 - fit-test coupons",
         [
             ("CornerCatchBossCoupon", catch_tm),
             ("FrontJointLeft", fL_tm),

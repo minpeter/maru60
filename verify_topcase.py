@@ -1,4 +1,4 @@
-"""Comprehensive 3D Mating & Printability Verification for Rule 60 V3 HHKB Unibody.
+"""Comprehensive 3D Mating & Printability Verification for the Maru60 HHKB top case (Rule60 V3 stock parts).
 
 Verifies exported CAD files (not in-memory construction) across 6 independent suites:
   1. Mesh Integrity & X2D Bed Bounds: watertight, winding-consistent, 1-shell STLs & 3MFs.
@@ -92,9 +92,9 @@ def main() -> None:
         assert m.is_watertight and m.is_winding_consistent and len(m.split()) == 1, stl_name
 
     for tmf_name, expected_objs in [
-        ("rule60-hhkb-left-plate.3mf", 1),
-        ("rule60-hhkb-right-plate.3mf", 1),
-        ("rule60-fit-test-coupons.3mf", 5),
+        ("maru60-hhkb-left-plate.3mf", 1),
+        ("maru60-hhkb-right-plate.3mf", 1),
+        ("maru60-fit-test-coupons.3mf", 5),
     ]:
         sc = trimesh.load(ROOT / tmf_name, force="scene")
         assert isinstance(sc, trimesh.Scene)
@@ -248,7 +248,7 @@ def main() -> None:
     # below, and no unsupported flat overhang wider than 2.0 mm (a layer growing past the one below by more than 45 deg).
     print_objects = [("LeftHalfPrint", trimesh.load_mesh(ROOT / "left-half-print.stl")),
                      ("RightHalfPrint", trimesh.load_mesh(ROOT / "right-half-print.stl"))]
-    print_objects += list(trimesh.load(ROOT / "rule60-fit-test-coupons.3mf", force="scene").geometry.items())
+    print_objects += list(trimesh.load(ROOT / "maru60-fit-test-coupons.3mf", force="scene").geometry.items())
     floating_islands: dict[str, list[dict[str, float]]] = {}
     flat_overhangs: dict[str, list[dict[str, float]]] = {}
     for part_label, pm in print_objects:
@@ -450,9 +450,9 @@ def main() -> None:
             "left-half-print.stl",
             "right-half-print.stl",
             "coupon-ballcatch-gasket-left.stl",
-            "rule60-hhkb-left-plate.3mf",
-            "rule60-hhkb-right-plate.3mf",
-            "rule60-fit-test-coupons.3mf",
+            "maru60-hhkb-left-plate.3mf",
+            "maru60-hhkb-right-plate.3mf",
+            "maru60-fit-test-coupons.3mf",
         ],
         "dovetail_insertion_path": {
             "steps_checked": len(dz_steps),

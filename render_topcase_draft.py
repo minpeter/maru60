@@ -1,4 +1,4 @@
-"""Render SolidCraft HHKB top-case + honeycomb wrist-rest draft with Blender Cycles."""
+"""Render the Maru60 HHKB top case + honeycomb wrist rest (SolidCraft draft) with Blender Cycles."""
 from pathlib import Path
 import json
 import sys

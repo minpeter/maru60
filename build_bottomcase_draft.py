@@ -1,5 +1,6 @@
-"""Rule 60 V3 HHKB bottom case (draft): a printable tray that takes the stock plate, silicone gasket caps, ball catches,
-battery-bay filler and back decoration plate, and nests in the stock top case or the printed one (build_topcase_draft.py).
+"""Maru60 HHKB bottom case (draft), for the Rule60 V3: a printable tray that takes the stock plate, silicone gasket
+caps, ball catches, battery-bay filler and back decoration plate, and nests in the stock top case or the printed one
+(build_topcase_draft.py).
 
 No caliper reading of the stock bottom case exists yet (the caliper displays in IMG_0462-0465 are out of frame), so the
 geometry comes from the parts it mates with, plus the owner's photos IMG_0462-0474 for layout:
@@ -382,16 +383,16 @@ def main() -> None:
         assert len(tm.split(only_watertight=False)) == 1, name
         tm.export(OUT / f"{name}-print.stl")
     lic = "CC BY-NC 4.0 (non-commercial use only)"
-    top.write_3mf(OUT / "rule60-hhkb-bottomcase-left.3mf", f"Rule 60 V3 HHKB bottom case, left half ({lic})",
+    top.write_3mf(OUT / "maru60-hhkb-bottomcase-left.3mf", f"Maru60 HHKB bottom case, for Rule60 V3 - left half ({lic})",
                   [("BottomLeft", printed["bottom-left"])], fine_layer_z=None)
-    top.write_3mf(OUT / "rule60-hhkb-bottomcase-right.3mf", f"Rule 60 V3 HHKB bottom case, right half ({lic})",
+    top.write_3mf(OUT / "maru60-hhkb-bottomcase-right.3mf", f"Maru60 HHKB bottom case, for Rule60 V3 - right half ({lic})",
                   [("BottomRight", printed["bottom-right"])], fine_layer_z=None)
-    top.write_3mf(OUT / "rule60-hhkb-bottomcase-fit-coupon.3mf", f"Rule 60 V3 bottom case fit coupon ({lic})",
+    top.write_3mf(OUT / "maru60-hhkb-bottomcase-fit-coupon.3mf", f"Maru60 HHKB bottom case fit coupon ({lic})",
                   [("CouponFrontLeft", printed["coupon-front-left"])], fine_layer_z=None)
     pair = [printed["joint-test-left"].copy(), printed["joint-test-right"].copy()]
     pair[0].apply_translation([-25.0, 0.0, 0.0])
     pair[1].apply_translation([25.0, 0.0, 0.0])
-    top.write_3mf(OUT / "rule60-hhkb-bottomcase-joint-test.3mf", f"Rule 60 V3 bottom case joint test ({lic})",
+    top.write_3mf(OUT / "maru60-hhkb-bottomcase-joint-test.3mf", f"Maru60 HHKB bottom case joint test ({lic})",
                   [("JointTestLeft", pair[0]), ("JointTestRight", pair[1])], fine_layer_z=None)
     report["parts"] = {name: {"print_extents": [round(v, 2) for v in tm.extents], "volume_cm3": round(tm.volume / 1e3, 1)}
                        for name, tm in printed.items()}

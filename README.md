@@ -6,9 +6,10 @@ separate connectors. Optional adhesive anti-slip pads are not included.
 
 [View on MakerWorld](https://makerworld.com/en/models/3490864-rule-60-v3-honeycomb-wrist-rest#profileId-3986872)
 
-Also in this repository: an experimental [HHKB top case with the wrist rest
-built in](#hhkb-top-case-with-integrated-wrist-rest-experimental) and a
-[draft bottom case](#hhkb-bottom-case-draft) that takes the stock internals.
+Also in this repository: **Maru60**, an HHKB housing for the Rule 60 V3's
+internals with this wrist rest built in: an experimental
+[top case](#maru60-hhkb-top-case-with-integrated-wrist-rest-experimental) and a
+[draft bottom case](#maru60-hhkb-bottom-case-draft).
 
 ![Dovetail joint detail; overview predates the small compression ribs](images/joint-underside.png)
 
@@ -138,13 +139,16 @@ renders was unavailable due to an image-upload quota.
 [Historical rib comparison](evidence/rib-comparison.json) covers the original
 v9 candidates, not the current tight-fit slicing estimate.
 
-## HHKB top case with integrated wrist rest (experimental)
+## Maru60 HHKB top case with integrated wrist rest (experimental)
 
-A replacement Rule 60 V3 **HHKB** top case with the honeycomb wrist rest built
-in. It reuses the stock bottom case, PC gasket plate, 12 silicone gasket caps
-and four ball-catch strike plates. The case outline and Z levels follow the
-owner's caliper measurements of the stock top case; the gasket-cap and
-ball-catch pockets follow photo metrology of the same part.
+**Maru60** is an HHKB housing for the Rule 60 V3's internals with the
+honeycomb wrist rest built in. The name is 마루 (*maru*), the raised wooden
+porch along a Korean house where you sit and rest. Its top case reuses the
+stock Rule 60 V3 bottom case (or the Maru60 bottom case below), PC gasket
+plate, 12 silicone gasket caps and four ball-catch strike plates. The case
+outline and Z levels follow the owner's caliper measurements of the stock top
+case; the gasket-cap and ball-catch pockets follow photo metrology of the same
+part.
 
 **License: [CC BY-NC 4.0](LICENSE-topcase)**, personal and other non-commercial
 use only (the wrist rest above stays CC BY 4.0; see
@@ -199,11 +203,11 @@ found by printing:
 
 | File | Use |
 | --- | --- |
-| [Left half — 3MF](models/rule60-hhkb-topcase-left.3mf) | 206 × 197 mm print, 4 h 16 min / 76 g |
-| [Right half — 3MF](models/rule60-hhkb-topcase-right.3mf) | 149 × 197 mm print, 3 h 48 min / 65 g; USB-C notch for the 6095 tri-mode kit PCB |
-| [Right half, universal USB — 3MF](models/rule60-hhkb-topcase-right-usb-universal.3mf) | Same, with a 14.75 mm notch covering every measured on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
-| [Fit coupons — 3MF](models/rule60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
-| [CAD — STEP](models/rule60-hhkb-topcase.step) | Both halves, for remixing |
+| [Left half — 3MF](models/maru60-hhkb-topcase-left.3mf) | 206 × 197 mm print, 4 h 16 min / 76 g |
+| [Right half — 3MF](models/maru60-hhkb-topcase-right.3mf) | 149 × 197 mm print, 3 h 48 min / 65 g; USB-C notch for the 6095 tri-mode kit PCB |
+| [Right half, universal USB — 3MF](models/maru60-hhkb-topcase-right-usb-universal.3mf) | Same, with a 14.75 mm notch covering every measured on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
+| [Fit coupons — 3MF](models/maru60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
+| [CAD — STEP](models/maru60-hhkb-topcase.step) | Both halves, for remixing |
 
 Assembled: **298.1 × 198.3 mm**, 20.01 mm case height. The halves split at the
 centre through the wrist rest and front bezel, joined by three sliding
@@ -326,7 +330,7 @@ Outputs go to the ignored `topcase-draft/`; `export_topcase.py` copies the
 downloads, STEP, [report](evidence/topcase-report.json),
 [verification](evidence/topcase-verification.json) and renders; a build for
 another `--board` exports only its right half,
-`models/rule60-hhkb-topcase-right-usb-<board>.3mf`. To
+`models/maru60-hhkb-topcase-right-usb-<board>.3mf`. To
 re-extract the outlines from the drawing, see
 [third_party/inkc-rule60-v3](third_party/inkc-rule60-v3/README.md) (needs
 [Bun](https://bun.sh)).
@@ -366,12 +370,12 @@ not widened for cable plugs. A plug body up to the USB-C maximum of 12.35 mm
 fits with 0.2 mm per side. Some retail cables are wider (about 13 mm
 measured) and will not seat fully, the same as in the stock case.
 
-## HHKB bottom case (draft)
+## Maru60 HHKB bottom case (draft)
 
-A printable Rule 60 V3 bottom case for the stock PC gasket plate, 12 silicone
-caps, four double-ball catches, battery-bay filler and back decoration plate.
-It nests in the stock top case or the printed one above. **Draft: print the
-fit coupon first.** Same license as the top case
+A printable Maru60 bottom case for the stock Rule 60 V3 PC gasket plate, 12
+silicone caps, four double-ball catches, battery-bay filler and back
+decoration plate. It nests in the stock top case or the Maru60 top case above.
+**Draft: print the fit coupon first.** Same license as the top case
 ([CC BY-NC 4.0](LICENSE-topcase)).
 
 No caliper reading of the stock bottom case exists yet: the caliper displays
@@ -401,10 +405,10 @@ flush with the rim top, the balls would sit below the tongue tip.
 
 | File | Use |
 | --- | --- |
-| [Fit coupon — 3MF](models/rule60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front step, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 30 min / 10 g |
-| [Joint test — 3MF](models/rule60-hhkb-bottomcase-joint-test.3mf) | Both sides of the middle floor dovetail, 44 × 32 mm cut-outs. 0 h 18 min / 6 g |
-| [Left half — 3MF](models/rule60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot, back-left catch. 206 × 112 mm, 3 h 29 min / 70 g |
-| [Right half — 3MF](models/rule60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 44 min / 55 g |
+| [Fit coupon — 3MF](models/maru60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front step, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 30 min / 10 g |
+| [Joint test — 3MF](models/maru60-hhkb-bottomcase-joint-test.3mf) | Both sides of the middle floor dovetail, 44 × 32 mm cut-outs. 0 h 18 min / 6 g |
+| [Left half — 3MF](models/maru60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot, back-left catch. 206 × 112 mm, 3 h 29 min / 70 g |
+| [Right half — 3MF](models/maru60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 44 min / 55 g |
 
 Print desk face down, no supports or brim; owner's top-case settings
 (Bambu Studio CLI estimates above). Print the joint test first: the two
@@ -449,23 +453,25 @@ Copyright 2026 minpeter. Two licenses apply:
   below: the wrist-rest generator, its model exports, documentation and
   renders. Attribute this project, link to the license and identify your
   changes. Commercial use is permitted.
-- **HHKB top and bottom case — [CC BY-NC 4.0](LICENSE-topcase), personal and
+- **Maru60 top and bottom case — [CC BY-NC 4.0](LICENSE-topcase), personal and
   other non-commercial use only.** `build_topcase_draft.py`, `export_topcase.py`,
-  `render_topcase_draft.py`, `verify_topcase.py`, `models/rule60-hhkb-topcase*`,
+  `render_topcase_draft.py`, `verify_topcase.py`, `models/maru60-hhkb-topcase*`,
   `images/topcase-*`, `evidence/topcase*`, `build_bottomcase_draft.py`,
-  `verify_bottomcase.py`, `export_bottomcase.py`, `models/rule60-hhkb-bottomcase*`
+  `verify_bottomcase.py`, `export_bottomcase.py`, `models/maru60-hhkb-bottomcase*`
   and `evidence/bottomcase*`. You may print, modify and share
   it for non-commercial purposes with attribution. Selling the files, prints
   or derived designs requires the owner's permission.
 
 The top-case license applies to every version of the top case in this
 repository, including all earlier commits and branches, which previously
-stated CC BY 4.0.
+stated CC BY 4.0, and the files published as `models/rule60-hhkb-*` before the
+Maru60 name.
 
 Third-party tools retain their own licenses. No affiliation with keyboard or
 printer manufacturers is implied. The Rule 60 V3 is designed by INKC STUDIO;
-the top and bottom cases are independent re-creations from measurements of the
-owner's stock parts and are not official files.
+Maru60 is not an INKC STUDIO product. Its top and bottom cases are independent
+designs from measurements of the owner's stock parts, made to fit the Rule 60
+V3's internals, and are not official files.
 [`third_party/inkc-rule60-v3/rule60-v3.dwg`](third_party/inkc-rule60-v3/README.md)
 is INKC STUDIO's plate drawing, redistributed on the creator's statement that
 the plate drawings are open source; it is not covered by either of this

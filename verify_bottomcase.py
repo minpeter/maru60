@@ -1,4 +1,4 @@
-"""Mating and printability checks for the Rule 60 V3 HHKB bottom-case draft (build_bottomcase_draft.py).
+"""Mating and printability checks for the Maru60 HHKB bottom-case draft (build_bottomcase_draft.py).
 
 Run after both builds: the printed top case (topcase-draft/solidcraft-export.3mf, the same pocket as the stock one) is
 the mating gauge, and the stock parts come from spec/: INKC 6095(gas) plate, silicone caps, strike plates and tongues,
@@ -47,7 +47,7 @@ def main() -> None:
         assert m.is_watertight and m.is_winding_consistent and len(m.split()) == 1, name
         assert np.all(m.bounds[0] >= -1e-6) and np.all(m.bounds[1] <= [256.0, 256.0, 256.0]), (name, m.bounds)
     for name, n_obj in (("left", 1), ("right", 1), ("fit-coupon", 1), ("joint-test", 2)):
-        sc = trimesh.load(OUT / f"rule60-hhkb-bottomcase-{name}.3mf", force="scene")
+        sc = trimesh.load(OUT / f"maru60-hhkb-bottomcase-{name}.3mf", force="scene")
         assert len(sc.geometry) == n_obj and np.all(sc.bounds[0] >= -1e-6) and np.all(sc.bounds[1] <= 256.0), name
 
     sc = trimesh.load(ROOT / "topcase-draft" / "solidcraft-export.3mf", force="scene")

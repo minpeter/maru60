@@ -1,4 +1,4 @@
-# HHKB top case — measurements and evidence
+# Maru60 HHKB top case — measurements and evidence
 
 Source data behind [`build_topcase_draft.py`](../../build_topcase_draft.py) and the
 checks behind the published files. All measurements were taken by the owner

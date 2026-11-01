@@ -1,7 +1,7 @@
-"""Publish the HHKB top case + wrist rest print files, CAD, evidence and renders from `topcase-draft/`.
+"""Publish the Maru60 HHKB top case + wrist rest print files, CAD, evidence and renders from `topcase-draft/`.
 
 A build for the default board publishes everything. A build for another `--board` changes only the USB-C notch in the
-right half, so it publishes just that half as `models/rule60-hhkb-topcase-right-usb-<board>.3mf` with its verification.
+right half, so it publishes just that half as `models/maru60-hhkb-topcase-right-usb-<board>.3mf` with its verification.
 """
 from pathlib import Path
 import json
@@ -26,18 +26,18 @@ def publish_3mf(src: str, dst: str) -> None:
 
 
 if board != spec.default_board():
-    publish_3mf('rule60-hhkb-right-plate.3mf', f'rule60-hhkb-topcase-right-usb-{board}.3mf')
+    publish_3mf('maru60-hhkb-right-plate.3mf', f'maru60-hhkb-topcase-right-usb-{board}.3mf')
     shutil.copyfile(source / 'verification.json', ROOT / 'evidence' / f'topcase-verification-usb-{board}.json')
     print(f'Exported the right half for board {board!r} and its verification.')
     raise SystemExit
 
 for src, dst in [
-    ('rule60-hhkb-left-plate.3mf', 'rule60-hhkb-topcase-left.3mf'),
-    ('rule60-hhkb-right-plate.3mf', 'rule60-hhkb-topcase-right.3mf'),
-    ('rule60-fit-test-coupons.3mf', 'rule60-hhkb-topcase-fit-coupons.3mf'),
+    ('maru60-hhkb-left-plate.3mf', 'maru60-hhkb-topcase-left.3mf'),
+    ('maru60-hhkb-right-plate.3mf', 'maru60-hhkb-topcase-right.3mf'),
+    ('maru60-fit-test-coupons.3mf', 'maru60-hhkb-topcase-fit-coupons.3mf'),
 ]:
     publish_3mf(src, dst)
-shutil.copyfile(source / 'rule60-hhkb-unibody-draft.step', ROOT / 'models' / 'rule60-hhkb-topcase.step')
+shutil.copyfile(source / 'maru60-hhkb-unibody-draft.step', ROOT / 'models' / 'maru60-hhkb-topcase.step')
 for src, dst in [('draft-report.json', 'topcase-report.json'), ('verification.json', 'topcase-verification.json')]:
     shutil.copyfile(source / src, ROOT / 'evidence' / dst)
 # Renders come from the optional Blender step; publish them only when all four exist and postdate the build.
