@@ -57,7 +57,7 @@ Readings not used:
 | --- | --- | --- |
 | Strike positions (plate frame) | BL 89.85, BR 196.70, FL 90.22, FR 196.28 | Homography of [IMG_0201](photos/IMG_0201.jpg) on the 8 top-mount holes of the DWG `6095(top)` plate, RMS 0.13 mm ([ball-catch-analysis.json](analysis/ball-catch-analysis.json)) |
 | Strike plate | ~20.5 × 6.55 mm, M2 at 13.0 mm pitch, tongue 3.55 × ~5.7 mm | Same analysis plus two-view silhouette fit of IMG_0218 / IMG_0222 |
-| Strike pocket "mushroom" end reliefs | 7.25 wide, 4.1 lobe 4.55 past the plate end, end wall 2.15 past, R0.85 shoulder | Two-view ray-cast silhouette fit, IMG_0218 + IMG_0222 (13 mm-eq. ultra-wide, f = 1485 px) ([fit](analysis/strike-pocket-fit-v4.3.png)) |
+| Strike pocket "mushroom" end reliefs | 7.25 wide, 4.1 lobe 4.55 past the plate end, end wall 2.15 past, R0.85 shoulder | Two-view ray-cast silhouette fit, IMG_0218 + IMG_0222 (13 mm-eq. ultra-wide, f = 1485 px) ([fit](analysis/strike-pocket-fit-v7.10.png)) |
 | Back strike distance from the inner back wall | BL 4.15, BR 4.30 | Same fit; kept when the measured outline moved the wall |
 | Front strike distance from the inner front wall | 4.26 | **Not measured**: centred between the front wall and the plate edge |
 | Silicone gasket cap | 8.3 × 5.5 × 4.5 free; 8.2 × 4.0 footprint (the pocket basis). The part itself is the Keebox cap, 8.0 × 5.0 × 5.0 with a 6.5 × 2.8 × 1.2 slot (listing drawing; the owner confirmed it as the stock cap, 2026-11-01) | Rectified underside photo, 28 px/mm ([annotated](analysis/underside-photo-annotated.jpg)) |
@@ -98,14 +98,14 @@ strikes are nearly symmetric, so it could not reveal the v6.2 mirror image.
 | File | Content |
 | --- | --- |
 | [underside-photo-annotated.jpg](analysis/underside-photo-annotated.jpg) | Rectified stock underside with gasket caps, strikes and holes marked |
-| [outline-overlay-v4.png](analysis/outline-overlay-v4.png) | v4 model outline over the rectified photo (superseded outline; shows the method) |
-| [strike-pocket-fit-v4.3.png](analysis/strike-pocket-fit-v4.3.png) | Two-view strike-pocket silhouette fit |
+| [outline-overlay-v7.10.png](analysis/outline-overlay-v7.10.png) | v7.10 model edges at their true depth over the rectified photo, coloured by Z_p level; photo − model edge gaps −0.90 to +0.48 mm, largest at the front lip |
+| [strike-pocket-fit-v7.10.png](analysis/strike-pocket-fit-v7.10.png) | Two-view strike-pocket silhouette fit (pocket shape fitted on v4.3, unchanged since), redrawn with the v7.10 mesh: Z_p 5.92 sections of the 4 pockets and the BR pocket ray-cast into both photos, 1−R² 0.149 / 0.366 |
 | [measurement-guide.png](analysis/measurement-guide.png) / [.svg](analysis/measurement-guide.svg) | Guide sent to the owner for what to measure |
 | [bottom-measurement-guide.png](analysis/bottom-measurement-guide.png) / [.svg](analysis/bottom-measurement-guide.svg) | Bottom-case guide; the end section is cut from the draft model |
 | [ball-catch-analysis.json](analysis/ball-catch-analysis.json) | Strike/catch positions and hardware size estimates |
 | [dwg-source-manifest.json](analysis/dwg-source-manifest.json) | Source URLs and SHA-256 of the downloaded Rule60 drawings |
 
-## Checks (v7.7)
+## Checks (v7.10)
 
 | File | Content |
 | --- | --- |
@@ -113,8 +113,11 @@ strikes are nearly symmetric, so it could not reveal the v6.2 mirror image.
 | [../topcase-verification-usb-universal.json](../topcase-verification-usb-universal.json) | Same checks on the `--board universal` build (14.75 mm USB notch, only the right half differs) |
 | [../topcase-report.json](../topcase-report.json) | Build report: Z stack, pocket outlines, back seam, dovetails, USB-C notch |
 | [checks/as-printed-check.json](checks/as-printed-check.json) | v7.4: same checks on both halves rebuilt at the printed layer heights, plan clearances to the stock parts, slicer estimates. One finding: the wedge-key tip bears after ~0.15 mm of its 0.20 mm vertical glue line. v7.5–v7.10 changed only the wrist-rest bumpon pads and the USB-C notch position, away from every joint. |
-| [checks/seams-v7.4.png](checks/seams-v7.4.png) | Split line, back-seam plan at the BL strike, and sections through the 3 dovetails and the wedge key (unchanged since v7.4) |
+| [checks/seams-v7.10.png](checks/seams-v7.10.png) | Split line, back-seam plan at the BL strike, and sections through the 3 dovetails and the wedge key (joints unchanged since v7.4) |
 
-`as-printed-check.json` and the seam image were produced during the design
-session, not by `build_topcase_draft.py`; regenerate them by hand if the
-geometry changes.
+`as-printed-check.json` and every figure under `analysis/`, `checks/` and
+[../bottomcase/](../bottomcase/) were produced during the design session, not
+by the build scripts; regenerate them by hand if the geometry changes. The
+model figures (outline overlay, strike-pocket fit, seams, bottom-case figures)
+were last re-rendered from top case v7.10 (manifold3d build) and bottom case
+v0.10; the measurement guides are the ones sent to the owner.
