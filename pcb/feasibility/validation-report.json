@@ -1,17 +1,45 @@
 {
   "result": "PASS",
-  "configurations": 96,
-  "checks": [
-    "switch centers inside 285.0x94.6mm envelope",
-    "plateGH60 frame round-trip within 0.001mm",
-    "minimum same-row and adjacent-row center spacing �0.5U",
-    "all WK/WKL/HHKB x 6.25U/7U x four binary key options enumerated",
-    "row keycap envelope � 15.05U"
+  "declared_layout_option_cases": 48,
+  "layouts": [
+    "WK",
+    "WKL",
+    "HHKB"
   ],
-  "minimum_center_spacing_mm": 9.525,
-  "clearance": "NOT CHECKED: no licensed hot-swap socket geometry, selected LED footprint geometry, plate CAD, or case solid available.",
+  "spacebar_sizes_u": [
+    6.25,
+    7
+  ],
+  "options": [
+    "split/non-split Backspace",
+    "split/non-split right Shift",
+    "stepped/non-stepped Caps"
+  ],
+  "excluded": "Split spacebar was not requested and is not modeled.",
+  "checks": [
+    "all six explicit seven-position bottom-row definitions match expected key widths and order",
+    "switch centers inside the nominal 285x94.6mm board profile",
+    "plate/GH60 transform round-trip within 0.001mm",
+    "minimum same-row switch-center pitch �0.5U",
+    "Backspace, right Shift, and stepped Caps site selection matches each flag"
+  ],
+  "expected_bottom_row_width_u": {
+    "WK": {
+      "7": 15,
+      "6.25": 13.75
+    },
+    "WKL": {
+      "7": 15,
+      "6.25": 15.25
+    },
+    "HHKB": {
+      "7": 14,
+      "6.25": 14.25
+    }
+  },
+  "physical_pcb_combinations_validated": false,
+  "clearance": "NOT CHECKED: no licensed hot-swap socket geometry, component footprints, plate CAD, or case solids available.",
   "socket_geometry_available": false,
-  "case_and_plate_geometry_available": false,
   "sample": {
     "id": "WK-6.25U",
     "switch_sites": 60
