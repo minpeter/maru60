@@ -70,6 +70,18 @@ The drawing is redistributed in [third_party/inkc-rule60-v3](../../third_party/i
 outlines extracted from it, and [spec/rule60-v3.json](../../spec/rule60-v3.json)
 the values on this page in machine-readable form.
 
+## Still to measure
+
+Values the design uses that no caliper has confirmed yet, in the order they
+matter. Each one names what to measure and what it would change.
+
+| Part | Measure | Now (source) | Sets |
+| --- | --- | --- | --- |
+| Stock steel weight plate, with it out of the case | Hole centres from the nearer short end (two per end) and from the straight back edge; hole thread and depth; plate thickness | 8.8 / 38.9 from the end, 4.8 / 24.7 from the back edge, M2, blind (IMG_0474 / IMG_0463, ±0.5); 3.0 thick (drawing) | Bottom-case screw holes (`bottom.weight_plate_holes`, 0.5 mm float per side, could shrink), M2 × 4 length, recess depth 2.3 |
+| Stock keyboard on its feet | Gap between the desk and the top-case skirt lip | ~2.0 (estimated, `desk.gap`) | How far the wrist-rest and bottom-case bumpons stand proud |
+| Stock bottom case | Cap-seat level, ball-catch notch depth, catch screw pitch | Derived from the top case; pitch 25.5 (photos read 25.5–26.8) | Gasket preload, catch engagement, catch pilots |
+| Stock top case | Front strike distance from the inner front wall; outer corner radius | 4.26 (centred, not measured); R4.85 (concentric with the fitted R2.0 pocket) | Front strike pockets; outer corners |
+
 ## Photos
 
 Original resolution and image data (decoded pixels identical to the camera
