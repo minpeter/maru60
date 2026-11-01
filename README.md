@@ -455,6 +455,30 @@ catch notch depth and the catch screw pitch (photos read 25.5–26.8 mm). The
 weight-plate screw positions are photo-read, not measured; the 0.5 mm float in
 each hole covers that.
 
+## HHKB gasket plate (INKC drawing)
+
+Fabrication files for the stock Rule 60 V3 HHKB plate, so it can be ordered
+without the kit. The geometry is INKC STUDIO's
+`rule 60-6095(gas)--7u非左移+分裂退格` drawing from
+[`rule60-v3.dwg`](third_party/inkc-rule60-v3/README.md), unchanged: the gasket
+outline both Maru60 cases are verified around, the 60 HHKB switch cutouts
+(split backspace, 1.75u + 1u right shift) plus the two bottom-row ends under
+the top-case blockers, plate-mount stabilizer cutouts for both 2.25u keys and
+the 7u spacebar, no flex cuts.
+
+| File | Use |
+| --- | --- |
+| [FR4 Gerbers — ZIP](models/rule60-v3-hhkb-gas-plate-fr4-gerber.zip) | Upload as a 2-layer, 1.6 mm FR4 board (any mask colour). Outline, copper on both sides kept 0.5 mm off every routed edge, full solder mask. JLCPCB quote (5 pcs, the minimum): $20.40 + $9.87 UPS to Korea, 2–3 days build |
+| [DXF](models/rule60-v3-hhkb-gas-plate.dxf) | Laser or CNC cutting in PC 1.5 mm (the stock material) or aluminium. Units mm, closed outlines with true arcs |
+
+FR4 1.6 mm is about ten times stiffer than the stock 1.5 mm PC, so the gasket
+mount feels firmer; the 0.1 mm extra thickness sits inside the caps'
+1.2–1.6 mm range and squeezes the lower flange 0.1 mm more.
+`uv run build_plate.py` regenerates both files and
+[checks](evidence/plate-report.json) the outline against the one the cases use,
+a 14.00 mm switch cutout under every HHKB key, a stabilizer housing at each
+stabilizer position, router reach with a 1.0 mm bit and the copper pullback.
+
 ## License and design history
 
 Copyright 2026 minpeter. Two licenses apply:
@@ -484,8 +508,9 @@ designs from measurements of the owner's stock parts, made to fit the Rule 60
 V3's internals, and are not official files.
 [`third_party/inkc-rule60-v3/rule60-v3.dwg`](third_party/inkc-rule60-v3/README.md)
 is INKC STUDIO's plate drawing, redistributed on the creator's statement that
-the plate drawings are open source; it is not covered by either of this
-repository's licenses.
+the plate drawings are open source; it and the plate files converted from it
+(`build_plate.py`, `models/rule60-v3-hhkb-gas-plate*`, `evidence/plate-report.json`)
+are not covered by either of this repository's licenses.
 
 Early experiments took inspiration from [Shanhj's palm rest](https://makerworld.com/en/models/1326999).
 The final v9 generator constructs its geometry in code and embeds neither

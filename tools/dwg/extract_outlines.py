@@ -117,12 +117,86 @@ def own_frame(e: Ent) -> tuple[float, float]:
     return -b[0], -b[1]
 
 
+def piece(e: Ent) -> list[list[float]]:
+    """Vertices [x, y, bulge] of an open LWPOLYLINE or LINE; the last vertex's bulge is unused."""
+    if e["type"] == "LINE":
+        return [[e["startPoint"]["x"], e["startPoint"]["y"], 0.0], [e["endPoint"]["x"], e["endPoint"]["y"], 0.0]]
+    return [[v["x"], v["y"], v.get("bulge", 0) or 0.0] for v in e["vertices"]]
+
+
+def reverse(p: list[list[float]]) -> list[list[float]]:
+    """The same path walked backwards: segment i of the result is segment n-2-i of `p` with its bulge negated."""
+    n = len(p)
+    return [[p[n - 1 - i][0], p[n - 1 - i][1], -p[n - 2 - i][2] if i < n - 1 else 0.0] for i in range(n)]
+
+
+def cutouts(plate: Ent) -> list[list[list[float]]]:
+    """Closed cutout loops inside a plate outline. Some cutouts are drawn as open polylines plus LINEs: those are
+    chained end to end; zero-length LINEs and LINEs lying on an existing cutout edge are dropped."""
+    pb, tol = bbox(plate), 1e-3
+    loops, open_pieces = [], []
+    for e in ents:
+        if e["handle"] == plate["handle"] or e["type"] not in ("LWPOLYLINE", "LINE") or not inside(bbox_any(e), pb):
+            continue
+        if e["type"] == "LWPOLYLINE" and closed(e):
+            loops.append(piece(e))
+        elif e["type"] == "LWPOLYLINE" or math.dist(piece(e)[0][:2], piece(e)[1][:2]) > tol:
+            open_pieces.append(piece(e))
+    leftovers = []
+    while open_pieces:
+        cur = open_pieces.pop(0)
+        while math.dist(cur[0][:2], cur[-1][:2]) > tol:
+            for i, p in enumerate(open_pieces):
+                if math.dist(p[0][:2], cur[-1][:2]) < tol or math.dist(p[-1][:2], cur[-1][:2]) < tol:
+                    nxt = open_pieces.pop(i)
+                    nxt = nxt if math.dist(nxt[0][:2], cur[-1][:2]) < tol else reverse(nxt)
+                    cur = cur[:-1] + [[cur[-1][0], cur[-1][1], nxt[0][2]]] + nxt[1:]
+                    break
+            else:
+                break
+        if math.dist(cur[0][:2], cur[-1][:2]) < tol:
+            loops.append(cur[:-1])  # the last vertex repeats the first
+        else:
+            leftovers.append(cur)
+    edges = [((a[0], a[1]), (b[0], b[1])) for lp in loops for a, b in zip(lp, lp[1:] + lp[:1])]
+    for p in leftovers:  # a stray LINE drawn over a cutout edge
+        assert len(p) == 2 and any(on_segment(p[0][:2], s) and on_segment(p[1][:2], s) for s in edges), p
+    return loops
+
+
+def on_segment(q, seg, tol=0.01) -> bool:
+    (ax, ay), (bx, by) = seg
+    if not (min(ax, bx) - tol <= q[0] <= max(ax, bx) + tol and min(ay, by) - tol <= q[1] <= max(ay, by) + tol):
+        return False
+    return abs((bx - ax) * (q[1] - ay) - (by - ay) * (q[0] - ax)) / max(math.dist((ax, ay), (bx, by)), 1e-9) < tol
+
+
+def bbox_any(e: Ent) -> tuple[float, float, float, float]:
+    if e["type"] == "LWPOLYLINE":
+        return bbox(e)
+    (ax, ay, _), (bx, by, _) = piece(e)
+    return min(ax, bx), min(ay, by), max(ax, bx), max(ay, by)
+
+
+def frame_verts(loop: list[list[float]], dx: float, dy: float) -> list[list[float]]:
+    return [[round(x + dx, 4), round(y + dy, 4), round(b, 6)] for x, y, b in loop]
+
+
 top = plate_below(find_text("rule 60-6095(top)"), 80)
 gas = plate_below(find_text("rule 60-6095(gas)"), 88)
 tb = bbox(top)
 T_DX, T_DY = -tb[0], -tb[1]
 et, eg = esc_centre(top["handle"]), esc_centre(gas["handle"])
 G_DX, G_DY = T_DX + et[0] - eg[0], T_DY + et[1] - eg[1]
+# HHKB plate: the gas outline with split-backspace, 7u, plate-mount-stabilizer cutouts and no flex cuts. Its outline is
+# vertex-identical to plate_gas, so it is placed by its bounding box and checked on the Esc cutout.
+hhkb_label = "rule 60-6095(gas)--7u非左移+分裂退格"
+hhkb = plate_below(find_text(hhkb_label), 88)
+hb, gb = bbox(hhkb), bbox(gas)
+H_DX, H_DY = G_DX + gb[0] - hb[0], G_DY + gb[1] - hb[1]
+eh = esc_centre(hhkb["handle"])
+assert math.dist((eh[0] + H_DX, eh[1] + H_DY), (et[0] + T_DX, et[1] + T_DY)) < 0.02, "HHKB plate Esc off the frame"
+hhkb_cuts = sorted(cutouts(hhkb), key=lambda lp: (round(min(v[1] for v in lp), 1), min(v[0] for v in lp)))
 
 holes = sorted(
     ({"name": "top_mount_hole", "handle": e["handle"], "layer": e["layer"],
@@ -157,6 +231,11 @@ out: dict[str, Any] = {
     "points": {"esc_switch_centre": [round(et[0] + T_DX, 4), round(et[1] + T_DY, 4)], "switch_pitch": 19.05},
     "outlines": [
         poly_record("plate_gas", gas, G_DX, G_DY, {"thickness": 1.5, "label": "rule 60-6095(gas)"}),
+        poly_record("plate_gas_hhkb", hhkb, H_DX, H_DY,
+                    {"thickness": 1.5, "label": hhkb_label,
+                     "note": "HHKB plate (split backspace, 7u, plate-mount stabilizers, no flex cuts): plate_gas outline "
+                             "placed on plate_gas, Esc cutout on points.esc_switch_centre",
+                     "cutouts": [frame_verts(lp, H_DX, H_DY) for lp in hhkb_cuts]}),
         poly_record("plate_top", top, T_DX, T_DY, {"thickness": 1.5, "label": "rule 60-6095(top)"}),
         poly_record("battery_bay_filler", inner, *own_frame(inner),
                     {"thickness": 4.5, "label": "rule60v3  内配  厚度4.5MM", "placed": False,

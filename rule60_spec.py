@@ -23,27 +23,42 @@ def outline(name: str) -> dict[str, Any]:
     return next(o for o in _OUTLINES["outlines"] if o["name"] == name)
 
 
-def outline_points(name: str, arc_steps: int = 12) -> list[tuple[float, float]]:
-    """Closed outline `name` in the plate frame, arcs (DWG bulges) split into `arc_steps` chords; first point not repeated."""
-    verts = outline(name)["verts"]
+def point(name: str) -> tuple[float, float]:
+    """Named point from spec/rule60-v3-outlines.json (plate frame), e.g. `esc_switch_centre`."""
+    x, y = _OUTLINES["points"][name]
+    return x, y
+
+
+def bulge_arc(x0: float, y0: float, x1: float, y1: float, bulge: float) -> tuple[float, float, float, float]:
+    """Arc (centre x, centre y, radius, swept angle; positive = counter-clockwise) of a DWG bulge segment."""
+    theta = 4.0 * math.atan(bulge)
+    chord = math.hypot(x1 - x0, y1 - y0)
+    r = chord / (2.0 * abs(math.sin(theta / 2.0)))
+    nx, ny = -(y1 - y0) / chord, (x1 - x0) / chord
+    if bulge < 0:
+        nx, ny = -nx, -ny
+    d = r * math.cos(theta / 2.0)
+    return (x0 + x1) / 2 + nx * d, (y0 + y1) / 2 + ny * d, r, theta
+
+
+def verts_points(verts: list[list[float]], arc_steps: int = 12) -> list[tuple[float, float]]:
+    """Closed [x, y, bulge] loop as points, arcs split into `arc_steps` chords; first point not repeated."""
     pts: list[tuple[float, float]] = []
     for k, (x0, y0, bulge) in enumerate(verts):
         x1, y1, _ = verts[(k + 1) % len(verts)]
         pts.append((x0, y0))
         if abs(bulge) < 1e-9:
             continue
-        theta = 4.0 * math.atan(bulge)
-        chord = math.hypot(x1 - x0, y1 - y0)
-        r = chord / (2.0 * abs(math.sin(theta / 2.0)))
-        nx, ny = -(y1 - y0) / chord, (x1 - x0) / chord
-        if bulge < 0:
-            nx, ny = -nx, -ny
-        d = r * math.cos(theta / 2.0)
-        cx, cy = (x0 + x1) / 2 + nx * d, (y0 + y1) / 2 + ny * d
+        cx, cy, r, theta = bulge_arc(x0, y0, x1, y1, bulge)
         a0 = math.atan2(y0 - cy, x0 - cx)
         pts.extend((cx + r * math.cos(a0 + theta * t / arc_steps), cy + r * math.sin(a0 + theta * t / arc_steps))
                    for t in range(1, arc_steps))
     return pts
+
+
+def outline_points(name: str, arc_steps: int = 12) -> list[tuple[float, float]]:
+    """Closed outline `name` in the plate frame, arcs (DWG bulges) split into `arc_steps` chords; first point not repeated."""
+    return verts_points(outline(name)["verts"], arc_steps)
 
 
 def gasket_outlines_plate(arc_steps: int = 16) -> list[list[tuple[float, float]]]:

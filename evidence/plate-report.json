@@ -1,0 +1,102 @@
+{
+  "outline": "plate_gas (identical vertices): the outline the Maru60 top and bottom cases are verified around",
+  "bounds_mm": [
+    -0.0,
+    1.018,
+    285.9,
+    106.467
+  ],
+  "cutouts": 62,
+  "hhkb_keys": 60,
+  "switch_cutout_mm": 14.0,
+  "spare_cutouts_under_blockers": [
+    [
+      7.35,
+      8.67,
+      21.35,
+      22.67
+    ],
+    [
+      264.52,
+      8.67,
+      278.52,
+      22.67
+    ]
+  ],
+  "shared_wider_cutouts": [
+    {
+      "key": [
+        16.74,
+        53.77,
+        1.75
+      ],
+      "x_from_centre": [
+        -11.77,
+        7.0
+      ]
+    }
+  ],
+  "stabilizer_housings": [
+    {
+      "key_u": 2.25,
+      "x": 252.456,
+      "y_span_from_centre": [
+        -8.0,
+        5.5
+      ]
+    },
+    {
+      "key_u": 2.25,
+      "x": 276.332,
+      "y_span_from_centre": [
+        -8.0,
+        5.5
+      ]
+    },
+    {
+      "key_u": 2.25,
+      "x": 9.569,
+      "y_span_from_centre": [
+        -8.0,
+        5.5
+      ]
+    },
+    {
+      "key_u": 2.25,
+      "x": 33.445,
+      "y_span_from_centre": [
+        -8.0,
+        5.5
+      ]
+    },
+    {
+      "key_u": 7.0,
+      "x": 85.8,
+      "y_span_from_centre": [
+        -5.53,
+        7.97
+      ]
+    },
+    {
+      "key_u": 7.0,
+      "x": 200.1,
+      "y_span_from_centre": [
+        -5.53,
+        7.97
+      ]
+    }
+  ],
+  "router_bit_mm": 1.0,
+  "max_uncut_void_mm2": 0.0052,
+  "copper_pullback_mm": 0.5,
+  "plate_area_mm2": 15126.7,
+  "source": {
+    "drawing": "rule 60-6095(gas)--7u非左移+分裂退格",
+    "handle": "2A34",
+    "author": "INKC STUDIO"
+  },
+  "files": [
+    "models/rule60-v3-hhkb-gas-plate-fr4-gerber.zip: rule60-v3-hhkb-gas-plate.GBL, rule60-v3-hhkb-gas-plate.GBS, rule60-v3-hhkb-gas-plate.GKO, rule60-v3-hhkb-gas-plate.GTL, rule60-v3-hhkb-gas-plate.GTS",
+    "models/rule60-v3-hhkb-gas-plate.dxf"
+  ]
+}
