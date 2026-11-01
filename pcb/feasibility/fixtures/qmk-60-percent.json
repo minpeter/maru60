@@ -1,7 +1,7 @@
 {
-  "fixture_schema": "maru60-qmk-layout-fixtures/1",
+  "fixture_schema": "maru60-qmk-layout-fixtures/2",
   "sources": {
-    "WK_WKL": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_ansi_tsangan/info.json",
+    "WKL": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_ansi_tsangan/info.json",
     "HHKB": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_hhkb/info.json"
   },
   "coordinate_basis": {
@@ -12,77 +12,6 @@
     "row_total_u": 15
   },
   "layouts": {
-    "WK": {
-      "segments": [
-        {
-          "name": "LCtrl",
-          "keycap_start_u": 0,
-          "keycap_width_u": 1.5,
-          "kind": "key",
-          "switch_center_u": 0.75
-        },
-        {
-          "name": "LWin",
-          "keycap_start_u": 1.5,
-          "keycap_width_u": 1,
-          "kind": "key",
-          "switch_center_u": 2
-        },
-        {
-          "name": "LAlt",
-          "keycap_start_u": 2.5,
-          "keycap_width_u": 1.5,
-          "kind": "key",
-          "switch_center_u": 3.25
-        },
-        {
-          "name": "Space",
-          "keycap_start_u": 4,
-          "keycap_width_u": 7,
-          "kind": "key",
-          "switch_center_u": 7.5
-        },
-        {
-          "name": "RAlt",
-          "keycap_start_u": 11,
-          "keycap_width_u": 1.5,
-          "kind": "key",
-          "switch_center_u": 11.75
-        },
-        {
-          "name": "RWin",
-          "keycap_start_u": 12.5,
-          "keycap_width_u": 1,
-          "kind": "key",
-          "switch_center_u": 13
-        },
-        {
-          "name": "RCtrl",
-          "keycap_start_u": 13.5,
-          "keycap_width_u": 1.5,
-          "kind": "key",
-          "switch_center_u": 14.25
-        }
-      ],
-      "all_centers_u": [
-        0.75,
-        2,
-        3.25,
-        7.5,
-        11.75,
-        13,
-        14.25
-      ],
-      "active_centers_u": [
-        0.75,
-        2,
-        3.25,
-        7.5,
-        11.75,
-        13,
-        14.25
-      ]
-    },
     "WKL": {
       "segments": [
         {
@@ -235,5 +164,59 @@
     "keycap_outline_offset_u": 0,
     "stem_center_offset_candidate_u": -0.25,
     "status": "UNVALIDATED pending selected switch footprint/keycap/plate geometry."
-  }
+  },
+  "physical_switch_union_sites": [
+    {
+      "center_u": 0.75,
+      "center_gh60_x_mm": 13.91,
+      "present_for": [
+        "WKL"
+      ]
+    },
+    {
+      "center_u": 2,
+      "center_gh60_x_mm": 37.7225,
+      "present_for": [
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 3.25,
+      "center_gh60_x_mm": 61.535,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 7.5,
+      "center_gh60_x_mm": 142.4975,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 11.75,
+      "center_gh60_x_mm": 223.46,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 13,
+      "center_gh60_x_mm": 247.2725,
+      "present_for": [
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 14.25,
+      "center_gh60_x_mm": 271.085,
+      "present_for": [
+        "WKL"
+      ]
+    }
+  ]
 }
