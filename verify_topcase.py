@@ -104,8 +104,8 @@ def main() -> None:
             sc.bounds.tolist(),
         )
 
-    # Load print-frame LeftHalf & RightHalf from SolidCraft B-rep export
-    sc_raw = trimesh.load(ROOT / "solidcraft-export.3mf", force="scene")
+    # Load the print-frame LeftHalf & RightHalf as built
+    sc_raw = trimesh.load(ROOT / "halves-world.3mf", force="scene")
     assert isinstance(sc_raw, trimesh.Scene)
     raw_tms = sorted(
         [m for m in sc_raw.dump(concatenate=False) if isinstance(m, trimesh.Trimesh)],
@@ -117,7 +117,7 @@ def main() -> None:
     full_case_mf = left_mf + right_mf
 
     # Wrist-rest mirror symmetry: away from the joints (X < 10) the two wrist halves are exact mirrors, including the
-    # 0.70 mm front top chamfer. A CAD-kernel boolean fault that drops material or chamfers on one half shows up here.
+    # 0.70 mm front top chamfer. A boolean fault that drops material or chamfers on one half shows up here.
     wrist_box = md.Manifold.cube([135.0, 82.0, 30.0]).translate([10.0, -1.0, -5.0])
     right_wrist, mirrored_left_wrist = right_mf ^ wrist_box, left_mf.mirror([1.0, 0.0, 0.0]) ^ wrist_box
     wrist_asymmetry = float((right_wrist - mirrored_left_wrist).volume() + (mirrored_left_wrist - right_wrist).volume())

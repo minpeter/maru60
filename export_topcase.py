@@ -1,4 +1,4 @@
-"""Publish the Maru60 HHKB top case + wrist rest print files, CAD, evidence and renders from `topcase-draft/`.
+"""Publish the Maru60 HHKB top case + wrist rest print files, evidence and renders from `topcase-draft/`.
 
 A build for the default board publishes everything. A build for another `--board` changes only the USB-C notch in the
 right half, so it publishes just that half as `models/maru60-hhkb-topcase-right-usb-<board>.3mf` with its verification.
@@ -37,7 +37,6 @@ for src, dst in [
     ('maru60-fit-test-coupons.3mf', 'maru60-hhkb-topcase-fit-coupons.3mf'),
 ]:
     publish_3mf(src, dst)
-shutil.copyfile(source / 'maru60-hhkb-unibody-draft.step', ROOT / 'models' / 'maru60-hhkb-topcase.step')
 for src, dst in [('draft-report.json', 'topcase-report.json'), ('verification.json', 'topcase-verification.json')]:
     shutil.copyfile(source / src, ROOT / 'evidence' / dst)
 # Renders come from the optional Blender step; publish them only when all four exist and postdate the build.
@@ -46,6 +45,6 @@ built_at = (source / 'render-meshes.json').stat().st_mtime
 if all(p.exists() and p.stat().st_mtime >= built_at for p in renders):
     for p in renders:
         shutil.copyfile(p, ROOT / 'images' / p.name.replace('render-', 'topcase-'))
-    print('Exported top-case downloads, CAD, evidence and renders.')
+    print('Exported top-case downloads, evidence and renders.')
 else:
-    print('Exported top-case downloads, CAD and evidence; renders missing or older than the build, images/ unchanged.')
+    print('Exported top-case downloads and evidence; renders missing or older than the build, images/ unchanged.')

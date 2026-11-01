@@ -1,7 +1,7 @@
 """Maru60 HHKB top case + integrated honeycomb wrist rest, for the Rule60 V3 (stock bottom case, plate, gaskets, catches).
 
-Built from caliper measurements of the owner's stock top case plus photo metrology of the silicone gasket caps and
-ball-catch pockets (IMG_0201..IMG_0222, 28 px/mm rectified):
+Built in pure Python (manifold3d mesh CSG, a few seconds) from caliper measurements of the owner's stock top case plus
+photo metrology of the silicone gasket caps and ball-catch pockets (IMG_0201..IMG_0222, 28 px/mm rectified):
   - Silicone gasket cap ("gasket bean/sock", 12 installed = 2 per 41 mm tab): the Keebox 8.0 x 5.0 x 5.0 mm U-sock with a
     rounded end and a 6.5 x 2.8 x 1.2 mm slot (`gasket.cap_free`), 1.9 mm flanges either side of the 1.5 mm PC tab.
     Pockets are sized from the stock underside photo (`gasket.pocket_footprint`, 43.00 mm outer span per tab).
@@ -37,7 +37,6 @@ from __future__ import annotations
 import argparse
 import json
 import math
-import subprocess
 from typing import Any
 import zipfile
 import xml.etree.ElementTree as ET
@@ -46,12 +45,13 @@ from pathlib import Path
 import manifold3d as md
 import numpy as np
 from shapely.ops import unary_union
+import shapely.affinity as sa
 import shapely.geometry as sg
+from shapely.geometry.polygon import orient
 import trimesh
 
 import rule60_spec as spec
 
-SOLIDCRAFT_CLI = Path.home() / ".local/bin/solidcraft-cli"
 OUT = Path(__file__).resolve().parent / "topcase-draft"
 OUT.mkdir(exist_ok=True)
 
@@ -108,7 +108,6 @@ RELIEF_CORNER_R = 0.50  # Relief outer corners (0.35 mm from the plate edge)
 CAP_TOP_COMPRESSED = spec.value("gasket.top_flange_compressed")  # Cap top flange: 1.9 free, 1.20 seated (derived)
 Z_PLATE = round(Z_GASKET + CAP_TOP_COMPRESSED, 2)  # Seated gasket-plate top face (7.50 mm)
 Z_RELIEF = Z_GASKET     # Plate-body travel relief: same level as the cap pockets (owner), 1.20 mm plate travel
-KERNEL_WORKAROUND_W = (30.257, 87.070)  # Temporary bore site in the RightHalf front floor face (print frame), step 10b
 # Ball-catch strikes: (name, X_plate, inner skirt wall faced, center distance from that wall). Back pair: the distance
 # fitted to IMG_0218/0222 (kept when the measured outline moves the wall). Front pair: the measured front bezel narrows
 # the band between the inner wall and the gasket-plate edge to 7.6 mm, so they sit centred in it (0.63 mm pocket-to-wall
@@ -270,13 +269,6 @@ def z_desk_in_print_frame(y: float) -> float:
     return h_inst / math.cos(TILT_RAD)
 
 
-def poly_to_pts(poly: Any) -> list[list[float]]:
-    coords = list(poly.exterior.coords)
-    pts = [[round(float(x), 4), round(float(y), 4)] for x, y in coords[:-1]]
-    pts.append(pts[0])
-    return pts
-
-
 # Stock ball-catch strike pocket, fitted to IMG_0218 + IMG_0222 (iPhone Ultra Wide 13 mm eq., f = 1485 px) by
 # two-view ray-cast silhouette matching; scale from the 13.0 mm strike screw pitch (plate-frame mm).
 # The strike plate measures ~20.5 x 6.55 mm; its 7.25 mm wide pocket ends in the CNC "mushroom" relief —
@@ -364,441 +356,183 @@ def socket_rib_polys(yc: float, neck_half: float, head_half: float, proj: float,
     ]
 
 
-def build_solidcraft_commands(board_id: str) -> list[dict[str, Any]]:
-    cmds: list[dict[str, Any]] = []
+# ---------------------------------------------------------------------------
+# Geometry kernel: manifold3d mesh CSG in the print frame. Sketched outlines are the same shapely polylines throughout;
+# true arcs (outer and inner skirt corners, keycap-opening corners, strike-screw pilots) are tessellated to `ARC_TOL`.
+# Sketch planes: XY (X, Y) extruded along +Z_p; YZ (Y, Z_p) along +X; XZ (X, Z_p) along +Y.
+# ---------------------------------------------------------------------------
+ARC_TOL = 0.002  # Max chord error of tessellated arcs (mm)
+
+
+def arc_steps(r: float, sweep: float) -> int:
+    return max(2, math.ceil(sweep / (2.0 * math.acos(1.0 - ARC_TOL / r))))
+
+
+def round_vertices(pts: list[tuple[float, float]], radii: list[float]) -> sg.Polygon:
+    """Polygon with vertex i replaced by the tangent arc of radius `radii[i]` (0: sharp); a convex vertex loses area,
+    a reflex vertex gains it (the fillet of a solid's concave or convex vertical edge seen from either side)."""
+    p = np.asarray(pts, dtype=float)
+    out: list[tuple[float, float]] = []
+    for i, r in enumerate(radii):
+        b = p[i]
+        if r <= 0.0:
+            out.append((float(b[0]), float(b[1])))
+            continue
+        u1 = (p[i - 1] - b) / np.linalg.norm(p[i - 1] - b)
+        u2 = (p[(i + 1) % len(p)] - b) / np.linalg.norm(p[(i + 1) % len(p)] - b)
+        theta = math.acos(float(np.clip(u1 @ u2, -1.0, 1.0)))
+        centre = b + (u1 + u2) / np.linalg.norm(u1 + u2) * r / math.sin(theta / 2.0)
+        p1, p2 = b + u1 * r / math.tan(theta / 2.0), b + u2 * r / math.tan(theta / 2.0)
+        a1 = math.atan2(p1[1] - centre[1], p1[0] - centre[0])
+        sweep = (math.atan2(p2[1] - centre[1], p2[0] - centre[0]) - a1 + math.pi) % (2.0 * math.pi) - math.pi
+        k = arc_steps(r, abs(sweep))
+        out.extend((float(centre[0] + r * math.cos(a1 + sweep * j / k)), float(centre[1] + r * math.sin(a1 + sweep * j / k)))
+                   for j in range(k + 1))
+    poly = sg.Polygon(out)
+    assert poly.is_valid, "self-intersecting fillet"
+    return poly
+
+
+def circle(cx: float, cy: float, r: float) -> sg.Polygon:
+    n = arc_steps(r, 2.0 * math.pi)
+    return sg.Polygon([(cx + r * math.cos(2.0 * math.pi * k / n), cy + r * math.sin(2.0 * math.pi * k / n)) for k in range(n)])
+
+
+def xsec(shape: Any) -> md.CrossSection:
+    rings: list[np.ndarray] = []
+    for g in getattr(shape, "geoms", [shape]):
+        g = orient(g)
+        rings.append(np.asarray(g.exterior.coords[:-1], dtype=np.float64))
+        rings.extend(np.asarray(h.coords[:-1], dtype=np.float64) for h in g.interiors)
+    return md.CrossSection(rings)
+
+
+def prism_xy(shape: Any, z0: float, z1: float) -> md.Manifold:
+    return xsec(shape).extrude(z1 - z0).translate([0.0, 0.0, z0])
+
+
+def prism_yz(shape_yz: Any, x0: float, x1: float) -> md.Manifold:
+    """(Y, Z_p) outline swept along +X from x0 to x1."""
+    return xsec(shape_yz).extrude(x1 - x0).transform(np.array([[0.0, 0.0, 1.0, x0], [1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0]]))
+
+
+def prism_xz(shape_xz: Any, y0: float, y1: float) -> md.Manifold:
+    """(X, Z_p) outline swept along +Y from y0 to y1 (built in (X, -Z_p), a right-handed sketch frame)."""
+    flipped = sa.affine_transform(shape_xz, [1.0, 0.0, 0.0, -1.0, 0.0, 0.0])
+    return xsec(flipped).extrude(y1 - y0).transform(np.array([[1.0, 0.0, 0.0, 0.0], [0.0, 0.0, 1.0, y0], [0.0, -1.0, 0.0, 0.0]]))
+
+
+def build_halves(board_id: str) -> tuple[md.Manifold, md.Manifold]:
+    """LeftHalf (X <= 0 plus the back strip) and RightHalf in the print frame, in the CNC order of the docstring."""
     usb_x, usb_w = usb_notch_print(board_id)
+    total_d = WRIST_D + CASE_D
 
-    def add_param(name: str, expr: str, comment: str = "") -> None:
-        p: dict[str, Any] = {"name": name, "expression": expr}
-        if comment:
-            p["comment"] = comment
-        cmds.append({"command": "parameters.add", "params": p})
+    # 1. Block (Z_p 0..24) with the `CORNER_R` outer vertical corners.
+    outer = round_vertices([(-CASE_W / 2, 0.0), (CASE_W / 2, 0.0), (CASE_W / 2, total_d), (-CASE_W / 2, total_d)], [CORNER_R] * 4)
+    body = prism_xy(outer, 0.0, 24.0)
 
-    # 1. Editable User Parameters in SolidCraft Timeline (19 parameters)
-    add_param("case_w", f"{CASE_W} mm", f"Top-case outer width ({CASE_W:.2f} mm, from caliper bezels)")
-    add_param("case_d", f"{CASE_D} mm", f"Top-case outer depth ({CASE_D:.2f} mm, from caliper bezels)")
-    add_param("wrist_d", f"{WRIST_D} mm", "Integrated palm-rest depth (80.00 mm)")
-    add_param("tilt_deg", f"{TILT_DEG} deg", "Keyboard & top-deck angle (6.0 deg)")
-    add_param("junc_h", f"{JUNC_H} mm", f"Installed top-face height at Y=wrist_d junction ({JUNC_H:.2f} mm)")
-    add_param("skirt_h", f"{SKIRT_H} mm", f"Top-case total height ({SKIRT_H:.2f} mm, caliper)")
-    add_param("z_floor", f"{Z_FLOOR} mm", f"Base pocket floor ({Z_FLOOR:.2f} mm, caliper)")
-    add_param("z_gasket", f"{Z_GASKET} mm", f"6 open silicone-cap pocket floor ({Z_GASKET:.2f} mm, caliper)")
-    add_param("z_strike", f"{Z_STRIKE} mm", f"4 ball-catch strike pocket floor ({Z_STRIKE:.2f} mm, caliper)")
-    add_param("skin_t", f"{SKIN_T} mm", "Wrist-rest honeycomb top skin thickness")
-    add_param("skirt_wall", f"{SKIRT_WALL} mm", f"Skirt wall thickness, sides and back ({SKIRT_WALL:.2f} mm, caliper)")
-    add_param("front_wall", f"{FRONT_WALL} mm", f"Skirt wall thickness, front ({FRONT_WALL:.2f} mm, caliper)")
-    add_param("wrist_wall", f"{WRIST_WALL} mm", "Wrist-rest perimeter wall thickness")
-    add_param("corner_r", f"{CORNER_R} mm", f"Outer vertical corner fillet radius ({CORNER_R:.2f} mm)")
-    add_param("usb_x", f"{usb_x} mm", f"USB-C center X ({usb_x:.2f} mm)")
-    add_param("usb_w", f"{usb_w} mm", f"USB-C opening width ({usb_w:.2f} mm)")
-    add_param("usb_depth", f"{USB_DEPTH} mm", f"USB-C notch depth from skirt lip ({USB_DEPTH:.2f} mm, top at Z_p {USB_TOP_ZP:.2f})")
-    add_param("joint_clear", f"{JOINT_CLEAR} mm", "Base dovetail clearance per face")
-    add_param("joint_z_clear", f"{JOINT_Z_CLEAR} mm", "Vertical tongue-landing to socket-roof clearance")
+    # 2. Side profile: the 6-deg desk plane under the wrist rest, the 20.01 mm skirt lip under the case.
+    profile = sg.Polygon([(-2.0, round(z_desk_in_print_frame(-2.0), 4)), (WRIST_D, round(z_desk_in_print_frame(WRIST_D), 4)),
+                          (WRIST_D, SKIRT_H), (total_d + 2.0, SKIRT_H), (total_d + 2.0, 26.0), (-2.0, 26.0)])
+    body -= prism_yz(profile, -160.0, 160.0)
 
-    # 2. Main Unibody Envelope + `CORNER_R` Outer Corner Fillets (wrist-rest front and case back corners)
-    cmds.extend([
-        {
-            "command": "solid.box",
-            "params": {
-                "length": "case_w",
-                "width": "wrist_d + case_d",
-                "height": 24,
-                "center": [0, "(wrist_d + case_d)/2", 12],
-                "body_name": "Unibody",
-                "name": "UnibodyBlock",
-            },
-        },
-        {
-            "command": "solid.fillet",
-            "params": {
-                "edges": [
-                    [-CASE_W / 2, 0, 12],
-                    [CASE_W / 2, 0, 12],
-                    [-CASE_W / 2, WRIST_D + CASE_D, 12],
-                    [CASE_W / 2, WRIST_D + CASE_D, 12],
-                ],
-                "radius": "corner_r",
-                "name": "OuterCornerFillets",
-            },
-        },
-    ])
+    # 3. Base pocket from the lip down to the floor (`z_floor`), `INNER_SKIRT_R` inner corners, inside the skirt walls.
+    cx_in, cy0_in, cy1_in = CASE_W / 2 - SKIRT_WALL, WRIST_D + FRONT_WALL, WRIST_D + CASE_D - SKIRT_WALL
+    pocket = round_vertices([(-cx_in, cy0_in), (cx_in, cy0_in), (cx_in, cy1_in), (-cx_in, cy1_in)], [INNER_SKIRT_R] * 4)
+    body -= prism_xy(pocket, Z_FLOOR, Z_FLOOR + 20.0)
 
-    # 3. Single Side-Profile Cut on YZ Plane (6-deg wrist desk plane + 20.01 mm case skirt lip)
-    z_m2 = round(z_desk_in_print_frame(-2.0), 4)
-    z_w = round(z_desk_in_print_frame(WRIST_D), 4)
-    cmds.extend([
-        {"command": "sketch.create", "params": {"plane": "YZ", "offset": "-160", "name": "SideProfileSk"}},
-        {
-            "command": "sketch.line",
-            "params": {
-                "points": [
-                    [-2.0, z_m2],
-                    [WRIST_D, z_w],
-                    [WRIST_D, SKIRT_H],
-                    [WRIST_D + CASE_D + 2.0, SKIRT_H],
-                    [WRIST_D + CASE_D + 2.0, 26.0],
-                    [-2.0, 26.0],
-                    [-2.0, z_m2],
-                ]
-            },
-        },
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {
-                "sketch": "SideProfileSk",
-                "distance": 320,
-                "operation": "cut",
-                "targets": ["Unibody"],
-                "name": "DeskAndSkirtProfileCut",
-            },
-        },
-    ])
+    # 4. HHKB keycap opening (`Z_p -1 .. 14`): R1.2 corners, R0.5 at the two bottom-row outer corners next to the
+    #    blockers (0.50/0.34 mm keycap clearance there).
+    opening = [pw(OPENING_P[0], 25.20), pw(28.55, 25.20), pw(28.55, OPENING_P[1]), pw(257.35, OPENING_P[1]),
+               pw(257.35, 25.20), pw(OPENING_P[2], 25.20), pw(OPENING_P[2], OPENING_P[3]), pw(OPENING_P[0], OPENING_P[3])]
+    body -= prism_xy(round_vertices(opening, [1.2, 1.2, 0.5, 0.5, 1.2, 1.2, 1.2, 1.2]), -1.0, 14.0)
 
-    # 4. Base Pocket from the skirt lip down to the floor (`z_floor = 9.69 mm`), leaving the outer skirt wall (`2.85 mm`
-    #    sides and back, `2.80 mm` front) with R = 5.0 mm inner corners. Every later interior feature is cut into this floor.
-    cx_in = round(CASE_W / 2 - SKIRT_WALL, 3)
-    cy0_in = round(WRIST_D + FRONT_WALL, 3)
-    cy1_in = round(WRIST_D + CASE_D - SKIRT_WALL, 3)
-    cmds.extend([
-        {
-            "command": "solid.box",
-            "params": {
-                "length": "case_w - 2*skirt_wall",
-                "width": "case_d - skirt_wall - front_wall",
-                "height": 20,
-                "center": [0, "wrist_d + front_wall + (case_d - skirt_wall - front_wall)/2", "z_floor + 10 mm"],
-                "operation": "cut",
-                "targets": ["Unibody"],
-                "name": "BasePocketToFloor",
-            },
-        },
-        {
-            "command": "solid.fillet",
-            "params": {
-                "edges": [
-                    [-cx_in, cy0_in, 12.0],
-                    [cx_in, cy0_in, 12.0],
-                    [-cx_in, cy1_in, 12.0],
-                    [cx_in, cy1_in, 12.0],
-                ],
-                "radius": INNER_SKIRT_R,
-                "name": "CavityInnerCornerFillets",
-            },
-        },
-    ])
-
-    # 6. Punch Exact HHKB 7U Keycap Opening (`Z_p = -1 .. 15 mm`) + CNC R=1.2 mm Corner Fillets on 6 vertices;
-    #    the two bottom-row outer corners next to the blockers keep only 0.50/0.34 mm keycap clearance, so they take R=0.5.
-    hhkb_world_pts = [
-        list(pw(OPENING_P[0], 25.20)),
-        list(pw(28.55, 25.20)),
-        list(pw(28.55, OPENING_P[1])),
-        list(pw(257.35, OPENING_P[1])),
-        list(pw(257.35, 25.20)),
-        list(pw(OPENING_P[2], 25.20)),
-        list(pw(OPENING_P[2], OPENING_P[3])),
-        list(pw(OPENING_P[0], OPENING_P[3])),
-        list(pw(OPENING_P[0], 25.20)),
-    ]
-    bottom_row_corners = {2, 3}
-    hhkb_corner_edges = [[pt[0], pt[1], 3.0] for i, pt in enumerate(hhkb_world_pts[:-1]) if i not in bottom_row_corners]
-    bottom_row_corner_edges = [[hhkb_world_pts[i][0], hhkb_world_pts[i][1], 3.0] for i in sorted(bottom_row_corners)]
-    cmds.extend([
-        {"command": "sketch.create", "params": {"plane": "XY", "offset": -1.0, "name": "HHKBOpeningSk"}},
-        {"command": "sketch.line", "params": {"points": hhkb_world_pts}},
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {
-                "sketch": "HHKBOpeningSk",
-                "distance": 15.0,
-                "operation": "cut",
-                "targets": ["Unibody"],
-                "name": "HHKBKeycapCutout",
-            },
-        },
-        {
-            "command": "solid.fillet",
-            "params": {
-                "edges": hhkb_corner_edges,
-                "radius": 1.2,
-                "name": "HHKBOpeningCornerFillets",
-            },
-        },
-        {
-            "command": "solid.fillet",
-            "params": {
-                "edges": bottom_row_corner_edges,
-                "radius": 0.5,
-                "name": "HHKBBottomRowCornerFillets",
-            },
-        },
-    ])
-
-    # 7. Plate-body relief + 6 open silicone-cap pockets cut in one go to `z_gasket = 6.30 mm` (one level, owner), straight
-    #    from the floor (`orange_cut_poly_p`). The seated gasket plate occupies `Z_p = 7.50..9.00`.
+    # 5. Plate-body relief + 6 open silicone-cap pockets, one cut to `z_gasket` (`orange_cut_poly_p`); the seated gasket
+    #    plate occupies `Z_p = 7.50..9.00`.
     orange_w = sg.Polygon([pw(x, y) for x, y in orange_cut_poly_p().exterior.coords[:-1]])
-    orange_pick = orange_w.representative_point()
-    cmds.extend([
-        {"command": "sketch.create", "params": {"plane": "XY", "offset": "z_gasket", "name": "CapPocketsAndReliefSk"}},
-        {"command": "sketch.line", "params": {"points": poly_to_pts(orange_w)}},
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {
-                "sketch": "CapPocketsAndReliefSk",
-                "profiles": [{"point": [round(orange_pick.x, 3), round(orange_pick.y, 3)]}],
-                "distance": "z_floor - z_gasket + 1 mm",
-                "operation": "cut",
-                "targets": ["Unibody"],
-                "name": "CapPocketsAndPlateRelief",
-            },
-        },
-    ])
+    body -= prism_xy(orange_w, Z_GASKET, Z_FLOOR + 1.0)
 
-    # 8. Four Ball-Catch Strike Pockets with stock CNC mushroom end reliefs (`strike_pocket_poly`), floor at `z_strike`.
-    #    Lobes sit on the skirt half: +Y for the back pair, -Y for the front pair.
-    strike_sites_p = strike_centers_p()
-    cmds.append({"command": "sketch.create", "params": {"plane": "XY", "offset": "z_strike", "name": "StrikePocketsSk"}})
-    strike_picks: list[dict[str, list[float]]] = []
-    for _, sx_p, sy_p in strike_sites_p:
-        pocket_p = strike_pocket_poly(sx_p, sy_p, skirt_sign=1.0 if sy_p > 50.0 else -1.0)
-        pocket_w = sg.Polygon([pw(x, y) for x, y in pocket_p.exterior.coords[:-1]])
-        cmds.append({"command": "sketch.line", "params": {"points": poly_to_pts(pocket_w)}})
-        cxw, cyw = pw(sx_p, sy_p)
-        strike_picks.append({"point": [cxw, cyw]})
-    cmds.append({"command": "sketch.finish", "params": {}})
-    cmds.append({
-        "command": "solid.extrude",
-        "params": {
-            "sketch": "StrikePocketsSk",
-            "profiles": strike_picks,
-            "distance": 5.0,
-            "operation": "cut",
-            "targets": ["Unibody"],
-            "name": "BallCatchStrikePockets",
-        },
-    })
+    # 6. Four strike pockets (`strike_pocket_poly`, lobes on the skirt half), floor at `z_strike`, and the blind M2
+    #    pilots (Ø1.8 mm, `STRIKE_PILOT_DEPTH` past the pocket floor).
+    strikes = strike_centers_p()
+    pockets = unary_union([sg.Polygon([pw(x, y) for x, y in strike_pocket_poly(sx, sy, 1.0 if sy > 50.0 else -1.0).exterior.coords[:-1]])
+                           for _, sx, sy in strikes])
+    body -= prism_xy(pockets, Z_STRIKE, Z_STRIKE + 5.0)
+    pilots = unary_union([circle(pw(sx, sy)[0] + dx, pw(sx, sy)[1], 0.90) for _, sx, sy in strikes for dx in (-6.5, 6.5)])
+    body -= prism_xy(pilots, Z_STRIKE - STRIKE_PILOT_DEPTH, Z_STRIKE + 1.45)
 
-    # 9. Blind M2 strike-screw pilot holes (Ø1.8 mm, `STRIKE_PILOT_DEPTH` past each strike pocket floor)
-    pilot_sets = [
-        ("StrikePilotsSk", f"z_strike - {STRIKE_PILOT_DEPTH} mm", [(round(pw(sx_p, sy_p)[0] + dx_s, 4), pw(sx_p, sy_p)[1], 0.90)
-                                                                  for _, sx_p, sy_p in strike_sites_p for dx_s in (-6.5, 6.5)]),
-    ]
-    for sk_name, sk_offset, holes in pilot_sets:
-        cmds.append({"command": "sketch.create", "params": {"plane": "XY", "offset": sk_offset, "name": sk_name}})
-        for hx, hy, hr in holes:
-            cmds.append({"command": "sketch.circle.center", "params": {"center": [hx, hy], "radius": hr}})
-        cmds.append({"command": "sketch.finish", "params": {}})
-        cmds.append({
-            "command": "solid.extrude",
-            "params": {
-                "sketch": sk_name,
-                "profiles": [{"point": [hx, hy]} for hx, hy, _ in holes],
-                "distance": round(STRIKE_PILOT_DEPTH + 1.45, 2),
-                "operation": "cut",
-                "targets": ["Unibody"],
-                "name": sk_name.replace("Sk", "Holes"),
-            },
-        })
-
-    # 10b. SolidCraft v0.22.0 boolean workaround, part 1: with no inner loop in the front-right floor face, the first
-    #      RightHalf joint-socket cut leaves a zero-width slit at X = 25.965, drops the front top chamfer up to that slit
-    #      and loses ~38 mm^3 of wrist material. A temporary bore here avoids it; part 2 refills it after the joints.
-    wa_x, wa_y = KERNEL_WORKAROUND_W
-    cmds.extend([
-        {"command": "sketch.create", "params": {"plane": "XY", "offset": "z_floor - 3.8 mm", "name": "KernelWorkaroundBoreSk"}},
-        {"command": "sketch.circle.center", "params": {"center": [wa_x, wa_y], "radius": 1.00}},
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {
-                "sketch": "KernelWorkaroundBoreSk",
-                "profiles": [{"point": [wa_x, wa_y]}],
-                "distance": 4.5,
-                "operation": "cut",
-                "targets": ["Unibody"],
-                "name": "KernelWorkaroundBore",
-            },
-        },
-    ])
-
-    # 11. USB-C notch through the back skirt wall: open at the lip, `USB_END_R` corners at its closed end (Z_p
-    #     `USB_TOP_ZP`). XZ sketch coordinates are (X, -Z_p); the profile runs 1 mm past the lip and is cut through the wall.
+    # 7. USB-C notch through the back skirt wall: open at the lip, `USB_END_R` corners at its closed end (`USB_TOP_ZP`).
     usb_xz = sg.box(usb_x - usb_w / 2, USB_TOP_ZP, usb_x + usb_w / 2, SKIRT_H + 1.0)
     usb_xz = usb_xz.buffer(-USB_END_R).buffer(USB_END_R, quad_segs=12).union(
         sg.box(usb_x - usb_w / 2, USB_TOP_ZP + USB_END_R, usb_x + usb_w / 2, SKIRT_H + 1.0)).simplify(1e-4)
-    usb_sk = sg.Polygon([(x, -z) for x, z in usb_xz.exterior.coords[:-1]])
-    back_inner_y = round(WRIST_D + CASE_D - SKIRT_WALL, 3)
-    cmds.extend([
-        {"command": "sketch.create", "params": {"plane": "XZ", "offset": str(round(back_inner_y - 1.0, 3)), "name": "USBNotchSk"}},
-        {"command": "sketch.line", "params": {"points": poly_to_pts(usb_sk)}},
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {"sketch": "USBNotchSk", "distance": round(SKIRT_WALL + 2.0, 3), "operation": "cut",
-                       "targets": ["Unibody"], "name": "USBCutout"},
-        },
-    ])
+    back_inner_y = WRIST_D + CASE_D - SKIRT_WALL
+    body -= prism_xz(usb_xz, back_inner_y - 1.0, back_inner_y + SKIRT_WALL + 1.0)
 
-    # 12. Wrist-Rest Symmetric Interior Hollows (contoured around the 4 front bumpon pads) + Right-Side Undercut Boss
-    #     Strip + 45-deg pad undercuts
+    # 8. Wrist rest: the two interior hollows under the skin (contoured around the 4 front bumpon pads), the
+    #    right-side socket boss strip (X 3.5..9.8, standing 0.2 mm into the skin: a flat overhang otherwise), the
+    #    45-deg pad undercuts and the bumpon pockets.
     assert (PAD_D - BUMPON_D_MAX) / 2 >= 1.0 and PAD_W >= BUMPON_D_MAX + 2.0, "bumpon pad too small"
     w_in_x = round(CASE_W / 2 - WRIST_WALL, 3)
-    front_notches: list[list[float]] = []
+    front_notches: list[tuple[float, float]] = []
     for c in sorted(PAD_X, reverse=True):  # left half, outer pad first along the front (X rising)
         x0, x1 = -(c + PAD_W / 2), -(c - PAD_W / 2)
-        front_notches += [[x0, WRIST_WALL], [x0, PAD_D], [x1, PAD_D], [x1, WRIST_WALL]]
-    left_hollow_pts = [
-        [-w_in_x + 5.5, 2.2],
-        *front_notches,
-        [-4.0, 2.2],
-        [-4.0, 77.8],
-        [-w_in_x, 77.8],
-        [-w_in_x, 7.7],
-        [-w_in_x + 5.5, 2.2],
-    ]
-    right_hollow_pts = [[-x, y] for x, y in reversed(left_hollow_pts)]
-
-    cmds.extend([
-        {"command": "sketch.create", "params": {"plane": "XY", "offset": "skin_t", "name": "WristHollowSk"}},
-        {"command": "sketch.line", "params": {"points": left_hollow_pts}},
-        {"command": "sketch.line", "params": {"points": right_hollow_pts}},
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {
-                "sketch": "WristHollowSk",
-                "profiles": [{"point": [-75.0, 40.0]}, {"point": [75.0, 40.0]}],
-                "distance": 24,
-                "operation": "cut",
-                "targets": ["Unibody"],
-                "name": "WristBayHollows",
-            },
-        },
-        # Socket boss strip (X 3.5..9.8) carrying the right-half dovetail sockets. It stands on the wrist skin (bottom
-        # 0.2 mm into it): v5.7 started it at Z_p 4.5, a 5.6 mm wide flat overhang with nothing under it in print.
-        {"command": "sketch.create", "params": {"plane": "YZ", "offset": "3.5", "name": "RightBossSideSk"}},
-        {
-            "command": "sketch.line",
-            "params": {
-                "points": [
-                    [14.0, round(SKIN_T - 0.2, 3)],
-                    [79.0, round(SKIN_T - 0.2, 3)],
-                    [79.0, 17.5],
-                    [14.0, round(z_desk_in_print_frame(14.0) - 0.5, 3)],
-                    [14.0, round(SKIN_T - 0.2, 3)],
-                ]
-            },
-        },
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {
-                "sketch": "RightBossSideSk",
-                "distance": 6.3,
-                "operation": "join",
-                "targets": ["Unibody"],
-                "name": "RightSocketBossStrip",
-            },
-        },
-    ])
+        front_notches += [(x0, WRIST_WALL), (x0, PAD_D), (x1, PAD_D), (x1, WRIST_WALL)]
+    left_hollow = sg.Polygon([(-w_in_x + 5.5, 2.2), *front_notches, (-4.0, 2.2), (-4.0, 77.8), (-w_in_x, 77.8), (-w_in_x, 7.7)])
+    right_hollow = sa.scale(left_hollow, xfact=-1.0, origin=(0.0, 0.0))
+    body -= prism_xy(sg.MultiPolygon([left_hollow, right_hollow]), SKIN_T, SKIN_T + 24.0)
+    boss = sg.Polygon([(14.0, SKIN_T - 0.2), (79.0, SKIN_T - 0.2), (79.0, 17.5), (14.0, z_desk_in_print_frame(14.0) - 0.5)])
+    body += prism_yz(boss, 3.5, 9.8)
 
     # Pad undercuts: each pad's underside rises at 45 deg to a `PAD_TIP_T` vertical land at its inner edge, so it prints
     # without support; the pad stays full height where that slope meets the skin, at least `PAD_COLUMN_D` from the wall.
-    # Only cuts: the pad face stays the step-3 desk plane and the pad sides the hollow notch, and the cut reaches 1 mm
-    # into the empty bay past the pad's sides and inner edge (no coincident faces).
+    # Only cuts: the pad face stays the desk plane and the pad sides the hollow notch, and the cut reaches 1 mm into the
+    # empty bay past the pad's sides and inner edge (no coincident faces).
     z_tip = z_desk_in_print_frame(PAD_D) - PAD_TIP_T  # underside at the pad's inner edge
     y_out = PAD_D + 1.0
     below_slope = sg.Polygon([(y_out, z_tip + 1.0), (PAD_D - 100.0, z_tip - 100.0), (y_out, z_tip - 100.0)])
-    cut = sg.box(PAD_COLUMN_D, SKIN_T, y_out, z_tip + 1.0).intersection(below_slope)
-    assert cut.geom_type == "Polygon" and cut.area > 1.0, cut
-    undercut = sg.Polygon([(round(y, 4), round(z, 4)) for y, z in cut.exterior.coords[:-1]])
-    for i, x0 in enumerate(sorted(s * c - PAD_W / 2 for c in PAD_X for s in (-1.0, 1.0))):
-        cmds.extend([
-            {"command": "sketch.create", "params": {"plane": "YZ", "offset": str(x0 - 1.0), "name": f"PadUndercutSk{i}"}},
-            {"command": "sketch.line", "params": {"points": poly_to_pts(undercut)}},
-            {"command": "sketch.finish", "params": {}},
-            {
-                "command": "solid.extrude",
-                "params": {
-                    "sketch": f"PadUndercutSk{i}",
-                    "profiles": [{"point": [round(undercut.centroid.x, 4), round(undercut.centroid.y, 4)]}],
-                    "distance": PAD_W + 2.0,
-                    "operation": "cut",
-                    "targets": ["Unibody"],
-                    "name": f"PadUndercut{i}",
-                },
-            },
-        ])
+    undercut = sg.box(PAD_COLUMN_D, SKIN_T, y_out, z_tip + 1.0).intersection(below_slope)
+    assert undercut.geom_type == "Polygon" and undercut.area > 1.0, undercut
+    for x0 in sorted(s * c - PAD_W / 2 for c in PAD_X for s in (-1.0, 1.0)):
+        body -= prism_yz(undercut, x0 - 1.0, x0 + PAD_W + 1.0)
 
-    # Bumpon pockets: one sketch on the desk plane (x along X, v up the 6-deg slope, normal out of the pad faces), a
-    # 72-gon circumscribing `POCKET_D` centred on each pad, cut `POCKET_DEPTH` into the pad and 1 mm out past its face.
-    # Flat facets keep the two halves exact mirrors; a true circle is faceted differently in each exported half.
+    # Bumpon pockets: on the desk plane (x along X, v up the 6-deg slope, normal out of the pad faces), a 72-gon
+    # circumscribing `POCKET_D` centred on each pad, `POCKET_DEPTH` into the pad and 1 mm out past its face. Flat facets
+    # keep the two halves exact mirrors.
     cos_t, sin_t = math.cos(TILT_RAD), math.sin(TILT_RAD)
     r_poly = POCKET_D / 2 / math.cos(math.pi / 72)
-    cmds.append({"command": "sketch.create", "params": {
-        "plane": {"origin": [0.0, 0.0, z_desk_in_print_frame(0.0)], "x_dir": [1.0, 0.0, 0.0], "y_dir": [0.0, cos_t, sin_t]},
-        "name": "BumponPocketSk"}})
-    for x, y in pad_centres():
-        v = y / cos_t
-        pts = [[round(x + r_poly * math.cos(2 * math.pi * k / 72), 4), round(v + r_poly * math.sin(2 * math.pi * k / 72), 4)]
-               for k in range(72)]
-        cmds.append({"command": "sketch.line", "params": {"points": [*pts, pts[0]]}})
-    cmds.extend([
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {"sketch": "BumponPocketSk", "distance": POCKET_DEPTH, "direction": "negative", "distance2": 1.0,
-                       "operation": "cut", "targets": ["Unibody"], "name": "BumponPockets"},
-        },
-    ])
+    rings = [sg.Polygon([(x + r_poly * math.cos(2 * math.pi * k / 72), y / cos_t + r_poly * math.sin(2 * math.pi * k / 72))
+                         for k in range(72)]) for x, y in pad_centres()]
+    to_desk_plane = np.array([[1.0, 0.0, 0.0, 0.0], [0.0, cos_t, -sin_t, 0.0], [0.0, sin_t, cos_t, z_desk_in_print_frame(0.0)]])
+    body -= xsec(sg.MultiPolygon(rings)).extrude(POCKET_DEPTH + 1.0).translate([0.0, 0.0, -POCKET_DEPTH]).transform(to_desk_plane)
 
-    # 13. Symmetric Honeycomb Lattice Cutout through Wrist-Rest Top Skin (Z_p = 0 .. skin_t)
+    # 9. Honeycomb through the wrist-rest skin (`Z_p -0.5 .. skin_t + 0.5`): hexagons with a vertex at 90 deg, each
+    #    circumcircle 1 mm inside a bay.
     hex_r = round(4.5 - RIB / math.sqrt(3), 4)
     left_bay = sg.Polygon([(-w_in_x + 5.5, 2.2), (-4.0, 2.2), (-4.0, 77.8), (-w_in_x, 77.8), (-w_in_x, 7.7)]).buffer(-1.0)
     right_bay = sg.Polygon([(4.0, 2.2), (w_in_x - 5.5, 2.2), (w_in_x, 7.7), (w_in_x, 77.8), (4.0, 77.8)]).buffer(-1.0)
-
-    cmds.append({"command": "sketch.create", "params": {"plane": "XY", "offset": -0.5, "name": "HoneycombSk"}})
-    hex_picks = []
+    cells = []
     for col in range(-22, 23):
         hx = round(col * 6.75, 4)
         for row in range(-6, 7):
             hy = round(40.0 + (row + (col % 2) * 0.5) * 4.5 * math.sqrt(3), 4)
-            cell = sg.Point(hx, hy).buffer(hex_r)
-            if left_bay.contains(cell) or right_bay.contains(cell):
-                cmds.append({
-                    "command": "sketch.polygon.inscribed",
-                    "params": {"center": [hx, hy], "radius": hex_r, "sides": 6, "connect": False},
-                })
-                hex_picks.append({"point": [hx, hy]})
-    cmds.append({"command": "sketch.finish", "params": {}})
-    cmds.append({
-        "command": "solid.extrude",
-        "params": {
-            "sketch": "HoneycombSk",
-            "profiles": hex_picks,
-            "distance": "skin_t + 1 mm",
-            "operation": "cut",
-            "targets": ["Unibody"],
-            "name": "HoneycombSkinCutout",
-        },
-    })
+            if left_bay.contains(sg.Point(hx, hy).buffer(hex_r)) or right_bay.contains(sg.Point(hx, hy).buffer(hex_r)):
+                cells.append(sg.Polygon([(hx + hex_r * math.cos(math.pi / 6 + math.pi * k / 3),
+                                          hy + hex_r * math.sin(math.pi / 6 + math.pi * k / 3)) for k in range(6)]))
+    body -= prism_xy(sg.MultiPolygon(cells), -0.5, SKIN_T + 0.5)
 
-    # 14. Split Unibody on YZ Symmetry Plane (X = 0) -> `RightHalf` & `LeftHalf` (the back strip moves over in 15a)
-    cmds.extend([
-        {"command": "solid.split_body", "params": {"body": "Unibody", "plane": "YZ", "name": "CenterYZSplit"}},
-        {"command": "body.rename", "params": {"body": "Unibody", "name": "RightHalf"}},
-        {"command": "body.rename", "params": {"body": "Unibody (1)", "name": "LeftHalf"}},
-    ])
+    # 10. Split at X = 0: LeftHalf X <= 0, RightHalf X >= 0 (the back strip moves over in 12).
+    left, right = body.trim_by_plane([-1.0, 0.0, 0.0], 0.0), body.trim_by_plane([1.0, 0.0, 0.0], 0.0)
 
-    # 15. Screwless 3-dovetail system across X = 0 (with planar chevron compression ribs):
+    # 11. Three dovetails across X = 0 (with planar chevron compression ribs):
     #     - Plain tongue meets the plain socket line-to-line (0 mm) in plan; each tongue starts `JOINT_Z_CLEAR` below the
     #       socket roof (`z_tongue = z_stop + 0.20`), the only vertical contact between the halves.
     #     - Chevron ribs stand in the socket band `[z_tongue + 0.3, z_tongue + rib_top]` (fixed in the RightHalf),
     #       so the tongue bites only once its ramped underside reaches that band (final 2.2 mm of travel).
-    #     - The tongue's 45-deg print ramp is matched by a socket fill (15b), so tongue and socket meet over every face.
+    #     - Socket fill: the RightHalf keeps the space under the tongue's 45-deg print ramp up to the ramp lowered by
+    #       `JOINT_Z_CLEAR`, so the ramp is a glue face with the same 0.20 mm (vertical) line as the tongue landing, not a
+    #       3 mm void. Printed on the socket floor, its top is the 45-deg slope: no support. It is left uncut (socket
+    #       minus the fill wedge) rather than cut and joined back, which would leave the fill's flanks coplanar with the
+    #       socket walls.
     for jname, yc, nh, hh, proj, z_stop, z_top, z_sock_top, rib_top, taper in JOINTS_SPEC:
         z_tongue = round(z_stop + JOINT_Z_CLEAR, 3)
         assert nh - taper > 0.0, f"{jname}: neck half-width at X=1.4 must stay positive"
@@ -808,208 +542,42 @@ def build_solidcraft_commands(board_id: str) -> list[dict[str, Any]]:
         male_poly = dovetail_poly(yc, nh, hh, proj, neck_taper=taper)
         rib_polys = socket_rib_polys(yc, nh, hh, proj, taper)
         assert sock_poly.is_valid and male_poly.is_valid and all(p.is_valid for p in rib_polys), jname
+        z_base, x_end = round(z_stop - 0.3, 3), round(proj + 0.5, 3)
+        x_start = 0.8 + (z_base + JOINT_Z_CLEAR - tongue_ramp_z(0.8, z_tongue, proj)) / ((proj + 0.3) / (proj - 0.2))
+        z_end = tongue_ramp_z(x_end, z_tongue, proj) - JOINT_Z_CLEAR
+        fill = prism_xz(sg.Polygon([(x_start, z_base), (x_end, z_base), (x_end, z_end)]), yc - hh - 1.0, yc + hh + 1.0)
+        socket = prism_xy(sock_poly, z_stop, z_sock_top)
+        assert ((socket ^ fill) - right).volume() < 1e-6, f"{jname}: fill outside the RightHalf"
+        right -= socket - fill
+        right += prism_xy(sg.MultiPolygon(rib_polys), z_tongue + 0.3, z_tongue + rib_top)
+        left += prism_xy(male_poly, z_tongue, z_top)
+        ramp = sg.Polygon([(0.8, tongue_ramp_z(0.8, z_tongue, proj)), (proj + 0.6, tongue_ramp_z(0.8, z_tongue, proj)),
+                           (proj + 0.6, tongue_ramp_z(proj + 0.6, z_tongue, proj))])
+        left -= prism_xz(ramp, yc - hh - 1.2, yc + hh + 1.2)  # 45-deg self-supporting print ramp under the tongue
 
-        cmds.extend([
-            {"command": "sketch.create", "params": {"plane": "XY", "offset": z_stop, "name": f"{jname}SockSk"}},
-            {"command": "sketch.line", "params": {"points": poly_to_pts(sock_poly)}},
-            {"command": "sketch.finish", "params": {}},
-            {
-                "command": "solid.extrude",
-                "params": {
-                    "sketch": f"{jname}SockSk",
-                    "profiles": [{"point": [round(proj / 2, 2), yc]}],
-                    "distance": round(z_sock_top - z_stop, 3),
-                    "operation": "cut",
-                    "targets": ["RightHalf"],
-                    "name": f"{jname}Socket",
-                },
-            },
-            {"command": "sketch.create", "params": {"plane": "XY", "offset": round(z_tongue + 0.3, 3), "name": f"{jname}SockRibSk"}},
-            *({"command": "sketch.line", "params": {"points": poly_to_pts(p)}} for p in rib_polys),
-            {"command": "sketch.finish", "params": {}},
-            {
-                "command": "solid.extrude",
-                "params": {
-                    "sketch": f"{jname}SockRibSk",
-                    "profiles": [
-                        {"point": [round(p.representative_point().x, 4), round(p.representative_point().y, 4)]}
-                        for p in rib_polys
-                    ],
-                    "distance": round(rib_top - 0.3, 3),
-                    "operation": "join",
-                    "targets": ["RightHalf"],
-                    "name": f"{jname}SocketRibs",
-                },
-            },
-            {"command": "sketch.create", "params": {"plane": "XY", "offset": z_tongue, "name": f"{jname}TongueSk"}},
-            {"command": "sketch.line", "params": {"points": poly_to_pts(male_poly)}},
-            {"command": "sketch.finish", "params": {}},
-            {
-                "command": "solid.extrude",
-                "params": {
-                    "sketch": f"{jname}TongueSk",
-                    "profiles": [{"point": [round(proj / 2, 2), yc]}],
-                    "distance": round(z_top - z_tongue, 3),
-                    "operation": "join",
-                    "targets": ["LeftHalf"],
-                    "name": f"{jname}Tongue",
-                },
-            },
-            # 45-deg self-supporting print ramp under the overhanging tongue
-            {
-                "command": "sketch.create",
-                "params": {"plane": "XZ", "offset": str(round(yc - hh - 1.2, 3)), "name": f"{jname}RampSk"},
-            },
-            {
-                "command": "sketch.line",
-                "params": {
-                    "points": [
-                        [0.8, round(-tongue_ramp_z(0.8, z_tongue, proj), 3)],
-                        [round(proj + 0.6, 3), round(-tongue_ramp_z(0.8, z_tongue, proj), 3)],
-                        [round(proj + 0.6, 3), round(-tongue_ramp_z(proj + 0.6, z_tongue, proj), 3)],
-                        [0.8, round(-tongue_ramp_z(0.8, z_tongue, proj), 3)],
-                    ]
-                },
-            },
-            {"command": "sketch.finish", "params": {}},
-            {
-                "command": "solid.extrude",
-                "params": {
-                    "sketch": f"{jname}RampSk",
-                    "distance": round(2 * hh + 2.4, 3),
-                    "operation": "cut",
-                    "targets": ["LeftHalf"],
-                    "name": f"{jname}PrintChamfer",
-                },
-            },
-        ])
+    # 12. Stagger: the back strip of the RightHalf from X = 0 to `BACK_SEAM_X - gap/2` (above `SPLIT_STEP_Y`, so only
+    #     back bezel and skirt) joins the LeftHalf; the RightHalf loses it up to `BACK_SEAM_X + gap/2` (gap 0: one plane).
+    half_gap = BACK_SEAM_GAP / 2
+    strip = right ^ prism_xy(sg.box(0.0, SPLIT_STEP_Y, BACK_SEAM_X - half_gap, 205.0), -5.0, 35.0)
+    right -= prism_xy(sg.box(-1.0, SPLIT_STEP_Y, BACK_SEAM_X + half_gap, 205.0), -5.0, 35.0)
+    left += strip
 
-    # 15a. Stagger: the back strip of the RightHalf from X = 0 to `BACK_SEAM_X - gap/2` (above `SPLIT_STEP_Y`, so only
-    #      back bezel and skirt) joins the LeftHalf; the RightHalf loses it up to `BACK_SEAM_X + gap/2` (gap 0: one
-    #      plane). It runs after the dovetails on purpose: a tongue joined to a LeftHalf that has been through
-    #      `solid.combine` came out shifted by 0.4 um (SolidCraft v0.22.0), enough to drag along its line-to-line socket.
-    half_gap = round(BACK_SEAM_GAP / 2, 3)
-
-    def strip_sketch(name: str, x0: float, x1: float) -> list[dict[str, Any]]:
-        pts = [[x0, SPLIT_STEP_Y], [x1, SPLIT_STEP_Y], [x1, 205.0], [x0, 205.0], [x0, SPLIT_STEP_Y]]
-        return [{"command": "sketch.create", "params": {"plane": "XY", "offset": -5.0, "name": name}},
-                {"command": "sketch.line", "params": {"points": pts}},
-                {"command": "sketch.finish", "params": {}}]
-
-    cmds.extend([
-        *strip_sketch("BackStripSk", 0.0, round(BACK_SEAM_X - half_gap, 3)),
-        {"command": "solid.extrude", "params": {"sketch": "BackStripSk", "distance": 40.0, "operation": "new",
-                                                "body_name": "BackStrip", "name": "BackStripRegion"}},
-        {"command": "solid.combine",
-         "params": {"target": "BackStrip", "tools": ["RightHalf"], "operation": "intersect", "keep_tools": True}},
-        *strip_sketch("BackStripCutSk", -1.0, round(BACK_SEAM_X + half_gap, 3)),
-        {"command": "solid.extrude", "params": {"sketch": "BackStripCutSk", "distance": 40.0, "operation": "cut",
-                                                "targets": ["RightHalf"], "name": "BackStripCut"}},
-        {"command": "solid.combine", "params": {"target": "LeftHalf", "tools": ["BackStrip"], "operation": "join"}},
-    ])
-
-    # 15b. Socket fills: the RightHalf fills the space under each tongue's print ramp up to the ramp lowered by
-    #      `JOINT_Z_CLEAR`, inside the socket outline, so the ramp is a glue face with the same 0.20 mm (vertical) line as
-    #      the tongue landing, not a 3 mm void. Fill = socket prism intersected with the lowered-ramp profile, joined
-    #      after the dovetails (see 15a). Printed on the socket floor, its top is the 45-deg slope: no support.
-    for jname, yc, nh, hh, proj, z_stop, *_, taper in JOINTS_SPEC:
-        z_tongue = round(z_stop + JOINT_Z_CLEAR, 3)
-        z_base = round(z_stop - 0.3, 3)
-        x_end = round(proj + 0.5, 3)
-        k = (proj + 0.3) / (proj - 0.2)
-        x_start = round(0.8 + (z_base + JOINT_Z_CLEAR - tongue_ramp_z(0.8, z_tongue, proj)) / k, 4)
-        z_end = round(tongue_ramp_z(x_end, z_tongue, proj) - JOINT_Z_CLEAR, 4)
-        cmds.extend([
-            {"command": "sketch.create", "params": {"plane": "XY", "offset": z_base, "name": f"{jname}FillPlanSk"}},
-            {"command": "sketch.line",
-             "params": {"points": poly_to_pts(dovetail_poly(yc, nh, hh, proj, clear=JOINT_CLEAR, neck_taper=taper))}},
-            {"command": "sketch.finish", "params": {}},
-            {"command": "solid.extrude",
-             "params": {"sketch": f"{jname}FillPlanSk", "profiles": [{"point": [round(proj / 2, 2), yc]}],
-                        "distance": round(z_end - z_base + 0.5, 3), "operation": "new",
-                        "body_name": f"{jname}SocketFill", "name": f"{jname}FillPlan"}},
-            {"command": "sketch.create",
-             "params": {"plane": "XZ", "offset": str(round(yc - hh - 1.0, 3)), "name": f"{jname}FillRampSk"}},
-            {"command": "sketch.line",
-             "params": {"points": [[x_start, -z_base], [x_end, -z_base], [x_end, -z_end], [x_start, -z_base]]}},
-            {"command": "sketch.finish", "params": {}},
-            {"command": "solid.extrude",
-             "params": {"sketch": f"{jname}FillRampSk", "distance": round(2 * hh + 2.0, 3), "operation": "intersect",
-                        "targets": [f"{jname}SocketFill"], "name": f"{jname}FillRamp"}},
-            {"command": "solid.combine",
-             "params": {"target": "RightHalf", "tools": [f"{jname}SocketFill"], "operation": "join"}},
-        ])
-
-    # 15c. Back seam: Y alignment from a 45-deg wedge key on the LeftHalf under the seam strike pocket floor, sliding down
-    #      with the dovetails into a matching notch in the RightHalf (the wedge lowered by `JOINT_Z_CLEAR`) that opens
-    #      into the strike pocket. X and Z across the seam come from the stock strike plate screwed into both halves.
-    #      The key root sinks 0.3 mm into the LeftHalf.
+    # 13. Back seam: Y alignment from a 45-deg wedge key on the LeftHalf under the seam strike pocket floor, sliding down
+    #     with the dovetails into a matching notch in the RightHalf (the wedge lowered by `JOINT_Z_CLEAR`) that opens
+    #     into the strike pocket. X and Z across the seam come from the stock strike plate screwed into both halves.
+    #     The key root sinks 0.3 mm into the LeftHalf.
     bk = back_seam_key()
-    root_x, root_z = round(bk["key_x0"] - 0.3, 3), round(BACK_KEY_Z0 - 0.3, 3)
-    notch_pts = [[x, -z] for x, z in bk["notch_xz"]] + [[bk["notch_xz"][0][0], -bk["notch_xz"][0][1]]]
-    cmds.extend([
-        {"command": "sketch.create",
-         "params": {"plane": "XZ", "offset": str(round(bk["key_y"] - BACK_KEY_HW, 3)), "name": "BackSeamKeySk"}},
-        {"command": "sketch.line",
-         "params": {"points": [[root_x, -root_z], [root_x, -Z_STRIKE], [bk["key_tip_x"], -Z_STRIKE], [root_x, -root_z]]}},
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {"sketch": "BackSeamKeySk", "distance": round(2 * BACK_KEY_HW, 3), "operation": "join",
-                       "targets": ["LeftHalf"], "name": "BackSeamKey"},
-        },
-        {"command": "sketch.create", "params": {"plane": "XZ", "offset": str(bk["notch_y0"]), "name": "BackSeamNotchSk"}},
-        {"command": "sketch.line", "params": {"points": notch_pts}},
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {"sketch": "BackSeamNotchSk", "distance": round(bk["notch_y1"] - bk["notch_y0"], 3),
-                       "operation": "cut", "targets": ["RightHalf"], "name": "BackSeamNotch"},
-        },
-    ])
+    root_x, root_z = bk["key_x0"] - 0.3, BACK_KEY_Z0 - 0.3
+    left += prism_xz(sg.Polygon([(root_x, root_z), (root_x, Z_STRIKE), (bk["key_tip_x"], Z_STRIKE)]),
+                     bk["key_y"] - BACK_KEY_HW, bk["key_y"] + BACK_KEY_HW)
+    right -= prism_xz(sg.Polygon(bk["notch_xz"]), bk["notch_y0"], bk["notch_y1"])
 
-    # 15d. SolidCraft boolean workaround, part 2: refill the temporary bore (r + 0.05 mm, floor down past its bottom), so
-    #      the floor is solid there again. Net geometry: no hole. (v5.7: an r1.6/1.65 pair left a non-manifold seam.)
-    cmds.extend([
-        {"command": "sketch.create", "params": {"plane": "XY", "offset": "z_floor - 3.9 mm", "name": "KernelWorkaroundFillSk"}},
-        {"command": "sketch.circle.center", "params": {"center": [wa_x, wa_y], "radius": 1.05}},
-        {"command": "sketch.finish", "params": {}},
-        {
-            "command": "solid.extrude",
-            "params": {
-                "sketch": "KernelWorkaroundFillSk",
-                "profiles": [{"point": [wa_x, wa_y]}],
-                "distance": 3.9,
-                "operation": "join",
-                "targets": ["RightHalf"],
-                "name": "KernelWorkaroundFill",
-            },
-        },
-    ])
-
-    # 16. Final Crisp CNC 45-deg Outer Top Perimeter Chamfers (`0.70 mm`)
-    cmds.extend([
-        {
-            "command": "solid.chamfer",
-            "params": {
-                "body": "LeftHalf",
-                "edges": [[-75.0, 0.0, 0.0]],
-                "distance": 0.70,
-                "name": "LeftOuterTopChamfer",
-            },
-        },
-        {
-            "command": "solid.chamfer",
-            "params": {
-                "body": "RightHalf",
-                "edges": [[75.0, 0.0, 0.0]],
-                "distance": 0.70,
-                "name": "RightOuterTopChamfer",
-            },
-        },
-    ])
-
-    return cmds
+    # 14. 45-deg `0.70 mm` chamfer round the outer top perimeter (the top face meets the outer walls; the split faces
+    #     and every opening keep sharp edges): keep what lies inside the top outline inset by `0.70 - Z_p`.
+    chamfer_keep = md.Manifold.hull(
+        prism_xy(outer.buffer(-0.701, quad_segs=arc_steps(CORNER_R, math.pi / 2)), -0.001, 0.0)
+        + prism_xy(outer, 0.70, 0.701)) + prism_xy(outer.buffer(5.0), 0.70, 40.0)
+    return left ^ chamfer_keep, right ^ chamfer_keep
 
 
 def write_3mf(path: Path, title: str, named_meshes: list[tuple[str, trimesh.Trimesh]],
@@ -1067,71 +635,30 @@ def write_3mf(path: Path, title: str, named_meshes: list[tuple[str, trimesh.Trim
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--reuse-solidcraft", action="store_true", help="Reuse existing .solidcraft/.step/.3mf if present")
     ap.add_argument("--board", choices=spec.board_ids(), default=spec.default_board(),
                     help="PCB whose USB-C position sets the notch (spec/boards.json); default: %(default)s")
     args = ap.parse_args()
 
-    cmds = build_solidcraft_commands(args.board)
     usb_x, usb_w = usb_notch_print(args.board)
-    script_path = OUT / "maru60-hhkb-unibody-draft.script.json"
-    design_path = OUT / "maru60-hhkb-unibody-draft.solidcraft"
-    step_path = OUT / "maru60-hhkb-unibody-draft.step"
-    threemf_raw = OUT / "solidcraft-export.3mf"
-    eval_path = OUT / "solidcraft-eval.json"
-
-    script_path.write_text(json.dumps({"commands": cmds}, indent=2) + "\n")
-
-    if not (args.reuse_solidcraft and design_path.exists() and step_path.exists() and threemf_raw.exists() and eval_path.exists()):
-        print(f"Running SolidCraft headless engine ({len(cmds)} commands) -> {design_path.name}")
-        subprocess.run(
-            [
-                str(SOLIDCRAFT_CLI),
-                "run",
-                str(script_path),
-                "--save",
-                str(design_path),
-                "--out",
-                str(step_path),
-                "--out",
-                str(threemf_raw),
-                "--timings",
-                "--json-out",
-                str(OUT / "solidcraft-timings.json"),
-            ],
-            check=True,
-        )
-        subprocess.run(
-            [str(SOLIDCRAFT_CLI), "eval", "--in", str(design_path), "--json-out", str(eval_path)],
-            check=True,
-        )
-    sc_eval = json.loads(eval_path.read_text())
-    print("SolidCraft B-rep bodies:", [(b["name"], round(b["volume_mm3"], 1), b["faces"]) for b in sc_eval["bodies"]])
-
-    scene = trimesh.load(threemf_raw, force="scene")
-    assert isinstance(scene, trimesh.Scene)
-    raw_meshes = list(scene.dump(concatenate=False))
-    raw_tms = [m for m in raw_meshes if isinstance(m, trimesh.Trimesh)]
-    assert len(raw_tms) == 2, f"Expected 2 bodies, got {len(raw_tms)}"
-
-    def to_manifold(tm: trimesh.Trimesh) -> md.Manifold:
-        tm = tm.copy()
-        tm.merge_vertices(digits_vertex=5)
-        mf = md.Manifold(md.Mesh64(np.asarray(tm.vertices, dtype=np.float64), np.asarray(tm.faces, dtype=np.uint64)))
-        assert mf.status() == md.Error.NoError, mf.status()
-        return mf
+    left_mf, right_mf = build_halves(args.board)
+    for name, mf in (("LeftHalf", left_mf), ("RightHalf", right_mf)):
+        assert mf.status() == md.Error.NoError and len(mf.decompose()) == 1, (name, mf.status(), len(mf.decompose()))
 
     def to_trimesh(mf: md.Manifold) -> trimesh.Trimesh:
-        # Welding on a 1e-5 grid also exposes zero-width slits (pinched surfaces) as open edges.
-        d = mf.simplify(1e-5).to_mesh64()
-        tm = trimesh.Trimesh(d.vert_properties[:, :3], d.tri_verts)
-        tm.merge_vertices(digits_vertex=5)
+        # Coplanar cut faces (the pad undercuts and the wrist hollows meet the skin underside at `SKIN_T`) leave pairs of
+        # zero-area triangles along their seams; drop them, then demand one closed shell of the same volume.
+        d = mf.simplify(1e-6).to_mesh64()
+        tm = trimesh.Trimesh(d.vert_properties[:, :3], d.tri_verts, process=False)
+        tm.merge_vertices(digits_vertex=6)
+        tm.update_faces(tm.nondegenerate_faces(height=1e-8))
+        tm.remove_unreferenced_vertices()
         assert tm.is_watertight and tm.is_winding_consistent, (tm.is_watertight, tm.is_winding_consistent)
+        assert len(tm.split(only_watertight=False)) == 1 and abs(tm.volume - mf.volume()) < 1e-3, (tm.volume, mf.volume())
         return tm
 
-    raw_tms.sort(key=lambda m: float(m.bounds[0][0]))
-    left_mf = to_manifold(raw_tms[0])
-    right_mf = to_manifold(raw_tms[1])
+    # Both halves in the print frame, as built: the mating gauge for verify_topcase.py and verify_bottomcase.py.
+    write_3mf(OUT / "halves-world.3mf", "Maru60 HHKB top case halves, print frame (as built)",
+              [("LeftHalf", to_trimesh(left_mf)), ("RightHalf", to_trimesh(right_mf))], fine_layer_z=None)
 
     seated_interference = float((left_mf ^ right_mf).volume())
     disengaged_overlap = float((left_mf.translate([0.0, 0.0, 17.5]) ^ right_mf).volume())
@@ -1208,9 +735,7 @@ def main() -> None:
 
     report = {
         "version": "v7.10-front-row-bumpons",
-        "generator": "SolidCraft v0.22.0 parametric timeline + 28px/mm gasket metrology",
-        "solidcraft_design": str(design_path.relative_to(Path(__file__).resolve().parent)),
-        "step_export": str(step_path.relative_to(Path(__file__).resolve().parent)),
+        "generator": "manifold3d mesh CSG (build_topcase_draft.py) + 28px/mm gasket metrology",
         "strike_pocket_spec_mm": {
             "pocket_width": 2 * STRIKE_POCKET_HALF_W,
             "strike_plate_length": 2 * STRIKE_PLATE_HALF_LEN,
@@ -1293,15 +818,13 @@ def main() -> None:
         },
         "bodies": [
             {
-                "name": b["name"],
-                "volume_mm3": round(float(b["volume_mm3"]), 2),
-                "mass_petg_g": round(float(b["volume_mm3"]) * 1.27e-3, 1),
-                "faces": b["faces"],
-                "print_plate_bounds_mm": np.round(
-                    (left_plate_tm if b["name"] == "LeftHalf" else right_plate_tm).bounds, 2
-                ).tolist(),
+                "name": name,
+                "volume_mm3": round(mf.volume(), 2),
+                "mass_petg_g": round(mf.volume() * 1.27e-3, 1),
+                "triangles": mf.num_tri(),
+                "print_plate_bounds_mm": np.round(tm.bounds, 2).tolist(),
             }
-            for b in sc_eval["bodies"]
+            for name, mf, tm in (("LeftHalf", left_mf, left_plate_tm), ("RightHalf", right_mf, right_plate_tm))
         ],
         "installed_assembly_extents_mm": np.round(
             trimesh.util.concatenate([left_inst_tm, right_inst_tm]).extents, 2

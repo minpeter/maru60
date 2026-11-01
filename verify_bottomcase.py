@@ -1,6 +1,6 @@
 """Mating and printability checks for the Maru60 HHKB bottom-case draft (build_bottomcase_draft.py).
 
-Run after both builds: the printed top case (topcase-draft/solidcraft-export.3mf, the same pocket as the stock one) is
+Run after both builds: the printed top case (topcase-draft/halves-world.3mf, the same pocket as the stock one) is
 the mating gauge, and the stock parts come from spec/: INKC 6095(gas) plate, silicone caps, strike plates and tongues,
 ball-catch bodies, a GH60 PCB with its bottom-side parts and USB-C plug, battery-bay filler, decoration plate, bumpons.
 Writes bottomcase-draft/verification.json.
@@ -50,7 +50,7 @@ def main() -> None:
         sc = trimesh.load(OUT / f"maru60-hhkb-bottomcase-{name}.3mf", force="scene")
         assert len(sc.geometry) == n_obj and np.all(sc.bounds[0] >= -1e-6) and np.all(sc.bounds[1] <= 256.0), name
 
-    sc = trimesh.load(ROOT / "topcase-draft" / "solidcraft-export.3mf", force="scene")
+    sc = trimesh.load(ROOT / "topcase-draft" / "halves-world.3mf", force="scene")
     top_mf = md.Manifold.batch_boolean([to_manifold(t) for t in sc.dump(concatenate=False)], md.OpType.Add)
     world = {name: to_manifold(trimesh.load_mesh(OUT / f"{name}-world.stl")) for name in parts}
     bottom = world["bottom-left"] + world["bottom-right"]
