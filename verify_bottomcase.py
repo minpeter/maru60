@@ -148,7 +148,7 @@ def main() -> None:
 
     # 6. Battery-bay filler (INKC drawing, 4.5 mm) drops onto the floor of the 4.69 mm bay, its top below the cavity
     #    floor; the decoration plate (3 mm) sits in its underside recess within the desk face; >= 1.0 mm of material
-    #    between that recess and the bay, and over each bumpon pocket.
+    #    between that recess and the bay (outside the four screw holes), and over each bumpon pocket.
     fil = spec.outline("battery_bay_filler")
     bay = REPORT["plate_frame"]["battery_bay"]
     fx0, fy0 = (bay[0] + bay[2]) / 2 - fil["bbox"][2] / 2, (bay[1] + bay[3]) / 2 - fil["bbox"][3] / 2
@@ -159,6 +159,10 @@ def main() -> None:
     deco_t, deco_d = bc.DECO["thickness"], bc.DECO_RECESS  # the plate stands deco_t - deco_d proud of the desk face
     deco = bc.from_print(bc.prism(deco_poly, deco_d - deco_t, deco_d - 0.01))
     deco_cover = bc.from_print(bc.prism(deco_poly.buffer(bc.DECO_CLEAR), deco_d + 0.05, deco_d + 1.0))
+    screws = bc.deco_screws_print()
+    screw_holes = md.Manifold.batch_boolean([bc.from_print(md.Manifold.cylinder(
+        2.0, bc.DECO_SCREW_HOLE_D / 2 + 0.05, bc.DECO_SCREW_HOLE_D / 2 + 0.05, 32).translate([*s["print"], deco_d]))
+        for s in screws], md.OpType.Add)
     assert deco_t - deco_d < top.BUMPON_H - top.POCKET_DEPTH - 1.0, "weight plate stands within 1 mm of the desk"
     pocket_r = top.POCKET_D / 2
     bumpons = [bc.from_print(md.Manifold.cylinder(top.BUMPON_H, top.BUMPON_D_MAX / 2, top.BUMPON_D_MAX / 2, 64)
@@ -174,7 +178,7 @@ def main() -> None:
     fits = {
         "filler_overlap_mm3": vol(filler ^ bottom),
         "deco_plate_overlap_mm3": vol(deco ^ bottom),
-        "deco_roof_1mm_void_mm3": vol(deco_cover - bottom),
+        "deco_roof_1mm_void_mm3": vol(deco_cover - bottom - screw_holes),
         "bumpon_overlap_mm3": [vol(b ^ bottom) for b in bumpons],
         "bumpon_roof_1mm_void_mm3": [vol(r - bottom) for r in roofs],
         "bumpon_wall_1mm_void_mm3": [vol(w - bottom) for w in walls],
@@ -184,6 +188,37 @@ def main() -> None:
     assert fits["deco_roof_1mm_void_mm3"] < 0.05, fits
     assert max(fits["bumpon_overlap_mm3"]) < 0.01 and max(fits["bumpon_roof_1mm_void_mm3"]) < 0.05, fits
     assert max(fits["bumpon_wall_1mm_void_mm3"]) < 0.05, fits
+
+    # 6b. Weight-plate screws: four M2 from inside, through the floor into the plate's blind tapped holes (photo-read,
+    #     0.5 mm float). A Ø4.0 x 2.0 head (socket cap, the largest common M2 head) on its counterbore floor and the
+    #     Ø2.0 shank clear the case centred and 0.45 mm off in any direction; the head stays >= 1.5 mm below the cavity
+    #     floor; >= 1.2 mm of thread in the plate with the tip >= 1.0 mm short of its outer face; each hole >= 2.5 mm
+    #     inside the plate edge; two screws per half, each counterbore >= 2 mm from the seam.
+    head_h, head_d, shank_d, float_xy = 2.0, 4.0, 2.0, 0.45
+    left_region = bc.left_region_print()
+    screw_report = []
+    for s in screws:
+        (px, py), z0 = s["print"], s["cbore_floor_z"]
+        overlaps = []
+        for dx, dy in ((0.0, 0.0), (float_xy, 0.0), (-float_xy, 0.0), (0.0, float_xy), (0.0, -float_xy)):
+            head = md.Manifold.cylinder(head_h, head_d / 2, head_d / 2, 48).translate([px + dx, py + dy, z0 + 0.01])
+            shank = md.Manifold.cylinder(z0 - deco_d + 0.5, shank_d / 2, shank_d / 2, 32).translate(
+                [px + dx, py + dy, deco_d - 0.5])
+            overlaps.append(vol(bc.from_print(head + shank) ^ bottom))
+        tip_z = z0 - bc.DECO_SCREW_LEN
+        point = sg.Point(px, py)
+        screw_report.append({
+            "plate_xy": s["plate"], "half": "left" if left_region.contains(point) else "right",
+            "overlap_mm3_centred_and_shifted": overlaps,
+            "head_top_below_cavity_floor_mm": round(s["cavity_floor_z"] - (z0 + head_h), 2),
+            "thread_in_plate_mm": round(deco_d - tip_z, 2), "tip_to_plate_outer_face_mm": round(tip_z - (deco_d - deco_t), 2),
+            "hole_to_plate_edge_mm": round(deco_poly.exterior.distance(point) - shank_d / 2, 2),
+            "cbore_to_seam_mm": round(left_region.exterior.distance(point) - bc.DECO_SCREW_CBORE_D / 2, 2)})
+    for r in screw_report:
+        assert max(r["overlap_mm3_centred_and_shifted"]) < 0.01, r
+        assert r["head_top_below_cavity_floor_mm"] >= 1.5 and r["thread_in_plate_mm"] >= 1.2, r
+        assert r["tip_to_plate_outer_face_mm"] >= 1.0 and r["hole_to_plate_edge_mm"] >= 2.5 and r["cbore_to_seam_mm"] >= 2.0, r
+    assert sorted(r["half"] for r in screw_report) == ["left", "left", "right", "right"], screw_report
 
     # 7. One desk plane: in the print frame the bottom-case underside and the wrist-rest pad faces both lie at Z' = 0.
     to_p = bc.TO_PRINT
@@ -322,6 +357,7 @@ def main() -> None:
         "ball_catches": catch_gauge,
         "pcb": {"gh60_pcb_and_usb_free_mm3": pcb_free, "usb_body_to_floor_mm": floor_gap, "usb_plug_free_mm3": plug_free},
         "drop_in_parts": fits,
+        "weight_plate_screws": screw_report,
         "desk_plane": desk,
         "tray_and_base": tray_base,
         "split_seam": seam,

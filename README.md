@@ -399,9 +399,10 @@ from the parts it mates with; the photos set the layout.
 | Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
 | 140 × 45 mm R2 battery bay, 4.69 mm deep, back centre | Length, width, radius: INKC post (which gives 4.5 deep); depth: owner's caliper on the stock bay; position from the owner's photos. The 4.5 mm filler rests on the bay floor, 0.19 mm under the cavity floor |
 | Steel weight plate recess, 2.3 mm deep (the 3 mm plate stands 0.7 mm proud, 1.3 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. The plate's centre bump lies over the front of the bay: 2.3 mm leaves 1.03 mm of floor between them, 2.5 mm would leave 0.83 and a flush 3.0 mm recess 0.33 |
+| Four weight-plate screws from inside, as on the stock case: Ø3.0 holes through the recess roof, Ø5.4 counterbores from the cavity floor leaving 2.5 mm of floor under each head. Two per plate end, 8.8 / 38.9 mm in from the end and 4.8 / 24.7 mm from the straight back edge; two in each half | The stock plate's blind tapped holes, read off the owner's inside photo (IMG_0474) on the plate outline, ±0.5 mm; the holes float 0.5 mm per side. M2 × 4 goes 1.5 mm into the plate and stops 1.5 mm short of its outer face; the head sits 2.3–4.4 mm below the cavity floor |
 | USB-C slot | Same centre and width as the top-case notch (`--board`) |
 | ㄴㄱ split: the seam runs through the back-right catch (53.75 mm right of centre), crosses the floor 37.3 mm behind the front rail face, and leaves through the front-left catch (52.73 mm left of centre) | Owner. Both seam catches bridge it with one M2 screw in each half; the other two stay in one half. Staggered against the top-case seams |
-| Hybrid joint: five line-to-line dovetails (three across the floor, one on each leg) that slide together normal to the desk face and lock both in-plane directions, plus the two seam catches, glue and the weight plate | Top-case joint profile (5.2/6.6 mm half widths, 6.0 mm projection). Where the back leg runs under the battery bay and weight-plate recess the floor is only 1.6–4.4 mm, so that stretch is a glued butt that the taped plate spans |
+| Hybrid joint: five line-to-line dovetails (three across the floor, one on each leg) that slide together normal to the desk face and lock both in-plane directions, plus the two seam catches, glue and the weight plate | Top-case joint profile (5.2/6.6 mm half widths, 6.0 mm projection). Where the back leg runs under the battery bay and weight-plate recess the floor is only 1.6–4.6 mm, so that stretch is a straight glued butt; the weight plate spans it, screwed to each half with two of its four screws |
 
 Z is measured from the top case's top face, as in the top-case evidence. The
 catches stand on their notch floor with the barrels 0.60 mm under the strike
@@ -412,16 +413,18 @@ flush with the rim top, the balls would sit below the tongue tip.
 | --- | --- |
 | [Fit coupon — 3MF](models/maru60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front step, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 30 min / 10 g |
 | [Joint test — 3MF](models/maru60-hhkb-bottomcase-joint-test.3mf) | Both sides of the middle floor dovetail, 44 × 32 mm cut-outs. 0 h 18 min / 6 g |
-| [Left half — 3MF](models/maru60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot, back-left catch. 206 × 112 mm, 3 h 29 min / 70 g |
-| [Right half — 3MF](models/maru60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 44 min / 55 g |
+| [Left half — 3MF](models/maru60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot, back-left catch. 206 × 112 mm, 3 h 37 min / 71 g |
+| [Right half — 3MF](models/maru60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 52 min / 56 g |
 
 Print desk face down, no supports or brim; owner's top-case settings
 (Bambu Studio CLI estimates above). Print the joint test first: the two
 pieces should press together by hand along the desk-face normal and not move
-sideways. Join the halves with glue in the seam, screw the two seam catches
-across it, then tape the steel weight plate over the back leg. Move the four
-catches from the stock case with their M2 screws. Press four SJ5012 bumpons
-into the underside pockets.
+sideways. Join the halves with glue in the seam and screw the two seam catches
+across it. Lay the steel weight plate in its recess and screw it on from inside
+with four **M2 × 4** screws (pan or socket head, up to Ø4.0); any longer screw
+could bottom out in the plate's blind holes. Move the four catches from the
+stock case with their M2 screws. Press four SJ5012 bumpons into the underside
+pockets.
 
 Fit on the coupon, in order: the rim slides into the top-case pocket and the
 top case sits flat on the rim; the catch clicks onto its strike and holds;
@@ -438,7 +441,9 @@ against the printed top case and virtual stock parts: free nesting at ±0.10 mm
 with rail-only bearing, no material outside the rail outline, both ends open, the plate free through 1.0 mm of travel, all 12 cap
 flanges bearing, catches clear of both cases, a GH60 PCB with 2.0 mm
 bottom-side parts and the USB-C receptacle, the cable plug through both
-cases, the filler, the decoration plate and four corner bumpons, one desk plane with
+cases, the filler, the decoration plate and its four screws (head and shank
+clear of the case centred and 0.45 mm off, thread in the plate, two per half),
+four corner bumpons, one desk plane with
 the wrist rest, the split seam (no overlap when seated or along the insertion
 path, over 40 mm³ of collision for any 0.3 mm sideways shift, and one screw
 per half in each seam catch), and 0.20 mm layers without islands or
@@ -447,8 +452,8 @@ The [report](evidence/bottomcase-report.json) lists every level and position.
 
 Not measured, so the coupon decides: cap-seat level (sets gasket preload),
 catch notch depth and the catch screw pitch (photos read 25.5–26.8 mm). The
-stock floor screws that hold the weight plate are not modelled: fix the plate
-with double-sided tape.
+weight-plate screw positions are photo-read, not measured; the 0.5 mm float in
+each hole covers that.
 
 ## License and design history
 

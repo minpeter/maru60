@@ -120,4 +120,4 @@ strikes are nearly symmetric, so it could not reveal the v6.2 mirror image.
 by the build scripts; regenerate them by hand if the geometry changes. The
 model figures (outline overlay, strike-pocket fit, seams, bottom-case figures)
 were last re-rendered from top case v7.10 (manifold3d build) and bottom case
-v0.10; the measurement guides are the ones sent to the owner.
+v0.11; the measurement guides are the ones sent to the owner.
