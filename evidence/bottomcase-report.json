@@ -298,6 +298,67 @@
     "from_slope_edge": 6.5,
     "clear": 0.2
   },
+  "deco_screws": {
+    "thread": "M2",
+    "length": 4.0,
+    "hole_d": 3.0,
+    "cbore_d": 5.4,
+    "clamp": 2.5,
+    "sites": [
+      {
+        "plate": [
+          8.8,
+          30.8
+        ],
+        "print": [
+          -111.0,
+          -169.95
+        ],
+        "world_x": -111.0,
+        "cbore_floor_print_z": 4.8,
+        "cavity_floor_print_z": 11.21
+      },
+      {
+        "plate": [
+          38.9,
+          10.9
+        ],
+        "print": [
+          -80.9,
+          -150.05
+        ],
+        "world_x": -80.9,
+        "cbore_floor_print_z": 4.8,
+        "cavity_floor_print_z": 9.118
+      },
+      {
+        "plate": [
+          200.7,
+          10.9
+        ],
+        "print": [
+          80.9,
+          -150.05
+        ],
+        "world_x": 80.9,
+        "cbore_floor_print_z": 4.8,
+        "cavity_floor_print_z": 9.118
+      },
+      {
+        "plate": [
+          230.8,
+          30.8
+        ],
+        "print": [
+          111.0,
+          -169.95
+        ],
+        "world_x": 111.0,
+        "cbore_floor_print_z": 4.8,
+        "cavity_floor_print_z": 11.21
+      }
+    ]
+  },
   "rim_clear": 0.15,
   "split": {
     "shape": "\u3134\u3131",
@@ -384,7 +445,7 @@
         111.89,
         22.33
       ],
-      "volume_cm3": 111.8
+      "volume_cm3": 111.5
     },
     "bottom-right": {
       "print_extents": [
@@ -392,7 +453,7 @@
         111.89,
         22.33
       ],
-      "volume_cm3": 91.5
+      "volume_cm3": 91.2
     },
     "coupon-front-left": {
       "print_extents": [

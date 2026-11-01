@@ -16,8 +16,9 @@ geometry comes from the parts it mates with, plus the owner's photos IMG_0462-04
     top-case strike pocket. The catch barrels rise past the rim top into that pocket: with the catch flush the balls
     would sit below the 12.7 strike-tongue tip; the stock pocket's end walls and screw-head lobes fit a raised catch.
   - Cavity floor under the MX stack (plate top 7.50, PCB top 12.50); 140 x 45 battery bay, 4.69 deep as the stock bay
-    (owner caliper; published 4.5), at the back, back decoration plate recess (INKC drawing) on the underside, USB-C
-    slot under the top-case notch.
+    (owner caliper; published 4.5), at the back, back decoration plate recess (INKC drawing) on the underside with four
+    counterbored M2 holes from the cavity to screw the steel plate on as the stock case does, USB-C slot under the
+    top-case notch.
   - Split at X = 0 into two halves for a 256 mm bed, each printed desk face down without supports.
 
 Frames: the top-case print frame (`world`: X mirrored from the plate frame, Y from the wrist-rest front, Z_p down from the
@@ -81,11 +82,17 @@ DECO_RECESS = 2.3        # Recess depth: the 3 mm plate stands 0.7 proud of the 
                          # 2.0). The plate's centre bump lies over the front of the 4.69 deep battery bay: 2.3 leaves
                          # 1.03 mm of floor between them; 2.5 left 0.83 and a flush 3.0 would leave 0.33
 DECO = spec.outline("back_deco_plate")
+DECO_SCREWS = spec.value("bottom.weight_plate_holes")  # Tapped holes of the stock plate, plate-outline frame (photo)
+DECO_SCREW_HOLE_D = 3.0  # Through the floor for the M2 shank: 0.5 mm float per side covers the photo-read positions
+DECO_SCREW_CBORE_D = 5.4  # Counterbore from the cavity side for an M2 head up to 4.0 (socket cap 3.8, pan 4.0), same float
+DECO_SCREW_CLAMP = 2.5  # Floor under each head: an M2 x 4 screw reaches 1.5 mm into the 3 mm plate, its tip 1.5 short
+DECO_SCREW_LEN = 4.0    # of the outer face (the stock holes are blind); the head sits 2.2-4.3 mm below the cavity floor
 # ㄴㄱ split (owner): the seam runs through one back and one front ball catch, so each of those two stock catch bodies
 # bridges it with one M2 screw in each half; between them it crosses the floor in front of the battery bay. Staggered
 # against the top-case seams (back at its BL strike, front at X = 0). Hybrid joint as on the top case: the two catch
 # bodies, line-to-line plan dovetails on the floor seam (the halves slide together along the print Z axis, normal to
-# the desk face, and the tongues lock both in-plane directions), glue, and the steel weight plate under the back leg.
+# the desk face, and the tongues lock both in-plane directions), glue, and the steel weight plate under the back leg,
+# screwed to each half with two of its four M2 screws.
 _STRIKES_W = {n: top.pw(x, y) for n, x, y in top.strike_centers_p()}
 SEAM_BACK_CATCH = next(n for n, (x, y) in _STRIKES_W.items() if y > 150.0 and x < 0.0)
 SEAM_FRONT_CATCH = next(n for n, (x, y) in _STRIKES_W.items() if y < 150.0 and x > 0.0)
@@ -95,8 +102,8 @@ DOVETAIL = {"neck_half": 5.2, "head_half": 6.6, "proj": 6.0, "neck_taper": 0.55}
 SEAM_DOVETAILS = [("cross", -30.0, "left"), ("cross", 0.0, "right"), ("cross", 30.0, "left"),
                   ("back", 130.0, "left"), ("front", 106.0, "right")]
 # ^ (seam leg, world X on the crossing / world Y on a leg, half carrying the tongue). Floor at the seam: crossing 6.2 mm,
-#   front leg 3.2-6.2 mm (tongue in ~4.7), back leg ~7 mm at its tongue but only 1.8-4.3 mm where it runs under the
-#   battery bay and the weight-plate recess: a plain glued butt there, which the taped steel plate spans.
+#   front leg 3.2-6.2 mm (tongue in ~4.7), back leg ~7 mm at its tongue but only 1.6-4.6 mm where it runs under the
+#   battery bay and the weight-plate recess: a straight glued butt there, which the screwed steel plate spans.
 JOINT_TEST_BOX = (-22.0, 104.0, 22.0, 136.0)  # World XY around the middle crossing tongue: the joint test pair
 BED = 256.0
 
@@ -247,12 +254,33 @@ def bumpon_centres_world() -> list[tuple[float, float]]:
     return [(x, Y_FRONT + d if edge == "front" else Y_BACK - d) for x, edge, d in BUMPON_SITES]
 
 
+def deco_to_print(x: float, y: float) -> tuple[float, float]:
+    """Weight-plate outline frame (X along its length, Y 0 at the bump tip) -> print frame (X, Y'): centred on X = 0, its
+    straight back edge `DECO_FROM_SLOPE` in front of the slope's desk-face edge (print Y' grows toward the front)."""
+    y_edge = print_y(Y_BACK - BACK_BEVEL_INSET) + DECO_FROM_SLOPE
+    return x - DECO["bbox"][2] / 2, y_edge + DECO["bbox"][3] - y
+
+
 def deco_poly_print() -> Any:
     """Back decoration plate outline (INKC drawing) in the print frame, true size on the desk face."""
-    pts = spec.outline_points("back_deco_plate")
-    w, h = DECO["bbox"][2], DECO["bbox"][3]
-    y_edge = print_y(Y_BACK - BACK_BEVEL_INSET) + DECO_FROM_SLOPE  # print Y' grows toward the front
-    return orient(sg.Polygon([(x - w / 2, y_edge + (h - y)) for x, y in pts]))
+    return orient(sg.Polygon([deco_to_print(x, y) for x, y in spec.outline_points("back_deco_plate")]))
+
+
+def cavity_floor_print_z(y_p: float) -> float:
+    """Print Z' of the cavity floor (Z_p = `FLOOR_ZP`) above print Y'."""
+    y = -(y_p + FLOOR_ZP * SIN) / COS
+    return SIN * y - COS * FLOOR_ZP + DESK_A * COS
+
+
+def deco_screws_print() -> list[dict[str, Any]]:
+    """Weight-plate screw axes, normal to the desk face like the plate's tapped holes: print (X, Y'), the counterbore
+    floor `DECO_SCREW_CLAMP` above the recess roof, and the cavity floor Z' on the axis."""
+    sites = []
+    for x, y in DECO_SCREWS["holes"]:
+        px, py = deco_to_print(x, y)
+        sites.append({"plate": [x, y], "print": [px, py], "cbore_floor_z": DECO_RECESS + DECO_SCREW_CLAMP,
+                      "cavity_floor_z": cavity_floor_print_z(py)})
+    return sites
 
 
 def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
@@ -288,6 +316,14 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         cuts.append(from_print(md.Manifold.cylinder(top.POCKET_DEPTH + 1.0, pocket_r, pocket_r, 64).translate(
             [xw, print_y(yw), -1.0])))
     cuts.append(from_print(prism(deco_poly_print().buffer(DECO_CLEAR, quad_segs=8), -1.0, DECO_RECESS)))
+    # Weight-plate screws from inside: a through hole from the recess roof and a counterbore down from the cavity floor.
+    hole_r, cbore_r = DECO_SCREW_HOLE_D / 2, DECO_SCREW_CBORE_D / 2
+    for s in deco_screws_print():
+        (px, py), z0 = s["print"], s["cbore_floor_z"]
+        cuts.append(from_print(md.Manifold.cylinder(DECO_SCREW_CLAMP + 2.0, hole_r, hole_r, 32).translate(
+            [px, py, DECO_RECESS - 1.0])))
+        cuts.append(from_print(md.Manifold.cylinder(s["cavity_floor_z"] + 1.0 - z0, cbore_r, cbore_r, 48).translate(
+            [px, py, z0])))
     body = body - md.Manifold.batch_boolean(cuts, md.OpType.Add)
 
     report = {
@@ -308,6 +344,11 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "deco_recess_print": {"outline_bounds": [round(v, 3) for v in deco_poly_print().bounds], "depth": DECO_RECESS,
                               "plate_thickness": DECO["thickness"], "from_slope_edge": DECO_FROM_SLOPE,
                               "clear": DECO_CLEAR},
+        "deco_screws": {"thread": DECO_SCREWS["thread"], "length": DECO_SCREW_LEN, "hole_d": DECO_SCREW_HOLE_D,
+                        "cbore_d": DECO_SCREW_CBORE_D, "clamp": DECO_SCREW_CLAMP,
+                        "sites": [{"plate": s["plate"], "print": [round(v, 3) for v in s["print"]],
+                                   "world_x": round(s["print"][0], 3), "cbore_floor_print_z": s["cbore_floor_z"],
+                                   "cavity_floor_print_z": round(s["cavity_floor_z"], 3)} for s in deco_screws_print()]},
         "rim_clear": RIM_CLEAR,
         "split": {"shape": "ㄴㄱ", "back_catch": SEAM_BACK_CATCH, "back_x_world": SEAM_BACK_X,
                   "front_catch": SEAM_FRONT_CATCH, "front_x_world": SEAM_FRONT_X, "cross_y_world": SEAM_CROSS_Y,
