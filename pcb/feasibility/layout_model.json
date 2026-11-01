@@ -1,5 +1,5 @@
 {
-  "schema": "maru60-layout-model/2",
+  "schema": "maru60-layout-model/3",
   "status": "draft",
   "units": "mm",
   "reference": {
@@ -13,7 +13,7 @@
     "plate_frame_transform": "x_plate = x_gh60 + 0.4525; y_plate = 101.06775 - y_gh60",
     "top_row_plate_y_mm": 91.8688,
     "row_pitch_mm": 19.05,
-    "source": "spec/boards.json GH60 outline and spec/rule60-v3-outlines.json Esc center/pitch; keyboard coordinate sites are nominal modeling assumptions pending measured PCB/plate geometry."
+    "source": "spec/boards.json GH60 outline and spec/rule60-v3-outlines.json Esc center/pitch; key coordinates are nominal modeling assumptions, pending measured PCB/plate geometry."
   },
   "rows": [
     {
@@ -253,13 +253,13 @@
     "WK": {
       "7": {
         "total_u": 15,
-        "keys": [
+        "positions": [
           [
             "LCtrl",
             1.5
           ],
           [
-            "LMeta",
+            "LWin",
             1
           ],
           [
@@ -275,7 +275,7 @@
             1.5
           ],
           [
-            "Menu/Fn",
+            "RWin",
             1
           ],
           [
@@ -285,14 +285,14 @@
         ]
       },
       "6.25": {
-        "total_u": 13.75,
-        "keys": [
+        "total_u": 15,
+        "positions": [
           [
             "LCtrl",
             1.25
           ],
           [
-            "LMeta",
+            "LWin",
             1.25
           ],
           [
@@ -305,6 +305,10 @@
           ],
           [
             "RAlt",
+            1.25
+          ],
+          [
+            "RWin",
             1.25
           ],
           [
@@ -321,7 +325,7 @@
     "WKL": {
       "7": {
         "total_u": 15,
-        "keys": [
+        "positions": [
           [
             "LCtrl",
             1.5
@@ -354,7 +358,7 @@
       },
       "6.25": {
         "total_u": 15.25,
-        "keys": [
+        "positions": [
           [
             "LCtrl",
             1.5
@@ -389,7 +393,7 @@
     "HHKB": {
       "7": {
         "total_u": 14,
-        "keys": [
+        "positions": [
           [
             "LCtrl",
             1.5
@@ -422,7 +426,7 @@
       },
       "6.25": {
         "total_u": 14.25,
-        "keys": [
+        "positions": [
           [
             "LCtrl",
             1.5
@@ -491,10 +495,10 @@
       "plate-mount"
     ],
     "socket_geometry_available": false,
-    "plate_geometry_available": false
+    "plate_geometry_available": false,
+    "WKL_blocker_semantics": "LWinBlock/RWinBlock are blank keycap positions, not switch sites."
   },
   "excluded_variants": [
-    "split spacebar is not part of the requested feature set or this model"
+    "split spacebar is not requested and is not modeled"
   ]
 }
-

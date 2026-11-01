@@ -15,18 +15,19 @@
     "split/non-split right Shift",
     "stepped/non-stepped Caps"
   ],
-  "excluded": "Split spacebar was not requested and is not modeled.",
+  "excluded": "Split spacebar not requested; not modeled.",
   "checks": [
-    "all six explicit seven-position bottom-row definitions match expected key widths and order",
-    "switch centers inside the nominal 285x94.6mm board profile",
-    "plate/GH60 transform round-trip within 0.001mm",
-    "minimum same-row switch-center pitch �0.5U",
-    "Backspace, right Shift, and stepped Caps site selection matches each flag"
+    "all six explicit bottom-row position counts, orders, and widths match expected values",
+    "WK 6.25U has 8 positions (7 modifiers + 6.25U spacebar) and totals 15U",
+    "blank WKL blockers are not counted as switch sites",
+    "active modeled switch centers inside nominal 285x94.6mm profile",
+    "plate/GH60 coordinate round-trip within 0.001mm",
+    "minimum same-row active switch-site pitch �0.5U"
   ],
-  "expected_bottom_row_width_u": {
+  "bottom_row_width_u": {
     "WK": {
       "7": 15,
-      "6.25": 13.75
+      "6.25": 15
     },
     "WKL": {
       "7": 15,
@@ -37,12 +38,26 @@
       "6.25": 14.25
     }
   },
+  "bottom_position_counts": {
+    "WK": {
+      "7": 7,
+      "6.25": 8
+    },
+    "WKL": {
+      "7": 7,
+      "6.25": 7
+    },
+    "HHKB": {
+      "7": 7,
+      "6.25": 7
+    }
+  },
   "physical_pcb_combinations_validated": false,
   "clearance": "NOT CHECKED: no licensed hot-swap socket geometry, component footprints, plate CAD, or case solids available.",
   "socket_geometry_available": false,
   "sample": {
     "id": "WK-6.25U",
-    "switch_sites": 60
+    "bottom_positions": 8,
+    "switch_sites": 61
   }
 }
-

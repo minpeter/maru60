@@ -20,7 +20,7 @@
 
 `node pcb/feasibility/validate_layout.mjs` passes 48 **declared layout/option cases**: six explicit bottom-row definitions crossed with split/non-split Backspace, split/non-split right Shift, and stepped/non-stepped Caps. The checks confirm the named row widths/order, modeled switch-center bounds, plate↔GH60 transform round-trip, and minimum modeled same-row spacing. This does not validate 48 physical PCB combinations.
 
-The standard WK 6.25U definition is seven positions: 1.25U Ctrl, Meta, Alt; 6.25U Space; 1.25U Alt, Menu/Fn, Ctrl = 13.75U. Other modeled totals: WK 7U 15U; WKL 6.25U 15.25U; WKL 7U 15U; HHKB 6.25U 14.25U; HHKB 7U 14U. Split spacebar is not included.
+The standard WK 6.25U definition is eight positions: 1.25U Ctrl, Win, Alt; 6.25U Space; 1.25U Alt, Win, Menu/Fn, Ctrl = 15U. Other modeled totals: WK 7U 15U; WKL 6.25U 15.25U; WKL 7U 15U; HHKB 6.25U 14.25U; HHKB 7U 14U. Split spacebar is not included.
 
 ## Mechanical provenance
 
