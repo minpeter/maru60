@@ -4,7 +4,7 @@ Upstream baseline: `emolitor/qmk_firmware`, branch `em-rp2350`, commit `431ed9ad
 
 The upstream RP2350 sample metadata explicitly sets `processor: RP2350`, `bootloader: rp2350`, and GPIO matrix pins. The fork author reports Pico 2 (RP2350A) USB enumeration, WS2812, and flash-backed EEPROM checks; this is their report, not Maru60 bench evidence. The branch contains Raw HID/VIA dynamic keymap support and the RP2350 flash driver.
 
-This subtree is an overlay scaffold, not a standalone QMK checkout. `keyboard.json` proposes a 5×15 matrix on GP0–GP19 and `rules.mk` enables VIA/dynamic keymaps. Pin assignments are candidates until schematic and routing review. The keymap matrix is a seed only; the complete VIA physical-layout definition for all alternate switch sites has not been authored.
+This subtree is an overlay scaffold, not a standalone QMK checkout. `keyboard.json` proposes a 5×15 matrix on GP0–GP19 and `rules.mk` enables VIA/dynamic keymaps. Pin assignments are candidates until schematic and routing review. The keymap matrix is a WK 7U seed only. The 7U WK/WKL/HHKB VIA physical layout definitions and switch-to-matrix mapping remain unfinished; there are no 6.25U variants in the v1 firmware scaffold.
 
 ## Not built or verified
 

@@ -1,0 +1,239 @@
+{
+  "fixture_schema": "maru60-qmk-layout-fixtures/1",
+  "sources": {
+    "WK_WKL": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_ansi_tsangan/info.json",
+    "HHKB": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_hhkb/info.json"
+  },
+  "coordinate_basis": {
+    "pitch_mm": 19.05,
+    "x_origin_gh60_mm": -0.3775,
+    "bottom_y_gh60_mm": 85.39875,
+    "bottom_y_plate_mm": 15.669,
+    "row_total_u": 15
+  },
+  "layouts": {
+    "WK": {
+      "segments": [
+        {
+          "name": "LCtrl",
+          "keycap_start_u": 0,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 0.75
+        },
+        {
+          "name": "LWin",
+          "keycap_start_u": 1.5,
+          "keycap_width_u": 1,
+          "kind": "key",
+          "switch_center_u": 2
+        },
+        {
+          "name": "LAlt",
+          "keycap_start_u": 2.5,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 3.25
+        },
+        {
+          "name": "Space",
+          "keycap_start_u": 4,
+          "keycap_width_u": 7,
+          "kind": "key",
+          "switch_center_u": 7.5
+        },
+        {
+          "name": "RAlt",
+          "keycap_start_u": 11,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 11.75
+        },
+        {
+          "name": "RWin",
+          "keycap_start_u": 12.5,
+          "keycap_width_u": 1,
+          "kind": "key",
+          "switch_center_u": 13
+        },
+        {
+          "name": "RCtrl",
+          "keycap_start_u": 13.5,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 14.25
+        }
+      ],
+      "all_centers_u": [
+        0.75,
+        2,
+        3.25,
+        7.5,
+        11.75,
+        13,
+        14.25
+      ],
+      "active_centers_u": [
+        0.75,
+        2,
+        3.25,
+        7.5,
+        11.75,
+        13,
+        14.25
+      ]
+    },
+    "WKL": {
+      "segments": [
+        {
+          "name": "LCtrl",
+          "keycap_start_u": 0,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 0.75
+        },
+        {
+          "name": "LWinBlock",
+          "keycap_start_u": 1.5,
+          "keycap_width_u": 1,
+          "kind": "blocker",
+          "switch_center_u": null
+        },
+        {
+          "name": "LAlt",
+          "keycap_start_u": 2.5,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 3.25
+        },
+        {
+          "name": "Space",
+          "keycap_start_u": 4,
+          "keycap_width_u": 7,
+          "kind": "key",
+          "switch_center_u": 7.5
+        },
+        {
+          "name": "RAlt",
+          "keycap_start_u": 11,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 11.75
+        },
+        {
+          "name": "RWinBlock",
+          "keycap_start_u": 12.5,
+          "keycap_width_u": 1,
+          "kind": "blocker",
+          "switch_center_u": null
+        },
+        {
+          "name": "RCtrl",
+          "keycap_start_u": 13.5,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 14.25
+        }
+      ],
+      "all_centers_u": [
+        0.75,
+        2,
+        3.25,
+        7.5,
+        11.75,
+        13,
+        14.25
+      ],
+      "active_centers_u": [
+        0.75,
+        3.25,
+        7.5,
+        11.75,
+        14.25
+      ]
+    },
+    "HHKB": {
+      "segments": [
+        {
+          "name": "LeftBlock",
+          "keycap_start_u": 0,
+          "keycap_width_u": 1.5,
+          "kind": "blocker",
+          "switch_center_u": null
+        },
+        {
+          "name": "LMeta",
+          "keycap_start_u": 1.5,
+          "keycap_width_u": 1,
+          "kind": "key",
+          "switch_center_u": 2
+        },
+        {
+          "name": "LAlt",
+          "keycap_start_u": 2.5,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 3.25
+        },
+        {
+          "name": "Space",
+          "keycap_start_u": 4,
+          "keycap_width_u": 7,
+          "kind": "key",
+          "switch_center_u": 7.5
+        },
+        {
+          "name": "RAlt",
+          "keycap_start_u": 11,
+          "keycap_width_u": 1.5,
+          "kind": "key",
+          "switch_center_u": 11.75
+        },
+        {
+          "name": "RMeta",
+          "keycap_start_u": 12.5,
+          "keycap_width_u": 1,
+          "kind": "key",
+          "switch_center_u": 13
+        },
+        {
+          "name": "RightBlock",
+          "keycap_start_u": 13.5,
+          "keycap_width_u": 1.5,
+          "kind": "blocker",
+          "switch_center_u": null
+        }
+      ],
+      "all_centers_u": [
+        0.75,
+        2,
+        3.25,
+        7.5,
+        11.75,
+        13,
+        14.25
+      ],
+      "active_centers_u": [
+        2,
+        3.25,
+        7.5,
+        11.75,
+        13
+      ]
+    }
+  },
+  "common_centers_gh60_mm": [
+    13.91,
+    37.7225,
+    61.535,
+    142.4975,
+    223.46,
+    247.2725,
+    271.085
+  ],
+  "stepped_caps": {
+    "keycap_outline_offset_u": 0,
+    "stem_center_offset_candidate_u": -0.25,
+    "status": "UNVALIDATED pending selected switch footprint/keycap/plate geometry."
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "schema": "maru60-layout-model/3",
+  "schema": "maru60-layout-model/5",
   "status": "draft",
   "units": "mm",
   "reference": {
@@ -253,208 +253,171 @@
     "WK": {
       "7": {
         "total_u": 15,
-        "positions": [
-          [
-            "LCtrl",
-            1.5
-          ],
-          [
-            "LWin",
-            1
-          ],
-          [
-            "LAlt",
-            1.5
-          ],
-          [
-            "Space",
-            7
-          ],
-          [
-            "RAlt",
-            1.5
-          ],
-          [
-            "RWin",
-            1
-          ],
-          [
-            "RCtrl",
-            1.5
-          ]
-        ]
-      },
-      "6.25": {
-        "total_u": 15,
-        "positions": [
-          [
-            "LCtrl",
-            1.25
-          ],
-          [
-            "LWin",
-            1.25
-          ],
-          [
-            "LAlt",
-            1.25
-          ],
-          [
-            "Space",
-            6.25
-          ],
-          [
-            "RAlt",
-            1.25
-          ],
-          [
-            "RWin",
-            1.25
-          ],
-          [
-            "Menu/Fn",
-            1.25
-          ],
-          [
-            "RCtrl",
-            1.25
-          ]
+        "validation_status": "validated against independent QMK fixture",
+        "segments": [
+          {
+            "name": "LCtrl",
+            "keycap_start_u": 0,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 0.75
+          },
+          {
+            "name": "LWin",
+            "keycap_start_u": 1.5,
+            "keycap_width_u": 1,
+            "kind": "key",
+            "switch_center_u": 2
+          },
+          {
+            "name": "LAlt",
+            "keycap_start_u": 2.5,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 3.25
+          },
+          {
+            "name": "Space",
+            "keycap_start_u": 4,
+            "keycap_width_u": 7,
+            "kind": "key",
+            "switch_center_u": 7.5
+          },
+          {
+            "name": "RAlt",
+            "keycap_start_u": 11,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 11.75
+          },
+          {
+            "name": "RWin",
+            "keycap_start_u": 12.5,
+            "keycap_width_u": 1,
+            "kind": "key",
+            "switch_center_u": 13
+          },
+          {
+            "name": "RCtrl",
+            "keycap_start_u": 13.5,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 14.25
+          }
         ]
       }
     },
     "WKL": {
       "7": {
         "total_u": 15,
-        "positions": [
-          [
-            "LCtrl",
-            1.5
-          ],
-          [
-            "LWinBlock",
-            1
-          ],
-          [
-            "LAlt",
-            1.5
-          ],
-          [
-            "Space",
-            7
-          ],
-          [
-            "RAlt",
-            1.5
-          ],
-          [
-            "RWinBlock",
-            1
-          ],
-          [
-            "RCtrl",
-            1.5
-          ]
-        ]
-      },
-      "6.25": {
-        "total_u": 15.25,
-        "positions": [
-          [
-            "LCtrl",
-            1.5
-          ],
-          [
-            "LWinBlock",
-            1.5
-          ],
-          [
-            "LAlt",
-            1.5
-          ],
-          [
-            "Space",
-            6.25
-          ],
-          [
-            "RAlt",
-            1.5
-          ],
-          [
-            "RWinBlock",
-            1.5
-          ],
-          [
-            "RCtrl",
-            1.5
-          ]
+        "validation_status": "validated against independent QMK fixture",
+        "segments": [
+          {
+            "name": "LCtrl",
+            "keycap_start_u": 0,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 0.75
+          },
+          {
+            "name": "LWinBlock",
+            "keycap_start_u": 1.5,
+            "keycap_width_u": 1,
+            "kind": "blocker",
+            "switch_center_u": null
+          },
+          {
+            "name": "LAlt",
+            "keycap_start_u": 2.5,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 3.25
+          },
+          {
+            "name": "Space",
+            "keycap_start_u": 4,
+            "keycap_width_u": 7,
+            "kind": "key",
+            "switch_center_u": 7.5
+          },
+          {
+            "name": "RAlt",
+            "keycap_start_u": 11,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 11.75
+          },
+          {
+            "name": "RWinBlock",
+            "keycap_start_u": 12.5,
+            "keycap_width_u": 1,
+            "kind": "blocker",
+            "switch_center_u": null
+          },
+          {
+            "name": "RCtrl",
+            "keycap_start_u": 13.5,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 14.25
+          }
         ]
       }
     },
     "HHKB": {
       "7": {
-        "total_u": 14,
-        "positions": [
-          [
-            "LCtrl",
-            1.5
-          ],
-          [
-            "LMeta",
-            1
-          ],
-          [
-            "LAlt",
-            1
-          ],
-          [
-            "Space",
-            7
-          ],
-          [
-            "RAlt",
-            1
-          ],
-          [
-            "RMeta",
-            1
-          ],
-          [
-            "RCtrl",
-            1.5
-          ]
-        ]
-      },
-      "6.25": {
-        "total_u": 14.25,
-        "positions": [
-          [
-            "LCtrl",
-            1.5
-          ],
-          [
-            "LMeta",
-            1.25
-          ],
-          [
-            "LAlt",
-            1.25
-          ],
-          [
-            "Space",
-            6.25
-          ],
-          [
-            "RAlt",
-            1.25
-          ],
-          [
-            "RMeta",
-            1.25
-          ],
-          [
-            "RCtrl",
-            1.5
-          ]
+        "total_u": 15,
+        "validation_status": "validated against independent QMK fixture",
+        "segments": [
+          {
+            "name": "LeftBlock",
+            "keycap_start_u": 0,
+            "keycap_width_u": 1.5,
+            "kind": "blocker",
+            "switch_center_u": null
+          },
+          {
+            "name": "LMeta",
+            "keycap_start_u": 1.5,
+            "keycap_width_u": 1,
+            "kind": "key",
+            "switch_center_u": 2
+          },
+          {
+            "name": "LAlt",
+            "keycap_start_u": 2.5,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 3.25
+          },
+          {
+            "name": "Space",
+            "keycap_start_u": 4,
+            "keycap_width_u": 7,
+            "kind": "key",
+            "switch_center_u": 7.5
+          },
+          {
+            "name": "RAlt",
+            "keycap_start_u": 11,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 11.75
+          },
+          {
+            "name": "RMeta",
+            "keycap_start_u": 12.5,
+            "keycap_width_u": 1,
+            "kind": "key",
+            "switch_center_u": 13
+          },
+          {
+            "name": "RightBlock",
+            "keycap_start_u": 13.5,
+            "keycap_width_u": 1.5,
+            "kind": "blocker",
+            "switch_center_u": null
+          }
         ]
       }
     }
@@ -487,18 +450,36 @@
       ]
     },
     "stepped_caps": {
-      "switch_center_offset_u": 0.25,
-      "envelope_u": 1.75
+      "keycap_outline_offset_u": 0,
+      "stem_center_offset_candidate_u": -0.25,
+      "status": "UNVALIDATED",
+      "reason": "Conventional stem-center offset candidate is -0.25U; confirm against selected manufacturer footprint, stepped keycap and plate; exclude from passing cases."
     },
     "stabilizer_options": [
       "PCB-mount",
       "plate-mount"
     ],
     "socket_geometry_available": false,
-    "plate_geometry_available": false,
-    "WKL_blocker_semantics": "LWinBlock/RWinBlock are blank keycap positions, not switch sites."
+    "plate_geometry_available": false
   },
   "excluded_variants": [
-    "split spacebar is not requested and is not modeled"
-  ]
+    "6.25U removed from v1 by user decision",
+    "split spacebar not requested"
+  ],
+  "scope": {
+    "spacebar_u": 7,
+    "layouts": [
+      "WK",
+      "WKL",
+      "HHKB"
+    ],
+    "six_point_two_five_u": false,
+    "split_spacebar": false,
+    "decision_history": "Earlier 6.25U options were considered; user chose 7U only for PCB v1."
+  },
+  "provenance": {
+    "mechanical_reference": "spec/boards.json GH60 outline, spec/rule60-v3-outlines.json Esc center/pitch",
+    "independent_qmk_fixtures": "pcb/feasibility/fixtures/qmk-60-percent.json",
+    "note": "QMK keycap layout rectangles do not prove selected switch-footprint, socket, plate, or case clearance."
+  }
 }

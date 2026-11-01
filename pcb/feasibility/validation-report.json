@@ -1,63 +1,61 @@
 {
   "result": "PASS",
-  "declared_layout_option_cases": 48,
-  "layouts": [
-    "WK",
-    "WKL",
-    "HHKB"
+  "declared_layout_option_cases": 12,
+  "variants": [
+    "WK 7U",
+    "WKL 7U",
+    "HHKB 7U"
   ],
-  "spacebar_sizes_u": [
-    6.25,
-    7
-  ],
-  "options": [
-    "split/non-split Backspace",
-    "split/non-split right Shift",
-    "stepped/non-stepped Caps"
-  ],
-  "excluded": "Split spacebar not requested; not modeled.",
   "checks": [
-    "all six explicit bottom-row position counts, orders, and widths match expected values",
-    "WK 6.25U has 8 positions (7 modifiers + 6.25U spacebar) and totals 15U",
-    "blank WKL blockers are not counted as switch sites",
-    "active modeled switch centers inside nominal 285x94.6mm profile",
-    "plate/GH60 coordinate round-trip within 0.001mm",
-    "minimum same-row active switch-site pitch �0.5U"
+    "independent QMK fixtures match; all three spans are 15U from common origin",
+    "centers [0.75,2,3.25,7.5,11.75,13,14.25]U match pinned values",
+    "HHKB has five active centers [2,3.25,7.5,11.75,13]U; blank corners have no switches",
+    "GH60 centers match independent mm coordinates within 0.00001mm",
+    "Backspace/right Shift alternatives preserve 15U"
   ],
-  "bottom_row_width_u": {
-    "WK": {
-      "7": 15,
-      "6.25": 15
-    },
-    "WKL": {
-      "7": 15,
-      "6.25": 15.25
-    },
-    "HHKB": {
-      "7": 14,
-      "6.25": 14.25
-    }
+  "excluded_from_pass": [
+    "6.25U removed from v1",
+    "stepped Caps stem candidate -0.25U is unvalidated; outline remains separately centered",
+    "PCB/footprint/plate/case clearance"
+  ],
+  "sources": {
+    "WK_WKL": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_ansi_tsangan/info.json",
+    "HHKB": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_hhkb/info.json"
   },
-  "bottom_position_counts": {
-    "WK": {
-      "7": 7,
-      "6.25": 8
-    },
-    "WKL": {
-      "7": 7,
-      "6.25": 7
-    },
-    "HHKB": {
-      "7": 7,
-      "6.25": 7
-    }
+  "common_centers_gh60_mm": [
+    13.91,
+    37.7225,
+    61.535,
+    142.4975,
+    223.46,
+    247.2725,
+    271.085
+  ],
+  "bottom_y_gh60_mm": 85.39875,
+  "active_centers_u": {
+    "WK": [
+      0.75,
+      2,
+      3.25,
+      7.5,
+      11.75,
+      13,
+      14.25
+    ],
+    "WKL": [
+      0.75,
+      3.25,
+      7.5,
+      11.75,
+      14.25
+    ],
+    "HHKB": [
+      2,
+      3.25,
+      7.5,
+      11.75,
+      13
+    ]
   },
-  "physical_pcb_combinations_validated": false,
-  "clearance": "NOT CHECKED: no licensed hot-swap socket geometry, component footprints, plate CAD, or case solids available.",
-  "socket_geometry_available": false,
-  "sample": {
-    "id": "WK-6.25U",
-    "bottom_positions": 8,
-    "switch_sites": 61
-  }
+  "physical_clearance_validated": false
 }
