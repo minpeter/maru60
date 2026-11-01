@@ -20,15 +20,18 @@ The current plate has plate-mount stabilizer cutouts. A PCB-mount option needs a
 - `feasibility/validate_layout.mjs`: executable validator and SVG generator. Run with `node pcb/feasibility/validate_layout.mjs`.
 - `feasibility/validation-report.json`: latest model-case test summary.
 - `feasibility/layout-preview.svg` and `layout-preview.png`: WKL/HHKB 7U comparison; gray segments mark blockers; union sites remain modeled separately.
-- `firmware/qmk`: minimal RP2350/VIA overlay scaffold pinned to the investigated QMK fork revision.
+- `firmware/qmk`: RP2350/VIA overlay scaffold pinned to the investigated QMK fork revision.
+- `engineering/third_party/MX_V2`: MIT-licensed upstream 1U and 7U MX hot-swap footprints with required notices.
+- `engineering/footprint-check.mjs`: geometry-only screening of real switch copper pads and 7U stabilizer drills against the WKL/HHKB bottom-row socket union.
+- `engineering/electrical-architecture.md`: RP2350A/USB-C/matrix/RGB design decisions, official reference links, and explicit KiCad/physical-validation blockers.
 
 QMK references: [ANSI Tsangan 60%](https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_ansi_tsangan/info.json) and [HHKB 60%](https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_hhkb/info.json).
 
 ## Validation boundary
 
-The Node model checks 12 declared nominal layout/option cases for explicit row widths and key order, nominal switch-center bounds, plate/GH60 coordinate round-trip, and minimum 0.5U modeled center spacing. These are nominal layout cases, not physical PCB compatibility tests. The model does **not** check switch body, hot-swap socket, diode, LED, stabilizer, mounting-hole, plate or case collision. No licensed socket footprint geometry or PCB/plate/case solids are in this workstream yet. Do not read the passing layout report as clearance proof.
+The Node model checks 12 declared nominal layout/option cases for explicit row widths and key order, nominal switch-center bounds, plate/GH60 coordinate round-trip, and minimum 0.5U modeled center spacing. These are nominal layout cases, not physical PCB compatibility tests. The model does **not** check switch body, hot-swap socket, diode, LED, stabilizer, mounting-hole, plate or case collision. Licensed ai03 1U/7U hot-swap footprint geometry is now vendored and screened; no PCB/plate/case solid collision check has been done. Do not read the passing layout report as clearance proof.
 
-No schematic or KiCad PCB has been made. KiCad is unavailable in the current execution environment. Firmware scaffold, QMK compilation, VIA GUI remapping/persistence, electrical validation, and physical fit remain unverified. This is not manufacturing-ready.
+No schematic or routed KiCad PCB has been made. KiCad is unavailable in the Windows execution environment; install/approval details and the actual RP2350A power/USB/RGB architecture are documented in `engineering/electrical-architecture.md`. The licensed hot-swap footprint copper screening passes only its narrow geometric checks; it is not DRC or physical fit validation. The Maru60 QMK/VIA overlay compiles in the separate pinned cloud build after prototype USB metadata was added, but VIA GUI remapping/persistence, electrical validation, and physical fit remain unverified. This is not manufacturing-ready.
 
 ## License and design provenance
 

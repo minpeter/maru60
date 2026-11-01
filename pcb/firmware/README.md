@@ -8,10 +8,10 @@ This subtree is an overlay scaffold, not a standalone QMK checkout. `keyboard.js
 
 ## Not built or verified
 
-- No local QMK checkout/toolchain was available in this execution environment, so `qmk compile` was not run.
+- The Windows environment has no QMK MSYS. A separate Debian/GCC cloud build compiled the pinned upstream RP2350 `via_ci` baseline and then the Maru60 `via` overlay after USB metadata was added (UF2 output, exit code 0). This is a source build only; no physical RP2350A board was tested.
 - VIA Configurator layout and end-to-end remapping/persistence are not validated.
 - RP2350 flash size is not selected; set the fork's `RP_FLASH_SIZE` to match the chosen component.
-- Per-key RGB and underglow are both required, but their LED count, chain/zone architecture, GPIOs, power budget, and build configuration await component/PCB decisions.
+- Per-key RGB and underglow are both required, but their LED count, chain/zone architecture, GPIOs, power budget, and build configuration await component/PCB decisions. See `pcb/engineering/electrical-architecture.md` for the current design risks and official RP2350A reference.
 - No USB, matrix, lighting, or bootloader hardware test has been run.
 
 Use the overlay under the pinned fork's `keyboards/maru60/rp2350` and finish the physical layout/net mapping before treating it as buildable firmware.

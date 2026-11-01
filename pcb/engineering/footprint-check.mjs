@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url));
+const third=path.join(base,'third_party','MX_V2');
+const fp1=fs.readFileSync(path.join(third,'MX-Hotswap-1U.kicad_mod'),'utf8');
+const fp7=fs.readFileSync(path.join(third,'MX-Hotswap-7U.kicad_mod'),'utf8');
+const U=19.05, centers=[0.75,2,3.25,7.5,11.75,13,14.25], rowY=85.39875, spaceX=142.4975;
+const pads=[...fp1.matchAll(/\(pad "([^"]+)" smd [^()]*?\(at (-?[\d.]+) (-?[\d.]+)(?: [\d.]+)?\) \(size ([\d.]+) ([\d.]+)\)/g)].map(m=>({n:m[1],x:+m[2],y:+m[3],w:+m[4],h:+m[5]}));
+const holes=[...fp7.matchAll(/\(pad "" np_thru_hole circle \(at (-?[\d.]+) (-?[\d.]+)(?: [\d.]+)?\) \(size ([\d.]+) ([\d.]+)\) \(drill ([\d.]+)\)/g)].map(m=>({x:+m[1],y:+m[2],d:+m[5]})).filter(h=>Math.abs(h.x)>50);
+if(pads.length!==2) throw Error('Expected 2 hotswap copper pads; got '+pads.length);
+if(holes.length!==4) throw Error('Expected 4 wide stabilizer holes; got '+holes.length);
+const boxes=[];
+for(let i=0;i<centers.length;i++) for(const p of pads) boxes.push({socket:'S'+i,netpad:p.n,x0:centers[i]*U+p.x-p.w/2,x1:centers[i]*U+p.x+p.w/2,y0:rowY+p.y-p.h/2,y1:rowY+p.y+p.h/2});
+const overlaps=[];
+for(let i=0;i<boxes.length;i++) for(let j=i+1;j<boxes.length;j++) if(boxes[i].socket!==boxes[j].socket && boxes[i].x0<boxes[j].x1 && boxes[j].x0<boxes[i].x1 && boxes[i].y0<boxes[j].y1 && boxes[j].y0<boxes[i].y1) overlaps.push([boxes[i],boxes[j]]);
+function distPointRect(cx,cy,b){const dx=Math.max(b.x0-cx,0,cx-b.x1),dy=Math.max(b.y0-cy,0,cy-b.y1);return Math.hypot(dx,dy)}
+const stab=holes.map(h=>({hole:[spaceX+h.x,rowY+h.y],drill:h.d,minCopperClearance:Math.min(...boxes.map(b=>distPointRect(spaceX+h.x,rowY+h.y,b)-h.d/2))}));
+const report={title:'MX footprint copper geometry screening only',source:{repo:'ai03-2725/MX_V2',commit:'0b379eebbeb66c7fd6e82e400b47958ad695614e',license:'MIT',footprints:['MX_Hotswap.pretty/MX-Hotswap-1U.kicad_mod','MX_Hotswap.pretty/MX-Hotswap-7U.kicad_mod']},layout:{units:centers,rowOrigin:'shared 15U bottom-row left edge',unionSocketCount:centers.length,GH60:{spacebarCenterX:spaceX,bottomRowCenterY:rowY}},method:{extract:'SMD copper pads from 1U footprint and wide NPTH holes from 7U footprint',orientation:'source footprint local geometry; row translated to GH60 frame; no mirror/board-side transform applied',limits:['Not KiCad DRC or physical fit validation','No switch body, stabilizer housings/wires, manufacturer plate cutouts, PCB-to-plate registration, traces/vias, Edge.Cuts, mounting holes, case or keycap interference checked','Upstream README says fresh projects should flip hotswap footprints so socket/pad side is bottom; no transform applied']},results:{copperPadsPerSite:pads.length,crossSocketPadAabbOverlaps:overlaps.length,wideStabilizerHoles:holes.length,stabilizerDrillToAnySocketCopper:stab},status:overlaps.length===0&&stab.every(x=>x.minCopperClearance>0)?'PASS_GEOMETRY_ONLY':'FAIL'};
+fs.writeFileSync(path.join(base,'footprint-check-report.json'),JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({status:report.status,sites:centers.length,crossSocketOverlaps:overlaps.length,stabClearances:stab.map(x=>x.minCopperClearance)},null,2));
+if(report.status!=='PASS_GEOMETRY_ONLY')process.exitCode=1;

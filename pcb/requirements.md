@@ -5,7 +5,7 @@
 | GH60 envelope | Model references 285.0 × 94.6 mm profile, 19.05 mm pitch, and Rule60 frame transform | Draft key-center model; own Edge.Cuts pending |
 | RP2350A | QMK fork's `handwired/onekey/rp2350` metadata uses `processor: RP2350` | Target scaffold added; no build |
 | USB-C | v7.10 case notch is 12.8 mm wide; existing surveyed 6095 center is photo-scaled ≈18.0 mm GH60 X | Receptacle/board-edge design and physical fit pending |
-| MX hot-swap | Required | Socket/footprint and electrical topology pending |
+| MX hot-swap | ai03 MX_V2 MIT 1U/7U footprints vendored with license; copper pad geometry screened against seven bottom-row sites | Diodes, full layout, face transform, DRC and physical fit pending |
 | WKL / HHKB | Two independent 7U bottom-row fixtures; blocker intervals plus union socket sites | Nominal keycap/switch-center model only |
 | Spacebar size | 7U only for PCB v1 | Selected by user; earlier 6.25U option removed |
 | Split/non-split Backspace and right Shift | Both site variants modeled independently | Coordinate checks pass; actual footprint/site clearance pending |
@@ -31,4 +31,14 @@ Stepped Caps is excluded from passing cases. The -0.25U leftward stem-center off
 - Base: repository `main` `03c92914fb0acad659a554024d689673794ea5a9`.
 - Case reference: open PR #1 head `1d89453825131438929ad887e2b0264f8f620cd2` (top v7.10, bottom draft v0.11).
 - GH60 frame and Rule60 plate transform: existing `spec/rule60-v3.json`, `spec/boards.json`, and `spec/rule60-v3-outlines.json`.
-- No PH60 or Waffling60 board geometry was copied. No socket footprint geometry is present in the source tree, so no genuine socket collision study has been performed.
+- No PH60 or Waffling60 board geometry was copied. A narrow copper-pad footprint screening now uses geometry extracted from MIT-licensed ai03 MX_V2 files; it does not model switch body, plate, stabilizer housings, case, or transformed board side.
+
+
+## Electrical and footprint progress (2026-11-01)
+
+- Vendored ai03 MX_V2 `MX-Hotswap-1U` and `MX-Hotswap-7U` from upstream commit `0b379eebbeb66c7fd6e82e400b47958ad695614e` under its included MIT license. The project-wide PCB hardware license remains unselected.
+- `node pcb/engineering/footprint-check.mjs`: PASS_GEOMETRY_ONLY. It parsed two copper pads per 1U socket, checked all seven WKL/HHKB union sites for cross-socket copper AABB intersections (0), and checked four wide 7U stabilizer NPTH drills against socket copper (positive calculated clearance). See `engineering/footprint-check-report.json` for exact results and limitations.
+- This is not KiCad DRC or physical/plate/case validation. The source footprint side/orientation must be set as specified by upstream and inspected in KiCad before PCB placement.
+- Bare RP2350A requires external QSPI flash and its integrated switching regulator block must follow the Raspberry Pi RP2350A Minimal reference; details and unresolved USB-C, matrix, RGB-power selections are in `engineering/electrical-architecture.md`.
+- The KiCad native schematic/board are still absent because KiCad 10.0.8 and `kicad-cli` are not installed in this environment; the official installer/approval boundary is documented. Do not treat reference data or a geometry report as a completed design.
+- Parent-provided cloud build: pinned emolitor QMK RP2350 `via_ci` baseline and Maru60 `via` target compiled/linked to UF2 after adding prototype USB ID metadata. This does not validate a physical PCB or VIA GUI/persistence. Build run provenance is external to the local Windows workspace.
