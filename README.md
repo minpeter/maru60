@@ -22,18 +22,20 @@ have not been validated.
 
 | File | Use |
 | --- | --- |
-| [Full wrist rest — 3MF](models/rule60-v9-honeycomb-body.3mf) | Both current halves on one plate |
-| [Left / male — STL](models/left.stl) | Replacement male half |
-| [Right / female — STL](models/right.stl) | Receiver half |
-| [Both halves — STL](models/rule60-one-plate.stl) | Combined print plate |
-| [Male-only replacement — 3MF](models/rule60-tight-fit-left.3mf) | Reuse an existing v9 receiver |
-| [Male-only fit coupon — 3MF](models/rule60-tight-fit-test-left.3mf) | Test against your existing receiver first |
-| [Two-joint fit test — 3MF](models/rule60-v9-joint-test.3mf) | Print both sides of the joint test |
-| [Surface and pad sample — 3MF](models/rule60-v9-surface-pad-test.3mf) | Surface feel, adhesion and pad placement |
+| [Full wrist rest — 3MF](models/rule60-v3-wrist-rest/rule60-v9-honeycomb-body.3mf) | Both current halves on one plate |
+| [Left / male — STL](models/rule60-v3-wrist-rest/left.stl) | Replacement male half |
+| [Right / female — STL](models/rule60-v3-wrist-rest/right.stl) | Receiver half |
+| [Both halves — STL](models/rule60-v3-wrist-rest/rule60-one-plate.stl) | Combined print plate |
+| [Male-only replacement — 3MF](models/rule60-v3-wrist-rest/rule60-tight-fit-left.3mf) | Reuse an existing v9 receiver |
+| [Male-only fit coupon — 3MF](models/rule60-v3-wrist-rest/rule60-tight-fit-test-left.3mf) | Test against your existing receiver first |
+| [Two-joint fit test — 3MF](models/rule60-v3-wrist-rest/rule60-v9-joint-test.3mf) | Print both sides of the joint test |
+| [Surface and pad sample — 3MF](models/rule60-v3-wrist-rest/rule60-v9-surface-pad-test.3mf) | Surface feel, adhesion and pad placement |
 
-Existing `rule60-v9-*` download paths are retained, but the body and joint-test
-files now contain the tight-fit revision. Older geometry remains in Git history.
-The surface sample is unchanged.
+The wrist-rest downloads live in `models/rule60-v3-wrist-rest/` (they were in
+`models/` until the Maru60 housing joined this repository). The `rule60-v9-*`
+file names are retained, but the body and joint-test files now contain the
+tight-fit revision. Older geometry remains in Git history. The surface sample
+is unchanged.
 
 Repository 3MFs contain **geometry only**, not printer settings or G-code.
 Keep the supplied orientation: the sloping wrist-contact surface faces the
@@ -101,7 +103,7 @@ directory. `rule60-one-plate.3mf`, `replacement-left.3mf`,
 `replacement-test-left.3mf` and `test-joint-plate.3mf` correspond to the
 downloads above. STL exports use millimetres.
 
-`export.py` refreshes `models/` and the verification evidence. Published STLs
+`export.py` refreshes `models/rule60-v3-wrist-rest/` and the verification evidence. Published STLs
 are binary: export removes triangles that collapse at float32 precision, then
 checks closed meshes, component counts, dimensions and volume after reload.
 This avoids degenerate faces when MakerWorld converts ASCII STL downloads.

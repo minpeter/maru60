@@ -7,7 +7,7 @@ import trimesh
 
 ROOT = Path(__file__).resolve().parent
 source = ROOT / 'rib-2.4-male-expanded-0.20-compression-0.10'
-models = ROOT / 'models'
+models = ROOT / 'models' / 'rule60-v3-wrist-rest'
 
 for name, count in [('left', 1), ('right', 1), ('rule60-one-plate', 2)]:
     original = trimesh.load_mesh(source / (name + '.stl'))
