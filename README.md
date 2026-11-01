@@ -11,7 +11,7 @@ internals with this wrist rest built in: an experimental
 [top case](#maru60-hhkb-top-case-with-integrated-wrist-rest-experimental) and a
 [draft bottom case](#maru60-hhkb-bottom-case-draft).
 
-![Dovetail joint detail; overview predates the small compression ribs](images/joint-underside.png)
+![Dovetail joint detail of the current tight-fit halves](images/joint-underside.png)
 
 ## Download and print
 
