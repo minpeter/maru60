@@ -405,7 +405,7 @@ from the parts it mates with; the photos set the layout.
 | 140 × 45 mm R2 battery bay, 4.69 mm deep, back centre | Length, width, radius: INKC post (which gives 4.5 deep); depth: owner's caliper on the stock bay; position from the owner's photos. The 4.5 mm filler rests on the bay floor, 0.19 mm under the cavity floor |
 | Steel weight plate recess, 2.3 mm deep (the 3 mm plate stands 0.7 mm proud, 1.3 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. The plate's centre bump lies over the front of the bay: 2.3 mm leaves 1.03 mm of floor between them, 2.5 mm would leave 0.83 and a flush 3.0 mm recess 0.33 |
 | Four weight-plate screws from inside, as on the stock case: Ø3.0 holes through the recess roof, Ø5.4 counterbores from the cavity floor leaving 2.5 mm of floor under each head. Two per plate end, 8.8 / 38.9 mm in from the end and 4.8 / 24.7 mm from the straight back edge; two in each half | The stock plate's blind tapped holes, read off the owner's inside photo (IMG_0474) on the plate outline, ±0.5 mm; the holes float 0.5 mm per side. M2 × 4 goes 1.5 mm into the plate and stops 1.5 mm short of its outer face; the head sits 2.3–4.4 mm below the cavity floor |
-| USB-C slot | Same centre and width as the top-case notch (`--board`), 14.75 mm. At that width the rail between the slot and the back-left cap recess would be a 0.14 mm fin, so the slot opens into the recess down to its floor |
+| USB-C slot | Same centre and width as the top-case notch (`--board`), 14.75 mm. Open underneath through the tray and base, with no lip or floor across the exit (owner-confirmed). At that width the rail between the slot and the back-left cap recess would be a 0.14 mm fin, so the slot opens into the recess down to its floor |
 | ㄴㄱ split: the seam runs through the back-right catch (53.75 mm right of centre), crosses the floor 37.3 mm behind the front rail face, and leaves through the front-left catch (52.73 mm left of centre) | Owner. Both seam catches bridge it with one M2 screw in each half; the other two stay in one half. Staggered against the top-case seams |
 | Hybrid joint: five line-to-line dovetails (three across the floor, one on each leg) that slide together normal to the desk face and lock both in-plane directions, plus the two seam catches, glue and the weight plate | Top-case joint profile (5.2/6.6 mm half widths, 6.0 mm projection). Where the back leg runs under the battery bay and weight-plate recess the floor is only 1.6–4.6 mm, so that stretch is a straight glued butt; the weight plate spans it, screwed to each half with two of its four screws |
 
@@ -455,6 +455,13 @@ path, over 40 mm³ of collision for any 0.3 mm sideways shift, and one screw
 per half in each seam catch), and 0.20 mm layers without islands or
 undeclared overhangs.
 The [report](evidence/bottomcase-report.json) lists every level and position.
+
+The USB exit is also checked through the exported case's entire depth: no
+material may bridge its open bottom. See the [regression and PCB/USB-C assembly
+renders](evidence/usb-open-bottom/README.md), including the original underside
+camera angle and an explicitly visualization-only cutaway. The rendered A21
+PCB and USB4105 candidate are not the verifier's generic gauges or a final
+component selection.
 
 Not measured, so the coupon decides: cap-seat level (sets gasket preload),
 catch notch depth and the catch screw pitch (photos read 25.5–26.8 mm). The

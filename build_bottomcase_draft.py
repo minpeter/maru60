@@ -308,7 +308,9 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     usb_x, usb_w = top.usb_notch_print(board)
     usb_y0, usb_y1 = top.pw(0.0, LEDGE_BACK_P - 1.0)[1], top.pw(0.0, RIM_P[3] + 1.0)[1]
     slot = sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1)
-    cuts.append(prism(slot, Z_RIM_TOP - 1.0, top.SKIRT_H))
+    # Open underneath through both the sloping tray and base, not just to the top-case skirt lip.
+    usb_z1 = desk_zp(usb_y1) + 1.0
+    cuts.append(prism(slot, Z_RIM_TOP - 1.0, usb_z1))
     slot_fins = []
     for recess in (plate_to_world(p) for p in cap_recesses_p()):
         wall = slot.distance(recess)
@@ -349,7 +351,8 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
                         "battery_bay": [round(v, 3) for v in bay_p], "cap_recesses": [[round(v, 3) for v in p.bounds]
                                                                                       for p in cap_recesses_p()]},
         "catches": [{**s, "pilots": pilots[2 * k:2 * k + 2]} for k, s in enumerate(sites)],
-        "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, top.SKIRT_H],
+        "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, usb_z1],
+                           "open_bottom": True,
                            "cap_recess_walls_removed_mm": slot_fins, "min_wall": SLOT_MIN_WALL},
         "bumpons_world": [[x, round(y, 3)] for x, y in bumpon_centres_world()],
         "bumpon_pocket": {"d": top.POCKET_D, "depth": top.POCKET_DEPTH},

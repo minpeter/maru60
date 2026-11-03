@@ -298,8 +298,14 @@ def main() -> None:
     notch = json.loads((ROOT / "topcase-draft" / "draft-report.json").read_text())["geometry_mm"]["usb_notch"]
     assert len(gaps) == 1 and abs((gaps[0][0] + gaps[0][1]) / 2 - notch["x_world"]) < 0.05, (gaps, notch)
     assert abs(gaps[0][1] - gaps[0][0] - notch["width"]) < 0.05 and gaps[0][0] > 0.0, (gaps, notch)
-    # 8a. The slot leaves no fin: between it and each cap recess the rail top keeps `SLOT_MIN_WALL` or is cut away.
+    # The USB exit is open underneath, not a closed-bottom window. Probe through the exported case's full depth;
+    # a check only at plug height misses the sloping tray's residual skin below the skirt lip.
     sy0, sy1 = REPORT["usb_slot_world"]["y"]
+    slot_column = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, sy1 - 0.02,
+                      Z["rim_top"] - 1.0, bottom.bounding_box()[5] + 1.0)
+    slot_bottom_material = vol(bottom ^ slot_column)
+    assert slot_bottom_material < 0.0001, f"USB exit is not open underneath: {slot_bottom_material} mm^3"
+    # 8a. The slot leaves no fin: between it and each cap recess the rail top keeps `SLOT_MIN_WALL` or is cut away.
     slot_plan = sg.box(gaps[0][0], sy0, gaps[0][1], sy1)
     rim = slice_material(bottom, Z["rim_top"] + 0.25)
     walls = []
@@ -309,7 +315,7 @@ def main() -> None:
             x0, x1 = (gaps[0][1], rx0) if rx0 >= gaps[0][1] else (rx1, gaps[0][0])
             between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1)))
             walls.append(round(between.bounds[2] - between.bounds[0], 3) if between.area > 1e-4 else 0.0)
-    slot_check = {"cap_recess_walls_mm": walls}
+    slot_check = {"cap_recess_walls_mm": walls, "open_bottom_material_mm3": slot_bottom_material}
     assert all(w == 0.0 or w >= bc.SLOT_MIN_WALL - 0.01 for w in walls), slot_check
 
     # 8b. Open ends (stock part, IMG_0462/0472/0473): between the rail faces nothing rises above the cavity floor over
