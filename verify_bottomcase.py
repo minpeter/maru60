@@ -301,12 +301,12 @@ def main() -> None:
     notch = json.loads((ROOT / "topcase-draft" / "draft-report.json").read_text())["geometry_mm"]["usb_notch"]
     assert len(gaps) == 1 and abs((gaps[0][0] + gaps[0][1]) / 2 - notch["x_world"]) < 0.05, (gaps, notch)
     assert abs(gaps[0][1] - gaps[0][0] - notch["width"]) < 0.05 and gaps[0][0] > 0.0, (gaps, notch)
-    # A lower-case bridge crosses above the port, distinct from the upper-case bridge.
-    # Probe exported geometry: the old ceiling-less exit must fail the bridge-presence check.
+    # The lower-case roof over the port is flush with the surrounding rim, not a separate recessed beam.
+    # Probe exported geometry: both the ceiling-less exit and recessed-roof revisions must fail.
     sy0, sy1 = REPORT["usb_slot_world"]["y"]
-    open_y = sy0 + 2.0
+    open_y = sy0 + 1.0
     bridge_probe = box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, bc.Y_BACK - 0.02,
-                       10.72, 11.88)
+                       Z["rim_top"] + 0.02, 11.88)
     bridge_missing = vol(bridge_probe - bottom)
     assert bridge_missing < 0.0001, f"Lower USB bridge missing: {bridge_missing} mm^3"
     bridge_bounds = (bottom ^ box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02,
@@ -315,7 +315,10 @@ def main() -> None:
                       11.92, bottom.bounding_box()[5] + 1.0)
     slot_bottom_material = vol(bottom ^ slot_column)
     assert slot_bottom_material < 0.0001, f"USB exit is not open underneath: {slot_bottom_material} mm^3"
-    ledge_z = zc + 3.25 + 0.8 + 0.3
+    ledge_z = 21.08  # Proposed deeper mating floor; independent exported-geometry contract, not a stock measurement
+    floor_air = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02, 20.10, 21.06)
+    floor_blockage = vol(bottom ^ floor_air)
+    assert floor_blockage < 0.0001, f"USB mating floor is not recessed deeply enough: {floor_blockage} mm^3"
     # At least 0.8 mm of the ledge must remain, including its thinnest rear edge.
     ledge_probe = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02,
                       ledge_z + 0.02, ledge_z + 0.82)
@@ -332,6 +335,7 @@ def main() -> None:
             between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1)))
             walls.append(round(between.bounds[2] - between.bounds[0], 3) if between.area > 1e-4 else 0.0)
     slot_check = {"cap_recess_walls_mm": walls, "open_bottom_material_mm3": slot_bottom_material,
+                  "recessed_floor_blockage_mm3": floor_blockage,
                   "inner_ledge_missing_mm3": ledge_missing, "bridge_missing_mm3": bridge_missing,
                   "bridge_to_upper_ceiling_mm": round(bridge_bounds[2] - Z["rim_top"], 3),
                   "bridge_to_generic_plug_mm": round(zc - 3.25 - bridge_bounds[5], 3),
@@ -360,7 +364,7 @@ def main() -> None:
     to_print_xy = [1.0, 0.0, 0.0, -bc.COS, 0.0, -bc.SIN * tz]  # tray-bottom points (x, y, tz) -> print (x', y')
     step_band = sa.affine_transform(steps_world, to_print_xy).buffer(0.3)
     bridge_print = bc.to_trimesh(box(gaps[0][0] - 0.8, open_y, gaps[0][1] + 0.8, bc.Y_BACK,
-                                     10.70, 11.90).transform(bc.TO_PRINT))
+                                     Z["rim_top"], 11.90).transform(bc.TO_PRINT))
     usb_support = sg.MultiPoint(bridge_print.vertices[:, :2]).convex_hull.buffer(0.3)
     declared = unary_union([bridges, step_band, usb_support])
     printability = {}
