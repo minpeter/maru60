@@ -1,0 +1,73 @@
+{
+  "status": "CANONICAL_ISOLATED_A22_ACTUAL_REMOTE_FAULT_CLOSURE_NOT_RELEASE",
+  "completed_utc": "2026-11-03T03:58:26.715686+00:00",
+  "pcb_sha256": "fdd9ce12580c1dc8a1fe14dfced60f0199b2911b2d7c87a818a2bf7affb5fa33",
+  "source_sha256": "9a998341b71c781032bc87ff82399f8fbe0b0245905338d4a32b4f76d2d6fd2c",
+  "native": {
+    "opens": 22,
+    "hard": 0,
+    "warnings": 59,
+    "parity": 0,
+    "ERC": 0
+  },
+  "numbered_pins": 924,
+  "physical_pads": 1275,
+  "footprints": 340,
+  "vias": 881,
+  "segments": 9886,
+  "track_centerline_mm": 11992.555877103017,
+  "actual_closure": "U1.35/R113.2 component joins U7.4/TP9.1 component: four real pads, two components to one",
+  "all_other_populated_net_partitions_identical": true,
+  "new_fault_tracks": 39,
+  "new_signal_vias": 2,
+  "new_GND_vias": 2,
+  "new_route_mm": 106.55201838721908,
+  "all_existing_copper_and_footprints_preserved": true,
+  "positive_rail_fill_coordinates_exact": true,
+  "all13_original_sources_and_5_signal_sources_pass": true,
+  "cold_byte_identity": true,
+  "retained_outer_tracks": 9633,
+  "retained_new_reference_loss_mm": {
+    "left": 0,
+    "center": 0,
+    "right": 0
+  },
+  "new_FAULT_projection_outside_launch_disks_mm": {
+    "LED_FAULT_N": {
+      "left": 0.0,
+      "center": 0.0,
+      "right": 0.0
+    }
+  },
+  "nearest_source_ground_via_distances_mm": [
+    0.8485274303173718,
+    0.75
+  ],
+  "distance_not_full_return_loop": true,
+  "remaining_opens_by_net": {
+    "ROW0": 2,
+    "COL3": 1,
+    "COL4": 1,
+    "COL5": 1,
+    "COL6": 1,
+    "COL7": 1,
+    "COL8": 1,
+    "COL9": 1,
+    "COL10": 1,
+    "COL11": 1,
+    "COL12": 1,
+    "COL13": 1,
+    "COL14": 1,
+    "ROW1": 1,
+    "ROW2": 1,
+    "ROW3": 1,
+    "ROW4": 1,
+    "SWDIO": 1,
+    "RUN": 1,
+    "KEY_RGB": 1,
+    "LED_ENABLE": 1
+  },
+  "limits": "Connectivity and native/reference geometry only. Current/PI/oscillator/SI/actual-SKU/assembly/process not qualified; unchanged LV1T asynchronous off-state logical release gate remains blocked. Actual AP2112 and current parts retained.",
+  "main_sha256": "80681cd392d1ca83bd37e58faef07a0def301f2d93763102982eaf1c0148f831",
+  "worker_manifest_sha256": "421158d97128b888c9df677be734b5a35efc6d2a39381922f8a4dd15c53a9c3d"
+}

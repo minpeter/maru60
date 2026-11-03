@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETED conservative positive annular source addendum; no CAD adoption",
+  "canonical_A22_sha256": "fdd9ce12580c1dc8a1fe14dfced60f0199b2911b2d7c87a818a2bf7affb5fa33",
+  "helper_sha256": "44f93cf13a7d915b503987fd66a81c05e44558fed333e88e144a11b0b7793eb2",
+  "positive_report_sha256": "6cbc648a7e955ce1b06d840e138ffa23ac0ade65b90e4359a253ee03bb66f7db",
+  "all13_strict_source_components_pass": true,
+  "native_protected_opens": 0,
+  "native_hard_errors": 0,
+  "runtime_seconds": 44.00387120246887,
+  "negative_control": {
+    "sha256": "9a54ae9bd6d1ee32dc3562fb460382c79b57d99be42070c1bbd0c421795f9fff",
+    "source_gate_pass": false,
+    "unproved_3V3_pads": [
+      {
+        "uuid": "7d0a6e66-5181-43eb-bf9e-dcd01bae37c3",
+        "ref": "C115",
+        "pin": "1"
+      },
+      {
+        "uuid": "fd5ab632-bb61-45a5-8d62-795593b9b860",
+        "ref": "U1",
+        "pin": "30"
+      }
+    ],
+    "native_protected_open_count": 1,
+    "runtime_seconds": 42.96684455871582,
+    "missing_footprint_library_warnings": 137,
+    "scope": "Isolated real one-feed cut; full-row original source helper and native open independently confirm C115.1/U1.30 source failure. Library warnings do not affect raw conductor polygons but this is not a qualified routing candidate."
+  },
+  "proof_limits": [
+    "1um conservative copper-subset contact proves positive connectivity; coarse noncontact alone is NOT a disconnection proof.",
+    "Early stop when every scoped conductor component is reached does not classify all orphan filled islands.",
+    "No epsilon expansion, no spatial clipping, no Unfracture; holes physically subtracted.",
+    "Not numerical equivalence with 1nm exhaustive graph; both slow fine attempts stopped without terminal result.",
+    "Connectivity only: not powered/IR/thermal/return/SI/process/assembly approval."
+  ],
+  "all_inputs_still_match": true
+}

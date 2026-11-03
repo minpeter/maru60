@@ -1,5 +1,9 @@
 # Maru60 RP2350A PCB — engineering draft
 
+## Recovered native checkpoints (2026-11-03)
+
+The [A21 checkpoint](checkpoints/a21/README.md) now includes the actual native four-layer board, schematic, project, local libraries and evidence. Its A22 predecessor is retained at `checkpoints/a21/coordinator-evidence/source.kicad_pcb`. Fresh checks and publication limits are in [publication/a21-a22](publication/a21-a22/README.md). A21 still has 21 opens and A22 22; neither is fabrication-ready. The foundation notes below are historical and do not describe the current existence of native CAD.
+
 This independent PCB workstream is kept under `pcb/`; it does not merge or alter housing work.
 
 ## Product requirements
@@ -31,7 +35,7 @@ QMK references: [ANSI Tsangan 60%](https://raw.githubusercontent.com/qmk/qmk_fir
 
 The Node model checks 12 declared nominal layout/option cases for explicit row widths and key order, nominal switch-center bounds, plate/GH60 coordinate round-trip, and minimum 0.5U modeled center spacing. These are nominal layout cases, not physical PCB compatibility tests. The model does **not** check switch body, hot-swap socket, diode, LED, stabilizer, mounting-hole, plate or case collision. Licensed ai03 1U/7U hot-swap footprint geometry is now vendored and screened; no PCB/plate/case solid collision check has been done. Do not read the passing layout report as clearance proof.
 
-No schematic or routed KiCad PCB has been made. KiCad is unavailable in the Windows execution environment; install/approval details and the actual RP2350A power/USB/RGB architecture are documented in `engineering/electrical-architecture.md`. The licensed hot-swap footprint copper screening passes only its narrow geometric checks; it is not DRC or physical fit validation. The Maru60 QMK/VIA overlay compiles in the separate pinned cloud build after prototype USB metadata was added, but VIA GUI remapping/persistence, electrical validation, and physical fit remain unverified. This is not manufacturing-ready.
+At the original foundation revision, no schematic or routed KiCad PCB had been made. Native WIP CAD is now archived above. KiCad is unavailable in the Windows execution environment; install/approval details and the actual RP2350A power/USB/RGB architecture are documented in `engineering/electrical-architecture.md`. The licensed hot-swap footprint copper screening passes only its narrow geometric checks; it is not DRC or physical fit validation. The Maru60 QMK/VIA overlay compiles in the separate pinned cloud build after prototype USB metadata was added, but VIA GUI remapping/persistence, electrical validation, and physical fit remain unverified. This is not manufacturing-ready.
 
 ## License and design provenance
 
