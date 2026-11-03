@@ -200,14 +200,19 @@ found by printing:
   case the back row along the keyboard junction stood 24 mm in front of the
   bottom case's own front bumpons, so the assembly stood on 14; the front row
   and the bottom case's four corners (8 in all) carry every load case.
+- **v7.11 (not printed):** the USB-C notch is 14.75 mm wide instead of the
+  stock 12.8 (`top.usb_notch_cable_width` in `spec/rule60-v3.json`; set it to
+  12.8 for the stock width). The stock width left 0.22 mm per side for a
+  12.35 mm USB-C plug, less than the ±0.3 mm photo reading of the board's
+  connector centre.
 
 [Fit photos](evidence/topcase/README.md#photos) are in the evidence folder.
 
 | File | Use |
 | --- | --- |
 | [Left half — 3MF](models/maru60-hhkb-topcase-left.3mf) | 206 × 197 mm print, 4 h 16 min / 76 g |
-| [Right half — 3MF](models/maru60-hhkb-topcase-right.3mf) | 149 × 197 mm print, 3 h 48 min / 65 g; USB-C notch for the 6095 tri-mode kit PCB |
-| [Right half, universal USB — 3MF](models/maru60-hhkb-topcase-right-usb-universal.3mf) | Same, with a 14.75 mm notch covering every measured on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
+| [Right half — 3MF](models/maru60-hhkb-topcase-right.3mf) | 149 × 197 mm print, 3 h 48 min / 65 g; 14.75 mm USB-C notch centred on the 6095 tri-mode kit PCB |
+| [Right half, universal USB — 3MF](models/maru60-hhkb-topcase-right-usb-universal.3mf) | Same 14.75 mm notch, centred on the spread of every measured on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
 | [Fit coupons — 3MF](models/maru60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
 
 Assembled: **298.1 × 198.3 mm**, 20.01 mm case height. The halves split at the
@@ -370,10 +375,10 @@ the stock plate is assumed to match the DWG; the outer corner radius is not
 measured. Clearance to the plate (0.30 mm per side) and keycaps (0.32 mm)
 tolerates up to about 0.2% print shrinkage.
 
-The USB notch keeps the stock 12.8 mm width and moves with `--board`; it is
-not widened for cable plugs. A plug body up to the USB-C maximum of 12.35 mm
-fits with 0.2 mm per side. Some retail cables are wider (about 13 mm
-measured) and will not seat fully, the same as in the stock case.
+The USB notch is 14.75 mm wide and moves with `--board`. A plug body up to
+the USB-C maximum of 12.35 mm clears 1.2 mm per side, a ~13 mm retail plug
+0.875 mm; the stock 12.8 mm notch (`top.usb_notch_cable_width` = 12.8) left
+0.22 mm and did not take the 13 mm plug.
 
 ## Maru60 HHKB bottom case (draft)
 
@@ -391,16 +396,17 @@ from the parts it mates with; the photos set the layout.
 | --- | --- |
 | Front and back rails: 292.1 mm long, R2.7 corners, top bears on the 9.69 mm top-case floor | Top-case pocket (caliper) less 0.15 mm per side; corner radius from the v6.2 fit |
 | Open ends: no wall at either short end; the floor runs out between the rails | Stock bottom case (owner's photos IMG_0462, 0472, 0473); the top-case side skirts close the ends |
-| Two bodies: a ㄷ tray (both rails and the floor, rail outline, 10.32 mm from the rail tops at the back, tilted 0.2° so its front edge meets the desk plane) and a triangular base under it, inset so the tray bottom shows as a step all round: 5.2 mm at the back, 4.5 mm at the front and at each end, where the base ends in clean square cuts | Stock bottom case (owner's calipers, approximate). Only the rail tops bear, so the 9.69 seat alone sets the gasket stack. The steps print as cantilevers at 6° |
-| Base back face: one 14.59 mm straight slope from the back step to the desk face (15.3 mm in from the rail face) | Owner's caliper readings and an edge trace of IMG_0465 (5.0 / 14.5 mm, 47°). The owner's direct inset reading, 18.61 mm, does not fit those lengths at this case height |
-| Desk face on the wrist rest's 6° plane, four bumpon pockets at the corners (X ±130; 13.0 mm from the front rail face, 8.5 mm in from the back slope's desk-face edge) | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons, 8 in all with the wrist rest's front row. Rigid-body load share (self weight 9 N, wrists 15 N, typing 5 N; assumed): 3.7–5.6 N each with both wrists down, all 8 loaded |
+| Two bodies: a ㄷ tray (both rails and the floor, rail outline, 10.32 mm from the rail tops at the back, tilted 0.2° so its front edge meets the desk plane) and a triangular base under it, inset 4.5 mm at each end, where the base ends in clean square cuts | Stock bottom case (owner's calipers, approximate). Only the rail tops bear, so the 9.69 seat alone sets the gasket stack |
+| No flat step under the tray (v0.12): every rail face runs on 0.6 mm below the tray bottom, then a 45° chamfer (above the bed as printed) runs in to the base. At the front, where the tray bottom is within 0.5 mm of the desk, the face goes straight down; at the ends the chamfer meets the end faces 4.5 mm in; at the back it runs to the desk face 12.6 mm in from the rail face | The stock part's 4.5 / 5.2 mm steps printed as flat cantilevers at 6° (Bambu Studio: 196 overhang-wall and 209 bridge features on the left half). `STEP_CHAMFER_DEG` and `STEP_LAND` in `build_bottomcase_draft.py` |
+| Stock back face, now inside the back chamfer: a 5.2 mm step, then one 14.59 mm slope to the desk face 15.3 mm in from the rail face. Its desk-face edge still locates the weight plate and the back bumpons | Owner's caliper readings and an edge trace of IMG_0465 (5.0 / 14.5 mm, 47°). The owner's direct inset reading, 18.61 mm, does not fit those lengths at this case height. A chamfer that removes the step cannot keep the slope: printed, the slope stands at 52°, steeper than the 45° that has to start at the rail face |
+| Desk face on the wrist rest's 6° plane, four bumpon pockets at the corners (X ±130; 13.0 mm from the front rail face, 8.5 mm in from the stock back slope's desk-face edge) | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons, 8 in all with the wrist rest's front row. Rigid-body load share (self weight 9 N, wrists 15 N, typing 5 N; assumed): 3.7–5.6 N each with both wrists down, all 8 loaded |
 | Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange: the Keebox cap's 1.9 mm flanges each squeeze 0.70 mm. A stock case reads about 4 mm between the seats (one owner, not ours); 4.00 here would leave the USB-C body 0.79 mm above the floor, short of the 0.8 mm plate travel |
 | Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](evidence/topcase/analysis/ball-catch-analysis.json)); pilots on the top-case strike-pocket lobe centres |
 | Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
 | 140 × 45 mm R2 battery bay, 4.69 mm deep, back centre | Length, width, radius: INKC post (which gives 4.5 deep); depth: owner's caliper on the stock bay; position from the owner's photos. The 4.5 mm filler rests on the bay floor, 0.19 mm under the cavity floor |
 | Steel weight plate recess, 2.3 mm deep (the 3 mm plate stands 0.7 mm proud, 1.3 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. The plate's centre bump lies over the front of the bay: 2.3 mm leaves 1.03 mm of floor between them, 2.5 mm would leave 0.83 and a flush 3.0 mm recess 0.33 |
 | Four weight-plate screws from inside, as on the stock case: Ø3.0 holes through the recess roof, Ø5.4 counterbores from the cavity floor leaving 2.5 mm of floor under each head. Two per plate end, 8.8 / 38.9 mm in from the end and 4.8 / 24.7 mm from the straight back edge; two in each half | The stock plate's blind tapped holes, read off the owner's inside photo (IMG_0474) on the plate outline, ±0.5 mm; the holes float 0.5 mm per side. M2 × 4 goes 1.5 mm into the plate and stops 1.5 mm short of its outer face; the head sits 2.3–4.4 mm below the cavity floor |
-| USB-C slot | Same centre and width as the top-case notch (`--board`) |
+| USB-C slot | Same centre and width as the top-case notch (`--board`), 14.75 mm. At that width the rail between the slot and the back-left cap recess would be a 0.14 mm fin, so the slot opens into the recess down to its floor; the case under the slot keeps at least 1.0 mm |
 | ㄴㄱ split: the seam runs through the back-right catch (53.75 mm right of centre), crosses the floor 37.3 mm behind the front rail face, and leaves through the front-left catch (52.73 mm left of centre) | Owner. Both seam catches bridge it with one M2 screw in each half; the other two stay in one half. Staggered against the top-case seams |
 | Hybrid joint: five line-to-line dovetails (three across the floor, one on each leg) that slide together normal to the desk face and lock both in-plane directions, plus the two seam catches, glue and the weight plate | Top-case joint profile (5.2/6.6 mm half widths, 6.0 mm projection). Where the back leg runs under the battery bay and weight-plate recess the floor is only 1.6–4.6 mm, so that stretch is a straight glued butt; the weight plate spans it, screwed to each half with two of its four screws |
 
@@ -411,10 +417,10 @@ flush with the rim top, the balls would sit below the tongue tip.
 
 | File | Use |
 | --- | --- |
-| [Fit coupon — 3MF](models/maru60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front step, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 30 min / 10 g |
+| [Fit coupon — 3MF](models/maru60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, end chamfer, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 31 min / 10 g |
 | [Joint test — 3MF](models/maru60-hhkb-bottomcase-joint-test.3mf) | Both sides of the middle floor dovetail, 44 × 32 mm cut-outs. 0 h 18 min / 6 g |
-| [Left half — 3MF](models/maru60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot, back-left catch. 206 × 112 mm, 3 h 37 min / 71 g |
-| [Right half — 3MF](models/maru60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 52 min / 56 g |
+| [Left half — 3MF](models/maru60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot, back-left catch. 206 × 112 mm, 3 h 34 min / 73 g |
+| [Right half — 3MF](models/maru60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 46 min / 57 g |
 
 Print desk face down, no supports or brim; owner's top-case settings
 (Bambu Studio CLI estimates above). Print the joint test first: the two
@@ -440,14 +446,16 @@ The [verification](evidence/bottomcase-verification.json) checks the halves
 against the printed top case and virtual stock parts: free nesting at ±0.10 mm
 with rail-only bearing, no material outside the rail outline, both ends open, the plate free through 1.0 mm of travel, all 12 cap
 flanges bearing, catches clear of both cases, a GH60 PCB with 2.0 mm
-bottom-side parts and the USB-C receptacle, the cable plug through both
-cases, the filler, the decoration plate and its four screws (head and shank
+bottom-side parts and the USB-C receptacle, a 12.35 mm cable plug through
+both cases (a 13 mm plug and the 12.35 mm plug 0.3 mm off centre are
+reported), no fin beside the USB-C slot and at least the 0.6 mm land under it, the filler, the decoration plate and its four screws (head and shank
 clear of the case centred and 0.45 mm off, thread in the plate, two per half),
 four corner bumpons, one desk plane with
 the wrist rest, the split seam (no overlap when seated or along the insertion
 path, over 40 mm³ of collision for any 0.3 mm sideways shift, and one screw
-per half in each seam catch), and 0.20 mm layers without islands or
-undeclared overhangs.
+per half in each seam catch), nothing outside the step chamfers, and 0.20 mm
+layers without islands or undeclared overhangs, with no flat step under the
+tray.
 The [report](evidence/bottomcase-report.json) lists every level and position.
 
 Not measured, so the coupon decides: cap-seat level (sets gasket preload),

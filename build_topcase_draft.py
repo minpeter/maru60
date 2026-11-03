@@ -20,7 +20,8 @@ photo metrology of the silicone gasket caps and ball-catch pockets (IMG_0201..IM
          6.55 mm strike, stock CNC "mushroom" end reliefs (`4.1 mm` semicircular lobe on the skirt half `4.55 mm` past each
          plate end, interior-half end wall `2.15 mm` past it, `R0.85` shoulder; two-view fit of IMG_0218/0222), with
          `3.55 mm` deep M2 strike screw pilots; each keeps its fitted distance to the inner skirt wall it faces
-      6. USB-C notch (12.8 wide, 8.7 deep from the lip, R1.5 closed-end corners). Gasket mount only: no top-mount screws.
+      6. USB-C notch (14.75 wide for cable plugs, stock 12.8 selectable in spec/, 8.7 deep from the lip, R1.5 closed-end
+         corners). Gasket mount only: no top-mount screws.
   - Staggered split into two X2D halves: X = 0 through the wrist rest and front bezel (3 dovetails); the back bezel runs
     on in the LeftHalf to the back-left (BL) strike centre, where the stock strike plate (one M2 per half) and a wedge key
     join the back seam. Each male part keeps its 45-deg print ramp and the female side fills under it, so every joint
@@ -249,7 +250,8 @@ def usb_notch_print(board_id: str) -> tuple[float, float]:
 
 
 # Width and corner shape from the stock notch measured against the v6.2 print (owner photos IMG_0378/0379, scaled from
-# the printed 14.2 mm notch): 12.6 / 12.75 wide, rounded closed-end corners (CNC endmill); 0.1-0.2 mm generous. Depth
+# the printed 14.2 mm notch): 12.6 / 12.75 wide, rounded closed-end corners (CNC endmill); 0.1-0.2 mm generous. v7.11
+# cuts it 14.75 wide (`top.usb_notch_cable_width`): the stock width left 0.22 mm per side for a 12.35 mm plug. Depth
 # from the v7.3 full-print fit: the photo-estimated 5.7 mm hit the USB-C connector until the owner cut the notch ~3 mm
 # deeper by hand, so it is 8.7 mm (closed end 1.62 mm above the 9.69 floor).
 USB_TOP_ZP = round(SKIRT_H - spec.value("top.usb_notch")["depth_from_lip"], 2)  # Notch closed end (Z_p 11.31)
@@ -734,7 +736,7 @@ def main() -> None:
     )
 
     report = {
-        "version": "v7.10-front-row-bumpons",
+        "version": "v7.11-usb-notch-14p75",
         "generator": "manifold3d mesh CSG (build_topcase_draft.py) + 28px/mm gasket metrology",
         "strike_pocket_spec_mm": {
             "pocket_width": 2 * STRIKE_POCKET_HALF_W,

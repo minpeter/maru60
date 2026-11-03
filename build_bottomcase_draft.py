@@ -76,6 +76,15 @@ BACK_LEDGE_W = 5.2       # Tray bottom showing behind the base, from the back ra
 BACK_SLOPE_LEN = 14.59   # Straight slope from the step's inner edge to the desk face
 FRONT_STEP_W = 4.5       # Tray bottom showing in front of the base, from the front rail face (owner, approximate)
 END_STEP_W = 4.5         # Tray bottom showing past each end of the base, from the rail ends
+# v0.12: printed desk face down, those steps were flat cantilevers at 6 deg (bridges and overhang walls on every layer).
+# Under the tray, each rail face now runs on `STEP_LAND` and then a chamfer, `STEP_CHAMFER_DEG` above the bed, takes the
+# step back to the base: the front and end faces keep their desk-face inset, and the back chamfer, steeper than the stock
+# back slope can be at the back step, buries it. The land keeps a crisp edge under the top-case lip and >= 0.6 mm of
+# floor under the USB-C slot.
+STEP_CHAMFER_DEG = 45.0  # Chamfer face above the bed in the print frame: 45 or steeper prints without support or bridges
+STEP_LAND = 0.6          # Rail faces continue this far (Z_p) below the tray bottom before the chamfer starts
+SLOT_MIN_WALL = 0.8      # Rail left between the USB-C slot and a cap recess: anything thinner (under two 0.4 mm
+                         # perimeters) is cut away, so the slot opens into the recess instead of leaving a fin
 DECO_CLEAR = 0.20        # Recess around the 3 mm steel weight / decoration plate outline (INKC drawing), per side
 DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, along the desk face (owner)
 DECO_RECESS = 2.3        # Recess depth: the 3 mm plate stands 0.7 proud of the desk face (1.3 under the bumpons'
@@ -146,7 +155,8 @@ def _back_slope_inset() -> float:
     return round(BACK_LEDGE_W + (lo + hi) / 2, 3)
 
 
-BACK_BEVEL_INSET = _back_slope_inset()
+BACK_BEVEL_INSET = _back_slope_inset()  # Stock back slope's desk-face edge: still locates the weight plate and the back
+                                        # bumpons, though the back chamfer now buries the slope itself
 BUMPON_SITES = [(130.0, "front", round(FRONT_STEP_W + 8.5, 2)), (-130.0, "front", round(FRONT_STEP_W + 8.5, 2)),
                 (130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2)), (-130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2))]
 # ^ world X, edge, centre distance from that rail face; each row clears the base edge by a 1.2 mm wall + 0.5 mm. Four
@@ -180,14 +190,52 @@ def base_body() -> md.Manifold:
     return prism(base_outline(), TRAY_BOTTOM_ZP - 1.0, deep).trim_by_plane(*back_bevel())
 
 
+def step_chamfer_planes() -> list[tuple[list[float], float]]:
+    """Planes (normal, offset; material keeps n . (x, y, z_p) >= offset) of the step chamfers, front, back and both ends:
+    each through the rail-face edge `STEP_LAND` below the tray bottom, inclined `STEP_CHAMFER_DEG` above the bed when
+    printed desk face down, and running in toward the desk."""
+    x_end = abs(top.pw(RIM_P[0], 0.0)[0])
+    rot_to, rot_from = TO_PRINT[:, :3], FROM_PRINT[:, :3]
+    cos_t = math.cos(math.radians(STEP_CHAMFER_DEG))
+
+    def edge(x: float, y: float) -> np.ndarray:
+        return np.array([x, y, tray_bottom_zp(y) + STEP_LAND])
+
+    planes = []
+    for p0, p1, inward in ((edge(-x_end, Y_FRONT), edge(x_end, Y_FRONT), (0.0, 1.0, 0.0)),
+                           (edge(-x_end, Y_BACK), edge(x_end, Y_BACK), (0.0, -1.0, 0.0)),
+                           (edge(x_end, Y_FRONT), edge(x_end, Y_BACK), (-1.0, 0.0, 0.0)),
+                           (edge(-x_end, Y_FRONT), edge(-x_end, Y_BACK), (1.0, 0.0, 0.0))):
+        e = rot_to @ (p1 - p0)  # edge direction, print frame (Z' up from the bed)
+        e_h = math.hypot(e[0], e[1])
+        along = np.array([e[0] / e_h, e[1] / e_h, 0.0])
+        h = rot_to @ np.asarray(inward)
+        h = np.array([h[0], h[1], 0.0]) / math.hypot(h[0], h[1])  # horizontal, into the case
+        q = -cos_t * e[2] / e_h  # keeps the normal square to the edge, which rises with the 0.2 deg tray tilt
+        n_print = math.sqrt(1.0 - cos_t ** 2 - q ** 2) * h + q * along + np.array([0.0, 0.0, cos_t])
+        n = rot_from @ n_print
+        planes.append((n.tolist(), float(n @ p0)))
+    return planes
+
+
+def back_desk_edge_y() -> float:
+    """World Y where the back chamfer meets the desk face."""
+    (_, ny, nz), off = step_chamfer_planes()[1]
+    return (off - nz * DESK_A) / (ny + nz * TAN)
+
+
 def underside_zp(y: float) -> float:
-    """Z_p of the case underside at world Y away from the ends: tray bottom, desk face or back slope."""
+    """Z_p of the case underside at world Y away from the ends: the stock tray bottom, desk face or back slope, or the
+    step chamfers and land below them."""
     if y < Y_FRONT + FRONT_STEP_W or y >= Y_BACK - BACK_LEDGE_W:
-        return tray_bottom_zp(y)
-    if y <= Y_BACK - BACK_BEVEL_INSET:
-        return desk_zp(y)
-    y0, y1 = Y_BACK - BACK_BEVEL_INSET, Y_BACK - BACK_LEDGE_W
-    return desk_zp(y0) + (y - y0) / (y1 - y0) * (tray_bottom_zp(y1) - desk_zp(y0))
+        stock = tray_bottom_zp(y)
+    elif y <= Y_BACK - BACK_BEVEL_INSET:
+        stock = desk_zp(y)
+    else:
+        y0, y1 = Y_BACK - BACK_BEVEL_INSET, Y_BACK - BACK_LEDGE_W
+        stock = desk_zp(y0) + (y - y0) / (y1 - y0) * (tray_bottom_zp(y1) - desk_zp(y0))
+    chamfer = min((off - n[1] * y) / n[2] for n, off in step_chamfer_planes()[:2])  # both have n_z < 0
+    return max(stock, min(desk_zp(y), chamfer))
 
 
 def print_y(y: float) -> float:
@@ -287,7 +335,10 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     # ㄷ tray (rail outline, rail tops to the tray bottom) + the inset triangular base, both cut by the desk plane.
     rim = plate_box(*RIM_P, r=RIM_CORNER_R)
     tray = prism(rim, Z_RIM_TOP, desk_zp(Y_FRONT) + 1.0).trim_by_plane(*tray_bottom_plane())
-    body = tray + base_body()
+    chamfered = prism(rim, TRAY_BOTTOM_ZP - 1.0, desk_zp(Y_BACK) + 2.0)  # rail outline under the tray, cut back by the
+    for n, off in step_chamfer_planes():                                  # step chamfers
+        chamfered = chamfered.trim_by_plane(n, off)
+    body = tray + base_body() + chamfered
     body = body.trim_by_plane([0.0, SIN, -COS], -DESK_A * COS)  # keep Z_p <= desk plane
 
     # Cavity between the rails, through both short ends (no end walls).
@@ -305,7 +356,16 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
                 [xw, yw, CATCH_FLOOR_ZP - 0.5]))
     usb_x, usb_w = top.usb_notch_print(board)
     usb_y0, usb_y1 = top.pw(0.0, LEDGE_BACK_P - 1.0)[1], top.pw(0.0, RIM_P[3] + 1.0)[1]
-    cuts.append(prism(sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1), Z_RIM_TOP - 1.0, top.SKIRT_H))
+    slot = sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1)
+    cuts.append(prism(slot, Z_RIM_TOP - 1.0, top.SKIRT_H))
+    slot_fins = []
+    for recess in (plate_to_world(p) for p in cap_recesses_p()):
+        wall = slot.distance(recess)
+        if 0.0 < wall < SLOT_MIN_WALL:  # join them down to the recess floor, its rounded corner included
+            (sx0, sy0, sx1, sy1), (rx0, ry0, rx1, ry1) = slot.bounds, recess.bounds
+            xa, xb = (sx1 - 0.01, rx0 + top.CAP_POCKET_R) if rx0 >= sx1 else (rx1 - top.CAP_POCKET_R, sx0 + 0.01)
+            cuts.append(prism(sg.box(xa, max(sy0, ry0), xb, min(sy1, ry1)), Z_RIM_TOP - 1.0, CAP_SEAT_ZP))
+            slot_fins.append(round(wall, 3))
     bay_y1 = LEDGE_BACK_P - BAY_BACK_GAP
     bay_cx = -top.DX_PW  # plate X of the case centre line (world X = 0)
     bay_p = (bay_cx - _BAY["length"] / 2, bay_y1 - _BAY["width"], bay_cx + _BAY["length"] / 2, bay_y1)
@@ -338,7 +398,8 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
                         "battery_bay": [round(v, 3) for v in bay_p], "cap_recesses": [[round(v, 3) for v in p.bounds]
                                                                                       for p in cap_recesses_p()]},
         "catches": [{**s, "pilots": pilots[2 * k:2 * k + 2]} for k, s in enumerate(sites)],
-        "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, top.SKIRT_H]},
+        "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, top.SKIRT_H],
+                           "cap_recess_walls_removed_mm": slot_fins, "min_wall": SLOT_MIN_WALL},
         "bumpons_world": [[x, round(y, 3)] for x, y in bumpon_centres_world()],
         "bumpon_pocket": {"d": top.POCKET_D, "depth": top.POCKET_DEPTH},
         "deco_recess_print": {"outline_bounds": [round(v, 3) for v in deco_poly_print().bounds], "depth": DECO_RECESS,
@@ -357,7 +418,9 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "tray_and_base": {"tray_bottom_z_p_front_back": [round(tray_bottom_zp(Y_FRONT), 3), TRAY_BOTTOM_ZP],
                           "back_step": BACK_LEDGE_W, "back_slope_length": BACK_SLOPE_LEN,
                           "front_step": FRONT_STEP_W, "end_step": END_STEP_W,
-                          "desk_face_back_inset": BACK_BEVEL_INSET,
+                          "step_chamfer_deg": STEP_CHAMFER_DEG, "step_land": STEP_LAND,
+                          "stock_slope_desk_edge_inset": BACK_BEVEL_INSET,
+                          "desk_face_back_inset": round(Y_BACK - back_desk_edge_y(), 3),
                           "base_outline_world": [round(v, 3) for v in base_outline().bounds]},
     }
     return body, report

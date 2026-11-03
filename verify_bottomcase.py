@@ -8,6 +8,7 @@ Writes bottomcase-draft/verification.json.
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
 import manifold3d as md
@@ -128,7 +129,9 @@ def main() -> None:
 
     # 5. PCB: a GH60 outline (285.0 x 94.6, 1.6 mm) under the MX plate with 2.0 mm bottom-side parts and the board's
     #    USB-C receptacle (9.0 x 7.4 x 3.26 under the PCB, mouth 0.6 past the back edge) clears the cavity with the
-    #    plate 0.8 mm down; the cable plug overmold (12.0 x 6.5) clears both cases from the receptacle out.
+    #    plate 0.8 mm down; the cable plug overmold at the USB-C maximum (12.35 x 6.5) clears both cases from the
+    #    receptacle out. Reported, not required (the stock notch width stays selectable): a ~13 mm retail plug, and the
+    #    12.35 plug with the board's USB centre 0.3 mm off (photo-read centres).
     fr = json.loads((ROOT / "spec" / "boards.json").read_text())["frames"]["pcb_to_plate"]
     pcb_x0, pcb_y0, pcb_y1 = fr["dx"], fr["y0"] - 94.6, fr["y0"]
     z_pcb = top.Z_PLATE + 5.0
@@ -141,9 +144,14 @@ def main() -> None:
     assert max(pcb_free.values()) < 0.01, pcb_free
     zc = z_pcb + 1.6 + 1.63
     usb_xw = top.pw(usb_xp, 0.0)[0]
-    plug = box(usb_xw - 6.0, uy1, usb_xw + 6.0, 240.0, zc - 3.25, zc + 3.25)  # out past the back face (197.37)
-    plug_free = {"bottom_mm3": vol(plug ^ bottom), "top_mm3": vol(plug ^ top_mf)}
+    plugs = {}
+    for label, w, dx in (("12.35", 12.35, 0.0), ("12.35_x+0.3", 12.35, 0.3), ("12.35_x-0.3", 12.35, -0.3),
+                         ("13.0", 13.0, 0.0)):
+        plug = box(usb_xw + dx - w / 2, uy1, usb_xw + dx + w / 2, 240.0, zc - 3.25, zc + 3.25)  # out past the back face
+        plugs[label] = {"bottom_mm3": vol(plug ^ bottom), "top_mm3": vol(plug ^ top_mf)}
+    plug_free = plugs.pop("12.35")
     assert max(plug_free.values()) < 0.01, plug_free
+    plug_reported = {k: max(v.values()) < 0.01 for k, v in plugs.items()}
     floor_gap = round(Z["cavity_floor"] - (z_pcb + 1.6 + 3.26), 2)
 
     # 6. Battery-bay filler (INKC drawing, 4.5 mm) drops onto the floor of the 4.69 mm bay, its top below the cavity
@@ -226,34 +234,33 @@ def main() -> None:
             "top_case_min_z": round(float(top_mf.transform(to_p).bounding_box()[2]), 4),
             "wrist_pad_face_area_mm2": round(float(slice_material(top_mf.transform(to_p), 0.02).area), 1)}
     assert abs(desk["bottom_min_z"]) < 1e-3 and abs(desk["top_case_min_z"]) < 0.02 and desk["wrist_pad_face_area_mm2"] > 1000.0, desk
-    # 7b. ㄷ tray + triangular base (stock part): every section below the tray bottom lies inside the base outline
-    #     (the steps all round stay empty), nothing sits behind the back slope plane, the base fills its outline just
-    #     under the tray bottom, the tray keeps the full rail outline down to its bottom, and the desk face ends
-    #     `BACK_BEVEL_INSET` in from the back rail face.
-    n, off = bc.back_bevel()
+    # 7b. ㄷ tray + triangular base under the step chamfers (v0.12): outside the base outline nothing lies behind any of
+    #     the four chamfer planes,
+    #     the tray keeps the full rail outline down to its bottom and the rail faces run on `STEP_LAND` below it, the
+    #     stock base's end faces still show `END_STEP_W` in where the case is deeper than the chamfer, and the desk face
+    #     ends where the back chamfer meets it. The printability check (9) proves no flat step is left.
     base_ol = bc.base_outline()
     tz = bc.TRAY_BOTTOM_ZP                     # tray bottom at the back rail (highest)
-    tz_low = bc.tray_bottom_zp(bc.Y_FRONT)     # tray bottom at the front rail (lowest: tilted 0.2 deg)
-    outside_base = {f"z_p_{z:g}": round(slice_material(bottom, z).difference(base_ol.buffer(0.01)).area, 4)
-                    for z in (tz_low + 0.05, tz_low + 2.0, tz_low + 6.0, tz_low + 10.0)}
-    below_tray = box(-200.0, bc.Y_BACK - bc.BACK_BEVEL_INSET - 1.0, 200.0, bc.Y_BACK + 1.0, tz + 0.05, 40.0)
-    behind_bevel = vol(bottom ^ below_tray.trim_by_plane([-v for v in n], -off + 0.02))  # n . x <= off - 0.02
-    under = slice_material(bottom, tz_low + 0.05)  # just under the whole tray; the bay runs through here, so compare
-                                                   # outlines, not fill
+    base_prism = bc.prism(base_ol, 0.0, 60.0)
+    behind_chamfer = [vol(bottom.trim_by_plane([-v for v in n], -off + 0.02) - base_prism)
+                      for n, off in bc.step_chamfer_planes()]
     tray = slice_material(bottom, tz - 0.05)
+    land = slice_material(bottom, tz + bc.STEP_LAND - 0.1)  # the front rail is above the desk plane here: X and back
+    deep = slice_material(bottom, tz + bc.STEP_LAND + bc.END_STEP_W + 1.0)  # below the end chamfers: the base faces
     rail_outline_p = bc.plate_box(*bc.RIM_P, r=bc.RIM_CORNER_R)
     desk_slice = slice_material(bottom.transform(to_p), 0.05)
-    tray_base = {"material_outside_base_outline_mm2": outside_base, "material_behind_slope_mm3": behind_bevel,
-                 "base_bounds_world": [round(v, 2) for v in under.bounds],
-                 "expected_base_bounds": [round(v, 2) for v in base_ol.bounds],
+    tray_base = {"material_behind_step_chamfers_mm3": behind_chamfer,
                  "tray_bottom_bounds_world": [round(v, 2) for v in tray.bounds],
+                 "land_bounds_world": [round(v, 2) for v in land.bounds],
                  "rail_outline_bounds": [round(v, 2) for v in rail_outline_p.bounds],
+                 "base_end_faces_x_world": [round(deep.bounds[0], 2), round(deep.bounds[2], 2)],
+                 "expected_base_x": [round(base_ol.bounds[0], 2), round(base_ol.bounds[2], 2)],
                  "desk_face_back_edge_print_y": round(desk_slice.bounds[1], 3),
-                 "expected_print_y": round(bc.print_y(bc.Y_BACK - bc.BACK_BEVEL_INSET), 3)}
-    assert max(outside_base.values()) < 0.01 and behind_bevel < 0.01, tray_base
-    assert all(abs(a - b) < 0.1 for a, b in zip(tray_base["base_bounds_world"][:3],  # ends and front; the back is
-                                                tray_base["expected_base_bounds"][:3])), tray_base  # sloped here
+                 "expected_print_y": round(bc.print_y(bc.back_desk_edge_y()), 3)}
+    assert max(behind_chamfer) < 0.01, tray_base
     assert all(abs(a - b) < 0.1 for a, b in zip(tray_base["tray_bottom_bounds_world"], tray_base["rail_outline_bounds"])), tray_base
+    assert all(abs(tray_base["land_bounds_world"][k] - tray_base["rail_outline_bounds"][k]) < 0.1 for k in (0, 2, 3)), tray_base
+    assert all(abs(a - b) < 0.1 for a, b in zip(tray_base["base_end_faces_x_world"], tray_base["expected_base_x"])), tray_base
     assert abs(tray_base["desk_face_back_edge_print_y"] - tray_base["expected_print_y"]) < 0.1, tray_base
 
     # 7c. ㄴㄱ seam, hybrid joint: the halves meet line-to-line without overlap, slide together freely along the
@@ -291,6 +298,30 @@ def main() -> None:
     notch = json.loads((ROOT / "topcase-draft" / "draft-report.json").read_text())["geometry_mm"]["usb_notch"]
     assert len(gaps) == 1 and abs((gaps[0][0] + gaps[0][1]) / 2 - notch["x_world"]) < 0.05, (gaps, notch)
     assert abs(gaps[0][1] - gaps[0][0] - notch["width"]) < 0.05 and gaps[0][0] > 0.0, (gaps, notch)
+    # 8a. The slot leaves no fin: between it and each cap recess the rail top keeps `SLOT_MIN_WALL` or is cut away, and
+    #     the case under the slot (rays up through the slot floor on a 0.5 mm grid) keeps the land's thickness or more.
+    sy0, sy1 = REPORT["usb_slot_world"]["y"]
+    slot_plan = sg.box(gaps[0][0], sy0, gaps[0][1], sy1)
+    rim = slice_material(bottom, Z["rim_top"] + 0.25)
+    walls = []
+    for r in (bc.plate_to_world(p) for p in bc.cap_recesses_p()):
+        if slot_plan.distance(r) < 3.0:
+            (_, ry0, _, ry1), (rx0, rx1) = r.bounds, (r.bounds[0], r.bounds[2])
+            x0, x1 = (gaps[0][1], rx0) if rx0 >= gaps[0][1] else (rx1, gaps[0][0])
+            between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1)))
+            walls.append(round(between.bounds[2] - between.bounds[0], 3) if between.area > 1e-4 else 0.0)
+    under_tm = trimesh.load_mesh(OUT / "bottom-left-world.stl") + trimesh.load_mesh(OUT / "bottom-right-world.stl")
+    ys = np.arange(bc.Y_BACK - 9.0, bc.Y_BACK - 0.1, 0.5)
+    xs = np.arange(gaps[0][0] + 0.25, gaps[0][1] - 0.2, 0.5)
+    origins = np.array([[x, y, top.SKIRT_H + 0.01] for x in xs for y in ys])
+    locs, rays, _ = under_tm.ray.intersects_location(origins, np.tile([0.0, 0.0, 1.0], (len(origins), 1)))
+    first_exit = {}
+    for (_, _, z), k in zip(locs, rays):
+        first_exit[k] = min(first_exit.get(k, 99.0), z)
+    under_slot = round(min(z - top.SKIRT_H for z in first_exit.values()), 3)
+    slot_check = {"cap_recess_walls_mm": walls, "thinnest_under_slot_mm": under_slot}
+    assert all(w == 0.0 or w >= bc.SLOT_MIN_WALL - 0.01 for w in walls), slot_check
+    assert under_slot >= bc.STEP_LAND - 0.05, slot_check
 
     # 8b. Open ends (stock part, IMG_0462/0472/0473): between the rail faces nothing rises above the cavity floor over
     #     the last 10 mm of either end, while both rails run on to the rim ends at the rim top.
@@ -306,14 +337,15 @@ def main() -> None:
 
     # 9. Printability, desk face down at 0.20 mm layers: no island without the layer below; no flat overhang wider than
     #    2 mm per layer, and no down-facing surface shallower than 45 deg above the bed, except the declared ones:
-    #    bumpon-pocket roofs and decoration-recess roof (bridges), and the tray bottom showing round the base (the steps:
-    #    a cantilever at 6 deg; the per-layer test alone misses it because each 0.20 mm layer grows only ~1.9 mm).
+    #    bumpon-pocket roofs and decoration-recess roof (bridges). The tray bottom round the base used to be declared as
+    #    well (a cantilever at 6 deg, each 0.20 mm layer growing only ~1.9 mm); since v0.12 its chamfers must pass, and
+    #    the down-facing area left in that band is reported.
     bridges = unary_union([sg.Point(x, bc.print_y(y)).buffer(pocket_r + 0.3) for x, y in bc.bumpon_centres_world()]
                           + [deco_poly.buffer(bc.DECO_CLEAR + 0.3)])
     steps_world = bc.plate_box(*bc.RIM_P, r=bc.RIM_CORNER_R).difference(base_ol)
     to_print_xy = [1.0, 0.0, 0.0, -bc.COS, 0.0, -bc.SIN * tz]  # tray-bottom points (x, y, tz) -> print (x', y')
     step_band = sa.affine_transform(steps_world, to_print_xy).buffer(0.3)
-    declared = unary_union([bridges, step_band])
+    declared = bridges
     printability = {}
     for name in parts:
         pm = trimesh.load_mesh(OUT / f"{name}-print.stl")
@@ -336,7 +368,8 @@ def main() -> None:
                             wide.append({"z": round(float(z), 2), "bounds": [round(v, 1) for v in g_model.bounds]})
             prev = cur
         # Down-facing faces off the bed steeper than 45 deg from vertical, outside the declared regions (model XY).
-        down = (pm.face_normals[:, 2] < -0.707) & (pm.triangles_center[:, 2] > 0.05)
+        # Below 44.9 deg: the 45-deg step chamfers export within ~0.02 deg (float32 STL) of the limit.
+        down = (pm.face_normals[:, 2] < -math.cos(math.radians(44.9))) & (pm.triangles_center[:, 2] > 0.05)
         shallow = [c for c in pm.triangles_center[down] - [shift[0], shift[1], 0.0]
                    if not declared.contains(sg.Point(c[0], c[1]))]
         step_area = float(pm.area_faces[down][[step_band.contains(sg.Point(c[0] - shift[0], c[1] - shift[1]))
@@ -345,6 +378,7 @@ def main() -> None:
             {"down_facing_face_at": [round(float(v), 1) for v in c]} for c in shallow[:5]],
             "tray_step_cantilever_mm2": round(step_area, 1)}
     assert not any(v["islands"] or v["undeclared_overhangs"] for v in printability.values()), printability
+    assert max(v["tray_step_cantilever_mm2"] for v in printability.values()) < 1.0, printability
 
     verification = {
         "status": "ALL_PASSED",
@@ -355,13 +389,15 @@ def main() -> None:
         "gasket": {"plate_free_mm3": plate_free, "cap_flanges_seated_mm3": caps_seated,
                    "cap_flanges_bearing_0p10_mm3": caps_bear, "cap_seat_z_p": Z["cap_seat"]},
         "ball_catches": catch_gauge,
-        "pcb": {"gh60_pcb_and_usb_free_mm3": pcb_free, "usb_body_to_floor_mm": floor_gap, "usb_plug_free_mm3": plug_free},
+        "pcb": {"gh60_pcb_and_usb_free_mm3": pcb_free, "usb_body_to_floor_mm": floor_gap, "usb_plug_free_mm3": plug_free,
+                "usb_plug_side_clearance_mm": round((notch["width"] - 12.35) / 2, 3), "other_plugs_free": plug_reported},
         "drop_in_parts": fits,
         "weight_plate_screws": screw_report,
         "desk_plane": desk,
         "tray_and_base": tray_base,
         "split_seam": seam,
         "usb_slot_x_world": [round(v, 3) for v in gaps[0]],
+        "usb_slot_section": slot_check,
         "open_ends_material_above_floor_mm3": open_ends,
         "printability_0p20mm": {k: {"islands": len(v["islands"]), "undeclared_overhangs": len(v["undeclared_overhangs"]),
                                     "tray_step_cantilever_mm2": v["tray_step_cantilever_mm2"]}
