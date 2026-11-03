@@ -1,0 +1,73 @@
+{
+  "resistor_error_allocation_percent": {
+    "initial": 0.1,
+    "TCR_105K_10ppm": 0.105,
+    "225kh_70C_drift": 0.30015822784810126,
+    "solder": 0.020031645569620254,
+    "humidity": 0.10003164556962026,
+    "thermal_cycles": 0.10003164556962026,
+    "cold": 0.05003164556962025,
+    "board_bend": 0.05003164556962025
+  },
+  "sum_percent": 0.8253164556962025,
+  "unused_to_1pct_percent": 0.1746835443037975,
+  "I_at3p2_Rmax_uA": 100.43690051725002,
+  "I_min_static_uA": 102.53979812182995,
+  "I_max_static_uA": 106.3524276305713,
+  "C101_no_bias_no_aging_uF": 3.5955000000000004,
+  "C101_min_combined_remaining_factor_for2uF": 0.556250869141983,
+  "C101_conditional_screen_uF": 2.265165,
+  "C101_DF_test_ESR_upper_ohm_NOT_30mOhm_proof": 0.9406320513705401,
+  "BYP_68nF_alternate_initial_screen_nF": [
+    64.4062,
+    71.81412
+  ],
+  "BYP_68nF_alternate_room_IR_Gohm_using_Cmax": 6.962419089727757,
+  "BYP_68nF_alternate_room_IR_inferred_leak_nA_at3p4": 0.4883360160000001,
+  "BYP_68nF_alternate_after_damp_IR_inferred_leak_nA_at3p4": 9.766720320000003,
+  "nominal_startup_ms": 0.6599999999999999,
+  "nominal_short_recovery_ms": 329.99999999999994,
+  "nominal_10p7uF_startup_charge_mA": 53.5,
+  "BYP_10nF_room_leak_inference_nA_at3p4": 0.34,
+  "BYP_10nF_post_damp_leak_inference_nA_at3p4": 6.8,
+  "BYP_comparison": [
+    {
+      "C_nF": 1.5,
+      "nominal_start_ms": 0.09899999999999999,
+      "nominal_recovery_ms": 49.49999999999999,
+      "nominal_10p7uF_charging_mA": 356.66666666666663
+    },
+    {
+      "C_nF": 10,
+      "nominal_start_ms": 0.6599999999999999,
+      "nominal_recovery_ms": 329.99999999999994,
+      "nominal_10p7uF_charging_mA": 53.5
+    },
+    {
+      "C_nF": 22,
+      "nominal_start_ms": 1.4519999999999997,
+      "nominal_recovery_ms": 725.9999999999999,
+      "nominal_10p7uF_charging_mA": 24.318181818181817
+    },
+    {
+      "C_nF": 47,
+      "nominal_start_ms": 3.102,
+      "nominal_recovery_ms": 1551.0,
+      "nominal_10p7uF_charging_mA": 11.382978723404253
+    },
+    {
+      "C_nF": 68,
+      "nominal_start_ms": 4.4879999999999995,
+      "nominal_recovery_ms": 2244.0,
+      "nominal_10p7uF_charging_mA": 7.867647058823529
+    }
+  ],
+  "LDO_normal_300mA_screen_W": 0.2483995942800057,
+  "EP_paste_coverage_fraction": 0.5978260869565218,
+  "WARNINGS": [
+    "Error allocation sums independent test limits, not a manufacturer simultaneous lifetime guarantee.",
+    "No DC bias/aging/ESR all-corner guarantee is inferred from nominal/X7R/DF or typical curves.",
+    "BYP IR is measured at rated voltage and room temperature; inferred lower-voltage leakage is not guaranteed hot-PCB leakage.",
+    "No whole USB or fault current pass."
+  ]
+}
