@@ -1,132 +1,110 @@
-# USB exit: low sidewalls, open outer exit, retained inner ledge
+# USB exit: separate upper-case and lower-case bridges
 
 Follow-up to housing PR #1 at `b1cf07038061dd97fe7e448679078e8362da8368`
-(top case v7.11 / bottom case v0.11), default `6095-trimode`. The owner corrected
-the previous render: the orange bottom case rose to the ceiling beside the USB
-entrance. Simply cutting the whole slot through the base did not fix that.
-The owner approved lowering those walls while retaining the inner horizontal ledge.
+(top v7.11 / bottom v0.11), default **6095-trimode**, not universal.
 
-This revision supersedes the first PR #9 correction at `69d8703`. The initial
-review's physical "protruding floor" interpretation and the claim that the entire
-inner slot must be floorless were not established by the photographs.
+The owner's latest clarification supersedes the previous interpretation:
+**the lower case also has a bridge above the USB passage, with open space
+underneath that is printed with support.** The upper case has its own bridge.
+The previous lowered-sidewall / ceiling-less revision was not the intended shape.
+The lower bridge is neither the retained inner floor ledge nor just a gasket island.
 
-| Feature | Current design, Zp positive downward |
+## Current geometry
+
+All dimensions are mm. Zp increases downward; these are **design choices, not
+measurements of the photographed stock part**.
+
+| Feature | Geometry |
 | --- | --- |
-| Slot | Xworld 124.4975, width 14.75; top case and connector position unchanged |
-| Sidewalls | Local relief extends 6.0 mm to each side; top lowered from Zp 9.69 to 15.20, excluding actual rounded gasket-bearing outlines plus a 0.10 mm margin |
-| Clearance to PCB underside | 1.10 mm nominal; 0.30 mm after 0.80 mm downward travel |
-| Inner ledge | Yworld 186.236–188.236, 2.0 mm deep, top at Zp 20.08; minimum vertical thickness 0.917741 mm over the sloping base |
-| Open outer exit | From Yworld 188.236 through the rear face at 194.37; cutter continues to 195.37 and through the underside |
-| Cable-body gauge | Existing rectangular 12.35 × 6.5 mm gauge, not a standardized overmold maximum; 0.30 mm ledge clearance after 0.80 mm downward travel |
+| USB slot | Xworld 124.4975; width 14.75; top case and connector position unchanged |
+| Lower-case bridge | Top Zp 10.70; bottom 11.90; thickness **1.20**; Yworld 188.236–194.370 |
+| Bridge attachment | 14.75 clear span, 0.8 overlap into each side support; earlier 6 mm sidewall relief removed |
+| Above lower bridge | **1.01 gap** to the upper case's local inner ceiling at Zp 9.69; rear rounded notch unchanged |
+| Below lower bridge | **0.58 roof clearance** to the existing nominal generic plug gauge; downward PCB travel increases it |
+| Outer passage | Open below Zp 11.90, from Yworld 188.236 through rear face 194.370 and through underside |
+| Retained inner ledge | Yworld 186.236–188.236, depth 2.0, top Zp 20.08; minimum vertical thickness 0.917741 |
+| Generic cable gauge | Rectangular 12.35 × 6.5; clears seated and 0.8 down, with 0.30 ledge clearance down |
 
-These heights, relief width and ledge depth are **design choices, not measured
-dimensions of the photographed stock part**. A ledge at the ordinary Zp 18.20
-cavity floor collided with the existing cable-body gauge; retaining a short,
-lower ledge over the thicker base permits the gauge's downward travel without
-leaving a sub-0.8 mm skin. A narrow side relief still exposed a high wall in the
-oblique render. The final relief is 6 mm per side and preserves the rounded
-gasket contact areas, not the unused corners of the oversized rectangular
-recess floors: those corners also formed a wall up to the entrance ceiling.
-The rounded bearing outlines have a 0.10 mm support margin. This is not a
-guarantee for arbitrary retail cables.
-Only the published bottom-left half changes; the other three bottom downloads,
-the top case and catch features are unchanged. Gasket bearing heights and full
-contact areas are preserved; unused recess-floor material near USB is relieved.
+The bridge attaches to the restored sidewalls as one connected solid. The
+gasket recesses, bearing heights/contact areas, catch features and top case
+are unchanged from the original housing baseline. Only the published
+bottom-left 3MF changes; the other three bottom downloads retain their bytes.
+The rectangular cable gauge is **not a standardized overmold maximum**.
 
-## Regression evidence
+## Verification and printing
 
-The verifier probes the exported STL assembly, inset 0.02 mm to avoid float32
-boundary noise. Checks require an open outer exit, retained inner ledge of at
-least 0.8 mm thickness, and low shoulders with material remaining below them.
-The generic cable-body gauge must clear both cases seated and 0.8 mm down.
+The exported STL is probed with a 0.02 inset to avoid float32 boundary noise.
+Bridge presence and the passage **below** it are checked separately; the old
+test requiring the entire slot column to be empty was the wrong contract.
 
-| Check | First PR #9 correction (`69d8703`) | Current correction |
+| Check | Previous low-sidewall revision | Current bridge revision |
 | --- | ---: | ---: |
-| Material in the two high-shoulder probes | 57.3156 mm³ | 0.0000 mm³ |
-| Missing material in the retained-ledge probe | 23.0653 mm³ | 0.0000 mm³ |
-| Material bridging the outer exit | 0.0000 mm³ | 0.0000 mm³ |
-| Gasket-bearing material lost to this revision | — | 0.0000 mm³ |
-| Geometry changed outside the local USB region | — | 0.0000 mm³ |
-| Default-board full bottom-case verifier | New shoulder/ledge regression fails | `ALL_PASSED` |
+| Missing lower-bridge material | 103.9856 mm³ | 0 mm³ |
+| Material blocking passage below bridge | 0 mm³ | 0 mm³ |
+| Down-facing USB roof in desk-down print pose | None | **90.48 mm²** |
+| Default full bottom verifier | New bridge-presence test fails | ALL_PASSED |
 
-Direct before/after solid checks for `6095-trimode`, `ph60-rev3` and `universal`
-are recorded in [geometry-checks.json](geometry-checks.json). The default full
-top-case verifier also passes. The earlier 66.327 mm³ full-slot probe was too
-broad: it counted inner base material as well as the rear residual skin, and
-is deliberately replaced by separate outer-exit and retained-ledge probes.
-The existing full bottom-case verifier **does not support `universal`**: it
-looks up that aggregate profile as an actual PCB ID and raises `StopIteration`
-in `usb_centre_plate_x`. This pre-existing limitation is not hidden or changed
-by this fix. No universal bottom half is published here.
+The full default top verifier also passes. See [geometry-checks.json](geometry-checks.json)
+and the refreshed [bottom verification](../bottomcase-verification.json).
+Single-shell/watertightness, bed size, top/bottom seating, gasket contact,
+generic PCB/USB/cable gauges and 0.8 mm downward travel remain checked.
 
-## Assembly renders
+**Print the USB roof with support.** It spans 14.75 mm and its underside is
+approximately 6° above the bed in the intended desk-face-down print pose,
+not a self-supporting 45° ramp. The printability verifier explicitly declares
+this USB region as supported and records its downward-facing area. A passing
+result therefore does **not** mean support-free printing. The 3MF contains
+geometry, not generated support toolpaths: enable support in the slicer below
+the USB bridge and verify access for removal through the port/open underside.
+No slicer toolpath, bridge-sag, support-removal or physical strength test has
+been performed; support density/interface gaps remain printer-specific.
 
-Blender 5.2.2 LTS, Cycles, 32 samples with denoising. These are actual CAD mesh
-renders, not generated illustrations. The first camera reproduces the previous
-third image's underside-oblique position and 45 mm orthographic width.
+The existing full bottom verifier does not support aggregate profile
+`universal` (it looks it up as a concrete PCB and raises `StopIteration`).
+This pre-existing limitation is unchanged; no universal bottom is published.
 
-![Underside oblique: assembled, intact geometry](01-under-assembled.png)
+## Blender assembly renders
 
-![Rear: assembled, intact geometry](02-rear-assembled.png)
+Blender 5.2.2 LTS, Cycles, 32 samples/denoising. Actual CAD meshes, not AI
+illustrations. Blue upper case, orange lower case, green PCB, silver USB-C,
+gray PC plate. The first camera retains the previous underside-oblique pose.
 
-![Visualization-only longitudinal cutaway: parts not moved](03-cutaway-assembled.png)
+![Same underside camera: lower bridge above the USB opening](01-under-assembled.png)
+![Rear: intact assembly](02-rear-assembled.png)
+![Visualization-only cutaway: two separate bridges](03-cutaway-assembled.png)
+![Intact bottom case alone: bridge attached to its side supports](04-bottom-only.png)
 
-![Bottom case alone, intact geometry: low shoulders and retained inner ledge](04-bottom-only.png)
+Views 1/2 are intact nominal assemblies. View 3 cuts the housing, plate and PCB
+at render X = +0.08 only to expose the stack; the detailed J1 connector remains
+intact. **This is not a manufacturing cut.** View 4 hides the other parts without
+subtracting them. No exploded offsets, exaggerated thickness or print supports
+are added. The 1.01 gap describes the inner overlapping bridges, not a constant
+gap around the curved outer top-case notch.
 
-Blue: top case; orange: corrected bottom case; green: PCB; silver: USB shell;
-light gray: PC plate. The first two views have no visual cuts, exploded offsets,
-transparency or exaggerated thickness. The third removes the camera-side half
-at render X = +0.08 mm solely to reveal the internal stack; **this cutaway is
-not an additional manufacturing cut**. The fourth shows the intact bottom case
-alone; the other parts are hidden, not subtracted from the manufacturing model.
+## Inputs and limits
 
-The first view explicitly labels the **remaining high rounded gasket support**
-and the lowered entry sidewall separately. That support is deliberately not
-removed: the current nominal cap stack requires bearing at Zp 10.20, above
-the PCB. Lowering it to Zp 15.20 would remove the cap's specified support.
-The photographs do not independently verify that nominal support geometry;
-this revision must not be described as removing every high orange surface
-or as an exact reproduction of the photographed stock case.
+- Housing: PR #1 baseline above plus this lower-bridge correction; 6095-trimode.
+- PCB: PR #2 archived [A21 at f87140b](https://github.com/minpeter/maru60/blob/f87140b05bc66ce0eab382aff62b12cf459443ce/pcb/checkpoints/a21/maru60.kicad_pcb),
+  native 285 × 94.6 R2 Edge.Cuts and **351 through drills**, 1.6 thick.
+  Nominal Zp 12.50–14.10. This WIP PCB is referenced, not adopted or modified.
+  Copper pads, solder fillets, other populated electronics, sockets, switches,
+  gaskets and cable/overmold are omitted; mask color is illustrative.
+- J1: native KiCad (18.0, 3.8), B.Cu, zero footprint/model rotation;
+  **USB4105-GF-A candidate**, not a final selection. Official KiCad
+  [9.0.2 VRML model](https://gitlab.com/kicad/libraries/kicad-packages3D/-/blob/9.0.2/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.wrl),
+  legacy units multiplied by 2.54, native bottom-side pose. [GCT drawing](https://gct.co/files/drawings/usb4105.pdf):
+  body width 8.94, body height 3.31 from mounting face. Not the generic verifier box.
+- Plate: native INKC HHKB outline and switch/stabilizer cutouts, PC 1.5 at Zp 7.50.
+- Frames: Xplate = XGH60 + 0.4525; Yplate = 101.06775 − YGH60.
+  Render X = 124.4975 − Xworld; Y = Yworld − 194.37; Z = 20.01 − Zp.
+  Proper rigid rotations, not mirroring or moving parts to fake clearance.
 
-### PCB and connector provenance
+Input hashes/camera poses: [provenance.json](provenance.json), [views.json](views.json).
+KiCad model attribution: library contributors, CC BY-SA 4.0 with
+[KiCad library exception](https://gitlab.com/kicad/libraries/kicad-packages3D/-/blob/9.0.2/LICENSE.md).
+The housing's [existing license](../../LICENSE-topcase) is unchanged.
 
-- Housing: default `6095-trimode` USB profile, **not universal**; corrected
-  bottom case generated from this PR. The top case is unchanged from PR #1.
-- PCB: PR #2 commit `f87140b05bc66ce0eab382aff62b12cf459443ce`, native
-  [`pcb/checkpoints/a21/maru60.kicad_pcb`](https://github.com/minpeter/maru60/blob/f87140b05bc66ce0eab382aff62b12cf459443ce/pcb/checkpoints/a21/maru60.kicad_pcb).
-  The 285 × 94.6 mm R2 Edge.Cuts, 1.6 mm substrate, through drills and nearby
-  B.Cu pads are represented. Solder-mask color is illustrative; other populated
-  components, solder fillets, switches, sockets and gaskets are not rendered.
-  The archived A21 PCB is WIP, not fabrication-ready, and is **not adopted or
-  modified by this PR**.
-- J1: the native A21 footprint at KiCad (18.0, 3.8) mm on B.Cu, zero rotation:
-  `USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal`.
-  Its value is explicitly **USB4105-GF-A (candidate)**, not a final selection.
-- Connector geometry: official KiCad **9.0.2** library
-  [USB4105 VRML model](https://gitlab.com/kicad/libraries/kicad-packages3D/-/blob/9.0.2/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.wrl),
-  converted from legacy 2.54 mm units and placed using the native B.Cu pose.
-  [GCT drawing](https://gct.co/files/drawings/usb4105.pdf): 8.94 mm body width,
-  3.31 mm body height above its PCB mounting face. The rendered shell is not
-  the old generic 9.0 × 7.4 × 3.26 mm verification box.
-- Plate: native INKC HHKB outline and cutouts, 1.5 mm PC, top at Zp 7.50.
-  PCB top/bottom: Zp 12.50 / 14.10, using the housing's nominal MX stack.
-- Frames: Xplate = XGH60 + 0.4525; Yplate = 101.06775 − YGH60. Render frame:
-  X = 124.4975 − Xworld; Y = Yworld − 194.37; Z = 20.01 − Zp. This is a rigid
-  rotation, not a mirror. No component was moved to make it appear to fit.
-
-Exact input hashes and camera poses are in [provenance.json](provenance.json)
-and [views.json](views.json). KiCad library model attribution: KiCad library
-contributors, CC BY-SA 4.0 with the KiCad library exception; see the
-[library license](https://gitlab.com/kicad/libraries/kicad-packages3D/-/blob/9.0.2/LICENSE.md).
-The exception covers generated design files; this visualization does not
-change the housing's [existing license](../../LICENSE-topcase) or select a PCB
-hardware license.
-
-### Validation boundary
-
-The render shows a nominal assembly pose, not complete PCB-to-case clearance
-certification, solder-joint strength, USB mating compliance, cable reach or
-physical gasket-travel validation. No cable or overmold is rendered.
-The existing verifier still uses its documented generic PCB/component/plug
-gauges; its passing results must not be read as a full A21/USB4105 qualification.
-The 0.84 mm generic-body floor clearance is not a measured USB4105 clearance.
+The render is a nominal assembly, not full A21/USB qualification, USB electrical
+validation, guaranteed cable reach, printed dimensional accuracy or a stock-part
+replica. The existing verifiers use generic component/plug gauges; their passing
+results must not be read as a qualification of all commercial cables.

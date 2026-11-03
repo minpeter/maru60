@@ -18,8 +18,8 @@ geometry comes from the parts it mates with, plus the owner's photos IMG_0462-04
   - Cavity floor under the MX stack (plate top 7.50, PCB top 12.50); 140 x 45 battery bay, 4.69 deep as the stock bay
     (owner caliper; published 4.5), at the back, back decoration plate recess (INKC drawing) on the underside with four
     counterbored M2 holes from the cavity to screw the steel plate on as the stock case does, USB-C slot under the
-    top-case notch.
-  - Split at X = 0 into two halves for a 256 mm bed, each printed desk face down without supports.
+    top-case notch, with a separate lower-case bridge over the open USB passage.
+  - Split at X = 0 into two halves for a 256 mm bed, printed desk face down with support under the USB bridge.
 
 Frames: the top-case print frame (`world`: X mirrored from the plate frame, Y from the wrist-rest front, Z_p down from the
 top face) and each part's print frame (desk face on the bed). Usage: uv run build_bottomcase_draft.py [--board BOARD]
@@ -78,8 +78,8 @@ FRONT_STEP_W = 4.5       # Tray bottom showing in front of the base, from the fr
 END_STEP_W = 4.5         # Tray bottom showing past each end of the base, from the rail ends
 SLOT_MIN_WALL = 0.8      # Rail left between the USB-C slot and a cap recess: anything thinner (under two 0.4 mm
                          # perimeters) is cut away, so the slot opens into the recess instead of leaving a fin
-USB_SHOULDER_CLEAR = 6.0  # Clear the deep entry's sidewalls, not just its rear edge; rounded cap bearings are excluded
-USB_SHOULDER_ZP = 15.20  # PCB underside 14.10 + 0.80 downward travel + 0.30 clearance; design, not a stock measurement
+USB_BRIDGE_TOP_ZP = 10.70  # Separate lower-case bridge: 1.01 below the upper pocket ceiling, not a stock measurement
+USB_BRIDGE_THICKNESS = 1.20  # A supported print over the open USB passage, not a self-supporting ramp
 USB_LEDGE_ZP = 20.08    # Generic plug underside 18.98 + 0.80 downward travel + 0.30 clearance, not a cable standard
 DECO_CLEAR = 0.20        # Recess around the 3 mm steel weight / decoration plate outline (INKC drawing), per side
 DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, along the desk face (owner)
@@ -311,21 +311,13 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     usb_x, usb_w = top.usb_notch_print(board)
     usb_y0, usb_y1 = top.pw(0.0, LEDGE_BACK_P - 1.0)[1], top.pw(0.0, RIM_P[3] + 1.0)[1]
     slot = sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1)
-    # An open outer exit, not a tunnel to the top-case ceiling. Retain the inner floor/ledge:
-    # retain a 2 mm inner ledge over the thicker base; open the rest through the underside.
+    # Open below the passage, with a distinct lower-case bridge above it. The upper case has its own bridge.
+    # Retain a 2 mm inner ledge over the thicker base; open the rest through the underside.
     usb_open_y = usb_y0 + 2.0
     usb_z1 = desk_zp(usb_y1) + 1.0
     cuts.append(prism(slot, Z_RIM_TOP - 1.0, USB_LEDGE_ZP))
     cuts.append(prism(sg.box(usb_x - usb_w / 2, usb_open_y, usb_x + usb_w / 2, usb_y1),
                       Z_RIM_TOP - 1.0, usb_z1))
-    shoulder_cut = prism(sg.box(usb_x - usb_w / 2 - USB_SHOULDER_CLEAR, usb_y0,
-                                usb_x + usb_w / 2 + USB_SHOULDER_CLEAR, usb_y1),
-                         Z_RIM_TOP - 1.0, USB_SHOULDER_ZP)
-    # Preserve the actual rounded cap bearing areas, not the oversized rectangular recess floor:
-    # the unused corner of that floor otherwise remains a wall reaching the USB entry ceiling.
-    for pts in spec.gasket_outlines_plate():
-        bearing = plate_to_world(sg.Polygon(pts)).buffer(0.10, quad_segs=8)
-        shoulder_cut -= prism(bearing, Z_RIM_TOP - 1.0, USB_SHOULDER_ZP + 1.0)
     slot_fins = []
     for recess in (plate_to_world(p) for p in cap_recesses_p()):
         wall = slot.distance(recess)
@@ -334,7 +326,6 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
             xa, xb = (sx1 - 0.01, rx0 + top.CAP_POCKET_R) if rx0 >= sx1 else (rx1 - top.CAP_POCKET_R, sx0 + 0.01)
             cuts.append(prism(sg.box(xa, max(sy0, ry0), xb, min(sy1, ry1)), Z_RIM_TOP - 1.0, CAP_SEAT_ZP))
             slot_fins.append(round(wall, 3))
-    cuts.append(shoulder_cut)
     bay_y1 = LEDGE_BACK_P - BAY_BACK_GAP
     bay_cx = -top.DX_PW  # plate X of the case centre line (world X = 0)
     bay_p = (bay_cx - _BAY["length"] / 2, bay_y1 - _BAY["width"], bay_cx + _BAY["length"] / 2, bay_y1)
@@ -354,6 +345,9 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         cuts.append(from_print(md.Manifold.cylinder(s["cavity_floor_z"] + 1.0 - z0, cbore_r, cbore_r, 48).translate(
             [px, py, z0])))
     body = body - md.Manifold.batch_boolean(cuts, md.OpType.Add)
+    # The rear rail ends provide the bridge's two supports. Stop at the rail face, inside the upper skirt pocket.
+    body += prism(sg.box(usb_x - usb_w / 2 - 0.8, usb_open_y, usb_x + usb_w / 2 + 0.8, Y_BACK),
+                  USB_BRIDGE_TOP_ZP, USB_BRIDGE_TOP_ZP + USB_BRIDGE_THICKNESS)
 
     report = {
         "board": board,
@@ -369,8 +363,8 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "catches": [{**s, "pilots": pilots[2 * k:2 * k + 2]} for k, s in enumerate(sites)],
         "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, usb_z1],
                            "open_bottom_y": [usb_open_y, usb_y1], "inner_ledge_z_p": USB_LEDGE_ZP,
-                           "shoulder_relief_per_side": USB_SHOULDER_CLEAR, "shoulder_z_p": USB_SHOULDER_ZP,
-                           "gasket_bearing_footprints_preserved": True, "gasket_bearing_margin": 0.10,
+                           "bridge_z_p": [USB_BRIDGE_TOP_ZP, USB_BRIDGE_TOP_ZP + USB_BRIDGE_THICKNESS],
+                           "bridge_y": [usb_open_y, Y_BACK], "bridge_requires_print_support": True,
                            "cap_recess_walls_removed_mm": slot_fins, "min_wall": SLOT_MIN_WALL},
         "bumpons_world": [[x, round(y, 3)] for x, y in bumpon_centres_world()],
         "bumpon_pocket": {"d": top.POCKET_D, "depth": top.POCKET_DEPTH},

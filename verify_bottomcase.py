@@ -301,12 +301,18 @@ def main() -> None:
     notch = json.loads((ROOT / "topcase-draft" / "draft-report.json").read_text())["geometry_mm"]["usb_notch"]
     assert len(gaps) == 1 and abs((gaps[0][0] + gaps[0][1]) / 2 - notch["x_world"]) < 0.05, (gaps, notch)
     assert abs(gaps[0][1] - gaps[0][0] - notch["width"]) < 0.05 and gaps[0][0] > 0.0, (gaps, notch)
-    # The outer rear step is open underneath, but the inner cavity floor/ledge is retained.
-    # Probe the exported mesh, not a cutter or the report's claim that the exit is open.
+    # A lower-case bridge crosses above the port, distinct from the upper-case bridge.
+    # Probe exported geometry: the old ceiling-less exit must fail the bridge-presence check.
     sy0, sy1 = REPORT["usb_slot_world"]["y"]
     open_y = sy0 + 2.0
+    bridge_probe = box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, bc.Y_BACK - 0.02,
+                       10.72, 11.88)
+    bridge_missing = vol(bridge_probe - bottom)
+    assert bridge_missing < 0.0001, f"Lower USB bridge missing: {bridge_missing} mm^3"
+    bridge_bounds = (bottom ^ box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02,
+                                  bc.Y_BACK - 0.02, 9.0, 12.4)).bounding_box()
     slot_column = box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, sy1 - 0.02,
-                      Z["rim_top"] - 1.0, bottom.bounding_box()[5] + 1.0)
+                      11.92, bottom.bounding_box()[5] + 1.0)
     slot_bottom_material = vol(bottom ^ slot_column)
     assert slot_bottom_material < 0.0001, f"USB exit is not open underneath: {slot_bottom_material} mm^3"
     ledge_z = zc + 3.25 + 0.8 + 0.3
@@ -314,21 +320,7 @@ def main() -> None:
     ledge_probe = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02,
                       ledge_z + 0.02, ledge_z + 0.82)
     ledge_missing = vol(ledge_probe - bottom)
-    # Both rear shoulders must be below the PCB, including 0.8 travel and 0.3 clearance.
-    shoulder_limit = z_pcb + 1.6 + 0.8 + 0.3
-    shoulders = {}
-    for name, xa, xb in (("left", gaps[0][0] - 5.9, gaps[0][0] - 0.1),
-                         ("right", gaps[0][1] + 0.1, gaps[0][1] + 5.9)):
-        probe = box(xa, bc.Y_BACK - 1.0, xb, bc.Y_BACK - 0.1, Z["rim_top"] - 0.1, shoulder_limit - 0.02)
-        foot = box(xa, bc.Y_BACK - 1.0, xb, bc.Y_BACK - 0.1, shoulder_limit + 0.02, shoulder_limit + 0.52)
-        shoulders[name] = {"high_wall_mm3": vol(bottom ^ probe), "missing_foot_mm3": vol(foot - bottom)}
-    entry_air = box(gaps[0][0] - 5.9, sy0 + 0.02, gaps[0][1] + 5.9, sy1 - 0.02,
-                    Z["rim_top"] - 0.1, shoulder_limit - 0.02)
-    for ring in caps_plan:
-        entry_air -= bc.prism(ring.buffer(0.12, quad_segs=8), Z["rim_top"] - 0.1, shoulder_limit - 0.02)
-    entry_material = vol(bottom ^ entry_air)
-    assert max(ledge_missing, entry_material) < 0.0001 and max(v for s in shoulders.values() for v in s.values()) < 0.0001, (
-        "USB inner ledge / low shoulders", ledge_missing, entry_material, shoulders)
+    assert ledge_missing < 0.0001, ("USB inner ledge", ledge_missing)
     # 8a. The slot leaves no fin: between it and each cap recess the rail top keeps `SLOT_MIN_WALL` or is cut away.
     slot_plan = sg.box(gaps[0][0], sy0, gaps[0][1], sy1)
     rim = slice_material(bottom, Z["rim_top"] + 0.25)
@@ -340,8 +332,10 @@ def main() -> None:
             between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1)))
             walls.append(round(between.bounds[2] - between.bounds[0], 3) if between.area > 1e-4 else 0.0)
     slot_check = {"cap_recess_walls_mm": walls, "open_bottom_material_mm3": slot_bottom_material,
-                  "inner_ledge_missing_mm3": ledge_missing, "shoulders": shoulders,
-                  "entry_air_material_mm3": entry_material, "plug_down_0p8_mm3": plug_down_free}
+                  "inner_ledge_missing_mm3": ledge_missing, "bridge_missing_mm3": bridge_missing,
+                  "bridge_to_upper_ceiling_mm": round(bridge_bounds[2] - Z["rim_top"], 3),
+                  "bridge_to_generic_plug_mm": round(zc - 3.25 - bridge_bounds[5], 3),
+                  "plug_down_0p8_mm3": plug_down_free}
     assert all(w == 0.0 or w >= bc.SLOT_MIN_WALL - 0.01 for w in walls), slot_check
 
     # 8b. Open ends (stock part, IMG_0462/0472/0473): between the rail faces nothing rises above the cavity floor over
@@ -358,14 +352,17 @@ def main() -> None:
 
     # 9. Printability, desk face down at 0.20 mm layers: no island without the layer below; no flat overhang wider than
     #    2 mm per layer, and no down-facing surface shallower than 45 deg above the bed, except the declared ones:
-    #    bumpon-pocket roofs and decoration-recess roof (bridges), and the tray bottom showing round the base (the steps:
+    #    USB bridge (requires support), bumpon-pocket roofs and decoration-recess roof, and the tray bottom (the steps:
     #    a cantilever at 6 deg; the per-layer test alone misses it because each 0.20 mm layer grows only ~1.9 mm).
     bridges = unary_union([sg.Point(x, bc.print_y(y)).buffer(pocket_r + 0.3) for x, y in bc.bumpon_centres_world()]
                           + [deco_poly.buffer(bc.DECO_CLEAR + 0.3)])
     steps_world = bc.plate_box(*bc.RIM_P, r=bc.RIM_CORNER_R).difference(base_ol)
     to_print_xy = [1.0, 0.0, 0.0, -bc.COS, 0.0, -bc.SIN * tz]  # tray-bottom points (x, y, tz) -> print (x', y')
     step_band = sa.affine_transform(steps_world, to_print_xy).buffer(0.3)
-    declared = unary_union([bridges, step_band])
+    bridge_print = bc.to_trimesh(box(gaps[0][0] - 0.8, open_y, gaps[0][1] + 0.8, bc.Y_BACK,
+                                     10.70, 11.90).transform(bc.TO_PRINT))
+    usb_support = sg.MultiPoint(bridge_print.vertices[:, :2]).convex_hull.buffer(0.3)
+    declared = unary_union([bridges, step_band, usb_support])
     printability = {}
     for name in parts:
         pm = trimesh.load_mesh(OUT / f"{name}-print.stl")
@@ -393,9 +390,13 @@ def main() -> None:
                    if not declared.contains(sg.Point(c[0], c[1]))]
         step_area = float(pm.area_faces[down][[step_band.contains(sg.Point(c[0] - shift[0], c[1] - shift[1]))
                                                for c in pm.triangles_center[down]]].sum())
+        usb_area = float(pm.area_faces[down][[usb_support.contains(sg.Point(c[0] - shift[0], c[1] - shift[1]))
+                                              for c in pm.triangles_center[down]]].sum())
         printability[name] = {"islands": islands, "undeclared_overhangs": wide + [
             {"down_facing_face_at": [round(float(v), 1) for v in c]} for c in shallow[:5]],
+            "usb_bridge_requires_support_mm2": round(usb_area, 2),
             "tray_step_cantilever_mm2": round(step_area, 1)}
+    assert printability["bottom-left"]["usb_bridge_requires_support_mm2"] > 80.0, printability
     assert not any(v["islands"] or v["undeclared_overhangs"] for v in printability.values()), printability
 
     verification = {
@@ -418,6 +419,7 @@ def main() -> None:
         "usb_slot_section": slot_check,
         "open_ends_material_above_floor_mm3": open_ends,
         "printability_0p20mm": {k: {"islands": len(v["islands"]), "undeclared_overhangs": len(v["undeclared_overhangs"]),
+                                    "usb_bridge_requires_support_mm2": v["usb_bridge_requires_support_mm2"],
                                     "tray_step_cantilever_mm2": v["tray_step_cantilever_mm2"]}
                                 for k, v in printability.items()},
     }

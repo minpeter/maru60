@@ -1,13 +1,13 @@
 {
   "housing_base": "b1cf07038061dd97fe7e448679078e8362da8368",
-  "housing_change": "Local low USB shoulders; open outer rear step; retained lowered inner ledge",
+  "housing_change": "Distinct lower-case bridge above USB passage; restored side supports; open below bridge; retained inner ledge",
   "board_profile": "6095-trimode (not universal)",
   "top_version": "v7.11",
-  "bottom_version": "v0.11 + low-shoulder / retained-ledge correction",
+  "bottom_version": "v0.11 + supported lower-bridge correction",
   "pcb_commit": "f87140b05bc66ce0eab382aff62b12cf459443ce",
   "pcb_file": "pcb/checkpoints/a21/maru60.kicad_pcb",
   "pcb_sha256": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
-  "pcb_geometry": "Native Edge.Cuts, through drills and nearby B.Cu pads; solder mask visualization; other components omitted",
+  "pcb_geometry": "Native Edge.Cuts and 351 through drills; solder mask visualization; copper pads and other components omitted",
   "pcb_z_p": [
     12.5,
     14.1
@@ -48,10 +48,9 @@
       195.37
     ],
     "inner_ledge_z_p": 20.08,
-    "shoulder_relief_per_side": 6.0,
-    "shoulder_z_p": 15.2,
-    "gasket_bearing_footprints_preserved": true,
-    "gasket_bearing_margin": 0.1,
+    "bridge_z_p": [10.70, 11.90],
+    "bridge_y": [188.236, 194.37],
+    "bridge_requires_print_support": true,
     "cap_recess_walls_removed_mm": [
       0.143
     ],
