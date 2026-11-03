@@ -1,4 +1,4 @@
-# USB exit: flush lower rim and deeper mating floor
+# USB connector: recessed inner floor connected to the exit
 
 Follow-up to housing PR #1 at `b1cf07038061dd97fe7e448679078e8362da8368`
 (top v7.11 / bottom v0.11), default **6095-trimode**, not universal.
@@ -9,6 +9,12 @@ beam; the mating floor below the USB opening is recessed more deeply.** Both
 upper and lower cases still bridge the passage, and the lower roof needs print
 support. The earlier 1.01 mm gap above a separate 1.20 mm beam was an incorrect
 interpretation. The floor depth below is a design trial, not photo metrology.
+
+The latest annotated cutaway identifies the **floor directly under the USB
+connector inside the housing**, not just the cable exit. The previous revision
+left this inner floor at Zp 18.20. This revision removes it across the slot width
+and continues the recessed floor 9.0 mm farther inward to sit beneath the whole
+candidate receptacle body. The existing roof and outer opening are unchanged.
 
 ## Current geometry
 
@@ -23,12 +29,12 @@ measurements of the photographed stock part**.
 | Above lower roof | **No separate gap** to the upper case's local inner ceiling at Zp 9.69; cap recesses and fin relief retained; rear rounded notch unchanged |
 | Below lower bridge | **0.58 roof clearance** to the existing nominal generic plug gauge; downward PCB travel increases it |
 | Outer passage | Open below Zp 11.90, from Yworld 187.236 through rear face 194.370 and through underside |
-| Recessed inner mating floor | Yworld 186.236–187.236, fore-aft length 1.0, top Zp 21.08; **2.88 below** the ordinary cavity floor at 18.20 and **1.00 deeper** than the previous revision; minimum vertical skin 0.954279 |
+| Recessed inner connector floor | Width 14.75; Yworld **177.236–187.236**, fore-aft length **10.0**; top Zp 21.08, **2.88 below** the ordinary cavity floor at 18.20; minimum vertical skin 0.954279 |
 | Generic cable gauge | Rectangular 12.35 × 6.5; clears seated and 0.8 down, with 1.30 floor clearance down |
 
-The retained floor was shortened from 2.0 to 1.0 mm because simply lowering the
-old 2.0 mm floor by 1.0 mm would cut through its thinnest end over the sloping
-underside (previous minimum 0.917741 mm). The new opening avoids that thin skin.
+The outermost 1.0 mm of the recessed floor remains over the sloping underside;
+its additional 9.0 mm extends inward over thicker base material. The depth and
+reach are trial dimensions, not a claimed USB plug standard or stock measurement.
 
 The bridge attaches to the restored sidewalls as one connected solid. The
 gasket recesses, bearing heights/contact areas, catch features and top case
@@ -43,26 +49,26 @@ Flush roof presence, the passage **below** it, floor recess depth and retained
 floor thickness are checked separately. A solid-looking render alone is not
 proof of any of these contracts.
 
-| Check | Previous recessed-beam revision | Current flush/deeper revision |
+| Check | Previous outer-exit-only recess | Current inner-connector recess |
 | --- | ---: | ---: |
-| Missing flush-roof material (including expanded fore-aft coverage) | 120.3199 mm³ | 0 mm³ |
-| Material blocking the deeper floor air-space probe | 13.5567 mm³ | 0 mm³ |
+| Material filling the inner connector recess probe | **374.3165 mm³** | **0 mm³** |
+| Missing flush-roof material | 0 mm³ | 0 mm³ |
 | Material blocking passage below bridge | 0 mm³ | 0 mm³ |
-| Down-facing USB roof in desk-down print pose | 90.48 mm² | **105.23 mm²** |
-| Default full bottom verifier | New flush-roof test fails | ALL_PASSED |
+| Down-facing USB roof in desk-down print pose | 105.23 mm² | **105.23 mm²** |
+| Default full bottom verifier | New inner-recess test fails | ALL_PASSED |
 
 The full default top verifier also passes. See [geometry-checks.json](geometry-checks.json)
 and the refreshed [bottom verification](../bottomcase-verification.json).
 Single-shell/watertightness, bed size, top/bottom seating, gasket contact,
 generic PCB/USB/cable gauges and 0.8 mm downward travel remain checked.
 Focused CSG checks cover 6095-trimode, ph60-rev3 and universal; they are not
-full alternate-profile builds. The native A21 board clears the lower case at
-nominal height and 0.8 mm down. J1's bounding envelope clears nominally, but
-its bottom is Zp 17.410001: at 0.8 mm down it exceeds the ordinary cavity floor
-at 18.20 by about **0.010 mm**. The same overlap exists in the preceding model.
-This conservative envelope check does not establish an actual shell collision;
-the detailed contact shape and final component tolerance need qualification.
-The generic verifier's 0.8 mm pass must not be extended to this candidate J1.
+full alternate-profile builds. The change only removes material inside the
+specified floor pocket; it adds no material, so the prior native PCB clearance
+cannot decrease. The native A21 J1 bounding envelope now clears at nominal
+height and **0.8 mm down** (both 0 mm³ overlap). The prior 0.010 mm floor incursion
+at 0.8 mm down is removed by this inner recess. This is an envelope clearance
+check, not USB mating compliance, full manufacturing tolerance analysis or a
+qualification of all commercial male plugs.
 
 **Print the USB roof with support.** It spans 14.75 mm and its underside is
 approximately 6° above the bed in the intended desk-face-down print pose,
@@ -84,21 +90,22 @@ Blender 5.2.2 LTS, Cycles, 32 samples/denoising. Actual CAD meshes, not AI
 illustrations. Blue upper case, orange lower case, green PCB, silver USB-C,
 gray PC plate. The first camera retains the previous underside-oblique pose.
 
-![Same underside camera: flush roof and deeper mating floor](01-under-assembled.png)
-![Rear: intact assembly](02-rear-assembled.png)
-![Visualization-only cutaway: flush lower roof and recessed floor](03-cutaway-assembled.png)
-![Intact bottom case alone: continuous rim over the passage](04-bottom-only.png)
+![Same underside camera: flush roof and deeper mating floor](01-under-assembled.jpg)
+![Rear: intact assembly](02-rear-assembled.jpg)
+![Visualization-only cutaway: flush lower roof and recessed floor](03-cutaway-assembled.jpg)
+![Intact bottom case alone: continuous rim over the passage](04-bottom-only.jpg)
+![Inside the lower case: recessed floor directly beneath the connector](05-inside-bottom.jpg)
 
 Views 1/2 are intact nominal assemblies. View 3 cuts the housing, plate and PCB
 at render X = +0.08 only to expose the stack; the detailed J1 connector remains
-intact. **This is not a manufacturing cut.** View 4 hides the other parts without
+intact. **This is not a manufacturing cut.** Views 4/5 hide the other parts without
 subtracting them. No exploded offsets, exaggerated thickness or print supports
 are added. The roof's top is coplanar with the surrounding rim, rather than
 floating below it. The rounded notch in the upper case is unchanged.
 
 ## Inputs and limits
 
-- Housing: PR #1 baseline above plus flush-roof/deeper-floor correction; 6095-trimode.
+- Housing: PR #1 baseline above plus flush-roof/inner-connector-floor correction; 6095-trimode.
 - PCB: PR #2 archived [A21 at f87140b](https://github.com/minpeter/maru60/blob/f87140b05bc66ce0eab382aff62b12cf459443ce/pcb/checkpoints/a21/maru60.kicad_pcb),
   native 285 × 94.6 R2 Edge.Cuts and **351 through drills**, 1.6 thick.
   Nominal Zp 12.50–14.10. This WIP PCB is referenced, not adopted or modified.

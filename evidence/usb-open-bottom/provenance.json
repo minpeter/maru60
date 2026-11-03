@@ -1,9 +1,9 @@
 {
   "housing_base": "b1cf07038061dd97fe7e448679078e8362da8368",
-  "housing_change": "Lower roof flush with surrounding rim; mating floor 1.00 mm deeper at Zp21.08; retained floor shortened to 1.00 mm to preserve underside skin; trial dimensions, not photo measurements",
+  "housing_change": "Recess the floor directly beneath the inner USB connector: extend 9.00 mm inward, 14.75 wide x 10.00 long at Zp21.08, joined to the outer exit; flush roof unchanged; trial dimensions, not photo measurements",
   "board_profile": "6095-trimode (not universal)",
   "top_version": "v7.11",
-  "bottom_version": "v0.11 + flush-roof/deeper-floor correction",
+  "bottom_version": "v0.11 + inner-connector-floor correction",
   "pcb_commit": "f87140b05bc66ce0eab382aff62b12cf459443ce",
   "pcb_file": "pcb/checkpoints/a21/maru60.kicad_pcb",
   "pcb_sha256": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
@@ -48,6 +48,7 @@
       195.37
     ],
     "inner_ledge_z_p": 21.08,
+    "inner_connector_relief_y": [177.236, 187.236],
     "bridge_z_p": [9.69, 11.90],
     "bridge_y": [187.236, 194.37],
     "bridge_requires_print_support": true,
