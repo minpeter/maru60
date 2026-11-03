@@ -42,10 +42,10 @@
     "tongue_tip_past_barrel_axis_mm": 1.75,
     "barrel_top_under_strike_plate_mm": 0.6,
     "pilot_depths_mm": [
-      4.0,
-      4.0,
-      4.0,
-      4.0,
+      3.92,
+      3.92,
+      3.92,
+      3.92,
       4.0,
       4.0,
       4.0,
@@ -177,21 +177,28 @@
     "wrist_pad_face_area_mm2": 2464.0
   },
   "tray_and_base": {
-    "material_behind_step_chamfers_mm3": [
-      0.0,
-      0.0,
-      0.0004,
-      0.0004
+    "material_outside_base_outline_mm2": {
+      "z_p_20.4803": 0.0,
+      "z_p_22.4303": 0.0,
+      "z_p_26.4303": 0.0,
+      "z_p_30.4303": 0.0
+    },
+    "material_behind_slope_mm3": 0.0,
+    "base_bounds_world": [
+      -141.55,
+      87.45,
+      141.55,
+      188.74
+    ],
+    "expected_base_bounds": [
+      -141.55,
+      87.45,
+      141.55,
+      189.17
     ],
     "tray_bottom_bounds_world": [
       -146.05,
       82.95,
-      146.05,
-      194.37
-    ],
-    "land_bounds_world": [
-      -146.05,
-      83.71,
       146.05,
       194.37
     ],
@@ -201,23 +208,15 @@
       146.05,
       194.37
     ],
-    "base_end_faces_x_world": [
-      -141.55,
-      141.55
-    ],
-    "expected_base_x": [
-      -141.55,
-      141.55
-    ],
-    "desk_face_back_edge_print_y": -184.042,
-    "expected_print_y": -183.992
+    "desk_face_back_edge_print_y": -181.289,
+    "expected_print_y": -181.25
   },
   "split_seam": {
     "seated_overlap_mm3": 0.0,
     "insertion_path_max_overlap_mm3": 0.0001,
     "in_plane_shift_overlap_mm3": {
       "x+0.3": 45.9297,
-      "x-0.3": 222.6295,
+      "x-0.3": 208.0433,
       "print_y+0.3": 235.5866,
       "print_y-0.3": 41.4416
     },
@@ -247,8 +246,7 @@
   "usb_slot_section": {
     "cap_recess_walls_mm": [
       0.0
-    ],
-    "thinnest_under_slot_mm": 1.005
+    ]
   },
   "open_ends_material_above_floor_mm3": {
     "left": 0.0,
@@ -258,17 +256,17 @@
     "bottom-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "tray_step_cantilever_mm2": 0.0
+      "tray_step_cantilever_mm2": 1913.5
     },
     "bottom-right": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "tray_step_cantilever_mm2": 0.0
+      "tray_step_cantilever_mm2": 1829.1
     },
     "coupon-front-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "tray_step_cantilever_mm2": 0.0
+      "tray_step_cantilever_mm2": 590.4
     },
     "joint-test-left": {
       "islands": 0,
