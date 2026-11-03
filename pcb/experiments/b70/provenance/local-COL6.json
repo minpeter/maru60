@@ -1,0 +1,614 @@
+{
+  "net": "COL6",
+  "source": "input.kicad_pcb",
+  "width_mm": 0.2,
+  "full_board_grid_mm": 0.1,
+  "maximum_per_link_cost_mm": 25,
+  "strategy": "Cost-bounded (25mm including 4.5mm via penalty) native connected components, dense original track anchors at <=0.1mm, nearest cross-component A* spanning tree, additive routing only; fixed USB strip, existing escapes and power/core protection unchanged",
+  "components_before": [
+    {
+      "members": [
+        "0010d098-5526-4076-8b38-e57081133a88",
+        "f190c1fc-aba0-4a6c-a20d-77eaa4ff6e26",
+        "73253303-3e80-4795-ae53-5a0a0068eaaa",
+        "50b35477-7305-4159-9dc8-90b9d5bd3d8d",
+        "dd0b7979-fa44-4fec-8852-9b847f624958",
+        "c8755cfe-9a53-4778-a47a-687e3528f333",
+        "a96be4df-c49d-4bfd-8dfd-2956442a4919",
+        "ff811bda-434d-49eb-8415-07c597d38c99",
+        "8ab570e0-0564-4727-9ab4-eb4269d710db",
+        "740913aa-86ca-4b7b-ad7c-aa832b8ad5f8",
+        "b819b7d1-16b0-4011-81bf-f9f5d50c9eee",
+        "90882544-eda3-4632-b730-00ad3616c468",
+        "ba62c407-0a2f-48b2-9201-9adac508499a",
+        "524d9d5e-0fc6-41cb-986e-5e510cc420aa",
+        "2c935dcd-1d86-4d1e-b2ae-ffdf3a790ca8",
+        "20c331a0-35ab-473f-93fb-fc0172d7a6fe",
+        "2aba0f15-f254-41d5-91e8-b809752e98af",
+        "78dc0fd7-0765-4eba-8ec6-ca561dc778bb",
+        "a9e603f0-e111-44e7-a19a-2c60dbe46fad",
+        "dd04cdf4-4ed0-49ae-a11a-85038766454b",
+        "f971627b-6337-497e-a16c-c0a602d5bb4b",
+        "c993d04f-a521-469d-a00e-a7ce4b063e66",
+        "c14e0571-f7ba-4da4-9952-c19765cdd3d3",
+        "5562ee54-2063-4cc6-9cb6-fdcd79082f6f",
+        "27f6253b-08ca-4c0b-8509-c8168b8913e5",
+        "e48f7794-86ba-47f1-bcbd-b07c62a91790",
+        "92715463-3df6-4bc6-9e36-a3cd82e777f7",
+        "73a0bf30-9b3d-4e08-83bd-eb3d588c4e8d",
+        "89aa12d7-ed07-42aa-8088-3aa0b7ebe008",
+        "7d4e7e34-718a-4b49-9884-a7120d3c79bf",
+        "4acc10f7-83c2-4a03-938d-478a5c9dd201",
+        "2e9938c4-b9f5-4116-8f33-5f17e586e3ed",
+        "1197efe3-33ca-46a0-820f-f5a254ef6849",
+        "2caff031-aeba-4276-a6bc-24806dea74be",
+        "4e4fe6d6-1fee-4ff2-b956-3e41d36bc5df",
+        "c5511489-32df-4a3c-8e08-8cde597f4477",
+        "a26f136f-6de8-4226-a11a-63526aa10ae4",
+        "ef71df38-d9fb-4544-a639-2f2a10b1d629",
+        "c48cb038-309a-4e4e-bc7b-6cb4e3d24c8d",
+        "af5a2107-e0d5-4cad-aca6-e3b9c71ec4f4",
+        "c014e05f-376f-4643-9f3b-3ef2f1dadecb",
+        "2b2d4f06-db59-4fb6-a3b7-b0357b90e3ec",
+        "ebcfb84a-2020-4587-9ab7-b72859575af9",
+        "bb91f5a3-952e-4a8a-a9ea-5fafa91030cc",
+        "979eeccf-f695-449c-8370-451213a85a6b",
+        "323f7764-5f61-408e-a7c3-b8a076d7cc04",
+        "317d494b-5edc-47cd-b949-02ce502a2e25",
+        "2613e3b0-a3a2-4bb1-8f99-bd2ec73a8825",
+        "b169c9b0-a819-4b46-a2e1-3e5b61ed5bb8",
+        "aa361c3f-c651-4663-852f-927361fbdb7a",
+        "a539a0e9-bada-4531-b604-0fd5dd5088a5",
+        "9a52cf37-1f4c-4555-98ac-a8e4fd67d5ed",
+        "5f1127be-0fe1-46c7-8057-dc408ccdca74",
+        "3b5cc125-689a-41a5-aab3-fb854dba365a",
+        "a7abea76-8089-44de-a624-1390521efa90",
+        "c0df9584-dde2-4006-9958-21c9dd7b4578",
+        "5d7282a4-eba3-4d06-97b2-6c3828cf807d",
+        "f91ea744-829a-49d3-95cd-d6402dc11e52",
+        "cb132f83-459b-44cd-8208-fb68be8bdde1",
+        "1e309dc1-bdc1-494d-931e-9df9948b9646",
+        "036b605c-7fa2-4baa-ba04-15eb7906be7b",
+        "a48aa6ff-1010-4a9d-8490-e20257b40620",
+        "a9146838-093f-4955-9bb9-647d5aa7feb6",
+        "9e361dfa-f6ce-4f58-85b8-0c8ed8a4f4d4",
+        "9527516a-44f8-4a76-8b54-eb0c929ad1b9",
+        "363ab88d-c13c-4414-9525-607b85dbdc4d",
+        "a0e317dd-817f-4cd0-8e01-024e72d94567",
+        "7a0902bf-d12d-4364-a11e-63be805eb6df",
+        "8c007908-e350-47ba-8922-8fb9e8bd0b85",
+        "df48f8fa-b116-427c-8c6b-a6095e7d4dfd",
+        "b88e4415-1d0c-4094-808f-eb82cac38cfb",
+        "f9927acb-3830-4ecd-8d04-789cfb89b5e7",
+        "beec06fa-1a3f-461b-965f-0acd29c6ea37",
+        "ffdd2351-b475-45ac-84bb-e05e57e33d56",
+        "7f058d75-3011-4317-9664-657b0eeb6f7d",
+        "0fa63f92-ac89-4939-909c-52b518d1cfb9",
+        "5dfab634-2d85-4f0e-9a2b-fb66d051f35e",
+        "c093b180-c201-4507-8fab-c81dafa558ed",
+        "91b6fca4-982d-414a-b79a-89abd90201a4",
+        "151ecd5c-525e-4b7d-8d5a-22b661b1b6e9",
+        "8df92ef6-d59f-40b6-a44b-002edbf6d711",
+        "5a04c69e-e72c-455b-bd23-32d7ce147da8",
+        "0d9a0443-94b2-4ae9-b40d-69e38f3e60c9",
+        "fc507e4f-7da9-471d-96ba-d984892fe03e",
+        "f4687a04-1f0b-4043-8bc3-78bc236f1553",
+        "ddbfb370-563f-49eb-97f5-382d4c3d6111",
+        "c98c891c-4f5d-415b-a2a0-b1c000295971",
+        "ea524734-e0a1-4bc7-a545-78528d241f06",
+        "42b3a676-d1fe-4a00-81e7-555a718a4cf5",
+        "26856035-f236-479e-a7f7-b88efda82fb1",
+        "2cc6637a-2cf1-4638-8da4-bf31d9752bb5",
+        "8a91ffad-6564-4175-82fd-b16f1f7c9a2f",
+        "ec960941-faf9-46d8-aa76-f765c7ce0760",
+        "7afbdc75-e615-48fa-a84b-047dcfb3287a",
+        "8e36b087-d229-4c43-9d20-bcaed651ede6",
+        "3047f893-9e28-4e3b-845c-dfcde9efbc3d",
+        "e05bbda2-7bd5-4ffb-86bc-013938fa370d",
+        "dcfc2bd2-d0ff-485b-89f0-4926e6d4c361",
+        "c44f2ef0-6028-450b-8efb-cb0cf64f06a3",
+        "3a2db8bc-99fc-4f00-9fce-811c76ab8db6",
+        "2adb5b6f-e80f-477c-a2a5-475d5bd6cce1",
+        "8fb1489c-c91b-4eac-a6a6-31a0277b12f0",
+        "6770d8f9-738d-4af8-8817-a093f233ea21",
+        "e01fa1d0-eefc-4658-920d-7c56e2410910",
+        "85c0a7ba-4e5c-4a4f-9c64-2c54fdc9133d",
+        "e12d7967-b771-4d92-9b81-67cd6804a73f",
+        "adf5fc23-4665-418f-9f58-8df94e38c4ea",
+        "cdeb2d21-24b2-46ac-bf5b-032fec3872af",
+        "3938d502-9397-4f00-8ddc-6bc7df939053",
+        "5267ce06-c1b0-4954-87fa-3ddf9e5426df",
+        "49a0e787-c8ee-4a9a-be4e-04a585a538a5",
+        "39b4f906-a00d-4722-973b-a2eaef8b2418",
+        "362e4513-9728-4665-a011-82b14d098b08",
+        "96e4d006-8123-4c43-be40-1d5aaf0198a9",
+        "02f47cd4-f588-4eac-bb5f-4df7212bb520",
+        "39fee7bb-8262-490f-af28-fdb6468f146f",
+        "00cde492-c861-4429-9b68-633ca8e7ed86",
+        "2cfe7814-e936-4294-a2bd-bb650ce87fef",
+        "7f605615-a150-46bf-8600-1599d8a00103",
+        "13aa4b6f-edf5-4993-a790-d8163f88f3ea",
+        "3893ddd8-f41b-46db-950a-5bc1ff758bd3",
+        "7ce5cbb1-4d5b-400e-a48f-7189ebb69522",
+        "78a6be43-95a8-4cfd-9f28-db93e0c313ee",
+        "65e751e5-dc74-4380-be07-ca4d87cd16d5"
+      ],
+      "pads": []
+    },
+    {
+      "members": [
+        "32ae5e8f-0a03-42e5-a8f1-ca4eea0a0f7b",
+        "eb85eebe-a6be-4b67-92a0-2ab8d9914c95",
+        "3bfd92b8-4a00-4617-a750-81794ab44ed7",
+        "62545ccd-c9df-4455-8c3b-a6f491d7c4e8",
+        "7c3a5adc-ddf3-4c07-8a2c-be238c4bd1be",
+        "6fe454e0-bb9a-4e7a-a1c6-59254865a95e",
+        "d4c1ee63-c924-4077-af90-4b63f06ebe81",
+        "9eb51a86-a15a-490c-8702-bb4348b491b3",
+        "646acf28-45dd-4329-996c-c00c31ce2ab3",
+        "36f755e7-3e14-43f7-9049-a5f7a0d2ad44",
+        "54c213c6-5404-4e77-85fd-1fd738070e25",
+        "4c9c5e03-3453-46e8-b34b-dc7c9816e610",
+        "b5b5e227-f395-4901-902d-ee1e75373668",
+        "a1bc9142-53ec-4b43-872d-095b7dc1bfce",
+        "5848c5ac-9aad-4eb2-8527-2b1d0a67059f",
+        "45fe455d-8bf1-49b9-a7cb-33bb5b434d9e",
+        "21fa1cfe-e4c3-4b9b-bcf0-1933be29bf38",
+        "297b9faf-0028-4dc3-acef-b4c44b734c96",
+        "6842a70f-49d9-4b29-8bc4-4bc71f9a9723",
+        "7a64e066-f3db-433f-a4cb-8a80d4494dbd",
+        "61cc6bb5-ed9c-413e-9af2-eaf1e0b0077d",
+        "c00206b2-7869-4b0c-8dfa-1923b1767d8e",
+        "d9e32952-71bb-432c-8845-3b21fd9db9a2",
+        "1758bf8a-471b-4082-a1a1-23a52cbeb133",
+        "7610a386-8d1e-4605-80d6-143b00ba747e",
+        "c9959ee8-7664-4c01-863d-f2bb6fd8aff4",
+        "d655b6a4-d74f-457f-bf6f-59ddc7dd53d6",
+        "ed4c83c4-bd8a-40cd-b2a8-efa600718e2e",
+        "faa5cd8e-b24c-44c2-a1bc-d79fb8ee3db4",
+        "487953af-ecce-450f-ab91-ac3d79d4d64e",
+        "d5d74961-5260-4d93-9ab4-3fe1d90c4e2d",
+        "9c9ea059-0a7c-4861-b78d-79b3054929e4",
+        "64830c68-04c4-4307-9a53-556466752f4c",
+        "130f49a8-b7a1-43e7-bfb3-70682cfad120",
+        "7a7446b5-eae9-423d-ba45-8ad8ab30391e",
+        "7f513ac6-0972-482f-b8be-8fb82f3d0e86",
+        "3870053b-438e-4d8d-9a32-873f355c3989",
+        "e6f75839-a020-48b4-837a-c5960eec2d36",
+        "5c1359c7-ef8a-4180-822f-871b52958c1e",
+        "2d41505c-958e-42e4-81ed-4718011e2c35",
+        "2b941187-c588-41f9-afcb-586c2847dfe2",
+        "75f7b094-ca0d-4a6f-8dbc-99aba73d92e1",
+        "d860e080-f560-43bc-b130-1e79ed9c61bd",
+        "b35c6926-2789-4707-9ffa-c87ea275deb9",
+        "f5a958de-2a5f-4326-95d0-35ac052d28c5",
+        "7c815315-8c63-4827-83d5-14fa0af75b66",
+        "99bd9a74-065e-4949-ba65-f69a405e7d62",
+        "0f142e58-adae-4f0a-920c-da5cd979aba9",
+        "c9074014-3dc7-412e-8ba9-e0ab2cd88c65",
+        "fa4894cd-cb75-46e0-9e11-dc73bead1072",
+        "eadac6a9-695a-44c7-98af-53f9604000b3",
+        "db55a7db-ef5f-4228-ab32-cae8a4047b7d",
+        "a25f1433-29b0-4b34-9408-6a3b74ff91e8",
+        "5ea4c844-baa0-4593-8c3e-53ede41be481",
+        "9f131b99-cd0e-41ce-b6c0-1ce438d5b18a",
+        "1256b3dd-c3d3-40c8-9e6d-5e6981b4c273",
+        "373088ea-97ad-48ca-b296-4abe98c3a463",
+        "fcc065ed-4e34-4a92-822b-e87683958b7b",
+        "40ace207-8d1c-442d-9b77-5e80c40ba22e",
+        "87756f96-104b-4a5f-99ee-0df2a0268a18",
+        "eca56221-df44-46a2-8140-8b45a52c2648",
+        "b6d2da7d-2d86-4876-aed3-f5e4ae776740",
+        "6f5ece8d-b5eb-4c3d-8012-a503aca0b970",
+        "fcf20b55-6656-4c69-8898-87e72d00236e",
+        "d5bfe6b9-bce0-4796-acf7-e925f33d1706",
+        "be966459-3b2e-49d8-9571-f2a47f053013",
+        "843aa0fe-266a-43db-a724-6fce567b8bfb",
+        "48b3b9a8-4594-4174-a599-50c5ac6f33ba",
+        "2553bb0e-578e-436c-8785-5a2563db804d",
+        "dd0d8076-ff31-47f0-8cce-f34b6fb3cdf4",
+        "4e701372-6310-4da2-b9ab-95e8cce6a777",
+        "f2c62e56-cf46-4e99-8a8f-68e3076e3bb6",
+        "5d358d6d-9734-40dd-b0a9-d14eb0a45a5d",
+        "7bfa5c12-c68c-48a7-a29e-c41389f31cdd",
+        "9059664c-0851-4bfa-bc1b-ccda2980f255",
+        "482ff363-6349-4cac-bdd5-630274da5cba",
+        "8539ad82-e170-4e0c-8e1f-18510f95d485",
+        "495c086c-5ae4-40da-8d1d-7c9be0bdd4b3",
+        "f1f38827-e780-48da-9d21-42b7ea973432",
+        "087e0197-4202-4eb0-b0f2-3c478ab88ac3",
+        "f7601048-b0bf-42e8-9540-d3bfcb235ca5"
+      ],
+      "pads": [
+        "SW49.1",
+        "SW36.1",
+        "SW22.1",
+        "SW7.1",
+        "SW59.1"
+      ]
+    },
+    {
+      "members": [
+        "482ff363-6349-4cac-bdd5-630274da5cba",
+        "8539ad82-e170-4e0c-8e1f-18510f95d485",
+        "495c086c-5ae4-40da-8d1d-7c9be0bdd4b3",
+        "f1f38827-e780-48da-9d21-42b7ea973432",
+        "087e0197-4202-4eb0-b0f2-3c478ab88ac3",
+        "f7601048-b0bf-42e8-9540-d3bfcb235ca5"
+      ],
+      "pads": []
+    },
+    {
+      "members": [
+        "5266910e-0370-4478-bd77-22ae0bd663df",
+        "174c7937-43f7-4880-9e92-c16b0e0e5555",
+        "8ca4df7d-71ea-4f20-9fad-b3881680db3d",
+        "dd8c5b60-6f11-473d-8009-ddf602714895",
+        "61192ccc-7f63-45c6-be70-eec79c730484",
+        "b4a2d2b2-7659-4433-8498-737b029caf34",
+        "0764bb2e-f289-41b6-b58f-5dcbd41a7a78"
+      ],
+      "pads": [
+        "U1.15"
+      ]
+    },
+    {
+      "members": [
+        "087e0197-4202-4eb0-b0f2-3c478ab88ac3",
+        "f7601048-b0bf-42e8-9540-d3bfcb235ca5"
+      ],
+      "pads": []
+    },
+    {
+      "members": [
+        "9059664c-0851-4bfa-bc1b-ccda2980f255"
+      ],
+      "pads": []
+    }
+  ],
+  "connections": [
+    {
+      "groups": [
+        2,
+        4
+      ],
+      "euclidean_gap_mm": 0.7615773105863909,
+      "expanded_states": 14,
+      "found": true
+    },
+    {
+      "groups": [
+        1,
+        4
+      ],
+      "euclidean_gap_mm": 0.9899494936611666,
+      "expanded_states": 15,
+      "found": true
+    },
+    {
+      "groups": [
+        1,
+        2
+      ],
+      "euclidean_gap_mm": 1.2727922061357857,
+      "expanded_states": 21,
+      "found": true
+    },
+    {
+      "groups": [
+        0,
+        1
+      ],
+      "euclidean_gap_mm": 2.0,
+      "expanded_states": 237207,
+      "found": false
+    },
+    {
+      "groups": [
+        0,
+        2
+      ],
+      "euclidean_gap_mm": 3.3286633954186478,
+      "expanded_states": 236909,
+      "found": false
+    },
+    {
+      "groups": [
+        1,
+        2
+      ],
+      "euclidean_gap_mm": 27.76256472302226,
+      "expanded_states": 610761,
+      "found": false
+    }
+  ],
+  "elapsed_seconds": 13.375919798010727,
+  "path_found": true,
+  "components_remaining": 3,
+  "output": "/workspace/shared/maru-b2l-usb-return/coordinated/nov03-multiterm/local-COL6.kicad_pcb",
+  "native_opens_presave": 72,
+  "segments": [
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        113.30000000000001,
+        50.0
+      ],
+      "end": [
+        113.7,
+        50.0
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        113.7,
+        50.0
+      ],
+      "end": [
+        113.9,
+        50.2
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        113.9,
+        50.2
+      ],
+      "end": [
+        114.0,
+        50.2
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.0,
+        50.2
+      ],
+      "end": [
+        114.0,
+        50.300000000000004
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        113.31346091666667,
+        50.013460916666666
+      ],
+      "end": [
+        113.30000000000001,
+        50.0
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.04557466666667,
+        50.3
+      ],
+      "end": [
+        114.0,
+        50.300000000000004
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        118.0,
+        54.1
+      ],
+      "end": [
+        118.0,
+        53.800000000000004
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        118.0,
+        53.800000000000004
+      ],
+      "end": [
+        117.60000000000001,
+        53.400000000000006
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        117.60000000000001,
+        53.400000000000006
+      ],
+      "end": [
+        117.30000000000001,
+        53.400000000000006
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        118.006517,
+        54.106517
+      ],
+      "end": [
+        118.0,
+        54.1
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        117.296004,
+        53.396004
+      ],
+      "end": [
+        117.30000000000001,
+        53.400000000000006
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        115.30000000000001,
+        51.400000000000006
+      ],
+      "end": [
+        115.30000000000001,
+        51.2
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        115.30000000000001,
+        51.2
+      ],
+      "end": [
+        115.2,
+        51.1
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        115.2,
+        51.1
+      ],
+      "end": [
+        115.2,
+        51.0
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        115.2,
+        51.0
+      ],
+      "end": [
+        114.80000000000001,
+        50.6
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.80000000000001,
+        50.6
+      ],
+      "end": [
+        114.7,
+        50.6
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.7,
+        50.6
+      ],
+      "end": [
+        114.60000000000001,
+        50.5
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.60000000000001,
+        50.5
+      ],
+      "end": [
+        114.4,
+        50.5
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        115.33828068965516,
+        51.43828068965517
+      ],
+      "end": [
+        115.30000000000001,
+        51.400000000000006
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL6",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.431637,
+        50.531637
+      ],
+      "end": [
+        114.4,
+        50.5
+      ],
+      "role": "exact native track interior anchor"
+    }
+  ],
+  "vias": [],
+  "added_length_mm": 3.6754137245676985
+}

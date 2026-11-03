@@ -1,0 +1,1123 @@
+{
+  "board": "/workspace/shared/maru-b2l-usb-return/coordinated/nov03-multiterm/checkpoint-shorttree-070.kicad_pcb",
+  "board_sha256": "1b585bd5858f7bf40811ba6fbd285809b1c1d927f35a2eb6916f89f86ea6f60b",
+  "baseline_sha256": "8f6d2a91146370424ce7950ad99b40208724119dcea96a696bf1c48a420c6d08",
+  "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+  "status": "FROZEN_CONDITIONAL_ROUTING_PROGRESS_NOT_RELEASE",
+  "native": {
+    "opens": 70,
+    "hard_DRC": 0,
+    "parity": 0,
+    "warnings_by_type": {
+      "track_dangling": 70,
+      "via_dangling": 35
+    },
+    "erc_violations": 0,
+    "open_counts": {
+      "ROW0": 1,
+      "COL3": 1,
+      "COL4": 1,
+      "COL5": 5,
+      "COL6": 4,
+      "COL8": 1,
+      "COL9": 1,
+      "COL10": 2,
+      "COL11": 1,
+      "COL12": 2,
+      "COL13": 2,
+      "COL14": 1,
+      "ROW1": 1,
+      "ROW2": 1,
+      "ROW3": 4,
+      "GND": 32,
+      "UG_LED_2": 1,
+      "UG_LED_6": 1,
+      "UG_LED_9": 1,
+      "+3V3": 1,
+      "+5V": 1,
+      "KEY_RGB_5V_BUF": 1,
+      "KEY_RGB_CHAIN_5": 1,
+      "KEY_RGB_CHAIN_24": 1,
+      "KEY_RGB_CHAIN_35": 1,
+      "KEY_RGB_CHAIN_52": 1
+    }
+  },
+  "fixed_contract": {
+    "footprints": 340,
+    "physical_pads": 1275,
+    "poses_values_pad_nets_unchanged": true,
+    "all_B75_retained_UUID_net_names_identical_in_RAW_before_load_snapshots": true,
+    "all_B75_track_geometry_unchanged": true,
+    "USB_objects_unchanged": 162,
+    "unique_electrical_ref_pin_identities": 924,
+    "numbered_physical_pads": 940
+  },
+  "delta": {
+    "new_tracks": 31,
+    "new_vias": 1,
+    "total_length_mm": 6.343967538637326,
+    "nets": [
+      "COL5",
+      "COL6"
+    ],
+    "removed_or_modified_B75_objects": 0,
+    "closed_opens": 5
+  },
+  "cold_refill": {
+    "candidate_sha256": "1b585bd5858f7bf40811ba6fbd285809b1c1d927f35a2eb6916f89f86ea6f60b",
+    "cold_sha256": "1b585bd5858f7bf40811ba6fbd285809b1c1d927f35a2eb6916f89f86ea6f60b",
+    "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+    "project_hash_guards": {
+      "before_LoadBoard": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_LoadBoard": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_BuildConnectivity": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_refill": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_same_path_SaveBoard": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073"
+    },
+    "byte_identical": true,
+    "scope": "Independent fresh process, matching inherited B75 project preexists before LoadBoard, same-path native refill/save. Does not prove powered behavior."
+  },
+  "untouched_B75_cold_control": {
+    "candidate_sha256": "8f6d2a91146370424ce7950ad99b40208724119dcea96a696bf1c48a420c6d08",
+    "cold_sha256": "18c7b5c9a21830b38924a00064c6f726eae8338af80baf69a4cec5329d80e618",
+    "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+    "project_hash_guards": {
+      "before_LoadBoard": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_LoadBoard": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_BuildConnectivity": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_refill": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_same_path_SaveBoard": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073"
+    },
+    "byte_identical": false,
+    "scope": "Independent fresh process, matching inherited B75 project preexists before LoadBoard, same-path native refill/save. Does not prove powered behavior."
+  },
+  "untouched_B75_second_cold_control": {
+    "candidate_sha256": "18c7b5c9a21830b38924a00064c6f726eae8338af80baf69a4cec5329d80e618",
+    "cold_sha256": "18c7b5c9a21830b38924a00064c6f726eae8338af80baf69a4cec5329d80e618",
+    "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+    "project_hash_guards": {
+      "before_LoadBoard": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_LoadBoard": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_BuildConnectivity": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_refill": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "after_same_path_SaveBoard": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073"
+    },
+    "byte_identical": true,
+    "scope": "Independent fresh process, matching inherited B75 project preexists before LoadBoard, same-path native refill/save. Does not prove powered behavior."
+  },
+  "power_fills_against_B75_cold_control": [
+    {
+      "uuid": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "exact_fill_equal_to_untouched_B75_cold_control": true
+    },
+    {
+      "uuid": "18251378-06a1-40ae-8f44-01acf0d3371a",
+      "net": "+3V3",
+      "exact_fill_equal_to_untouched_B75_cold_control": true
+    },
+    {
+      "uuid": "3f67c971-a794-46bf-8f55-e7568aa08387",
+      "net": "+3V3",
+      "exact_fill_equal_to_untouched_B75_cold_control": true
+    },
+    {
+      "uuid": "431dc987-81d8-4e96-9039-7fb10f89e34d",
+      "net": "+1V1",
+      "exact_fill_equal_to_untouched_B75_cold_control": true
+    },
+    {
+      "uuid": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "exact_fill_equal_to_untouched_B75_cold_control": true
+    },
+    {
+      "uuid": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "exact_fill_equal_to_untouched_B75_cold_control": true
+    }
+  ],
+  "source_center_witness_nonregression": [
+    {
+      "name": "ground",
+      "total_pad_count": 215,
+      "unreached_pads": [
+        [
+          "C100",
+          "2"
+        ],
+        [
+          "C101",
+          "2"
+        ],
+        [
+          "C105",
+          "2"
+        ],
+        [
+          "C106",
+          "2"
+        ],
+        [
+          "C107",
+          "2"
+        ],
+        [
+          "C108",
+          "2"
+        ],
+        [
+          "C109",
+          "2"
+        ],
+        [
+          "C110",
+          "2"
+        ],
+        [
+          "C112",
+          "2"
+        ],
+        [
+          "C113",
+          "2"
+        ],
+        [
+          "C114",
+          "2"
+        ],
+        [
+          "C115",
+          "2"
+        ],
+        [
+          "C116",
+          "2"
+        ],
+        [
+          "C117",
+          "2"
+        ],
+        [
+          "C118",
+          "2"
+        ],
+        [
+          "C120",
+          "2"
+        ],
+        [
+          "C121",
+          "2"
+        ],
+        [
+          "C122",
+          "2"
+        ],
+        [
+          "C123",
+          "2"
+        ],
+        [
+          "C200",
+          "2"
+        ],
+        [
+          "C201",
+          "2"
+        ],
+        [
+          "C202",
+          "2"
+        ],
+        [
+          "C203",
+          "2"
+        ],
+        [
+          "C204",
+          "2"
+        ],
+        [
+          "C205",
+          "2"
+        ],
+        [
+          "C206",
+          "2"
+        ],
+        [
+          "C207",
+          "2"
+        ],
+        [
+          "C208",
+          "2"
+        ],
+        [
+          "C209",
+          "2"
+        ],
+        [
+          "C210",
+          "2"
+        ],
+        [
+          "C211",
+          "2"
+        ],
+        [
+          "C212",
+          "2"
+        ],
+        [
+          "C213",
+          "2"
+        ],
+        [
+          "C214",
+          "2"
+        ],
+        [
+          "C215",
+          "2"
+        ],
+        [
+          "C216",
+          "2"
+        ],
+        [
+          "C217",
+          "2"
+        ],
+        [
+          "C218",
+          "2"
+        ],
+        [
+          "C219",
+          "2"
+        ],
+        [
+          "C220",
+          "2"
+        ],
+        [
+          "C221",
+          "2"
+        ],
+        [
+          "C222",
+          "2"
+        ],
+        [
+          "C223",
+          "2"
+        ],
+        [
+          "C224",
+          "2"
+        ],
+        [
+          "C225",
+          "2"
+        ],
+        [
+          "C226",
+          "2"
+        ],
+        [
+          "C227",
+          "2"
+        ],
+        [
+          "C228",
+          "2"
+        ],
+        [
+          "C229",
+          "2"
+        ],
+        [
+          "C230",
+          "2"
+        ],
+        [
+          "C231",
+          "2"
+        ],
+        [
+          "C232",
+          "2"
+        ],
+        [
+          "C233",
+          "2"
+        ],
+        [
+          "C234",
+          "2"
+        ],
+        [
+          "C235",
+          "2"
+        ],
+        [
+          "C236",
+          "2"
+        ],
+        [
+          "C237",
+          "2"
+        ],
+        [
+          "C238",
+          "2"
+        ],
+        [
+          "C239",
+          "2"
+        ],
+        [
+          "C240",
+          "2"
+        ],
+        [
+          "C241",
+          "2"
+        ],
+        [
+          "C242",
+          "2"
+        ],
+        [
+          "C243",
+          "2"
+        ],
+        [
+          "C244",
+          "2"
+        ],
+        [
+          "C245",
+          "2"
+        ],
+        [
+          "C246",
+          "2"
+        ],
+        [
+          "C247",
+          "2"
+        ],
+        [
+          "C248",
+          "2"
+        ],
+        [
+          "C249",
+          "2"
+        ],
+        [
+          "C250",
+          "2"
+        ],
+        [
+          "C251",
+          "2"
+        ],
+        [
+          "C252",
+          "2"
+        ],
+        [
+          "C253",
+          "2"
+        ],
+        [
+          "C254",
+          "2"
+        ],
+        [
+          "C255",
+          "2"
+        ],
+        [
+          "C256",
+          "2"
+        ],
+        [
+          "C257",
+          "2"
+        ],
+        [
+          "C258",
+          "2"
+        ],
+        [
+          "C259",
+          "2"
+        ],
+        [
+          "C260",
+          "2"
+        ],
+        [
+          "C261",
+          "2"
+        ],
+        [
+          "C262",
+          "2"
+        ],
+        [
+          "C263",
+          "2"
+        ],
+        [
+          "C264",
+          "2"
+        ],
+        [
+          "C265",
+          "2"
+        ],
+        [
+          "C266",
+          "2"
+        ],
+        [
+          "C267",
+          "2"
+        ],
+        [
+          "C268",
+          "2"
+        ],
+        [
+          "C269",
+          "2"
+        ],
+        [
+          "C270",
+          "2"
+        ],
+        [
+          "C271",
+          "2"
+        ],
+        [
+          "C272",
+          "2"
+        ],
+        [
+          "C273",
+          "2"
+        ],
+        [
+          "C274",
+          "2"
+        ],
+        [
+          "C275",
+          "2"
+        ],
+        [
+          "J1",
+          "A1"
+        ],
+        [
+          "J1",
+          "A12"
+        ],
+        [
+          "J1",
+          "B1"
+        ],
+        [
+          "J1",
+          "B12"
+        ],
+        [
+          "J1",
+          "S1"
+        ],
+        [
+          "J1",
+          "S1"
+        ],
+        [
+          "J1",
+          "S1"
+        ],
+        [
+          "J1",
+          "S1"
+        ],
+        [
+          "J2",
+          "2"
+        ],
+        [
+          "LED1",
+          "4"
+        ],
+        [
+          "LED10",
+          "4"
+        ],
+        [
+          "LED11",
+          "4"
+        ],
+        [
+          "LED12",
+          "4"
+        ],
+        [
+          "LED13",
+          "4"
+        ],
+        [
+          "LED14",
+          "4"
+        ],
+        [
+          "LED15",
+          "4"
+        ],
+        [
+          "LED16",
+          "4"
+        ],
+        [
+          "LED17",
+          "4"
+        ],
+        [
+          "LED18",
+          "4"
+        ],
+        [
+          "LED19",
+          "4"
+        ],
+        [
+          "LED2",
+          "4"
+        ],
+        [
+          "LED20",
+          "4"
+        ],
+        [
+          "LED21",
+          "4"
+        ],
+        [
+          "LED22",
+          "4"
+        ],
+        [
+          "LED23",
+          "4"
+        ],
+        [
+          "LED24",
+          "4"
+        ],
+        [
+          "LED25",
+          "4"
+        ],
+        [
+          "LED26",
+          "4"
+        ],
+        [
+          "LED27",
+          "4"
+        ],
+        [
+          "LED28",
+          "4"
+        ],
+        [
+          "LED29",
+          "4"
+        ],
+        [
+          "LED3",
+          "4"
+        ],
+        [
+          "LED30",
+          "4"
+        ],
+        [
+          "LED31",
+          "4"
+        ],
+        [
+          "LED32",
+          "4"
+        ],
+        [
+          "LED33",
+          "4"
+        ],
+        [
+          "LED34",
+          "4"
+        ],
+        [
+          "LED35",
+          "4"
+        ],
+        [
+          "LED36",
+          "4"
+        ],
+        [
+          "LED37",
+          "4"
+        ],
+        [
+          "LED38",
+          "4"
+        ],
+        [
+          "LED39",
+          "4"
+        ],
+        [
+          "LED4",
+          "4"
+        ],
+        [
+          "LED40",
+          "4"
+        ],
+        [
+          "LED41",
+          "4"
+        ],
+        [
+          "LED42",
+          "4"
+        ],
+        [
+          "LED43",
+          "4"
+        ],
+        [
+          "LED44",
+          "4"
+        ],
+        [
+          "LED45",
+          "4"
+        ],
+        [
+          "LED46",
+          "4"
+        ],
+        [
+          "LED47",
+          "4"
+        ],
+        [
+          "LED48",
+          "4"
+        ],
+        [
+          "LED49",
+          "4"
+        ],
+        [
+          "LED5",
+          "4"
+        ],
+        [
+          "LED50",
+          "4"
+        ],
+        [
+          "LED51",
+          "4"
+        ],
+        [
+          "LED52",
+          "4"
+        ],
+        [
+          "LED53",
+          "4"
+        ],
+        [
+          "LED54",
+          "4"
+        ],
+        [
+          "LED55",
+          "4"
+        ],
+        [
+          "LED56",
+          "4"
+        ],
+        [
+          "LED57",
+          "4"
+        ],
+        [
+          "LED58",
+          "4"
+        ],
+        [
+          "LED59",
+          "4"
+        ],
+        [
+          "LED6",
+          "4"
+        ],
+        [
+          "LED60",
+          "4"
+        ],
+        [
+          "LED61",
+          "4"
+        ],
+        [
+          "LED62",
+          "4"
+        ],
+        [
+          "LED63",
+          "4"
+        ],
+        [
+          "LED64",
+          "4"
+        ],
+        [
+          "LED65",
+          "4"
+        ],
+        [
+          "LED66",
+          "4"
+        ],
+        [
+          "LED67",
+          "4"
+        ],
+        [
+          "LED68",
+          "4"
+        ],
+        [
+          "LED69",
+          "4"
+        ],
+        [
+          "LED7",
+          "4"
+        ],
+        [
+          "LED70",
+          "4"
+        ],
+        [
+          "LED71",
+          "4"
+        ],
+        [
+          "LED72",
+          "4"
+        ],
+        [
+          "LED73",
+          "4"
+        ],
+        [
+          "LED74",
+          "4"
+        ],
+        [
+          "LED75",
+          "4"
+        ],
+        [
+          "LED76",
+          "4"
+        ],
+        [
+          "LED8",
+          "4"
+        ],
+        [
+          "LED9",
+          "4"
+        ],
+        [
+          "R100",
+          "2"
+        ],
+        [
+          "R101",
+          "2"
+        ],
+        [
+          "R107",
+          "2"
+        ],
+        [
+          "R109",
+          "2"
+        ],
+        [
+          "R112",
+          "2"
+        ],
+        [
+          "R114",
+          "2"
+        ],
+        [
+          "SW100",
+          "2"
+        ],
+        [
+          "SW100",
+          "2"
+        ],
+        [
+          "TP1",
+          "1"
+        ],
+        [
+          "U2",
+          "2"
+        ],
+        [
+          "U3",
+          "4"
+        ],
+        [
+          "U4",
+          "2"
+        ],
+        [
+          "U5",
+          "1"
+        ],
+        [
+          "U5",
+          "3"
+        ],
+        [
+          "U6",
+          "1"
+        ],
+        [
+          "U6",
+          "3"
+        ],
+        [
+          "U7",
+          "2"
+        ],
+        [
+          "Y1",
+          "2"
+        ],
+        [
+          "Y1",
+          "4"
+        ]
+      ],
+      "reached_pad_count": 16,
+      "unreached_components": 193,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "3v3",
+      "total_pad_count": 28,
+      "unreached_pads": [
+        [
+          "C115",
+          "1"
+        ],
+        [
+          "U1",
+          "30"
+        ]
+      ],
+      "reached_pad_count": 26,
+      "unreached_components": 2,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "1v1",
+      "total_pad_count": 10,
+      "unreached_pads": [],
+      "reached_pad_count": 10,
+      "unreached_components": 0,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "5v",
+      "total_pad_count": 7,
+      "unreached_pads": [
+        [
+          "C100",
+          "1"
+        ],
+        [
+          "C120",
+          "1"
+        ],
+        [
+          "U2",
+          "1"
+        ],
+        [
+          "U2",
+          "3"
+        ],
+        [
+          "U7",
+          "1"
+        ]
+      ],
+      "reached_pad_count": 2,
+      "unreached_components": 1,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "LX",
+      "total_pad_count": 2,
+      "unreached_pads": [],
+      "reached_pad_count": 2,
+      "unreached_components": 0,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "AVDD",
+      "total_pad_count": 3,
+      "unreached_pads": [],
+      "reached_pad_count": 3,
+      "unreached_components": 0,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "LED5V",
+      "total_pad_count": 160,
+      "unreached_pads": [],
+      "reached_pad_count": 160,
+      "unreached_components": 0,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "KEY-data",
+      "total_pad_count": 2,
+      "unreached_pads": [],
+      "reached_pad_count": 2,
+      "unreached_components": 0,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "BOOT",
+      "total_pad_count": 3,
+      "unreached_pads": [],
+      "reached_pad_count": 3,
+      "unreached_components": 0,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "SS",
+      "total_pad_count": 4,
+      "unreached_pads": [],
+      "reached_pad_count": 4,
+      "unreached_components": 0,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "UG-BUF",
+      "total_pad_count": 2,
+      "unreached_pads": [],
+      "reached_pad_count": 2,
+      "unreached_components": 0,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "UG-output",
+      "total_pad_count": 2,
+      "unreached_pads": [],
+      "reached_pad_count": 2,
+      "unreached_components": 0,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    },
+    {
+      "name": "KEY-BUF",
+      "total_pad_count": 2,
+      "unreached_pads": [
+        [
+          "R110",
+          "1"
+        ]
+      ],
+      "reached_pad_count": 1,
+      "unreached_components": 1,
+      "unreached_pad_list_equal_baseline": true,
+      "unreached_component_count_equal_baseline": true
+    }
+  ],
+  "physical_annular_status": "PENDING_NOT_CREDITED",
+  "reference": {
+    "retained_center_and_edges_continuous_audit": {
+      "left": 5.144183850779936e-07,
+      "center": 1.3584906035321947e-06,
+      "right": 7.122760489468348e-07
+    },
+    "maximum_individual_retained_missing_interval_mm": 7.295737769842467e-07,
+    "USB_full_stats_exact_equal_B75": true,
+    "new_USB_trunk_missing_samples": 0,
+    "full_USB_missing_samples": 3735,
+    "new_matrix_reference": {
+      "COL5": {
+        "length_mm": 5.163414486506821,
+        "missing_length_mm": {
+          "left": 1.7438533864830679,
+          "center": 1.8431462797018054,
+          "right": 1.8431462797018054
+        }
+      },
+      "COL6": {
+        "length_mm": 1.1805530521304701,
+        "missing_length_mm": {
+          "left": 1.1805530521304701,
+          "center": 1.1805530521304701,
+          "right": 1.1805530521304701
+        }
+      }
+    },
+    "limitation": "New matrix copper is not fully geometrically referenced; existing source/GND opens remain. 0 DRC and source-set nonregression are not powered or return-path qualification."
+  },
+  "gates_bundle": "/workspace/shared/maru-b2l-usb-return/coordinated/nov03-multiterm/gates-final70-complete/BUNDLE.json"
+}
