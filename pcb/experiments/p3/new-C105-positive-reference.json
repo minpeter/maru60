@@ -1,0 +1,47 @@
+{
+  "candidate_sha256": "3ff913a8351d6c284bc67a40b39a99391a7c761d239f895827d6874647e60680",
+  "new_power_tracks": 1,
+  "new_power_vias": 0,
+  "new_track_centerline_mm": 1.8431986463753711,
+  "method": "Continuous saved native GND-polygon boundary intersections at centerline and both copper edges, F to In1 and B to In2. Own-via0.55mm neighborhoods are categorization only, not qualification/waiver.",
+  "totals_by_probe": {
+    "left_edge": {
+      "raw_missing_mm": 0.0,
+      "outside_own_via_mm": 0.0,
+      "outside_interval_count": 0
+    },
+    "centerline": {
+      "raw_missing_mm": 0.0,
+      "outside_own_via_mm": 0.0,
+      "outside_interval_count": 0
+    },
+    "right_edge": {
+      "raw_missing_mm": 0.0,
+      "outside_own_via_mm": 0.0,
+      "outside_interval_count": 0
+    }
+  },
+  "track_intervals": [
+    {
+      "uuid": "b1fdeceb-d432-5648-b3d4-5f7a98a787a9",
+      "copper_layer": "B.Cu",
+      "reference_layer": "In2.Cu",
+      "start_mm": [
+        20.1,
+        17.78
+      ],
+      "end_mm": [
+        21.9125,
+        17.445
+      ],
+      "width_mm": 0.2,
+      "track_length_mm": 1.8431986463753711,
+      "missing_projection_intervals": {
+        "left_edge": [],
+        "centerline": [],
+        "right_edge": []
+      }
+    }
+  ],
+  "scope": "New positive-feed reference geometry only, not full loop/impedance/PDN/current/SI proof; nearest real source-GND transitions are separately in audit-final.json."
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "name": "native-drc",
+    "returncode": 0,
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "drc",
+      "--severity-all",
+      "--all-track-errors",
+      "--schematic-parity",
+      "--format",
+      "json",
+      "--output",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/native-drc.json",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb"
+    ]
+  },
+  {
+    "name": "native-erc",
+    "returncode": 0,
+    "command": [
+      "kicad-cli",
+      "sch",
+      "erc",
+      "--severity-all",
+      "--format",
+      "json",
+      "--output",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/native-erc.json",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_sch"
+    ]
+  },
+  {
+    "name": "witnesses/1V1",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/1V1.json",
+      "+1V1",
+      "L1",
+      "1"
+    ]
+  },
+  {
+    "name": "witnesses/3V3",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/3V3.json",
+      "+3V3",
+      "U2",
+      "5"
+    ]
+  },
+  {
+    "name": "witnesses/5V",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/5V.json",
+      "+5V",
+      "F1",
+      "2"
+    ]
+  },
+  {
+    "name": "witnesses/AVDD",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/AVDD.json",
+      "VREG_AVDD",
+      "R104",
+      "2"
+    ]
+  },
+  {
+    "name": "witnesses/BOOT",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/BOOT.json",
+      "BOOT_BUTTON",
+      "R106",
+      "2"
+    ]
+  },
+  {
+    "name": "witnesses/GND",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/GND.json"
+    ]
+  },
+  {
+    "name": "witnesses/KEYBUF",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/KEYBUF.json",
+      "KEY_RGB_5V_BUF",
+      "U5",
+      "4"
+    ]
+  },
+  {
+    "name": "witnesses/KEYdata",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/KEYdata.json",
+      "KEY_RGB_5V",
+      "R110",
+      "2"
+    ]
+  },
+  {
+    "name": "witnesses/LED5V",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/LED5V.json",
+      "+5V_LED",
+      "U7",
+      "6"
+    ]
+  },
+  {
+    "name": "witnesses/LX",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/LX.json",
+      "VREG_LX",
+      "U1",
+      "48"
+    ]
+  },
+  {
+    "name": "witnesses/SS",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/SS.json",
+      "QSPI_SS",
+      "U3",
+      "1"
+    ]
+  },
+  {
+    "name": "witnesses/UGBUF",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/UGBUF.json",
+      "UNDERGLOW_5V_BUF",
+      "U6",
+      "4"
+    ]
+  },
+  {
+    "name": "witnesses/UGoutput",
+    "returncode": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+      "/workspace/shared/maru-a4l-P3-source-merge-0401/witnesses/UGoutput.json",
+      "UNDERGLOW_5V",
+      "R111",
+      "2"
+    ]
+  }
+]

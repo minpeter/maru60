@@ -1,0 +1,80 @@
+{
+  "net": "VREG_AVDD",
+  "root": [
+    "R104",
+    "2"
+  ],
+  "board": "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb",
+  "rail_pad_count": 3,
+  "track_pad_components": 3,
+  "unreached_components": [
+    {
+      "component": 0,
+      "pads": [
+        [
+          "C104",
+          "1"
+        ]
+      ],
+      "zone_witnesses": []
+    },
+    {
+      "component": 2,
+      "pads": [
+        [
+          "U1",
+          "46"
+        ]
+      ],
+      "zone_witnesses": []
+    }
+  ],
+  "details": [
+    {
+      "component": 0,
+      "pads": [
+        [
+          "C104",
+          "1"
+        ]
+      ],
+      "zone_witnesses": []
+    },
+    {
+      "component": 1,
+      "pads": [
+        [
+          "R104",
+          "2"
+        ]
+      ],
+      "zone_witnesses": []
+    },
+    {
+      "component": 2,
+      "pads": [
+        [
+          "U1",
+          "46"
+        ]
+      ],
+      "zone_witnesses": []
+    }
+  ],
+  "core_rail_pads_reached": [
+    [
+      "R104",
+      "2"
+    ]
+  ],
+  "core_rail_pads_unreached": [
+    [
+      "C104",
+      "1"
+    ],
+    [
+      "U1",
+      "46"
+    ]
+  ]
+}
