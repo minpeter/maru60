@@ -1,0 +1,43 @@
+{
+  "status": "BLOCKED_SYSTEMIC_DSN_FIDELITY",
+  "native_control_open_count": 15,
+  "router_control_unconnected_items": 544,
+  "router_findings": {
+    "holeClearance": 66,
+    "clearance": 40,
+    "track_dangling": 529,
+    "via_dangling": 31,
+    "isolated_island_dead_copper": 2316
+  },
+  "focused_repairs": [
+    "Locked preserved native copper (DSN type fix)",
+    "Disabled inner signal routing by explicit adjacent .rules",
+    "Disabled automatic neckdown below native minimum",
+    "Added native oval-NPTH-slot clearance keepout after layer declarations"
+  ],
+  "remaining_disagreement_example": {
+    "net": "+1V1",
+    "via_centers_mm": [
+      [
+        116.2,
+        81.0
+      ],
+      [
+        116.8,
+        81.0
+      ]
+    ],
+    "copper_diameter_mm": 0.6,
+    "drill_diameter_mm": 0.25,
+    "geometric_hole_to_hole_gap_mm": 0.35,
+    "router_reported_hole_gap_mm": 0.0001,
+    "router_reported_quantity": "Copper-shape gap mislabeled holeClearance by router, not geometric drill gap"
+  },
+  "scope_decision": "Do not spend the queued heavy routing budgets until native-equivalent representation is established. Do not change or shrink native copper to silence the router. No accepted actual-length winner.",
+  "router_control_unconnected_record_types": {
+    "unconnectedItems": 173,
+    "isolated_island_unconnected": 371
+  },
+  "router_control_unconnected_items_is_native_open_count": false,
+  "root_cause_followup": "../unit-counterexamples/terminal-result.json"
+}

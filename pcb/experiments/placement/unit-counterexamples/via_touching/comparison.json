@@ -1,0 +1,29 @@
+{
+  "name": "via_touching",
+  "exit": 0,
+  "elapsed_sec": 2.33,
+  "router_unconnected": {},
+  "router_violations": {
+    "holeClearance": 4,
+    "via_dangling": 2
+  },
+  "clearance_examples": [
+    "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+    "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+    "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+    "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)"
+  ],
+  "native": {
+    "opens": 0,
+    "violations": [
+      {
+        "type": "via_dangling",
+        "severity": "warning"
+      },
+      {
+        "type": "via_dangling",
+        "severity": "warning"
+      }
+    ]
+  }
+}
