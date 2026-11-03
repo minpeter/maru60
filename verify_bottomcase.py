@@ -319,8 +319,13 @@ def main() -> None:
     floor_air = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02, 20.10, 21.06)
     floor_blockage = vol(bottom ^ floor_air)
     assert floor_blockage < 0.0001, f"USB mating floor is not recessed deeply enough: {floor_blockage} mm^3"
-    # At least 0.8 mm of the ledge must remain, including its thinnest rear edge.
-    ledge_probe = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02,
+    # The recess must continue beneath the connector inside the case, not stop at the outer cable exit.
+    inner_port_air = box(gaps[0][0] + 0.02, sy0 - 8.98, gaps[0][1] - 0.02, sy0 - 0.02,
+                         18.22, 21.06)
+    inner_port_blockage = vol(bottom ^ inner_port_air)
+    assert inner_port_blockage < 0.0001, f"Floor still fills the inner USB connector recess: {inner_port_blockage} mm^3"
+    # At least 0.8 mm remains under the whole connector recess, including its thinnest rear edge.
+    ledge_probe = box(gaps[0][0] + 0.02, sy0 - 8.98, gaps[0][1] - 0.02, open_y - 0.02,
                       ledge_z + 0.02, ledge_z + 0.82)
     ledge_missing = vol(ledge_probe - bottom)
     assert ledge_missing < 0.0001, ("USB inner ledge", ledge_missing)
@@ -336,6 +341,7 @@ def main() -> None:
             walls.append(round(between.bounds[2] - between.bounds[0], 3) if between.area > 1e-4 else 0.0)
     slot_check = {"cap_recess_walls_mm": walls, "open_bottom_material_mm3": slot_bottom_material,
                   "recessed_floor_blockage_mm3": floor_blockage,
+                  "inner_connector_recess_blockage_mm3": inner_port_blockage,
                   "inner_ledge_missing_mm3": ledge_missing, "bridge_missing_mm3": bridge_missing,
                   "bridge_to_upper_ceiling_mm": round(bridge_bounds[2] - Z["rim_top"], 3),
                   "bridge_to_generic_plug_mm": round(zc - 3.25 - bridge_bounds[5], 3),

@@ -80,6 +80,7 @@ SLOT_MIN_WALL = 0.8      # Rail left between the USB-C slot and a cap recess: an
                          # perimeters) is cut away, so the slot opens into the recess instead of leaving a fin
 USB_BRIDGE_BOTTOM_ZP = 11.90  # Roof underside; its top is flush with the surrounding rim, not a separate recessed beam
 USB_LEDGE_ZP = 21.08    # Deeper USB mating-floor relief; design trial, not a depth measured from the owner's photo
+USB_INNER_RELIEF_L = 9.0  # Continue the lowered floor inside, beneath the connector, not only under the cable exit
 DECO_CLEAR = 0.20        # Recess around the 3 mm steel weight / decoration plate outline (INKC drawing), per side
 DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, along the desk face (owner)
 DECO_RECESS = 2.3        # Recess depth: the 3 mm plate stands 0.7 proud of the desk face (1.3 under the bumpons'
@@ -311,11 +312,13 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     usb_y0, usb_y1 = top.pw(0.0, LEDGE_BACK_P - 1.0)[1], top.pw(0.0, RIM_P[3] + 1.0)[1]
     slot = sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1)
     # Open below the passage, with a distinct lower-case bridge above it. The upper case has its own bridge.
-    # The mating floor is recessed below the cavity, not a raised lip. Keep only 1 mm over the thicker base:
-    # extending this deeper floor farther back would leave a thin skin over the sloping underside.
+    # The floor continues inward beneath the connector. At the outer exit retain only 1 mm:
+    # extending the floor farther outward would leave a thin skin over the sloping underside.
     usb_open_y = usb_y0 + 1.0
     usb_z1 = desk_zp(usb_y1) + 1.0
     cuts.append(prism(slot, Z_RIM_TOP - 1.0, USB_LEDGE_ZP))
+    inner_relief = sg.box(usb_x - usb_w / 2, usb_y0 - USB_INNER_RELIEF_L, usb_x + usb_w / 2, usb_open_y)
+    cuts.append(prism(inner_relief, FLOOR_ZP - 0.01, USB_LEDGE_ZP))
     cuts.append(prism(sg.box(usb_x - usb_w / 2, usb_open_y, usb_x + usb_w / 2, usb_y1),
                       Z_RIM_TOP - 1.0, usb_z1))
     # Continue the rim plane over the port, preserving its existing cap recesses and fin relief.
@@ -368,6 +371,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "catches": [{**s, "pilots": pilots[2 * k:2 * k + 2]} for k, s in enumerate(sites)],
         "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, usb_z1],
                            "open_bottom_y": [usb_open_y, usb_y1], "inner_ledge_z_p": USB_LEDGE_ZP,
+                           "inner_connector_relief_y": [usb_y0 - USB_INNER_RELIEF_L, usb_open_y],
                            "bridge_z_p": [Z_RIM_TOP, USB_BRIDGE_BOTTOM_ZP],
                            "bridge_y": [usb_open_y, Y_BACK], "bridge_requires_print_support": True,
                            "cap_recess_walls_removed_mm": slot_fins, "min_wall": SLOT_MIN_WALL},
