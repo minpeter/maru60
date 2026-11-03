@@ -102,16 +102,18 @@ def usb_centre_plate_x(board_id: str) -> float | None:
 
 
 def usb_notch(board_id: str) -> tuple[float, float]:
-    """USB notch centre (plate X) and width for a board. `universal` widens the stock notch by the spread of every
-    measured on-board USB centre (fit verdict not `no`; `inferred` guesses such as a centre read off a cable plug are left
-    out) and centres it on that spread, so each of those boards keeps at least the stock clearance."""
+    """USB notch centre (plate X) and width for a board: `top.usb_notch_cable_width`, never narrower than the stock
+    notch. `universal` widens the stock notch by the spread of every measured on-board USB centre (fit verdict not `no`;
+    `inferred` guesses such as a centre read off a cable plug are left out) and centres it on that spread, so each of
+    those boards keeps at least the stock clearance."""
     width = value("top.usb_notch")["width"]
+    cable_width = max(width, value("top.usb_notch_cable_width"))
     if board_id != UNIVERSAL:
         centre = usb_centre_plate_x(board_id)
         if centre is None:
             raise SystemExit(f"Board {board_id!r} has no on-board USB position in spec/boards.json; use --board {UNIVERSAL}")
-        return centre, width
+        return centre, cable_width
     xs = [x for b in _BOARDS["boards"]
           if b["fit"]["verdict"] != "no" and b["usb"] and b["usb"].get("status") != "inferred"
           and (x := usb_centre_plate_x(b["id"])) is not None]
-    return round((min(xs) + max(xs)) / 2, 4), round(width + max(xs) - min(xs), 4)
+    return round((min(xs) + max(xs)) / 2, 4), round(max(cable_width, width + max(xs) - min(xs)), 4)
