@@ -78,9 +78,8 @@ FRONT_STEP_W = 4.5       # Tray bottom showing in front of the base, from the fr
 END_STEP_W = 4.5         # Tray bottom showing past each end of the base, from the rail ends
 SLOT_MIN_WALL = 0.8      # Rail left between the USB-C slot and a cap recess: anything thinner (under two 0.4 mm
                          # perimeters) is cut away, so the slot opens into the recess instead of leaving a fin
-USB_BRIDGE_TOP_ZP = 10.70  # Separate lower-case bridge: 1.01 below the upper pocket ceiling, not a stock measurement
-USB_BRIDGE_THICKNESS = 1.20  # A supported print over the open USB passage, not a self-supporting ramp
-USB_LEDGE_ZP = 20.08    # Generic plug underside 18.98 + 0.80 downward travel + 0.30 clearance, not a cable standard
+USB_BRIDGE_BOTTOM_ZP = 11.90  # Roof underside; its top is flush with the surrounding rim, not a separate recessed beam
+USB_LEDGE_ZP = 21.08    # Deeper USB mating-floor relief; design trial, not a depth measured from the owner's photo
 DECO_CLEAR = 0.20        # Recess around the 3 mm steel weight / decoration plate outline (INKC drawing), per side
 DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, along the desk face (owner)
 DECO_RECESS = 2.3        # Recess depth: the 3 mm plate stands 0.7 proud of the desk face (1.3 under the bumpons'
@@ -312,19 +311,27 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     usb_y0, usb_y1 = top.pw(0.0, LEDGE_BACK_P - 1.0)[1], top.pw(0.0, RIM_P[3] + 1.0)[1]
     slot = sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1)
     # Open below the passage, with a distinct lower-case bridge above it. The upper case has its own bridge.
-    # Retain a 2 mm inner ledge over the thicker base; open the rest through the underside.
-    usb_open_y = usb_y0 + 2.0
+    # The mating floor is recessed below the cavity, not a raised lip. Keep only 1 mm over the thicker base:
+    # extending this deeper floor farther back would leave a thin skin over the sloping underside.
+    usb_open_y = usb_y0 + 1.0
     usb_z1 = desk_zp(usb_y1) + 1.0
     cuts.append(prism(slot, Z_RIM_TOP - 1.0, USB_LEDGE_ZP))
     cuts.append(prism(sg.box(usb_x - usb_w / 2, usb_open_y, usb_x + usb_w / 2, usb_y1),
                       Z_RIM_TOP - 1.0, usb_z1))
+    # Continue the rim plane over the port, preserving its existing cap recesses and fin relief.
+    bridge = prism(sg.box(usb_x - usb_w / 2 - 0.8, usb_open_y, usb_x + usb_w / 2 + 0.8, Y_BACK),
+                   Z_RIM_TOP, USB_BRIDGE_BOTTOM_ZP)
+    for recess in cap_recesses_p():
+        bridge -= prism(plate_to_world(recess), Z_RIM_TOP - 1.0, CAP_SEAT_ZP)
     slot_fins = []
     for recess in (plate_to_world(p) for p in cap_recesses_p()):
         wall = slot.distance(recess)
         if 0.0 < wall < SLOT_MIN_WALL:  # join them down to the recess floor, its rounded corner included
             (sx0, sy0, sx1, sy1), (rx0, ry0, rx1, ry1) = slot.bounds, recess.bounds
             xa, xb = (sx1 - 0.01, rx0 + top.CAP_POCKET_R) if rx0 >= sx1 else (rx1 - top.CAP_POCKET_R, sx0 + 0.01)
-            cuts.append(prism(sg.box(xa, max(sy0, ry0), xb, min(sy1, ry1)), Z_RIM_TOP - 1.0, CAP_SEAT_ZP))
+            fin_cut = prism(sg.box(xa, max(sy0, ry0), xb, min(sy1, ry1)), Z_RIM_TOP - 1.0, CAP_SEAT_ZP)
+            cuts.append(fin_cut)
+            bridge -= fin_cut
             slot_fins.append(round(wall, 3))
     bay_y1 = LEDGE_BACK_P - BAY_BACK_GAP
     bay_cx = -top.DX_PW  # plate X of the case centre line (world X = 0)
@@ -345,9 +352,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         cuts.append(from_print(md.Manifold.cylinder(s["cavity_floor_z"] + 1.0 - z0, cbore_r, cbore_r, 48).translate(
             [px, py, z0])))
     body = body - md.Manifold.batch_boolean(cuts, md.OpType.Add)
-    # The rear rail ends provide the bridge's two supports. Stop at the rail face, inside the upper skirt pocket.
-    body += prism(sg.box(usb_x - usb_w / 2 - 0.8, usb_open_y, usb_x + usb_w / 2 + 0.8, Y_BACK),
-                  USB_BRIDGE_TOP_ZP, USB_BRIDGE_TOP_ZP + USB_BRIDGE_THICKNESS)
+    body += bridge
 
     report = {
         "board": board,
@@ -363,7 +368,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "catches": [{**s, "pilots": pilots[2 * k:2 * k + 2]} for k, s in enumerate(sites)],
         "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, usb_z1],
                            "open_bottom_y": [usb_open_y, usb_y1], "inner_ledge_z_p": USB_LEDGE_ZP,
-                           "bridge_z_p": [USB_BRIDGE_TOP_ZP, USB_BRIDGE_TOP_ZP + USB_BRIDGE_THICKNESS],
+                           "bridge_z_p": [Z_RIM_TOP, USB_BRIDGE_BOTTOM_ZP],
                            "bridge_y": [usb_open_y, Y_BACK], "bridge_requires_print_support": True,
                            "cap_recess_walls_removed_mm": slot_fins, "min_wall": SLOT_MIN_WALL},
         "bumpons_world": [[x, round(y, 3)] for x, y in bumpon_centres_world()],
