@@ -1,9 +1,9 @@
 {
   "housing_base": "b1cf07038061dd97fe7e448679078e8362da8368",
-  "housing_change": "USB slot through tray and base; 14.75 mm width and centre unchanged",
+  "housing_change": "Local low USB shoulders; open outer rear step; retained lowered inner ledge",
   "board_profile": "6095-trimode (not universal)",
   "top_version": "v7.11",
-  "bottom_version": "v0.11 + open USB correction",
+  "bottom_version": "v0.11 + low-shoulder / retained-ledge correction",
   "pcb_commit": "f87140b05bc66ce0eab382aff62b12cf459443ce",
   "pcb_file": "pcb/checkpoints/a21/maru60.kicad_pcb",
   "pcb_sha256": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
@@ -31,5 +31,30 @@
   ],
   "render_frame": "X=124.4975-Xworld; Y=Yworld-194.37; Z=20.01-Zp; rigid rotation, no mirroring",
   "plate": "Native INKC HHKB outline/cutouts, PC 1.5mm at Zp7.50",
-  "caveats": "PCB is archived WIP, not manufacturing-ready. No cable, switches, sockets, gaskets or other components shown. Assembled nominal pose, not exploded. No claim of full PCB fit/USB compliance."
+  "caveats": "PCB is archived WIP, not manufacturing-ready. No cable, switches, sockets, gaskets or other components shown. Assembled nominal pose, not exploded. No claim of full PCB fit/USB compliance.",
+  "usb_geometry": {
+    "x": 124.4975,
+    "width": 14.75,
+    "y": [
+      186.236,
+      195.37
+    ],
+    "z_p": [
+      9.69,
+      33.24609629666706
+    ],
+    "open_bottom_y": [
+      188.236,
+      195.37
+    ],
+    "inner_ledge_z_p": 20.08,
+    "shoulder_relief_per_side": 6.0,
+    "shoulder_z_p": 15.2,
+    "gasket_bearing_footprints_preserved": true,
+    "gasket_bearing_margin": 0.1,
+    "cap_recess_walls_removed_mm": [
+      0.143
+    ],
+    "min_wall": 0.8
+  }
 }

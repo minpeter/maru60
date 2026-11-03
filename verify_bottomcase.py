@@ -128,7 +128,7 @@ def main() -> None:
 
     # 5. PCB: a GH60 outline (285.0 x 94.6, 1.6 mm) under the MX plate with 2.0 mm bottom-side parts and the board's
     #    USB-C receptacle (9.0 x 7.4 x 3.26 under the PCB, mouth 0.6 past the back edge) clears the cavity with the
-    #    plate 0.8 mm down; the cable plug overmold at the USB-C maximum (12.35 x 6.5) clears both cases from the
+    #    plate 0.8 mm down; a generic cable-body gauge (12.35 x 6.5, not a standard overmold maximum) clears from the
     #    receptacle out. Reported, not required (the stock notch width stays selectable): a ~13 mm retail plug, and the
     #    12.35 plug with the board's USB centre 0.3 mm off (photo-read centres).
     fr = json.loads((ROOT / "spec" / "boards.json").read_text())["frames"]["pcb_to_plate"]
@@ -148,8 +148,11 @@ def main() -> None:
                          ("13.0", 13.0, 0.0)):
         plug = box(usb_xw + dx - w / 2, uy1, usb_xw + dx + w / 2, 240.0, zc - 3.25, zc + 3.25)  # out past the back face
         plugs[label] = {"bottom_mm3": vol(plug ^ bottom), "top_mm3": vol(plug ^ top_mf)}
+        if label == "12.35":
+            plug_down = plug.translate([0.0, 0.0, 0.8])
+            plug_down_free = {"bottom_mm3": vol(plug_down ^ bottom), "top_mm3": vol(plug_down ^ top_mf)}
     plug_free = plugs.pop("12.35")
-    assert max(plug_free.values()) < 0.01, plug_free
+    assert max(plug_free.values()) < 0.01 and max(plug_down_free.values()) < 0.01, (plug_free, plug_down_free)
     plug_reported = {k: max(v.values()) < 0.01 for k, v in plugs.items()}
     floor_gap = round(Z["cavity_floor"] - (z_pcb + 1.6 + 3.26), 2)
 
@@ -298,13 +301,34 @@ def main() -> None:
     notch = json.loads((ROOT / "topcase-draft" / "draft-report.json").read_text())["geometry_mm"]["usb_notch"]
     assert len(gaps) == 1 and abs((gaps[0][0] + gaps[0][1]) / 2 - notch["x_world"]) < 0.05, (gaps, notch)
     assert abs(gaps[0][1] - gaps[0][0] - notch["width"]) < 0.05 and gaps[0][0] > 0.0, (gaps, notch)
-    # The USB exit is open underneath, not a closed-bottom window. Probe through the exported case's full depth;
-    # a check only at plug height misses the sloping tray's residual skin below the skirt lip.
+    # The outer rear step is open underneath, but the inner cavity floor/ledge is retained.
+    # Probe the exported mesh, not a cutter or the report's claim that the exit is open.
     sy0, sy1 = REPORT["usb_slot_world"]["y"]
-    slot_column = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, sy1 - 0.02,
+    open_y = sy0 + 2.0
+    slot_column = box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, sy1 - 0.02,
                       Z["rim_top"] - 1.0, bottom.bounding_box()[5] + 1.0)
     slot_bottom_material = vol(bottom ^ slot_column)
     assert slot_bottom_material < 0.0001, f"USB exit is not open underneath: {slot_bottom_material} mm^3"
+    ledge_z = zc + 3.25 + 0.8 + 0.3
+    # At least 0.8 mm of the ledge must remain, including its thinnest rear edge.
+    ledge_probe = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02,
+                      ledge_z + 0.02, ledge_z + 0.82)
+    ledge_missing = vol(ledge_probe - bottom)
+    # Both rear shoulders must be below the PCB, including 0.8 travel and 0.3 clearance.
+    shoulder_limit = z_pcb + 1.6 + 0.8 + 0.3
+    shoulders = {}
+    for name, xa, xb in (("left", gaps[0][0] - 5.9, gaps[0][0] - 0.1),
+                         ("right", gaps[0][1] + 0.1, gaps[0][1] + 5.9)):
+        probe = box(xa, bc.Y_BACK - 1.0, xb, bc.Y_BACK - 0.1, Z["rim_top"] - 0.1, shoulder_limit - 0.02)
+        foot = box(xa, bc.Y_BACK - 1.0, xb, bc.Y_BACK - 0.1, shoulder_limit + 0.02, shoulder_limit + 0.52)
+        shoulders[name] = {"high_wall_mm3": vol(bottom ^ probe), "missing_foot_mm3": vol(foot - bottom)}
+    entry_air = box(gaps[0][0] - 5.9, sy0 + 0.02, gaps[0][1] + 5.9, sy1 - 0.02,
+                    Z["rim_top"] - 0.1, shoulder_limit - 0.02)
+    for ring in caps_plan:
+        entry_air -= bc.prism(ring.buffer(0.12, quad_segs=8), Z["rim_top"] - 0.1, shoulder_limit - 0.02)
+    entry_material = vol(bottom ^ entry_air)
+    assert max(ledge_missing, entry_material) < 0.0001 and max(v for s in shoulders.values() for v in s.values()) < 0.0001, (
+        "USB inner ledge / low shoulders", ledge_missing, entry_material, shoulders)
     # 8a. The slot leaves no fin: between it and each cap recess the rail top keeps `SLOT_MIN_WALL` or is cut away.
     slot_plan = sg.box(gaps[0][0], sy0, gaps[0][1], sy1)
     rim = slice_material(bottom, Z["rim_top"] + 0.25)
@@ -315,7 +339,9 @@ def main() -> None:
             x0, x1 = (gaps[0][1], rx0) if rx0 >= gaps[0][1] else (rx1, gaps[0][0])
             between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1)))
             walls.append(round(between.bounds[2] - between.bounds[0], 3) if between.area > 1e-4 else 0.0)
-    slot_check = {"cap_recess_walls_mm": walls, "open_bottom_material_mm3": slot_bottom_material}
+    slot_check = {"cap_recess_walls_mm": walls, "open_bottom_material_mm3": slot_bottom_material,
+                  "inner_ledge_missing_mm3": ledge_missing, "shoulders": shoulders,
+                  "entry_air_material_mm3": entry_material, "plug_down_0p8_mm3": plug_down_free}
     assert all(w == 0.0 or w >= bc.SLOT_MIN_WALL - 0.01 for w in walls), slot_check
 
     # 8b. Open ends (stock part, IMG_0462/0472/0473): between the rail faces nothing rises above the cavity floor over
