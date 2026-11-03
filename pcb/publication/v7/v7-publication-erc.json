@@ -1,0 +1,130 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T19:42:29+0900",
+    "kicad_version": "9.0.2",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/5cea1f07-cba7-55d1-9c88-823833390084",
+            "violations": [
+                {
+                    "description": "The symbol library 'Maru60_Options' was not found at '/workspace/scratch/edd9a5be63e7/pcb-pr-publish/validation/v7/engineering/Maru60_Options.kicad_sym'.",
+                    "items": [
+                        {
+                            "description": "Symbol SWCAP1 [Caps_Options]",
+                            "pos": {
+                                "x": 0.254,
+                                "y": 1.2192
+                            },
+                            "uuid": "1636d360-dd6a-50b6-9818-7f0a870ab6f4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The symbol library 'Maru60_Options' was not found at '/workspace/scratch/edd9a5be63e7/pcb-pr-publish/validation/v7/engineering/Maru60_Options.kicad_sym'.",
+                    "items": [
+                        {
+                            "description": "Symbol SWCAP1 [Caps_Options]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 2.54
+                            },
+                            "uuid": "1411e859-2c06-5fd6-9317-e5fb5970e68f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The symbol library 'Maru60_Options' was not found at '/workspace/scratch/edd9a5be63e7/pcb-pr-publish/validation/v7/engineering/Maru60_Options.kicad_sym'.",
+                    "items": [
+                        {
+                            "description": "Symbol SWRS1 [RShift_Options]",
+                            "pos": {
+                                "x": 2.032,
+                                "y": 2.54
+                            },
+                            "uuid": "cf6d3bae-0d92-51e5-8ff8-54a95bacee99"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The symbol library 'Maru60_Options' was not found at '/workspace/scratch/edd9a5be63e7/pcb-pr-publish/validation/v7/engineering/Maru60_Options.kicad_sym'.",
+                    "items": [
+                        {
+                            "description": "Symbol SWRS1 [RShift_Options]",
+                            "pos": {
+                                "x": 3.048,
+                                "y": 1.6002
+                            },
+                            "uuid": "1d8616a7-c044-566a-b2cc-5f501e26a147"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The symbol library 'Maru60_Options' was not found at '/workspace/scratch/edd9a5be63e7/pcb-pr-publish/validation/v7/engineering/Maru60_Options.kicad_sym'.",
+                    "items": [
+                        {
+                            "description": "Symbol SWRS1 [RShift_Options]",
+                            "pos": {
+                                "x": 3.302,
+                                "y": 1.6002
+                            },
+                            "uuid": "3f16a0f9-5773-5eb9-9d30-20b2b42985ba"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        },
+        {
+            "path": "/Core/",
+            "uuid_path": "/5cea1f07-cba7-55d1-9c88-823833390084/0940d797-79a6-569a-9535-d8f19961ba0b",
+            "violations": []
+        },
+        {
+            "path": "/Matrix/",
+            "uuid_path": "/5cea1f07-cba7-55d1-9c88-823833390084/60396a0c-10b4-5d1a-87f2-666bd4e06ce0",
+            "violations": []
+        },
+        {
+            "path": "/Lighting/",
+            "uuid_path": "/5cea1f07-cba7-55d1-9c88-823833390084/ff1f2d0b-fb14-553f-aed3-d630e604b205",
+            "violations": []
+        },
+        {
+            "path": "/Expansion and test — candidate/",
+            "uuid_path": "/5cea1f07-cba7-55d1-9c88-823833390084/7a6dc416-23b3-5e8a-be8e-e017ce965a16",
+            "violations": []
+        },
+        {
+            "path": "/V7 supply-context CANDIDATE/",
+            "uuid_path": "/5cea1f07-cba7-55d1-9c88-823833390084/1aeb0fa4-d557-5c2b-9217-17b868887fca",
+            "violations": []
+        },
+        {
+            "path": "/V7 input-protection CANDIDATE/",
+            "uuid_path": "/5cea1f07-cba7-55d1-9c88-823833390084/2ed114c6-5cd0-5571-b3b7-30ce41438842",
+            "violations": []
+        },
+        {
+            "path": "/V7 v6-regulated-domain CANDIDATE/",
+            "uuid_path": "/5cea1f07-cba7-55d1-9c88-823833390084/249c6d4c-b333-5b24-9f4d-47a79b0f14f8",
+            "violations": []
+        },
+        {
+            "path": "/V7 gpio-isolation CANDIDATE/",
+            "uuid_path": "/5cea1f07-cba7-55d1-9c88-823833390084/8d33d6b9-8438-5e7e-8701-0165726b09f2",
+            "violations": []
+        }
+    ],
+    "source": "maru60.kicad_sch"
+}
