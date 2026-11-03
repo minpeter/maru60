@@ -10,10 +10,10 @@
       "x+0.25": 27.5444,
       "y-0.10": 0.0007,
       "y+0.10": 0.0007,
-      "y-0.25": 260.5018,
-      "y+0.25": 238.6482
+      "y-0.25": 260.5019,
+      "y+0.25": 246.239
     },
-    "rim_top_bearing_on_9p69_floor_mm2": 1662.6,
+    "rim_top_bearing_on_9p69_floor_mm2": 1716.8,
     "skirt_lip_contact_mm3": 0.0,
     "material_outside_rail_outline_mm2": {
       "z_p_9.99": 0.0,
@@ -249,17 +249,9 @@
     ],
     "open_bottom_material_mm3": 0.0,
     "inner_ledge_missing_mm3": 0.0,
-    "shoulders": {
-      "left": {
-        "high_wall_mm3": 0.0,
-        "missing_foot_mm3": 0.0
-      },
-      "right": {
-        "high_wall_mm3": 0.0,
-        "missing_foot_mm3": 0.0
-      }
-    },
-    "entry_air_material_mm3": 0.0,
+    "bridge_missing_mm3": 0.0,
+    "bridge_to_upper_ceiling_mm": 1.01,
+    "bridge_to_generic_plug_mm": 0.58,
     "plug_down_0p8_mm3": {
       "bottom_mm3": 0.0,
       "top_mm3": 0.0
@@ -273,26 +265,31 @@
     "bottom-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "tray_step_cantilever_mm2": 1836.8
+      "usb_bridge_requires_support_mm2": 90.48,
+      "tray_step_cantilever_mm2": 1927.3
     },
     "bottom-right": {
       "islands": 0,
       "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
       "tray_step_cantilever_mm2": 1829.1
     },
     "coupon-front-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
       "tray_step_cantilever_mm2": 590.4
     },
     "joint-test-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
       "tray_step_cantilever_mm2": 0.0
     },
     "joint-test-right": {
       "islands": 0,
       "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
       "tray_step_cantilever_mm2": 0.0
     }
   }
