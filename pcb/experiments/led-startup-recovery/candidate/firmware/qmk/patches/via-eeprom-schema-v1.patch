@@ -1,0 +1,67 @@
+--- a/quantum/via.c
++++ b/quantum/via.c
+@@ -36,6 +36,7 @@
+ #include "wait.h"
+ #include "version.h" // for QMK_BUILDDATE used in EEPROM magic
+ #include "nvm_via.h"
++#include "via_eeprom_schema.h"
+ 
+ #if defined(SECURE_ENABLE)
+ #    include "secure.h"
+@@ -64,14 +65,30 @@
+ #if defined(LED_MATRIX_ENABLE)
+ #    include "led_matrix.h"
+ #endif
++
++// Optional stable EEPROM schema identity; keep the legacy date default for
++// keyboards that have not opted in. This does not move any EEPROM storage.
++static void via_eeprom_get_magic(uint8_t *magic0, uint8_t *magic1, uint8_t *magic2) {
++#ifdef VIA_EEPROM_SCHEMA_ID
++#    if VIA_EEPROM_SCHEMA_ID <= 0 || VIA_EEPROM_SCHEMA_ID >= 0xFFFFFFUL
++#        error VIA_EEPROM_SCHEMA_ID must be a nonzero 24-bit value other than 0xFFFFFF
++#    endif
++    *magic0 = (VIA_EEPROM_SCHEMA_ID >> 16) & 0xFF;
++    *magic1 = (VIA_EEPROM_SCHEMA_ID >> 8) & 0xFF;
++    *magic2 = VIA_EEPROM_SCHEMA_ID & 0xFF;
++#else
++    const char *p = QMK_BUILDDATE;
++    *magic0 = ((p[2] & 0x0F) << 4) | (p[3] & 0x0F);
++    *magic1 = ((p[5] & 0x0F) << 4) | (p[6] & 0x0F);
++    *magic2 = ((p[8] & 0x0F) << 4) | (p[9] & 0x0F);
++#endif
++}
+ 
+ // Can be called in an overriding via_init_kb() to test if keyboard level code usage of
+ // EEPROM is invalid and use/save defaults.
+ bool via_eeprom_is_valid(void) {
+-    char   *p      = QMK_BUILDDATE; // e.g. "2019-11-05-11:29:54"
+-    uint8_t magic0 = ((p[2] & 0x0F) << 4) | (p[3] & 0x0F);
+-    uint8_t magic1 = ((p[5] & 0x0F) << 4) | (p[6] & 0x0F);
+-    uint8_t magic2 = ((p[8] & 0x0F) << 4) | (p[9] & 0x0F);
++    uint8_t magic0, magic1, magic2;
++    via_eeprom_get_magic(&magic0, &magic1, &magic2);
+ 
+     uint8_t ee_magic0;
+     uint8_t ee_magic1;
+@@ -85,10 +102,8 @@
+ // Keyboard level code (eg. via_init_kb()) should not call this
+ void via_eeprom_set_valid(bool valid) {
+     if (valid) {
+-        char   *p      = QMK_BUILDDATE; // e.g. "2019-11-05-11:29:54"
+-        uint8_t magic0 = ((p[2] & 0x0F) << 4) | (p[3] & 0x0F);
+-        uint8_t magic1 = ((p[5] & 0x0F) << 4) | (p[6] & 0x0F);
+-        uint8_t magic2 = ((p[8] & 0x0F) << 4) | (p[9] & 0x0F);
++        uint8_t magic0, magic1, magic2;
++        via_eeprom_get_magic(&magic0, &magic1, &magic2);
+         nvm_via_update_magic(magic0, magic1, magic2);
+     } else {
+         nvm_via_update_magic(0xFF, 0xFF, 0xFF);
+--- /dev/null
++++ b/quantum/via_eeprom_schema.h
+@@ -0,0 +1,6 @@
++// SPDX-License-Identifier: GPL-2.0-or-later
++#pragma once
++// Optional VIA_EEPROM_SCHEMA_ID is a stable 24-bit storage/meaning version.
++// 0 and 0xFFFFFF are reserved. No EEPROM offsets or sizes are changed.
++// Without an ID, VIA retains its existing date-derived magic behavior.
++#define QMK_VIA_EEPROM_SCHEMA_API_VERSION 1

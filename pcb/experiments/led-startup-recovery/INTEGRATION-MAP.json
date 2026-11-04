@@ -1,0 +1,247 @@
+{
+  "packet_install_root": "pcb/experiments/led-startup-recovery",
+  "packet_install_rule": "Copy every file in PACKAGE-MANIFEST.json files at the identical relative path, plus PACKAGE-MANIFEST.json itself. The manifest is the complete exact packet inventory.",
+  "required_minimal_host_replay": [
+    "candidate/ (all 62 files)",
+    "known-source-hashes.json",
+    "baseline-extracted/accepted-main/pcb/firmware/qmk/keyboards/maru60/rp2350/ (all 22 files)"
+  ],
+  "active_copy_rule": "Replace absent/new active firmware and engineering directories with exact candidate copies, do not merge stale files. Parent performs adoption after verifying the documentation-only delta.",
+  "active_copy_files": [
+    {
+      "source": "candidate/firmware/history/fixtures/maru60.xml",
+      "destination": "pcb/firmware/history/fixtures/maru60.xml",
+      "sha256": "38d3f54dde794077012ebe21bc50d21968ecc94232c3153061db6f0258b9adf1"
+    },
+    {
+      "source": "candidate/firmware/qmk/apply_report_sync_patch.py",
+      "destination": "pcb/firmware/qmk/apply_report_sync_patch.py",
+      "sha256": "b1230cb703712d20de5223a0a90050c7ca3d7ee59843fd953e0f72ad195cccd3"
+    },
+    {
+      "source": "candidate/firmware/qmk/apply_via_schema_patch.py",
+      "destination": "pcb/firmware/qmk/apply_via_schema_patch.py",
+      "sha256": "837c5e1539f69ed5966df57bae80d64d1f62a9f6748b60b9a418912da7230c14"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/config.h",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/config.h",
+      "sha256": "3923a07e7329edf1bc8f78067b56c8a093dd3f223bba0bc89ed652198bf2235d"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/keyboard.json",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/keyboard.json",
+      "sha256": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/keymaps/via/keymap.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/keymaps/via/keymap.c",
+      "sha256": "bb80f8601a6818ca1c822745ef7a85d16ae94c627c2222478ec26956a762b494"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/keymaps/via_hhkb/keymap.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/keymaps/via_hhkb/keymap.c",
+      "sha256": "9d83cc8687de165cb52793cdb4808058d90b67625119ecad3402dc85068401ab"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/keymaps/via_hhkb/rules.mk",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/keymaps/via_hhkb/rules.mk",
+      "sha256": "a249d7b848b9ef246d4fa73a3fe8591fab9859323d7845d2681ead37eebc2e75"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/led_config.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/led_config.c",
+      "sha256": "e0845ffafa16aab35e58fdfe1bb1df97b56a18f2b63f9d2565b89e2fe0206291"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru60.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru60.c",
+      "sha256": "14ff9750932b512bca6d794398bef2a3dfe940da9a29e30346e4e5151d660036"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_key_transport.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_key_transport.c",
+      "sha256": "063d101e0c98e10fbf34ad3e2b10bf98962e58cfa160a7f97515bb8d8854c4c6"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_layout.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_layout.c",
+      "sha256": "e40b7484c8ef7821fa6b6033bcd353ecd9c1e66010a4b851467ea827c686dbc4"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_layout_policy.h",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_layout_policy.h",
+      "sha256": "5311a1bef83dab42db1c6a0ce6897570cfbfe19a3c029b6bf2b1911ebe9254a9"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_led_counts.h",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_led_counts.h",
+      "sha256": "9f3f8775c3a775e6c973dc10b0c0694a42d8ba4d3ea49d37f588992d450f3b6b"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_report_sync.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_report_sync.c",
+      "sha256": "5a01ae6b906eeaed2b3ce8b056c913d9419032e4cbf377aa01dd98ccaaaf53f1"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_report_sync.h",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_report_sync.h",
+      "sha256": "6f87ef8a8c082b5ae9e57b797bce753eace04c46901810cdb7a9eccffb0dec53"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c",
+      "sha256": "dcb1acc86789b2a8f919769671dea8c5e2042fb20756cc15a6b2e3304e62ca52"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.h",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.h",
+      "sha256": "85403c42339f1777106308a2cc4c537f84a5c84021d4f50ebf406c00fb6a618e"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb_policy.h",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_rgb_policy.h",
+      "sha256": "db89d46aeae1d944d980f61f5d7c0544c8c985a8d561a2fea54e55cc788a99a7"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_suspend.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_suspend.c",
+      "sha256": "5b9609f7911f6f6bdf46a5f7d27ccea0b5b6cd11d92cbd1b2746a7882f73982e"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_suspend_masks.h",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_suspend_masks.h",
+      "sha256": "9e8906bb18e76fe55cb4549e9ec03e6e4cdbea78085a5ddc1243adb9e8938ccd"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_ug_transport.c",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_ug_transport.c",
+      "sha256": "caed702d6652ae0ffa2704d979b02eb84e35dae8783f0bc3c6f731877c3d3320"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_via_schema.h",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_via_schema.h",
+      "sha256": "2c81294491303c0d9ec1fb25e9f3b4161235e4843b74387ffa46f6cfc09bf172"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/maru_ws2812_transport.inc",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_ws2812_transport.inc",
+      "sha256": "802e09fe8e95b9ce7e149b879e808f7c3ee6d772e244cebea61bb44f83ee3716"
+    },
+    {
+      "source": "candidate/firmware/qmk/keyboards/maru60/rp2350/rules.mk",
+      "destination": "pcb/firmware/qmk/keyboards/maru60/rp2350/rules.mk",
+      "sha256": "509eed120a163447ac2462fb961f6026ca950397734458c927e990b4605b1a26"
+    },
+    {
+      "source": "candidate/firmware/qmk/patches/report-state-sync-v1.json",
+      "destination": "pcb/firmware/qmk/patches/report-state-sync-v1.json",
+      "sha256": "aa0b05b6fd05a33331363b2a1501ce34f355c5dd9b92185e2555a72bea1d99a7"
+    },
+    {
+      "source": "candidate/firmware/qmk/patches/report-state-sync-v1.patch",
+      "destination": "pcb/firmware/qmk/patches/report-state-sync-v1.patch",
+      "sha256": "77d8e13cf4d6d61a53bacf7179c92e3fde320cdfc299758586d5d803a40f4883"
+    },
+    {
+      "source": "candidate/firmware/qmk/patches/via-eeprom-schema-v1.json",
+      "destination": "pcb/firmware/qmk/patches/via-eeprom-schema-v1.json",
+      "sha256": "629d54e1ac961a778329b2e4b4ca44e4c453c0b6fb9a285fdc33e7acedc23571"
+    },
+    {
+      "source": "candidate/firmware/qmk/patches/via-eeprom-schema-v1.patch",
+      "destination": "pcb/firmware/qmk/patches/via-eeprom-schema-v1.patch",
+      "sha256": "7b72e3e6bf0ac5bec3f9c88008c7b079e5092a765c6b6d0fd8c16178bd784435"
+    },
+    {
+      "source": "candidate/firmware/qmk/qmk-upstream.json",
+      "destination": "pcb/firmware/qmk/qmk-upstream.json",
+      "sha256": "d6d49c601f1490c3d3259c348e6596f50e13ccde0053ef1d7b87f54242e0281e"
+    },
+    {
+      "source": "candidate/firmware/tests/README.md",
+      "destination": "pcb/firmware/tests/README.md",
+      "sha256": "b204bf091782004c33110142d7d7197d418a4cc0545424b0b285eb8d8d6e3ea9"
+    },
+    {
+      "source": "candidate/firmware/tests/led_contract_test.py",
+      "destination": "pcb/firmware/tests/led_contract_test.py",
+      "sha256": "db437a2c5fc1975bd6c081e16c4a95b5db442ede7792a28240f4c4d06840c3e6"
+    },
+    {
+      "source": "candidate/firmware/tests/matrix_simultaneous_model.py",
+      "destination": "pcb/firmware/tests/matrix_simultaneous_model.py",
+      "sha256": "ab591524db61d24a3d229835e0bd28a14059d62b2d8d47b8c54660feda48f650"
+    },
+    {
+      "source": "candidate/firmware/tests/mock/quantum.h",
+      "destination": "pcb/firmware/tests/mock/quantum.h",
+      "sha256": "8c34375a456038ec4763e1de58f54c69ee0c707b2fe4d7ab6ace7dccebf3124c"
+    },
+    {
+      "source": "candidate/firmware/tests/mock/via.h",
+      "destination": "pcb/firmware/tests/mock/via.h",
+      "sha256": "b3adf106d95b8934f690943f2921308b90be5b766c4c8ba250c792de56400201"
+    },
+    {
+      "source": "candidate/firmware/tests/option_test.c",
+      "destination": "pcb/firmware/tests/option_test.c",
+      "sha256": "c9fc8b08bc3f62840a5cdc856928bd9ea56d666c16e2415a0bd5a7dd72ee044d"
+    },
+    {
+      "source": "candidate/firmware/tests/power_policy_test.c",
+      "destination": "pcb/firmware/tests/power_policy_test.c",
+      "sha256": "7c3ab37d20bc0fcd22fbd9955c2c3f1a76ee525911adc0958b564de999062fd0"
+    },
+    {
+      "source": "candidate/firmware/tests/suspend_mask_test.c",
+      "destination": "pcb/firmware/tests/suspend_mask_test.c",
+      "sha256": "0b5c981496ca86c1b05b71a04b3a7b71b787cddc88d564a9bf1b568c0d21fb85"
+    },
+    {
+      "source": "candidate/firmware/tests/suspend_mock/quantum.h",
+      "destination": "pcb/firmware/tests/suspend_mock/quantum.h",
+      "sha256": "24bd877abbb996fd92ae8175f5f05979da609fc48aef2a22cd605cf1d1c2ec35"
+    },
+    {
+      "source": "candidate/firmware/tools/generate_led_config.py",
+      "destination": "pcb/firmware/tools/generate_led_config.py",
+      "sha256": "ff32ea1d6cf51f0e1987bdfd7d2d6134aa7cd8505e01dbe6d67272fc4c1a0dbc"
+    },
+    {
+      "source": "candidate/firmware/via/generate.py",
+      "destination": "pcb/firmware/via/generate.py",
+      "sha256": "dc119872198715e824cb0a048469e17781a7ea18ac0302fbaadaa32633d2e2d9"
+    },
+    {
+      "source": "candidate/firmware/via/maru60-hhkb-64.json",
+      "destination": "pcb/firmware/via/maru60-hhkb-64.json",
+      "sha256": "4cd1f17b74c5e3d52dce3f787dcebd38711e864b38545257aca631feeadd9839"
+    },
+    {
+      "source": "candidate/firmware/via/maru60-wkl-64.json",
+      "destination": "pcb/firmware/via/maru60-wkl-64.json",
+      "sha256": "fa74d2e43cbac6a6a3bf0532726883138d4f32135740f7a49f281da2b4cb2902"
+    },
+    {
+      "source": "candidate/engineering/key-rgb-index-map.json",
+      "destination": "pcb/engineering/key-rgb-index-map.json",
+      "sha256": "1007ec827584d3874023a0db3ca289f60275be7de30553ff314c22837ceab99b"
+    },
+    {
+      "source": "candidate/engineering/key-sites.json",
+      "destination": "pcb/engineering/key-sites.json",
+      "sha256": "05a77a4ab94274152ad9b99fedfba263342560c507b07baa930c5a0e84fd8859"
+    },
+    {
+      "source": "candidate/engineering/lighting-components.json",
+      "destination": "pcb/engineering/lighting-components.json",
+      "sha256": "2b5d8805bbb22243808f8e2ce098b7b58f2905d62a07ea4d7c86316b13a649b8"
+    }
+  ],
+  "active_copy_count": 46,
+  "source_adoption_only": true,
+  "full_arm_build": false,
+  "hardware_qualification": false,
+  "qualification_default": 0
+}

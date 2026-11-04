@@ -1,0 +1,484 @@
+{
+  "pass": true,
+  "source_unchanged": true,
+  "source_hashes": {
+    "maru_ug_transport.c": "caed702d6652ae0ffa2704d979b02eb84e35dae8783f0bc3c6f731877c3d3320",
+    "maru60.c": "14ff9750932b512bca6d794398bef2a3dfe940da9a29e30346e4e5151d660036",
+    "maru_key_transport.c": "063d101e0c98e10fbf34ad3e2b10bf98962e58cfa160a7f97515bb8d8854c4c6",
+    "maru_via_schema.h": "2c81294491303c0d9ec1fb25e9f3b4161235e4843b74387ffa46f6cfc09bf172",
+    "maru_rgb.c": "dcb1acc86789b2a8f919769671dea8c5e2042fb20756cc15a6b2e3304e62ca52",
+    "maru_ws2812_transport.inc": "802e09fe8e95b9ce7e149b879e808f7c3ee6d772e244cebea61bb44f83ee3716",
+    "maru_suspend.c": "5b9609f7911f6f6bdf46a5f7d27ccea0b5b6cd11d92cbd1b2746a7882f73982e",
+    "maru_layout_policy.h": "5311a1bef83dab42db1c6a0ce6897570cfbfe19a3c029b6bf2b1911ebe9254a9",
+    "maru_rgb_policy.h": "db89d46aeae1d944d980f61f5d7c0544c8c985a8d561a2fea54e55cc788a99a7",
+    "maru_suspend_masks.h": "9e8906bb18e76fe55cb4549e9ec03e6e4cdbea78085a5ddc1243adb9e8938ccd",
+    "maru_led_counts.h": "9f3f8775c3a775e6c973dc10b0c0694a42d8ba4d3ea49d37f588992d450f3b6b",
+    "rules.mk": "509eed120a163447ac2462fb961f6026ca950397734458c927e990b4605b1a26",
+    "led_config.c": "e0845ffafa16aab35e58fdfe1bb1df97b56a18f2b63f9d2565b89e2fe0206291",
+    "maru_report_sync.c": "5a01ae6b906eeaed2b3ce8b056c913d9419032e4cbf377aa01dd98ccaaaf53f1",
+    "config.h": "3923a07e7329edf1bc8f78067b56c8a093dd3f223bba0bc89ed652198bf2235d",
+    "keyboard.json": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69",
+    "maru_rgb.h": "85403c42339f1777106308a2cc4c537f84a5c84021d4f50ebf406c00fb6a618e",
+    "maru_layout.c": "e40b7484c8ef7821fa6b6033bcd353ecd9c1e66010a4b851467ea827c686dbc4",
+    "maru_report_sync.h": "6f87ef8a8c082b5ae9e57b797bce753eace04c46901810cdb7a9eccffb0dec53",
+    "keymaps/via_hhkb/keymap.c": "9d83cc8687de165cb52793cdb4808058d90b67625119ecad3402dc85068401ab",
+    "keymaps/via_hhkb/rules.mk": "a249d7b848b9ef246d4fa73a3fe8591fab9859323d7845d2681ead37eebc2e75",
+    "keymaps/via/keymap.c": "bb80f8601a6818ca1c822745ef7a85d16ae94c627c2222478ec26956a762b494"
+  },
+  "fixture_hashes": {
+    "run.py": "e48ea322f5f1a2f20041c97f9b1fa957295b8a1f3e504bdc06759703462f5d34",
+    "lifecycle_test.c": "4df9464e66f0c837c6d17935dd9573c27a69f2ee60bf24228ff7186a6fc2b4b7",
+    "mock/quantum.h": "7ac89e8e041bfe1612fc29f2b52b103efee1614f097e1b690d7d7c550e4d8e53",
+    "mock/via.h": "f14847b9f2f9f35466e7f88db509100be033193b574a9ee55fea70f508933972",
+    "mock/color.h": "f82089021d5dd5ead5e718070615434c96e57a8429da02165249d704d04d1a49",
+    "mock/timer.h": "9269a7f6301cc63591fa465362ffaf5df150ac61fcc8e854aba30c4ba5e7995e",
+    "mock/rgb_matrix_drivers.h": "36c5da323cb025ec696569d7f4baec047a9e8eb1b4f458e37b952c36483daf03",
+    "mock/usb_device_state.h": "356d6a40379bc6852206513c13d0adf0aeaf0df419ce54497a623e90988bd959",
+    "mock/report_sync.h": "a5bc94e12fce0b01037701027da18484b335c161716e096f80d8323acbfd5b4b",
+    "mock/via_eeprom_schema.h": "0b5cac962c4daedda58063777b10286047899579f2134e536adc5e1f01591c57"
+  },
+  "independent_executions": 73,
+  "limits": [
+    "Real maru_rgb.c and maru60.c only; fake GPIO, scheduling, transport, USB state and user hooks",
+    "No QMK build, ARM compilation, true USB suspend ordering, hardware or electrical qualification",
+    "All enabled durations are synthetic boundary-test values, not proposed production intervals"
+  ],
+  "tests": [
+    {
+      "case": "normal",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=normal duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-key",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=missing-key duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-ug",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=missing-ug duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "cold-fault",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent cold-fault latch"
+    },
+    {
+      "case": "settling-off",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=settling-off duration=1 epochs=2 calls=2,2"
+    },
+    {
+      "case": "settling-suspend",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=settling-suspend duration=1 epochs=2 calls=2,2"
+    },
+    {
+      "case": "active-suspend",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=active-suspend duration=1 epochs=2 calls=4,4"
+    },
+    {
+      "case": "active-fault",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=active-fault duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "active-health",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=active-health duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "enable-loss",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=enable-loss duration=1 epochs=2 calls=4,4"
+    },
+    {
+      "case": "zone-cycle",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=zone-cycle duration=1 epochs=2 calls=4,4"
+    },
+    {
+      "case": "shutdown",
+      "opt": "-O0",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=shutdown duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "normal",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=normal duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-key",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=missing-key duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-ug",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=missing-ug duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "cold-fault",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent cold-fault latch"
+    },
+    {
+      "case": "settling-off",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=settling-off duration=7 epochs=2 calls=2,2"
+    },
+    {
+      "case": "settling-suspend",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=settling-suspend duration=7 epochs=2 calls=2,2"
+    },
+    {
+      "case": "active-suspend",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=active-suspend duration=7 epochs=2 calls=4,4"
+    },
+    {
+      "case": "active-fault",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=active-fault duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "active-health",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=active-health duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "enable-loss",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=enable-loss duration=7 epochs=2 calls=4,4"
+    },
+    {
+      "case": "zone-cycle",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=zone-cycle duration=7 epochs=2 calls=4,4"
+    },
+    {
+      "case": "shutdown",
+      "opt": "-O0",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=shutdown duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "normal",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=normal duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-key",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=missing-key duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-ug",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=missing-ug duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "cold-fault",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent cold-fault latch"
+    },
+    {
+      "case": "settling-off",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=settling-off duration=2147483647 epochs=2 calls=2,2"
+    },
+    {
+      "case": "settling-suspend",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=settling-suspend duration=2147483647 epochs=2 calls=2,2"
+    },
+    {
+      "case": "active-suspend",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=active-suspend duration=2147483647 epochs=2 calls=4,4"
+    },
+    {
+      "case": "active-fault",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=active-fault duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "active-health",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=active-health duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "enable-loss",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=enable-loss duration=2147483647 epochs=2 calls=4,4"
+    },
+    {
+      "case": "zone-cycle",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=zone-cycle duration=2147483647 epochs=2 calls=4,4"
+    },
+    {
+      "case": "shutdown",
+      "opt": "-O0",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=shutdown duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "normal",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=normal duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-key",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=missing-key duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-ug",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=missing-ug duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "cold-fault",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent cold-fault latch"
+    },
+    {
+      "case": "settling-off",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=settling-off duration=1 epochs=2 calls=2,2"
+    },
+    {
+      "case": "settling-suspend",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=settling-suspend duration=1 epochs=2 calls=2,2"
+    },
+    {
+      "case": "active-suspend",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=active-suspend duration=1 epochs=2 calls=4,4"
+    },
+    {
+      "case": "active-fault",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=active-fault duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "active-health",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=active-health duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "enable-loss",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=enable-loss duration=1 epochs=2 calls=4,4"
+    },
+    {
+      "case": "zone-cycle",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=zone-cycle duration=1 epochs=2 calls=4,4"
+    },
+    {
+      "case": "shutdown",
+      "opt": "-O2",
+      "synthetic_ms": 1,
+      "result": "PASS independent scenario=shutdown duration=1 epochs=1 calls=2,2"
+    },
+    {
+      "case": "normal",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=normal duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-key",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=missing-key duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-ug",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=missing-ug duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "cold-fault",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent cold-fault latch"
+    },
+    {
+      "case": "settling-off",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=settling-off duration=7 epochs=2 calls=2,2"
+    },
+    {
+      "case": "settling-suspend",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=settling-suspend duration=7 epochs=2 calls=2,2"
+    },
+    {
+      "case": "active-suspend",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=active-suspend duration=7 epochs=2 calls=4,4"
+    },
+    {
+      "case": "active-fault",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=active-fault duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "active-health",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=active-health duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "enable-loss",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=enable-loss duration=7 epochs=2 calls=4,4"
+    },
+    {
+      "case": "zone-cycle",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=zone-cycle duration=7 epochs=2 calls=4,4"
+    },
+    {
+      "case": "shutdown",
+      "opt": "-O2",
+      "synthetic_ms": 7,
+      "result": "PASS independent scenario=shutdown duration=7 epochs=1 calls=2,2"
+    },
+    {
+      "case": "normal",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=normal duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-key",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=missing-key duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "missing-ug",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=missing-ug duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "cold-fault",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent cold-fault latch"
+    },
+    {
+      "case": "settling-off",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=settling-off duration=2147483647 epochs=2 calls=2,2"
+    },
+    {
+      "case": "settling-suspend",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=settling-suspend duration=2147483647 epochs=2 calls=2,2"
+    },
+    {
+      "case": "active-suspend",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=active-suspend duration=2147483647 epochs=2 calls=4,4"
+    },
+    {
+      "case": "active-fault",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=active-fault duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "active-health",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=active-health duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "enable-loss",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=enable-loss duration=2147483647 epochs=2 calls=4,4"
+    },
+    {
+      "case": "zone-cycle",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=zone-cycle duration=2147483647 epochs=2 calls=4,4"
+    },
+    {
+      "case": "shutdown",
+      "opt": "-O2",
+      "synthetic_ms": 2147483647,
+      "result": "PASS independent scenario=shutdown duration=2147483647 epochs=1 calls=2,2"
+    },
+    {
+      "case": "default-off-real-keyboard-wrappers",
+      "result": "PASS independent defaultOFF wrapper path"
+    }
+  ]
+}

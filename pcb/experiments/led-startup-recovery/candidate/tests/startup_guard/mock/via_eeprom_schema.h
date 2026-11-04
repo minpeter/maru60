@@ -1,0 +1,2 @@
+#pragma once
+#define QMK_VIA_EEPROM_SCHEMA_API_VERSION 1

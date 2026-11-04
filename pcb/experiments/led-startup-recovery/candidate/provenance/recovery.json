@@ -1,0 +1,26 @@
+{
+  "status": "PARTIAL_EXACT_RECOVERY_WITH_NEW_IMPLEMENTATION",
+  "original_git_history_recovered": false,
+  "original_72_file_working_packet_recovered": false,
+  "original_startup_tests_and_receipts_recovered": false,
+  "historical_baseline_source_files_matching_known_sha256": 22,
+  "historical_fixed_source_files_matching_known_sha256": 19,
+  "new_implementation_files": [
+    "maru_rgb.c",
+    "maru_rgb.h",
+    "maru_ws2812_transport.inc"
+  ],
+  "config_h_exactly_reconstructed": true,
+  "baseline_archive": {
+    "name": "accepted-main-7fb63a6-ADC.zip",
+    "library_file_id": "libfile_b8b6187fc3388191883a1249bd61a8c2",
+    "file_id": "file_000000007a34823090845c70670c47f1",
+    "version_id": "28",
+    "sha256": "85b4b5991d33a31e632cb9a358c3a64efc3ec3a374256b02defea4bb833e171b"
+  },
+  "known_hashes_source": "Prior source-application tool outputs retained in this task conversation; known-source-hashes.json",
+  "qualified_default": 0,
+  "full_qmk_arm_build_attempted": false,
+  "hardware_qualification": false,
+  "new_source_change_during_testing": "Initial default-OFF compile warning for an unsigned < 0 comparison corrected by compile-time qualification gating, not by adding an arbitrary interval. Direct-OFF fixture corrected to respect non-latching fresh restart semantics. Final source-bound tests rerun."
+}

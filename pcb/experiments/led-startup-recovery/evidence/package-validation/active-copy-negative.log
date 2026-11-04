@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "candidate_files": 62,
+  "baseline_files_exact": 22,
+  "former_working_files_exact": 19,
+  "new_implementation_files": [
+    "maru_rgb.c",
+    "maru_rgb.h",
+    "maru_ws2812_transport.inc"
+  ],
+  "qualification_default": 0,
+  "original_complete_packet_recovered": false
+}
+Traceback (most recent call last):
+  File "/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/integration-ready/verify_package.py", line 25, in <module>
+    assert files(a.active_root/part)==files(P/'candidate'/part),f'Active {part} mismatch'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Active firmware mismatch

@@ -22,7 +22,7 @@ Fresh receipts are under the selected unit's `qa/recovery-native`. Their executi
 
 ## Missing work and safe continuation
 
-The working LED startup guard firmware and imported firmware tree are not included in this recovery repository. Do not flash a fallback firmware or enable LED power qualification. Original C124 rejected-trial packets and later unselected label/C124 studies are also not fully restored. No unselected trial is promoted here.
+A reviewed, newly tested LED startup-guard recovery implementation is now active at `pcb/firmware`, with exact copies of its supporting engineering files at `pcb/engineering`. Nineteen of the 22 former fixed overlay files were recovered exactly; three guard source files are explicitly new implementations. The immutable baseline, reviewed candidate, fresh host tests and static V7 mapping are preserved under `pcb/experiments/led-startup-recovery`. Qualification remains OFF. Full pinned QMK/ARM builds and hardware acceptance have not been performed; do not flash or enable qualification. Original C124 rejected-trial packets and later unselected label/C124 studies are also not fully restored. No unselected trial is promoted here.
 
 Continue new experiments from the exact selected board in isolated directories, with new source-bound checks and independent review before adoption. Do not weaken clearance, old conductor/reference preservation or qualification gates. Do not push or fabricate from this baseline.
 

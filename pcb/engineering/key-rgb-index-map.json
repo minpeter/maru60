@@ -1,0 +1,1312 @@
+{
+  "status": "PROMOTED engineering candidate 2026-11-02; normal Backspace unresolved; optical/body fit not hardware validated",
+  "led_count": 64,
+  "pixels": [
+    {
+      "index": 0,
+      "led_ref": "LED1",
+      "switch_ref": "SW1",
+      "matrix": [
+        0,
+        0
+      ],
+      "x_mm": 9.1475,
+      "y_mm": 4.11875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_5V",
+      "dout_net": "KEY_RGB_CHAIN_1",
+      "pins": {
+        "1": "KEY_RGB_5V",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_1",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 1,
+      "led_ref": "LED2",
+      "switch_ref": "SW2",
+      "matrix": [
+        0,
+        1
+      ],
+      "x_mm": 28.1975,
+      "y_mm": 4.11875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_1",
+      "dout_net": "KEY_RGB_CHAIN_2",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_1",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_2",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 2,
+      "led_ref": "LED3",
+      "switch_ref": "SW3",
+      "matrix": [
+        0,
+        2
+      ],
+      "x_mm": 47.2475,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_2",
+      "dout_net": "KEY_RGB_CHAIN_3",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_2",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_3",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 3,
+      "led_ref": "LED4",
+      "switch_ref": "SW4",
+      "matrix": [
+        0,
+        3
+      ],
+      "x_mm": 66.2975,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_3",
+      "dout_net": "KEY_RGB_CHAIN_4",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_3",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_4",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 4,
+      "led_ref": "LED5",
+      "switch_ref": "SW5",
+      "matrix": [
+        0,
+        4
+      ],
+      "x_mm": 85.3475,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_4",
+      "dout_net": "KEY_RGB_CHAIN_5",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_4",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_5",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 5,
+      "led_ref": "LED6",
+      "switch_ref": "SW6",
+      "matrix": [
+        0,
+        5
+      ],
+      "x_mm": 104.3975,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_5",
+      "dout_net": "KEY_RGB_CHAIN_6",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_5",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_6",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 6,
+      "led_ref": "LED7",
+      "switch_ref": "SW7",
+      "matrix": [
+        0,
+        6
+      ],
+      "x_mm": 123.4475,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_6",
+      "dout_net": "KEY_RGB_CHAIN_7",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_6",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_7",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 7,
+      "led_ref": "LED8",
+      "switch_ref": "SW8",
+      "matrix": [
+        0,
+        7
+      ],
+      "x_mm": 142.4975,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_7",
+      "dout_net": "KEY_RGB_CHAIN_8",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_7",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_8",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 8,
+      "led_ref": "LED9",
+      "switch_ref": "SW9",
+      "matrix": [
+        0,
+        8
+      ],
+      "x_mm": 161.5475,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_8",
+      "dout_net": "KEY_RGB_CHAIN_9",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_8",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_9",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 9,
+      "led_ref": "LED10",
+      "switch_ref": "SW10",
+      "matrix": [
+        0,
+        9
+      ],
+      "x_mm": 180.5975,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_9",
+      "dout_net": "KEY_RGB_CHAIN_10",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_9",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_10",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 10,
+      "led_ref": "LED11",
+      "switch_ref": "SW11",
+      "matrix": [
+        0,
+        10
+      ],
+      "x_mm": 199.6475,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_10",
+      "dout_net": "KEY_RGB_CHAIN_11",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_10",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_11",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 11,
+      "led_ref": "LED12",
+      "switch_ref": "SW12",
+      "matrix": [
+        0,
+        11
+      ],
+      "x_mm": 218.6975,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_11",
+      "dout_net": "KEY_RGB_CHAIN_12",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_11",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_12",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 12,
+      "led_ref": "LED13",
+      "switch_ref": "SW13",
+      "matrix": [
+        0,
+        12
+      ],
+      "x_mm": 237.7475,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_12",
+      "dout_net": "KEY_RGB_CHAIN_13",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_12",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_13",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 13,
+      "led_ref": "LED14",
+      "switch_ref": "SW14",
+      "matrix": [
+        0,
+        13
+      ],
+      "x_mm": 256.7975,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_13",
+      "dout_net": "KEY_RGB_CHAIN_14",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_13",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_14",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 14,
+      "led_ref": "LED15",
+      "switch_ref": "SW15",
+      "matrix": [
+        0,
+        14
+      ],
+      "x_mm": 275.8475,
+      "y_mm": 14.27875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_14",
+      "dout_net": "KEY_RGB_CHAIN_15",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_14",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_15",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 15,
+      "led_ref": "LED29",
+      "switch_ref": "SW29",
+      "matrix": [
+        1,
+        13
+      ],
+      "x_mm": 271.085,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_15",
+      "dout_net": "KEY_RGB_CHAIN_16",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_15",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_16",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 16,
+      "led_ref": "LED28",
+      "switch_ref": "SW28",
+      "matrix": [
+        1,
+        12
+      ],
+      "x_mm": 247.2725,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_16",
+      "dout_net": "KEY_RGB_CHAIN_17",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_16",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_17",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 17,
+      "led_ref": "LED27",
+      "switch_ref": "SW27",
+      "matrix": [
+        1,
+        11
+      ],
+      "x_mm": 228.2225,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_17",
+      "dout_net": "KEY_RGB_CHAIN_18",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_17",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_18",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 18,
+      "led_ref": "LED26",
+      "switch_ref": "SW26",
+      "matrix": [
+        1,
+        10
+      ],
+      "x_mm": 209.1725,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_18",
+      "dout_net": "KEY_RGB_CHAIN_19",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_18",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_19",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 19,
+      "led_ref": "LED25",
+      "switch_ref": "SW25",
+      "matrix": [
+        1,
+        9
+      ],
+      "x_mm": 190.1225,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_19",
+      "dout_net": "KEY_RGB_CHAIN_20",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_19",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_20",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 20,
+      "led_ref": "LED24",
+      "switch_ref": "SW24",
+      "matrix": [
+        1,
+        8
+      ],
+      "x_mm": 171.0725,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_20",
+      "dout_net": "KEY_RGB_CHAIN_21",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_20",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_21",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 21,
+      "led_ref": "LED23",
+      "switch_ref": "SW23",
+      "matrix": [
+        1,
+        7
+      ],
+      "x_mm": 152.0225,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_21",
+      "dout_net": "KEY_RGB_CHAIN_22",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_21",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_22",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 22,
+      "led_ref": "LED22",
+      "switch_ref": "SW22",
+      "matrix": [
+        1,
+        6
+      ],
+      "x_mm": 132.9725,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_22",
+      "dout_net": "KEY_RGB_CHAIN_23",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_22",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_23",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 23,
+      "led_ref": "LED21",
+      "switch_ref": "SW21",
+      "matrix": [
+        1,
+        5
+      ],
+      "x_mm": 113.9225,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_23",
+      "dout_net": "KEY_RGB_CHAIN_24",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_23",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_24",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 24,
+      "led_ref": "LED20",
+      "switch_ref": "SW20",
+      "matrix": [
+        1,
+        4
+      ],
+      "x_mm": 94.8725,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_24",
+      "dout_net": "KEY_RGB_CHAIN_25",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_24",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_25",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 25,
+      "led_ref": "LED19",
+      "switch_ref": "SW19",
+      "matrix": [
+        1,
+        3
+      ],
+      "x_mm": 75.8225,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_25",
+      "dout_net": "KEY_RGB_CHAIN_26",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_25",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_26",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 26,
+      "led_ref": "LED18",
+      "switch_ref": "SW18",
+      "matrix": [
+        1,
+        2
+      ],
+      "x_mm": 56.7725,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_26",
+      "dout_net": "KEY_RGB_CHAIN_27",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_26",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_27",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 27,
+      "led_ref": "LED17",
+      "switch_ref": "SW17",
+      "matrix": [
+        1,
+        1
+      ],
+      "x_mm": 37.7225,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_27",
+      "dout_net": "KEY_RGB_CHAIN_28",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_27",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_28",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 28,
+      "led_ref": "LED16",
+      "switch_ref": "SW16",
+      "matrix": [
+        1,
+        0
+      ],
+      "x_mm": 13.91,
+      "y_mm": 33.32875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_28",
+      "dout_net": "KEY_RGB_CHAIN_29",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_28",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_29",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 29,
+      "led_ref": "LED30",
+      "switch_ref": "SWCAP1",
+      "matrix": [
+        2,
+        0
+      ],
+      "x_mm": 16.49125,
+      "y_mm": 42.21875,
+      "active_when": "caps_normal",
+      "din_net": "KEY_RGB_CHAIN_29",
+      "dout_net": "KEY_RGB_CHAIN_30",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_29",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_30",
+        "4": "GND"
+      },
+      "switch_unit": 1,
+      "switch_pad_pair": [
+        1,
+        2
+      ]
+    },
+    {
+      "led_ref": "LED75",
+      "switch_ref": "SWCAP1",
+      "matrix": [
+        2,
+        0
+      ],
+      "x_mm": 11.32875,
+      "y_mm": 52.37875,
+      "active_when": "caps_stepped",
+      "index": 30,
+      "din_net": "KEY_RGB_CHAIN_30",
+      "dout_net": "KEY_RGB_CHAIN_31",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_30",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_31",
+        "4": "GND"
+      },
+      "switch_unit": 2,
+      "switch_pad_pair": [
+        3,
+        4
+      ]
+    },
+    {
+      "index": 31,
+      "led_ref": "LED31",
+      "switch_ref": "SW31",
+      "matrix": [
+        2,
+        1
+      ],
+      "x_mm": 42.485,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_31",
+      "dout_net": "KEY_RGB_CHAIN_32",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_31",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_32",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 32,
+      "led_ref": "LED32",
+      "switch_ref": "SW32",
+      "matrix": [
+        2,
+        2
+      ],
+      "x_mm": 61.535,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_32",
+      "dout_net": "KEY_RGB_CHAIN_33",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_32",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_33",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 33,
+      "led_ref": "LED33",
+      "switch_ref": "SW33",
+      "matrix": [
+        2,
+        3
+      ],
+      "x_mm": 80.585,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_33",
+      "dout_net": "KEY_RGB_CHAIN_34",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_33",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_34",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 34,
+      "led_ref": "LED34",
+      "switch_ref": "SW34",
+      "matrix": [
+        2,
+        4
+      ],
+      "x_mm": 99.635,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_34",
+      "dout_net": "KEY_RGB_CHAIN_35",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_34",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_35",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 35,
+      "led_ref": "LED35",
+      "switch_ref": "SW35",
+      "matrix": [
+        2,
+        5
+      ],
+      "x_mm": 118.685,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_35",
+      "dout_net": "KEY_RGB_CHAIN_36",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_35",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_36",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 36,
+      "led_ref": "LED36",
+      "switch_ref": "SW36",
+      "matrix": [
+        2,
+        6
+      ],
+      "x_mm": 137.735,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_36",
+      "dout_net": "KEY_RGB_CHAIN_37",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_36",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_37",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 37,
+      "led_ref": "LED37",
+      "switch_ref": "SW37",
+      "matrix": [
+        2,
+        7
+      ],
+      "x_mm": 156.785,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_37",
+      "dout_net": "KEY_RGB_CHAIN_38",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_37",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_38",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 38,
+      "led_ref": "LED38",
+      "switch_ref": "SW38",
+      "matrix": [
+        2,
+        8
+      ],
+      "x_mm": 175.835,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_38",
+      "dout_net": "KEY_RGB_CHAIN_39",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_38",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_39",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 39,
+      "led_ref": "LED39",
+      "switch_ref": "SW39",
+      "matrix": [
+        2,
+        9
+      ],
+      "x_mm": 194.885,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_39",
+      "dout_net": "KEY_RGB_CHAIN_40",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_39",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_40",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 40,
+      "led_ref": "LED40",
+      "switch_ref": "SW40",
+      "matrix": [
+        2,
+        10
+      ],
+      "x_mm": 213.935,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_40",
+      "dout_net": "KEY_RGB_CHAIN_41",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_40",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_41",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 41,
+      "led_ref": "LED41",
+      "switch_ref": "SW41",
+      "matrix": [
+        2,
+        11
+      ],
+      "x_mm": 232.985,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_41",
+      "dout_net": "KEY_RGB_CHAIN_42",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_41",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_42",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 42,
+      "led_ref": "LED42",
+      "switch_ref": "SW42",
+      "matrix": [
+        2,
+        12
+      ],
+      "x_mm": 263.94125,
+      "y_mm": 52.37875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_42",
+      "dout_net": "KEY_RGB_CHAIN_43",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_42",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_43",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 43,
+      "led_ref": "LED55",
+      "switch_ref": "SWRS1",
+      "matrix": [
+        3,
+        12
+      ],
+      "x_mm": 275.8475,
+      "y_mm": 71.42875,
+      "active_when": "rshift_split",
+      "din_net": "KEY_RGB_CHAIN_43",
+      "dout_net": "KEY_RGB_CHAIN_44",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_43",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_44",
+        "4": "GND"
+      },
+      "switch_unit": 3,
+      "switch_pad_pair": [
+        5,
+        6
+      ]
+    },
+    {
+      "led_ref": "LED76",
+      "switch_ref": "SWRS1",
+      "matrix": [
+        3,
+        11
+      ],
+      "x_mm": 259.17875,
+      "y_mm": 61.26875,
+      "active_when": "rshift_normal",
+      "index": 44,
+      "din_net": "KEY_RGB_CHAIN_44",
+      "dout_net": "KEY_RGB_CHAIN_45",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_44",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_45",
+        "4": "GND"
+      },
+      "switch_unit": 1,
+      "switch_pad_pair": [
+        1,
+        2
+      ]
+    },
+    {
+      "index": 45,
+      "led_ref": "LED54",
+      "switch_ref": "SWRS1",
+      "matrix": [
+        3,
+        11
+      ],
+      "x_mm": 249.65375,
+      "y_mm": 71.42875,
+      "active_when": "rshift_split",
+      "din_net": "KEY_RGB_CHAIN_45",
+      "dout_net": "KEY_RGB_CHAIN_46",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_45",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_46",
+        "4": "GND"
+      },
+      "switch_unit": 2,
+      "switch_pad_pair": [
+        3,
+        4
+      ]
+    },
+    {
+      "index": 46,
+      "led_ref": "LED53",
+      "switch_ref": "SW53",
+      "matrix": [
+        3,
+        10
+      ],
+      "x_mm": 223.46,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_46",
+      "dout_net": "KEY_RGB_CHAIN_47",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_46",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_47",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 47,
+      "led_ref": "LED52",
+      "switch_ref": "SW52",
+      "matrix": [
+        3,
+        9
+      ],
+      "x_mm": 204.41,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_47",
+      "dout_net": "KEY_RGB_CHAIN_48",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_47",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_48",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 48,
+      "led_ref": "LED51",
+      "switch_ref": "SW51",
+      "matrix": [
+        3,
+        8
+      ],
+      "x_mm": 185.36,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_48",
+      "dout_net": "KEY_RGB_CHAIN_49",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_48",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_49",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 49,
+      "led_ref": "LED50",
+      "switch_ref": "SW50",
+      "matrix": [
+        3,
+        7
+      ],
+      "x_mm": 166.31,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_49",
+      "dout_net": "KEY_RGB_CHAIN_50",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_49",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_50",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 50,
+      "led_ref": "LED49",
+      "switch_ref": "SW49",
+      "matrix": [
+        3,
+        6
+      ],
+      "x_mm": 147.26,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_50",
+      "dout_net": "KEY_RGB_CHAIN_51",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_50",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_51",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 51,
+      "led_ref": "LED48",
+      "switch_ref": "SW48",
+      "matrix": [
+        3,
+        5
+      ],
+      "x_mm": 128.21,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_51",
+      "dout_net": "KEY_RGB_CHAIN_52",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_51",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_52",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 52,
+      "led_ref": "LED47",
+      "switch_ref": "SW47",
+      "matrix": [
+        3,
+        4
+      ],
+      "x_mm": 109.16,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_52",
+      "dout_net": "KEY_RGB_CHAIN_53",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_52",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_53",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 53,
+      "led_ref": "LED46",
+      "switch_ref": "SW46",
+      "matrix": [
+        3,
+        3
+      ],
+      "x_mm": 90.11,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_53",
+      "dout_net": "KEY_RGB_CHAIN_54",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_53",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_54",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 54,
+      "led_ref": "LED45",
+      "switch_ref": "SW45",
+      "matrix": [
+        3,
+        2
+      ],
+      "x_mm": 71.06,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_54",
+      "dout_net": "KEY_RGB_CHAIN_55",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_54",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_55",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 55,
+      "led_ref": "LED44",
+      "switch_ref": "SW44",
+      "matrix": [
+        3,
+        1
+      ],
+      "x_mm": 52.01,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_55",
+      "dout_net": "KEY_RGB_CHAIN_56",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_55",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_56",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 56,
+      "led_ref": "LED43",
+      "switch_ref": "SW43",
+      "matrix": [
+        3,
+        0
+      ],
+      "x_mm": 21.05375,
+      "y_mm": 71.42875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_56",
+      "dout_net": "KEY_RGB_CHAIN_57",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_56",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_57",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 57,
+      "led_ref": "LED56",
+      "switch_ref": "SW56",
+      "matrix": [
+        4,
+        0
+      ],
+      "x_mm": 13.91,
+      "y_mm": 90.47875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_57",
+      "dout_net": "KEY_RGB_CHAIN_58",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_57",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_58",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 58,
+      "led_ref": "LED57",
+      "switch_ref": "SW57",
+      "matrix": [
+        4,
+        1
+      ],
+      "x_mm": 37.7225,
+      "y_mm": 90.47875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_58",
+      "dout_net": "KEY_RGB_CHAIN_59",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_58",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_59",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 59,
+      "led_ref": "LED58",
+      "switch_ref": "SW58",
+      "matrix": [
+        4,
+        2
+      ],
+      "x_mm": 61.535,
+      "y_mm": 90.47875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_59",
+      "dout_net": "KEY_RGB_CHAIN_60",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_59",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_60",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 60,
+      "led_ref": "LED59",
+      "switch_ref": "SW59",
+      "matrix": [
+        4,
+        6
+      ],
+      "x_mm": 142.4975,
+      "y_mm": 90.47875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_60",
+      "dout_net": "KEY_RGB_CHAIN_61",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_60",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_61",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 61,
+      "led_ref": "LED60",
+      "switch_ref": "SW60",
+      "matrix": [
+        4,
+        10
+      ],
+      "x_mm": 223.46,
+      "y_mm": 90.47875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_61",
+      "dout_net": "KEY_RGB_CHAIN_62",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_61",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_62",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 62,
+      "led_ref": "LED61",
+      "switch_ref": "SW61",
+      "matrix": [
+        4,
+        11
+      ],
+      "x_mm": 247.2725,
+      "y_mm": 90.47875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_62",
+      "dout_net": "KEY_RGB_CHAIN_63",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_62",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_63",
+        "4": "GND"
+      }
+    },
+    {
+      "index": 63,
+      "led_ref": "LED62",
+      "switch_ref": "SW62",
+      "matrix": [
+        4,
+        12
+      ],
+      "x_mm": 271.085,
+      "y_mm": 90.47875,
+      "active_when": "always",
+      "din_net": "KEY_RGB_CHAIN_63",
+      "dout_net": "KEY_RGB_CHAIN_64",
+      "pins": {
+        "1": "KEY_RGB_CHAIN_63",
+        "2": "+5V_LED",
+        "3": "KEY_RGB_CHAIN_64",
+        "4": "GND"
+      }
+    }
+  ],
+  "schema": "maru60-rgb-index/2"
+}
