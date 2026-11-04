@@ -2,9 +2,10 @@
 
 This isolated recovery repository preserves the exact selected PCB after the execution workspace was replaced. It does not invent or restore the lost Git history.
 
-Open `pcb/experiments/v7-c124-support-serial-cleanup/candidate/pcb/maru60.kicad_pro`.
+Open `pcb/experiments/v7-two-reference-legibility/candidate/pcb/maru60.kicad_pro`.
 
-- Current experimental PCB SHA256: `abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d`.
+- Current experimental PCB SHA256: `4765dfd82f70cfcfc00c06b4d9abfb614c7d657ec086fcf57c28d49bc3236136`.
+- Prior serial-support PCB abdb is retained unchanged.
 - Prior C124-plus-GND PCB7882 is retained unchanged.
 - Prior connector GND-only PCB aaaf is retained unchanged.
 - Prior two-track GND cleanup c770 is retained unchanged.
@@ -16,9 +17,13 @@ Open `pcb/experiments/v7-c124-support-serial-cleanup/candidate/pcb/maru60.kicad_
 - Original working branch: `feat/maru60-v7-protection-layout`.
 - This repository starts a separate recovery history. The original Git objects and full historical QA suites are missing, not recreated from summaries.
 
-## Current experimental source-support cleanup
+## Current experimental U18/L2 legibility correction
 
-Three main endpoints now use their retained support segments as real serial legs. Independent native/contact/reference checks and cold refill pass without relaxing any rule. Warnings64→61, same12 opens, other hard DRC/ERC/parity0. Inventory:9,750 tracks,919 vias,383 footprints,13,184.45545001526mm. Actual small copper-shape changes are recorded; no impedance or stability gain is inferred. All prior C124/GND and hardware limits remain. Read `pcb/experiments/v7-c124-support-serial-cleanup/README.md`.
+Two Reference fields are clearer, with actual nominal/stroked courtyard gaps above 0.20 mm and independent native/pixel/refill verification. The blocked first trial and its corrected boundary interpretation are preserved. Electrical data is byte-identical to abdb, so the completed material/support/reference results inherit without claiming new electrical simulations. Warnings 61→55, same 12 opens, other hard DRC/parity 0; prior ERC 0 inherits from identical circuit sources. Inventory remains9,750 tracks / 919 vias / 383 footprints / 13,184.45545001526 mm. All hardware, startup, pulse, environmental and signal-quality limits remain. See `pcb/experiments/v7-two-reference-legibility/README.md`.
+
+## Preserved experimental source-support cleanup
+
+Three main endpoints now use their retained support segments as real serial legs. Independent native/contact/reference checks and cold refill pass without relaxing any rule. Warnings64→61, same 12 opens, other hard DRC/ERC/parity0. Inventory:9,750 tracks,919 vias,383 footprints,13,184.45545001526mm. Actual small copper-shape changes are recorded; no impedance or stability gain is inferred. All prior C124/GND and hardware limits remain. Read `pcb/experiments/v7-c124-support-serial-cleanup/README.md`.
 
 ## Preserved experimental C124 correction and connector ground stitch
 
@@ -32,7 +37,7 @@ That preceding working selection added one ordinary GND via, with strict physica
 
 ## Preserved two-track GND cleanup
 
-That preceding selection removed only the proved two-track dead-end GND branch, preserving its existing via, every drill and all12serialized zone records exactly. Independent fresh corrected-material checks preserve all245net partitions and247original ground-return paths. Native DRC has66warnings/12inheritedopens/zeroothererrors, ERC0 andparity0. Inventory:9,750tracks/918vias/382footprints/13,176.816253756544mm. Normal cold refill is byte-identical. No current-transition tolerance or warning waiver is used, and no high-frequency ground or hardware improvement is inferred. See `pcb/experiments/v7-gnd-deadbranch-cleanup/` for the frozen evidence, adoption receipt and full92-warning history(26resolved,66remaining).
+That preceding selection removed only the proved two-track dead-end GND branch, preserving its existing via, every drill and all12serialized zone records exactly. Independent fresh corrected-material checks preserve all245net partitions and247original ground-return paths. Native DRC has66warnings/12inheritedopens/zeroothererrors, ERC 0 andparity0. Inventory:9,750tracks/918vias/382footprints/13,176.816253756544mm. Normal cold refill is byte-identical. No current-transition tolerance or warning waiver is used, and no high-frequency ground or hardware improvement is inferred. See `pcb/experiments/v7-gnd-deadbranch-cleanup/` for the frozen evidence, adoption receipt and full92-warning history(26resolved,66remaining).
 
 ## Physical-contact checker correction
 
