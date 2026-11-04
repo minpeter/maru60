@@ -1,0 +1,99 @@
+{
+  "status": "PASS exact one-Reference-only raw reversal, native identity and separate cold refill",
+  "source_sha256": "4765dfd82f70cfcfc00c06b4d9abfb614c7d657ec086fcf57c28d49bc3236136",
+  "candidate_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+  "change": {
+    "old": "(property \"Reference\" \"C139\"\n\t\t\t(at 0 1.43 90)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"a7e903e6-58a0-4923-9231-ef2738cfee18\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.75 0.75)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)",
+    "new": "(property \"Reference\" \"C139\"\n\t\t\t(at -3.2 0 90)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"a7e903e6-58a0-4923-9231-ef2738cfee18\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.8 0.8)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)"
+  },
+  "all57_companions_exact": true,
+  "all_electrical_copper_drills_zones_rules_exact": true,
+  "native_typography_verified": true,
+  "cold_refill_seconds": 2.346262036000553,
+  "cold_refill_all58_files_byte_identical": true,
+  "warnings_before": 55,
+  "warnings_after": 51,
+  "four_exact_C139_warnings_removed": [
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Segment of U18 on B.Silkscreen",
+          "pos": {
+            "x": 180.41,
+            "y": 83.6
+          },
+          "uuid": "8495b51d-160c-4cb9-9899-d4a2bcac7da4"
+        },
+        {
+          "description": "Reference field of C139",
+          "pos": {
+            "x": 179.97,
+            "y": 85.0
+          },
+          "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    },
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of C139",
+          "pos": {
+            "x": 179.97,
+            "y": 85.0
+          },
+          "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of C139",
+          "pos": {
+            "x": 179.97,
+            "y": 85.0
+          },
+          "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Reference field of C139",
+          "pos": {
+            "x": 179.97,
+            "y": 85.0
+          },
+          "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18"
+        },
+        {
+          "description": "Polygon of U18 on B.Silkscreen",
+          "pos": {
+            "x": 180.41,
+            "y": 85.01
+          },
+          "uuid": "bdb55a9b-b916-42b1-9de8-aba56533c21e"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    }
+  ],
+  "no_new_warning": true,
+  "same_raw_opens": 12,
+  "other_hard_and_parity": 0,
+  "ERC_and_material_results_inherit_as_identical_input_only": true,
+  "hardware_qualification": false
+}

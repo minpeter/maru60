@@ -1,0 +1,141 @@
+{
+  "source_sha256": "4765dfd82f70cfcfc00c06b4d9abfb614c7d657ec086fcf57c28d49bc3236136",
+  "trial_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+  "status": "PASS exact raw one-Reference-only scope; geometry acceptance separate",
+  "changed_footprints": [
+    {
+      "uuid": "7bef23cd-c46f-4532-8994-ad000c87041a",
+      "reference": "C139",
+      "source_reference_raw": "(property \"Reference\" \"C139\"\n\t\t\t(at 0 1.43 90)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"a7e903e6-58a0-4923-9231-ef2738cfee18\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.75 0.75)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)",
+      "trial_reference_raw": "(property \"Reference\" \"C139\"\n\t\t\t(at -3.2 0 90)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"a7e903e6-58a0-4923-9231-ef2738cfee18\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.8 0.8)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)"
+    }
+  ],
+  "all_other_raw_top_level_objects_exact": true,
+  "all_non_reference_bytes_in_changed_footprints_exact": true,
+  "all12_raw_zones_exact": true,
+  "all_tracks_vias_holes_pads_nets_settings_exact": true,
+  "source_file_count": 58,
+  "all_companions_exact": true,
+  "eight_selected_full_footprints_exact": {
+    "C100": {
+      "footprint_uuid": "936d1b8f-2579-4255-b41c-cc9654291283",
+      "full_raw_footprint_exact": true
+    },
+    "R140": {
+      "footprint_uuid": "7b318399-ba02-4c74-af7c-24a406884d8a",
+      "full_raw_footprint_exact": true
+    },
+    "R160": {
+      "footprint_uuid": "319c8d90-2e8c-4fbe-b044-eb183bcc2c22",
+      "full_raw_footprint_exact": true
+    },
+    "R134": {
+      "footprint_uuid": "e8bd1f07-b665-43fb-a3a3-9ba1bca55842",
+      "full_raw_footprint_exact": true
+    },
+    "C124": {
+      "footprint_uuid": "c16684c6-e6e9-4d9e-ab06-ad0653958e94",
+      "full_raw_footprint_exact": true
+    },
+    "R121": {
+      "footprint_uuid": "d422a027-2eda-4bf9-9c83-1580d56a84b7",
+      "full_raw_footprint_exact": true
+    },
+    "R125": {
+      "footprint_uuid": "7f46d8aa-a5e8-5221-bb89-7f6d1360b233",
+      "full_raw_footprint_exact": true
+    },
+    "U8": {
+      "footprint_uuid": "a1f79810-94aa-4bc1-82d7-8f56f7f8b4f0",
+      "full_raw_footprint_exact": true
+    }
+  },
+  "source_drc_sha256": "a863e8fef061f3092bd0d689d51a015873d7e61931b989a8aa67dca343e87699",
+  "trial_drc_sha256": "9fad396e10baca03de8f82a38988ac29805ae231922581ea0f5c61bbb676edd7",
+  "warning_counts": [
+    55,
+    51
+  ],
+  "removed_warnings": [
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of C139",
+          "pos": {
+            "x": 179.97,
+            "y": 85.0
+          },
+          "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of C139",
+          "pos": {
+            "x": 179.97,
+            "y": 85.0
+          },
+          "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Reference field of C139",
+          "pos": {
+            "x": 179.97,
+            "y": 85.0
+          },
+          "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18"
+        },
+        {
+          "description": "Polygon of U18 on B.Silkscreen",
+          "pos": {
+            "x": 180.41,
+            "y": 85.01
+          },
+          "uuid": "bdb55a9b-b916-42b1-9de8-aba56533c21e"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Segment of U18 on B.Silkscreen",
+          "pos": {
+            "x": 180.41,
+            "y": 83.6
+          },
+          "uuid": "8495b51d-160c-4cb9-9899-d4a2bcac7da4"
+        },
+        {
+          "description": "Reference field of C139",
+          "pos": {
+            "x": 179.97,
+            "y": 85.0
+          },
+          "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    }
+  ],
+  "added_warnings": [],
+  "raw12opens_exact": true,
+  "hard_DRC": 0,
+  "parity": 0
+}

@@ -2,9 +2,10 @@
 
 This isolated recovery repository preserves the exact selected PCB after the execution workspace was replaced. It does not invent or restore the lost Git history.
 
-Open `pcb/experiments/v7-two-reference-legibility/candidate/pcb/maru60.kicad_pro`.
+Open `pcb/experiments/v7-c139-reference-legibility/candidate/pcb/maru60.kicad_pro`.
 
-- Current experimental PCB SHA256: `4765dfd82f70cfcfc00c06b4d9abfb614c7d657ec086fcf57c28d49bc3236136`.
+- Current experimental PCB SHA256: `2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69`.
+- Prior U18/L2 label PCB 4765 is retained unchanged.
 - Prior serial-support PCB abdb is retained unchanged.
 - Prior C124-plus-GND PCB7882 is retained unchanged.
 - Prior connector GND-only PCB aaaf is retained unchanged.
@@ -17,7 +18,11 @@ Open `pcb/experiments/v7-two-reference-legibility/candidate/pcb/maru60.kicad_pro
 - Original working branch: `feat/maru60-v7-protection-layout`.
 - This repository starts a separate recovery history. The original Git objects and full historical QA suites are missing, not recreated from summaries.
 
-## Current experimental U18/L2 legibility correction
+## Current experimental C139 legibility correction
+
+C139 is now directly above its own component column, with separately verified raw nominal/drawn-stroke courtyard gaps of 0.279524/0.254524 mm. Only this Reference field changes; all electrical source, fills and companions match 4765. Independent exact raw reversal, native checks, visual inspection and separate cold refill pass. Warnings 55→51, same 12 opens, other hard DRC/parity 0; prior ERC and material results inherit from identical inputs. The full warning history has 44 resolved and 51 remaining. R159/C136 are retained because nearby examined free positions would confuse ownership. All prior qualification limits remain. See `pcb/experiments/v7-c139-reference-legibility/README.md`.
+
+## Preserved experimental U18/L2 legibility correction
 
 Two Reference fields are clearer, with actual nominal/stroked courtyard gaps above 0.20 mm and independent native/pixel/refill verification. The blocked first trial and its corrected boundary interpretation are preserved. Electrical data is byte-identical to abdb, so the completed material/support/reference results inherit without claiming new electrical simulations. Warnings 61→55, same 12 opens, other hard DRC/parity 0; prior ERC 0 inherits from identical circuit sources. Inventory remains9,750 tracks / 919 vias / 383 footprints / 13,184.45545001526 mm. All hardware, startup, pulse, environmental and signal-quality limits remain. See `pcb/experiments/v7-two-reference-legibility/README.md`.
 
