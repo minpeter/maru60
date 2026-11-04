@@ -80,7 +80,7 @@ SLOT_MIN_WALL = 0.8      # Rail left between the USB-C slot and a cap recess: an
                          # perimeters) is cut away, so the slot opens into the recess instead of leaving a fin
 USB_BRIDGE_BOTTOM_ZP = 11.90  # Roof underside; its top is flush with the surrounding rim, not a separate recessed beam
 USB_LEDGE_ZP = 21.08    # Deeper USB mating-floor relief; design trial, not a depth measured from the owner's photo
-USB_INNER_RELIEF_L = 9.0  # Continue the lowered floor inside, beneath the connector, not only under the cable exit
+USB_PORT_POCKET_DEPTH = 0.50  # Shallow, bounded recess seen in the owner's photo; preview depth, not a measurement
 DECO_CLEAR = 0.20        # Recess around the 3 mm steel weight / decoration plate outline (INKC drawing), per side
 DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, along the desk face (owner)
 DECO_RECESS = 2.3        # Recess depth: the 3 mm plate stands 0.7 proud of the desk face (1.3 under the bumpons'
@@ -312,18 +312,28 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     usb_y0, usb_y1 = top.pw(0.0, LEDGE_BACK_P - 1.0)[1], top.pw(0.0, RIM_P[3] + 1.0)[1]
     slot = sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1)
     # Open below the passage, with a distinct lower-case bridge above it. The upper case has its own bridge.
-    # The floor continues inward beneath the connector. At the outer exit retain only 1 mm:
-    # extending the floor farther outward would leave a thin skin over the sloping underside.
+    # Retain only 1 mm of the outer exit floor over the sloping underside.
+    # The shallow inner port pocket is separate: its end rises back to the cavity floor before the exit.
     usb_open_y = usb_y0 + 1.0
     usb_z1 = desk_zp(usb_y1) + 1.0
     cuts.append(prism(slot, Z_RIM_TOP - 1.0, USB_LEDGE_ZP))
-    inner_relief = sg.box(usb_x - usb_w / 2, usb_y0 - USB_INNER_RELIEF_L, usb_x + usb_w / 2, usb_open_y)
-    cuts.append(prism(inner_relief, FLOOR_ZP - 0.01, USB_LEDGE_ZP))
+    inner_relief = sg.box(usb_x - 10.0, usb_y0 - 14.0, usb_x + 10.0, usb_y0 - 1.0)
+    inner_relief = inner_relief.buffer(-2.0).buffer(2.0, quad_segs=16)
+    cuts.append(prism(inner_relief, FLOOR_ZP - 0.01, FLOOR_ZP + USB_PORT_POCKET_DEPTH))
     cuts.append(prism(sg.box(usb_x - usb_w / 2, usb_open_y, usb_x + usb_w / 2, usb_y1),
                       Z_RIM_TOP - 1.0, usb_z1))
+    # Use the very same X/Z_p lip contour as the top case so square lower-case tips do not show behind its rounds.
+    cuts.append(top.prism_xz(top.usb_lip_round_xz(usb_x, usb_w, usb_z1), usb_y0, usb_y1))
     # Continue the rim plane over the port, preserving its existing cap recesses and fin relief.
+    # Match the top-case opening's upper corner curves without lowering the central ceiling.
+    arch_box = sg.box(usb_x - usb_w / 2, USB_BRIDGE_BOTTOM_ZP, usb_x + usb_w / 2, USB_LEDGE_ZP)
+    arch_opening = arch_box.buffer(-top.USB_END_R).buffer(top.USB_END_R, quad_segs=12).union(
+        sg.box(usb_x - usb_w / 2, USB_BRIDGE_BOTTOM_ZP + top.USB_END_R,
+               usb_x + usb_w / 2, USB_LEDGE_ZP)).simplify(1e-4)
+    # Overlap the side walls beyond the arc tangency so the STL has no zero-width junction there.
     bridge = prism(sg.box(usb_x - usb_w / 2 - 0.8, usb_open_y, usb_x + usb_w / 2 + 0.8, Y_BACK),
-                   Z_RIM_TOP, USB_BRIDGE_BOTTOM_ZP)
+                   Z_RIM_TOP, USB_BRIDGE_BOTTOM_ZP + top.USB_END_R + 0.1)
+    bridge -= top.prism_xz(arch_opening, usb_open_y - 0.1, Y_BACK + 0.1)
     for recess in cap_recesses_p():
         bridge -= prism(plate_to_world(recess), Z_RIM_TOP - 1.0, CAP_SEAT_ZP)
     slot_fins = []
@@ -371,8 +381,12 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         "catches": [{**s, "pilots": pilots[2 * k:2 * k + 2]} for k, s in enumerate(sites)],
         "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, usb_z1],
                            "open_bottom_y": [usb_open_y, usb_y1], "inner_ledge_z_p": USB_LEDGE_ZP,
-                           "inner_connector_relief_y": [usb_y0 - USB_INNER_RELIEF_L, usb_open_y],
+                           "inner_connector_pocket": {"bounds_xy": list(inner_relief.bounds), "corner_r": 2.0,
+                                                      "floor_z_p": FLOOR_ZP + USB_PORT_POCKET_DEPTH,
+                                                      "end_land_mm": 1.0},
                            "bridge_z_p": [Z_RIM_TOP, USB_BRIDGE_BOTTOM_ZP],
+                           "bridge_corner_r": top.USB_END_R,
+                           "open_lip_corner_r": top.USB_LIP_R,
                            "bridge_y": [usb_open_y, Y_BACK], "bridge_requires_print_support": True,
                            "cap_recess_walls_removed_mm": slot_fins, "min_wall": SLOT_MIN_WALL},
         "bumpons_world": [[x, round(y, 3)] for x, y in bumpon_centres_world()],
@@ -427,9 +441,14 @@ def split(body: md.Manifold) -> tuple[md.Manifold, md.Manifold]:
 
 
 def to_trimesh(m: md.Manifold) -> trimesh.Trimesh:
-    mesh = m.to_mesh()
-    tm = trimesh.Trimesh(np.asarray(mesh.vert_properties)[:, :3], np.asarray(mesh.tri_verts), process=True)
+    # As in the top-case exporter, retain precision at tangent cuts before removing zero-area seam triangles.
+    mesh = m.simplify(1e-6).to_mesh64()
+    tm = trimesh.Trimesh(mesh.vert_properties[:, :3], mesh.tri_verts, process=False)
+    tm.merge_vertices(digits_vertex=6)
+    tm.update_faces(tm.nondegenerate_faces(height=1e-8))
+    tm.remove_unreferenced_vertices()
     assert tm.is_watertight and tm.is_winding_consistent, "non-manifold export"
+    assert abs(tm.volume - m.volume()) < 1e-3, "export changed solid volume"
     return tm
 
 

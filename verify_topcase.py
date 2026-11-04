@@ -397,7 +397,8 @@ def main() -> None:
     # 6h. Chirality (v6.2 printed the mirror image). The print frame is the underside with the front at low Y, so the
     #     keyboard's left (Esc side: USB-C notch, and the back-left gasket tab set 10 mm inward to clear it) is print +X.
     back_line_y = GEOM["inner_skirt_world"][3] + 1.4
-    skirt = material_at(z_lip - 1.0).intersection(sg.LineString([(-160.0, back_line_y), (160.0, back_line_y)]))
+    # Measure the straight slot above the rounded, outward-flared lip ends.
+    skirt = material_at(z_lip - 2.0).intersection(sg.LineString([(-160.0, back_line_y), (160.0, back_line_y)]))
     ends = sorted(c for g in getattr(skirt, "geoms", [skirt]) for c in (g.bounds[0], g.bounds[2]))
     notches = [(a, b) for a, b in zip(ends[1:-1:2], ends[2::2]) if b - a > 5.0]
     assert len(notches) == 1 and notches[0][0] > 0.0, f"USB-C notch must be at print +X (keyboard left): {notches}"
@@ -412,6 +413,19 @@ def main() -> None:
     usb_probe = sg.Point(usb["x_world"], back_line_y)
     assert material_at(usb["closed_end_zp"] - 0.2).contains(usb_probe), usb
     assert not material_at(usb["closed_end_zp"] + 0.2).contains(usb_probe), usb
+    # Convex rounds at both free lip ends: remove the pointed tips, retain the circular shoulder,
+    # and keep the notch open below. These probes distinguish a round from a straight chamfer.
+    lip_corner_checks = {}
+    radius = 0.5  # Reduced free-end round; independent exported-geometry contract, not the R1.5 arch.
+    for side in (-1.0, 1.0):
+        edge = usb["x_world"] + side * usb["width"] / 2
+        cut = not material_at(z_lip - radius * 2 / 15).contains(
+            sg.Point(edge + side * radius * 2 / 15, back_line_y))
+        shoulder = material_at(z_lip - radius * 0.4).contains(
+            sg.Point(edge + side * radius * 0.4, back_line_y))
+        lip_corner_checks[str(side)] = bool(cut and shoulder)
+    assert all(lip_corner_checks.values()), ("USB lower lip is not rounded", lip_corner_checks)
+    assert not material_at(z_lip - 0.05).contains(usb_probe), "USB notch closed at the lip"
     # 6i. Bumpon pockets (3M SJ5012): turned so the desk plane is level (the pocket axis vertical), on each of the 8 pads
     #     a max-size bumpon disk fits the empty pocket, sits wholly on its floor at `pocket_depth` with >= 1 mm of floor
     #     under it, the pocket keeps >= 1 mm of wall to every pad edge at the pad face, and nothing stands proud of the
@@ -486,6 +500,7 @@ def main() -> None:
         "short_side_steps_2p85_4p90_5p66": side_steps_ok,
         "chirality_usb_notch_x_and_back_pocket_centres": {"usb_notch_x": usb_notch_x,
                                                           "back_outer_pocket_abs_x": {k: round(v, 2) for k, v in back_outer.items()}},
+        "usb_lip_corner_rounds": lip_corner_checks,
         "bumpon_pockets_sj5012": pocket_gauge,
         "strike_tongue_to_plate_gap_mm": tongue_plate_gap,
         "virtual_hardware_mating_mm3": {

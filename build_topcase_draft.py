@@ -21,7 +21,7 @@ photo metrology of the silicone gasket caps and ball-catch pockets (IMG_0201..IM
          plate end, interior-half end wall `2.15 mm` past it, `R0.85` shoulder; two-view fit of IMG_0218/0222), with
          `3.55 mm` deep M2 strike screw pilots; each keeps its fitted distance to the inner skirt wall it faces
       6. USB-C notch (14.75 wide for cable plugs, stock 12.8 selectable in spec/, 8.7 deep from the lip, R1.5 closed-end
-         corners). Gasket mount only: no top-mount screws.
+         corners and convex R0.5 rounds at the open lip ends). Gasket mount only: no top-mount screws.
   - Staggered split into two X2D halves: X = 0 through the wrist rest and front bezel (3 dovetails); the back bezel runs
     on in the LeftHalf to the back-left (BL) strike centre, where the stock strike plate (one M2 per half) and a wedge key
     join the back seam. Each male part keeps its 45-deg print ramp and the female side fills under it, so every joint
@@ -249,6 +249,16 @@ def usb_notch_print(board_id: str) -> tuple[float, float]:
     return pw(centre_p, 0.0)[0], width
 
 
+def usb_lip_round_xz(usb_x: float, usb_w: float, z1: float) -> Any:
+    """Shared X/Z_p corner cuts at the open lip: remove tips in both cases without closing the passage."""
+    rounds = []
+    for edge, side in ((usb_x - usb_w / 2, -1.0), (usb_x + usb_w / 2, 1.0)):
+        cx, cz = edge + side * USB_LIP_R, SKIRT_H - USB_LIP_R
+        rounds.append(sg.box(min(edge, cx), cz, max(edge, cx), z1).difference(
+            sg.Point(cx, cz).buffer(USB_LIP_R, quad_segs=12)))
+    return unary_union(rounds)
+
+
 # Width and corner shape from the stock notch measured against the v6.2 print (owner photos IMG_0378/0379, scaled from
 # the printed 14.2 mm notch): 12.6 / 12.75 wide, rounded closed-end corners (CNC endmill); 0.1-0.2 mm generous. v7.11
 # cuts it 14.75 wide (`top.usb_notch_cable_width`): the stock width left 0.22 mm per side for a 12.35 mm plug. Depth
@@ -256,7 +266,8 @@ def usb_notch_print(board_id: str) -> tuple[float, float]:
 # deeper by hand, so it is 8.7 mm (closed end 1.62 mm above the 9.69 floor).
 USB_TOP_ZP = round(SKIRT_H - spec.value("top.usb_notch")["depth_from_lip"], 2)  # Notch closed end (Z_p 11.31)
 USB_DEPTH = round(SKIRT_H - USB_TOP_ZP, 2)  # USB-C notch depth from skirt lip
-USB_END_R = spec.value("top.usb_notch")["end_r"]  # Closed-end corner radius (3 mm endmill); the lip-side corners stay sharp
+USB_END_R = spec.value("top.usb_notch")["end_r"]  # Closed-end arch radius; unchanged
+USB_LIP_R = 0.50  # Small matching free-end rounds on both cases, reduced from the R1.5 preview
 
 JOINT_CLEAR = 0.0       # Base dovetail socket clearance per face: line-to-line, as in the published v9 tight fit
 JOINT_Z_CLEAR = 0.20    # Vertical gap between each tongue landing and its socket roof, so both halves rest on the desk
@@ -467,6 +478,8 @@ def build_halves(board_id: str) -> tuple[md.Manifold, md.Manifold]:
     usb_xz = sg.box(usb_x - usb_w / 2, USB_TOP_ZP, usb_x + usb_w / 2, SKIRT_H + 1.0)
     usb_xz = usb_xz.buffer(-USB_END_R).buffer(USB_END_R, quad_segs=12).union(
         sg.box(usb_x - usb_w / 2, USB_TOP_ZP + USB_END_R, usb_x + usb_w / 2, SKIRT_H + 1.0)).simplify(1e-4)
+    # Round away the two pointed lip tips, flaring outward rather than adding a bottom bar across the notch.
+    usb_xz = usb_xz.union(usb_lip_round_xz(usb_x, usb_w, SKIRT_H + 1.0))
     back_inner_y = WRIST_D + CASE_D - SKIRT_WALL
     body -= prism_xz(usb_xz, back_inner_y - 1.0, back_inner_y + SKIRT_WALL + 1.0)
 
@@ -782,7 +795,7 @@ def main() -> None:
                                   round((INNER_P[2] - INNER_P[0]) / 2, 3), round(INNER_P[3] + DY_PW, 3)],
             "back_seam_strike": BACK_SEAM_STRIKE,
             "usb_notch": {"board": args.board, "x_world": usb_x, "width": usb_w, "closed_end_zp": USB_TOP_ZP,
-                          "depth_from_lip": USB_DEPTH, "closed_end_corner_r": USB_END_R},
+                          "depth_from_lip": USB_DEPTH, "closed_end_corner_r": USB_END_R, "open_lip_corner_r": USB_LIP_R},
             "inner_skirt_corner_r": INNER_SKIRT_R,
             "outer_corner_r": CORNER_R,
             "floor_ledge_width": RIM_SEAT_W,

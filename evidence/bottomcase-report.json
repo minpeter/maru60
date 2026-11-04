@@ -268,14 +268,23 @@
       195.37
     ],
     "inner_ledge_z_p": 21.08,
-    "inner_connector_relief_y": [
-      177.236,
-      187.236
-    ],
+    "inner_connector_pocket": {
+      "bounds_xy": [
+        114.4975,
+        172.236,
+        134.4975,
+        185.236
+      ],
+      "corner_r": 2.0,
+      "floor_z_p": 18.7,
+      "end_land_mm": 1.0
+    },
     "bridge_z_p": [
       9.69,
       11.9
     ],
+    "bridge_corner_r": 1.5,
+    "open_lip_corner_r": 0.5,
     "bridge_y": [
       187.236,
       194.37
@@ -467,7 +476,7 @@
         111.89,
         22.33
       ],
-      "volume_cm3": 111.2
+      "volume_cm3": 111.4
     },
     "bottom-right": {
       "print_extents": [

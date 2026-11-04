@@ -311,21 +311,52 @@ def main() -> None:
     assert bridge_missing < 0.0001, f"Lower USB bridge missing: {bridge_missing} mm^3"
     bridge_bounds = (bottom ^ box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02,
                                   bc.Y_BACK - 0.02, 9.0, 12.4)).bounding_box()
-    slot_column = box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, sy1 - 0.02,
-                      11.92, bottom.bounding_box()[5] + 1.0)
+    # Both upper inside corners follow the top-case radius, not a square corner or a chamfer.
+    radius = notch["closed_end_corner_r"]
+    arch_missing, arch_blockage = 0.0, 0.0
+    for edge, sign in ((gaps[0][0], 1.0), (gaps[0][1], -1.0)):
+        for offset, solid in ((radius * 2 / 15, True), (radius / 3, False)):
+            x, z = edge + sign * offset, 11.90 + offset
+            probe = box(x - 0.02, open_y + 0.02, x + 0.02, bc.Y_BACK - 0.02, z - 0.02, z + 0.02)
+            if solid:
+                arch_missing += vol(probe - bottom)
+            else:
+                arch_blockage += vol(probe ^ bottom)
+    assert arch_missing < 0.0001 and arch_blockage < 0.0001, ("USB arch radius", arch_missing, arch_blockage)
+    slot_column = box(gaps[0][0] + radius + 0.02, open_y + 0.02,
+                      gaps[0][1] - radius - 0.02, sy1 - 0.02, 11.92, bottom.bounding_box()[5] + 1.0)
+    slot_column += box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, sy1 - 0.02,
+                       11.90 + radius + 0.02, bottom.bounding_box()[5] + 1.0)
     slot_bottom_material = vol(bottom ^ slot_column)
     assert slot_bottom_material < 0.0001, f"USB exit is not open underneath: {slot_bottom_material} mm^3"
+    # The lower case must have the same small free-end rounds as the upper case, not square corners behind them.
+    lip_corner_checks = {}
+    lip_radius = 0.5
+    for edge, side in ((gaps[0][0], -1.0), (gaps[0][1], 1.0)):
+        cut = not slice_material(bottom, top.SKIRT_H - lip_radius * 2 / 15).contains(
+            sg.Point(edge + side * lip_radius * 2 / 15, bc.Y_BACK - 0.2))
+        shoulder = slice_material(bottom, top.SKIRT_H - lip_radius * 0.4).contains(
+            sg.Point(edge + side * lip_radius * 0.4, bc.Y_BACK - 0.2))
+        # Continue into the open exit below the lip; a shallow groove with a square ledge underneath is not a round.
+        open_below = not slice_material(bottom, top.SKIRT_H + 0.2).contains(
+            sg.Point(edge + side * lip_radius / 2, open_y + 0.2))
+        lip_corner_checks[str(side)] = bool(cut and shoulder and open_below)
+    assert all(lip_corner_checks.values()), ("Lower USB lip rounds differ from upper case", lip_corner_checks)
     ledge_z = 21.08  # Proposed deeper mating floor; independent exported-geometry contract, not a stock measurement
     floor_air = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02, 20.10, 21.06)
     floor_blockage = vol(bottom ^ floor_air)
     assert floor_blockage < 0.0001, f"USB mating floor is not recessed deeply enough: {floor_blockage} mm^3"
-    # The recess must continue beneath the connector inside the case, not stop at the outer cable exit.
-    inner_port_air = box(gaps[0][0] + 0.02, sy0 - 8.98, gaps[0][1] - 0.02, sy0 - 0.02,
-                         18.22, 21.06)
+    # A shallow local pocket, not a deep channel: its floor and raised end must both remain.
+    inner_port_air = box(usb_xw - 8.0, sy0 - 13.9, usb_xw + 8.0, sy0 - 1.1, 18.22, 18.68)
     inner_port_blockage = vol(bottom ^ inner_port_air)
     assert inner_port_blockage < 0.0001, f"Floor still fills the inner USB connector recess: {inner_port_blockage} mm^3"
-    # At least 0.8 mm remains under the whole connector recess, including its thinnest rear edge.
-    ledge_probe = box(gaps[0][0] + 0.02, sy0 - 8.98, gaps[0][1] - 0.02, open_y - 0.02,
+    inner_floor = box(usb_xw - 8.0, sy0 - 13.9, usb_xw + 8.0, sy0 - 1.1, 18.72, 19.52)
+    end_land = box(usb_xw - 8.0, sy0 - 0.9, usb_xw + 8.0, sy0 - 0.1, 18.22, 18.62)
+    shallow_floor_missing = vol(inner_floor - bottom)
+    raised_end_missing = vol(end_land - bottom)
+    assert shallow_floor_missing < 0.0001 and raised_end_missing < 0.0001, (shallow_floor_missing, raised_end_missing)
+    # At least 0.8 mm remains under the separate outer ledge, including its thinnest rear edge.
+    ledge_probe = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02,
                       ledge_z + 0.02, ledge_z + 0.82)
     ledge_missing = vol(ledge_probe - bottom)
     assert ledge_missing < 0.0001, ("USB inner ledge", ledge_missing)
@@ -340,8 +371,11 @@ def main() -> None:
             between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1)))
             walls.append(round(between.bounds[2] - between.bounds[0], 3) if between.area > 1e-4 else 0.0)
     slot_check = {"cap_recess_walls_mm": walls, "open_bottom_material_mm3": slot_bottom_material,
+                  "arch_corner_missing_mm3": arch_missing, "arch_corner_blockage_mm3": arch_blockage,
+                  "matching_lip_corner_rounds": lip_corner_checks,
                   "recessed_floor_blockage_mm3": floor_blockage,
                   "inner_connector_recess_blockage_mm3": inner_port_blockage,
+                  "shallow_port_floor_missing_mm3": shallow_floor_missing, "raised_port_end_missing_mm3": raised_end_missing,
                   "inner_ledge_missing_mm3": ledge_missing, "bridge_missing_mm3": bridge_missing,
                   "bridge_to_upper_ceiling_mm": round(bridge_bounds[2] - Z["rim_top"], 3),
                   "bridge_to_generic_plug_mm": round(zc - 3.25 - bridge_bounds[5], 3),

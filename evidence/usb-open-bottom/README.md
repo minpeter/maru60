@@ -1,20 +1,18 @@
-# USB connector: recessed inner floor connected to the exit
+# USB connector: shallow local pocket and matched R0.5 lip rounds
 
 Follow-up to housing PR #1 at `b1cf07038061dd97fe7e448679078e8362da8368`
 (top v7.11 / bottom v0.11), default **6095-trimode**, not universal.
 
-The owner's latest inside photographs supersede the previous interpretation:
-**the lower roof is flush with the surrounding rim, not an independently lowered
-beam; the mating floor below the USB opening is recessed more deeply.** Both
-upper and lower cases still bridge the passage, and the lower roof needs print
-support. The earlier 1.01 mm gap above a separate 1.20 mm beam was an incorrect
-interpretation. The floor depth below is a design trial, not photo metrology.
+The owner's photographs supersede the earlier deep, continuous inner channel.
+The inner pocket is now **shallow and bounded**, with a raised end before the
+separate outer exit recess. Its dimensions are preview assumptions, not photo
+measurements. The lower roof remains flush with the surrounding rim and needs
+print support. Its upper opening corners match the top-case R1.5 arch.
 
-The latest annotated cutaway identifies the **floor directly under the USB
-connector inside the housing**, not just the cable exit. The previous revision
-left this inner floor at Zp 18.20. This revision removes it across the slot width
-and continues the recessed floor 9.0 mm farther inward to sit beneath the whole
-candidate receptacle body. The existing roof and outer opening are unchanged.
+The lower free ends of the top-case USB notch were initially rounded too much
+(R1.5), while the corresponding bottom-case corners remained square. Both now
+use the same **R0.5 X/Z contour**, continued into the open exit rather than cut
+as a shallow groove. No bottom bar is added across the passage.
 
 ## Current geometry
 
@@ -23,24 +21,24 @@ measurements of the photographed stock part**.
 
 | Feature | Geometry |
 | --- | --- |
-| USB slot | Xworld 124.4975; width 14.75; top case and connector position unchanged |
+| USB slot | Xworld 124.4975; straight width 14.75; connector position unchanged |
 | Lower-case roof | Top flush at Zp 9.69; bottom 11.90; thickness **2.21**; Yworld 187.236–194.370 |
 | Bridge attachment | 14.75 clear span, 0.8 overlap into each side support; earlier 6 mm sidewall relief removed |
-| Above lower roof | **No separate gap** to the upper case's local inner ceiling at Zp 9.69; cap recesses and fin relief retained; rear rounded notch unchanged |
-| Below lower bridge | **0.58 roof clearance** to the existing nominal generic plug gauge; downward PCB travel increases it |
-| Outer passage | Open below Zp 11.90, from Yworld 187.236 through rear face 194.370 and through underside |
-| Recessed inner connector floor | Width 14.75; Yworld **177.236–187.236**, fore-aft length **10.0**; top Zp 21.08, **2.88 below** the ordinary cavity floor at 18.20; minimum vertical skin 0.954279 |
+| Above lower roof | **No separate gap** to the upper case's local inner ceiling at Zp 9.69; cap recesses and fin relief retained |
+| Opening corners | Upper arches R1.5; free lip ends R0.5 on both cases, sharing one contour |
+| Outer passage | Open below the rounded roof, from Yworld 187.236 through rear face 194.370 and through underside |
+| Inner pocket | 20 × 13, R2; Xworld 114.4975–134.4975; Yworld 172.236–185.236; depth 0.50, floor Zp 18.70 |
+| Raised end | 1.0 fore-aft before the outer recess; ordinary floor Zp 18.20 |
+| Outer recessed floor | Yworld 186.236–187.236, Zp 21.08; the existing **2.88 high vertical step is retained** |
 | Generic cable gauge | Rectangular 12.35 × 6.5; clears seated and 0.8 down, with 1.30 floor clearance down |
 
-The outermost 1.0 mm of the recessed floor remains over the sloping underside;
-its additional 9.0 mm extends inward over thicker base material. The depth and
-reach are trial dimensions, not a claimed USB plug standard or stock measurement.
-
-The bridge attaches to the restored sidewalls as one connected solid. The
-gasket recesses, bearing heights/contact areas, catch features and top case
-are unchanged from the original housing baseline. Only the published
-bottom-left 3MF changes; the other three bottom downloads retain their bytes.
-The rectangular cable gauge is **not a standardized overmold maximum**.
+The owner authorized shipping this state without another floor change. The
+2.88 high step is a result of the trial floor levels, **not a proven structural
+requirement or a cable-support feature**. Any later smoothing must preserve
+floor thickness and recheck connector/cable travel. The gasket recesses and
+catch features are unchanged; the current full verifier records gasket bearing.
+Both cases' downloads/reports are refreshed. The rectangular cable gauge is
+**not a standardized overmold maximum**.
 
 ## Verification and printing
 
@@ -49,26 +47,26 @@ Flush roof presence, the passage **below** it, floor recess depth and retained
 floor thickness are checked separately. A solid-looking render alone is not
 proof of any of these contracts.
 
-| Check | Previous outer-exit-only recess | Current inner-connector recess |
-| --- | ---: | ---: |
-| Material filling the inner connector recess probe | **374.3165 mm³** | **0 mm³** |
-| Missing flush-roof material | 0 mm³ | 0 mm³ |
-| Material blocking passage below bridge | 0 mm³ | 0 mm³ |
-| Down-facing USB roof in desk-down print pose | 105.23 mm² | **105.23 mm²** |
-| Default full bottom verifier | New inner-recess test fails | ALL_PASSED |
+| Check | Current result |
+| --- | ---: |
+| Pocket blockage / missing shallow floor / missing raised end | 0 / 0 / 0 mm³ |
+| Missing flush-roof material / blocked open passage | 0 / 0 mm³ |
+| Matched R0.5 lip corners | Both sides pass in both exported cases |
+| Paired exported-contour probes against an analytic R0.5 circle | 50 pairs pass |
+| Down-facing USB roof in desk-down print pose | 107.01 mm² |
+| Full default top / bottom verifiers | ALL_PASSED / ALL_PASSED |
 
 The full default top verifier also passes. See [geometry-checks.json](geometry-checks.json)
 and the refreshed [bottom verification](../bottomcase-verification.json).
 Single-shell/watertightness, bed size, top/bottom seating, gasket contact,
 generic PCB/USB/cable gauges and 0.8 mm downward travel remain checked.
-Focused CSG checks cover 6095-trimode, ph60-rev3 and universal; they are not
-full alternate-profile builds. The change only removes material inside the
-specified floor pocket; it adds no material, so the prior native PCB clearance
-cannot decrease. The native A21 J1 bounding envelope now clears at nominal
-height and **0.8 mm down** (both 0 mm³ overlap). The prior 0.010 mm floor incursion
-at 0.8 mm down is removed by this inner recess. This is an envelope clearance
-check, not USB mating compliance, full manufacturing tolerance analysis or a
-qualification of all commercial male plugs.
+Only the default 6095-trimode profile is qualified by these full runs. The native
+A21 J1 bounding envelope clears nominally (0 mm³), but overlaps the retained
+end region by **0.0471 mm³ at 0.8 mm down**. The earlier deep-channel claim of
+zero native overlap no longer applies. The candidate is **not qualified** for
+that full travel; generic-gauge success does not override this result. This is
+not USB mating compliance, full manufacturing tolerance analysis or commercial
+cable qualification. No final PCB/connector selection is made here.
 
 **Print the USB roof with support.** It spans 14.75 mm and its underside is
 approximately 6° above the bed in the intended desk-face-down print pose,
@@ -86,26 +84,22 @@ This pre-existing limitation is unchanged; no universal bottom is published.
 
 ## Blender assembly renders
 
-Blender 5.2.2 LTS, Cycles, 32 samples/denoising. Actual CAD meshes, not AI
+Blender 5.2.2 LTS, Cycles, 24 samples/denoising. Actual CAD meshes, not AI
 illustrations. Blue upper case, orange lower case, green PCB, silver USB-C,
-gray PC plate. The first camera retains the previous underside-oblique pose.
+gray PC plate. All four views below are **uncut**. The first is explicitly the
+historical R1.5-top/square-bottom preview; the next three show current geometry.
+The last hides other parts without subtracting material. No exploded offsets,
+exaggerated thickness or print supports are added. Older numbered JPGs retained
+in this folder are superseded and must not be used as the current shape.
 
-![Same underside camera: flush roof and deeper mating floor](01-under-assembled.jpg)
-![Rear: intact assembly](02-rear-assembled.jpg)
-![Visualization-only cutaway: flush lower roof and recessed floor](03-cutaway-assembled.jpg)
-![Intact bottom case alone: continuous rim over the passage](04-bottom-only.jpg)
-![Inside the lower case: recessed floor directly beneath the connector](05-inside-bottom.jpg)
-
-Views 1/2 are intact nominal assemblies. View 3 cuts the housing, plate and PCB
-at render X = +0.08 only to expose the stack; the detailed J1 connector remains
-intact. **This is not a manufacturing cut.** Views 4/5 hide the other parts without
-subtracting them. No exploded offsets, exaggerated thickness or print supports
-are added. The roof's top is coplanar with the surrounding rim, rather than
-floating below it. The rounded notch in the upper case is unchanged.
+![Before: R1.5 top lip and square bottom lip](current-before.jpg)
+![After: both lip ends R0.5, same camera](current-after.jpg)
+![Current intact PCB/USB-C assembly detail](current-detail.jpg)
+![Current lower case alone, no visualization cut](current-bottom.jpg)
 
 ## Inputs and limits
 
-- Housing: PR #1 baseline above plus flush-roof/inner-connector-floor correction; 6095-trimode.
+- Housing: PR #1 baseline above plus shallow pocket, flush roof and matched lip-round corrections; 6095-trimode.
 - PCB: PR #2 archived [A21 at f87140b](https://github.com/minpeter/maru60/blob/f87140b05bc66ce0eab382aff62b12cf459443ce/pcb/checkpoints/a21/maru60.kicad_pcb),
   native 285 × 94.6 R2 Edge.Cuts and **351 through drills**, 1.6 thick.
   Nominal Zp 12.50–14.10. This WIP PCB is referenced, not adopted or modified.
