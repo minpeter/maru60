@@ -1,0 +1,114 @@
+{
+  "scope": "Actual D nominal topology belongs to existing 10n_100R class. Assumed-parasitic numerical results unchanged; no model of actual D routing or active startup.",
+  "board_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+  "source_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "model_manifest_sha256": "bb52c290f0867c4da5934e6f543fedbd785e79ae39f363d24f5cf645659e0201",
+  "model_options": [
+    [
+      "10n_direct",
+      1e-08,
+      0
+    ],
+    [
+      "10n_100R",
+      1e-08,
+      100
+    ],
+    [
+      "8p2n_NP0_direct",
+      8.2e-09,
+      0
+    ]
+  ],
+  "selected_nominal_model_class": "10n_100R",
+  "selected_means_model_class_not_CAD_adoption": true,
+  "scenarios_unchanged": [
+    [
+      "low",
+      1e-12,
+      0.1,
+      5e-10,
+      0.05,
+      3e-10,
+      1e-14
+    ],
+    [
+      "central",
+      2e-12,
+      0.3,
+      2e-09,
+      0.15,
+      8e-10,
+      1e-13
+    ],
+    [
+      "high",
+      5e-12,
+      1.0,
+      1e-08,
+      0.5,
+      2e-09,
+      1e-12
+    ]
+  ],
+  "measured_parasitics": false,
+  "actual_D_changes_not_modelled": [
+    "C124 specific YAGEO bias/temperature/aging/ESR/ESL",
+    "R121 KOA RN73R stability/humidity and exact small lands",
+    "actual route/copper/support/return/source coupling"
+  ],
+  "length_comparison": [
+    {
+      "original_V4_plan_metric": "DVDT_new_pin_side",
+      "D_actual_metric": "DVDT_main_centerline_witness_including_stub",
+      "original_V4_plan_mm": 1.6604042650720494,
+      "actual_D_mm": 1.9605822924342076,
+      "D_minus_V4_mm": 0.30017802736215815
+    },
+    {
+      "original_V4_plan_metric": "DVDT_new_cap_side",
+      "D_actual_metric": "CAP_track_centerline",
+      "original_V4_plan_mm": 1.1032792031031833,
+      "actual_D_mm": 1.0903669107231748,
+      "D_minus_V4_mm": -0.012912292380008461
+    },
+    {
+      "original_V4_plan_metric": "C124_new_ground",
+      "D_actual_metric": "C124_GND_track_centerline",
+      "original_V4_plan_mm": 0.699231721248399,
+      "actual_D_mm": 0.6992317212483999,
+      "D_minus_V4_mm": 8.881784197001252e-16
+    },
+    {
+      "original_V4_plan_metric": "UVLO_new_chain",
+      "D_actual_metric": "UVLO_main_replacement_chain",
+      "original_V4_plan_mm": 9.247623313140586,
+      "actual_D_mm": 9.436568489413434,
+      "D_minus_V4_mm": 0.18894517627284735
+    },
+    {
+      "original_V4_plan_metric": "OVLO_new_arm",
+      "D_actual_metric": "OVLO_complete_main_arm_including_retained",
+      "original_V4_plan_mm": 10.172156726817853,
+      "actual_D_mm": 10.41418418287273,
+      "D_minus_V4_mm": 0.24202745605487763
+    }
+  ],
+  "numerical_replay": {
+    "csv_points": 10818,
+    "native_points": 21636,
+    "native_cases": 36,
+    "native_DVDT_max_pointwise_relative_complex_error": 1.045184152581066e-09,
+    "native_divider_max_pointwise_relative_complex_error": 1.078721435512704e-15,
+    "exact_same_summary_as_prior_independent_check": true
+  },
+  "reviewer_scope": "Fresh parent-worker replay of existing independent impedance/native verification, not a new independent human/agent review; new subagent unavailable due thread limit. Separate actual CAD independent review is owned by routing.",
+  "geometry_acceptance": "Separate ongoing routing task; no adoption asserted by this packet",
+  "qualification": {
+    "active_startup": false,
+    "measured_hardware": false,
+    "manufacturing": false,
+    "input_fault": false,
+    "R125_reset_pulse": false
+  }
+}

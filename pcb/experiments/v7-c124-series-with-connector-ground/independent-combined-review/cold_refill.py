@@ -1,0 +1,4 @@
+import json,hashlib,time
+from pathlib import Path
+import pcbnew as p
+R=Path('/tmp/v7-c124-d-plus-connector-gnd-independent-review');B=R/'cold/pcb/maru60.kicad_pcb';actual=Path('/tmp/v7-c124-d-plus-connector-gnd/filled/pcb/maru60.kicad_pcb');h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();before=h(B);assert before==h(actual)=='7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401';start=time.monotonic();b=p.LoadBoard(str(B));b.BuildConnectivity();p.ZONE_FILLER(b).Fill(b.Zones());p.SaveBoard(str(B),b);r={'source_sha256':before,'cold_sha256':h(B),'seconds':time.monotonic()-start,'byte_identical':h(B)==before,'original_unchanged':h(actual)==before,'native_version':p.GetBuildVersion()};(R/'COLD_REFILL.json').write_text(json.dumps(r,indent=2)+'\n');assert r['byte_identical']and r['original_unchanged'];print(json.dumps(r,indent=2))

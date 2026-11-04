@@ -1,0 +1,29 @@
+{
+  "status": "UNSELECTED D plus one approved-geometry connector GND via; no adoption",
+  "source_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+  "prefill_sha256": "a6303c45fc3df52e519753022ff3d8f1e731696d4fb45fee7ff199432da9dd95",
+  "source_D_contract_sha256": "dd71f7e6d3eccaa1ba531d47a8057acc2eca8d277816019f707c28899c2f07ab",
+  "via_contract_sha256": "c58baac31c087ddd115fb5ccbe7953ced52d8469c0efe675b2184ea00ff7d7a5",
+  "via_actual_eligibility_sha256": "27c41ca26cfa052bbb2f7c983152d285c584299d8dff5f40d4a3fced05d58d69",
+  "new_via": {
+    "uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+    "net": "GND",
+    "xy_mm": [
+      17.2,
+      9.9
+    ],
+    "diameter_mm": 0.5,
+    "drill_mm": 0.25,
+    "span": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "nominal_annular_width_mm": 0.125
+  },
+  "actual_source_GND_net_code": 83,
+  "new_raw_record": "(via\n\t\t(at 17.2 9.9)\n\t\t(size 0.5)\n\t\t(drill 0.25)\n\t\t(layers \"F.Cu\" \"B.Cu\")\n\t\t(net 83)\n\t\t(uuid \"cda2df4b-6411-5409-a933-5106751244d8\")\n\t)",
+  "retired_objects": [],
+  "changed_old_objects": [],
+  "unchanged_companions": 57,
+  "qualification": false
+}

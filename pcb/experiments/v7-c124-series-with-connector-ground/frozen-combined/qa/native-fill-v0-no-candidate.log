@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/tmp/v7-c124-d-plus-connector-gnd/scripts/fill_combined.py", line 3, in <module>
+    R=Path('/tmp/v7-c124-d-plus-connector-gnd');Q=R/'filled/pcb/maru60.kicad_pcb';H=lambda q:hashlib.sha256(q.read_bytes()).hexdigest();before=H(Q);b=p.LoadBoard(str(Q));assert p.Version()=='9.0.2';ct=json.loads((R/'BUILD_CONTRACT.json').read_text());idx={q.m_Uuid.AsString():q for q in b.GetTracks()};v=idx[ct['new_via']['uuid']];assert isinstance(v,p.PCB_VIA);assert v.GetNetname()=='GND'and v.GetNetCode()==ct['actual_source_GND_net_code'];assert (v.GetPosition().x,v.GetPosition().y)==(17200000,9900000);assert v.GetWidth()==500000 and v.GetDrillValue()==250000 and v.GetViaType()==p.VIATYPE_THROUGH
+                                                                                                                                               ~^^^
+  File "/tmp/v7-c124-d-plus-connector-gnd/scripts/fill_combined.py", line 3, in <lambda>
+    R=Path('/tmp/v7-c124-d-plus-connector-gnd');Q=R/'filled/pcb/maru60.kicad_pcb';H=lambda q:hashlib.sha256(q.read_bytes()).hexdigest();before=H(Q);b=p.LoadBoard(str(Q));assert p.Version()=='9.0.2';ct=json.loads((R/'BUILD_CONTRACT.json').read_text());idx={q.m_Uuid.AsString():q for q in b.GetTracks()};v=idx[ct['new_via']['uuid']];assert isinstance(v,p.PCB_VIA);assert v.GetNetname()=='GND'and v.GetNetCode()==ct['actual_source_GND_net_code'];assert (v.GetPosition().x,v.GetPosition().y)==(17200000,9900000);assert v.GetWidth()==500000 and v.GetDrillValue()==250000 and v.GetViaType()==p.VIATYPE_THROUGH
+                                                                                                            ~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 625, in read_bytes
+    with self.open(mode='rb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/v7-c124-d-plus-connector-gnd/filled/pcb/maru60.kicad_pcb'

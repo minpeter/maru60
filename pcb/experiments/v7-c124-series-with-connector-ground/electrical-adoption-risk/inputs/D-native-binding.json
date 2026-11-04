@@ -1,0 +1,1928 @@
+{
+  "scope": "Nominal native/netlist/part and named-centerline binding only; physical contact/reference acceptance separate; no extracted impedance",
+  "board_hashes": {
+    "source": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+    "actual": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b"
+  },
+  "netlist_sha256": "05b0032974c95e00e7b563cd8ffadadbb6d72d51e266706f813609c08ca01b6d",
+  "contract_sha256": "15835e0f49534e7250626669db5645dccc80034a3cefd88651578731627d62bd",
+  "KiCad_version": "9.0.2+dfsg-1",
+  "components": {
+    "U8": {
+      "value": "TPS259470LRPW",
+      "at_mm": [
+        18.0,
+        18.5
+      ],
+      "orientation_deg": 180.0,
+      "native_properties": {
+        "Reference": "U8",
+        "Value": "TPS259470LRPW",
+        "Datasheet": "",
+        "Description": ""
+      },
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            18.9,
+            19.1875
+          ],
+          "size_mm": [
+            0.6,
+            0.275
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            18.9,
+            18.725
+          ],
+          "size_mm": [
+            0.6,
+            0.25
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            18.9,
+            18.275
+          ],
+          "size_mm": [
+            0.6,
+            0.25
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            18.9,
+            17.8125
+          ],
+          "size_mm": [
+            0.6,
+            0.275
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            18.7125,
+            19.375
+          ],
+          "size_mm": [
+            0.225,
+            0.65
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            18.7125,
+            17.625
+          ],
+          "size_mm": [
+            0.225,
+            0.65
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            18.25,
+            19.13
+          ],
+          "size_mm": [
+            0.28,
+            1.06
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            18.25,
+            17.87
+          ],
+          "size_mm": [
+            0.28,
+            1.06
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            17.75,
+            19.13
+          ],
+          "size_mm": [
+            0.28,
+            1.06
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            17.75,
+            17.87
+          ],
+          "size_mm": [
+            0.28,
+            1.06
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            17.2875,
+            19.375
+          ],
+          "size_mm": [
+            0.225,
+            0.65
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            17.2875,
+            17.625
+          ],
+          "size_mm": [
+            0.225,
+            0.65
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            17.1,
+            19.1875
+          ],
+          "size_mm": [
+            0.6,
+            0.275
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            17.1,
+            18.725
+          ],
+          "size_mm": [
+            0.6,
+            0.25
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            17.1,
+            18.275
+          ],
+          "size_mm": [
+            0.6,
+            0.25
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "at_mm": [
+            17.1,
+            17.8125
+          ],
+          "size_mm": [
+            0.6,
+            0.275
+          ]
+        },
+        {
+          "number": "1",
+          "net": "USB_UVLO",
+          "at_mm": [
+            18.9,
+            17.8
+          ],
+          "size_mm": [
+            0.6,
+            0.3
+          ]
+        },
+        {
+          "number": "1",
+          "net": "USB_UVLO",
+          "at_mm": [
+            18.725,
+            17.625
+          ],
+          "size_mm": [
+            0.25,
+            0.65
+          ]
+        },
+        {
+          "number": "2",
+          "net": "USB_OVLO",
+          "at_mm": [
+            18.9,
+            18.275
+          ],
+          "size_mm": [
+            0.6,
+            0.25
+          ]
+        },
+        {
+          "number": "3",
+          "net": "unconnected-(U8-AUXOFF-Pad3)",
+          "at_mm": [
+            18.9,
+            18.725
+          ],
+          "size_mm": [
+            0.6,
+            0.25
+          ]
+        },
+        {
+          "number": "4",
+          "net": "USB_INPUT_FAULT_N",
+          "at_mm": [
+            18.9,
+            19.2
+          ],
+          "size_mm": [
+            0.6,
+            0.3
+          ]
+        },
+        {
+          "number": "4",
+          "net": "USB_INPUT_FAULT_N",
+          "at_mm": [
+            18.725,
+            19.375
+          ],
+          "size_mm": [
+            0.25,
+            0.65
+          ]
+        },
+        {
+          "number": "5",
+          "net": "VBUS_FUSED",
+          "at_mm": [
+            18.25,
+            18.5
+          ],
+          "size_mm": [
+            0.3,
+            2.4
+          ]
+        },
+        {
+          "number": "6",
+          "net": "VBUS_PROTECTED_RAW",
+          "at_mm": [
+            17.75,
+            18.5
+          ],
+          "size_mm": [
+            0.3,
+            2.4
+          ]
+        },
+        {
+          "number": "7",
+          "net": "USB_DVDT",
+          "at_mm": [
+            17.275,
+            19.375
+          ],
+          "size_mm": [
+            0.25,
+            0.65
+          ]
+        },
+        {
+          "number": "7",
+          "net": "USB_DVDT",
+          "at_mm": [
+            17.1,
+            19.2
+          ],
+          "size_mm": [
+            0.6,
+            0.3
+          ]
+        },
+        {
+          "number": "8",
+          "net": "GND",
+          "at_mm": [
+            17.1,
+            18.725
+          ],
+          "size_mm": [
+            0.6,
+            0.25
+          ]
+        },
+        {
+          "number": "9",
+          "net": "USB_ILM",
+          "at_mm": [
+            17.1,
+            18.275
+          ],
+          "size_mm": [
+            0.6,
+            0.25
+          ]
+        },
+        {
+          "number": "10",
+          "net": "unconnected-(U8-ITIMER-Pad10)",
+          "at_mm": [
+            17.275,
+            17.625
+          ],
+          "size_mm": [
+            0.25,
+            0.65
+          ]
+        },
+        {
+          "number": "10",
+          "net": "unconnected-(U8-ITIMER-Pad10)",
+          "at_mm": [
+            17.1,
+            17.8
+          ],
+          "size_mm": [
+            0.6,
+            0.3
+          ]
+        }
+      ]
+    },
+    "R120": {
+      "value": "590k 0.1%",
+      "at_mm": [
+        20.5,
+        18.5
+      ],
+      "orientation_deg": -90.0,
+      "native_properties": {
+        "Reference": "R120",
+        "Value": "590k 0.1%",
+        "Datasheet": "",
+        "Description": ""
+      },
+      "pads": [
+        {
+          "number": "1",
+          "net": "VBUS_FUSED",
+          "at_mm": [
+            20.5,
+            17.675
+          ],
+          "size_mm": [
+            0.8,
+            0.95
+          ]
+        },
+        {
+          "number": "2",
+          "net": "USB_OVLO",
+          "at_mm": [
+            20.5,
+            19.325
+          ],
+          "size_mm": [
+            0.8,
+            0.95
+          ]
+        }
+      ]
+    },
+    "R121": {
+      "value": "156k 0.1%",
+      "at_mm": [
+        13.68,
+        18.65
+      ],
+      "orientation_deg": 0.0,
+      "native_properties": {
+        "Reference": "R121",
+        "Value": "156k 0.1%",
+        "Datasheet": "https://www.koaspeer.com/pdfs/RN73R.pdf",
+        "Description": "",
+        "Manufacturer": "KOA",
+        "MPN": "RN73R1ETTP1563B25",
+        "Status": "UNSELECTED - not assembly or procurement approved"
+      },
+      "pads": [
+        {
+          "number": "1",
+          "net": "USB_OVLO",
+          "at_mm": [
+            13.68,
+            19.1
+          ],
+          "size_mm": [
+            0.3,
+            0.4
+          ]
+        },
+        {
+          "number": "2",
+          "net": "GND",
+          "at_mm": [
+            13.68,
+            18.2
+          ],
+          "size_mm": [
+            0.3,
+            0.4
+          ]
+        }
+      ]
+    },
+    "R122": {
+      "value": "620k 0.1%",
+      "at_mm": [
+        17.5,
+        14.5
+      ],
+      "orientation_deg": 180.0,
+      "native_properties": {
+        "Reference": "R122",
+        "Value": "620k 0.1%",
+        "Datasheet": "",
+        "Description": ""
+      },
+      "pads": [
+        {
+          "number": "1",
+          "net": "VBUS_FUSED",
+          "at_mm": [
+            18.325,
+            14.5
+          ],
+          "size_mm": [
+            0.8,
+            0.95
+          ]
+        },
+        {
+          "number": "2",
+          "net": "USB_UVLO",
+          "at_mm": [
+            16.675,
+            14.5
+          ],
+          "size_mm": [
+            0.8,
+            0.95
+          ]
+        }
+      ]
+    },
+    "R123": {
+      "value": "267k 0.1%",
+      "at_mm": [
+        22.0,
+        23.5
+      ],
+      "orientation_deg": 90.0,
+      "native_properties": {
+        "Reference": "R123",
+        "Value": "267k 0.1%",
+        "Datasheet": "",
+        "Description": ""
+      },
+      "pads": [
+        {
+          "number": "1",
+          "net": "USB_UVLO",
+          "at_mm": [
+            22.0,
+            24.325
+          ],
+          "size_mm": [
+            0.8,
+            0.95
+          ]
+        },
+        {
+          "number": "2",
+          "net": "GND",
+          "at_mm": [
+            22.0,
+            22.675
+          ],
+          "size_mm": [
+            0.8,
+            0.95
+          ]
+        }
+      ]
+    },
+    "R125": {
+      "value": "100 1%",
+      "at_mm": [
+        15.36,
+        20.48
+      ],
+      "orientation_deg": 0.0,
+      "native_properties": {
+        "Reference": "R125",
+        "Value": "100 1%",
+        "Datasheet": "https://www.koaspeer.com/catimages/Products/RK73H/RK73H.pdf",
+        "Description": "",
+        "Manufacturer": "KOA",
+        "MPN": "RK73H1ETTP1000F",
+        "Status": "UNSELECTED - not assembly or procurement approved"
+      },
+      "pads": [
+        {
+          "number": "1",
+          "net": "USB_DVDT",
+          "at_mm": [
+            15.81,
+            20.48
+          ],
+          "size_mm": [
+            0.4,
+            0.3
+          ]
+        },
+        {
+          "number": "2",
+          "net": "USB_DVDT_CAP",
+          "at_mm": [
+            14.91,
+            20.48
+          ],
+          "size_mm": [
+            0.4,
+            0.3
+          ]
+        }
+      ]
+    },
+    "C124": {
+      "value": "10nF 10% 50V",
+      "at_mm": [
+        15.185,
+        19.375
+      ],
+      "orientation_deg": 0.0,
+      "native_properties": {
+        "Reference": "C124",
+        "Value": "10nF 10% 50V",
+        "Datasheet": "https://yageogroup.com/download/specsheet/CC0402KRX7R9BB103",
+        "Description": "",
+        "Manufacturer": "YAGEO",
+        "MPN": "CC0402KRX7R9BB103",
+        "Status": "UNSELECTED - not assembly or procurement approved"
+      },
+      "pads": [
+        {
+          "number": "1",
+          "net": "USB_DVDT_CAP",
+          "at_mm": [
+            14.685,
+            19.375
+          ],
+          "size_mm": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "number": "2",
+          "net": "GND",
+          "at_mm": [
+            15.685,
+            19.375
+          ],
+          "size_mm": [
+            0.5,
+            0.5
+          ]
+        }
+      ]
+    }
+  },
+  "source_components": {
+    "U8": {
+      "value": "TPS259470LRPW",
+      "pads": [
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "",
+          "net": ""
+        },
+        {
+          "number": "1",
+          "net": "USB_UVLO"
+        },
+        {
+          "number": "1",
+          "net": "USB_UVLO"
+        },
+        {
+          "number": "2",
+          "net": "USB_OVLO"
+        },
+        {
+          "number": "3",
+          "net": "unconnected-(U8-AUXOFF-Pad3)"
+        },
+        {
+          "number": "4",
+          "net": "USB_INPUT_FAULT_N"
+        },
+        {
+          "number": "4",
+          "net": "USB_INPUT_FAULT_N"
+        },
+        {
+          "number": "5",
+          "net": "VBUS_FUSED"
+        },
+        {
+          "number": "6",
+          "net": "VBUS_PROTECTED_RAW"
+        },
+        {
+          "number": "7",
+          "net": "USB_DVDT"
+        },
+        {
+          "number": "7",
+          "net": "USB_DVDT"
+        },
+        {
+          "number": "8",
+          "net": "GND"
+        },
+        {
+          "number": "9",
+          "net": "USB_ILM"
+        },
+        {
+          "number": "10",
+          "net": "unconnected-(U8-ITIMER-Pad10)"
+        },
+        {
+          "number": "10",
+          "net": "unconnected-(U8-ITIMER-Pad10)"
+        }
+      ]
+    },
+    "R120": {
+      "value": "590k 0.1%",
+      "pads": [
+        {
+          "number": "1",
+          "net": "VBUS_FUSED"
+        },
+        {
+          "number": "2",
+          "net": "USB_OVLO"
+        }
+      ]
+    },
+    "R121": {
+      "value": "156k 0.1%",
+      "pads": [
+        {
+          "number": "1",
+          "net": "USB_OVLO"
+        },
+        {
+          "number": "2",
+          "net": "GND"
+        }
+      ]
+    },
+    "R122": {
+      "value": "620k 0.1%",
+      "pads": [
+        {
+          "number": "1",
+          "net": "VBUS_FUSED"
+        },
+        {
+          "number": "2",
+          "net": "USB_UVLO"
+        }
+      ]
+    },
+    "R123": {
+      "value": "267k 0.1%",
+      "pads": [
+        {
+          "number": "1",
+          "net": "USB_UVLO"
+        },
+        {
+          "number": "2",
+          "net": "GND"
+        }
+      ]
+    },
+    "C124": {
+      "value": "10nF 10% 50V",
+      "pads": [
+        {
+          "number": "1",
+          "net": "USB_DVDT"
+        },
+        {
+          "number": "2",
+          "net": "GND"
+        }
+      ]
+    }
+  },
+  "source_retired_track_witnesses": {
+    "8305ea6c-327f-407d-9092-892db2d90da5": {
+      "uuid": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.2,
+        16.35
+      ],
+      "end_mm": [
+        13.5,
+        17.05
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.9899494936611666
+    },
+    "efb452e0-b8d1-484b-9a90-3179d99b1aa8": {
+      "uuid": "efb452e0-b8d1-484b-9a90-3179d99b1aa8",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        13.5,
+        17.05
+      ],
+      "end_mm": [
+        13.45,
+        17.05
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.05
+    },
+    "2bef712b-2271-470e-9ed0-961aa43325cd": {
+      "uuid": "2bef712b-2271-470e-9ed0-961aa43325cd",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        13.45,
+        17.05
+      ],
+      "end_mm": [
+        13.3,
+        17.2
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.21213203435596428
+    },
+    "a621cda3-f605-4bff-b3d7-2213de164c79": {
+      "uuid": "a621cda3-f605-4bff-b3d7-2213de164c79",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        13.3,
+        17.2
+      ],
+      "end_mm": [
+        13.3,
+        17.3
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.1
+    },
+    "db0f565d-8915-441b-b9f8-50cdd933467c": {
+      "uuid": "db0f565d-8915-441b-b9f8-50cdd933467c",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        13.3,
+        17.3
+      ],
+      "end_mm": [
+        13.25,
+        17.35
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "0bf33e40-59fe-4d2e-b57a-4f027a536d54": {
+      "uuid": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        13.25,
+        17.35
+      ],
+      "end_mm": [
+        13.25,
+        19.65
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 2.3
+    },
+    "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93": {
+      "uuid": "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        13.25,
+        19.65
+      ],
+      "end_mm": [
+        13.3,
+        19.7
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "4174a692-19ae-4049-916a-e21e775415e2": {
+      "uuid": "4174a692-19ae-4049-916a-e21e775415e2",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        13.3,
+        19.7
+      ],
+      "end_mm": [
+        13.3,
+        19.8
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.1
+    },
+    "800b2e7b-f1bf-428e-b54f-6431e8b4af81": {
+      "uuid": "800b2e7b-f1bf-428e-b54f-6431e8b4af81",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        13.3,
+        19.8
+      ],
+      "end_mm": [
+        14.3,
+        20.8
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.4142135623730951
+    },
+    "1cad25a0-be8b-4cb5-8379-06fa21c6eea4": {
+      "uuid": "1cad25a0-be8b-4cb5-8379-06fa21c6eea4",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.3,
+        20.8
+      ],
+      "end_mm": [
+        14.35,
+        20.8
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.05
+    },
+    "681a81ab-2f2d-4b74-b71a-83e09245dca9": {
+      "uuid": "681a81ab-2f2d-4b74-b71a-83e09245dca9",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.35,
+        20.8
+      ],
+      "end_mm": [
+        14.4,
+        20.85
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "8a91626f-c454-43dc-876d-58c563ab2be4": {
+      "uuid": "8a91626f-c454-43dc-876d-58c563ab2be4",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.4,
+        20.85
+      ],
+      "end_mm": [
+        14.45,
+        20.85
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.05
+    },
+    "d340564d-1097-4e0e-8f38-4b0385b0a0bb": {
+      "uuid": "d340564d-1097-4e0e-8f38-4b0385b0a0bb",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.45,
+        20.85
+      ],
+      "end_mm": [
+        14.5,
+        20.9
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "c635b040-8e23-4da7-9cec-9b59b66c88e3": {
+      "uuid": "c635b040-8e23-4da7-9cec-9b59b66c88e3",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.5,
+        20.9
+      ],
+      "end_mm": [
+        14.55,
+        20.9
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.05
+    },
+    "bca2758e-28c6-41dd-97f0-2c9466f8ca97": {
+      "uuid": "bca2758e-28c6-41dd-97f0-2c9466f8ca97",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.55,
+        20.9
+      ],
+      "end_mm": [
+        14.6,
+        20.95
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "f0a66333-ec8a-4243-a130-df6b6aa03b1d": {
+      "uuid": "f0a66333-ec8a-4243-a130-df6b6aa03b1d",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.6,
+        20.95
+      ],
+      "end_mm": [
+        14.65,
+        20.95
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.05
+    },
+    "17c10e7b-5920-47bd-8de6-90bf22d6522c": {
+      "uuid": "17c10e7b-5920-47bd-8de6-90bf22d6522c",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.65,
+        20.95
+      ],
+      "end_mm": [
+        14.7,
+        21.0
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "b2509e57-5e09-46f8-8514-02052efec7ae": {
+      "uuid": "b2509e57-5e09-46f8-8514-02052efec7ae",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.7,
+        21.0
+      ],
+      "end_mm": [
+        14.8,
+        21.0
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.1
+    },
+    "33383b43-6318-422d-a220-1199026db482": {
+      "uuid": "33383b43-6318-422d-a220-1199026db482",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.8,
+        21.0
+      ],
+      "end_mm": [
+        14.85,
+        21.05
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "1274878c-3b2f-48be-b335-ff839fe8150d": {
+      "uuid": "1274878c-3b2f-48be-b335-ff839fe8150d",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.85,
+        21.05
+      ],
+      "end_mm": [
+        16.8,
+        21.05
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.95
+    },
+    "a1d85406-3c20-4dc4-850f-7efdab0cdfd6": {
+      "uuid": "a1d85406-3c20-4dc4-850f-7efdab0cdfd6",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        16.8,
+        21.05
+      ],
+      "end_mm": [
+        16.85,
+        21.1
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "de44c09a-0455-40a8-8f3e-d6d7fa9dcec0": {
+      "uuid": "de44c09a-0455-40a8-8f3e-d6d7fa9dcec0",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        16.85,
+        21.1
+      ],
+      "end_mm": [
+        17.05,
+        21.1
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.2
+    },
+    "bf30ad55-1b9f-467f-8fef-7ac60c4f920d": {
+      "uuid": "bf30ad55-1b9f-467f-8fef-7ac60c4f920d",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        17.05,
+        21.1
+      ],
+      "end_mm": [
+        17.1,
+        21.15
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "a44d4a9f-aa40-4d02-9ed7-16774fbe4849": {
+      "uuid": "a44d4a9f-aa40-4d02-9ed7-16774fbe4849",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        17.1,
+        21.15
+      ],
+      "end_mm": [
+        17.2,
+        21.15
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.1
+    },
+    "05a0b97d-79af-50e5-b191-fe26b55d2c02": {
+      "uuid": "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        15.05,
+        19.925
+      ],
+      "end_mm": [
+        14.0,
+        19.325
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.2093386622447826
+    },
+    "18d72adc-e983-48eb-b7d1-3047b981e17d": {
+      "uuid": "18d72adc-e983-48eb-b7d1-3047b981e17d",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        15.65,
+        19.3
+      ],
+      "end_mm": [
+        15.55,
+        19.3
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.1
+    },
+    "3aa399c7-b37b-4cb6-b1bb-33266155cd74": {
+      "uuid": "3aa399c7-b37b-4cb6-b1bb-33266155cd74",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        15.55,
+        19.3
+      ],
+      "end_mm": [
+        15.5,
+        19.25
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477
+    },
+    "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57": {
+      "uuid": "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        17.25,
+        19.4
+      ],
+      "end_mm": [
+        15.7,
+        19.4
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.55
+    },
+    "5b54e93a-0faf-402b-8565-7a7da068e6bb": {
+      "uuid": "5b54e93a-0faf-402b-8565-7a7da068e6bb",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        15.5,
+        19.275
+      ],
+      "end_mm": [
+        15.5,
+        19.25
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.025
+    },
+    "c69210ed-fc0a-5e8b-994b-e205b18141f3": {
+      "uuid": "c69210ed-fc0a-5e8b-994b-e205b18141f3",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        15.7,
+        19.4
+      ],
+      "end_mm": [
+        15.65,
+        19.3
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.11180339887498948
+    },
+    "eb147f3b-fbe7-5ff5-a09d-d36fa376b92f": {
+      "uuid": "eb147f3b-fbe7-5ff5-a09d-d36fa376b92f",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        20.175,
+        21.0
+      ],
+      "end_mm": [
+        15.05,
+        19.925
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 5.23653033983381
+    }
+  },
+  "native_main_and_support_tracks": [
+    {
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.2,
+        16.35
+      ],
+      "end_mm": [
+        13.1,
+        17.05
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.3038404810405297,
+      "name": "UVLO0"
+    },
+    {
+      "uuid": "32e162df-abf9-5325-93bb-b71d84e9d850",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        13.1,
+        17.05
+      ],
+      "end_mm": [
+        12.8,
+        17.55
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.58309518948453,
+      "name": "UVLO1"
+    },
+    {
+      "uuid": "b77e3c63-f801-5830-836d-8b5fd1860cba",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        12.8,
+        17.55
+      ],
+      "end_mm": [
+        12.8,
+        19.9
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 2.35,
+      "name": "UVLO2"
+    },
+    {
+      "uuid": "b9c65313-e1f2-5c81-8e18-abc631b792ae",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        17.2,
+        20.8
+      ],
+      "end_mm": [
+        18.0,
+        20.95
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.8139410298049853,
+      "name": "OVLO6"
+    },
+    {
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        18.0,
+        20.95
+      ],
+      "end_mm": [
+        20.175,
+        21.0
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 2.175574636733937,
+      "name": "OVLO7"
+    },
+    {
+      "uuid": "fd0e066b-c366-5b5a-b501-15fcf42fddb4",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        17.25,
+        19.4
+      ],
+      "end_mm": [
+        16.85,
+        19.4
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.4,
+      "name": "DVDT0"
+    },
+    {
+      "uuid": "94047f09-e88d-56e7-aee2-15e0dcdca1ac",
+      "kind": "PCB_TRACK",
+      "net": "GND",
+      "start_mm": [
+        15.755,
+        19.17
+      ],
+      "end_mm": [
+        16.4,
+        18.9
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.6992317212483999,
+      "name": "GND0"
+    },
+    {
+      "uuid": "d4d6f91a-e726-5530-80d1-f22a126456bc",
+      "kind": "PCB_TRACK",
+      "net": "GND",
+      "start_mm": [
+        15.5,
+        17.725
+      ],
+      "end_mm": [
+        14.9,
+        17.275
+      ],
+      "width_mm": 0.28,
+      "layer": "B.Cu",
+      "centerline_mm": 0.75,
+      "name": "GROUND_BRIDGE_A"
+    },
+    {
+      "uuid": "0dd51559-bc06-502f-8bb1-1b186fa751d0",
+      "kind": "PCB_TRACK",
+      "net": "GND",
+      "start_mm": [
+        15.5,
+        17.85
+      ],
+      "end_mm": [
+        15.5,
+        17.25
+      ],
+      "width_mm": 0.2,
+      "layer": "B.Cu",
+      "centerline_mm": 0.6,
+      "name": "GROUND_BRIDGE_B"
+    },
+    {
+      "uuid": "34ff4dac-01f8-5a27-b816-6afc433ee9e4",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        16.85,
+        19.4
+      ],
+      "end_mm": [
+        16.6,
+        19.85
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.51478150704935,
+      "name": "DVDT1"
+    },
+    {
+      "uuid": "bb6b5e8e-366e-5318-bb1e-c9bde07c56e9",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        16.6,
+        19.85
+      ],
+      "end_mm": [
+        15.81,
+        20.48
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.0104454463255301,
+      "name": "DVDT2"
+    },
+    {
+      "uuid": "14ce044c-5d14-57b8-a5b8-96edcd04f5e9",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT_CAP",
+      "start_mm": [
+        14.91,
+        20.48
+      ],
+      "end_mm": [
+        14.76,
+        19.4
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.0903669107231748,
+      "name": "CAP0"
+    },
+    {
+      "uuid": "9f71c7e9-1999-5d93-bca7-92de689f89aa",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        14.25,
+        20.75
+      ],
+      "end_mm": [
+        14.6,
+        21.13
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.5166236541235796,
+      "name": "OVLO2"
+    },
+    {
+      "uuid": "a74eeba1-1677-5103-9d24-8f1325cc2689",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        14.6,
+        21.13
+      ],
+      "end_mm": [
+        15.95,
+        21.13
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.35,
+      "name": "OVLO3"
+    },
+    {
+      "uuid": "2f172817-a869-561b-9617-cad76ccd385e",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        15.95,
+        21.13
+      ],
+      "end_mm": [
+        17.05,
+        20.86375
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.1317636955212869,
+      "name": "OVLO4"
+    },
+    {
+      "uuid": "1ee63e90-13d4-5a87-aa3a-851c027d505e",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        17.05,
+        20.86375
+      ],
+      "end_mm": [
+        17.2,
+        20.8
+      ],
+      "width_mm": 0.16,
+      "layer": "B.Cu",
+      "centerline_mm": 0.16298485359075549,
+      "name": "OVLO5"
+    },
+    {
+      "uuid": "0d4c7461-d4c1-51d0-aa44-752e38bdf90f",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        12.8,
+        19.9
+      ],
+      "end_mm": [
+        12.95,
+        20.05
+      ],
+      "width_mm": 0.16,
+      "layer": "B.Cu",
+      "centerline_mm": 0.21213203435596428,
+      "name": "UVLO0"
+    },
+    {
+      "uuid": "53e4abd7-6073-554e-94ef-7b4edee4f767",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        12.95,
+        20.05
+      ],
+      "end_mm": [
+        14.05,
+        21.47
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.7962182495454166,
+      "name": "UVLO1"
+    },
+    {
+      "uuid": "35e48064-f402-56a7-8121-f32b5830f6a5",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.05,
+        21.47
+      ],
+      "end_mm": [
+        15.9,
+        21.47
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.85,
+      "name": "UVLO2"
+    },
+    {
+      "uuid": "ae8370c8-802f-534a-b14a-23daebf30ae6",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        15.9,
+        21.47
+      ],
+      "end_mm": [
+        17.05,
+        21.214286
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.1780872844556127,
+      "name": "UVLO3"
+    },
+    {
+      "uuid": "49e8a13b-3b5e-54c7-95ca-7a0d5b40ce34",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        17.05,
+        21.214286
+      ],
+      "end_mm": [
+        17.2,
+        21.15
+      ],
+      "width_mm": 0.16,
+      "layer": "B.Cu",
+      "centerline_mm": 0.16319525053138034,
+      "name": "UVLO4"
+    },
+    {
+      "uuid": "66453383-04ef-5371-8252-4d0004d7a05d",
+      "kind": "PCB_TRACK",
+      "net": "GND",
+      "start_mm": [
+        13.68,
+        18.2
+      ],
+      "end_mm": [
+        14.0,
+        17.675
+      ],
+      "width_mm": 0.2,
+      "layer": "B.Cu",
+      "centerline_mm": 0.6148373768729418,
+      "name": "R121_GND_LEG"
+    },
+    {
+      "uuid": "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+      "kind": "PCB_TRACK",
+      "net": "GND",
+      "start_mm": [
+        14.0,
+        17.675
+      ],
+      "end_mm": [
+        14.54,
+        17.435
+      ],
+      "width_mm": 0.21,
+      "layer": "B.Cu",
+      "centerline_mm": 0.5909314681077662,
+      "name": "R121_OLD_GND_SUPPORT"
+    },
+    {
+      "uuid": "cc032d04-9495-5992-8324-8e98a3065b14",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        13.68,
+        19.1
+      ],
+      "end_mm": [
+        14.2,
+        19.45
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.6268173577685928,
+      "name": "R121_OVLO0"
+    },
+    {
+      "uuid": "53bcbb0a-ce50-5c23-bcbc-c7e42eff2bc6",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        14.2,
+        19.45
+      ],
+      "end_mm": [
+        14.2,
+        20.55
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.1,
+      "name": "R121_OVLO1"
+    },
+    {
+      "uuid": "9820d6a1-a966-5f57-ba9f-b4f6eebf98a8",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        14.2,
+        20.55
+      ],
+      "end_mm": [
+        14.25,
+        20.6
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.07071067811865477,
+      "name": "R121_OVLO2"
+    },
+    {
+      "uuid": "a037876a-72ca-5e86-972b-a613ac79a8a3",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        14.25,
+        20.6
+      ],
+      "end_mm": [
+        14.25,
+        20.75
+      ],
+      "width_mm": 0.16,
+      "layer": "B.Cu",
+      "centerline_mm": 0.15,
+      "name": "R121_OVLO3"
+    },
+    {
+      "uuid": "ea24a1e4-dda5-5e54-815c-ce8d2a7844f6",
+      "kind": "PCB_TRACK",
+      "net": "GND",
+      "start_mm": [
+        15.5,
+        17.85
+      ],
+      "end_mm": [
+        15.5,
+        17.25
+      ],
+      "width_mm": 0.21,
+      "layer": "B.Cu",
+      "centerline_mm": 0.6,
+      "name": "C124_OLD_GND_SUPPORT_GUARD"
+    },
+    {
+      "uuid": "2415b4fb-a4a8-5806-8904-da9a0189625c",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        17.25,
+        19.4
+      ],
+      "end_mm": [
+        16.775,
+        19.4
+      ],
+      "width_mm": 0.16,
+      "layer": "B.Cu",
+      "centerline_mm": 0.475,
+      "name": "DVDT_OLD_SUPPORT"
+    },
+    {
+      "uuid": "cc1282fe-f0b3-5fea-9d45-66eea8068d66",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        20.175,
+        21.0
+      ],
+      "end_mm": [
+        20.0725,
+        20.9785
+      ],
+      "width_mm": 0.16,
+      "layer": "B.Cu",
+      "centerline_mm": 0.1047306067966762,
+      "name": "OVLO_OLD_SUPPORT"
+    },
+    {
+      "uuid": "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a",
+      "kind": "PCB_TRACK",
+      "net": "USB_UVLO",
+      "start_mm": [
+        14.2,
+        16.35
+      ],
+      "end_mm": [
+        14.1,
+        16.45
+      ],
+      "width_mm": 0.16,
+      "layer": "B.Cu",
+      "centerline_mm": 0.14142135623730953,
+      "name": "UVLO_OLD_SUPPORT"
+    }
+  ],
+  "retained_native_tracks": {
+    "e218cfe4-e4ba-5b6c-985d-8f1da39a4402": {
+      "uuid": "e218cfe4-e4ba-5b6c-985d-8f1da39a4402",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        20.575,
+        20.825
+      ],
+      "end_mm": [
+        20.175,
+        21.0
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.4366062299143245
+    },
+    "6e2e82bf-1a07-562e-b012-9a61a7509e00": {
+      "uuid": "6e2e82bf-1a07-562e-b012-9a61a7509e00",
+      "kind": "PCB_TRACK",
+      "net": "USB_OVLO",
+      "start_mm": [
+        22.0,
+        19.6
+      ],
+      "end_mm": [
+        20.575,
+        20.825
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 1.8791620472966135
+    },
+    "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3": {
+      "uuid": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+      "kind": "PCB_TRACK",
+      "net": "USB_DVDT",
+      "start_mm": [
+        17.275,
+        19.375
+      ],
+      "end_mm": [
+        17.25,
+        19.4
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu",
+      "centerline_mm": 0.03535533905932738
+    }
+  },
+  "lengths_mm": {
+    "DVDT_three_main_new_segments": 1.9252269533748803,
+    "DVDT_retained_stub": 0.03535533905932738,
+    "DVDT_main_centerline_witness_including_stub": 1.9605822924342076,
+    "CAP_track_centerline": 1.0903669107231748,
+    "C124_GND_track_centerline": 0.6992317212483999,
+    "UVLO_main_replacement_chain": 9.436568489413434,
+    "OVLO_new_R121_start_chain": 1.9475280358872478,
+    "OVLO_complete_main_arm_including_retained": 10.41418418287273,
+    "all_added_track_objects_sum_including_overlapping_support": 25.126730788436376
+  },
+  "nominal_order": "U8.7 -> R125.1; R125.2 -> C124.1; C124.2 -> GND",
+  "four_divider_values_and_nodes_preserved": true,
+  "native_via_uuid_inventory_exact": true,
+  "no_board_save_fill_or_mutation": true,
+  "all_parasitics_still_assumed": true,
+  "limitations": [
+    "Track endpoint/pad center offsets and overlapping support copper are explicit; summed centerlines are not an extracted unique route, loop impedance or pickup.",
+    "R121 RN73R part differs in stability/environmental specifications; R120 MPN/TCR remains unspecified.",
+    "C124 exact YAGEO part is not a bias/temperature/aging/ESR/ESL model.",
+    "No source/candidate physical partition or fill acceptance inferred from net labels."
+  ]
+}

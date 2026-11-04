@@ -1,0 +1,33 @@
+{
+  "status": "PASS: bounded acceptance eligible; selection remains the routing coordinator responsibility",
+  "frozen_at_UTC": "2026-11-04T14:31:00Z",
+  "source_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "candidate_sha256": "aaafc033c6e9809afcb189290c3740157b7ab5596aaa0867e581f08d89807eca",
+  "contract_sha256": "c58baac31c087ddd115fb5ccbe7953ced52d8469c0efe675b2184ea00ff7d7a5",
+  "new_via_uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+  "strict_physical_and_reference_audit_pass": true,
+  "actual_R2_binding_pass": true,
+  "independent_normal_cold_refill_byte_identical": true,
+  "current_outer_shadow_checks": 13129,
+  "legacy_non_GND_outer_shadow_checks": 11905,
+  "retired_U10_Dminus_explicitly_preserved": true,
+  "actual_physical_drill_loss_per_inner_plane_mm2": 0.049087681002,
+  "annular_contact_per_inner_plane_mm2": 0.147260768066,
+  "guarded_contact_per_inner_plane_mm2": 0.1472558792225,
+  "old_material_components_preserved": 382,
+  "native_raw_opens": 12,
+  "native_warnings": 66,
+  "native_other_hard_DRC": 0,
+  "native_ERC": 0,
+  "native_parity": 0,
+  "no_selected_source_or_routing_candidate_mutation": true,
+  "phase_note": "The pending R2 labels in actual_geometry.json record its earlier audit phase; actual_R2_binding.json and this final eligibility record close that gate.",
+  "limits": [
+    "This is bounded eligibility for the one-via geometry/connectivity change, not global board completion; 12 raw opens and 66 warnings remain unchanged.",
+    "The connector merged-antipad neck remains unchanged and is not restored. The 0.95 mm GND stub remains byte-exact.",
+    "The new grounded copper can change local USB fields/coupling despite unchanged signal objects. No source-supported parasitic extraction or post-change waveform model qualifies this stitch.",
+    "Nearest-return distance is geometric, not inductance or SI gain. No hardware SI, ESD, EMC, PDN or manufacturing qualification is claimed.",
+    "Only current c770 and restored original a9 historical shadows are verified; the missing original full QA/history has not been restored.",
+    "Native polygon approximation is 1 nm and contacts use a 2 nm inward guard; neither is a physical-loss waiver."
+  ]
+}

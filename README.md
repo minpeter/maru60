@@ -2,9 +2,10 @@
 
 This isolated recovery repository preserves the exact selected PCB after the execution workspace was replaced. It does not invent or restore the lost Git history.
 
-Open `pcb/experiments/v7-connector-ground-stitch/candidate/pcb/maru60.kicad_pro`.
+Open `pcb/experiments/v7-c124-series-with-connector-ground/candidate/pcb/maru60.kicad_pro`.
 
-- Current experimental PCB SHA256: `aaafc033c6e9809afcb189290c3740157b7ab5596aaa0867e581f08d89807eca`.
+- Current experimental PCB SHA256: `7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401`.
+- Prior connector GND-only PCB aaaf is retained unchanged.
 - Prior two-track GND cleanup c770 is retained unchanged.
 - Prior BUCK cleanup PCB: `aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f`, retained unchanged.
 - Prior four-reference/logo PCB: `2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373`, retained unchanged.
@@ -14,9 +15,15 @@ Open `pcb/experiments/v7-connector-ground-stitch/candidate/pcb/maru60.kicad_pro`
 - Original working branch: `feat/maru60-v7-protection-layout`.
 - This repository starts a separate recovery history. The original Git objects and full historical QA suites are missing, not recreated from summaries.
 
-## Current experimental connector ground stitch
+## Current experimental C124 correction and connector ground stitch
 
-The current working selection adds one ordinary GND via, with strict physical loss limited to its exact drill and all prior signal shadows protected. Fresh corrected material checks, native DRC/ERC/parity and independent cold refill pass. Counts are 9,750 tracks, 919 vias, 382 footprints and 13,176.816253756544 mm. The same 66 warnings and 12 expansion opens remain. All 245 pad-net partitions and 247 original GND roots are preserved. No SI/ESD, active startup, assembly or hardware qualification is implied. See `pcb/experiments/v7-connector-ground-stitch/`.
+The reviewed local 100 Ω dV/dt series resistor, explicit 10 nF capacitor and same-value RN73R R121 package change are combined with the separately committed GND via. Exact circuit/part/geometry, strengthened old support and reference checks pass; independent combined review passes 45 checks with byte-identical cold refill. Counts: 9,750 tracks, 919 vias, 383 footprints, 13,185.28691027245 mm. The same 12 expansion opens remain; other hard DRC, ERC and parity are zero. There are 64 warnings: five old label warnings removed and THREE new source-support endpoint warnings explicitly retained, not waived.
+
+This is an experimental working selection only. The electrical-risk memo recommends it as a next-prototype candidate, not a qualified replacement. Active startup/reset/brownout, repetitive pulse, input-fault envelope, environmental drift, assembly/mechanical and actual signal quality remain unverified. The unknown selected R121 specification is not equated with the earlier unselected TNPW proposal. LED qualification stays OFF. Read `pcb/experiments/v7-c124-series-with-connector-ground/README.md` and its electrical decision brief. Do not fabricate or claim electrical/production readiness from this selection.
+
+## Preserved connector ground stitch
+
+That preceding working selection added one ordinary GND via, with strict physical loss limited to its exact drill and all prior signal shadows protected. Fresh corrected material checks, native DRC/ERC/parity and independent cold refill pass. Counts are 9,750 tracks, 919 vias, 382 footprints and 13,176.816253756544 mm. The same 66 warnings and 12 expansion opens remain. All 245 pad-net partitions and 247 original GND roots are preserved. No SI/ESD, active startup, assembly or hardware qualification is implied. See `pcb/experiments/v7-connector-ground-stitch/`.
 
 ## Preserved two-track GND cleanup
 
@@ -30,7 +37,7 @@ That evidence-only milestone left the then-selected aead board and firmware unch
 
 The preceding working selection removed the degree-one feedback via and 2.85 mm dead arm while preserving the 1.95 mm active path. Fresh full physical connectivity, DRC/parity/ERC and independent review pass the explicit candidate-specific 1 nm coordinate-precision criterion. The original strict global zero-loss result remains FAIL and is preserved separately; exact remote contour changes are bounded by 0.733693794 nm, with critical shadows/contacts/roots and normal clearance rules retained. This criterion does not apply to other candidates.
 
-At that predecessor:9,752 tracks, 918 vias, 382 footprints and 13,178.75473138763 mm track length. The same 12 expansion-GPIO opens remain; warnings are 67, with precisely one removed and none added. There are zero other hard DRC errors, zero ERC violations and zero parity findings. No noise, loop-stability, hardware or manufacturing improvement is inferred. Read `pcb/experiments/v7-buck-feedback-cleanup/README.md` and its unchanged strict, precision and final eligibility evidence. J3/C124 alternatives remain unselected; firmware is unchanged.
+At that predecessor:9,752 tracks, 918 vias, 382 footprints and 13,178.75473138763 mm track length. The same 12 expansion-GPIO opens remain; warnings are 67, with precisely one removed and none added. There are zero other hard DRC errors, zero ERC violations and zero parity findings. No noise, loop-stability, hardware or manufacturing improvement is inferred. Read `pcb/experiments/v7-buck-feedback-cleanup/README.md` and its unchanged strict, precision and final eligibility evidence. Earlier J3/C124 alternatives remain unselected; the later experimental D-based selection is described above, and firmware is unchanged.
 
 ## Preserved metadata/artwork predecessor
 
@@ -48,7 +55,7 @@ Fresh recovery receipts are under the original recovered unit's `qa/recovery-nat
 
 ## Missing work and safe continuation
 
-A reviewed, newly tested LED startup-guard recovery implementation is now active at `pcb/firmware`, with exact copies of its supporting engineering files at `pcb/engineering`. Nineteen of the 22 former fixed overlay files were recovered exactly; three guard source files are explicitly new implementations. The immutable baseline, reviewed candidate, fresh host tests and static V7 mapping are preserved under `pcb/experiments/led-startup-recovery`. Qualification remains OFF. Full pinned QMK/ARM builds and hardware acceptance have not been performed; do not flash or enable qualification. Original C124 rejected-trial packets and later unselected label/C124 studies are also not fully restored. The reviewed four-label/logo predecessor remains preserved; the separate C124 circuit trial remains unselected.
+A reviewed, newly tested LED startup-guard recovery implementation is now active at `pcb/firmware`, with exact copies of its supporting engineering files at `pcb/engineering`. Nineteen of the 22 former fixed overlay files were recovered exactly; three guard source files are explicitly new implementations. The immutable baseline, reviewed candidate, fresh host tests and static V7 mapping are preserved under `pcb/experiments/led-startup-recovery`. Qualification remains OFF. Full pinned QMK/ARM builds and hardware acceptance have not been performed; do not flash or enable qualification. Original C124 rejected-trial packets and later unselected label/C124 studies are also not fully restored. The reviewed four-label/logo predecessor remains preserved; the earlier C124 trials remain unselected; the later D-based experimental selection is described above.
 
 Continue new experiments from the exact selected board in isolated directories, with new source-bound checks and independent review before adoption. Do not weaken clearance, old conductor/reference preservation or qualification gates. Do not push or fabricate from this baseline.
 
@@ -58,4 +65,4 @@ Continue new experiments from the exact selected board in isolated directories, 
 
 `pcb/experiments/v7-c124-short-local-review` preserves the independently reviewed short-local 100 ohm series-resistor trial. Its latest experimental PCB is ec48735f21b813f84873a4dfcd8a984a395f59a6d48d30e5bcfff19aaefe52a7, with accepted four-reference/logo artwork retained. Earlier scoped geometry/positive-contact/reference and carry reviews reported passes: 31 bounded old tracks retired, 21 new tracks, no drill changes, all retained copper and saved zones exact, and unrelated physical net partitions unchanged. Native hard DRC/ERC/parity are zero; 12 expansion opens and 64 warnings remain, including one explicit rooted support-tail warning.
 
-This was evidence integration, not selection of the C124 circuit. The prior 2c7e100a board remains unchanged; the current entrypoint selects the later connector ground stitch described above. Passive models and independently checked component alternatives are included, but active startup/reset/pulse behavior, actual parasitics/coupling, assembly/3D and hardware qualification remain open. See the experiment README for exact source bindings and limitations. No smaller-capacitor alternative or proposed procurement part has been adopted. Later source-bound actual-C review distinguishes positive connectivity from full original-support preservation and finds four inherited signal-support deficits, alongside the manufacturer occupied-envelope conflict; C124 remains unselected. Those separate trials and repair plans do not modify this selected PCB.
+This was evidence integration, not selection of the C124 circuit. The prior 2c7e100a board remains unchanged; the current entrypoint selects the later D-based combination described above. Passive models and independently checked component alternatives are included, but active startup/reset/pulse behavior, actual parasitics/coupling, assembly/3D and hardware qualification remain open. See the experiment README for exact source bindings and limitations. At that earlier checkpoint, no smaller-capacitor alternative or proposed procurement part had been adopted. Later source-bound actual-C review distinguishes positive connectivity from full original-support preservation and finds four inherited signal-support deficits, alongside the manufacturer occupied-envelope conflict; That actual-C trial remains unselected. The independently repaired D successor is separately selected for experimental development above.

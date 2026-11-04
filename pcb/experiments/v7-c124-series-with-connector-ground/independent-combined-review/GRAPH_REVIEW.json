@@ -1,0 +1,191 @@
+{
+  "checks": [
+    {
+      "check": "actual_R2_hash_source_binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pad_inventory_exact",
+      "pass": true,
+      "detail": {
+        "ordered_equal": true
+      }
+    },
+    {
+      "check": "pad_partitions_by_net_exact",
+      "pass": true,
+      "detail": {
+        "ordered_equal": true
+      }
+    },
+    {
+      "check": "direct_edges_exact",
+      "pass": true,
+      "detail": {
+        "ordered_equal": false
+      }
+    },
+    {
+      "check": "raw_unguarded_direct_edges_exact",
+      "pass": true,
+      "detail": {
+        "ordered_equal": false
+      }
+    },
+    {
+      "check": "native_pairs_without_guarded_positive_copper_exact",
+      "pass": true,
+      "detail": {
+        "ordered_equal": true
+      }
+    },
+    {
+      "check": "guard_failing_material_edges_exact",
+      "pass": true,
+      "detail": {
+        "ordered_equal": true
+      }
+    },
+    {
+      "check": "empty_object_layers_exact",
+      "pass": true,
+      "detail": {
+        "ordered_equal": true
+      }
+    },
+    {
+      "check": "multiple_component_object_layers_exact",
+      "pass": true,
+      "detail": {
+        "ordered_equal": true
+      }
+    },
+    {
+      "check": "NPTH_material_exact",
+      "pass": true,
+      "detail": {
+        "ordered_equal": true
+      }
+    },
+    {
+      "check": "four_new_material_nodes_only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "only_two_expected_inner_zone_area_changes",
+      "pass": true,
+      "detail": [
+        "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+        "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0"
+      ]
+    },
+    {
+      "check": "all_retained_material_edges_exact",
+      "pass": true,
+      "detail": 22512
+    },
+    {
+      "check": "exactly_two_new_guarded_plane_contacts",
+      "pass": true,
+      "detail": [
+        [
+          "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+          "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+          0.147260768066,
+          0.1472558792225
+        ],
+        [
+          "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+          "object:cda2df4b-6411-5409-a933-5106751244d8:6:0",
+          0.147260768066,
+          0.1472558792225
+        ]
+      ]
+    },
+    {
+      "check": "all_old_barrels_exact",
+      "pass": true,
+      "detail": 934
+    },
+    {
+      "check": "exactly_one_intact_four_layer_new_barrel",
+      "pass": true,
+      "detail": [
+        {
+          "uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+          "type": "PCB_VIA",
+          "nodes": [
+            "object:cda2df4b-6411-5409-a933-5106751244d8:0:0",
+            "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+            "object:cda2df4b-6411-5409-a933-5106751244d8:6:0",
+            "object:cda2df4b-6411-5409-a933-5106751244d8:2:0"
+          ],
+          "proof": "through span asserted; one positive annulus per copper layer; centered circular via or exact convex PTH hole enclosure proved; all-hole material has exact normalized native coordinate contour equality to own annulus; no foreign drill severs annulus"
+        }
+      ]
+    },
+    {
+      "check": "full_DSU_rebuilt_roots_and_all_old_roots_exact",
+      "pass": true,
+      "detail": {
+        "old_nodes": 14687,
+        "source_components": 383,
+        "candidate_components": 383
+      }
+    },
+    {
+      "check": "all_existing_object_roots_exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all_247_GND_pad_roots_exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "new_via_joins_same_J1_GND_root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all_12_native_open_component_pairs_exact",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "source_graph_sha256": "2d4b25e398e2d635de747a696dd263ef1f83b638001a4beec4932583b1e4f98a",
+  "candidate_graph_sha256": "304954c5b4195c28bcea68ef950625584efd557fd3475430c1245c0078ff877c",
+  "candidate_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "source_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+  "new_edges": [
+    [
+      "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+      0.147260768066,
+      0.1472558792225
+    ],
+    [
+      "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:6:0",
+      0.147260768066,
+      0.1472558792225
+    ]
+  ],
+  "new_barrel": [
+    {
+      "uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+      "type": "PCB_VIA",
+      "nodes": [
+        "object:cda2df4b-6411-5409-a933-5106751244d8:0:0",
+        "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+        "object:cda2df4b-6411-5409-a933-5106751244d8:6:0",
+        "object:cda2df4b-6411-5409-a933-5106751244d8:2:0"
+      ],
+      "proof": "through span asserted; one positive annulus per copper layer; centered circular via or exact convex PTH hole enclosure proved; all-hole material has exact normalized native coordinate contour equality to own annulus; no foreign drill severs annulus"
+    }
+  ],
+  "strict_zone_area_basis": "Floating graph metadata changes only two expected zone area fields. Exact physical loss is verified independently by native contour equality in GEOMETRY_INHERITANCE.json, not by a rounded-area tolerance."
+}

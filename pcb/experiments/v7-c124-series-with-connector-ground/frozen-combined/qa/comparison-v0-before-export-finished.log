@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/tmp/v7-c124-d-plus-connector-gnd/scripts/compare_material.py", line 4, in <module>
+    a=json.loads(A.read_text());b=json.loads(B.read_text());assert a['board_sha256']=='f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b';assert b['board_sha256']=='7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401'
+                                             ^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/v7-c124-d-plus-connector-gnd/qa/material-graph.json'

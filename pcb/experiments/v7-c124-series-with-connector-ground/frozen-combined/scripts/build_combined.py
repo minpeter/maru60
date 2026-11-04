@@ -1,0 +1,14 @@
+from pathlib import Path
+import json,hashlib,shutil,re
+R=Path('/tmp/v7-c124-d-plus-connector-gnd');SRC=Path('/tmp/v7-c124-d-actual/filled/pcb');H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();expected='f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b';assert H(SRC/'maru60.kicad_pcb')==expected
+GC=Path('/workspace/scratch/edd9a5be63e7/v7-connector-ground-contract-c770/CONSTRUCTION_CONTRACT.json');GA=Path('/workspace/scratch/edd9a5be63e7/v7-connector-ground-actual-aaaf/FINAL_ELIGIBILITY.json');assert H(GC)=='c58baac31c087ddd115fb5ccbe7953ced52d8469c0efe675b2184ea00ff7d7a5';assert H(GA)=='27c41ca26cfa052bbb2f7c983152d285c584299d8dff5f40d4a3fced05d58d69'
+gb=json.loads(Path('/tmp/v7-connector-gnd-stitch-c770/BUILD_CONTRACT.json').read_text());raw=(SRC/'maru60.kicad_pcb').read_text();net=set(re.findall(r'\(net (\d+) "GND"\)',raw));assert len(net)==1;code=int(next(iter(net)));node=re.sub(r'\(net \d+\)',f'(net {code})',gb['new_raw_record']);assert gb['new_via']['uuid'] not in raw
+assert not (R/'source').exists()
+for stage in ['source','prefill']:shutil.copytree(SRC,R/stage/'pcb')
+pt=raw.rfind(')');(R/'prefill/pcb/maru60.kicad_pcb').write_text(raw[:pt]+'\t'+node+'\n'+raw[pt:]);shutil.copytree(R/'prefill/pcb',R/'filled/pcb')
+for p,n in [(GC,'GND_CONSTRUCTION_CONTRACT.json'),(GA,'GND_FINAL_ELIGIBILITY.json'),(Path('/tmp/v7-connector-gnd-stitch-c770/BUILD_CONTRACT.json'),'GND_BUILD_CONTRACT.json'),(Path('/tmp/v7-c124-d-actual/BUILD_CONTRACT.json'),'D_BUILD_CONTRACT.json'),(Path('/tmp/v7-c124-d-actual/STATUS.json'),'D_STATUS.json'),(Path('/tmp/v7-c124-d-actual/qa/actual-material-graph.json'),'D_material_graph.json')]:shutil.copy2(p,R/'inputs'/n)
+ct={'status':'UNSELECTED D plus one approved-geometry connector GND via; no adoption','source_sha256':expected,'prefill_sha256':H(R/'prefill/pcb/maru60.kicad_pcb'),'source_D_contract_sha256':H(R/'inputs/D_BUILD_CONTRACT.json'),'via_contract_sha256':H(GC),'via_actual_eligibility_sha256':H(GA),'new_via':gb['new_via'],'actual_source_GND_net_code':code,'new_raw_record':node,'retired_objects':[],'changed_old_objects':[],'unchanged_companions':57,'qualification':False}
+(R/'BUILD_CONTRACT.json').write_text(json.dumps(ct,indent=2)+'\n')
+for stage in ['source','prefill']:
+ m={str(p.relative_to(R/stage/'pcb')):{'bytes':p.stat().st_size,'sha256':H(p)}for p in sorted((R/stage/'pcb').rglob('*'))if p.is_file()};assert len(m)==58;(R/(stage.upper()+'_TREE_MANIFEST.json')).write_text(json.dumps(m,indent=2)+'\n')
+print(json.dumps(ct,indent=2))
