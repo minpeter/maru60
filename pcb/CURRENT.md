@@ -1,19 +1,19 @@
 # Current V7 recovery selection
 
-Selected CAD: `experiments/v7-buck-feedback-cleanup/candidate/pcb/maru60.kicad_pcb`.
-SHA256: `aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f`.
+Selected CAD:`experiments/v7-gnd-deadbranch-cleanup/candidate/pcb/maru60.kicad_pcb`.
+SHA256:`c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a`.
 
-The degree-one BUCK_FB via and 2.85 mm unused arm are removed, preserving the 1.95 mm active feedback section and all three feedback pads. The previous 2c7 four-label/logo project remains unchanged.
+Exactly two unused F.Cu GND tracks totaling1.938477631mm are removed. The existing boundary via, every one of1,269drills and all12serialized zone records are unchanged. No component/BOM, circuit, firmware, clearance or rule change.
 
-Verified: 12 unchanged expansion-GPIO opens, zero critical source opens, 67 warnings (one removed, none added), zero other hard DRC errors, ERC zero and parity zero. Tracks 9,752; vias 918; footprints 382; summed track length 13,178.75473138763 mm. All 245 pad partitions, 731 plane contacts and 247 rooted GND pads remain exact.
+Verified:12unchanged expansion-GPIO opens, zero critical source opens,66warnings(one removed,noneadded), zero other hard DRC errors,ERC0,parity0. Tracks9,750;vias918;footprints382;summed track length13,176.816253756544mm. Fresh correctedR2 and independent review preserve all245pad-net partitions,247original ground returns,934barrel proofs and every retained material/zone contact witness. All51existing guard failures remain explicit. Normal cold refill reproduces the exact board.
 
-The original strict zero-global-plane-loss check remains FAIL. Selection explicitly uses the independently reviewed candidate-specific bilateral 1 nm contour-precision criterion, with a proven 0.733693794 nm upper bound and unchanged critical reference/contact/root and normal clearance checks. It is not a generic epsilon waiver or electrical/manufacturing qualification. Full reasons, original failures, controls and final fresh native checks are preserved in this unit.
+The current aead-to-c770 transition passes strict plane preservation with zero saved-zone difference and no tolerance exception. Historical BUCK predecessor aead and its original strict failure/candidate-specific1nm condition remain unchanged; this does not retroactively change that earlier result. All previous sources and evidence are preserved.
 
-The J3 and C124 circuit trials remain unselected. No noise, pickup or loop-stability benefit is claimed.
+No HF-ground, noise,PDN,SI,EMC,thermal,stability,assembly or hardware improvement is inferred. F.Cu ground foil is intentionally reduced; only the bounded nominal topology/reference claims above are established. C128,+4Vstub,J3,C124 alternatives remain unselected. See the current unit's adoption receipt and complete92-warning history(26resolved,66remaining).
 
 ## Corrected current physical evidence
 
-`experiments/v7-material-contact-correction/` supersedes the old global contact/support-area measurements. The exact reviewed R2 implementation is active at `tools/export_material_graph.py`. Five fresh material rechecks and exact positive-interior certificates for all 22,531 accepted selected-board contacts preserve the current 245-net pad connectivity. Microscopic unproved contacts remain excluded. No CAD/firmware change, new experiment adoption or hardware qualification accompanies this correction. Original evidence and separate failed plane/reference gates remain intact.
+The exact reviewed material checker remains `tools/export_material_graph.py`. `experiments/v7-material-contact-correction/` preserves the original error correction, five source-bound rechecks and exact positive-interior certificates for the aead baseline. The new current unit independently verifies its two-track successor; no old contact-area shortcut is reinstated. This is bounded nominal connectivity evidence, not manufacturing or hardware qualification.
 
 ## Active recovery firmware
 

@@ -1,0 +1,31 @@
+{
+  "source_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "candidate_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "source_drc_sha256": "9031bae4837fc39491c8de305e9d057f8286ceaf1e0b1fc89cc434298c6c5df7",
+  "candidate_drc_sha256": "d36d991b59314ab4e1aa50babdbd77f7bffd0b342d0f73f0bc254e36c490dfbf",
+  "native_counts": {
+    "warnings": 66,
+    "hard_errors": 0,
+    "opens": 12,
+    "schematic_parity": 0,
+    "erc": 0
+  },
+  "only_removed_warning": {
+    "description": "Track has unconnected end",
+    "items": [
+      {
+        "description": "Track [GND] on F.Cu, length 0.1000 mm",
+        "pos": {
+          "x": 133.4,
+          "y": 77.45
+        },
+        "uuid": "68f95f8e-16e1-430a-a0b2-1c1d51d16fde"
+      }
+    ],
+    "severity": "warning",
+    "type": "track_dangling"
+  },
+  "added_warnings": [],
+  "raw_open_rows_equal": true,
+  "semantic_open_pair_review": "Pending fresh R2"
+}
