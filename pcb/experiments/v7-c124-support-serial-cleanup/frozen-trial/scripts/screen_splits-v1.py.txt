@@ -1,0 +1,25 @@
+from pathlib import Path
+import pcbnew as p,json,hashlib,uuid
+R=Path('/tmp/v7-support-endpoint-trial');BP=Path('/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-c124-series-with-connector-ground/candidate/pcb/maru60.kicad_pcb');H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();sha=H(BP);assert sha=='7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401';b=p.LoadBoard(str(BP));b.BuildConnectivity();cn=b.GetConnectivity();idx={q.m_Uuid.AsString():q for q in b.GetTracks()}
+plans=[('f58bc791-8a08-55a5-ada7-19575bcd7e75','abcd4fb1-881b-43f9-906e-39d93366692e',[14.54,17.435]),('cc1282fe-f0b3-5fea-9d45-66eea8068d66','ae94ea04-2d21-5f84-8952-7f8960275e00',[20.06625,20.9975]),('d4be2091-cd02-51f1-b2e5-0505e7ec1e8a','f41eeb49-8180-5bac-bccf-c1a0b3b4c547',[14.09,16.42])]
+def poly(q,out=False):
+ r=p.SHAPE_POLY_SET();q.GetEffectiveShape(p.B_Cu).TransformToPolygon(r,1,p.ERROR_OUTSIDE if out else p.ERROR_INSIDE);r.Simplify();return r
+def delta(a,z):
+ l=p.SHAPE_POLY_SET(a);l.BooleanSubtract(z);g=p.SHAPE_POLY_SET(z);g.BooleanSubtract(a);return {'loss_nm2':l.Area(),'gain_nm2':g.Area(),'loss_contours':l.OutlineCount(),'gain_contours':g.OutlineCount()}
+print('METHOD',cn.TestTrackEndpointDangling.__doc__,flush=True)
+rows=[];original={}
+for supp,main,xy in plans:
+ q=idx[main];support=idx[supp];st=q.GetStart();end=q.GetEnd();m=p.VECTOR2I(round(xy[0]*1e6),round(xy[1]*1e6));assert (end.x-st.x)*(m.y-st.y)==(end.y-st.y)*(m.x-st.x)
+ olds={str(out):poly(q,out)for out in[False,True]};oldunion={str(out):poly(q,out)for out in[False,True]}
+ for out in[False,True]:oldunion[str(out)].BooleanAdd(poly(support,out))
+ olddang=cn.TestTrackEndpointDangling(support,True)
+ n=p.PCB_TRACK(b);n.SetStart(m);n.SetEnd(end);n.SetWidth(q.GetWidth());n.SetLayer(q.GetLayer());n.SetNetCode(q.GetNetCode());n.m_Uuid=p.KIID(str(uuid.uuid5(uuid.NAMESPACE_URL,'v7-support-endpoint-split/'+main)));q.SetEnd(m);b.Add(n)
+ r={'support_uuid':supp,'split_main_uuid':main,'split_xy_mm':xy,'new_tail_uuid':n.m_Uuid.AsString(),'original_start_mm':[st.x/1e6,st.y/1e6],'original_end_mm':[end.x/1e6,end.y/1e6],'width_mm':q.GetWidth()/1e6,'net':q.GetNetname(),'native_dangling_before':olddang,'collinear_integer_cross_product':0,'material':{}}
+ for out in[False,True]:
+  now=poly(q,out);now.BooleanAdd(poly(n,out));trackdelta=delta(olds[str(out)],now);now.BooleanAdd(poly(support,out));r['material'][str(out)]={'single_track_split_union':trackdelta,'including_unchanged_support':delta(oldunion[str(out)],now)}
+ rows.append(r)
+b.BuildConnectivity();cn=b.GetConnectivity()
+for r in rows:
+ r['native_dangling_after']=cn.TestTrackEndpointDangling(idx[r['support_uuid']],True);r['main_dangling_after']=cn.TestTrackEndpointDangling(idx[r['split_main_uuid']],True);r['tail_dangling_after']=cn.TestTrackEndpointDangling(next(q for q in b.GetTracks()if q.m_Uuid.AsString()==r['new_tail_uuid']),True)
+assert H(BP)==sha
+res={'source_sha256':sha,'status':'Read-only in-memory split screen; no PCB saved','plans':rows,'source_unchanged':True};(R/'qa/readonly-split-screen.json').write_text(json.dumps(res,indent=2)+'\n');print(json.dumps(res,indent=2))

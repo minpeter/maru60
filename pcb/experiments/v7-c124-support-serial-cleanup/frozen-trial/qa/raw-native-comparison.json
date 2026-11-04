@@ -1,0 +1,69 @@
+{
+  "status": "PASS bounded three-track endpoint delta",
+  "source_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "actual_sha256": "abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d",
+  "exact_changed_UUIDs": [
+    "abcd4fb1-881b-43f9-906e-39d93366692e",
+    "ae94ea04-2d21-5f84-8952-7f8960275e00",
+    "f41eeb49-8180-5bac-bccf-c1a0b3b4c547"
+  ],
+  "all_other_top_level_raw_objects_exact": true,
+  "all12_raw_zone_records_exact": true,
+  "all_original_holes_vias_footprints_exact": true,
+  "all57_companions_exact": true,
+  "native_warnings_before": 64,
+  "native_warnings_after": 61,
+  "removed_warnings": [
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [GND] on B.Cu, length 0.5909 mm",
+          "pos": {
+            "x": 14.0,
+            "y": 17.675
+          },
+          "uuid": "f58bc791-8a08-55a5-ada7-19575bcd7e75"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    },
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [USB_OVLO] on B.Cu, length 0.1047 mm",
+          "pos": {
+            "x": 20.175,
+            "y": 21.0
+          },
+          "uuid": "cc1282fe-f0b3-5fea-9d45-66eea8068d66"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    },
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [USB_UVLO] on B.Cu, length 0.1414 mm",
+          "pos": {
+            "x": 14.2,
+            "y": 16.35
+          },
+          "uuid": "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    }
+  ],
+  "added_warnings": [],
+  "raw12opens_exact": true,
+  "hard_DRC": 0,
+  "parity": 0,
+  "same_net_union_delta_is_not_claimed_zero": true,
+  "old_reference_invariance": "All actual saved zone records and all physical drill objects are byte-identical to 7882, so physical plane material and every old reference projection are pointwise unchanged, including retired historical shadows."
+}

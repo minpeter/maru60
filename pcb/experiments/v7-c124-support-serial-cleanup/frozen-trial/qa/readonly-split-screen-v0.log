@@ -1,0 +1,5 @@
+METHOD TestTrackEndpointDangling(CONNECTIVITY_DATA self, PCB_TRACK aTrack, bool aIgnoreTracksInPads, VECTOR2I aPos=None) -> bool
+Traceback (most recent call last):
+  File "/tmp/v7-support-endpoint-trial/scripts/screen_splits.py", line 15, in <module>
+    olddang=cn.TestTrackEndpointDangling(support)
+TypeError: CONNECTIVITY_DATA.TestTrackEndpointDangling() missing 1 required positional argument: 'aIgnoreTracksInPads'

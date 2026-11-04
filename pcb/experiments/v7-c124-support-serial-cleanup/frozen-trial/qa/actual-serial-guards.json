@@ -1,0 +1,489 @@
+{
+  "status": "Actual saved serial-route guard result with explicit 7882 comparison baseline; source/actual fields clarified without changing geometry calculations",
+  "plans": [
+    {
+      "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "net": "GND",
+      "which": "start",
+      "point": [
+        14.54,
+        17.435
+      ],
+      "support_uuid": "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+      "new_start": [
+        14.54,
+        17.435
+      ],
+      "new_end": [
+        14.9,
+        17.275
+      ],
+      "new_length_mm": 0.39395431207184417,
+      "native_support_dangling_after": false,
+      "native_main_dangling_after": false,
+      "same_net_union_old_minus_new": {
+        "area_mm2": 5.3943e-08,
+        "contours": 2
+      },
+      "same_net_union_new_minus_old": {
+        "area_mm2": 2.814105e-07,
+        "contours": 1
+      },
+      "loaded_actual_start": [
+        14.54,
+        17.435
+      ],
+      "loaded_actual_end": [
+        14.9,
+        17.275
+      ],
+      "loaded_actual_length_mm": 0.39395431207184417,
+      "original_source_start": [
+        14.0,
+        17.675
+      ],
+      "original_source_end": [
+        14.9,
+        17.275
+      ],
+      "original_source_length_mm": 0.9848857801796105,
+      "loaded_native_support_dangling": false
+    },
+    {
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "net": "USB_OVLO",
+      "which": "end",
+      "point": [
+        20.0725,
+        20.9785
+      ],
+      "support_uuid": "cc1282fe-f0b3-5fea-9d45-66eea8068d66",
+      "new_start": [
+        18.0,
+        20.95
+      ],
+      "new_end": [
+        20.0725,
+        20.9785
+      ],
+      "new_length_mm": 2.0726959497234514,
+      "native_support_dangling_after": false,
+      "native_main_dangling_after": false,
+      "same_net_union_old_minus_new": {
+        "area_mm2": 0.020167169438,
+        "contours": 19
+      },
+      "same_net_union_new_minus_old": {
+        "area_mm2": 0.018984262772,
+        "contours": 24
+      },
+      "loaded_actual_start": [
+        18.0,
+        20.95
+      ],
+      "loaded_actual_end": [
+        20.0725,
+        20.9785
+      ],
+      "loaded_actual_length_mm": 2.0726959497234514,
+      "original_source_start": [
+        18.0,
+        20.95
+      ],
+      "original_source_end": [
+        20.175,
+        21.0
+      ],
+      "original_source_length_mm": 2.175574636733937,
+      "loaded_native_support_dangling": false
+    },
+    {
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "net": "USB_UVLO",
+      "which": "start",
+      "point": [
+        14.1,
+        16.45
+      ],
+      "support_uuid": "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a",
+      "new_start": [
+        14.1,
+        16.45
+      ],
+      "new_end": [
+        13.1,
+        17.05
+      ],
+      "new_length_mm": 1.16619037896906,
+      "native_support_dangling_after": false,
+      "native_main_dangling_after": false,
+      "same_net_union_old_minus_new": {
+        "area_mm2": 0.019024172307,
+        "contours": 13
+      },
+      "same_net_union_new_minus_old": {
+        "area_mm2": 0.016339260869,
+        "contours": 31
+      },
+      "loaded_actual_start": [
+        14.1,
+        16.45
+      ],
+      "loaded_actual_end": [
+        13.1,
+        17.05
+      ],
+      "loaded_actual_length_mm": 1.16619037896906,
+      "original_source_start": [
+        14.2,
+        16.35
+      ],
+      "original_source_end": [
+        13.1,
+        17.05
+      ],
+      "original_source_length_mm": 1.3038404810405297,
+      "loaded_native_support_dangling": false
+    }
+  ],
+  "clearance": [
+    {
+      "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "nearest_foreign": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.578883
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.753883
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.827654
+        }
+      ],
+      "nearest_terminals": [
+        {
+          "ref": "R121",
+          "pad": "1",
+          "gap_mm": 1.21561
+        },
+        {
+          "ref": "C124",
+          "pad": "1",
+          "gap_mm": 1.446882
+        },
+        {
+          "ref": "R125",
+          "pad": "2",
+          "gap_mm": 2.55584
+        }
+      ]
+    },
+    {
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "nearest_foreign": [
+        {
+          "uuid": "8dc4f020-c585-43de-bdee-f0f67f5cbf01",
+          "net": "USB_UVLO",
+          "gap_mm": 0.409016
+        },
+        {
+          "uuid": "dd3804f3-148a-4cf9-906e-00f43ccbd9a0",
+          "net": "USB_UVLO",
+          "gap_mm": 0.409016
+        },
+        {
+          "uuid": "d0f88a07-a621-42a2-80df-40a923fad313",
+          "net": "USB_UVLO",
+          "gap_mm": 0.415685
+        }
+      ],
+      "nearest_terminals": [
+        {
+          "ref": "R125",
+          "pad": "1",
+          "gap_mm": 1.907193
+        },
+        {
+          "ref": "C124",
+          "pad": "2",
+          "gap_mm": 2.405384
+        },
+        {
+          "ref": "R125",
+          "pad": "2",
+          "gap_mm": 2.631362
+        }
+      ]
+    },
+    {
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "nearest_foreign": [
+        {
+          "uuid": "5cd30845-f09e-4ecf-9e5d-f0638932fe94",
+          "net": "COL0",
+          "gap_mm": 0.193392
+        },
+        {
+          "uuid": "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+          "net": "GND",
+          "gap_mm": 0.818979
+        },
+        {
+          "uuid": "66453383-04ef-5371-8252-4d0004d7a05d",
+          "net": "GND",
+          "gap_mm": 0.823979
+        }
+      ],
+      "nearest_terminals": [
+        {
+          "ref": "R121",
+          "pad": "2",
+          "gap_mm": 0.883943
+        },
+        {
+          "ref": "R121",
+          "pad": "1",
+          "gap_mm": 1.550996
+        },
+        {
+          "ref": "C124",
+          "pad": "1",
+          "gap_mm": 2.327933
+        }
+      ]
+    }
+  ],
+  "all14_original_strong_supports": [
+    {
+      "old": "f79380d7-c89c-4396-b53e-4918d8902c13",
+      "target": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "net": "GND",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "f79380d7-c89c-4396-b53e-4918d8902c13",
+      "target": "19181a2b-164e-4055-9004-2860bebe32f4",
+      "net": "GND",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "437d8abf-8e4f-4587-99b7-93c610dd4000",
+      "target": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "net": "GND",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+      "target": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+      "net": "USB_DVDT",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+      "target": "e07df864-b2ae-41c6-8b80-01729167b27e",
+      "net": "USB_DVDT",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+      "target": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+      "net": "USB_DVDT",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "eb147f3b-fbe7-5ff5-a09d-d36fa376b92f",
+      "target": "e218cfe4-e4ba-5b6c-985d-8f1da39a4402",
+      "net": "USB_OVLO",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "target": "751dcade-77aa-4c93-aab3-170f1229e0e4",
+      "net": "USB_UVLO",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "target": "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed",
+      "net": "USB_UVLO",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "a44d4a9f-aa40-4d02-9ed7-16774fbe4849",
+      "target": "7d18b97e-b287-4393-8a28-411c96dcc305",
+      "net": "USB_UVLO",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "bf30ad55-1b9f-467f-8fef-7ac60c4f920d",
+      "target": "7d18b97e-b287-4393-8a28-411c96dcc305",
+      "net": "USB_UVLO",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "a44d4a9f-aa40-4d02-9ed7-16774fbe4849",
+      "target": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+      "net": "USB_UVLO",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "a44d4a9f-aa40-4d02-9ed7-16774fbe4849",
+      "target": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+      "net": "USB_UVLO",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "old": "d0e90a39-e58b-5cb7-8db8-b7abb248673b",
+      "target": "9f71c7e9-1999-5d93-bca7-92de689f89aa",
+      "net": "USB_OVLO",
+      "exact": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "strong": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    }
+  ],
+  "new_outward2nm_reference": [
+    {
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "plane": "In1.Cu",
+      "area_mm2": 0.0,
+      "contours": 0
+    },
+    {
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "plane": "In2.Cu",
+      "area_mm2": 0.0,
+      "contours": 0
+    },
+    {
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "plane": "In1.Cu",
+      "area_mm2": 0.0,
+      "contours": 0
+    },
+    {
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "plane": "In2.Cu",
+      "area_mm2": 0.0,
+      "contours": 0
+    }
+  ],
+  "failures": {
+    "dangling": [],
+    "clearance": [],
+    "support": [],
+    "reference": []
+  },
+  "no_extra_objects_or_drills": true,
+  "source_unchanged": true,
+  "actual_sha256": "abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d",
+  "comparison_baseline_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "cached_baseline_local_material": {
+    "path": "/tmp/v7-c124-d-actual/qa/actual-local-material.json",
+    "sha256": "9e132b07e2c56eb80e7687a2a06e7b0bf292b53f83fe55babdcf82a2dbd63fa7",
+    "original_board_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+    "current_7882_equivalence": "7882 differs only by the connector via at (17.2,9.9). Its drill does not intersect any cached local object; combined strict material review proved all original object material nodes exact. Thus local old track/pad material equals 7882. No cached plane is used for the current reference tests."
+  },
+  "reference_plane_input": "Actual saved abdb native zones, with every actual through drill (including connector via) subtracted in this run."
+}

@@ -2,9 +2,10 @@
 
 This isolated recovery repository preserves the exact selected PCB after the execution workspace was replaced. It does not invent or restore the lost Git history.
 
-Open `pcb/experiments/v7-c124-series-with-connector-ground/candidate/pcb/maru60.kicad_pro`.
+Open `pcb/experiments/v7-c124-support-serial-cleanup/candidate/pcb/maru60.kicad_pro`.
 
-- Current experimental PCB SHA256: `7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401`.
+- Current experimental PCB SHA256: `abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d`.
+- Prior C124-plus-GND PCB7882 is retained unchanged.
 - Prior connector GND-only PCB aaaf is retained unchanged.
 - Prior two-track GND cleanup c770 is retained unchanged.
 - Prior BUCK cleanup PCB: `aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f`, retained unchanged.
@@ -15,7 +16,11 @@ Open `pcb/experiments/v7-c124-series-with-connector-ground/candidate/pcb/maru60.
 - Original working branch: `feat/maru60-v7-protection-layout`.
 - This repository starts a separate recovery history. The original Git objects and full historical QA suites are missing, not recreated from summaries.
 
-## Current experimental C124 correction and connector ground stitch
+## Current experimental source-support cleanup
+
+Three main endpoints now use their retained support segments as real serial legs. Independent native/contact/reference checks and cold refill pass without relaxing any rule. Warnings64→61, same12 opens, other hard DRC/ERC/parity0. Inventory:9,750 tracks,919 vias,383 footprints,13,184.45545001526mm. Actual small copper-shape changes are recorded; no impedance or stability gain is inferred. All prior C124/GND and hardware limits remain. Read `pcb/experiments/v7-c124-support-serial-cleanup/README.md`.
+
+## Preserved experimental C124 correction and connector ground stitch
 
 The reviewed local 100 Ω dV/dt series resistor, explicit 10 nF capacitor and same-value RN73R R121 package change are combined with the separately committed GND via. Exact circuit/part/geometry, strengthened old support and reference checks pass; independent combined review passes 45 checks with byte-identical cold refill. Counts: 9,750 tracks, 919 vias, 383 footprints, 13,185.28691027245 mm. The same 12 expansion opens remain; other hard DRC, ERC and parity are zero. There are 64 warnings: five old label warnings removed and THREE new source-support endpoint warnings explicitly retained, not waived.
 
