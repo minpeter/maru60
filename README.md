@@ -375,10 +375,11 @@ the stock plate is assumed to match the DWG; the outer corner radius is not
 measured. Clearance to the plate (0.30 mm per side) and keycaps (0.32 mm)
 tolerates up to about 0.2% print shrinkage.
 
-The USB notch is 14.75 mm wide and moves with `--board`. A plug body up to
-the USB-C maximum of 12.35 mm clears 1.2 mm per side, a ~13 mm retail plug
+The USB notch is 14.75 mm wide and moves with `--board`. A 12.35 mm-wide
+plug-body gauge clears 1.2 mm per side, a ~13 mm retail plug
 0.875 mm; the stock 12.8 mm notch (`top.usb_notch_cable_width` = 12.8) left
-0.22 mm and did not take the 13 mm plug.
+0.22 mm and did not take the 13 mm plug. Cable overmolds do not have a single
+standard maximum; these are gauges, not a guarantee for every USB-C cable.
 
 ## Maru60 HHKB bottom case (draft)
 
@@ -405,7 +406,7 @@ from the parts it mates with; the photos set the layout.
 | 140 × 45 mm R2 battery bay, 4.69 mm deep, back centre | Length, width, radius: INKC post (which gives 4.5 deep); depth: owner's caliper on the stock bay; position from the owner's photos. The 4.5 mm filler rests on the bay floor, 0.19 mm under the cavity floor |
 | Steel weight plate recess, 2.3 mm deep (the 3 mm plate stands 0.7 mm proud, 1.3 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. The plate's centre bump lies over the front of the bay: 2.3 mm leaves 1.03 mm of floor between them, 2.5 mm would leave 0.83 and a flush 3.0 mm recess 0.33 |
 | Four weight-plate screws from inside, as on the stock case: Ø3.0 holes through the recess roof, Ø5.4 counterbores from the cavity floor leaving 2.5 mm of floor under each head. Two per plate end, 8.8 / 38.9 mm in from the end and 4.8 / 24.7 mm from the straight back edge; two in each half | The stock plate's blind tapped holes, read off the owner's inside photo (IMG_0474) on the plate outline, ±0.5 mm; the holes float 0.5 mm per side. M2 × 4 goes 1.5 mm into the plate and stops 1.5 mm short of its outer face; the head sits 2.3–4.4 mm below the cavity floor |
-| USB-C slot | Same centre and width as the top-case notch (`--board`), 14.75 mm. At that width the rail between the slot and the back-left cap recess would be a 0.14 mm fin, so the slot opens into the recess down to its floor |
+| USB-C slot | Same centre and 14.75 mm straight width as the top-case notch (`--board`). The lower roof is **flush with the surrounding rim** at Zp 9.69–11.90 (2.21 thick); its upper arch corners are R1.5. Both cases have matching **R0.5 free lip ends** and the passage stays open underneath, requiring print support. The inner floor has a **shallow bounded 20 × 13 mm R2 pocket, depth 0.50**, followed by a 1.0 mm raised end before the separate outer recess. The outer floor remains at Zp 21.08 with at least 0.8 mm skin; its **2.88 mm step is retained, not proven structurally necessary**. Zp increases downward. These are trial design values, not stock-part measurements. The 0.14 mm fin beside the back-left cap recess is removed down to its floor |
 | ㄴㄱ split: the seam runs through the back-right catch (53.75 mm right of centre), crosses the floor 37.3 mm behind the front rail face, and leaves through the front-left catch (52.73 mm left of centre) | Owner. Both seam catches bridge it with one M2 screw in each half; the other two stay in one half. Staggered against the top-case seams |
 | Hybrid joint: five line-to-line dovetails (three across the floor, one on each leg) that slide together normal to the desk face and lock both in-plane directions, plus the two seam catches, glue and the weight plate | Top-case joint profile (5.2/6.6 mm half widths, 6.0 mm projection). Where the back leg runs under the battery bay and weight-plate recess the floor is only 1.6–4.6 mm, so that stretch is a straight glued butt; the weight plate spans it, screwed to each half with two of its four screws |
 
@@ -421,8 +422,10 @@ flush with the rim top, the balls would sit below the tongue tip.
 | [Left half — 3MF](models/maru60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot, back-left catch. 206 × 112 mm, 3 h 37 min / 71 g |
 | [Right half — 3MF](models/maru60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 52 min / 56 g |
 
-Print desk face down, no supports or brim; owner's top-case settings
-(Bambu Studio CLI estimates above). Print the joint test first: the two
+Print desk face down, **with support under the USB bridge** on the left half.
+The 3MF is geometry only: enable support in the slicer and check removal access
+through the USB opening and open underside. Estimates above predate this bridge
+and its support; they have not been re-sliced. Print the joint test first: the two
 pieces should press together by hand along the desk-face normal and not move
 sideways. Join the halves with glue in the seam and screw the two seam catches
 across it. Lay the steel weight plate in its recess and screw it on from inside
@@ -455,6 +458,21 @@ path, over 40 mm³ of collision for any 0.3 mm sideways shift, and one screw
 per half in each seam catch), and 0.20 mm layers without islands or
 undeclared overhangs.
 The [report](evidence/bottomcase-report.json) lists every level and position.
+
+Separate checks require the exported lower USB bridge to exist, the passage
+below it to stay open, the shallow inner pocket and raised end to remain,
+both cases' R0.5 lip ends to match, the outer recessed floor to retain at least
+0.8 mm of skin, and the 12.35 × 6.5 mm generic
+plug gauge to clear with 0.8 mm downward travel. The printability check declares
+the USB roof as supported and reports 107.01 mm² of downward-facing roof;
+passing does not mean support-free printing. Physical sag/strength and support
+removal have not been tested.
+See the [regression and PCB/USB-C assembly
+renders](evidence/usb-open-bottom/README.md) for current uncut assembly and
+bottom-only views. The rendered A21 PCB and USB4105 candidate are not the
+verifier's generic gauges or a final component selection: its native J1 envelope
+clears nominally but overlaps by **0.0471 mm³ at 0.8 mm down**, so that candidate
+is not qualified for the full travel.
 
 Not measured, so the coupon decides: cap-seat level (sets gasket preload),
 catch notch depth and the catch screw pitch (photos read 25.5–26.8 mm). The

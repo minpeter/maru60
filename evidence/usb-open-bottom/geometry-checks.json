@@ -1,0 +1,77 @@
+{
+  "board": "6095-trimode",
+  "top_status": "ALL_PASSED",
+  "bottom_status": "ALL_PASSED",
+  "usb_slot_section": {
+    "cap_recess_walls_mm": [
+      0.0
+    ],
+    "open_bottom_material_mm3": 0.0,
+    "arch_corner_missing_mm3": 0.0,
+    "arch_corner_blockage_mm3": 0.0,
+    "matching_lip_corner_rounds": {
+      "-1.0": true,
+      "1.0": true
+    },
+    "recessed_floor_blockage_mm3": 0.0,
+    "inner_connector_recess_blockage_mm3": 0.0,
+    "shallow_port_floor_missing_mm3": 0.0,
+    "raised_port_end_missing_mm3": 0.0,
+    "inner_ledge_missing_mm3": 0.0,
+    "bridge_missing_mm3": 0.0,
+    "bridge_to_upper_ceiling_mm": -0.0,
+    "bridge_to_generic_plug_mm": 0.08,
+    "plug_down_0p8_mm3": {
+      "bottom_mm3": 0.0,
+      "top_mm3": 0.0
+    }
+  },
+  "gasket": {
+    "plate_free_mm3": {
+      "down_0.0": 0.0,
+      "down_0.5": 0.0,
+      "down_1.0": 0.0
+    },
+    "cap_flanges_seated_mm3": 0.0,
+    "cap_flanges_bearing_0p10_mm3": 40.2351,
+    "cap_seat_z_p": 10.2
+  },
+  "printability": {
+    "bottom-left": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 107.01,
+      "tray_step_cantilever_mm2": 1888.3
+    },
+    "bottom-right": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
+      "tray_step_cantilever_mm2": 1829.1
+    },
+    "coupon-front-left": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
+      "tray_step_cantilever_mm2": 590.4
+    },
+    "joint-test-left": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
+      "tray_step_cantilever_mm2": 0.0
+    },
+    "joint-test-right": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
+      "tray_step_cantilever_mm2": 0.0
+    }
+  },
+  "native_A21_J1_envelope": {
+    "0": 0.0,
+    "0.8": 0.0471
+  },
+  "native_caveat": "Candidate envelope, not selected hardware. Positive overlap at 0.8mm down is NOT a qualified fit; generic verifier success does not override this.",
+  "paired_R0p5_contour_probes": 50
+}

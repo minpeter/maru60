@@ -2,18 +2,18 @@
   "status": "ALL_PASSED",
   "board": "6095-trimode",
   "top_case_pocket": {
-    "seated_overlap_mm3": 0.0007,
+    "seated_overlap_mm3": 0.0008,
     "lateral_shift_overlap_mm3": {
-      "x-0.10": 0.0007,
-      "x+0.10": 0.0007,
+      "x-0.10": 0.0008,
+      "x+0.10": 0.0008,
       "x-0.25": 27.5444,
       "x+0.25": 27.5444,
-      "y-0.10": 0.0007,
-      "y+0.10": 0.0007,
+      "y-0.10": 0.0008,
+      "y+0.10": 0.0008,
       "y-0.25": 260.5019,
-      "y+0.25": 245.2599
+      "y+0.25": 247.7361
     },
-    "rim_top_bearing_on_9p69_floor_mm2": 1716.8,
+    "rim_top_bearing_on_9p69_floor_mm2": 1822.0,
     "skirt_lip_contact_mm3": 0.0,
     "material_outside_rail_outline_mm2": {
       "z_p_9.99": 0.0,
@@ -246,7 +246,26 @@
   "usb_slot_section": {
     "cap_recess_walls_mm": [
       0.0
-    ]
+    ],
+    "open_bottom_material_mm3": 0.0,
+    "arch_corner_missing_mm3": 0.0,
+    "arch_corner_blockage_mm3": 0.0,
+    "matching_lip_corner_rounds": {
+      "-1.0": true,
+      "1.0": true
+    },
+    "recessed_floor_blockage_mm3": 0.0,
+    "inner_connector_recess_blockage_mm3": 0.0,
+    "shallow_port_floor_missing_mm3": 0.0,
+    "raised_port_end_missing_mm3": 0.0,
+    "inner_ledge_missing_mm3": 0.0,
+    "bridge_missing_mm3": 0.0,
+    "bridge_to_upper_ceiling_mm": -0.0,
+    "bridge_to_generic_plug_mm": 0.08,
+    "plug_down_0p8_mm3": {
+      "bottom_mm3": 0.0,
+      "top_mm3": 0.0
+    }
   },
   "open_ends_material_above_floor_mm3": {
     "left": 0.0,
@@ -256,26 +275,31 @@
     "bottom-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "tray_step_cantilever_mm2": 1913.5
+      "usb_bridge_requires_support_mm2": 107.01,
+      "tray_step_cantilever_mm2": 1888.3
     },
     "bottom-right": {
       "islands": 0,
       "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
       "tray_step_cantilever_mm2": 1829.1
     },
     "coupon-front-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
       "tray_step_cantilever_mm2": 590.4
     },
     "joint-test-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
       "tray_step_cantilever_mm2": 0.0
     },
     "joint-test-right": {
       "islands": 0,
       "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
       "tray_step_cantilever_mm2": 0.0
     }
   }
