@@ -12,6 +12,10 @@ Open `pcb/experiments/v7-buck-feedback-cleanup/candidate/pcb/maru60.kicad_pro`.
 - Original working branch: `feat/maru60-v7-protection-layout`.
 - This repository starts a separate recovery history. The original Git objects and full historical QA suites are missing, not recreated from summaries.
 
+## Physical-contact checker correction
+
+The active board and firmware are unchanged. A corrected material checker and five fresh source-bound rechecks are preserved in `pcb/experiments/v7-material-contact-correction/`. It resolves via-wrapper, neighboring-drill and disconnected-material shortcuts in the earlier global exporter. Original physical contact/support-area claims are superseded by the explicit erratum; original receipts remain unchanged. The selected board retains all 245 pad-net partitions, and all 22,531 accepted material edges have exact positive-interior witnesses. Native DRC, 12 opens and 67 warnings and all separate plane/reference limits remain unchanged. The active checker is `pcb/tools/export_material_graph.py`. This is bounded nominal connectivity evidence, not manufacturing or hardware qualification.
+
 ## Current bounded BUCK_FB cleanup
 
 The working selection removes the degree-one feedback via and 2.85 mm dead arm while preserving the 1.95 mm active path. Fresh full physical connectivity, DRC/parity/ERC and independent review pass the explicit candidate-specific 1 nm coordinate-precision criterion. The original strict global zero-loss result remains FAIL and is preserved separately; exact remote contour changes are bounded by 0.733693794 nm, with critical shadows/contacts/roots and normal clearance rules retained. This criterion does not apply to other candidates.

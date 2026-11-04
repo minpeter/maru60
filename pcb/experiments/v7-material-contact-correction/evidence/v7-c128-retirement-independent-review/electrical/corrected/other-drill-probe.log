@@ -1,0 +1,140 @@
+{
+  "status": "FOCUSED COUNTEREXAMPLE AUDIT; completed v1 corrected exports unchanged",
+  "shorttracks": [
+    {
+      "uuid": "9ce1d223-d7c3-49f8-a54a-cd2573c67b14",
+      "net": "ROW4",
+      "start": [
+        111.9,
+        91.45
+      ],
+      "end": [
+        111.9,
+        91.4
+      ],
+      "width_mm": 0.15,
+      "length_mm": 0.05,
+      "physical_area_after_all_drills_mm2": 0.0,
+      "overlapping_holes": [
+        "901de7f9-8f2b-4fda-8701-779f97081ed1"
+      ]
+    },
+    {
+      "uuid": "8a0af035-c52e-4652-816c-b152480bf29d",
+      "net": "ROW0",
+      "start": [
+        127.1,
+        83.9
+      ],
+      "end": [
+        127.1,
+        83.95
+      ],
+      "width_mm": 0.15,
+      "length_mm": 0.05,
+      "physical_area_after_all_drills_mm2": 0.0,
+      "overlapping_holes": [
+        "b460c437-7d6c-4227-b9a0-21224a370131"
+      ]
+    },
+    {
+      "uuid": "4b67f996-1ff1-4142-8261-0c00f2db5d84",
+      "net": "KEY_RGB_5V",
+      "start": [
+        82.25,
+        78.45
+      ],
+      "end": [
+        82.25,
+        78.4
+      ],
+      "width_mm": 0.15,
+      "length_mm": 0.05,
+      "physical_area_after_all_drills_mm2": 0.0,
+      "overlapping_holes": [
+        "70579ce8-6408-4de2-bcc5-3bddeb1bb2a2"
+      ]
+    }
+  ],
+  "incident_edges": [
+    {
+      "a": "8a0af035-c52e-4652-816c-b152480bf29d",
+      "b": "fc1d4b79-3a44-4dd0-9c45-2d96c57f75dc",
+      "a_type": "PCB_TRACK",
+      "b_type": "PCB_TRACK",
+      "canonical_own_hole_support": [
+        [
+          "F.Cu",
+          0.0177922110415
+        ]
+      ],
+      "all_overlapping_hole_support": [],
+      "details": {
+        "F.Cu": {
+          "a_holes": [
+            "b460c437-7d6c-4227-b9a0-21224a370131"
+          ],
+          "b_holes": [
+            "b460c437-7d6c-4227-b9a0-21224a370131"
+          ],
+          "a_physical_area": 0.0,
+          "b_physical_area": 0.061215599985
+        }
+      }
+    },
+    {
+      "a": "9ce1d223-d7c3-49f8-a54a-cd2573c67b14",
+      "b": "e6f4ef5f-a846-4c81-b799-1e97b0ec8d6a",
+      "a_type": "PCB_TRACK",
+      "b_type": "PCB_TRACK",
+      "canonical_own_hole_support": [
+        [
+          "F.Cu",
+          0.021858385555
+        ]
+      ],
+      "all_overlapping_hole_support": [],
+      "details": {
+        "F.Cu": {
+          "a_holes": [
+            "901de7f9-8f2b-4fda-8701-779f97081ed1"
+          ],
+          "b_holes": [
+            "901de7f9-8f2b-4fda-8701-779f97081ed1"
+          ],
+          "a_physical_area": 0.0,
+          "b_physical_area": 0.1354617350105
+        }
+      }
+    },
+    {
+      "a": "1f28dba5-5be9-4866-8695-cfe8cb946626",
+      "b": "4b67f996-1ff1-4142-8261-0c00f2db5d84",
+      "a_type": "PCB_TRACK",
+      "b_type": "PCB_TRACK",
+      "canonical_own_hole_support": [
+        [
+          "F.Cu",
+          0.0177922110415
+        ]
+      ],
+      "all_overlapping_hole_support": [],
+      "details": {
+        "F.Cu": {
+          "a_holes": [
+            "70579ce8-6408-4de2-bcc5-3bddeb1bb2a2",
+            "9c7f6cf6-e85d-4449-8914-eff10491fbc1"
+          ],
+          "b_holes": [
+            "70579ce8-6408-4de2-bcc5-3bddeb1bb2a2"
+          ],
+          "a_physical_area": 0.336987263131,
+          "b_physical_area": 0.0
+        }
+      }
+    }
+  ],
+  "new_zero_contact_count": 3,
+  "changed_support_count": 3,
+  "scope": "Only incident saved direct contacts of the three observed false track-via shorttracks. Subtracts every overlapping physical hole from each object shape on the tested layer. Not a global corrected export."
+}

@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "revision": "selected-aead-r2-exact-witness-audit-v2-preserve-native-operand-order",
+  "input_sha256": {
+    "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/export_material_graph.py": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9",
+    "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/aead/physical-graph.json": "7a6ca935a3699b2d0a2e1e7b21de7c27059aa802e07080f904b8b80314170741",
+    "/tmp/v7-c128-stub-retirement-aead/source/pcb/maru60.kicad_pcb": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+    "/tmp/v7-contact-positive-witness-helper/positive_witness.py": "0ea4d4b9447fcc62780b8f12a9fcd1538c2f8f27d2fe9ab61b18cbf7573d2d7c"
+  },
+  "audit_script_sha256": "e90aa2db7fc7db6762900812433fe107c3708e02b2a1bb6d2f94c837ab7b4d44",
+  "native_version": "9.0.2+dfsg-1",
+  "clearance_nm_at_least": 2,
+  "witness_schema": [
+    "pinned_graph_material_edge_index",
+    "x_num_nm",
+    "y_num_nm",
+    "positive_common_denominator"
+  ],
+  "component_binding": "Each witness edge index resolves endpoints in pinned graph material_edges; both endpoint coordinate hashes are in component_sha256.",
+  "method": "Exact outer-and-hole PIP and exact segment-distance >=2 nm for both original physical components; native intersections generate seeds only.",
+  "scope": "Only R2 accepted material edges; existing guard failures excluded, barrel proofs reconstructed/compared but not treated as coplanar witness edges. Source topology is reconstructed by pinned native R2 code, not independently certified.",
+  "prior_report_path": "/tmp/v7-contact-positive-witness-helper/selected-aead-exact-witnesses.json",
+  "prior_report_sha256": "fcc660d34ade9740c7790f69c6c67c4ef4398dbab69a472dcb24248bd151378a",
+  "xdg": {
+    "XDG_CONFIG_HOME": "/tmp/v7-contact-positive-witness-helper/selected-aead-xdg/config",
+    "XDG_CACHE_HOME": "/tmp/v7-contact-positive-witness-helper/selected-aead-xdg/cache",
+    "XDG_DATA_HOME": "/tmp/v7-contact-positive-witness-helper/selected-aead-xdg/data",
+    "XDG_STATE_HOME": "/tmp/v7-contact-positive-witness-helper/selected-aead-xdg/state",
+    "XDG_RUNTIME_DIR": "/tmp/v7-contact-positive-witness-helper/selected-aead-xdg/runtime",
+    "XDG_RUNTIME_HOME": "/tmp/v7-contact-positive-witness-helper/selected-aead-xdg/runtime"
+  },
+  "reconstructed_node_count": 14687,
+  "source_metadata_exact_match": true,
+  "source_object_mapping_exact_match": true,
+  "source_barrel_proofs_exact_match": true,
+  "accepted_material_edge_count": 22531,
+  "existing_guard_failed_edges_not_audited": 51,
+  "seed_types": {
+    "raw_intersection": 68,
+    "guarded_intersection_fallback": 0,
+    "prior_certificate_reverified": 22463
+  },
+  "prepared_component_count": 12928,
+  "verified_edge_count": 22531,
+  "failed_edge_count": 0,
+  "all_accepted_material_edges_have_exact_positive_witness": true,
+  "input_sha256_after": {
+    "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/export_material_graph.py": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9",
+    "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/aead/physical-graph.json": "7a6ca935a3699b2d0a2e1e7b21de7c27059aa802e07080f904b8b80314170741",
+    "/tmp/v7-c128-stub-retirement-aead/source/pcb/maru60.kicad_pcb": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+    "/tmp/v7-contact-positive-witness-helper/positive_witness.py": "0ea4d4b9447fcc62780b8f12a9fcd1538c2f8f27d2fe9ab61b18cbf7573d2d7c"
+  },
+  "all_pinned_inputs_unchanged": true,
+  "seconds": 101.26380927900027,
+  "output": "/tmp/v7-contact-positive-witness-helper/selected-aead-exact-witnesses-order-replay.json",
+  "output_sha256": "a90feb222e30bd7bea2273786d85cca2f5749433ffcbfd1e3e411a2aa716bfac",
+  "failure_examples": []
+}

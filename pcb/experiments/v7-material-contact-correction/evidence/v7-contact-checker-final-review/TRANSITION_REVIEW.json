@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "J3_corrected_transition": {
+    "only_changed_net": "EXT_GPIO26",
+    "whole_EXT26_pad_merger": true,
+    "no_old_material_root_split": true,
+    "only_root_merger": {
+      "object:00413816-4339-5bd8-913f-e1ae6708a3e9:2:0": [
+        "object:00413816-4339-5bd8-913f-e1ae6708a3e9:2:0",
+        "object:81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76:2:0"
+      ]
+    },
+    "old_direct_and_zone_supports_exact": true,
+    "new_direct_contacts": 4
+  },
+  "same_board_original_to_corrected": {
+    "j3_b5c": {
+      "original_graph_sha256": "f0976c3e44d87932dec56132a93ab5e5f4fa3a1644f3e18df072c94380ad3ec0",
+      "corrected_graph_sha256": "4d0d0f54ed624761053be8f8e3f4cf129f849d98130b334d0640cf7f8f14ef01",
+      "all_original_pad_identities_and_partitions_exact": true
+    },
+    "c124_ec487": {
+      "original_graph_sha256": "834ce37b5d84a4eced3273760a4d0aad958c86ecde31c072c18f22098e069238",
+      "corrected_graph_sha256": "88b407f2b222782d8cc0b70c901b30a93b7270663daa1cb2c7d05dfef491be86",
+      "all_original_pad_identities_and_partitions_exact": true
+    }
+  },
+  "C124_carry": {
+    "complete_files": 57,
+    "unchanged_nonboard_files": 56,
+    "raw_carry_receipt_sha256": "ac9f51b8941a369e28670fef29b2ab0d011f48151f76b4bfef3a332eb17f8eaf",
+    "base_sha256": "8c45df3642599be269697ce9b225fe55ee6b886dce713b77f6ced533ea268fb6",
+    "final_sha256": "ec48735f21b813f84873a4dfcd8a984a395f59a6d48d30e5bcfff19aaefe52a7"
+  },
+  "inputs": {
+    "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/EXTRA_MATERIAL_GRAPH_AUDIT.json": "1db80de70cbb704bd939b6fa93461e9c094f123c8b632cad12873e650fc58d12"
+  },
+  "script_sha256": "7bde397d022a5554f6c4c530eaa03e136271bcd1d5c68b1067b25d747427d78c",
+  "limits": "Only selected aead has the supplementary exact rational interior certificate for every accepted edge. Other boards use the reviewed guarded native R2 model. No CAD adoption, historical suite restoration or strict reference/plane waiver."
+}

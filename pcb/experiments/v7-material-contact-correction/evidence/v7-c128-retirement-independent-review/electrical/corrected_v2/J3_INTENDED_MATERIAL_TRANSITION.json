@@ -1,0 +1,171 @@
+{
+  "status": "PASS: intended new EXT26 closure only; this does not accept plane/reference transition geometry",
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "b5c33bbc25a0c01a43b1444156508fc3b74e9b62dd0ebe96bd4bd8e09a3ff687",
+  "declared_new_objects": [
+    {
+      "uuid": "aec7b234-8210-4a87-a022-d746958c4589",
+      "type": "via",
+      "net": "EXT_GPIO26",
+      "xy_mm": [
+        95.106622,
+        40.194087
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.25,
+      "layers": "F.Cu through B.Cu"
+    },
+    {
+      "uuid": "e11af75f-071f-405a-9a20-a227d234c83d",
+      "type": "track",
+      "net": "EXT_GPIO26",
+      "start_mm": [
+        95.5,
+        39
+      ],
+      "end_mm": [
+        95.106622,
+        40.194087
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "4f25e68e-e031-4aa9-8534-3e7de85924d2",
+      "type": "track",
+      "net": "EXT_GPIO26",
+      "start_mm": [
+        95.106622,
+        40.194087
+      ],
+      "end_mm": [
+        95.182857,
+        41.849474
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    }
+  ],
+  "actual_added_uuids": [
+    "4f25e68e-e031-4aa9-8534-3e7de85924d2",
+    "aec7b234-8210-4a87-a022-d746958c4589",
+    "e11af75f-071f-405a-9a20-a227d234c83d"
+  ],
+  "actual_removed_uuids": [],
+  "pad_inventory_exact": true,
+  "only_changed_pad_net": "EXT_GPIO26",
+  "EXT26_before": [
+    [
+      "U13.9",
+      "U11.14"
+    ],
+    [
+      "J3.8"
+    ]
+  ],
+  "EXT26_after": [
+    [
+      "U13.9",
+      "J3.8",
+      "U11.14"
+    ]
+  ],
+  "old_retained_direct_zone_support_deltas": {
+    "direct": {
+      "old_count": 21797,
+      "new_count": 21797,
+      "removed": [],
+      "added": [],
+      "changed_positive": []
+    },
+    "zone": {
+      "old_count": 731,
+      "new_count": 731,
+      "removed": [],
+      "added": [],
+      "changed_positive": []
+    }
+  },
+  "old_material_root_splits": [],
+  "old_material_root_mergers": [
+    {
+      "target_root": "object:00413816-4339-5bd8-913f-e1ae6708a3e9:2:0",
+      "source_roots": [
+        "object:00413816-4339-5bd8-913f-e1ae6708a3e9:2:0",
+        "object:81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76:2:0"
+      ],
+      "nets": [
+        "EXT_GPIO26"
+      ]
+    }
+  ],
+  "new_direct_contacts": [
+    {
+      "a": "4f25e68e-e031-4aa9-8534-3e7de85924d2",
+      "b": "df690eec-df6a-52bf-82fe-eace87245374",
+      "support": [
+        [
+          "F.Cu",
+          0.020085784695
+        ]
+      ]
+    },
+    {
+      "a": "4f25e68e-e031-4aa9-8534-3e7de85924d2",
+      "b": "aec7b234-8210-4a87-a022-d746958c4589",
+      "support": [
+        [
+          "F.Cu",
+          0.0193748918375
+        ]
+      ]
+    },
+    {
+      "a": "aec7b234-8210-4a87-a022-d746958c4589",
+      "b": "e11af75f-071f-405a-9a20-a227d234c83d",
+      "support": [
+        [
+          "B.Cu",
+          0.019374743553
+        ]
+      ]
+    },
+    {
+      "a": "e11af75f-071f-405a-9a20-a227d234c83d",
+      "b": "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76",
+      "support": [
+        [
+          "B.Cu",
+          0.1247061671145
+        ]
+      ]
+    }
+  ],
+  "new_zone_contacts": [],
+  "new_material_contact_proofs": [
+    [
+      "object:4f25e68e-e031-4aa9-8534-3e7de85924d2:0:0",
+      "object:df690eec-df6a-52bf-82fe-eace87245374:0:0",
+      0.020085784695,
+      0.0200846952405
+    ],
+    [
+      "object:4f25e68e-e031-4aa9-8534-3e7de85924d2:0:0",
+      "object:aec7b234-8210-4a87-a022-d746958c4589:0:0",
+      0.0193748918375,
+      0.019373685797
+    ],
+    [
+      "object:aec7b234-8210-4a87-a022-d746958c4589:2:0",
+      "object:e11af75f-071f-405a-9a20-a227d234c83d:2:0",
+      0.019374743553,
+      0.019373499188
+    ],
+    [
+      "object:e11af75f-071f-405a-9a20-a227d234c83d:2:0",
+      "object:81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76:2:0",
+      0.1247061671145,
+      0.1247020753855
+    ]
+  ]
+}

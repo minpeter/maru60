@@ -11,6 +11,10 @@ The original strict zero-global-plane-loss check remains FAIL. Selection explici
 
 The J3 and C124 circuit trials remain unselected. No noise, pickup or loop-stability benefit is claimed.
 
+## Corrected current physical evidence
+
+`experiments/v7-material-contact-correction/` supersedes the old global contact/support-area measurements. The exact reviewed R2 implementation is active at `tools/export_material_graph.py`. Five fresh material rechecks and exact positive-interior certificates for all 22,531 accepted selected-board contacts preserve the current 245-net pad connectivity. Microscopic unproved contacts remain excluded. No CAD/firmware change, new experiment adoption or hardware qualification accompanies this correction. Original evidence and separate failed plane/reference gates remain intact.
+
 ## Active recovery firmware
 
 The active development overlay remains `firmware/qmk/keyboards/maru60/rp2350`, with supporting files under `engineering`. It is unchanged and byte-identical to the reviewed LED startup recovery. Nineteen former fixed-overlay files were recovered exactly; three are newly tested implementations. LED qualification remains 0. No full pinned QMK/ARM build, flashing or hardware acceptance is claimed.

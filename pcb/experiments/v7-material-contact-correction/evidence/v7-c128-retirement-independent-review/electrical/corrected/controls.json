@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "board_sha256": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb",
+  "checker_sha256": "35df75c4c564fee2f4b69982282cb15111c6e96bbe8d6fdb54990f05cf1bcf43",
+  "mechanism": {
+    "wrapper_native_class": "PCB_VIA",
+    "wrapper_python_type": "PCB_TRACK",
+    "canonical_python_type": "PCB_VIA"
+  },
+  "controls": [
+    {
+      "control": "canonical_vs_neighbor_wrapper_and_multilayer_drill",
+      "layer": "F.Cu",
+      "area_mm2": 0.147260768066,
+      "geometry_exact": true
+    },
+    {
+      "control": "canonical_vs_neighbor_wrapper_and_multilayer_drill",
+      "layer": "In1.Cu",
+      "area_mm2": 0.147260768066,
+      "geometry_exact": true
+    },
+    {
+      "control": "canonical_vs_neighbor_wrapper_and_multilayer_drill",
+      "layer": "In2.Cu",
+      "area_mm2": 0.147260768066,
+      "geometry_exact": true
+    },
+    {
+      "control": "canonical_vs_neighbor_wrapper_and_multilayer_drill",
+      "layer": "B.Cu",
+      "area_mm2": 0.147260768066,
+      "geometry_exact": true
+    },
+    {
+      "control": "known_positive_annular_contact",
+      "track": "cdcdaf62-0d7e-520a-9821-934ef8e04931",
+      "via": "2a8005ba-8cc3-5ec3-bf91-40e20122da23",
+      "area_mm2": 0.0564735324735
+    },
+    {
+      "control": "reject_observed_drill_only_false_contact",
+      "a": "8a0af035-c52e-4652-816c-b152480bf29d",
+      "b": "b460c437-7d6c-4227-b9a0-21224a370131",
+      "positive_support": []
+    },
+    {
+      "control": "reject_observed_drill_only_false_contact",
+      "a": "9ce1d223-d7c3-49f8-a54a-cd2573c67b14",
+      "b": "901de7f9-8f2b-4fda-8701-779f97081ed1",
+      "positive_support": []
+    },
+    {
+      "control": "reject_observed_drill_only_false_contact",
+      "a": "4b67f996-1ff1-4142-8261-0c00f2db5d84",
+      "b": "70579ce8-6408-4de2-bcc5-3bddeb1bb2a2",
+      "positive_support": []
+    },
+    {
+      "control": "all_native_pad_shapes_and_drill_handling_unchanged",
+      "total_pads": 1437,
+      "hole_pads": 351,
+      "pad_layer_checks": 1908,
+      "PTH": 16,
+      "NPTH": 335
+    }
+  ]
+}
