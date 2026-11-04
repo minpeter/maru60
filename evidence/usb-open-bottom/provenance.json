@@ -1,9 +1,9 @@
 {
   "housing_base": "b1cf07038061dd97fe7e448679078e8362da8368",
-  "housing_change": "Recess the floor directly beneath the inner USB connector: extend 9.00 mm inward, 14.75 wide x 10.00 long at Zp21.08, joined to the outer exit; flush roof unchanged; trial dimensions, not photo measurements",
+  "housing_change": "Shallow bounded 20x13 R2 pocket, depth0.5; 1mm end land; R1.5 lower arch; shared R0.5 open-lip ends on both cases. Existing 2.88mm exit-floor step retained, not structurally qualified.",
   "board_profile": "6095-trimode (not universal)",
-  "top_version": "v7.11",
-  "bottom_version": "v0.11 + inner-connector-floor correction",
+  "top_version": "v7.11 + R0.5 open-lip ends",
+  "bottom_version": "v0.11 + shallow pocket and matched lip rounds",
   "pcb_commit": "f87140b05bc66ce0eab382aff62b12cf459443ce",
   "pcb_file": "pcb/checkpoints/a21/maru60.kicad_pcb",
   "pcb_sha256": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
@@ -48,13 +48,55 @@
       195.37
     ],
     "inner_ledge_z_p": 21.08,
-    "inner_connector_relief_y": [177.236, 187.236],
-    "bridge_z_p": [9.69, 11.90],
-    "bridge_y": [187.236, 194.37],
+    "inner_connector_pocket": {
+      "bounds_xy": [
+        114.4975,
+        172.236,
+        134.4975,
+        185.236
+      ],
+      "corner_r": 2.0,
+      "floor_z_p": 18.7,
+      "end_land_mm": 1.0
+    },
+    "bridge_z_p": [
+      9.69,
+      11.9
+    ],
+    "bridge_corner_r": 1.5,
+    "open_lip_corner_r": 0.5,
+    "bridge_y": [
+      187.236,
+      194.37
+    ],
     "bridge_requires_print_support": true,
     "cap_recess_walls_removed_mm": [
       0.143
     ],
     "min_wall": 0.8
+  },
+  "renderer": "Blender 5.2.2 LTS, Cycles, 24 samples, denoising",
+  "historical_images": "current-before.jpg depicts the preceding local R1.5 top-lip/square-bottom preview. Other legacy numbered JPGs are superseded, not current exports.",
+  "published_models": {
+    "models/maru60-hhkb-bottomcase-fit-coupon.3mf": "ab6a8c62c5a125b28a45c3882581d842fd2ba81ac7dc9fb60e8ad5b18d92364a",
+    "models/maru60-hhkb-bottomcase-joint-test.3mf": "93bd1bee95ea87b08fcf48c3890f23910c3c4979fefeee6260a1aee17303b3ec",
+    "models/maru60-hhkb-bottomcase-left.3mf": "00bad19fddcf5abad198e3ba04dcf09c95d303f6627b901056a638ba107bc83f",
+    "models/maru60-hhkb-bottomcase-right.3mf": "df642f8b5c02757685672028bdbae38bca549f423cb6ec88e57c386abc8ca38d",
+    "models/maru60-hhkb-topcase-fit-coupons.3mf": "77d47e039b6f0e2a3747f1ecb844696f12188c60dcd510284532e3bc865b15ba",
+    "models/maru60-hhkb-topcase-left.3mf": "fdd0ab56cc2a1a3210c110713c68a0ebae8f8f1ed335d0503177f6a4b69dc594",
+    "models/maru60-hhkb-topcase-right-usb-universal.3mf": "1ec4f0edb3ec74cee82cf2857a614dc9686e3cd15617943e114c39561b05e1a7",
+    "models/maru60-hhkb-topcase-right.3mf": "b73aa7ce0f77fda80ff0b89ab343bf90632515e4d461c11fa7636d3a8e897fe8"
+  },
+  "source_sha256": {
+    "build_topcase_draft.py": "34523aefc45bbfff726a868a022a295edc1369b532268615b494edf295bc7476",
+    "build_bottomcase_draft.py": "bd3f22b130e84c3928222a4b6bfb754f08697f0d852ca318e4faf37945f45113",
+    "verify_topcase.py": "c50c2ed322ed7c6a7e2b988c9fc15c36e34df412c628c1ba3e95c28abe7146b2",
+    "verify_bottomcase.py": "3c8d171496423b0e9b192aa18175bbcdbdae0176a1872d7bdc2a91fae51d4b99"
+  },
+  "images_sha256": {
+    "current-before.jpg": "141bbb4bf47f44a065f7cfee1196dae1bc3310e01be5354a501f515a140d201b",
+    "current-after.jpg": "bfbb58b5e7e703766f281701de67a61ac5e5a8a163324ba772ff6ea29ac21843",
+    "current-detail.jpg": "3a9b3d71f38afc70592280d75e07e29e11456596bd79f841b134c8744e228a02",
+    "current-bottom.jpg": "2abeb81830568ea7bef341da26fceb312fe0b456295974ff7afc4e2055c34c33"
   }
 }
