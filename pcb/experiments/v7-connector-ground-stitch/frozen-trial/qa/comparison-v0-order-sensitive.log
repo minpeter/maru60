@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/v7-connector-gnd-stitch-c770/scripts/compare.py", line 19, in <module>
+    assert all(checks.values()),{k:v for k,v in checks.items() if not v}
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'direct_edges_exact': False, 'raw_unguarded_direct_edges_exact': False, 'all_retained_material_edge_witnesses_exact': False}

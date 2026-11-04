@@ -1,0 +1,51 @@
+{
+  "status": "UNSELECTED nominal full material/DRC/companion comparison passes; independent strict physical/reference review pending",
+  "source_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "candidate_sha256": "aaafc033c6e9809afcb189290c3740157b7ab5596aaa0867e581f08d89807eca",
+  "source_graph_sha256": "3d174b35c555dcce8b3df1097f664be12e4736cca1f750a005d46441b941452c",
+  "candidate_graph_sha256": "1129a187d109ce4e5d8e98788f8c22cd7d3f0b9edd0e6a70f0badac5cc602824",
+  "checks": {
+    "pad_inventory_exact": true,
+    "pad_partitions_by_net_exact": true,
+    "direct_edges_exact": true,
+    "raw_unguarded_direct_edges_exact": true,
+    "guard_failing_material_edges_exact": true,
+    "empty_object_layers_exact": true,
+    "multiple_component_object_layers_exact": true,
+    "NPTH_material_exact": true,
+    "all_retained_material_edge_witnesses_exact": true,
+    "retained_barrel_proofs_exact": true,
+    "all_original_GND_pads_and_new_via_share_J1_A1_root": true,
+    "all_native_warning_entries_exact": true,
+    "all_native_open_entries_exact": true,
+    "schematic_parity_zero": true,
+    "all53_project_companions_exact": true
+  },
+  "retained_object_nodes": 14660,
+  "new_via_nodes": [
+    "object:cda2df4b-6411-5409-a933-5106751244d8:0:0",
+    "object:cda2df4b-6411-5409-a933-5106751244d8:2:0",
+    "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+    "object:cda2df4b-6411-5409-a933-5106751244d8:6:0"
+  ],
+  "pad_net_groups": 245,
+  "original_GND_pad_count": 247,
+  "native_metrics": {
+    "tracks": 9750,
+    "vias": 919,
+    "footprints": 382,
+    "track_length_mm": 13176.816253756544,
+    "warnings": 66,
+    "opens": 12,
+    "other_hard_DRC": 0,
+    "ERC": 0,
+    "parity": 0
+  },
+  "comparison_note": "Native candidate pair enumeration order differs. Full edge/witness records are compared as multisets, preserving duplicates; zero old records are removed or changed. Initial order-sensitive diagnostic is preserved.",
+  "limits": [
+    "No added via is a restored USB neck.",
+    "No inductance, impedance, waveform or hardware gain is inferred.",
+    "Area changes alone are not a strict inclusion proof; exact raw/physical-drill identity is reviewed separately."
+  ]
+}
+zone changes {'zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0': [{'kind': 'zone', 'uuid': '7a0e11fe-4433-4b0d-914b-0fa7262b6aa2', 'layer': 'In1.Cu', 'index': 0, 'area_mm2': 23436.333089335607, 'net': 'GND'}, {'kind': 'zone', 'uuid': '7a0e11fe-4433-4b0d-914b-0fa7262b6aa2', 'layer': 'In1.Cu', 'index': 0, 'area_mm2': 23436.284001654607, 'net': 'GND'}], 'zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0': [{'kind': 'zone', 'uuid': '3a23a46c-3272-47d8-86cd-03a9240b82af', 'layer': 'In2.Cu', 'index': 0, 'area_mm2': 23486.85337147416, 'net': 'GND'}, {'kind': 'zone', 'uuid': '3a23a46c-3272-47d8-86cd-03a9240b82af', 'layer': 'In2.Cu', 'index': 0, 'area_mm2': 23486.80428379316, 'net': 'GND'}]}

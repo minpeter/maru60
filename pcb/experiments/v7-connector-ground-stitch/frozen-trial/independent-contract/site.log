@@ -1,0 +1,701 @@
+{
+  "status": "Prospective shape contract checks pass; no actual new board via exists yet",
+  "source_board": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-gnd-deadbranch-cleanup/candidate/pcb/maru60.kicad_pcb",
+  "board_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "graph_path": "/tmp/v7-gnd-tail-cleanup-aead/qa/material-graph.json",
+  "graph_sha256": "3d174b35c555dcce8b3df1097f664be12e4736cca1f750a005d46441b941452c",
+  "active_helper_path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/tools/export_material_graph.py",
+  "active_helper_sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9",
+  "native_version": "9.0.2+dfsg-1",
+  "proposed": {
+    "uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+    "net": "GND",
+    "xy_mm": [
+      17.2,
+      9.9
+    ],
+    "diameter_mm": 0.5,
+    "drill_mm": 0.25,
+    "span": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "nominal_annular_width_mm": 0.125
+  },
+  "return_distance_geometry": [
+    {
+      "signal_via": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+      "signal_xy_mm": [
+        17.75,
+        8.4
+      ],
+      "current_nearest_rooted_GND_via": "30f42945-7f50-4bbe-b5f4-d95448eea66b",
+      "current_nearest_distance_mm": 2.351196503910296,
+      "proposed_via_distance_mm": 1.5976545308670458,
+      "prospective_nearest_distance_mm": 1.5976545308670458
+    },
+    {
+      "signal_via": "544a3023-571c-4ba3-b056-b27f573292aa",
+      "signal_xy_mm": [
+        18.75,
+        8.4
+      ],
+      "current_nearest_rooted_GND_via": "30f42945-7f50-4bbe-b5f4-d95448eea66b",
+      "current_nearest_distance_mm": 1.956559480312316,
+      "proposed_via_distance_mm": 2.156965461012299,
+      "prospective_nearest_distance_mm": 1.956559480312316
+    }
+  ],
+  "through_drill_counts": {
+    "through_vias": 918,
+    "NPTH": 335,
+    "PTH": 16
+  },
+  "all_holes_checked": 1269,
+  "nearest_physical_holes": [
+    {
+      "uuid": "5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 1.2533296378372907,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        2260000000000,
+        1
+      ]
+    },
+    {
+      "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 1.3476545308670458,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        2552500000000,
+        1
+      ]
+    },
+    {
+      "uuid": "e0df788a-a488-40a8-af32-04634bc14ecc",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 1.4070455636463348,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        2745800000000,
+        1
+      ]
+    },
+    {
+      "uuid": "30f42945-7f50-4bbe-b5f4-d95448eea66b",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 1.6969527472437536,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        3790625000000,
+        1
+      ]
+    },
+    {
+      "uuid": "544a3023-571c-4ba3-b056-b27f573292aa",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 1.9069654610122992,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        4652500000000,
+        1
+      ]
+    },
+    {
+      "uuid": "be54cb7c-06d2-4d6c-b403-b3d7c497f530",
+      "kind": "NPTH",
+      "ref": "SW1",
+      "hole_edge_clearance_mm": 2.0781968898350294,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        9327507812500,
+        1
+      ]
+    },
+    {
+      "uuid": "ba0e0532-1586-4050-a390-d87dcee11d2c",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 2.3748809496813377,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        6890000000000,
+        1
+      ]
+    },
+    {
+      "uuid": "4ad5fbff-979d-4fdd-ac13-96ba2def284a",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 2.849193443462347,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        9605000000000,
+        1
+      ]
+    },
+    {
+      "uuid": "1e6f9b6e-9a22-418a-8cde-6feb5aafb26e",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 2.881293662370235,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        9805000000000,
+        1
+      ]
+    },
+    {
+      "uuid": "371297bb-c9b9-4c5c-906f-039f12f2b87f",
+      "kind": "NPTH",
+      "ref": "SW1",
+      "hole_edge_clearance_mm": 2.9988304264429937,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        21379807812500,
+        1
+      ]
+    },
+    {
+      "uuid": "ec09f5eb-9819-4635-b159-a5d1d80d3e03",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 3.0970135942359125,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        11202500000000,
+        1
+      ]
+    },
+    {
+      "uuid": "7f24e4f2-6c89-4f44-bc04-ab69c6145c2f",
+      "kind": "through_vias",
+      "ref": null,
+      "hole_edge_clearance_mm": 3.4762581767773417,
+      "exact_hole_to_hole_0p25_pass": true,
+      "exact_foreign_hole_disjoint_from_new_annulus": true,
+      "exact_existing_hole_to_new_copper_0p15_pass": true,
+      "axis_distance_squared_nm2": [
+        13885000000000,
+        1
+      ]
+    }
+  ],
+  "all_object_layer_checks": 15330,
+  "near_foreign_copper": [
+    {
+      "uuid": "a808b65d-1870-532d-86cd-6f8d7849a959",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.225,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "b17b8cd1-1903-56a9-a344-e509ffb983c9",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.238815,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "abd413c6-ea9a-5122-a0aa-204e314f3ec4",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.301497,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "09178be0-d279-48cb-ab31-5aa0534dedea",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.374329,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "114832de-14ed-45a6-a71e-4827e49ece5f",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.476561,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "38dc9b81-4edc-471e-add7-2572a3c28274",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.476561,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "987658e4-2786-5128-bd22-185c9ed388d3",
+      "net": "USB_DP_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.535,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "5fd7a3f0-7bd0-4400-a2d5-a518fb3dbdbe",
+      "net": "COL0",
+      "layer": "B.Cu",
+      "ref": "SW1",
+      "nominal_copper_edge_clearance_mm": 0.53875,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "cd56f3a9-6491-546f-8ac4-245f866cb787",
+      "net": "USB_DP_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.540794,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "ad6e4170-c174-50a4-9cc7-e4c180a76234",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.645824,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "73e01598-6edd-41d2-b19a-1ef47b849196",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.806372,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "dde35e57-1aaa-56c2-98cd-55771e22bab1",
+      "net": "USB_DP_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.859831,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "4386ae32-e6c7-51a8-9f51-4af5a03c9caf",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.860327,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 0.995038,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "a963e830-796c-53b3-b9de-ef49be1314bc",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 1.055444,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 1.097655,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+      "net": "USB_DP_CONN",
+      "layer": "In1.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 1.097655,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+      "net": "USB_DP_CONN",
+      "layer": "In2.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 1.097655,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+      "net": "USB_DP_CONN",
+      "layer": "B.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 1.097655,
+      "native_0p15_clearance_pass": true
+    },
+    {
+      "uuid": "e0df788a-a488-40a8-af32-04634bc14ecc",
+      "net": "CC1",
+      "layer": "F.Cu",
+      "ref": null,
+      "nominal_copper_edge_clearance_mm": 1.157045,
+      "native_0p15_clearance_pass": true
+    }
+  ],
+  "near_original_object_shadows": [
+    {
+      "uuid": "a808b65d-1870-532d-86cd-6f8d7849a959",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.35,
+      "no_intersection": true
+    },
+    {
+      "uuid": "b17b8cd1-1903-56a9-a344-e509ffb983c9",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.363815,
+      "no_intersection": true
+    },
+    {
+      "uuid": "abd413c6-ea9a-5122-a0aa-204e314f3ec4",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.426497,
+      "no_intersection": true
+    },
+    {
+      "uuid": "09178be0-d279-48cb-ab31-5aa0534dedea",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.499329,
+      "no_intersection": true
+    },
+    {
+      "uuid": "114832de-14ed-45a6-a71e-4827e49ece5f",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.601561,
+      "no_intersection": true
+    },
+    {
+      "uuid": "38dc9b81-4edc-471e-add7-2572a3c28274",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.601561,
+      "no_intersection": true
+    },
+    {
+      "uuid": "987658e4-2786-5128-bd22-185c9ed388d3",
+      "net": "USB_DP_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.66,
+      "no_intersection": true
+    },
+    {
+      "uuid": "5fd7a3f0-7bd0-4400-a2d5-a518fb3dbdbe",
+      "net": "COL0",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.66375,
+      "no_intersection": true
+    },
+    {
+      "uuid": "cd56f3a9-6491-546f-8ac4-245f866cb787",
+      "net": "USB_DP_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.665794,
+      "no_intersection": true
+    },
+    {
+      "uuid": "ad6e4170-c174-50a4-9cc7-e4c180a76234",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.770824,
+      "no_intersection": true
+    },
+    {
+      "uuid": "73e01598-6edd-41d2-b19a-1ef47b849196",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.931372,
+      "no_intersection": true
+    },
+    {
+      "uuid": "dde35e57-1aaa-56c2-98cd-55771e22bab1",
+      "net": "USB_DP_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.984831,
+      "no_intersection": true
+    },
+    {
+      "uuid": "4386ae32-e6c7-51a8-9f51-4af5a03c9caf",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 0.985327,
+      "no_intersection": true
+    },
+    {
+      "uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 1.120038,
+      "no_intersection": true
+    },
+    {
+      "uuid": "5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc",
+      "net": "GND",
+      "layer": "F.Cu",
+      "drill_to_original_nominal_shadow_mm": 1.12833,
+      "no_intersection": true
+    },
+    {
+      "uuid": "5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc",
+      "net": "GND",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 1.12833,
+      "no_intersection": true
+    },
+    {
+      "uuid": "46548df2-c6ab-43ec-857a-410aa8d7a855",
+      "net": "GND",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 1.142707,
+      "no_intersection": true
+    },
+    {
+      "uuid": "9d2eadf2-7278-4bf3-aa12-b2f72fe801d4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 1.149019,
+      "no_intersection": true
+    },
+    {
+      "uuid": "a963e830-796c-53b3-b9de-ef49be1314bc",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_original_nominal_shadow_mm": 1.180444,
+      "no_intersection": true
+    },
+    {
+      "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "drill_to_original_nominal_shadow_mm": 1.222655,
+      "no_intersection": true
+    }
+  ],
+  "all_existing_object_drill_intersections": [],
+  "all_GND_zone_drill_losses": [
+    {
+      "layer": "F.Cu",
+      "node": "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:0",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "F.Cu",
+      "node": "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:1",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "F.Cu",
+      "node": "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:2",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "F.Cu",
+      "node": "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:3",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "F.Cu",
+      "node": "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:4",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "F.Cu",
+      "node": "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:5",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "F.Cu",
+      "node": "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:6",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "F.Cu",
+      "node": "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:7",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "F.Cu",
+      "node": "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:8",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "B.Cu",
+      "node": "zone:4568b524-9e43-496b-a69d-6a08336db9f4:2:0",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "B.Cu",
+      "node": "zone:598fd50b-9500-4edd-a58c-41bf97902cb1:2:0",
+      "new_drill_loss_mm2": 0.0
+    },
+    {
+      "layer": "In1.Cu",
+      "node": "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "new_drill_loss_mm2": 0.049087681002
+    },
+    {
+      "layer": "In2.Cu",
+      "node": "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "new_drill_loss_mm2": 0.049087681002
+    }
+  ],
+  "copper_graphics_count": 0,
+  "board_outline_new_pad_outside_area_mm2": 0.0,
+  "netclass_clearances": {
+    "Default": 0.15,
+    "USB_FS_CONN_PROVISIONAL": 0.15,
+    "USB_FS_MCU_ESCAPE": 0.15
+  },
+  "no_custom_dru": true,
+  "physical_rooted_plane_contacts": [
+    {
+      "layer": "In1.Cu",
+      "zone_uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "physical_material_node": "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "J1_A1_root": "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0",
+      "exact_R2_component_area_match_mm2": 23436.333089335607,
+      "annular_overlap_mm2": 0.147260768066,
+      "annular_missing_mm2": 0.0,
+      "positive_overlap_after_each_2nm_inward_guard_mm2": 0.1472558792225,
+      "new_physical_drill_loss_outside_polygon_mm2": 0.049087681002
+    },
+    {
+      "layer": "In2.Cu",
+      "zone_uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "physical_material_node": "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "J1_A1_root": "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0",
+      "exact_R2_component_area_match_mm2": 23486.85337147416,
+      "annular_overlap_mm2": 0.147260768066,
+      "annular_missing_mm2": 0.0,
+      "positive_overlap_after_each_2nm_inward_guard_mm2": 0.1472558792225,
+      "new_physical_drill_loss_outside_polygon_mm2": 0.049087681002
+    }
+  ],
+  "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+  "source_counts": {
+    "tracks": 9750,
+    "vias": 918,
+    "footprints": 382
+  },
+  "minimum_board_edge": {
+    "uuid": "dcd7bbbf-b154-4109-86ce-55a263b2253b",
+    "conservative_copper_edge_distance_mm": 9.625,
+    "native_0p5_clearance_pass": true
+  },
+  "keepout_checks": [
+    {
+      "uuid": "ba4d2263-baf4-4b28-97d8-2eb2524a351c",
+      "intersects_new_via": false
+    }
+  ],
+  "foreign_zone_checks": [
+    {
+      "uuid": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "pass": true
+    },
+    {
+      "uuid": "18251378-06a1-40ae-8f44-01acf0d3371a",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "pass": true
+    },
+    {
+      "uuid": "3f67c971-a794-46bf-8f55-e7568aa08387",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "pass": true
+    },
+    {
+      "uuid": "431dc987-81d8-4e96-9039-7fb10f89e34d",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "pass": true
+    },
+    {
+      "uuid": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "pass": true
+    },
+    {
+      "uuid": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "pass": true
+    }
+  ],
+  "normal_project_rules": {
+    "max_error": 0.005,
+    "min_clearance": 0.15,
+    "min_connection": 0.15,
+    "min_copper_edge_clearance": 0.5,
+    "min_groove_width": 0.0,
+    "min_hole_clearance": 0.15,
+    "min_hole_to_hole": 0.25,
+    "min_microvia_diameter": 0.2,
+    "min_microvia_drill": 0.1,
+    "min_resolved_spokes": 2,
+    "min_silk_clearance": 0.0,
+    "min_text_height": 0.8,
+    "min_text_thickness": 0.08,
+    "min_through_hole_diameter": 0.25,
+    "min_track_width": 0.15,
+    "min_via_annular_width": 0.1,
+    "min_via_diameter": 0.5,
+    "solder_mask_to_copper_clearance": 0.0,
+    "use_height_for_length_calcs": true
+  },
+  "no_CAD_mutation": true,
+  "limitations": [
+    "No inserted-candidate DRC, refill, graph or acceptance has run.",
+    "All-hole R2 source contacts are used; old local/neighbor-hole evidence is not a contact oracle.",
+    "No endpoint masks, no allowable small physical loss, and no SI/ESD qualification.",
+    "Native polygon representation uses1nm approximation; no1nm loss allowance is applied. Contact acceptance also requires positive overlap after2nm inward guard."
+  ]
+}

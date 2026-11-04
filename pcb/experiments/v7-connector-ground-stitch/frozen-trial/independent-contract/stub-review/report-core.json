@@ -1,0 +1,1166 @@
+{
+  "board_path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-gnd-deadbranch-cleanup/candidate/pcb/maru60.kicad_pcb",
+  "board_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "graph_path": "/tmp/v7-gnd-tail-cleanup-aead/qa/material-graph.json",
+  "graph_sha256": "3d174b35c555dcce8b3df1097f664be12e4736cca1f750a005d46441b941452c",
+  "helper_path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/tools/export_material_graph.py",
+  "native_version": "9.0.2+dfsg-1",
+  "method": "R2 graph read plus independent canonical all-through-drill copper subtraction, local native 1 nm polygons, 2 nm guard. No nearest-gap measurement is used or claimed.",
+  "stub": {
+    "uuid": "bc0a06ab-785a-4a27-a164-9c3256c7f3bd",
+    "type": "PCB_TRACK",
+    "net": "GND",
+    "at_mm": [
+      15.7,
+      10.75
+    ],
+    "start_mm": [
+      15.7,
+      10.75
+    ],
+    "end_mm": [
+      15.7,
+      9.8
+    ],
+    "width_mm": 0.25,
+    "layer": "F.Cu"
+  },
+  "stub_area_mm2": 0.237499592978,
+  "stub_material_root": "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0",
+  "stub_graph_degree": 1,
+  "independent_fcu_contacts": [
+    {
+      "uuid": "5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc",
+      "type": "PCB_VIA",
+      "net": "GND",
+      "at_mm": [
+        15.7,
+        9.8
+      ],
+      "drill_mm": 0.25,
+      "width_mm": 0.5,
+      "layer": "F.Cu",
+      "area_mm2": 0.035244191822,
+      "guarded_area_mm2": 0.0352419640185
+    }
+  ],
+  "independent_fcu_zone_contacts": [],
+  "anchor": {
+    "uuid": "5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc",
+    "type": "PCB_VIA",
+    "net": "GND",
+    "at_mm": [
+      15.7,
+      9.8
+    ],
+    "drill_mm": 0.25,
+    "width_mm": 0.5
+  },
+  "anchor_graph_edges": [
+    [
+      "object:bc0a06ab-785a-4a27-a164-9c3256c7f3bd:0:0",
+      "object:5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc:0:0",
+      0.035244191822,
+      0.0352419640185
+    ],
+    [
+      "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "object:5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc:4:0",
+      0.147260768066,
+      0.1472558792225
+    ],
+    [
+      "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "object:5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc:6:0",
+      0.147260768066,
+      0.1472558792225
+    ]
+  ],
+  "anchor_barrel_proof": [
+    {
+      "uuid": "5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc",
+      "type": "PCB_VIA",
+      "nodes": [
+        "object:5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc:0:0",
+        "object:5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc:4:0",
+        "object:5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc:6:0",
+        "object:5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc:2:0"
+      ],
+      "proof": "through span asserted; one positive annulus per copper layer; centered circular via or exact convex PTH hole enclosure proved; all-hole material has exact normalized native coordinate contour equality to own annulus; no foreign drill severs annulus"
+    }
+  ],
+  "gnd_pad_count": 247,
+  "gnd_pad_partitions": 1,
+  "removing_only_stub_graph_vertex_keeps_all_gnd_pads_reachable": true,
+  "relevant_ground_pads": [
+    {
+      "uuid": "ca350ba2-393c-4678-ac83-1cb8522ffa40",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        16.01,
+        7.5
+      ],
+      "ref": "R100",
+      "value": "5.1k 1%",
+      "pad": "2",
+      "size_mm": [
+        0.54,
+        0.64
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    },
+    {
+      "uuid": "186082bb-d1d7-429b-b059-389234bbb320",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        14.8,
+        7.48
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "A1",
+      "size_mm": [
+        0.6,
+        1.15
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    },
+    {
+      "uuid": "2ff87e9f-3345-4b21-92c9-6df36e744505",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        21.2,
+        7.48
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "A12",
+      "size_mm": [
+        0.6,
+        1.15
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    },
+    {
+      "uuid": "00f0f755-a19d-4df8-bd31-accb2c50b1dd",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        21.2,
+        7.48
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "B1",
+      "size_mm": [
+        0.6,
+        1.15
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    },
+    {
+      "uuid": "d29bc0ff-e038-4ca0-8c0d-15a02855310c",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        14.8,
+        7.48
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "B12",
+      "size_mm": [
+        0.6,
+        1.15
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    },
+    {
+      "uuid": "e423df7f-9e6e-45c0-b359-f92ee1e48ae3",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        13.68,
+        2.725
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "S1",
+      "size_mm": [
+        1.0,
+        1.8
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    },
+    {
+      "uuid": "dbfacece-1e1d-443c-9456-487dc95f1ac0",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        13.68,
+        6.905
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "S1",
+      "size_mm": [
+        1.0,
+        2.1
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    },
+    {
+      "uuid": "66b5ddfb-0a11-4b10-baf7-47853fad339a",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        22.32,
+        2.725
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "S1",
+      "size_mm": [
+        1.0,
+        1.8
+      ],
+      "drill_mm": [
+        0.6,
+        1.4
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    },
+    {
+      "uuid": "e0b085cc-ee45-4961-ae2b-166bf9a1902d",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        22.32,
+        6.905
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "S1",
+      "size_mm": [
+        1.0,
+        2.1
+      ],
+      "drill_mm": [
+        0.6,
+        1.7
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    },
+    {
+      "uuid": "9d2eadf2-7278-4bf3-aa12-b2f72fe801d4",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        18.5,
+        10.325
+      ],
+      "ref": "U10",
+      "value": "TPD2EUSB30DRTR",
+      "pad": "3",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "material_roots": [
+        "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+      ]
+    }
+  ],
+  "nearest_by_net_and_projection_layer": {},
+  "nearby_objects": [],
+  "limitations": [
+    "No CAD mutation or zone refill performed.",
+    "Graph deletion is a topological counterfactual, not a changed-board proof.",
+    "No wave, impedance, field, current, ESD or hardware model; guard/return effectiveness not proved.",
+    "Native 1 nm polygons are geometric approximations and material guard is a robustness test, not fabrication tolerance."
+  ],
+  "local_usb_geometry": [
+    {
+      "uuid": "09178be0-d279-48cb-ab31-5aa0534dedea",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        17.75,
+        8.4
+      ],
+      "start_mm": [
+        17.75,
+        8.4
+      ],
+      "end_mm": [
+        16.8625,
+        9.2875
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "781e0571-34da-484e-9d9a-ea0e6c7203c3",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.75,
+        8.4
+      ],
+      "start_mm": [
+        18.75,
+        8.4
+      ],
+      "end_mm": [
+        17.75,
+        8.4
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "83975cc5-5447-4704-a405-2a3a65bd02c4",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        20.8,
+        9.8
+      ],
+      "start_mm": [
+        20.8,
+        9.8
+      ],
+      "end_mm": [
+        21.575,
+        10.575
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "8b9b45ea-8aca-4d9e-8f15-0efa0da45faf",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        21.575,
+        10.575
+      ],
+      "start_mm": [
+        21.575,
+        10.575
+      ],
+      "end_mm": [
+        22.4,
+        10.575
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "92338e32-d41d-46a8-bf4a-4cc649d339de",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        24.093198,
+        10.575
+      ],
+      "start_mm": [
+        24.093198,
+        10.575
+      ],
+      "end_mm": [
+        24.893198,
+        11.375
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "af389e13-82f3-402d-bcb3-9aeb2a1e8157",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        22.4,
+        10.575
+      ],
+      "start_mm": [
+        22.4,
+        10.575
+      ],
+      "end_mm": [
+        24.093198,
+        10.575
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "b17b8cd1-1903-56a9-a344-e509ffb983c9",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        16.8625,
+        9.2875
+      ],
+      "start_mm": [
+        16.8625,
+        9.2875
+      ],
+      "end_mm": [
+        20.8,
+        9.8
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "f0575ca0-f941-4110-8a28-712d78694deb",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        24.893198,
+        11.375
+      ],
+      "start_mm": [
+        24.893198,
+        11.375
+      ],
+      "end_mm": [
+        25.093198,
+        11.375
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "544a3023-571c-4ba3-b056-b27f573292aa",
+      "type": "PCB_VIA",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.75,
+        8.4
+      ],
+      "drill_mm": 0.25,
+      "width_mm": 0.5
+    },
+    {
+      "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+      "type": "PCB_VIA",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        17.75,
+        8.4
+      ],
+      "drill_mm": 0.25,
+      "width_mm": 0.5
+    },
+    {
+      "uuid": "5b08ec50-9d90-5d96-a298-8c2e65b8d7c6",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.85,
+        11.175
+      ],
+      "start_mm": [
+        18.85,
+        11.175
+      ],
+      "end_mm": [
+        18.7,
+        10.715
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "84ffbf13-1211-4737-8707-5631b74159de",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        17.75,
+        7.48
+      ],
+      "start_mm": [
+        17.75,
+        7.48
+      ],
+      "end_mm": [
+        17.75,
+        8.4
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "987658e4-2786-5128-bd22-185c9ed388d3",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.06,
+        10.715
+      ],
+      "start_mm": [
+        18.06,
+        10.715
+      ],
+      "end_mm": [
+        18.06,
+        9.8
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "b9d0b23f-c338-48c7-a941-510b95c02f08",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.75,
+        7.48
+      ],
+      "start_mm": [
+        18.75,
+        7.48
+      ],
+      "end_mm": [
+        18.75,
+        8.4
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "cd56f3a9-6491-546f-8ac4-245f866cb787",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.06,
+        9.8
+      ],
+      "start_mm": [
+        18.06,
+        9.8
+      ],
+      "end_mm": [
+        18.75,
+        9.8
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "dde35e57-1aaa-56c2-98cd-55771e22bab1",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.7,
+        10.715
+      ],
+      "start_mm": [
+        18.7,
+        10.715
+      ],
+      "end_mm": [
+        18.06,
+        10.715
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "fa960ce9-efd8-5c7b-a84a-e626be686c1f",
+      "type": "PCB_TRACK",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.75,
+        9.8
+      ],
+      "start_mm": [
+        18.75,
+        9.8
+      ],
+      "end_mm": [
+        18.75,
+        8.4
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "1a71c171-733d-4dff-b215-dd56d18f9b95",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        24.706801,
+        11.825
+      ],
+      "start_mm": [
+        24.706801,
+        11.825
+      ],
+      "end_mm": [
+        24.906801,
+        11.825
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "1c12e9f5-56df-41fd-8f0c-b9f3a95c087a",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        22.4,
+        11.025
+      ],
+      "start_mm": [
+        22.4,
+        11.025
+      ],
+      "end_mm": [
+        23.906801,
+        11.025
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "a8658ac1-3f9c-4ac6-bcad-6247e6226b65",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        23.906801,
+        11.025
+      ],
+      "start_mm": [
+        23.906801,
+        11.025
+      ],
+      "end_mm": [
+        24.706801,
+        11.825
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "b04e3a6d-1e98-43d1-9b10-58c23321ca28",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        18.0,
+        12.4
+      ],
+      "start_mm": [
+        18.0,
+        12.4
+      ],
+      "end_mm": [
+        17.5625,
+        12.4
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "b4944ceb-a3bc-455d-ad4a-1064cf3d8041",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        20.8,
+        11.7
+      ],
+      "start_mm": [
+        20.8,
+        11.7
+      ],
+      "end_mm": [
+        21.475,
+        11.025
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "c25036c4-dbb4-494c-880c-b491af41ef4c",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        21.475,
+        11.025
+      ],
+      "start_mm": [
+        21.475,
+        11.025
+      ],
+      "end_mm": [
+        22.4,
+        11.025
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "cc183bf5-15f3-5270-ae14-886f402cad67",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        20.8,
+        11.7
+      ],
+      "start_mm": [
+        20.8,
+        11.7
+      ],
+      "end_mm": [
+        18.0,
+        12.4
+      ],
+      "width_mm": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "f91f5ac5-9482-4743-87e7-862e51863477",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        24.906801,
+        11.825
+      ],
+      "start_mm": [
+        24.906801,
+        11.825
+      ],
+      "end_mm": [
+        25.306801,
+        12.225
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "ba0e0532-1586-4050-a390-d87dcee11d2c",
+      "type": "PCB_VIA",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        18.0,
+        12.4
+      ],
+      "drill_mm": 0.25,
+      "width_mm": 0.5
+    },
+    {
+      "uuid": "114832de-14ed-45a6-a71e-4827e49ece5f",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        17.25,
+        9.1
+      ],
+      "start_mm": [
+        17.25,
+        9.1
+      ],
+      "end_mm": [
+        18.25,
+        9.1
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "38dc9b81-4edc-471e-add7-2572a3c28274",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        17.25,
+        7.48
+      ],
+      "start_mm": [
+        17.25,
+        7.48
+      ],
+      "end_mm": [
+        17.25,
+        9.1
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        18.25,
+        9.1
+      ],
+      "start_mm": [
+        18.25,
+        9.1
+      ],
+      "end_mm": [
+        18.25,
+        7.48
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "4386ae32-e6c7-51a8-9f51-4af5a03c9caf",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        17.75,
+        10.95
+      ],
+      "start_mm": [
+        17.75,
+        10.95
+      ],
+      "end_mm": [
+        18.0,
+        11.025
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "73e01598-6edd-41d2-b19a-1ef47b849196",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        18.25,
+        9.1
+      ],
+      "start_mm": [
+        18.25,
+        9.1
+      ],
+      "end_mm": [
+        18.0,
+        9.1
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "a808b65d-1870-532d-86cd-6f8d7849a959",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        17.75,
+        9.6
+      ],
+      "start_mm": [
+        17.75,
+        9.6
+      ],
+      "end_mm": [
+        17.75,
+        10.95
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "a963e830-796c-53b3-b9de-ef49be1314bc",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        18.0,
+        11.025
+      ],
+      "start_mm": [
+        18.0,
+        11.025
+      ],
+      "end_mm": [
+        18.0,
+        12.4
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "abd413c6-ea9a-5122-a0aa-204e314f3ec4",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        18.0,
+        9.35
+      ],
+      "start_mm": [
+        18.0,
+        9.35
+      ],
+      "end_mm": [
+        17.75,
+        9.6
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "ad6e4170-c174-50a4-9cc7-e4c180a76234",
+      "type": "PCB_TRACK",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        18.0,
+        9.1
+      ],
+      "start_mm": [
+        18.0,
+        9.1
+      ],
+      "end_mm": [
+        18.0,
+        9.35
+      ],
+      "width_mm": 0.15,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "5487ee5a-8b47-4626-a712-4694dde58742",
+      "type": "PAD",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        17.75,
+        7.48
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "A6",
+      "size_mm": [
+        0.3,
+        1.15
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "uuid": "d6055620-8930-4e0c-aa05-fb34265f158f",
+      "type": "PAD",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        18.25,
+        7.48
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "A7",
+      "size_mm": [
+        0.3,
+        1.15
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "uuid": "9350d4f4-a97a-4264-a287-26e378b6a81d",
+      "type": "PAD",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.75,
+        7.48
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "B6",
+      "size_mm": [
+        0.3,
+        1.15
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "uuid": "ce73e7cc-dc74-4861-9448-96b126ab01d0",
+      "type": "PAD",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        17.25,
+        7.48
+      ],
+      "ref": "J1",
+      "value": "USB4105-GF-A (candidate)",
+      "pad": "B7",
+      "size_mm": [
+        0.3,
+        1.15
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "uuid": "d3f86522-9a79-4e09-9355-32e55f18dff1",
+      "type": "PAD",
+      "net": "USB_DP_CONN",
+      "at_mm": [
+        18.85,
+        11.175
+      ],
+      "ref": "U10",
+      "value": "TPD2EUSB30DRTR",
+      "pad": "1",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "uuid": "475f0f84-edb4-4cc6-a260-0d9bd713f85f",
+      "type": "PAD",
+      "net": "USB_DM_CONN",
+      "at_mm": [
+        18.15,
+        11.175
+      ],
+      "ref": "U10",
+      "value": "TPD2EUSB30DRTR",
+      "pad": "2",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "protection_ground_geometry": [
+    {
+      "uuid": "9d2eadf2-7278-4bf3-aa12-b2f72fe801d4",
+      "type": "PAD",
+      "net": "GND",
+      "at_mm": [
+        18.5,
+        10.325
+      ],
+      "ref": "U10",
+      "value": "TPD2EUSB30DRTR",
+      "pad": "3",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "uuid": "46548df2-c6ab-43ec-857a-410aa8d7a855",
+      "type": "PCB_TRACK",
+      "net": "GND",
+      "at_mm": [
+        18.5,
+        10.325
+      ],
+      "start_mm": [
+        18.5,
+        10.325
+      ],
+      "end_mm": [
+        19.1,
+        10.325
+      ],
+      "width_mm": 0.2,
+      "layer": "B.Cu"
+    },
+    {
+      "uuid": "30f42945-7f50-4bbe-b5f4-d95448eea66b",
+      "type": "PCB_VIA",
+      "net": "GND",
+      "at_mm": [
+        19.1,
+        10.325
+      ],
+      "drill_mm": 0.25,
+      "width_mm": 0.5
+    }
+  ],
+  "protection_ground_graph_edges": [
+    [
+      "object:30f42945-7f50-4bbe-b5f4-d95448eea66b:2:0",
+      "object:46548df2-c6ab-43ec-857a-410aa8d7a855:2:0",
+      0.026643460712,
+      0.02664194349
+    ],
+    [
+      "object:46548df2-c6ab-43ec-857a-410aa8d7a855:2:0",
+      "object:9d2eadf2-7278-4bf3-aa12-b2f72fe801d4:2:0",
+      0.045637083359,
+      0.045635444316
+    ]
+  ],
+  "helper_sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9",
+  "board_unchanged": true
+}

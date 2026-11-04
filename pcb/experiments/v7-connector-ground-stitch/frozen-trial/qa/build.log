@@ -1,0 +1,27 @@
+./pcbnew/pcb_track.cpp(375): assert "false" failed in SetWidth(): Warning: PCB_VIA::SetWidth called without a layer argument
+{
+  "status": "UNSELECTED one ordinary GND stitch; actual validation pending",
+  "source_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "prefill_sha256": "43cfe54820adaacc75625e60fec0d0e830949cdc51405bd9910e668c65e5179b",
+  "site_receipt_sha256": "27da71b4a1db30d204397c49a32089aa0244b704ba851f35639efb03be43d1d0",
+  "reviewed_contract_sha256": "c58baac31c087ddd115fb5ccbe7953ced52d8469c0efe675b2184ea00ff7d7a5",
+  "new_via": {
+    "uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+    "net": "GND",
+    "xy_mm": [
+      17.2,
+      9.9
+    ],
+    "diameter_mm": 0.5,
+    "drill_mm": 0.25,
+    "span": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "nominal_annular_width_mm": 0.125
+  },
+  "new_raw_record": "(via\n\t\t(at 17.2 9.9)\n\t\t(size 0.5)\n\t\t(drill 0.25)\n\t\t(layers \"F.Cu\" \"B.Cu\")\n\t\t(net 83)\n\t\t(uuid \"cda2df4b-6411-5409-a933-5106751244d8\")\n\t)",
+  "retired_objects": [],
+  "existing_connector_stub_unchanged": "bc0a06ab-785a-4a27-a164-9c3256c7f3bd",
+  "scope": "No prior copper, footprint, schematic, rule, or drill is edited. The new through drill is explicit; it may remove ground outside old shadows. No neck restoration, SI gain or hardware qualification is claimed."
+}

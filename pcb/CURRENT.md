@@ -1,22 +1,12 @@
-# Current V7 recovery selection
+# Current V7 experimental working selection
 
-Selected CAD:`experiments/v7-gnd-deadbranch-cleanup/candidate/pcb/maru60.kicad_pcb`.
-SHA256:`c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a`.
+Open `experiments/v7-connector-ground-stitch/candidate/pcb/maru60.kicad_pro`.
+PCB SHA256: aaafc033c6e9809afcb189290c3740157b7ab5596aaa0867e581f08d89807eca.
 
-Exactly two unused F.Cu GND tracks totaling1.938477631mm are removed. The existing boundary via, every one of1,269drills and all12serialized zone records are unchanged. No component/BOM, circuit, firmware, clearance or rule change.
+One ordinary GND via was added to the preserved c770 source. All prior records and saved fills are byte-identical. Only its actual drill removes ground, 0.049087681002 mm² per inner plane, outside every protected current and historical signal shadow. The native/independent material and cold-refill checks pass; no current precision or endpoint waiver was used.
 
-Verified:12unchanged expansion-GPIO opens, zero critical source opens,66warnings(one removed,noneadded), zero other hard DRC errors,ERC0,parity0. Tracks9,750;vias918;footprints382;summed track length13,176.816253756544mm. Fresh correctedR2 and independent review preserve all245pad-net partitions,247original ground returns,934barrel proofs and every retained material/zone contact witness. All51existing guard failures remain explicit. Normal cold refill reproduces the exact board.
+9,750 tracks; 919 vias; 382 footprints; 13,176.816253756544 mm. DRC: 66 unchanged warnings, 12 unchanged expansion opens, zero other hard errors. ERC and schematic parity: zero. All 245 pad-net partitions, 247 original GND-pad roots and old contacts are preserved.
 
-The current aead-to-c770 transition passes strict plane preservation with zero saved-zone difference and no tolerance exception. Historical BUCK predecessor aead and its original strict failure/candidate-specific1nm condition remain unchanged; this does not retroactively change that earlier result. All previous sources and evidence are preserved.
+The existing USB neck and connector stub remain. Added copper may alter fields/coupling; there is no post-change extraction or SI/ESD/EMC/hardware gain claim. This remains an unfinished experimental design, not a manufacturing release. C124 and J3 alternatives are not selected here. Historical BUCK-only 1 nm acceptance remains confined to that earlier transition; its original strict failure is unchanged.
 
-No HF-ground, noise,PDN,SI,EMC,thermal,stability,assembly or hardware improvement is inferred. F.Cu ground foil is intentionally reduced; only the bounded nominal topology/reference claims above are established. C128,+4Vstub,J3,C124 alternatives remain unselected. See the current unit's adoption receipt and complete92-warning history(26resolved,66remaining).
-
-## Corrected current physical evidence
-
-The exact reviewed material checker remains `tools/export_material_graph.py`. `experiments/v7-material-contact-correction/` preserves the original error correction, five source-bound rechecks and exact positive-interior certificates for the aead baseline. The new current unit independently verifies its two-track successor; no old contact-area shortcut is reinstated. This is bounded nominal connectivity evidence, not manufacturing or hardware qualification.
-
-## Active recovery firmware
-
-The active development overlay remains `firmware/qmk/keyboards/maru60/rp2350`, with supporting files under `engineering`. It is unchanged and byte-identical to the reviewed LED startup recovery. Nineteen former fixed-overlay files were recovered exactly; three are newly tested implementations. LED qualification remains 0. No full pinned QMK/ARM build, flashing or hardware acceptance is claimed.
-
-Verify exact package/active-file identity from repository root with `python3 pcb/experiments/led-startup-recovery/verify_package.py --active-root pcb`. The original lost Git history and full historical QA were not restored.
+Active firmware remains `firmware/qmk/keyboards/maru60/rp2350`, with the reviewed recovery overlay unchanged and LED qualification 0. No full pinned QMK/ARM build or flashing. Run `python3 pcb/experiments/led-startup-recovery/verify_package.py --active-root pcb` from the repository root to check its identity. The original lost history/full historical QA are not restored.

@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "kicad-cli",
+    "pcb",
+    "drc",
+    "--format",
+    "json",
+    "--all-track-errors",
+    "--schematic-parity",
+    "--severity-all",
+    "--output",
+    "/tmp/v7-connector-gnd-stitch-c770/qa/drc.json",
+    "/tmp/v7-connector-gnd-stitch-c770/filled/pcb/maru60.kicad_pcb"
+  ],
+  "exit": 0,
+  "seconds": 3.857926120999764,
+  "xdg": {
+    "XDG_DATA_HOME": "/tmp/v7-connector-gnd-stitch-c770/xdg/data",
+    "XDG_CONFIG_HOME": "/tmp/v7-connector-gnd-stitch-c770/xdg/config",
+    "XDG_CACHE_HOME": "/tmp/v7-connector-gnd-stitch-c770/xdg/cache",
+    "XDG_STATE_HOME": "/tmp/v7-connector-gnd-stitch-c770/xdg/state",
+    "XDG_RUNTIME_DIR": "/tmp/v7-connector-gnd-stitch-c770/xdg/runtime"
+  },
+  "candidate_sha256": "aaafc033c6e9809afcb189290c3740157b7ab5596aaa0867e581f08d89807eca"
+}
