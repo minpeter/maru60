@@ -1,0 +1,11 @@
+# Same-case-size NP0 alternative
+
+A more relevant read-only option is **TDK C1608NP01H822J080AA**, a current Production 0603 part rated 8.2 nF ±5%, 50 V. The [official product page](https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608NP01H822J080AA) and [high-temperature catalog](https://product.tdk.com/en/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_hightemp_en.pdf) specify NP0 with ±30 ppm/°C and a −55 to +150°C range. Its nominal body is 1.60 ×0.80 ×0.80 mm, each ±0.10 mm. This is a distinct current product, not an assumed renaming of the obsolete C1608C0G1H822J080AA.
+
+Using the 25°C reference, maximum absolute temperature difference 125°C, and initial +5% tolerance gives a **coefficient-only upper estimate of 8.6422875 nF**, leaving 1.3577125 nF below 10 nF. The symmetric coefficient-only range is 7.7607875–8.6422875 nF. The general specification measures the coefficient at 25/85°C with −10/−25°C checks. Extending a constant ±30 ppm/°C across the full catalog range is a screening assumption, not an independently verified pointwise bound. Separate drift, soldering and environmental stress conditions exist; this is not an all-condition guarantee for the assembled circuit.
+
+The nominal design ramp remains 20.5 ms to 5 V versus 25 ms for 10 nF; cap-only inrush into the board's nominal direct 5.8 µF rises from 1.16 to 1.414634 mA. Active buck startup is still omitted. The full manufacturer controller/load operating contract remains necessary.
+
+The existing C124 pads are 0.90 ×0.95 mm with a 0.65 mm inner gap. The proposed part's recommended reflow gap, land length and width are each 0.60–0.80 mm: the gap fits, but length and width exceed those recommendations by 0.10 and 0.15 mm. That needs assembly review; it is neither an automatic drop-in approval nor proof the larger pads are unsafe. No pads, BOM fields or circuit values were changed.
+
+This option avoids the X7R temperature increase in the first screen and may avoid a new series-resistor route. It still changes the startup ramp and needs actual-component/assembly review. It is a candidate to test, not a selected correction. `np0_option.py` reproduces the coefficient-only arithmetic in `np0-option.json`. The original 1,200-row X7R sensitivity file remains unchanged.

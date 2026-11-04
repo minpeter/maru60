@@ -32,3 +32,9 @@ A reviewed, newly tested LED startup-guard recovery implementation is now active
 Continue new experiments from the exact selected board in isolated directories, with new source-bound checks and independent review before adoption. Do not weaken clearance, old conductor/reference preservation or qualification gates. Do not push or fabricate from this baseline.
 
 `recovery/` contains reconstruction inputs, scripts, source manifests, explicit historical limitations, independent review and the exact selected-board preview. Reconstruction scripts preserve their original execution layout; they are provenance artifacts, not a relocated one-command replay promise. The saved board can be opened directly without reconstruction.
+
+## Completed unselected C124 circuit experiment
+
+`pcb/experiments/v7-c124-short-local-review` preserves the independently reviewed short-local 100 ohm series-resistor trial. Its latest experimental PCB is ec48735f21b813f84873a4dfcd8a984a395f59a6d48d30e5bcfff19aaefe52a7, with accepted four-reference/logo artwork retained. Actual geometry/contact/reference and carry reviews pass: 31 bounded old tracks retired, 21 new tracks, no drill changes, all retained copper and saved zones exact, and unrelated physical net partitions unchanged. Native hard DRC/ERC/parity are zero; 12 expansion opens and 64 warnings remain, including one explicit rooted support-tail warning.
+
+This is evidence integration, not selection. The current entrypoint and 2c7e100a board remain unchanged. Passive models and independently checked component alternatives are included, but active startup/reset/pulse behavior, actual parasitics/coupling, assembly/3D and hardware qualification remain open. See the experiment README for exact source bindings and limitations. No smaller-capacitor alternative or proposed procurement part has been adopted.

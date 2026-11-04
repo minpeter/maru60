@@ -1,0 +1,111 @@
+{
+  "source_warnings": 92,
+  "candidate_warnings": 88,
+  "retired": [
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of R121",
+          "pos": {
+            "x": 15.43,
+            "y": 18.5
+          },
+          "uuid": "34e374c0-fd5b-4362-abd1-bf5c02f704ee"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of C124",
+          "pos": {
+            "x": 16.93,
+            "y": 18.5
+          },
+          "uuid": "239b0001-7259-43d7-a032-613be2f91f59"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Segment of C124 on B.Silkscreen",
+          "pos": {
+            "x": 14.99,
+            "y": 18.64058
+          },
+          "uuid": "2385c1aa-5511-4795-966c-287e6d9ad225"
+        },
+        {
+          "description": "Reference field of R121",
+          "pos": {
+            "x": 15.43,
+            "y": 18.5
+          },
+          "uuid": "34e374c0-fd5b-4362-abd1-bf5c02f704ee"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of R121",
+          "pos": {
+            "x": 15.43,
+            "y": 18.5
+          },
+          "uuid": "34e374c0-fd5b-4362-abd1-bf5c02f704ee"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of C124",
+          "pos": {
+            "x": 16.93,
+            "y": 18.5
+          },
+          "uuid": "239b0001-7259-43d7-a032-613be2f91f59"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    }
+  ],
+  "added": [
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [GND] on B.Cu, length 0.6000 mm",
+          "pos": {
+            "x": 15.5,
+            "y": 17.85
+          },
+          "uuid": "0dd51559-bc06-502f-8bb1-1b186fa751d0"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    }
+  ],
+  "source_open_count": 12,
+  "candidate_open_count": 12,
+  "schematic_parity": 0,
+  "native_open_item_pair_sets_unchanged": false,
+  "native_open_raw_order_unchanged": false
+}

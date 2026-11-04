@@ -1,0 +1,692 @@
+{
+  "candidate_sha256": "8c45df3642599be269697ce9b225fe55ee6b886dce713b77f6ced533ea268fb6",
+  "source_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "version": "9.0.2+dfsg-1",
+  "footprint_count": 383,
+  "track_via_count": 10661,
+  "track_mismatches": [],
+  "parts": {
+    "R125": {
+      "uuid": "7f46d8aa-a5e8-5221-bb89-7f6d1360b233",
+      "xy": [
+        15.54,
+        20.27
+      ],
+      "orientation_degrees": 0.0,
+      "fields": {
+        "Reference": "R125",
+        "Value": "100 1%",
+        "Datasheet": "https://www.koaspeer.com/catimages/Products/RK73H/RK73H.pdf",
+        "Description": "",
+        "Manufacturer": "KOA",
+        "MPN": "RK73H1ETTP1000F",
+        "Status": "UNSELECTED - not assembly or procurement approved"
+      },
+      "court_vertices": [
+        [
+          14.64,
+          19.745
+        ],
+        [
+          16.44,
+          19.745
+        ],
+        [
+          16.44,
+          20.795
+        ],
+        [
+          14.64,
+          20.795
+        ]
+      ],
+      "court_extra_mm2": 0.0,
+      "court_missing_mm2": 0.0,
+      "reference_text_size": [
+        0.8,
+        0.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "3582c5ef-76e5-578e-89b5-9c156868c11e",
+          "xy": [
+            15.99,
+            20.27
+          ],
+          "size": [
+            0.4,
+            0.3
+          ],
+          "orientation_degrees": 0.0,
+          "shape": 1,
+          "net": "USB_DVDT",
+          "layers": [
+            "B.Cu",
+            "B.Mask",
+            "B.Paste"
+          ],
+          "paste_margin_mm": [
+            0.0,
+            0.0
+          ],
+          "mask_expansion_mm": 0.0,
+          "copper_area_mm2": 0.12,
+          "native_paste_shape_area_mm2": 0.12,
+          "native_mask_shape_area_mm2": 0.12
+        },
+        {
+          "number": "2",
+          "uuid": "960e3148-8557-528f-8a4f-d73f49d28860",
+          "xy": [
+            15.09,
+            20.27
+          ],
+          "size": [
+            0.4,
+            0.3
+          ],
+          "orientation_degrees": 0.0,
+          "shape": 1,
+          "net": "USB_DVDT_CAP",
+          "layers": [
+            "B.Cu",
+            "B.Mask",
+            "B.Paste"
+          ],
+          "paste_margin_mm": [
+            0.0,
+            0.0
+          ],
+          "mask_expansion_mm": 0.0,
+          "copper_area_mm2": 0.12,
+          "native_paste_shape_area_mm2": 0.12,
+          "native_mask_shape_area_mm2": 0.12
+        }
+      ]
+    },
+    "C124": {
+      "uuid": "c16684c6-e6e9-4d9e-ab06-ad0653958e94",
+      "xy": [
+        15.38,
+        19.17
+      ],
+      "orientation_degrees": 0.0,
+      "fields": {
+        "Reference": "C124",
+        "Value": "10nF 10% 50V",
+        "Datasheet": "https://pim.murata.com/en-us/pim/details/?partNum=GRM155R71H103KA88%23",
+        "Description": "",
+        "Manufacturer": "Murata",
+        "MPN": "GRM155R71H103KA88D",
+        "Status": "UNSELECTED - not assembly or procurement approved"
+      },
+      "court_vertices": [
+        [
+          14.58,
+          18.645
+        ],
+        [
+          16.18,
+          18.645
+        ],
+        [
+          16.18,
+          19.695
+        ],
+        [
+          14.58,
+          19.695
+        ]
+      ],
+      "court_extra_mm2": 0.0,
+      "court_missing_mm2": 0.0,
+      "reference_text_size": [
+        0.8,
+        0.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "e99fab95-384f-4c82-aa22-4b94524bb476",
+          "xy": [
+            15.005,
+            19.17
+          ],
+          "size": [
+            0.35,
+            0.5
+          ],
+          "orientation_degrees": 0.0,
+          "shape": 1,
+          "net": "USB_DVDT_CAP",
+          "layers": [
+            "B.Cu",
+            "B.Mask",
+            "B.Paste"
+          ],
+          "paste_margin_mm": [
+            0.0,
+            0.0
+          ],
+          "mask_expansion_mm": 0.0,
+          "copper_area_mm2": 0.175,
+          "native_paste_shape_area_mm2": 0.175,
+          "native_mask_shape_area_mm2": 0.175
+        },
+        {
+          "number": "2",
+          "uuid": "f79380d7-c89c-4396-b53e-4918d8902c13",
+          "xy": [
+            15.755,
+            19.17
+          ],
+          "size": [
+            0.35,
+            0.5
+          ],
+          "orientation_degrees": 0.0,
+          "shape": 1,
+          "net": "GND",
+          "layers": [
+            "B.Cu",
+            "B.Mask",
+            "B.Paste"
+          ],
+          "paste_margin_mm": [
+            0.0,
+            0.0
+          ],
+          "mask_expansion_mm": 0.0,
+          "copper_area_mm2": 0.175,
+          "native_paste_shape_area_mm2": 0.175,
+          "native_mask_shape_area_mm2": 0.175
+        }
+      ]
+    },
+    "R121": {
+      "uuid": "d422a027-2eda-4bf9-9c83-1580d56a84b7",
+      "xy": [
+        13.68,
+        18.65
+      ],
+      "orientation_degrees": 0.0,
+      "fields": {
+        "Reference": "R121",
+        "Value": "156k 0.1%",
+        "Datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+        "Description": "",
+        "Manufacturer": "Vishay",
+        "MPN": "TNPW0603156KBEEA",
+        "Status": "UNSELECTED - not assembly or procurement approved"
+      },
+      "court_vertices": [
+        [
+          12.93,
+          17.15
+        ],
+        [
+          14.43,
+          17.15
+        ],
+        [
+          14.43,
+          20.15
+        ],
+        [
+          12.93,
+          20.15
+        ]
+      ],
+      "court_extra_mm2": 0.0,
+      "court_missing_mm2": 0.0,
+      "reference_text_size": [
+        0.8,
+        0.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "2ceda713-c41e-4c74-9962-f6a642f1e236",
+          "xy": [
+            13.68,
+            19.45
+          ],
+          "size": [
+            1.0,
+            0.9
+          ],
+          "orientation_degrees": 0.0,
+          "shape": 1,
+          "net": "USB_OVLO",
+          "layers": [
+            "B.Cu",
+            "B.Mask",
+            "B.Paste"
+          ],
+          "paste_margin_mm": [
+            0.0,
+            0.0
+          ],
+          "mask_expansion_mm": 0.0,
+          "copper_area_mm2": 0.9,
+          "native_paste_shape_area_mm2": 0.9,
+          "native_mask_shape_area_mm2": 0.9
+        },
+        {
+          "number": "2",
+          "uuid": "437d8abf-8e4f-4587-99b7-93c610dd4000",
+          "xy": [
+            13.68,
+            17.85
+          ],
+          "size": [
+            1.0,
+            0.9
+          ],
+          "orientation_degrees": 0.0,
+          "shape": 1,
+          "net": "GND",
+          "layers": [
+            "B.Cu",
+            "B.Mask",
+            "B.Paste"
+          ],
+          "paste_margin_mm": [
+            0.0,
+            0.0
+          ],
+          "mask_expansion_mm": 0.0,
+          "copper_area_mm2": 0.9,
+          "native_paste_shape_area_mm2": 0.9,
+          "native_mask_shape_area_mm2": 0.9
+        }
+      ]
+    }
+  },
+  "build_contract_stale_prefill_sha": "db4f1277729b00c73d8e666313486dce2da4c955c6a11729d5397d8dbbe600fc",
+  "part_mismatches": [],
+  "bridge_internal_contact_mm2": 0.0603916194445,
+  "expected_contact_rechecks": [
+    {
+      "new": "R121.2",
+      "old": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "physical_area_mm2": 0.055103142777,
+      "expected_area_mm2": 0.055103142777,
+      "positive": true
+    },
+    {
+      "new": "old-ground-bridge",
+      "old": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "physical_area_mm2": 0.0478458239865,
+      "expected_area_mm2": 0.0478458239865,
+      "positive": true
+    },
+    {
+      "new": "old-ground-bridge",
+      "old": "19181a2b-164e-4055-9004-2860bebe32f4",
+      "physical_area_mm2": 0.126415530208,
+      "expected_area_mm2": 0.126415530208,
+      "positive": true
+    },
+    {
+      "new": "old-ground-bridge",
+      "old": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "physical_area_mm2": 0.0411650268745,
+      "expected_area_mm2": 0.0411650268745,
+      "positive": true
+    },
+    {
+      "new": "UVLO0",
+      "old": "751dcade-77aa-4c93-aab3-170f1229e0e4",
+      "physical_area_mm2": 0.017715203511,
+      "expected_area_mm2": 0.017715203511,
+      "positive": true
+    },
+    {
+      "new": "UVLO0",
+      "old": "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed",
+      "physical_area_mm2": 0.0038718109395,
+      "expected_area_mm2": 0.0038718109395,
+      "positive": true
+    },
+    {
+      "new": "UVLO5",
+      "old": "7d18b97e-b287-4393-8a28-411c96dcc305",
+      "physical_area_mm2": 0.0181318794495,
+      "expected_area_mm2": 0.0181318794495,
+      "positive": true
+    },
+    {
+      "new": "UVLO5",
+      "old": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+      "physical_area_mm2": 0.0026191701635,
+      "expected_area_mm2": 0.0026191701635,
+      "positive": true
+    },
+    {
+      "new": "UVLO5",
+      "old": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+      "physical_area_mm2": 0.007766904377,
+      "expected_area_mm2": 0.007766904377,
+      "positive": true
+    },
+    {
+      "new": "OVLO7",
+      "old": "e218cfe4-e4ba-5b6c-985d-8f1da39a4402",
+      "physical_area_mm2": 0.017690946176,
+      "expected_area_mm2": 0.017690946176,
+      "positive": true
+    },
+    {
+      "new": "DVDT0",
+      "old": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+      "physical_area_mm2": 0.017792209043,
+      "expected_area_mm2": 0.017792209043,
+      "positive": true
+    },
+    {
+      "new": "DVDT0",
+      "old": "e07df864-b2ae-41c6-8b80-01729167b27e",
+      "physical_area_mm2": 0.02383558147,
+      "expected_area_mm2": 0.02383558147,
+      "positive": true
+    },
+    {
+      "new": "DVDT0",
+      "old": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+      "physical_area_mm2": 0.011589685699,
+      "expected_area_mm2": 0.011589685699,
+      "positive": true
+    },
+    {
+      "new": "DVDT1",
+      "old": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+      "physical_area_mm2": 0.001589663694,
+      "expected_area_mm2": 0.001589663694,
+      "positive": true
+    },
+    {
+      "new": "GND0",
+      "old": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+      "physical_area_mm2": 0.0193746831795,
+      "expected_area_mm2": 0.0193746831795,
+      "positive": true
+    },
+    {
+      "new": "GND0",
+      "old": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+      "physical_area_mm2": 0.017672032351,
+      "expected_area_mm2": 0.017672032351,
+      "positive": true
+    }
+  ],
+  "new_contact_rechecks": [
+    {
+      "a": "R125.1",
+      "b": "DVDT2",
+      "area_mm2": 0.039552006926
+    },
+    {
+      "a": "R125.2",
+      "b": "CAP0",
+      "area_mm2": 0.0314025995855
+    },
+    {
+      "a": "C124.1",
+      "b": "CAP0",
+      "area_mm2": 0.046447327865
+    },
+    {
+      "a": "C124.2",
+      "b": "GND0",
+      "area_mm2": 0.037292656678
+    },
+    {
+      "a": "R121.1",
+      "b": "OVLO0",
+      "area_mm2": 0.08383558147
+    },
+    {
+      "a": "UVLO0",
+      "b": "UVLO1",
+      "area_mm2": 0.017695026429
+    },
+    {
+      "a": "UVLO1",
+      "b": "UVLO2",
+      "area_mm2": 0.017709297482
+    },
+    {
+      "a": "UVLO2",
+      "b": "UVLO3",
+      "area_mm2": 0.0177922110415
+    },
+    {
+      "a": "UVLO3",
+      "b": "UVLO4",
+      "area_mm2": 0.0177922096285
+    },
+    {
+      "a": "UVLO4",
+      "b": "UVLO5",
+      "area_mm2": 0.0176869897535
+    },
+    {
+      "a": "OVLO0",
+      "b": "OVLO1",
+      "area_mm2": 0.018878372011
+    },
+    {
+      "a": "OVLO1",
+      "b": "OVLO2",
+      "area_mm2": 0.017671235033
+    },
+    {
+      "a": "OVLO2",
+      "b": "OVLO3",
+      "area_mm2": 0.017730854166
+    },
+    {
+      "a": "OVLO3",
+      "b": "OVLO4",
+      "area_mm2": 0.017841798887
+    },
+    {
+      "a": "OVLO4",
+      "b": "OVLO5",
+      "area_mm2": 0.0176866264975
+    },
+    {
+      "a": "OVLO5",
+      "b": "OVLO6",
+      "area_mm2": 0.0177202956905
+    },
+    {
+      "a": "OVLO6",
+      "b": "OVLO7",
+      "area_mm2": 0.017672159396
+    },
+    {
+      "a": "DVDT0",
+      "b": "DVDT1",
+      "area_mm2": 0.0178274773995
+    },
+    {
+      "a": "DVDT1",
+      "b": "DVDT2",
+      "area_mm2": 0.0176715084345
+    }
+  ],
+  "full_old_support_rechecks": [
+    {
+      "old_contact_uuid": "19181a2b-164e-4055-9004-2860bebe32f4",
+      "outside_old_support_area_mm2": 0.105708073089,
+      "not_covered_by_actual_inside_bridge_mm2": 0.0
+    },
+    {
+      "old_contact_uuid": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "outside_old_support_area_mm2": 0.0091029973315,
+      "not_covered_by_actual_inside_bridge_mm2": 0.0
+    }
+  ],
+  "dvd_net_members": {
+    "USB_DVDT": [
+      {
+        "uuid": "3a7c4379-6a0e-5f7b-ad21-ef1ae2696fa2",
+        "type": "PCB_TRACK",
+        "ref": null,
+        "pin": null
+      },
+      {
+        "uuid": "5a9f5b0b-83b0-5eb3-aa0f-f401e18b5739",
+        "type": "PCB_TRACK",
+        "ref": null,
+        "pin": null
+      },
+      {
+        "uuid": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+        "type": "PCB_TRACK",
+        "ref": null,
+        "pin": null
+      },
+      {
+        "uuid": "fd0e066b-c366-5b5a-b501-15fcf42fddb4",
+        "type": "PCB_TRACK",
+        "ref": null,
+        "pin": null
+      },
+      {
+        "uuid": "3582c5ef-76e5-578e-89b5-9c156868c11e",
+        "type": "PAD",
+        "ref": "R125",
+        "pin": "1"
+      },
+      {
+        "uuid": "e07df864-b2ae-41c6-8b80-01729167b27e",
+        "type": "PAD",
+        "ref": "U8",
+        "pin": "7"
+      },
+      {
+        "uuid": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+        "type": "PAD",
+        "ref": "U8",
+        "pin": "7"
+      }
+    ],
+    "USB_DVDT_CAP": [
+      {
+        "uuid": "fb9bdab6-3397-51af-bd4c-48b6b68af4cd",
+        "type": "PCB_TRACK",
+        "ref": null,
+        "pin": null
+      },
+      {
+        "uuid": "960e3148-8557-528f-8a4f-d73f49d28860",
+        "type": "PAD",
+        "ref": "R125",
+        "pin": "2"
+      },
+      {
+        "uuid": "e99fab95-384f-4c82-aa22-4b94524bb476",
+        "type": "PAD",
+        "ref": "C124",
+        "pin": "1"
+      }
+    ]
+  },
+  "input_output_min_gap": {
+    "a": "3582c5ef-76e5-578e-89b5-9c156868c11e",
+    "b": "960e3148-8557-528f-8a4f-d73f49d28860",
+    "gap_mm": 0.5,
+    "overlap_mm2": 0.0
+  },
+  "input_output_overlap_count": 0,
+  "court_gaps_mm": {
+    "C124_R125": 0.05,
+    "R121_C124": 0.15,
+    "R121_R125": 0.21,
+    "R125_U8": 0.06
+  },
+  "actual_terminal_envelope_gaps": [
+    {
+      "terminal": "C124.1",
+      "obstacle": "OVLO0",
+      "gap_mm": 0.170722
+    },
+    {
+      "terminal": "C124.1",
+      "obstacle": "OVLO1",
+      "gap_mm": 0.170722
+    },
+    {
+      "terminal": "C124.1",
+      "obstacle": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "gap_mm": 0.179286
+    },
+    {
+      "terminal": "R121.2",
+      "obstacle": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "gap_mm": 0.167369
+    },
+    {
+      "terminal": "R125.2",
+      "obstacle": "OVLO3",
+      "gap_mm": 0.182902
+    }
+  ],
+  "r121_ground_pad_to_uvlo1_gap_mm": 0.173672,
+  "bridge_foreign_min": {
+    "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+    "net": "USB_ILM",
+    "gap_mm": 0.375
+  },
+  "reference_projection_signal_objects": 22,
+  "actual_reference_coverage": [
+    {
+      "layer": "In1.Cu",
+      "outside_projection_uncovered_mm2": 0.0,
+      "uncovered_outlines": 0
+    },
+    {
+      "layer": "In2.Cu",
+      "outside_projection_uncovered_mm2": 0.0,
+      "uncovered_outlines": 0
+    }
+  ],
+  "actual_plane_roots": [
+    {
+      "via": "efadf2be-e519-469f-a84c-2e7cbb60672a",
+      "layer": "In1.Cu",
+      "physical_annulus_overlap_mm2": 0.147260768066
+    },
+    {
+      "via": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "layer": "In1.Cu",
+      "physical_annulus_overlap_mm2": 0.147260768066
+    },
+    {
+      "via": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+      "layer": "In1.Cu",
+      "physical_annulus_overlap_mm2": 0.147260768066
+    },
+    {
+      "via": "efadf2be-e519-469f-a84c-2e7cbb60672a",
+      "layer": "In2.Cu",
+      "physical_annulus_overlap_mm2": 0.147260768066
+    },
+    {
+      "via": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "layer": "In2.Cu",
+      "physical_annulus_overlap_mm2": 0.147260768066
+    },
+    {
+      "via": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+      "layer": "In2.Cu",
+      "physical_annulus_overlap_mm2": 0.147260768066
+    }
+  ],
+  "source_zone_records_identical": true,
+  "candidate_sha256_after": "8c45df3642599be269697ce9b225fe55ee6b886dce713b77f6ced533ea268fb6"
+}

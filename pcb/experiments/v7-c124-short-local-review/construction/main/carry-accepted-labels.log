@@ -1,0 +1,52 @@
+{
+  "status": "UNSELECTED separate accepted-artwork carry; no electrical change or adoption",
+  "selected_source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "trial_source_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "prior_filled_trial_sha256": "8c45df3642599be269697ce9b225fe55ee6b886dce713b77f6ced533ea268fb6",
+  "successor_sha256": "ec48735f21b813f84873a4dfcd8a984a395f59a6d48d30e5bcfff19aaefe52a7",
+  "changed_footprint_blocks": [
+    {
+      "reference": "R140",
+      "uuid": "7b318399-ba02-4c74-af7c-24a406884d8a",
+      "old_block_sha256": "3331a4566cc8eba5a75405040b402add330f73bbfff476b45e6fb99454e21758",
+      "accepted_block_sha256": "1588fdb06093c214f8bfc18f73802dea250111f1b80fb2fb30aa9bc4eb687046",
+      "scope": "reference field only"
+    },
+    {
+      "reference": "R160",
+      "uuid": "319c8d90-2e8c-4fbe-b044-eb183bcc2c22",
+      "old_block_sha256": "41d2af2d45337223dcebff059d88f4c4ecc07641626a036e58a9bc1b26fcf235",
+      "accepted_block_sha256": "d23ff6eb07b8e136ed8a70d292be29e4c188157de8a37f750cc0428e3350ce79",
+      "scope": "reference field only"
+    },
+    {
+      "reference": "C100",
+      "uuid": "936d1b8f-2579-4255-b41c-cc9654291283",
+      "old_block_sha256": "921e787e8b6c187be9e07a5ec7c03f214507db8aa719f19b64f0300342a9f421",
+      "accepted_block_sha256": "baca99ab4c78623a4321b7e5baf04f0ff62593060d08a1a212f14a56032da9a2",
+      "scope": "reference field only"
+    },
+    {
+      "reference": "LOGO1",
+      "uuid": "ba7f51cc-1007-44c0-8919-491491f7c29a",
+      "old_block_sha256": "fbc2c388be68e8a5fb4ea4a3541d7179ebef75bb07513873fbbf7e30cd9247db",
+      "accepted_block_sha256": "c119e28a109562edfbcba24a78bcd544a77baca8725911d52fdcb947c9aa8a7e",
+      "scope": "nonconductive whole LOGO1 artwork only"
+    },
+    {
+      "reference": "R134",
+      "uuid": "e8bd1f07-b665-43fb-a3a3-9ba1bca55842",
+      "old_block_sha256": "f0d8ca806df8c8576179015a46536b2243d5d97b6040c14b9d7ac86d902da92f",
+      "accepted_block_sha256": "9a5d9b56d32c6d4e8f7234b9219c8f452c1d13f9d75cff4fdcbcab949d8c227b",
+      "scope": "reference field only"
+    }
+  ],
+  "all_other_blocks_byte_identical": true,
+  "all_12_zone_records_byte_identical": true,
+  "all_copper_pads_tracks_vias_geometry_nets_and_rules_unchanged": true,
+  "source_paths": [
+    "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-reference-legibility/candidate/pcb/maru60.kicad_pcb",
+    "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-four-reference-logo/candidate-four/pcb/maru60.kicad_pcb",
+    "/tmp/v7-c124-rebound-short/isolated-v4/filled/pcb/maru60.kicad_pcb"
+  ]
+}

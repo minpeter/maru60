@@ -15,3 +15,5 @@ The short C124/R121/R125 routing trial remains unselected. Read the root README 
 The active development overlay is `firmware/qmk/keyboards/maru60/rp2350`; supporting files are under `engineering`. It is byte-identical to the reviewed candidate under `experiments/led-startup-recovery/candidate`. Of the former fixed overlay, 19 files are exact recovery and three are new code. Qualification defaults to 0. Host tests and the fresh static V7 mapping pass; full QMK/ARM and hardware verification remain pending. No CAD byte changed in this firmware adoption.
 
 Verify package and active identity with `python3 pcb/experiments/led-startup-recovery/verify_package.py --active-root pcb` from the repository root. Follow that package's README for a fresh complete host replay. This is development-source adoption only, not a build, flash or release.
+
+The completed C124 circuit experiment and its independent reviews are archived at `experiments/v7-c124-short-local-review`. It remains explicitly unselected; this current-board pointer is unchanged.
