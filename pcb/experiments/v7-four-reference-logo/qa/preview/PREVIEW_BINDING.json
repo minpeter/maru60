@@ -1,0 +1,189 @@
+{
+  "candidate_board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "native_plot_and_panels": [
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--layers",
+        "B.Mask,B.Silkscreen,B.Fab,B.Courtyard,Edge.Cuts",
+        "--page-size-mode",
+        "1",
+        "--exclude-drawing-sheet",
+        "--mode-single",
+        "--output",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/back-native.svg",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_pcb"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-native/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-native/xdg_data_home",
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-native/xdg_cache_home",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-native/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-native/xdg_runtime_dir"
+      },
+      "exit_code": 0,
+      "svg_sha256": "2bad35d655e11a2468ddd2e475d0d83846addcff318a102944c8334b6604137b",
+      "log_sha256": "dfe1c3c3e16e5cffff687c3b91b4b780aefa000d9bd1a2ef45c95f9a462e24f4"
+    },
+    {
+      "panel": "C100",
+      "crop_board_mm": [
+        133,
+        68,
+        16,
+        12
+      ],
+      "back_display_mirrored": true,
+      "svg_sha256": "cfc9034d7ead0f0a01516ba924644cfc67fabf8e38b98132e5c722e9498fc083",
+      "png_sha256": "737ec65919670aedcb487db684c258bf9551a08ef083619bcf878f17c820197c",
+      "raster_command": [
+        "inkscape",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/C100.svg",
+        "--export-type=png",
+        "--export-filename=/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/C100.png",
+        "--export-width=780",
+        "--export-height=420",
+        "--export-background=#122129",
+        "--export-background-opacity=1"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-C100/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-C100/xdg_data_home",
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-C100/xdg_cache_home",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-C100/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-C100/xdg_runtime_dir"
+      },
+      "log_sha256": "17c0ee9414feb6b894805329811acbe2329b02267ce34db0030acce00e802a49"
+    },
+    {
+      "panel": "R140",
+      "crop_board_mm": [
+        108,
+        28,
+        12,
+        11
+      ],
+      "back_display_mirrored": true,
+      "svg_sha256": "5485d369a0aa1889d61ecb9f42b64c5681ae6ce1ae0caf8a727f31d78deddcec",
+      "png_sha256": "52844af470abc27b6e6bf7373d807b2babff4d017774892061d713ac5092f382",
+      "raster_command": [
+        "inkscape",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/R140.svg",
+        "--export-type=png",
+        "--export-filename=/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/R140.png",
+        "--export-width=780",
+        "--export-height=420",
+        "--export-background=#122129",
+        "--export-background-opacity=1"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R140/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R140/xdg_data_home",
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R140/xdg_cache_home",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R140/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R140/xdg_runtime_dir"
+      },
+      "log_sha256": "5e88df935e979fdb6a58bf36da429dc99eb3b2da3424fb06bca35e4dc258afd6"
+    },
+    {
+      "panel": "R160",
+      "crop_board_mm": [
+        178,
+        80,
+        12,
+        12
+      ],
+      "back_display_mirrored": true,
+      "svg_sha256": "33b3ad6d16129cd474d66c351ce41b286e30582c917e947aaa7f5692ddff345b",
+      "png_sha256": "5271b63ace7f132c9ac4f7429cc651282a5337b4a9c33916ad69acac937e342d",
+      "raster_command": [
+        "inkscape",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/R160.svg",
+        "--export-type=png",
+        "--export-filename=/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/R160.png",
+        "--export-width=780",
+        "--export-height=420",
+        "--export-background=#122129",
+        "--export-background-opacity=1"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R160/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R160/xdg_data_home",
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R160/xdg_cache_home",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R160/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R160/xdg_runtime_dir"
+      },
+      "log_sha256": "7596c9066c2ff4111f8f7057ac67e548fd5d45dc839d94c8b451c95d59b3cb5a"
+    },
+    {
+      "panel": "R134",
+      "crop_board_mm": [
+        101,
+        39,
+        13,
+        12
+      ],
+      "back_display_mirrored": true,
+      "svg_sha256": "58870f69274b13cecb0779b65c6dc46757679cd2db2b54d218d553bd15f13327",
+      "png_sha256": "b8ec468edfefbeaf9df64183024f98953ef91c142e98ec9eff68088209e30e20",
+      "raster_command": [
+        "inkscape",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/R134.svg",
+        "--export-type=png",
+        "--export-filename=/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/R134.png",
+        "--export-width=780",
+        "--export-height=420",
+        "--export-background=#122129",
+        "--export-background-opacity=1"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R134/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R134/xdg_data_home",
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R134/xdg_cache_home",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R134/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-R134/xdg_runtime_dir"
+      },
+      "log_sha256": "67bcf61089cee63ac7fefd961b3851754163ffb2076175deef0c48a89f482fda"
+    },
+    {
+      "panel": "LOGO1",
+      "crop_board_mm": [
+        65,
+        77,
+        26,
+        16
+      ],
+      "back_display_mirrored": true,
+      "svg_sha256": "cc10964747e8d5b3e449525142fdc6dbb8719caebff35bacc88f744c38e9d5b0",
+      "png_sha256": "6bb74f3944f326ef6395e1fdf3fe981fd67b74c3652918d3bae008669bb2f0eb",
+      "raster_command": [
+        "inkscape",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/LOGO1.svg",
+        "--export-type=png",
+        "--export-filename=/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/preview/LOGO1.png",
+        "--export-width=780",
+        "--export-height=420",
+        "--export-background=#122129",
+        "--export-background-opacity=1"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-LOGO1/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-LOGO1/xdg_data_home",
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-LOGO1/xdg_cache_home",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-LOGO1/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/preview-raster-LOGO1/xdg_runtime_dir"
+      },
+      "log_sha256": "09973d8cc3b232279f4d35cbfbb84e20ed57ef37cfae12a909da225df236aa06"
+    }
+  ],
+  "png_sha256": "b9a4b5033f38bcdd31bc95567555519cf32e8d910bb428cec6d6dcb87dbb5fb6",
+  "screen_comparison_sha256": "e26c35c291b255ac49531f263afd7d7b801e181cce00d2b7ad137bf965c5dede",
+  "native_ink_sha256": "5b607d6aa8e81f9a28f982bc98559bd1cd7d02820bc3eea7aa0185f2cb11a234",
+  "all_CAD_geometry_unaltered_for_visualization": true,
+  "method": "Native SVG groups with viewBox crops and back-side reflection; native Fab proxy/reference graphics remain visible, not actual silkscreen objects. Other existing board warnings are not hidden.",
+  "selected": false,
+  "manufacturing_or_actual_3D_visibility_qualified": false
+}

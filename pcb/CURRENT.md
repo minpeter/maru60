@@ -1,12 +1,14 @@
 # Current V7 recovery selection
 
-Selected CAD: `experiments/v7-reference-legibility/candidate/pcb/maru60.kicad_pcb`.
+Selected CAD: `experiments/v7-four-reference-logo/candidate-four/pcb/maru60.kicad_pcb`.
 
-SHA256 `7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1` is exactly equal to the original selected unit34 board. No new circuit or layout change is selected by this recovery commit.
+SHA256: `2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373`.
 
-Fresh recovery checks: 12 opens (all incomplete expansion GPIO), 0 critical source opens, 92 warnings, other DRC errors0, ERC0, schematic parity0. Tracks9752, vias919. The older 14-open a9ff board is retained only in its saved source archive and is not this selection.
+This successor changes only four reference labels (C100, R140, R160, R134) and translates the complete LOGO1 artwork. All electrical geometry, rules, pads, nets, drills and saved planes are unchanged from the exact recovered 7c23 board. The previous selected source remains under `experiments/v7-reference-legibility`.
 
-Read the root README for the unrecovered Git history, historical QA, full later project manifest and firmware limitations. The 100-ohm C124 long-route trial remains rejected. The short C124/R121 alternative and the safe label/logo subset remain unselected.
+Verified: 12 expansion-GPIO opens, 0 critical source opens, 68 warnings (24 removed, none added), 0 other hard DRC errors, ERC 0 and parity 0. Tracks 9,752, vias 919, total track length 13,181.60473138763 mm. Exact source-bound native checks, independent ink/association review and complete warning lifecycle are under the new unit. This bounded metadata/artwork adoption does not claim a new cold-fill replay, active simulation or hardware/manufacturing/3D qualification.
+
+The short C124/R121/R125 routing trial remains unselected. Read the root README for the original missing Git history and other recovery limits.
 
 ## Active recovery firmware
 

@@ -1,16 +1,21 @@
-# MARU60 V7 exact-CAD recovery baseline
+# MARU60 V7 recovery workbench
 
 This isolated recovery repository preserves the exact selected PCB after the execution workspace was replaced. It does not invent or restore the lost Git history.
 
-Open `pcb/experiments/v7-reference-legibility/candidate/pcb/maru60.kicad_pro`.
+Open `pcb/experiments/v7-four-reference-logo/candidate-four/pcb/maru60.kicad_pro`.
 
-- Selected PCB SHA256: `7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1`.
+- Current PCB SHA256: `2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373`.
+- Exact recovered original selected PCB: `7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1`, retained in the prior unit.
 - Original selection commit: `b42351518b0007177a85fa3ce44f8d41967c9af9`.
 - Last known original evidence-only HEAD: `3bed855f70875e1466f3a0a253d549ae581baaf4`.
 - Original working branch: `feat/maru60-v7-protection-layout`.
 - This repository starts a separate recovery history. The original Git objects and full historical QA suites are missing, not recreated from summaries.
 
-## Exact recovery and fresh checks
+## Current metadata/artwork successor
+
+The selected successor changes four reference labels and moves the intact LOGO1 artwork. Independent native ink/association review and exact raw restoration establish unchanged electrical geometry and saved fills. Warnings fall from 92 to 68, with 24 exact removals and none added; the same 12 GPIO open-component pairs remain. Native counts remain 9,752 tracks, 919 vias and 13,181.60473138763 mm. Fresh candidate ERC and parity are zero. All 92 original warning records have an explicit current disposition in the new unit. This is bounded label/artwork adoption, not electrical, 3D or manufacturing qualification.
+
+## Exact recovery baseline and fresh checks
 
 All six complete board hashes, from integration baseline through U10, C128, width repair and typography, match their historical targets exactly. The independent review verifies raw deltas and unchanged saved fill bytes. This is full-byte recovery, not approximate geometry recreation.
 
@@ -22,7 +27,7 @@ Fresh receipts are under the selected unit's `qa/recovery-native`. Their executi
 
 ## Missing work and safe continuation
 
-A reviewed, newly tested LED startup-guard recovery implementation is now active at `pcb/firmware`, with exact copies of its supporting engineering files at `pcb/engineering`. Nineteen of the 22 former fixed overlay files were recovered exactly; three guard source files are explicitly new implementations. The immutable baseline, reviewed candidate, fresh host tests and static V7 mapping are preserved under `pcb/experiments/led-startup-recovery`. Qualification remains OFF. Full pinned QMK/ARM builds and hardware acceptance have not been performed; do not flash or enable qualification. Original C124 rejected-trial packets and later unselected label/C124 studies are also not fully restored. No unselected trial is promoted here.
+A reviewed, newly tested LED startup-guard recovery implementation is now active at `pcb/firmware`, with exact copies of its supporting engineering files at `pcb/engineering`. Nineteen of the 22 former fixed overlay files were recovered exactly; three guard source files are explicitly new implementations. The immutable baseline, reviewed candidate, fresh host tests and static V7 mapping are preserved under `pcb/experiments/led-startup-recovery`. Qualification remains OFF. Full pinned QMK/ARM builds and hardware acceptance have not been performed; do not flash or enable qualification. Original C124 rejected-trial packets and later unselected label/C124 studies are also not fully restored. The reviewed four-label/logo successor is now selected; the separate C124 circuit trial remains unselected.
 
 Continue new experiments from the exact selected board in isolated directories, with new source-bound checks and independent review before adoption. Do not weaken clearance, old conductor/reference preservation or qualification gates. Do not push or fabricate from this baseline.
 
