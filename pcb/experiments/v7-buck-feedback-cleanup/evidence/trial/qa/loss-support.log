@@ -1,0 +1,41 @@
+19:56:29: Debug: Adding duplicate image handler for 'PNG file'
+19:56:29: Debug: Adding duplicate image handler for 'JPEG file'
+19:56:29: Debug: Adding duplicate image handler for 'TIFF file'
+19:56:29: Debug: Adding duplicate image handler for 'GIF file'
+19:56:29: Debug: Adding duplicate image handler for 'PNM file'
+19:56:29: Debug: Adding duplicate image handler for 'PCX file'
+19:56:29: Debug: Adding duplicate image handler for 'IFF file'
+19:56:29: Debug: Adding duplicate image handler for 'Windows icon file'
+19:56:29: Debug: Adding duplicate image handler for 'Windows cursor file'
+19:56:29: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+19:56:29: Debug: Adding duplicate image handler for 'TGA file'
+19:56:29: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "layers": [
+    {
+      "layer": "In1.Cu",
+      "reported_loss_mm2": 1.42282e-07,
+      "overlap_authorized_removed_arm_and_via_cut_region_mm2": 0.0,
+      "source_GND_contact_support_hits": [],
+      "source_GND_objects_bbox_tested": [
+        "a19d897e-32d7-4ddb-bcb1-1a373aea4764",
+        "a3884f85-e9cb-5586-82ee-11b5cace6664"
+      ],
+      "all_source_GND_on_layer_count": 246
+    },
+    {
+      "layer": "In2.Cu",
+      "reported_loss_mm2": 1.40974e-07,
+      "overlap_authorized_removed_arm_and_via_cut_region_mm2": 0.0,
+      "source_GND_contact_support_hits": [],
+      "source_GND_objects_bbox_tested": [
+        "a19d897e-32d7-4ddb-bcb1-1a373aea4764",
+        "a3884f85-e9cb-5586-82ee-11b5cace6664"
+      ],
+      "all_source_GND_on_layer_count": 246
+    }
+  ],
+  "scope": "Tests positive area of each actual old inner-plane GND copper/annular contact support against raw native loss polygons. No polygon discarded. Cut region is exact retired deadarm copper plus old via nominal .4505mm clearance envelope. Existing full-board non-GND shadow proof is separate. Strict global no-loss remains failed irrespective of zero support overlap."
+}

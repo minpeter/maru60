@@ -1,0 +1,120 @@
+{
+  "candidate_board_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "preview_png_sha256": "8d0353d423a295e6ff8ea1b082105c3240e79f9929efb7675350aad16fb60dca",
+  "native_and_raster_records": [
+    {
+      "side": "F",
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--layers",
+        "F.Cu,F.Mask,F.Silkscreen,Edge.Cuts",
+        "--page-size-mode",
+        "2",
+        "--exclude-drawing-sheet",
+        "--mode-single",
+        "--output",
+        "/tmp/v7-buck-deadarm-final-recheck/qa/fullboard-preview/F-copper-mask-silk.svg",
+        "/tmp/v7-buck-deadarm-final-recheck/candidate/pcb/maru60.kicad_pcb"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-F/xdg_config_home",
+        "XDG_DATA_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-F/xdg_data_home",
+        "XDG_CACHE_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-F/xdg_cache_home",
+        "XDG_STATE_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-F/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-F/xdg_runtime_dir"
+      },
+      "exit_code": 0,
+      "svg_sha256": "782b8b7ce9b81a4349b8e433241f68738f3b7e83151e5b14c923e116e4ba4267",
+      "log_sha256": "8c35d393b29f240290953f905088d1ebf2666ac44e215a39de933d6aeab7753c"
+    },
+    {
+      "side": "F",
+      "command": [
+        "inkscape",
+        "/tmp/v7-buck-deadarm-final-recheck/qa/fullboard-preview/F-copper-mask-silk.svg",
+        "--export-type=png",
+        "--export-filename=/tmp/v7-buck-deadarm-final-recheck/qa/fullboard-preview/F-copper-mask-silk.png",
+        "--export-width=2600",
+        "--export-background=#122129",
+        "--export-background-opacity=1"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-F/xdg_config_home",
+        "XDG_DATA_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-F/xdg_data_home",
+        "XDG_CACHE_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-F/xdg_cache_home",
+        "XDG_STATE_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-F/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-F/xdg_runtime_dir"
+      },
+      "exit_code": 0,
+      "png_sha256": "0afa9248b84d0dc1ea1b8ae3e7a96558d41fdde347c0a2fd50697256acb67509",
+      "log_sha256": "a8de97b794cc870890b85aa645172ea4b7d5fa4ecc781645b2d69df084c018c2"
+    },
+    {
+      "side": "B",
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--layers",
+        "B.Cu,B.Mask,B.Silkscreen,Edge.Cuts",
+        "--page-size-mode",
+        "2",
+        "--exclude-drawing-sheet",
+        "--mode-single",
+        "--output",
+        "/tmp/v7-buck-deadarm-final-recheck/qa/fullboard-preview/B-copper-mask-silk.svg",
+        "--mirror",
+        "/tmp/v7-buck-deadarm-final-recheck/candidate/pcb/maru60.kicad_pcb"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-B/xdg_config_home",
+        "XDG_DATA_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-B/xdg_data_home",
+        "XDG_CACHE_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-B/xdg_cache_home",
+        "XDG_STATE_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-B/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-native-B/xdg_runtime_dir"
+      },
+      "exit_code": 0,
+      "svg_sha256": "858350c8dc24ac5c92e31a2c4af822bd0f57d3910ba45c758c30c0aad2743f66",
+      "log_sha256": "91321c6e42362a623ce52b0b9e5b958fcaa29dd8f8535b720122c3157c5a862e"
+    },
+    {
+      "side": "B",
+      "command": [
+        "inkscape",
+        "/tmp/v7-buck-deadarm-final-recheck/qa/fullboard-preview/B-copper-mask-silk.svg",
+        "--export-type=png",
+        "--export-filename=/tmp/v7-buck-deadarm-final-recheck/qa/fullboard-preview/B-copper-mask-silk.png",
+        "--export-width=2600",
+        "--export-background=#122129",
+        "--export-background-opacity=1"
+      ],
+      "private_xdg": {
+        "XDG_CONFIG_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-B/xdg_config_home",
+        "XDG_DATA_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-B/xdg_data_home",
+        "XDG_CACHE_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-B/xdg_cache_home",
+        "XDG_STATE_HOME": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-B/xdg_state_home",
+        "XDG_RUNTIME_DIR": "/tmp/v7-buck-deadarm-final-recheck/qa/runtime/fullboard-raster-B/xdg_runtime_dir"
+      },
+      "exit_code": 0,
+      "png_sha256": "1c8332934c548f6367246fae5fbecd941835f2a21579ab7169a2aa9c46de10dc",
+      "log_sha256": "a0764e9ca674de1ae3dcd7c59ee319de62569ad94e3b26e92a1745101a7f03de"
+    }
+  ],
+  "same_snapshot_metrics_source_sha256": "2e7e91b3d536505e99f5f911933de5c8c3b8469ccdce8c747b547705552541a6",
+  "same_snapshot_DRC_sha256": "ff2192f8502708a3bd39391bff4be9b614ba48bccc88afc8343ef68dc57ddd53",
+  "displayed_layers": [
+    "F.Cu",
+    "F.Mask",
+    "F.Silkscreen",
+    "B.Cu",
+    "B.Mask",
+    "B.Silkscreen",
+    "Edge.Cuts"
+  ],
+  "selected": false,
+  "manufacturing_or_3D_qualified": false
+}

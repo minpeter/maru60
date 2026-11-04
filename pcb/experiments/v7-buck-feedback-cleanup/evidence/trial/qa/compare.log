@@ -1,0 +1,35 @@
+19:46:04: Debug: Adding duplicate image handler for 'PNG file'
+19:46:04: Debug: Adding duplicate image handler for 'JPEG file'
+19:46:04: Debug: Adding duplicate image handler for 'TIFF file'
+19:46:04: Debug: Adding duplicate image handler for 'GIF file'
+19:46:04: Debug: Adding duplicate image handler for 'PNM file'
+19:46:04: Debug: Adding duplicate image handler for 'PCX file'
+19:46:04: Debug: Adding duplicate image handler for 'IFF file'
+19:46:04: Debug: Adding duplicate image handler for 'Windows icon file'
+19:46:04: Debug: Adding duplicate image handler for 'Windows cursor file'
+19:46:04: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+19:46:04: Debug: Adding duplicate image handler for 'TGA file'
+19:46:04: Debug: Adding duplicate image handler for 'XPM file'
+old geometry changed []
+RESULT {
+  "status": "UNSELECTED BUCK dead-arm actual native refill comparison; no adoption/analog claim",
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "filled_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "old_electrical_geometry_changed": [],
+  "canonical_nonzone_nodes_exact": true,
+  "new_uuid_set": [
+    "6ffab701-7688-4850-9aad-8ab86bd0f04a"
+  ],
+  "retired_uuid_set": [
+    "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+    "d382de57-3476-43c4-ac26-0a72b21acf7c"
+  ],
+  "affected_old_non_GND_shadows": [],
+  "all_retained_non_GND_shadow_loss_mm2": 0,
+  "outer_zone_delta_area_mm2": 0.0,
+  "notes": [
+    "Shadow loss is actual source saved inner fill minus actual candidate saved inner fill intersected with original full-width non-GND copper projections, with physical original holes removed.",
+    "No endpoint/transition exemption is assumed. New via and track projection gaps are reported in full.",
+    "Canonical nonzone comparison excludes declared retired/source and new/candidate UUIDs and all zone nodes; individual zone outlines/clearance/min-thickness are checked separately."
+  ]
+}

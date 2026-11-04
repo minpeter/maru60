@@ -1,0 +1,66 @@
+[
+  {
+    "command": [
+      "/usr/bin/python3",
+      "/tmp/v7-buck-deadarm-trial-2c7e/tools/export_native_physical_graph.py",
+      "/tmp/v7-buck-deadarm-final-recheck/source/pcb/maru60.kicad_pcb",
+      "/tmp/v7-buck-deadarm-final-recheck/qa/source-physical-graph.json"
+    ],
+    "exit_code": 0,
+    "seconds": 29.27986601399971
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "drc",
+      "--schematic-parity",
+      "--format",
+      "json",
+      "--output",
+      "/tmp/v7-buck-deadarm-final-recheck/qa/source-drc.json",
+      "/tmp/v7-buck-deadarm-final-recheck/source/pcb/maru60.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "seconds": 3.5704347629998665
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "/tmp/v7-buck-deadarm-trial-2c7e/tools/export_native_physical_graph.py",
+      "/tmp/v7-buck-deadarm-final-recheck/candidate/pcb/maru60.kicad_pcb",
+      "/tmp/v7-buck-deadarm-final-recheck/qa/candidate-physical-graph.json"
+    ],
+    "exit_code": 0,
+    "seconds": 30.875403714999266
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "drc",
+      "--schematic-parity",
+      "--format",
+      "json",
+      "--output",
+      "/tmp/v7-buck-deadarm-final-recheck/qa/candidate-drc.json",
+      "/tmp/v7-buck-deadarm-final-recheck/candidate/pcb/maru60.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "seconds": 3.3619370100004744
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--output",
+      "/tmp/v7-buck-deadarm-final-recheck/qa/candidate-erc.json",
+      "/tmp/v7-buck-deadarm-final-recheck/candidate/pcb/maru60.kicad_sch"
+    ],
+    "exit_code": 0,
+    "seconds": 0.6974701130002359
+  }
+]

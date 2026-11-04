@@ -1,0 +1,4 @@
+  File "/tmp/v7-buck-precision-criterion-review/verify_remote_invariants.py", line 63
+    results.append({'layer':lp['layer'],'all_remote_loss_and_gain_hulls_clear_all_old_nonGND_shadows_and_inner_GND_contact_copper_with_2nm_guard':allclear,'invariant_patch_checks':inv,,'zone_clearance_nm':clearance,'project_hole_clearance_nm':hole_clearance,'all_inner_foreign_objects_considered':len(copper),'all_actual_holes_considered':len(holes),'patch_count':len(records),'failures':sum(r['failure_count'] for r in records),'patches':records})
+                                                                                                                                                                                        ^
+SyntaxError: invalid syntax

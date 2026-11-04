@@ -1,0 +1,48 @@
+{
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "old_strict_global_gate": "FAIL unchanged",
+  "original_no_old_shadow_loss_and_root_support_conditions_pass": true,
+  "layers": [
+    {
+      "layer": "In1.Cu",
+      "all_exact_loss_bands_clear_every_original_nonGND_shadow_with_2nm_guard": true,
+      "all_exact_loss_and_gain_bands_clear_every_retained_inner_GND_contact_copper_with_2nm_guard": true,
+      "gain_only_old_outer_shadow_intersections": [
+        {
+          "patch": 20,
+          "old_outer_shadow_uuid": "1730bf89-ef3e-49cd-8b39-45e7cb1cd687",
+          "exact_classification": "candidate_only_gain",
+          "consequence": "Only previously unreferenced projection gains saved GND coverage; no source-only loss in this entire patch."
+        },
+        {
+          "patch": 20,
+          "old_outer_shadow_uuid": "3faef3cc-6d4c-4b81-985d-bbd7b0e40bcd",
+          "exact_classification": "candidate_only_gain",
+          "consequence": "Only previously unreferenced projection gains saved GND coverage; no source-only loss in this entire patch."
+        },
+        {
+          "patch": 20,
+          "old_outer_shadow_uuid": "66da563a-d05d-491f-8b6f-896c2f77a9c0",
+          "exact_classification": "candidate_only_gain",
+          "consequence": "Only previously unreferenced projection gains saved GND coverage; no source-only loss in this entire patch."
+        }
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "all_exact_loss_bands_clear_every_original_nonGND_shadow_with_2nm_guard": true,
+      "all_exact_loss_and_gain_bands_clear_every_retained_inner_GND_contact_copper_with_2nm_guard": true,
+      "gain_only_old_outer_shadow_intersections": [
+        {
+          "patch": 20,
+          "old_outer_shadow_uuid": "923e7bca-275b-45ab-ac17-f238c65f21ec",
+          "exact_classification": "candidate_only_gain",
+          "consequence": "Only previously unreferenced projection gains saved GND coverage; no source-only loss in this entire patch."
+        }
+      ]
+    }
+  ],
+  "gain_as_loss_classification_control_rejected": true,
+  "note": "The initial all-delta/all-shadow exclusion probe was stronger than the required zero-loss invariant and returned false for one gain-only patch. Exact rational cell classification preserves the actual original requirement; no loss is ignored."
+}

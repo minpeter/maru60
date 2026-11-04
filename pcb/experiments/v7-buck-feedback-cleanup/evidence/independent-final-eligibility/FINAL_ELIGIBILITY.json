@@ -1,0 +1,36 @@
+{
+  "decision": "eligible_for_bounded_adoption_under_authorized_exact_candidate_1nm_criterion",
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "old_strict_global_no_plane_loss": "FAIL preserved unchanged",
+  "applied_candidate_specific_precision_criterion": "PASS",
+  "fresh_final_recheck": "PASS independently reverified",
+  "strict_manifest_sha256": "d44a930febcfe545cedae062c2649b952225778cca0603bfbf0a480b63fbee6f",
+  "precision_manifest_sha256": "ba50b29c74fbcef38c15012dbbd020c6e03bcf632b56f5f433bac20a4bccc2c6",
+  "precision_receipt_sha256": "6d4ecb94724da7e4f199ce16eef1d072836f682d97c6e0fe196d9a771cbc976a",
+  "fresh_builder_terminal_sha256": "8f0af4db3f30e7f06f58c344b8fab8f3694da1de03f81c262f54d929f4af8640",
+  "all_five_actual_commands_successful_and_expected": true,
+  "all_recorded_output_hashes_verified": true,
+  "every_actual_output_log_and_complete54file_source_candidate_copy_bound": true,
+  "fresh_full_graphs_equal_prior_rechecked_graphs_except_path_timing": true,
+  "all245_net_partitions_exact": true,
+  "all12_complete_endpoint_component_pairs_exact": true,
+  "all48_new_DRC_endpoint_UUID_native_position_description_checks_pass": true,
+  "fresh_source_candidate_raw_open_records_exact_after_item_order_normalization": true,
+  "diagnostics": {
+    "warnings_before": 68,
+    "warnings_after": 67,
+    "only_removed_warning_uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c",
+    "hard_DRC_errors": 0,
+    "parity": 0,
+    "ERC": 0,
+    "remaining_opens": 12
+  },
+  "selection_performed": false,
+  "limitations": [
+    "Eligibility is only for exact aead2fb0 under the separately authorized1nm coordinate-precision condition, not the original strict gate.",
+    "No generic checker, future-candidate exemption, new active simulation, SI/noise/loop-stability/hardware or manufacturing qualification.",
+    "Twelve inherited GPIO opens and67remaining warnings are not resolved by this cleanup."
+  ],
+  "bindings_sha256": "623ce9ab7956c728c42271ede5e4fd6df1c374296f100e11850cc5dcf2ccfa0c"
+}

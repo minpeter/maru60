@@ -1,0 +1,101 @@
+{
+  "decision": "pass_authorized_candidate_specific_1nm_precision_criterion_pending_fresh_final_recheck",
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "old_strict_global_no_loss_result": "FAIL; unchanged and still true",
+  "prior_strict_manifest_sha256": "d44a930febcfe545cedae062c2649b952225778cca0603bfbf0a480b63fbee6f",
+  "criterion_application_authorized_by_parent": "2026-11-04 11:19:55 UTC; exact aead candidate only",
+  "candidate_specific_precision_criterion_pass": true,
+  "final_adoption_eligible": false,
+  "pending": "Fresh final physical graph, DRC/parity and ERC recheck, followed by separate parent selection decision. No selection made by reviewer.",
+  "criterion": {
+    "scope": "Only exact2c7\u2192aead dead-arm cleanup under unchanged saved native rules and remote obstacle geometry.",
+    "bound_nm": 1,
+    "remote_region": "All source-only and candidate-only saved material differences except the exact original removed-via hole polygon. No local-region expansion.",
+    "required_invariants": [
+      "Exact unchanged other conductor/footprint/drill/net/zone/project geometry",
+      "Every remote difference point within1nm of opposite true saved-material closure/boundary, both directions",
+      "Zero loss at every original non-GND full-width shadow and every retained rooted/physical contact support",
+      "Unchanged normal clearance/hole rules, native DRC/parity/ERC and complete physical partitions",
+      "Both exact source and candidate observed as byte-identical normal-refill fixed points"
+    ],
+    "explicit_engineering_precision_criterion_not_automatic_native_rule": true
+  },
+  "proof": {
+    "remote_patches_per_layer": 51,
+    "exact_disjoint_difference_cells_per_layer": 181,
+    "actual_material_boundary_segment_tests_per_layer": 208,
+    "maximum_constructive_opposite_material_distance_squared_nm2_exact": "20946193984/38911272217",
+    "maximum_constructive_distance_upper_bound_nm": 0.7336937937005995,
+    "worst_source_point_mm": [
+      148.54558,
+      85.664891
+    ],
+    "explicit_opposite_boundary_point_mm": [
+      148.54557928040435,
+      85.66489085686122
+    ],
+    "complete_raw_area_identity_verified": true,
+    "areas": {
+      "In1.Cu": {
+        "remote_loss_nm2_exact": "4199406150342540815352251/12495015671017470030",
+        "remote_gain_nm2_exact": "5038858755155943567320413/6247507835508735015",
+        "local_gain_nm2_exact": "641253345104",
+        "remote_loss_mm2_approx": 3.3608650528411726e-07,
+        "remote_gain_mm2_approx": 8.065390052841173e-07,
+        "local_gain_mm2_exact_decimal": "0.641253345104",
+        "raw_total_signed_area_delta_nm2_exact": "1282507631113/2"
+      },
+      "In2.Cu": {
+        "remote_loss_nm2_exact": "4199406150342540815352251/12495015671017470030",
+        "remote_gain_nm2_exact": "5038858755155943567320413/6247507835508735015",
+        "local_gain_nm2_exact": "641253345104",
+        "remote_loss_mm2_approx": 3.3608650528411726e-07,
+        "remote_gain_mm2_approx": 8.065390052841173e-07,
+        "local_gain_mm2_exact_decimal": "0.641253345104",
+        "raw_total_signed_area_delta_nm2_exact": "1282507631113/2"
+      }
+    }
+  },
+  "native_grid": {
+    "integer_IU_per_mm": 1000000,
+    "IU_nm": 1,
+    "integer_vertices_can_encode_real_sub_nm_slivers": true
+  },
+  "clearance_and_support": {
+    "foreign_inner_copper_rule_nm": 200000,
+    "hole_rule_nm": 150000,
+    "minimum_native_new_copper_last_noncollision_nm": 200499,
+    "minimum_native_new_hole_last_noncollision_nm": 150499,
+    "no_copper_or_hole_intrusion": true,
+    "all_exact_loss_bands_clear_old_outer_shadows_with_2nm_native_guard": true,
+    "all_exact_loss_and_gain_bands_clear_retained_inner_GND_contact_copper_with_2nm_native_guard": true,
+    "one_gain_only_patch_adds_reference_under_existing_outer_shadows": true,
+    "all731_plane_contact_ids_and_support_areas_exact": true,
+    "all247_rooted_GND_pads_exact": true,
+    "all245_observed_net_pad_partitions_exact": true
+  },
+  "controls": {
+    "material_geometry_checks": 11,
+    "wrong_gain_to_loss_classification_rejected": true,
+    "optimized_Python_scripts_rejected_before_work": 5,
+    "native_collision_primitive_controls": 3,
+    "observed_normal_refill_fixed_points": 2
+  },
+  "limitations": [
+    "The strict mathematical zero-loss gate still fails. This applied alternate criterion does not erase or relabel the real slivers.",
+    "The0.733693794nm number is an exact constructive upper bound to the opposite material, not a claimed exact nearest-point Hausdorff maximum.",
+    "Vertex-grid scale motivates a narrowly scoped engineering precision criterion; it is not a manufacturing tolerance or proof of electrical equivalence.",
+    "No quantified pickup/noise/loop-stability/SI/hardware/manufacturing improvement.",
+    "Proof and controls are candidate-specific, not a general validated production checker.",
+    "No six-copy cold replay or new active SPICE result is claimed."
+  ],
+  "evidence": {
+    "material-coverage-proof.json": "378c5bd080967e7705960784e524d2d957fd1bb6988ef92c9fa0c1a8153536b2",
+    "boundary-envelope-proof.json": "c0fddf1326415dcf697d6356b795b5bb307bbefa64c13d45f84525900a623847",
+    "remote-rule-review.json": "05f93c678af07d22660f501bb961edf9cd80a34689161dc4098e67e7c5fdbeca",
+    "qualified-invariant-review.json": "7a20a098d19ce3be8a5b2f0fdeedf0f38178b795de0b9437198f892902b550b6",
+    "native-grid-independent.json": "6e4cdcec78f8f6b8e69c63323e72d6d6db785797a9e95bc657efafb62e838183",
+    "SOURCE_BINDINGS.json": "dfabb5ad34bc79857bce6b59b33489e6228cf4b1580c5893d462c725dfbfb3fa"
+  }
+}

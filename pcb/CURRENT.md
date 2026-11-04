@@ -1,19 +1,18 @@
 # Current V7 recovery selection
 
-Selected CAD: `experiments/v7-four-reference-logo/candidate-four/pcb/maru60.kicad_pcb`.
+Selected CAD: `experiments/v7-buck-feedback-cleanup/candidate/pcb/maru60.kicad_pcb`.
+SHA256: `aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f`.
 
-SHA256: `2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373`.
+The degree-one BUCK_FB via and 2.85 mm unused arm are removed, preserving the 1.95 mm active feedback section and all three feedback pads. The previous 2c7 four-label/logo project remains unchanged.
 
-This successor changes only four reference labels (C100, R140, R160, R134) and translates the complete LOGO1 artwork. All electrical geometry, rules, pads, nets, drills and saved planes are unchanged from the exact recovered 7c23 board. The previous selected source remains under `experiments/v7-reference-legibility`.
+Verified: 12 unchanged expansion-GPIO opens, zero critical source opens, 67 warnings (one removed, none added), zero other hard DRC errors, ERC zero and parity zero. Tracks 9,752; vias 918; footprints 382; summed track length 13,178.75473138763 mm. All 245 pad partitions, 731 plane contacts and 247 rooted GND pads remain exact.
 
-Verified: 12 expansion-GPIO opens, 0 critical source opens, 68 warnings (24 removed, none added), 0 other hard DRC errors, ERC 0 and parity 0. Tracks 9,752, vias 919, total track length 13,181.60473138763 mm. Exact source-bound native checks, independent ink/association review and complete warning lifecycle are under the new unit. This bounded metadata/artwork adoption does not claim a new cold-fill replay, active simulation or hardware/manufacturing/3D qualification.
+The original strict zero-global-plane-loss check remains FAIL. Selection explicitly uses the independently reviewed candidate-specific bilateral 1 nm contour-precision criterion, with a proven 0.733693794 nm upper bound and unchanged critical reference/contact/root and normal clearance checks. It is not a generic epsilon waiver or electrical/manufacturing qualification. Full reasons, original failures, controls and final fresh native checks are preserved in this unit.
 
-The short C124/R121/R125 routing trial remains unselected. Read the root README for the original missing Git history and other recovery limits.
+The J3 and C124 circuit trials remain unselected. No noise, pickup or loop-stability benefit is claimed.
 
 ## Active recovery firmware
 
-The active development overlay is `firmware/qmk/keyboards/maru60/rp2350`; supporting files are under `engineering`. It is byte-identical to the reviewed candidate under `experiments/led-startup-recovery/candidate`. Of the former fixed overlay, 19 files are exact recovery and three are new code. Qualification defaults to 0. Host tests and the fresh static V7 mapping pass; full QMK/ARM and hardware verification remain pending. No CAD byte changed in this firmware adoption.
+The active development overlay remains `firmware/qmk/keyboards/maru60/rp2350`, with supporting files under `engineering`. It is unchanged and byte-identical to the reviewed LED startup recovery. Nineteen former fixed-overlay files were recovered exactly; three are newly tested implementations. LED qualification remains 0. No full pinned QMK/ARM build, flashing or hardware acceptance is claimed.
 
-Verify package and active identity with `python3 pcb/experiments/led-startup-recovery/verify_package.py --active-root pcb` from the repository root. Follow that package's README for a fresh complete host replay. This is development-source adoption only, not a build, flash or release.
-
-The completed C124 circuit experiment and its independent reviews are archived at `experiments/v7-c124-short-local-review`. It remains explicitly unselected; this current-board pointer is unchanged.
+Verify exact package/active-file identity from repository root with `python3 pcb/experiments/led-startup-recovery/verify_package.py --active-root pcb`. The original lost Git history and full historical QA were not restored.

@@ -1,0 +1,704 @@
+{
+  "status": "UNSELECTED final recheck; original strict no-plane-loss failure unchanged",
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "selected_source_still_exact": true,
+  "all_named_net_count": 245,
+  "all_pad_inventory_and_partitions_exact": true,
+  "fresh_graphs_equal_prior_native_graphs": true,
+  "source_open_pairs": [
+    [
+      "0edef198-5c80-419d-865b-5ec49cd8067c",
+      "48515e67-f469-46fd-945e-80e221d7f8ff"
+    ],
+    [
+      "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f",
+      "254b9a4f-db28-4c96-a610-c908a1ce5922"
+    ],
+    [
+      "2fae1e1e-2f58-4081-9638-13aea2289d7d",
+      "3289f5ae-a6a0-55fb-8040-2ff133e55784"
+    ],
+    [
+      "3827e42c-c508-4185-8351-759c94512528",
+      "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+    ],
+    [
+      "38f37228-2ce2-4edd-bea2-10e387e0f52d",
+      "86bf9e60-5de3-41d8-afec-7db12426463b"
+    ],
+    [
+      "5a0545bd-febf-49dd-9baa-b129430d4f9c",
+      "7610c2f0-d25f-5392-9c6d-51572f345960"
+    ],
+    [
+      "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76",
+      "df690eec-df6a-52bf-82fe-eace87245374"
+    ],
+    [
+      "8acfaaa0-99ff-425a-b370-70be0fbb3868",
+      "e01faed3-83ab-447f-badb-64e03c26621d"
+    ],
+    [
+      "984834de-986f-5e89-97e1-e53e00fd8fcc",
+      "c1939946-4449-4887-9393-3ef03908d4dd"
+    ],
+    [
+      "a18e6e59-fb74-4513-a5f4-6a34d9223429",
+      "bee40e5c-5047-43dd-8262-df42b4062ba6"
+    ],
+    [
+      "a71398b4-f7e8-4d77-820d-99a4c9a4d9df",
+      "d4d89708-1b6c-56fe-8c2f-207ff79756ff"
+    ],
+    [
+      "bee40e5c-5047-43dd-8262-df42b4062ba6",
+      "cff436d2-a051-486a-8eda-ad80c8687157"
+    ]
+  ],
+  "candidate_open_pairs": [
+    [
+      "0edef198-5c80-419d-865b-5ec49cd8067c",
+      "48515e67-f469-46fd-945e-80e221d7f8ff"
+    ],
+    [
+      "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f",
+      "254b9a4f-db28-4c96-a610-c908a1ce5922"
+    ],
+    [
+      "2fae1e1e-2f58-4081-9638-13aea2289d7d",
+      "3289f5ae-a6a0-55fb-8040-2ff133e55784"
+    ],
+    [
+      "3827e42c-c508-4185-8351-759c94512528",
+      "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+    ],
+    [
+      "38f37228-2ce2-4edd-bea2-10e387e0f52d",
+      "86bf9e60-5de3-41d8-afec-7db12426463b"
+    ],
+    [
+      "5a0545bd-febf-49dd-9baa-b129430d4f9c",
+      "7610c2f0-d25f-5392-9c6d-51572f345960"
+    ],
+    [
+      "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76",
+      "df690eec-df6a-52bf-82fe-eace87245374"
+    ],
+    [
+      "8acfaaa0-99ff-425a-b370-70be0fbb3868",
+      "e01faed3-83ab-447f-badb-64e03c26621d"
+    ],
+    [
+      "984834de-986f-5e89-97e1-e53e00fd8fcc",
+      "c1939946-4449-4887-9393-3ef03908d4dd"
+    ],
+    [
+      "a18e6e59-fb74-4513-a5f4-6a34d9223429",
+      "bee40e5c-5047-43dd-8262-df42b4062ba6"
+    ],
+    [
+      "a71398b4-f7e8-4d77-820d-99a4c9a4d9df",
+      "d4d89708-1b6c-56fe-8c2f-207ff79756ff"
+    ],
+    [
+      "bee40e5c-5047-43dd-8262-df42b4062ba6",
+      "cff436d2-a051-486a-8eda-ad80c8687157"
+    ]
+  ],
+  "exact_open_endpoint_pairs_equal": true,
+  "source_open_records": [
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 5 [EXT_GPIO24] of J3 on B.Cu",
+          "pos": {
+            "x": 92.5,
+            "y": 39.0
+          },
+          "uuid": "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+        },
+        {
+          "description": "Pad 12 [EXT_GPIO24] of U13 on B.Cu",
+          "pos": {
+            "x": 89.45,
+            "y": 42.0
+          },
+          "uuid": "e01faed3-83ab-447f-badb-64e03c26621d"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 16 [EXT_GPIO24] of U11 on B.Cu",
+          "pos": {
+            "x": 107.1,
+            "y": 36.675
+          },
+          "uuid": "3827e42c-c508-4185-8351-759c94512528"
+        },
+        {
+          "description": "Pad 5 [EXT_GPIO24] of J3 on B.Cu",
+          "pos": {
+            "x": 92.5,
+            "y": 39.0
+          },
+          "uuid": "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 6 [EXT_GPIO25] of J3 on B.Cu",
+          "pos": {
+            "x": 93.5,
+            "y": 39.0
+          },
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6"
+        },
+        {
+          "description": "Pad 11 [EXT_GPIO25] of U13 on B.Cu",
+          "pos": {
+            "x": 89.45,
+            "y": 42.5
+          },
+          "uuid": "a18e6e59-fb74-4513-a5f4-6a34d9223429"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 15 [EXT_GPIO25] of U11 on B.Cu",
+          "pos": {
+            "x": 107.1,
+            "y": 37.325
+          },
+          "uuid": "cff436d2-a051-486a-8eda-ad80c8687157"
+        },
+        {
+          "description": "Pad 6 [EXT_GPIO25] of J3 on B.Cu",
+          "pos": {
+            "x": 93.5,
+            "y": 39.0
+          },
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 8 [EXT_GPIO26] of J3 on B.Cu",
+          "pos": {
+            "x": 95.5,
+            "y": 39.0
+          },
+          "uuid": "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76"
+        },
+        {
+          "description": "Track [EXT_GPIO26] on F.Cu, length 3.8040 mm",
+          "pos": {
+            "x": 93.0,
+            "y": 41.95
+          },
+          "uuid": "df690eec-df6a-52bf-82fe-eace87245374"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 9 [EXT_GPIO27] of J3 on B.Cu",
+          "pos": {
+            "x": 96.5,
+            "y": 39.0
+          },
+          "uuid": "38f37228-2ce2-4edd-bea2-10e387e0f52d"
+        },
+        {
+          "description": "Track [EXT_GPIO27] on B.Cu, length 0.1000 mm",
+          "pos": {
+            "x": 98.7,
+            "y": 42.4
+          },
+          "uuid": "86bf9e60-5de3-41d8-afec-7db12426463b"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [MCU_GPIO3] on B.Cu, length 1.0041 mm",
+          "pos": {
+            "x": 104.0,
+            "y": 33.325
+          },
+          "uuid": "7610c2f0-d25f-5392-9c6d-51572f345960"
+        },
+        {
+          "description": "Pad 5 [MCU_GPIO3] of U1 on B.Cu",
+          "pos": {
+            "x": 112.2,
+            "y": 84.95
+          },
+          "uuid": "5a0545bd-febf-49dd-9baa-b129430d4f9c"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [MCU_GPIO10] on F.Cu, length 3.8746 mm",
+          "pos": {
+            "x": 104.7,
+            "y": 32.525
+          },
+          "uuid": "3289f5ae-a6a0-55fb-8040-2ff133e55784"
+        },
+        {
+          "description": "Pad 14 [MCU_GPIO10] of U1 on B.Cu",
+          "pos": {
+            "x": 108.6,
+            "y": 84.95
+          },
+          "uuid": "2fae1e1e-2f58-4081-9638-13aea2289d7d"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [MCU_GPIO24] on B.Cu, length 1.0296 mm",
+          "pos": {
+            "x": 109.325,
+            "y": 43.0
+          },
+          "uuid": "984834de-986f-5e89-97e1-e53e00fd8fcc"
+        },
+        {
+          "description": "Pad 36 [MCU_GPIO24] of U1 on B.Cu",
+          "pos": {
+            "x": 110.2,
+            "y": 78.05
+          },
+          "uuid": "c1939946-4449-4887-9393-3ef03908d4dd"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [MCU_GPIO25] on B.Cu, length 1.0050 mm",
+          "pos": {
+            "x": 97.5,
+            "y": 32.725
+          },
+          "uuid": "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f"
+        },
+        {
+          "description": "Pad 37 [MCU_GPIO25] of U1 on B.Cu",
+          "pos": {
+            "x": 110.6,
+            "y": 78.05
+          },
+          "uuid": "254b9a4f-db28-4c96-a610-c908a1ce5922"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 40 [MCU_GPIO26] of U1 on B.Cu",
+          "pos": {
+            "x": 111.8,
+            "y": 78.05
+          },
+          "uuid": "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+        },
+        {
+          "description": "Track [MCU_GPIO26] on F.Cu, length 5.4966 mm",
+          "pos": {
+            "x": 108.9,
+            "y": 45.45
+          },
+          "uuid": "d4d89708-1b6c-56fe-8c2f-207ff79756ff"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 1 [MCU_GPIO27] of R145 on B.Cu",
+          "pos": {
+            "x": 116.325,
+            "y": 39.5
+          },
+          "uuid": "0edef198-5c80-419d-865b-5ec49cd8067c"
+        },
+        {
+          "description": "Pad 41 [MCU_GPIO27] of U1 on B.Cu",
+          "pos": {
+            "x": 112.2,
+            "y": 78.05
+          },
+          "uuid": "48515e67-f469-46fd-945e-80e221d7f8ff"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    }
+  ],
+  "candidate_open_records": [
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 5 [EXT_GPIO24] of J3 on B.Cu",
+          "pos": {
+            "x": 92.5,
+            "y": 39.0
+          },
+          "uuid": "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+        },
+        {
+          "description": "Pad 12 [EXT_GPIO24] of U13 on B.Cu",
+          "pos": {
+            "x": 89.45,
+            "y": 42.0
+          },
+          "uuid": "e01faed3-83ab-447f-badb-64e03c26621d"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 16 [EXT_GPIO24] of U11 on B.Cu",
+          "pos": {
+            "x": 107.1,
+            "y": 36.675
+          },
+          "uuid": "3827e42c-c508-4185-8351-759c94512528"
+        },
+        {
+          "description": "Pad 5 [EXT_GPIO24] of J3 on B.Cu",
+          "pos": {
+            "x": 92.5,
+            "y": 39.0
+          },
+          "uuid": "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 6 [EXT_GPIO25] of J3 on B.Cu",
+          "pos": {
+            "x": 93.5,
+            "y": 39.0
+          },
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6"
+        },
+        {
+          "description": "Pad 11 [EXT_GPIO25] of U13 on B.Cu",
+          "pos": {
+            "x": 89.45,
+            "y": 42.5
+          },
+          "uuid": "a18e6e59-fb74-4513-a5f4-6a34d9223429"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 15 [EXT_GPIO25] of U11 on B.Cu",
+          "pos": {
+            "x": 107.1,
+            "y": 37.325
+          },
+          "uuid": "cff436d2-a051-486a-8eda-ad80c8687157"
+        },
+        {
+          "description": "Pad 6 [EXT_GPIO25] of J3 on B.Cu",
+          "pos": {
+            "x": 93.5,
+            "y": 39.0
+          },
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 8 [EXT_GPIO26] of J3 on B.Cu",
+          "pos": {
+            "x": 95.5,
+            "y": 39.0
+          },
+          "uuid": "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76"
+        },
+        {
+          "description": "Track [EXT_GPIO26] on F.Cu, length 3.8040 mm",
+          "pos": {
+            "x": 93.0,
+            "y": 41.95
+          },
+          "uuid": "df690eec-df6a-52bf-82fe-eace87245374"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 9 [EXT_GPIO27] of J3 on B.Cu",
+          "pos": {
+            "x": 96.5,
+            "y": 39.0
+          },
+          "uuid": "38f37228-2ce2-4edd-bea2-10e387e0f52d"
+        },
+        {
+          "description": "Track [EXT_GPIO27] on B.Cu, length 0.1000 mm",
+          "pos": {
+            "x": 98.7,
+            "y": 42.4
+          },
+          "uuid": "86bf9e60-5de3-41d8-afec-7db12426463b"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [MCU_GPIO3] on B.Cu, length 1.0041 mm",
+          "pos": {
+            "x": 104.0,
+            "y": 33.325
+          },
+          "uuid": "7610c2f0-d25f-5392-9c6d-51572f345960"
+        },
+        {
+          "description": "Pad 5 [MCU_GPIO3] of U1 on B.Cu",
+          "pos": {
+            "x": 112.2,
+            "y": 84.95
+          },
+          "uuid": "5a0545bd-febf-49dd-9baa-b129430d4f9c"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [MCU_GPIO10] on F.Cu, length 3.8746 mm",
+          "pos": {
+            "x": 104.7,
+            "y": 32.525
+          },
+          "uuid": "3289f5ae-a6a0-55fb-8040-2ff133e55784"
+        },
+        {
+          "description": "Pad 14 [MCU_GPIO10] of U1 on B.Cu",
+          "pos": {
+            "x": 108.6,
+            "y": 84.95
+          },
+          "uuid": "2fae1e1e-2f58-4081-9638-13aea2289d7d"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [MCU_GPIO24] on B.Cu, length 1.0296 mm",
+          "pos": {
+            "x": 109.325,
+            "y": 43.0
+          },
+          "uuid": "984834de-986f-5e89-97e1-e53e00fd8fcc"
+        },
+        {
+          "description": "Pad 36 [MCU_GPIO24] of U1 on B.Cu",
+          "pos": {
+            "x": 110.2,
+            "y": 78.05
+          },
+          "uuid": "c1939946-4449-4887-9393-3ef03908d4dd"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Track [MCU_GPIO25] on B.Cu, length 1.0050 mm",
+          "pos": {
+            "x": 97.5,
+            "y": 32.725
+          },
+          "uuid": "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f"
+        },
+        {
+          "description": "Pad 37 [MCU_GPIO25] of U1 on B.Cu",
+          "pos": {
+            "x": 110.6,
+            "y": 78.05
+          },
+          "uuid": "254b9a4f-db28-4c96-a610-c908a1ce5922"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 40 [MCU_GPIO26] of U1 on B.Cu",
+          "pos": {
+            "x": 111.8,
+            "y": 78.05
+          },
+          "uuid": "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+        },
+        {
+          "description": "Track [MCU_GPIO26] on F.Cu, length 5.4966 mm",
+          "pos": {
+            "x": 108.9,
+            "y": 45.45
+          },
+          "uuid": "d4d89708-1b6c-56fe-8c2f-207ff79756ff"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    },
+    {
+      "description": "Missing connection between items",
+      "items": [
+        {
+          "description": "Pad 1 [MCU_GPIO27] of R145 on B.Cu",
+          "pos": {
+            "x": 116.325,
+            "y": 39.5
+          },
+          "uuid": "0edef198-5c80-419d-865b-5ec49cd8067c"
+        },
+        {
+          "description": "Pad 41 [MCU_GPIO27] of U1 on B.Cu",
+          "pos": {
+            "x": 112.2,
+            "y": 78.05
+          },
+          "uuid": "48515e67-f469-46fd-945e-80e221d7f8ff"
+        }
+      ],
+      "severity": "error",
+      "type": "unconnected_items"
+    }
+  ],
+  "warning_removed": [
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [BUCK_FB] on F.Cu - B.Cu",
+          "pos": {
+            "x": 178.15,
+            "y": 85.75
+          },
+          "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    }
+  ],
+  "warning_added": [],
+  "source_warnings": 68,
+  "candidate_warnings": 67,
+  "candidate_opens": 12,
+  "other_DRC_errors": 0,
+  "parity": 0,
+  "ERC": 0,
+  "candidate_totals": {
+    "tracks": 9752,
+    "vias": 918,
+    "footprints": 382,
+    "track_length_mm": 13178.75473138763
+  },
+  "receipts": {
+    "candidate-erc.json": "5d29e2e3efef937464bce979a2e81997aba38ef4a78812e306b2c361e80373a7",
+    "candidate-drc.json": "ff2192f8502708a3bd39391bff4be9b614ba48bccc88afc8343ef68dc57ddd53",
+    "candidate-physical-graph.json": "2e7e91b3d536505e99f5f911933de5c8c3b8469ccdce8c747b547705552541a6",
+    "source-drc.json": "c93e96b7491554ad207b69d3d2ce4f14e510e5368ccae1a934b80770735d85ec",
+    "commands.json": "5683f591ebd9c9cab71dc46739bd81ca5a77a9193e1bc897f08e75f426aff177",
+    "source-physical-graph.json": "6ea554aa152b511102d2500a90151017939abff3f38bf67205acf42a4b2d6eed"
+  }
+}

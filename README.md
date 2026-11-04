@@ -2,18 +2,25 @@
 
 This isolated recovery repository preserves the exact selected PCB after the execution workspace was replaced. It does not invent or restore the lost Git history.
 
-Open `pcb/experiments/v7-four-reference-logo/candidate-four/pcb/maru60.kicad_pro`.
+Open `pcb/experiments/v7-buck-feedback-cleanup/candidate/pcb/maru60.kicad_pro`.
 
-- Current PCB SHA256: `2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373`.
+- Current PCB SHA256: `aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f`.
+- Prior four-reference/logo PCB: `2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373`, retained unchanged.
 - Exact recovered original selected PCB: `7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1`, retained in the prior unit.
 - Original selection commit: `b42351518b0007177a85fa3ce44f8d41967c9af9`.
 - Last known original evidence-only HEAD: `3bed855f70875e1466f3a0a253d549ae581baaf4`.
 - Original working branch: `feat/maru60-v7-protection-layout`.
 - This repository starts a separate recovery history. The original Git objects and full historical QA suites are missing, not recreated from summaries.
 
-## Current metadata/artwork successor
+## Current bounded BUCK_FB cleanup
 
-The selected successor changes four reference labels and moves the intact LOGO1 artwork. Independent native ink/association review and exact raw restoration establish unchanged electrical geometry and saved fills. Warnings fall from 92 to 68, with 24 exact removals and none added; the same 12 GPIO open-component pairs remain. Native counts remain 9,752 tracks, 919 vias and 13,181.60473138763 mm. Fresh candidate ERC and parity are zero. All 92 original warning records have an explicit current disposition in the new unit. This is bounded label/artwork adoption, not electrical, 3D or manufacturing qualification.
+The working selection removes the degree-one feedback via and 2.85 mm dead arm while preserving the 1.95 mm active path. Fresh full physical connectivity, DRC/parity/ERC and independent review pass the explicit candidate-specific 1 nm coordinate-precision criterion. The original strict global zero-loss result remains FAIL and is preserved separately; exact remote contour changes are bounded by 0.733693794 nm, with critical shadows/contacts/roots and normal clearance rules retained. This criterion does not apply to other candidates.
+
+Current counts: 9,752 tracks, 918 vias, 382 footprints and 13,178.75473138763 mm track length. The same 12 expansion-GPIO opens remain; warnings are 67, with precisely one removed and none added. There are zero other hard DRC errors, zero ERC violations and zero parity findings. No noise, loop-stability, hardware or manufacturing improvement is inferred. Read `pcb/experiments/v7-buck-feedback-cleanup/README.md` and its unchanged strict, precision and final eligibility evidence. J3/C124 alternatives remain unselected; firmware is unchanged.
+
+## Preserved metadata/artwork predecessor
+
+The preceding selected successor changed four reference labels and moved the intact LOGO1 artwork. Independent native ink/association review and exact raw restoration establish unchanged electrical geometry and saved fills. Warnings fall from 92 to 68, with 24 exact removals and none added; the same 12 GPIO open-component pairs remain. Native counts remain 9,752 tracks, 919 vias and 13,181.60473138763 mm. Fresh candidate ERC and parity are zero. All 92 original warning records have an explicit current disposition in the new unit. This is bounded label/artwork adoption, not electrical, 3D or manufacturing qualification.
 
 ## Exact recovery baseline and fresh checks
 
@@ -23,11 +30,11 @@ The earlier 53-file CAD bundle was recovered from the saved tscircuit archive an
 
 Fresh KiCad 9.0.2 DRC, schematic parity, ERC and netlist export completed without source changes: 12 expansion-GPIO opens, zero critical power/USB source opens, 92 warnings, zero other DRC errors, zero parity issues and zero ERC violations. Fresh native counts are 9,752 tracks, 919 vias, 382 footprints and 13,181.60473138763 mm summed track length.
 
-Fresh receipts are under the selected unit's `qa/recovery-native`. Their execution paths identify the isolated recovery staging directory where the exact same bytes were checked. Historical full physical-graph/frozen replay is not claimed to have been rerun or recovered. Source-bound simulation archives remain separate saved artifacts; full hardware, PDN, SI, ESD, EMC, mechanical and manufacturing qualification remain false.
+Fresh recovery receipts are under the original recovered unit's `qa/recovery-native`. Their execution paths identify the isolated recovery staging directory where the exact same bytes were checked. Historical full physical-graph/frozen replay is not claimed to have been rerun or recovered. Source-bound simulation archives remain separate saved artifacts; full hardware, PDN, SI, ESD, EMC, mechanical and manufacturing qualification remain false.
 
 ## Missing work and safe continuation
 
-A reviewed, newly tested LED startup-guard recovery implementation is now active at `pcb/firmware`, with exact copies of its supporting engineering files at `pcb/engineering`. Nineteen of the 22 former fixed overlay files were recovered exactly; three guard source files are explicitly new implementations. The immutable baseline, reviewed candidate, fresh host tests and static V7 mapping are preserved under `pcb/experiments/led-startup-recovery`. Qualification remains OFF. Full pinned QMK/ARM builds and hardware acceptance have not been performed; do not flash or enable qualification. Original C124 rejected-trial packets and later unselected label/C124 studies are also not fully restored. The reviewed four-label/logo successor is now selected; the separate C124 circuit trial remains unselected.
+A reviewed, newly tested LED startup-guard recovery implementation is now active at `pcb/firmware`, with exact copies of its supporting engineering files at `pcb/engineering`. Nineteen of the 22 former fixed overlay files were recovered exactly; three guard source files are explicitly new implementations. The immutable baseline, reviewed candidate, fresh host tests and static V7 mapping are preserved under `pcb/experiments/led-startup-recovery`. Qualification remains OFF. Full pinned QMK/ARM builds and hardware acceptance have not been performed; do not flash or enable qualification. Original C124 rejected-trial packets and later unselected label/C124 studies are also not fully restored. The reviewed four-label/logo predecessor remains preserved; the separate C124 circuit trial remains unselected.
 
 Continue new experiments from the exact selected board in isolated directories, with new source-bound checks and independent review before adoption. Do not weaken clearance, old conductor/reference preservation or qualification gates. Do not push or fabricate from this baseline.
 
@@ -37,4 +44,4 @@ Continue new experiments from the exact selected board in isolated directories, 
 
 `pcb/experiments/v7-c124-short-local-review` preserves the independently reviewed short-local 100 ohm series-resistor trial. Its latest experimental PCB is ec48735f21b813f84873a4dfcd8a984a395f59a6d48d30e5bcfff19aaefe52a7, with accepted four-reference/logo artwork retained. Actual geometry/contact/reference and carry reviews pass: 31 bounded old tracks retired, 21 new tracks, no drill changes, all retained copper and saved zones exact, and unrelated physical net partitions unchanged. Native hard DRC/ERC/parity are zero; 12 expansion opens and 64 warnings remain, including one explicit rooted support-tail warning.
 
-This is evidence integration, not selection. The current entrypoint and 2c7e100a board remain unchanged. Passive models and independently checked component alternatives are included, but active startup/reset/pulse behavior, actual parasitics/coupling, assembly/3D and hardware qualification remain open. See the experiment README for exact source bindings and limitations. No smaller-capacitor alternative or proposed procurement part has been adopted.
+This was evidence integration, not selection of the C124 circuit. The prior 2c7e100a board remains unchanged; the current entrypoint selects the later BUCK_FB cleanup described above. Passive models and independently checked component alternatives are included, but active startup/reset/pulse behavior, actual parasitics/coupling, assembly/3D and hardware qualification remain open. See the experiment README for exact source bindings and limitations. No smaller-capacitor alternative or proposed procurement part has been adopted.
