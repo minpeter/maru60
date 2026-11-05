@@ -1,0 +1,3132 @@
+{
+  "board_sha256": "1b585bd5858f7bf40811ba6fbd285809b1c1d927f35a2eb6916f89f86ea6f60b",
+  "method": "Native track/pad graph INCLUDING pad-free stitching components plus same-layer unioned filled-zone polygon contact witnesses at 0.1mm; not return/impedance proof",
+  "nets": [
+    {
+      "net": "+1V1",
+      "pad_count": 10,
+      "connected_pad_groups": [
+        [
+          "C103.1",
+          "C108.1",
+          "C109.1",
+          "C110.1",
+          "L1.1",
+          "TP5.1",
+          "U1.23",
+          "U1.39",
+          "U1.50",
+          "U1.6"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "+3V3",
+      "pad_count": 28,
+      "connected_pad_groups": [
+        [
+          "C101.1",
+          "C102.1",
+          "C105.1",
+          "C111.1",
+          "C112.1",
+          "C113.1",
+          "C114.1",
+          "C116.1",
+          "C117.1",
+          "C118.1",
+          "C199.1",
+          "R104.1",
+          "R105.1",
+          "R113.1",
+          "TP4.1",
+          "U1.1",
+          "U1.11",
+          "U1.20",
+          "U1.38",
+          "U1.44",
+          "U1.45",
+          "U1.49",
+          "U1.53",
+          "U1.54",
+          "U2.5",
+          "U3.8"
+        ],
+        [
+          "C115.1",
+          "U1.30"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "+5V",
+      "pad_count": 7,
+      "connected_pad_groups": [
+        [
+          "F1.2",
+          "TP3.1"
+        ],
+        [
+          "C100.1",
+          "C120.1",
+          "U2.1",
+          "U2.3",
+          "U7.1"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "+5V_LED",
+      "pad_count": 160,
+      "connected_pad_groups": [
+        [
+          "C121.1",
+          "C122.1",
+          "C123.1",
+          "C200.1",
+          "C201.1",
+          "C202.1",
+          "C203.1",
+          "C204.1",
+          "C205.1",
+          "C206.1",
+          "C207.1",
+          "C208.1",
+          "C209.1",
+          "C210.1",
+          "C211.1",
+          "C212.1",
+          "C213.1",
+          "C214.1",
+          "C215.1",
+          "C216.1",
+          "C217.1",
+          "C218.1",
+          "C219.1",
+          "C220.1",
+          "C221.1",
+          "C222.1",
+          "C223.1",
+          "C224.1",
+          "C225.1",
+          "C226.1",
+          "C227.1",
+          "C228.1",
+          "C229.1",
+          "C230.1",
+          "C231.1",
+          "C232.1",
+          "C233.1",
+          "C234.1",
+          "C235.1",
+          "C236.1",
+          "C237.1",
+          "C238.1",
+          "C239.1",
+          "C240.1",
+          "C241.1",
+          "C242.1",
+          "C243.1",
+          "C244.1",
+          "C245.1",
+          "C246.1",
+          "C247.1",
+          "C248.1",
+          "C249.1",
+          "C250.1",
+          "C251.1",
+          "C252.1",
+          "C253.1",
+          "C254.1",
+          "C255.1",
+          "C256.1",
+          "C257.1",
+          "C258.1",
+          "C259.1",
+          "C260.1",
+          "C261.1",
+          "C262.1",
+          "C263.1",
+          "C264.1",
+          "C265.1",
+          "C266.1",
+          "C267.1",
+          "C268.1",
+          "C269.1",
+          "C270.1",
+          "C271.1",
+          "C272.1",
+          "C273.1",
+          "C274.1",
+          "C275.1",
+          "LED1.2",
+          "LED10.2",
+          "LED11.2",
+          "LED12.2",
+          "LED13.2",
+          "LED14.2",
+          "LED15.2",
+          "LED16.2",
+          "LED17.2",
+          "LED18.2",
+          "LED19.2",
+          "LED2.2",
+          "LED20.2",
+          "LED21.2",
+          "LED22.2",
+          "LED23.2",
+          "LED24.2",
+          "LED25.2",
+          "LED26.2",
+          "LED27.2",
+          "LED28.2",
+          "LED29.2",
+          "LED3.2",
+          "LED30.2",
+          "LED31.2",
+          "LED32.2",
+          "LED33.2",
+          "LED34.2",
+          "LED35.2",
+          "LED36.2",
+          "LED37.2",
+          "LED38.2",
+          "LED39.2",
+          "LED4.2",
+          "LED40.2",
+          "LED41.2",
+          "LED42.2",
+          "LED43.2",
+          "LED44.2",
+          "LED45.2",
+          "LED46.2",
+          "LED47.2",
+          "LED48.2",
+          "LED49.2",
+          "LED5.2",
+          "LED50.2",
+          "LED51.2",
+          "LED52.2",
+          "LED53.2",
+          "LED54.2",
+          "LED55.2",
+          "LED56.2",
+          "LED57.2",
+          "LED58.2",
+          "LED59.2",
+          "LED6.2",
+          "LED60.2",
+          "LED61.2",
+          "LED62.2",
+          "LED63.2",
+          "LED64.2",
+          "LED65.2",
+          "LED66.2",
+          "LED67.2",
+          "LED68.2",
+          "LED69.2",
+          "LED7.2",
+          "LED70.2",
+          "LED71.2",
+          "LED72.2",
+          "LED73.2",
+          "LED74.2",
+          "LED75.2",
+          "LED76.2",
+          "LED8.2",
+          "LED9.2",
+          "R114.1",
+          "TP10.1",
+          "U5.5",
+          "U6.5",
+          "U7.6"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "BOOT_BUTTON",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "R106.2",
+          "SW100.1",
+          "SW100.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "CC1",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "J1.A5",
+          "R100.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "CC2",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "J1.B5",
+          "R101.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL0",
+      "pad_count": 7,
+      "connected_pad_groups": [
+        [
+          "SW1.1",
+          "SW16.1",
+          "SW43.1",
+          "SW56.1",
+          "SWCAP1.1",
+          "SWCAP1.3",
+          "U1.8"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL1",
+      "pad_count": 6,
+      "connected_pad_groups": [
+        [
+          "SW17.1",
+          "SW2.1",
+          "SW31.1",
+          "SW44.1",
+          "SW57.1",
+          "U1.9"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL10",
+      "pad_count": 6,
+      "connected_pad_groups": [
+        [
+          "SW11.1",
+          "SW26.1",
+          "SW40.1",
+          "SW53.1",
+          "SW60.1"
+        ],
+        [
+          "U1.19"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL11",
+      "pad_count": 7,
+      "connected_pad_groups": [
+        [
+          "SW12.1",
+          "SW27.1",
+          "SW41.1",
+          "SW61.1",
+          "SWRS1.1",
+          "SWRS1.3"
+        ],
+        [
+          "U1.27"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL12",
+      "pad_count": 6,
+      "connected_pad_groups": [
+        [
+          "SW13.1",
+          "SW28.1",
+          "SW42.1",
+          "SW62.1",
+          "SWRS1.5"
+        ],
+        [
+          "U1.28"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL13",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "SW14.1",
+          "SW29.1"
+        ],
+        [
+          "U1.29"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL14",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "SW15.1"
+        ],
+        [
+          "U1.31"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL2",
+      "pad_count": 6,
+      "connected_pad_groups": [
+        [
+          "SW18.1",
+          "SW3.1",
+          "SW32.1",
+          "SW45.1",
+          "SW58.1",
+          "U1.10"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL3",
+      "pad_count": 5,
+      "connected_pad_groups": [
+        [
+          "SW19.1",
+          "SW33.1",
+          "SW4.1",
+          "SW46.1"
+        ],
+        [
+          "U1.12"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL4",
+      "pad_count": 5,
+      "connected_pad_groups": [
+        [
+          "SW20.1",
+          "SW34.1",
+          "SW47.1",
+          "SW5.1"
+        ],
+        [
+          "U1.13"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL5",
+      "pad_count": 5,
+      "connected_pad_groups": [
+        [
+          "SW21.1",
+          "SW35.1",
+          "SW6.1"
+        ],
+        [
+          "SW48.1"
+        ],
+        [
+          "U1.42"
+        ]
+      ],
+      "group_count": 3,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL6",
+      "pad_count": 6,
+      "connected_pad_groups": [
+        [
+          "SW22.1",
+          "SW36.1",
+          "SW49.1",
+          "SW59.1",
+          "SW7.1"
+        ],
+        [
+          "U1.15"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL7",
+      "pad_count": 5,
+      "connected_pad_groups": [
+        [
+          "SW23.1",
+          "SW37.1",
+          "SW50.1",
+          "SW8.1",
+          "U1.16"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL8",
+      "pad_count": 5,
+      "connected_pad_groups": [
+        [
+          "SW24.1",
+          "SW38.1",
+          "SW51.1",
+          "SW9.1"
+        ],
+        [
+          "U1.17"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "COL9",
+      "pad_count": 5,
+      "connected_pad_groups": [
+        [
+          "SW10.1",
+          "SW25.1",
+          "SW39.1",
+          "SW52.1"
+        ],
+        [
+          "U1.18"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "GND",
+      "pad_count": 215,
+      "connected_pad_groups": [
+        [
+          "C100.2",
+          "C101.2",
+          "C120.2",
+          "C121.2",
+          "C201.2",
+          "C202.2",
+          "C203.2",
+          "C204.2",
+          "C205.2",
+          "C206.2",
+          "C207.2",
+          "C208.2",
+          "C209.2",
+          "C210.2",
+          "C211.2",
+          "C212.2",
+          "C213.2",
+          "C214.2",
+          "C217.2",
+          "C218.2",
+          "C219.2",
+          "C220.2",
+          "C221.2",
+          "C222.2",
+          "C223.2",
+          "C224.2",
+          "C225.2",
+          "C226.2",
+          "C227.2",
+          "C228.2",
+          "C233.2",
+          "C234.2",
+          "C235.2",
+          "C236.2",
+          "C237.2",
+          "C238.2",
+          "C239.2",
+          "C240.2",
+          "C241.2",
+          "C247.2",
+          "C248.2",
+          "C249.2",
+          "C250.2",
+          "C251.2",
+          "C252.2",
+          "C253.2",
+          "C254.2",
+          "C258.2",
+          "C259.2",
+          "C260.2",
+          "C261.2",
+          "C262.2",
+          "C263.2",
+          "C264.2",
+          "C265.2",
+          "C266.2",
+          "C267.2",
+          "C271.2",
+          "C272.2",
+          "C273.2",
+          "C275.2",
+          "LED10.4",
+          "LED11.4",
+          "LED12.4",
+          "LED13.4",
+          "LED14.4",
+          "LED15.4",
+          "LED19.4",
+          "LED2.4",
+          "LED20.4",
+          "LED21.4",
+          "LED22.4",
+          "LED23.4",
+          "LED24.4",
+          "LED25.4",
+          "LED26.4",
+          "LED27.4",
+          "LED28.4",
+          "LED29.4",
+          "LED3.4",
+          "LED34.4",
+          "LED35.4",
+          "LED36.4",
+          "LED37.4",
+          "LED38.4",
+          "LED39.4",
+          "LED4.4",
+          "LED40.4",
+          "LED41.4",
+          "LED42.4",
+          "LED49.4",
+          "LED5.4",
+          "LED50.4",
+          "LED51.4",
+          "LED52.4",
+          "LED53.4",
+          "LED55.4",
+          "LED59.4",
+          "LED6.4",
+          "LED60.4",
+          "LED61.4",
+          "LED62.4",
+          "LED63.4",
+          "LED64.4",
+          "LED65.4",
+          "LED66.4",
+          "LED67.4",
+          "LED68.4",
+          "LED7.4",
+          "LED72.4",
+          "LED73.4",
+          "LED74.4",
+          "LED76.4",
+          "LED8.4",
+          "LED9.4",
+          "R109.2",
+          "R114.2",
+          "SW100.2",
+          "SW100.2",
+          "U2.2",
+          "U7.2"
+        ],
+        [
+          "C123.2",
+          "C215.2",
+          "C216.2",
+          "C229.2",
+          "C230.2",
+          "C231.2",
+          "C242.2",
+          "C243.2",
+          "C244.2",
+          "C255.2",
+          "C256.2",
+          "C257.2",
+          "C268.2",
+          "C269.2",
+          "C274.2",
+          "LED16.4",
+          "LED17.4",
+          "LED18.4",
+          "LED30.4",
+          "LED31.4",
+          "LED32.4",
+          "LED43.4",
+          "LED44.4",
+          "LED45.4",
+          "LED56.4",
+          "LED57.4",
+          "LED58.4",
+          "LED69.4",
+          "LED75.4"
+        ],
+        [
+          "C200.2",
+          "LED1.4"
+        ],
+        [
+          "R101.2",
+          "U4.2"
+        ],
+        [
+          "LED47.4"
+        ],
+        [
+          "LED33.4"
+        ],
+        [
+          "C245.2"
+        ],
+        [
+          "C246.2"
+        ],
+        [
+          "C232.2"
+        ],
+        [
+          "R100.2"
+        ],
+        [
+          "LED48.4"
+        ],
+        [
+          "LED46.4"
+        ],
+        [
+          "LED54.4"
+        ],
+        [
+          "C122.2",
+          "U5.1"
+        ],
+        [
+          "U3.4"
+        ],
+        [
+          "C110.2",
+          "C113.2"
+        ],
+        [
+          "C108.2",
+          "C112.2",
+          "C114.2"
+        ],
+        [
+          "C106.2",
+          "C107.2",
+          "C109.2",
+          "C117.2",
+          "C270.2",
+          "LED71.4",
+          "Y1.2",
+          "Y1.4"
+        ],
+        [
+          "C118.2"
+        ],
+        [
+          "C102.2",
+          "C103.2",
+          "C104.2",
+          "C111.2",
+          "C199.2",
+          "U1.47",
+          "U1.61",
+          "U1.61",
+          "U1.61",
+          "U1.61",
+          "U1.61",
+          "U1.61",
+          "U1.61",
+          "U1.61",
+          "U1.61",
+          "U1.61"
+        ],
+        [
+          "C105.2",
+          "R107.2",
+          "TP1.1"
+        ],
+        [
+          "LED70.4"
+        ],
+        [
+          "J1.A1",
+          "J1.B12",
+          "J1.S1"
+        ],
+        [
+          "J1.A12",
+          "J1.B1",
+          "J1.S1"
+        ],
+        [
+          "J1.S1"
+        ],
+        [
+          "J1.S1"
+        ],
+        [
+          "R112.2"
+        ],
+        [
+          "C116.2"
+        ],
+        [
+          "J2.2"
+        ],
+        [
+          "C115.2"
+        ],
+        [
+          "U6.1",
+          "U6.3"
+        ],
+        [
+          "U5.3"
+        ]
+      ],
+      "group_count": 32,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_1",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D1.2",
+          "SW1.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_10",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D10.2",
+          "SW10.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_11",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D11.2",
+          "SW11.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_12",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D12.2",
+          "SW12.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_13",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D13.2",
+          "SW13.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_14",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D14.2",
+          "SW14.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_15",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D15.2",
+          "SW15.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_16",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D16.2",
+          "SW16.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_17",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D17.2",
+          "SW17.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_18",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D18.2",
+          "SW18.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_19",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D19.2",
+          "SW19.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_2",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D2.2",
+          "SW2.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_20",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D20.2",
+          "SW20.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_21",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D21.2",
+          "SW21.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_22",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D22.2",
+          "SW22.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_23",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D23.2",
+          "SW23.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_24",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D24.2",
+          "SW24.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_25",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D25.2",
+          "SW25.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_26",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D26.2",
+          "SW26.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_27",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D27.2",
+          "SW27.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_28",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D28.2",
+          "SW28.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_29",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D29.2",
+          "SW29.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_3",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D3.2",
+          "SW3.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_30",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "D30.2",
+          "SWCAP1.2",
+          "SWCAP1.4"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_31",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D31.2",
+          "SW31.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_32",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D32.2",
+          "SW32.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_33",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D33.2",
+          "SW33.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_34",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D34.2",
+          "SW34.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_35",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D35.2",
+          "SW35.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_36",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D36.2",
+          "SW36.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_37",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D37.2",
+          "SW37.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_38",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D38.2",
+          "SW38.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_39",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D39.2",
+          "SW39.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_4",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D4.2",
+          "SW4.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_40",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D40.2",
+          "SW40.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_41",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D41.2",
+          "SW41.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_42",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D42.2",
+          "SW42.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_43",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D43.2",
+          "SW43.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_44",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D44.2",
+          "SW44.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_45",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D45.2",
+          "SW45.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_46",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D46.2",
+          "SW46.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_47",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D47.2",
+          "SW47.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_48",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D48.2",
+          "SW48.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_49",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D49.2",
+          "SW49.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_5",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D5.2",
+          "SW5.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_50",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D50.2",
+          "SW50.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_51",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D51.2",
+          "SW51.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_52",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D52.2",
+          "SW52.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_53",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D53.2",
+          "SW53.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_54",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "D54.2",
+          "SWRS1.2",
+          "SWRS1.4"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_55",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D55.2",
+          "SWRS1.6"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_56",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D56.2",
+          "SW56.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_57",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D57.2",
+          "SW57.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_58",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D58.2",
+          "SW58.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_59",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D59.2",
+          "SW59.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_6",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D6.2",
+          "SW6.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_60",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D60.2",
+          "SW60.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_61",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D61.2",
+          "SW61.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_62",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D62.2",
+          "SW62.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_7",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D7.2",
+          "SW7.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_8",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D8.2",
+          "SW8.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_9",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "D9.2",
+          "SW9.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "U1.32",
+          "U5.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_5V",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED1.1",
+          "R110.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_5V_BUF",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "R110.1"
+        ],
+        [
+          "U5.4"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_1",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED1.3",
+          "LED2.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_10",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED10.3",
+          "LED11.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_11",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED11.3",
+          "LED12.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_12",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED12.3",
+          "LED13.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED13.3",
+          "LED14.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED14.3",
+          "LED15.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED15.3",
+          "LED29.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_16",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED28.1",
+          "LED29.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_17",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED27.1",
+          "LED28.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_18",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED26.1",
+          "LED27.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_19",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED25.1",
+          "LED26.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_2",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED2.3",
+          "LED3.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_20",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED24.1",
+          "LED25.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_21",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED23.1",
+          "LED24.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_22",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED22.1",
+          "LED23.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_23",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED21.1",
+          "LED22.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_24",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED21.3"
+        ],
+        [
+          "LED20.1"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_25",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED19.1",
+          "LED20.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_26",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED18.1",
+          "LED19.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_27",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED17.1",
+          "LED18.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_28",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED16.1",
+          "LED17.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_29",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED16.3",
+          "LED30.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_3",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED3.3",
+          "LED4.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_30",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED30.3",
+          "LED75.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_31",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED31.1",
+          "LED75.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_32",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED31.3",
+          "LED32.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_33",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED32.3",
+          "LED33.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_34",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED33.3",
+          "LED34.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_35",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED35.1"
+        ],
+        [
+          "LED34.3"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_36",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED35.3",
+          "LED36.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_37",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED36.3",
+          "LED37.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_38",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED37.3",
+          "LED38.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_39",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED38.3",
+          "LED39.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_4",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED4.3",
+          "LED5.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_40",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED39.3",
+          "LED40.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_41",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED40.3",
+          "LED41.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_42",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED41.3",
+          "LED42.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_43",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED42.3",
+          "LED55.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_44",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED55.3",
+          "LED76.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_45",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED54.1",
+          "LED76.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_46",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED53.1",
+          "LED54.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_47",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED52.1",
+          "LED53.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_48",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED51.1",
+          "LED52.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_49",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED50.1",
+          "LED51.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_5",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED6.1"
+        ],
+        [
+          "LED5.3"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_50",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED49.1",
+          "LED50.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_51",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED48.1",
+          "LED49.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_52",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED47.1"
+        ],
+        [
+          "LED48.3"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_53",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED46.1",
+          "LED47.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_54",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED45.1",
+          "LED46.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_55",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED44.1",
+          "LED45.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_56",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED43.1",
+          "LED44.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_57",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED43.3",
+          "LED56.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_58",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED56.3",
+          "LED57.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_59",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED57.3",
+          "LED58.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_6",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED6.3",
+          "LED7.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_60",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED58.3",
+          "LED59.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_61",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED59.3",
+          "LED60.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_62",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED60.3",
+          "LED61.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_63",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED61.3",
+          "LED62.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_7",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED7.3",
+          "LED8.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_8",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED8.3",
+          "LED9.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "KEY_RGB_CHAIN_9",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED10.1",
+          "LED9.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "LED_ENABLE",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "R109.1",
+          "U1.34",
+          "U7.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "LED_FAULT_N",
+      "pad_count": 4,
+      "connected_pad_groups": [
+        [
+          "R113.2",
+          "TP9.1",
+          "U1.35",
+          "U7.4"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "LED_ILIM",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "R112.1",
+          "U7.5"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "QSPI_SCLK",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "U1.56",
+          "U3.6"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "QSPI_SD0",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "U1.57",
+          "U3.5"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "QSPI_SD1",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "U1.59",
+          "U3.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "QSPI_SD2",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "U1.58",
+          "U3.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "QSPI_SD3",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "U1.55",
+          "U3.7"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "QSPI_SS",
+      "pad_count": 4,
+      "connected_pad_groups": [
+        [
+          "R105.2",
+          "R106.1",
+          "U1.60",
+          "U3.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "RESET_GND",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "R107.1",
+          "SW101.2",
+          "SW101.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "ROW0",
+      "pad_count": 16,
+      "connected_pad_groups": [
+        [
+          "D10.1",
+          "D11.1",
+          "D12.1",
+          "D13.1",
+          "D14.1",
+          "D15.1",
+          "D6.1",
+          "D7.1",
+          "D8.1",
+          "D9.1",
+          "U1.2"
+        ],
+        [
+          "D1.1",
+          "D2.1",
+          "D3.1",
+          "D4.1",
+          "D5.1"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "ROW1",
+      "pad_count": 15,
+      "connected_pad_groups": [
+        [
+          "D21.1",
+          "D22.1",
+          "D23.1",
+          "D24.1",
+          "D25.1",
+          "D26.1",
+          "D27.1",
+          "D28.1",
+          "D29.1",
+          "U1.3"
+        ],
+        [
+          "D16.1",
+          "D17.1",
+          "D18.1",
+          "D19.1",
+          "D20.1"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "ROW2",
+      "pad_count": 14,
+      "connected_pad_groups": [
+        [
+          "D30.1",
+          "D31.1",
+          "D32.1",
+          "D33.1",
+          "D34.1",
+          "U1.4"
+        ],
+        [
+          "D35.1",
+          "D36.1",
+          "D37.1",
+          "D38.1",
+          "D39.1",
+          "D40.1",
+          "D41.1",
+          "D42.1"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "ROW3",
+      "pad_count": 14,
+      "connected_pad_groups": [
+        [
+          "D48.1",
+          "D49.1",
+          "D50.1",
+          "D51.1",
+          "D52.1",
+          "D53.1",
+          "D54.1",
+          "D55.1"
+        ],
+        [
+          "D47.1"
+        ],
+        [
+          "D43.1",
+          "D44.1",
+          "D45.1",
+          "D46.1"
+        ],
+        [
+          "U1.43"
+        ]
+      ],
+      "group_count": 4,
+      "intentional_nc": false
+    },
+    {
+      "net": "ROW4",
+      "pad_count": 8,
+      "connected_pad_groups": [
+        [
+          "D56.1",
+          "D57.1",
+          "D58.1",
+          "D59.1",
+          "D60.1",
+          "D61.1",
+          "D62.1",
+          "U1.7"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "RUN",
+      "pad_count": 4,
+      "connected_pad_groups": [
+        [
+          "SW101.1",
+          "SW101.1",
+          "TP6.1",
+          "U1.26"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "SWCLK",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "J2.3",
+          "TP8.1",
+          "U1.24"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "SWDIO",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "J2.1",
+          "TP7.1",
+          "U1.25"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_1",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED63.3",
+          "LED64.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_10",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED72.3",
+          "LED73.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_11",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED73.3",
+          "LED74.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_2",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED65.1"
+        ],
+        [
+          "LED64.3"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_3",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED65.3",
+          "LED66.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_4",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED66.3",
+          "LED67.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_5",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED67.3",
+          "LED68.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_6",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED69.1"
+        ],
+        [
+          "LED68.3"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_7",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED69.3",
+          "LED70.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_8",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED70.3",
+          "LED71.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UG_LED_9",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED72.1"
+        ],
+        [
+          "LED71.3"
+        ]
+      ],
+      "group_count": 2,
+      "intentional_nc": false
+    },
+    {
+      "net": "UNDERGLOW",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "U1.33",
+          "U6.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UNDERGLOW_5V",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "LED63.1",
+          "R111.2"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "UNDERGLOW_5V_BUF",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "R111.1",
+          "U6.4"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "USB_DM",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "R103.2",
+          "U1.51"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "USB_DM_CONN",
+      "pad_count": 5,
+      "connected_pad_groups": [
+        [
+          "J1.A7",
+          "J1.B7",
+          "R103.1",
+          "U4.3",
+          "U4.4"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "USB_DP",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "R102.2",
+          "U1.52"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "USB_DP_CONN",
+      "pad_count": 5,
+      "connected_pad_groups": [
+        [
+          "J1.A6",
+          "J1.B6",
+          "R102.1",
+          "U4.1",
+          "U4.6"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "VBUS",
+      "pad_count": 7,
+      "connected_pad_groups": [
+        [
+          "F1.1",
+          "J1.A4",
+          "J1.A9",
+          "J1.B4",
+          "J1.B9",
+          "TP2.1",
+          "U4.5"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "VREG_AVDD",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "C104.1",
+          "R104.2",
+          "U1.46"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "VREG_LX",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "L1.2",
+          "U1.48"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "XIN",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "C106.1",
+          "U1.21",
+          "Y1.1"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "XOUT",
+      "pad_count": 2,
+      "connected_pad_groups": [
+        [
+          "R108.2",
+          "U1.22"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "XTAL_OUT",
+      "pad_count": 3,
+      "connected_pad_groups": [
+        [
+          "C107.1",
+          "R108.1",
+          "Y1.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": false
+    },
+    {
+      "net": "unconnected-(J1-SBU1-PadA8)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "J1.A8"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(J1-SBU2-PadB8)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "J1.B8"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(LED62-DOUT-Pad3)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "LED62.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(LED74-DOUT-Pad3)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "LED74.3"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(U1A-GPIO10-Pad14)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "U1.14"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(U1A-GPIO24-Pad36)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "U1.36"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(U1A-GPIO25-Pad37)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "U1.37"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(U1A-GPIO26_ADC0-Pad40)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "U1.40"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(U1A-GPIO27_ADC1-Pad41)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "U1.41"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(U1A-GPIO3-Pad5)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "U1.5"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    },
+    {
+      "net": "unconnected-(U2-NC-Pad4)",
+      "pad_count": 1,
+      "connected_pad_groups": [
+        [
+          "U2.4"
+        ]
+      ],
+      "group_count": 1,
+      "intentional_nc": true
+    }
+  ],
+  "split_non_nc_nets": [
+    "+3V3",
+    "+5V",
+    "COL10",
+    "COL11",
+    "COL12",
+    "COL13",
+    "COL14",
+    "COL3",
+    "COL4",
+    "COL5",
+    "COL6",
+    "COL8",
+    "COL9",
+    "GND",
+    "KEY_RGB_5V_BUF",
+    "KEY_RGB_CHAIN_24",
+    "KEY_RGB_CHAIN_35",
+    "KEY_RGB_CHAIN_5",
+    "KEY_RGB_CHAIN_52",
+    "ROW0",
+    "ROW1",
+    "ROW2",
+    "ROW3",
+    "UG_LED_2",
+    "UG_LED_6",
+    "UG_LED_9"
+  ]
+}
