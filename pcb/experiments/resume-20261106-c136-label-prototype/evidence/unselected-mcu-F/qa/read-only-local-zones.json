@@ -1,0 +1,44 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "region_mm": [
+    109.7,
+    74.7,
+    111.9,
+    76.8
+  ],
+  "zone_copper": [
+    {
+      "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "rule_area": false,
+      "local_clearance_mm": 0.15,
+      "filled_copper_within_inventory_region_mm2": 1.3515261643275
+    },
+    {
+      "uuid": "18251378-06a1-40ae-8f44-01acf0d3371a",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "rule_area": false,
+      "local_clearance_mm": 0.15,
+      "filled_copper_within_inventory_region_mm2": 3.147444558469
+    },
+    {
+      "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "rule_area": false,
+      "local_clearance_mm": 0.2,
+      "filled_copper_within_inventory_region_mm2": 3.752344556997
+    },
+    {
+      "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "rule_area": false,
+      "local_clearance_mm": 0.2,
+      "filled_copper_within_inventory_region_mm2": 3.753134206716
+    }
+  ],
+  "constraint": "Existing F.Cu GND fill is not immutable: proposed F track move requires native refill at zone clearance and full contact checks. Inner GND fill is the actual adjacent reference. No claim that removing local F fill is harmless before validation."
+}

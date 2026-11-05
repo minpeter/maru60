@@ -1,3 +1,7 @@
+## Latest qualified development prototype
+
+C136 reference correction: 9 open connection pairs and40 warnings, with copper/fills exactly unchanged from ef45f84. All prior checkpoints preserved. Fresh physical-connection and cold-refill validation pass, but inherited limits and incomplete electrical work remain. See pcb/CURRENT.md and the selected prototype README. Unselected routing and power-branch experiments are explicitly separated in evidence.
+
 ## Latest qualified development prototype, 2026-11-05
 
 The frozen GPIO27 + GND stitch + reference-label candidate has 9 open connection pairs and 42 warnings. Its independently caught GPIO26 departure-reference defect was corrected and all affected reference checks were rerun with explicit assertions. It is not strict geometric or fabrication acceptance: inherited exact no-loss differences and remaining electrical/model limits stay documented. Earlier strict and prototype checkpoints are preserved. See `pcb/CURRENT.md` and the candidate README.

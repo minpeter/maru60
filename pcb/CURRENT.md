@@ -1,9 +1,9 @@
-# Current baseline and qualified development candidate
+# Current baseline and development candidate
 
-Strict geometry baseline remains `experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro`, commit `bbf61e6`, PCB `04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99`: 11 open pairs and 51 warnings.
+Strict geometry baseline remains experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro, commit bbf61e6, PCB04be04e5: 11 open pairs and51 warnings.
 
-Latest frozen qualified development prototype: `experiments/resume-20261105-gpio27-stitch-labels-prototype/pcb/maru60.kicad_pro`, PCB `9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed`: 9 open pairs and 42 warnings. Read its README.txt and DECISION.json. GPIO27 header closure, a rooted GPIO24 GND stitch and four label repairs are included. An independently caught departure-reference exception was corrected without enlarging the allowed transition windows; every new and affected reference row now has an executable passing assertion.
+Latest qualified development prototype: experiments/resume-20261106-c136-label-prototype/pcb/maru60.kicad_pro, PCB2e532c1a: 9 open pairs and40 warnings. Only the C136 Reference field differs from ef45f84. Full raw reversal, fresh native/ERC/net/material and cold-refill validation pass. All copper, fill, masks, holes and component placements are exactly unchanged.
 
-The earlier c782123 / 56d66f65 prototype remains preserved with 10 open pairs and 50 warnings. Held b1e3 and rejected MCU experiments are not selected. The inherited strict exact-no-loss failure remains explicit; this is NOT promotion to the strict baseline or manufacturing release.
+Prior prototypes ef45f84/9d787421 (9/42) and c782123/56d66f65 (10/50) remain preserved. This remains a qualified development checkpoint, NOT strict acceptance or manufacturing release. Inherited exact no-loss failure and51 guarded-contact proof failures are explicit. No active-power, SI/EMI, full firmware or hardware qualification. LED qualification stays OFF.
 
-All prior designs are retained. No full current-board active-power, SI/EMI, full firmware-build or hardware qualification is claimed. LED qualification stays OFF.
+Latest unselected experiments: header25 refactor and MCU D/E rejected; complete +4V_REG branch removal held for exact remote GND boundary loss despite native41 warnings; MCU F is an incomplete launch with additional intentional warning and disclosed plane changes. None is present in the selected CAD.

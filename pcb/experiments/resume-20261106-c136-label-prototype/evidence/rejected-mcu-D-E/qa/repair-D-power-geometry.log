@@ -1,0 +1,68 @@
+04:11:00: Debug: Adding duplicate image handler for 'PNG file'
+04:11:00: Debug: Adding duplicate image handler for 'JPEG file'
+04:11:00: Debug: Adding duplicate image handler for 'TIFF file'
+04:11:00: Debug: Adding duplicate image handler for 'GIF file'
+04:11:00: Debug: Adding duplicate image handler for 'PNM file'
+04:11:00: Debug: Adding duplicate image handler for 'PCX file'
+04:11:00: Debug: Adding duplicate image handler for 'IFF file'
+04:11:00: Debug: Adding duplicate image handler for 'Windows icon file'
+04:11:00: Debug: Adding duplicate image handler for 'Windows cursor file'
+04:11:00: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+04:11:00: Debug: Adding duplicate image handler for 'TGA file'
+04:11:00: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": "dc152488552f56ce44641108be78be7928083bf04849242b7e6ba25eed0ca091",
+  "declared_modified_power_uuid": "14d35ed0-d9e6-45a6-a698-4e8b482aba5f",
+  "new_power_track_uuids": [
+    "14d35ed0-d9e6-45a6-a698-4e8b482aba5f",
+    "db39d882-6ecf-4006-b107-6b00b1abd04a",
+    "c9ab3bcd-dc1c-42be-a778-cc759ccf7bd7"
+  ],
+  "net": "+1V1",
+  "all_track_widths_mm": [
+    0.6,
+    0.6,
+    0.6
+  ],
+  "old_length_mm": 3.6505,
+  "new_length_mm": 3.7138721900498246,
+  "length_delta_mm": 0.06337219004982453,
+  "old_physical_power_area_mm2": 2.374866759386,
+  "new_physical_power_area_mm2": 2.410909685146,
+  "removed_physical_power_area_mm2": 0.382629144355,
+  "added_physical_power_area_mm2": 0.418672234995,
+  "source_nearby_drill_ids": [
+    "2df4c211-ae72-4021-a11a-f400d90108b2",
+    "a3dac412-9c4c-48cf-81b8-b7016c33b879"
+  ],
+  "candidate_nearby_drill_ids": [
+    "2df4c211-ae72-4021-a11a-f400d90108b2",
+    "a3dac412-9c4c-48cf-81b8-b7016c33b879"
+  ],
+  "endpoints": [
+    {
+      "uuid": "2df4c211-ae72-4021-a11a-f400d90108b2",
+      "position_mm": [
+        111.4,
+        75.7
+      ],
+      "unchanged_native_geometry": true,
+      "old_physical_power_overlap_mm2": 0.233654438848,
+      "new_physical_power_overlap_mm2": 0.233654440513,
+      "lost_original_endpoint_contact_mm2": 9.7437e-08
+    },
+    {
+      "uuid": "a3dac412-9c4c-48cf-81b8-b7016c33b879",
+      "position_mm": [
+        111.4,
+        79.3505
+      ],
+      "unchanged_native_geometry": true,
+      "old_physical_power_overlap_mm2": 0.233654438848,
+      "new_physical_power_overlap_mm2": 0.233654383044,
+      "lost_original_endpoint_contact_mm2": 5.6933e-08
+    }
+  ],
+  "limits": "Only nominal geometry and endpoint contact coverage. Full named-pad/decoupler partition comparison is separate. No impedance, ripple, regulator stability, current capability or hardware qualification."
+}

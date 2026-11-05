@@ -1,0 +1,215 @@
+{
+  "status": "BOTH_REPAIRS_REJECTED_NO_PAIR_CLOSED_PAUSED",
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "source_all58_unchanged": true,
+  "old_rejected_C_sha256": "ebf7bdb8556158df3f6c6c63ed985dec18a34ca709a6175d69efbde93389e634",
+  "finite_attempts": 2,
+  "D": {
+    "pcb": "repair-D/pcb/maru60.kicad_pcb",
+    "sha256": "dc152488552f56ce44641108be78be7928083bf04849242b7e6ba25eed0ca091",
+    "status": "REJECTED_ADJACENT_REFERENCE_GAP",
+    "native_open_pairs": 9,
+    "native_warnings": 43,
+    "native_other_hard_errors": 0,
+    "native_warning_categories": {
+      "warning:silk_over_copper": 13,
+      "warning:silk_overlap": 10,
+      "warning:text_height": 15,
+      "warning:track_dangling": 4,
+      "warning:via_dangling": 1
+    },
+    "schematic_parity": 0,
+    "fresh_ERC": 0,
+    "raw_native_net_identity": true,
+    "all58_cold_files_exact": true,
+    "physical_open_component_pairs_equal_source": true,
+    "source_warnings_retained_exactly": true,
+    "new_warning": {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [MCU_GPIO27] on F.Cu - B.Cu",
+          "pos": {
+            "x": 112.16,
+            "y": 77.0
+          },
+          "uuid": "a9449505-d241-4157-b612-44b39e5c9ea7"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    "material_pad_inventory_and_partitions_exact": true,
+    "unrelated_material_edges_or_witness_changes": 0,
+    "guard_failing_material_edges": 51,
+    "power_all10_pad_bindings_single_root": true,
+    "all247_GND_pads_in_J1_root": true,
+    "modified_power_width_mm": 0.6,
+    "power_length_mm": 3.7138721900498246,
+    "power_length_delta_mm": 0.06337219004982453,
+    "power_actual_copper_removed_mm2": 0.382629144355,
+    "power_actual_copper_added_mm2": 0.418672234995,
+    "power_endpoint_polygon_diagnostics": [
+      {
+        "uuid": "2df4c211-ae72-4021-a11a-f400d90108b2",
+        "position_mm": [
+          111.4,
+          75.7
+        ],
+        "unchanged_native_geometry": true,
+        "old_physical_power_overlap_mm2": 0.233654438848,
+        "new_physical_power_overlap_mm2": 0.233654440513,
+        "lost_original_endpoint_contact_mm2": 9.7437e-08
+      },
+      {
+        "uuid": "a3dac412-9c4c-48cf-81b8-b7016c33b879",
+        "position_mm": [
+          111.4,
+          79.3505
+        ],
+        "unchanged_native_geometry": true,
+        "old_physical_power_overlap_mm2": 0.233654438848,
+        "new_physical_power_overlap_mm2": 0.233654383044,
+        "lost_original_endpoint_contact_mm2": 5.6933e-08
+      }
+    ],
+    "reference_failure": {
+      "candidate_sha256": "dc152488552f56ce44641108be78be7928083bf04849242b7e6ba25eed0ca091",
+      "failed_track_uuid": "db39d882-6ecf-4006-b107-6b00b1abd04a",
+      "uncovered_outside_unchanged_own_transition_mm2": 4.713901e-06,
+      "parts": [
+        {
+          "area_mm2": 4.713901e-06,
+          "bbox_mm": [
+            111.594518,
+            76.163287,
+            111.60097,
+            76.167096
+          ],
+          "polygon_mm": [
+            [
+              111.600092,
+              76.167096
+            ],
+            [
+              111.599454,
+              76.164712
+            ],
+            [
+              111.594518,
+              76.166034
+            ],
+            [
+              111.596028,
+              76.165402
+            ],
+            [
+              111.597873,
+              76.164621
+            ],
+            [
+              111.599714,
+              76.163832
+            ],
+            [
+              111.60097,
+              76.163287
+            ]
+          ]
+        }
+      ],
+      "limits": "Local exact geometry of rejected D only. Not a global routing impossibility statement."
+    },
+    "metrics": {
+      "tracks": 9778,
+      "vias": 924,
+      "footprints": 383,
+      "track_length_mm": 13212.334463650453
+    },
+    "metrics_delta": {
+      "tracks": 5,
+      "vias": 1,
+      "footprints": 0,
+      "track_length_mm": 1.5252639572081534
+    },
+    "complete_plane_report": "qa/repair-D-return.json",
+    "local_web_report": "qa/repair-D-local-neck.json",
+    "corridor_requalification": "Not run: candidate rejected by own adjacent-reference failure."
+  },
+  "E": {
+    "pcb": "repair-E/pcb/maru60.kicad_pcb",
+    "sha256": "f0f604149199b14945edb481b1a8330ddb4c5f7eb12fc3153419d06dba3de865",
+    "status": "REJECTED_NATIVE_CLEARANCE",
+    "native_open_pairs": 9,
+    "native_warnings": 43,
+    "native_other_hard_errors": 2,
+    "schematic_parity": 0,
+    "clearance_errors": [
+      {
+        "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1445 mm)",
+        "items": [
+          {
+            "description": "Track [LED_FAULT_N] on F.Cu, length 0.5000 mm",
+            "pos": {
+              "x": 110.8,
+              "y": 75.45
+            },
+            "uuid": "b995c2c7-f443-497b-bb80-da0d3312d10d"
+          },
+          {
+            "description": "Track [+1V1] on F.Cu, length 0.4851 mm",
+            "pos": {
+              "x": 111.4,
+              "y": 75.7
+            },
+            "uuid": "db39d882-6ecf-4006-b107-6b00b1abd04a"
+          }
+        ],
+        "severity": "error",
+        "type": "clearance"
+      },
+      {
+        "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1445 mm)",
+        "items": [
+          {
+            "description": "Track [+1V1] on F.Cu, length 0.4851 mm",
+            "pos": {
+              "x": 111.4,
+              "y": 75.7
+            },
+            "uuid": "db39d882-6ecf-4006-b107-6b00b1abd04a"
+          },
+          {
+            "description": "Track [LED_FAULT_N] on F.Cu, length 0.1414 mm",
+            "pos": {
+              "x": 110.8,
+              "y": 75.95
+            },
+            "uuid": "f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774"
+          }
+        ],
+        "severity": "error",
+        "type": "clearance"
+      }
+    ],
+    "deep_contact_plane_cold_ERC_tests": "Not run after native clearance failure. In-memory names guarded before save only."
+  },
+  "continuation_search": "Not run; neither repair passed the prerequisite gates. South-boundary continuation remains untested on this source.",
+  "remaining_open_net_counts": {
+    "EXT_GPIO24": 1,
+    "EXT_GPIO25": 2,
+    "MCU_GPIO3": 1,
+    "MCU_GPIO10": 1,
+    "MCU_GPIO24": 1,
+    "MCU_GPIO25": 1,
+    "MCU_GPIO26": 1,
+    "MCU_GPIO27": 1
+  },
+  "limits": [
+    "No MCU pair closed; no routing-success claim",
+    "No SI, active power stability, EMI, manufacturing or hardware qualification",
+    "No independent review of rejected variants",
+    "No CAD or rule change outside isolated worker variants; no merge into current checkpoint",
+    "No assertion that all shaped rail geometries or bounded LED_FAULT_N refactors are impossible"
+  ]
+}

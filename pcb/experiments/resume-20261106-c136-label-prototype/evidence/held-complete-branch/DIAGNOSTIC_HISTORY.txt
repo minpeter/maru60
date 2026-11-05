@@ -1,0 +1,13 @@
+One complete-branch copper variant only, built from immutable 9d787421.
+
+The first native DRC gate passed (41 warnings / 9 open pairs / no added violations). Deeper checks were then allowed.
+
+compare_material.failed.py and material-comparison-syntax-failure.log retain an initial reporting-script SyntaxError; no candidate edit was involved. The corrected comparator passes and all retained primitive serializations are identical.
+
+geometry.py full old-gap/new-gap sweep was manually interrupted (exit 130) because the exact whole-plane containment method plus retained material deltas proves the required nominal reference condition without repeating thousands of large plane Booleans. Its incomplete log must not be counted as a pass.
+
+geometry_containment.py was also manually interrupted (exit 130) after its full-zone output exposed exact no-loss failures. Its repeated all-board drill subtraction per small object was replaced by geometry_containment_bounded_drills.py. The replacement still covers EVERY retained object and BOTH inner reference planes. Only drills with disjoint exact bounding boxes are omitted from each object's subtraction, matching the corrected material exporter's all-drill method. No reference crop, tolerance, or expanded exception window is introduced.
+
+exact_plane_deltas.py completed successfully before its final poll. It saves all loss/gain contours and tests retained object intersections. No optimized duplicate of that extraction was run; the prepared exact_plane_deltas_bounded_drills.py is unused.
+
+The full native plane-loss count is nonzero. Rational source/candidate edge comparison independently confirms real represented boundary loss. Candidate remains HELD / REJECTED FOR EXACT NO-LOSS regardless of other nominal checks. No third copper variant, merge, selected-repository change, or fabrication action.
