@@ -1,3 +1,7 @@
+# Latest resumed checkpoint
+
+The latest experimental selection is now `pcb/experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro`, with **11 open pairs and 51 unchanged warnings**. PCB SHA256: `04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99`. Read `pcb/CURRENT.md`. This supersedes only the prior current-selection pointer below; all historical units remain unchanged. It is not production-ready.
+
 # MARU60 V7 recovery workbench
 
 This isolated recovery repository preserves the exact selected PCB after the execution workspace was replaced. It does not invent or restore the lost Git history.

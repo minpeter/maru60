@@ -1,0 +1,128 @@
+{
+  "source_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+  "candidate_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "direct_edges": {
+    "old": 21775,
+    "new": 21780,
+    "removed": [],
+    "changed": [],
+    "added": [
+      {
+        "key": [
+          "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+          "df690eec-df6a-52bf-82fe-eace87245374"
+        ],
+        "after": [
+          [
+            [
+              "F.Cu",
+              0.002066678083
+            ]
+          ]
+        ]
+      },
+      {
+        "key": [
+          "075334c3-e6fd-4cf3-8599-1a58cef3db7f",
+          "55e5d0cf-c179-4e88-925d-241a5a9d4416"
+        ],
+        "after": [
+          [
+            [
+              "F.Cu",
+              0.019374803264
+            ]
+          ]
+        ]
+      },
+      {
+        "key": [
+          "3667e0a4-19f7-405c-b774-a3c5f075980e",
+          "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76"
+        ],
+        "after": [
+          [
+            [
+              "B.Cu",
+              0.1227720005985
+            ]
+          ]
+        ]
+      },
+      {
+        "key": [
+          "075334c3-e6fd-4cf3-8599-1a58cef3db7f",
+          "3667e0a4-19f7-405c-b774-a3c5f075980e"
+        ],
+        "after": [
+          [
+            [
+              "B.Cu",
+              0.019374723487
+            ]
+          ]
+        ]
+      },
+      {
+        "key": [
+          "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+          "bd60c430-58d5-568a-b034-a604187f20ee"
+        ],
+        "after": [
+          [
+            [
+              "F.Cu",
+              0.0193748033835
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  "zone_edges": {
+    "old": 733,
+    "new": 733,
+    "removed": [],
+    "changed": [],
+    "added": []
+  },
+  "pad_partition_changes": [
+    {
+      "net": "EXT_GPIO26",
+      "before": [
+        [
+          "61457a9d-06fa-45ae-8ba5-7fe97a547950",
+          "9802007f-2fe7-4459-b27f-4f1f6eb27cb3"
+        ],
+        [
+          "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76"
+        ]
+      ],
+      "after": [
+        [
+          "61457a9d-06fa-45ae-8ba5-7fe97a547950",
+          "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76",
+          "9802007f-2fe7-4459-b27f-4f1f6eb27cb3"
+        ]
+      ]
+    }
+  ],
+  "guard_failures_identical": true,
+  "old_empty_object_layers_identical": true,
+  "old_multiple_component_layers_identical": true,
+  "old_object_material_preserved": true,
+  "old_barrels_identical": true,
+  "new_barrels": [
+    {
+      "uuid": "075334c3-e6fd-4cf3-8599-1a58cef3db7f",
+      "type": "PCB_VIA",
+      "nodes": [
+        "object:075334c3-e6fd-4cf3-8599-1a58cef3db7f:0:0",
+        "object:075334c3-e6fd-4cf3-8599-1a58cef3db7f:4:0",
+        "object:075334c3-e6fd-4cf3-8599-1a58cef3db7f:6:0",
+        "object:075334c3-e6fd-4cf3-8599-1a58cef3db7f:2:0"
+      ],
+      "proof": "through span asserted; one positive annulus per copper layer; centered circular via or exact convex PTH hole enclosure proved; all-hole material has exact normalized native coordinate contour equality to own annulus; no foreign drill severs annulus"
+    }
+  ]
+}
