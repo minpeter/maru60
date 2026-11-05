@@ -1,3 +1,7 @@
+## Latest development prototype, 2026-11-05
+
+The frozen GPIO24 + VBUS candidate has 10 open pairs and 50 warnings, with source-bound checks and a new simulation applicability crosswalk. It is NOT strict acceptance: exact plane inclusion fails by explicit sub-nanometre boundary changes. The independently checked 11-open/51-warning GPIO26 baseline remains preserved. See `pcb/CURRENT.md` and `pcb/experiments/resume-20261105-gpio24-vbus-prototype/README.txt`.
+
 # Latest resumed checkpoint
 
 The latest experimental selection is now `pcb/experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro`, with **11 open pairs and 51 unchanged warnings**. PCB SHA256: `04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99`. Read `pcb/CURRENT.md`. This supersedes only the prior current-selection pointer below; all historical units remain unchanged. It is not production-ready.

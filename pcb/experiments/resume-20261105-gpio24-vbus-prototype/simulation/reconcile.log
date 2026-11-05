@@ -1,0 +1,460 @@
+{
+  "C100": {
+    "schematic_value": "4.7uF 50V X7R 10%",
+    "schematic_pins": {
+      "1": "+4V_REG",
+      "2": "GND"
+    },
+    "native_board": {
+      "value": "4.7uF 50V X7R 10%",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    }
+  },
+  "C120": {
+    "schematic_value": "1u",
+    "schematic_pins": {
+      "1": "+4V_REG",
+      "2": "GND"
+    },
+    "native_board": {
+      "value": "1u",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    }
+  },
+  "C125": {
+    "schematic_value": "1uF 50V effective TBD",
+    "schematic_pins": {
+      "2": "GND",
+      "1": "VBUS_FUSED"
+    },
+    "native_board": {
+      "value": "1uF 50V effective TBD",
+      "pads": {
+        "1": "VBUS_FUSED",
+        "2": "GND"
+      }
+    }
+  },
+  "C126": {
+    "schematic_value": "1uF 50V",
+    "schematic_pins": {
+      "2": "GND",
+      "1": "VBUS_PROTECTED_RAW"
+    },
+    "native_board": {
+      "value": "1uF 50V",
+      "pads": {
+        "1": "VBUS_PROTECTED_RAW",
+        "2": "GND"
+      }
+    }
+  },
+  "R125": {
+    "schematic_value": "100 1%",
+    "schematic_pins": {
+      "1": "USB_DVDT",
+      "2": "USB_DVDT_CAP"
+    },
+    "native_board": {
+      "value": "100 1%",
+      "pads": {
+        "1": "USB_DVDT",
+        "2": "USB_DVDT_CAP"
+      }
+    }
+  },
+  "F1": {
+    "schematic_value": "SF-1206F100-2 CANDIDATE",
+    "schematic_pins": {
+      "1": "VBUS",
+      "2": "VBUS_FUSED"
+    },
+    "native_board": {
+      "value": "SF-1206F100-2 CANDIDATE",
+      "pads": {
+        "1": "VBUS",
+        "2": "VBUS_FUSED"
+      }
+    }
+  },
+  "D100": {
+    "schematic_value": "PMEG4030ER - reverse discharge bypass",
+    "schematic_pins": {
+      "2": "+4V_REG",
+      "1": "VBUS_PROTECTED_RAW"
+    },
+    "native_board": {
+      "value": "PMEG4030ER - reverse discharge bypass",
+      "pads": {
+        "1": "VBUS_PROTECTED_RAW",
+        "2": "+4V_REG"
+      }
+    }
+  },
+  "U2": {
+    "schematic_value": "MAX38902AATA+T",
+    "schematic_pins": {
+      "6": "+3V3",
+      "8": "+3V3",
+      "1": "+4V_REG",
+      "3": "+4V_REG",
+      "2": "GND",
+      "4": "GND",
+      "9": "GND",
+      "7": "LDO_BYP",
+      "5": "unconnected-(U2-SELB_OPEN-Pad5)"
+    },
+    "native_board": {
+      "value": "MAX38902AATA+T",
+      "pads": {
+        "": "",
+        "1": "+4V_REG",
+        "2": "GND",
+        "3": "+4V_REG",
+        "4": "GND",
+        "5": "unconnected-(U2-SELB_OPEN-Pad5)",
+        "6": "+3V3",
+        "7": "LDO_BYP",
+        "8": "+3V3",
+        "9": "GND"
+      }
+    }
+  },
+  "U8": {
+    "schematic_value": "TPS259470LRPW",
+    "schematic_pins": {
+      "8": "GND",
+      "7": "USB_DVDT",
+      "9": "USB_ILM",
+      "4": "USB_INPUT_FAULT_N",
+      "2": "USB_OVLO",
+      "1": "USB_UVLO",
+      "5": "VBUS_FUSED",
+      "6": "VBUS_PROTECTED_RAW",
+      "3": "unconnected-(U8-AUXOFF-Pad3)",
+      "10": "unconnected-(U8-ITIMER-Pad10)"
+    },
+    "native_board": {
+      "value": "TPS259470LRPW",
+      "pads": {
+        "": "",
+        "1": "USB_UVLO",
+        "2": "USB_OVLO",
+        "3": "unconnected-(U8-AUXOFF-Pad3)",
+        "4": "USB_INPUT_FAULT_N",
+        "5": "VBUS_FUSED",
+        "6": "VBUS_PROTECTED_RAW",
+        "7": "USB_DVDT",
+        "8": "GND",
+        "9": "USB_ILM",
+        "10": "unconnected-(U8-ITIMER-Pad10)"
+      }
+    }
+  },
+  "R120": {
+    "schematic_value": "590k 0.1%",
+    "schematic_pins": {
+      "2": "USB_OVLO",
+      "1": "VBUS_FUSED"
+    },
+    "native_board": {
+      "value": "590k 0.1%",
+      "pads": {
+        "1": "VBUS_FUSED",
+        "2": "USB_OVLO"
+      }
+    }
+  },
+  "R121": {
+    "schematic_value": "156k 0.1%",
+    "schematic_pins": {
+      "2": "GND",
+      "1": "USB_OVLO"
+    },
+    "native_board": {
+      "value": "156k 0.1%",
+      "pads": {
+        "1": "USB_OVLO",
+        "2": "GND"
+      }
+    }
+  },
+  "R122": {
+    "schematic_value": "620k 0.1%",
+    "schematic_pins": {
+      "2": "USB_UVLO",
+      "1": "VBUS_FUSED"
+    },
+    "native_board": {
+      "value": "620k 0.1%",
+      "pads": {
+        "1": "VBUS_FUSED",
+        "2": "USB_UVLO"
+      }
+    }
+  },
+  "R123": {
+    "schematic_value": "267k 0.1%",
+    "schematic_pins": {
+      "2": "GND",
+      "1": "USB_UVLO"
+    },
+    "native_board": {
+      "value": "267k 0.1%",
+      "pads": {
+        "1": "USB_UVLO",
+        "2": "GND"
+      }
+    }
+  },
+  "R124": {
+    "schematic_value": "6.65k 0.1%",
+    "schematic_pins": {
+      "2": "GND",
+      "1": "USB_ILM"
+    },
+    "native_board": {
+      "value": "6.65k 0.1%",
+      "pads": {
+        "1": "USB_ILM",
+        "2": "GND"
+      }
+    }
+  },
+  "C124": {
+    "schematic_value": "10nF 10% 50V",
+    "schematic_pins": {
+      "2": "GND",
+      "1": "USB_DVDT_CAP"
+    },
+    "native_board": {
+      "value": "10nF 10% 50V",
+      "pads": {
+        "1": "USB_DVDT_CAP",
+        "2": "GND"
+      }
+    }
+  },
+  "U18": {
+    "schematic_value": "TPS62932DRLR",
+    "schematic_pins": {
+      "6": "BUCK_BST",
+      "8": "BUCK_FB",
+      "7": "BUCK_SS",
+      "5": "BUCK_SW",
+      "4": "GND",
+      "3": "VBUS_PROTECTED_RAW",
+      "2": "unconnected-(U18-EN_FLOAT_ENABLE-Pad2)",
+      "1": "unconnected-(U18-RT_FLOAT_500KHZ-Pad1)"
+    },
+    "native_board": {
+      "value": "TPS62932DRLR",
+      "pads": {
+        "1": "unconnected-(U18-RT_FLOAT_500KHZ-Pad1)",
+        "2": "unconnected-(U18-EN_FLOAT_ENABLE-Pad2)",
+        "3": "VBUS_PROTECTED_RAW",
+        "4": "GND",
+        "5": "BUCK_SW",
+        "6": "BUCK_BST",
+        "7": "BUCK_SS",
+        "8": "BUCK_FB"
+      }
+    }
+  },
+  "L2": {
+    "schematic_value": "XAL4030-472MEC 4.7uH 20%",
+    "schematic_pins": {
+      "2": "+4V_REG",
+      "1": "BUCK_SW"
+    },
+    "native_board": {
+      "value": "XAL4030-472MEC 4.7uH 20%",
+      "pads": {
+        "1": "BUCK_SW",
+        "2": "+4V_REG"
+      }
+    }
+  },
+  "C136": {
+    "schematic_value": "100nF 50V",
+    "schematic_pins": {
+      "2": "GND",
+      "1": "VBUS_PROTECTED_RAW"
+    },
+    "native_board": {
+      "value": "100nF 50V",
+      "pads": {
+        "1": "VBUS_PROTECTED_RAW",
+        "2": "GND"
+      }
+    }
+  },
+  "C137": {
+    "schematic_value": "4.7uF 50V effective>=2uF TBD",
+    "schematic_pins": {
+      "2": "GND",
+      "1": "VBUS_PROTECTED_RAW"
+    },
+    "native_board": {
+      "value": "4.7uF 50V effective>=2uF TBD",
+      "pads": {
+        "1": "VBUS_PROTECTED_RAW",
+        "2": "GND"
+      }
+    }
+  },
+  "C138": {
+    "schematic_value": "100nF 16V BST-SW",
+    "schematic_pins": {
+      "1": "BUCK_BST",
+      "2": "BUCK_SW"
+    },
+    "native_board": {
+      "value": "100nF 16V BST-SW",
+      "pads": {
+        "1": "BUCK_BST",
+        "2": "BUCK_SW"
+      }
+    }
+  },
+  "C139": {
+    "schematic_value": "100nF 10% 16V - soft start",
+    "schematic_pins": {
+      "1": "BUCK_SS",
+      "2": "GND"
+    },
+    "native_board": {
+      "value": "100nF 10% 16V - soft start",
+      "pads": {
+        "1": "BUCK_SS",
+        "2": "GND"
+      }
+    }
+  },
+  "C140": {
+    "schematic_value": "22uF 10V effective>=12uF TBD",
+    "schematic_pins": {
+      "1": "+4V_REG",
+      "2": "GND"
+    },
+    "native_board": {
+      "value": "22uF 10V effective>=12uF TBD",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    }
+  },
+  "C141": {
+    "schematic_value": "22uF 10V effective>=12uF TBD",
+    "schematic_pins": {
+      "1": "+4V_REG",
+      "2": "GND"
+    },
+    "native_board": {
+      "value": "22uF 10V effective>=12uF TBD",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    }
+  },
+  "R159": {
+    "schematic_value": "40.0k 0.1%",
+    "schematic_pins": {
+      "1": "+4V_REG",
+      "2": "BUCK_FB"
+    },
+    "native_board": {
+      "value": "40.0k 0.1%",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "BUCK_FB"
+      }
+    }
+  },
+  "R160": {
+    "schematic_value": "10.0k 0.1%",
+    "schematic_pins": {
+      "1": "BUCK_FB",
+      "2": "GND"
+    },
+    "native_board": {
+      "value": "10.0k 0.1%",
+      "pads": {
+        "1": "BUCK_FB",
+        "2": "GND"
+      }
+    }
+  },
+  "U7": {
+    "schematic_value": "TPS2553DBVR-1",
+    "schematic_pins": {
+      "6": "+4V_LED",
+      "1": "+4V_REG",
+      "2": "GND",
+      "3": "LED_ENABLE",
+      "4": "LED_FAULT_N",
+      "5": "LED_ILIM"
+    },
+    "native_board": {
+      "value": "TPS2553DBVR-1",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND",
+        "3": "LED_ENABLE",
+        "4": "LED_FAULT_N",
+        "5": "LED_ILIM",
+        "6": "+4V_LED"
+      }
+    }
+  },
+  "R112": {
+    "schematic_value": "133k 1%",
+    "schematic_pins": {
+      "2": "GND",
+      "1": "LED_ILIM"
+    },
+    "native_board": {
+      "value": "133k 1%",
+      "pads": {
+        "1": "LED_ILIM",
+        "2": "GND"
+      }
+    }
+  },
+  "C128": {
+    "schematic_value": "100nF 16V",
+    "schematic_pins": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "native_board": {
+      "value": "100nF 16V",
+      "pads": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    }
+  },
+  "C129": {
+    "schematic_value": "100nF 16V",
+    "schematic_pins": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "native_board": {
+      "value": "100nF 16V",
+      "pads": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    }
+  }
+}

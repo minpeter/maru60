@@ -1,0 +1,47 @@
+{
+  "SPICE_runs": 14,
+  "plots": 5,
+  "RC_error_V": 3.0351160698049995e-06,
+  "startup": {
+    "efuse_typ_slew_V_per_ms": 0.2,
+    "efuse_5V_rise_time_ms": 25.0,
+    "buck_typ_internal_UVLO_rising_V": 3.6,
+    "buck_typ_soft_start_ms": 14.545454545454545,
+    "ideal_buck_full_output_time_ms": 32.54545454545455,
+    "not_actual_startup_prediction": true
+  },
+  "input_recovery": [
+    {
+      "Cin_effective_uF": 2,
+      "assumed_line_L_uH": 0.1,
+      "peak_V": 4.980984042434
+    },
+    {
+      "Cin_effective_uF": 2,
+      "assumed_line_L_uH": 0.5,
+      "peak_V": 6.286691156263
+    },
+    {
+      "Cin_effective_uF": 2,
+      "assumed_line_L_uH": 1.0,
+      "peak_V": 6.947959415621
+    },
+    {
+      "Cin_effective_uF": 4.7,
+      "assumed_line_L_uH": 0.1,
+      "peak_V": 4.946297142192
+    },
+    {
+      "Cin_effective_uF": 4.7,
+      "assumed_line_L_uH": 0.5,
+      "peak_V": 5.469850873869
+    },
+    {
+      "Cin_effective_uF": 4.7,
+      "assumed_line_L_uH": 1.0,
+      "peak_V": 6.127971961486
+    }
+  ],
+  "source_unchanged": true,
+  "source_hash_checked_this_run": true
+}

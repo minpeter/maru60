@@ -1,0 +1,153 @@
+{
+  "board_sha256": "3663aac96fb305eb4925fff938dd2db5862b880c6c262b2fa82707567a6e98f7",
+  "native_board_read_only": true,
+  "parts_verified": {
+    "U8": "TPS259470LRPW",
+    "U18": "TPS62932DRLR",
+    "U7": "TPS2553DBVR-1",
+    "U12": "TLV810EA29DBZR",
+    "R120": "590k 0.1%",
+    "R121": "156k 0.1%",
+    "R122": "620k 0.1%",
+    "R123": "267k 0.1%",
+    "R124": "6.65k 0.1%",
+    "R159": "40.0k 0.1%",
+    "R160": "10.0k 0.1%",
+    "R112": "133k 1%",
+    "C124": "10nF 10% 50V"
+  },
+  "source_connectivity": {
+    "+4V_REG": {
+      "reached": 11,
+      "total": 11,
+      "unreached": []
+    },
+    "GND": {
+      "reached": 246,
+      "total": 247,
+      "unreached": [
+        {
+          "uuid": "2ea22089-b6e8-49a9-94a7-091f48c56806",
+          "ref": "C128",
+          "pin": "2"
+        }
+      ]
+    },
+    "+3V3": {
+      "reached": 37,
+      "total": 37,
+      "unreached": []
+    },
+    "+4V_LED": {
+      "reached": 160,
+      "total": 160,
+      "unreached": []
+    },
+    "VBUS_FUSED": {
+      "reached": 5,
+      "total": 5,
+      "unreached": []
+    },
+    "VBUS_PROTECTED_RAW": {
+      "reached": 6,
+      "total": 6,
+      "unreached": []
+    },
+    "USB_DP_CONN": {
+      "reached": 3,
+      "total": 4,
+      "unreached": [
+        {
+          "uuid": "d3f86522-9a79-4e09-9355-32e55f18dff1",
+          "ref": "U10",
+          "pin": "1"
+        }
+      ]
+    }
+  },
+  "divider_V": {
+    "OVLO": {
+      "rising": [
+        5.589286272727273,
+        5.916767875542209
+      ],
+      "falling": [
+        5.078415335971721,
+        5.404278219219219
+      ]
+    },
+    "UVLO": {
+      "rising": [
+        3.8626146046986727,
+        4.1306726293559475
+      ],
+      "falling": [
+        3.507646617629562,
+        3.7747107836150757
+      ]
+    }
+  },
+  "buck_setpoint_V_reference_plus_resistors_only": {
+    "25C": [
+      3.953670329670331,
+      4.04647047047047
+    ],
+    "0_to_85C": [
+      3.9337022977022986,
+      4.066502502502502
+    ],
+    "full_IC_temp_range": [
+      3.913734265734267,
+      4.086534534534533
+    ]
+  },
+  "buck_reference_model_excludes": [
+    "FB leakage (0.15uA typical, no stated bound)",
+    "tempco",
+    "line/load/transient regulation",
+    "ripple",
+    "dropout",
+    "layout"
+  ],
+  "buck_nominal_required_VIN_lossless_98percent_duty_V": 4.081632653061225,
+  "buck_max_setpoint_required_VIN_lossless_98percent_duty_V": 4.169933198504626,
+  "LED_U7_current_limit_equation_estimates": {
+    "minimum_A": 0.17365746919875535,
+    "nominal_A": 0.201512719722154,
+    "maximum_A": 0.23390117254047116
+  },
+  "LED_population": 76,
+  "LED_rail_nominal_cap_count": 79,
+  "LED_rail_nominal_capacitance_uF": 12.5,
+  "LED_minimum_supply_V_from_A1": 3.7,
+  "buck_low_setpoint_minus_LED_minimum_V": 0.21373426573426668,
+  "U7_drop_at_max_estimated_threshold_135mOhm_V": 0.031576658292963605,
+  "residual_for_other_losses_after_U7_V": 0.18215760744130308,
+  "LED_margin_interpretation": "Conditional arithmetic only if buck regulates. No bound on current sharing, path losses, capacitor bias, dynamic droop or LED temperature behavior. Not an electrical qualification.",
+  "protected_feed_prior_geometry_matched_segments": 37,
+  "protected_feed_nominal_trace_only_R20_ohm": 0.19798703232902254,
+  "protected_feed_trace_only_drop_at_0_5A_V": 0.09899351616451127,
+  "protected_feed_caveat": "Sum of nominal rectangular trace segments as a serial centerline model. Not an exact conductor-resistance solve or an upper/lower bound on the complete supply. Does not establish ampacity, board temperature, output regulation, stability, safe current or manufacturing readiness.",
+  "Rtop_only_UVLO_tradeoff": [
+    {
+      "assumed_max_start_at_divider_V": 4.4,
+      "continuous_Rtop_ohm_with_Rbottom267k": 677428.3941436348,
+      "best_guaranteed_falling_V": 3.73288139242838
+    },
+    {
+      "assumed_max_start_at_divider_V": 4.5,
+      "continuous_Rtop_ohm_with_Rbottom267k": 698751.2897729592,
+      "best_guaranteed_falling_V": 3.8165100166785653
+    },
+    {
+      "assumed_max_start_at_divider_V": 4.75,
+      "continuous_Rtop_ohm_with_Rbottom267k": 752058.52884627,
+      "best_guaranteed_falling_V": 4.0255815773040275
+    }
+  ],
+  "UVLO_tradeoff_caveat": "Illustrative startup constraints at VBUS_FUSED, not a selected USB voltage contract; resistor selected continuously, not E-series. No feed/eFuse drop included, so local buck voltage is lower.",
+  "rail_ready_sensor_present": false,
+  "input_fault_MCU_receiver_present": false,
+  "LED_timing_source": "https://www.ti.com/lit/ds/symlink/tps2553-1.pdf section6.5: 3ms maximum turn-on to90% for CL1uF RL100ohm. Actual12.5uF rail is not this test condition.",
+  "remaining_qualification": false
+}

@@ -1,0 +1,174 @@
+
+**** 02/11/22 16:49:36 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "TPS25947x_Startup-published"  [ C:\Users\a0489230\Documents\pspice modelling\TPS25947x_PSPICE_TRANS\tps25947x_trans-psp
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "published.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../tps25947x_trans.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 70m 0 100n 
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1.0n
+.OPTIONS ITL4= 40
+.PROBE64 V(alias(*)) I(alias(*)) 
+.INC "..\TPS25947x_Startup.net" 
+
+
+
+**** INCLUDING TPS25947x_Startup.net ****
+* source TPS25947X_TRANS
+R_R50         0 PGTH_72_74  630k TC=0,0 
+R_R34         VCC FLTB_70  1k TC=0,0 
+R_R51         N41060 PG_72_74  10k TC=0,0 
+C_C44         0 N21460  0.01u  
+X_D14          VIN3 0 SMBJ18A
+R_R55         0 AUX_OFF_70  1T TC=0,0 
+V_VCC1         N41060 0 5
+R_R46         VCC AUX_OFF_70  100k TC=0,0 
+V_V6         VIN3 0  
++PULSE 0 12 100n 1n 1n 1 2
+X_C40    0 VOUT3 TPS25947x_Startup_C40 
+D_D15          0 VOUT3 DI_B330A 
+C_C38         0 VIN3  1u  
+R_R48         0 OVC_72  390k TC=0,0 
+C_C43         0 ITIMER3  2.2n  
+C_C41         0 VOUT3  10u  
+R_R57         0 FLTB_70  1T TC=0,0 
+R_R49         PGTH_72_74 VOUT3  1Meg TC=0,0 
+R_RLOAD         0 VOUT3  12 TC=0,0 
+V_VCC         VCC 0 5
+C_C39         0 VIN3  100n  
+R_R35         0 EN_UVLO3  124k TC=0,0 
+R_R32         EN_UVLO3 VIN3  1Meg TC=0,0 
+R_R58         0 OVC_72  1T TC=0,0 
+C_C42         0 EN_UVLO3  100p  
+R_R56         0 PG_72_74  1T TC=0,0 
+R_R45         DVDT3 N21460  100 TC=0,0 
+R_R38         0 OVLO_70_74  78.7k TC=0,0 
+R_R33         OVLO_70_74 VIN3  1Meg TC=0,0 
+R_R37         0 ILM3  549 TC=0,0 
+X_U1         AUX_OFF_70 DVDT3 EN_UVLO3 FLTB_70 0 ILM3 VIN3 ITIMER3 VOUT3
++  OVLO_70_74 TPS25947X_TRANS PARAMS: TPS259474LRPW=0 TPS259474ARPW=0 TA=25
++  TPS259470ARPW=1 TPS259470LRPW=0 TPS259472ARPW=0 TPS259472LRPW=0
+
+.subckt TPS25947x_Startup_C40 1 2  
+C_C40         1 _SR C_C40 220u  
+.model         C_C40 CAP C=1      
+RESR_C40         _SR 2 0.15   
+.ends TPS25947x_Startup_C40
+
+**** RESUMING published.cir ****
+.END
+
+**** 02/11/22 16:49:36 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "TPS25947x_Startup-published"  [ C:\Users\a0489230\Documents\pspice modelling\TPS25947x_PSPICE_TRANS\tps25947x_trans-psp
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 02/11/22 16:49:36 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "TPS25947x_Startup-published"  [ C:\Users\a0489230\Documents\pspice modelling\TPS25947x_PSPICE_TRANS\tps25947x_trans-psp
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_C40.C_C40     
+           C    1            
+
+
+**** 02/11/22 16:49:36 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "TPS25947x_Startup-published"  [ C:\Users\a0489230\Documents\pspice modelling\TPS25947x_PSPICE_TRANS\tps25947x_trans-psp
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    5.0000  ( ILM3) 99.92E-06  ( VIN3)    0.0000  (DVDT3) 264.0E-06      
+
+(VOUT3) 66.84E-09  (N21460) 264.0E-06 (N41060)    5.0000 (OVC_72)    0.0000     
+
+(FLTB_70)    5.0000                   (ITIMER3)    2.5000                       
+
+(EN_UVLO3)    0.0000                  (PG_72_74)    5.0000                      
+
+(X_C40._SR) 66.84E-09                 (AUX_OFF_70) 50.00E-09                    
+
+(OVLO_70_74) 174.6E-06                (PGTH_72_74) 25.83E-09                
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VCC1      -5.000E-12
+    V_V6        -4.500E-06
+    V_VCC       -5.001E-05
+
+    TOTAL POWER DISSIPATION   2.50E-04  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+          JOB ABORTED
+
+**** 02/11/22 16:49:36 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "TPS25947x_Startup-published"  [ C:\Users\a0489230\Documents\pspice modelling\TPS25947x_PSPICE_TRANS\tps25947x_trans-psp
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =   107623.06
+  Total job time (using Solver 1)   =       12.50
+

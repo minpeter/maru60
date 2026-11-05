@@ -1,0 +1,199 @@
+{
+  "source_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "candidate_sha256": "2bacda8824b543df9be08628cd8ac14b2ed6628d7ee3e221626b869da74787d4",
+  "declared_modified_via_uuid": "976a7de4-489f-4261-a64f-3551037e01df",
+  "before_mm": [
+    97.25,
+    37.55
+  ],
+  "after_mm": [
+    97.25,
+    37.45
+  ],
+  "native_zone_clearance_mm": 0.2,
+  "comparison_envelope_radius_mm": 0.455,
+  "projection_loss_rows": [
+    {
+      "old_track_uuid": "3e0fec9e-6c78-45a5-a2dc-22ae925ad604",
+      "net": "see raw source object identity",
+      "track_layer": "B.Cu",
+      "reference": "In1.Cu",
+      "lost_reference_mm2": 2.3625e-08,
+      "outside_moved_via_0p455mm_envelope_mm2": 2.3625e-08,
+      "lost_patch_bbox_nm": [
+        274475000,
+        37899500,
+        274540691,
+        37917101
+      ],
+      "integer_nm_contours": [
+        [
+          [
+            274499669,
+            37910492
+          ],
+          [
+            274475000,
+            37917101
+          ],
+          [
+            274540691,
+            37899500
+          ]
+        ]
+      ]
+    },
+    {
+      "old_track_uuid": "b928a2a5-bde8-464d-aac1-e446062d5f57",
+      "net": "see raw source object identity",
+      "track_layer": "F.Cu",
+      "reference": "In1.Cu",
+      "lost_reference_mm2": 0.000578146491,
+      "outside_moved_via_0p455mm_envelope_mm2": 0.0,
+      "lost_patch_bbox_nm": [
+        97682898,
+        37425000,
+        97700500,
+        37490691
+      ],
+      "integer_nm_contours": [
+        [
+          [
+            97700500,
+            37490691
+          ],
+          [
+            97682898,
+            37425000
+          ],
+          [
+            97700500,
+            37425000
+          ]
+        ]
+      ]
+    },
+    {
+      "old_track_uuid": "48e89f5e-c7ba-4a20-a4a3-4d002c478a59",
+      "net": "see raw source object identity",
+      "track_layer": "B.Cu",
+      "reference": "In1.Cu",
+      "lost_reference_mm2": 3.2982482e-05,
+      "outside_moved_via_0p455mm_envelope_mm2": 0.0,
+      "lost_patch_bbox_nm": [
+        96799500,
+        37475000,
+        96803704,
+        37490691
+      ],
+      "integer_nm_contours": [
+        [
+          [
+            96799500,
+            37490691
+          ],
+          [
+            96799500,
+            37475000
+          ],
+          [
+            96803704,
+            37475000
+          ]
+        ]
+      ]
+    },
+    {
+      "old_track_uuid": "3e0fec9e-6c78-45a5-a2dc-22ae925ad604",
+      "net": "see raw source object identity",
+      "track_layer": "B.Cu",
+      "reference": "In2.Cu",
+      "lost_reference_mm2": 2.3625e-08,
+      "outside_moved_via_0p455mm_envelope_mm2": 2.3625e-08,
+      "lost_patch_bbox_nm": [
+        274475000,
+        37899500,
+        274540691,
+        37917101
+      ],
+      "integer_nm_contours": [
+        [
+          [
+            274499669,
+            37910492
+          ],
+          [
+            274475000,
+            37917101
+          ],
+          [
+            274540691,
+            37899500
+          ]
+        ]
+      ]
+    },
+    {
+      "old_track_uuid": "b928a2a5-bde8-464d-aac1-e446062d5f57",
+      "net": "see raw source object identity",
+      "track_layer": "F.Cu",
+      "reference": "In2.Cu",
+      "lost_reference_mm2": 0.000578146491,
+      "outside_moved_via_0p455mm_envelope_mm2": 0.0,
+      "lost_patch_bbox_nm": [
+        97682898,
+        37425000,
+        97700500,
+        37490691
+      ],
+      "integer_nm_contours": [
+        [
+          [
+            97700500,
+            37490691
+          ],
+          [
+            97682898,
+            37425000
+          ],
+          [
+            97700500,
+            37425000
+          ]
+        ]
+      ]
+    },
+    {
+      "old_track_uuid": "48e89f5e-c7ba-4a20-a4a3-4d002c478a59",
+      "net": "see raw source object identity",
+      "track_layer": "B.Cu",
+      "reference": "In2.Cu",
+      "lost_reference_mm2": 3.2982482e-05,
+      "outside_moved_via_0p455mm_envelope_mm2": 0.0,
+      "lost_patch_bbox_nm": [
+        96799500,
+        37475000,
+        96803704,
+        37490691
+      ],
+      "integer_nm_contours": [
+        [
+          [
+            96799500,
+            37490691
+          ],
+          [
+            96799500,
+            37475000
+          ],
+          [
+            96803704,
+            37475000
+          ]
+        ]
+      ]
+    }
+  ],
+  "all_loss_confined": false,
+  "method": "Native physical filled GND polygons with all through drills subtracted; conservative outside-rounded old source copper projections; exact positive Boolean patch outside declared moved signal-via transition; no Unfracture."
+}

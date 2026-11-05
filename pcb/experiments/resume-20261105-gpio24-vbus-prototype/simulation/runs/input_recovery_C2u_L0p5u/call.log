@@ -1,0 +1,20 @@
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: abrupt protected-feed recovery sensitivity; no efuse slew model
+COMMAND_RETURN source /workspace/shared/maru60-resume/power-replay-20261105/inputs/v7-power-simulation/netlists/input_recovery_C2u_L0p5u.cir: 0
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout Initial Transient Solution
+stdout --------------------------
+stdout Node                                   Voltage
+stdout ----                                   -------
+stdout source                                       0
+stdout n1                                           0
+stdout capin                                        0
+stdout cnode                                        0
+stdout lfeed#branch                                 0
+stdout vin#branch                                   0
+stdout No. of Data Rows : 15016
+COMMAND_RETURN run: 0
+COMMAND_RETURN set wr_singlescale: 0
+COMMAND_RETURN set wr_vecnames: 0
+COMMAND_RETURN wrdata /workspace/shared/maru60-resume/power-replay-20261105/runs/input_recovery_C2u_L0p5u/waveform.txt v(source) v(capin): 0

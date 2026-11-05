@@ -1,9 +1,7 @@
-# Current resumed experimental selection
+# Current baseline and prototype candidate
 
-Open `experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro`.
+The strict accepted geometry baseline remains `experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro`, PCB `04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99`, commit `bbf61e6`: 11 open pairs and 51 warnings.
 
-PCB SHA256: `04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99`.
+Latest frozen development candidate: `experiments/resume-20261105-gpio24-vbus-prototype/pcb/maru60.kicad_pro`, PCB `56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9`: 10 open pairs and 50 warnings. Read its README.txt and DECISION.json before use. Its strict exact-no-loss diagnostic FAILS with explicit, independently bounded sub-nanometre plane-boundary changes. This is a reversible prototype candidate, not promotion to strict acceptance or manufacturing release.
 
-The EXT_GPIO26 header-side connection is closed; MCU_GPIO26 is still open. Fresh checks: 11 open pairs, 51 unchanged warnings, zero other DRC/ERC/parity findings. Two outer-layer segments and one through via add 3.602290795897 mm. All previous conductor/contact witnesses and old signal-reference support are retained. See the new unit's SELECTION.json and README.txt for exact evidence and limitations.
-
-This is not a manufacturing, SI or hardware release. LED qualification remains OFF. Prior selected C139 design and full recovery history are preserved unchanged.
+All prior designs are retained. No full current-board active simulation, SI/EMI, full firmware build or physical qualification is claimed. LED qualification stays OFF.

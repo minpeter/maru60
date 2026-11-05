@@ -1,0 +1,33 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-44.2 shared library
+stdout ** Creation Date: Sun Jan 12 08:19:15 UTC 2025
+stdout ******
+COMMAND_RETURN set ngbehavior=ps: 0
+COMMAND_RETURN set numdgt=12: 0
+stdout ******
+stdout ** ngspice-44.2 : Circuit level simulation program
+stdout ** Compiled with KLU Direct Linear Solver
+stdout ** The U. C. Berkeley CAD Group
+stdout ** Copyright 1985-1994, Regents of the University of California.
+stdout ** Copyright 2001-2024, The ngspice team.
+stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html
+stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+stdout ** Creation Date: Sun Jan 12 08:19:15 UTC 2025
+stdout ******
+COMMAND_RETURN version: 0
+stderr File included as:   .inc  vendor/SLUM808/TPS62932_PSPICE_TRANS/TPS62932_TRANS.LIB
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: v7 tps62932 isolated buck startup using ti model unchanged
+stderr Error on line 686 or its substitute:
+stderr a.xu18.x_u10_u9.as_s1 %gd xu18.x_u10_u9.reset2 0 %gd xu18.x_u10_u9.meas 0 xu18.x_u10_u9:as1
+stderr MIF-ERROR - unable to find definition of model xu18.x_u10_u9:as1
+stderr Simulation interrupted due to error!
+COMMAND_RETURN source /workspace/scratch/edd9a5be63e7/v7-power-audit-20261104/simulation/tps62932_startup.cir: 0
+stderr Error: circuit not parsed.
+COMMAND_RETURN run: 0
+COMMAND_RETURN set wr_singlescale: 0
+COMMAND_RETURN set wr_vecnames: 0
+stderr Error: no such function as i,
+stderr or i(L2) is not available.
+COMMAND_RETURN wrdata /workspace/scratch/edd9a5be63e7/v7-power-audit-20261104/simulation/startup_original/waveform.txt v(vin) v(vout) v(sw) v(ss) v(fb) i(L2): 0
