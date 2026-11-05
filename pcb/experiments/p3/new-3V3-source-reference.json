@@ -1,0 +1,690 @@
+{
+  "candidate_sha256": "3ff913a8351d6c284bc67a40b39a99391a7c761d239f895827d6874647e60680",
+  "new_power_tracks": 11,
+  "new_power_vias": 3,
+  "new_track_centerline_mm": 12.935524105480003,
+  "method": "Continuous saved native GND-polygon boundary intersections at centerline and both copper edges, F to In1 and B to In2. Own-via0.55mm neighborhoods are categorization only, not qualification/waiver.",
+  "totals_by_probe": {
+    "left_edge": {
+      "raw_missing_mm": 2.886717793739879,
+      "outside_own_via_mm": 0.0,
+      "outside_interval_count": 0
+    },
+    "centerline": {
+      "raw_missing_mm": 2.8013760572933446,
+      "outside_own_via_mm": 0.0,
+      "outside_interval_count": 0
+    },
+    "right_edge": {
+      "raw_missing_mm": 3.075456876846154,
+      "outside_own_via_mm": 0.5091673086805488,
+      "outside_interval_count": 1
+    }
+  },
+  "track_intervals": [
+    {
+      "uuid": "0d103cd3-8272-5dc5-80d9-21d63ed3999b",
+      "copper_layer": "F.Cu",
+      "reference_layer": "In1.Cu",
+      "start_mm": [
+        23.7,
+        34.6
+      ],
+      "end_mm": [
+        22.825,
+        34.4
+      ],
+      "width_mm": 0.25,
+      "track_length_mm": 0.8975661535508127,
+      "missing_projection_intervals": {
+        "left_edge": [
+          {
+            "t0": 0.517713171039,
+            "t1": 1.0,
+            "start_mm": [
+              23.219147875153105,
+              34.61831467911369
+            ],
+            "end_mm": [
+              22.79714689981223,
+              34.52185731332148
+            ],
+            "length_mm": 0.43288433397874343,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "centerline": [
+          {
+            "t0": 0.497741938628,
+            "t1": 1.0,
+            "start_mm": [
+              23.2644758037005,
+              34.5004516122744
+            ],
+            "end_mm": [
+              22.825,
+              34.4
+            ],
+            "length_mm": 0.4508098362355541,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "right_edge": [
+          {
+            "t0": 0.516974971643,
+            "t1": 1.0,
+            "start_mm": [
+              23.275500000000143,
+              34.374747692349914
+            ],
+            "end_mm": [
+              22.85285310018777,
+              34.278142686678514
+            ],
+            "length_mm": 0.43354691677116475,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "46a0ef6a-4071-54f3-8403-d8609da12f54",
+      "copper_layer": "F.Cu",
+      "reference_layer": "In1.Cu",
+      "start_mm": [
+        23.75,
+        31.9
+      ],
+      "end_mm": [
+        24.9,
+        31.9
+      ],
+      "width_mm": 0.25,
+      "track_length_mm": 1.1499999999999986,
+      "missing_projection_intervals": {
+        "left_edge": [
+          {
+            "t0": 0.0,
+            "t1": 0.321005329908,
+            "start_mm": [
+              23.75,
+              31.775
+            ],
+            "end_mm": [
+              24.1191561293942,
+              31.775
+            ],
+            "length_mm": 0.36915612939419956,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "centerline": [
+          {
+            "t0": 0.0,
+            "t1": 0.249653913043,
+            "start_mm": [
+              23.75,
+              31.9
+            ],
+            "end_mm": [
+              24.03710199999945,
+              31.9
+            ],
+            "length_mm": 0.28710199999944963,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "right_edge": [
+          {
+            "t0": 0.0,
+            "t1": 0.090848453003,
+            "start_mm": [
+              23.75,
+              32.025
+            ],
+            "end_mm": [
+              23.85447572095345,
+              32.025
+            ],
+            "length_mm": 0.10447572095344987,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "6d82ccaf-abf9-5791-af4b-09f5357e8420",
+      "copper_layer": "F.Cu",
+      "reference_layer": "In1.Cu",
+      "start_mm": [
+        24.9,
+        31.9
+      ],
+      "end_mm": [
+        24.9,
+        34.6
+      ],
+      "width_mm": 0.25,
+      "track_length_mm": 2.700000000000003,
+      "missing_projection_intervals": {
+        "left_edge": [],
+        "centerline": [],
+        "right_edge": []
+      }
+    },
+    {
+      "uuid": "70d897f6-56a6-50e3-91d5-b3fa5e453949",
+      "copper_layer": "F.Cu",
+      "reference_layer": "In1.Cu",
+      "start_mm": [
+        24.9,
+        34.6
+      ],
+      "end_mm": [
+        23.7,
+        34.6
+      ],
+      "width_mm": 0.25,
+      "track_length_mm": 1.1999999999999993,
+      "missing_projection_intervals": {
+        "left_edge": [],
+        "centerline": [],
+        "right_edge": []
+      }
+    },
+    {
+      "uuid": "b8aaa8bf-30cb-5363-afba-aaa36d9fe4e2",
+      "copper_layer": "F.Cu",
+      "reference_layer": "In1.Cu",
+      "start_mm": [
+        20.7,
+        31.9
+      ],
+      "end_mm": [
+        23.75,
+        31.9
+      ],
+      "width_mm": 0.3,
+      "track_length_mm": 3.0500000000000007,
+      "missing_projection_intervals": {
+        "left_edge": [
+          {
+            "t0": 0.843869101416,
+            "t1": 1.0,
+            "start_mm": [
+              23.2738007593188,
+              31.75
+            ],
+            "end_mm": [
+              23.75,
+              31.75
+            ],
+            "length_mm": 0.47619924068120006,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "centerline": [
+          {
+            "t0": 0.873081311475,
+            "t1": 1.0,
+            "start_mm": [
+              23.36289799999875,
+              31.9
+            ],
+            "end_mm": [
+              23.75,
+              31.9
+            ],
+            "length_mm": 0.38710200000125006,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "right_edge": [
+          {
+            "t0": 0.963549175693,
+            "t1": 1.0,
+            "start_mm": [
+              23.63882498586365,
+              32.05
+            ],
+            "end_mm": [
+              23.75,
+              32.05
+            ],
+            "length_mm": 0.11117501413634995,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "cf903d29-e433-5624-aa05-0d9f3b3995d3",
+      "copper_layer": "F.Cu",
+      "reference_layer": "In1.Cu",
+      "start_mm": [
+        23.75,
+        31.9
+      ],
+      "end_mm": [
+        23.7,
+        31.6
+      ],
+      "width_mm": 0.3,
+      "track_length_mm": 0.3041381265149083,
+      "missing_projection_intervals": {
+        "left_edge": [
+          {
+            "t0": 0.0,
+            "t1": 1.0,
+            "start_mm": [
+              23.602040911425178,
+              31.924659848095803
+            ],
+            "end_mm": [
+              23.552040911425177,
+              31.624659848095806
+            ],
+            "length_mm": 0.3041381265149083,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "centerline": [
+          {
+            "t0": 0.0,
+            "t1": 1.0,
+            "start_mm": [
+              23.75,
+              31.9
+            ],
+            "end_mm": [
+              23.7,
+              31.6
+            ],
+            "length_mm": 0.3041381265149083,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "right_edge": [
+          {
+            "t0": 0.0,
+            "t1": 1.0,
+            "start_mm": [
+              23.897959088574822,
+              31.875340151904194
+            ],
+            "end_mm": [
+              23.84795908857482,
+              31.575340151904197
+            ],
+            "length_mm": 0.3041381265149083,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "fc6e456a-edaa-5d59-898e-af3038e4381c",
+      "copper_layer": "F.Cu",
+      "reference_layer": "In1.Cu",
+      "start_mm": [
+        20.7,
+        30.4
+      ],
+      "end_mm": [
+        20.7,
+        31.9
+      ],
+      "width_mm": 0.3,
+      "track_length_mm": 1.5,
+      "missing_projection_intervals": {
+        "left_edge": [
+          {
+            "t0": 0.0,
+            "t1": 0.284132848704,
+            "start_mm": [
+              20.849999999999998,
+              30.4
+            ],
+            "end_mm": [
+              20.849999999999998,
+              30.826199273055998
+            ],
+            "length_mm": 0.426199273056,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "centerline": [
+          {
+            "t0": 0.0,
+            "t1": 0.300333333333,
+            "start_mm": [
+              20.7,
+              30.4
+            ],
+            "end_mm": [
+              20.7,
+              30.8504999999995
+            ],
+            "length_mm": 0.45049999999949997,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "right_edge": [
+          {
+            "t0": 0.0,
+            "t1": 0.284132848704,
+            "start_mm": [
+              20.55,
+              30.4
+            ],
+            "end_mm": [
+              20.55,
+              30.826199273055998
+            ],
+            "length_mm": 0.426199273056,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "036ab17c-657e-5eb7-aa3a-da7332e7917f",
+      "copper_layer": "B.Cu",
+      "reference_layer": "In2.Cu",
+      "start_mm": [
+        22.05,
+        34.0
+      ],
+      "end_mm": [
+        22.65,
+        34.0
+      ],
+      "width_mm": 0.2,
+      "track_length_mm": 0.5999999999999979,
+      "missing_projection_intervals": {
+        "left_edge": [],
+        "centerline": [
+          {
+            "t0": 0.944697138549,
+            "t1": 1.0,
+            "start_mm": [
+              22.616818283129398,
+              34.0
+            ],
+            "end_mm": [
+              22.65,
+              34.0
+            ],
+            "length_mm": 0.03318171687059991,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "right_edge": [
+          {
+            "t0": 0.72983,
+            "t1": 1.0,
+            "start_mm": [
+              22.487897999999998,
+              34.1
+            ],
+            "end_mm": [
+              22.65,
+              34.1
+            ],
+            "length_mm": 0.16210199999999944,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "284963fb-bbb5-5aaf-b594-b15500e67259",
+      "copper_layer": "B.Cu",
+      "reference_layer": "In2.Cu",
+      "start_mm": [
+        23.9,
+        31.2
+      ],
+      "end_mm": [
+        23.7,
+        31.6
+      ],
+      "width_mm": 0.2,
+      "track_length_mm": 0.44721359549995954,
+      "missing_projection_intervals": {
+        "left_edge": [
+          {
+            "t0": 0.012698932583,
+            "t1": 1.0,
+            "start_mm": [
+              23.98690293258339,
+              31.249800932583195
+            ],
+            "end_mm": [
+              23.78944271909999,
+              31.644721359549997
+            ],
+            "length_mm": 0.44153446020050446,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "centerline": [
+          {
+            "t0": 0.0,
+            "t1": 1.0,
+            "start_mm": [
+              23.9,
+              31.2
+            ],
+            "end_mm": [
+              23.7,
+              31.6
+            ],
+            "length_mm": 0.4472135954999595,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "right_edge": [
+          {
+            "t0": 0.0,
+            "t1": 1.0,
+            "start_mm": [
+              23.810557280900007,
+              31.155278640450003
+            ],
+            "end_mm": [
+              23.610557280900007,
+              31.555278640450005
+            ],
+            "length_mm": 0.4472135954999595,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "4d1b2e39-db74-5a9d-98f7-2da4a6a3721a",
+      "copper_layer": "B.Cu",
+      "reference_layer": "In2.Cu",
+      "start_mm": [
+        22.65,
+        34.0
+      ],
+      "end_mm": [
+        22.825,
+        34.4
+      ],
+      "width_mm": 0.2,
+      "track_length_mm": 0.4366062299143235,
+      "missing_projection_intervals": {
+        "left_edge": [
+          {
+            "t0": 0.0,
+            "t1": 1.0,
+            "start_mm": [
+              22.741615733490217,
+              33.959918116598026
+            ],
+            "end_mm": [
+              22.916615733490218,
+              34.359918116598024
+            ],
+            "length_mm": 0.43660622991432346,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "centerline": [
+          {
+            "t0": 0.0,
+            "t1": 1.0,
+            "start_mm": [
+              22.65,
+              34.0
+            ],
+            "end_mm": [
+              22.825,
+              34.4
+            ],
+            "length_mm": 0.43660622991432346,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "right_edge": [
+          {
+            "t0": 0.0,
+            "t1": 1.0,
+            "start_mm": [
+              22.55838426650978,
+              34.040081883401974
+            ],
+            "end_mm": [
+              22.73338426650978,
+              34.44008188340197
+            ],
+            "length_mm": 0.43660622991432346,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "c9e5e620-0cec-5dcd-8f26-99bc65f35d56",
+      "copper_layer": "B.Cu",
+      "reference_layer": "In2.Cu",
+      "start_mm": [
+        23.9,
+        30.55
+      ],
+      "end_mm": [
+        23.9,
+        31.2
+      ],
+      "width_mm": 0.2,
+      "track_length_mm": 0.6499999999999986,
+      "missing_projection_intervals": {
+        "left_edge": [],
+        "centerline": [
+          {
+            "t0": 0.992734534988,
+            "t1": 1.0,
+            "start_mm": [
+              23.9,
+              31.1952774477422
+            ],
+            "end_mm": [
+              23.9,
+              31.2
+            ],
+            "length_mm": 0.004722552257799979,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ],
+        "right_edge": [
+          {
+            "t0": 0.0,
+            "t1": 0.783334321047,
+            "start_mm": [
+              23.799999999999997,
+              30.55
+            ],
+            "end_mm": [
+              23.799999999999997,
+              31.05916730868055
+            ],
+            "length_mm": 0.5091673086805488,
+            "bucket": "outside_own_via_neighborhood",
+            "overlapping_copper_keepouts": [
+              "ba4d2263-baf4-4b28-97d8-2eb2524a351c"
+            ],
+            "near_foreign_via_antipads": []
+          },
+          {
+            "t0": 0.783334321047,
+            "t1": 1.0,
+            "start_mm": [
+              23.799999999999997,
+              31.05916730868055
+            ],
+            "end_mm": [
+              23.799999999999997,
+              31.2
+            ],
+            "length_mm": 0.14083269131944973,
+            "bucket": "within_own_3V3_via_0p55mm_neighborhood",
+            "overlapping_copper_keepouts": [],
+            "near_foreign_via_antipads": []
+          }
+        ]
+      }
+    }
+  ],
+  "scope": "New positive-feed reference geometry only, not full loop/impedance/PDN/current/SI proof; nearest real source-GND transitions are separately in audit-final.json."
+}

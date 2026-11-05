@@ -1,0 +1,267 @@
+{
+  "source_sha256": "29a77ef306e78f3c6e25a5bdaca68aa22aef278acdabeed0cbb3db7d78a4a8e2",
+  "candidate_sha256": "3ff913a8351d6c284bc67a40b39a99391a7c761d239f895827d6874647e60680",
+  "status": "P3_SOURCE_BRIDGE_PLUS_C105_GROUND_COMPLETE_PARTIAL_RAILS_NOT_A25_PROGRESS",
+  "exact2_C105_ground_positive_arm_additions_only": true,
+  "retained9051_source_copper_exact": true,
+  "all340_footprints_and_1275pads_exact": true,
+  "all13_zone_definitions_exact": true,
+  "project_bytes_exact": true,
+  "no_new_vias": true,
+  "C105_direct_positive_to_U3_8_track_component": true,
+  "C105_direct_ground_to_existing_via_track_component": true,
+  "source_endpoint_comparison": [
+    {
+      "name": "1V1",
+      "physical_pad_count": 10,
+      "old_unreached_components": 2,
+      "new_unreached_components": 2,
+      "new_unreached_physical_endpoints": [
+        [
+          "TP5",
+          "1"
+        ]
+      ],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "3V3",
+      "physical_pad_count": 28,
+      "old_unreached_components": 11,
+      "new_unreached_components": 11,
+      "new_unreached_physical_endpoints": [
+        [
+          "R113",
+          "1"
+        ],
+        [
+          "C114",
+          "1"
+        ],
+        [
+          "C118",
+          "1"
+        ],
+        [
+          "C117",
+          "1"
+        ],
+        [
+          "C113",
+          "1"
+        ],
+        [
+          "C116",
+          "1"
+        ],
+        [
+          "R104",
+          "1"
+        ],
+        [
+          "C199",
+          "1"
+        ],
+        [
+          "C115",
+          "1"
+        ],
+        [
+          "U1",
+          "11"
+        ],
+        [
+          "U1",
+          "20"
+        ]
+      ],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "5V",
+      "physical_pad_count": 7,
+      "old_unreached_components": 2,
+      "new_unreached_components": 2,
+      "new_unreached_physical_endpoints": [
+        [
+          "TP3",
+          "1"
+        ],
+        [
+          "C120",
+          "1"
+        ],
+        [
+          "U7",
+          "1"
+        ]
+      ],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "AVDD",
+      "physical_pad_count": 3,
+      "old_unreached_components": 2,
+      "new_unreached_components": 2,
+      "new_unreached_physical_endpoints": [
+        [
+          "C104",
+          "1"
+        ],
+        [
+          "U1",
+          "46"
+        ]
+      ],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "BOOT",
+      "physical_pad_count": 3,
+      "old_unreached_components": 2,
+      "new_unreached_components": 2,
+      "new_unreached_physical_endpoints": [
+        [
+          "SW100",
+          "1"
+        ],
+        [
+          "SW100",
+          "1"
+        ]
+      ],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "GND",
+      "physical_pad_count": 215,
+      "old_unreached_components": 1,
+      "new_unreached_components": 0,
+      "new_unreached_physical_endpoints": [],
+      "restored_endpoints": [
+        [
+          "C105",
+          "2"
+        ]
+      ],
+      "lost_endpoints": []
+    },
+    {
+      "name": "KEYBUF",
+      "physical_pad_count": 2,
+      "old_unreached_components": 0,
+      "new_unreached_components": 0,
+      "new_unreached_physical_endpoints": [],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "KEYdata",
+      "physical_pad_count": 2,
+      "old_unreached_components": 0,
+      "new_unreached_components": 0,
+      "new_unreached_physical_endpoints": [],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "LED5V",
+      "physical_pad_count": 160,
+      "old_unreached_components": 0,
+      "new_unreached_components": 0,
+      "new_unreached_physical_endpoints": [],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "LX",
+      "physical_pad_count": 2,
+      "old_unreached_components": 0,
+      "new_unreached_components": 0,
+      "new_unreached_physical_endpoints": [],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "SS",
+      "physical_pad_count": 4,
+      "old_unreached_components": 3,
+      "new_unreached_components": 3,
+      "new_unreached_physical_endpoints": [
+        [
+          "R105",
+          "2"
+        ],
+        [
+          "R106",
+          "1"
+        ],
+        [
+          "U1",
+          "60"
+        ]
+      ],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "UGBUF",
+      "physical_pad_count": 2,
+      "old_unreached_components": 0,
+      "new_unreached_components": 0,
+      "new_unreached_physical_endpoints": [],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    },
+    {
+      "name": "UGoutput",
+      "physical_pad_count": 2,
+      "old_unreached_components": 0,
+      "new_unreached_components": 0,
+      "new_unreached_physical_endpoints": [],
+      "restored_endpoints": [],
+      "lost_endpoints": []
+    }
+  ],
+  "native": {
+    "opens": 78,
+    "hard": 0,
+    "warnings": 119,
+    "warning_types": {
+      "track_dangling": 107,
+      "via_dangling": 10,
+      "silk_over_copper": 2
+    },
+    "parity": 0,
+    "ERC": 0
+  },
+  "all7958_retained_outer_tracks_new_reference_loss_mm": {
+    "left": 0,
+    "center": 0,
+    "right": 0
+  },
+  "scope_limits": [
+    "All215 GND physical pads now source-reached topologically; not loop/PDN/SI/assembly qualification.",
+    "All positive/source stage opens remain unchanged, as do LX and downstreamLED connectivity caveats.",
+    "C105 positive/GND arms1.843199mm/2.832402mm, two-via innerreturn chord13.602007mm, U3GNDarm1.492542mm are geometric context, not a predicted current path or complete qualified bypassloop.",
+    "No footprint/pose/newhole change; original-case/tool/body sensitivities remain conditional.",
+    "S3 regression repaired by exact terminal bridge; no TP5 move and no A25 KEY16 merge."
+  ],
+  "cold_byte_identical": true,
+  "all215GND_pads_source_reached": true,
+  "1V1_reached_physical_pads": 9,
+  "1V1_total_physical_pads": 10,
+  "1V1_remaining_populated_endpoint": [
+    "TP5",
+    "1"
+  ],
+  "1V1_additional_padless_unreached_component": true,
+  "retained_nonpower_signal_inventory_exact": true,
+  "VIN_edge_only_exception_mm": 0.5091673086805488,
+  "accepted_main_unchanged": true
+}

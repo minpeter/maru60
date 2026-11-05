@@ -1,0 +1,3095 @@
+{
+  "scope": "Audit whether unsafe Unfracture-after-Boolean affects these exact P3 lost/gained differences or retained-reference loss helpers. Actual boards are read-only and native GetFilledPolysList/UnitSet witnesses are never modified. Does not validate arbitrary past/future helpers.",
+  "inputs": {
+    "/workspace/shared/maru-a4l-P3-S1-reconstruction-0236/handoff-P3-S1-netcorrect-0303/candidate.kicad_pcb": "d363280e8f85754f02a71eaf4232d0305dc190474baf67e8c013f5996fc7eb7c",
+    "/workspace/shared/maru-a4l-P3-S2-GND-0308/handoff-P3-S2-partial-GND-0320/candidate.kicad_pcb": "b88b6457632c263cd9515c6a828bdcd69198bc468308a65cdfb4e721f95c3b27",
+    "/workspace/shared/maru-a4l-P3-S3-1V1-0323/rejected-S3-source-regression-0336/candidate.kicad_pcb": "cacce2aa6872d3e060b9dbc37e6527b73f3e7a6c8d1e09921667d2d2d2fc39bf",
+    "/workspace/shared/maru-a4l-P3-S3-3V3-bridge-worker-0334/handoff-3V3-source-repair-0357/candidate.kicad_pcb": "29a77ef306e78f3c6e25a5bdaca68aa22aef278acdabeed0cbb3db7d78a4a8e2",
+    "/workspace/shared/maru-a4l-P3-C105-arms-0336/handoff-P3-C105-ground-complete-0340/candidate.kicad_pcb": "723ce05283f38d225ed3f8fff9a66f1e0c054f7accdf23155283ff96f3680ca5",
+    "/workspace/shared/maru-a4l-P3-source-merge-0401/candidate.kicad_pcb": "3ff913a8351d6c284bc67a40b39a99391a7c761d239f895827d6874647e60680"
+  },
+  "all_cases": [
+    {
+      "pair": "S1_to_S2",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.227175308652,
+        "outlines": 14,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.227175171578,
+        "outlines": 6,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.000136710354,
+        "outlines": 14,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.000136639523,
+        "outlines": 4,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.3455121246745,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.345512212336,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 5.916e-09,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.1502e-08,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.444113296282,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.4441132257905,
+        "outlines": 2,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 6.43095e-08,
+        "outlines": 2,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 6.3874e-08,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.8783787988625,
+        "outlines": 18,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.8783788747135,
+        "outlines": 6,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 9.4872622e-05,
+        "outlines": 15,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 9.4820823e-05,
+        "outlines": 4,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.950213491077,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.950213490048,
+        "outlines": 6,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.030239340664,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.030239379414,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532838665,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 7.5131e-08,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.2865e-09,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532838665,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 7.5131e-08,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.2865e-09,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532860745,
+        "outlines": 2,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532860745,
+        "outlines": 2,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_C105",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 6.8780878590015,
+        "outlines": 3,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 6.878087549079,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 5.56075e-08,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 4.83465e-08,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 5.394e-09,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 5.394e-09,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.5325e-09,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0987027779815,
+        "outlines": 3,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0987027142155,
+        "outlines": 2,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.105860714091,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.1058607547,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.968690116916,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689597248,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 6.6178285e-06,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 6.571162e-06,
+        "outlines": 2,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.968690116916,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689597248,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 6.6178285e-06,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 6.571162e-06,
+        "outlines": 2,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.9686901219075,
+        "outlines": 8,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689623381,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.9686901219075,
+        "outlines": 8,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689623381,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    },
+    {
+      "pair": "bridge_to_merge",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": false,
+      "holes_changed": false
+    }
+  ],
+  "affected_cases": [
+    {
+      "pair": "S1_to_S2",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.227175308652,
+        "outlines": 14,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.227175171578,
+        "outlines": 6,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.000136710354,
+        "outlines": 14,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.000136639523,
+        "outlines": 4,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.3455121246745,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.345512212336,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S1_to_S2",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 5.916e-09,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.1502e-08,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.444113296282,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.4441132257905,
+        "outlines": 2,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.8783787988625,
+        "outlines": 18,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.8783788747135,
+        "outlines": 6,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 9.4872622e-05,
+        "outlines": 15,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 9.4820823e-05,
+        "outlines": 4,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.950213491077,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.950213490048,
+        "outlines": 6,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.030239340664,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.030239379414,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532838665,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 7.5131e-08,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.2865e-09,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532838665,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 7.5131e-08,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.2865e-09,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532860745,
+        "outlines": 2,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532860745,
+        "outlines": 2,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 6.8780878590015,
+        "outlines": 3,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 6.878087549079,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "net": "GND",
+      "layer": "F.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 5.56075e-08,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 4.83465e-08,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 5.394e-09,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 5.394e-09,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.5325e-09,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0,
+        "outlines": 0,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "1aadcaf6-ffff-4e11-aede-2b0ea6f0d7d7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 0.0987027779815,
+        "outlines": 3,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.0987027142155,
+        "outlines": 2,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "97a624d9-0f30-4c5d-a5bd-98ebd17b9e26",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.105860714091,
+        "outlines": 1,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.1058607547,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.968690116916,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689597248,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 6.6178285e-06,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 6.571162e-06,
+        "outlines": 2,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.968690116916,
+        "outlines": 6,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689597248,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "gained",
+      "before": {
+        "area_mm2": 6.6178285e-06,
+        "outlines": 4,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 6.571162e-06,
+        "outlines": 2,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.9686901219075,
+        "outlines": 8,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689623381,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.9686901219075,
+        "outlines": 8,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689623381,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    }
+  ],
+  "retained_reference_affected_cases": [
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532860745,
+        "outlines": 2,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 0.6412532860745,
+        "outlines": 2,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 0.641253209143,
+        "outlines": 1,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.9686901219075,
+        "outlines": 8,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689623381,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "zone": "retained_reference_exact_union_minus_union",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "direction": "lost",
+      "before": {
+        "area_mm2": 1.9686901219075,
+        "outlines": 8,
+        "holes": 0
+      },
+      "after": {
+        "area_mm2": 1.968689623381,
+        "outlines": 3,
+        "holes": 0
+      },
+      "area_changed": true,
+      "holes_changed": false
+    }
+  ]
+}

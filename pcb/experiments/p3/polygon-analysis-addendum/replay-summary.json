@@ -1,0 +1,99 @@
+{
+  "scope": "P3 scoped replays only, actual CAD/source graphs unchanged. Unsafe Unfracture removed entirely from new comparator. Native normalized difference outlines and holes plus original Contains midpoint tests used.",
+  "pairs": [
+    {
+      "pair": "S1_to_S2",
+      "source_sha256": "d363280e8f85754f02a71eaf4232d0305dc190474baf67e8c013f5996fc7eb7c",
+      "candidate_sha256": "b88b6457632c263cd9515c6a828bdcd69198bc468308a65cdfb4e721f95c3b27",
+      "retained_tracks": 7934,
+      "old_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_affected_tracks": [],
+      "exact_old_result_equal": true
+    },
+    {
+      "pair": "S2_to_rejected_S3",
+      "source_sha256": "b88b6457632c263cd9515c6a828bdcd69198bc468308a65cdfb4e721f95c3b27",
+      "candidate_sha256": "cacce2aa6872d3e060b9dbc37e6527b73f3e7a6c8d1e09921667d2d2d2fc39bf",
+      "retained_tracks": 7939,
+      "old_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_affected_tracks": [],
+      "exact_old_result_equal": true
+    },
+    {
+      "pair": "S2_to_C105",
+      "source_sha256": "b88b6457632c263cd9515c6a828bdcd69198bc468308a65cdfb4e721f95c3b27",
+      "candidate_sha256": "723ce05283f38d225ed3f8fff9a66f1e0c054f7accdf23155283ff96f3680ca5",
+      "retained_tracks": 7939,
+      "old_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_affected_tracks": [],
+      "exact_old_result_equal": true
+    },
+    {
+      "pair": "S3_to_repaired_bridge",
+      "source_sha256": "cacce2aa6872d3e060b9dbc37e6527b73f3e7a6c8d1e09921667d2d2d2fc39bf",
+      "candidate_sha256": "29a77ef306e78f3c6e25a5bdaca68aa22aef278acdabeed0cbb3db7d78a4a8e2",
+      "retained_tracks": 7947,
+      "old_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_affected_tracks": [],
+      "exact_old_result_equal": true
+    },
+    {
+      "pair": "bridge_to_merge",
+      "source_sha256": "29a77ef306e78f3c6e25a5bdaca68aa22aef278acdabeed0cbb3db7d78a4a8e2",
+      "candidate_sha256": "3ff913a8351d6c284bc67a40b39a99391a7c761d239f895827d6874647e60680",
+      "retained_tracks": 7958,
+      "old_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_totals_mm": {
+        "left": 0,
+        "center": 0,
+        "right": 0
+      },
+      "new_affected_tracks": [],
+      "exact_old_result_equal": true
+    }
+  ],
+  "all_five_old_reference_results_reproduced_without_Unfracture": true,
+  "no_holes_in_any130_stage_difference_before_or_after": true,
+  "maximum_observed_Unfracture_area_perturbation_mm2": 5.196679999652787e-07,
+  "fill_area_records_taken_before_Unfracture_unaffected": true
+}
