@@ -1,0 +1,70 @@
+{
+  "source_pcb_sha256": "80681cd392d1ca83bd37e58faef07a0def301f2d93763102982eaf1c0148f831",
+  "replaced": [
+    "C100",
+    "C101",
+    "U2"
+  ],
+  "removed": [
+    "U4"
+  ],
+  "changed_pins": [
+    [
+      "U1",
+      "5",
+      "NC",
+      "MCU_GPIO3"
+    ],
+    [
+      "U1",
+      "14",
+      "NC",
+      "MCU_GPIO10"
+    ],
+    [
+      "U1",
+      "36",
+      "NC",
+      "MCU_GPIO24"
+    ],
+    [
+      "U1",
+      "37",
+      "NC",
+      "MCU_GPIO25"
+    ],
+    [
+      "U1",
+      "40",
+      "NC",
+      "MCU_GPIO26"
+    ],
+    [
+      "U1",
+      "41",
+      "NC",
+      "MCU_GPIO27"
+    ],
+    [
+      "F1",
+      "2",
+      "+5V",
+      "VBUS_FUSED"
+    ],
+    [
+      "#FLG01",
+      "1",
+      "+5V",
+      "VBUS_FUSED"
+    ]
+  ],
+  "renamed_main_rails": {
+    "+5V": "+4V_REG",
+    "+5V_LED": "+4V_LED"
+  },
+  "preserved_translators": [
+    "U5 SN74LV1T125DBVR",
+    "U6 SN74LV1T125DBVR"
+  ],
+  "status": "V7 reversible native candidate, not safety qualified"
+}
