@@ -1,0 +1,13 @@
+{
+  "revision": 2,
+  "inner_layers": "Inactive for routing, retained as reference planes; existing reviewed local core copper remains",
+  "automatic_neckdown": "disabled in per-router config template",
+  "slot_keepout": [
+    {
+      "ref": "SWRS1",
+      "pad_uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+      "dilation_mm": 0.35
+    }
+  ],
+  "source": "Native four-layer-stackup.md and 0.15 mm process rules; native oval-NPTH copper-edge rule 0.5 mm"
+}

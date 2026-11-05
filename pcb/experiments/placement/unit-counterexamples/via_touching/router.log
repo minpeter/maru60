@@ -1,0 +1,19 @@
+Picked up JAVA_TOOL_OPTIONS: -Xms64m -Xmx384m
+2026-11-02 19:48:10.595 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-11-02 19:48:10.898 INFO   Hardware: 9 CPU cores, 384 CPU score, 384 MB RAM
+2026-11-02 19:48:10.903 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-11-02 19:48:10.907 INFO   Configured network proxy: 127.0.0.1:43115
+2026-11-02 19:48:12.053 WARN   Could not create HttpClient for VersionChecker: null
+2026-11-02 19:48:12.063 INFO   Loading DSN file for DRC: /workspace/shared/maru60-placement-lab/unit-counterexamples/via_touching/input.dsn
+2026-11-02 19:48:12.067 INFO   [0218AF\845A45] Loading board file 'input.dsn'...
+2026-11-02 19:48:12.245 WARN   Design Warning: Board has 4 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 4 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 4 fixed trace/via clearance violations:
+          - FixedVia#8 [net GND] <-> FixedVia#7 [net GND]
+          - FixedVia#8 [net GND] <-> FixedVia#7 [net GND]
+          - FixedVia#8 [net GND] <-> FixedVia#7 [net GND]
+          - FixedVia#8 [net GND] <-> FixedVia#7 [net GND]
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 4 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-11-02 19:48:12.269 INFO   DRC report written to: /workspace/shared/maru60-placement-lab/unit-counterexamples/via_touching/router-drc.json

@@ -1,0 +1,238 @@
+{
+  "schema": "maru60-whole-board-routing-experiments/1",
+  "created_utc": "2026-11-02T09:56:55.345786+00:00",
+  "objective": "Sum actual centerline copper tracks across ALL nets and copper layers. Include power and GND tracks; report plane area and via count/vertical estimate separately. No incomplete-board length win.",
+  "baseline": "frozen.kicad_pcb, 15 native opens; separate current main may advance independently. Same netlist/hard-fixed layout across experimental cases.",
+  "resource_policy": {
+    "max_router_subprocesses": 2,
+    "router_heap_mib": 768,
+    "per_job_max_autorouter_passes": 4,
+    "per_job_wall_clock_seconds": 1200,
+    "fanout": false,
+    "optimizer": false,
+    "network": "seccomp denies socket/connect",
+    "active_workers_initially": 1,
+    "reason": "Existing full-rip-up diagnostic consumes one router slot until terminal."
+  },
+  "acceptance": {
+    "required_native_unconnected": 0,
+    "required_native_geometric_findings": 0,
+    "same_footprints_pin_netlist_and_hard_fixed_layout": true,
+    "length_ranking": "Only eligible complete candidates may enter actual wire-length ranking."
+  },
+  "experiments": [
+    {
+      "id": "00-control-frozen",
+      "placement": "frozen.kicad_pcb",
+      "strategy": "Unchanged-placement routed control; finish existing gaps",
+      "state": "budget_exhausted_no_session",
+      "router_started": true,
+      "result": null,
+      "started_utc": "2026-11-02T10:01:28.888489+00:00",
+      "router_started_utc": "2026-11-02T10:01:32.891851+00:00",
+      "preparation": {
+        "exit_code": 0,
+        "wall_seconds": 3.000562515000638,
+        "budget_exhausted": false
+      },
+      "router_elapsed_seconds": 1170.3,
+      "router_execution": {
+        "exit_code": 130,
+        "wall_seconds": 1200.3346658439987,
+        "budget_exhausted": true
+      },
+      "finished_utc": "2026-11-02T10:21:33.292174+00:00"
+    },
+    {
+      "id": "01-best-preserved",
+      "placement": "best_placement.kicad_pcb",
+      "strategy": "Best aggregate placement proxy; preserve unaffected copper",
+      "state": "cancelled_systemic_preflight",
+      "router_started": true,
+      "result": null,
+      "started_utc": "2026-11-02T10:11:39.012663+00:00",
+      "router_started_utc": "2026-11-02T10:11:40.015708+00:00",
+      "preparation": {
+        "exit_code": 0,
+        "reused_prepared_rebase": true
+      },
+      "router_elapsed_seconds": 990.3,
+      "finished_utc": "2026-11-02T10:29:01.364321+00:00",
+      "stop_reason": "Native-clean fixed copper imports with systemic false geometry/open-count findings; stop queued heavy jobs until one focused adapter repair is tested."
+    },
+    {
+      "id": "02-usb-near",
+      "placement": "usb_near_local_refined.kicad_pcb",
+      "strategy": "USB-near cluster and local movable-part refinement",
+      "state": "router_failed_no_session",
+      "router_started": true,
+      "result": null,
+      "started_utc": "2026-11-02T10:21:37.132821+00:00",
+      "router_started_utc": "2026-11-02T10:21:47.136857+00:00",
+      "preparation": {
+        "exit_code": 0,
+        "wall_seconds": 9.001275785998587,
+        "budget_exhausted": false
+      },
+      "router_execution": {
+        "exit_code": 1,
+        "wall_seconds": 3.000403127000027,
+        "budget_exhausted": false
+      },
+      "finished_utc": "2026-11-02T10:21:50.138773+00:00"
+    },
+    {
+      "id": "03-intermediate",
+      "placement": "intermediate_local_refined.kicad_pcb",
+      "strategy": "Intermediate left-side cluster and local refinement",
+      "state": "router_failed_no_session",
+      "router_started": true,
+      "result": null,
+      "started_utc": "2026-11-02T10:21:53.135018+00:00",
+      "router_started_utc": "2026-11-02T10:22:03.148177+00:00",
+      "preparation": {
+        "exit_code": 0,
+        "wall_seconds": 9.010958621998725,
+        "budget_exhausted": false
+      },
+      "router_execution": {
+        "exit_code": 1,
+        "wall_seconds": 3.001358501998766,
+        "budget_exhausted": false
+      },
+      "finished_utc": "2026-11-02T10:22:06.150947+00:00"
+    },
+    {
+      "id": "04-original-anchor",
+      "placement": "current_anchor_repacked_local_refined.kicad_pcb",
+      "strategy": "MCU anchor unchanged; support/local refinement",
+      "state": "router_failed_no_session",
+      "router_started": true,
+      "result": null,
+      "started_utc": "2026-11-02T10:22:09.140402+00:00",
+      "router_started_utc": "2026-11-02T10:22:19.143826+00:00",
+      "preparation": {
+        "exit_code": 0,
+        "wall_seconds": 9.001136425002187,
+        "budget_exhausted": false
+      },
+      "router_execution": {
+        "exit_code": 1,
+        "wall_seconds": 3.0004430070002854,
+        "budget_exhausted": false
+      },
+      "finished_utc": "2026-11-02T10:22:22.145487+00:00"
+    },
+    {
+      "id": "05-central-quarterturn",
+      "placement": "central_local_refined.kicad_pcb",
+      "strategy": "Central MCU with alternative quarter-turn orientation",
+      "state": "router_failed_no_session",
+      "router_started": true,
+      "result": null,
+      "started_utc": "2026-11-02T10:22:25.142795+00:00",
+      "router_started_utc": "2026-11-02T10:22:35.156419+00:00",
+      "preparation": {
+        "exit_code": 0,
+        "wall_seconds": 9.010944005000056,
+        "budget_exhausted": false
+      },
+      "router_execution": {
+        "exit_code": 1,
+        "wall_seconds": 3.0004923600026814,
+        "budget_exhausted": false
+      },
+      "finished_utc": "2026-11-02T10:22:38.158638+00:00"
+    },
+    {
+      "id": "06-left-central",
+      "placement": "broad_02_local_refined.kicad_pcb",
+      "strategy": "Alternative x114 controller/flash/support packing",
+      "state": "cancelled_systemic_preflight",
+      "router_started": true,
+      "result": null,
+      "started_utc": "2026-11-02T10:22:41.150845+00:00",
+      "router_started_utc": "2026-11-02T10:22:52.156384+00:00",
+      "preparation": {
+        "exit_code": 0,
+        "wall_seconds": 10.00302582599761,
+        "budget_exhausted": false
+      },
+      "router_elapsed_seconds": 300.1,
+      "finished_utc": "2026-11-02T10:29:01.364321+00:00",
+      "stop_reason": "Native-clean fixed copper imports with systemic false geometry/open-count findings; stop queued heavy jobs until one focused adapter repair is tested."
+    },
+    {
+      "id": "07-right-central",
+      "placement": "broad_06_local_refined.kicad_pcb",
+      "strategy": "Alternative x160 matrix-centered packing",
+      "state": "paused_preflight",
+      "router_started": false,
+      "result": null
+    },
+    {
+      "id": "08-left-bottom",
+      "placement": "broad_01.kicad_pcb",
+      "strategy": "Alternative x104 y86 controller/support packing",
+      "state": "paused_preflight",
+      "router_started": false,
+      "result": null
+    },
+    {
+      "id": "09-right-bottom",
+      "placement": "broad_08.kicad_pcb",
+      "strategy": "Alternative x186 y84 controller/support packing",
+      "state": "paused_preflight",
+      "router_started": false,
+      "result": null
+    }
+  ],
+  "updated_utc": "2026-11-02T10:40:08.528184+00:00",
+  "paused_for_preflight": true,
+  "paused_utc": "2026-11-02T10:29:01.364321+00:00",
+  "pause_reason": "Native-clean fixed copper imports with systemic false geometry/open-count findings; stop queued heavy jobs until one focused adapter repair is tested.",
+  "current_attempt_terminal": true,
+  "comparison_complete": false,
+  "native_actual_length_winner": null,
+  "blocker": {
+    "status": "BLOCKED_SYSTEMIC_DSN_FIDELITY",
+    "native_control_open_count": 15,
+    "router_control_unconnected_items": 544,
+    "router_findings": {
+      "holeClearance": 66,
+      "clearance": 40,
+      "track_dangling": 529,
+      "via_dangling": 31,
+      "isolated_island_dead_copper": 2316
+    },
+    "focused_repairs": [
+      "Locked preserved native copper (DSN type fix)",
+      "Disabled inner signal routing by explicit adjacent .rules",
+      "Disabled automatic neckdown below native minimum",
+      "Added native oval-NPTH-slot clearance keepout after layer declarations"
+    ],
+    "remaining_disagreement_example": {
+      "net": "+1V1",
+      "via_centers_mm": [
+        [
+          116.2,
+          81.0
+        ],
+        [
+          116.8,
+          81.0
+        ]
+      ],
+      "copper_diameter_mm": 0.6,
+      "drill_diameter_mm": 0.25,
+      "geometric_hole_to_hole_gap_mm": 0.35,
+      "router_reported_hole_gap_mm": 0.0001
+    },
+    "scope_decision": "Do not spend the queued heavy routing budgets until native-equivalent representation is established. Do not change or shrink native copper to silence the router. No accepted actual-length winner."
+  },
+  "router_started_case_count": 7,
+  "routing_completion_count": 0,
+  "terminal_reason": "Confirmed Freerouting same-net via copper-clearance and off-center physical-contact semantics differ from native KiCad; tiny regression tests reproduce. No export-only repair established.",
+  "terminal_evidence": "unit-counterexamples/terminal-result.json",
+  "heavy_queue_running": false
+}

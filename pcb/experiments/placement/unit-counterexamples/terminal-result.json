@@ -1,0 +1,138 @@
+{
+  "status": "TERMINAL_BLOCKED_ROUTER_SEMANTICS",
+  "heavy_queue_running": false,
+  "export_only_repair_established": false,
+  "native_geometry_modified_to_silence_router": false,
+  "router_control_unconnected_records": {
+    "unconnectedItems": 173,
+    "isolated_island_unconnected": 371
+  },
+  "unit_tests": [
+    {
+      "name": "via_touching",
+      "exit": 0,
+      "elapsed_sec": 2.33,
+      "router_unconnected": {},
+      "router_violations": {
+        "holeClearance": 4,
+        "via_dangling": 2
+      },
+      "clearance_examples": [
+        "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+        "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+        "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+        "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)"
+      ],
+      "native": {
+        "opens": 0,
+        "violations": [
+          {
+            "type": "via_dangling",
+            "severity": "warning"
+          },
+          {
+            "type": "via_dangling",
+            "severity": "warning"
+          }
+        ]
+      }
+    },
+    {
+      "name": "via_touching_attach_on",
+      "exit": 0,
+      "elapsed_sec": 2.33,
+      "router_unconnected": {},
+      "router_violations": {
+        "holeClearance": 4,
+        "via_dangling": 2
+      },
+      "clearance_examples": [
+        "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+        "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+        "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+        "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)"
+      ]
+    },
+    {
+      "name": "plane_center",
+      "exit": 0,
+      "elapsed_sec": 2.42,
+      "router_unconnected": {},
+      "router_violations": {},
+      "clearance_examples": [],
+      "native": {
+        "opens": 0,
+        "violations": []
+      }
+    },
+    {
+      "name": "plane_pad_offcenter",
+      "exit": 0,
+      "elapsed_sec": 2.43,
+      "router_unconnected": {
+        "unconnectedItems": 1
+      },
+      "router_violations": {
+        "track_dangling": 1
+      },
+      "clearance_examples": [],
+      "native": {
+        "opens": 0,
+        "violations": []
+      }
+    },
+    {
+      "name": "plane_via_offcenter",
+      "exit": 0,
+      "elapsed_sec": 2.27,
+      "router_unconnected": {
+        "unconnectedItems": 1
+      },
+      "router_violations": {
+        "track_dangling": 1,
+        "via_dangling": 1
+      },
+      "clearance_examples": [],
+      "native": {
+        "opens": 0,
+        "violations": []
+      }
+    }
+  ],
+  "source_version": "Freerouting official v2.5.0",
+  "source_files": [
+    {
+      "file": "Via.java",
+      "sha256": "c3c6db596003263456a1c93a1e5972f30717ed7968ab0cec184733f546b7e7c7"
+    },
+    {
+      "file": "Plane.java",
+      "sha256": "e799c29a8612a2ab2ea924cef9ef89dca1cd2c8fb1b7fda72ed29ac00b83d1cb"
+    },
+    {
+      "file": "DesignRulesChecker.java",
+      "sha256": "5aea3c7198cfbdae3251e03bf9eb3ef3332056ec4eaf1f80b66da6c4788022ed"
+    },
+    {
+      "file": "Item.java",
+      "sha256": "38384c9fc270fcffcd21b2ea2fe093f998529d0d908691170c85d2b8da8d036d"
+    },
+    {
+      "file": "Padstack.java",
+      "sha256": "9158a904a09968a23a742076d5dd131eeadfbba73e775d3339df71835a5420b4"
+    },
+    {
+      "file": "DrillItem.java",
+      "sha256": "7f3bd29f8406c6987457400b1e136de371724d21bb42c73ac5b7f7b0a6eb2e5c"
+    },
+    {
+      "file": "ConductionArea.java",
+      "sha256": "2dc48135c2f8476fc4610c43e8c1a0351cdd52f89e543e16cb5532e3f991c39a"
+    },
+    {
+      "file": "Library.java",
+      "sha256": "2f0bcc62995b8aaf24a39f3159c475397a9ab30216cd87337a3013169d5218e9"
+    }
+  ],
+  "next_safe_approach": "Native pcbnew geometry/zone connectivity with constrained outer-layer reroute deltas; compare completed native boards at equal connectivity and DRC acceptance. A router patch/adapter requires its own native-equivalence regression gate before restarting this queue."
+}
