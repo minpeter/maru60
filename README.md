@@ -1,3 +1,7 @@
+## Latest bounded development prototype
+
+USB pendant cleanup: 9 open connection pairs and 38 warnings. Independent exact raw scope, fresh native/material and all-hole contact verification pass. All retained copper, holes, fills and actual signal paths are unchanged. Rejected GPIO25 routing trials and explicit power-model limits are preserved. See pcb/CURRENT.md. No fabrication or active stability approval is implied.
+
 ## Latest qualified development prototype
 
 Unused +3V3 branch cleanup: 9 open connection pairs and 39 warnings. Independent exact geometry and fresh contact validation pass, with all retained conductor material unchanged and zero new GND-plane loss. All prior checkpoints and inherited limitations remain. See pcb/CURRENT.md and the selected prototype README. No manufacturing or active stability approval is implied.

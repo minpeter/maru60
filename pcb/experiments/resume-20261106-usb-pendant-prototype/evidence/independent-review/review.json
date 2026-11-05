@@ -1,0 +1,72 @@
+{
+  "source_sha256": "88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e",
+  "candidate_sha256": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5",
+  "native_version": "9.0.2+dfsg-1",
+  "raw_byte_identity_except_exact_one_segment": true,
+  "deleted_block": "\t(segment\n\t\t(start 18 12.4)\n\t\t(end 17.5625 12.4)\n\t\t(width 0.15)\n\t\t(layer \"F.Cu\")\n\t\t(net 120)\n\t\t(uuid \"b04e3a6d-1e98-43d1-9b10-58c23321ca28\")\n\t)\n",
+  "project_files": 58,
+  "native": {
+    "warnings": [
+      39,
+      38
+    ],
+    "opens": [
+      9,
+      9
+    ],
+    "removed": {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [USB_DM_CONN] on F.Cu, length 0.4375 mm",
+          "pos": {
+            "x": 18.0,
+            "y": 12.4
+          },
+          "uuid": "b04e3a6d-1e98-43d1-9b10-58c23321ca28"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    },
+    "parity": 0,
+    "erc": 0
+  },
+  "material_graph": {
+    "fresh_geometry_export": false,
+    "scope": "Independent components/edges/open-pad-pairs recomputed from PCB-hash-bound source and candidate exports; fresh junction geometry below.",
+    "retained_vertices": 14715,
+    "components": 380,
+    "exact_retained_edges": 22525,
+    "pad_count": 1084,
+    "physical_open_pairs_equal": true,
+    "guard_diagnostics_unchanged": 51
+  },
+  "fresh_junction": {
+    "holes_subtracted": 1273,
+    "sole_stub_contacts": [
+      {
+        "uuid": "ba0e0532-1586-4050-a390-d87dcee11d2c",
+        "area_mm2": 0.019374781122
+      }
+    ],
+    "zone_contacts": [],
+    "retained_active_via_contacts": [
+      {
+        "uuid": "cc183bf5-15f3-5270-ae14-886f402cad67",
+        "layer": "F.Cu",
+        "area_mm2": 0.0193748847625,
+        "guarded_2nm_each_mm2": 0.019373714382
+      },
+      {
+        "uuid": "a963e830-796c-53b3-b9de-ef49be1314bc",
+        "layer": "B.Cu",
+        "area_mm2": 0.019374781122,
+        "guarded_2nm_each_mm2": 0.0193735788875
+      }
+    ]
+  },
+  "cold_refill_all_58_files_exact": true,
+  "submitted_CAD_unchanged": true,
+  "verdict": "PASS bounded one-segment cleanup only; no selection or fabrication/SI qualification"
+}

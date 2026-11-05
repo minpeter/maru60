@@ -1,0 +1,47 @@
+{
+  "scope": "Concise U18 power audit; no CAD changes, no active stability approval",
+  "files": [
+    {
+      "path": "DELIVERY_REPORT.md",
+      "sha256": "977f93e4cbdcc9778213f390df04a064d901f0244e5d77382f2ed1d3d686111a",
+      "bytes": 7157
+    },
+    {
+      "path": "audit.py",
+      "sha256": "81ace24f2b4cc3501e5c1efaba2f2eaf002a372f9474538294ea9ef811b1ec49",
+      "bytes": 3842
+    },
+    {
+      "path": "calculations.json",
+      "sha256": "db58fc528787e2016e5c09eae4f018aac2fd3deb8f7d5b1e2a5477204bbed001",
+      "bytes": 26021
+    },
+    {
+      "path": "components-audit.json",
+      "sha256": "f653a9235b0caae7dce48ba7c7436f255796bba5802a702f53578ac2093aa66c",
+      "bytes": 8267
+    },
+    {
+      "path": "source-hashes.json",
+      "sha256": "8ec6250bb5c8fae4163dbe15601481213f6102233b87f88ee69970b972e7c35d",
+      "bytes": 2664
+    },
+    {
+      "path": "netlist.xml",
+      "sha256": "61be6b5c95bf3dff17c10df2605eb2f4013af2a4ef97fe04ab8f396ae08658e5",
+      "bytes": 446307
+    },
+    {
+      "path": "replay_calculations.py",
+      "sha256": "63ba8dec25f9feb733db6182847ee30eea4094d0089df3ea8db19ce3acfb4c29",
+      "bytes": 6505
+    },
+    {
+      "path": "calculation-replay-result.json",
+      "sha256": "a411d996bded4141d52cd183c0ee1713ff9e647033856e26fad427acb89461eb",
+      "bytes": 26319
+    }
+  ],
+  "excluded": "Vendor PDFs, extracted full text, screenshot, full research report and intermediate PCB inventory remain local research; not delivery copies.",
+  "reproduction_caveat": "Calculation-only replay is self-contained with replay_calculations.py and calculations.json (Python stdlib). Original audit.py still requires native CAD, existing wrapper and official PDFs separately. Neither replay is active-model/stability qualification."
+}

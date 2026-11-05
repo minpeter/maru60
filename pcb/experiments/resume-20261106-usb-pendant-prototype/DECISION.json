@@ -1,0 +1,39 @@
+{
+  "status": "FROZEN_BOUNDED_DEVELOPMENT_PROTOTYPE_NOT_STRICT_ACCEPTANCE_OR_FABRICATION",
+  "source_commit": "fa96a7c8b334f0f496ab7cdb4de9b18cf9276966",
+  "source_pcb_sha256": "88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e",
+  "candidate_pcb_sha256": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5",
+  "native": {
+    "open_pairs": 9,
+    "warnings": 38,
+    "other_errors": 0,
+    "ERC": 0,
+    "parity": 0
+  },
+  "metrics": {
+    "tracks": 9763,
+    "vias": 922,
+    "footprints": 383,
+    "track_length_mm": 13201.868076244167
+  },
+  "removed_segment": "b04e3a6d-1e98-43d1-9b10-58c23321ca28",
+  "removed_length_mm": 0.4375,
+  "entire_other_PCB_serialization_identical": true,
+  "independent_review": "PASS_BOUNDED_RELATIVE_CLEANUP",
+  "all58_cold_files_identical": true,
+  "inherited_guarded_contact_diagnostics": 51,
+  "inherited_exact_no_loss_failure": "Unresolved from earlier prototype changes; this new deletion adds no loss.",
+  "remaining_pairs": {
+    "header": 3,
+    "MCU": 6
+  },
+  "limits": [
+    "Development prototype only, not strict-baseline promotion.",
+    "No USB SI/EMI, active-power, full firmware, thermal or hardware qualification.",
+    "LED qualification remains OFF.",
+    "No public push, purchase, manufacture or flashing."
+  ],
+  "final_copy_material_recomputed": true,
+  "all9_physical_open_component_pairs_match": true,
+  "rejected_GPIO25_candidates": 3
+}
