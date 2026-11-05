@@ -1,0 +1,1 @@
+Isolated BOM/land-pattern study, NOT FOR FAB. See ../IMPLEMENTATION.md and ../RESET-RECOVERY.md. Electrical pin/net endpoints identical to independently reviewed correction; exact MPN/footprint metadata and C14268nF-to10nF value differ. The placement-only PCB is NOT the main board and not routed.
