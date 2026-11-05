@@ -1,0 +1,105 @@
+{
+  "status": "TERMINAL ISOLATED GEOMETRY/FUNCTION CHECKPOINT; NOT ACCEPTED MAIN OR POWERED/ASSEMBLY QUALIFICATION",
+  "source_sha256": "fdd9ce12580c1dc8a1fe14dfced60f0199b2911b2d7c87a818a2bf7affb5fa33",
+  "candidate_sha256": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+  "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+  "accepted_main_unchanged_sha256": "80681cd392d1ca83bd37e58faef07a0def301f2d93763102982eaf1c0148f831",
+  "native": {
+    "opens": 21,
+    "hard_errors": 0,
+    "warnings": 58,
+    "parity_issues": 0,
+    "ERC_violations": 0
+  },
+  "source_witnesses": 13,
+  "additional_signal_witnesses": [
+    "XIN",
+    "XOUT",
+    "XTAL_OUT",
+    "UNDERGLOW",
+    "LED_FAULT_N",
+    "LED_ENABLE",
+    "COL1"
+  ],
+  "only_populated_partition_change": "U1.34 joined to the existing R109.1/U7.3 LED_ENABLE component",
+  "retained_outer_tracks_compared": 9545,
+  "retained_new_reference_loss_mm": {
+    "left": 0,
+    "center": 0,
+    "right": 0
+  },
+  "new_reference_totals_mm": {
+    "COL1": {
+      "left": 0.0,
+      "center": 0.0,
+      "right": 0.0
+    },
+    "LED_ENABLE": {
+      "left": 0.0,
+      "center": 0.0,
+      "right": 0.0
+    },
+    "LED_FAULT_N": {
+      "left": 0.0,
+      "center": 0.0,
+      "right": 0.0
+    },
+    "UNDERGLOW": {
+      "left": 0.0,
+      "center": 0.0,
+      "right": 0.0
+    }
+  },
+  "numbered_pins": 924,
+  "physical_pads": 1275,
+  "footprints": 340,
+  "metrics_partial": {
+    "footprints": 340,
+    "vias": 890,
+    "segments": 9817,
+    "track_centerline_mm": 12111.263716154526
+  },
+  "exact_delta": {
+    "removed_tracks": 127,
+    "added_objects": 67,
+    "new_ENABLE_tracks": 41,
+    "new_ENABLE_centerline_mm": 120.3688715257549,
+    "new_ENABLE_vias": 5,
+    "new_GND_return_vias": 4,
+    "retired_vias": 0,
+    "moved_footprints": 0
+  },
+  "B_3V3_fill_lost_mm2": 0.268960924894,
+  "B_3V3_fill_gained_mm2": 1.81606e-07,
+  "cold_byte_identical": true,
+  "exact_native_node_replay_byte_identical": true,
+  "remaining_opens_by_net": {
+    "ROW0": 2,
+    "COL3": 1,
+    "COL4": 1,
+    "COL5": 1,
+    "COL6": 1,
+    "COL7": 1,
+    "COL8": 1,
+    "COL9": 1,
+    "COL10": 1,
+    "COL11": 1,
+    "COL12": 1,
+    "COL13": 1,
+    "COL14": 1,
+    "ROW1": 1,
+    "ROW2": 1,
+    "ROW3": 1,
+    "ROW4": 1,
+    "SWDIO": 1,
+    "RUN": 1,
+    "KEY_RGB": 1
+  },
+  "qualification_limits": [
+    "13 rail/source witnesses prove connectivity only, not powered current/PI or thermal qualification.",
+    "Existing LV1T125 asynchronous power-off/reset/trip/collapse gate remains blocked.",
+    "Oscillator startup/load/drive, actual switch SKU/whole assembly, manufacturing and physical waveforms remain open.",
+    "B 3V3 fill geometry is not identical; its local FAULT-route cut requires PI/current context, despite all source/native gates passing.",
+    "All lengths are partial board or positive signal centerline lengths; via vertical paths and full return-loop lengths are not included."
+  ]
+}

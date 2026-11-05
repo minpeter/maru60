@@ -1,0 +1,13 @@
+# Canonical isolated A21 — actual ENABLE closure
+
+Exact PCB **b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f**. Independent owner checks: **21 opens / 0 hard / 58 warnings / parity 0 / ERC 0**, all13 original and conservative physical-drill source graphs, seven explicit clock/control/COL1 witnesses,924 numbered pins/1275 physical pads/340 footprints, cold byte identity.
+
+U1.34 now actually joins R109.1/U7.3: three populated pads, not a local escape tail. U7 current-limit/fault/default-off topology and every part/footprint are unchanged. Other populated net partitions are identical. ENABLE adds41 tracks **120.368872 mm**,5 standard0.50/0.25 signal vias and4 GND stitches; it is a real remote function, NOT a length saving. Simultaneous local UG/COL1/FAULT rerouting preserves original endpoints/functions (new local lengths6.545438/6.224686/6.933021 mm). Exact ledger127 retired/67 added objects; all retained native nodes remain exact. Only removed GND is the separately audited padless old-C107 tail7feee974; via6a3f and tail54f remain unchanged and source-connected.
+
+All9,545 retained outer tracks and all new four-net center/edge references show zero new loss outside declared own-via0.55 mm launch disks. Five nearest GND returns have explicit physical-drill annular contacts on BOTH inner source islands, conservative contact0.146297 mm² each; center distances0.800/0.781/0.800/0.950/0.800 mm are NOT full return-loop lengths. The physical source proof uses1um conservative copper subsets without Unfracture or epsilon expansion; a coarse negative alone would need refinement.
+
+**Explicit power tradeoff:** B +3V3 fill loses0.268960925 mm² from the FAULT local refinement (plus sub-micrometer polygon slivers). All28 +3V3 pads and all scoped conductor components remain source-reached; other positive-rail fills are exact. This is not all-positive-fill identity, ampacity, IR-drop or powered qualification. Existing west-core neck/current/oscillator/SI, actual SKU/assembly/process and LV1T asynchronous off-state release gates remain open.
+
+Full unfinished board **12,111.263716 mm /890 vias /9,817 segments**. Remaining21:17 MCU matrix trunks,one padless ROW0 stub,and SWDIO/RUN/KEY_RGB. The padless stub is not counted as a functional closure. Main remains80681cd…f831 unchanged. No public push,order or flash.
+
+Root MANIFEST describes the complete current packet. Worker/inherited manifests describe their separately preserved historical packets, not the selected excerpts here. Reproduce only in a new writable copy with matching project/schema/libs; one-board same-path Load/refill/Save and raw canonical retained-net guards are mandatory. This is a conditional routing checkpoint, not accepted-main/prototype/fabrication adoption.

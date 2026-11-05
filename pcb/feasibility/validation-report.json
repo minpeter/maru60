@@ -1,0 +1,53 @@
+{
+  "result": "PASS",
+  "declared_layout_option_cases": 8,
+  "variants": [
+    "WKL 7U",
+    "HHKB 7U"
+  ],
+  "checks": [
+    "independent QMK fixtures match WKL and HHKB geometry; both span 15U from common origin",
+    "all nominal centers [0.75,2,3.25,7.5,11.75,13,14.25]U retained in the physical union",
+    "WKL and HHKB active-site union retains all seven needed bottom switch coordinates",
+    "blocker positions have no per-layout key assignment; alternate-layout socket overlap remains a mechanical clearance item",
+    "GH60 X centers match independent fixture to 0.00001mm; frame Y within0.001mm",
+    "split/non-split Backspace and right Shift preserve 15U"
+  ],
+  "physical_union_sites_u": [
+    0.75,
+    2,
+    3.25,
+    7.5,
+    11.75,
+    13,
+    14.25
+  ],
+  "active_centers_u": {
+    "WKL": [
+      0.75,
+      3.25,
+      7.5,
+      11.75,
+      14.25
+    ],
+    "HHKB": [
+      2,
+      3.25,
+      7.5,
+      11.75,
+      13
+    ]
+  },
+  "overlap_clearance": "NOT CHECKED: WKL blockers at 2U/13U overlap HHKB active sites; HHKB corner blockers overlap WKL active sites. Compatible separate plates/upper shells and physical clearance must be proven.",
+  "excluded_from_pass": [
+    "WK removed from v1 by user decision",
+    "6.25U removed from v1 by user decision",
+    "stepped Caps stem offset candidate -0.25U unvalidated; keycap outline remains separate",
+    "socket/plate/case collision and electrical routing"
+  ],
+  "sources": {
+    "WKL": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_ansi_tsangan/info.json",
+    "HHKB": "https://raw.githubusercontent.com/qmk/qmk_firmware/master/layouts/default/60_hhkb/info.json"
+  },
+  "physical_clearance_validated": false
+}

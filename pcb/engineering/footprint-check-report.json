@@ -1,0 +1,78 @@
+{
+  "title": "MX footprint copper geometry screening only",
+  "source": {
+    "repo": "ai03-2725/MX_V2",
+    "commit": "0b379eebbeb66c7fd6e82e400b47958ad695614e",
+    "license": "MIT",
+    "footprints": [
+      "MX_Hotswap.pretty/MX-Hotswap-1U.kicad_mod",
+      "MX_Hotswap.pretty/MX-Hotswap-7U.kicad_mod"
+    ]
+  },
+  "layout": {
+    "units": [
+      0.75,
+      2,
+      3.25,
+      7.5,
+      11.75,
+      13,
+      14.25
+    ],
+    "rowOrigin": "shared 15U bottom-row left edge",
+    "unionSocketCount": 7,
+    "GH60": {
+      "spacebarCenterX": 142.4975,
+      "bottomRowCenterY": 85.39875
+    }
+  },
+  "method": {
+    "extract": "SMD copper pads from 1U footprint and wide NPTH holes from 7U footprint",
+    "orientation": "source footprint local geometry; row translated to GH60 frame; no mirror/board-side transform applied",
+    "limits": [
+      "Not KiCad DRC or physical fit validation",
+      "No switch body, stabilizer housings/wires, manufacturer plate cutouts, PCB-to-plate registration, traces/vias, Edge.Cuts, mounting holes, case or keycap interference checked",
+      "Upstream README says fresh projects should flip hotswap footprints so socket/pad side is bottom; no transform applied"
+    ]
+  },
+  "results": {
+    "copperPadsPerSite": 2,
+    "crossSocketPadAabbOverlaps": 0,
+    "wideStabilizerHoles": 4,
+    "stabilizerDrillToAnySocketCopper": [
+      {
+        "hole": [
+          85.3475,
+          78.41375000000001
+        ],
+        "drill": 3.048,
+        "minCopperClearance": 13.88585561256171
+      },
+      {
+        "hole": [
+          199.6475,
+          78.41375000000001
+        ],
+        "drill": 3.048,
+        "minCopperClearance": 15.56155980938287
+      },
+      {
+        "hole": [
+          85.3475,
+          93.65375
+        ],
+        "drill": 3.9878,
+        "minCopperClearance": 15.848819803886393
+      },
+      {
+        "hole": [
+          199.6475,
+          93.65375
+        ],
+        "drill": 3.9878,
+        "minCopperClearance": 18.92342664563039
+      }
+    ]
+  },
+  "status": "PASS_GEOMETRY_ONLY"
+}

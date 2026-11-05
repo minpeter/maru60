@@ -1,0 +1,273 @@
+{
+  "status": "COMPLETED",
+  "canonical_sha256": "fdd9ce12580c1dc8a1fe14dfced60f0199b2911b2d7c87a818a2bf7affb5fa33",
+  "native_guard_sha256": "12b416953c8d0d3a696cea51983c4280d50537f0e72e62c5da3c8604f14fc5ea",
+  "cases": [
+    {
+      "name": "canonical-control",
+      "board": "/workspace/shared/maru-a22-enable-0357/source.kicad_pcb",
+      "pcb_sha256": "fdd9ce12580c1dc8a1fe14dfced60f0199b2911b2d7c87a818a2bf7affb5fa33",
+      "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "canonical_sha256": "fdd9ce12580c1dc8a1fe14dfced60f0199b2911b2d7c87a818a2bf7affb5fa33",
+      "pre_Load_canonical_retained_nodes_exact": true,
+      "changed_retained_nodes": [],
+      "removed_uuids": [],
+      "allowed_removed_uuids": [],
+      "never_relabels_or_saves": true,
+      "native_Load_Build_refill_guard_pass": true,
+      "native_report_sha256": "b201b0d842d15fd79f514fc8df3f1d58541e3ee3134ab103920f1a951f658e0a"
+    },
+    {
+      "name": "first-outward",
+      "board": "/workspace/shared/maru-a22-enable-0357/joint-east-0403/candidate.kicad_pcb",
+      "pcb_sha256": "9ef726583cdfdf0f06a7e81e28dd467d24e537cfd0e9c20e270501975fbb84b6",
+      "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "canonical_sha256": "fdd9ce12580c1dc8a1fe14dfced60f0199b2911b2d7c87a818a2bf7affb5fa33",
+      "pre_Load_canonical_retained_nodes_exact": true,
+      "changed_retained_nodes": [],
+      "removed_uuids": [
+        "0c027236-279d-44d5-a42b-9f8b71eac7b5",
+        "c5155bc9-d62a-40a8-a093-c85107df9d66",
+        "df212a00-fb43-4743-8fc2-6b6e4675ed06",
+        "e6c2f148-01b8-4534-b768-c40d03a8c2a5"
+      ],
+      "allowed_removed_uuids": [
+        "0c027236-279d-44d5-a42b-9f8b71eac7b5",
+        "c5155bc9-d62a-40a8-a093-c85107df9d66",
+        "df212a00-fb43-4743-8fc2-6b6e4675ed06",
+        "e6c2f148-01b8-4534-b768-c40d03a8c2a5"
+      ],
+      "never_relabels_or_saves": true,
+      "native_Load_Build_refill_guard_pass": true,
+      "native_report_sha256": "4949d7607fca6b031846a9f1b0df78ad5eec56365a9482a60e929e74d9617402"
+    },
+    {
+      "name": "rejected-wide",
+      "board": "/workspace/shared/maru-a22-enable-0357/joint-east-wide-0410/candidate.kicad_pcb",
+      "pcb_sha256": "a40340ce7138243d4e95cf34c37020d2918dcdc4b11c54cd5b0a1debbe9d4968",
+      "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "canonical_sha256": "fdd9ce12580c1dc8a1fe14dfced60f0199b2911b2d7c87a818a2bf7affb5fa33",
+      "pre_Load_canonical_retained_nodes_exact": false,
+      "changed_retained_nodes": [
+        {
+          "uuid": "7feee974-e301-44e1-95ec-db424b6bbee6",
+          "canonical_net": "GND",
+          "candidate_net": "LED_FAULT_N",
+          "canonical_node": [
+            "segment",
+            [
+              "start",
+              "33.45",
+              "17.88"
+            ],
+            [
+              "end",
+              "32.976",
+              "18.95"
+            ],
+            [
+              "width",
+              "0.25"
+            ],
+            [
+              "layer",
+              "B.Cu"
+            ],
+            [
+              "net",
+              "83"
+            ],
+            [
+              "uuid",
+              "7feee974-e301-44e1-95ec-db424b6bbee6"
+            ]
+          ],
+          "candidate_node": [
+            "segment",
+            [
+              "start",
+              "33.45",
+              "17.88"
+            ],
+            [
+              "end",
+              "32.976",
+              "18.95"
+            ],
+            [
+              "width",
+              "0.25"
+            ],
+            [
+              "layer",
+              "B.Cu"
+            ],
+            [
+              "net",
+              "136"
+            ],
+            [
+              "uuid",
+              "7feee974-e301-44e1-95ec-db424b6bbee6"
+            ]
+          ]
+        },
+        {
+          "uuid": "54f14d63-40e1-426a-a963-26583874af9e",
+          "canonical_net": "GND",
+          "candidate_net": "LED_FAULT_N",
+          "canonical_node": [
+            "segment",
+            [
+              "start",
+              "31.85",
+              "19.6"
+            ],
+            [
+              "end",
+              "32.976",
+              "18.95"
+            ],
+            [
+              "width",
+              "0.25"
+            ],
+            [
+              "layer",
+              "B.Cu"
+            ],
+            [
+              "net",
+              "83"
+            ],
+            [
+              "uuid",
+              "54f14d63-40e1-426a-a963-26583874af9e"
+            ]
+          ],
+          "candidate_node": [
+            "segment",
+            [
+              "start",
+              "31.85",
+              "19.6"
+            ],
+            [
+              "end",
+              "32.976",
+              "18.95"
+            ],
+            [
+              "width",
+              "0.25"
+            ],
+            [
+              "layer",
+              "B.Cu"
+            ],
+            [
+              "net",
+              "136"
+            ],
+            [
+              "uuid",
+              "54f14d63-40e1-426a-a963-26583874af9e"
+            ]
+          ]
+        },
+        {
+          "uuid": "6a3f580c-5712-47ea-8383-e2a4d03abf80",
+          "canonical_net": "GND",
+          "candidate_net": "LED_FAULT_N",
+          "canonical_node": [
+            "via",
+            [
+              "at",
+              "32.976",
+              "18.95"
+            ],
+            [
+              "size",
+              "0.5"
+            ],
+            [
+              "drill",
+              "0.25"
+            ],
+            [
+              "layers",
+              "F.Cu",
+              "B.Cu"
+            ],
+            [
+              "net",
+              "83"
+            ],
+            [
+              "uuid",
+              "6a3f580c-5712-47ea-8383-e2a4d03abf80"
+            ]
+          ],
+          "candidate_node": [
+            "via",
+            [
+              "at",
+              "32.976",
+              "18.95"
+            ],
+            [
+              "size",
+              "0.5"
+            ],
+            [
+              "drill",
+              "0.25"
+            ],
+            [
+              "layers",
+              "F.Cu",
+              "B.Cu"
+            ],
+            [
+              "net",
+              "136"
+            ],
+            [
+              "uuid",
+              "6a3f580c-5712-47ea-8383-e2a4d03abf80"
+            ]
+          ]
+        }
+      ],
+      "removed_uuids": [
+        "0c027236-279d-44d5-a42b-9f8b71eac7b5",
+        "4f71f2c4-60ea-44d6-ba3c-2d3f098b46f3",
+        "68a5166f-d340-4c3d-a14a-fa251648b948",
+        "6b5a11a6-a6bd-42b1-96b1-b25875d45fa6",
+        "894270d3-e998-47bf-b1a9-a9fcb38715ca",
+        "a832b2ff-0258-4a06-9019-82f1bfc5e602",
+        "c5155bc9-d62a-40a8-a093-c85107df9d66",
+        "df212a00-fb43-4743-8fc2-6b6e4675ed06",
+        "e6c2f148-01b8-4534-b768-c40d03a8c2a5",
+        "ea51ab43-1fde-4df9-802f-1eb69707d567",
+        "f9e1b6b2-34f2-4418-bdbd-4a13889ef579"
+      ],
+      "allowed_removed_uuids": [
+        "0c027236-279d-44d5-a42b-9f8b71eac7b5",
+        "4f71f2c4-60ea-44d6-ba3c-2d3f098b46f3",
+        "68a5166f-d340-4c3d-a14a-fa251648b948",
+        "6b5a11a6-a6bd-42b1-96b1-b25875d45fa6",
+        "894270d3-e998-47bf-b1a9-a9fcb38715ca",
+        "a832b2ff-0258-4a06-9019-82f1bfc5e602",
+        "c5155bc9-d62a-40a8-a093-c85107df9d66",
+        "df212a00-fb43-4743-8fc2-6b6e4675ed06",
+        "e6c2f148-01b8-4534-b768-c40d03a8c2a5",
+        "ea51ab43-1fde-4df9-802f-1eb69707d567",
+        "f9e1b6b2-34f2-4418-bdbd-4a13889ef579"
+      ],
+      "never_relabels_or_saves": true,
+      "rejected_before_Load": true
+    }
+  ],
+  "lesson": "Post-Load snapshots alone miss automatic KiCad reassignment during Load. Canonical retained raw-node identity is a pre-Load expectation, never a relabel operation. All future composition must pass canonical retained-node equality before first Load, then raw semantic maps after Load/Build/refill/save."
+}
