@@ -1,0 +1,17 @@
+05:00:08: Debug: Adding duplicate image handler for 'PNG file'
+05:00:08: Debug: Adding duplicate image handler for 'JPEG file'
+05:00:08: Debug: Adding duplicate image handler for 'TIFF file'
+05:00:08: Debug: Adding duplicate image handler for 'GIF file'
+05:00:08: Debug: Adding duplicate image handler for 'PNM file'
+05:00:08: Debug: Adding duplicate image handler for 'PCX file'
+05:00:08: Debug: Adding duplicate image handler for 'IFF file'
+05:00:08: Debug: Adding duplicate image handler for 'Windows icon file'
+05:00:08: Debug: Adding duplicate image handler for 'Windows cursor file'
+05:00:08: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+05:00:08: Debug: Adding duplicate image handler for 'TGA file'
+05:00:08: Debug: Adding duplicate image handler for 'XPM file'
+Traceback (most recent call last):
+  File "/workspace/shared/maru60-resume/continuation-97d9eb7/stub3v3/scripts/exact_cycle_proof.py", line 21, in <module>
+    assert q==start;crosses=[(v[(i+1)%len(v)][0]-a[0])*(v[(i+2)%len(v)][1]-v[(i+1)%len(v)][1])-(v[(i+1)%len(v)][1]-a[1])*(v[(i+2)%len(v)][0]-v[(i+1)%len(v)][0])for i,a in enumerate(v)];assert all(c>0 for c in crosses)or all(c<0 for c in crosses)
+                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,18 @@
+05:03:20: Debug: Adding duplicate image handler for 'PNG file'
+05:03:20: Debug: Adding duplicate image handler for 'JPEG file'
+05:03:20: Debug: Adding duplicate image handler for 'TIFF file'
+05:03:20: Debug: Adding duplicate image handler for 'GIF file'
+05:03:20: Debug: Adding duplicate image handler for 'PNM file'
+05:03:20: Debug: Adding duplicate image handler for 'PCX file'
+05:03:20: Debug: Adding duplicate image handler for 'IFF file'
+05:03:20: Debug: Adding duplicate image handler for 'Windows icon file'
+05:03:20: Debug: Adding duplicate image handler for 'Windows cursor file'
+05:03:20: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+05:03:20: Debug: Adding duplicate image handler for 'TGA file'
+05:03:20: Debug: Adding duplicate image handler for 'XPM file'
+rows 15362 intersecting [{'uuid': '2480fc10-287f-4789-b472-6f262c22fab7', 'layer': 'B.Cu', 'bbox_nm': [99425001, 36325001, 102424999, 39324999], 'strictly_disjoint_from_removed_hole_bbox': False}, {'uuid': '2169784c-cf39-4537-b24f-3e353c6d1bd7', 'layer': 'B.Cu', 'bbox_nm': [100125001, 31725001, 107774999, 39374999], 'strictly_disjoint_from_removed_hole_bbox': False}, {'uuid': '82bcd976-f96f-49a5-96ca-8b38a7aef77e', 'layer': 'B.Cu', 'bbox_nm': [100475001, 38225002, 102124998, 39874999], 'strictly_disjoint_from_removed_hole_bbox': False}, {'uuid': '1f883907-7fab-417e-9752-92a032e409fa', 'layer': 'B.Cu', 'bbox_nm': [101825001, 38775001, 103224999, 40174999], 'strictly_disjoint_from_removed_hole_bbox': False}]
+Traceback (most recent call last):
+  File "/workspace/shared/maru60-resume/continuation-97d9eb7/stub3v3/scripts/retained_hole_bbox.py", line 16, in <module>
+    x=dict(outer_zone_exact_serialized_contours_equal=True,outer_zone_rows=len(za),removed_hole_bbox_nm=[hb.GetX(),hb.GetY(),hb.GetRight(),hb.GetBottom()],rows=rows,pass_all_disjoint=all(r['strictly_disjoint_from_removed_hole_bbox']for r in rows));(D/'qa/retained-hole-bbox-proof.json').write_text(json.dumps(x,indent=2)+'\n');print('rows',len(rows),'intersecting',[r for r in rows if not r['strictly_disjoint_from_removed_hole_bbox']]);assert x['pass_all_disjoint']
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            ~^^^^^^^^^^^^^^^^^^^^^
+AssertionError

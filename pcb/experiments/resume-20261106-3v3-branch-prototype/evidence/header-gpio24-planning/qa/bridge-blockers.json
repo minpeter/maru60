@@ -1,0 +1,4158 @@
+{
+  "overlap_sites": 160,
+  "all_sites_have_blockers": true,
+  "blocker_counts": {
+    "('COL13', 'F.Cu')": 95,
+    "('GND', 'B.Cu')": 19,
+    "('EXT_GPIO10', 'B.Cu')": 152,
+    "('EXT_GPIO10', 'F.Cu')": 33,
+    "('EXT_GPIO10', 'In1.Cu')": 33,
+    "('EXT_GPIO10', 'In2.Cu')": 33,
+    "('EXT_GPIO25', 'B.Cu')": 44
+  },
+  "rows": [
+    {
+      "xy": [
+        92.05,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.05,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.05,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.05,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.157647,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.157647,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.157647,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.157647,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.05,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.108276,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.108276,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.108276,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.108276,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.05,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.059016,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.059016,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.059016,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.059016,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "57e3fe50-4822-4c06-b0dc-45be6850b21f",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.167442,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "e82bdee3-9e23-4127-957e-0cf202535da9",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.167442,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.1,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.1,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.1,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.1,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.167083,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.167083,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.167083,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.167083,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.1,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.118465,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.118465,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.118465,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.118465,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.1,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.070087,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.070087,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.070087,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.070087,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "57e3fe50-4822-4c06-b0dc-45be6850b21f",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.189781,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "e82bdee3-9e23-4127-957e-0cf202535da9",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.189781,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.15,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.15,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.15,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.15,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.15,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.132455,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.132455,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.132455,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.132455,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.15,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.085234,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.085234,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.085234,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.085234,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.15,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.038516,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.038516,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.038516,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.038516,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "57e3fe50-4822-4c06-b0dc-45be6850b21f",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "e82bdee3-9e23-4127-957e-0cf202535da9",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "19a2d820-9695-4b98-aaae-ca81bf36d938",
+          "net": "GND",
+          "layer": "B.Cu",
+          "clearance_mm": 0.100624,
+          "required_screen_mm": 0.15
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.2,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.2,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.2,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.2,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.196419,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.196419,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.196419,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.196419,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.2,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.2,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.104152,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.104152,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.104152,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.104152,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.2,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.059016,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.059016,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.059016,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.059016,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.25,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.25,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.25,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.25,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.25,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.17082,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.17082,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.17082,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.17082,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.25,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.126498,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.126498,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.126498,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.126498,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.25,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.083095,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.083095,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.083095,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.083095,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.25,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.040832,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.040832,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.040832,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.040832,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.3,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.3,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.3,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.3,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.3,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.194622,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.194622,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.194622,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.194622,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.3,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.15192,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.15192,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.15192,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.15192,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.3,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.110327,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.110327,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.110327,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.110327,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.3,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.070087,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.070087,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.070087,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.070087,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.3,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.031507,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.031507,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.031507,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.031507,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.35,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.35,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.35,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.35,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.35,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.35,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.35,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.140312,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.140312,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.140312,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.140312,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.35,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.102079,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.102079,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.102079,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.102079,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.35,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.065685,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.065685,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.065685,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.065685,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.4,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.4,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.4,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.4,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.4,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.4,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.4,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.172681,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.172681,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.172681,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.172681,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.4,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.136396,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.136396,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.136396,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.136396,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.4,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.102079,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.102079,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.102079,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.102079,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.45,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.45,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.45,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.45,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.45,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.45,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.45,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.45,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.172681,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.172681,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.172681,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.172681,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.45,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.140312,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.140312,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.140312,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.140312,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.5,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.5,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.5,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.5,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.5,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.5,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.5,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.5,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.5,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "F.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In1.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "993c32b8-6a99-4938-aa25-63750edb9118",
+          "net": "EXT_GPIO10",
+          "layer": "In2.Cu",
+          "clearance_mm": 0.180073,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.55,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.55,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.55,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.55,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.55,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.55,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.55,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.55,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.55,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.6,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.6,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.6,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.6,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.6,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.6,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.6,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.6,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.6,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.65,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.65,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.65,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.65,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.65,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.65,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.65,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.65,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.169974,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.65,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.135977,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.7,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.7,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.7,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.7,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.7,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.7,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.7,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.7,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.135977,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.7,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.099264,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.75,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.2,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.75,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.2,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.75,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.2,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.75,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.2,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.75,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.2,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.75,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.189781,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.2,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.75,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.146699,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.20052,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.75,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.105116,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.204669,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.75,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.065512,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.8,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.8,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.8,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.8,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.8,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.8,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.167442,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.15,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.8,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.122213,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.150567,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.8,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.078112,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.15509,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.8,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.035555,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.164025,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.85,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.85,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.85,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.85,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.85,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.197015,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.85,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.149341,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.85,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.1022,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.100624,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.85,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.055788,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.105593,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.85,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.01041,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.115388,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.9,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.9,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.9,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.9,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.9,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.184901,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.9,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.135977,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.05,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.9,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.08731,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.050693,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.9,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.039005,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.056207,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.9,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.067038,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.95,
+        39.35
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.95,
+        39.4
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.95,
+        39.45
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.95,
+        39.5
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.95,
+        39.55
+      ],
+      "hits": [
+        {
+          "uuid": "393cd1e2-4007-43d0-803e-78162f1899a5",
+          "net": "COL13",
+          "layer": "F.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.175,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.177493,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.95,
+        39.6
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.125,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.127769,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.95,
+        39.65
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.075,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.078112,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.00078,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.95,
+        39.7
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.025,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.028553,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.00697,
+          "required_screen_mm": 0.205
+        }
+      ]
+    },
+    {
+      "xy": [
+        92.95,
+        39.75
+      ],
+      "hits": [
+        {
+          "uuid": "545b95d3-afce-5921-b080-4bfe3e931fe1",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "81986595-1a91-5494-96ff-efb2631ef843",
+          "net": "EXT_GPIO10",
+          "layer": "B.Cu",
+          "clearance_mm": 0.0,
+          "required_screen_mm": 0.205
+        },
+        {
+          "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6",
+          "net": "EXT_GPIO25",
+          "layer": "B.Cu",
+          "clearance_mm": 0.019076,
+          "required_screen_mm": 0.205
+        }
+      ]
+    }
+  ]
+}

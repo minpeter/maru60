@@ -1,0 +1,52 @@
+{
+  "source_sha256": "2e532c1a16e64a34eafafdfbd5b85c05d70bb12ad9e52924c5cbe024fdc9aa2c",
+  "proposed_retired": [
+    "0826a4b6-5567-52ab-a787-b898d20d23ac",
+    "53e7b99f-308f-57ae-9e47-9e779e6b3272",
+    "f9815195-95ae-5029-9575-af5b562417f2",
+    "fba8f2b5-a5de-578b-a107-ce7c9d080fb6"
+  ],
+  "retained_nodes": 14722,
+  "retained_components": 380,
+  "exact_retained_partition_unchanged": true,
+  "pad_inventory_untouched": true,
+  "incident_edges": [
+    [
+      "object:9f355e92-2386-5d9a-b330-367e9a6d6370:0:0",
+      "object:fba8f2b5-a5de-578b-a107-ce7c9d080fb6:0:0",
+      0.0710593839905,
+      0.071057462965
+    ],
+    [
+      "object:fba8f2b5-a5de-578b-a107-ce7c9d080fb6:0:0",
+      "object:0826a4b6-5567-52ab-a787-b898d20d23ac:0:0",
+      0.056473380707,
+      0.056469288712
+    ],
+    [
+      "object:0826a4b6-5567-52ab-a787-b898d20d23ac:2:0",
+      "object:f9815195-95ae-5029-9575-af5b562417f2:2:0",
+      0.0564737293945,
+      0.0564695881385
+    ],
+    [
+      "object:53e7b99f-308f-57ae-9e47-9e779e6b3272:2:0",
+      "object:f9815195-95ae-5029-9575-af5b562417f2:2:0",
+      0.070732756779,
+      0.070730800764
+    ]
+  ],
+  "incident_guard_failures": [],
+  "via_barrel_proof": {
+    "uuid": "0826a4b6-5567-52ab-a787-b898d20d23ac",
+    "type": "PCB_VIA",
+    "nodes": [
+      "object:0826a4b6-5567-52ab-a787-b898d20d23ac:0:0",
+      "object:0826a4b6-5567-52ab-a787-b898d20d23ac:4:0",
+      "object:0826a4b6-5567-52ab-a787-b898d20d23ac:6:0",
+      "object:0826a4b6-5567-52ab-a787-b898d20d23ac:2:0"
+    ],
+    "proof": "through span asserted; one positive annulus per copper layer; centered circular via or exact convex PTH hole enclosure proved; all-hole material has exact normalized native coordinate contour equality to own annulus; no foreign drill severs annulus"
+  },
+  "limits": "Source graph pruning only; no candidate, refill, plane no-loss, native warning, or electromagnetic proof."
+}

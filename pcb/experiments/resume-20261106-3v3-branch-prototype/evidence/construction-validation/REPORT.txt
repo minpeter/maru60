@@ -1,0 +1,29 @@
+ISOLATED CANDIDATE PASSES BOUNDED CLEANUP VALIDATION. NOT SELECTED.
+
+Source: 97d9eb7 label prototype, PCB SHA256 2e532c1a16e64a34eafafdfbd5b85c05d70bb12ad9e52924c5cbe024fdc9aa2c.
+Candidate PCB SHA256 88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e.
+Only changed project file: maru60.kicad_pcb. Original source unchanged; strict baseline remains separate.
+
+SCOPE
+Exactly nine 0.30 mm tracks (8.503623449077 mm centerline) and one through-via were removed. Full UUID list: qa/build.json. No other retained track, via, footprint or pad serialization changed. The branch attaches only to the interior of retained F.Cu f578f80d-52bb-500f-b3df-4fe97eccdb4e at (104.5,41.0); this conductor and both functional continuations remain byte-identical. Exhaustive all-object/all-zone contact scans, with every through-hole subtracted, prove no branch pad/zone/feed function. Initial one-segment and four-object interpretations were read-only; full tracing distinguished overlapping short-segment cliques from the actual supply/load T junction before this sole candidate was created.
+
+NATIVE GATE
+40 to 39 warnings: exactly the original +3V3 track_dangling warning removed, no new warning/error item. All nine physical open pairs are unchanged, resolved by fresh complete material pad components rather than representative UUIDs. Fresh schematic parity: 0. ERC: 0. Fresh schematic XML/native/raw net identity: pass, 1,064 electrical XML nodes checked. Cold refill: all 58 project files byte-identical.
+
+FRESH MATERIAL AND CONTACTS
+Corrected all-hole material exporter rerun on exact candidate bytes. Complete pad inventory and pad partitions unchanged. All 14,716 retained material vertices preserve the same 380 components. All 22,526 retained island contacts remain, with no raw or guarded overlap reduction. All 21,789 retained direct object/layer contacts and 735 retained zone contacts remain. All retained raw primitives are identical. Inherited 51 guarded-contact proof diagnostics are unchanged, not solved or waived and not native warnings.
+
+FULL PLANE AND RETAINED MATERIAL
+All 11 zone rows pass zero loss area AND zero contours. Nine outer-zone serialized contour sets are exactly unchanged. Each inner GND plane gains native Boolean area 0.641253380693 mm2 across six contours; zero native loss area/contours. Gain is never used to excuse loss.
+
+Independent exact boundary proof cancels opposite-directed fracture connectors, accounts for every changed edge, and checks all six matched changed boundary paths per inner plane using exact rational integration and inside/outside classification. Every interval is gain-only, including remote changes: exact path loss 0 nm2. The remaining 50-edge removed clearance cycle lies wholly in candidate copper: its entire bounding box contains no noncancelled candidate boundary edge and an exact interior sample is copper. Thus no removed-boundary region can lose plane metal. This proof does not assume a convex clearance contour. Every boundary change is accounted for; no tolerance or exception window is used. Candidate drill set is the unchanged source drill set minus the retired via hole, so hole subtraction preserves the exact raw-plane containment result. Algebraic boundary gain stored in the proof is not presented as an exact Boolean material-gain measurement.
+
+All 15,362 retained object/layer rows assert zero loss AND zero gain, each with zero area AND zero contours. Additionally, exact integer geometry proves the retired drill misses every retained raw copper polygon: 15,358 rows have strictly separate bounding boxes; the four remaining diagonal-track rows have no exact edge intersection or mutual containment. Therefore all retained represented material is exactly unchanged after all holes, not merely numerically close.
+
+All 25,726 retained signal/power reference rows for both inner planes pass with zero lost-reference and zero uncovered-gain area AND contours. Stronger reasoning is available here: exact unchanged retained material and exact whole-plane containment imply monotonically preserved existing reference. No retained metal was restored by the retired drill, so no restored-material coverage exception exists.
+
+LIMITS
+These checks qualify only this finite unused-branch cleanup against its immediate prototype source. The inherited earlier exact no-loss failure remains separate and unresolved. No full-board baseline qualification, PDN/SI improvement, active stability, parasitic benefit, physical hardware, production or fabrication readiness claim. No additional copper variant, install, credentials, external push, order or flashing.
+
+EVIDENCE
+qa/native-gate.json; qa/material-graph.json; qa/material-comparison.json; qa/retained-material-partitions.json; qa/full-geometry-containment.json; qa/retained-hole-bbox-proof.json; qa/exact-full-plane-proof.json; qa/rational-boundary-classification.json; qa/boundary-delta.json; qa/exact-boundary-paths.json; qa/net-identity.json; qa/erc.json; qa/parity.json; qa/cold-refill.json. Full input/output hashes: HASHES.json. Read-only scope history and initial diagnostic scripts/logs retained.

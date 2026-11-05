@@ -1,5 +1,9 @@
 ## Latest qualified development prototype
 
+Unused +3V3 branch cleanup: 9 open connection pairs and 39 warnings. Independent exact geometry and fresh contact validation pass, with all retained conductor material unchanged and zero new GND-plane loss. All prior checkpoints and inherited limitations remain. See pcb/CURRENT.md and the selected prototype README. No manufacturing or active stability approval is implied.
+
+## Latest qualified development prototype
+
 C136 reference correction: 9 open connection pairs and40 warnings, with copper/fills exactly unchanged from ef45f84. All prior checkpoints preserved. Fresh physical-connection and cold-refill validation pass, but inherited limits and incomplete electrical work remain. See pcb/CURRENT.md and the selected prototype README. Unselected routing and power-branch experiments are explicitly separated in evidence.
 
 ## Latest qualified development prototype, 2026-11-05

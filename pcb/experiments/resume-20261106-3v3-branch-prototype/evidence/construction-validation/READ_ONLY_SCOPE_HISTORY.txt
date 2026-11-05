@@ -1,0 +1,29 @@
+PRE-CANDIDATE READ-ONLY SCOPE STUDY. At this stage no candidate had been created.
+
+Source SHA256: 2e532c1a16e64a34eafafdfbd5b85c05d70bb12ad9e52924c5cbe024fdc9aa2c
+Candidate SHA256 at read-only stage: none.
+
+The target +3V3 B.Cu track is not the complete unused branch. A single-track or four-object removal would leave more pendant routing; no warning relocation experiment was made. The first apparently branched contact graph at 9f355e92 is only neighboring short segments overlapping each other. It is not a real supply/load T junction.
+
+The actual retained attachment is F.Cu track f578f80d-52bb-500f-b3df-4fe97eccdb4e, from (104.5,42.475) to (104.5,40.225). The pendant end 0858c392 reaches its INTERIOR at (104.5,41.0), with positive material overlap 0.092571522059 mm2. Its opposite ends separately connect to retained track fa80b406 and retained via91b5761c, whose continuation reaches C129 pad1. This track and all its geometry must remain.
+
+Complete finite branch proposal, NOT performed: nine 0.3mm tracks (8.503623449077mm summed centerline) and one through-via:
+- 0826a4b6-5567-52ab-a787-b898d20d23ac: PCB_VIA B.Cu, at [101.7375, 39.4375] (all four layers scanned)
+- 0858c392-ee59-5350-bcaf-d8762f658a08: PCB_TRACK F.Cu, [104.85, 40.725] -> [104.5, 41.0]
+- 19fee20c-f24a-5570-9d2d-8ed9371d42bb: PCB_TRACK F.Cu, [105.1125, 40.2375] -> [105.0625, 40.5125]
+- 53e7b99f-308f-57ae-9e47-9e779e6b3272: PCB_TRACK B.Cu, [105.0, 37.775] -> [102.87, 38.495]
+- 7ffc8178-bb79-51de-b57d-c5c6afb0ad28: PCB_TRACK F.Cu, [105.0, 39.875] -> [105.0875, 40.05]
+- 872bfd37-a607-537a-a7fa-650d69bca58e: PCB_TRACK F.Cu, [105.0875, 40.05] -> [105.1125, 40.2375]
+- 9f355e92-2386-5d9a-b330-367e9a6d6370: PCB_TRACK F.Cu, [104.75, 39.625] -> [105.0, 39.875]
+- cbe6ef4b-6ae2-561c-89a1-59cf696150b8: PCB_TRACK F.Cu, [105.0625, 40.5125] -> [104.85, 40.725]
+- f9815195-95ae-5029-9575-af5b562417f2: PCB_TRACK B.Cu, [102.87, 38.495] -> [101.7375, 39.4375]
+- fba8f2b5-a5de-578b-a107-ce7c9d080fb6: PCB_TRACK F.Cu, [101.7375, 39.4375] -> [104.75, 39.625]
+
+PHYSICAL PROOF: Native KiCad9.0.2 material shapes, every board through-drill subtracted, exhaustive bounding-box-complete scans against every track, via, pad and filled zone, not only same-net/native-connectivity candidates. Every branch contact is internal to the declared ten-object branch except its single retained attachment to f578f80d. No branch object contacts a pad or any zone; via0826a4b6 has no inner-layer contacts and only the two branch tracks on F/B copper. The source corrected graph proves its intact plated annuli. All contact rows include area and contour count.
+Source-graph pruning of all ten objects preserves exactly all 14716 retained material vertices in 380 components, hence all complete retained pad partitions. No retired object is a pad; no incident guarded-contact failure. This is a topology proof, not a refill or electromagnetic proof.
+
+SCOPE HISTORY: A target-only interpretation was expanded first to four objects. Full physical tracing then showed that short-segment overlap cliques were not real supply/load forks. The complete ten-object pendant branch was identified before any candidate was built. No single-track or four-object candidate was created.
+
+AT THAT READ-ONLY STAGE: Candidate native DRC, all-plane area/contour loss, retained reference, raw primitive, fresh material export, net identity, ERC/parity and cold58 were NOT run because no candidate exists. Source baseline remains 9 opens/40 native warnings as supplied; inherited exact no-loss failure and 51 guarded-contact diagnostics remain unresolved. No PDN/SI/stability, production, or parasitic improvement claim. No install, credentials, external push, orders, flashing.
+
+EVIDENCE: qa/full-branch-trace.json and .log; qa/full-graph-prune.json and .log; scripts/full_inspect.py and full_graph_prune.py. Initial four-object proof and preliminary trace retained separately. initial-inspection-diagnostic.log records an initial read-only PCB_VIA.GetWidth-without-layer warning, fixed by excluding via from track description in final script; it is not a native DRC result.

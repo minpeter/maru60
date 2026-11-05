@@ -1,9 +1,9 @@
 # Current baseline and development candidate
 
-Strict geometry baseline remains experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro, commit bbf61e6, PCB04be04e5: 11 open pairs and51 warnings.
+Strict geometry baseline remains experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro, commit bbf61e6 / PCB04be04e5: 11 open pairs and 51 warnings.
 
-Latest qualified development prototype: experiments/resume-20261106-c136-label-prototype/pcb/maru60.kicad_pro, PCB2e532c1a: 9 open pairs and40 warnings. Only the C136 Reference field differs from ef45f84. Full raw reversal, fresh native/ERC/net/material and cold-refill validation pass. All copper, fill, masks, holes and component placements are exactly unchanged.
+Latest qualified development prototype: experiments/resume-20261106-3v3-branch-prototype/pcb/maru60.kicad_pro, PCB88fbac1d: 9 open pairs and 39 warnings. The complete unused +3V3 branch (nine tracks and one via) is removed. Independent fresh native/material and exact plane-boundary review passes. Every retained physical conductor remains exact; all GND plane changes are gains, with no loss exception. Complete pads/contacts/open pairs are preserved. See README.txt and DECISION.json.
 
-Prior prototypes ef45f84/9d787421 (9/42) and c782123/56d66f65 (10/50) remain preserved. This remains a qualified development checkpoint, NOT strict acceptance or manufacturing release. Inherited exact no-loss failure and51 guarded-contact proof failures are explicit. No active-power, SI/EMI, full firmware or hardware qualification. LED qualification stays OFF.
+Prior 97d9eb7 / PCB2e532c1a (9/40), ef45f84 / PCB9d787421 (9/42), and c782123 / PCB56d66f65 (10/50) remain preserved. This is not promotion to strict baseline or manufacturing release. The inherited earlier exact no-loss failure and 51 guarded-contact diagnostics remain. No active-power, SI/PDN, full firmware or hardware qualification. LED qualification stays OFF.
 
-Latest unselected experiments: header25 refactor and MCU D/E rejected; complete +4V_REG branch removal held for exact remote GND boundary loss despite native41 warnings; MCU F is an incomplete launch with additional intentional warning and disclosed plane changes. None is present in the selected CAD.
+Remaining wiring: three header pairs and six MCU pairs. New finite GPIO3 and U13 GPIO24 planning did not produce a complete route. Unselected/held copper experiments remain separately labeled. A new 64-corner datasheet-based static power envelope is included, with explicit test-condition and dynamic limits.
