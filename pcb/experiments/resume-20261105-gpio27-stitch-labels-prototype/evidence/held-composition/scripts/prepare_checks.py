@@ -1,0 +1,18 @@
+from pathlib import Path
+R=Path('/workspace/shared/maru60-resume');D=R/'continuation-c782/combined27';S=D/'scripts'
+# Reuse the exact native algorithms, changing source/candidate identities and
+# accounting for the four already-declared Reference-only property forms.
+s=(R/'continuation-c782/stitch/scripts/geometry.py').read_text().replace("D=R/'continuation-c782/stitch';S=R/'combined-trial/pcb'", "D=R/'continuation-c782/combined27';S=R/'continuation-c782/header/trial27/pcb'")
+s=s.replace("forms=lambda s:collections.Counter", "\ndef strip_refs(s):\n for oa,oz,fp in reversed(children(s)):\n  if head(fp)!='footprint':continue\n  prop=next(((a,z,t)for a,z,t in children(fp)if head(t)=='property'and any(t.startswith('(property \\\"Reference\\\" \\\"'+r+'\\\"')for r in ['U13','R135','R145','U11'])),None)\n  if prop:\n   a,z,t=prop;s=s[:oa+a]+s[oa+z:]\n return s\nforms=lambda s:collections.Counter")
+s=s.replace("in children(s)if head(t)!='zone'", "in children(strip_refs(s))if head(t)!='zone'").replace("'qa/build.json'", "'qa/BUILD.json'").replace("['via_uuid']", "['added_GND_stitch_uuid']").replace("R/'combined-trial/qa/drc.json'", "R/'continuation-c782/header/qa/drc.json'")
+(S/'geometry.py').write_text(s)
+s=(R/'continuation-c782/stitch/scripts/compare_graph.py').read_text().replace("continuation-c782/stitch", "continuation-c782/combined27").replace("combined-trial/qa/material-graph.json", "continuation-c782/header/qa/material-graph.json").replace("'qa/build.json'", "'qa/BUILD.json'").replace("['via_uuid']", "['added_GND_stitch_uuid']")
+s += '\nassert not lost_direct and not lost_zone\nfor key in ["guard_failing_material_edges","empty_material_layers","multiple_material_islands"]:\n if key in a: assert a[key]==b[key],key\n# Exact old contact areas, not just edge presence.\ndirect=lambda g:{(x,y,l):area for x,y,ls in g["direct_edges"] for l,area in ls}\nzone=lambda g:{(z,u):area for z,u,area in g["zone_edges"]}\nad,bd=direct(a),direct(b);az,bz=zone(a),zone(b)\nassert all(bd[k]==v for k,v in ad.items())\nassert all(bz[k]==v for k,v in az.items())\nr["all_old_direct_and_zone_contact_areas_exact"]=True\nr["all_old_material_nodes_exact"]=all(k in b["material_nodes"] and v==b["material_nodes"][k]for k,v in a["material_nodes"].items())\nassert r["all_old_material_nodes_exact"]\n(D/"qa/graph-comparison.json").write_text(json.dumps(r,indent=2)+"\\n")\n'
+(S/'compare_graph.py').write_text(s)
+s=(R/'continuation-c782/stitch/scripts/open_pairs.py').read_text().replace("continuation-c782/stitch/qa", "continuation-c782/combined27/qa").replace("combined-trial/qa", "continuation-c782/header/qa").replace('56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9','ad2fddcfa109ad2b21c27471eebc822408fd5a92a713cb393d523185e3c8a532').replace('22761b0f007cd9b113843c0074924fee02c3728e98f33d88fc90eb7cdc14ec9c','b1e3b41f868bebc2915264d1136e356a67b3b8896de3650068bd1c438aa62913').replace('==10','==9').replace('all10','all9')
+(S/'open_pairs.py').write_text(s)
+s=(R/'continuation-c782/warnings-next/scripts/cold.py').read_text().replace("continuation-c782/warnings-next", "continuation-c782/combined27").replace("S=D/'candidate/pcb'", "S=D/'pcb'")
+(S/'cold.py').write_text(s)
+s=(R/'continuation-c782/warnings-next/scripts/three_boundaries.py').read_text().replace("continuation-c782/warnings-next", "continuation-c782/combined27").replace('combined27/candidate/pcb','combined27/pcb').replace("['U11']","['U13','R135','R145','U11']").replace('one reference field','four reference fields')
+(S/'three_boundaries.py').write_text(s)
+(S/'native_ink.py').write_text((R/'continuation-c782/warnings/scripts/native_ink.py').read_text())

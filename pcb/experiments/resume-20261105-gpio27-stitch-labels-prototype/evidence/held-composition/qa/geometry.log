@@ -1,0 +1,209 @@
+03:24:49: Debug: Adding duplicate image handler for 'PNG file'
+03:24:49: Debug: Adding duplicate image handler for 'JPEG file'
+03:24:49: Debug: Adding duplicate image handler for 'TIFF file'
+03:24:49: Debug: Adding duplicate image handler for 'GIF file'
+03:24:49: Debug: Adding duplicate image handler for 'PNM file'
+03:24:49: Debug: Adding duplicate image handler for 'PCX file'
+03:24:49: Debug: Adding duplicate image handler for 'IFF file'
+03:24:49: Debug: Adding duplicate image handler for 'Windows icon file'
+03:24:49: Debug: Adding duplicate image handler for 'Windows cursor file'
+03:24:49: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+03:24:49: Debug: Adding duplicate image handler for 'TGA file'
+03:24:49: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "source_sha256": "ad2fddcfa109ad2b21c27471eebc822408fd5a92a713cb393d523185e3c8a532",
+  "candidate_sha256": "b1e3b41f868bebc2915264d1136e356a67b3b8896de3650068bd1c438aa62913",
+  "raw_scope": {
+    "removed": [],
+    "added": [
+      "(via (at 105.65 36.05) (size 0.5) (drill 0.25) (layers \"F.Cu\" \"B.Cu\") (net 83) (uuid \"efdf2c37-5653-4018-9cc8-dfb15999bb91\") )"
+    ],
+    "zone_configuration_equal": true,
+    "all57_companions_equal": true
+  },
+  "drc_added": [],
+  "drc_removed": [
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of U13",
+          "pos": {
+            "x": 90.0,
+            "y": 39.9
+          },
+          "uuid": "d5936da3-6a90-497b-8070-68fd872b012b"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of U11",
+          "pos": {
+            "x": 110.0,
+            "y": 32.8
+          },
+          "uuid": "b4d6de7b-9d6c-48fb-bb32-d6509af7050e"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of R145",
+          "pos": {
+            "x": 115.5,
+            "y": 38.07
+          },
+          "uuid": "d26c4db7-f00b-4e58-b1f3-9d04c6192d53"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of R135",
+          "pos": {
+            "x": 116.43,
+            "y": 37.0
+          },
+          "uuid": "1fead33a-4bad-4c1e-915a-4d237e8f12b1"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of U13",
+          "pos": {
+            "x": 90.0,
+            "y": 39.9
+          },
+          "uuid": "d5936da3-6a90-497b-8070-68fd872b012b"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of U11",
+          "pos": {
+            "x": 110.0,
+            "y": 32.8
+          },
+          "uuid": "b4d6de7b-9d6c-48fb-bb32-d6509af7050e"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of R145",
+          "pos": {
+            "x": 115.5,
+            "y": 38.07
+          },
+          "uuid": "d26c4db7-f00b-4e58-b1f3-9d04c6192d53"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Reference field of R135",
+          "pos": {
+            "x": 116.43,
+            "y": 37.0
+          },
+          "uuid": "1fead33a-4bad-4c1e-915a-4d237e8f12b1"
+        },
+        {
+          "description": "Reference field of R145",
+          "pos": {
+            "x": 115.5,
+            "y": 38.07
+          },
+          "uuid": "d26c4db7-f00b-4e58-b1f3-9d04c6192d53"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    }
+  ],
+  "open_records_equal": false,
+  "planes": [
+    {
+      "layer": "F.Cu",
+      "raw_loss_mm2": 0.0,
+      "raw_gain_mm2": 0.0,
+      "physical_loss_mm2": 0.0,
+      "physical_gain_mm2": 0.0,
+      "loss_outside_actual_new_drill_mm2": 0.0,
+      "loss_outside_contours_nm": [],
+      "old_signal_reference_losses": [],
+      "old_physical_components": 9,
+      "new_physical_components": 9
+    },
+    {
+      "layer": "In1.Cu",
+      "raw_loss_mm2": 0.0,
+      "raw_gain_mm2": 0.0,
+      "physical_loss_mm2": 0.049087681002,
+      "physical_gain_mm2": 0.0,
+      "loss_outside_actual_new_drill_mm2": 0.0,
+      "loss_outside_contours_nm": [],
+      "old_signal_reference_losses": [],
+      "old_physical_components": 1,
+      "new_physical_components": 1
+    },
+    {
+      "layer": "In2.Cu",
+      "raw_loss_mm2": 0.0,
+      "raw_gain_mm2": 0.0,
+      "physical_loss_mm2": 0.049087681002,
+      "physical_gain_mm2": 0.0,
+      "loss_outside_actual_new_drill_mm2": 0.0,
+      "loss_outside_contours_nm": [],
+      "old_signal_reference_losses": [],
+      "old_physical_components": 1,
+      "new_physical_components": 1
+    },
+    {
+      "layer": "B.Cu",
+      "raw_loss_mm2": 0.0,
+      "raw_gain_mm2": 0.0,
+      "physical_loss_mm2": 0.0,
+      "physical_gain_mm2": 0.0,
+      "loss_outside_actual_new_drill_mm2": 0.0,
+      "loss_outside_contours_nm": [],
+      "old_signal_reference_losses": [],
+      "old_physical_components": 2,
+      "new_physical_components": 2
+    }
+  ],
+  "nearest_GND_via_before_mm": 3.647687623687094,
+  "nearest_GND_via_after_mm": 1.4577379737113252,
+  "note": "No SI gain inferred from nearest-via distance. Strict prior prototype no-loss FAIL retained."
+}

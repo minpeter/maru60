@@ -1,3 +1,7 @@
+## Latest qualified development prototype, 2026-11-05
+
+The frozen GPIO27 + GND stitch + reference-label candidate has 9 open connection pairs and 42 warnings. Its independently caught GPIO26 departure-reference defect was corrected and all affected reference checks were rerun with explicit assertions. It is not strict geometric or fabrication acceptance: inherited exact no-loss differences and remaining electrical/model limits stay documented. Earlier strict and prototype checkpoints are preserved. See `pcb/CURRENT.md` and the candidate README.
+
 ## Latest development prototype, 2026-11-05
 
 The frozen GPIO24 + VBUS candidate has 10 open pairs and 50 warnings, with source-bound checks and a new simulation applicability crosswalk. It is NOT strict acceptance: exact plane inclusion fails by explicit sub-nanometre boundary changes. The independently checked 11-open/51-warning GPIO26 baseline remains preserved. See `pcb/CURRENT.md` and `pcb/experiments/resume-20261105-gpio24-vbus-prototype/README.txt`.

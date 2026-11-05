@@ -1,0 +1,1 @@
+This is an incomplete, unselected MCU_GPIO27 escape. PCB SHA256 ebf7bdb8556158df3f6c6c63ed985dec18a34ca709a6175d69efbde93389e634. It closes no pair and has four hard clearance errors. Read ../REPORT.md and ../FINAL.json. Material/reference continuity results do not override native DRC failures. Do not select, merge, fabricate or flash from this packet.

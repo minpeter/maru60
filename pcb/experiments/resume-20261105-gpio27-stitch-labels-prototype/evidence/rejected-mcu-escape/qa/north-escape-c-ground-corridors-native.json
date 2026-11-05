@@ -1,0 +1,52 @@
+{
+  "candidate_sha256": "ebf7bdb8556158df3f6c6c63ed985dec18a34ca709a6175d69efbde93389e634",
+  "method": "Each witness is a union of native outside-rounded1nm capsule polygons at the stated width, subtracted from the actual all-through-drill-cut GND plane. These are analytical witnesses wholly contained in existing copper, not added tracks. Endpoint annular contact also has positive overlap after2nm inward guards.",
+  "rows": [
+    {
+      "name": "MCU_GPIO27_B_reference",
+      "reference_plane": "In2.Cu",
+      "validated_corridor_width_mm": 0.15,
+      "corridor_area_mm2": 0.377671616444,
+      "native_material_outside_actual_plane_mm2": 0.0,
+      "target_GND_via_uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+      "native_positive_corridor_to_GND_annulus_mm2": 0.0095002569395,
+      "guarded_2nm_contact_mm2": 0.009499445789,
+      "pass": true
+    },
+    {
+      "name": "COL5_B_reference",
+      "reference_plane": "In2.Cu",
+      "validated_corridor_width_mm": 0.15,
+      "corridor_area_mm2": 0.3267600075005,
+      "native_material_outside_actual_plane_mm2": 0.0,
+      "target_GND_via_uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+      "native_positive_corridor_to_GND_annulus_mm2": 0.0095333385535,
+      "guarded_2nm_contact_mm2": 0.0095325400735,
+      "pass": true
+    },
+    {
+      "name": "COL5_In1_reference",
+      "reference_plane": "In2.Cu",
+      "validated_corridor_width_mm": 0.2,
+      "corridor_area_mm2": 0.5000483532895,
+      "native_material_outside_actual_plane_mm2": 0.0,
+      "target_GND_via_uuid": "be938d46-431d-4dbf-bb6e-742185b88b4f",
+      "native_positive_corridor_to_GND_annulus_mm2": 0.015125488405,
+      "guarded_2nm_contact_mm2": 0.0151245067115,
+      "pass": true
+    },
+    {
+      "name": "modified_1V1_F_reference",
+      "reference_plane": "In1.Cu",
+      "validated_corridor_width_mm": 0.2,
+      "corridor_area_mm2": 0.6817207601495,
+      "native_material_outside_actual_plane_mm2": 0.0,
+      "target_GND_via_uuid": "57331af9-9323-4e50-949c-123703e9d3d4",
+      "native_positive_corridor_to_GND_annulus_mm2": 0.0151384170505,
+      "guarded_2nm_contact_mm2": 0.015137420136,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "limits": "Existing-metal continuity witnesses only. No statement about actual HF current distribution, loop inductance, power stability, SI or EMC."
+}

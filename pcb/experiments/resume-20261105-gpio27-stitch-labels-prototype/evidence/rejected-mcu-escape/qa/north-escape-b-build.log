@@ -1,0 +1,217 @@
+{
+  "source_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "candidate_sha256": "c7d3bac1e8c77ee4e48f4d753ae3b9e982fa9572f7a1d78b143ac7518a33c4da",
+  "modified": [
+    {
+      "uuid": "f44d59d3-0c42-48c1-b89c-540ea6a07763",
+      "net": "COL5",
+      "layer": "F.Cu",
+      "old_start_end": [
+        [
+          112.35,
+          76.8
+        ],
+        [
+          112.35,
+          76.8
+        ]
+      ],
+      "new_start_end": [
+        [
+          112.175,
+          76.3
+        ],
+        [
+          112.175,
+          76.3
+        ]
+      ]
+    },
+    {
+      "uuid": "224e7239-5039-4cc7-b38b-ca258f485b01",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "old_start_end": [
+        [
+          112.6,
+          77.5
+        ],
+        [
+          112.35,
+          77.25
+        ]
+      ],
+      "new_start_end": [
+        [
+          112.6,
+          77.5
+        ],
+        [
+          112.695,
+          77.405
+        ]
+      ]
+    },
+    {
+      "uuid": "65c0b9cf-87fb-4ae5-a2e0-e11b853cd699",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "old_start_end": [
+        [
+          112.35,
+          77.25
+        ],
+        [
+          112.35,
+          76.8
+        ]
+      ],
+      "new_start_end": [
+        [
+          112.695,
+          77.405
+        ],
+        [
+          112.695,
+          76.6
+        ]
+      ]
+    },
+    {
+      "uuid": "d94e477a-28ae-41a9-bdea-441b16be174c",
+      "net": "COL5",
+      "layer": "In1.Cu",
+      "old_start_end": [
+        [
+          112.35,
+          76.8
+        ],
+        [
+          112.35,
+          73.65
+        ]
+      ],
+      "new_start_end": [
+        [
+          112.35,
+          76.3
+        ],
+        [
+          112.35,
+          73.65
+        ]
+      ]
+    },
+    {
+      "uuid": "14d35ed0-d9e6-45a6-a698-4e8b482aba5f",
+      "net": "+1V1",
+      "layer": "F.Cu",
+      "old_start_end": [
+        [
+          111.4,
+          75.7
+        ],
+        [
+          111.4,
+          79.3505
+        ]
+      ],
+      "new_start_end": [
+        [
+          111.35,
+          75.75
+        ],
+        [
+          111.35,
+          79.3005
+        ]
+      ],
+      "retained_width_mm": 0.6
+    }
+  ],
+  "added": [
+    {
+      "uuid": "82c1e32c-6d48-4cd7-aef5-08182b26ee82",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "start_mm": [
+        112.695,
+        76.6
+      ],
+      "end_mm": [
+        112.175,
+        76.3
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "uuid": "f740ca53-eede-4a3c-a03e-b8da4492e86c",
+      "net": "COL5",
+      "layer": "In1.Cu",
+      "start_mm": [
+        112.175,
+        76.3
+      ],
+      "end_mm": [
+        112.35,
+        76.3
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "uuid": "3b5bc829-ecfe-4fcb-bdb9-686de87623ce",
+      "net": "MCU_GPIO27",
+      "layer": "B.Cu",
+      "start_mm": [
+        112.2,
+        78.05
+      ],
+      "end_mm": [
+        112.16,
+        77.0
+      ],
+      "width_mm": 0.15
+    },
+    {
+      "uuid": "1bd3d5fa-7752-4eb0-8cdb-a2009455bb78",
+      "net": "MCU_GPIO27",
+      "type": "through_via",
+      "pos_mm": [
+        112.16,
+        77.0
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.25
+    },
+    {
+      "uuid": "7cde734f-0b13-4d30-a7c8-1d450d58fbb6",
+      "net": "+1V1",
+      "layer": "F.Cu",
+      "start_mm": [
+        111.4,
+        75.7
+      ],
+      "end_mm": [
+        111.35,
+        75.75
+      ],
+      "width_mm": 0.6
+    },
+    {
+      "uuid": "0db77525-5820-478c-96dd-16ca8371f4d8",
+      "net": "+1V1",
+      "layer": "F.Cu",
+      "start_mm": [
+        111.35,
+        79.3005
+      ],
+      "end_mm": [
+        111.4,
+        79.3505
+      ],
+      "width_mm": 0.6
+    }
+  ],
+  "scope": "Unselected partial MCU_GPIO27 escape; targeted correction relocates the middle of one +1V1 F.Cu rail by0.05mm while preserving0.6mm width and both original endpoints, and pulls the new COL5 B diagonal north0.1mm. No complete MCU closure.",
+  "predecessor_sha256": "30aa174b1083c0b166daafaa831a7dd8986a0852b94eb18b69aba82c1d25533c"
+}

@@ -1,0 +1,42 @@
+{
+  "candidate_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "source_sensitivity_board_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "all_four_named_capacitors_values_and_pins_unchanged": true,
+  "components": [
+    {
+      "reference": "C100",
+      "value": "4.7uF 50V X7R 10%",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    },
+    {
+      "reference": "C120",
+      "value": "1u",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    },
+    {
+      "reference": "C140",
+      "value": "22uF 10V effective>=12uF TBD",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    },
+    {
+      "reference": "C141",
+      "value": "22uF 10V effective>=12uF TBD",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    }
+  ],
+  "basis_nominal_uF": 49.7,
+  "meaning": "The same verified nameplate basis applies to this candidate; the synthetic 18-case sensitivity does not become an active or extracted current-board simulation.",
+  "effective_values_known": false
+}

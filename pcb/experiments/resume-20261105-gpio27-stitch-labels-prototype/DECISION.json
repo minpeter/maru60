@@ -1,0 +1,97 @@
+{
+  "status": "FROZEN_QUALIFIED_DEVELOPMENT_PROTOTYPE_NOT_STRICT_ACCEPTANCE_OR_FABRICATION",
+  "candidate": {
+    "pcb_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+    "open_pairs": 9,
+    "warnings": 42,
+    "other_DRC_errors": 0,
+    "ERC": 0,
+    "schematic_parity": 0,
+    "raw_conductive_objects": 12135,
+    "electrical_pin_bindings": 1064,
+    "cold_refill_identical_files": 58,
+    "tracks": 9773,
+    "vias": 923,
+    "footprints": 383,
+    "track_length_mm": 13210.809199693245
+  },
+  "strict_baseline_preserved": {
+    "commit": "bbf61e6ae1bb54d31d7fa2b353fd19ca1410275a",
+    "pcb_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+    "open_pairs": 11,
+    "warnings": 51
+  },
+  "previous_prototype_preserved": {
+    "commit": "c78212367e3f86a530503ba9616f527ec5d44d96",
+    "pcb_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+    "open_pairs": 10,
+    "warnings": 50
+  },
+  "additional_closed_pair": "EXT_GPIO27: J3.9 to existing U11.13/U13.8 component",
+  "remaining_pairs": {
+    "header": 3,
+    "MCU": 6
+  },
+  "GND_stitch": {
+    "xy_mm": [
+      105.65,
+      36.05
+    ],
+    "diameter_drill_mm": [
+      0.5,
+      0.25
+    ],
+    "both_inner_planes_rooted_to_247_GND_pads": true,
+    "nearest_GPIO24_transition_GND_via_mm": 1.4577379737113252,
+    "prior_distance_mm": 3.647687623687094,
+    "SI_qualification": false
+  },
+  "labels": [
+    "U13",
+    "U11",
+    "R135",
+    "R145"
+  ],
+  "full_board_return_gate": {
+    "independent_fresh_rerun": true,
+    "new_tracks_checked": 15,
+    "retained_affected_tracks_checked": 137,
+    "all_new_outside_own_window_area_and_contours_zero": true,
+    "no_undeclared_old_signal_projection_loss": true,
+    "both_inner_planes_one_component": true,
+    "transition_windows_enlarged": false
+  },
+  "held_source_exception": {
+    "held_pcb_sha256": "b1e3b41f868bebc2915264d1136e356a67b3b8896de3650068bd1c438aa62913",
+    "newly_unsupported_area_mm2": 0.0003496908615,
+    "resolved_in_candidate": true,
+    "correction": "Restore original collinear GPIO26 departure with one split and extra0.15mm segment; original source-via patch exactly restored."
+  },
+  "strict_exact_no_loss": "FAIL inherited from c782; unchanged old geometry/contact identity also not claimed for declared refactors",
+  "inherited_guarded_contact_proof_failures": 51,
+  "power": {
+    "new_synthetic_passive_cases": 18,
+    "all_finite_and_analytically_checked": true,
+    "nominal_direct_4V_REG_uF": 49.7,
+    "effective_capacitance_known": false,
+    "active_model_qualification": false,
+    "full_current_board_active_models_passed": 0,
+    "independent_replay_all18_identical": true,
+    "independent_max_all_sample_analytic_error_uV": 1.006039,
+    "source_deck_board_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+    "final_four_capacitor_nameplate_and_pin_inventory_independently_identical": true
+  },
+  "rejected_MCU_C": {
+    "pcb_sha256": "ebf7bdb8556158df3f6c6c63ed985dec18a34ca709a6175d69efbde93389e634",
+    "clearance_errors": 4,
+    "pairs_closed": 0,
+    "included_in_candidate": false
+  },
+  "limitations": [
+    "Nine physical opens and42 native warnings remain.",
+    "Inherited exact no-loss failure, declared changed contact patches and51 guarded-contact proof failures remain explicit.",
+    "No SI/EMI, active-power startup/fault/brownout/pulse, thermal, fabrication or hardware qualification.",
+    "No full ARM/QMK build; LED qualification remains OFF.",
+    "No public push, purchase, manufacturing order or flashing."
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "status": "REJECTED_PARTIAL_ESCAPE_NO_PAIR_CLOSED_PAUSED",
+  "source_pcb": "/workspace/shared/maru60-resume/continuation-c782/mcu/source/pcb/maru60.kicad_pcb",
+  "source_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "frozen_candidate_pcb": "/workspace/shared/maru60-resume/continuation-c782/mcu/frozen-C/pcb/maru60.kicad_pcb",
+  "candidate_sha256": "ebf7bdb8556158df3f6c6c63ed985dec18a34ca709a6175d69efbde93389e634",
+  "native_open_pairs": 10,
+  "native_warnings": 51,
+  "native_hard_errors": 4,
+  "hard_error_details": [
+    {
+      "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1050 mm)",
+      "items": [
+        {
+          "description": "Track [+1V1] on F.Cu, length 3.4105 mm",
+          "pos": {
+            "x": 111.28,
+            "y": 75.82
+          },
+          "uuid": "14d35ed0-d9e6-45a6-a698-4e8b482aba5f"
+        },
+        {
+          "description": "Track [LED_FAULT_N] on F.Cu, length 0.5000 mm",
+          "pos": {
+            "x": 110.8,
+            "y": 75.45
+          },
+          "uuid": "b995c2c7-f443-497b-bb80-da0d3312d10d"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1050 mm)",
+      "items": [
+        {
+          "description": "Track [+1V1] on F.Cu, length 0.1697 mm",
+          "pos": {
+            "x": 111.4,
+            "y": 75.7
+          },
+          "uuid": "7cde734f-0b13-4d30-a7c8-1d450d58fbb6"
+        },
+        {
+          "description": "Track [LED_FAULT_N] on F.Cu, length 0.5000 mm",
+          "pos": {
+            "x": 110.8,
+            "y": 75.45
+          },
+          "uuid": "b995c2c7-f443-497b-bb80-da0d3312d10d"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1050 mm)",
+      "items": [
+        {
+          "description": "Track [+1V1] on F.Cu, length 3.4105 mm",
+          "pos": {
+            "x": 111.28,
+            "y": 75.82
+          },
+          "uuid": "14d35ed0-d9e6-45a6-a698-4e8b482aba5f"
+        },
+        {
+          "description": "Track [LED_FAULT_N] on F.Cu, length 0.1414 mm",
+          "pos": {
+            "x": 110.8,
+            "y": 75.95
+          },
+          "uuid": "f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1223 mm)",
+      "items": [
+        {
+          "description": "Track [+1V1] on F.Cu, length 0.1697 mm",
+          "pos": {
+            "x": 111.4,
+            "y": 75.7
+          },
+          "uuid": "7cde734f-0b13-4d30-a7c8-1d450d58fbb6"
+        },
+        {
+          "description": "Track [LED_FAULT_N] on F.Cu, length 0.1414 mm",
+          "pos": {
+            "x": 110.8,
+            "y": 75.95
+          },
+          "uuid": "f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  ],
+  "parity": 0,
+  "fresh_ERC": 0,
+  "raw_native_net_identity_pass": true,
+  "all58_cold_files_exact": true,
+  "all58_frozen_files_exact": true,
+  "all_named_pad_partitions_exact": true,
+  "unrelated_contact_changes": 0,
+  "GND_pads_preserved": true,
+  "power_pad_bindings": 10,
+  "new_modified_adjacent_reference_uncovered_outside_transitions_mm2": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "real_plane_web_changes_retained": true,
+  "independent_review": "Not performed on C; not requested as an acceptable route because native DRC fails.",
+  "no_full_route_found_in_finite_window": true,
+  "source_unchanged": true,
+  "source_and_newer_parent_branches_not_merged": true,
+  "report": "/workspace/shared/maru60-resume/continuation-c782/mcu/REPORT.md",
+  "limits": [
+    "No pair closed",
+    "No SI/EMI or active power stability pass",
+    "No hardware/manufacturing qualification",
+    "Future composition must start from the new frozen parent base and recheck fill"
+  ],
+  "metrics": {
+    "tracks": 9763,
+    "vias": 922,
+    "footprints": 383,
+    "track_length_mm": 13204.538596839022
+  }
+}

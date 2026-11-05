@@ -1,0 +1,12 @@
+Synthetic charge-balance sensitivity; NOT active/current-board stability
+* Source PCB SHA256 56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9
+* Verified directly connected nominal capacitance: C100+C120+C140+C141 = 49.7uF
+* ASSUMED effective fraction 1; neither measured value nor confidence bound
+* ASSUMED initial capacitor voltage4V, aggregate ESR0.02ohm, fixed regulator current
+* ASSUMED load delta0.2A,10ns ramp, no regulator response for50us
+Ireg 0 out 0.1
+Iload out 0 PWL(0 0.1 5u 0.1 5.01u 0.3)
+RESR out cnode 0.02
+Cout cnode 0 49.7u IC=4
+.tran .05u 55u 0 .05u UIC
+.end

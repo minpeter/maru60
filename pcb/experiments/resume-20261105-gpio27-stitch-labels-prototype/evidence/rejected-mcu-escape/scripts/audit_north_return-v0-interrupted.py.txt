@@ -1,0 +1,43 @@
+import pcbnew as p,json,hashlib
+from pathlib import Path
+R=Path('/workspace/shared/maru60-resume/continuation-c782/mcu');S=R/'source/pcb/maru60.kicad_pcb';B=R/'north-escape/pcb/maru60.kicad_pcb';build=json.load(open(R/'qa/north-escape-build.json'));changed={x['uuid'] for x in build['modified']};added={x['uuid'] for x in build['added']};uid=lambda q:q.m_Uuid.AsString();h=lambda f:hashlib.sha256(f.read_bytes()).hexdigest()
+def poly(sh,out=False):
+ z=p.SHAPE_POLY_SET();sh.TransformToPolygon(z,1,p.ERROR_OUTSIDE if out else p.ERROR_INSIDE);z.Simplify();return z
+def delta(a,b):z=p.SHAPE_POLY_SET(a);z.BooleanSubtract(b);return z
+def inter(a,b):z=p.SHAPE_POLY_SET();z.BooleanIntersection(a,b);return z
+def capture(path,shadows=False):
+ b=p.LoadBoard(str(path));items=list(b.GetTracks())+[q for f in b.GetFootprints() for q in f.Pads()];holes=p.SHAPE_POLY_SET()
+ for q in items:
+  if isinstance(q,(p.PAD,p.PCB_VIA)) and q.HasHole():holes.Append(poly(q.GetEffectiveHoleShape(),True))
+ holes.Simplify();planes={};shapes=[]
+ for z in b.Zones():
+  if z.GetIsRuleArea() or z.GetNetname()!='GND':continue
+  for l in [p.In1_Cu,p.In2_Cu]:
+   if z.IsOnLayer(l):planes[l]=delta(z.GetFilledPolysList(l),holes)
+ if shadows:
+  for q in items:
+   if q.GetNetname() in ('','GND'):continue
+   for l in [p.F_Cu,p.B_Cu,p.In1_Cu,p.In2_Cu]:
+    if not q.IsOnLayer(l):continue
+    sh=poly(p.SHAPE_CIRCLE(q.GetPosition(),q.GetWidth(l)//2) if isinstance(q,p.PCB_VIA) else q.GetEffectiveShape(l),True);sh.BooleanSubtract(holes);shapes.append((uid(q),q.GetNetname(),b.GetLayerName(l),sh))
+ return b,planes,shapes,holes
+base,old,oldsh,oh=capture(S,True);b,new,newsh,nh=capture(B,False);env=p.SHAPE_POLY_SET()
+for xy in [(112.175,76.3),(112.16,77.0)]:env.Append(poly(p.SHAPE_CIRCLE(p.VECTOR2I(round(xy[0]*1e6),round(xy[1]*1e6)),455000),True))
+env.Simplify();plane_rows=[]
+for l in old:
+ loss=delta(old[l],new[l]);gain=delta(new[l],old[l]);outside=delta(loss,env);imp=[];changedimp=[]
+ for u,n,sl,sh in oldsh:
+  if loss.BBox().Intersects(sh.BBox()):
+   ar=inter(loss,sh).Area()/1e12
+   if ar>0:
+    row={'uuid':u,'net':n,'source_layer':sl,'nearest_plane':(sl=='F.Cu' and l==p.In1_Cu) or (sl in ['B.Cu','In1.Cu'] and l==p.In2_Cu),'lost_reference_area_mm2':ar};(changedimp if u in changed else imp).append(row)
+ plane_rows.append({'plane':b.GetLayerName(l),'lost_mm2':loss.Area()/1e12,'gain_mm2':gain.Area()/1e12,'loss_outside_declared_0p455mm_transition_envelopes_mm2':outside.Area()/1e12,'retained_old_signal_shadow_losses':imp,'retired_or_modified_COL5_shadow_losses':changedimp,'old_components':old[l].OutlineCount(),'new_components':new[l].OutlineCount()})
+newrefs=[]
+for q in b.GetTracks():
+ if uid(q) not in changed|added or isinstance(q,p.PCB_VIA):continue
+ l=q.GetLayer();ref=p.In1_Cu if l==p.F_Cu else p.In2_Cu;sh=delta(poly(q.GetEffectiveShape(l),True),nh);un=delta(sh,new[ref]);ownenv=p.SHAPE_POLY_SET()
+ for v in b.GetTracks():
+  if isinstance(v,p.PCB_VIA) and v.GetNetname()==q.GetNetname():ownenv.Append(poly(p.SHAPE_CIRCLE(v.GetPosition(),455000),True))
+ ownenv.Simplify();outside=delta(un,ownenv)
+ newrefs.append({'uuid':uid(q),'net':q.GetNetname(),'layer':b.GetLayerName(l),'reference_plane':b.GetLayerName(ref),'uncovered_mm2':un.Area()/1e12,'uncovered_outside_own_net_transition_envelopes_mm2':outside.Area()/1e12})
+r={'source_sha256':h(S),'candidate_sha256':h(B),'planes':plane_rows,'new_modified_track_reference':newrefs,'all_holes_subtracted':True,'all_source_signal_shadows_checked':len(oldsh),'no_Unfracture':True,'limits':'Exact native nominal geometry; not SI or hardware. Modified COL5 source geometry is declared rather than treated as immutable. Raw tiny losses are retained without tolerance waiver.'};(R/'qa/north-escape-return.json').write_text(json.dumps(r,indent=2));print(json.dumps(r,indent=2))
