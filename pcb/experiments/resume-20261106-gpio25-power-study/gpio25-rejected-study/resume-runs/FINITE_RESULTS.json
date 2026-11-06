@@ -1,0 +1,1130 @@
+{
+  "cases": [
+    {
+      "case": "j0-b0",
+      "via_sites_mm": [
+        [
+          93.6,
+          39.9
+        ],
+        [
+          97.9,
+          40.925
+        ]
+      ],
+      "native": {
+        "opens": 8,
+        "violations": 38,
+        "identical_38_warnings": true,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_rejection_witnesses": [
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "122557567301681/8"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "61238597107922/9"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "21342846805201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "70162850959961/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "122557567301681/8"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "61238597107922/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "21342846805201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "70162850959961/9"
+        }
+      ],
+      "exact_foreign_reference_rejection": [
+        {
+          "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+          "net": "COL14",
+          "layer": "F.Cu",
+          "reference": "In1.Cu",
+          "native_loss_area_nm2": 13776649889.0,
+          "native_loss_contours": 1,
+          "point_nm": [
+            "1276607784/13",
+            "535997586/13"
+          ],
+          "source_copper": true,
+          "candidate_copper": false,
+          "boundary": false,
+          "retained_trace_interior": true,
+          "inside_any_drill": false
+        }
+      ],
+      "foreign_scan_stopped_after_counterexample": true,
+      "candidate_sha256": "8e7acfc8edd213d116032339f280e4563500b8261df91d0d709f94db99758b87",
+      "acceptance": false
+    },
+    {
+      "case": "j0-b1",
+      "via_sites_mm": [
+        [
+          93.6,
+          39.9
+        ],
+        [
+          98.075,
+          40.7
+        ]
+      ],
+      "native": {
+        "opens": 8,
+        "violations": 38,
+        "identical_38_warnings": true,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_rejection_witnesses": [
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "89854577",
+            "164001005/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "243819940192889/16"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "61238597107922/9"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "18753434105201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "70162850959961/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "89854577",
+            "164001005/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "243819940192889/16"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "61238597107922/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "18753434105201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "70162850959961/9"
+        }
+      ],
+      "exact_foreign_reference_rejection": [
+        {
+          "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+          "net": "COL14",
+          "layer": "F.Cu",
+          "reference": "In1.Cu",
+          "native_loss_area_nm2": 2139918074.5,
+          "native_loss_contours": 1,
+          "point_nm": [
+            "688696312/7",
+            "287150908/7"
+          ],
+          "source_copper": true,
+          "candidate_copper": false,
+          "boundary": false,
+          "retained_trace_interior": true,
+          "inside_any_drill": false
+        }
+      ],
+      "foreign_scan_stopped_after_counterexample": true,
+      "candidate_sha256": "23a2f54af245009be20d16316633f28e4453114daba758f82b238ed2b1aa8b00",
+      "acceptance": false
+    },
+    {
+      "case": "j0-b2",
+      "via_sites_mm": [
+        [
+          93.6,
+          39.9
+        ],
+        [
+          98.275,
+          40.55
+        ]
+      ],
+      "native": {
+        "opens": 8,
+        "violations": 38,
+        "identical_38_warnings": true,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_rejection_witnesses": [
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "122557567301681/8"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "61238597107922/9"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "17404110805201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "70162850959961/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "122557567301681/8"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "61238597107922/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "17404110805201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "70162850959961/9"
+        }
+      ],
+      "exact_foreign_reference_rejection": [
+        {
+          "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+          "net": "COL14",
+          "layer": "F.Cu",
+          "reference": "In1.Cu",
+          "native_loss_area_nm2": 13776664812.5,
+          "native_loss_contours": 1,
+          "point_nm": [
+            "1281482909/13",
+            "531122370/13"
+          ],
+          "source_copper": true,
+          "candidate_copper": false,
+          "boundary": false,
+          "retained_trace_interior": true,
+          "inside_any_drill": false
+        }
+      ],
+      "foreign_scan_stopped_after_counterexample": true,
+      "candidate_sha256": "d8c16788fff95a4755356d0b16336457a7429cdf8ff3e63a3cc5a55eb0cb70f6",
+      "acceptance": false
+    },
+    {
+      "case": "j1-b0",
+      "via_sites_mm": [
+        [
+          93.825,
+          40.05
+        ],
+        [
+          97.9,
+          40.925
+        ]
+      ],
+      "native": {
+        "opens": 8,
+        "violations": 38,
+        "identical_38_warnings": true,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_rejection_witnesses": [
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "133981508801681/8"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "74081189857922/9"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "21342846805201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "82163523859961/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "133981508801681/8"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "74081189857922/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "21342846805201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "82163523859961/9"
+        }
+      ],
+      "exact_foreign_reference_rejection": [
+        {
+          "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+          "net": "COL14",
+          "layer": "F.Cu",
+          "reference": "In1.Cu",
+          "native_loss_area_nm2": 13776649889.0,
+          "native_loss_contours": 1,
+          "point_nm": [
+            "1276607784/13",
+            "535997586/13"
+          ],
+          "source_copper": true,
+          "candidate_copper": false,
+          "boundary": false,
+          "retained_trace_interior": true,
+          "inside_any_drill": false
+        }
+      ],
+      "foreign_scan_stopped_after_counterexample": true,
+      "candidate_sha256": "4ff87d1070d0256c084e7ba867b06e26676de5679dc5d482eb1ec564ae028a7a",
+      "acceptance": false
+    },
+    {
+      "case": "j1-b1",
+      "via_sites_mm": [
+        [
+          93.825,
+          40.05
+        ],
+        [
+          98.075,
+          40.7
+        ]
+      ],
+      "native": {
+        "opens": 8,
+        "violations": 38,
+        "identical_38_warnings": true,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_rejection_witnesses": [
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "89854577",
+            "164001005/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "266675779792889/16"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "74081189857922/9"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "18753434105201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "82163523859961/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "89854577",
+            "164001005/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "266675779792889/16"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "74081189857922/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "18753434105201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "82163523859961/9"
+        }
+      ],
+      "exact_foreign_reference_rejection": [
+        {
+          "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+          "net": "COL14",
+          "layer": "F.Cu",
+          "reference": "In1.Cu",
+          "native_loss_area_nm2": 2139918074.5,
+          "native_loss_contours": 1,
+          "point_nm": [
+            "688696312/7",
+            "287150908/7"
+          ],
+          "source_copper": true,
+          "candidate_copper": false,
+          "boundary": false,
+          "retained_trace_interior": true,
+          "inside_any_drill": false
+        }
+      ],
+      "foreign_scan_stopped_after_counterexample": true,
+      "candidate_sha256": "7644273e05d30bef340ae609f8dbba52ad02c3bd99836048bc329d6ef12c58e6",
+      "acceptance": false
+    },
+    {
+      "case": "j1-b2",
+      "via_sites_mm": [
+        [
+          93.825,
+          40.05
+        ],
+        [
+          98.275,
+          40.55
+        ]
+      ],
+      "native": {
+        "opens": 8,
+        "violations": 38,
+        "identical_38_warnings": true,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_rejection_witnesses": [
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "133981508801681/8"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "74081189857922/9"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "17404110805201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "82163523859961/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "133981508801681/8"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "74081189857922/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "17404110805201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "82163523859961/9"
+        }
+      ],
+      "exact_foreign_reference_rejection": [
+        {
+          "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+          "net": "COL14",
+          "layer": "F.Cu",
+          "reference": "In1.Cu",
+          "native_loss_area_nm2": 13776664812.5,
+          "native_loss_contours": 1,
+          "point_nm": [
+            "1281482909/13",
+            "531122370/13"
+          ],
+          "source_copper": true,
+          "candidate_copper": false,
+          "boundary": false,
+          "retained_trace_interior": true,
+          "inside_any_drill": false
+        }
+      ],
+      "foreign_scan_stopped_after_counterexample": true,
+      "candidate_sha256": "3ff6122fc3ccdd8092d212ad164f03eb36f67147517f9ba97fb1f70f86d35983",
+      "acceptance": false
+    },
+    {
+      "case": "j2-b0",
+      "via_sites_mm": [
+        [
+          93.925,
+          40.3
+        ],
+        [
+          97.9,
+          40.925
+        ]
+      ],
+      "native": {
+        "opens": 8,
+        "violations": 38,
+        "identical_38_warnings": true,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_rejection_witnesses": [
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "137075115401681/8"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "87825399757922/9"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "21342846805201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "97425982759961/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "137075115401681/8"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "87825399757922/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "21342846805201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "97425982759961/9"
+        }
+      ],
+      "exact_foreign_reference_rejection": [
+        {
+          "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+          "net": "COL14",
+          "layer": "F.Cu",
+          "reference": "In1.Cu",
+          "native_loss_area_nm2": 13776649889.0,
+          "native_loss_contours": 1,
+          "point_nm": [
+            "1276607784/13",
+            "535997586/13"
+          ],
+          "source_copper": true,
+          "candidate_copper": false,
+          "boundary": false,
+          "retained_trace_interior": true,
+          "inside_any_drill": false
+        }
+      ],
+      "foreign_scan_stopped_after_counterexample": true,
+      "candidate_sha256": "dea0ada209d5442633e49b86fc3cea3a241151522e7402b74196e90cb882d40a",
+      "acceptance": false
+    },
+    {
+      "case": "j2-b1",
+      "via_sites_mm": [
+        [
+          93.925,
+          40.3
+        ],
+        [
+          98.075,
+          40.7
+        ]
+      ],
+      "native": {
+        "opens": 8,
+        "violations": 38,
+        "identical_38_warnings": true,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_rejection_witnesses": [
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "89854577",
+            "164001005/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "272939123392889/16"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "87825399757922/9"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "18753434105201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "97425982759961/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "89854577",
+            "164001005/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "272939123392889/16"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "87825399757922/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "18753434105201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "97425982759961/9"
+        }
+      ],
+      "exact_foreign_reference_rejection": [
+        {
+          "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+          "net": "COL14",
+          "layer": "F.Cu",
+          "reference": "In1.Cu",
+          "native_loss_area_nm2": 2139918074.5,
+          "native_loss_contours": 1,
+          "point_nm": [
+            "688696312/7",
+            "287150908/7"
+          ],
+          "source_copper": true,
+          "candidate_copper": false,
+          "boundary": false,
+          "retained_trace_interior": true,
+          "inside_any_drill": false
+        }
+      ],
+      "foreign_scan_stopped_after_counterexample": true,
+      "candidate_sha256": "e44e1dab464aa79de2d6fa602a442c8f6286d3563e59f6ef2ebd43110e02d499",
+      "acceptance": false
+    },
+    {
+      "case": "j2-b2",
+      "via_sites_mm": [
+        [
+          93.925,
+          40.3
+        ],
+        [
+          98.275,
+          40.55
+        ]
+      ],
+      "native": {
+        "opens": 8,
+        "violations": 38,
+        "identical_38_warnings": true,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_rejection_witnesses": [
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "137075115401681/8"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "87825399757922/9"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "17404110805201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In1.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "97425982759961/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "359389731/4",
+            "164050501/4"
+          ],
+          "min_changed_via_distance_squared_nm2": "137075115401681/8"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "275772281/3",
+            "113703281/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "87825399757922/9"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "195288289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "17404110805201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "206488289/2",
+            "75336641/2"
+          ],
+          "min_changed_via_distance_squared_nm2": "12103534005201/2"
+        },
+        {
+          "layer": "In2.Cu",
+          "point_nm": [
+            "277542856/3",
+            "111982885/3"
+          ],
+          "min_changed_via_distance_squared_nm2": "97425982759961/9"
+        }
+      ],
+      "exact_foreign_reference_rejection": [
+        {
+          "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+          "net": "COL14",
+          "layer": "F.Cu",
+          "reference": "In1.Cu",
+          "native_loss_area_nm2": 13776664812.5,
+          "native_loss_contours": 1,
+          "point_nm": [
+            "1281482909/13",
+            "531122370/13"
+          ],
+          "source_copper": true,
+          "candidate_copper": false,
+          "boundary": false,
+          "retained_trace_interior": true,
+          "inside_any_drill": false
+        }
+      ],
+      "foreign_scan_stopped_after_counterexample": true,
+      "candidate_sha256": "cadbc4b068abd62087c33a712e1bc91c55b7899a3c4dcbeb8a510e49140cf4b5",
+      "acceptance": false
+    }
+  ],
+  "original_85_files_unchanged": true,
+  "source_sha256": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5",
+  "scope": "Finite nine frozen pairs only; no global impossibility or SI/production claim.",
+  "not_run": [
+    "full local native antipad attribution",
+    "complete all-track area/contour acceptance scan",
+    "semantic pad-component merge and retained contact acceptance",
+    "cold58",
+    "ERC/net-identity acceptance"
+  ]
+}

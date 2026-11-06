@@ -1,0 +1,1628 @@
+{
+  "outcome": "QUALIFICATION_GAPS_NOT_HARDWARE_FAILURE",
+  "native_version": "9.0.2",
+  "checks": {
+    "pcb_hash": "PASS",
+    "fresh_export_source": "PASS",
+    "previous_export_connectivity_parity": "PASS",
+    "selected_component_value_and_all_native_pad_parity": "PASS",
+    "fault_observability_topology": "PASS",
+    "default_LED_qualification_OFF": "PASS"
+  },
+  "components_checked": 36,
+  "native_pins_checked": 181,
+  "source_hashes": {
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/maru60-core.kicad_sch": "f0183190e194e30ec8e5b07a34bfc277fb2f95558511bba3676c3ea58a10dbe9",
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/maru60-expansion.kicad_sch": "926f3ffa7423b76596cc6fcebfec065eb8f73d91d840a9b0fd37a4b6e8baf88d",
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/maru60-lighting.kicad_sch": "dd10fd66b1a2b119b91194d436983732d042cf0949c92d4497479f4ca009bb10",
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/maru60-matrix.kicad_sch": "a87a278408050f59df0912afaaf9f476f1648f828b7744b2f734ca3b62862f90",
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/maru60.kicad_sch": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51",
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/protection-gpio-isolation.kicad_sch": "2ee16d2ad54943123666eaf35512592908e21d52ff4672760c5298e52e55f38e",
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/protection-input-protection.kicad_sch": "ead85b4d9213b619fba8745710f5f97a6d30ee28c5d857c063206e5b306f0125",
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/protection-supply-context.kicad_sch": "b593e119667214a2d732eca470272e23f97190c7c630856bd7fa7fadc6875f15",
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/protection-v6-regulated-domain.kicad_sch": "8cbd2694194d8ea807a86983cb821b585131a63467b30d915ba1517af10694cc",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/config.h": "3923a07e7329edf1bc8f78067b56c8a093dd3f223bba0bc89ed652198bf2235d",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/keyboard.json": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/led_config.c": "e0845ffafa16aab35e58fdfe1bb1df97b56a18f2b63f9d2565b89e2fe0206291",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru60.c": "14ff9750932b512bca6d794398bef2a3dfe940da9a29e30346e4e5151d660036",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_key_transport.c": "063d101e0c98e10fbf34ad3e2b10bf98962e58cfa160a7f97515bb8d8854c4c6",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_layout.c": "e40b7484c8ef7821fa6b6033bcd353ecd9c1e66010a4b851467ea827c686dbc4",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_layout_policy.h": "5311a1bef83dab42db1c6a0ce6897570cfbfe19a3c029b6bf2b1911ebe9254a9",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_led_counts.h": "9f3f8775c3a775e6c973dc10b0c0694a42d8ba4d3ea49d37f588992d450f3b6b",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_report_sync.c": "5a01ae6b906eeaed2b3ce8b056c913d9419032e4cbf377aa01dd98ccaaaf53f1",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_report_sync.h": "6f87ef8a8c082b5ae9e57b797bce753eace04c46901810cdb7a9eccffb0dec53",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c": "dcb1acc86789b2a8f919769671dea8c5e2042fb20756cc15a6b2e3304e62ca52",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.h": "85403c42339f1777106308a2cc4c537f84a5c84021d4f50ebf406c00fb6a618e",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_rgb_policy.h": "db89d46aeae1d944d980f61f5d7c0544c8c985a8d561a2fea54e55cc788a99a7",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_suspend.c": "5b9609f7911f6f6bdf46a5f7d27ccea0b5b6cd11d92cbd1b2746a7882f73982e",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_suspend_masks.h": "9e8906bb18e76fe55cb4549e9ec03e6e4cdbea78085a5ddc1243adb9e8938ccd",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_ug_transport.c": "caed702d6652ae0ffa2704d979b02eb84e35dae8783f0bc3c6f731877c3d3320",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_via_schema.h": "2c81294491303c0d9ec1fb25e9f3b4161235e4843b74387ffa46f6cfc09bf172",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/maru_ws2812_transport.inc": "802e09fe8e95b9ce7e149b879e808f7c3ee6d772e244cebea61bb44f83ee3716",
+    "pcb/firmware/qmk/keyboards/maru60/rp2350/rules.mk": "509eed120a163447ac2462fb961f6026ca950397734458c927e990b4605b1a26",
+    "pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/maru60.kicad_pcb": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5"
+  },
+  "fresh_netlist_sha256": "4b5cf26bbaf6d61e861f7fa58f845d7698a774e79e4de0733076faffe00ad188",
+  "components": {
+    "C120": {
+      "value": "1u",
+      "native_pins": {
+        "1": "+4V_REG",
+        "2": "GND"
+      },
+      "fields": {
+        "Footprint": "Capacitor_SMD:C_0402_1005Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "F1": {
+      "value": "SF-1206F100-2 CANDIDATE",
+      "native_pins": {
+        "1": "VBUS",
+        "2": "VBUS_FUSED"
+      },
+      "fields": {
+        "Footprint": "Fuse:Fuse_1206_3216Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "R109": {
+      "value": "100k",
+      "native_pins": {
+        "1": "LED_ENABLE",
+        "2": "GND"
+      },
+      "fields": {
+        "Footprint": "Resistor_SMD:R_0402_1005Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "R112": {
+      "value": "133k 1%",
+      "native_pins": {
+        "1": "LED_ILIM",
+        "2": "GND"
+      },
+      "fields": {
+        "Footprint": "Resistor_SMD:R_0402_1005Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "R113": {
+      "value": "10k",
+      "native_pins": {
+        "1": "+3V3",
+        "2": "LED_FAULT_N"
+      },
+      "fields": {
+        "Footprint": "Resistor_SMD:R_0402_1005Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "U1": {
+      "value": "RP2350A (A4 required)",
+      "native_pins": {
+        "1": "+3V3",
+        "2": "ROW0",
+        "3": "ROW1",
+        "4": "ROW2",
+        "5": "MCU_GPIO3",
+        "6": "+1V1",
+        "7": "ROW4",
+        "8": "COL0",
+        "9": "COL1",
+        "10": "COL2",
+        "11": "+3V3",
+        "12": "COL3",
+        "13": "COL4",
+        "14": "MCU_GPIO10",
+        "15": "COL6",
+        "16": "COL7",
+        "17": "COL8",
+        "18": "COL9",
+        "19": "COL10",
+        "20": "+3V3",
+        "21": "XIN",
+        "22": "XOUT",
+        "23": "+1V1",
+        "24": "SWCLK",
+        "25": "SWDIO",
+        "26": "RUN",
+        "27": "COL11",
+        "28": "COL12",
+        "29": "COL13",
+        "30": "+3V3",
+        "31": "COL14",
+        "32": "KEY_RGB",
+        "33": "UNDERGLOW",
+        "34": "LED_ENABLE",
+        "35": "LED_FAULT_N",
+        "36": "MCU_GPIO24",
+        "37": "MCU_GPIO25",
+        "38": "+3V3",
+        "39": "+1V1",
+        "40": "MCU_GPIO26",
+        "41": "MCU_GPIO27",
+        "42": "COL5",
+        "43": "ROW3",
+        "44": "+3V3",
+        "45": "+3V3",
+        "46": "VREG_AVDD",
+        "47": "GND",
+        "48": "VREG_LX",
+        "49": "+3V3",
+        "50": "+1V1",
+        "51": "USB_DM",
+        "52": "USB_DP",
+        "53": "+3V3",
+        "54": "+3V3",
+        "55": "QSPI_SD3",
+        "56": "QSPI_SCLK",
+        "57": "QSPI_SD0",
+        "58": "QSPI_SD2",
+        "59": "QSPI_SD1",
+        "60": "QSPI_SS",
+        "61": "GND"
+      },
+      "fields": {
+        "status": "CANDIDATE; not procurement approved",
+        "manufacturer": "Raspberry Pi",
+        "manufacturer_pn": "RP2350A",
+        "Silicon_Revision_Requirement": "A4 production silicon only; reject unknown/A2",
+        "Incoming_Identity_Check": "Topmark RP2350A0A4; CHIP_ID.REVISION=3 AND ROM[0x13]=4",
+        "Supplier_SKU_Status": "UNASSIGNED; verify exact A4 lot before purchase",
+        "Footprint": "Maru60:RP2350A_QFN60_Official_R4",
+        "Datasheet": "https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf",
+        "Description": null
+      }
+    },
+    "U5": {
+      "value": "SN74LV1T125DBVR",
+      "native_pins": {
+        "1": "GND",
+        "2": "KEY_RGB",
+        "3": "GND",
+        "4": "KEY_RGB_5V_BUF",
+        "5": "+4V_LED"
+      },
+      "fields": {
+        "Footprint": "Package_TO_SOT_SMD:SOT-23-5",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "U6": {
+      "value": "SN74LV1T125DBVR",
+      "native_pins": {
+        "1": "GND",
+        "2": "UNDERGLOW",
+        "3": "GND",
+        "4": "UNDERGLOW_5V_BUF",
+        "5": "+4V_LED"
+      },
+      "fields": {
+        "Footprint": "Package_TO_SOT_SMD:SOT-23-5",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "U7": {
+      "value": "TPS2553DBVR-1",
+      "native_pins": {
+        "1": "+4V_REG",
+        "2": "GND",
+        "3": "LED_ENABLE",
+        "4": "LED_FAULT_N",
+        "5": "LED_ILIM",
+        "6": "+4V_LED"
+      },
+      "fields": {
+        "Footprint": "Package_TO_SOT_SMD:SOT-23-6",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "C100": {
+      "value": "4.7uF 50V X7R 10%",
+      "native_pins": {
+        "1": "+4V_REG",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md",
+        "Manufacturer": "Murata",
+        "MPN": "GRM31CR71H475KA12L",
+        "Footprint": "MaruStudy:Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9",
+        "Datasheet": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM31CR71H475KA12-01A.pdf",
+        "Description": null
+      }
+    },
+    "U2": {
+      "value": "MAX38902AATA+T",
+      "native_pins": {
+        "1": "+4V_REG",
+        "2": "GND",
+        "3": "+4V_REG",
+        "4": "GND",
+        "5": "unconnected-(U2-SELB_OPEN-Pad5)",
+        "6": "+3V3",
+        "7": "LDO_BYP",
+        "8": "+3V3",
+        "9": "GND"
+      },
+      "fields": {
+        "Status": "ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md",
+        "Manufacturer": "Analog Devices",
+        "MPN": "MAX38902AATA+T",
+        "Footprint": "MaruStudy:MAX_T822-3C_90-0065_2x2_P0.5_EP0.8x1.38",
+        "Datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX38902A-MAX38902D.pdf",
+        "Description": null
+      }
+    },
+    "C124": {
+      "value": "10nF 10% 50V",
+      "native_pins": {
+        "1": "USB_DVDT_CAP",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Manufacturer": "YAGEO",
+        "MPN": "CC0402KRX7R9BB103",
+        "Footprint": "C124_Short_Study:C_YAGEO_CC0402_050x050_P100_B_Conditional",
+        "Datasheet": "https://yageogroup.com/download/specsheet/CC0402KRX7R9BB103",
+        "Description": null
+      }
+    },
+    "C125": {
+      "value": "1uF 50V effective TBD",
+      "native_pins": {
+        "1": "VBUS_FUSED",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "C126": {
+      "value": "1uF 50V",
+      "native_pins": {
+        "1": "VBUS_PROTECTED_RAW",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "R120": {
+      "value": "590k 0.1%",
+      "native_pins": {
+        "1": "VBUS_FUSED",
+        "2": "USB_OVLO"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "R121": {
+      "value": "156k 0.1%",
+      "native_pins": {
+        "1": "USB_OVLO",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Manufacturer": "KOA",
+        "MPN": "RN73R1ETTP1563B25",
+        "Footprint": "C124_Short_Study:R_KOA_RN73R1E_0402_Reflow_Vertical_B",
+        "Datasheet": "https://www.koaspeer.com/pdfs/RN73R.pdf",
+        "Description": null
+      }
+    },
+    "R122": {
+      "value": "620k 0.1%",
+      "native_pins": {
+        "1": "VBUS_FUSED",
+        "2": "USB_UVLO"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "R123": {
+      "value": "267k 0.1%",
+      "native_pins": {
+        "1": "USB_UVLO",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "R124": {
+      "value": "6.65k 0.1%",
+      "native_pins": {
+        "1": "USB_ILM",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "R125": {
+      "value": "100 1%",
+      "native_pins": {
+        "1": "USB_DVDT",
+        "2": "USB_DVDT_CAP"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Manufacturer": "KOA",
+        "MPN": "RK73H1ETTP1000F",
+        "Footprint": "C124_Short_Study:R_KOA_RK73H1E_0402_Reflow_B",
+        "Datasheet": "https://www.koaspeer.com/catimages/Products/RK73H/RK73H.pdf",
+        "Description": null
+      }
+    },
+    "R126": {
+      "value": "100k 1%",
+      "native_pins": {
+        "1": "USB_INPUT_FAULT_N",
+        "2": "+3V3"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "U8": {
+      "value": "TPS259470LRPW",
+      "native_pins": {
+        "1": "USB_UVLO",
+        "2": "USB_OVLO",
+        "3": "unconnected-(U8-AUXOFF-Pad3)",
+        "4": "USB_INPUT_FAULT_N",
+        "5": "VBUS_FUSED",
+        "6": "VBUS_PROTECTED_RAW",
+        "7": "USB_DVDT",
+        "8": "GND",
+        "9": "USB_ILM",
+        "10": "unconnected-(U8-ITIMER-Pad10)"
+      },
+      "fields": {
+        "Status": "RPW0010A land pattern not implemented; pin map from Rev C Table 5-1",
+        "Footprint": "Protection_Study:TI_RPW0010A_2x2mm_Official4225183A_DRAFT",
+        "Datasheet": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+        "Description": null
+      }
+    },
+    "C136": {
+      "value": "100nF 50V",
+      "native_pins": {
+        "1": "VBUS_PROTECTED_RAW",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "C137": {
+      "value": "4.7uF 50V effective>=2uF TBD",
+      "native_pins": {
+        "1": "VBUS_PROTECTED_RAW",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "C138": {
+      "value": "100nF 16V BST-SW",
+      "native_pins": {
+        "1": "BUCK_BST",
+        "2": "BUCK_SW"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "C139": {
+      "value": "100nF 10% 16V - soft start",
+      "native_pins": {
+        "1": "BUCK_SS",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "C140": {
+      "value": "22uF 10V effective>=12uF TBD",
+      "native_pins": {
+        "1": "+4V_REG",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "C141": {
+      "value": "22uF 10V effective>=12uF TBD",
+      "native_pins": {
+        "1": "+4V_REG",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "D100": {
+      "value": "PMEG4030ER - reverse discharge bypass",
+      "native_pins": {
+        "1": "VBUS_PROTECTED_RAW",
+        "2": "+4V_REG"
+      },
+      "fields": {
+        "Status": "Provisional bypass per TPS62932 section11; NOT guaranteed <=0.3V clamp; pulse/current/leakage/temp/footprint review OPEN",
+        "Footprint": "Diode_SMD:Nexperia_CFP3_SOD-123W",
+        "Datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG4030ER.pdf",
+        "Description": null
+      }
+    },
+    "L2": {
+      "value": "XAL4030-472MEC 4.7uH 20%",
+      "native_pins": {
+        "1": "BUCK_SW",
+        "2": "+4V_REG"
+      },
+      "fields": {
+        "Status": "Candidate only; 3.1mm max height; footprint/assembly/thermal gates OPEN",
+        "Footprint": "Inductor_SMD:L_Coilcraft_XAL4030-XXX",
+        "Datasheet": "https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal40xx/xal4030-472/",
+        "Description": null
+      }
+    },
+    "R159": {
+      "value": "40.0k 0.1%",
+      "native_pins": {
+        "1": "+4V_REG",
+        "2": "BUCK_FB"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "R160": {
+      "value": "10.0k 0.1%",
+      "native_pins": {
+        "1": "BUCK_FB",
+        "2": "GND"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "U18": {
+      "value": "TPS62932DRLR",
+      "native_pins": {
+        "1": "unconnected-(U18-RT_FLOAT_500KHZ-Pad1)",
+        "2": "unconnected-(U18-EN_FLOAT_ENABLE-Pad2)",
+        "3": "VBUS_PROTECTED_RAW",
+        "4": "GND",
+        "5": "BUCK_SW",
+        "6": "BUCK_BST",
+        "7": "BUCK_SS",
+        "8": "BUCK_FB"
+      },
+      "fields": {
+        "Status": "Provisional; DRL pad geometry/paste not independently qualified; EN intentionally floating per 9.3.6",
+        "Footprint": "Package_TO_SOT_SMD:SOT-583-8",
+        "Datasheet": "https://www.ti.com/lit/ds/symlink/tps62933.pdf",
+        "Description": null
+      }
+    },
+    "R128": {
+      "value": "100k 1%",
+      "native_pins": {
+        "1": "GPIO_ISOLATE",
+        "2": "+3V3"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "Datasheet": null,
+        "Description": null
+      }
+    },
+    "U11": {
+      "value": "SN74CB3T3245PWR",
+      "native_pins": {
+        "1": "unconnected-(U11-NC-Pad1)",
+        "2": "GPIO3_ISO",
+        "3": "GPIO10_ISO",
+        "4": "GPIO24_ISO",
+        "5": "GPIO25_ISO",
+        "6": "GPIO26_ISO",
+        "7": "GPIO27_ISO",
+        "8": "unconnected-(U11-A7-Pad8)",
+        "9": "unconnected-(U11-A8-Pad9)",
+        "10": "GND",
+        "11": "unconnected-(U11-B8-Pad11)",
+        "12": "unconnected-(U11-B7-Pad12)",
+        "13": "EXT_GPIO27",
+        "14": "EXT_GPIO26",
+        "15": "EXT_GPIO25",
+        "16": "EXT_GPIO24",
+        "17": "EXT_GPIO10",
+        "18": "EXT_GPIO3",
+        "19": "GPIO_ISOLATE",
+        "20": "+3V3"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Package_SO:Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm",
+        "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74cb3t3245.pdf",
+        "Description": null
+      }
+    },
+    "U12": {
+      "value": "TLV810EA29DBZR",
+      "native_pins": {
+        "1": "GND",
+        "2": "GPIO_ISOLATE",
+        "3": "+3V3"
+      },
+      "fields": {
+        "Status": "CANDIDATE - not procurement approved",
+        "Footprint": "Package_TO_SOT_SMD:SOT-23",
+        "Datasheet": "https://www.ti.com/lit/ds/symlink/tlv810e.pdf",
+        "Description": null
+      }
+    }
+  },
+  "nets": {
+    "VBUS": [
+      [
+        "F1",
+        "1"
+      ],
+      [
+        "J1",
+        "A4"
+      ],
+      [
+        "J1",
+        "A9"
+      ],
+      [
+        "J1",
+        "B4"
+      ],
+      [
+        "J1",
+        "B9"
+      ],
+      [
+        "TP2",
+        "1"
+      ]
+    ],
+    "VBUS_FUSED": [
+      [
+        "C125",
+        "1"
+      ],
+      [
+        "F1",
+        "2"
+      ],
+      [
+        "R120",
+        "1"
+      ],
+      [
+        "R122",
+        "1"
+      ],
+      [
+        "U8",
+        "5"
+      ]
+    ],
+    "VBUS_PROTECTED_RAW": [
+      [
+        "C126",
+        "1"
+      ],
+      [
+        "C136",
+        "1"
+      ],
+      [
+        "C137",
+        "1"
+      ],
+      [
+        "D100",
+        "1"
+      ],
+      [
+        "U18",
+        "3"
+      ],
+      [
+        "U8",
+        "6"
+      ]
+    ],
+    "+4V_REG": [
+      [
+        "C100",
+        "1"
+      ],
+      [
+        "C120",
+        "1"
+      ],
+      [
+        "C140",
+        "1"
+      ],
+      [
+        "C141",
+        "1"
+      ],
+      [
+        "D100",
+        "2"
+      ],
+      [
+        "L2",
+        "2"
+      ],
+      [
+        "R159",
+        "1"
+      ],
+      [
+        "TP3",
+        "1"
+      ],
+      [
+        "U2",
+        "1"
+      ],
+      [
+        "U2",
+        "3"
+      ],
+      [
+        "U7",
+        "1"
+      ]
+    ],
+    "+3V3": [
+      [
+        "C101",
+        "1"
+      ],
+      [
+        "C102",
+        "1"
+      ],
+      [
+        "C105",
+        "1"
+      ],
+      [
+        "C111",
+        "1"
+      ],
+      [
+        "C112",
+        "1"
+      ],
+      [
+        "C113",
+        "1"
+      ],
+      [
+        "C114",
+        "1"
+      ],
+      [
+        "C115",
+        "1"
+      ],
+      [
+        "C116",
+        "1"
+      ],
+      [
+        "C117",
+        "1"
+      ],
+      [
+        "C118",
+        "1"
+      ],
+      [
+        "C128",
+        "1"
+      ],
+      [
+        "C129",
+        "1"
+      ],
+      [
+        "C142",
+        "1"
+      ],
+      [
+        "C199",
+        "1"
+      ],
+      [
+        "R104",
+        "1"
+      ],
+      [
+        "R105",
+        "1"
+      ],
+      [
+        "R113",
+        "1"
+      ],
+      [
+        "R126",
+        "2"
+      ],
+      [
+        "R128",
+        "2"
+      ],
+      [
+        "R163",
+        "1"
+      ],
+      [
+        "TP4",
+        "1"
+      ],
+      [
+        "U1",
+        "1"
+      ],
+      [
+        "U1",
+        "11"
+      ],
+      [
+        "U1",
+        "20"
+      ],
+      [
+        "U1",
+        "30"
+      ],
+      [
+        "U1",
+        "38"
+      ],
+      [
+        "U1",
+        "44"
+      ],
+      [
+        "U1",
+        "45"
+      ],
+      [
+        "U1",
+        "49"
+      ],
+      [
+        "U1",
+        "53"
+      ],
+      [
+        "U1",
+        "54"
+      ],
+      [
+        "U11",
+        "20"
+      ],
+      [
+        "U12",
+        "3"
+      ],
+      [
+        "U2",
+        "6"
+      ],
+      [
+        "U2",
+        "8"
+      ],
+      [
+        "U3",
+        "8"
+      ]
+    ],
+    "+4V_LED": [
+      [
+        "C121",
+        "1"
+      ],
+      [
+        "C122",
+        "1"
+      ],
+      [
+        "C123",
+        "1"
+      ],
+      [
+        "C200",
+        "1"
+      ],
+      [
+        "C201",
+        "1"
+      ],
+      [
+        "C202",
+        "1"
+      ],
+      [
+        "C203",
+        "1"
+      ],
+      [
+        "C204",
+        "1"
+      ],
+      [
+        "C205",
+        "1"
+      ],
+      [
+        "C206",
+        "1"
+      ],
+      [
+        "C207",
+        "1"
+      ],
+      [
+        "C208",
+        "1"
+      ],
+      [
+        "C209",
+        "1"
+      ],
+      [
+        "C210",
+        "1"
+      ],
+      [
+        "C211",
+        "1"
+      ],
+      [
+        "C212",
+        "1"
+      ],
+      [
+        "C213",
+        "1"
+      ],
+      [
+        "C214",
+        "1"
+      ],
+      [
+        "C215",
+        "1"
+      ],
+      [
+        "C216",
+        "1"
+      ],
+      [
+        "C217",
+        "1"
+      ],
+      [
+        "C218",
+        "1"
+      ],
+      [
+        "C219",
+        "1"
+      ],
+      [
+        "C220",
+        "1"
+      ],
+      [
+        "C221",
+        "1"
+      ],
+      [
+        "C222",
+        "1"
+      ],
+      [
+        "C223",
+        "1"
+      ],
+      [
+        "C224",
+        "1"
+      ],
+      [
+        "C225",
+        "1"
+      ],
+      [
+        "C226",
+        "1"
+      ],
+      [
+        "C227",
+        "1"
+      ],
+      [
+        "C228",
+        "1"
+      ],
+      [
+        "C229",
+        "1"
+      ],
+      [
+        "C230",
+        "1"
+      ],
+      [
+        "C231",
+        "1"
+      ],
+      [
+        "C232",
+        "1"
+      ],
+      [
+        "C233",
+        "1"
+      ],
+      [
+        "C234",
+        "1"
+      ],
+      [
+        "C235",
+        "1"
+      ],
+      [
+        "C236",
+        "1"
+      ],
+      [
+        "C237",
+        "1"
+      ],
+      [
+        "C238",
+        "1"
+      ],
+      [
+        "C239",
+        "1"
+      ],
+      [
+        "C240",
+        "1"
+      ],
+      [
+        "C241",
+        "1"
+      ],
+      [
+        "C242",
+        "1"
+      ],
+      [
+        "C243",
+        "1"
+      ],
+      [
+        "C244",
+        "1"
+      ],
+      [
+        "C245",
+        "1"
+      ],
+      [
+        "C246",
+        "1"
+      ],
+      [
+        "C247",
+        "1"
+      ],
+      [
+        "C248",
+        "1"
+      ],
+      [
+        "C249",
+        "1"
+      ],
+      [
+        "C250",
+        "1"
+      ],
+      [
+        "C251",
+        "1"
+      ],
+      [
+        "C252",
+        "1"
+      ],
+      [
+        "C253",
+        "1"
+      ],
+      [
+        "C254",
+        "1"
+      ],
+      [
+        "C255",
+        "1"
+      ],
+      [
+        "C256",
+        "1"
+      ],
+      [
+        "C257",
+        "1"
+      ],
+      [
+        "C258",
+        "1"
+      ],
+      [
+        "C259",
+        "1"
+      ],
+      [
+        "C260",
+        "1"
+      ],
+      [
+        "C261",
+        "1"
+      ],
+      [
+        "C262",
+        "1"
+      ],
+      [
+        "C263",
+        "1"
+      ],
+      [
+        "C264",
+        "1"
+      ],
+      [
+        "C265",
+        "1"
+      ],
+      [
+        "C266",
+        "1"
+      ],
+      [
+        "C267",
+        "1"
+      ],
+      [
+        "C268",
+        "1"
+      ],
+      [
+        "C269",
+        "1"
+      ],
+      [
+        "C270",
+        "1"
+      ],
+      [
+        "C271",
+        "1"
+      ],
+      [
+        "C272",
+        "1"
+      ],
+      [
+        "C273",
+        "1"
+      ],
+      [
+        "C274",
+        "1"
+      ],
+      [
+        "C275",
+        "1"
+      ],
+      [
+        "LED1",
+        "2"
+      ],
+      [
+        "LED10",
+        "2"
+      ],
+      [
+        "LED11",
+        "2"
+      ],
+      [
+        "LED12",
+        "2"
+      ],
+      [
+        "LED13",
+        "2"
+      ],
+      [
+        "LED14",
+        "2"
+      ],
+      [
+        "LED15",
+        "2"
+      ],
+      [
+        "LED16",
+        "2"
+      ],
+      [
+        "LED17",
+        "2"
+      ],
+      [
+        "LED18",
+        "2"
+      ],
+      [
+        "LED19",
+        "2"
+      ],
+      [
+        "LED2",
+        "2"
+      ],
+      [
+        "LED20",
+        "2"
+      ],
+      [
+        "LED21",
+        "2"
+      ],
+      [
+        "LED22",
+        "2"
+      ],
+      [
+        "LED23",
+        "2"
+      ],
+      [
+        "LED24",
+        "2"
+      ],
+      [
+        "LED25",
+        "2"
+      ],
+      [
+        "LED26",
+        "2"
+      ],
+      [
+        "LED27",
+        "2"
+      ],
+      [
+        "LED28",
+        "2"
+      ],
+      [
+        "LED29",
+        "2"
+      ],
+      [
+        "LED3",
+        "2"
+      ],
+      [
+        "LED30",
+        "2"
+      ],
+      [
+        "LED31",
+        "2"
+      ],
+      [
+        "LED32",
+        "2"
+      ],
+      [
+        "LED33",
+        "2"
+      ],
+      [
+        "LED34",
+        "2"
+      ],
+      [
+        "LED35",
+        "2"
+      ],
+      [
+        "LED36",
+        "2"
+      ],
+      [
+        "LED37",
+        "2"
+      ],
+      [
+        "LED38",
+        "2"
+      ],
+      [
+        "LED39",
+        "2"
+      ],
+      [
+        "LED4",
+        "2"
+      ],
+      [
+        "LED40",
+        "2"
+      ],
+      [
+        "LED41",
+        "2"
+      ],
+      [
+        "LED42",
+        "2"
+      ],
+      [
+        "LED43",
+        "2"
+      ],
+      [
+        "LED44",
+        "2"
+      ],
+      [
+        "LED45",
+        "2"
+      ],
+      [
+        "LED46",
+        "2"
+      ],
+      [
+        "LED47",
+        "2"
+      ],
+      [
+        "LED48",
+        "2"
+      ],
+      [
+        "LED49",
+        "2"
+      ],
+      [
+        "LED5",
+        "2"
+      ],
+      [
+        "LED50",
+        "2"
+      ],
+      [
+        "LED51",
+        "2"
+      ],
+      [
+        "LED52",
+        "2"
+      ],
+      [
+        "LED53",
+        "2"
+      ],
+      [
+        "LED54",
+        "2"
+      ],
+      [
+        "LED55",
+        "2"
+      ],
+      [
+        "LED56",
+        "2"
+      ],
+      [
+        "LED57",
+        "2"
+      ],
+      [
+        "LED58",
+        "2"
+      ],
+      [
+        "LED59",
+        "2"
+      ],
+      [
+        "LED6",
+        "2"
+      ],
+      [
+        "LED60",
+        "2"
+      ],
+      [
+        "LED61",
+        "2"
+      ],
+      [
+        "LED62",
+        "2"
+      ],
+      [
+        "LED63",
+        "2"
+      ],
+      [
+        "LED64",
+        "2"
+      ],
+      [
+        "LED65",
+        "2"
+      ],
+      [
+        "LED66",
+        "2"
+      ],
+      [
+        "LED67",
+        "2"
+      ],
+      [
+        "LED68",
+        "2"
+      ],
+      [
+        "LED69",
+        "2"
+      ],
+      [
+        "LED7",
+        "2"
+      ],
+      [
+        "LED70",
+        "2"
+      ],
+      [
+        "LED71",
+        "2"
+      ],
+      [
+        "LED72",
+        "2"
+      ],
+      [
+        "LED73",
+        "2"
+      ],
+      [
+        "LED74",
+        "2"
+      ],
+      [
+        "LED75",
+        "2"
+      ],
+      [
+        "LED76",
+        "2"
+      ],
+      [
+        "LED8",
+        "2"
+      ],
+      [
+        "LED9",
+        "2"
+      ],
+      [
+        "R114",
+        "1"
+      ],
+      [
+        "TP10",
+        "1"
+      ],
+      [
+        "U5",
+        "5"
+      ],
+      [
+        "U6",
+        "5"
+      ],
+      [
+        "U7",
+        "6"
+      ]
+    ],
+    "USB_INPUT_FAULT_N": [
+      [
+        "R126",
+        "1"
+      ],
+      [
+        "U8",
+        "4"
+      ]
+    ],
+    "GPIO_ISOLATE": [
+      [
+        "R128",
+        "1"
+      ],
+      [
+        "U11",
+        "19"
+      ],
+      [
+        "U12",
+        "2"
+      ]
+    ],
+    "LED_ENABLE": [
+      [
+        "R109",
+        "1"
+      ],
+      [
+        "U1",
+        "34"
+      ],
+      [
+        "U7",
+        "3"
+      ]
+    ],
+    "LED_FAULT_N": [
+      [
+        "R113",
+        "2"
+      ],
+      [
+        "TP9",
+        "1"
+      ],
+      [
+        "U1",
+        "35"
+      ],
+      [
+        "U7",
+        "4"
+      ]
+    ],
+    "RUN": [
+      [
+        "SW101",
+        "1"
+      ],
+      [
+        "TP6",
+        "1"
+      ],
+      [
+        "U1",
+        "26"
+      ]
+    ]
+  },
+  "not_run": [
+    "active power simulation",
+    "hardware brownout/load/startup measurements",
+    "compiled firmware test",
+    "DRC rerun",
+    "loop/thermal qualification"
+  ],
+  "limitations": [
+    "Logical net membership is not proof of physical continuity; current PCB remains incompletely routed.",
+    "Assertions verify topology and textual policy, not timing or compiled binary behavior.",
+    "No source CAD or firmware changes."
+  ]
+}

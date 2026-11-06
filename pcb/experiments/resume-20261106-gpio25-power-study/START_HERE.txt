@@ -1,0 +1,20 @@
+MARU60 GPIO25 AND POWER-CONDITION REVIEW
+
+This is a saved analysis supplement, NOT a new selected PCB revision.
+Current design remains be51692 / PCB41f82c80: 9 open connection pairs, 38 warnings. The complete unchanged 58-file current CAD is under current-source-be51692/pcb. Open that project's maru60.kicad_pro. Prior strict and development baselines remain in the previous complete checkpoint, not replaced by this study.
+
+GPIO25: all nine frozen combinations of new transition-via locations were examined. All native gates report 8 open pairs / the same38 warning records / parity0, but EVERY candidate loses existing COL14 F.Cu-to-In1.Cu reference and has exact remote GND-loss witnesses. None is selected. The source-to-candidate counterexamples exclude all physical drills and are exact rational, nonboundary witnesses. A separate implementation confirms three representative bridge cases using winding classification and analytic trace-capsule distance. These are not merely rounding-noise allegations. Read gpio25-rejected-study/resume-runs/REPORT.md and FINITE_RESULTS.json. The earlier resume-audit early-stop report is superseded by this completed nine-case result.
+
+Do NOT use the experimental candidate PCBs for manufacture or mistake their8-open native count for an accepted improvement. Expensive full acceptance tests stopped after decisive counterexamples; unrun stages are listed. The study proves rejection of these nine cases, not global routing impossibility.
+
+POWER: fresh native/netlist comparison checks36 components and181 numbered pads. Input fault does not reach the MCU; the supervisor only controls GPIO isolation. Therefore an input dip with MCU/USB/LED-fault state unchanged has no dedicated LED re-settling trigger in this source. Whether realistic hardware exhibits that condition is unmeasured. The default build keeps LED power disabled through qualification=0; no setting was changed.
+
+The eFuse's nominal6.65-kohm setting has a425/500/575-mA datasheet row under stated conditions, not a guaranteed500-mA ceiling. TI's own EVM uses6.65 kohm with1% tolerance, so the rounded resistor-range endpoint does not justify declaring a violation or replacing it. LED-branch thresholds are conditional173.657/201.513/233.901mA and cannot be treated as total USB input current. No actual overdraw or nuisance trip is established. Detailed conditions, replay and measurement plan are in power-conditions/REPORT.md.
+
+U18: actual copper pads, pitch, corner radius, numbering and backside transform match TI's DRL0008A example. Effective soldermask expansion is0; mask registration/NSMD strategy and the example0.10-mm stencil need fabrication/assembly confirmation. No blind footprint change or provisional-status removal was made. See u18-land-pattern/report.md.
+
+Portable power snapshot and current-limit arithmetic replay use only included JSON/netlist files and Python stdlib. Native source/geometry scripts retain original paths and require the original layout, installed KiCad9, and vendor PDF where stated; they are not standalone turnkey scripts in this archive. Vendor PDFs/full text/screenshots are not redistributed. A future replay must restore or explicitly update inputs and preserve hash validation, not bypass guards.
+
+No active-power, SI/EMI, full firmware, thermal or hardware qualification is claimed. Current-design inherited exact-no-loss and conservative-contact limitations remain. No external push, manufacturing or flashing occurred.
+
+MANIFEST.json hashes every delivered file except itself. Nested manifests describe their original evidence packets; the outer manifest is authoritative for this archive.

@@ -1,0 +1,169 @@
+06:20:13: Debug: Adding duplicate image handler for 'PNG file'
+06:20:13: Debug: Adding duplicate image handler for 'JPEG file'
+06:20:13: Debug: Adding duplicate image handler for 'TIFF file'
+06:20:13: Debug: Adding duplicate image handler for 'GIF file'
+06:20:13: Debug: Adding duplicate image handler for 'PNM file'
+06:20:13: Debug: Adding duplicate image handler for 'PCX file'
+06:20:13: Debug: Adding duplicate image handler for 'IFF file'
+06:20:13: Debug: Adding duplicate image handler for 'Windows icon file'
+06:20:13: Debug: Adding duplicate image handler for 'Windows cursor file'
+06:20:13: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+06:20:13: Debug: Adding duplicate image handler for 'TGA file'
+06:20:13: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "scanned_retained_foreign_tracks": 2156,
+  "all_drill_shapes_checked": 2548,
+  "native_intersections": [
+    {
+      "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+      "net": "COL14",
+      "layer": "F.Cu",
+      "reference": "In1.Cu",
+      "native_loss_area_nm2": 13776664812.5,
+      "native_loss_contours": 1
+    }
+  ],
+  "exact_foreign_reference_loss_witnesses": [
+    {
+      "uuid": "9820d4ee-e433-4a88-934a-98eda993e59e",
+      "net": "COL14",
+      "layer": "F.Cu",
+      "reference": "In1.Cu",
+      "native_loss_area_nm2": 13776664812.5,
+      "native_loss_contours": 1,
+      "point_nm": [
+        "1281482909/13",
+        "531122370/13"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "boundary": false,
+      "retained_trace_interior": true,
+      "inside_any_drill": false
+    }
+  ],
+  "remote_witnesses_all_drill_checked": [
+    {
+      "layer": "In1.Cu",
+      "point_nm": [
+        "359389731/4",
+        "164050501/4"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    },
+    {
+      "layer": "In1.Cu",
+      "point_nm": [
+        "275772281/3",
+        "113703281/3"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    },
+    {
+      "layer": "In1.Cu",
+      "point_nm": [
+        "195288289/2",
+        "75336641/2"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    },
+    {
+      "layer": "In1.Cu",
+      "point_nm": [
+        "206488289/2",
+        "75336641/2"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    },
+    {
+      "layer": "In1.Cu",
+      "point_nm": [
+        "277542856/3",
+        "111982885/3"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    },
+    {
+      "layer": "In2.Cu",
+      "point_nm": [
+        "359389731/4",
+        "164050501/4"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    },
+    {
+      "layer": "In2.Cu",
+      "point_nm": [
+        "275772281/3",
+        "113703281/3"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    },
+    {
+      "layer": "In2.Cu",
+      "point_nm": [
+        "195288289/2",
+        "75336641/2"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    },
+    {
+      "layer": "In2.Cu",
+      "point_nm": [
+        "206488289/2",
+        "75336641/2"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    },
+    {
+      "layer": "In2.Cu",
+      "point_nm": [
+        "277542856/3",
+        "111982885/3"
+      ],
+      "source_copper": true,
+      "candidate_copper": false,
+      "source_boundary": false,
+      "candidate_boundary": false,
+      "inside_or_on_any_drill": false
+    }
+  ],
+  "full_scan_completed": false,
+  "verdict": "REJECT_EXACT_FOREIGN_REFERENCE_LOSS"
+}
