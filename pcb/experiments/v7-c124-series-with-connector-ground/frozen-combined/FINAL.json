@@ -1,0 +1,46 @@
+{
+  "status": "PASS combined bounded source/geometry/native/independent checkpoint; experimental only",
+  "source_D_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+  "filled_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "filled_tree_files": 58,
+  "filled_tree_manifest_sha256": "f8b47a33e694b36cdeaec33eb8aa85441643405c0c402b7c2942035bf25c173c",
+  "report_sha256": "02e9555e8e4544722a925cebbf95d8715352b8944dcd07dddb6200a6f25eba89",
+  "source_raw_only_change": "one declared ordinary GND via, no other edits",
+  "native": {
+    "tracks": 9750,
+    "vias": 919,
+    "footprints": 383,
+    "track_length_mm": 13185.28691027245,
+    "native_version": "9.0.2+dfsg-1"
+  },
+  "native_result": {
+    "hard_DRC": 0,
+    "warnings": 64,
+    "opens": 12,
+    "ERC": 0,
+    "parity": 0,
+    "all_D_warning_open_entries_exact": true
+  },
+  "strict_support_reference_material": true,
+  "independent_check_count": 45,
+  "independent_cold_refill_byte_identical": true,
+  "independent_review_path": "/tmp/v7-c124-d-plus-connector-gnd-independent-review",
+  "independent_review_hashes": {
+    "RESULT.md": "d30ebf850a8e9a9af4cae1c86820e126128155771dd6df1d60620ec4d228d395",
+    "ELIGIBILITY.json": "e55c7655cc410d0e8faffcc99f28820386e6a2892a80f984f61ae2cbb0b9ed6b",
+    "MANIFEST.json": "330e5c4e2c5b1d75cc98c5f149147fa87733908a7d2ca89060a8962c2286fa1e"
+  },
+  "three_D_support_end_warnings_retained": true,
+  "selected_repo_written": false,
+  "D_aaaf_c770_immutable": true,
+  "hardware_assembly_active_startup_SI_ESD_process_qualification": false,
+  "passive_equations_not_rerun": true,
+  "image": {
+    "board_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+    "native_view_sha256": "b0b8b174c0457d3b973c18a1b53295693d67ba9edd1ec353cbdaba2d7c723d75",
+    "image_sha256": "585ea0976e0b3871b535483ac945d51e50a51248cfa8d2c09212cb696c36375b",
+    "image_bytes": 436792,
+    "display_polygon_error_nm": 100,
+    "visual_review": "Viewed actual pixels; labels and three local panels legible. No qualification inferred."
+  }
+}

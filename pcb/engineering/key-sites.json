@@ -1,0 +1,1618 @@
+{
+  "schema": "maru60-key-sites/2",
+  "status": "initial split BS/right Shift physical placement; unsplit/stepped alternatives excluded pending collision resolution",
+  "coordinate_frame": "GH60 mm, origin upper-left, +X right, +Y down",
+  "diode_direction": "COL2ROW",
+  "switch_count": 62,
+  "sites": [
+    {
+      "ref": "SW1",
+      "diode_ref": "D1",
+      "name": "Esc",
+      "row": 0,
+      "col": 0,
+      "x_mm": 9.1475,
+      "y_mm": 9.19875,
+      "x_u": 0,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL0",
+        "2": "KEY_1"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_1"
+      }
+    },
+    {
+      "ref": "SW2",
+      "diode_ref": "D2",
+      "name": "1",
+      "row": 0,
+      "col": 1,
+      "x_mm": 28.1975,
+      "y_mm": 9.19875,
+      "x_u": 1,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL1",
+        "2": "KEY_2"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_2"
+      }
+    },
+    {
+      "ref": "SW3",
+      "diode_ref": "D3",
+      "name": "2",
+      "row": 0,
+      "col": 2,
+      "x_mm": 47.2475,
+      "y_mm": 9.19875,
+      "x_u": 2,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL2",
+        "2": "KEY_3"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_3"
+      }
+    },
+    {
+      "ref": "SW4",
+      "diode_ref": "D4",
+      "name": "3",
+      "row": 0,
+      "col": 3,
+      "x_mm": 66.2975,
+      "y_mm": 9.19875,
+      "x_u": 3,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL3",
+        "2": "KEY_4"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_4"
+      }
+    },
+    {
+      "ref": "SW5",
+      "diode_ref": "D5",
+      "name": "4",
+      "row": 0,
+      "col": 4,
+      "x_mm": 85.3475,
+      "y_mm": 9.19875,
+      "x_u": 4,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL4",
+        "2": "KEY_5"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_5"
+      }
+    },
+    {
+      "ref": "SW6",
+      "diode_ref": "D6",
+      "name": "5",
+      "row": 0,
+      "col": 5,
+      "x_mm": 104.3975,
+      "y_mm": 9.19875,
+      "x_u": 5,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL5",
+        "2": "KEY_6"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_6"
+      }
+    },
+    {
+      "ref": "SW7",
+      "diode_ref": "D7",
+      "name": "6",
+      "row": 0,
+      "col": 6,
+      "x_mm": 123.4475,
+      "y_mm": 9.19875,
+      "x_u": 6,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL6",
+        "2": "KEY_7"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_7"
+      }
+    },
+    {
+      "ref": "SW8",
+      "diode_ref": "D8",
+      "name": "7",
+      "row": 0,
+      "col": 7,
+      "x_mm": 142.4975,
+      "y_mm": 9.19875,
+      "x_u": 7,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL7",
+        "2": "KEY_8"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_8"
+      }
+    },
+    {
+      "ref": "SW9",
+      "diode_ref": "D9",
+      "name": "8",
+      "row": 0,
+      "col": 8,
+      "x_mm": 161.5475,
+      "y_mm": 9.19875,
+      "x_u": 8,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL8",
+        "2": "KEY_9"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_9"
+      }
+    },
+    {
+      "ref": "SW10",
+      "diode_ref": "D10",
+      "name": "9",
+      "row": 0,
+      "col": 9,
+      "x_mm": 180.5975,
+      "y_mm": 9.19875,
+      "x_u": 9,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL9",
+        "2": "KEY_10"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_10"
+      }
+    },
+    {
+      "ref": "SW11",
+      "diode_ref": "D11",
+      "name": "0",
+      "row": 0,
+      "col": 10,
+      "x_mm": 199.6475,
+      "y_mm": 9.19875,
+      "x_u": 10,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL10",
+        "2": "KEY_11"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_11"
+      }
+    },
+    {
+      "ref": "SW12",
+      "diode_ref": "D12",
+      "name": "Minus",
+      "row": 0,
+      "col": 11,
+      "x_mm": 218.6975,
+      "y_mm": 9.19875,
+      "x_u": 11,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL11",
+        "2": "KEY_12"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_12"
+      }
+    },
+    {
+      "ref": "SW13",
+      "diode_ref": "D13",
+      "name": "Equal",
+      "row": 0,
+      "col": 12,
+      "x_mm": 237.7475,
+      "y_mm": 9.19875,
+      "x_u": 12,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL12",
+        "2": "KEY_13"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_13"
+      }
+    },
+    {
+      "ref": "SW14",
+      "diode_ref": "D14",
+      "name": "Backspace_L",
+      "row": 0,
+      "col": 13,
+      "x_mm": 256.7975,
+      "y_mm": 9.19875,
+      "x_u": 13,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL13",
+        "2": "KEY_14"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_14"
+      }
+    },
+    {
+      "ref": "SW15",
+      "diode_ref": "D15",
+      "name": "Backspace_R",
+      "row": 0,
+      "col": 14,
+      "x_mm": 275.8475,
+      "y_mm": 9.19875,
+      "x_u": 14,
+      "y_u": 0,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL14",
+        "2": "KEY_15"
+      },
+      "diode_nets": {
+        "1": "ROW0",
+        "2": "KEY_15"
+      }
+    },
+    {
+      "ref": "SW16",
+      "diode_ref": "D16",
+      "name": "Tab",
+      "row": 1,
+      "col": 0,
+      "x_mm": 13.91,
+      "y_mm": 28.24875,
+      "x_u": 0,
+      "y_u": 1,
+      "width_u": 1.5,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL0",
+        "2": "KEY_16"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_16"
+      }
+    },
+    {
+      "ref": "SW17",
+      "diode_ref": "D17",
+      "name": "Q",
+      "row": 1,
+      "col": 1,
+      "x_mm": 37.7225,
+      "y_mm": 28.24875,
+      "x_u": 1.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL1",
+        "2": "KEY_17"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_17"
+      }
+    },
+    {
+      "ref": "SW18",
+      "diode_ref": "D18",
+      "name": "W",
+      "row": 1,
+      "col": 2,
+      "x_mm": 56.7725,
+      "y_mm": 28.24875,
+      "x_u": 2.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL2",
+        "2": "KEY_18"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_18"
+      }
+    },
+    {
+      "ref": "SW19",
+      "diode_ref": "D19",
+      "name": "E",
+      "row": 1,
+      "col": 3,
+      "x_mm": 75.8225,
+      "y_mm": 28.24875,
+      "x_u": 3.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL3",
+        "2": "KEY_19"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_19"
+      }
+    },
+    {
+      "ref": "SW20",
+      "diode_ref": "D20",
+      "name": "R",
+      "row": 1,
+      "col": 4,
+      "x_mm": 94.8725,
+      "y_mm": 28.24875,
+      "x_u": 4.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL4",
+        "2": "KEY_20"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_20"
+      }
+    },
+    {
+      "ref": "SW21",
+      "diode_ref": "D21",
+      "name": "T",
+      "row": 1,
+      "col": 5,
+      "x_mm": 113.9225,
+      "y_mm": 28.24875,
+      "x_u": 5.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL5",
+        "2": "KEY_21"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_21"
+      }
+    },
+    {
+      "ref": "SW22",
+      "diode_ref": "D22",
+      "name": "Y",
+      "row": 1,
+      "col": 6,
+      "x_mm": 132.9725,
+      "y_mm": 28.24875,
+      "x_u": 6.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL6",
+        "2": "KEY_22"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_22"
+      }
+    },
+    {
+      "ref": "SW23",
+      "diode_ref": "D23",
+      "name": "U",
+      "row": 1,
+      "col": 7,
+      "x_mm": 152.0225,
+      "y_mm": 28.24875,
+      "x_u": 7.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL7",
+        "2": "KEY_23"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_23"
+      }
+    },
+    {
+      "ref": "SW24",
+      "diode_ref": "D24",
+      "name": "I",
+      "row": 1,
+      "col": 8,
+      "x_mm": 171.0725,
+      "y_mm": 28.24875,
+      "x_u": 8.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL8",
+        "2": "KEY_24"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_24"
+      }
+    },
+    {
+      "ref": "SW25",
+      "diode_ref": "D25",
+      "name": "O",
+      "row": 1,
+      "col": 9,
+      "x_mm": 190.1225,
+      "y_mm": 28.24875,
+      "x_u": 9.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL9",
+        "2": "KEY_25"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_25"
+      }
+    },
+    {
+      "ref": "SW26",
+      "diode_ref": "D26",
+      "name": "P",
+      "row": 1,
+      "col": 10,
+      "x_mm": 209.1725,
+      "y_mm": 28.24875,
+      "x_u": 10.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL10",
+        "2": "KEY_26"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_26"
+      }
+    },
+    {
+      "ref": "SW27",
+      "diode_ref": "D27",
+      "name": "LeftBracket",
+      "row": 1,
+      "col": 11,
+      "x_mm": 228.2225,
+      "y_mm": 28.24875,
+      "x_u": 11.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL11",
+        "2": "KEY_27"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_27"
+      }
+    },
+    {
+      "ref": "SW28",
+      "diode_ref": "D28",
+      "name": "RightBracket",
+      "row": 1,
+      "col": 12,
+      "x_mm": 247.2725,
+      "y_mm": 28.24875,
+      "x_u": 12.5,
+      "y_u": 1,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL12",
+        "2": "KEY_28"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_28"
+      }
+    },
+    {
+      "ref": "SW29",
+      "diode_ref": "D29",
+      "name": "Backslash",
+      "row": 1,
+      "col": 13,
+      "x_mm": 271.085,
+      "y_mm": 28.24875,
+      "x_u": 13.5,
+      "y_u": 1,
+      "width_u": 1.5,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL13",
+        "2": "KEY_29"
+      },
+      "diode_nets": {
+        "1": "ROW1",
+        "2": "KEY_29"
+      }
+    },
+    {
+      "ref": "SW30",
+      "diode_ref": "D30",
+      "name": "Caps",
+      "row": 2,
+      "col": 0,
+      "x_mm": 16.29125,
+      "y_mm": 47.29875,
+      "x_u": 0,
+      "y_u": 2,
+      "width_u": 1.75,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL0",
+        "2": "KEY_30"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_30"
+      }
+    },
+    {
+      "ref": "SW31",
+      "diode_ref": "D31",
+      "name": "A",
+      "row": 2,
+      "col": 1,
+      "x_mm": 42.485,
+      "y_mm": 47.29875,
+      "x_u": 1.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL1",
+        "2": "KEY_31"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_31"
+      }
+    },
+    {
+      "ref": "SW32",
+      "diode_ref": "D32",
+      "name": "S",
+      "row": 2,
+      "col": 2,
+      "x_mm": 61.535,
+      "y_mm": 47.29875,
+      "x_u": 2.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL2",
+        "2": "KEY_32"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_32"
+      }
+    },
+    {
+      "ref": "SW33",
+      "diode_ref": "D33",
+      "name": "D",
+      "row": 2,
+      "col": 3,
+      "x_mm": 80.585,
+      "y_mm": 47.29875,
+      "x_u": 3.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL3",
+        "2": "KEY_33"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_33"
+      }
+    },
+    {
+      "ref": "SW34",
+      "diode_ref": "D34",
+      "name": "F",
+      "row": 2,
+      "col": 4,
+      "x_mm": 99.635,
+      "y_mm": 47.29875,
+      "x_u": 4.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL4",
+        "2": "KEY_34"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_34"
+      }
+    },
+    {
+      "ref": "SW35",
+      "diode_ref": "D35",
+      "name": "G",
+      "row": 2,
+      "col": 5,
+      "x_mm": 118.685,
+      "y_mm": 47.29875,
+      "x_u": 5.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL5",
+        "2": "KEY_35"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_35"
+      }
+    },
+    {
+      "ref": "SW36",
+      "diode_ref": "D36",
+      "name": "H",
+      "row": 2,
+      "col": 6,
+      "x_mm": 137.735,
+      "y_mm": 47.29875,
+      "x_u": 6.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL6",
+        "2": "KEY_36"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_36"
+      }
+    },
+    {
+      "ref": "SW37",
+      "diode_ref": "D37",
+      "name": "J",
+      "row": 2,
+      "col": 7,
+      "x_mm": 156.785,
+      "y_mm": 47.29875,
+      "x_u": 7.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL7",
+        "2": "KEY_37"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_37"
+      }
+    },
+    {
+      "ref": "SW38",
+      "diode_ref": "D38",
+      "name": "K",
+      "row": 2,
+      "col": 8,
+      "x_mm": 175.835,
+      "y_mm": 47.29875,
+      "x_u": 8.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL8",
+        "2": "KEY_38"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_38"
+      }
+    },
+    {
+      "ref": "SW39",
+      "diode_ref": "D39",
+      "name": "L",
+      "row": 2,
+      "col": 9,
+      "x_mm": 194.885,
+      "y_mm": 47.29875,
+      "x_u": 9.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL9",
+        "2": "KEY_39"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_39"
+      }
+    },
+    {
+      "ref": "SW40",
+      "diode_ref": "D40",
+      "name": "Semicolon",
+      "row": 2,
+      "col": 10,
+      "x_mm": 213.935,
+      "y_mm": 47.29875,
+      "x_u": 10.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL10",
+        "2": "KEY_40"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_40"
+      }
+    },
+    {
+      "ref": "SW41",
+      "diode_ref": "D41",
+      "name": "Quote",
+      "row": 2,
+      "col": 11,
+      "x_mm": 232.985,
+      "y_mm": 47.29875,
+      "x_u": 11.75,
+      "y_u": 2,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL11",
+        "2": "KEY_41"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_41"
+      }
+    },
+    {
+      "ref": "SW42",
+      "diode_ref": "D42",
+      "name": "Enter",
+      "row": 2,
+      "col": 12,
+      "x_mm": 263.94125,
+      "y_mm": 47.29875,
+      "x_u": 12.75,
+      "y_u": 2,
+      "width_u": 2.25,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-2.25U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL12",
+        "2": "KEY_42"
+      },
+      "diode_nets": {
+        "1": "ROW2",
+        "2": "KEY_42"
+      }
+    },
+    {
+      "ref": "SW43",
+      "diode_ref": "D43",
+      "name": "LeftShift",
+      "row": 3,
+      "col": 0,
+      "x_mm": 21.05375,
+      "y_mm": 66.34875,
+      "x_u": 0,
+      "y_u": 3,
+      "width_u": 2.25,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-2.25U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL0",
+        "2": "KEY_43"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_43"
+      }
+    },
+    {
+      "ref": "SW44",
+      "diode_ref": "D44",
+      "name": "Z",
+      "row": 3,
+      "col": 1,
+      "x_mm": 52.01,
+      "y_mm": 66.34875,
+      "x_u": 2.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL1",
+        "2": "KEY_44"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_44"
+      }
+    },
+    {
+      "ref": "SW45",
+      "diode_ref": "D45",
+      "name": "X",
+      "row": 3,
+      "col": 2,
+      "x_mm": 71.06,
+      "y_mm": 66.34875,
+      "x_u": 3.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL2",
+        "2": "KEY_45"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_45"
+      }
+    },
+    {
+      "ref": "SW46",
+      "diode_ref": "D46",
+      "name": "C",
+      "row": 3,
+      "col": 3,
+      "x_mm": 90.11,
+      "y_mm": 66.34875,
+      "x_u": 4.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL3",
+        "2": "KEY_46"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_46"
+      }
+    },
+    {
+      "ref": "SW47",
+      "diode_ref": "D47",
+      "name": "V",
+      "row": 3,
+      "col": 4,
+      "x_mm": 109.16,
+      "y_mm": 66.34875,
+      "x_u": 5.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL4",
+        "2": "KEY_47"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_47"
+      }
+    },
+    {
+      "ref": "SW48",
+      "diode_ref": "D48",
+      "name": "B",
+      "row": 3,
+      "col": 5,
+      "x_mm": 128.21,
+      "y_mm": 66.34875,
+      "x_u": 6.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL5",
+        "2": "KEY_48"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_48"
+      }
+    },
+    {
+      "ref": "SW49",
+      "diode_ref": "D49",
+      "name": "N",
+      "row": 3,
+      "col": 6,
+      "x_mm": 147.26,
+      "y_mm": 66.34875,
+      "x_u": 7.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL6",
+        "2": "KEY_49"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_49"
+      }
+    },
+    {
+      "ref": "SW50",
+      "diode_ref": "D50",
+      "name": "M",
+      "row": 3,
+      "col": 7,
+      "x_mm": 166.31,
+      "y_mm": 66.34875,
+      "x_u": 8.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL7",
+        "2": "KEY_50"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_50"
+      }
+    },
+    {
+      "ref": "SW51",
+      "diode_ref": "D51",
+      "name": "Comma",
+      "row": 3,
+      "col": 8,
+      "x_mm": 185.36,
+      "y_mm": 66.34875,
+      "x_u": 9.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL8",
+        "2": "KEY_51"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_51"
+      }
+    },
+    {
+      "ref": "SW52",
+      "diode_ref": "D52",
+      "name": "Period",
+      "row": 3,
+      "col": 9,
+      "x_mm": 204.41,
+      "y_mm": 66.34875,
+      "x_u": 10.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL9",
+        "2": "KEY_52"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_52"
+      }
+    },
+    {
+      "ref": "SW53",
+      "diode_ref": "D53",
+      "name": "Slash",
+      "row": 3,
+      "col": 10,
+      "x_mm": 223.46,
+      "y_mm": 66.34875,
+      "x_u": 11.25,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL10",
+        "2": "KEY_53"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_53"
+      }
+    },
+    {
+      "ref": "SW54",
+      "diode_ref": "D54",
+      "name": "RightShift_L",
+      "row": 3,
+      "col": 11,
+      "x_mm": 249.65375,
+      "y_mm": 66.34875,
+      "x_u": 12.25,
+      "y_u": 3,
+      "width_u": 1.75,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL11",
+        "2": "KEY_54"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_54"
+      }
+    },
+    {
+      "ref": "SW55",
+      "diode_ref": "D55",
+      "name": "RightShift_R",
+      "row": 3,
+      "col": 12,
+      "x_mm": 275.8475,
+      "y_mm": 66.34875,
+      "x_u": 14.0,
+      "y_u": 3,
+      "width_u": 1,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL12",
+        "2": "KEY_55"
+      },
+      "diode_nets": {
+        "1": "ROW3",
+        "2": "KEY_55"
+      }
+    },
+    {
+      "ref": "SW56",
+      "diode_ref": "D56",
+      "name": "LCtrl",
+      "row": 4,
+      "col": 0,
+      "x_mm": 13.91,
+      "y_mm": 85.39875,
+      "x_u": 0,
+      "y_u": 4,
+      "width_u": 1.5,
+      "present_for": [
+        "WKL"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL0",
+        "2": "KEY_56"
+      },
+      "diode_nets": {
+        "1": "ROW4",
+        "2": "KEY_56"
+      }
+    },
+    {
+      "ref": "SW57",
+      "diode_ref": "D57",
+      "name": "LMeta",
+      "row": 4,
+      "col": 1,
+      "x_mm": 37.7225,
+      "y_mm": 85.39875,
+      "x_u": 1.5,
+      "y_u": 4,
+      "width_u": 1,
+      "present_for": [
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL1",
+        "2": "KEY_57"
+      },
+      "diode_nets": {
+        "1": "ROW4",
+        "2": "KEY_57"
+      }
+    },
+    {
+      "ref": "SW58",
+      "diode_ref": "D58",
+      "name": "LAlt",
+      "row": 4,
+      "col": 2,
+      "x_mm": 61.535,
+      "y_mm": 85.39875,
+      "x_u": 2.5,
+      "y_u": 4,
+      "width_u": 1.5,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL2",
+        "2": "KEY_58"
+      },
+      "diode_nets": {
+        "1": "ROW4",
+        "2": "KEY_58"
+      }
+    },
+    {
+      "ref": "SW59",
+      "diode_ref": "D59",
+      "name": "Space",
+      "row": 4,
+      "col": 6,
+      "x_mm": 142.4975,
+      "y_mm": 85.39875,
+      "x_u": 4,
+      "y_u": 4,
+      "width_u": 7,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-7U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL6",
+        "2": "KEY_59"
+      },
+      "diode_nets": {
+        "1": "ROW4",
+        "2": "KEY_59"
+      }
+    },
+    {
+      "ref": "SW60",
+      "diode_ref": "D60",
+      "name": "RAlt",
+      "row": 4,
+      "col": 10,
+      "x_mm": 223.46,
+      "y_mm": 85.39875,
+      "x_u": 11,
+      "y_u": 4,
+      "width_u": 1.5,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL10",
+        "2": "KEY_60"
+      },
+      "diode_nets": {
+        "1": "ROW4",
+        "2": "KEY_60"
+      }
+    },
+    {
+      "ref": "SW61",
+      "diode_ref": "D61",
+      "name": "RMeta",
+      "row": 4,
+      "col": 11,
+      "x_mm": 247.2725,
+      "y_mm": 85.39875,
+      "x_u": 12.5,
+      "y_u": 4,
+      "width_u": 1,
+      "present_for": [
+        "HHKB"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL11",
+        "2": "KEY_61"
+      },
+      "diode_nets": {
+        "1": "ROW4",
+        "2": "KEY_61"
+      }
+    },
+    {
+      "ref": "SW62",
+      "diode_ref": "D62",
+      "name": "RCtrl",
+      "row": 4,
+      "col": 12,
+      "x_mm": 271.085,
+      "y_mm": 85.39875,
+      "x_u": 13.5,
+      "y_u": 4,
+      "width_u": 1.5,
+      "present_for": [
+        "WKL"
+      ],
+      "footprint": "MX_V2:MX-Hotswap-1U",
+      "diode_footprint": "Diode_SMD:D_SOD-123",
+      "switch_nets": {
+        "1": "COL12",
+        "2": "KEY_62"
+      },
+      "diode_nets": {
+        "1": "ROW4",
+        "2": "KEY_62"
+      }
+    }
+  ],
+  "matrix_revision": "bottom-columns-physical-v2; visible layout retained; VIA schema migration required"
+}

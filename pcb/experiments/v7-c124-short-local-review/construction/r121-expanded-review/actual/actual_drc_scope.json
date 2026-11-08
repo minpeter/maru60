@@ -1,0 +1,31 @@
+{
+  "candidate_sha256": "8c45df3642599be269697ce9b225fe55ee6b886dce713b77f6ced533ea268fb6",
+  "drc_report_sha256": "0befbe22c82f45d19d2c5450530cf7ad4e8caaa30218015da81731e09ba937bf",
+  "total_violations": 88,
+  "total_unconnected_entries": 12,
+  "type_counts": {
+    "track_dangling": 6,
+    "via_dangling": 2,
+    "text_height": 26,
+    "silk_over_copper": 24,
+    "silk_overlap": 30
+  },
+  "contract_related_entries": [
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [GND] on B.Cu, length 0.6000 mm",
+          "pos": {
+            "x": 15.5,
+            "y": 17.85
+          },
+          "uuid": "0dd51559-bc06-502f-8bb1-1b186fa751d0"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    }
+  ],
+  "interpretation": "Do not call DRC-clean. The bridgeB warning persists despite independently positive physical copper contacts; not waived. This review does not perform the whole-board baseline delta."
+}

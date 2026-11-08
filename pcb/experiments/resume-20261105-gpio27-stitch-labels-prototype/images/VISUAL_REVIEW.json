@@ -1,0 +1,13 @@
+{
+  "candidate_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "viewed": [
+    "full-native.png"
+  ],
+  "findings": "All three final label images are byte-identical to the explicitly viewed b1e3 images, so the existing visual association review transfers exactly. The final whole-board rendering is reviewed separately. These are nominal CAD views, not physical hardware.",
+  "mechanical_or_fabrication_qualification": false,
+  "label_image_byte_identity_to_previously_viewed_b1e3": {
+    "U13": true,
+    "U11-label": true,
+    "R135-R145": true
+  }
+}

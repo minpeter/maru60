@@ -1,0 +1,358 @@
+20:53:59: Debug: Adding duplicate image handler for 'PNG file'
+20:53:59: Debug: Adding duplicate image handler for 'JPEG file'
+20:53:59: Debug: Adding duplicate image handler for 'TIFF file'
+20:53:59: Debug: Adding duplicate image handler for 'GIF file'
+20:53:59: Debug: Adding duplicate image handler for 'PNM file'
+20:53:59: Debug: Adding duplicate image handler for 'PCX file'
+20:53:59: Debug: Adding duplicate image handler for 'IFF file'
+20:53:59: Debug: Adding duplicate image handler for 'Windows icon file'
+20:53:59: Debug: Adding duplicate image handler for 'Windows cursor file'
+20:53:59: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+20:53:59: Debug: Adding duplicate image handler for 'TGA file'
+20:53:59: Debug: Adding duplicate image handler for 'XPM file'
+20:53:59: Debug: Adding duplicate image handler for 'PNG file'
+20:53:59: Debug: Adding duplicate image handler for 'JPEG file'
+20:53:59: Debug: Adding duplicate image handler for 'TIFF file'
+20:53:59: Debug: Adding duplicate image handler for 'GIF file'
+20:53:59: Debug: Adding duplicate image handler for 'PNM file'
+20:53:59: Debug: Adding duplicate image handler for 'PCX file'
+20:53:59: Debug: Adding duplicate image handler for 'IFF file'
+20:53:59: Debug: Adding duplicate image handler for 'Windows icon file'
+20:53:59: Debug: Adding duplicate image handler for 'Windows cursor file'
+20:53:59: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+20:53:59: Debug: Adding duplicate image handler for 'TGA file'
+20:53:59: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "per_board": {
+    "aead": {
+      "board_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+      "original_graph_sha256": "2e7e91b3d536505e99f5f911933de5c8c3b8469ccdce8c747b547705552541a6",
+      "corrected_graph_sha256": "517a56e614914769a4c7e5eef3ac99076a9da33c5504d9d859b2a747b8b7df22",
+      "pad_inventory_exact": true,
+      "changed_pad_partition_nets": [],
+      "all_native_object_component_partition_exact": true,
+      "direct": {
+        "original_count": 21901,
+        "corrected_count": 21898,
+        "false_positive_edges_removed": [
+          {
+            "a": "4b67f996-1ff1-4142-8261-0c00f2db5d84",
+            "b": "70579ce8-6408-4de2-bcc5-3bddeb1bb2a2",
+            "old_support": [
+              [
+                "F.Cu",
+                0.02517116294
+              ]
+            ],
+            "redundant_with_corrected_edges": true
+          },
+          {
+            "a": "901de7f9-8f2b-4fda-8701-779f97081ed1",
+            "b": "9ce1d223-d7c3-49f8-a54a-cd2573c67b14",
+            "old_support": [
+              [
+                "F.Cu",
+                0.02517116294
+              ]
+            ],
+            "redundant_with_corrected_edges": true
+          },
+          {
+            "a": "8a0af035-c52e-4652-816c-b152480bf29d",
+            "b": "b460c437-7d6c-4227-b9a0-21224a370131",
+            "old_support": [
+              [
+                "F.Cu",
+                0.02517116294
+              ]
+            ],
+            "redundant_with_corrected_edges": true
+          }
+        ],
+        "positive_edges_added": [],
+        "changed_still_positive_support_count": 1040
+      },
+      "zone": {
+        "original_count": 731,
+        "corrected_count": 731,
+        "false_positive_edges_removed": [],
+        "positive_edges_added": [],
+        "changed_still_positive_support_count": 4
+      }
+    },
+    "2c7": {
+      "board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+      "original_graph_sha256": "6ea554aa152b511102d2500a90151017939abff3f38bf67205acf42a4b2d6eed",
+      "corrected_graph_sha256": "a7d7be26512f0d23ab5107067407e4cdf20e5894e4964c50821ce047779f5d82",
+      "pad_inventory_exact": true,
+      "changed_pad_partition_nets": [],
+      "all_native_object_component_partition_exact": true,
+      "direct": {
+        "original_count": 21902,
+        "corrected_count": 21899,
+        "false_positive_edges_removed": [
+          {
+            "a": "4b67f996-1ff1-4142-8261-0c00f2db5d84",
+            "b": "70579ce8-6408-4de2-bcc5-3bddeb1bb2a2",
+            "old_support": [
+              [
+                "F.Cu",
+                0.02517116294
+              ]
+            ],
+            "redundant_with_corrected_edges": true
+          },
+          {
+            "a": "901de7f9-8f2b-4fda-8701-779f97081ed1",
+            "b": "9ce1d223-d7c3-49f8-a54a-cd2573c67b14",
+            "old_support": [
+              [
+                "F.Cu",
+                0.02517116294
+              ]
+            ],
+            "redundant_with_corrected_edges": true
+          },
+          {
+            "a": "8a0af035-c52e-4652-816c-b152480bf29d",
+            "b": "b460c437-7d6c-4227-b9a0-21224a370131",
+            "old_support": [
+              [
+                "F.Cu",
+                0.02517116294
+              ]
+            ],
+            "redundant_with_corrected_edges": true
+          }
+        ],
+        "positive_edges_added": [],
+        "changed_still_positive_support_count": 1041
+      },
+      "zone": {
+        "original_count": 731,
+        "corrected_count": 731,
+        "false_positive_edges_removed": [],
+        "positive_edges_added": [],
+        "changed_still_positive_support_count": 4
+      }
+    },
+    "cafa": {
+      "board_sha256": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb",
+      "original_graph_sha256": "07a07ec46fe50823f5519aa381d030131ffbdd761c830509e5d833fa296d0b1c",
+      "corrected_graph_sha256": "93169549e62f1c3cd0ac21e7c950d5e39b703e48ad31e387198e4462194dec8c",
+      "pad_inventory_exact": true,
+      "changed_pad_partition_nets": [],
+      "all_native_object_component_partition_exact": true,
+      "direct": {
+        "original_count": 21888,
+        "corrected_count": 21885,
+        "false_positive_edges_removed": [
+          {
+            "a": "4b67f996-1ff1-4142-8261-0c00f2db5d84",
+            "b": "70579ce8-6408-4de2-bcc5-3bddeb1bb2a2",
+            "old_support": [
+              [
+                "F.Cu",
+                0.02517116294
+              ]
+            ],
+            "redundant_with_corrected_edges": true
+          },
+          {
+            "a": "901de7f9-8f2b-4fda-8701-779f97081ed1",
+            "b": "9ce1d223-d7c3-49f8-a54a-cd2573c67b14",
+            "old_support": [
+              [
+                "F.Cu",
+                0.02517116294
+              ]
+            ],
+            "redundant_with_corrected_edges": true
+          },
+          {
+            "a": "8a0af035-c52e-4652-816c-b152480bf29d",
+            "b": "b460c437-7d6c-4227-b9a0-21224a370131",
+            "old_support": [
+              [
+                "F.Cu",
+                0.02517116294
+              ]
+            ],
+            "redundant_with_corrected_edges": true
+          }
+        ],
+        "positive_edges_added": [],
+        "changed_still_positive_support_count": 1039
+      },
+      "zone": {
+        "original_count": 731,
+        "corrected_count": 731,
+        "false_positive_edges_removed": [],
+        "positive_edges_added": [],
+        "changed_still_positive_support_count": 4
+      }
+    }
+  },
+  "transitions": {
+    "2c7-to-aead": {
+      "pad_inventory_exact": true,
+      "all_245_pad_partitions_exact": true,
+      "all_retained_native_object_roots_exact": true,
+      "retired_native_objects": [
+        {
+          "uuid": "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+          "type": "PCB_TRACK",
+          "net": "BUCK_FB",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c",
+          "type": "PCB_VIA",
+          "net": "BUCK_FB",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        }
+      ],
+      "added_native_objects": [
+        {
+          "uuid": "6ffab701-7688-4850-9aad-8ab86bd0f04a",
+          "type": "PCB_TRACK",
+          "net": "BUCK_FB",
+          "layers": [
+            "F.Cu"
+          ]
+        }
+      ],
+      "direct": {
+        "retained_contacts_and_support_exact": true,
+        "source_retained": 21895,
+        "candidate_retained": 21895,
+        "lost_keys": [],
+        "added_keys": [],
+        "support_changes": []
+      },
+      "zone": {
+        "retained_contacts_and_support_exact": true,
+        "source_retained": 731,
+        "candidate_retained": 731,
+        "lost_keys": [],
+        "added_keys": [],
+        "support_changes": []
+      }
+    },
+    "aead-to-cafa": {
+      "pad_inventory_exact": true,
+      "all_245_pad_partitions_exact": true,
+      "all_retained_native_object_roots_exact": true,
+      "retired_native_objects": [
+        {
+          "uuid": "0826a4b6-5567-52ab-a787-b898d20d23ac",
+          "type": "PCB_VIA",
+          "net": "+3V3",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "0858c392-ee59-5350-bcaf-d8762f658a08",
+          "type": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "19fee20c-f24a-5570-9d2d-8ed9371d42bb",
+          "type": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "53e7b99f-308f-57ae-9e47-9e779e6b3272",
+          "type": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "7ffc8178-bb79-51de-b57d-c5c6afb0ad28",
+          "type": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "872bfd37-a607-537a-a7fa-650d69bca58e",
+          "type": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "9f355e92-2386-5d9a-b330-367e9a6d6370",
+          "type": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "cbe6ef4b-6ae2-561c-89a1-59cf696150b8",
+          "type": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "f9815195-95ae-5029-9575-af5b562417f2",
+          "type": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "fba8f2b5-a5de-578b-a107-ce7c9d080fb6",
+          "type": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "F.Cu"
+          ]
+        }
+      ],
+      "added_native_objects": [],
+      "direct": {
+        "retained_contacts_and_support_exact": true,
+        "source_retained": 21885,
+        "candidate_retained": 21885,
+        "lost_keys": [],
+        "added_keys": [],
+        "support_changes": []
+      },
+      "zone": {
+        "retained_contacts_and_support_exact": true,
+        "source_retained": 731,
+        "candidate_retained": 731,
+        "lost_keys": [],
+        "added_keys": [],
+        "support_changes": []
+      }
+    }
+  },
+  "J1_A1_exact": true
+}

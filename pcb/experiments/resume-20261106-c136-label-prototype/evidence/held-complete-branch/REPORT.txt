@@ -1,0 +1,33 @@
+HELD / REJECTED FOR EXACT NO-LOSS. UNSELECTED.
+Complete unused +4V_REG branch experiment. No further copper variant authorized or created.
+
+Source: qualified ef45f84/9d787421 prototype, SHA256 9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed.
+Candidate SHA256 0922da136ddb6df6847fa0c37a7195679c43bd3327e36c4fb06b6cdce006d0d1.
+The strict bbf61e6 baseline remains separate. Source project and selected repository unchanged. First rejected one-segment experiment and read-only follow-up remain in sibling stub4v/.
+
+BOUNDED CHANGE
+Removed exactly F.Cu tracks acf57724-d322-4087-84ab-2893c779cea3 and 05a61be2-0243-4f1b-be73-9b2474fa2d93, plus redundant through-via 83c3c335-9252-48a7-a6b9-33be2a34353e at (33.4,19.65). Exhaustive all-object/all-zone contact scans proved the two tracks form a pendant chain. Via had only F.Cu chain contacts and B.Cu rail/TP3-lead contacts, with no inner-layer or zone function. All three pairs among retained B.Cu main rail, TP3 lead and TP3 pad have positive direct guarded overlap independent of the via annulus. See preedit-via-proof.json and sibling read-only evidence.
+
+NATIVE GATE FIRST: PASS
+41 warnings (down from 42), 9 open pairs. Exactly the original +4V_REG dangling warning removed; no new warning or error category. Fresh schematic-parity DRC: 0 parity entries. ERC: 0. Fresh schematic XML -> raw/native board net identity: pass. Cold refill: all 58 project files byte-identical. Native open representative pairs map to the same complete physical pad components.
+
+MATERIAL AND RETAINED GEOMETRY: PASS WITH INHERITED LIMITS
+Corrected all-through-drill exporter rerun. Every pad inventory/partition unchanged. All 14,723 retained material nodes retain the same 380 connected components. All 22,535 retained island contacts remain, with no raw or guarded overlap reduction. 21,798 object/layer direct contacts and 735 zone contacts preserved. All retained serialized track/via/footprint primitives are byte-identical; only the declared three objects are deleted. Inherited 51 guarded-contact proof failures remain unchanged; they are NOT resolved or waived.
+
+All 15,369 retained object/layer material rows explicitly assert zero loss area AND zero loss contours. Two retained B.Cu objects gain material because the declared retired via drill is removed: rail 495170b7 gains 0.070686135132 mm2, and TP3 lead ec862796 gains 0.04330704845 mm2. No other retained object gains or loses material. All 25,740 retained signal/power reference rows, inspecting both inner GND planes, pass the native zero-area AND zero-contour test for lost reference on existing material and uncovered added material. These are nominal native-polygon reference checks, not an electromagnetic or all-real-number clearance proof.
+
+FULL PLANE GATE: FAIL
+All 9 outer-layer zone rows have exactly zero gain and loss. Both inner GND zone rows report native loss 0.0000000199015 mm2 across four contours each, and gain 0.7914969484185 mm2 across six contours each. A nonzero gain does not excuse the loss. Every row was tested; assertion fails on these two plane rows. No tolerance or exception window is used.
+
+EXACT BOUNDARY DIAGNOSIS
+All four native loss triangles per plane are preserved, with bounding boxes, nearby exact source/candidate filled boundary paths, and exact rational squared distances to the retired via center and both retired track centerlines (loss-locations.json). They lie around x=21.56,26.24,280.55,281.34 mm, not just the removed via. Distances to the retired via center are approximately 11.8327,7.1622,247.1496,247.9405 mm respectively.
+
+After cancelling exactly opposite-directed fracture edges, each inner plane has 73 removed and 21 added directed edges. Independent exact rational integration between matching source/candidate boundary paths, with exact point-in-filled-polygon classification of samples on every integration interval, proves actual represented remote plane-edge displacement. Exact remote loss is 87241489/1376 nm2 = 0.0000000634022449127907 mm2 per inner plane. This differs from native Boolean sliver area, which therefore must NOT be presented as exact geometric loss. Nonzero rational loss proves this is not solely a clipping-result artifact or a cancelled fracture connector. Integer re-fracturing/tessellation is consistent with the changed intermediate boundary vertices, but the stored piecewise-linear metal boundary really changes; no safety/harmlessness inference follows from its small size. Full raw boundary deltas and rational classifications are retained.
+
+No retained-object intersection with the native four loss contours was found. This does not override exact whole-plane failure or inherited c782 exact no-loss failure. The new complete-branch candidate is held/rejected and must not be merged merely to reduce warning count.
+
+VALIDATION HISTORY
+The original expensive old-gap/new-gap sweep and its first containment implementation were stopped, not counted as passes. The completed bounded-drill containment implementation still covers all retained objects and both full inner planes, using exact drill bounding-box filtering only to avoid subtracting physically disjoint holes. All scripts and logs, including an initial comparator SyntaxError, remain recorded in DIAGNOSTIC_HISTORY.txt. There was no second complete-branch or third copper variant.
+
+NO PHYSICAL QUALIFICATION
+The retired branch/via parasitic effect is unmodeled. No PDN/SI improvement, active stability, hardware, manufacturing or fabrication qualification is claimed. No install, credentials, push, purchase, fabrication or flashing performed.

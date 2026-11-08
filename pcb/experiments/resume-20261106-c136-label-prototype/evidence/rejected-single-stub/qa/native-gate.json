@@ -1,0 +1,261 @@
+{
+  "violations": {
+    "before": 42,
+    "after": 42,
+    "removed": [
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [+4V_REG] on F.Cu, length 1.5556 mm",
+            "pos": {
+              "x": 22.6,
+              "y": 18.55
+            },
+            "uuid": "acf57724-d322-4087-84ab-2893c779cea3"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      }
+    ],
+    "added": [
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [+4V_REG] on F.Cu, length 9.7000 mm",
+            "pos": {
+              "x": 23.7,
+              "y": 19.65
+            },
+            "uuid": "05a61be2-0243-4f1b-be73-9b2474fa2d93"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      }
+    ],
+    "before_categories": {
+      "warning:track_dangling": 4,
+      "warning:text_height": 15,
+      "warning:silk_over_copper": 13,
+      "warning:silk_overlap": 10
+    },
+    "after_categories": {
+      "warning:track_dangling": 4,
+      "warning:text_height": 15,
+      "warning:silk_over_copper": 13,
+      "warning:silk_overlap": 10
+    }
+  },
+  "unconnected_items": {
+    "before": 9,
+    "after": 9,
+    "removed": [
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 12 [EXT_GPIO24] of U13 on B.Cu",
+            "pos": {
+              "x": 89.45,
+              "y": 42.0
+            },
+            "uuid": "e01faed3-83ab-447f-badb-64e03c26621d"
+          },
+          {
+            "description": "Pad 5 [EXT_GPIO24] of J3 on B.Cu",
+            "pos": {
+              "x": 92.5,
+              "y": 39.0
+            },
+            "uuid": "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 40 [MCU_GPIO26] of U1 on B.Cu",
+            "pos": {
+              "x": 111.8,
+              "y": 78.05
+            },
+            "uuid": "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+          },
+          {
+            "description": "Track [MCU_GPIO26] on F.Cu, length 5.4966 mm",
+            "pos": {
+              "x": 108.9,
+              "y": 45.45
+            },
+            "uuid": "d4d89708-1b6c-56fe-8c2f-207ff79756ff"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [MCU_GPIO24] on B.Cu, length 1.0296 mm",
+            "pos": {
+              "x": 109.325,
+              "y": 43.0
+            },
+            "uuid": "984834de-986f-5e89-97e1-e53e00fd8fcc"
+          },
+          {
+            "description": "Pad 36 [MCU_GPIO24] of U1 on B.Cu",
+            "pos": {
+              "x": 110.2,
+              "y": 78.05
+            },
+            "uuid": "c1939946-4449-4887-9393-3ef03908d4dd"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [MCU_GPIO25] on B.Cu, length 1.0050 mm",
+            "pos": {
+              "x": 97.5,
+              "y": 32.725
+            },
+            "uuid": "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f"
+          },
+          {
+            "description": "Pad 37 [MCU_GPIO25] of U1 on B.Cu",
+            "pos": {
+              "x": 110.6,
+              "y": 78.05
+            },
+            "uuid": "254b9a4f-db28-4c96-a610-c908a1ce5922"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      }
+    ],
+    "added": [
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 1 [MCU_GPIO24] of R132 on B.Cu",
+            "pos": {
+              "x": 109.325,
+              "y": 43.0
+            },
+            "uuid": "9eb021c4-a45d-4e91-bb20-d4d5181c4b6c"
+          },
+          {
+            "description": "Pad 36 [MCU_GPIO24] of U1 on B.Cu",
+            "pos": {
+              "x": 110.2,
+              "y": 78.05
+            },
+            "uuid": "c1939946-4449-4887-9393-3ef03908d4dd"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 1 [MCU_GPIO25] of R133 on B.Cu",
+            "pos": {
+              "x": 98.5,
+              "y": 32.825
+            },
+            "uuid": "b0f62a3d-7abe-4631-9255-1097dbefcea8"
+          },
+          {
+            "description": "Pad 37 [MCU_GPIO25] of U1 on B.Cu",
+            "pos": {
+              "x": 110.6,
+              "y": 78.05
+            },
+            "uuid": "254b9a4f-db28-4c96-a610-c908a1ce5922"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 12 [EXT_GPIO24] of U13 on B.Cu",
+            "pos": {
+              "x": 89.45,
+              "y": 42.0
+            },
+            "uuid": "e01faed3-83ab-447f-badb-64e03c26621d"
+          },
+          {
+            "description": "Track [EXT_GPIO24] on B.Cu, length 1.2590 mm",
+            "pos": {
+              "x": 92.5,
+              "y": 39.0
+            },
+            "uuid": "abce6f28-dc33-4728-9430-3b3a14c3fc23"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 40 [MCU_GPIO26] of U1 on B.Cu",
+            "pos": {
+              "x": 111.8,
+              "y": 78.05
+            },
+            "uuid": "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+          },
+          {
+            "description": "Track [MCU_GPIO26] on B.Cu, length 1.1105 mm",
+            "pos": {
+              "x": 108.325,
+              "y": 44.5
+            },
+            "uuid": "1740585c-6e03-5d0e-8448-78c4eddb0baa"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      }
+    ],
+    "before_categories": {
+      "error:unconnected_items": 9
+    },
+    "after_categories": {
+      "error:unconnected_items": 9
+    }
+  },
+  "schematic_parity": {
+    "before": 0,
+    "after": 0,
+    "removed": [],
+    "added": [],
+    "before_categories": {},
+    "after_categories": {}
+  },
+  "pass": false,
+  "decision": "REJECTED: a new dangling warning appears on retained active rail 05a61be2; severity/category totals alone hide replacement of the warned object. Stop before deeper checks.",
+  "open_pair_limit": "Native representative items differ in four pre-existing open-pair reports. No fresh material/partition validation run after failed gate; count equality is not accepted as physical proof."
+}

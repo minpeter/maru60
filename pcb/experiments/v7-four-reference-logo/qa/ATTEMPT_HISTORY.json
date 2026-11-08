@@ -1,0 +1,28 @@
+{
+  "source_board_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "prototype_five": {
+    "path": "candidate/pcb",
+    "board_sha256": "8a92cd8710e821d91e8b06c3f3b9d2a90cfd30f9ad76949f78c02672cc58ed3e",
+    "construction_execution": "qa/build-candidate.execution.json",
+    "raw_delta_restoration_passed_before_metadata_gate": true,
+    "failed_gate": "Expected53 files, native SaveBoard produced one explicit additional maru60.kicad_prl. Source53 unchanged.",
+    "generated_local_preferences_sha256": "8c0a828ce6c58ebd31b8835a9bd58efb04385897813f3e5d51b961410868af58",
+    "fresh_R131_check": "qa/prototype-five-R131.json",
+    "R131_intersects_unmoved_U12_reference": true,
+    "status": "Not eligible; preserved. R131 removed from revised scope."
+  },
+  "current_four": {
+    "path": "candidate-four/pcb",
+    "board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+    "explicit_source53_plus_generated_metadata54_contract": "PLAN-four.json",
+    "four_references": [
+      "C100",
+      "R140",
+      "R160",
+      "R134"
+    ],
+    "R131_preserved_exactly": true,
+    "selected": false
+  },
+  "historical_lost19_reference_trial_or_checker_packets_not_claimed_restored": true
+}

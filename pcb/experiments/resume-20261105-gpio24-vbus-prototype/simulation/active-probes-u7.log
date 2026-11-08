@@ -1,0 +1,20 @@
+stdout ** Copyright 2001-2024, The ngspice team.
+stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html
+stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+stdout ** Creation Date: Sun Jan 12 08:19:15 UTC 2025
+stdout ******
+COMMAND_RETURN version: 0
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: unmodified ti tps2553-1 model with candidate rail and resistor values
+stderr Error on line 193 or its substitute:
+stderr a.xu7.x_u1_s14.as_u1_s14 %gd xu7.u1_set0_r 0 %gd xu7.u1_4ms 0 xu7.x_u1_s14:a_u1_s14
+stderr MIF-ERROR - unable to find definition of model xu7.x_u1_s14:a_u1_s14
+stderr Simulation interrupted due to error!
+COMMAND_RETURN source /workspace/shared/maru60-resume/power-replay-20261105/inputs/v7-power-simulation/tps2553_startup.cir: 0
+stderr Error: circuit not parsed.
+COMMAND_RETURN run: 0
+COMMAND_RETURN set wr_singlescale: 0
+COMMAND_RETURN set wr_vecnames: 0
+stderr Error: no such vector out
+stderr in term: v(out)
+COMMAND_RETURN wrdata /workspace/shared/maru60-resume/power-replay-20261105/active-probes/u7/waveform.txt v(out): 0

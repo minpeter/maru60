@@ -1,0 +1,6 @@
+from pathlib import Path
+import pcbnew as p,json,hashlib,time
+R=Path('/tmp/v7-support-endpoint-trial');Q=R/'filled/pcb/maru60.kicad_pcb';H=lambda q:hashlib.sha256(q.read_bytes()).hexdigest();before=H(Q);b=p.LoadBoard(str(Q));assert p.GetBuildVersion()=='9.0.2+dfsg-1';ct=json.loads((R/'BUILD_CONTRACT.json').read_text());idx={q.m_Uuid.AsString():q for q in b.GetTracks()}
+for row in ct['changed_main_tracks']:
+ q=idx[row['uuid']];assert [q.GetStart().x/1e6,q.GetStart().y/1e6]==row['new_start'];assert[q.GetEnd().x/1e6,q.GetEnd().y/1e6]==row['new_end']
+inv={'tracks':sum(not isinstance(q,p.PCB_VIA)for q in idx.values()),'vias':sum(isinstance(q,p.PCB_VIA)for q in idx.values()),'footprints':len(b.GetFootprints()),'track_length_mm':sum(q.GetLength()/1e6 for q in idx.values()if not isinstance(q,p.PCB_VIA))};start=time.monotonic();b.BuildConnectivity();p.ZONE_FILLER(b).Fill(b.Zones());p.SaveBoard(str(Q),b);r={'prefill_sha256':before,'filled_sha256':H(Q),'normal_fill_seconds':time.monotonic()-start,'zone_count':len(b.Zones()),'inventory':inv,'status':'UNSELECTED actual serial-leg correction'};(R/'qa/native-fill.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r,indent=2))

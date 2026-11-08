@@ -1,0 +1,60 @@
+{
+  "status": "COMPLETED UNSELECTED CONSTRUCTION CHECKPOINT; not selected or qualified",
+  "source_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "prefill_sha256": "a07cc6b2e6bfa33616e2cd712a272e13c134399def9cfa55ce2bf3532663034b",
+  "filled_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+  "construction_contract_sha256": "15835e0f49534e7250626669db5645dccc80034a3cefd88651578731627d62bd",
+  "filled_tree_files": 58,
+  "filled_tree_manifest_sha256": "225295fc4c1ff8151fd0cc4f0932746c672800cb2700b289fabbf37f3d8406e0",
+  "native": {
+    "tracks": 9750,
+    "vias": 918,
+    "footprints": 383,
+    "track_length_mm": 13185.28691027245,
+    "hard_errors": 0,
+    "warnings": 64,
+    "opens": 12,
+    "ERC": 0,
+    "parity": 0
+  },
+  "warnings": {
+    "old_retired": 5,
+    "new_native_endpoint": 3,
+    "new_accepted_or_suppressed": false
+  },
+  "gates": {
+    "raw_source_delta": true,
+    "all_retained_track_via_records_exact": true,
+    "all_12_zones_exact": true,
+    "all_1269_physical_holes_exact": true,
+    "all_net_partition_contract": true,
+    "no_resistor_bypass": true,
+    "all_14_full_boundary_supports_plus2_minus2_nm": true,
+    "all_58_outward2nm_reference_projections": true,
+    "zero_added_old_reference_shadow_loss": true,
+    "ordinary_pad_via_020mm": true,
+    "actual_foreign_copper": true,
+    "actual_terminal_envelopes": true,
+    "actual_full_courtyards": true,
+    "component_schematic_BOM_module_binding_223_checks": true,
+    "independent_actual_33_checks": true,
+    "effective_mask_paste_apertures": true
+  },
+  "historical_diagnostic": "Internal obsolete V4 R121 pad/first-OVLO contact is explicitly replaced; diagnostic remains in original receipt. No unchanged-boundary support is waived.",
+  "existing_material_guard_failures_unchanged": 51,
+  "qualification": {
+    "adoption": false,
+    "assembly": false,
+    "manufacturer_process": false,
+    "procurement": false,
+    "switch_socket_plate_case": false,
+    "active_startup": false,
+    "analog_parasitics_noise": false,
+    "pulse_reset": false,
+    "hardware": false,
+    "RN73R_TNPW_long_term_equivalence": false
+  },
+  "remaining_native_conditions": "Twelve exact existing opens and three added support-end warnings remain. No native-warning waiver or automatic adoption.",
+  "independent_actual_manifest_sha256": "6bd560d0fce149f914d797dce2c17adbd246f618e59c8a0b038f00749d7373b9",
+  "passive_packet_sha256": "d763ad67082493ef71399513d1665029f8e2ecbe3421b951d056426674005cb5"
+}

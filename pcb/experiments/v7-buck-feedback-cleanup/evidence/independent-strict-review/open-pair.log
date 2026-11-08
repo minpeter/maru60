@@ -1,0 +1,58 @@
+{
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "pass_exact_twelve_complete_component_pairs": true,
+  "all48_endpoints_UUID_native_position_description_validated": true,
+  "unique_component_pairs": 12,
+  "representative_changes": [
+    {
+      "net": "MCU_GPIO10",
+      "before": [
+        "051d7e9f-8c14-583e-a304-ee3212964756",
+        "2fae1e1e-2f58-4081-9638-13aea2289d7d"
+      ],
+      "after": [
+        "2fae1e1e-2f58-4081-9638-13aea2289d7d",
+        "3289f5ae-a6a0-55fb-8040-2ff133e55784"
+      ],
+      "complete_component_pair_exact": true
+    },
+    {
+      "net": "MCU_GPIO24",
+      "before": [
+        "9eb021c4-a45d-4e91-bb20-d4d5181c4b6c",
+        "c1939946-4449-4887-9393-3ef03908d4dd"
+      ],
+      "after": [
+        "984834de-986f-5e89-97e1-e53e00fd8fcc",
+        "c1939946-4449-4887-9393-3ef03908d4dd"
+      ],
+      "complete_component_pair_exact": true
+    },
+    {
+      "net": "MCU_GPIO25",
+      "before": [
+        "254b9a4f-db28-4c96-a610-c908a1ce5922",
+        "b0f62a3d-7abe-4631-9255-1097dbefcea8"
+      ],
+      "after": [
+        "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f",
+        "254b9a4f-db28-4c96-a610-c908a1ce5922"
+      ],
+      "complete_component_pair_exact": true
+    },
+    {
+      "net": "MCU_GPIO26",
+      "before": [
+        "1740585c-6e03-5d0e-8448-78c4eddb0baa",
+        "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+      ],
+      "after": [
+        "a71398b4-f7e8-4d77-820d-99a4c9a4d9df",
+        "d4d89708-1b6c-56fe-8c2f-207ff79756ff"
+      ],
+      "complete_component_pair_exact": true
+    }
+  ],
+  "method": "Independent union-find from all positive direct/zone edges; exact full UUID member sets per endpoint pair, not count or same-net equivalence. Native exported type/net/position/layer/ref/pin/length validate every observed endpoint."
+}

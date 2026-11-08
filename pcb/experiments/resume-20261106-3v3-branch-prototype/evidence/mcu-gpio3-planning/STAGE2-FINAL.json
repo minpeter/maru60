@@ -1,0 +1,34 @@
+{
+  "status": "STOPPED_BOUNDED_SINGLE_LAYER_TOPOLOGY_BLOCKER",
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": null,
+  "candidate_saved": false,
+  "route_closed": false,
+  "source_unchanged": true,
+  "modified_source_objects": [],
+  "source_DRC_inherited_not_rerun": {
+    "open_pairs": 9,
+    "warnings": 42
+  },
+  "native_candidate_DRC": "not run; no candidate exists",
+  "material_graph_contacts_net_identity_ERC_cold_refill": "not run for candidate; no candidate exists",
+  "actual_plane_proof": "Both native all-hole-cut source GND layers lose positive material to proposed via drill; all area and contour rows explicitly asserted",
+  "inherited_limits": [
+    "Strict exact-no-loss failure remains",
+    "51 guarded-contact proof failures remain separate from native warnings",
+    "No SI, active-power, hardware or manufacturing readiness claim"
+  ],
+  "initial_stop_superseded": true,
+  "qualification": "Declared rule-derived local via drill/antipad is allowed only in an isolated development prototype, not strict no-loss baseline.",
+  "transition_freeze": "qa/transition-freeze.json",
+  "route_topology": "qa/qualified-route-topology.json",
+  "source_component_bbox": [
+    112.1892755612236,
+    82.350002,
+    119.83416560646793,
+    89.22914151002624
+  ],
+  "source_component_strictly_inside_search_bounds": true,
+  "complete_route_plausible": false,
+  "next_scope_needed": "Additional explicitly assessed layer transition or narrowly scoped conductor reroute; not attempted in this bounded one-launch assessment."
+}

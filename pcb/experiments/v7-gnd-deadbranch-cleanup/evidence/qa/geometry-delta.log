@@ -1,0 +1,141 @@
+Runtime homes: /tmp/v7-gnd-tail-cleanup-aead/runtime.uPEDKU
+22:33:40: Debug: Adding duplicate image handler for 'PNG file'
+22:33:40: Debug: Adding duplicate image handler for 'JPEG file'
+22:33:40: Debug: Adding duplicate image handler for 'TIFF file'
+22:33:40: Debug: Adding duplicate image handler for 'GIF file'
+22:33:40: Debug: Adding duplicate image handler for 'PNM file'
+22:33:40: Debug: Adding duplicate image handler for 'PCX file'
+22:33:40: Debug: Adding duplicate image handler for 'IFF file'
+22:33:40: Debug: Adding duplicate image handler for 'Windows icon file'
+22:33:40: Debug: Adding duplicate image handler for 'Windows cursor file'
+22:33:40: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+22:33:40: Debug: Adding duplicate image handler for 'TGA file'
+22:33:40: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "status": "UNSELECTED native/serialized delta screen; strict raw-contour reviewer governs acceptance",
+  "source_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "candidate_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "retired_uuids": [
+    "577f36c1-4f15-4c40-b632-02db2931cfb0",
+    "68f95f8e-16e1-430a-a0b2-1c1d51d16fde"
+  ],
+  "retained_nonzone_records_byte_identical": true,
+  "zone_configs_byte_identical": true,
+  "companions_byte_identical": true,
+  "companion_files": 53,
+  "source_drills": 1269,
+  "candidate_drills": 1269,
+  "only_removed_drill": null,
+  "all_retained_drill_shapes_exact": true,
+  "retained_copper_material_inclusion_argument": "Every retained raw copper shape and every through-drill are identical, so each retained object material is identical. Saved-plane inclusion is separately checked against exact serialized zone records.",
+  "limitations": [
+    "Native integer polygon Boolean areas are preliminary estimates, not substitutes for exact serialized-contour classification.",
+    "No inherited global hardware, stability, SI, EMC or manufacturing qualification."
+  ]
+}
+ZONE_DELTAS [
+  {
+    "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+    "net": "GND",
+    "layer": "F.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "0263a319-be98-46c7-be76-b4690077fb70",
+    "net": "+1V1",
+    "layer": "B.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "18251378-06a1-40ae-8f44-01acf0d3371a",
+    "net": "+3V3",
+    "layer": "B.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "3f67c971-a794-46bf-8f55-e7568aa08387",
+    "net": "+3V3",
+    "layer": "B.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "431dc987-81d8-4e96-9039-7fb10f89e34d",
+    "net": "+1V1",
+    "layer": "B.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "4568b524-9e43-496b-a69d-6a08336db9f4",
+    "net": "GND",
+    "layer": "B.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+    "net": "+3V3",
+    "layer": "B.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+    "net": "GND",
+    "layer": "B.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+    "net": "VREG_LX",
+    "layer": "B.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+    "net": "GND",
+    "layer": "In1.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "ba4d2263-baf4-4b28-97d8-2eb2524a351c",
+    "net": "",
+    "layer": "In1.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "ba4d2263-baf4-4b28-97d8-2eb2524a351c",
+    "net": "",
+    "layer": "In2.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  },
+  {
+    "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+    "net": "GND",
+    "layer": "In2.Cu",
+    "raw_zone_record_identical": true,
+    "native_loss_estimate_mm2": 0.0,
+    "native_gain_estimate_mm2": 0.0
+  }
+]

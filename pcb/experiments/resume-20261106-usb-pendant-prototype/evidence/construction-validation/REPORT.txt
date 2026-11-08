@@ -1,0 +1,27 @@
+ONE-SEGMENT USB TRIM PASSES BOUNDED GEOMETRIC CHECKS. UNSELECTED; INDEPENDENT REVIEW PENDING.
+
+Source commit fa96a7c8b334f0f496ab7cdb4de9b18cf9276966; source PCB SHA256 88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e.
+Candidate PCB SHA256 41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5.
+Only maru60.kicad_pcb differs among the 58 project files. Source and previous candidates/reports remain untouched.
+
+SCOPE AND JUNCTION
+Exactly F.Cu USB_DM_CONN segment b04e3a6d-1e98-43d1-9b10-58c23321ca28 removed, from (18,12.4) to (17.5625,12.4), width 0.15 mm, length 0.4375 mm. No other primitive, pad, via, placement, hole, mask, rule, width or zone change.
+Exhaustive all-object/all-zone scan with all through-drills subtracted finds the stub has only one physical contact: via ba0e0532-1586-4050-a390-d87dcee11d2c. Its historical raw overlap with active F trace is drill-removed metal, not a retained material contact. Full retained graph pruning proves no pad or other retained partition changes before candidate creation.
+Active F trace cc183bf5-15f3-5270-ae14-886f402cad67 retains positive via-annulus overlap 0.0193748847625 mm2, guarded overlap 0.019373714382 mm2. B trace a963e830-796c-53b3-b9de-ef49be1314bc retains 0.019374781122 mm2, guarded 0.0193735788875 mm2. Guards erode each contact shape 2 nm. Candidate deletion removes the stub primitive, not overlapping retained via/trace copper.
+
+NATIVE AND MATERIAL
+39 to 38 warnings, exactly intended track_dangling removed; no new warning/error item. Nine native opens and their complete physical pad-pair partitions unchanged. ERC/parity 0; all 1,064 XML electrical nodes match; all 1,084 pads and pad partitions match. Fresh corrected all-hole material export binds the candidate hash. Retained 14,715 material vertices / 380 components unchanged; 22,525 island contacts retained without raw or guarded overlap reduction. All 21,788 retained direct contacts and 735 zone contacts unchanged. Cold refill preserves all 58 project files byte-for-byte.
+
+EXACT RETAINED MATERIAL AND REFERENCE
+Entire PCB top-level serialization is exact after excluding only the deleted segment, not merely selected copper fields. This proves all retained primitive geometry, all holes, every zone fill and remote boundary unchanged. Changed holes: 0. Changed zone serializations/filled contours: 0. Actual all-hole GND plane shadows are exactly equal. No enlarged window, epsilon or tolerated remote loss.
+All 11 zone rows have zero gain AND loss area/contours. All 15,361 retained object/layer rows have zero gain AND loss area/contours. All 25,724 retained reference rows have zero lost reference and zero uncovered gain, each area AND contours. Because retained material and complete reference planes are exactly equal after the identical hole subtraction, every reference intersection is exactly equal. This rigorous equality proof is stronger than monotonic containment and makes slow sampled gap sweeps redundant.
+
+USB TOPOLOGY AND MODEL LIMITS
+Before/after active paths, widths, pad bindings, segment inventories and via UUIDs are in qa/active-paths.json and qa/exact-topology.json and are exact. Main J1.A7-to-R103.1 DM centerline-plus-pad-distance path 155.7727858327784 mm, four layer transitions; J1.A6-to-R102.1 DP 155.8282811482048 mm, four. R103.2-to-U1.51 DM 3.8778877167952057 mm, zero transitions; R102.2-to-U1.52 DP 4.146320343559643 mm, zero. These declared geometric metrics include center-to-contact pad distance and zero lateral via length, not 3D propagation delay. Connector nets retain 0.15/0.25 mm trace widths; MCU legs retain 0.15 mm. Total DM_CONN track inventory falls 158.83028583277834 to 158.39278583277834 mm solely by the pendant; this is not active-path shortening. All nine DP/DM connector-net vias remain, including DP ESD-branch via.
+Historical v7-si-advanced-20261104 source geometry includes the stub in inventory but excludes it from non-null active DM paths. The reduced channel uses uniform D+ mainline and lumped D- length correction, plus an explicit DP U10 branch; no distinct DM pendant branch. Stub removal changes physical input the reduced model did not resolve. Historical hashes and routes do not bind this candidate; no old numerical SI output reused. No field/IBIS/eye model, electromagnetic improvement, USB certification or active stability claim.
+
+INHERITED LIMITS
+51 guarded-contact proof diagnostics remain unchanged and separate from native warnings. Earlier baseline exact-no-loss failure remains unresolved. Nearby GND stub is untouched. The known between-signal-via neck discontinuity is unchanged, not restored. This is only immediate-source bounded cleanup evidence, not strict baseline qualification, production/fabrication readiness, or hardware validation.
+
+EVIDENCE
+qa/full-branch-trace.json, contact-patch-accounting.json, full-graph-prune.json, build.json, native-gate.json, drc.json, material-graph.json, material-comparison.json, retained-material-partitions.json, full-geometry-containment.json, exact-topology.json, active-paths.json, historical-model-audit.json, erc.json, parity.json, net-identity.json, cold-refill.json. SUMMARY.json and HASHES.json bind results.

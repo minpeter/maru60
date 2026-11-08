@@ -1,0 +1,22 @@
+{
+  "method": "Conservative outside polygons; all foreign pad/track/via and filled-zone copper screened against radius0.45mm disk. This is a clearance screen, not SI validation.",
+  "layers": [
+    {
+      "layer": "F.Cu",
+      "foreign_overlaps_in_020mm_clearance_envelope": []
+    },
+    {
+      "layer": "In1.Cu",
+      "foreign_overlaps_in_020mm_clearance_envelope": []
+    },
+    {
+      "layer": "In2.Cu",
+      "foreign_overlaps_in_020mm_clearance_envelope": []
+    },
+    {
+      "layer": "B.Cu",
+      "foreign_overlaps_in_020mm_clearance_envelope": []
+    }
+  ],
+  "pass_screen": true
+}

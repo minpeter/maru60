@@ -1,0 +1,988 @@
+{
+  "R125_center": [
+    15.595,
+    20.1
+  ],
+  "C124_center": [
+    15.6,
+    19.045
+  ],
+  "R125_U8_gap_nm": [
+    5000,
+    5001
+  ],
+  "R125_C124_gap_nm": [
+    5000,
+    5001
+  ],
+  "grid_passes": [
+    {
+      "dy": -0.075,
+      "angle": 88,
+      "min_gap_nm": [
+        "2",
+        "8305ea6c-327f-407d-9092-892db2d90da5",
+        "USB_UVLO",
+        [
+          154404,
+          154405
+        ]
+      ],
+      "R125court_gap_nm": [
+        4711,
+        4712
+      ],
+      "contacts": [
+        [
+          "1",
+          "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+          "USB_OVLO"
+        ],
+        [
+          "2",
+          "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "GND"
+        ]
+      ]
+    },
+    {
+      "dy": -0.05,
+      "angle": 88,
+      "min_gap_nm": [
+        "1",
+        "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+        "USB_UVLO",
+        [
+          164396,
+          164397
+        ]
+      ],
+      "R125court_gap_nm": [
+        3838,
+        3839
+      ],
+      "contacts": [
+        [
+          "1",
+          "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+          "USB_OVLO"
+        ],
+        [
+          "2",
+          "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "GND"
+        ]
+      ]
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "min_gap_nm": [
+        "1",
+        "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+        "USB_UVLO",
+        [
+          164396,
+          164397
+        ]
+      ],
+      "R125court_gap_nm": [
+        2966,
+        2967
+      ],
+      "contacts": [
+        [
+          "1",
+          "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+          "USB_OVLO"
+        ],
+        [
+          "2",
+          "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "GND"
+        ]
+      ]
+    },
+    {
+      "dy": 0,
+      "angle": 88,
+      "min_gap_nm": [
+        "1",
+        "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93",
+        "USB_UVLO",
+        [
+          156203,
+          156204
+        ]
+      ],
+      "R125court_gap_nm": [
+        2093,
+        2094
+      ],
+      "contacts": [
+        [
+          "1",
+          "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+          "USB_OVLO"
+        ],
+        [
+          "2",
+          "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "GND"
+        ]
+      ]
+    }
+  ],
+  "preferred_1nm_proof": [
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "1",
+      "obstacle": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "gap_effective_nm": [
+        146733,
+        146734
+      ],
+      "inside150_overlap_nm2": 235062020.0,
+      "outside150_overlap_nm2": 235135107.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "1",
+      "obstacle": "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93",
+      "gap_effective_nm": [
+        154829,
+        154830
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "1",
+      "obstacle": "4174a692-19ae-4049-916a-e21e775415e2",
+      "gap_effective_nm": [
+        154829,
+        154830
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "1",
+      "obstacle": "800b2e7b-f1bf-428e-b54f-6431e8b4af81",
+      "gap_effective_nm": [
+        211157,
+        211158
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "gap_effective_nm": [
+        173835,
+        173836
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "gap_effective_nm": [
+        233087,
+        233088
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "2bef712b-2271-470e-9ed0-961aa43325cd",
+      "gap_effective_nm": [
+        231312,
+        231313
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "gap_effective_nm": [
+        202107,
+        202108
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "a621cda3-f605-4bff-b3d7-2213de164c79",
+      "gap_effective_nm": [
+        223230,
+        223231
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "db0f565d-8915-441b-b9f8-50cdd933467c",
+      "gap_effective_nm": [
+        223230,
+        223231
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "efb452e0-b8d1-484b-9a90-3179d99b1aa8",
+      "gap_effective_nm": [
+        202107,
+        202108
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "1",
+      "obstacle": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "gap_effective_nm": [
+        129170,
+        129171
+      ],
+      "inside150_overlap_nm2": 5017190529.0,
+      "outside150_overlap_nm2": 5017354785.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "1",
+      "obstacle": "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93",
+      "gap_effective_nm": [
+        156610,
+        156611
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "1",
+      "obstacle": "4174a692-19ae-4049-916a-e21e775415e2",
+      "gap_effective_nm": [
+        156610,
+        156611
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "1",
+      "obstacle": "800b2e7b-f1bf-428e-b54f-6431e8b4af81",
+      "gap_effective_nm": [
+        220575,
+        220576
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "2",
+      "obstacle": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "gap_effective_nm": [
+        182685,
+        182686
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "2",
+      "obstacle": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "gap_effective_nm": [
+        244268,
+        244269
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "2",
+      "obstacle": "2bef712b-2271-470e-9ed0-961aa43325cd",
+      "gap_effective_nm": [
+        223852,
+        223853
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "2",
+      "obstacle": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "gap_effective_nm": [
+        190509,
+        190510
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "2",
+      "obstacle": "a621cda3-f605-4bff-b3d7-2213de164c79",
+      "gap_effective_nm": [
+        233831,
+        233832
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "2",
+      "obstacle": "db0f565d-8915-441b-b9f8-50cdd933467c",
+      "gap_effective_nm": [
+        233831,
+        233832
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "2",
+      "obstacle": "efb452e0-b8d1-484b-9a90-3179d99b1aa8",
+      "gap_effective_nm": [
+        190509,
+        190510
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "1",
+      "obstacle": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "gap_effective_nm": [
+        111712,
+        111713
+      ],
+      "inside150_overlap_nm2": 13064747648.0,
+      "outside150_overlap_nm2": 13064977493.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "1",
+      "obstacle": "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93",
+      "gap_effective_nm": [
+        161561,
+        161562
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "1",
+      "obstacle": "4174a692-19ae-4049-916a-e21e775415e2",
+      "gap_effective_nm": [
+        161561,
+        161562
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "1",
+      "obstacle": "800b2e7b-f1bf-428e-b54f-6431e8b4af81",
+      "gap_effective_nm": [
+        231121,
+        231122
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "2",
+      "obstacle": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "gap_effective_nm": [
+        192091,
+        192092
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "2",
+      "obstacle": "2bef712b-2271-470e-9ed0-961aa43325cd",
+      "gap_effective_nm": [
+        217299,
+        217300
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "2",
+      "obstacle": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "gap_effective_nm": [
+        181421,
+        181422
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "2",
+      "obstacle": "a621cda3-f605-4bff-b3d7-2213de164c79",
+      "gap_effective_nm": [
+        246542,
+        246543
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "2",
+      "obstacle": "db0f565d-8915-441b-b9f8-50cdd933467c",
+      "gap_effective_nm": [
+        246542,
+        246543
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "2",
+      "obstacle": "efb452e0-b8d1-484b-9a90-3179d99b1aa8",
+      "gap_effective_nm": [
+        181421,
+        181422
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "1",
+      "obstacle": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "gap_effective_nm": [
+        146733,
+        146734
+      ],
+      "inside150_overlap_nm2": 235062020.0,
+      "outside150_overlap_nm2": 235135107.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "1",
+      "obstacle": "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93",
+      "gap_effective_nm": [
+        167909,
+        167910
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "1",
+      "obstacle": "4174a692-19ae-4049-916a-e21e775415e2",
+      "gap_effective_nm": [
+        167909,
+        167910
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "1",
+      "obstacle": "800b2e7b-f1bf-428e-b54f-6431e8b4af81",
+      "gap_effective_nm": [
+        228834,
+        228835
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "gap_effective_nm": [
+        193454,
+        193455
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "gap_effective_nm": [
+        233087,
+        233088
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "2bef712b-2271-470e-9ed0-961aa43325cd",
+      "gap_effective_nm": [
+        213634,
+        213635
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "gap_effective_nm": [
+        182062,
+        182063
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "a621cda3-f605-4bff-b3d7-2213de164c79",
+      "gap_effective_nm": [
+        216943,
+        216944
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "db0f565d-8915-441b-b9f8-50cdd933467c",
+      "gap_effective_nm": [
+        216943,
+        216944
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "2",
+      "obstacle": "efb452e0-b8d1-484b-9a90-3179d99b1aa8",
+      "gap_effective_nm": [
+        182062,
+        182063
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "1",
+      "obstacle": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "gap_effective_nm": [
+        164396,
+        164397
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "1",
+      "obstacle": "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93",
+      "gap_effective_nm": [
+        167518,
+        167519
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "1",
+      "obstacle": "4174a692-19ae-4049-916a-e21e775415e2",
+      "gap_effective_nm": [
+        167518,
+        167519
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "1",
+      "obstacle": "800b2e7b-f1bf-428e-b54f-6431e8b4af81",
+      "gap_effective_nm": [
+        219704,
+        219705
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "2",
+      "obstacle": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "gap_effective_nm": [
+        184677,
+        184678
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "2",
+      "obstacle": "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+      "gap_effective_nm": [
+        221980,
+        221981
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "2",
+      "obstacle": "2bef712b-2271-470e-9ed0-961aa43325cd",
+      "gap_effective_nm": [
+        221364,
+        221365
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "2",
+      "obstacle": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "gap_effective_nm": [
+        195097,
+        195098
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "2",
+      "obstacle": "a621cda3-f605-4bff-b3d7-2213de164c79",
+      "gap_effective_nm": [
+        207030,
+        207031
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "2",
+      "obstacle": "db0f565d-8915-441b-b9f8-50cdd933467c",
+      "gap_effective_nm": [
+        207030,
+        207031
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "2",
+      "obstacle": "efb452e0-b8d1-484b-9a90-3179d99b1aa8",
+      "gap_effective_nm": [
+        195097,
+        195098
+      ],
+      "inside150_overlap_nm2": 0.0,
+      "outside150_overlap_nm2": 0.0
+    }
+  ],
+  "contact_areas": [
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "1",
+      "track": "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+      "inside_outside_mm2": [
+        {
+          "old": 0.0882516749755,
+          "new": 0.0797686881535,
+          "lost": 0.008482986822000008,
+          "gained": 0.0
+        },
+        {
+          "old": 0.088252608771,
+          "new": 0.0797696153395,
+          "lost": 0.008482963418499995,
+          "gained": -3.0013000001938295e-08
+        }
+      ]
+    },
+    {
+      "dy": -0.025,
+      "angle": 87,
+      "pad": "2",
+      "track": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "inside_outside_mm2": [
+        {
+          "old": 0.118391559547,
+          "new": 0.129382626838,
+          "lost": 1.7458699999584049e-07,
+          "gained": 0.010991241878000005
+        },
+        {
+          "old": 0.1183919182105,
+          "new": 0.1293829774935,
+          "lost": 1.797955000021334e-07,
+          "gained": 0.010991239078499998
+        }
+      ]
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "1",
+      "track": "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+      "inside_outside_mm2": [
+        {
+          "old": 0.0882516749755,
+          "new": 0.0761784384655,
+          "lost": 0.012073359387499996,
+          "gained": 1.2287749999451147e-07
+        },
+        {
+          "old": 0.088252608771,
+          "new": 0.076179219057,
+          "lost": 0.012073333700499997,
+          "gained": -5.601350000494776e-08
+        }
+      ]
+    },
+    {
+      "dy": -0.05,
+      "angle": 86,
+      "pad": "2",
+      "track": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "inside_outside_mm2": [
+        {
+          "old": 0.118391559547,
+          "new": 0.1335122585595,
+          "lost": 1.521069999954605e-07,
+          "gained": 0.015120851119499998
+        },
+        {
+          "old": 0.1183919182105,
+          "new": 0.1335126016265,
+          "lost": 1.5872550000739505e-07,
+          "gained": 0.015120842141500002
+        }
+      ]
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "1",
+      "track": "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+      "inside_outside_mm2": [
+        {
+          "old": 0.0882516749755,
+          "new": 0.072494026283,
+          "lost": 0.0157576486925,
+          "gained": 0.0
+        },
+        {
+          "old": 0.088252608771,
+          "new": 0.072495030231,
+          "lost": 0.015757641286999996,
+          "gained": 6.274699999864186e-08
+        }
+      ]
+    },
+    {
+      "dy": -0.075,
+      "angle": 85,
+      "pad": "2",
+      "track": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "inside_outside_mm2": [
+        {
+          "old": 0.118391559547,
+          "new": 0.137509805388,
+          "lost": -9.240000001242699e-09,
+          "gained": 0.01911823660100001
+        },
+        {
+          "old": 0.1183919182105,
+          "new": 0.137509976883,
+          "lost": 9.17000000932866e-09,
+          "gained": 0.019118067842500017
+        }
+      ]
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "1",
+      "track": "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+      "inside_outside_mm2": [
+        {
+          "old": 0.0882516749755,
+          "new": 0.078616733787,
+          "lost": 0.009634941188500001,
+          "gained": 0.0
+        },
+        {
+          "old": 0.088252608771,
+          "new": 0.0786176775005,
+          "lost": 0.009634931270499997,
+          "gained": 0.0
+        }
+      ]
+    },
+    {
+      "dy": -0.05,
+      "angle": 87,
+      "pad": "2",
+      "track": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "inside_outside_mm2": [
+        {
+          "old": 0.118391559547,
+          "new": 0.130060314713,
+          "lost": -9.240000001242699e-09,
+          "gained": 0.011668745926000007
+        },
+        {
+          "old": 0.1183919182105,
+          "new": 0.130060798797,
+          "lost": 0.0,
+          "gained": 0.011668880586499994
+        }
+      ]
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "1",
+      "track": "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+      "inside_outside_mm2": [
+        {
+          "old": 0.0882516749755,
+          "new": 0.0822635057055,
+          "lost": 0.0059881989705,
+          "gained": 2.9700500003837504e-08
+        },
+        {
+          "old": 0.088252608771,
+          "new": 0.082264471008,
+          "lost": 0.005988412245999997,
+          "gained": 2.7448299999566217e-07
+        }
+      ]
+    },
+    {
+      "dy": -0.025,
+      "angle": 88,
+      "pad": "2",
+      "track": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "inside_outside_mm2": [
+        {
+          "old": 0.118391559547,
+          "new": 0.1259952940395,
+          "lost": 1.521069999954605e-07,
+          "gained": 0.0076038865994999955
+        },
+        {
+          "old": 0.1183919182105,
+          "new": 0.12599581821,
+          "lost": 0.0,
+          "gained": 0.007603899999499994
+        }
+      ]
+    }
+  ]
+}

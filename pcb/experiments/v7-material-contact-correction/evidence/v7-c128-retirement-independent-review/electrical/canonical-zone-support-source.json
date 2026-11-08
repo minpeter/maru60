@@ -1,0 +1,39 @@
+{
+  "phase": "source",
+  "board_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "saved_zone_edges": 731,
+  "checked_zone_edges": 731,
+  "changed_support_count": 4,
+  "changed_support_edges": [
+    {
+      "zone": "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "object": "efadf2be-e519-469f-a84c-2e7cbb60672a",
+      "saved": 0.147260768455,
+      "actual": 0.147260768066,
+      "type": "PCB_VIA"
+    },
+    {
+      "zone": "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "object": "f24b622c-321d-4260-a6c8-f6e54e5e846a",
+      "saved": 0.1438175138065,
+      "actual": 0.1438175134165,
+      "type": "PCB_VIA"
+    },
+    {
+      "zone": "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "object": "efadf2be-e519-469f-a84c-2e7cbb60672a",
+      "saved": 0.147260768455,
+      "actual": 0.147260768066,
+      "type": "PCB_VIA"
+    },
+    {
+      "zone": "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "object": "f24b622c-321d-4260-a6c8-f6e54e5e846a",
+      "saved": 0.1438175138065,
+      "actual": 0.1438175134165,
+      "type": "PCB_VIA"
+    }
+  ],
+  "lost_positive_edges": [],
+  "scope": "Recompute support for every existing saved zone-edge against exact saved filled polygons, after all canonical physical holes removed; no connectivity discovery, refill or new graph export."
+}

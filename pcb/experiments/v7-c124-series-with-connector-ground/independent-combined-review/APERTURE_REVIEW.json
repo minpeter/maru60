@@ -1,0 +1,686 @@
+{
+  "Mask": {
+    "path": "/tmp/v7-c124-d-plus-connector-gnd-independent-review/artwork/maru60-B_Mask.gbs",
+    "sha256": "ca099451c189f3fb698943465939d1a31463e4d294f638a13b179de6a96ae801",
+    "objects_parsed": 1024,
+    "target_apertures": [
+      {
+        "ref": "R125",
+        "type": "R",
+        "aperture": 54,
+        "parameters": [
+          0.4,
+          0.3
+        ],
+        "center": [
+          15.81,
+          -20.48
+        ],
+        "bbox": [
+          15.610000000000001,
+          -20.63,
+          16.01,
+          -20.330000000000002
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              14.71,
+              -20.63,
+              15.11,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.5000000000000018
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              15.435,
+              -19.625,
+              15.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.7050000000000018
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.9760379090998482
+          }
+        ]
+      },
+      {
+        "ref": "R125",
+        "type": "R",
+        "aperture": 54,
+        "parameters": [
+          0.4,
+          0.3
+        ],
+        "center": [
+          14.91,
+          -20.48
+        ],
+        "bbox": [
+          14.71,
+          -20.63,
+          15.11,
+          -20.330000000000002
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              15.610000000000001,
+              -20.63,
+              16.01,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.5000000000000018
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.7050000000000018
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              15.435,
+              -19.625,
+              15.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.7763053522938015
+          }
+        ]
+      },
+      {
+        "ref": "C124",
+        "type": "R",
+        "aperture": 65,
+        "parameters": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          14.685,
+          -19.375
+        ],
+        "bbox": [
+          14.435,
+          -19.625,
+          14.935,
+          -19.125
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              15.435,
+              -19.625,
+              15.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.5
+          },
+          {
+            "ref": "R121",
+            "type": "R",
+            "bbox_mm": [
+              13.53,
+              -19.3,
+              13.83,
+              -18.900000000000002
+            ],
+            "gap_lower_bound_mm": 0.6050000000000004
+          },
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              14.71,
+              -20.63,
+              15.11,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.7050000000000018
+          }
+        ]
+      },
+      {
+        "ref": "C124",
+        "type": "R",
+        "aperture": 65,
+        "parameters": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          15.685,
+          -19.375
+        ],
+        "bbox": [
+          15.435,
+          -19.625,
+          15.935,
+          -19.125
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.5
+          },
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              15.610000000000001,
+              -20.63,
+              16.01,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.7050000000000018
+          },
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              14.71,
+              -20.63,
+              15.11,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.7763053522938015
+          }
+        ]
+      },
+      {
+        "ref": "R121",
+        "type": "R",
+        "aperture": 66,
+        "parameters": [
+          0.3,
+          0.4
+        ],
+        "center": [
+          13.68,
+          -19.1
+        ],
+        "bbox": [
+          13.53,
+          -19.3,
+          13.83,
+          -18.900000000000002
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "R121",
+            "type": "R",
+            "bbox_mm": [
+              13.53,
+              -18.4,
+              13.83,
+              -18.0
+            ],
+            "gap_lower_bound_mm": 0.5000000000000036
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.6050000000000004
+          },
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              14.71,
+              -20.63,
+              15.11,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 1.354732445909525
+          }
+        ]
+      },
+      {
+        "ref": "R121",
+        "type": "R",
+        "aperture": 66,
+        "parameters": [
+          0.3,
+          0.4
+        ],
+        "center": [
+          13.68,
+          -18.2
+        ],
+        "bbox": [
+          13.53,
+          -18.4,
+          13.83,
+          -18.0
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "R121",
+            "type": "R",
+            "bbox_mm": [
+              13.53,
+              -19.3,
+              13.83,
+              -18.900000000000002
+            ],
+            "gap_lower_bound_mm": 0.5000000000000036
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.9442722065167451
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              15.435,
+              -19.625,
+              15.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 1.7611501923459008
+          }
+        ]
+      }
+    ],
+    "minimum_target_to_any_other_aperture_conservative_bbox_gap_mm": 0.5
+  },
+  "Paste": {
+    "path": "/tmp/v7-c124-d-plus-connector-gnd-independent-review/artwork/maru60-B_Paste.gbp",
+    "sha256": "ad32f9e60829b2d63289e1f54a8557d57ab6a0f8b5675a4e346cf3227e062bc7",
+    "objects_parsed": 748,
+    "target_apertures": [
+      {
+        "ref": "R125",
+        "type": "R",
+        "aperture": 45,
+        "parameters": [
+          0.4,
+          0.3
+        ],
+        "center": [
+          15.81,
+          -20.48
+        ],
+        "bbox": [
+          15.610000000000001,
+          -20.63,
+          16.01,
+          -20.330000000000002
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              14.71,
+              -20.63,
+              15.11,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.5000000000000018
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              15.435,
+              -19.625,
+              15.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.7050000000000018
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.9760379090998482
+          }
+        ]
+      },
+      {
+        "ref": "R125",
+        "type": "R",
+        "aperture": 45,
+        "parameters": [
+          0.4,
+          0.3
+        ],
+        "center": [
+          14.91,
+          -20.48
+        ],
+        "bbox": [
+          14.71,
+          -20.63,
+          15.11,
+          -20.330000000000002
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              15.610000000000001,
+              -20.63,
+              16.01,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.5000000000000018
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.7050000000000018
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              15.435,
+              -19.625,
+              15.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.7763053522938015
+          }
+        ]
+      },
+      {
+        "ref": "C124",
+        "type": "R",
+        "aperture": 55,
+        "parameters": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          14.685,
+          -19.375
+        ],
+        "bbox": [
+          14.435,
+          -19.625,
+          14.935,
+          -19.125
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              15.435,
+              -19.625,
+              15.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.5
+          },
+          {
+            "ref": "R121",
+            "type": "R",
+            "bbox_mm": [
+              13.53,
+              -19.3,
+              13.83,
+              -18.900000000000002
+            ],
+            "gap_lower_bound_mm": 0.6050000000000004
+          },
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              14.71,
+              -20.63,
+              15.11,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.7050000000000018
+          }
+        ]
+      },
+      {
+        "ref": "C124",
+        "type": "R",
+        "aperture": 55,
+        "parameters": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          15.685,
+          -19.375
+        ],
+        "bbox": [
+          15.435,
+          -19.625,
+          15.935,
+          -19.125
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.5
+          },
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              15.610000000000001,
+              -20.63,
+              16.01,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.7050000000000018
+          },
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              14.71,
+              -20.63,
+              15.11,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 0.7763053522938015
+          }
+        ]
+      },
+      {
+        "ref": "R121",
+        "type": "R",
+        "aperture": 56,
+        "parameters": [
+          0.3,
+          0.4
+        ],
+        "center": [
+          13.68,
+          -19.1
+        ],
+        "bbox": [
+          13.53,
+          -19.3,
+          13.83,
+          -18.900000000000002
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "R121",
+            "type": "R",
+            "bbox_mm": [
+              13.53,
+              -18.4,
+              13.83,
+              -18.0
+            ],
+            "gap_lower_bound_mm": 0.5000000000000036
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.6050000000000004
+          },
+          {
+            "ref": "R125",
+            "type": "R",
+            "bbox_mm": [
+              14.71,
+              -20.63,
+              15.11,
+              -20.330000000000002
+            ],
+            "gap_lower_bound_mm": 1.354732445909525
+          }
+        ]
+      },
+      {
+        "ref": "R121",
+        "type": "R",
+        "aperture": 56,
+        "parameters": [
+          0.3,
+          0.4
+        ],
+        "center": [
+          13.68,
+          -18.2
+        ],
+        "bbox": [
+          13.53,
+          -18.4,
+          13.83,
+          -18.0
+        ],
+        "nearest_apertures": [
+          {
+            "ref": "R121",
+            "type": "R",
+            "bbox_mm": [
+              13.53,
+              -19.3,
+              13.83,
+              -18.900000000000002
+            ],
+            "gap_lower_bound_mm": 0.5000000000000036
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              14.435,
+              -19.625,
+              14.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 0.9442722065167451
+          },
+          {
+            "ref": "C124",
+            "type": "R",
+            "bbox_mm": [
+              15.435,
+              -19.625,
+              15.935,
+              -19.125
+            ],
+            "gap_lower_bound_mm": 1.7611501923459008
+          }
+        ]
+      }
+    ],
+    "minimum_target_to_any_other_aperture_conservative_bbox_gap_mm": 0.5
+  },
+  "candidate_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "status": "PASS nominal generated aperture geometry; process qualification OFF",
+  "method": "Read generated KiCad Gerbers in mm 4.6. Explicit target rectangular aperture dimensions/centers checked; all plotted flashes and linear regions included in conservative axis-aligned bounding-box separation screen. Positive bounding-box gap is a guaranteed lower bound, not an asserted exact curved-aperture clearance. No registration or fabrication threshold invented.",
+  "effective_native_mask_expansion_mm": 0,
+  "effective_native_paste_margin_mm": [
+    0,
+    0
+  ],
+  "paste_nominal_area_mm2_per_pad": {
+    "R121": 0.12,
+    "R125": 0.12,
+    "C124": 0.25
+  },
+  "unqualified": [
+    "Solder-mask registration and dam capability",
+    "Stencil thickness, paste volume and transfer efficiency",
+    "Reflow/assembly process and tombstoning",
+    "Procurement and component drift equivalence",
+    "3D switch/socket/plate/case clearance"
+  ]
+}

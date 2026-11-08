@@ -1,0 +1,50 @@
+04:30:46: Debug: Adding duplicate image handler for 'PNG file'
+04:30:46: Debug: Adding duplicate image handler for 'JPEG file'
+04:30:46: Debug: Adding duplicate image handler for 'TIFF file'
+04:30:46: Debug: Adding duplicate image handler for 'GIF file'
+04:30:46: Debug: Adding duplicate image handler for 'PNM file'
+04:30:46: Debug: Adding duplicate image handler for 'PCX file'
+04:30:46: Debug: Adding duplicate image handler for 'IFF file'
+04:30:46: Debug: Adding duplicate image handler for 'Windows icon file'
+04:30:46: Debug: Adding duplicate image handler for 'Windows cursor file'
+04:30:46: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+04:30:46: Debug: Adding duplicate image handler for 'TGA file'
+04:30:46: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": "fb227c9af1b2c520452fee6815fdfecf6c44f7a42f090d432e5293fd3538d434",
+  "proof_scope": "Native straight-track capsule endpoint disk contains the unchanged via disk because exact integer endpoint coordinates agree and its radius is at least the via radius. Same own drill and no foreign drill in the disk preserve the complete original annulus contact. This is a primitive containment argument, not an assertion that separately polygonized overlap numbers are identical. Raw small polygon differences remain in the geometry report.",
+  "endpoints": [
+    {
+      "endpoint_via_uuid": "2df4c211-ae72-4021-a11a-f400d90108b2",
+      "via_position_nm": [
+        111400000,
+        75700000
+      ],
+      "via_outer_diameter_nm": 600000,
+      "drill_diameter_nm": 250000,
+      "new_track_uuid": "b12a0bfe-e38b-40c9-aec3-27a9b5b6d9d6",
+      "new_track_width_nm": 600000,
+      "exact_integer_endpoint_match": true,
+      "same_radius_capsule_endpoint_contains_entire_via_disk": true,
+      "foreign_drill_intersections": [],
+      "source_via_primitive_unchanged": true
+    },
+    {
+      "endpoint_via_uuid": "a3dac412-9c4c-48cf-81b8-b7016c33b879",
+      "via_position_nm": [
+        111400000,
+        79350500
+      ],
+      "via_outer_diameter_nm": 600000,
+      "drill_diameter_nm": 250000,
+      "new_track_uuid": "0b4a5159-5caa-4f4f-bf65-a5177e57e97e",
+      "new_track_width_nm": 600000,
+      "exact_integer_endpoint_match": true,
+      "same_radius_capsule_endpoint_contains_entire_via_disk": true,
+      "foreign_drill_intersections": [],
+      "source_via_primitive_unchanged": true
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS exact one-via raw/companion/native delta",
+  "source_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+  "candidate_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "only_added_uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+  "new_raw_via_record_exact": true,
+  "all_old_top_level_nodes_byte_exact_ordered": true,
+  "all_12_zone_records_byte_exact": true,
+  "old_tracks_vias_byte_exact": 10668,
+  "all_57_companions_byte_exact": true,
+  "all_net_component_libpart_XML_exact": {
+    "components": true,
+    "libparts": true,
+    "nets": true
+  },
+  "source_native_warnings": 64,
+  "candidate_native_warnings": 64,
+  "all_warning_entries_exact": true,
+  "all_12_open_entries_exact": true,
+  "hard_DRC": 0,
+  "parity": 0,
+  "ERC": 0,
+  "D_support_end_warnings_preserved": [
+    "cc1282fe-f0b3-5fea-9d45-66eea8068d66",
+    "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+    "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a"
+  ],
+  "no_adoption": true
+}

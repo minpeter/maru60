@@ -1,0 +1,140 @@
+{
+  "source_sha256": "88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e",
+  "source_unchanged": true,
+  "selected_candidate": null,
+  "accepted_pairs_closed": 0,
+  "primary_prototype_native_pairs_closed": 1,
+  "primary_prototype_material_pair_merger_confirmed": true,
+  "variants": [
+    {
+      "name": "primary",
+      "path": "/workspace/shared/maru60-resume/continuation-fa96a7c/gpio24-via25",
+      "sha256": "42bfe0e9f19637b1e6a65c6887e5455d70419ced716f6df60064d7f6c8c73239",
+      "status": "REJECTED",
+      "native_gate": {
+        "violations": {
+          "before": 39,
+          "after": 39,
+          "added": [],
+          "removed": []
+        },
+        "unconnected_items": {
+          "before": 9,
+          "after": 8,
+          "added": [
+            {
+              "description": "Missing connection between items",
+              "items": [
+                {
+                  "description": "Track [EXT_GPIO25] on F.Cu, length 1.1294 mm",
+                  "pos": {
+                    "x": 93.925,
+                    "y": 40.175
+                  },
+                  "uuid": "e7ca2c06-4f7b-4b3b-857e-fe87a342a39f"
+                },
+                {
+                  "description": "Pad 11 [EXT_GPIO25] of U13 on B.Cu",
+                  "pos": {
+                    "x": 89.45,
+                    "y": 42.5
+                  },
+                  "uuid": "a18e6e59-fb74-4513-a5f4-6a34d9223429"
+                }
+              ],
+              "severity": "error",
+              "type": "unconnected_items"
+            }
+          ],
+          "removed": [
+            {
+              "description": "Missing connection between items",
+              "items": [
+                {
+                  "description": "Pad 15 [EXT_GPIO25] of U11 on B.Cu",
+                  "pos": {
+                    "x": 107.1,
+                    "y": 37.325
+                  },
+                  "uuid": "cff436d2-a051-486a-8eda-ad80c8687157"
+                },
+                {
+                  "description": "Pad 6 [EXT_GPIO25] of J3 on B.Cu",
+                  "pos": {
+                    "x": 93.5,
+                    "y": 39.0
+                  },
+                  "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6"
+                }
+              ],
+              "severity": "error",
+              "type": "unconnected_items"
+            },
+            {
+              "description": "Missing connection between items",
+              "items": [
+                {
+                  "description": "Pad 6 [EXT_GPIO25] of J3 on B.Cu",
+                  "pos": {
+                    "x": 93.5,
+                    "y": 39.0
+                  },
+                  "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6"
+                },
+                {
+                  "description": "Pad 11 [EXT_GPIO25] of U13 on B.Cu",
+                  "pos": {
+                    "x": 89.45,
+                    "y": 42.5
+                  },
+                  "uuid": "a18e6e59-fb74-4513-a5f4-6a34d9223429"
+                }
+              ],
+              "severity": "error",
+              "type": "unconnected_items"
+            }
+          ]
+        },
+        "schematic_parity": {
+          "before": 0,
+          "after": 0,
+          "added": [],
+          "removed": []
+        },
+        "native_severity_gate_pass": true
+      },
+      "exact_remote_loss_confirmed": true,
+      "rejection": "Four strict rational remote-copper-loss witnesses per inner plane"
+    },
+    {
+      "name": "via24-left025",
+      "path": "/workspace/shared/maru60-resume/continuation-fa96a7c/gpio24-via25/variants/via24-left025",
+      "sha256": "c80ac9a2b6462826f42ea08cdcec925336c947bdb0a77f2ca1383d272a73689f",
+      "status": "REJECTED",
+      "native_gate": {
+        "identical_39_warnings": true,
+        "opens": 8,
+        "parity": 0,
+        "pass": true
+      },
+      "exact_remote_loss_confirmed": true,
+      "rejection": "Four strict rational remote-copper-loss witnesses per inner plane"
+    },
+    {
+      "name": "via24-down025",
+      "path": "/workspace/shared/maru60-resume/continuation-fa96a7c/gpio24-via25/variants/via24-down025",
+      "sha256": "356776dfd5e50205572837e5dcaa4005996875ce04b0469dbdb1f5139b7df26b",
+      "status": "REJECTED",
+      "native_gate": {
+        "identical_39_warnings": false,
+        "opens": 8,
+        "parity": 0,
+        "pass": false
+      },
+      "exact_remote_loss_confirmed": null,
+      "rejection": "Three added native clearance errors; later gates not run"
+    }
+  ],
+  "full_plane_all_track_scan": "Incomplete, explicitly interrupted after exact rejection; no pass",
+  "envelope450_to455_attribution": "Partial native-antipad identification only; not a complete exact acceptance proof"
+}

@@ -1,0 +1,25 @@
+PASS: bounded USB pendant cleanup relative to the immediate source only. Candidate remains unselected by this reviewer.
+
+Source PCB SHA256: 88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e
+Candidate PCB SHA256: 41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5
+
+Independent review.py completed with native KiCad 9.0.2+dfsg-1. Source and submitted candidate CAD were not edited.
+
+Fresh checks:
+- Entire raw PCB byte stream matches after removal of exactly the stated 0.4375 mm F.Cu segment block, UUID b04e3a6d-1e98-43d1-9b10-58c23321ca28. This is stronger than field-selected comparisons: all other serialized shapes, holes, filled zone contours, boundaries, masks, layers, settings and rules are identical. All 58 project file names match; only the PCB differs.
+- Fresh source and candidate schematic-parity native DRC: 39 -> 38 warnings, no new items, exactly the stated track_dangling removed; nine opens on each; zero parity discrepancies. Fresh candidate ERC: zero.
+- Independent geometry subtracts all 1,273 drill shapes. Stub has precisely one positive material contact, via ba0e0532-1586-4050-a390-d87dcee11d2c, and no filled-zone contact. The retained F.Cu active trace has 0.0193748847625 mm2 annular contact (0.019373714382 after each shape is eroded 2 nm); B.Cu active trace has 0.019374781122 mm2 (0.0193735788875 guarded). Thus the retained path does not depend on the removed stub bridging the drill.
+- Independent cold copy/refill retains all 58 project files byte-for-byte.
+
+Hash-bound graph checks, explicitly not a fresh full material export:
+- Source and candidate material-graph board hashes match their actual PCBs. Recomputed connected components from material edges plus barrel joins, rather than trusting saved root labels. Source retained partitions remain identical when the stub is pruned, and match candidate partitions: 14,715 retained vertices, 380 components.
+- All 22,525 retained accepted material contact edges and their raw/guarded areas are exactly equal. All 1,084 pad identities match. Each fresh native open representative was mapped to its complete pad-containing physical component using recomputed roots: all nine unordered physical pad-component pairs are unchanged, not merely the open count.
+- All 51 inherited guard diagnostics are exactly unchanged. These are separate from native warnings and remain unresolved.
+
+Coverage review:
+The author's exact_topology.py checks all top-level serialization, not only USB objects. geometry_containment_bounded_drills.py covers full zone/object/reference geometry with all-hole subtraction; its generic assertions are no-loss, but the stronger independently verified full raw equality proves both gain and loss zero for every retained shape and complete plane. Therefore retained reference intersections and remote boundaries cannot change. Full retained references are covered without relying on sampled windows or tolerances. The material exporter subtracts every asserted through drill, represents positive layer/island fragments separately, and permits barrel joins only after intact annulus checks; native connectivity supplies candidate contacts rather than proving copper contact. Its inherited 1 nm polygon approximation and 2 nm contact guard are geometric proof assumptions, not fabrication margins.
+
+Limits:
+This review establishes a safe bounded deletion against the immediate hash-bound source. It does not clear earlier baseline exact-no-loss failure or inherited guard diagnostics, repair the known reference-neck discontinuity, or imply USB SI/EMI, eye, timing, stability, fabrication or production qualification. No old numerical SI result is reused; the historical reduced model did not explicitly resolve this pendant. Raw active USB geometry remains identical. No CAD selection, installation, push, credentials or manufacturing action occurred.
+
+Evidence: review.py, review.json, review.log, source-drc.json, candidate-drc.json, erc.json, native command logs, and cold-pcb/. HASHES.json binds reviewer evidence and consulted upstream sources.

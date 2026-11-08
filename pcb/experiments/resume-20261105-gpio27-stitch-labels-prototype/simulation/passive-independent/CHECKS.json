@@ -1,0 +1,187 @@
+{
+  "result": "PASS synthetic passive numerical checks; provenance qualification required",
+  "source_board_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "final_board_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "final_board_capacitor_inventory_matches": true,
+  "final_board_inventory": [
+    {
+      "reference": "C100",
+      "value": "4.7uF 50V X7R 10%",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    },
+    {
+      "reference": "C120",
+      "value": "1u",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    },
+    {
+      "reference": "C140",
+      "value": "22uF 10V effective>=12uF TBD",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    },
+    {
+      "reference": "C141",
+      "value": "22uF 10V effective>=12uF TBD",
+      "pads": {
+        "1": "+4V_REG",
+        "2": "GND"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "case": "fraction_1_10us_load",
+      "rows": 320,
+      "max_all_sample_error_V": 2.0120773669418668e-07,
+      "max_capacitor_error_V": 2.0120773669418668e-07,
+      "endpoint_error_V": 2.0120719312899382e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_1_10us_unload",
+      "rows": 320,
+      "max_all_sample_error_V": 2.012078272883855e-07,
+      "max_capacitor_error_V": 2.0120782640020707e-07,
+      "endpoint_error_V": 2.0120719401717224e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_1_50us_load",
+      "rows": 1120,
+      "max_all_sample_error_V": 2.0120773669418668e-07,
+      "max_capacitor_error_V": 2.0120773669418668e-07,
+      "endpoint_error_V": 2.0120658161815186e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_1_50us_unload",
+      "rows": 1120,
+      "max_all_sample_error_V": 2.0120816746072023e-07,
+      "max_capacitor_error_V": 2.0120816746072023e-07,
+      "endpoint_error_V": 2.0120758215114165e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_1_100us_load",
+      "rows": 2120,
+      "max_all_sample_error_V": 2.0120773669418668e-07,
+      "max_capacitor_error_V": 2.0120773669418668e-07,
+      "endpoint_error_V": 2.0120681698543308e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_1_100us_unload",
+      "rows": 2120,
+      "max_all_sample_error_V": 2.0120847121773977e-07,
+      "max_capacitor_error_V": 2.0120847032956135e-07,
+      "endpoint_error_V": 2.0120781751842287e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p5_10us_load",
+      "rows": 320,
+      "max_all_sample_error_V": 4.024150279668959e-07,
+      "max_capacitor_error_V": 4.024150279668959e-07,
+      "endpoint_error_V": 4.0241438670207685e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p5_10us_unload",
+      "rows": 320,
+      "max_all_sample_error_V": 4.0241498222570726e-07,
+      "max_capacitor_error_V": 4.0241498133752884e-07,
+      "endpoint_error_V": 4.0241438625798764e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p5_50us_load",
+      "rows": 1120,
+      "max_all_sample_error_V": 4.02415313960347e-07,
+      "max_capacitor_error_V": 4.02415313960347e-07,
+      "endpoint_error_V": 4.0241516297001567e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p5_50us_unload",
+      "rows": 1120,
+      "max_all_sample_error_V": 4.0241498222570726e-07,
+      "max_capacitor_error_V": 4.0241498133752884e-07,
+      "endpoint_error_V": 4.024141633252043e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p5_100us_load",
+      "rows": 2120,
+      "max_all_sample_error_V": 4.0241564791543283e-07,
+      "max_capacitor_error_V": 4.0241564791543283e-07,
+      "endpoint_error_V": 4.024156337045781e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p5_100us_unload",
+      "rows": 2120,
+      "max_all_sample_error_V": 4.0241498222570726e-07,
+      "max_capacitor_error_V": 4.0241498133752884e-07,
+      "endpoint_error_V": 4.0241463494794516e-07,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p2_10us_load",
+      "rows": 320,
+      "max_all_sample_error_V": 1.006036669970456e-06,
+      "max_capacitor_error_V": 1.006036669970456e-06,
+      "endpoint_error_V": 1.0060359656449691e-06,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p2_10us_unload",
+      "rows": 320,
+      "max_all_sample_error_V": 1.0060368058617541e-06,
+      "max_capacitor_error_V": 1.0060368049735757e-06,
+      "endpoint_error_V": 1.0060359656449691e-06,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p2_50us_load",
+      "rows": 1120,
+      "max_all_sample_error_V": 1.006036669970456e-06,
+      "max_capacitor_error_V": 1.006036669970456e-06,
+      "endpoint_error_V": 1.006034907380382e-06,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p2_50us_unload",
+      "rows": 1120,
+      "max_all_sample_error_V": 1.006037531503523e-06,
+      "max_capacitor_error_V": 1.006037531503523e-06,
+      "endpoint_error_V": 1.0060369080022724e-06,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p2_100us_load",
+      "rows": 2120,
+      "max_all_sample_error_V": 1.006036669970456e-06,
+      "max_capacitor_error_V": 1.006036669970456e-06,
+      "endpoint_error_V": 1.006034084038987e-06,
+      "replay_identical": true
+    },
+    {
+      "case": "fraction_0p2_100us_unload",
+      "rows": 2120,
+      "max_all_sample_error_V": 1.0060387962695927e-06,
+      "max_capacitor_error_V": 1.0060387962695927e-06,
+      "endpoint_error_V": 1.0060380848386785e-06,
+      "replay_identical": true
+    }
+  ],
+  "max_all_sample_error_V": 1.0060387962695927e-06
+}

@@ -1,0 +1,93 @@
+03:35:16: Debug: Adding duplicate image handler for 'PNG file'
+03:35:16: Debug: Adding duplicate image handler for 'JPEG file'
+03:35:16: Debug: Adding duplicate image handler for 'TIFF file'
+03:35:16: Debug: Adding duplicate image handler for 'GIF file'
+03:35:16: Debug: Adding duplicate image handler for 'PNM file'
+03:35:16: Debug: Adding duplicate image handler for 'PCX file'
+03:35:16: Debug: Adding duplicate image handler for 'IFF file'
+03:35:16: Debug: Adding duplicate image handler for 'Windows icon file'
+03:35:16: Debug: Adding duplicate image handler for 'Windows cursor file'
+03:35:16: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+03:35:16: Debug: Adding duplicate image handler for 'TGA file'
+03:35:16: Debug: Adding duplicate image handler for 'XPM file'
+03:35:19: Debug: Adding duplicate image handler for 'PNG file'
+03:35:19: Debug: Adding duplicate image handler for 'JPEG file'
+03:35:19: Debug: Adding duplicate image handler for 'TIFF file'
+03:35:19: Debug: Adding duplicate image handler for 'GIF file'
+03:35:19: Debug: Adding duplicate image handler for 'PNM file'
+03:35:19: Debug: Adding duplicate image handler for 'PCX file'
+03:35:19: Debug: Adding duplicate image handler for 'IFF file'
+03:35:19: Debug: Adding duplicate image handler for 'Windows icon file'
+03:35:19: Debug: Adding duplicate image handler for 'Windows cursor file'
+03:35:19: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+03:35:19: Debug: Adding duplicate image handler for 'TGA file'
+03:35:19: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "native_version": "9.0.2+dfsg-1",
+  "planes": [
+    {
+      "plane": "In1.Cu",
+      "base_to_combined_loss_mm2": 0.880300188708,
+      "base_to_combined_gain_mm2": 0.189959295388,
+      "header_to_combined_loss_mm2": 0.049087681002,
+      "loss_exactly_expected_stitch_drill": true,
+      "old_signal_shadow_losses_from_stitch": [],
+      "components": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "plane": "In2.Cu",
+      "base_to_combined_loss_mm2": 0.880300188708,
+      "base_to_combined_gain_mm2": 0.189959295388,
+      "header_to_combined_loss_mm2": 0.049087681002,
+      "loss_exactly_expected_stitch_drill": true,
+      "old_signal_shadow_losses_from_stitch": [],
+      "components": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "GPIO10_contact_patches": [
+    {
+      "target": "2e9d2717-15e1-4bce-856d-b881bc5f3e3b",
+      "replacement": "b3bc6543-bd14-4b17-a59c-2b4bbc878cc5",
+      "before_mm2": 0.017792209043,
+      "after_mm2": 0.017792209043,
+      "lost_mm2": 0.0,
+      "lost_outlines": 0,
+      "gain_mm2": 0.0
+    },
+    {
+      "target": "b90cbf74-89de-49fa-ac51-d43df3605713",
+      "replacement": "b3bc6543-bd14-4b17-a59c-2b4bbc878cc5",
+      "before_mm2": 0.002619127193,
+      "after_mm2": 0.002619127193,
+      "lost_mm2": 0.0,
+      "lost_outlines": 0,
+      "gain_mm2": 0.0
+    },
+    {
+      "target": "2bd88f35-bab5-4803-8710-df5ee50545de",
+      "replacement": "b3bc6543-bd14-4b17-a59c-2b4bbc878cc5",
+      "before_mm2": 0.007514899337,
+      "after_mm2": 0.007514899337,
+      "lost_mm2": 0.0,
+      "lost_outlines": 0,
+      "gain_mm2": 0.0
+    },
+    {
+      "target": "cd5fb524-ab04-563a-a15b-b61178f9c51e",
+      "replacement": "fdd2376a-e263-51cf-8638-7d8989c5ffc8",
+      "before_mm2": 0.0177921599255,
+      "after_mm2": 0.018878311454,
+      "lost_mm2": 1.37825e-08,
+      "lost_outlines": 26,
+      "gain_mm2": 0.001086166601
+    }
+  ]
+}

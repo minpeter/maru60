@@ -1,0 +1,36 @@
+[
+  {
+    "part": "TPS62932",
+    "url": "https://www.ti.com/lit/zip/SLUM808",
+    "downloaded": true,
+    "sha256": "95abc6d8df73df3105bb1a70479241c068771fc172c05e0344352f897b3926bc",
+    "model": "Final1.00, 23MAR2022, PSpice17.4",
+    "unmodified": true,
+    "status": "ngspice parse blocked by unavailable XSPICE VSWITCH model definition",
+    "limitations": "Vendor says quiescent current, shutdown current and temperature-dependent characteristics are not modeled."
+  },
+  {
+    "part": "TPS25947",
+    "url": "https://www.ti.com/lit/zip/SLVMDJ6",
+    "downloaded": true,
+    "sha256": "9bfd3f61435af48179c56bf8c4d9911471154511db272241a9b4c2a9c9c28a2b",
+    "status": "Encrypted PSpice library; not executable by installed ngspice",
+    "encrypted_marker": "**$ENCRYPTED_LIB"
+  },
+  {
+    "part": "TPS2553-1",
+    "url": "https://www.ti.com/lit/zip/SLVM426",
+    "downloaded": true,
+    "sha256": "5d4e7d9c4787ae4aafe46a794a20d0facd9ec60aecd3c12db9e44a4b842185f7",
+    "model": "Final 1.00, 19 Oct 2011, PSpice 16.2",
+    "unmodified": true,
+    "status": "ngspice parse blocked by unavailable XSPICE VSWITCH model definition; no waveform produced",
+    "failure_log": "led_vendor_original/ngspice.log"
+  },
+  {
+    "part": "MAX38902A",
+    "url": "https://www.analog.com/en/products/MAX38902A.html",
+    "downloaded": false,
+    "status": "Product page advertises a MAX38902B LTspice model. Exact A variant was not substituted or run."
+  }
+]

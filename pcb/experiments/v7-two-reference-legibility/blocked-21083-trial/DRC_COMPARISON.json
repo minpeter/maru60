@@ -1,0 +1,120 @@
+{
+  "source_board_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "candidate_board_sha256": "21083e9498512939d40d95eb6866850367939e590fcf949440b4d4642b46727b",
+  "source_drc_sha256": "8d8660dbaa5f5ec736579281f638c9a180d8b13224f9741f843ed8210842ba81",
+  "candidate_drc_sha256": "673c5afd6ff11f8a83e5b52ce331b7916c80b5a9b13cb46d7ced4aaac8b8ecea",
+  "removed": [
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Reference field of R159",
+          "pos": {
+            "x": 181.57,
+            "y": 85.0
+          },
+          "uuid": "dbd31047-168e-40f6-b393-4f6e5518463a"
+        },
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of L2",
+          "pos": {
+            "x": 177.85,
+            "y": 81.0
+          },
+          "uuid": "540b3dae-dfa9-42bb-81ce-22a3e5ae32ea"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of L2",
+          "pos": {
+            "x": 177.85,
+            "y": 81.0
+          },
+          "uuid": "540b3dae-dfa9-42bb-81ce-22a3e5ae32ea"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Segment of C139 on B.Silkscreen",
+          "pos": {
+            "x": 181.91,
+            "y": 84.85942
+          },
+          "uuid": "135c4327-c10d-4452-bb61-c9f94926e75d"
+        },
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    }
+  ],
+  "added": [],
+  "raw_unconnected_items_identical": true,
+  "schematic_parity_entries_identical": true,
+  "source_warning_count": 64,
+  "candidate_warning_count": 58,
+  "opens": 12
+}

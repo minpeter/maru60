@@ -1,0 +1,59 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": "0922da136ddb6df6847fa0c37a7195679c43bd3327e36c4fb06b6cdce006d0d1",
+  "only_changed_project_file": [
+    "maru60.kicad_pcb"
+  ],
+  "native_warning_count": 41,
+  "native_open_pairs": 9,
+  "cold58": {
+    "all_files_byte_identical": true,
+    "files": 58,
+    "changed": [],
+    "erc": 0,
+    "parity": 0
+  },
+  "net_identity_pass": true,
+  "material_comparison_pass": true,
+  "retained_partitions": {
+    "all_retained_material_node_ids_equal": true,
+    "retained_material_nodes": 14723,
+    "all_retained_material_components_equal": true,
+    "components": 380,
+    "all_retained_island_contacts_preserved": true,
+    "retained_edges": 22535,
+    "any_raw_or_guarded_overlap_reduced": false
+  },
+  "geometry_containment_pass": false,
+  "geometry_failures": [
+    {
+      "kind": "zone_loss",
+      "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "layer": "In1.Cu",
+      "loss": {
+        "area_mm2": 1.99015e-08,
+        "outlines": 4
+      },
+      "gain": {
+        "area_mm2": 0.7914969484185,
+        "outlines": 6
+      },
+      "no_loss": false
+    },
+    {
+      "kind": "zone_loss",
+      "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "layer": "In2.Cu",
+      "loss": {
+        "area_mm2": 1.99015e-08,
+        "outlines": 4
+      },
+      "gain": {
+        "area_mm2": 0.7914969484185,
+        "outlines": 6
+      },
+      "no_loss": false
+    }
+  ],
+  "qualification": "UNSELECTED nominal candidate. Strict bbf61e6 remains separate; inherited c782 exact no-loss failure and 51 guarded-contact proof failures remain. No PDN/SI, active stability, fabrication or hardware qualification."
+}

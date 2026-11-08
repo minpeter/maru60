@@ -1,0 +1,11 @@
+# Corrected physical-contact evidence
+
+This is an evidence/tooling correction, not a CAD, schematic, BOM, firmware or selection change. The active board remains aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f, adopted at 87cacefe9dd48959f4f006440d3c3a598a0e7812. Current native counts remain 9,752 tracks,918 vias,382 footprints,12 GPIO opens and67 warnings; no new DRC/ERC/parity run is represented here because CAD bytes are unchanged.
+
+Read ERRATUM.md and FINAL_REVIEW.json first. The older global contact/support-area claims are superseded by the corrected source-specific R2 measurements and witnesses. All original evidence remains unchanged.
+
+Five fresh corrected exports cover selected aead, predecessor 2c7, unselected C128 cafa, J3 b5c and final C124 ec487. The first three retain all 1,082 named-pad identities/partitions on 245 nets. The exact selected-board supplement certifies all 22,531 accepted material edges with rational points at least 2 nm inside both reconstructed components. Fifty-one microscopic edges remain excluded, not waived; the 56 NPTH approximation fragments do not join any electrical root. The corrected transitions preserve intended connectivity and explicitly remeasure contact areas. J3 retains only the intended EXT26 merger; C124 retains its 246-net result.
+
+The current checker is installed at `../../tools/export_material_graph.py`; its bytes exactly match the reviewed frozen implementation. The complete 140-file evidence set is copied without changes under evidence/. INSTALL_MANIFEST.json maps original execution paths to saved relative paths and binds every member. AUTHORITATIVE_INPUTS.json is the original immutable reviewer list. Original, incomplete R1, rejected draft and final R2 reports remain distinguishable.
+
+The C128 retirement still fails strict global plane preservation; J3 still fails its new-transition reference gate. Neither is selected, and the BUCK-only 1 nm criterion is not extended. C124 circuit alternatives remain unselected. LED qualification remains OFF. The pre-loss original helper/full suites are unrecovered; no historical replay or universal safety, manufacturing, noise, loop-stability, SI or hardware qualification is claimed.

@@ -1,0 +1,21 @@
+{
+  "status": "UNSELECTED two-track GND leaf retirement; validation pending",
+  "source_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "prefill_sha256": "3cf686ff2dc183f14573bd189c62ff7ff3bbbd7297f4df5f8fe2724b19bc0647",
+  "retired_uuids": [
+    "577f36c1-4f15-4c40-b632-02db2931cfb0",
+    "68f95f8e-16e1-430a-a0b2-1c1d51d16fde"
+  ],
+  "retired_raw_records": [
+    "(segment\n\t\t(start 133.4 77.35)\n\t\t(end 132.1 76.05)\n\t\t(width 0.25)\n\t\t(layer \"F.Cu\")\n\t\t(net 83)\n\t\t(uuid \"577f36c1-4f15-4c40-b632-02db2931cfb0\")\n\t)",
+    "(segment\n\t\t(start 133.4 77.45)\n\t\t(end 133.4 77.35)\n\t\t(width 0.25)\n\t\t(layer \"F.Cu\")\n\t\t(net 83)\n\t\t(uuid \"68f95f8e-16e1-430a-a0b2-1c1d51d16fde\")\n\t)"
+  ],
+  "removed_net": "GND",
+  "removed_track_length_mm": 1.9384776310850238,
+  "retained_boundary_uuids": [
+    "277a8b55-ff78-53f6-840a-96fa0930cd16"
+  ],
+  "removed_via": null,
+  "added_objects": [],
+  "scope": "Remove only two declared dead-end F.Cu GND tracks. All drills, components, schematics, nets, clearance and setup stay unchanged. Normal fill, retained material support, full corrected connectivity, native DRC and strict original plane-preservation gates required. No physical HF-ground or hardware qualification claimed."
+}

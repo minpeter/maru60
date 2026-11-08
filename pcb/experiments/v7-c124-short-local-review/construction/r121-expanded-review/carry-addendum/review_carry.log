@@ -1,0 +1,118 @@
+{
+  "changed": [
+    {
+      "uuid": "319c8d90-2e8c-4fbe-b044-eb183bcc2c22",
+      "reference": "R160",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "41d2af2d45337223dcebff059d88f4c4ecc07641626a036e58a9bc1b26fcf235",
+      "new_block_sha256": "d23ff6eb07b8e136ed8a70d292be29e4c188157de8a37f750cc0428e3350ce79",
+      "reference_field_only": true,
+      "reference_layer_before_after": "B.SilkS"
+    },
+    {
+      "uuid": "7b318399-ba02-4c74-af7c-24a406884d8a",
+      "reference": "R140",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "3331a4566cc8eba5a75405040b402add330f73bbfff476b45e6fb99454e21758",
+      "new_block_sha256": "1588fdb06093c214f8bfc18f73802dea250111f1b80fb2fb30aa9bc4eb687046",
+      "reference_field_only": true,
+      "reference_layer_before_after": "B.SilkS"
+    },
+    {
+      "uuid": "936d1b8f-2579-4255-b41c-cc9654291283",
+      "reference": "C100",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "921e787e8b6c187be9e07a5ec7c03f214507db8aa719f19b64f0300342a9f421",
+      "new_block_sha256": "baca99ab4c78623a4321b7e5baf04f0ff62593060d08a1a212f14a56032da9a2",
+      "reference_field_only": true,
+      "reference_layer_before_after": "B.SilkS"
+    },
+    {
+      "uuid": "ba7f51cc-1007-44c0-8919-491491f7c29a",
+      "reference": "LOGO1",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "fbc2c388be68e8a5fb4ea4a3541d7179ebef75bb07513873fbbf7e30cd9247db",
+      "new_block_sha256": "c119e28a109562edfbcba24a78bcd544a77baca8725911d52fdcb947c9aa8a7e",
+      "old_and_new_logo_have_no_conductive_children": true,
+      "child_counts": {
+        "layer": 1,
+        "uuid": 1,
+        "at": 1,
+        "descr": 1,
+        "property": 4,
+        "attr": 1,
+        "fp_poly": 2,
+        "embedded_fonts": 1
+      },
+      "all_layer_uses": {
+        "B.Cu": 1,
+        "B.SilkS": 3,
+        "B.Fab": 3
+      },
+      "graphic_layer_uses": {
+        "B.SilkS": 3,
+        "B.Fab": 3
+      },
+      "zero_pad_drill_zone_copper_primitive": true
+    },
+    {
+      "uuid": "e8bd1f07-b665-43fb-a3a3-9ba1bca55842",
+      "reference": "R134",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "f0d8ca806df8c8576179015a46536b2243d5d97b6040c14b9d7ac86d902da92f",
+      "new_block_sha256": "9a5d9b56d32c6d4e8f7234b9219c8f452c1d13f9d75cff4fdcbcab949d8c227b",
+      "reference_field_only": true,
+      "reference_layer_before_after": "B.SilkS"
+    }
+  ],
+  "top_counts": {
+    "version": 1,
+    "generator": 1,
+    "generator_version": 1,
+    "general": 1,
+    "paper": 1,
+    "layers": 1,
+    "setup": 1,
+    "net": 247,
+    "footprint": 383,
+    "gr_line": 4,
+    "gr_arc": 4,
+    "gr_text": 6,
+    "segment": 9742,
+    "via": 919,
+    "zone": 12,
+    "embedded_fonts": 1
+  },
+  "companion_files_identical": true,
+  "drc_counts": {
+    "track_dangling": 6,
+    "via_dangling": 2,
+    "text_height": 22,
+    "silk_over_copper": 19,
+    "silk_overlap": 15
+  },
+  "drc_severity": {
+    "warning": 64
+  },
+  "drc_removed_count": 24,
+  "drc_added_count": 0,
+  "unconnected": 12,
+  "bridge_b": [
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [GND] on B.Cu, length 0.6000 mm",
+          "pos": {
+            "x": 15.5,
+            "y": 17.85
+          },
+          "uuid": "0dd51559-bc06-502f-8bb1-1b186fa751d0"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    }
+  ],
+  "hashes_unchanged": true
+}

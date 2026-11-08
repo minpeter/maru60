@@ -1,0 +1,40 @@
+PASS: bounded relative +3V3 pendant cleanup against the immediate label prototype. Candidate remains unselected by this review.
+
+Source PCB SHA256: 2e532c1a16e64a34eafafdfbd5b85c05d70bb12ad9e52924c5cbe024fdc9aa2c
+Candidate PCB SHA256: 88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e
+
+Independent read-only review used installed KiCad 9.0.2+dfsg-1 via run-kicad.sh. No source/candidate PCB modification, selection, upload, installation or external action. Reports and scripts are confined to this independent directory.
+
+IDENTITY AND SCOPE
+Both hashes match. There are 58 total files in each pcb project tree, meaning 57 unchanged companions plus the changed PCB, not 58 unchanged companions. Only nine 0.30 mm +3V3 segments (8.503623449077114 mm total centerline) and through-via 0826a4b6-5567-52ab-a787-b898d20d23ac are removed. Every retained serialized primitive, including complete footprints/pads and holes, is identical. Exact top-level comparison finds only those ten removals and two changed zone fills; all zone definitions apart from filled polygons and all other top-level content are identical.
+
+PENDANT TO LIVE JUNCTION
+Fresh exhaustive all-hole-subtracted contact scan reproduces the corrected ten-object scope. Exactly one external branch contact exists: 0858c392-ee59-5350-bcaf-d8762f658a08 to retained F.Cu f578f80d-52bb-500f-b3df-4fe97eccdb4e. The branch ends at (104.5,41.0), inside that retained vertical conductor from (104.5,42.475) to (104.5,40.225). Its retained continuations are fa80b406-f96a-57b7-9f1f-b2bf65657cf9 and via 91b5761c-2933-5c15-a2c8-7b4423194f7d. No branch-to-pad or branch-to-zone contacts exist. Source material graph pruning also preserves every retained component; short overlapping segments explain the initial false forks.
+
+FRESH NATIVE AND MATERIAL CHECKS
+Fresh source and candidate native schematic-parity DRC: 40/39 warnings, 9/9 opens, 0/0 parity. Exact warning-item set comparison removes only the intended track_dangling warning on 53e7b99f-308f-57ae-9e47-9e779e6b3272. No added item.
+Fresh corrected all-hole candidate material export is bound to the candidate hash and compared with the source's hash-bound material graph. Complete pad inventory/partitions and all nine native open pairs resolved to complete pad components are equal. Retained 14,716 material vertices retain 380 components and exactly 22,526 island contacts; neither raw nor guarded overlap decreases. All 21,789 retained direct object/layer contacts and 735 zone contacts are unchanged with no missing, added, or reduced contact. The inherited 51 guarded-contact diagnostics are exactly unchanged.
+
+EXACT PLANE AND RETAINED MATERIAL REVIEW
+Re-extracted actual source/candidate boundary edges and reran exact path/cycle classification. Opposite fracture connectors cancel exactly; six matched paths and one removed 50-edge clearance cycle account for all boundary changes on each inner plane. Every matched interval is gain-only under rational arithmetic, including tiny remote displacements. This is not a net-area argument.
+An additional independently written strict-strip proof strengthens the original sample classification: each of 17 exact cells per plane has exactly one source/candidate segment in its slab, and rational open-halfplane clipping proves no source or candidate noncancelled boundary enters any cell interior (82 bounding-box candidate edge tests per plane). Thus the exact sample classification applies throughout each cell, not just at one point.
+The non-convex removed-cycle correction is valid: a rational interior sample is candidate copper and no candidate noncancelled boundary edge bounding box touches the entire cycle box. The whole box is therefore copper irrespective of small non-convex cycle vertices. No convexity assumption or tolerance is needed. Candidate drill set is source drill set minus the retired via hole, with all retained hole geometry unchanged; subtraction cannot turn raw-plane containment into loss.
+Fresh native geometry replay passes all 11 zone rows with zero loss area AND contours. Nine outer zones are exactly contour-identical. Each inner plane gains native Boolean 0.641253380693 mm2 over six contours; gain is not used to excuse any loss.
+All 15,362 retained material object/layer rows explicitly assert BOTH zero loss and zero gain, each with zero area AND contours. Fresh exact hole-disjointness replay finds 15,358 separated boxes and four diagonal-track rows requiring narrow phase. All four have zero exact integer edge intersections and no mutual polygon containment, so the retired drill misses retained copper despite overlapping boxes. The narrow-phase fallback is sound for the asserted single-outline, no-hole polygons. No enlarged window or tolerance is used.
+All 25,726 retained reference rows pass. More strongly, unchanged retained physical material plus exact whole-plane containment monotonically preserves existing reference; no old-gap/new-gap sweep is needed.
+
+PROVENANCE AND LIMITS
+Core existing proof algorithms were inspected and rerun into this directory with output and candidate input paths separated. The strict strip proof, identity/scope checks and all-row aggregation add independent assertions rather than merely accepting packet pass flags. Fresh candidate export and source/candidate native reports were generated. Source material graph itself was not regenerated; its board hash was verified, and source contact tracing/pruning was freshly replayed. ERC/cold-refill results in the original packet were read but not independently rerun, as this review's required fresh gate is native DRC/parity and bounded geometry/material comparison.
+This is not strict-baseline or production acceptance. The inherited c782/ef45 exact no-loss failure and 51 guarded-contact diagnostics remain unresolved. No SI/PDN/active-stability, hardware, fabrication, parasitic-performance, or electromagnetic improvement is claimed. No counterexample was found within this bounded cleanup.
+
+KEY EVIDENCE (relative to this directory)
+SUMMARY.json
+qa/identity-scope.json; qa/exact-text-scope.json
+qa/drc.json; qa/source-drc.json
+qa/full-branch-trace.json; qa/full-graph-prune.json
+qa/material-graph.json; qa/material-comparison.json; qa/retained-material-partitions.json
+qa/full-geometry-containment.json; qa/retained-hole-bbox-proof.json
+qa/boundary-delta.json; qa/exact-boundary-paths.json
+qa/rational-boundary-classification.json; qa/exact-full-plane-proof.json
+qa/strict-strip-proof.json; scripts/strict_strip_proof.py
+qa/final-checks.log; HASHES.json

@@ -1,0 +1,930 @@
+{
+  "VBUS_FUSED": [
+    {
+      "ref": "C125",
+      "value": "1uF 50V effective TBD",
+      "pins": {
+        "2": "GND",
+        "1": "VBUS_FUSED"
+      },
+      "connection": "grounded"
+    }
+  ],
+  "VBUS_PROTECTED_RAW": [
+    {
+      "ref": "C126",
+      "value": "1uF 50V",
+      "pins": {
+        "2": "GND",
+        "1": "VBUS_PROTECTED_RAW"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C136",
+      "value": "100nF 50V",
+      "pins": {
+        "2": "GND",
+        "1": "VBUS_PROTECTED_RAW"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C137",
+      "value": "4.7uF 50V effective>=2uF TBD",
+      "pins": {
+        "2": "GND",
+        "1": "VBUS_PROTECTED_RAW"
+      },
+      "connection": "grounded"
+    }
+  ],
+  "+4V_REG": [
+    {
+      "ref": "C100",
+      "value": "4.7uF 50V X7R 10%",
+      "pins": {
+        "1": "+4V_REG",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C120",
+      "value": "1u",
+      "pins": {
+        "1": "+4V_REG",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C140",
+      "value": "22uF 10V effective>=12uF TBD",
+      "pins": {
+        "1": "+4V_REG",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C141",
+      "value": "22uF 10V effective>=12uF TBD",
+      "pins": {
+        "1": "+4V_REG",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    }
+  ],
+  "+4V_LED": [
+    {
+      "ref": "C121",
+      "value": "4.7u",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C122",
+      "value": "100n",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C123",
+      "value": "100n",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C200",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C201",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C202",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C203",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C204",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C205",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C206",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C207",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C208",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C209",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C210",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C211",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C212",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C213",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C214",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C215",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C216",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C217",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C218",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C219",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C220",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C221",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C222",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C223",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C224",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C225",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C226",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C227",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C228",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C229",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C230",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C231",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C232",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C233",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C234",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C235",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C236",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C237",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C238",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C239",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C240",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C241",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C242",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C243",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C244",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C245",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C246",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C247",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C248",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C249",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C250",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C251",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C252",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C253",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C254",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C255",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C256",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C257",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C258",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C259",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C260",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C261",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C262",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C263",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C264",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C265",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C266",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C267",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C268",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C269",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C270",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C271",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C272",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C273",
+      "value": "100nF",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C274",
+      "value": "100nF 10V X7R candidate",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C275",
+      "value": "100nF 10V X7R candidate",
+      "pins": {
+        "1": "+4V_LED",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    }
+  ],
+  "+3V3": [
+    {
+      "ref": "C101",
+      "value": "4.7uF 50V X7R 10%",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C102",
+      "value": "4.7u 6.3V",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C105",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C111",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C112",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C113",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C114",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C115",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C116",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C117",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C118",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C128",
+      "value": "100nF 16V",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C129",
+      "value": "100nF 16V",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    },
+    {
+      "ref": "C142",
+      "value": "10nF 50V C0G 5%",
+      "pins": {
+        "1": "+3V3",
+        "2": "LDO_BYP"
+      },
+      "connection": "between_non_ground_nets"
+    },
+    {
+      "ref": "C199",
+      "value": "100n",
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "connection": "grounded"
+    }
+  ]
+}

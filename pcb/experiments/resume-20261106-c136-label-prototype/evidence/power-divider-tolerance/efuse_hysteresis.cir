@@ -1,0 +1,14 @@
+Behavioral U8 hysteresis: not a TI macro-model; excludes dVdt,currentlimit,delay
+Vstim fused 0 PWL(0 0 1 6.5 2 0)
+R122 fused uv 620k
+R123 uv 0 267k
+R120 fused ov 590k
+R121 ov 0 156k
+BOV ovinv 0 V=-V(ov)
+SUV fused mid uv 0 UVSW
+SOV mid out ovinv 0 OVSW
+.model UVSW SW(Ron=0.01415 Roff=1e9 Vt=1.145 Vh=0.055)
+.model OVSW SW(Ron=0.01415 Roff=1e9 Vt=-1.145 Vh=0.055)
+Rload out 0 33
+.tran .1m 2 0 .1m
+.end

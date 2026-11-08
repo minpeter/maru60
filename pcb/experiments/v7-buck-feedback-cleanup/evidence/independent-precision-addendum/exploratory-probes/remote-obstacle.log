@@ -1,0 +1,34 @@
+{
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "one_board_load_no_save_fill": true,
+  "native_build": "9.0.2+dfsg-1",
+  "native_coordinate_grid": {
+    "PCB_IU_PER_MM": 1000000.0,
+    "FromMM_1": 1000000,
+    "ToMM_1_IU": 1e-06,
+    "VECTOR2I_doc": "Proxy of C++ VECTOR2< int > class.",
+    "coordinate_type": "int"
+  },
+  "native_collision_controls_pass": true,
+  "all_remote_patch_hulls_clear_all_actual_holes_and_foreign_inner_copper_at_normal_zone_clearance": false,
+  "limitation": "Native collision checks use a conservative integer convex hull around each exact rational change band. They cover both gain and loss; they are separate from the exact opposite-material-distance proof and do not waive source/contour gates or constitute analog qualification."
+}
+[
+  {
+    "layer": "In1.Cu",
+    "zone_clearance_nm": 200000,
+    "all_inner_foreign_objects_considered": 966,
+    "all_actual_holes_considered": 1269,
+    "patch_count": 51,
+    "failures": 51
+  },
+  {
+    "layer": "In2.Cu",
+    "zone_clearance_nm": 200000,
+    "all_inner_foreign_objects_considered": 743,
+    "all_actual_holes_considered": 1269,
+    "patch_count": 51,
+    "failures": 51
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "via": "79e90551-63f2-4d3a-82a7-9d5d6259c3d6",
+  "pad_members": [
+    {
+      "uuid": "8acfaaa0-99ff-425a-b370-70be0fbb3868",
+      "ref": "J3",
+      "pad": "5",
+      "net": "EXT_GPIO24"
+    },
+    {
+      "uuid": "3827e42c-c508-4185-8351-759c94512528",
+      "ref": "U11",
+      "pad": "16",
+      "net": "EXT_GPIO24"
+    }
+  ],
+  "contacts": [
+    {
+      "a": "object:b9d330ac-1b1c-42cf-989e-7a81dbfe810a:0:0",
+      "z": "object:79e90551-63f2-4d3a-82a7-9d5d6259c3d6:0:0",
+      "raw_mm2": 0.0193748429605,
+      "guarded_mm2": 0.019373619872,
+      "other_uuid": "b9d330ac-1b1c-42cf-989e-7a81dbfe810a",
+      "type": "PCB_TRACK",
+      "net": "EXT_GPIO24",
+      "xy": [
+        104.35,
+        38.0
+      ],
+      "end": [
+        105.8,
+        37.5
+      ]
+    },
+    {
+      "a": "object:79e90551-63f2-4d3a-82a7-9d5d6259c3d6:2:0",
+      "z": "object:27d5bab5-97b2-409f-970d-ef67b5e0bc6a:2:0",
+      "raw_mm2": 0.019374760225,
+      "guarded_mm2": 0.019373332348,
+      "other_uuid": "27d5bab5-97b2-409f-970d-ef67b5e0bc6a",
+      "type": "PCB_TRACK",
+      "net": "EXT_GPIO24",
+      "xy": [
+        106.275,
+        36.9
+      ],
+      "end": [
+        105.8,
+        37.5
+      ]
+    }
+  ]
+}

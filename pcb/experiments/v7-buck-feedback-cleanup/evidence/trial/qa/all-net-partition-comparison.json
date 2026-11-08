@@ -1,0 +1,186 @@
+{
+  "status": "UNSELECTED BUCK dead-arm trim, geometry/connectivity evidence only",
+  "source": {
+    "board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+    "tracks": 9752,
+    "vias": 919,
+    "footprints": 382,
+    "track_length_mm": 13181.60473138763
+  },
+  "candidate": {
+    "board_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+    "tracks": 9752,
+    "vias": 918,
+    "footprints": 382,
+    "track_length_mm": 13178.75473138763
+  },
+  "source_graph_provenance": "Reused exact2c7 SHA-bound native drill-aware source graph generated earlier this session; not a graph of unselected J3.",
+  "pad_inventory_exact": true,
+  "all_named_net_count": 245,
+  "all_pad_partitions_exact": true,
+  "BUCK_FB_pad_component": [
+    [
+      "U18.8",
+      "R159.2",
+      "R160.1"
+    ]
+  ],
+  "all_retained_direct_contact_pairs_exact": true,
+  "retired_direct_edges": [
+    [
+      "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+      "3c804add-ee74-5104-b471-73062ffcaeb9",
+      [
+        [
+          "F.Cu",
+          0.02008558147
+        ]
+      ]
+    ],
+    [
+      "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+      "d20e66e3-44fb-4535-81e2-9bc53c5f6519",
+      [
+        [
+          "F.Cu",
+          0.0177922107475
+        ]
+      ]
+    ],
+    [
+      "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+      "37c51a69-ea1f-42e2-b356-72426fc3b1b2",
+      [
+        [
+          "F.Cu",
+          0.0374691473975
+        ]
+      ]
+    ],
+    [
+      "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+      "d382de57-3476-43c4-ac26-0a72b21acf7c",
+      [
+        [
+          "F.Cu",
+          0.045765126534
+        ]
+      ]
+    ]
+  ],
+  "replacement_direct_edges": [
+    [
+      "3c804add-ee74-5104-b471-73062ffcaeb9",
+      "6ffab701-7688-4850-9aad-8ab86bd0f04a",
+      [
+        [
+          "F.Cu",
+          0.018878372011
+        ]
+      ]
+    ],
+    [
+      "6ffab701-7688-4850-9aad-8ab86bd0f04a",
+      "d20e66e3-44fb-4535-81e2-9bc53c5f6519",
+      [
+        [
+          "F.Cu",
+          0.0177922107475
+        ]
+      ]
+    ],
+    [
+      "6ffab701-7688-4850-9aad-8ab86bd0f04a",
+      "37c51a69-ea1f-42e2-b356-72426fc3b1b2",
+      [
+        [
+          "F.Cu",
+          0.0374691473975
+        ]
+      ]
+    ]
+  ],
+  "replacement_contact_set_exact": true,
+  "retained_zone_contacts_lost": [],
+  "retained_zone_contacts_added": [],
+  "physical_zone_island_counts": [
+    {
+      "zone_uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "source": 9,
+      "candidate": 9
+    },
+    {
+      "zone_uuid": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "source": 1,
+      "candidate": 1
+    },
+    {
+      "zone_uuid": "18251378-06a1-40ae-8f44-01acf0d3371a",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "source": 6,
+      "candidate": 6
+    },
+    {
+      "zone_uuid": "3f67c971-a794-46bf-8f55-e7568aa08387",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "source": 2,
+      "candidate": 2
+    },
+    {
+      "zone_uuid": "431dc987-81d8-4e96-9039-7fb10f89e34d",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "source": 1,
+      "candidate": 1
+    },
+    {
+      "zone_uuid": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "source": 1,
+      "candidate": 1
+    },
+    {
+      "zone_uuid": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "source": 1,
+      "candidate": 1
+    },
+    {
+      "zone_uuid": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "source": 1,
+      "candidate": 1
+    },
+    {
+      "zone_uuid": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "source": 1,
+      "candidate": 1
+    },
+    {
+      "zone_uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "source": 1,
+      "candidate": 1
+    },
+    {
+      "zone_uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "source": 1,
+      "candidate": 1
+    }
+  ],
+  "qualification": "All original pad-root equivalence classes preserved; no converter noise/stability claim."
+}

@@ -1,0 +1,1688 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "rows": [
+    {
+      "via_xy": [
+        112.2,
+        84.25
+      ],
+      "checks": [
+        {
+          "object": "escape",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.20999999999999375,
+              "uuid": "842d4067-715e-4704-bfc9-34a716c9ae7b",
+              "class": "PAD",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "4",
+              "pos": [
+                112.6,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.20999999999999375,
+              "uuid": "f89456dd-e6ca-4835-9871-b1b59b4a11c8",
+              "class": "PAD",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "6",
+              "pos": [
+                111.8,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.22499999999999432,
+              "uuid": "9454d9b9-56c8-4e83-a5eb-edd1cb123f15",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                111.8,
+                84.9375
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.2
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "F.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.0,
+              "uuid": "f6b3e19b-5c04-48f1-baf9-4cc5b9d4e682",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                83.6495
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.6
+            },
+            {
+              "clearance_mm": 0.17152568046566102,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 0.3715254157762568,
+              "uuid": "37baaf9f-bebe-4166-9f5a-a3adc5551c2a",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                83.6495
+              ],
+              "end": [
+                110.7,
+                83.6495
+              ],
+              "width": 0.2
+            }
+          ],
+          "pass_0p15": false
+        },
+        {
+          "object": "via",
+          "layer": "In1.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.17152568046566102,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 0.9999999999999999,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            },
+            {
+              "clearance_mm": 1.4102284443043178,
+              "uuid": "12370ad7-8594-4190-a06c-9ea03927ab7c",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                111.0,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "In2.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.17152568046566102,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 0.9999999999999999,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            },
+            {
+              "clearance_mm": 1.4102284443043178,
+              "uuid": "12370ad7-8594-4190-a06c-9ea03927ab7c",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                111.0,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.17152568046566102,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 0.2013591847524569,
+              "uuid": "f89456dd-e6ca-4835-9871-b1b59b4a11c8",
+              "class": "PAD",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "6",
+              "pos": [
+                111.8,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.2013591847524628,
+              "uuid": "842d4067-715e-4704-bfc9-34a716c9ae7b",
+              "class": "PAD",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "4",
+              "pos": [
+                112.6,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            }
+          ],
+          "pass_0p15": true
+        }
+      ],
+      "B_escape_unsupported_GND_In2_mm2": 0.0,
+      "unsupported_contours": 0,
+      "unsupported_bbox_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "via_xy": [
+        112.2,
+        84.3
+      ],
+      "checks": [
+        {
+          "object": "escape",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.20999999999999375,
+              "uuid": "842d4067-715e-4704-bfc9-34a716c9ae7b",
+              "class": "PAD",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "4",
+              "pos": [
+                112.6,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.20999999999999375,
+              "uuid": "f89456dd-e6ca-4835-9871-b1b59b4a11c8",
+              "class": "PAD",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "6",
+              "pos": [
+                111.8,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.22499999999999432,
+              "uuid": "9454d9b9-56c8-4e83-a5eb-edd1cb123f15",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                111.8,
+                84.9375
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.2
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "F.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.0,
+              "uuid": "f6b3e19b-5c04-48f1-baf9-4cc5b9d4e682",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                83.6495
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.6
+            },
+            {
+              "clearance_mm": 0.21364049273721167,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 0.4136418457748202,
+              "uuid": "37baaf9f-bebe-4166-9f5a-a3adc5551c2a",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                83.6495
+              ],
+              "end": [
+                110.7,
+                83.6495
+              ],
+              "width": 0.2
+            }
+          ],
+          "pass_0p15": false
+        },
+        {
+          "object": "via",
+          "layer": "In1.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.21364049273721167,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 1.0499999999999972,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            },
+            {
+              "clearance_mm": 1.4499990368720908,
+              "uuid": "12370ad7-8594-4190-a06c-9ea03927ab7c",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                111.0,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "In2.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.21364049273721167,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 1.0499999999999972,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            },
+            {
+              "clearance_mm": 1.4499990368720908,
+              "uuid": "12370ad7-8594-4190-a06c-9ea03927ab7c",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                111.0,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.16379209779777051,
+              "uuid": "f89456dd-e6ca-4835-9871-b1b59b4a11c8",
+              "class": "PAD",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "6",
+              "pos": [
+                111.8,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.16379209779778028,
+              "uuid": "842d4067-715e-4704-bfc9-34a716c9ae7b",
+              "class": "PAD",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "4",
+              "pos": [
+                112.6,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.21364049273721167,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            }
+          ],
+          "pass_0p15": true
+        }
+      ],
+      "B_escape_unsupported_GND_In2_mm2": 0.0,
+      "unsupported_contours": 0,
+      "unsupported_bbox_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "via_xy": [
+        112.3,
+        84.25
+      ],
+      "checks": [
+        {
+          "object": "escape",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.15763834864957355,
+              "uuid": "842d4067-715e-4704-bfc9-34a716c9ae7b",
+              "class": "PAD",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "4",
+              "pos": [
+                112.6,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.20999899999999627,
+              "uuid": "f89456dd-e6ca-4835-9871-b1b59b4a11c8",
+              "class": "PAD",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "6",
+              "pos": [
+                111.8,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.22499899999999684,
+              "uuid": "9454d9b9-56c8-4e83-a5eb-edd1cb123f15",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                111.8,
+                84.9375
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.2
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "F.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.0,
+              "uuid": "f6b3e19b-5c04-48f1-baf9-4cc5b9d4e682",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                83.6495
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.6
+            },
+            {
+              "clearance_mm": 0.23140874752050083,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 0.4314089841206135,
+              "uuid": "37baaf9f-bebe-4166-9f5a-a3adc5551c2a",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                83.6495
+              ],
+              "end": [
+                110.7,
+                83.6495
+              ],
+              "width": 0.2
+            }
+          ],
+          "pass_0p15": false
+        },
+        {
+          "object": "via",
+          "layer": "In1.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.23140874752050083,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 1.003220527774924,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            },
+            {
+              "clearance_mm": 1.4729927603018946,
+              "uuid": "12370ad7-8594-4190-a06c-9ea03927ab7c",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                111.0,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "In2.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.23140874752050083,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 1.003220527774924,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            },
+            {
+              "clearance_mm": 1.4729927603018946,
+              "uuid": "12370ad7-8594-4190-a06c-9ea03927ab7c",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                111.0,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.1458854116885675,
+              "uuid": "842d4067-715e-4704-bfc9-34a716c9ae7b",
+              "class": "PAD",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "4",
+              "pos": [
+                112.6,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.23140874752050083,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 0.2703108271786356,
+              "uuid": "f89456dd-e6ca-4835-9871-b1b59b4a11c8",
+              "class": "PAD",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "6",
+              "pos": [
+                111.8,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            }
+          ],
+          "pass_0p15": false
+        }
+      ],
+      "B_escape_unsupported_GND_In2_mm2": 0.0,
+      "unsupported_contours": 0,
+      "unsupported_bbox_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "via_xy": [
+        112.2,
+        85.6
+      ],
+      "checks": [
+        {
+          "object": "escape",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.20999999999999375,
+              "uuid": "842d4067-715e-4704-bfc9-34a716c9ae7b",
+              "class": "PAD",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "4",
+              "pos": [
+                112.6,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.20999999999999375,
+              "uuid": "f89456dd-e6ca-4835-9871-b1b59b4a11c8",
+              "class": "PAD",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "6",
+              "pos": [
+                111.8,
+                84.95
+              ],
+              "size": [
+                0.7,
+                0.23
+              ]
+            },
+            {
+              "clearance_mm": 0.22499999999999432,
+              "uuid": "9454d9b9-56c8-4e83-a5eb-edd1cb123f15",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                111.8,
+                84.9375
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.2
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "F.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.0,
+              "uuid": "f6b3e19b-5c04-48f1-baf9-4cc5b9d4e682",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                83.6495
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.6
+            },
+            {
+              "clearance_mm": 0.4348840259181718,
+              "uuid": "23346d3f-171c-46b2-8b22-d74590ba3f0f",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                86.5
+              ],
+              "end": [
+                112.0,
+                86.7
+              ],
+              "width": 0.6
+            },
+            {
+              "clearance_mm": 0.5680331471512136,
+              "uuid": "f88431cf-9c57-436c-8e46-936ce13e131f",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                112.0,
+                86.7
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            }
+          ],
+          "pass_0p15": false
+        },
+        {
+          "object": "via",
+          "layer": "In1.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.5680331471512136,
+              "uuid": "f88431cf-9c57-436c-8e46-936ce13e131f",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                112.0,
+                86.7
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 1.4410916127276607,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 2.3499999999999943,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "In2.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.5680331471512136,
+              "uuid": "f88431cf-9c57-436c-8e46-936ce13e131f",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                112.0,
+                86.7
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 1.4410916127276607,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 2.3499999999999943,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.04999999999999716,
+              "uuid": "9454d9b9-56c8-4e83-a5eb-edd1cb123f15",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                111.8,
+                84.9375
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.2
+            },
+            {
+              "clearance_mm": 0.07500000000000284,
+              "uuid": "410f449f-c57d-4cd1-8390-6e619f7adb7c",
+              "class": "PCB_TRACK",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                112.6,
+                84.9375
+              ],
+              "end": [
+                112.6,
+                85.87811
+              ],
+              "width": 0.15
+            },
+            {
+              "clearance_mm": 0.16217871293730382,
+              "uuid": "0f9187b6-b8bd-49fe-a767-22a2fab9faa8",
+              "class": "PCB_TRACK",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                112.6,
+                85.87811
+              ],
+              "end": [
+                113.0,
+                86.27811
+              ],
+              "width": 0.15
+            }
+          ],
+          "pass_0p15": false
+        }
+      ],
+      "B_escape_unsupported_GND_In2_mm2": 0.0,
+      "unsupported_contours": 0,
+      "unsupported_bbox_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "via_xy": [
+        112.5,
+        86.1
+      ],
+      "checks": [
+        {
+          "object": "escape",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.0,
+              "uuid": "6ec58818-dd4d-4b1b-835c-3e10e5bfa43f",
+              "class": "PCB_TRACK",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                112.6,
+                85.9
+              ],
+              "end": [
+                113.0,
+                86.3
+              ],
+              "width": 0.15
+            },
+            {
+              "clearance_mm": 0.0,
+              "uuid": "cc9abe6b-fa98-41a5-b18c-4ab9fd3d0757",
+              "class": "PCB_TRACK",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                112.6,
+                85.87811
+              ],
+              "end": [
+                112.6,
+                85.9
+              ],
+              "width": 0.15
+            },
+            {
+              "clearance_mm": 0.002770762724068622,
+              "uuid": "410f449f-c57d-4cd1-8390-6e619f7adb7c",
+              "class": "PCB_TRACK",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                112.6,
+                84.9375
+              ],
+              "end": [
+                112.6,
+                85.87811
+              ],
+              "width": 0.15
+            }
+          ],
+          "pass_0p15": false
+        },
+        {
+          "object": "via",
+          "layer": "F.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.15000000000000568,
+              "uuid": "f6b3e19b-5c04-48f1-baf9-4cc5b9d4e682",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                83.6495
+              ],
+              "end": [
+                111.8,
+                86.5
+              ],
+              "width": 0.6
+            },
+            {
+              "clearance_mm": 0.22781760459053946,
+              "uuid": "23346d3f-171c-46b2-8b22-d74590ba3f0f",
+              "class": "PCB_TRACK",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu"
+              ],
+              "start": [
+                111.8,
+                86.5
+              ],
+              "end": [
+                112.0,
+                86.7
+              ],
+              "width": 0.6
+            },
+            {
+              "clearance_mm": 0.23102478004986682,
+              "uuid": "f88431cf-9c57-436c-8e46-936ce13e131f",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                112.0,
+                86.7
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "In1.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.23102478004986682,
+              "uuid": "f88431cf-9c57-436c-8e46-936ce13e131f",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                112.0,
+                86.7
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 1.998517986947825,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 2.8632083189172572,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "In2.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.23102478004986682,
+              "uuid": "f88431cf-9c57-436c-8e46-936ce13e131f",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                112.0,
+                86.7
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 1.998517986947825,
+              "uuid": "1809f77f-ebda-4062-954c-f879e7746c4a",
+              "class": "PCB_VIA",
+              "net": "+1V1",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "pos": [
+                111.8,
+                83.6495
+              ],
+              "width": 0.6,
+              "drill": 0.25
+            },
+            {
+              "clearance_mm": 2.8632083189172572,
+              "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+              "class": "PAD",
+              "net": "GND",
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "ref": "U1",
+              "pad": "61",
+              "pos": [
+                112.2,
+                82.7
+              ],
+              "size": [
+                0.6,
+                0.6
+              ]
+            }
+          ],
+          "pass_0p15": true
+        },
+        {
+          "object": "via",
+          "layer": "B.Cu",
+          "nearest": [
+            {
+              "clearance_mm": 0.0,
+              "uuid": "0f9187b6-b8bd-49fe-a767-22a2fab9faa8",
+              "class": "PCB_TRACK",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                112.6,
+                85.87811
+              ],
+              "end": [
+                113.0,
+                86.27811
+              ],
+              "width": 0.15
+            },
+            {
+              "clearance_mm": 0.0,
+              "uuid": "410f449f-c57d-4cd1-8390-6e619f7adb7c",
+              "class": "PCB_TRACK",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                112.6,
+                84.9375
+              ],
+              "end": [
+                112.6,
+                85.87811
+              ],
+              "width": 0.15
+            },
+            {
+              "clearance_mm": 0.0,
+              "uuid": "6ec58818-dd4d-4b1b-835c-3e10e5bfa43f",
+              "class": "PCB_TRACK",
+              "net": "ROW2",
+              "layers": [
+                "B.Cu"
+              ],
+              "start": [
+                112.6,
+                85.9
+              ],
+              "end": [
+                113.0,
+                86.3
+              ],
+              "width": 0.15
+            }
+          ],
+          "pass_0p15": false
+        }
+      ],
+      "B_escape_unsupported_GND_In2_mm2": 0.0,
+      "unsupported_contours": 0,
+      "unsupported_bbox_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

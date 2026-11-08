@@ -1,0 +1,224 @@
+04:40:47: Debug: Adding duplicate image handler for 'PNG file'
+04:40:47: Debug: Adding duplicate image handler for 'JPEG file'
+04:40:47: Debug: Adding duplicate image handler for 'TIFF file'
+04:40:47: Debug: Adding duplicate image handler for 'GIF file'
+04:40:47: Debug: Adding duplicate image handler for 'PNM file'
+04:40:47: Debug: Adding duplicate image handler for 'PCX file'
+04:40:47: Debug: Adding duplicate image handler for 'IFF file'
+04:40:47: Debug: Adding duplicate image handler for 'Windows icon file'
+04:40:47: Debug: Adding duplicate image handler for 'Windows cursor file'
+04:40:47: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+04:40:47: Debug: Adding duplicate image handler for 'TGA file'
+04:40:47: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "candidate_sha256": "fb227c9af1b2c520452fee6815fdfecf6c44f7a42f090d432e5293fd3538d434",
+  "prior_C_sha256": "ebf7bdb8556158df3f6c6c63ed985dec18a34ca709a6175d69efbde93389e634",
+  "read_only_no_search_or_CAD_save": true,
+  "region_mm": [
+    111.81,
+    76.5,
+    116.06,
+    78.5
+  ],
+  "geometry_capture_region_with_1mm_margin": [
+    110.81,
+    75.5,
+    117.06,
+    79.5
+  ],
+  "grid_mm": 0.05,
+  "samples_per_layer": 3526,
+  "prior_search_limits": "C search visited1842 F cells, no B cells, no reachable via sites; reached its y78.5 southern boundary. A bounding box is not a claim that every cell inside was reachable.",
+  "same_screen_parameters_as_prior": {
+    "signal_width_mm": 0.15,
+    "combined_trace_radius_clearance_mm": 0.2251,
+    "trace_reference_erosion_mm": 0.0751,
+    "via_old_shadow_buffer_mm": 0.456,
+    "via_plane_boundary_buffer_mm": 0.655
+  },
+  "rows": [
+    {
+      "label": "rejected_C",
+      "sha256": "ebf7bdb8556158df3f6c6c63ed985dec18a34ca709a6175d69efbde93389e634",
+      "allowed_track_grid_cells_F_B": [
+        2169,
+        415
+      ],
+      "ordinary_via_cells": 20,
+      "strong_plane_screen_via_cells": 20
+    },
+    {
+      "label": "candidate_F",
+      "sha256": "fb227c9af1b2c520452fee6815fdfecf6c44f7a42f090d432e5293fd3538d434",
+      "allowed_track_grid_cells_F_B": [
+        2169,
+        415
+      ],
+      "ordinary_via_cells": 20,
+      "strong_plane_screen_via_cells": 20
+    }
+  ],
+  "mask_changes": {
+    "newly_allowed_track_cells_F_B": [
+      0,
+      0
+    ],
+    "newly_blocked_track_cells_F_B": [
+      0,
+      0
+    ],
+    "ordinary_via_mask_changed_cells": 0,
+    "strong_via_mask_changed_cells": 0
+  },
+  "candidate_strong_screen_via_sites_mm": [
+    [
+      115.46,
+      76.5
+    ],
+    [
+      115.51,
+      76.5
+    ],
+    [
+      115.56,
+      76.5
+    ],
+    [
+      115.61,
+      76.5
+    ],
+    [
+      115.66,
+      76.5
+    ],
+    [
+      115.71,
+      76.5
+    ],
+    [
+      115.76,
+      76.5
+    ],
+    [
+      115.81,
+      76.5
+    ],
+    [
+      115.86,
+      76.5
+    ],
+    [
+      115.91,
+      76.5
+    ],
+    [
+      115.96,
+      76.5
+    ],
+    [
+      116.01,
+      76.5
+    ],
+    [
+      116.06,
+      76.5
+    ],
+    [
+      115.86,
+      76.55
+    ],
+    [
+      115.91,
+      76.55
+    ],
+    [
+      115.96,
+      76.55
+    ],
+    [
+      116.01,
+      76.55
+    ],
+    [
+      116.06,
+      76.55
+    ],
+    [
+      116.01,
+      76.6
+    ],
+    [
+      116.06,
+      76.6
+    ]
+  ],
+  "geometric_difference_within_old_pocket": [
+    {
+      "layer": "F",
+      "obstacle_symmetric_difference_inside_old_pocket_mm2": 0.0,
+      "track_reference_mask_geometry_difference_mm2": 0.0,
+      "physical_nearest_plane_geometry_difference_mm2": 0.0
+    },
+    {
+      "layer": "B",
+      "obstacle_symmetric_difference_inside_old_pocket_mm2": 0.0,
+      "track_reference_mask_geometry_difference_mm2": 0.0,
+      "physical_nearest_plane_geometry_difference_mm2": 0.0
+    }
+  ],
+  "blocking_primitives": [
+    {
+      "uuid": "d04bedc3-787f-4dd8-9a83-dc804564f50f",
+      "exact_primitive_signature_unchanged": true,
+      "geometry": {
+        "net": "LED_FAULT_N",
+        "layer": "F.Cu",
+        "start_mm": [
+          113.7,
+          77.05
+        ],
+        "end_mm": [
+          111.9,
+          75.25
+        ],
+        "width_mm": 0.15
+      }
+    },
+    {
+      "uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+      "exact_primitive_signature_unchanged": true,
+      "geometry": {
+        "net": "GND",
+        "layer": "F.Cu",
+        "start_mm": [
+          114.85,
+          77.65
+        ],
+        "end_mm": [
+          114.85,
+          77.65
+        ],
+        "width_mm": 0.6
+      }
+    },
+    {
+      "uuid": "5bcc3e01-7bf7-4484-aa21-f12e24210539",
+      "exact_primitive_signature_unchanged": true,
+      "geometry": {
+        "net": "GND",
+        "layer": "F.Cu",
+        "start_mm": [
+          115.9,
+          78.4
+        ],
+        "end_mm": [
+          115.9,
+          78.4
+        ],
+        "width_mm": 0.6
+      }
+    }
+  ],
+  "interpretation": "Static geometry/mask comparison only, no flood fill or route search. Equal masks inside the formerly bounded pocket do not prove the unbounded exterior inaccessible. The LED shift is farther north-west; the diagonal LED barrier, nearby GND vias and crystal-related plane boundary are not refactored here. A materially different next step would inspect the unsearched southern exterior or a specific local blocker/transition corridor, not count this rail-clearance repair as an escape from the pocket.",
+  "limits": "These screening margins are not DRC rules or SI qualification; actual future native fill and return checks remain necessary."
+}

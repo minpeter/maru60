@@ -1,0 +1,82 @@
+{
+  "every_hole_scanned": true,
+  "holes_intersecting_raw_stub": [
+    {
+      "uuid": "ba0e0532-1586-4050-a390-d87dcee11d2c",
+      "area_mm2": 0.026390345412,
+      "contours": 1
+    }
+  ],
+  "patches": [
+    {
+      "a": "b04e3a6d-1e98-43d1-9b10-58c23321ca28",
+      "b": "cc183bf5-15f3-5270-ae14-886f402cad67",
+      "layer": "F.Cu",
+      "raw": {
+        "area_mm2": 0.0176746312445,
+        "contours": 1
+      },
+      "actual_after_all_holes": {
+        "area_mm2": 0.0,
+        "contours": 0
+      },
+      "guarded_2nm_each": {
+        "area_mm2": 0.0,
+        "contours": 0
+      }
+    },
+    {
+      "a": "b04e3a6d-1e98-43d1-9b10-58c23321ca28",
+      "b": "ba0e0532-1586-4050-a390-d87dcee11d2c",
+      "layer": "F.Cu",
+      "raw": {
+        "area_mm2": 0.045765126534,
+        "contours": 1
+      },
+      "actual_after_all_holes": {
+        "area_mm2": 0.019374781122,
+        "contours": 1
+      },
+      "guarded_2nm_each": {
+        "area_mm2": 0.019373577259,
+        "contours": 1
+      }
+    },
+    {
+      "a": "cc183bf5-15f3-5270-ae14-886f402cad67",
+      "b": "ba0e0532-1586-4050-a390-d87dcee11d2c",
+      "layer": "F.Cu",
+      "raw": {
+        "area_mm2": 0.045765280335,
+        "contours": 1
+      },
+      "actual_after_all_holes": {
+        "area_mm2": 0.0193748847625,
+        "contours": 1
+      },
+      "guarded_2nm_each": {
+        "area_mm2": 0.019373714382,
+        "contours": 1
+      }
+    },
+    {
+      "a": "a963e830-796c-53b3-b9de-ef49be1314bc",
+      "b": "ba0e0532-1586-4050-a390-d87dcee11d2c",
+      "layer": "B.Cu",
+      "raw": {
+        "area_mm2": 0.045765126534,
+        "contours": 1
+      },
+      "actual_after_all_holes": {
+        "area_mm2": 0.019374781122,
+        "contours": 1
+      },
+      "guarded_2nm_each": {
+        "area_mm2": 0.0193735788875,
+        "contours": 1
+      }
+    }
+  ],
+  "source_hash": "88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e",
+  "interpretation": "The historical raw stub-to-active-trace endpoint overlap lies in removed drill metal. After all holes the stub contacts only the via annulus. Retained F and B traces each independently have positive guarded annular contact. Deletion removes the stub primitive, not shared via or trace copper."
+}

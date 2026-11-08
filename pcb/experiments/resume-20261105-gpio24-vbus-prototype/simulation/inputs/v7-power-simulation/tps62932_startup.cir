@@ -1,0 +1,20 @@
+V7 TPS62932 isolated buck startup using TI model unchanged
+.lib vendor/SLUM808/TPS62932_PSPICE_TRANS/TPS62932_TRANS.LIB
+Vsource source 0 PWL(0 0 1u 5)
+Rfeed source vin 0.1979870323
+C137 vin 0 4.7u
+C136 vin 0 100n
+XU18 bst en fb 0 rt ss sw vin TPS62932_TRANS PARAMS: STEADY_STATE=0 EN_FSS=0
+C138 bst sw 100n
+C139 ss 0 100n
+L2 sw lx 4.7u
+RL2 lx vout 0.0441
+C140 vout 0 22u
+C141 vout 0 22u
+R159 vout fb 40k
+R160 fb 0 10k
+Rload vout 0 40
+.tran 100n 30m 0 100n
+.options reltol=0.003 abstol=1n vntol=1u
+.save v(source) v(vin) v(vout) v(sw) v(ss) v(fb) i(L2)
+.end

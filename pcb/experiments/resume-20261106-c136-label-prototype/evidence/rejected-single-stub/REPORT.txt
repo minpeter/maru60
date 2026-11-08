@@ -1,0 +1,11 @@
+REJECTED, UNSELECTED bounded +4V_REG leaf deletion experiment.
+
+Immutable qualified source: ef45f84 prototype, board SHA256 9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed. The strict bbf61e6 prototype remains distinct and unchanged. No selected repository or source changed.
+
+Pre-edit topology: all-through-drill source material graph has exactly one positive material node for acf57724-d322-4087-84ab-2893c779cea3, area 1.747162505989 mm2, with exactly one guarded contact to 05a61be2-0243-4f1b-be73-9b2474fa2d93. Overlap is 0.5060958015915 mm2, guarded overlap 0.5060906766015 mm2. It is not a pad and has no raw zone or unproved contact. As a graph leaf it cannot disconnect other source graph vertices when removed. This is only pre-edit evidence, not proof of a refilled candidate.
+
+Exactly one segment was removed in one isolated copied project, followed by KiCad 9.0.2+dfsg-1 fill and save. Full native DRC ran FIRST. It reports 42 warnings, 9 unconnected items, 0 schematic-parity entries. No severity/category total increased. However the dangling warning on the deleted segment is replaced by a new dangling warning on the retained 9.7 mm +4V_REG rail at (23.7,19.65). This fails the strict no-additional-warning-object gate. There is no warning reduction. Four unconnected-item representative reports also differ; their physical equivalence is not asserted from count equality.
+
+STOPPED after native gate failure. Fresh net identity, cold58, ERC, material graph, complete retained pad partitions/contact checks, full-board plane/reference audits and deeper simulation were deliberately NOT RUN. No unchecked area or contour array is represented as passing. Candidate is rejected and must not be merged. Exact native removed/added records are retained in qa/native-gate.json. Source topology and source/candidate hashes are retained separately.
+
+Inherited c782 exact no-loss failure and 51 guarded-contact proof failures remain unresolved and explicit. No numerical tolerance waiver. The deleted branch's parasitic electrical effect is unmodeled; even a nominal geometry pass would not establish PDN/SI improvement or active stability. No further routing, installs, credentials, push, fabrication, purchase or flashing performed.

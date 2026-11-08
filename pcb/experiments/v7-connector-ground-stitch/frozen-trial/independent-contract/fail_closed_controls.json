@@ -1,0 +1,16 @@
+[
+  {
+    "script": "inspect_site.py",
+    "mode": "-O",
+    "exit": 1,
+    "reason": "Contract checks require assertions; optimized Python is forbidden",
+    "existing_result_unchanged": true
+  },
+  {
+    "script": "check_legacy_shadow.py",
+    "mode": "-O",
+    "exit": 1,
+    "reason": "Legacy checks require assertions; optimized Python is forbidden",
+    "existing_result_unchanged": true
+  }
+]

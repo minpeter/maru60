@@ -1,0 +1,12 @@
+import pcbnew as p,json,shutil,hashlib
+from pathlib import Path
+R=Path('/workspace/shared/maru60-resume/continuation-c782/mcu');S=R/'source/pcb/maru60.kicad_pcb';A=R/'north-escape/pcb';O=R/'north-escape-b/pcb';shutil.copytree(A,O,dirs_exist_ok=True);B=O/'maru60.kicad_pcb';b=p.LoadBoard(str(B));uid=lambda q:q.m_Uuid.AsString();idx={uid(q):q for q in b.GetTracks()};V=lambda x,y:p.VECTOR2I(round(x*1e6),round(y*1e6));build=json.load(open(R/'qa/north-escape-build.json'))
+idx['65c0b9cf-87fb-4ae5-a2e0-e11b853cd699'].SetEnd(V(112.695,76.6));idx['82c1e32c-6d48-4cd7-aef5-08182b26ee82'].SetStart(V(112.695,76.6))
+for x in build['modified']:
+ if x['uuid']=='65c0b9cf-87fb-4ae5-a2e0-e11b853cd699':x['new_start_end'][1]=[112.695,76.6]
+for x in build['added']:
+ if x['uuid']=='82c1e32c-6d48-4cd7-aef5-08182b26ee82':x['start_mm']=[112.695,76.6]
+q=idx['14d35ed0-d9e6-45a6-a698-4e8b482aba5f'];assert q.GetNetname()=='+1V1' and q.GetLayer()==p.F_Cu and q.GetWidth()==600000;before=[[q.GetStart().x/1e6,q.GetStart().y/1e6],[q.GetEnd().x/1e6,q.GetEnd().y/1e6]];q.SetStart(V(111.35,75.75));q.SetEnd(V(111.35,79.3005));build['modified'].append({'uuid':uid(q),'net':'+1V1','layer':'F.Cu','old_start_end':before,'new_start_end':[[111.35,75.75],[111.35,79.3005]],'retained_width_mm':.6})
+for a,c in [([111.4,75.7],[111.35,75.75]),([111.35,79.3005],[111.4,79.3505])]:
+ t=p.PCB_TRACK(b);t.SetStart(V(*a));t.SetEnd(V(*c));t.SetLayer(p.F_Cu);t.SetWidth(600000);t.SetNet(b.FindNet('+1V1'));b.Add(t);build['added'].append({'uuid':uid(t),'net':'+1V1','layer':'F.Cu','start_mm':a,'end_mm':c,'width_mm':.6})
+names={uid(q):q.GetNetname() for q in list(b.GetTracks())+[q for f in b.GetFootprints() for q in f.Pads()]};b.BuildConnectivity();p.ZONE_FILLER(b).Fill(b.Zones());assert names=={uid(q):q.GetNetname() for q in list(b.GetTracks())+[q for f in b.GetFootprints() for q in f.Pads()]};p.SaveBoard(str(B),b);build['candidate_sha256']=hashlib.sha256(B.read_bytes()).hexdigest();build['predecessor_sha256']=json.load(open(R/'qa/north-escape-build.json'))['candidate_sha256'];build['scope']='Unselected partial MCU_GPIO27 escape; targeted correction relocates the middle of one +1V1 F.Cu rail by0.05mm while preserving0.6mm width and both original endpoints, and pulls the new COL5 B diagonal north0.1mm. No complete MCU closure.';(R/'qa/north-escape-b-build.json').write_text(json.dumps(build,indent=2));print(json.dumps(build,indent=2))

@@ -1,0 +1,92 @@
+{
+  "violations": {
+    "before": 39,
+    "after": 39,
+    "added": [],
+    "removed": []
+  },
+  "unconnected_items": {
+    "before": 9,
+    "after": 8,
+    "added": [
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [EXT_GPIO25] on F.Cu, length 1.1294 mm",
+            "pos": {
+              "x": 93.925,
+              "y": 40.175
+            },
+            "uuid": "e7ca2c06-4f7b-4b3b-857e-fe87a342a39f"
+          },
+          {
+            "description": "Pad 11 [EXT_GPIO25] of U13 on B.Cu",
+            "pos": {
+              "x": 89.45,
+              "y": 42.5
+            },
+            "uuid": "a18e6e59-fb74-4513-a5f4-6a34d9223429"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      }
+    ],
+    "removed": [
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 15 [EXT_GPIO25] of U11 on B.Cu",
+            "pos": {
+              "x": 107.1,
+              "y": 37.325
+            },
+            "uuid": "cff436d2-a051-486a-8eda-ad80c8687157"
+          },
+          {
+            "description": "Pad 6 [EXT_GPIO25] of J3 on B.Cu",
+            "pos": {
+              "x": 93.5,
+              "y": 39.0
+            },
+            "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 6 [EXT_GPIO25] of J3 on B.Cu",
+            "pos": {
+              "x": 93.5,
+              "y": 39.0
+            },
+            "uuid": "bee40e5c-5047-43dd-8262-df42b4062ba6"
+          },
+          {
+            "description": "Pad 11 [EXT_GPIO25] of U13 on B.Cu",
+            "pos": {
+              "x": 89.45,
+              "y": 42.5
+            },
+            "uuid": "a18e6e59-fb74-4513-a5f4-6a34d9223429"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      }
+    ]
+  },
+  "schematic_parity": {
+    "before": 0,
+    "after": 0,
+    "added": [],
+    "removed": []
+  },
+  "native_severity_gate_pass": true
+}

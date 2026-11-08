@@ -1,0 +1,14 @@
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/led-startup-recovery/candidate/verify_sources.py
+{
+  "pass": true,
+  "candidate_files": 62,
+  "baseline_files_exact": 22,
+  "former_working_files_exact": 19,
+  "new_implementation_files": [
+    "maru_rgb.c",
+    "maru_rgb.h",
+    "maru_ws2812_transport.inc"
+  ],
+  "qualification_default": 0,
+  "original_complete_packet_recovered": false
+}

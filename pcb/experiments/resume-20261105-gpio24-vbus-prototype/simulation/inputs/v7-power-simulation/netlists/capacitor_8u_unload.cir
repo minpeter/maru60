@@ -1,0 +1,7 @@
+Charge-deficit envelope: regulator current held fixed for50us
+Ireg 0 out 0.3
+Iload out 0 PWL(0 0.3 5u 0.3 5.01u 0.09999999999999998)
+RESR out cnode 0.02
+Cout cnode 0 8u IC=4
+.tran .05u 55u 0 .05u UIC
+.end

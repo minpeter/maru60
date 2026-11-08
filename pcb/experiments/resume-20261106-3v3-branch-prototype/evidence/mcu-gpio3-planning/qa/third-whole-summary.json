@@ -1,0 +1,85 @@
+{
+  "scan_bounds_mm": [
+    108.2,
+    81.6,
+    113.8,
+    85.8
+  ],
+  "grid_mm": 0.1,
+  "previous_northern_points_excluded": 40,
+  "new_sites_screened": 570,
+  "all_copper_and_hole_screen_pass": 85,
+  "retained_reference_screen_pass": 96,
+  "both_pass": 66,
+  "spatially_separated_sites_assessed": 5,
+  "F_region_groups": {
+    "102": {
+      "portal_positions_mm": [
+        [
+          109.2,
+          83.7
+        ]
+      ],
+      "region_bbox_mm": [
+        105.24976878864774,
+        75.200002,
+        111.83155309380301,
+        86.55346026830499
+      ],
+      "connects_GPIO3": false,
+      "touches_search_boundary": false
+    },
+    "117": {
+      "portal_positions_mm": [
+        [
+          113.6,
+          83.3
+        ],
+        [
+          113.0,
+          84.1
+        ],
+        [
+          113.6,
+          84.0
+        ],
+        [
+          113.1,
+          83.5
+        ]
+      ],
+      "region_bbox_mm": [
+        112.1892755612236,
+        82.350002,
+        119.83416560646793,
+        89.22914151002624
+      ],
+      "connects_GPIO3": false,
+      "touches_search_boundary": false
+    }
+  },
+  "strongest_sequence_mm": [
+    [
+      112.6,
+      84
+    ],
+    [
+      113.2,
+      82.9
+    ],
+    [
+      109.2,
+      83.7
+    ]
+  ],
+  "complete_route_exists_in_assessed_regions": false,
+  "source_unchanged": true,
+  "candidate_saved": false,
+  "limits": [
+    "Bounded planning only, no global impossibility claim",
+    "New western F region opens more routing space but is enclosed inside search bounds",
+    "No further region traversal attempted under requested cap",
+    "Exact native candidate DRC/refill/material/net/ERC gates not run because no complete candidate exists",
+    "INVALID-pruning run is rejected and not evidence; corrected broad phase covers every sampled portal plus margins"
+  ]
+}

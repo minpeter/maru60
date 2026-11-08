@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/v7-two-label-independent-review/scripts/three_boundaries.py", line 41, in <module>
+    tmp=p.PCB_SHAPE();tmp.SetShape(p.SHAPE_T_ARC);tmp.SetArcGeometry(p.VECTOR2I(*a),q.GetArcMid(),p.VECTOR2I(*z));tmp.SetWidth(0);arc=p.Cast_to_SHAPE_ARC(tmp.GetEffectiveShape());chain.Append(arc,1.0);arc_count+=1
+                                                                                                                                                                                   ~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pcbnew.py", line 6517, in Append
+    return _pcbnew.SHAPE_LINE_CHAIN_Append(self, *args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: invalid null reference in method 'SHAPE_LINE_CHAIN_Append', argument 2 of type 'SHAPE_ARC const &'

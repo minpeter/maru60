@@ -1,0 +1,183 @@
+{
+  "pass": true,
+  "scope": "NEW bounded current-V7 schematic-netlist/GPIO and ideal-matrix check. Not the lost 362-file verifier or routed PCB/hardware qualification.",
+  "netlist_path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/led-startup-recovery/evidence/static-v7/current-v7-netlist.xml",
+  "netlist_sha256": "1b46d899330d9aba0b86380ab08b7a60d309fa7a1c8962b9e6fab3ad556f2d29",
+  "source_hashes": {
+    "maru_ug_transport.c": "caed702d6652ae0ffa2704d979b02eb84e35dae8783f0bc3c6f731877c3d3320",
+    "maru60.c": "14ff9750932b512bca6d794398bef2a3dfe940da9a29e30346e4e5151d660036",
+    "maru_key_transport.c": "063d101e0c98e10fbf34ad3e2b10bf98962e58cfa160a7f97515bb8d8854c4c6",
+    "maru_via_schema.h": "2c81294491303c0d9ec1fb25e9f3b4161235e4843b74387ffa46f6cfc09bf172",
+    "maru_rgb.c": "dcb1acc86789b2a8f919769671dea8c5e2042fb20756cc15a6b2e3304e62ca52",
+    "maru_ws2812_transport.inc": "802e09fe8e95b9ce7e149b879e808f7c3ee6d772e244cebea61bb44f83ee3716",
+    "maru_suspend.c": "5b9609f7911f6f6bdf46a5f7d27ccea0b5b6cd11d92cbd1b2746a7882f73982e",
+    "maru_layout_policy.h": "5311a1bef83dab42db1c6a0ce6897570cfbfe19a3c029b6bf2b1911ebe9254a9",
+    "maru_rgb_policy.h": "db89d46aeae1d944d980f61f5d7c0544c8c985a8d561a2fea54e55cc788a99a7",
+    "maru_suspend_masks.h": "9e8906bb18e76fe55cb4549e9ec03e6e4cdbea78085a5ddc1243adb9e8938ccd",
+    "maru_led_counts.h": "9f3f8775c3a775e6c973dc10b0c0694a42d8ba4d3ea49d37f588992d450f3b6b",
+    "rules.mk": "509eed120a163447ac2462fb961f6026ca950397734458c927e990b4605b1a26",
+    "led_config.c": "e0845ffafa16aab35e58fdfe1bb1df97b56a18f2b63f9d2565b89e2fe0206291",
+    "maru_report_sync.c": "5a01ae6b906eeaed2b3ce8b056c913d9419032e4cbf377aa01dd98ccaaaf53f1",
+    "config.h": "3923a07e7329edf1bc8f78067b56c8a093dd3f223bba0bc89ed652198bf2235d",
+    "keyboard.json": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69",
+    "maru_rgb.h": "85403c42339f1777106308a2cc4c537f84a5c84021d4f50ebf406c00fb6a618e",
+    "maru_layout.c": "e40b7484c8ef7821fa6b6033bcd353ecd9c1e66010a4b851467ea827c686dbc4",
+    "maru_report_sync.h": "6f87ef8a8c082b5ae9e57b797bce753eace04c46901810cdb7a9eccffb0dec53",
+    "keymaps/via_hhkb/keymap.c": "9d83cc8687de165cb52793cdb4808058d90b67625119ecad3402dc85068401ab",
+    "keymaps/via_hhkb/rules.mk": "a249d7b848b9ef246d4fa73a3fe8591fab9859323d7845d2681ead37eebc2e75",
+    "keymaps/via/keymap.c": "bb80f8601a6818ca1c822745ef7a85d16ae94c627c2222478ec26956a762b494"
+  },
+  "matrix_model_sha256": "ab591524db61d24a3d229835e0bd28a14059d62b2d8d47b8c54660feda48f650",
+  "checked_gpio_bindings": {
+    "0": {
+      "net": "ROW0",
+      "physical_pin": 2
+    },
+    "1": {
+      "net": "ROW1",
+      "physical_pin": 3
+    },
+    "2": {
+      "net": "ROW2",
+      "physical_pin": 4
+    },
+    "4": {
+      "net": "ROW4",
+      "physical_pin": 7
+    },
+    "5": {
+      "net": "COL0",
+      "physical_pin": 8
+    },
+    "6": {
+      "net": "COL1",
+      "physical_pin": 9
+    },
+    "7": {
+      "net": "COL2",
+      "physical_pin": 10
+    },
+    "8": {
+      "net": "COL3",
+      "physical_pin": 12
+    },
+    "9": {
+      "net": "COL4",
+      "physical_pin": 13
+    },
+    "11": {
+      "net": "COL6",
+      "physical_pin": 15
+    },
+    "12": {
+      "net": "COL7",
+      "physical_pin": 16
+    },
+    "13": {
+      "net": "COL8",
+      "physical_pin": 17
+    },
+    "14": {
+      "net": "COL9",
+      "physical_pin": 18
+    },
+    "15": {
+      "net": "COL10",
+      "physical_pin": 19
+    },
+    "16": {
+      "net": "COL11",
+      "physical_pin": 27
+    },
+    "17": {
+      "net": "COL12",
+      "physical_pin": 28
+    },
+    "18": {
+      "net": "COL13",
+      "physical_pin": 29
+    },
+    "19": {
+      "net": "COL14",
+      "physical_pin": 31
+    },
+    "20": {
+      "net": "KEY_RGB",
+      "physical_pin": 32
+    },
+    "21": {
+      "net": "UNDERGLOW",
+      "physical_pin": 33
+    },
+    "22": {
+      "net": "LED_ENABLE",
+      "physical_pin": 34
+    },
+    "23": {
+      "net": "LED_FAULT_N",
+      "physical_pin": 35
+    },
+    "28": {
+      "net": "COL5",
+      "physical_pin": 42
+    },
+    "29": {
+      "net": "ROW3",
+      "physical_pin": 43
+    }
+  },
+  "binding_count": 24,
+  "negative_controls": [
+    {
+      "case": "wrong_gpio_function",
+      "rejected": true
+    },
+    {
+      "case": "wrong_led_net",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_selected_gpio",
+      "rejected": true
+    }
+  ],
+  "matrix_results": [
+    {
+      "layout": "LAYOUT_wkl_7u_split",
+      "keys": 60,
+      "exhaustive_pressed_subsets": {
+        "1": 60,
+        "2": 1770,
+        "3": 34220
+      },
+      "all_pressed_and_all_released": "PASS",
+      "reversed_diode_negative_fixture": "detected",
+      "duplicate_matrix_coordinates": false,
+      "ideal_model_no_missing_or_ghost_keys": "PASS",
+      "netlist_sha256": "1b46d899330d9aba0b86380ab08b7a60d309fa7a1c8962b9e6fab3ad556f2d29",
+      "config_sha256": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69"
+    },
+    {
+      "layout": "LAYOUT_hhkb_7u",
+      "keys": 60,
+      "exhaustive_pressed_subsets": {
+        "1": 60,
+        "2": 1770,
+        "3": 34220
+      },
+      "all_pressed_and_all_released": "PASS",
+      "reversed_diode_negative_fixture": "detected",
+      "duplicate_matrix_coordinates": false,
+      "ideal_model_no_missing_or_ghost_keys": "PASS",
+      "netlist_sha256": "1b46d899330d9aba0b86380ab08b7a60d309fa7a1c8962b9e6fab3ad556f2d29",
+      "config_sha256": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69"
+    }
+  ],
+  "inputs_unchanged": true,
+  "limits": [
+    "Schematic netlist labels and symbol pin functions do not prove PCB routing continuity or physical wiring",
+    "Ideal forward diodes/digital levels; exhaustive key subsets only through3 plus all/none, not all2^60 combinations",
+    "No physical diode orientation/leakage, switch bounce, scan timing, analog margins, USB NKRO, MCU register/driver waveform or LED-rail qualification",
+    "No original full integration verifier, Git history or historical receipts restored"
+  ]
+}

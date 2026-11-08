@@ -1,0 +1,11 @@
+--- prior/README.md
++++ candidate/README.md
+@@ -12,7 +12,7 @@
+ 
+ ## Current behavior and limits
+ 
+-`MARU60_LED_POWER_QUALIFIED` defaults to **0**. Neither production settling interval nor qualification-report default is supplied. The new code uses OFF/SETTLING/ACTIVE states, keeps transports stopped and data LOW while settling, sends black first at each enable epoch, rechecks cancellation between resumes and chains, and guards the extracted transport after synchronization and immediately before DMA submission. Faults and failures during enabled operation remain latched across USB reconfiguration. Direct OFF is non-latching: an otherwise allowed subsequent task may start a **new** settling interval.
++`MARU60_LED_POWER_QUALIFIED` defaults to **0**. Neither production settling interval nor qualification-report default is supplied. The new code uses OFF/SETTLING/ACTIVE states, keeps transports stopped and data LOW while settling, sends black first at each enable epoch, rechecks cancellation between resumes and chains, and guards the extracted transport after synchronization and immediately before DMA submission. Observed `/FAULT` LOW and transport-not-ready while non-OFF remain latched across USB reconfiguration. Unexpected EN readback LOW cancels the current epoch without latching; a later allowed task may start a new full settling epoch. Direct OFF is non-latching: an otherwise allowed subsequent task may start a **new** settling interval.
+ 
+ The guard samples state in task context. It is **not atomic** with an asynchronous fault or in-flight DMA, can miss brief pulses, and supplies no maximum cancellation latency. EN readback and `/FAULT` do not measure LED-rail readiness. The tests' **7 ms is synthetic**, not board qualification. Existing synchronization can still wait for its timeout. Timer-wrap tests do not prove behavior after an entire 32-bit-millisecond rollover without service.
+ 

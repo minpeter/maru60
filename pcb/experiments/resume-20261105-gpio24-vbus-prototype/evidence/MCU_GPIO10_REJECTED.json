@@ -1,0 +1,149 @@
+{
+  "status": "FINITE_LOCAL_BLOCKER_PAUSED",
+  "source_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "selected_source_unchanged": true,
+  "wide10b_rejected_evidence_unchanged": true,
+  "accepted_new_routes": 0,
+  "source_open_pairs_remain": 11,
+  "report": "/workspace/shared/maru60-resume/mcu-plane-aware/REPORT.md",
+  "probes": [
+    {
+      "label": "entry",
+      "position_mm": [
+        107.95,
+        86.6
+      ],
+      "new_uuid": "0b85ba22-e435-43c7-8fbe-9427073f8309",
+      "source_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+      "probe_sha256": "a95aad550b5879e8730f16626710673943b5984c26f9c199cfc44c47b75cb8ff",
+      "new_via_diameter_mm": 0.5,
+      "new_via_drill_mm": 0.25,
+      "netnames_preserved_load_build_fill": true,
+      "planes": [
+        {
+          "layer": "In1.Cu",
+          "lost_mm2": 1.636641335072,
+          "gain_mm2": 1.361805e-07,
+          "loss_outside_actual_envelope_mm2": 1.1168600358625,
+          "old_signal_shadow_losses": [
+            {
+              "uuid": "42095510-462d-424b-ba9e-8f9fd57e592f",
+              "net": "COL0",
+              "source_layer": "F.Cu",
+              "lost_reference_area_mm2": 0.0686301839445
+            },
+            {
+              "uuid": "87c0de99-d24e-432b-9ce9-978ba4eac4e2",
+              "net": "COL4",
+              "source_layer": "B.Cu",
+              "lost_reference_area_mm2": 0.000104523064
+            },
+            {
+              "uuid": "174c7937-43f7-4880-9e92-c16b0e0e5555",
+              "net": "COL6",
+              "source_layer": "B.Cu",
+              "lost_reference_area_mm2": 1.2486971e-05
+            },
+            {
+              "uuid": "8ca4df7d-71ea-4f20-9fad-b3881680db3d",
+              "net": "COL6",
+              "source_layer": "B.Cu",
+              "lost_reference_area_mm2": 1.2483624e-05
+            },
+            {
+              "uuid": "9bd9d9fb-9f33-4e31-82f9-aec90d2a8051",
+              "net": "KEY_RGB",
+              "source_layer": "B.Cu",
+              "lost_reference_area_mm2": 0.07061535
+            }
+          ],
+          "before_components": 1,
+          "after_components": 1
+        },
+        {
+          "layer": "In2.Cu",
+          "lost_mm2": 0.529062326909,
+          "gain_mm2": 1.69005e-07,
+          "loss_outside_actual_envelope_mm2": 0.0098462848185,
+          "old_signal_shadow_losses": [
+            {
+              "uuid": "87c0de99-d24e-432b-9ce9-978ba4eac4e2",
+              "net": "COL4",
+              "source_layer": "B.Cu",
+              "lost_reference_area_mm2": 0.000104523064
+            },
+            {
+              "uuid": "174c7937-43f7-4880-9e92-c16b0e0e5555",
+              "net": "COL6",
+              "source_layer": "B.Cu",
+              "lost_reference_area_mm2": 1.2486971e-05
+            },
+            {
+              "uuid": "8ca4df7d-71ea-4f20-9fad-b3881680db3d",
+              "net": "COL6",
+              "source_layer": "B.Cu",
+              "lost_reference_area_mm2": 1.2483624e-05
+            }
+          ],
+          "before_components": 1,
+          "after_components": 1
+        }
+      ],
+      "scope": "Native physical filled-plane loss, every through-drill subtracted, no Unfracture; old signal shadows screened in x102\u2013111/y83\u201390, with global loss-outside-envelope checked. Via-only disconnected probe, not an accepted routed candidate.",
+      "native": {
+        "opens": 12,
+        "warnings": 52,
+        "other_hard_errors": 0,
+        "parity": 0,
+        "net_identity_pass": true
+      }
+    },
+    {
+      "label": "exit",
+      "position_mm": [
+        104.25,
+        85.95
+      ],
+      "new_uuid": "f051ee6c-e865-40c0-80a9-7bcc9c324b82",
+      "source_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+      "probe_sha256": "3c4c08dff37f30dbb6191942d6b21951cc5f6847892441d2bdb0e09035431c16",
+      "new_via_diameter_mm": 0.5,
+      "new_via_drill_mm": 0.25,
+      "netnames_preserved_load_build_fill": true,
+      "planes": [
+        {
+          "layer": "In1.Cu",
+          "lost_mm2": 0.641253319277,
+          "gain_mm2": 9.33455e-08,
+          "loss_outside_actual_envelope_mm2": 0.0,
+          "old_signal_shadow_losses": [],
+          "before_components": 1,
+          "after_components": 1
+        },
+        {
+          "layer": "In2.Cu",
+          "lost_mm2": 0.641253319277,
+          "gain_mm2": 9.33455e-08,
+          "loss_outside_actual_envelope_mm2": 0.0,
+          "old_signal_shadow_losses": [],
+          "before_components": 1,
+          "after_components": 1
+        }
+      ],
+      "scope": "Native physical filled-plane loss, every through-drill subtracted, no Unfracture; old signal shadows screened in x102\u2013111/y83\u201390, with global loss-outside-envelope checked. Via-only disconnected probe, not an accepted routed candidate.",
+      "native": {
+        "opens": 12,
+        "warnings": 52,
+        "other_hard_errors": 0,
+        "parity": 0,
+        "net_identity_pass": true
+      }
+    }
+  ],
+  "unrun": [
+    "Full material graph on via-only probes",
+    "Independent return-transition review",
+    "Cold refill of probe copies",
+    "Hardware or SI qualification"
+  ]
+}

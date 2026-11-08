@@ -1,0 +1,146 @@
+{
+  "status": "PASS exact two-reference carry; UNSELECTED combined candidate",
+  "electrical_source_sha256": "abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d",
+  "label_source_sha256": "99c2ef0ef03406fda6bff02d1d9dcf81712698eed2657514826593911b12c552",
+  "combined_sha256": "4765dfd82f70cfcfc00c06b4d9abfb614c7d657ec086fcf57c28d49bc3236136",
+  "restoring_exactly_two_reference_fields_recovers_abdb_bytes": true,
+  "restored_sha256": "abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d",
+  "only_two_reference_fields": [
+    {
+      "reference": "U18",
+      "exact_corrected_label_field": true
+    },
+    {
+      "reference": "L2",
+      "exact_corrected_label_field": true
+    }
+  ],
+  "all57_companions_exact": true,
+  "all_electrical_objects_drills_zones_nets_rules_exact_to_abdb": true,
+  "label_actual_native_geometry_exact_to_independent99c2": true,
+  "warnings_before_abdb": 61,
+  "warnings_after_combined": 55,
+  "warnings_from7882": 64,
+  "exact_removed_warnings": [
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of L2",
+          "pos": {
+            "x": 177.85,
+            "y": 81.0
+          },
+          "uuid": "540b3dae-dfa9-42bb-81ce-22a3e5ae32ea"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of L2",
+          "pos": {
+            "x": 177.85,
+            "y": 81.0
+          },
+          "uuid": "540b3dae-dfa9-42bb-81ce-22a3e5ae32ea"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Reference field of R159",
+          "pos": {
+            "x": 181.57,
+            "y": 85.0
+          },
+          "uuid": "dbd31047-168e-40f6-b393-4f6e5518463a"
+        },
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Segment of C139 on B.Silkscreen",
+          "pos": {
+            "x": 181.91,
+            "y": 84.85942
+          },
+          "uuid": "135c4327-c10d-4452-bb61-c9f94926e75d"
+        },
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    }
+  ],
+  "added_warnings": [],
+  "all12_raw_opens_exact": true,
+  "hard_DRC": 0,
+  "fresh_explicit_schematic_parity": 0,
+  "ERC0_inherited_by_exact_all_schematic_bytes": true,
+  "graph_inheritance": {
+    "checker_sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9",
+    "abdb_graph_sha256": "a911d5715d358ef7ad1d4c9f4eac2a0670b2edeba18411195ab7d61685930740",
+    "abdb_comparison_sha256": "fc035b5474c0ddb21de7257afc1193b9e56f24553fed3c3bf0ba5e05bc012baf",
+    "abdb_actual_guard_sha256": "c73104758072e929f9c6f83dfb37ca2669188bac71a7057433eddc254de0a2b6",
+    "independent_final_sha256": "b3c6cb5064193bffabafed987f9409229d8ef06c793c59c271989bdbed8bccac",
+    "justification": "Complete filled board is byte-identical to abdb after restoring exactly two Reference properties; no electrical or material geometry, plane, drill or project companion differs. Thus all corrected R2/support/reference/partition results inherit exactly, with no repeated full export."
+  },
+  "manufacturing_hardware_noise_stability_qualification": false
+}

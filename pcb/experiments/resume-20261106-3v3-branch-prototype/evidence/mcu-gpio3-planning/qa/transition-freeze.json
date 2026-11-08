@@ -1,0 +1,65 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "new_via_xy_mm": [
+    112.6,
+    84.0
+  ],
+  "via_diameter_mm": 0.5,
+  "drill_mm": 0.25,
+  "track_width_mm": 0.15,
+  "zone_clearance_mm": 0.2,
+  "envelope_radius_mm": 0.45,
+  "allowed_radius_by_layer_mm": {
+    "F.Cu": 0.4,
+    "In1.Cu": 0.45,
+    "In2.Cu": 0.45,
+    "B.Cu": 0.4
+  },
+  "envelope_construction": "native outside circle radius 250000+200000 nm; 1 nm polygonization; no discretionary enlargement",
+  "affected_zones": [
+    {
+      "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "layer": "F.Cu",
+      "net": "GND",
+      "clearance_mm": 0.15,
+      "fill_area_in_envelope_mm2": 0.5972511117287165
+    },
+    {
+      "uuid": "18251378-06a1-40ae-8f44-01acf0d3371a",
+      "layer": "B.Cu",
+      "net": "+3V3",
+      "clearance_mm": 0.15,
+      "fill_area_in_envelope_mm2": 0.0696794507900587
+    },
+    {
+      "uuid": "3f67c971-a794-46bf-8f55-e7568aa08387",
+      "layer": "B.Cu",
+      "net": "+3V3",
+      "clearance_mm": 0.15,
+      "fill_area_in_envelope_mm2": 0.37444938897863217
+    },
+    {
+      "uuid": "431dc987-81d8-4e96-9039-7fb10f89e34d",
+      "layer": "B.Cu",
+      "net": "+1V1",
+      "clearance_mm": 0.15,
+      "fill_area_in_envelope_mm2": 0.06969360119292073
+    },
+    {
+      "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "layer": "In1.Cu",
+      "net": "GND",
+      "clearance_mm": 0.2,
+      "fill_area_in_envelope_mm2": 0.6162069498984768
+    },
+    {
+      "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "layer": "In2.Cu",
+      "net": "GND",
+      "clearance_mm": 0.2,
+      "fill_area_in_envelope_mm2": 0.6162069498984768
+    }
+  ],
+  "retained_outer_conductors_intersecting_envelope": [],
+  "scope": "Qualified-development prototype only; strict baseline remains immutable. Actual drill and rule-derived antipad are declared local transition change, not arbitrary plane-loss allowance. Retained conductor reference outside its own existing transition is mandatory. No candidate exists."
+}

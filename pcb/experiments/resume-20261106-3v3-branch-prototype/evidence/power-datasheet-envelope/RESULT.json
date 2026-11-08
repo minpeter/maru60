@@ -1,0 +1,710 @@
+{
+  "source_pcb_sha256": "88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e",
+  "netlist_sha256": "3a8e215c1493e7ab222fc2f78f02c56b6c955883316dcf7ee7f6846c55e89c7b",
+  "U8_value": "TPS259470LRPW",
+  "UVLO_nodes": [
+    [
+      "R122",
+      "2"
+    ],
+    [
+      "R123",
+      "1"
+    ],
+    [
+      "U8",
+      "1"
+    ]
+  ],
+  "OVLO_nodes": [
+    [
+      "R120",
+      "2"
+    ],
+    [
+      "R121",
+      "1"
+    ],
+    [
+      "U8",
+      "2"
+    ]
+  ],
+  "equation": "Vbus = Vpin*(1+Rtop/Rbottom) + I_into_pin*Rtop",
+  "corners": [
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.868103198501873,
+      "exact_rational_V": "516391777/133500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.9919791985018724,
+      "exact_rational_V": "532929223/133500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 4.000987093632959,
+      "exact_rational_V": "534131777/133500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 4.124863093632959,
+      "exact_rational_V": "550669223/133500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.8626146046986722,
+      "exact_rational_V": "1890749849/489500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.9864906046986723,
+      "exact_rational_V": "1951387151/489500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.995312917621704,
+      "exact_rational_V": "177969216259/44544500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 4.119188917621704,
+      "exact_rational_V": "183487210741/44544500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.8734787804808555,
+      "exact_rational_V": "516592307777/133366500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.9976027804808556,
+      "exact_rational_V": "533146291223/133366500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 4.006548629355947,
+      "exact_rational_V": "534339367777/133366500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 4.1306726293559475,
+      "exact_rational_V": "550893351223/133366500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.8679791985018728,
+      "exact_rational_V": "516375223/133500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.9921031985018725,
+      "exact_rational_V": "532945777/133500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 4.000863093632959,
+      "exact_rational_V": "534115223/133500000"
+    },
+    {
+      "type": "UV_enable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 4.124987093632959,
+      "exact_rational_V": "550685777/133500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.5126387790262172,
+      "exact_rational_V": "468937277/133500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.6365147790262173,
+      "exact_rational_V": "485474723/133500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.6455226741573035,
+      "exact_rational_V": "162225759/44500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.7693986741573036,
+      "exact_rational_V": "167738241/44500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.5076466176295615,
+      "exact_rational_V": "156246364759/44544500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.6315226176295616,
+      "exact_rational_V": "161764359241/44544500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.6403449305525934,
+      "exact_rational_V": "162157344759/44544500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 619380.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.7642209305525935,
+      "exact_rational_V": "167675339241/44544500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.5175169347399833,
+      "exact_rational_V": "469118922277/133366500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.6416409347399834,
+      "exact_rational_V": "485672905723/133366500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.6505867836150756,
+      "exact_rational_V": "54096220253/14818500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 266733.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.7747107836150757,
+      "exact_rational_V": "55935551747/14818500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.5125147790262172,
+      "exact_rational_V": "468920723/133500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.6366387790262173,
+      "exact_rational_V": "485491277/133500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 3.6453986741573035,
+      "exact_rational_V": "162220241/44500000"
+    },
+    {
+      "type": "UV_disable",
+      "Rtop_ohm": 620620.0,
+      "Rbottom_ohm": 267267.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 3.7695226741573036,
+      "exact_rational_V": "167743759/44500000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.598225666666667,
+      "exact_rational_V": "16794677/3000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.716107666666667,
+      "exact_rational_V": "17148323/3000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.789507717948718,
+      "exact_rational_V": "225790801/39000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.907389717948718,
+      "exact_rational_V": "230388199/39000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.589286272727272,
+      "exact_rational_V": "61482149/11000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.707168272727273,
+      "exact_rational_V": "62778851/11000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.780266062168601,
+      "exact_rational_V": "75218602267/13013000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.898148062168601,
+      "exact_rational_V": "76752600733/13013000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.607064957290624,
+      "exact_rational_V": "16804373677/2997000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.725182957290624,
+      "exact_rational_V": "17158373323/2997000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.798649875542209,
+      "exact_rational_V": "17378553677/2997000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.916767875542209,
+      "exact_rational_V": "17732553323/2997000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.5981076666666665,
+      "exact_rational_V": "16794323/3000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.183,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.716225666666666,
+      "exact_rational_V": "17148677/3000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.789389717948718,
+      "exact_rational_V": "225786199/39000000"
+    },
+    {
+      "type": "OV_disable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.223,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.907507717948718,
+      "exact_rational_V": "230392801/39000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.086546179487179,
+      "exact_rational_V": "198375301/39000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.20442817948718,
+      "exact_rational_V": "202972699/39000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.277828230769231,
+      "exact_rational_V": "68611767/13000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.395710230769231,
+      "exact_rational_V": "70144233/13000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.07841533597172,
+      "exact_rational_V": "66085418767/13013000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.19629733597172,
+      "exact_rational_V": "67619417233/13013000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.269395125413048,
+      "exact_rational_V": "68570638767/13013000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 589410.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.387277125413049,
+      "exact_rational_V": "70104637233/13013000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.094575300967635,
+      "exact_rational_V": "15268442177/2997000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.212693300967635,
+      "exact_rational_V": "15622441823/2997000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.286160219219219,
+      "exact_rational_V": "1760291353/333000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 155844.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.404278219219219,
+      "exact_rational_V": "1799624647/333000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.0864281794871795,
+      "exact_rational_V": "198370699/39000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.076,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.2045461794871795,
+      "exact_rational_V": "202977301/39000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": -1e-07,
+      "input_threshold_V": 5.277710230769231,
+      "exact_rational_V": "68610233/13000000"
+    },
+    {
+      "type": "OV_reenable",
+      "Rtop_ohm": 590590.0,
+      "Rbottom_ohm": 156156.0,
+      "Vpin_V": 1.116,
+      "I_into_pin_A": 1e-07,
+      "input_threshold_V": 5.395828230769231,
+      "exact_rational_V": "70145767/13000000"
+    }
+  ],
+  "ranges": {
+    "UV_enable": {
+      "min_V": 3.8626146046986722,
+      "max_V": 4.1306726293559475,
+      "low_corner": {
+        "type": "UV_enable",
+        "Rtop_ohm": 619380.0,
+        "Rbottom_ohm": 267267.0,
+        "Vpin_V": 1.183,
+        "I_into_pin_A": -1e-07,
+        "input_threshold_V": 3.8626146046986722,
+        "exact_rational_V": "1890749849/489500000"
+      },
+      "high_corner": {
+        "type": "UV_enable",
+        "Rtop_ohm": 620620.0,
+        "Rbottom_ohm": 266733.0,
+        "Vpin_V": 1.223,
+        "I_into_pin_A": 1e-07,
+        "input_threshold_V": 4.1306726293559475,
+        "exact_rational_V": "550893351223/133366500000"
+      }
+    },
+    "UV_disable": {
+      "min_V": 3.5076466176295615,
+      "max_V": 3.7747107836150757,
+      "low_corner": {
+        "type": "UV_disable",
+        "Rtop_ohm": 619380.0,
+        "Rbottom_ohm": 267267.0,
+        "Vpin_V": 1.076,
+        "I_into_pin_A": -1e-07,
+        "input_threshold_V": 3.5076466176295615,
+        "exact_rational_V": "156246364759/44544500000"
+      },
+      "high_corner": {
+        "type": "UV_disable",
+        "Rtop_ohm": 620620.0,
+        "Rbottom_ohm": 266733.0,
+        "Vpin_V": 1.116,
+        "I_into_pin_A": 1e-07,
+        "input_threshold_V": 3.7747107836150757,
+        "exact_rational_V": "55935551747/14818500000"
+      }
+    },
+    "OV_disable": {
+      "min_V": 5.589286272727272,
+      "max_V": 5.916767875542209,
+      "low_corner": {
+        "type": "OV_disable",
+        "Rtop_ohm": 589410.0,
+        "Rbottom_ohm": 156156.0,
+        "Vpin_V": 1.183,
+        "I_into_pin_A": -1e-07,
+        "input_threshold_V": 5.589286272727272,
+        "exact_rational_V": "61482149/11000000"
+      },
+      "high_corner": {
+        "type": "OV_disable",
+        "Rtop_ohm": 590590.0,
+        "Rbottom_ohm": 155844.0,
+        "Vpin_V": 1.223,
+        "I_into_pin_A": 1e-07,
+        "input_threshold_V": 5.916767875542209,
+        "exact_rational_V": "17732553323/2997000000"
+      }
+    },
+    "OV_reenable": {
+      "min_V": 5.07841533597172,
+      "max_V": 5.404278219219219,
+      "low_corner": {
+        "type": "OV_reenable",
+        "Rtop_ohm": 589410.0,
+        "Rbottom_ohm": 156156.0,
+        "Vpin_V": 1.076,
+        "I_into_pin_A": -1e-07,
+        "input_threshold_V": 5.07841533597172,
+        "exact_rational_V": "66085418767/13013000000"
+      },
+      "high_corner": {
+        "type": "OV_reenable",
+        "Rtop_ohm": 590590.0,
+        "Rbottom_ohm": 155844.0,
+        "Vpin_V": 1.116,
+        "I_into_pin_A": 1e-07,
+        "input_threshold_V": 5.404278219219219,
+        "exact_rational_V": "1799624647/333000000"
+      }
+    }
+  },
+  "source": "TI TPS25947 SLVSFC9C revised May2026, electrical characteristics pp8-9; https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+  "table_test_conditions": "TJ -40 to125 C; VIN12V and remaining default test conditions unless noted. Do not claim these calculations independently qualify every input/temperature/load condition.",
+  "assumptions": [
+    "Independent resistor deviations limited to nominal0.1%; specific populated MPN/TCR/aging not established.",
+    "Only specified U8 pin leakage +/-0.1uA; excludes board leakage, contamination and other parasitics.",
+    "Static divider equation; excludes delays, dVdt, current limiting, capacitance, control loops, supply loss and dynamics."
+  ],
+  "method": "64 exact-rational static corners and independent Thevenin equation crosscheck; no active SPICE solve."
+}

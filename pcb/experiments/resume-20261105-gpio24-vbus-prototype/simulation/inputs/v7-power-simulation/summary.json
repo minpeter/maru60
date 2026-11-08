@@ -1,0 +1,506 @@
+{
+  "board_sha256": "3663aac96fb305eb4925fff938dd2db5862b880c6c262b2fa82707567a6e98f7",
+  "source_hash_checked_this_run": true,
+  "ngspice_version": "44.2 shared",
+  "classification": {
+    "spice": "Passive networks and explicitly behavioral eFuse hysteresis only",
+    "numerical": "Datasheet timing/DC/headroom/uncertainty sweeps",
+    "not_executed": "TI TPS62932 and TPS2553-1 vendor models parse failed; TPS25947 vendor model is encrypted; no full switching-controller closed-loop/thermal/USB eye/ESD waveform simulation"
+  },
+  "spice_runs": [
+    {
+      "name": "rc_control",
+      "netlist": "netlists/rc_control.cir",
+      "points": 526,
+      "max_time_s": 0.005,
+      "waveform": "runs/rc_control/waveform.txt"
+    },
+    {
+      "name": "efuse_hysteresis",
+      "netlist": "netlists/efuse_hysteresis.cir",
+      "points": 20011,
+      "max_time_s": 2.0,
+      "waveform": "runs/efuse_hysteresis/waveform.txt"
+    },
+    {
+      "name": "capacitor_8u_load",
+      "netlist": "netlists/capacitor_8u_load.cir",
+      "points": 1120,
+      "max_time_s": 5.5e-05,
+      "waveform": "runs/capacitor_8u_load/waveform.txt"
+    },
+    {
+      "name": "capacitor_24u_load",
+      "netlist": "netlists/capacitor_24u_load.cir",
+      "points": 1120,
+      "max_time_s": 5.5e-05,
+      "waveform": "runs/capacitor_24u_load/waveform.txt"
+    },
+    {
+      "name": "capacitor_44u_load",
+      "netlist": "netlists/capacitor_44u_load.cir",
+      "points": 1120,
+      "max_time_s": 5.5e-05,
+      "waveform": "runs/capacitor_44u_load/waveform.txt"
+    },
+    {
+      "name": "capacitor_8u_unload",
+      "netlist": "netlists/capacitor_8u_unload.cir",
+      "points": 1120,
+      "max_time_s": 5.5e-05,
+      "waveform": "runs/capacitor_8u_unload/waveform.txt"
+    },
+    {
+      "name": "capacitor_24u_unload",
+      "netlist": "netlists/capacitor_24u_unload.cir",
+      "points": 1120,
+      "max_time_s": 5.5e-05,
+      "waveform": "runs/capacitor_24u_unload/waveform.txt"
+    },
+    {
+      "name": "capacitor_44u_unload",
+      "netlist": "netlists/capacitor_44u_unload.cir",
+      "points": 1120,
+      "max_time_s": 5.5e-05,
+      "waveform": "runs/capacitor_44u_unload/waveform.txt"
+    },
+    {
+      "name": "input_recovery_C2u_L0p1u",
+      "netlist": "netlists/input_recovery_C2u_L0p1u.cir",
+      "points": 15017,
+      "max_time_s": 3e-05,
+      "waveform": "runs/input_recovery_C2u_L0p1u/waveform.txt"
+    },
+    {
+      "name": "input_recovery_C2u_L0p5u",
+      "netlist": "netlists/input_recovery_C2u_L0p5u.cir",
+      "points": 15016,
+      "max_time_s": 3e-05,
+      "waveform": "runs/input_recovery_C2u_L0p5u/waveform.txt"
+    },
+    {
+      "name": "input_recovery_C2u_L1p0u",
+      "netlist": "netlists/input_recovery_C2u_L1p0u.cir",
+      "points": 15016,
+      "max_time_s": 3e-05,
+      "waveform": "runs/input_recovery_C2u_L1p0u/waveform.txt"
+    },
+    {
+      "name": "input_recovery_C4p7u_L0p1u",
+      "netlist": "netlists/input_recovery_C4p7u_L0p1u.cir",
+      "points": 15017,
+      "max_time_s": 3e-05,
+      "waveform": "runs/input_recovery_C4p7u_L0p1u/waveform.txt"
+    },
+    {
+      "name": "input_recovery_C4p7u_L0p5u",
+      "netlist": "netlists/input_recovery_C4p7u_L0p5u.cir",
+      "points": 15016,
+      "max_time_s": 3e-05,
+      "waveform": "runs/input_recovery_C4p7u_L0p5u/waveform.txt"
+    },
+    {
+      "name": "input_recovery_C4p7u_L1p0u",
+      "netlist": "netlists/input_recovery_C4p7u_L1p0u.cir",
+      "points": 15016,
+      "max_time_s": 3e-05,
+      "waveform": "runs/input_recovery_C4p7u_L1p0u/waveform.txt"
+    }
+  ],
+  "RC_control_max_absolute_error_V": 3.0351160698049995e-06,
+  "efuse_behavioral_transitions": [
+    {
+      "time_s": 0.6133279999999,
+      "input_V": 3.986632,
+      "on": true
+    },
+    {
+      "time_s": 0.8829279999999,
+      "input_V": 5.739031999999,
+      "on": false
+    },
+    {
+      "time_s": 1.19815,
+      "input_V": 5.212025,
+      "on": true
+    },
+    {
+      "time_s": 1.44295,
+      "input_V": 3.620825,
+      "on": false
+    }
+  ],
+  "capacitor_scenarios": [
+    {
+      "cap_uF": 8,
+      "load_change_A": 0.2,
+      "regulator_response_assumption": "No current response for50us",
+      "endpoint_delta_V": -1.2538762499999998,
+      "analytic_delta_V": -1.2540000000000002
+    },
+    {
+      "cap_uF": 24,
+      "load_change_A": 0.2,
+      "regulator_response_assumption": "No current response for50us",
+      "endpoint_delta_V": -0.4206254166660002,
+      "analytic_delta_V": -0.42066666666666674
+    },
+    {
+      "cap_uF": 44,
+      "load_change_A": 0.2,
+      "regulator_response_assumption": "No current response for50us",
+      "endpoint_delta_V": -0.23125022727200006,
+      "analytic_delta_V": -0.2312727272727273
+    },
+    {
+      "cap_uF": 8,
+      "load_change_A": -0.2,
+      "regulator_response_assumption": "No current response for50us",
+      "endpoint_delta_V": 1.2538762500000002,
+      "analytic_delta_V": 1.2540000000000002
+    },
+    {
+      "cap_uF": 24,
+      "load_change_A": -0.2,
+      "regulator_response_assumption": "No current response for50us",
+      "endpoint_delta_V": 0.4206254166669998,
+      "analytic_delta_V": 0.42066666666666674
+    },
+    {
+      "cap_uF": 44,
+      "load_change_A": -0.2,
+      "regulator_response_assumption": "No current response for50us",
+      "endpoint_delta_V": 0.2312502272729997,
+      "analytic_delta_V": 0.2312727272727273
+    }
+  ],
+  "input_recovery_scenarios": [
+    {
+      "Cin_effective_uF": 2,
+      "assumed_line_L_uH": 0.1,
+      "peak_V": 4.980984042434
+    },
+    {
+      "Cin_effective_uF": 2,
+      "assumed_line_L_uH": 0.5,
+      "peak_V": 6.286691156263
+    },
+    {
+      "Cin_effective_uF": 2,
+      "assumed_line_L_uH": 1.0,
+      "peak_V": 6.947959415621
+    },
+    {
+      "Cin_effective_uF": 4.7,
+      "assumed_line_L_uH": 0.1,
+      "peak_V": 4.946297142192
+    },
+    {
+      "Cin_effective_uF": 4.7,
+      "assumed_line_L_uH": 0.5,
+      "peak_V": 5.469850873869
+    },
+    {
+      "Cin_effective_uF": 4.7,
+      "assumed_line_L_uH": 1.0,
+      "peak_V": 6.127971961486
+    }
+  ],
+  "startup_envelope": {
+    "efuse_typ_slew_V_per_ms": 0.2,
+    "efuse_5V_rise_time_ms": 25.0,
+    "buck_typ_internal_UVLO_rising_V": 3.6,
+    "buck_typ_soft_start_ms": 14.545454545454545,
+    "ideal_buck_full_output_time_ms": 32.54545454545455,
+    "not_actual_startup_prediction": true
+  },
+  "DC_scenarios": [
+    {
+      "source_R_ohm": 0,
+      "upstream_supply_V": 4.4,
+      "4V_output_total_A": 0.15,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.15343210194527554,
+      "buck_VIN_V": 4.3450272675300265,
+      "modeled_regulation_headroom_V": 0.24011172217942622,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0,
+      "upstream_supply_V": 4.4,
+      "4V_output_total_A": 0.3,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.3109011805747796,
+      "buck_VIN_V": 4.28860813866428,
+      "modeled_regulation_headroom_V": 0.16680597589099389,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0,
+      "upstream_supply_V": 4.4,
+      "4V_output_total_A": 0.5,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.5277282061864467,
+      "buck_VIN_V": 4.210921827129152,
+      "modeled_regulation_headroom_V": 0.06665339058656805,
+      "below_min_efuse_current_limit": false
+    },
+    {
+      "source_R_ohm": 0,
+      "upstream_supply_V": 4.75,
+      "4V_output_total_A": 0.15,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.14186901996935614,
+      "buck_VIN_V": 4.699170169855756,
+      "modeled_regulation_headroom_V": 0.5871717664586402,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0,
+      "upstream_supply_V": 4.75,
+      "4V_output_total_A": 0.3,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.2869108959789266,
+      "buck_VIN_V": 4.647203546536856,
+      "modeled_regulation_headroom_V": 0.5182294756061188,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0,
+      "upstream_supply_V": 4.75,
+      "4V_output_total_A": 0.5,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.48562474804055294,
+      "buck_VIN_V": 4.576006950199032,
+      "modeled_regulation_headroom_V": 0.4244368111950507,
+      "below_min_efuse_current_limit": false
+    },
+    {
+      "source_R_ohm": 0,
+      "upstream_supply_V": 5.0,
+      "4V_output_total_A": 0.15,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.13463218291979437,
+      "buck_VIN_V": 4.951763034725692,
+      "modeled_regulation_headroom_V": 0.8347127740311784,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0,
+      "upstream_supply_V": 5.0,
+      "4V_output_total_A": 0.3,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.27196687712148393,
+      "buck_VIN_V": 4.902557794704358,
+      "modeled_regulation_headroom_V": 0.7684766388102711,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0,
+      "upstream_supply_V": 5.0,
+      "4V_output_total_A": 0.5,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.459579438915522,
+      "buck_VIN_V": 4.835338646711531,
+      "modeled_regulation_headroom_V": 0.6785818737772997,
+      "below_min_efuse_current_limit": false
+    },
+    {
+      "source_R_ohm": 0.5,
+      "upstream_supply_V": 4.4,
+      "4V_output_total_A": 0.15,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.15627927079782677,
+      "buck_VIN_V": 4.265867528452393,
+      "modeled_regulation_headroom_V": 0.1625351778833446,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0.5,
+      "upstream_supply_V": 4.4,
+      "4V_output_total_A": 0.3,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.3234362772521518,
+      "buck_VIN_V": 4.122398837449712,
+      "modeled_regulation_headroom_V": 0.003920860700716844,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0.5,
+      "upstream_supply_V": 4.4,
+      "4V_output_total_A": 0.5,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.5679784577622089,
+      "buck_VIN_V": 3.912511455060472,
+      "modeled_regulation_headroom_V": -0.22578877404073783,
+      "below_min_efuse_current_limit": false
+    },
+    {
+      "source_R_ohm": 0.5,
+      "upstream_supply_V": 4.75,
+      "4V_output_total_A": 0.15,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.1441030723800684,
+      "buck_VIN_V": 4.62631820165742,
+      "modeled_regulation_headroom_V": 0.5157768376242711,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0.5,
+      "upstream_supply_V": 4.75,
+      "4V_output_total_A": 0.3,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.2965972134221046,
+      "buck_VIN_V": 4.495434457894891,
+      "modeled_regulation_headroom_V": 0.36949576873699286,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0.5,
+      "upstream_supply_V": 4.75,
+      "4V_output_total_A": 0.5,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.5159343463430153,
+      "buck_VIN_V": 4.307180241000651,
+      "modeled_regulation_headroom_V": 0.16098663618063735,
+      "below_min_efuse_current_limit": false
+    },
+    {
+      "source_R_ohm": 0.5,
+      "upstream_supply_V": 5.0,
+      "4V_output_total_A": 0.15,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.1365332556780803,
+      "buck_VIN_V": 4.882815277169843,
+      "modeled_regulation_headroom_V": 0.7671439716264468,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0.5,
+      "upstream_supply_V": 5.0,
+      "4V_output_total_A": 0.3,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.2801378631227638,
+      "buck_VIN_V": 4.7595613048173755,
+      "modeled_regulation_headroom_V": 0.6283400787210276,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 0.5,
+      "upstream_supply_V": 5.0,
+      "4V_output_total_A": 0.5,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.4847871194045899,
+      "buck_VIN_V": 4.58391350197491,
+      "modeled_regulation_headroom_V": 0.4321852319354118,
+      "below_min_efuse_current_limit": false
+    },
+    {
+      "source_R_ohm": 1.0,
+      "upstream_supply_V": 4.4,
+      "4V_output_total_A": 0.15,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.15935425117420665,
+      "buck_VIN_V": 4.1835511870835775,
+      "modeled_regulation_headroom_V": 0.08186516334190586,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 1.0,
+      "upstream_supply_V": 4.4,
+      "4V_output_total_A": 0.3,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.3383761473948898,
+      "buck_VIN_V": 3.940388066944075,
+      "modeled_regulation_headroom_V": -0.17444969439480618,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 1.0,
+      "upstream_supply_V": 4.4,
+      "4V_output_total_A": 0.5,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.6260379018747496,
+      "buck_VIN_V": 3.5496608361370727,
+      "modeled_regulation_headroom_V": -0.5813823805856688,
+      "below_min_efuse_current_limit": false
+    },
+    {
+      "source_R_ohm": 1.0,
+      "upstream_supply_V": 4.75,
+      "4V_output_total_A": 0.15,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.14648703194822793,
+      "buck_VIN_V": 4.551028564100358,
+      "modeled_regulation_headroom_V": 0.441992992818351,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 1.0,
+      "upstream_supply_V": 4.75,
+      "4V_output_total_A": 0.3,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.3077919740747626,
+      "buck_VIN_V": 4.331930152959306,
+      "modeled_regulation_headroom_V": 0.2092615499001198,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 1.0,
+      "upstream_supply_V": 4.75,
+      "4V_output_total_A": 0.5,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.5563450454373238,
+      "buck_VIN_V": 3.994323739281995,
+      "modeled_regulation_headroom_V": -0.14561273550364495,
+      "below_min_efuse_current_limit": false
+    },
+    {
+      "source_R_ohm": 1.0,
+      "upstream_supply_V": 5.0,
+      "4V_output_total_A": 0.15,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.13854794182192265,
+      "buck_VIN_V": 4.81181212726741,
+      "modeled_regulation_headroom_V": 0.6975608847220611,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 1.0,
+      "upstream_supply_V": 5.0,
+      "4V_output_total_A": 0.3,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.2894220888491826,
+      "buck_VIN_V": 4.606881729846584,
+      "modeled_regulation_headroom_V": 0.4787140952496518,
+      "below_min_efuse_current_limit": true
+    },
+    {
+      "source_R_ohm": 1.0,
+      "upstream_supply_V": 5.0,
+      "4V_output_total_A": 0.5,
+      "efficiency_assumed": 0.9,
+      "input_A": 0.5170771549114822,
+      "buck_VIN_V": 4.29766080577016,
+      "modeled_regulation_headroom_V": 0.15165758965475717,
+      "below_min_efuse_current_limit": false
+    }
+  ],
+  "ripple_analysis": {
+    "scope": "CCM ideal approximation only; light-load PFM,spread-spectrum,ESR,layout and closed-loop dynamics excluded",
+    "corners": 54,
+    "current_ripple_A_pp_range": [
+      0.11722642283570725,
+      0.6447453255963895
+    ],
+    "capacitive_voltage_ripple_V_pp_range": [
+      0.0006055083824158433,
+      0.007462330157365619
+    ],
+    "natural_LC_Hz_range": [
+      10103.090456737316,
+      16754.080134009022
+    ]
+  },
+  "source_unchanged": true
+}

@@ -1,0 +1,104 @@
+{
+  "scope": "Separate read-only supported NP0 component screen, not an amended1200-row X7R dataset or BOM selection.",
+  "part": "TDK C1608NP01H822J080AA",
+  "lifecycle_checked_2026_11_04": "Production",
+  "body_mm": {
+    "L": [
+      1.6,
+      0.1
+    ],
+    "W": [
+      0.8,
+      0.1
+    ],
+    "T": [
+      0.8,
+      0.1
+    ]
+  },
+  "capacitance_nF": 8.2,
+  "initial_tolerance_percent": 5,
+  "rated_VDC": 50,
+  "dielectric": "NP0 class1",
+  "temperature_coefficient_ppm_per_C": [
+    -30,
+    30
+  ],
+  "catalog_temperature_C": [
+    -55,
+    150
+  ],
+  "reference_temperature_C": 25,
+  "coefficient_only_assumed_envelope": {
+    "maximum_absolute_delta_T_C": 125,
+    "range_nF": [
+      "7.760787500",
+      "8.642287500"
+    ],
+    "upper_headroom_to10nF_nF": "1.357712500",
+    "nominal_5V_ramp_ms": "20.5",
+    "5V_design_ramp_ms_range": [
+      "19.4019687500",
+      "21.6057187500"
+    ],
+    "nominal_5p8uF_cap_only_inrush_mA": "1.414634146341463414634146341",
+    "5p8uF_cap_only_inrush_range_mA": [
+      "1.342237225965926266627903781",
+      "1.494693676382712450250699430"
+    ]
+  },
+  "guaranteed_complete_all_stress_effective_capacitance_bound": false,
+  "source_board_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "source_C124_footprint": "Capacitor_SMD:C_0603_1608Metric",
+  "source_raw_pad_fields": [
+    {
+      "number": "1",
+      "local_at": "-0.775 0 90",
+      "size": "0.9 0.95",
+      "uuid": "e99fab95-384f-4c82-aa22-4b94524bb476"
+    },
+    {
+      "number": "2",
+      "local_at": "0.775 0 90",
+      "size": "0.9 0.95",
+      "uuid": "f79380d7-c89c-4396-b53e-4918d8902c13"
+    }
+  ],
+  "land_comparison_mm": {
+    "manufacturer_reflow_inner_gap_PA": [
+      0.6,
+      0.8
+    ],
+    "manufacturer_each_axial_pad_length_PB": [
+      0.6,
+      0.8
+    ],
+    "manufacturer_pad_width_PC": [
+      0.6,
+      0.8
+    ],
+    "existing_inner_gap": 0.65,
+    "existing_each_axial_pad_length": 0.9,
+    "existing_pad_width": 0.95,
+    "gap_within_recommended_range": true,
+    "pad_length_above_recommended_upper": 0.1,
+    "pad_width_above_recommended_upper": 0.15
+  },
+  "manufacturer_recommended_land_match": false,
+  "assembly_unsafe_proven": false,
+  "automatic_drop_in_qualified": false,
+  "hardware_or_startup_qualified": false,
+  "source_urls": [
+    "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608NP01H822J080AA",
+    "https://product.tdk.com/en/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_hightemp_en.pdf",
+    "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/specification/mlccspec_commercial_general_midvoltage_en.pdf"
+  ],
+  "limitations": [
+    "Coefficient-only envelope combines initial tolerance with a constant worst-magnitude catalog temperature coefficient over the catalog range. It is a screening calculation, not a vendor promise for all assembled conditions.",
+    "The general specification checks the coefficient at25/85C, includes lower-temperature checks at-10/-25C and separately allows capacitance drift\u00b10.2% or\u00b10.05pF, whichever larger. Separate solder/stress conditions are not silently folded into this envelope.",
+    "Land recommendation deviation calls for separate assembly/paste/process review; it is not proof that existing larger pads are unsafe or electrically impossible. Body dimensions and recommended lands are different constraints.",
+    "The first-order timing/inrush values still omit active eFuse/buck behavior, parasitics, source resistance, current limits and dynamic loads.",
+    "Old C1608C0G1H822J080AA is Obsolete (last shipment2025-03-31); this NP0 part is a separate catalog item, not merely a suffix rename."
+  ],
+  "coefficient_constant_over_full_catalog_range_is_a_screening_extrapolation": true
+}

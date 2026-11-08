@@ -1,0 +1,235 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": "dc152488552f56ce44641108be78be7928083bf04849242b7e6ba25eed0ca091",
+  "pad_inventory_exact": true,
+  "all_named_pad_partitions_exact": true,
+  "changed_pad_partitions": [],
+  "unmodified_object_material_changes": [],
+  "unmodified_old_material_roots_split": {},
+  "missing_source_edges": [
+    {
+      "nodes": [
+        "object:65c0b9cf-87fb-4ae5-a2e0-e11b853cd699:2:0",
+        "object:f44d59d3-0c42-48c1-b89c-540ea6a07763:2:0"
+      ],
+      "old_witness": [
+        0.019374781037,
+        0.0193735779165
+      ],
+      "declared_changed_incident": true
+    }
+  ],
+  "changed_source_witnesses": [
+    {
+      "nodes": [
+        "object:d94e477a-28ae-41a9-bdea-441b16be174c:4:0",
+        "object:f44d59d3-0c42-48c1-b89c-540ea6a07763:4:0"
+      ],
+      "witnesses": [
+        [
+          0.019374781122,
+          0.0193735788875
+        ],
+        [
+          0.031542052138,
+          0.031540492046
+        ]
+      ],
+      "declared_changed_incident": true
+    },
+    {
+      "nodes": [
+        "object:224e7239-5039-4cc7-b38b-ca258f485b01:2:0",
+        "object:65c0b9cf-87fb-4ae5-a2e0-e11b853cd699:2:0"
+      ],
+      "witnesses": [
+        [
+          0.0177922110415,
+          0.0177912516125
+        ],
+        [
+          0.0177921539595,
+          0.0177911943705
+        ]
+      ],
+      "declared_changed_incident": true
+    },
+    {
+      "nodes": [
+        "object:224e7239-5039-4cc7-b38b-ca258f485b01:2:0",
+        "object:896ef6ef-19c8-4fe6-bef7-965e4b34c9f9:2:0"
+      ],
+      "witnesses": [
+        [
+          0.0177921450215,
+          0.0177911855595
+        ],
+        [
+          0.017792211866,
+          0.017791252635
+        ]
+      ],
+      "declared_changed_incident": true
+    },
+    {
+      "nodes": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0",
+        "object:2df4c211-ae72-4021-a11a-f400d90108b2:0:0"
+      ],
+      "witnesses": [
+        [
+          0.233654438848,
+          0.233648898866
+        ],
+        [
+          0.012267288703,
+          0.012266097709
+        ]
+      ],
+      "declared_changed_incident": true
+    },
+    {
+      "nodes": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0",
+        "object:a3dac412-9c4c-48cf-81b8-b7016c33b879:0:0"
+      ],
+      "witnesses": [
+        [
+          0.233654438848,
+          0.233648898866
+        ],
+        [
+          0.134501965855,
+          0.134497101666
+        ]
+      ],
+      "declared_changed_incident": true
+    }
+  ],
+  "missing_unrelated_edges": 0,
+  "changed_unrelated_witnesses": 0,
+  "original_GND_pad_count": 247,
+  "all_original_GND_pads_share_J1_root": true,
+  "power_pad_bindings": [
+    {
+      "uuid": "7596982b-d1b2-4010-9fc7-a9baf0ffadff",
+      "ref": "TP5",
+      "pad": "1",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    },
+    {
+      "uuid": "8dd04f69-da0e-4647-b453-92f6b632566f",
+      "ref": "C110",
+      "pad": "1",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    },
+    {
+      "uuid": "28f14cad-bf55-4d0f-b93b-4ebb94a446cf",
+      "ref": "L1",
+      "pad": "1",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    },
+    {
+      "uuid": "da2fe484-9c32-4e19-b091-135395808bb8",
+      "ref": "C103",
+      "pad": "1",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    },
+    {
+      "uuid": "7b5f57cd-4f1e-423d-8b4d-f178a30675f4",
+      "ref": "C108",
+      "pad": "1",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    },
+    {
+      "uuid": "3cb108e1-c77f-4811-8415-228a092ceacd",
+      "ref": "C109",
+      "pad": "1",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    },
+    {
+      "uuid": "f89456dd-e6ca-4835-9871-b1b59b4a11c8",
+      "ref": "U1",
+      "pad": "6",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    },
+    {
+      "uuid": "81efbd13-dd90-4979-a5da-b307671d3a05",
+      "ref": "U1",
+      "pad": "23",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    },
+    {
+      "uuid": "7530c710-08a4-49cc-b700-ea67893f5cab",
+      "ref": "U1",
+      "pad": "39",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    },
+    {
+      "uuid": "c6300e61-5e21-4256-aed0-62e7b1f20098",
+      "ref": "U1",
+      "pad": "50",
+      "net": "+1V1",
+      "material_roots": [
+        "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+      ]
+    }
+  ],
+  "power_pad_single_root": true,
+  "source_guard_rejections": 51,
+  "candidate_guard_rejections": 51,
+  "new_object_roots": {
+    "c9ab3bcd-dc1c-42be-a778-cc759ccf7bd7": [
+      "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+    ],
+    "8d3c2028-84d9-41d4-aeb3-e93f1b1e6e11": [
+      "object:09f3cddc-8694-4141-b189-ef75f69e7c2e:4:0"
+    ],
+    "db39d882-6ecf-4006-b107-6b00b1abd04a": [
+      "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0"
+    ],
+    "dcde3c0f-c67f-4291-9970-44463806bf3b": [
+      "object:09f3cddc-8694-4141-b189-ef75f69e7c2e:4:0"
+    ],
+    "a9449505-d241-4157-b612-44b39e5c9ea7": [
+      "object:3adf425a-ff08-468a-8aed-cbdaefe4743c:2:0"
+    ],
+    "3adf425a-ff08-468a-8aed-cbdaefe4743c": [
+      "object:3adf425a-ff08-468a-8aed-cbdaefe4743c:2:0"
+    ]
+  },
+  "metrics": {
+    "tracks": 9778,
+    "vias": 924,
+    "footprints": 383,
+    "track_length_mm": 13212.334463650453
+  },
+  "limits": "Material continuity does not prove adjacent-plane coverage, impedance, signal or power stability. Declared source geometry changes require separate return and endpoint proofs."
+}

@@ -1,0 +1,34 @@
+import json,hashlib,re,math
+from pathlib import Path
+W=Path(__file__).resolve().parent;R=Path('/tmp/v7-support-endpoint-trial');S=R/'source/pcb';D=R/'filled/pcb';H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+expected={'abcd4fb1-881b-43f9-906e-39d93366692e':('start','(start 14 17.675)','(start 14.54 17.435)'), 'ae94ea04-2d21-5f84-8952-7f8960275e00':('end','(end 20.175 21)','(end 20.0725 20.9785)'), 'f41eeb49-8180-5bac-bccf-c1a0b3b4c547':('start','(start 14.2 16.35)','(start 14.1 16.45)')}
+a=(S/'maru60.kicad_pcb').read_text();b=(D/'maru60.kicad_pcb').read_text();assert H(S/'maru60.kicad_pcb')=='7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401';assert H(D/'maru60.kicad_pcb')=='abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d'
+def spans(s):
+ depth=0;quoted=False;escape=False;start=None;out=[]
+ for i,c in enumerate(s):
+  if quoted:
+   if escape:escape=False
+   elif c=='\\':escape=True
+   elif c=='"':quoted=False
+   continue
+  if c=='"':quoted=True;continue
+  if c=='(':
+   depth+=1
+   if depth==2:start=i
+  elif c==')':
+   if depth==2:out.append((start,i+1,s[start:i+1]))
+   depth-=1
+ assert depth==0 and not quoted and not escape
+ return out
+sa=spans(a);sb=spans(b);assert len(sa)==len(sb)
+changed=[];restored=b
+for (x,y,oa),(u,v,ob)in reversed(list(zip(sa,sb))):
+ if oa==ob:continue
+ ids=re.findall(r'\(uuid "([^"]+)"\)',oa);assert len(ids)==1 and ids[0]in expected;uuid=ids[0];which,old,new=expected[uuid];assert oa.count(old)==1 and ob.count(new)==1 and oa.replace(old,new)==ob
+ changed.append(uuid);restored=restored[:u]+oa+restored[v:]
+assert set(changed)==set(expected) and restored==a
+fm=lambda d:{str(p.relative_to(d)):H(p)for p in sorted(d.rglob('*'))if p.is_file()};ma=fm(S);mb=fm(D);assert len(ma)==len(mb)==58 and set(ma)==set(mb);assert [p for p in ma if ma[p]!=mb[p]]==['maru60.kicad_pcb']
+za=[t for _,_,t in sa if t.startswith('(zone ')];zb=[t for _,_,t in sb if t.startswith('(zone ')];assert za==zb and len(za)==12
+old=json.load(open('/tmp/v7-c124-d-plus-connector-gnd/qa/drc.json'));new=json.load(open(R/'qa/drc.json'));key=lambda x:json.dumps(x,sort_keys=True,separators=(',',':'));aa={key(v):v for v in old['violations']};bb={key(v):v for v in new['violations']};assert len(aa)==64 and len(bb)==61;removed=[aa[x]for x in aa.keys()-bb.keys()];assert not(bb.keys()-aa.keys())and len(removed)==3 and {r['items'][0]['uuid']for r in removed}=={'f58bc791-8a08-55a5-ada7-19575bcd7e75','cc1282fe-f0b3-5fea-9d45-66eea8068d66','d4be2091-cd02-51f1-b2e5-0505e7ec1e8a'};assert all(v['severity']=='warning' for v in new['violations']);assert old['unconnected_items']==new['unconnected_items']and len(new['unconnected_items'])==12;assert old['schematic_parity']==new['schematic_parity']==[]
+r={'status':'PASS independent exact byte-delta and native DRC comparison','source_sha256':H(S/'maru60.kicad_pcb'),'candidate_sha256':H(D/'maru60.kicad_pcb'),'changed_tracks':sorted(changed),'changed_fields':'exactly one coordinate child per track','replacing_three_declared_children_recovers_source_exact_bytes':True,'all12_saved_zone_blocks_exact':True,'all_other_raw_track_via_pad_hole_footprint_setup_and_net_records_exact':True,'all57_companions_identical':True,'warnings':{'before':64,'after':61,'removed':removed,'added':[]},'opens_exactly_preserved':12,'all_remaining_violations_are_warnings':True,'parity_entries':[],'remaining_gate':'material graph and strengthened support/reference review; cold refill independently pending','geometry_equal_claim':False}
+(W/'RAW_REVIEW.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps({'pass':True,'changed':changed,'warnings':61,'opens':12}))

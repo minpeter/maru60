@@ -1,0 +1,449 @@
+{
+  "status": "UNREVIEWED_PASSIVE_SENSITIVITY_NOT_ADOPTED",
+  "board_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "netlist_sha256": "1b46d899330d9aba0b86380ab08b7a60d309fa7a1c8962b9e6fab3ad556f2d29",
+  "source_nodes_and_values_asserted": true,
+  "plan_manifest_sha256": "df39104454de147861ddc3d233a1b6d3bd079c7c7641042fda978604bc2ac7da",
+  "constructed_candidate": false,
+  "parasitics_derived_from_geometry": false,
+  "active_controller_model": false,
+  "frequency_range_Hz": [
+    100,
+    100000000.0
+  ],
+  "scenario_fields": [
+    "name",
+    "Cpin_F",
+    "trace_R_ohm",
+    "trace_L_H",
+    "capacitor_ESR_ohm",
+    "capacitor_ESL_H",
+    "coupling_F"
+  ],
+  "scenarios": [
+    [
+      "low",
+      1e-12,
+      0.1,
+      5e-10,
+      0.05,
+      3e-10,
+      1e-14
+    ],
+    [
+      "central",
+      2e-12,
+      0.3,
+      2e-09,
+      0.15,
+      8e-10,
+      1e-13
+    ],
+    [
+      "high",
+      5e-12,
+      1.0,
+      1e-08,
+      0.5,
+      2e-09,
+      1e-12
+    ]
+  ],
+  "options": [
+    [
+      "10n_direct",
+      1e-08,
+      0
+    ],
+    [
+      "10n_100R",
+      1e-08,
+      100
+    ],
+    [
+      "8p2n_NP0_direct",
+      8.2e-09,
+      0
+    ]
+  ],
+  "AC_points": 10818,
+  "independent_matrix_crosschecks": [
+    {
+      "scenario": "low",
+      "option": "10n_direct",
+      "inject": "pin",
+      "relative_crosscheck_max": 1.8988782766538987e-10,
+      "normalized_KCL_residual": 8.088740248335633e-16
+    },
+    {
+      "scenario": "low",
+      "option": "10n_direct",
+      "inject": "cap",
+      "relative_crosscheck_max": 4.4734397493861343e-10,
+      "normalized_KCL_residual": 8.090323972386317e-16
+    },
+    {
+      "scenario": "low",
+      "option": "10n_100R",
+      "inject": "pin",
+      "relative_crosscheck_max": 6.658433417766935e-16,
+      "normalized_KCL_residual": 2.023896778333718e-16
+    },
+    {
+      "scenario": "low",
+      "option": "10n_100R",
+      "inject": "cap",
+      "relative_crosscheck_max": 2.952978544727197e-13,
+      "normalized_KCL_residual": 2.771674990974934e-16
+    },
+    {
+      "scenario": "low",
+      "option": "8p2n_NP0_direct",
+      "inject": "pin",
+      "relative_crosscheck_max": 2.9197962684883774e-10,
+      "normalized_KCL_residual": 8.088569259580901e-16
+    },
+    {
+      "scenario": "low",
+      "option": "8p2n_NP0_direct",
+      "inject": "cap",
+      "relative_crosscheck_max": 5.162904026692453e-10,
+      "normalized_KCL_residual": 8.229522554974498e-16
+    },
+    {
+      "scenario": "central",
+      "option": "10n_direct",
+      "inject": "pin",
+      "relative_crosscheck_max": 1.401140424976709e-11,
+      "normalized_KCL_residual": 4.540198377310495e-16
+    },
+    {
+      "scenario": "central",
+      "option": "10n_direct",
+      "inject": "cap",
+      "relative_crosscheck_max": 4.38553942294608e-11,
+      "normalized_KCL_residual": 4.736112425720603e-16
+    },
+    {
+      "scenario": "central",
+      "option": "10n_100R",
+      "inject": "pin",
+      "relative_crosscheck_max": 7.141752458685045e-16,
+      "normalized_KCL_residual": 2.2963140555328326e-16
+    },
+    {
+      "scenario": "central",
+      "option": "10n_100R",
+      "inject": "cap",
+      "relative_crosscheck_max": 1.397211341381909e-13,
+      "normalized_KCL_residual": 2.369798068533069e-16
+    },
+    {
+      "scenario": "central",
+      "option": "8p2n_NP0_direct",
+      "inject": "pin",
+      "relative_crosscheck_max": 1.6769769916843734e-11,
+      "normalized_KCL_residual": 3.260606336532143e-16
+    },
+    {
+      "scenario": "central",
+      "option": "8p2n_NP0_direct",
+      "inject": "cap",
+      "relative_crosscheck_max": 7.825188589774673e-11,
+      "normalized_KCL_residual": 3.4104400689480375e-16
+    },
+    {
+      "scenario": "high",
+      "option": "10n_direct",
+      "inject": "pin",
+      "relative_crosscheck_max": 3.5816259667053825e-13,
+      "normalized_KCL_residual": 3.5850198210880727e-16
+    },
+    {
+      "scenario": "high",
+      "option": "10n_direct",
+      "inject": "cap",
+      "relative_crosscheck_max": 2.723537594357489e-12,
+      "normalized_KCL_residual": 2.5905878762671594e-16
+    },
+    {
+      "scenario": "high",
+      "option": "10n_100R",
+      "inject": "pin",
+      "relative_crosscheck_max": 4.548817218125743e-16,
+      "normalized_KCL_residual": 1.9173301766856857e-16
+    },
+    {
+      "scenario": "high",
+      "option": "10n_100R",
+      "inject": "cap",
+      "relative_crosscheck_max": 4.614266509028404e-14,
+      "normalized_KCL_residual": 3.5137723232838633e-16
+    },
+    {
+      "scenario": "high",
+      "option": "8p2n_NP0_direct",
+      "inject": "pin",
+      "relative_crosscheck_max": 7.245715777582144e-13,
+      "normalized_KCL_residual": 3.51126295678912e-16
+    },
+    {
+      "scenario": "high",
+      "option": "8p2n_NP0_direct",
+      "inject": "cap",
+      "relative_crosscheck_max": 5.337666549316369e-12,
+      "normalized_KCL_residual": 2.1569516882754973e-16
+    }
+  ],
+  "central_response_V_per_1V": {
+    "pin": {
+      "10n_direct": {
+        "1000": 9.99790043385444e-06,
+        "1000000": 9.990851095309798e-06,
+        "10000000": 9.331443231683114e-06,
+        "100000000": 0.00010466061647789074
+      },
+      "10n_100R": {
+        "1000": 9.998099558663042e-06,
+        "1000000": 6.38867093654854e-05,
+        "10000000": 0.0006310353525781996,
+        "100000000": 0.0062705469148486
+      },
+      "8p2n_NP0_direct": {
+        "1000": 1.2191999602084565e-05,
+        "1000000": 1.218423069841916e-05,
+        "10000000": 1.1441827835008286e-05,
+        "100000000": 0.00010253998883342396
+      }
+    },
+    "cap": {
+      "10n_direct": {
+        "1000": 9.99790043819608e-06,
+        "1000000": 9.99518924064053e-06,
+        "10000000": 9.728101457317371e-06,
+        "100000000": 2.3598771117335143e-05
+      },
+      "10n_100R": {
+        "1000": 9.997900438188119e-06,
+        "1000000": 9.995181280919112e-06,
+        "10000000": 9.727326812557589e-06,
+        "100000000": 2.3412242471099858e-05
+      },
+      "8p2n_NP0_direct": {
+        "1000": 1.219199960706537e-05,
+        "1000000": 1.2189209061505137e-05,
+        "10000000": 1.191383907735751e-05,
+        "100000000": 2.1599938600422053e-05
+      }
+    }
+  },
+  "divider_scenarios": [
+    {
+      "node": "UVLO",
+      "Rtop_ohm": 620000.0,
+      "Rbottom_ohm": 267000.0,
+      "Rthevenin_ohm": 186629.08680947014,
+      "assumed_Cground_pF": 1.0,
+      "assumed_Ccoupling_pF": 0.01,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.009900990099009901,
+      "decay_tau_us": 0.18849537767756483,
+      "at_1MHz_magnitude_V_per_V": 0.007565027147006929
+    },
+    {
+      "node": "UVLO",
+      "Rtop_ohm": 620000.0,
+      "Rbottom_ohm": 267000.0,
+      "Rthevenin_ohm": 186629.08680947014,
+      "assumed_Cground_pF": 1.0,
+      "assumed_Ccoupling_pF": 0.1,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.09090909090909091,
+      "decay_tau_us": 0.20529199549041713,
+      "at_1MHz_magnitude_V_per_V": 0.07184682233528952
+    },
+    {
+      "node": "UVLO",
+      "Rtop_ohm": 620000.0,
+      "Rbottom_ohm": 267000.0,
+      "Rthevenin_ohm": 186629.08680947014,
+      "assumed_Cground_pF": 1.0,
+      "assumed_Ccoupling_pF": 1.0,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.5,
+      "decay_tau_us": 0.3732581736189403,
+      "at_1MHz_magnitude_V_per_V": 0.45993438452454316
+    },
+    {
+      "node": "UVLO",
+      "Rtop_ohm": 620000.0,
+      "Rbottom_ohm": 267000.0,
+      "Rthevenin_ohm": 186629.08680947014,
+      "assumed_Cground_pF": 5.0,
+      "assumed_Ccoupling_pF": 0.01,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.0019960079840319364,
+      "decay_tau_us": 0.9350117249154454,
+      "at_1MHz_magnitude_V_per_V": 0.0019677055293157862
+    },
+    {
+      "node": "UVLO",
+      "Rtop_ohm": 620000.0,
+      "Rbottom_ohm": 267000.0,
+      "Rthevenin_ohm": 186629.08680947014,
+      "assumed_Cground_pF": 5.0,
+      "assumed_Ccoupling_pF": 0.1,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.019607843137254905,
+      "decay_tau_us": 0.9518083427282977,
+      "at_1MHz_magnitude_V_per_V": 0.01933934052734707
+    },
+    {
+      "node": "UVLO",
+      "Rtop_ohm": 620000.0,
+      "Rbottom_ohm": 267000.0,
+      "Rthevenin_ohm": 186629.08680947014,
+      "assumed_Cground_pF": 5.0,
+      "assumed_Ccoupling_pF": 1.0,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.16666666666666669,
+      "decay_tau_us": 1.1197745208568208,
+      "at_1MHz_magnitude_V_per_V": 0.16500830968090957
+    },
+    {
+      "node": "UVLO",
+      "Rtop_ohm": 620000.0,
+      "Rbottom_ohm": 267000.0,
+      "Rthevenin_ohm": 186629.08680947014,
+      "assumed_Cground_pF": 20.0,
+      "assumed_Ccoupling_pF": 0.01,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.0004997501249375313,
+      "decay_tau_us": 3.734448027057497,
+      "at_1MHz_magnitude_V_per_V": 0.0004992968943361872
+    },
+    {
+      "node": "UVLO",
+      "Rtop_ohm": 620000.0,
+      "Rbottom_ohm": 267000.0,
+      "Rthevenin_ohm": 186629.08680947014,
+      "assumed_Cground_pF": 20.0,
+      "assumed_Ccoupling_pF": 0.1,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.004975124378109453,
+      "decay_tau_us": 3.75124464487035,
+      "at_1MHz_magnitude_V_per_V": 0.004970652627282243
+    },
+    {
+      "node": "UVLO",
+      "Rtop_ohm": 620000.0,
+      "Rbottom_ohm": 267000.0,
+      "Rthevenin_ohm": 186629.08680947014,
+      "assumed_Cground_pF": 20.0,
+      "assumed_Ccoupling_pF": 1.0,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.04761904761904762,
+      "decay_tau_us": 3.919210822998873,
+      "at_1MHz_magnitude_V_per_V": 0.047579832188675085
+    },
+    {
+      "node": "OVLO",
+      "Rtop_ohm": 590000.0,
+      "Rbottom_ohm": 156000.0,
+      "Rthevenin_ohm": 123378.01608579088,
+      "assumed_Cground_pF": 1.0,
+      "assumed_Ccoupling_pF": 0.01,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.009900990099009901,
+      "decay_tau_us": 0.12461179624664877,
+      "at_1MHz_magnitude_V_per_V": 0.006103755485612529
+    },
+    {
+      "node": "OVLO",
+      "Rtop_ohm": 590000.0,
+      "Rbottom_ohm": 156000.0,
+      "Rthevenin_ohm": 123378.01608579088,
+      "assumed_Cground_pF": 1.0,
+      "assumed_Ccoupling_pF": 0.1,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.09090909090909091,
+      "decay_tau_us": 0.13571581769436997,
+      "at_1MHz_magnitude_V_per_V": 0.058986594658794404
+    },
+    {
+      "node": "OVLO",
+      "Rtop_ohm": 590000.0,
+      "Rbottom_ohm": 156000.0,
+      "Rthevenin_ohm": 123378.01608579088,
+      "assumed_Cground_pF": 1.0,
+      "assumed_Ccoupling_pF": 1.0,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.5,
+      "decay_tau_us": 0.24675603217158174,
+      "at_1MHz_magnitude_V_per_V": 0.4201812866029941
+    },
+    {
+      "node": "OVLO",
+      "Rtop_ohm": 590000.0,
+      "Rbottom_ohm": 156000.0,
+      "Rthevenin_ohm": 123378.01608579088,
+      "assumed_Cground_pF": 5.0,
+      "assumed_Ccoupling_pF": 0.01,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.0019960079840319364,
+      "decay_tau_us": 0.6181238605898123,
+      "at_1MHz_magnitude_V_per_V": 0.0019329620358965382
+    },
+    {
+      "node": "OVLO",
+      "Rtop_ohm": 590000.0,
+      "Rbottom_ohm": 156000.0,
+      "Rthevenin_ohm": 123378.01608579088,
+      "assumed_Cground_pF": 5.0,
+      "assumed_Ccoupling_pF": 0.1,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.019607843137254905,
+      "decay_tau_us": 0.6292278820375334,
+      "at_1MHz_magnitude_V_per_V": 0.01900919341946485
+    },
+    {
+      "node": "OVLO",
+      "Rtop_ohm": 590000.0,
+      "Rbottom_ohm": 156000.0,
+      "Rthevenin_ohm": 123378.01608579088,
+      "assumed_Cground_pF": 5.0,
+      "assumed_Ccoupling_pF": 1.0,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.16666666666666669,
+      "decay_tau_us": 0.7402680965147452,
+      "at_1MHz_magnitude_V_per_V": 0.16294330770050888
+    },
+    {
+      "node": "OVLO",
+      "Rtop_ohm": 590000.0,
+      "Rbottom_ohm": 156000.0,
+      "Rthevenin_ohm": 123378.01608579088,
+      "assumed_Cground_pF": 20.0,
+      "assumed_Ccoupling_pF": 0.01,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.0004997501249375313,
+      "decay_tau_us": 2.468794101876675,
+      "at_1MHz_magnitude_V_per_V": 0.0004987148818767599
+    },
+    {
+      "node": "OVLO",
+      "Rtop_ohm": 590000.0,
+      "Rbottom_ohm": 156000.0,
+      "Rthevenin_ohm": 123378.01608579088,
+      "assumed_Cground_pF": 20.0,
+      "assumed_Ccoupling_pF": 0.1,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.004975124378109453,
+      "decay_tau_us": 2.4798981233243964,
+      "at_1MHz_magnitude_V_per_V": 0.00496491010486864
+    },
+    {
+      "node": "OVLO",
+      "Rtop_ohm": 590000.0,
+      "Rbottom_ohm": 156000.0,
+      "Rthevenin_ohm": 123378.01608579088,
+      "assumed_Cground_pF": 20.0,
+      "assumed_Ccoupling_pF": 1.0,
+      "high_frequency_ratio_Cc_over_Ctotal": 0.04761904761904762,
+      "decay_tau_us": 2.5909383378016084,
+      "at_1MHz_magnitude_V_per_V": 0.047529459610485374
+    }
+  ],
+  "notes": [
+    "Selected board is unchanged. V4 plan is analytical and unconstructed.",
+    "The 100 ohm resistor satisfies a separate manufacturer recommendation; this passive model cannot establish its active-controller purpose.",
+    "Pin-side series resistance can increase this hypothetical pickup while cap-side pickup behaves differently. It is not a predicted old/new board noise ratio.",
+    "8.2nF option is nominal-C-only substitution with matched assumed ESR/ESL; no NP0 dielectric/bias/temperature/aging model.",
+    "Divider supply and return are ideal AC grounds; supply noise, source impedance and common return are omitted.",
+    "UVLO/OVLO resistor topology is unchanged; changed routing does not determine Cground or Ccoupling.",
+    "No pin input clamps/filter, active eFuse, load/buck, return-plane extraction, transient/ESD, assembly or hardware qualification."
+  ]
+}

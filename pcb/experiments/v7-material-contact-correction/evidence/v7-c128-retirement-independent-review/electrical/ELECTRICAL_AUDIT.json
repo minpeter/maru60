@@ -1,0 +1,598 @@
+{
+  "status": "RAW_FILES_DRC_AND_WITNESS_CHECKS_PASS; original graph support claims invalid due wrapper bug; corrected full graph audit separate; not global acceptance",
+  "source_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "candidate_sha256": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb",
+  "contract_sha256": "4feb4ba2be91888a12f14524b2137537bd5a9e46aadad826e84be6bb26de3f6b",
+  "checks": [
+    {
+      "name": "board and contract SHA256 bindings",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "contract exactly nine tracks one via and adds nothing",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "all 54 source and candidate file paths; 53 nonboard files byte exact",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "raw object UUID removal set exact; no UUID additions",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "raw removed object kinds",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "prefill raw bytes exactly source minus declared ten spans",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "all retained nonzone forms token exact in original order",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "all zone definitions/configuration exact after excluding saved fill payloads",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "only two inner plane saved fill forms differ",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "native object removal set exactly contract",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "native contract object 0826a4b6-5567-52ab-a787-b898d20d23ac",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_VIA",
+        "net": "+3V3",
+        "layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "start": [
+          101.7375,
+          39.4375
+        ],
+        "end": [
+          101.7375,
+          39.4375
+        ],
+        "width_mm": 0.5,
+        "length_mm": 0.0,
+        "drill_mm": 0.25
+      }
+    },
+    {
+      "name": "native contract object 0858c392-ee59-5350-bcaf-d8762f658a08",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "F.Cu"
+        ],
+        "start": [
+          104.85,
+          40.725
+        ],
+        "end": [
+          104.5,
+          41.0
+        ],
+        "width_mm": 0.3,
+        "length_mm": 0.4451123453691214
+      }
+    },
+    {
+      "name": "native contract object 19fee20c-f24a-5570-9d2d-8ed9371d42bb",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "F.Cu"
+        ],
+        "start": [
+          105.1125,
+          40.2375
+        ],
+        "end": [
+          105.0625,
+          40.5125
+        ],
+        "width_mm": 0.3,
+        "length_mm": 0.27950849718747367
+      }
+    },
+    {
+      "name": "native contract object 53e7b99f-308f-57ae-9e47-9e779e6b3272",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "B.Cu"
+        ],
+        "start": [
+          105.0,
+          37.775
+        ],
+        "end": [
+          102.87,
+          38.495
+        ],
+        "width_mm": 0.3,
+        "length_mm": 2.248399430706208
+      }
+    },
+    {
+      "name": "native contract object 7ffc8178-bb79-51de-b57d-c5c6afb0ad28",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "F.Cu"
+        ],
+        "start": [
+          105.0,
+          39.875
+        ],
+        "end": [
+          105.0875,
+          40.05
+        ],
+        "width_mm": 0.3,
+        "length_mm": 0.1956559480312316
+      }
+    },
+    {
+      "name": "native contract object 872bfd37-a607-537a-a7fa-650d69bca58e",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "F.Cu"
+        ],
+        "start": [
+          105.0875,
+          40.05
+        ],
+        "end": [
+          105.1125,
+          40.2375
+        ],
+        "width_mm": 0.3,
+        "length_mm": 0.18915932438026944
+      }
+    },
+    {
+      "name": "native contract object 9f355e92-2386-5d9a-b330-367e9a6d6370",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "F.Cu"
+        ],
+        "start": [
+          104.75,
+          39.625
+        ],
+        "end": [
+          105.0,
+          39.875
+        ],
+        "width_mm": 0.3,
+        "length_mm": 0.3535533905932738
+      }
+    },
+    {
+      "name": "native contract object cbe6ef4b-6ae2-561c-89a1-59cf696150b8",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "F.Cu"
+        ],
+        "start": [
+          105.0625,
+          40.5125
+        ],
+        "end": [
+          104.85,
+          40.725
+        ],
+        "width_mm": 0.3,
+        "length_mm": 0.3005203820042827
+      }
+    },
+    {
+      "name": "native contract object f9815195-95ae-5029-9575-af5b562417f2",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "B.Cu"
+        ],
+        "start": [
+          102.87,
+          38.495
+        ],
+        "end": [
+          101.7375,
+          39.4375
+        ],
+        "width_mm": 0.3,
+        "length_mm": 1.4733847087573566
+      }
+    },
+    {
+      "name": "native contract object fba8f2b5-a5de-578b-a107-ce7c9d080fb6",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "F.Cu"
+        ],
+        "start": [
+          101.7375,
+          39.4375
+        ],
+        "end": [
+          104.75,
+          39.625
+        ],
+        "width_mm": 0.3,
+        "length_mm": 3.018329422047898
+      }
+    },
+    {
+      "name": "native contract object f578f80d-52bb-500f-b3df-4fe97eccdb4e",
+      "pass_": true,
+      "detail": {
+        "type": "PCB_TRACK",
+        "net": "+3V3",
+        "layers": [
+          "F.Cu"
+        ],
+        "start": [
+          104.5,
+          42.475
+        ],
+        "end": [
+          104.5,
+          40.225
+        ],
+        "width_mm": 0.3,
+        "length_mm": 2.25
+      }
+    },
+    {
+      "name": "native retired centerline length",
+      "pass_": true,
+      "detail": 8.503623449077116
+    },
+    {
+      "name": "saved native graph board SHA bindings",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "graph 0 inventory matches native pads exactly",
+      "pass_": true,
+      "detail": {
+        "named_pads": 1082,
+        "total_native_pads": 1437
+      }
+    },
+    {
+      "name": "graph 0 recomputed full pad partitions from actual positive edges",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "graph 0 native counts/length",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "graph 1 inventory matches native pads exactly",
+      "pass_": true,
+      "detail": {
+        "named_pads": 1082,
+        "total_native_pads": 1437
+      }
+    },
+    {
+      "name": "graph 1 recomputed full pad partitions from actual positive edges",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "graph 1 native counts/length",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "all 245 pad partitions source/candidate exactly preserved",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "all retained direct contacts AND exact support areas equal",
+      "pass_": true,
+      "detail": [
+        {
+          "direct": 21901,
+          "zone": 731,
+          "physical_zone_components": 25
+        },
+        {
+          "direct": 21888,
+          "zone": 731,
+          "physical_zone_components": 25
+        }
+      ]
+    },
+    {
+      "name": "all retained zone contacts AND exact support areas equal",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "removed branch has exactly declared single live attachment and no zone contact",
+      "pass_": true,
+      "detail": [
+        {
+          "retired": "0858c392-ee59-5350-bcaf-d8762f658a08",
+          "retained": "f578f80d-52bb-500f-b3df-4fe97eccdb4e",
+          "support": [
+            [
+              "F.Cu",
+              0.092571522059
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "all four live paths and attachment path with native positive support recomputation",
+      "pass_": true,
+      "detail": {
+        "unique_direct_edges": 36,
+        "unique_zone_edges": 3,
+        "hops": [
+          7,
+          26,
+          5,
+          5,
+          24
+        ]
+      }
+    },
+    {
+      "name": "DRC 67 to 66 exact one named dangling warning removal and no other changes",
+      "pass_": true,
+      "detail": [
+        {
+          "description": "Track has unconnected end",
+          "items": [
+            {
+              "description": "Track [+3V3] on B.Cu, length 2.2484 mm",
+              "pos": {
+                "x": 105.0,
+                "y": 37.775
+              },
+              "uuid": "53e7b99f-308f-57ae-9e47-9e779e6b3272"
+            }
+          ],
+          "severity": "warning",
+          "type": "track_dangling"
+        }
+      ]
+    },
+    {
+      "name": "all 12 complete open records exactly equal, not just pairs",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "24 open endpoint occurrences native UUID/type/ref/pad/net/layer/position/length sanity and disconnected roots",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "zero other DRC errors and parity/ERC empty",
+      "pass_": true,
+      "detail": {
+        "ERC_sheets": 9
+      }
+    },
+    {
+      "name": "candidate commands-output-log-input bindings",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "reused source graph/DRC bytes exactly original historical artifacts",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "reused source historical commands/logs bind correct source board",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "same native graph checker source used for source/candidate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "build/fill hash chain and emitted logs",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "actual-results log exactly machine report",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "checks log complete graph DRC ERC sequence",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "all 54 selected source files match isolated source snapshot",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "all inputs unchanged by this audit",
+      "pass_": true,
+      "detail": null
+    }
+  ],
+  "file_manifest": "file-manifest.json",
+  "all_54_file_count": 54,
+  "retired_uuids": [
+    "0826a4b6-5567-52ab-a787-b898d20d23ac",
+    "0858c392-ee59-5350-bcaf-d8762f658a08",
+    "19fee20c-f24a-5570-9d2d-8ed9371d42bb",
+    "53e7b99f-308f-57ae-9e47-9e779e6b3272",
+    "7ffc8178-bb79-51de-b57d-c5c6afb0ad28",
+    "872bfd37-a607-537a-a7fa-650d69bca58e",
+    "9f355e92-2386-5d9a-b330-367e9a6d6370",
+    "cbe6ef4b-6ae2-561c-89a1-59cf696150b8",
+    "f9815195-95ae-5029-9575-af5b562417f2",
+    "fba8f2b5-a5de-578b-a107-ce7c9d080fb6"
+  ],
+  "retired_track_length_mm": 8.503623449077116,
+  "changed_zone_fill_uuids": [
+    "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+    "3a23a46c-3272-47d8-86cd-03a9240b82af"
+  ],
+  "graph_edge_counts": [
+    {
+      "direct": 21901,
+      "zone": 731,
+      "physical_zone_components": 25
+    },
+    {
+      "direct": 21888,
+      "zone": 731,
+      "physical_zone_components": 25
+    }
+  ],
+  "pad_nets": 245,
+  "pad_inventory_count": 1082,
+  "native_total_pads": 1437,
+  "witness_artifact": "verified-witnesses.json",
+  "open_endpoints_artifact": "verified-open-endpoints.json",
+  "removed_DRC_records": [
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [+3V3] on B.Cu, length 2.2484 mm",
+          "pos": {
+            "x": 105.0,
+            "y": 37.775
+          },
+          "uuid": "53e7b99f-308f-57ae-9e47-9e779e6b3272"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    }
+  ],
+  "command_bindings": [
+    {
+      "kind": "graph",
+      "command": {
+        "command": [
+          "/usr/bin/python3",
+          "/tmp/v7-c128-stub-retirement-aead/tools/export_native_physical_graph.py",
+          "/tmp/v7-c128-stub-retirement-aead/filled/pcb/maru60.kicad_pcb",
+          "/tmp/v7-c128-stub-retirement-aead/qa/candidate-physical-graph.json"
+        ],
+        "exit_code": 0,
+        "seconds": 32.27225522499975
+      },
+      "output_sha256": "07a07ec46fe50823f5519aa381d030131ffbdd761c830509e5d833fa296d0b1c",
+      "log_sha256": "7ce0d1e8328aaa7afdb33f70c176fdb832caa9f21ea2de1147fcd277c41517bd",
+      "input_sha256": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb"
+    },
+    {
+      "kind": "drc",
+      "command": {
+        "command": [
+          "kicad-cli",
+          "pcb",
+          "drc",
+          "--schematic-parity",
+          "--format",
+          "json",
+          "--output",
+          "/tmp/v7-c128-stub-retirement-aead/qa/drc.json",
+          "/tmp/v7-c128-stub-retirement-aead/filled/pcb/maru60.kicad_pcb"
+        ],
+        "exit_code": 0,
+        "seconds": 3.653575586000443
+      },
+      "output_sha256": "40140279bd6d0a944b4d1d3c7c394bfdcba84a044e2f2dda01ae0cd3eae7e110",
+      "log_sha256": "056ff307a4522051dd125dc8f8f5e89da1fb9541b2e04c2a4e354c9f2a861956",
+      "input_sha256": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb"
+    },
+    {
+      "kind": "erc",
+      "command": {
+        "command": [
+          "kicad-cli",
+          "sch",
+          "erc",
+          "--format",
+          "json",
+          "--output",
+          "/tmp/v7-c128-stub-retirement-aead/qa/erc.json",
+          "/tmp/v7-c128-stub-retirement-aead/filled/pcb/maru60.kicad_sch"
+        ],
+        "exit_code": 0,
+        "seconds": 0.6213315410004725
+      },
+      "output_sha256": "932dd08556b9a313d76ffcd820e22fdd63ecdd061aecb26b2dd90a82a44cbe46",
+      "log_sha256": "cb3f96de8995c36dc4cc0b09d935afaaa8489e19d367adaa70f9ca3c400b83e7",
+      "input_sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51"
+    }
+  ],
+  "strict_global_plane_gate": "Separate parent review; the supplied strict native loss of 3.1345e-9 mm2 per plane remains a FAIL, not waived; BUCK-only 1nm criterion does not apply.",
+  "script_review": {
+    "graph": "FAULT FOUND: GetConnectedTracks via neighbors are Python PCB_TRACK wrappers; isinstance-based hole subtraction can be skipped and cached. Original recorded support equality does not prove accurate physical support. Canonical direct support audit found 1042 changed areas and 3 redundant zero-area false edges; corrected full exports and controls are separate artifacts. All five path witnesses independently retain positive drill-aware copper.",
+    "comparison": "Original compare_graphs.py uses booleans and set-based deltas and compares open pairs only. This audit strengthens those to independently reconstructed graph partitions, multiplicity-preserving full DRC/open-record comparisons and native endpoint sanity.",
+    "provenance": "DRC/ERC JSON does not embed input SHA; binding is command/log plus byte-identical source chain, recorded graph hashes, unchanged 54-file input inventory, and build/refill hash chain. No claim of cryptographic execution attestation.",
+    "limits": "No new full native graph exports or DRC/ERC executions. Existing native outputs were audited as requested. Native source and candidate loads and restricted witness geometry recomputation only. Not an impedance/stability/PDN performance analysis."
+  }
+}

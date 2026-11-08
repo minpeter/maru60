@@ -1,0 +1,13 @@
+Unmodified TI TPS2553-1 model with candidate rail and resistor values
+.include vendor/SLVM426A/SLVM426/TPS2553-1_PSPICE_TRANS/tps2553-1_trans.lib
+Vsup in 0 4
+Ven en 0 PWL(0 0 1m 0 1.001m 3.3)
+Vlogic v33 0 3.3
+Rpull v33 fault 100k
+Rilim ilim 0 133k
+Cin in 0 1u
+Cout out 0 12.5u
+Rload out 0 100
+XU7 in 0 en 0 fault ilim out TPS2553-1_TRANS
+.tran 1u 10m
+.end

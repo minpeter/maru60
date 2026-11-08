@@ -1,0 +1,21 @@
+{
+  "status": "STOPPED_PREFLIGHT_GEOMETRY_BLOCKER",
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": null,
+  "candidate_saved": false,
+  "route_closed": false,
+  "source_unchanged": true,
+  "modified_source_objects": [],
+  "source_DRC_inherited_not_rerun": {
+    "open_pairs": 9,
+    "warnings": 42
+  },
+  "native_candidate_DRC": "not run; no candidate exists",
+  "material_graph_contacts_net_identity_ERC_cold_refill": "not run for candidate; no candidate exists",
+  "actual_plane_proof": "Both native all-hole-cut source GND layers lose positive material to proposed via drill; all area and contour rows explicitly asserted",
+  "inherited_limits": [
+    "Strict exact-no-loss failure remains",
+    "51 guarded-contact proof failures remain separate from native warnings",
+    "No SI, active-power, hardware or manufacturing readiness claim"
+  ]
+}

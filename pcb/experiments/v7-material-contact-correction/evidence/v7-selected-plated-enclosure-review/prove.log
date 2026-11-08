@@ -1,0 +1,22 @@
+{
+  "status": "PASS exact source-specific own-hole enclosure; not an all-drill graph replay",
+  "board_path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-buck-feedback-cleanup/candidate/pcb/maru60.kicad_pcb",
+  "source_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "native_version": "9.0.2+dfsg-1",
+  "copper_layer_count": 4,
+  "copper_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "via_count": 918,
+  "PTH_count": 16,
+  "plated_layer_checks": 3736,
+  "min_via_radial_margin_nm": "125000",
+  "min_PTH_hole_enclosure_margin_nm": "175000",
+  "exceptions": [],
+  "source_unchanged": true,
+  "method": "Exact integer/Fraction center, circle, rectangle and equal-spine capsule invariants from actual canonical native dimensions on every copper layer, including native hole segment endpoints and width. Unknown shape/span/offset fails closed. Positive enclosure makes each own-hole material a connected annulus touching the full physical hole boundary.",
+  "limits": "Own-hole enclosure only. Foreign-drill cuts and final contact topology remain the corrected checker responsibility; no manufacturing, plating-process or SI qualification."
+}

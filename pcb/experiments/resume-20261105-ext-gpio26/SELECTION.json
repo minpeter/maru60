@@ -1,0 +1,52 @@
+{
+  "status": "SELECTED_FOR_CONTINUED_EXPERIMENTAL_DEVELOPMENT_NOT_PRODUCTION",
+  "created_utc": "2026-11-05T16:59:44.399328+00:00",
+  "prior_commit": "321785ad9af76405c23ca6f6b215b1a07f8ae948",
+  "prior_board_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+  "selected_board_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "closed_connection": "EXT_GPIO26 header-side J3.8 to already-routed U11/U13 network; MCU_GPIO26 remains open",
+  "before": {
+    "opens": 12,
+    "warnings": 51,
+    "tracks": 9750,
+    "vias": 919,
+    "length_mm": 13184.45545001526
+  },
+  "after": {
+    "opens": 11,
+    "warnings": 51,
+    "tracks": 9752,
+    "vias": 920,
+    "length_mm": 13188.057740811157
+  },
+  "fresh_native": {
+    "other_DRC_errors": 0,
+    "schematic_parity": 0,
+    "ERC": 0,
+    "cold_refill_all58_files_byte_identical": true,
+    "raw_native_net_identity": true,
+    "electrical_XML_bindings_checked": 1064
+  },
+  "preservation": {
+    "prior_direct_contacts": 21775,
+    "prior_zone_contacts": 733,
+    "removed_or_changed_old_contact_witnesses": 0,
+    "prior_signal_reference_projection_losses": 0,
+    "inner_ground_components_before_after": [
+      1,
+      1
+    ],
+    "inner_plane_loss_each_mm2": 0.6412533988095,
+    "loss_confined_to_new_via_radius_mm": 0.455,
+    "new_track_projection_uncovered_outside_two_via_transition_windows_mm2": 0,
+    "nearest_existing_ground_via_distance_mm": 0.7786205751198778
+  },
+  "rejected_first_candidate": "76653875d2842bc145a0d461ac7e196ce69d15d02e0b43755cf1c007db42e6a5 had loss under existing EXT_GPIO10; retained separately and NOT selected",
+  "limits": [
+    "Only nominal material/connectivity/reference geometry is established.",
+    "No measured or simulated impedance, real return-current distribution, EMI/SI, transient/stability or hardware qualification.",
+    "Power, capacitor bias/aging, fault/startup/brownout/pulse and mechanical/manufacturing gates remain open.",
+    "Full pinned QMK/ARM builds have not been run. LED qualification remains OFF.",
+    "No public push, merge, fabrication, purchase or flashing."
+  ]
+}

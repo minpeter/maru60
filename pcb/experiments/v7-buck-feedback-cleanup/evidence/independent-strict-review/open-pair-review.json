@@ -1,0 +1,814 @@
+{
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "pass_exact_twelve_complete_component_pairs": true,
+  "all48_endpoints_UUID_native_position_description_validated": true,
+  "unique_component_pairs": 12,
+  "representative_changes": [
+    {
+      "net": "MCU_GPIO10",
+      "before": [
+        "051d7e9f-8c14-583e-a304-ee3212964756",
+        "2fae1e1e-2f58-4081-9638-13aea2289d7d"
+      ],
+      "after": [
+        "2fae1e1e-2f58-4081-9638-13aea2289d7d",
+        "3289f5ae-a6a0-55fb-8040-2ff133e55784"
+      ],
+      "complete_component_pair_exact": true
+    },
+    {
+      "net": "MCU_GPIO24",
+      "before": [
+        "9eb021c4-a45d-4e91-bb20-d4d5181c4b6c",
+        "c1939946-4449-4887-9393-3ef03908d4dd"
+      ],
+      "after": [
+        "984834de-986f-5e89-97e1-e53e00fd8fcc",
+        "c1939946-4449-4887-9393-3ef03908d4dd"
+      ],
+      "complete_component_pair_exact": true
+    },
+    {
+      "net": "MCU_GPIO25",
+      "before": [
+        "254b9a4f-db28-4c96-a610-c908a1ce5922",
+        "b0f62a3d-7abe-4631-9255-1097dbefcea8"
+      ],
+      "after": [
+        "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f",
+        "254b9a4f-db28-4c96-a610-c908a1ce5922"
+      ],
+      "complete_component_pair_exact": true
+    },
+    {
+      "net": "MCU_GPIO26",
+      "before": [
+        "1740585c-6e03-5d0e-8448-78c4eddb0baa",
+        "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+      ],
+      "after": [
+        "a71398b4-f7e8-4d77-820d-99a4c9a4d9df",
+        "d4d89708-1b6c-56fe-8c2f-207ff79756ff"
+      ],
+      "complete_component_pair_exact": true
+    }
+  ],
+  "source_records": [
+    {
+      "net": "EXT_GPIO24",
+      "endpoint_uuids": [
+        "8acfaaa0-99ff-425a-b370-70be0fbb3868",
+        "e01faed3-83ab-447f-badb-64e03c26621d"
+      ],
+      "complete_components": [
+        [
+          "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+        ],
+        [
+          "e01faed3-83ab-447f-badb-64e03c26621d"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO24",
+      "endpoint_uuids": [
+        "3827e42c-c508-4185-8351-759c94512528",
+        "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+      ],
+      "complete_components": [
+        [
+          "3827e42c-c508-4185-8351-759c94512528"
+        ],
+        [
+          "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO25",
+      "endpoint_uuids": [
+        "a18e6e59-fb74-4513-a5f4-6a34d9223429",
+        "bee40e5c-5047-43dd-8262-df42b4062ba6"
+      ],
+      "complete_components": [
+        [
+          "a18e6e59-fb74-4513-a5f4-6a34d9223429"
+        ],
+        [
+          "bee40e5c-5047-43dd-8262-df42b4062ba6"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO25",
+      "endpoint_uuids": [
+        "bee40e5c-5047-43dd-8262-df42b4062ba6",
+        "cff436d2-a051-486a-8eda-ad80c8687157"
+      ],
+      "complete_components": [
+        [
+          "bee40e5c-5047-43dd-8262-df42b4062ba6"
+        ],
+        [
+          "cff436d2-a051-486a-8eda-ad80c8687157"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO26",
+      "endpoint_uuids": [
+        "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76",
+        "df690eec-df6a-52bf-82fe-eace87245374"
+      ],
+      "complete_components": [
+        [
+          "00413816-4339-5bd8-913f-e1ae6708a3e9",
+          "0042d17a-b3c1-5b38-8f6c-f70b8598fceb",
+          "02045211-177a-5dbf-b74d-732d1f9bd3ad",
+          "09b07266-a7c4-50ce-9440-e7d3cde2174b",
+          "194e52fe-9739-5502-a2cb-2e71b4e19a78",
+          "28cd3c37-8361-5c39-8d60-61e9bfc427f4",
+          "31b0bb81-5977-5026-b0d7-8830c2b66c87",
+          "38d14e66-2199-5b3c-b896-20317913312b",
+          "3901c74f-3969-5bc7-b1ae-4d50b7f8ac8b",
+          "55b63a33-34a2-50e8-9450-6def28fdd835",
+          "55e8d947-a16f-580f-8442-ed8007a7faf3",
+          "60c7e145-2571-57cd-a0e8-24e503f31de3",
+          "61457a9d-06fa-45ae-8ba5-7fe97a547950",
+          "661bdc53-a387-5d90-bf1b-420453d31e02",
+          "68b4bc7d-a614-5151-8783-0fb2ed4ab8da",
+          "6ee3a3fb-4975-5a94-8b83-b9edad68f384",
+          "76015e03-58a6-5c88-b481-9c628c5b1061",
+          "8364d1e8-69ff-55f4-9edd-11055f4b359d",
+          "8cbc3f79-e5e6-5daa-8173-ef793c827ba0",
+          "8e174a69-1f7c-516a-9580-2d7ce2fba081",
+          "9802007f-2fe7-4459-b27f-4f1f6eb27cb3",
+          "9984681e-25a3-51b9-a236-3bd8f73abe2d",
+          "9b4ddac5-fd01-549c-baf8-00800c8a2f0e",
+          "a1fabb23-ffb6-5fee-b3b5-10efd2887a51",
+          "aa5ae685-e33a-5d71-9284-8efbebc5c214",
+          "b1853792-3019-54cf-89b0-b160b306b90e",
+          "b535b963-741a-5756-a0ae-0b3b606abe3c",
+          "bd60c430-58d5-568a-b034-a604187f20ee",
+          "cfedd418-a3b4-5016-b51e-d48eaa03c090",
+          "d00a323a-b4cb-5766-b318-0404b447348a",
+          "d6662151-848a-52e1-b361-62aa0637ffc9",
+          "da42bb89-2c8f-5bff-aadb-1f43b376892d",
+          "de4d86b4-8d2b-5e90-bdaa-4fa0838aea0d",
+          "df690eec-df6a-52bf-82fe-eace87245374",
+          "e70ba651-5257-5674-afb1-e470c4fd1cea",
+          "e76b1f55-7c17-570e-ae72-6dcfb50f0e4d",
+          "ea0411ef-ec1d-5201-9218-85daaf55457b",
+          "ea7d7e12-ab62-5072-bff2-db8c415ccc4b",
+          "ec77142f-a781-576e-bb69-b430a6d9bd50",
+          "f8fcb56c-c254-5033-b942-57064178b049",
+          "fd6788ce-7793-5100-b98b-216332d0640b",
+          "ffd6e86a-3da1-5a68-ba75-acc4238771bb"
+        ],
+        [
+          "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO27",
+      "endpoint_uuids": [
+        "38f37228-2ce2-4edd-bea2-10e387e0f52d",
+        "86bf9e60-5de3-41d8-afec-7db12426463b"
+      ],
+      "complete_components": [
+        [
+          "039c01f0-51e3-463a-98ee-b2f3d53dde2a",
+          "0e73ac65-a9b4-4b6b-abe0-7ce38aa672b2",
+          "109ac26e-bb64-4b26-940f-8d268f65bfde",
+          "13d43ee1-81c8-43cf-9a3c-bda35eab742b",
+          "149adc1e-7570-4ab2-a361-61dafbd19a92",
+          "16ef6513-d62e-4f2c-9f17-9b2f44bb9f2e",
+          "1846ea10-e520-4d6a-851e-340c8bef2b24",
+          "1911288d-7b9f-488d-b983-b70b856aa753",
+          "197c4063-5077-42af-8ea0-6377784edeb4",
+          "1be5f3f7-b3fd-4cc0-8d13-71d75a80ab2c",
+          "1f883907-7fab-417e-9752-92a032e409fa",
+          "2167dc2c-860f-4e79-9bc0-5748d588cfd0",
+          "2f448314-1823-4bf6-9ced-964f12161eed",
+          "2fb29e2f-05c6-4a6b-b073-d0cbbf135cd5",
+          "39f00117-fbdf-4d6a-a322-7f285d2706fc",
+          "42ad24dd-137e-401b-a9bb-c8e832de8d98",
+          "46602c0c-a749-49d6-87a9-72389f08daae",
+          "471a1561-c6ff-481e-a4c0-795ac79209b3",
+          "47f57618-88dc-44ec-b451-9a97c304e794",
+          "49a09950-8fc7-4319-b6b0-620fe69467b3",
+          "5459ffd3-8b6e-4774-b58e-bcb249788ae0",
+          "8057e8eb-b49a-47c5-83d7-1b2ec567104a",
+          "850a9e29-f982-41f9-bff7-d4262cfeb156",
+          "86bf9e60-5de3-41d8-afec-7db12426463b",
+          "9ef12015-3aff-4f0e-9759-7707b4c50eb2",
+          "a3aaf72e-4be2-4fcc-9be9-47a379f449c3",
+          "a898d7f5-33e9-463f-886b-2cc35bace964",
+          "a8d55e68-0bd6-40c9-bbc8-23cec98e894a",
+          "a9365c1e-dabf-41fe-a07e-e24b922b3149",
+          "abffa290-1121-40d1-bf11-ce43c67e766a",
+          "b097e346-ff38-486c-8c82-f4dcc1ff9c1c",
+          "b9aaeda7-bee6-4b3f-8ecf-02e0282237ef",
+          "bbabc3e8-b962-4953-875b-636ded96b044",
+          "bd432349-ab51-4f29-a4e8-5767aea67291",
+          "c2ed6bcf-3ae5-4bb4-9844-94b603745e8f",
+          "c5c8942e-59e1-4547-be3c-b823b5244044",
+          "c6e3b80b-c6c1-4539-a534-a35d0accd0f4",
+          "cf6cdfd3-170e-4172-9571-75058d9994ec",
+          "d7d250ae-9234-46b7-9083-25e7772ac0d7",
+          "e3b0557a-cbf1-4edb-a007-08794aca68c2",
+          "f2f057a8-37f3-4b86-92a3-b0beef20d4dd",
+          "f3a7ce1e-eedd-4a5a-adb4-e5d745f2a146",
+          "f43154b6-7ae6-4fed-93f3-3bfa12fdd5a8",
+          "fb1f1ba6-22e8-4703-9ed7-28cb3d85eb03",
+          "fe662e5e-1f7a-4ad5-bb8b-84634d00b955",
+          "fea0f8c7-6e3d-43ba-b647-03ab94220fc7",
+          "ff77188d-2fc3-4a8d-a063-b509b154a142"
+        ],
+        [
+          "38f37228-2ce2-4edd-bea2-10e387e0f52d"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO3",
+      "endpoint_uuids": [
+        "5a0545bd-febf-49dd-9baa-b129430d4f9c",
+        "7610c2f0-d25f-5392-9c6d-51572f345960"
+      ],
+      "complete_components": [
+        [
+          "0924efe7-58d6-5d4a-ad5f-d5415774bdfe",
+          "1ec9f1c8-bf6e-57a2-9d5d-7d0c6c58146b",
+          "327dee03-8edf-5911-8357-371fb2302139",
+          "44b6803c-9e29-4c19-b79c-2139d69a0a64",
+          "5ccc2b24-c6c0-5a90-b5ac-1af0bc9246b4",
+          "63c29009-f2f3-52ce-a33f-644c2df02340",
+          "65dd6ef4-f12e-535b-b4c0-821355b051e2",
+          "664aa9ce-e683-5c88-8790-bc965aa86538",
+          "69b06049-b85a-59f7-a3c0-cb9698f700de",
+          "7610c2f0-d25f-5392-9c6d-51572f345960",
+          "874b6ac4-f16c-5090-aad2-fc89ddebbdd3",
+          "90fe5489-1792-5aae-8a17-93babc5ee1bb",
+          "9263da58-fd29-5ad9-a050-facc262ae62c",
+          "9c2954c2-3596-5529-a9fc-87aa7233be4c",
+          "a5771de5-6304-53ff-ab35-98ed8575f005",
+          "ab4866e1-15a8-4028-9834-b9f0631586b3",
+          "b35a514f-dc3e-532d-a8d6-d982398f4c74",
+          "b4d27dd6-4459-568e-85bb-12c24faa504f",
+          "b5bdc8e1-089e-5645-8ed0-0e82b7877702",
+          "b9e0464a-91dd-5a3d-849b-d78a21b5043c",
+          "c0cd304e-5aff-580f-8534-5ac7da15557b",
+          "d2bd4711-5bab-5ee6-8fb7-484da3f9add1",
+          "d991a50a-0b42-5bba-9bb5-72bf68d8cdfd",
+          "dbf05def-e785-5f60-ae93-1e952aeae4d7",
+          "ea8bebfe-bfcf-540d-bd47-38cfbc637832",
+          "f10ae70d-7b8c-5303-966a-3e747b86e627",
+          "f29dc6e6-e29a-594e-8a4d-75fc7a497f10",
+          "f4e33ecc-9f76-58ee-93dc-35730e448a0f",
+          "fa9eafbf-38cf-5116-9031-9a75ec09644b",
+          "fd4942cc-8556-5c5e-ba2b-2e709657f8ca"
+        ],
+        [
+          "5a0545bd-febf-49dd-9baa-b129430d4f9c"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO10",
+      "endpoint_uuids": [
+        "051d7e9f-8c14-583e-a304-ee3212964756",
+        "2fae1e1e-2f58-4081-9638-13aea2289d7d"
+      ],
+      "complete_components": [
+        [
+          "051d7e9f-8c14-583e-a304-ee3212964756",
+          "15ae6ced-cf16-4c85-b62f-435f883fa81e",
+          "1eb7d81e-1e50-543f-9fd2-3c57d7201ff3",
+          "3289f5ae-a6a0-55fb-8040-2ff133e55784",
+          "64b4f2b3-2238-565b-a75d-c8e4fcb0ee6d",
+          "aa97e8d3-aa1a-5d18-a5cc-aed92d5d84c3",
+          "feb9504b-9acd-40d1-adcb-fbe805276c86"
+        ],
+        [
+          "2fae1e1e-2f58-4081-9638-13aea2289d7d"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO24",
+      "endpoint_uuids": [
+        "9eb021c4-a45d-4e91-bb20-d4d5181c4b6c",
+        "c1939946-4449-4887-9393-3ef03908d4dd"
+      ],
+      "complete_components": [
+        [
+          "06f85e3e-b021-59be-a936-56812856a49e",
+          "08941138-5fe6-5a8d-b19e-9d81808649ff",
+          "1b5f6616-7d8d-5b21-ab82-22052c0f9197",
+          "1bea95b1-3adb-4a80-a0ba-9574c6d9b43b",
+          "1dfbde81-b5d5-55ec-81d3-967187affe93",
+          "1f92f5d4-0264-51e0-919d-7d84b96be8a1",
+          "2e772726-af3a-5313-98f6-b397d840134d",
+          "2f279b61-3fd5-51f7-bc95-2971c8fdcaa7",
+          "2f30f66f-653d-5fcf-beb0-933e1e70ee1f",
+          "393bb642-8b5c-57e4-8cc5-dc69c8ca95aa",
+          "4ba531c6-6101-5eb5-8447-cae54b597da9",
+          "614e3566-c4d5-5199-b50a-4363dd8e67b9",
+          "63b70984-9fce-572d-baff-9dc758f94489",
+          "67680c8a-97e5-5dbe-b6bc-112707ae16bb",
+          "70baaea0-59d2-5172-8055-f90ecdc3d9e8",
+          "79cbde2e-3045-5df1-ad65-8684bf659ee6",
+          "84a530f9-e8c6-50ad-b575-aff0429ab404",
+          "84ee0fbb-cde7-5aa6-922e-b1b2e8ec4d9a",
+          "857c9d04-d617-5abd-800e-f4ee2278ae8d",
+          "8885afb5-b034-57e9-99ba-6842632c212b",
+          "984834de-986f-5e89-97e1-e53e00fd8fcc",
+          "9eb021c4-a45d-4e91-bb20-d4d5181c4b6c",
+          "a232a4a3-f7ed-57aa-97fd-691457f3a4f4",
+          "a316bf4f-a922-581e-8d08-9fa1eb3040e9",
+          "aca1c163-8143-534e-b03b-0b4fc153e36b",
+          "b7aa2dd4-5652-545c-a9e5-7299d2ed8d85",
+          "b894f702-ecdc-52df-9937-8ac99cbeaa97",
+          "bb998cff-7baa-5b53-ad63-93dd4761eeec",
+          "c030a64f-91eb-50aa-be35-b8608ec7bbc4",
+          "cf0ff5bf-728a-5db5-9c8f-a2cb144d1613",
+          "d2dcd4fd-e7ba-5221-900d-393921e04e49",
+          "d4262ba7-ad23-5c39-a419-fcb1b9fdb811",
+          "d8f7b4af-0241-5436-890d-f0e96099fb9b",
+          "d98d09a0-2a5e-514f-b651-68cd12d46f5a",
+          "f8fbd624-951f-5b44-af09-4cd6b198a4ab"
+        ],
+        [
+          "c1939946-4449-4887-9393-3ef03908d4dd"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO25",
+      "endpoint_uuids": [
+        "254b9a4f-db28-4c96-a610-c908a1ce5922",
+        "b0f62a3d-7abe-4631-9255-1097dbefcea8"
+      ],
+      "complete_components": [
+        [
+          "16d36864-1ae9-543e-8845-aead08f7ac5f",
+          "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f",
+          "416688ab-b279-575a-9d8a-7ea51d688453",
+          "4c7ccfd8-8e2f-4e56-a999-4de5f911e424",
+          "b0f62a3d-7abe-4631-9255-1097dbefcea8",
+          "c3d6fa14-169e-5e32-b491-af7a8b84ed48",
+          "cfce1137-3d51-544f-a8bb-fe40ad962e51",
+          "d5baa42e-4fa2-5561-8d05-51881c6e128d"
+        ],
+        [
+          "254b9a4f-db28-4c96-a610-c908a1ce5922"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO26",
+      "endpoint_uuids": [
+        "1740585c-6e03-5d0e-8448-78c4eddb0baa",
+        "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+      ],
+      "complete_components": [
+        [
+          "040f4c2d-8d80-57cd-ae09-80675e8f51b7",
+          "0b1dbea3-9c79-4a9a-9190-fcfc11af433c",
+          "0b36fd54-1f19-5440-8d20-668bbe1068a2",
+          "167d5183-fa83-5532-b1bb-9de0165d22c6",
+          "1740585c-6e03-5d0e-8448-78c4eddb0baa",
+          "39b74e8c-6a31-5580-8cbf-4fbe3075ae61",
+          "625bfc02-1b61-50da-8629-f113b4f0aea8",
+          "771af23d-3625-5ff9-b3c4-cbed73b2e3f5",
+          "827a4a40-133e-53a0-bf18-d5d6cf356af2",
+          "a66a30df-1594-5703-83c0-768c0a7d6451",
+          "b55b1a7d-7611-587b-bb2e-1fd47ab0df00",
+          "bd802b99-b69a-541e-8c03-5e3e27a2a83e",
+          "d4d89708-1b6c-56fe-8c2f-207ff79756ff",
+          "dff77e8a-f230-540c-8a32-9e52312de800",
+          "e65cface-2cca-4740-b0cf-1b77f43933e7",
+          "e8e048d8-5739-5cf5-b7fa-c7a96d51109f"
+        ],
+        [
+          "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO27",
+      "endpoint_uuids": [
+        "0edef198-5c80-419d-865b-5ec49cd8067c",
+        "48515e67-f469-46fd-945e-80e221d7f8ff"
+      ],
+      "complete_components": [
+        [
+          "006ac956-fe3d-5f2f-a629-fcb845d23a76",
+          "0edef198-5c80-419d-865b-5ec49cd8067c",
+          "1ec72477-ba8d-5eb2-b7b7-4a3051373e9b",
+          "234f533b-59a5-5543-bc36-5c2ac03cca23",
+          "28fed3cc-5bac-58a2-bb2b-58286c5ca793",
+          "34bb41f7-4b0a-5000-a98f-451550060349",
+          "422086ea-c1f4-56c8-808d-5e728b4c4d16",
+          "50643941-d0f1-530b-be44-d4cd677369e8",
+          "6cd226b8-3b1c-5ae0-9313-36ba83d98c49",
+          "6ddc90df-bd01-54dd-8fec-cf090cd50e99",
+          "8681e260-0185-530e-8db8-b9a17d5f26f9",
+          "9a8e10be-ae7b-5763-a538-f63538b90298",
+          "bb901587-7945-566e-a42b-ba34434a7e24",
+          "bec3b551-6553-5afc-a458-69b20e8d1556",
+          "c893b95e-46b2-557f-83ea-094ca5fc60a0",
+          "d3875439-845c-44fa-931f-23b5b7d41ae7",
+          "d5354eed-6db2-5320-bb1e-d038c9cd47ed",
+          "d8066246-2b0d-5cf1-b2c3-4404ba742adc",
+          "fad5f335-2c81-5c97-963b-f4b185d2ecd7"
+        ],
+        [
+          "48515e67-f469-46fd-945e-80e221d7f8ff"
+        ]
+      ]
+    }
+  ],
+  "candidate_records": [
+    {
+      "net": "EXT_GPIO24",
+      "endpoint_uuids": [
+        "8acfaaa0-99ff-425a-b370-70be0fbb3868",
+        "e01faed3-83ab-447f-badb-64e03c26621d"
+      ],
+      "complete_components": [
+        [
+          "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+        ],
+        [
+          "e01faed3-83ab-447f-badb-64e03c26621d"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO24",
+      "endpoint_uuids": [
+        "3827e42c-c508-4185-8351-759c94512528",
+        "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+      ],
+      "complete_components": [
+        [
+          "3827e42c-c508-4185-8351-759c94512528"
+        ],
+        [
+          "8acfaaa0-99ff-425a-b370-70be0fbb3868"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO25",
+      "endpoint_uuids": [
+        "a18e6e59-fb74-4513-a5f4-6a34d9223429",
+        "bee40e5c-5047-43dd-8262-df42b4062ba6"
+      ],
+      "complete_components": [
+        [
+          "a18e6e59-fb74-4513-a5f4-6a34d9223429"
+        ],
+        [
+          "bee40e5c-5047-43dd-8262-df42b4062ba6"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO25",
+      "endpoint_uuids": [
+        "bee40e5c-5047-43dd-8262-df42b4062ba6",
+        "cff436d2-a051-486a-8eda-ad80c8687157"
+      ],
+      "complete_components": [
+        [
+          "bee40e5c-5047-43dd-8262-df42b4062ba6"
+        ],
+        [
+          "cff436d2-a051-486a-8eda-ad80c8687157"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO26",
+      "endpoint_uuids": [
+        "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76",
+        "df690eec-df6a-52bf-82fe-eace87245374"
+      ],
+      "complete_components": [
+        [
+          "00413816-4339-5bd8-913f-e1ae6708a3e9",
+          "0042d17a-b3c1-5b38-8f6c-f70b8598fceb",
+          "02045211-177a-5dbf-b74d-732d1f9bd3ad",
+          "09b07266-a7c4-50ce-9440-e7d3cde2174b",
+          "194e52fe-9739-5502-a2cb-2e71b4e19a78",
+          "28cd3c37-8361-5c39-8d60-61e9bfc427f4",
+          "31b0bb81-5977-5026-b0d7-8830c2b66c87",
+          "38d14e66-2199-5b3c-b896-20317913312b",
+          "3901c74f-3969-5bc7-b1ae-4d50b7f8ac8b",
+          "55b63a33-34a2-50e8-9450-6def28fdd835",
+          "55e8d947-a16f-580f-8442-ed8007a7faf3",
+          "60c7e145-2571-57cd-a0e8-24e503f31de3",
+          "61457a9d-06fa-45ae-8ba5-7fe97a547950",
+          "661bdc53-a387-5d90-bf1b-420453d31e02",
+          "68b4bc7d-a614-5151-8783-0fb2ed4ab8da",
+          "6ee3a3fb-4975-5a94-8b83-b9edad68f384",
+          "76015e03-58a6-5c88-b481-9c628c5b1061",
+          "8364d1e8-69ff-55f4-9edd-11055f4b359d",
+          "8cbc3f79-e5e6-5daa-8173-ef793c827ba0",
+          "8e174a69-1f7c-516a-9580-2d7ce2fba081",
+          "9802007f-2fe7-4459-b27f-4f1f6eb27cb3",
+          "9984681e-25a3-51b9-a236-3bd8f73abe2d",
+          "9b4ddac5-fd01-549c-baf8-00800c8a2f0e",
+          "a1fabb23-ffb6-5fee-b3b5-10efd2887a51",
+          "aa5ae685-e33a-5d71-9284-8efbebc5c214",
+          "b1853792-3019-54cf-89b0-b160b306b90e",
+          "b535b963-741a-5756-a0ae-0b3b606abe3c",
+          "bd60c430-58d5-568a-b034-a604187f20ee",
+          "cfedd418-a3b4-5016-b51e-d48eaa03c090",
+          "d00a323a-b4cb-5766-b318-0404b447348a",
+          "d6662151-848a-52e1-b361-62aa0637ffc9",
+          "da42bb89-2c8f-5bff-aadb-1f43b376892d",
+          "de4d86b4-8d2b-5e90-bdaa-4fa0838aea0d",
+          "df690eec-df6a-52bf-82fe-eace87245374",
+          "e70ba651-5257-5674-afb1-e470c4fd1cea",
+          "e76b1f55-7c17-570e-ae72-6dcfb50f0e4d",
+          "ea0411ef-ec1d-5201-9218-85daaf55457b",
+          "ea7d7e12-ab62-5072-bff2-db8c415ccc4b",
+          "ec77142f-a781-576e-bb69-b430a6d9bd50",
+          "f8fcb56c-c254-5033-b942-57064178b049",
+          "fd6788ce-7793-5100-b98b-216332d0640b",
+          "ffd6e86a-3da1-5a68-ba75-acc4238771bb"
+        ],
+        [
+          "81ec2c48-c3ec-41e7-b9cc-fa35b56e1e76"
+        ]
+      ]
+    },
+    {
+      "net": "EXT_GPIO27",
+      "endpoint_uuids": [
+        "38f37228-2ce2-4edd-bea2-10e387e0f52d",
+        "86bf9e60-5de3-41d8-afec-7db12426463b"
+      ],
+      "complete_components": [
+        [
+          "039c01f0-51e3-463a-98ee-b2f3d53dde2a",
+          "0e73ac65-a9b4-4b6b-abe0-7ce38aa672b2",
+          "109ac26e-bb64-4b26-940f-8d268f65bfde",
+          "13d43ee1-81c8-43cf-9a3c-bda35eab742b",
+          "149adc1e-7570-4ab2-a361-61dafbd19a92",
+          "16ef6513-d62e-4f2c-9f17-9b2f44bb9f2e",
+          "1846ea10-e520-4d6a-851e-340c8bef2b24",
+          "1911288d-7b9f-488d-b983-b70b856aa753",
+          "197c4063-5077-42af-8ea0-6377784edeb4",
+          "1be5f3f7-b3fd-4cc0-8d13-71d75a80ab2c",
+          "1f883907-7fab-417e-9752-92a032e409fa",
+          "2167dc2c-860f-4e79-9bc0-5748d588cfd0",
+          "2f448314-1823-4bf6-9ced-964f12161eed",
+          "2fb29e2f-05c6-4a6b-b073-d0cbbf135cd5",
+          "39f00117-fbdf-4d6a-a322-7f285d2706fc",
+          "42ad24dd-137e-401b-a9bb-c8e832de8d98",
+          "46602c0c-a749-49d6-87a9-72389f08daae",
+          "471a1561-c6ff-481e-a4c0-795ac79209b3",
+          "47f57618-88dc-44ec-b451-9a97c304e794",
+          "49a09950-8fc7-4319-b6b0-620fe69467b3",
+          "5459ffd3-8b6e-4774-b58e-bcb249788ae0",
+          "8057e8eb-b49a-47c5-83d7-1b2ec567104a",
+          "850a9e29-f982-41f9-bff7-d4262cfeb156",
+          "86bf9e60-5de3-41d8-afec-7db12426463b",
+          "9ef12015-3aff-4f0e-9759-7707b4c50eb2",
+          "a3aaf72e-4be2-4fcc-9be9-47a379f449c3",
+          "a898d7f5-33e9-463f-886b-2cc35bace964",
+          "a8d55e68-0bd6-40c9-bbc8-23cec98e894a",
+          "a9365c1e-dabf-41fe-a07e-e24b922b3149",
+          "abffa290-1121-40d1-bf11-ce43c67e766a",
+          "b097e346-ff38-486c-8c82-f4dcc1ff9c1c",
+          "b9aaeda7-bee6-4b3f-8ecf-02e0282237ef",
+          "bbabc3e8-b962-4953-875b-636ded96b044",
+          "bd432349-ab51-4f29-a4e8-5767aea67291",
+          "c2ed6bcf-3ae5-4bb4-9844-94b603745e8f",
+          "c5c8942e-59e1-4547-be3c-b823b5244044",
+          "c6e3b80b-c6c1-4539-a534-a35d0accd0f4",
+          "cf6cdfd3-170e-4172-9571-75058d9994ec",
+          "d7d250ae-9234-46b7-9083-25e7772ac0d7",
+          "e3b0557a-cbf1-4edb-a007-08794aca68c2",
+          "f2f057a8-37f3-4b86-92a3-b0beef20d4dd",
+          "f3a7ce1e-eedd-4a5a-adb4-e5d745f2a146",
+          "f43154b6-7ae6-4fed-93f3-3bfa12fdd5a8",
+          "fb1f1ba6-22e8-4703-9ed7-28cb3d85eb03",
+          "fe662e5e-1f7a-4ad5-bb8b-84634d00b955",
+          "fea0f8c7-6e3d-43ba-b647-03ab94220fc7",
+          "ff77188d-2fc3-4a8d-a063-b509b154a142"
+        ],
+        [
+          "38f37228-2ce2-4edd-bea2-10e387e0f52d"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO3",
+      "endpoint_uuids": [
+        "5a0545bd-febf-49dd-9baa-b129430d4f9c",
+        "7610c2f0-d25f-5392-9c6d-51572f345960"
+      ],
+      "complete_components": [
+        [
+          "0924efe7-58d6-5d4a-ad5f-d5415774bdfe",
+          "1ec9f1c8-bf6e-57a2-9d5d-7d0c6c58146b",
+          "327dee03-8edf-5911-8357-371fb2302139",
+          "44b6803c-9e29-4c19-b79c-2139d69a0a64",
+          "5ccc2b24-c6c0-5a90-b5ac-1af0bc9246b4",
+          "63c29009-f2f3-52ce-a33f-644c2df02340",
+          "65dd6ef4-f12e-535b-b4c0-821355b051e2",
+          "664aa9ce-e683-5c88-8790-bc965aa86538",
+          "69b06049-b85a-59f7-a3c0-cb9698f700de",
+          "7610c2f0-d25f-5392-9c6d-51572f345960",
+          "874b6ac4-f16c-5090-aad2-fc89ddebbdd3",
+          "90fe5489-1792-5aae-8a17-93babc5ee1bb",
+          "9263da58-fd29-5ad9-a050-facc262ae62c",
+          "9c2954c2-3596-5529-a9fc-87aa7233be4c",
+          "a5771de5-6304-53ff-ab35-98ed8575f005",
+          "ab4866e1-15a8-4028-9834-b9f0631586b3",
+          "b35a514f-dc3e-532d-a8d6-d982398f4c74",
+          "b4d27dd6-4459-568e-85bb-12c24faa504f",
+          "b5bdc8e1-089e-5645-8ed0-0e82b7877702",
+          "b9e0464a-91dd-5a3d-849b-d78a21b5043c",
+          "c0cd304e-5aff-580f-8534-5ac7da15557b",
+          "d2bd4711-5bab-5ee6-8fb7-484da3f9add1",
+          "d991a50a-0b42-5bba-9bb5-72bf68d8cdfd",
+          "dbf05def-e785-5f60-ae93-1e952aeae4d7",
+          "ea8bebfe-bfcf-540d-bd47-38cfbc637832",
+          "f10ae70d-7b8c-5303-966a-3e747b86e627",
+          "f29dc6e6-e29a-594e-8a4d-75fc7a497f10",
+          "f4e33ecc-9f76-58ee-93dc-35730e448a0f",
+          "fa9eafbf-38cf-5116-9031-9a75ec09644b",
+          "fd4942cc-8556-5c5e-ba2b-2e709657f8ca"
+        ],
+        [
+          "5a0545bd-febf-49dd-9baa-b129430d4f9c"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO10",
+      "endpoint_uuids": [
+        "2fae1e1e-2f58-4081-9638-13aea2289d7d",
+        "3289f5ae-a6a0-55fb-8040-2ff133e55784"
+      ],
+      "complete_components": [
+        [
+          "051d7e9f-8c14-583e-a304-ee3212964756",
+          "15ae6ced-cf16-4c85-b62f-435f883fa81e",
+          "1eb7d81e-1e50-543f-9fd2-3c57d7201ff3",
+          "3289f5ae-a6a0-55fb-8040-2ff133e55784",
+          "64b4f2b3-2238-565b-a75d-c8e4fcb0ee6d",
+          "aa97e8d3-aa1a-5d18-a5cc-aed92d5d84c3",
+          "feb9504b-9acd-40d1-adcb-fbe805276c86"
+        ],
+        [
+          "2fae1e1e-2f58-4081-9638-13aea2289d7d"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO24",
+      "endpoint_uuids": [
+        "984834de-986f-5e89-97e1-e53e00fd8fcc",
+        "c1939946-4449-4887-9393-3ef03908d4dd"
+      ],
+      "complete_components": [
+        [
+          "06f85e3e-b021-59be-a936-56812856a49e",
+          "08941138-5fe6-5a8d-b19e-9d81808649ff",
+          "1b5f6616-7d8d-5b21-ab82-22052c0f9197",
+          "1bea95b1-3adb-4a80-a0ba-9574c6d9b43b",
+          "1dfbde81-b5d5-55ec-81d3-967187affe93",
+          "1f92f5d4-0264-51e0-919d-7d84b96be8a1",
+          "2e772726-af3a-5313-98f6-b397d840134d",
+          "2f279b61-3fd5-51f7-bc95-2971c8fdcaa7",
+          "2f30f66f-653d-5fcf-beb0-933e1e70ee1f",
+          "393bb642-8b5c-57e4-8cc5-dc69c8ca95aa",
+          "4ba531c6-6101-5eb5-8447-cae54b597da9",
+          "614e3566-c4d5-5199-b50a-4363dd8e67b9",
+          "63b70984-9fce-572d-baff-9dc758f94489",
+          "67680c8a-97e5-5dbe-b6bc-112707ae16bb",
+          "70baaea0-59d2-5172-8055-f90ecdc3d9e8",
+          "79cbde2e-3045-5df1-ad65-8684bf659ee6",
+          "84a530f9-e8c6-50ad-b575-aff0429ab404",
+          "84ee0fbb-cde7-5aa6-922e-b1b2e8ec4d9a",
+          "857c9d04-d617-5abd-800e-f4ee2278ae8d",
+          "8885afb5-b034-57e9-99ba-6842632c212b",
+          "984834de-986f-5e89-97e1-e53e00fd8fcc",
+          "9eb021c4-a45d-4e91-bb20-d4d5181c4b6c",
+          "a232a4a3-f7ed-57aa-97fd-691457f3a4f4",
+          "a316bf4f-a922-581e-8d08-9fa1eb3040e9",
+          "aca1c163-8143-534e-b03b-0b4fc153e36b",
+          "b7aa2dd4-5652-545c-a9e5-7299d2ed8d85",
+          "b894f702-ecdc-52df-9937-8ac99cbeaa97",
+          "bb998cff-7baa-5b53-ad63-93dd4761eeec",
+          "c030a64f-91eb-50aa-be35-b8608ec7bbc4",
+          "cf0ff5bf-728a-5db5-9c8f-a2cb144d1613",
+          "d2dcd4fd-e7ba-5221-900d-393921e04e49",
+          "d4262ba7-ad23-5c39-a419-fcb1b9fdb811",
+          "d8f7b4af-0241-5436-890d-f0e96099fb9b",
+          "d98d09a0-2a5e-514f-b651-68cd12d46f5a",
+          "f8fbd624-951f-5b44-af09-4cd6b198a4ab"
+        ],
+        [
+          "c1939946-4449-4887-9393-3ef03908d4dd"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO25",
+      "endpoint_uuids": [
+        "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f",
+        "254b9a4f-db28-4c96-a610-c908a1ce5922"
+      ],
+      "complete_components": [
+        [
+          "16d36864-1ae9-543e-8845-aead08f7ac5f",
+          "19fbbf44-02f9-5ba8-bc74-0706c06a4e2f",
+          "416688ab-b279-575a-9d8a-7ea51d688453",
+          "4c7ccfd8-8e2f-4e56-a999-4de5f911e424",
+          "b0f62a3d-7abe-4631-9255-1097dbefcea8",
+          "c3d6fa14-169e-5e32-b491-af7a8b84ed48",
+          "cfce1137-3d51-544f-a8bb-fe40ad962e51",
+          "d5baa42e-4fa2-5561-8d05-51881c6e128d"
+        ],
+        [
+          "254b9a4f-db28-4c96-a610-c908a1ce5922"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO26",
+      "endpoint_uuids": [
+        "a71398b4-f7e8-4d77-820d-99a4c9a4d9df",
+        "d4d89708-1b6c-56fe-8c2f-207ff79756ff"
+      ],
+      "complete_components": [
+        [
+          "040f4c2d-8d80-57cd-ae09-80675e8f51b7",
+          "0b1dbea3-9c79-4a9a-9190-fcfc11af433c",
+          "0b36fd54-1f19-5440-8d20-668bbe1068a2",
+          "167d5183-fa83-5532-b1bb-9de0165d22c6",
+          "1740585c-6e03-5d0e-8448-78c4eddb0baa",
+          "39b74e8c-6a31-5580-8cbf-4fbe3075ae61",
+          "625bfc02-1b61-50da-8629-f113b4f0aea8",
+          "771af23d-3625-5ff9-b3c4-cbed73b2e3f5",
+          "827a4a40-133e-53a0-bf18-d5d6cf356af2",
+          "a66a30df-1594-5703-83c0-768c0a7d6451",
+          "b55b1a7d-7611-587b-bb2e-1fd47ab0df00",
+          "bd802b99-b69a-541e-8c03-5e3e27a2a83e",
+          "d4d89708-1b6c-56fe-8c2f-207ff79756ff",
+          "dff77e8a-f230-540c-8a32-9e52312de800",
+          "e65cface-2cca-4740-b0cf-1b77f43933e7",
+          "e8e048d8-5739-5cf5-b7fa-c7a96d51109f"
+        ],
+        [
+          "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+        ]
+      ]
+    },
+    {
+      "net": "MCU_GPIO27",
+      "endpoint_uuids": [
+        "0edef198-5c80-419d-865b-5ec49cd8067c",
+        "48515e67-f469-46fd-945e-80e221d7f8ff"
+      ],
+      "complete_components": [
+        [
+          "006ac956-fe3d-5f2f-a629-fcb845d23a76",
+          "0edef198-5c80-419d-865b-5ec49cd8067c",
+          "1ec72477-ba8d-5eb2-b7b7-4a3051373e9b",
+          "234f533b-59a5-5543-bc36-5c2ac03cca23",
+          "28fed3cc-5bac-58a2-bb2b-58286c5ca793",
+          "34bb41f7-4b0a-5000-a98f-451550060349",
+          "422086ea-c1f4-56c8-808d-5e728b4c4d16",
+          "50643941-d0f1-530b-be44-d4cd677369e8",
+          "6cd226b8-3b1c-5ae0-9313-36ba83d98c49",
+          "6ddc90df-bd01-54dd-8fec-cf090cd50e99",
+          "8681e260-0185-530e-8db8-b9a17d5f26f9",
+          "9a8e10be-ae7b-5763-a538-f63538b90298",
+          "bb901587-7945-566e-a42b-ba34434a7e24",
+          "bec3b551-6553-5afc-a458-69b20e8d1556",
+          "c893b95e-46b2-557f-83ea-094ca5fc60a0",
+          "d3875439-845c-44fa-931f-23b5b7d41ae7",
+          "d5354eed-6db2-5320-bb1e-d038c9cd47ed",
+          "d8066246-2b0d-5cf1-b2c3-4404ba742adc",
+          "fad5f335-2c81-5c97-963b-f4b185d2ecd7"
+        ],
+        [
+          "48515e67-f469-46fd-945e-80e221d7f8ff"
+        ]
+      ]
+    }
+  ],
+  "method": "Independent union-find from all positive direct/zone edges; exact full UUID member sets per endpoint pair, not count or same-net equivalence. Native exported type/net/position/layer/ref/pin/length validate every observed endpoint."
+}

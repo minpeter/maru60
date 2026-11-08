@@ -1,0 +1,1 @@
+CHECKED PARTIAL LAUNCH, UNSELECTED. No MCU pair closed. Native 9 opens / 43 warnings / 0 other errors; declared contact and plane-web/pour changes remain. See ../REPORT.md and ../FINAL.json. Not SI, active power stability or manufacturing approval.

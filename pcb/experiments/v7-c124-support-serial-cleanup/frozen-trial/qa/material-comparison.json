@@ -1,0 +1,246 @@
+{
+  "status": "PASS actual serial-route material graph within explicit changed-three-object scope",
+  "source_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "actual_sha256": "abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d",
+  "source_graph_sha256": "304954c5b4195c28bcea68ef950625584efd557fd3475430c1245c0078ff877c",
+  "actual_graph_sha256": "a911d5715d358ef7ad1d4c9f4eac2a0670b2edeba18411195ab7d61685930740",
+  "checks": {
+    "same_objects": true,
+    "same_material_nodes": true,
+    "all_pad_partitions_exact": true,
+    "all_unaffected_material_nodes_exact": true,
+    "all_barrel_proofs_exact": true,
+    "all_guard_failures_exact": true,
+    "pad_inventory_exact": true,
+    "all_nonincident_material_edges_exact": true,
+    "all_net_component_relations_preserved": true
+  },
+  "changed_material_nodes": {
+    "object:f41eeb49-8180-5bac-bccf-c1a0b3b4c547:2:0": {
+      "before": {
+        "kind": "object",
+        "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+        "layer": "B.Cu",
+        "index": 0,
+        "area_mm2": 0.213247579589,
+        "net": "USB_UVLO"
+      },
+      "after": {
+        "kind": "object",
+        "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+        "layer": "B.Cu",
+        "index": 0,
+        "area_mm2": 0.1925998097305,
+        "net": "USB_UVLO"
+      }
+    },
+    "object:abcd4fb1-881b-43f9-906e-39d93366692e:2:0": {
+      "before": {
+        "kind": "object",
+        "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+        "layer": "B.Cu",
+        "index": 0,
+        "area_mm2": 0.1906957360865,
+        "net": "GND"
+      },
+      "after": {
+        "kind": "object",
+        "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+        "layer": "B.Cu",
+        "index": 0,
+        "area_mm2": 0.0725095060865,
+        "net": "GND"
+      }
+    },
+    "object:ae94ea04-2d21-5f84-8952-7f8960275e00:2:0": {
+      "before": {
+        "kind": "object",
+        "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+        "layer": "B.Cu",
+        "index": 0,
+        "area_mm2": 0.3440065978605,
+        "net": "USB_OVLO"
+      },
+      "after": {
+        "kind": "object",
+        "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+        "layer": "B.Cu",
+        "index": 0,
+        "area_mm2": 0.328575920505,
+        "net": "USB_OVLO"
+      }
+    }
+  },
+  "retired_or_changed_direct_contact_witnesses": [
+    [
+      "66453383-04ef-5371-8252-4d0004d7a05d",
+      "abcd4fb1-881b-43f9-906e-39d93366692e",
+      [
+        [
+          "B.Cu",
+          0.0315113215375
+        ]
+      ]
+    ],
+    [
+      "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+      [
+        [
+          "B.Cu",
+          0.1509971057445
+        ]
+      ]
+    ],
+    [
+      "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "b9c65313-e1f2-5c81-8e18-abc631b792ae",
+      [
+        [
+          "B.Cu",
+          0.017672159396
+        ]
+      ]
+    ],
+    [
+      "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "cc1282fe-f0b3-5fea-9d45-66eea8068d66",
+      [
+        [
+          "B.Cu",
+          0.0329482783235
+        ]
+      ]
+    ],
+    [
+      "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "e218cfe4-e4ba-5b6c-985d-8f1da39a4402",
+      [
+        [
+          "B.Cu",
+          0.017690946176
+        ]
+      ]
+    ],
+    [
+      "32e162df-abf9-5325-93bb-b71d84e9d850",
+      "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      [
+        [
+          "B.Cu",
+          0.017695026429
+        ]
+      ]
+    ],
+    [
+      "751dcade-77aa-4c93-aab3-170f1229e0e4",
+      "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      [
+        [
+          "B.Cu",
+          0.017715203511
+        ]
+      ]
+    ],
+    [
+      "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed",
+      "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      [
+        [
+          "B.Cu",
+          0.0038718109395
+        ]
+      ]
+    ],
+    [
+      "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a",
+      "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      [
+        [
+          "B.Cu",
+          0.0366695946005
+        ]
+      ]
+    ]
+  ],
+  "added_or_changed_direct_contact_witnesses": [
+    [
+      "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+      [
+        [
+          "B.Cu",
+          0.0328110341625
+        ]
+      ]
+    ],
+    [
+      "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "b9c65313-e1f2-5c81-8e18-abc631b792ae",
+      [
+        [
+          "B.Cu",
+          0.0176723395265
+        ]
+      ]
+    ],
+    [
+      "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "cc1282fe-f0b3-5fea-9d45-66eea8068d66",
+      [
+        [
+          "B.Cu",
+          0.0187017769525
+        ]
+      ]
+    ],
+    [
+      "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "e218cfe4-e4ba-5b6c-985d-8f1da39a4402",
+      [
+        [
+          "B.Cu",
+          0.0033531100545
+        ]
+      ]
+    ],
+    [
+      "32e162df-abf9-5325-93bb-b71d84e9d850",
+      "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      [
+        [
+          "B.Cu",
+          0.017699413008
+        ]
+      ]
+    ],
+    [
+      "751dcade-77aa-4c93-aab3-170f1229e0e4",
+      "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      [
+        [
+          "B.Cu",
+          0.0002875458685
+        ]
+      ]
+    ],
+    [
+      "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a",
+      "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      [
+        [
+          "B.Cu",
+          0.018701701818
+        ]
+      ]
+    ]
+  ],
+  "physical_edges_changed_only_incident_to": [
+    "abcd4fb1-881b-43f9-906e-39d93366692e",
+    "ae94ea04-2d21-5f84-8952-7f8960275e00",
+    "f41eeb49-8180-5bac-bccf-c1a0b3b4c547"
+  ],
+  "all14_full_source_supports_separate_actual_proof": "qa/actual-serial-guards.json",
+  "note": "Same-net contact ownership changes as support tracks become genuine serial legs; no source-patch loss is waived. Individual old pair areas are not falsely called unchanged.",
+  "guard_failure_count_retained": 51
+}

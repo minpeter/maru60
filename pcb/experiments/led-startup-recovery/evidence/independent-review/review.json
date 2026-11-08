@@ -1,0 +1,84 @@
+{
+  "verdict": "SOURCE_BOUND_APPROVAL_ELIGIBLE_FOR_DISABLED_RECOVERY_CANDIDATE",
+  "blocking_source_defects": [],
+  "source_directory": "/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/firmware/qmk/keyboards/maru60/rp2350",
+  "source_hashes": {
+    "config.h": "3923a07e7329edf1bc8f78067b56c8a093dd3f223bba0bc89ed652198bf2235d",
+    "keyboard.json": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69",
+    "keymaps/via/keymap.c": "bb80f8601a6818ca1c822745ef7a85d16ae94c627c2222478ec26956a762b494",
+    "keymaps/via_hhkb/keymap.c": "9d83cc8687de165cb52793cdb4808058d90b67625119ecad3402dc85068401ab",
+    "keymaps/via_hhkb/rules.mk": "a249d7b848b9ef246d4fa73a3fe8591fab9859323d7845d2681ead37eebc2e75",
+    "led_config.c": "e0845ffafa16aab35e58fdfe1bb1df97b56a18f2b63f9d2565b89e2fe0206291",
+    "maru60.c": "14ff9750932b512bca6d794398bef2a3dfe940da9a29e30346e4e5151d660036",
+    "maru_key_transport.c": "063d101e0c98e10fbf34ad3e2b10bf98962e58cfa160a7f97515bb8d8854c4c6",
+    "maru_layout.c": "e40b7484c8ef7821fa6b6033bcd353ecd9c1e66010a4b851467ea827c686dbc4",
+    "maru_layout_policy.h": "5311a1bef83dab42db1c6a0ce6897570cfbfe19a3c029b6bf2b1911ebe9254a9",
+    "maru_led_counts.h": "9f3f8775c3a775e6c973dc10b0c0694a42d8ba4d3ea49d37f588992d450f3b6b",
+    "maru_report_sync.c": "5a01ae6b906eeaed2b3ce8b056c913d9419032e4cbf377aa01dd98ccaaaf53f1",
+    "maru_report_sync.h": "6f87ef8a8c082b5ae9e57b797bce753eace04c46901810cdb7a9eccffb0dec53",
+    "maru_rgb.c": "dcb1acc86789b2a8f919769671dea8c5e2042fb20756cc15a6b2e3304e62ca52",
+    "maru_rgb.h": "85403c42339f1777106308a2cc4c537f84a5c84021d4f50ebf406c00fb6a618e",
+    "maru_rgb_policy.h": "db89d46aeae1d944d980f61f5d7c0544c8c985a8d561a2fea54e55cc788a99a7",
+    "maru_suspend.c": "5b9609f7911f6f6bdf46a5f7d27ccea0b5b6cd11d92cbd1b2746a7882f73982e",
+    "maru_suspend_masks.h": "9e8906bb18e76fe55cb4549e9ec03e6e4cdbea78085a5ddc1243adb9e8938ccd",
+    "maru_ug_transport.c": "caed702d6652ae0ffa2704d979b02eb84e35dae8783f0bc3c6f731877c3d3320",
+    "maru_via_schema.h": "2c81294491303c0d9ec1fb25e9f3b4161235e4843b74387ffa46f6cfc09bf172",
+    "maru_ws2812_transport.inc": "802e09fe8e95b9ce7e149b879e808f7c3ee6d772e244cebea61bb44f83ee3716",
+    "rules.mk": "509eed120a163447ac2462fb961f6026ca950397734458c927e990b4605b1a26"
+  },
+  "historical_overlay_exact_files": 19,
+  "new_files": [
+    "maru_rgb.c",
+    "maru_rgb.h",
+    "maru_ws2812_transport.inc"
+  ],
+  "known_receipt_sha256": "014760c1b73a68f413d515eb64d8a77d27e9d3c21b3cbbe222e63caac6e7ca6b",
+  "candidate_manifest_sha256": "ab7f168c0f973c5d9447ec305a3973f1b418467af5fa7018c93a26f58b46d500",
+  "candidate_file_count": 62,
+  "scope": "Read-only source review plus isolated host tests. No candidate files modified by reviewer.",
+  "verified": [
+    "Explicit OFF/SETTLING/ACTIVE flow; each enable epoch stops both chains and stages black before asserting EN; resumes occur only after elapsed interval.",
+    "No production settling interval or report is supplied. Qualification defaults OFF. Qualified compilation requires a nonempty string report and interval 1..2147483647.",
+    "USB-configured false, direct power OFF, both zones OFF and observed fault/readiness/EN failures invalidate the current state. Hardware/transport faults remain latched across USB cycles.",
+    "Direct OFF is intentionally not a persistent user disable: with policy allowed, a later task starts a new full settling epoch. Both zones OFF and unconfigured USB remain inhibited.",
+    "Guards run before each chain, after transport synchronization and immediately before DMA enable; a final post-underglow guard observes failure before returning.",
+    "Source-bound tests exercise default OFF with zero transport callbacks, invalid compile contracts, fault latching, boundaries and negative mutation controls.",
+    "Independent fresh fixture compiles actual maru_rgb.c and maru60.c at O0/O2 under UBSan, with 1/7/2147483647 ms synthetic intervals, wraparound, missing resources, cold and active faults, manual OFF, USB suspend/configure wrappers, EN loss, zone cycles, and shutdown."
+  ],
+  "test_counts": {
+    "reproduced_startup_executions": 90,
+    "reproduced_transport_executions": 288,
+    "invalid_contract_rejections": 7,
+    "killed_mutations": [
+      "skip-settling",
+      "retain-state",
+      "forget-fault",
+      "between-chains",
+      "black-first",
+      "post-sync",
+      "final-dma"
+    ],
+    "expected_nonatomic_limit_failures": 2,
+    "independent_lifecycle_executions": 73
+  },
+  "resolved_documentation_finding": "The initial firmware/tests/README.md gave obsolete enable-only build instructions and historical ARM verification without qualification. Reported to implementation owner, who corrected it. Reviewer reread the replacement README, BUILDING.md and top-level README; obsolete instructions and missing links were removed, and limitations are explicit.",
+  "limitations": [
+    "The 19/22 statement concerns historical active overlay file bytes, not recovery of the original lost working packet, verifier or logs. Three files are new source.",
+    "Reproduced transport tests compile only source-extracted ws2812_flush, not the full PIO/DMA translation units. Independent tests mock transports, GPIO, USB scheduling and time.",
+    "Expected submit-time fault controls fail by design, proving the polling-to-DMA gap is not atomic. No instantaneous fault-stop or physical cancellation-latency guarantee.",
+    "GPIO EN readback and /FAULT are not rail power-good; no measured settling interval, current/inrush/suspend electrical qualification or signal measurement exists.",
+    "Suspend tests prove actual wrapper calls and invalidation with mocked state notifications, not real QMK USB callback order, IRQ scheduling or host behavior.",
+    "No new pinned QMK/ARM build, full integration verifier, physical USB/hardware/VIA validation, flash, CAD changes, network publication or merge approval was performed.",
+    "Source eligibility applies only to the exact hashes in this report with production qualification OFF, and does not approve enabling, manufacturing, release or merging."
+  ],
+  "fixture_development_note": "Initial reviewer fixture incorrectly equated enable epochs with successful resumes after an intentionally aborted settling epoch. Fixed fixture to compare resume deltas; first failed attempt retained separately. No firmware change was needed.",
+  "artifacts": {
+    "reproduced/results.json": "23a5b47bc2101d1340258fefa0d61a379c5bac08c30e666d8055393449b97bfc",
+    "reproduced/guard/results.json": "07db6d15d8b6ff26e6150bd4f0128425c338e7723845adf48216bf1b4a0af905",
+    "independent/results/results.json": "624f2f35e2fd7b25762ebe56e8b1c74185099af7af5a937e9815020fe59c85ee",
+    "independent/lifecycle_test.c": "4df9464e66f0c837c6d17935dd9573c27a69f2ee60bf24228ff7186a6fc2b4b7",
+    "independent/run.py": "e48ea322f5f1a2f20041c97f9b1fa957295b8a1f3e504bdc06759703462f5d34",
+    "sealed-reproduced/results.json": "23a5b47bc2101d1340258fefa0d61a379c5bac08c30e666d8055393449b97bfc",
+    "final-reproduced/results.json": "75fcda19d6c91fe613bef174e024442ad9bbb39518aeb6d7f90ad90904756ddf"
+  }
+}

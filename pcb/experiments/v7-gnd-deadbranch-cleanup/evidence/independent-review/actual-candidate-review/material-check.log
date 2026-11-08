@@ -1,0 +1,47 @@
+{
+  "source_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "candidate_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "source_graph_sha256": "7a6ca935a3699b2d0a2e1e7b21de7c27059aa802e07080f904b8b80314170741",
+  "candidate_graph_sha256": "3d174b35c555dcce8b3df1097f664be12e4736cca1f750a005d46441b941452c",
+  "retained_material_nodes": 14685,
+  "retained_components": 382,
+  "all_retained_material_node_metadata_and_areas_exact": true,
+  "all_retained_material_component_memberships_preserved": true,
+  "all_245_pad_net_partitions_exact": true,
+  "all_51_guard_failures_exact": true,
+  "all_retained_material_edge_witness_areas_exact": true,
+  "all_zone_edge_witnesses_exact": true,
+  "all_934_barrel_proofs_exact": true,
+  "all_1269_physical_drills_retained": true,
+  "retained_boundary_via_barrel": {
+    "uuid": "277a8b55-ff78-53f6-840a-96fa0930cd16",
+    "type": "PCB_VIA",
+    "nodes": [
+      "object:277a8b55-ff78-53f6-840a-96fa0930cd16:0:0",
+      "object:277a8b55-ff78-53f6-840a-96fa0930cd16:4:0",
+      "object:277a8b55-ff78-53f6-840a-96fa0930cd16:6:0",
+      "object:277a8b55-ff78-53f6-840a-96fa0930cd16:2:0"
+    ],
+    "proof": "through span asserted; one positive annulus per copper layer; centered circular via or exact convex PTH hole enclosure proved; all-hole material has exact normalized native coordinate contour equality to own annulus; no foreign drill severs annulus"
+  },
+  "retained_inner_GND_plane_contacts": [
+    [
+      "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "object:277a8b55-ff78-53f6-840a-96fa0930cd16:4:0",
+      0.147260768161,
+      0.1472558792225
+    ],
+    [
+      "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "object:277a8b55-ff78-53f6-840a-96fa0930cd16:6:0",
+      0.147260768161,
+      0.1472558792225
+    ]
+  ],
+  "all_12_native_open_semantic_component_pairs_equal": true,
+  "raw_open_endpoint_entries_changed": 0,
+  "raw_open_report_rows_equal": true,
+  "source_drc_sha256": "9031bae4837fc39491c8de305e9d057f8286ceaf1e0b1fc89cc434298c6c5df7",
+  "candidate_drc_sha256": "d36d991b59314ab4e1aa50babdbd77f7bffd0b342d0f73f0bc254e36c490dfbf",
+  "status": "All bounded electrical/support checks pass. No powered or HF-ground qualification."
+}

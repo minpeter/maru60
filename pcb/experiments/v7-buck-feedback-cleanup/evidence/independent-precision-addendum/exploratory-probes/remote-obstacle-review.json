@@ -1,0 +1,3134 @@
+{
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "one_board_load_no_save_fill": true,
+  "native_build": "9.0.2+dfsg-1",
+  "native_coordinate_grid": {
+    "PCB_IU_PER_MM": 1000000.0,
+    "FromMM_1": 1000000,
+    "ToMM_1_IU": 1e-06,
+    "VECTOR2I_doc": "Proxy of C++ VECTOR2< int > class.",
+    "coordinate_type": "int"
+  },
+  "native_collision_controls_pass": true,
+  "all_remote_patch_hulls_clear_all_actual_holes_and_foreign_inner_copper_at_normal_zone_clearance": false,
+  "layers": [
+    {
+      "layer": "In1.Cu",
+      "zone_clearance_nm": 200000,
+      "all_inner_foreign_objects_considered": 966,
+      "all_actual_holes_considered": 1269,
+      "patch_count": 51,
+      "failures": 51,
+      "patches": [
+        {
+          "patch": 0,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              7828600,
+              85497381
+            ],
+            [
+              7840521,
+              85557309
+            ],
+            [
+              7865615,
+              85683465
+            ],
+            [
+              7845725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "eb2e4e32-86fa-460b-a173-71b55f5e98f4",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 1,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              8191645,
+              86176588
+            ],
+            [
+              8227432,
+              86200500
+            ],
+            [
+              8239327,
+              86208448
+            ],
+            [
+              8355651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "eb2e4e32-86fa-460b-a173-71b55f5e98f4",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 2,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              9826261,
+              85274284
+            ],
+            [
+              9830525,
+              85295720
+            ],
+            [
+              9831398,
+              85300110
+            ],
+            [
+              9831400,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "eb2e4e32-86fa-460b-a173-71b55f5e98f4",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 3,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              11765600,
+              85539302
+            ],
+            [
+              11788137,
+              85710489
+            ],
+            [
+              11794779,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "7c5329cb-cb6e-40e7-bac6-33933d23906c",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 4,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              17988600,
+              85497381
+            ],
+            [
+              18000521,
+              85557309
+            ],
+            [
+              18025615,
+              85683465
+            ],
+            [
+              18005725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "85712dfb-f292-4e2b-8f0d-d0112fabce1b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 5,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              18351645,
+              86176588
+            ],
+            [
+              18387432,
+              86200500
+            ],
+            [
+              18399327,
+              86208448
+            ],
+            [
+              18515651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "85712dfb-f292-4e2b-8f0d-d0112fabce1b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 6,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              31641100,
+              85497381
+            ],
+            [
+              31653021,
+              85557309
+            ],
+            [
+              31678115,
+              85683465
+            ],
+            [
+              31658225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "08821b49-6917-4c7e-b2fb-31e86d6bc5be",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 7,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              32004145,
+              86176588
+            ],
+            [
+              32039932,
+              86200500
+            ],
+            [
+              32051827,
+              86208448
+            ],
+            [
+              32168151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "08821b49-6917-4c7e-b2fb-31e86d6bc5be",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 8,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              33638761,
+              85274284
+            ],
+            [
+              33643025,
+              85295720
+            ],
+            [
+              33643898,
+              85300110
+            ],
+            [
+              33643900,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "08821b49-6917-4c7e-b2fb-31e86d6bc5be",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 9,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              35578100,
+              85539302
+            ],
+            [
+              35600637,
+              85710489
+            ],
+            [
+              35607279,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "d423645e-ab87-4b47-a14c-fd5a1e1fb41e",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 10,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              41801100,
+              85497381
+            ],
+            [
+              41813021,
+              85557309
+            ],
+            [
+              41838115,
+              85683465
+            ],
+            [
+              41818225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "b80c896e-2c06-4a39-bb3b-ae78e863ec60",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 11,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              42164145,
+              86176588
+            ],
+            [
+              42199932,
+              86200500
+            ],
+            [
+              42211827,
+              86208448
+            ],
+            [
+              42328151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "b80c896e-2c06-4a39-bb3b-ae78e863ec60",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 12,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              55453600,
+              85497381
+            ],
+            [
+              55465521,
+              85557309
+            ],
+            [
+              55490615,
+              85683465
+            ],
+            [
+              55470725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "6e087696-2807-4a17-a27c-88e5cd4c1577",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 13,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              55816645,
+              86176588
+            ],
+            [
+              55852432,
+              86200500
+            ],
+            [
+              55864327,
+              86208448
+            ],
+            [
+              55980651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "6e087696-2807-4a17-a27c-88e5cd4c1577",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 14,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              57451261,
+              85274284
+            ],
+            [
+              57455525,
+              85295720
+            ],
+            [
+              57456398,
+              85300110
+            ],
+            [
+              57456400,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "6e087696-2807-4a17-a27c-88e5cd4c1577",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 15,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              59390600,
+              85539302
+            ],
+            [
+              59413137,
+              85710489
+            ],
+            [
+              59419779,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "4b5f999d-c4c6-4afa-a181-38f819db0a96",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 16,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              65613600,
+              85497381
+            ],
+            [
+              65625521,
+              85557309
+            ],
+            [
+              65650615,
+              85683465
+            ],
+            [
+              65630725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "4ba04168-2586-402e-9596-170ee2fceaad",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 17,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              65976645,
+              86176588
+            ],
+            [
+              66012432,
+              86200500
+            ],
+            [
+              66024327,
+              86208448
+            ],
+            [
+              66140651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "4ba04168-2586-402e-9596-170ee2fceaad",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 18,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              103159309,
+              86149500
+            ],
+            [
+              103273890,
+              86180202
+            ],
+            [
+              103235065,
+              86169799
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "81598c3d-449f-442d-9d72-a33318b8b4ea",
+              "net": "COL8",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 19,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              102359309,
+              86149500
+            ],
+            [
+              102473890,
+              86180202
+            ],
+            [
+              102435065,
+              86169799
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "e18c292d-3e3b-41d1-8ebe-a3ca3e6337d4",
+              "net": "COL9",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 20,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              114999500,
+              85959309
+            ],
+            [
+              115017661,
+              86027085
+            ],
+            [
+              115030202,
+              86073890
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "01b638e5-d587-4d64-a4f6-de3de54a1d0f",
+              "net": "ROW0",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 21,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              115509309,
+              85449500
+            ],
+            [
+              115623890,
+              85480202
+            ],
+            [
+              115610193,
+              85476532
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "01b638e5-d587-4d64-a4f6-de3de54a1d0f",
+              "net": "ROW0",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 22,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              120626109,
+              85680202
+            ],
+            [
+              120670567,
+              85668289
+            ],
+            [
+              120740691,
+              85649500
+            ],
+            [
+              120704084,
+              85659309
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "6a56ea8e-e180-4411-be0e-3271cb72a365",
+              "net": "COL7",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 23,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              128499500,
+              85315892
+            ],
+            [
+              128519225,
+              85389507
+            ],
+            [
+              128533609,
+              85443190
+            ],
+            [
+              128524530,
+              85409307
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "2243f859-9e0b-49ea-a33e-ea763002a7c4",
+              "net": "LED_FAULT_N",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 24,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              136416100,
+              85497381
+            ],
+            [
+              136428021,
+              85557309
+            ],
+            [
+              136453115,
+              85683465
+            ],
+            [
+              136433225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 25,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              136779145,
+              86176588
+            ],
+            [
+              136814932,
+              86200500
+            ],
+            [
+              136826827,
+              86208448
+            ],
+            [
+              136943151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 26,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              138413761,
+              85274284
+            ],
+            [
+              138418025,
+              85295720
+            ],
+            [
+              138418898,
+              85300110
+            ],
+            [
+              138418900,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": false
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 27,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              140353100,
+              85539302
+            ],
+            [
+              140375637,
+              85710489
+            ],
+            [
+              140382279,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "d41420f9-3981-4a0d-a3e7-1da5d0ae8417",
+              "net": "",
+              "collides_at_200000nm_clearance": false
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "d41420f9-3981-4a0d-a3e7-1da5d0ae8417",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 28,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              146576100,
+              85497381
+            ],
+            [
+              146588021,
+              85557309
+            ],
+            [
+              146613115,
+              85683465
+            ],
+            [
+              146593225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 29,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              146939145,
+              86176588
+            ],
+            [
+              146974932,
+              86200500
+            ],
+            [
+              146986827,
+              86208448
+            ],
+            [
+              147103151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 30,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              148464931,
+              85873086
+            ],
+            [
+              148485310,
+              85823886
+            ],
+            [
+              148538948,
+              85694391
+            ],
+            [
+              148540416,
+              85690848
+            ],
+            [
+              148538151,
+              85696317
+            ],
+            [
+              148519771,
+              85740691
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 31,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              148540416,
+              85690848
+            ],
+            [
+              148540447,
+              85690691
+            ],
+            [
+              148578900,
+              85497379
+            ],
+            [
+              148545580,
+              85664891
+            ],
+            [
+              148540683,
+              85689507
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 32,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              148540416,
+              85106652
+            ],
+            [
+              148578900,
+              85300121
+            ],
+            [
+              148578899,
+              85300118
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": false
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 33,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              217378600,
+              85497381
+            ],
+            [
+              217390521,
+              85557309
+            ],
+            [
+              217415615,
+              85683465
+            ],
+            [
+              217395725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fcbdc763-0bad-4ed4-a4ae-0a53ef2c0d3b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 34,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              217741645,
+              86176588
+            ],
+            [
+              217777432,
+              86200500
+            ],
+            [
+              217789327,
+              86208448
+            ],
+            [
+              217905651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fcbdc763-0bad-4ed4-a4ae-0a53ef2c0d3b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 35,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              219376261,
+              85274284
+            ],
+            [
+              219380525,
+              85295720
+            ],
+            [
+              219381398,
+              85300110
+            ],
+            [
+              219381400,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fcbdc763-0bad-4ed4-a4ae-0a53ef2c0d3b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 36,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              221315600,
+              85539302
+            ],
+            [
+              221338137,
+              85710489
+            ],
+            [
+              221344779,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "312656bf-a01e-4ad8-a96d-4701dc6011a7",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 37,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              227538600,
+              85497381
+            ],
+            [
+              227550521,
+              85557309
+            ],
+            [
+              227575615,
+              85683465
+            ],
+            [
+              227555725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "2cdc186c-8fae-4268-932e-9e17e2f8f66c",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 38,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              227901645,
+              86176588
+            ],
+            [
+              227937432,
+              86200500
+            ],
+            [
+              227949327,
+              86208448
+            ],
+            [
+              228065651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "2cdc186c-8fae-4268-932e-9e17e2f8f66c",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 39,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              241191100,
+              85497381
+            ],
+            [
+              241203021,
+              85557309
+            ],
+            [
+              241228115,
+              85683465
+            ],
+            [
+              241208225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fccff7ed-e8a3-4213-bbec-1731cd7ad98d",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 40,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              241554145,
+              86176588
+            ],
+            [
+              241589932,
+              86200500
+            ],
+            [
+              241601827,
+              86208448
+            ],
+            [
+              241718151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fccff7ed-e8a3-4213-bbec-1731cd7ad98d",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 41,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              243188761,
+              85274284
+            ],
+            [
+              243193025,
+              85295720
+            ],
+            [
+              243193898,
+              85300110
+            ],
+            [
+              243193900,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fccff7ed-e8a3-4213-bbec-1731cd7ad98d",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 42,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              245128100,
+              85539302
+            ],
+            [
+              245150637,
+              85710489
+            ],
+            [
+              245157279,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "42c077a9-e813-45e5-b6e7-fdf85b09d788",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 43,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              251351100,
+              85497381
+            ],
+            [
+              251363021,
+              85557309
+            ],
+            [
+              251388115,
+              85683465
+            ],
+            [
+              251368225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "25a7ff5d-543f-4fd8-a680-5fd4b8a4e31a",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 44,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              251714145,
+              86176588
+            ],
+            [
+              251749932,
+              86200500
+            ],
+            [
+              251761827,
+              86208448
+            ],
+            [
+              251878151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "25a7ff5d-543f-4fd8-a680-5fd4b8a4e31a",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 45,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              265003600,
+              85497381
+            ],
+            [
+              265015521,
+              85557309
+            ],
+            [
+              265040615,
+              85683465
+            ],
+            [
+              265020725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "5995c635-83dd-4e7d-8eef-96e2646721f7",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 46,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              265366645,
+              86176588
+            ],
+            [
+              265402432,
+              86200500
+            ],
+            [
+              265414327,
+              86208448
+            ],
+            [
+              265530651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "5995c635-83dd-4e7d-8eef-96e2646721f7",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 47,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              267001261,
+              85274284
+            ],
+            [
+              267005525,
+              85295720
+            ],
+            [
+              267006398,
+              85300110
+            ],
+            [
+              267006400,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "5995c635-83dd-4e7d-8eef-96e2646721f7",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 48,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              268940600,
+              85539302
+            ],
+            [
+              268963137,
+              85710489
+            ],
+            [
+              268969779,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "492fceb4-6491-4a65-a2e2-7fd51f2519ea",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 49,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              275163600,
+              85497381
+            ],
+            [
+              275175521,
+              85557309
+            ],
+            [
+              275200615,
+              85683465
+            ],
+            [
+              275180725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "65868e41-b45b-4d74-9b61-b9dd150ad901",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 50,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              275526645,
+              86176588
+            ],
+            [
+              275562432,
+              86200500
+            ],
+            [
+              275574327,
+              86208448
+            ],
+            [
+              275690651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "65868e41-b45b-4d74-9b61-b9dd150ad901",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        }
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "zone_clearance_nm": 200000,
+      "all_inner_foreign_objects_considered": 743,
+      "all_actual_holes_considered": 1269,
+      "patch_count": 51,
+      "failures": 51,
+      "patches": [
+        {
+          "patch": 0,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              7828600,
+              85497381
+            ],
+            [
+              7840521,
+              85557309
+            ],
+            [
+              7865615,
+              85683465
+            ],
+            [
+              7845725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "eb2e4e32-86fa-460b-a173-71b55f5e98f4",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 1,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              8191645,
+              86176588
+            ],
+            [
+              8227432,
+              86200500
+            ],
+            [
+              8239327,
+              86208448
+            ],
+            [
+              8355651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "eb2e4e32-86fa-460b-a173-71b55f5e98f4",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 2,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              9826261,
+              85274284
+            ],
+            [
+              9830525,
+              85295720
+            ],
+            [
+              9831398,
+              85300110
+            ],
+            [
+              9831400,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "eb2e4e32-86fa-460b-a173-71b55f5e98f4",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 3,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              11765600,
+              85539302
+            ],
+            [
+              11788137,
+              85710489
+            ],
+            [
+              11794779,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "7c5329cb-cb6e-40e7-bac6-33933d23906c",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 4,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              17988600,
+              85497381
+            ],
+            [
+              18000521,
+              85557309
+            ],
+            [
+              18025615,
+              85683465
+            ],
+            [
+              18005725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "85712dfb-f292-4e2b-8f0d-d0112fabce1b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 5,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              18351645,
+              86176588
+            ],
+            [
+              18387432,
+              86200500
+            ],
+            [
+              18399327,
+              86208448
+            ],
+            [
+              18515651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "85712dfb-f292-4e2b-8f0d-d0112fabce1b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 6,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              31641100,
+              85497381
+            ],
+            [
+              31653021,
+              85557309
+            ],
+            [
+              31678115,
+              85683465
+            ],
+            [
+              31658225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "08821b49-6917-4c7e-b2fb-31e86d6bc5be",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 7,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              32004145,
+              86176588
+            ],
+            [
+              32039932,
+              86200500
+            ],
+            [
+              32051827,
+              86208448
+            ],
+            [
+              32168151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "08821b49-6917-4c7e-b2fb-31e86d6bc5be",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 8,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              33638761,
+              85274284
+            ],
+            [
+              33643025,
+              85295720
+            ],
+            [
+              33643898,
+              85300110
+            ],
+            [
+              33643900,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "08821b49-6917-4c7e-b2fb-31e86d6bc5be",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 9,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              35578100,
+              85539302
+            ],
+            [
+              35600637,
+              85710489
+            ],
+            [
+              35607279,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "d423645e-ab87-4b47-a14c-fd5a1e1fb41e",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 10,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              41801100,
+              85497381
+            ],
+            [
+              41813021,
+              85557309
+            ],
+            [
+              41838115,
+              85683465
+            ],
+            [
+              41818225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "b80c896e-2c06-4a39-bb3b-ae78e863ec60",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 11,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              42164145,
+              86176588
+            ],
+            [
+              42199932,
+              86200500
+            ],
+            [
+              42211827,
+              86208448
+            ],
+            [
+              42328151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "b80c896e-2c06-4a39-bb3b-ae78e863ec60",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 12,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              55453600,
+              85497381
+            ],
+            [
+              55465521,
+              85557309
+            ],
+            [
+              55490615,
+              85683465
+            ],
+            [
+              55470725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "6e087696-2807-4a17-a27c-88e5cd4c1577",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 13,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              55816645,
+              86176588
+            ],
+            [
+              55852432,
+              86200500
+            ],
+            [
+              55864327,
+              86208448
+            ],
+            [
+              55980651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "6e087696-2807-4a17-a27c-88e5cd4c1577",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 14,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              57451261,
+              85274284
+            ],
+            [
+              57455525,
+              85295720
+            ],
+            [
+              57456398,
+              85300110
+            ],
+            [
+              57456400,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "6e087696-2807-4a17-a27c-88e5cd4c1577",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 15,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              59390600,
+              85539302
+            ],
+            [
+              59413137,
+              85710489
+            ],
+            [
+              59419779,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "4b5f999d-c4c6-4afa-a181-38f819db0a96",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 16,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              65613600,
+              85497381
+            ],
+            [
+              65625521,
+              85557309
+            ],
+            [
+              65650615,
+              85683465
+            ],
+            [
+              65630725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "4ba04168-2586-402e-9596-170ee2fceaad",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 17,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              65976645,
+              86176588
+            ],
+            [
+              66012432,
+              86200500
+            ],
+            [
+              66024327,
+              86208448
+            ],
+            [
+              66140651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "4ba04168-2586-402e-9596-170ee2fceaad",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 18,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              103159309,
+              86149500
+            ],
+            [
+              103273890,
+              86180202
+            ],
+            [
+              103235065,
+              86169799
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "81598c3d-449f-442d-9d72-a33318b8b4ea",
+              "net": "COL8",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 19,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              102359309,
+              86149500
+            ],
+            [
+              102473890,
+              86180202
+            ],
+            [
+              102435065,
+              86169799
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "e18c292d-3e3b-41d1-8ebe-a3ca3e6337d4",
+              "net": "COL9",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 20,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              114999500,
+              85959309
+            ],
+            [
+              115017661,
+              86027085
+            ],
+            [
+              115030202,
+              86073890
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "01b638e5-d587-4d64-a4f6-de3de54a1d0f",
+              "net": "ROW0",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 21,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              115509309,
+              85449500
+            ],
+            [
+              115623890,
+              85480202
+            ],
+            [
+              115610193,
+              85476532
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "01b638e5-d587-4d64-a4f6-de3de54a1d0f",
+              "net": "ROW0",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 22,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              120626109,
+              85680202
+            ],
+            [
+              120670567,
+              85668289
+            ],
+            [
+              120740691,
+              85649500
+            ],
+            [
+              120704084,
+              85659309
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "6a56ea8e-e180-4411-be0e-3271cb72a365",
+              "net": "COL7",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 23,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              128499500,
+              85315892
+            ],
+            [
+              128519225,
+              85389507
+            ],
+            [
+              128533609,
+              85443190
+            ],
+            [
+              128524530,
+              85409307
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "2243f859-9e0b-49ea-a33e-ea763002a7c4",
+              "net": "LED_FAULT_N",
+              "collides_at_200000nm_clearance": false
+            }
+          ],
+          "failure_count": 0
+        },
+        {
+          "patch": 24,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              136416100,
+              85497381
+            ],
+            [
+              136428021,
+              85557309
+            ],
+            [
+              136453115,
+              85683465
+            ],
+            [
+              136433225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 25,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              136779145,
+              86176588
+            ],
+            [
+              136814932,
+              86200500
+            ],
+            [
+              136826827,
+              86208448
+            ],
+            [
+              136943151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 26,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              138413761,
+              85274284
+            ],
+            [
+              138418025,
+              85295720
+            ],
+            [
+              138418898,
+              85300110
+            ],
+            [
+              138418900,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": false
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 27,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              140353100,
+              85539302
+            ],
+            [
+              140375637,
+              85710489
+            ],
+            [
+              140382279,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "d41420f9-3981-4a0d-a3e7-1da5d0ae8417",
+              "net": "",
+              "collides_at_200000nm_clearance": false
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "d41420f9-3981-4a0d-a3e7-1da5d0ae8417",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 28,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              146576100,
+              85497381
+            ],
+            [
+              146588021,
+              85557309
+            ],
+            [
+              146613115,
+              85683465
+            ],
+            [
+              146593225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 29,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              146939145,
+              86176588
+            ],
+            [
+              146974932,
+              86200500
+            ],
+            [
+              146986827,
+              86208448
+            ],
+            [
+              147103151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 30,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              148464931,
+              85873086
+            ],
+            [
+              148485310,
+              85823886
+            ],
+            [
+              148538948,
+              85694391
+            ],
+            [
+              148540416,
+              85690848
+            ],
+            [
+              148538151,
+              85696317
+            ],
+            [
+              148519771,
+              85740691
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 31,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              148540416,
+              85690848
+            ],
+            [
+              148540447,
+              85690691
+            ],
+            [
+              148578900,
+              85497379
+            ],
+            [
+              148545580,
+              85664891
+            ],
+            [
+              148540683,
+              85689507
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 2
+        },
+        {
+          "patch": 32,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              148540416,
+              85106652
+            ],
+            [
+              148578900,
+              85300121
+            ],
+            [
+              148578899,
+              85300118
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "foreign_inner_copper",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": false
+            },
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 33,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              217378600,
+              85497381
+            ],
+            [
+              217390521,
+              85557309
+            ],
+            [
+              217415615,
+              85683465
+            ],
+            [
+              217395725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fcbdc763-0bad-4ed4-a4ae-0a53ef2c0d3b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 34,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              217741645,
+              86176588
+            ],
+            [
+              217777432,
+              86200500
+            ],
+            [
+              217789327,
+              86208448
+            ],
+            [
+              217905651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fcbdc763-0bad-4ed4-a4ae-0a53ef2c0d3b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 35,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              219376261,
+              85274284
+            ],
+            [
+              219380525,
+              85295720
+            ],
+            [
+              219381398,
+              85300110
+            ],
+            [
+              219381400,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fcbdc763-0bad-4ed4-a4ae-0a53ef2c0d3b",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 36,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              221315600,
+              85539302
+            ],
+            [
+              221338137,
+              85710489
+            ],
+            [
+              221344779,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "312656bf-a01e-4ad8-a96d-4701dc6011a7",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 37,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              227538600,
+              85497381
+            ],
+            [
+              227550521,
+              85557309
+            ],
+            [
+              227575615,
+              85683465
+            ],
+            [
+              227555725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "2cdc186c-8fae-4268-932e-9e17e2f8f66c",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 38,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              227901645,
+              86176588
+            ],
+            [
+              227937432,
+              86200500
+            ],
+            [
+              227949327,
+              86208448
+            ],
+            [
+              228065651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "2cdc186c-8fae-4268-932e-9e17e2f8f66c",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 39,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              241191100,
+              85497381
+            ],
+            [
+              241203021,
+              85557309
+            ],
+            [
+              241228115,
+              85683465
+            ],
+            [
+              241208225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fccff7ed-e8a3-4213-bbec-1731cd7ad98d",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 40,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              241554145,
+              86176588
+            ],
+            [
+              241589932,
+              86200500
+            ],
+            [
+              241601827,
+              86208448
+            ],
+            [
+              241718151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fccff7ed-e8a3-4213-bbec-1731cd7ad98d",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 41,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              243188761,
+              85274284
+            ],
+            [
+              243193025,
+              85295720
+            ],
+            [
+              243193898,
+              85300110
+            ],
+            [
+              243193900,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "fccff7ed-e8a3-4213-bbec-1731cd7ad98d",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 42,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              245128100,
+              85539302
+            ],
+            [
+              245150637,
+              85710489
+            ],
+            [
+              245157279,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "42c077a9-e813-45e5-b6e7-fdf85b09d788",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 43,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              251351100,
+              85497381
+            ],
+            [
+              251363021,
+              85557309
+            ],
+            [
+              251388115,
+              85683465
+            ],
+            [
+              251368225,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "25a7ff5d-543f-4fd8-a680-5fd4b8a4e31a",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 44,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              251714145,
+              86176588
+            ],
+            [
+              251749932,
+              86200500
+            ],
+            [
+              251761827,
+              86208448
+            ],
+            [
+              251878151,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "25a7ff5d-543f-4fd8-a680-5fd4b8a4e31a",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 45,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              265003600,
+              85497381
+            ],
+            [
+              265015521,
+              85557309
+            ],
+            [
+              265040615,
+              85683465
+            ],
+            [
+              265020725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "5995c635-83dd-4e7d-8eef-96e2646721f7",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 46,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              265366645,
+              86176588
+            ],
+            [
+              265402432,
+              86200500
+            ],
+            [
+              265414327,
+              86208448
+            ],
+            [
+              265530651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "5995c635-83dd-4e7d-8eef-96e2646721f7",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 47,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              267001261,
+              85274284
+            ],
+            [
+              267005525,
+              85295720
+            ],
+            [
+              267006398,
+              85300110
+            ],
+            [
+              267006400,
+              85300121
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "5995c635-83dd-4e7d-8eef-96e2646721f7",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 48,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              268940600,
+              85539302
+            ],
+            [
+              268963137,
+              85710489
+            ],
+            [
+              268969779,
+              85760943
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "492fceb4-6491-4a65-a2e2-7fd51f2519ea",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 49,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              275163600,
+              85497381
+            ],
+            [
+              275175521,
+              85557309
+            ],
+            [
+              275200615,
+              85683465
+            ],
+            [
+              275180725,
+              85583473
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "65868e41-b45b-4d74-9b61-b9dd150ad901",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        },
+        {
+          "patch": 50,
+          "integer_convex_hull_covers_all_exact_difference_cells": [
+            [
+              275526645,
+              86176588
+            ],
+            [
+              275562432,
+              86200500
+            ],
+            [
+              275574327,
+              86208448
+            ],
+            [
+              275690651,
+              86286175
+            ]
+          ],
+          "tested_nearby_obstacles": [
+            {
+              "kind": "actual_drill_hole",
+              "uuid": "65868e41-b45b-4d74-9b61-b9dd150ad901",
+              "net": "",
+              "collides_at_200000nm_clearance": true
+            }
+          ],
+          "failure_count": 1
+        }
+      ]
+    }
+  ],
+  "limitation": "Native collision checks use a conservative integer convex hull around each exact rational change band. They cover both gain and loss; they are separate from the exact opposite-material-distance proof and do not waive source/contour gates or constitute analog qualification."
+}

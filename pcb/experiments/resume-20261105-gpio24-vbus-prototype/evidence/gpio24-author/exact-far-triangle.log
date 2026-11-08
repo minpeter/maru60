@@ -1,0 +1,226 @@
+{
+  "source_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "candidate_sha256": "2bacda8824b543df9be08628cd8ac14b2ed6628d7ee3e221626b869da74787d4",
+  "status": "Targeted exact rational raw-filled-polygon classification only; other Boolean residues not classified by this file.",
+  "method": "No polygon Boolean or Unfracture: split reported triangle by the supporting line of every raw source/candidate polygon edge whose bounding box intersects it; exact Fraction arithmetic; classify each positive cell by exact winding of the unsimplified raw native filled outlines and holes. Assert cell area conservation and no physical drill bbox intersects the triangle.",
+  "physical_drills_intersecting_triangle_bbox": {
+    "26b": [],
+    "24move": []
+  },
+  "planes": [
+    {
+      "layer": "In1.Cu",
+      "near_source_edges": [
+        [
+          [
+            274426109,
+            37930202
+          ],
+          [
+            274499669,
+            37910492
+          ]
+        ],
+        [
+          [
+            274499669,
+            37910492
+          ],
+          [
+            274540691,
+            37899500
+          ]
+        ],
+        [
+          [
+            274540691,
+            37899500
+          ],
+          [
+            274659309,
+            37899500
+          ]
+        ]
+      ],
+      "near_candidate_edges": [
+        [
+          [
+            274470567,
+            37918289
+          ],
+          [
+            274540691,
+            37899500
+          ]
+        ],
+        [
+          [
+            274540691,
+            37899500
+          ],
+          [
+            274659309,
+            37899500
+          ]
+        ]
+      ],
+      "triangle_area_nm2_exact": "23625",
+      "exact_raw_zone_loss_nm2": "12804750/751",
+      "cells": [
+        {
+          "area_nm2_exact": "4937625/751",
+          "source_inside": true,
+          "candidate_inside": true,
+          "sample_nm": [
+            "206148888254/751",
+            "28470876307/751"
+          ],
+          "cell_vertices_nm": [
+            [
+              "206135880821/751",
+              "28474361570/751"
+            ],
+            [
+              "274475000",
+              "37917101"
+            ],
+            [
+              "274540691",
+              "37899500"
+            ]
+          ]
+        },
+        {
+          "area_nm2_exact": "12804750/751",
+          "source_inside": true,
+          "candidate_inside": false,
+          "sample_nm": [
+            "206155063727/751",
+            "28469221854/751"
+          ],
+          "cell_vertices_nm": [
+            [
+              "274499669",
+              "37910492"
+            ],
+            [
+              "206135880821/751",
+              "28474361570/751"
+            ],
+            [
+              "274540691",
+              "37899500"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "near_source_edges": [
+        [
+          [
+            274426109,
+            37930202
+          ],
+          [
+            274499669,
+            37910492
+          ]
+        ],
+        [
+          [
+            274499669,
+            37910492
+          ],
+          [
+            274540691,
+            37899500
+          ]
+        ],
+        [
+          [
+            274540691,
+            37899500
+          ],
+          [
+            274659309,
+            37899500
+          ]
+        ]
+      ],
+      "near_candidate_edges": [
+        [
+          [
+            274470567,
+            37918289
+          ],
+          [
+            274540691,
+            37899500
+          ]
+        ],
+        [
+          [
+            274540691,
+            37899500
+          ],
+          [
+            274659309,
+            37899500
+          ]
+        ]
+      ],
+      "triangle_area_nm2_exact": "23625",
+      "exact_raw_zone_loss_nm2": "12804750/751",
+      "cells": [
+        {
+          "area_nm2_exact": "4937625/751",
+          "source_inside": true,
+          "candidate_inside": true,
+          "sample_nm": [
+            "206148888254/751",
+            "28470876307/751"
+          ],
+          "cell_vertices_nm": [
+            [
+              "206135880821/751",
+              "28474361570/751"
+            ],
+            [
+              "274475000",
+              "37917101"
+            ],
+            [
+              "274540691",
+              "37899500"
+            ]
+          ]
+        },
+        {
+          "area_nm2_exact": "12804750/751",
+          "source_inside": true,
+          "candidate_inside": false,
+          "sample_nm": [
+            "206155063727/751",
+            "28469221854/751"
+          ],
+          "cell_vertices_nm": [
+            [
+              "274499669",
+              "37910492"
+            ],
+            [
+              "206135880821/751",
+              "28474361570/751"
+            ],
+            [
+              "274540691",
+              "37899500"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

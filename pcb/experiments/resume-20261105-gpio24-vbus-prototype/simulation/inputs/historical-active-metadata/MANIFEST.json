@@ -1,0 +1,346 @@
+{
+  "purpose": "Original-model runtime diagnostics; active validation rejected; no CAD edits",
+  "excluded": "Vendor archives/libraries, downloaded runtime/package binaries, Python cache",
+  "files": [
+    {
+      "path": "REPORT.md",
+      "bytes": 8780,
+      "sha256": "4f6246080281c1108eb240fa97fce39f2a6d774d0f512d6007c6e4fe808ebab3"
+    },
+    {
+      "path": "RESULTS.json",
+      "bytes": 13875,
+      "sha256": "dd4d3014e695376befa79110ce89b2122649239f03819369e86b946db039c26a"
+    },
+    {
+      "path": "build_buck_controls.py",
+      "bytes": 1455,
+      "sha256": "3b4f21ca6bf2b33e9380d10ac6b41fd41ea08faa00ffec3c8035f7a59488014f"
+    },
+    {
+      "path": "inputs/independent-review/REVIEW.md",
+      "bytes": 7362,
+      "sha256": "4811f4de5d4af09267c148b2ddf4292dd6164ac05662cbb04ecd28fd29bbc39f"
+    },
+    {
+      "path": "inputs/independent-review/evidence-sha256.json",
+      "bytes": 4495,
+      "sha256": "5d81060b534df24ffc6497e355fd720f8749471689345932bc79b0e120a9ae8d"
+    },
+    {
+      "path": "inputs/ngrun_xspice_initial.py",
+      "bytes": 1749,
+      "sha256": "dc6bc08bfdb921bbbee0526341b82de7acf2158f8fea1c27e9036d8a821532f1"
+    },
+    {
+      "path": "inputs/package-file-hashes.json",
+      "bytes": 5010,
+      "sha256": "99ae6bc1e5f75333ea1852559637efe42bb6dc2d1c84eaf654a49cc7b2c17923"
+    },
+    {
+      "path": "inputs/quick-replay-results.json",
+      "bytes": 2763,
+      "sha256": "5a2dc7b6ddf4f2f80a9ae6825c052c9c5c58fd53f35022a360d7bfae1472cb3c"
+    },
+    {
+      "path": "inputs/runner-log-regression.json",
+      "bytes": 253,
+      "sha256": "bdf18e5d2ee25aca88b902336744bab6c902fc82023055307b8cdf8a408d9d0f"
+    },
+    {
+      "path": "inputs/screenshot-provenance.json",
+      "bytes": 818,
+      "sha256": "dd2bb33a26908e44ce188dca178255f7f4862ee7d438b9a8f846856ab4a0fbf7"
+    },
+    {
+      "path": "inputs/source-runtime-identity.json",
+      "bytes": 1928,
+      "sha256": "129ef3c89f92e1bc9d10bb5d60d52edebb614ced7837a1bc887a7eacf3ef95c8"
+    },
+    {
+      "path": "inspect_translation.py",
+      "bytes": 1729,
+      "sha256": "038f7ffbacb4764d58f964a0febdb8d79c8040e642a57ee4a54e9d8d2347ac40"
+    },
+    {
+      "path": "installation.json",
+      "bytes": 2233,
+      "sha256": "57f3c0f1b9ff792fbdbe87bbbeff05ce9be23c82e7cf8ae526a7eae501f40c17"
+    },
+    {
+      "path": "netlists/buck-diagnostic-24v.cir",
+      "bytes": 727,
+      "sha256": "978ba234a28662c33feb1e05230386d57bfffb5936388b2311dfd84a36569f51"
+    },
+    {
+      "path": "netlists/buck-original-static-logic-expected.json",
+      "bytes": 771,
+      "sha256": "c6b9e81c80c0608f1f4020cc33c8778f9f488d2f4059f0562f037333d7d8a801"
+    },
+    {
+      "path": "netlists/buck-original-static-logic.cir",
+      "bytes": 1674,
+      "sha256": "333bec94e67322cab1dbcb1a7188540d1e8cb651aabb8895d55525ddb0bdebf8"
+    },
+    {
+      "path": "netlists/buck-portability.cir",
+      "bytes": 649,
+      "sha256": "d446fa8a3baa547ad09a491f1d1c68b25a0b06512e9c663031252397c0ad6d47"
+    },
+    {
+      "path": "netlists/reversed-limit-control.cir",
+      "bytes": 168,
+      "sha256": "98dfd84c06f1c1aac51311618db9c52749d0d31d729af5cba78e5e90bda74c94"
+    },
+    {
+      "path": "netlists/switch-control.cir",
+      "bytes": 187,
+      "sha256": "b9df86ff667997894a6c785303f5b88b0e4d1556a7a731394a0efb5293650517"
+    },
+    {
+      "path": "netlists/u7-original-xnor.cir",
+      "bytes": 365,
+      "sha256": "24c77c31423e2b4c1878ac1dfec1e7b4f878eef5ee637622129cf2485fdef047"
+    },
+    {
+      "path": "netlists/u7-portability.cir",
+      "bytes": 448,
+      "sha256": "fc55f9ae1063aa304b569b3000ecb5157298a52c945d6cbf710971c0ed112b04"
+    },
+    {
+      "path": "ngrun_xspice.py",
+      "bytes": 2010,
+      "sha256": "e72e181fa94f79f1bcbf548774d2de44f6c9c122df4a8708a0f230a523ee4881"
+    },
+    {
+      "path": "plot_results.py",
+      "bytes": 2051,
+      "sha256": "5378efd1be634ad1dc2f086752c9838bc7c694829cbfc3fedf76e167c856b805"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 4168,
+      "sha256": "4a2d2b9c68b859e7e21969d20cd65e29e3a90c84cbcde2c9a85cd612d2a36ea0"
+    },
+    {
+      "path": "runs/buck-diagnostic-24v/ngspice.log",
+      "bytes": 87224,
+      "sha256": "847734cb844792fc062735a99040e9f03cddf6c8e93ea478c5e797b5045ccc77"
+    },
+    {
+      "path": "runs/buck-diagnostic-24v/waveform.txt",
+      "bytes": 32017011,
+      "sha256": "a3e2fdb867a04a2b69050904f210ab53d1803e759a479dafe64601f714311f68"
+    },
+    {
+      "path": "runs/buck-diagnostic-24v-call.log",
+      "bytes": 902,
+      "sha256": "cb03ae022e57560889dae509610f40dfd66fc0f56c94073f6106318758092249"
+    },
+    {
+      "path": "runs/buck-original-portability/ngspice.log",
+      "bytes": 75098,
+      "sha256": "6b9e7e1916ab585824031d602b40e576b4e53b7d1ecfdcfd3c9ca45b903513c4"
+    },
+    {
+      "path": "runs/buck-original-portability/waveform.txt",
+      "bytes": 42940991,
+      "sha256": "a4eea9f0b386cb0bf3cb92685dc68650efa9f9687e25be4506f3d2b1c36a42ef"
+    },
+    {
+      "path": "runs/buck-original-portability-call.log",
+      "bytes": 798,
+      "sha256": "cb3390c9953ddbe2f4a709fe2b6d1e56375d095b99f5058cf34866f3b5ec1cf2"
+    },
+    {
+      "path": "runs/buck-original-static-logic-ps/ngspice.log",
+      "bytes": 2755,
+      "sha256": "be1a470ab103ab3d63da0ef67d544bcf2d7705f96609f875034a73091d97535f"
+    },
+    {
+      "path": "runs/buck-original-static-logic-ps/waveform.txt",
+      "bytes": 1642,
+      "sha256": "6511dde0d164c396b15e94da60427779a99acbf4d1407403ce5fa1f51ba33ed3"
+    },
+    {
+      "path": "runs/buck-original-static-logic-ps-call.log",
+      "bytes": 2140,
+      "sha256": "74d98fe7c66b69fd668f047328132fcab3cd8bb25dcdafb31fdfba879ea9949a"
+    },
+    {
+      "path": "runs/buck-original-static-logic-psa/ngspice.log",
+      "bytes": 2759,
+      "sha256": "6b8306f573237290eb43022ef292801d1d01ea4df79ba55455bdfce21a676446"
+    },
+    {
+      "path": "runs/buck-original-static-logic-psa/waveform.txt",
+      "bytes": 1642,
+      "sha256": "6511dde0d164c396b15e94da60427779a99acbf4d1407403ce5fa1f51ba33ed3"
+    },
+    {
+      "path": "runs/buck-original-static-logic-psa-call.log",
+      "bytes": 2143,
+      "sha256": "74045a78e8863a7acab52aa010e9d0f14c29ea24677c7c603925eb7165be2f5f"
+    },
+    {
+      "path": "runs/reversed-limit-control-ps/ngspice.log",
+      "bytes": 2325,
+      "sha256": "18ffcf10aceada3752b6d8d54dc5035a9a87b8c46827177c157aae573e224388"
+    },
+    {
+      "path": "runs/reversed-limit-control-ps/waveform.txt",
+      "bytes": 1296,
+      "sha256": "a449e4eb516b7e18fcfea4157860f96681d51cb7a1be4a5d3e2f37bddc54c13d"
+    },
+    {
+      "path": "runs/reversed-limit-control-ps-call.log",
+      "bytes": 1710,
+      "sha256": "ee1083b3387cc9bbb0a5861cb4b24e1255f0374a9535999dfeb65dda2925a5df"
+    },
+    {
+      "path": "runs/reversed-limit-control-psa/ngspice.log",
+      "bytes": 2329,
+      "sha256": "76428bf142560036f7344917ffc4255e7383a41101f77ec89cee39e2e5c5432f"
+    },
+    {
+      "path": "runs/reversed-limit-control-psa/waveform.txt",
+      "bytes": 1296,
+      "sha256": "d8de922309ea8276efe225a6718c5a80c8e0f77feb760f4ff1ae909d6ab33dd4"
+    },
+    {
+      "path": "runs/reversed-limit-control-psa-call.log",
+      "bytes": 1713,
+      "sha256": "45f59431ae1016a162ccae2251911bd0e7b76273607a2278d6c462371cc0d9c9"
+    },
+    {
+      "path": "runs/switch-control/ngspice.log",
+      "bytes": 2478,
+      "sha256": "d22927546b8db5e31c4574d5860a9963429329e1f24db2b90e489ad4a9ee2eff"
+    },
+    {
+      "path": "runs/switch-control-call.log",
+      "bytes": 1387,
+      "sha256": "c617a86a52317b6deabc6b587a057782e5c768d16b92c938413e09a321ce65a1"
+    },
+    {
+      "path": "runs/switch-control-psa/ngspice.log",
+      "bytes": 2341,
+      "sha256": "6217bf8f684462719ca91a358669a24ac0fa8d87d98c4034516622dc2da8d79d"
+    },
+    {
+      "path": "runs/switch-control-psa/waveform.txt",
+      "bytes": 492,
+      "sha256": "1a485de59313eab1102b26fc018dfff8642dc9b1e294523c7f9c3617145cfafd"
+    },
+    {
+      "path": "runs/switch-control-psa-call.log",
+      "bytes": 1640,
+      "sha256": "60154f7789ff8649cc5008da74b3ff0a2c860e08b0d9475bf00d9a500d1f2596"
+    },
+    {
+      "path": "runs/u7-original-internal-probes/ngspice.log",
+      "bytes": 24507,
+      "sha256": "70e36ae348e0a91d9cae16955daccbcfe884412297fc43a081adf1710f07ccf0"
+    },
+    {
+      "path": "runs/u7-original-internal-probes/waveform.txt",
+      "bytes": 1430868,
+      "sha256": "0526575e03e87c761ac656a4db42ce61a44f913f6b587ffdb9a7994848d21ebf"
+    },
+    {
+      "path": "runs/u7-original-internal-probes-call.log",
+      "bytes": 1116,
+      "sha256": "5cc27b1575788e80524c194d1ba466dafc44538efee0b73b16f439631ab8f758"
+    },
+    {
+      "path": "runs/u7-original-portability/ngspice.log",
+      "bytes": 24439,
+      "sha256": "dba3706825c528a253859f2f7933b2737cedd3eb92ee58b34b68c8bed368086f"
+    },
+    {
+      "path": "runs/u7-original-portability/waveform.txt",
+      "bytes": 821988,
+      "sha256": "ea07e1095afd5e6754b1fdf32ae90cc3344f13498b680a2c0e0ac378d10d2aa9"
+    },
+    {
+      "path": "runs/u7-original-portability-call.log",
+      "bytes": 1051,
+      "sha256": "bbacdd32e1b3fca45d42b00127d674a03c3361c7f327386132985a48e064bc58"
+    },
+    {
+      "path": "runs/u7-original-xnor/ngspice.log",
+      "bytes": 2316,
+      "sha256": "2650260bc0d56e136b2f709d37b005adeca227fa0d68c683b67da6c607dc7d3f"
+    },
+    {
+      "path": "runs/u7-original-xnor/waveform.txt",
+      "bytes": 202,
+      "sha256": "1e6b4f19d586107d81b0a004f7616585fd048990f63ee5d63a9bd8aed7a3301d"
+    },
+    {
+      "path": "runs/u7-original-xnor-call.log",
+      "bytes": 1701,
+      "sha256": "f97245878107eb0892a692a38c7458039fa36a538f0b8c864868daf3cfc2761b"
+    },
+    {
+      "path": "runs/u7-original-xnor-ltpsa/ngspice.log",
+      "bytes": 2330,
+      "sha256": "6e88360833a4c15f994310f12d13f33abd77e3f2df8ee1d80e1e9d5cdea6f029"
+    },
+    {
+      "path": "runs/u7-original-xnor-ltpsa/waveform.txt",
+      "bytes": 202,
+      "sha256": "1e6b4f19d586107d81b0a004f7616585fd048990f63ee5d63a9bd8aed7a3301d"
+    },
+    {
+      "path": "runs/u7-original-xnor-ltpsa-call.log",
+      "bytes": 1712,
+      "sha256": "31d1d6f910dfffbe95e8c6d99d783cfd813003cb293d7e20232d47a685ad179c"
+    },
+    {
+      "path": "runs/u7-original-xnor-psa/ngspice.log",
+      "bytes": 2323,
+      "sha256": "d2c94d856fa1084d7f2a302e0e118af78eb6ed5079ed36a5019d9396d7ee497c"
+    },
+    {
+      "path": "runs/u7-original-xnor-psa/waveform.txt",
+      "bytes": 202,
+      "sha256": "1e6b4f19d586107d81b0a004f7616585fd048990f63ee5d63a9bd8aed7a3301d"
+    },
+    {
+      "path": "runs/u7-original-xnor-psa-call.log",
+      "bytes": 1707,
+      "sha256": "e39a658d29cbc49ae028b7989d51330c720f5d4ade8c2d91be1174ef41953ae0"
+    },
+    {
+      "path": "runs/u7-translation-ltpsa/ngspice.log",
+      "bytes": 3727,
+      "sha256": "e65c3266ca17b5074a7385c860377b0389a3325c5333fdeaa832920fca2f873b"
+    },
+    {
+      "path": "runs/u7-translation-ps/ngspice.log",
+      "bytes": 3719,
+      "sha256": "bb0193a0d4497ad9a4ce3da9c983ec1863a1828800bfc5141b6a8f4046624950"
+    },
+    {
+      "path": "runs/u7-translation-psa/ngspice.log",
+      "bytes": 3722,
+      "sha256": "179f8324a31d906abd8820665d8fc2b279c974f4851204dc018274485b0ab089"
+    },
+    {
+      "path": "runtime-diagnostics.png",
+      "bytes": 175786,
+      "sha256": "adff97df4432b93044fefd3065d06ab83cf0195638b6118334ec6b976e3aa8c9"
+    },
+    {
+      "path": "summarize.py",
+      "bytes": 2584,
+      "sha256": "a760e2e78cc339fcd33363836bc11f81a5f8ba19bb8373b02866592862be4ce6"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 431,
+      "sha256": "3a57331083dffb5c4867a801596c088e71c411a0e10aa049fa28d95108cd10b7"
+    }
+  ]
+}

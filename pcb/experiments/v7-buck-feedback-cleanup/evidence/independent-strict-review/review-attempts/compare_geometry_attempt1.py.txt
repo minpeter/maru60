@@ -1,0 +1,78 @@
+import json,math,sys
+from pathlib import Path
+sys.dont_write_bytecode=True
+import pcbnew as p
+R=Path(__file__).resolve().parent;S=json.loads((R/'source.json').read_text());C=json.loads((R/'candidate.json').read_text())
+V='d382de57-3476-43c4-ac26-0a72b21acf7c';T='2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa';N='6ffab701-7688-4850-9aad-8ab86bd0f04a';ret={V,T}
+assert set(S['objects'])-set(C['objects'])==ret and set(C['objects'])-set(S['objects'])=={N}
+assert all(v==C['objects'][u] for u,v in S['objects'].items() if u not in ret)
+assert set(S['holes'])-set(C['holes'])=={V} and all(S['holes'][u]==v for u,v in C['holes'].items())
+assert S['project_sha256']==C['project_sha256'];q=C['objects'][N]
+assert q['net']=='BUCK_FB' and q['layers']==['F.Cu'] and q['width_nm']==150000 and q['start_nm']==[181000000,85750000] and q['end_nm']==[182950000,85750000] and q['length_mm']==1.95
+assert C['counts']['tracks']==S['counts']['tracks']==9752 and S['counts']['vias']-C['counts']['vias']==1 and C['counts']['pads']==S['counts']['pads']==1437 and C['counts']['holes']==1269 and math.isclose(S['counts']['all_track_centerline_mm']-C['counts']['all_track_centerline_mm'],2.85,abs_tol=1e-10)
+def poly(rows):
+ out=p.SHAPE_POLY_SET()
+ for row in rows:
+  def ring(v):
+   z=p.SHAPE_LINE_CHAIN()
+   for x,y in v:z.Append(p.VECTOR2I(x,y))
+   z.SetClosed(True);return z
+  idx=out.AddOutline(ring(row['outline']))
+  for h in row['holes']:out.AddHole(ring(h),idx)
+ return out
+copy=lambda q:p.SHAPE_POLY_SET(q)
+def sub(a,b):q=copy(a);q.BooleanSubtract(b);return q
+def cross(a,b):q=copy(a);q.BooleanIntersection(b);return q
+def bb(q):
+ if not q.Area():return None
+ b=q.BBox();return [b.GetLeft()/1e6,b.GetTop()/1e6,b.GetRight()/1e6,b.GetBottom()/1e6]
+area=lambda q:q.Area()/1e12
+old=poly(S['objects'][T]['copper']['F.Cu']['shape']);new=poly(C['objects'][N]['copper']['F.Cu']['shape']);extra=sub(new,old);assert extra.Area()==0
+# Full exact FB direct-edge identities and all three pad connectivity.
+def ed(d):return {tuple(sorted((e['a'],e['b']))):e['contacts'] for e in d['FB_edges']}
+e0,e1=ed(S),ed(C);assert {k:v for k,v in e0.items() if not(set(k)&ret)}=={k:v for k,v in e1.items() if N not in k}
+contacts={b if a==N else a for a,b in e1 if N in (a,b)};expected={'3c804add-ee74-5104-b471-73062ffcaeb9','d20e66e3-44fb-4535-81e2-9bc53c5f6519','37c51a69-ea1f-42e2-b356-72426fc3b1b2'};assert contacts==expected
+pads={u for u,m in S['objects'].items() if m['net']=='BUCK_FB' and m['class']=='PAD'}
+def reachable(edges,remove=set()):
+ adj={u:set() for k in edges for u in k};root='4439645c-928a-49ba-a4d7-2d7b4d71331f'
+ for a,b in edges:
+  if a not in remove and b not in remove:adj[a].add(b);adj[b].add(a)
+ seen=set();todo=[root]
+ while todo:
+  a=todo.pop()
+  if a in seen:continue
+  seen.add(a);todo.extend(adj[a]-seen)
+ return sorted(seen&pads)
+assert reachable(e0)==reachable(e1)==sorted(pads) and reachable(e0,ret)==['4439645c-928a-49ba-a4d7-2d7b4d71331f']
+zs={(z['uuid'],z['layer']):z for z in S['zones']};zc={(z['uuid'],z['layer']):z for z in C['zones']};assert zs.keys()==zc.keys();delta=[];physical={};localholes={}
+for label,data in [('source',S),('candidate',C)]:
+ holes=p.SHAPE_POLY_SET()
+ for h in data['holes'].values():
+  if 'shape'in h:holes.Append(poly(h['shape']))
+ holes.Simplify();localholes[label]=holes
+for key,z in zs.items():
+ v=zc[key];assert {k:t for k,t in z.items() if k!='fills'}=={k:t for k,t in v.items() if k!='fills'}
+ a,b=poly(z['fills']),poly(v['fills']);loss,gain=sub(a,b),sub(b,a)
+ rec={'uuid':key[0],'layer':key[1],'net':z['net'],'saved_fill_loss_mm2':area(loss),'saved_fill_gain_mm2':area(gain),'loss_bounds_mm':bb(loss),'gain_bounds_mm':bb(gain)}
+ if z['net']=='GND' and key[1] in ('In1.Cu','In2.Cu'):
+  a.BooleanSubtract(localholes['source']);b.BooleanSubtract(localholes['candidate']);physical[key[1]]=(a,b)
+  rec.update(physical_local_drill_subtracted_loss_mm2=area(sub(a,b)),physical_local_drill_subtracted_gain_mm2=area(sub(b,a)))
+ delta.append(rec)
+# Actual loss bounds prove all potentially affected retained shadows lie in complete local polygon export.
+oldloss=[];tested=[]
+for layer,(a,b) in physical.items():
+ loss=sub(a,b)
+ if loss.Area():
+  x1,y1,x2,y2=bb(loss);assert 177<=x1<=x2<=186 and 82<=y1<=y2<=87
+ for u,m in S['objects'].items():
+  if u in ret or m['net']=='GND':continue
+  outer={'In1.Cu':'F.Cu','In2.Cu':'B.Cu'}[layer]
+  if outer not in m['copper'] or not loss.Area():continue
+  shape=m['copper'][outer];x1,y1,x2,y2=shape['bbox'];b0=loss.BBox()
+  if x2<b0.GetLeft() or x1>b0.GetRight() or y2<b0.GetTop() or y1>b0.GetBottom():continue
+  assert 'shape'in shape;hit=cross(poly(shape['shape']),loss);tested.append([u,outer])
+  if hit.Area():oldloss.append({'uuid':u,'layer':outer,'loss_mm2':area(hit)})
+assert not oldloss
+base,after=physical['In1.Cu'];missingbefore=sub(new,base);missingafter=sub(new,after);introduced=sub(missingafter,missingbefore);assert introduced.Area()==0
+r={'pass_bounded_geometry_contact_reference_review':True,'source_sha256':S['board_sha256'],'candidate_sha256':C['board_sha256'],'retired_uuids':sorted(ret),'replacement_uuid':N,'all_other_native_objects_exact':True,'all_other_through_holes_exact':True,'all_zone_settings_exact':True,'project_sha256_exact':True,'replacement_new_copper_outside_old_track_mm2':area(extra),'active_centerline_mm':1.95,'dead_centerline_removed_mm':2.85,'counts_before':S['counts'],'counts_after':C['counts'],'retained_FB_contacts':sorted(contacts),'FB_pad_partition_exact':True,'entire_track_deletion_control_isolates_U18_8':True,'zone_deltas':delta,'old_retained_reference_shadows_lost_mm2':0,'retained_shadow_entries_needing_loss_intersection':tested,'retained_replacement_reference':{'full_projection_missing_before_mm2':area(missingbefore),'full_projection_missing_after_mm2':area(missingafter),'introduced_missing_reference_mm2':area(introduced),'absolute_reference_gap_is_inherited_not_waived':True},'no_new_drills':True,'removed_drill_mm':.25,'method':'Independent one-board native exports; exact geometry/contact and integer polygon comparison with all fill changes disclosed. Physical local reference subtracts every actual through-hole whose bbox intersects the proven affected window. Complete all-net graph review remains separate.','analog_qualification':False}
+(R/'geometry-review.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r,indent=2))

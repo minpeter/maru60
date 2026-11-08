@@ -1,0 +1,26 @@
+{
+  "allowlist": [
+    "REPORT.md",
+    "EVIDENCE.json",
+    "verify.py",
+    "replay.py",
+    "replay.log",
+    "netlist-fresh.xml",
+    "current_limits.py",
+    "CURRENT_LIMITS.json"
+  ],
+  "sha256": {
+    "REPORT.md": "0f5a2b3618c6c2c00e525ce079fb566ee17a18545cc8314eaae7c15c0441ae6b",
+    "EVIDENCE.json": "c6f5ff9d5dc31b74092a6101133ad2bad0411c2d20f795f51326e0f393571f58",
+    "verify.py": "4ca3e9b270a672aad5494d23beafe08f9aebec15be65ad6d775da8738786058f",
+    "replay.py": "f81f7f007aa31861305e3e695a4b8554146c196d2d97cb8416153ac0bb9e2090",
+    "replay.log": "817425d4844c0e7c7daa647d481acba548b55f9a00d9abdbbf86a7bd558a1757",
+    "netlist-fresh.xml": "4b5cf26bbaf6d61e861f7fa58f845d7698a774e79e4de0733076faffe00ad188",
+    "current_limits.py": "830c2e52ccac3a9e21ee96e48f8e3eff73ca4c2d34b1d1719d00283bd0b46b80",
+    "CURRENT_LIMITS.json": "bdeb8f937d136a072daccddc5f31b07ce261825f9d85b78d8353b0d421b08a96"
+  },
+  "excluded": [
+    "vendor PDFs/fulltext/screenshots",
+    "original netlist.xml (preserved locally; required only by native verify.py)"
+  ]
+}

@@ -1,0 +1,156 @@
+Capture source planes and nominal shadows
+Source capture done 12857
+03:07:15: Debug: Adding duplicate image handler for 'PNG file'
+03:07:15: Debug: Adding duplicate image handler for 'JPEG file'
+03:07:15: Debug: Adding duplicate image handler for 'TIFF file'
+03:07:15: Debug: Adding duplicate image handler for 'GIF file'
+03:07:15: Debug: Adding duplicate image handler for 'PNM file'
+03:07:15: Debug: Adding duplicate image handler for 'PCX file'
+03:07:15: Debug: Adding duplicate image handler for 'IFF file'
+03:07:15: Debug: Adding duplicate image handler for 'Windows icon file'
+03:07:15: Debug: Adding duplicate image handler for 'Windows cursor file'
+03:07:15: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+03:07:15: Debug: Adding duplicate image handler for 'TGA file'
+03:07:15: Debug: Adding duplicate image handler for 'XPM file'
+Candidate capture done
+{
+  "source_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "candidate_sha256": "30aa174b1083c0b166daafaa831a7dd8986a0852b94eb18b69aba82c1d25533c",
+  "planes": [
+    {
+      "plane": "In1.Cu",
+      "lost_mm2": 0.4863510432655,
+      "gain_mm2": 0.130372431028,
+      "loss_outside_declared_0p455mm_transition_envelopes_mm2": 0.038611251318,
+      "retained_old_signal_shadow_losses": [
+        {
+          "uuid": "14d35ed0-d9e6-45a6-a698-4e8b482aba5f",
+          "net": "+1V1",
+          "source_layer": "F.Cu",
+          "nearest_plane": true,
+          "lost_reference_area_mm2": 0.003940151347
+        }
+      ],
+      "retired_or_modified_COL5_shadow_losses": [
+        {
+          "uuid": "224e7239-5039-4cc7-b38b-ca258f485b01",
+          "net": "COL5",
+          "source_layer": "B.Cu",
+          "nearest_plane": false,
+          "lost_reference_area_mm2": 0.0200279343815
+        },
+        {
+          "uuid": "65c0b9cf-87fb-4ae5-a2e0-e11b853cd699",
+          "net": "COL5",
+          "source_layer": "B.Cu",
+          "nearest_plane": false,
+          "lost_reference_area_mm2": 0.008826788877
+        }
+      ],
+      "old_components": 1,
+      "new_components": 1
+    },
+    {
+      "plane": "In2.Cu",
+      "lost_mm2": 0.733131710302,
+      "gain_mm2": 0.129225117366,
+      "loss_outside_declared_0p455mm_transition_envelopes_mm2": 0.0370067392085,
+      "retained_old_signal_shadow_losses": [
+        {
+          "uuid": "14d35ed0-d9e6-45a6-a698-4e8b482aba5f",
+          "net": "+1V1",
+          "source_layer": "F.Cu",
+          "nearest_plane": false,
+          "lost_reference_area_mm2": 0.003940151347
+        },
+        {
+          "uuid": "d04bedc3-787f-4dd8-9a83-dc804564f50f",
+          "net": "LED_FAULT_N",
+          "source_layer": "F.Cu",
+          "nearest_plane": false,
+          "lost_reference_area_mm2": 0.0066303817455
+        }
+      ],
+      "retired_or_modified_COL5_shadow_losses": [
+        {
+          "uuid": "224e7239-5039-4cc7-b38b-ca258f485b01",
+          "net": "COL5",
+          "source_layer": "B.Cu",
+          "nearest_plane": true,
+          "lost_reference_area_mm2": 0.0200279343815
+        },
+        {
+          "uuid": "65c0b9cf-87fb-4ae5-a2e0-e11b853cd699",
+          "net": "COL5",
+          "source_layer": "B.Cu",
+          "nearest_plane": true,
+          "lost_reference_area_mm2": 0.008826788877
+        },
+        {
+          "uuid": "d94e477a-28ae-41a9-bdea-441b16be174c",
+          "net": "COL5",
+          "source_layer": "In1.Cu",
+          "nearest_plane": true,
+          "lost_reference_area_mm2": 0.0695199052605
+        }
+      ],
+      "old_components": 1,
+      "new_components": 1
+    }
+  ],
+  "new_modified_track_reference": [
+    {
+      "uuid": "224e7239-5039-4cc7-b38b-ca258f485b01",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_plane": "In2.Cu",
+      "uncovered_mm2": 0.0,
+      "uncovered_outside_own_net_transition_envelopes_mm2": 0.0
+    },
+    {
+      "uuid": "65c0b9cf-87fb-4ae5-a2e0-e11b853cd699",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_plane": "In2.Cu",
+      "uncovered_mm2": 0.0,
+      "uncovered_outside_own_net_transition_envelopes_mm2": 0.0
+    },
+    {
+      "uuid": "82c1e32c-6d48-4cd7-aef5-08182b26ee82",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_plane": "In2.Cu",
+      "uncovered_mm2": 0.0503453918265,
+      "uncovered_outside_own_net_transition_envelopes_mm2": 0.000279652153
+    },
+    {
+      "uuid": "d94e477a-28ae-41a9-bdea-441b16be174c",
+      "net": "COL5",
+      "layer": "In1.Cu",
+      "reference_plane": "In2.Cu",
+      "uncovered_mm2": 0.068800328295,
+      "uncovered_outside_own_net_transition_envelopes_mm2": 0.0
+    },
+    {
+      "uuid": "f740ca53-eede-4a3c-a03e-b8da4492e86c",
+      "net": "COL5",
+      "layer": "In1.Cu",
+      "reference_plane": "In2.Cu",
+      "uncovered_mm2": 0.01753104428,
+      "uncovered_outside_own_net_transition_envelopes_mm2": 0.0
+    },
+    {
+      "uuid": "3b5bc829-ecfe-4fcb-bdb9-686de87623ce",
+      "net": "MCU_GPIO27",
+      "layer": "B.Cu",
+      "reference_plane": "In2.Cu",
+      "uncovered_mm2": 0.04992553733,
+      "uncovered_outside_own_net_transition_envelopes_mm2": 0.0
+    }
+  ],
+  "all_holes_subtracted_from_planes": true,
+  "old_shadow_hole_equivalence": "Loss is a subset of the old plane after every physical through-hole is subtracted. Therefore loss intersect nominal old shadow equals loss intersect hole-subtracted old shadow, avoiding redundant per-object global subtraction.",
+  "all_source_signal_shadows_checked": 12857,
+  "no_Unfracture": true,
+  "limits": "Exact native nominal geometry; not SI or hardware. Modified COL5 source geometry is declared rather than treated as immutable. Raw tiny losses are retained without tolerance waiver."
+}

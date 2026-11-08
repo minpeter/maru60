@@ -1,0 +1,128 @@
+{
+  "status": "UNSELECTED natural serial-leg correction, no added or deleted objects",
+  "source_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "prefill_sha256": "abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d",
+  "read_only_screen_sha256": "9ba6f6f3a42e1aad8365bd4a0fe691bb06a89e5ed61af593e61e188f942e9ef7",
+  "changed_main_tracks": [
+    {
+      "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "net": "GND",
+      "old_start": [
+        14.0,
+        17.675
+      ],
+      "old_end": [
+        14.9,
+        17.275
+      ],
+      "old_length_mm": 0.9848857801796105,
+      "which": "start",
+      "point": [
+        14.54,
+        17.435
+      ],
+      "support_uuid": "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+      "native_support_dangling_before": true,
+      "new_start": [
+        14.54,
+        17.435
+      ],
+      "new_end": [
+        14.9,
+        17.275
+      ],
+      "new_length_mm": 0.39395431207184417,
+      "native_support_dangling_after": false,
+      "native_main_dangling_after": false,
+      "same_net_union_old_minus_new": {
+        "area_mm2": 5.3943e-08,
+        "contours": 2
+      },
+      "same_net_union_new_minus_old": {
+        "area_mm2": 2.814105e-07,
+        "contours": 1
+      }
+    },
+    {
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "net": "USB_OVLO",
+      "old_start": [
+        18.0,
+        20.95
+      ],
+      "old_end": [
+        20.175,
+        21.0
+      ],
+      "old_length_mm": 2.175574636733937,
+      "which": "end",
+      "point": [
+        20.0725,
+        20.9785
+      ],
+      "support_uuid": "cc1282fe-f0b3-5fea-9d45-66eea8068d66",
+      "native_support_dangling_before": true,
+      "new_start": [
+        18.0,
+        20.95
+      ],
+      "new_end": [
+        20.0725,
+        20.9785
+      ],
+      "new_length_mm": 2.0726959497234514,
+      "native_support_dangling_after": false,
+      "native_main_dangling_after": false,
+      "same_net_union_old_minus_new": {
+        "area_mm2": 0.020167169438,
+        "contours": 19
+      },
+      "same_net_union_new_minus_old": {
+        "area_mm2": 0.018984262772,
+        "contours": 24
+      }
+    },
+    {
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "net": "USB_UVLO",
+      "old_start": [
+        14.2,
+        16.35
+      ],
+      "old_end": [
+        13.1,
+        17.05
+      ],
+      "old_length_mm": 1.3038404810405297,
+      "which": "start",
+      "point": [
+        14.1,
+        16.45
+      ],
+      "support_uuid": "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a",
+      "native_support_dangling_before": true,
+      "new_start": [
+        14.1,
+        16.45
+      ],
+      "new_end": [
+        13.1,
+        17.05
+      ],
+      "new_length_mm": 1.16619037896906,
+      "native_support_dangling_after": false,
+      "native_main_dangling_after": false,
+      "same_net_union_old_minus_new": {
+        "area_mm2": 0.019024172307,
+        "contours": 13
+      },
+      "same_net_union_new_minus_old": {
+        "area_mm2": 0.016339260869,
+        "contours": 31
+      }
+    }
+  ],
+  "support_tracks_unchanged": true,
+  "all_footprints_pads_drills_rules_unchanged": true,
+  "scope": "Three endpoint changes incorporate the retained support segments into genuine serial conductive paths. No duplicate, zero-length, fake-loop or type-changed objects. GND is not claimed exact native polygon copper equality."
+}

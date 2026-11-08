@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/v7-connector-gnd-stitch-c770/scripts/build.py", line 18, in <module>
+    v=p.PCB_VIA(b);v.m_Uuid=p.KIID(UID);v.SetPosition(p.VECTOR2I(17200000,9900000));v.SetWidth(500000);v.SetDrill(250000);v.SetViaType(p.VIATYPE_THROUGH);v.SetLayerPair(p.F_Cu,p.B_Cu)
+                   ^^^^^^^^
+AttributeError: property 'm_Uuid' of 'PCB_VIA' object has no setter

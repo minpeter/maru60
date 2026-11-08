@@ -1,0 +1,163 @@
+{
+  "revision": "c770-connector-ground-stitch-only-construction-contract-v1",
+  "status": "Frozen, constructor-ready prospective contract; candidate not yet constructed or accepted",
+  "source": {
+    "board_path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-gnd-deadbranch-cleanup/candidate/pcb/maru60.kicad_pcb",
+    "board_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+    "selected_commit": "094851aa91eb49e40182c9a88657a8ed6e6dcba8",
+    "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+    "native_version": "9.0.2+dfsg-1",
+    "R2_graph_path": "/tmp/v7-gnd-tail-cleanup-aead/qa/material-graph.json",
+    "R2_graph_sha256": "3d174b35c555dcce8b3df1097f664be12e4736cca1f750a005d46441b941452c",
+    "R2_permanent_graph_path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-gnd-deadbranch-cleanup/evidence/qa/material-graph.json",
+    "active_material_helper_path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/tools/export_material_graph.py",
+    "active_material_helper_sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9"
+  },
+  "only_construction_change": {
+    "object_type": "ordinary plated through GND via",
+    "uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+    "at_mm": [
+      17.2,
+      9.9
+    ],
+    "size_mm": 0.5,
+    "drill_mm": 0.25,
+    "layers": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "net_name": "GND",
+    "expected_source_net_code": 83,
+    "new_tracks": 0,
+    "new_pads_or_footprints": 0,
+    "move_or_delete_existing_objects": false,
+    "change_rules_stackup_or_global_mask_settings": false,
+    "ordinary_existing_via_and_zone_settings_only": true
+  },
+  "keep_unchanged": {
+    "connector_stub_uuid": "bc0a06ab-785a-4a27-a164-9c3256c7f3bd",
+    "stub_start_mm": [
+      15.7,
+      10.75
+    ],
+    "stub_end_mm": [
+      15.7,
+      9.8
+    ],
+    "stub_layer": "F.Cu",
+    "stub_width_mm": 0.25,
+    "all_existing_tracks_vias_pads_footprints_fields_nets_edges_and_rules": true,
+    "all_existing_actual_drills": true,
+    "selected_source_never_written": true
+  },
+  "expected_object_counts": {
+    "source": {
+      "tracks": 9750,
+      "vias": 918,
+      "footprints": 382
+    },
+    "candidate": {
+      "tracks": 9750,
+      "vias": 919,
+      "footprints": 382
+    },
+    "candidate_all_through_drills": {
+      "through_vias": 919,
+      "NPTH": 335,
+      "PTH": 16
+    }
+  },
+  "historical_shadow_input": {
+    "path": "/workspace/scratch/edd9a5be63e7/v7-connector-ground-contract-c770/input-original-a9.kicad_pcb",
+    "sha256": "a9ff40100f8b34cd46b7706eb3264cbbc61508cc4c6895fdcefcb2cce35e7b67",
+    "exact_archive_provenance_file": "original_source_provenance.json",
+    "explicit_retired_U10_Dminus_uuid": "2c517f5c-8f2d-4a2a-9fea-dc1b7376c3cd",
+    "original_full_QA_history_restored": false
+  },
+  "prospective_evidence": {
+    "all_existing_holes_checked": 1269,
+    "all_existing_object_layer_checks": 15330,
+    "legacy_non_GND_outer_shapes_checked": 11905,
+    "minimum_foreign_copper_clearance_mm": 0.225,
+    "minimum_hole_edge_clearance_mm": 1.2533296378372907,
+    "minimum_current_drill_to_shadow_mm": 0.35,
+    "minimum_legacy_drill_to_shadow_mm": 0.363815,
+    "retired_DM_drill_to_shadow_mm": 0.6,
+    "physical_inner_contact_results": [
+      {
+        "layer": "In1.Cu",
+        "zone_uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+        "physical_material_node": "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+        "J1_A1_root": "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0",
+        "exact_R2_component_area_match_mm2": 23436.333089335607,
+        "annular_overlap_mm2": 0.147260768066,
+        "annular_missing_mm2": 0.0,
+        "positive_overlap_after_each_2nm_inward_guard_mm2": 0.1472558792225,
+        "new_physical_drill_loss_outside_polygon_mm2": 0.049087681002
+      },
+      {
+        "layer": "In2.Cu",
+        "zone_uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+        "physical_material_node": "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+        "J1_A1_root": "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0",
+        "exact_R2_component_area_match_mm2": 23486.85337147416,
+        "annular_overlap_mm2": 0.147260768066,
+        "annular_missing_mm2": 0.0,
+        "positive_overlap_after_each_2nm_inward_guard_mm2": 0.1472558792225,
+        "new_physical_drill_loss_outside_polygon_mm2": 0.049087681002
+      }
+    ],
+    "normal_project_rules": {
+      "max_error": 0.005,
+      "min_clearance": 0.15,
+      "min_connection": 0.15,
+      "min_copper_edge_clearance": 0.5,
+      "min_groove_width": 0.0,
+      "min_hole_clearance": 0.15,
+      "min_hole_to_hole": 0.25,
+      "min_microvia_diameter": 0.2,
+      "min_microvia_drill": 0.1,
+      "min_resolved_spokes": 2,
+      "min_silk_clearance": 0.0,
+      "min_text_height": 0.8,
+      "min_text_thickness": 0.08,
+      "min_through_hole_diameter": 0.25,
+      "min_track_width": 0.15,
+      "min_via_annular_width": 0.1,
+      "min_via_diameter": 0.5,
+      "solder_mask_to_copper_clearance": 0.0,
+      "use_height_for_length_calcs": true
+    },
+    "physical_loss_scope": "Only the new actual drill disk in the two current rooted inner GND planes. No loss to any original object or outer-zone copper."
+  },
+  "required_after_actual_construction_and_normal_fill": [
+    "Recheck exact source, project, helper, graph and original-a9 inputs before building. Build an isolated candidate only.",
+    "Exactly one new via with the stated UUID/net/position/size/drill/through span. All original objects, including the retained connector stub, remain exact; no other copper, hole, net, footprint, edge, rule or mask-setting edits.",
+    "Run normal native fill using KiCad9.0.2+dfsg-1, then source-bound native DRC/ERC/schematic parity and inventory. No new hard violations; no unreviewed warning regressions. Do not trim the retained stub to change warning counts.",
+    "For each layer, form physical saved-zone material by subtracting EVERY actual asserted through drill, including NPTH regardless of copper membership. Unknown hole/via types fail closed.",
+    "For In1.Cu and In2.Cu, expected physical candidate GND = source physical GND minus the exact native outside polygon of the ONE new actual drill. Require native Boolean XOR area exactly zero against actual candidate physical GND, with no loss tolerance or endpoint mask. Record loss explicitly; predicted outside-polygon area is0.049087681002mm2 per inner plane, but compare shapes, not area alone.",
+    "All outer GND-zone physical material and all non-GND-zone physical material must remain exact. The only added outer copper is the new via annulus. If normal fill creates additional copper/islands or other loss, stop and report a scope mismatch; do not silently relax the contract.",
+    "Intersections of actual new physical reference loss with EVERY original non-GND outer shape from both c770 and a9 must have exactly zero area. Include removed U10 DM shadow2c517f5c; no generic endpoint allowance.",
+    "Run the active all-through-drill R2 material graph on the actual filled candidate. Prove one intact positive plated annulus on each of four layers, no foreign-drill cut, and accepted guarded direct contact to both J1.A1-rooted inner GND material components.",
+    "Preserve all old named-pad partitions and old material connectivity/accepted guarded contacts. No foreign-net merge, no lost old positive contact and no new unproved tiny-contact dependency. Compare old-vertex connectivity rather than relying on root-name string stability.",
+    "Verify new via has only the predicted source contacts: two accepted inner-GND-zone contacts plus its own intact through barrel, with no unintended old-object or outer-zone contact. If contact inventory differs, stop for source-bound review.",
+    "Independent review must recheck actual candidate source/hash, strict loss shapes, full historical shadow preservation, all-hole R2/root evidence and native rule results before adoption. Keep c770 selected until acceptance."
+  ],
+  "scope_limits": [
+    "The proposed stitch does not restore the connector merged-antipad neck.",
+    "Geometric nearest-return distance reduction is not an extracted inductance, waveform, ESD or EMI improvement.",
+    "The connector stub is retained to avoid an unmotivated second change; no effective guarding or necessary return role is proved.",
+    "Project minimum dimensions are not manufacturer process qualification.",
+    "This packet adds no permission to edit the selected source and is not a physical SI/ESD compliance result."
+  ],
+  "evidence_hashes": {
+    "inspect_site.py": "2979fc4bc6be6f1d305f33ea1c399b1aef5caf65dcdadfa03ce0a2444b3977f2",
+    "site_results.json": "27da71b4a1db30d204397c49a32089aa0244b704ba851f35639efb03be43d1d0",
+    "check_legacy_shadow.py": "e7c9850d921ee1ea383c42e143b84ce0d2ba5f865308a29d087ba28db303256b",
+    "legacy_shadow_results.json": "48968084d2447a0baa4df8235d3d45ec4a7e370017767c5ec6e2d222193584ef",
+    "original_source_provenance.json": "ab8491a0420cd8c3c50d8834731267a4c22eb239bc9087de678e00ef16646427",
+    "fail_closed_controls.json": "e76bcca1fe4c0a359d12f9f4c19ea6314bdffcf7b666ce9044fbd4da61fcbdf0",
+    "stub-review/report-core.json": "57fdc2c530e742a56ec1edefe14f87d7826d9218009b175f58d65fac54aace9e",
+    "stub-review/README.md": "6c8f0dc84865997ed8a37d2dabaf6de0855be1c295b05873f96a80272dd9873f"
+  }
+}

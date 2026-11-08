@@ -1,0 +1,86 @@
+(ExpressProject "TPS2553-1_TRANS"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\tps2553-1_trans.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "tps2553-1_trans.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\tps2553-1_trans-pspicefiles\ilim\trans.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tps2553-1_trans-pspicefiles\ilim\trans.sim"
+        (DisplayName "ILIM-trans")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\tps2553-1_trans.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\tps2553-1_trans.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (TPS2553-1_TRANS
+      (FullPartName "TPS2553-1_TRANS.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS2553-1\RELEASE_TI\PSPICE\TPS2553-1_PSPICE_TRANS\TPS2553-1_TRANS.OLB")
+      (DeviceIndex "0"))
+    (TPS2553_TRANS
+      (FullPartName "TPS2553_TRANS.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS2553\RELEASE_TI\PSPICE\TPS2553_PSPICE_TRANS\TPS2553_TRANS.OLB")
+      (DeviceIndex "0"))
+    (TPS2557_TRANS
+      (FullPartName "TPS2557_TRANS.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS2557\RELEASE_TI\PSPICE\TPS2557_PSPICE_TRANS\TPS2557_TRANS.OLB")
+      (DeviceIndex "0"))
+    (TPS2001C_TRANS
+      (FullPartName "TPS2001C_TRANS.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS2001C\RELEASE_TI\PSPICE\TPS2001C_PSPICE_TRANS\TPS2001C_TRANS.OLB")
+      (DeviceIndex "0"))
+    (TPS2000C_TRANS
+      (FullPartName "TPS2000C_TRANS.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS2000C\RELEASE_TI\PSPICE\TPS2000C_PSPICE_TRANS\TPS2000C_TRANS.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "a0460872")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\TPS2553-1\Release_TI\PSPICE\TPS2553-1_PSPICE_TRANS\tps2553-1_trans.dsn")
+      (Path "Design Resources"
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\TPS2553-1\Release_TI\PSPICE\TPS2553-1_PSPICE_TRANS\tps2553-1_trans.dsn"
+         "ILIM")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Simulation Profiles"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 361 0 942"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 25 1561 25 671")
+        (Scroll "-300 -10")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS2553-1\RELEASE_TI\PSPICE\TPS2553-1_PSPICE_TRANS\TPS2553-1_TRANS.DSN")
+      (Schematic "ILIM")
+      (Page "PAGE1"))))

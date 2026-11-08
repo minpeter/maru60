@@ -1,0 +1,48 @@
+{
+  "pass": true,
+  "source_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+  "candidate_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "native_version": "9.0.2+dfsg-1",
+  "method": "Independent native union of every inner GND zone, actual-hole subtraction, every old non-GND object projection, nearest-plane new-track coverage; no Unfracture or area waiver. Declared0.455mm transition windows are explicit geometry, not SI qualification.",
+  "planes": [
+    {
+      "plane": "In1.Cu",
+      "old_components": 1,
+      "new_components": 1,
+      "loss_mm2": 0.6412533988095,
+      "gain_mm2": 1.18805e-08,
+      "loss_outside_declared_via_window_mm2": 0.0,
+      "loss_outside_declared_via_window_outlines": 0,
+      "old_signal_reference_losses": []
+    },
+    {
+      "plane": "In2.Cu",
+      "old_components": 1,
+      "new_components": 1,
+      "loss_mm2": 0.6412533988095,
+      "gain_mm2": 1.18805e-08,
+      "loss_outside_declared_via_window_mm2": 0.0,
+      "loss_outside_declared_via_window_outlines": 0,
+      "old_signal_reference_losses": []
+    }
+  ],
+  "new_track_reference": [
+    {
+      "uuid": "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+      "layer": "F.Cu",
+      "nearest_reference": "In1.Cu",
+      "uncovered_mm2": 0.152634129017,
+      "outside_transition_windows_mm2": 0.0,
+      "outside_transition_outlines": 0
+    },
+    {
+      "uuid": "3667e0a4-19f7-405c-b774-a3c5f075980e",
+      "layer": "B.Cu",
+      "nearest_reference": "In2.Cu",
+      "uncovered_mm2": 0.0762684010405,
+      "outside_transition_windows_mm2": 0.0,
+      "outside_transition_outlines": 0
+    }
+  ],
+  "limits": "No impedance, EMI, return-current distribution or hardware qualification."
+}

@@ -1,0 +1,487 @@
+{
+  "phase": "Combined actual native geometry and strict material/shadow binding; R2 comparison pending separately",
+  "pass_geometry_and_strict_loss": true,
+  "source_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+  "candidate_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "candidate_path": "/tmp/v7-c124-d-plus-connector-gnd/filled/pcb/maru60.kicad_pcb",
+  "contract_sha256": "c58baac31c087ddd115fb5ccbe7953ced52d8469c0efe675b2184ea00ff7d7a5",
+  "all_old_top_level_nodes_byte_exact_ordered": true,
+  "all_saved_zone_blocks_byte_exact": true,
+  "actual_new_via_uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+  "all_layer_annuli": [
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "physical_annulus_mm2": 0.147260768066,
+      "foreign_drill_annular_cut_mm2": 0.0
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.5,
+      "physical_annulus_mm2": 0.147260768066,
+      "foreign_drill_annular_cut_mm2": 0.0
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.5,
+      "physical_annulus_mm2": 0.147260768066,
+      "foreign_drill_annular_cut_mm2": 0.0
+    },
+    {
+      "layer": "B.Cu",
+      "width_mm": 0.5,
+      "physical_annulus_mm2": 0.147260768066,
+      "foreign_drill_annular_cut_mm2": 0.0
+    }
+  ],
+  "actual_through_drill_counts": {
+    "through_vias": 919,
+    "PTH": 16,
+    "NPTH": 335
+  },
+  "physical_zone_deltas": [
+    {
+      "zone_uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "actual_physical_loss_mm2": 0.0,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": false
+    },
+    {
+      "zone_uuid": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "actual_physical_loss_mm2": 0.0,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": false
+    },
+    {
+      "zone_uuid": "18251378-06a1-40ae-8f44-01acf0d3371a",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "actual_physical_loss_mm2": 0.0,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": false
+    },
+    {
+      "zone_uuid": "3f67c971-a794-46bf-8f55-e7568aa08387",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "actual_physical_loss_mm2": 0.0,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": false
+    },
+    {
+      "zone_uuid": "431dc987-81d8-4e96-9039-7fb10f89e34d",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "actual_physical_loss_mm2": 0.0,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": false
+    },
+    {
+      "zone_uuid": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "actual_physical_loss_mm2": 0.0,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": false
+    },
+    {
+      "zone_uuid": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "actual_physical_loss_mm2": 0.0,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": false
+    },
+    {
+      "zone_uuid": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "actual_physical_loss_mm2": 0.0,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": false
+    },
+    {
+      "zone_uuid": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "actual_physical_loss_mm2": 0.0,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": false
+    },
+    {
+      "zone_uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "actual_physical_loss_mm2": 0.049087681002,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": true
+    },
+    {
+      "zone_uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "actual_physical_loss_mm2": 0.049087681002,
+      "actual_gain_mm2": 0.0,
+      "expected_physical_material_XOR_nm2": 0.0,
+      "actual_loss_equals_only_new_drill": true
+    }
+  ],
+  "actual_positive_inner_contacts": [
+    {
+      "layer": "In1.Cu",
+      "zone_uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "inherited_source_material_node": "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "overlap_mm2": 0.147260768066,
+      "guarded_overlap_mm2": 0.1472558792225,
+      "source_J1_root": "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0",
+      "actual_R2_binding_pending": true
+    },
+    {
+      "layer": "In2.Cu",
+      "zone_uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "inherited_source_material_node": "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "overlap_mm2": 0.147260768066,
+      "guarded_overlap_mm2": 0.1472558792225,
+      "source_J1_root": "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0",
+      "actual_R2_binding_pending": true
+    }
+  ],
+  "actual_new_via_to_old_object_contacts": [],
+  "current_original_outer_shape_checks": 13131,
+  "current_original_shadow_intersections": [],
+  "legacy_a9_actual_drill_bound_to_frozen_check": true,
+  "retired_U10_Dminus_actual_drill_bound": [
+    {
+      "uuid": "2c517f5c-8f2d-4a2a-9fea-dc1b7376c3cd",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "drill_to_legacy_nominal_shadow_mm": 0.6
+    }
+  ],
+  "D_37_new_or_changed_outer_shapes_outward2nm_drill_checks": [
+    {
+      "uuid": "0dd51559-bc06-502f-8bb1-1b186fa751d0",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "66453383-04ef-5371-8252-4d0004d7a05d",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "94047f09-e88d-56e7-aee2-15e0dcdca1ac",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "d4d6f91a-e726-5530-80d1-f22a126456bc",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "ea24a1e4-dda5-5e54-815c-ce8d2a7844f6",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "2415b4fb-a4a8-5806-8904-da9a0189625c",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "34ff4dac-01f8-5a27-b816-6afc433ee9e4",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "bb6b5e8e-366e-5318-bb1e-c9bde07c56e9",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "fd0e066b-c366-5b5a-b501-15fcf42fddb4",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "1ee63e90-13d4-5a87-aa3a-851c027d505e",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "2f172817-a869-561b-9617-cad76ccd385e",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "53bcbb0a-ce50-5c23-bcbc-c7e42eff2bc6",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "9820d6a1-a966-5f57-ba9f-b4f6eebf98a8",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "9f71c7e9-1999-5d93-bca7-92de689f89aa",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "a037876a-72ca-5e86-972b-a613ac79a8a3",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "a74eeba1-1677-5103-9d24-8f1325cc2689",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "b9c65313-e1f2-5c81-8e18-abc631b792ae",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "cc032d04-9495-5992-8324-8e98a3065b14",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "cc1282fe-f0b3-5fea-9d45-66eea8068d66",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "0d4c7461-d4c1-51d0-aa44-752e38bdf90f",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "32e162df-abf9-5325-93bb-b71d84e9d850",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "35e48064-f402-56a7-8121-f32b5830f6a5",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "49e8a13b-3b5e-54c7-95ca-7a0d5b40ce34",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "53e4abd7-6073-554e-94ef-7b4edee4f767",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "ae8370c8-802f-534a-b14a-23daebf30ae6",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "b77e3c63-f801-5830-836d-8b5fd1860cba",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "14ce044c-5d14-57b8-a5b8-96edcd04f5e9",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "3582c5ef-76e5-578e-89b5-9c156868c11e",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "960e3148-8557-528f-8a4f-d73f49d28860",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "e99fab95-384f-4c82-aa22-4b94524bb476",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "f79380d7-c89c-4396-b53e-4918d8902c13",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "2ceda713-c41e-4c74-9962-f6a642f1e236",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    },
+    {
+      "uuid": "437d8abf-8e4f-4587-99b7-93c610dd4000",
+      "layer": "B.Cu",
+      "expanded2nm_shape_new_drill_overlap_mm2": 0.0
+    }
+  ],
+  "all_D_original_support_and_58_new_reference_rows_inherited": true,
+  "D_inheritance_basis": "All D copper/shapes and saved planes exact; new drill disjoint from every old outer shape and every D new/changed shape even outward 2 nm. Thus D original supports and full reference witnesses remain material-identical in their footprints.",
+  "actual_via_foreign_clearances": [
+    {
+      "layer": "F.Cu",
+      "nearest_foreign": [
+        {
+          "uuid": "b17b8cd1-1903-56a9-a344-e509ffb983c9",
+          "net": "USB_DP_CONN",
+          "gap_mm": 0.238816
+        },
+        {
+          "uuid": "09178be0-d279-48cb-ab31-5aa0534dedea",
+          "net": "USB_DP_CONN",
+          "gap_mm": 0.37433
+        },
+        {
+          "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+          "net": "USB_DP_CONN",
+          "gap_mm": 1.097654
+        }
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "nearest_foreign": [
+        {
+          "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+          "net": "USB_DP_CONN",
+          "gap_mm": 1.097654
+        },
+        {
+          "uuid": "e0df788a-a488-40a8-af32-04634bc14ecc",
+          "net": "CC1",
+          "gap_mm": 1.157045
+        },
+        {
+          "uuid": "544a3023-571c-4ba3-b056-b27f573292aa",
+          "net": "USB_DP_CONN",
+          "gap_mm": 1.656965
+        }
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "nearest_foreign": [
+        {
+          "uuid": "f87d754d-9071-487c-b6c8-34eb2f861a77",
+          "net": "USB_DP_CONN",
+          "gap_mm": 1.097654
+        },
+        {
+          "uuid": "e0df788a-a488-40a8-af32-04634bc14ecc",
+          "net": "CC1",
+          "gap_mm": 1.157045
+        },
+        {
+          "uuid": "544a3023-571c-4ba3-b056-b27f573292aa",
+          "net": "USB_DP_CONN",
+          "gap_mm": 1.656965
+        }
+      ]
+    },
+    {
+      "layer": "B.Cu",
+      "nearest_foreign": [
+        {
+          "uuid": "a808b65d-1870-532d-86cd-6f8d7849a959",
+          "net": "USB_DM_CONN",
+          "gap_mm": 0.225
+        },
+        {
+          "uuid": "abd413c6-ea9a-5122-a0aa-204e314f3ec4",
+          "net": "USB_DM_CONN",
+          "gap_mm": 0.301498
+        },
+        {
+          "uuid": "5fd7a3f0-7bd0-4400-a2d5-a518fb3dbdbe",
+          "net": "COL0",
+          "gap_mm": 0.33875
+        }
+      ]
+    }
+  ],
+  "D_pad_to_new_via_ordinary_gaps": [
+    {
+      "ref": "R125",
+      "pad": "1",
+      "new_via_outer_gap_mm": 10.247666
+    },
+    {
+      "ref": "R125",
+      "pad": "2",
+      "new_via_outer_gap_mm": 10.387339
+    },
+    {
+      "ref": "C124",
+      "pad": "1",
+      "new_via_outer_gap_mm": 9.248992
+    },
+    {
+      "ref": "C124",
+      "pad": "2",
+      "new_via_outer_gap_mm": 9.061329
+    },
+    {
+      "ref": "R121",
+      "pad": "1",
+      "new_via_outer_gap_mm": 9.360249
+    },
+    {
+      "ref": "R121",
+      "pad": "2",
+      "new_via_outer_gap_mm": 8.523078
+    }
+  ],
+  "c770_prior_current_13129_shadows_actual_drill_bound": true,
+  "c770_shadow_receipt_sha256": "b5dbc9420ca44f9bd4d3908871c585d64bcaa4c30bfe87d4fa9995829c5dfae7",
+  "no_CAD_mutation": true,
+  "no_SI_ESD_qualification": true,
+  "input_hashes": {
+    "project": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+    "source_R2_graph": "2d4b25e398e2d635de747a696dd263ef1f83b638001a4beec4932583b1e4f98a",
+    "active_R2_helper": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9"
+  }
+}

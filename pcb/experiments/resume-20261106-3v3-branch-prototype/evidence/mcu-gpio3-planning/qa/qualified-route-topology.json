@@ -1,0 +1,952 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "region_mm": [
+    99,
+    23,
+    121,
+    94
+  ],
+  "layer": "F.Cu",
+  "method": "Continuous actual native polygon free-space topology, conservative 0.225002 mm foreign-copper offset and 0.075002 mm reference erosion; no grid. Actual source In1 GND after all-hole cuts. Prospective transition windows declared before topology test. Not native DRC proof.",
+  "source_allowed": true,
+  "free_components": 142,
+  "source_component_bbox": [
+    112.1892755612236,
+    82.350002,
+    119.83416560646793,
+    89.22914151002624
+  ],
+  "target_same_component": [],
+  "target_transition_uuids": [
+    "69b06049-b85a-59f7-a3c0-cb9698f700de",
+    "b35a514f-dc3e-532d-a8d6-d982398f4c74",
+    "b5bdc8e1-089e-5645-8ed0-0e82b7877702",
+    "d991a50a-0b42-5bba-9bb5-72bf68d8cdfd"
+  ],
+  "source_component_area_mm2": 17.25682699281979,
+  "source_component_strictly_inside_search_bounds": true,
+  "boundary_foreign_copper": [
+    {
+      "uuid": "463cc7a3-44fd-46cd-ae66-5a692f1525a4",
+      "class": "PCB_TRACK",
+      "net": "ROW0",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.7,
+        85.55
+      ],
+      "end": [
+        125.0,
+        85.55
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "e0ff3d97-b5ef-43f6-970c-e88dfe0cbae2",
+      "class": "PCB_TRACK",
+      "net": "ROW0",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.35,
+        85.9
+      ],
+      "end": [
+        116.7,
+        85.55
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "ff2820fc-c436-4312-b382-9432f0706012",
+      "class": "PCB_TRACK",
+      "net": "ROW0",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.45,
+        85.9
+      ],
+      "end": [
+        116.35,
+        85.9
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "03e7c670-2181-4088-a42d-bbedf015202c",
+      "class": "PCB_TRACK",
+      "net": "COL7",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        120.8,
+        86.1
+      ],
+      "end": [
+        120.0,
+        86.1
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "0a14e507-b931-4154-a467-33cd3b7a031a",
+      "class": "PCB_TRACK",
+      "net": "COL7",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        120.0,
+        86.1
+      ],
+      "end": [
+        116.2,
+        89.9
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "5b56fe14-a970-4f8a-996a-c3221ccac785",
+      "class": "PCB_TRACK",
+      "net": "COL7",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        111.7,
+        87.3
+      ],
+      "end": [
+        114.1,
+        87.3
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "6a547bc3-c788-4b47-b3fe-f5a46bc639cf",
+      "class": "PCB_TRACK",
+      "net": "COL7",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.2,
+        89.4
+      ],
+      "end": [
+        116.2,
+        89.9
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "f4c60576-4108-4c82-95d5-5032cb64175e",
+      "class": "PCB_TRACK",
+      "net": "COL7",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        114.1,
+        87.3
+      ],
+      "end": [
+        116.2,
+        89.4
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "2702184a-0b18-4e2d-ad4f-e56aa172c9a6",
+      "class": "PCB_TRACK",
+      "net": "+3V3",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.75,
+        86.4
+      ],
+      "end": [
+        115.65,
+        86.4
+      ],
+      "width": 0.2
+    },
+    {
+      "uuid": "3bf1b371-5cf0-419f-b8fa-7c725ff5db21",
+      "class": "PCB_TRACK",
+      "net": "+3V3",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.65,
+        86.4
+      ],
+      "end": [
+        115.6,
+        86.45
+      ],
+      "width": 0.2
+    },
+    {
+      "uuid": "7c024157-4a80-4d6d-8811-9cdbc5eff51d",
+      "class": "PCB_TRACK",
+      "net": "+3V3",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.6,
+        86.45
+      ],
+      "end": [
+        115.2,
+        86.45
+      ],
+      "width": 0.2
+    },
+    {
+      "uuid": "9bd5e828-18e0-4280-9063-2158fa803f1b",
+      "class": "PCB_TRACK",
+      "net": "+3V3",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.9,
+        86.25
+      ],
+      "end": [
+        115.75,
+        86.4
+      ],
+      "width": 0.2
+    },
+    {
+      "uuid": "b4d2fef8-601a-4ae0-9600-15cb43f1d246",
+      "class": "PCB_TRACK",
+      "net": "+3V3",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        118.15,
+        86.05
+      ],
+      "end": [
+        116.75,
+        86.05
+      ],
+      "width": 0.2
+    },
+    {
+      "uuid": "be0ffe7a-0ebf-4cbb-b96b-cb234c8c18dd",
+      "class": "PCB_TRACK",
+      "net": "+3V3",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.2,
+        86.45
+      ],
+      "end": [
+        114.95,
+        86.2
+      ],
+      "width": 0.2
+    },
+    {
+      "uuid": "d40e4428-1c59-43c9-9cf6-131418f340bf",
+      "class": "PCB_TRACK",
+      "net": "+3V3",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.55,
+        86.25
+      ],
+      "end": [
+        115.9,
+        86.25
+      ],
+      "width": 0.2
+    },
+    {
+      "uuid": "fe5aac4a-21ec-4719-9a43-3a32bf9b1412",
+      "class": "PCB_TRACK",
+      "net": "+3V3",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.75,
+        86.05
+      ],
+      "end": [
+        116.55,
+        86.25
+      ],
+      "width": 0.2
+    },
+    {
+      "uuid": "f6b3e19b-5c04-48f1-baf9-4cc5b9d4e682",
+      "class": "PCB_TRACK",
+      "net": "+1V1",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        111.8,
+        83.6495
+      ],
+      "end": [
+        111.8,
+        86.5
+      ],
+      "width": 0.6
+    },
+    {
+      "uuid": "04ea848b-2f7d-4e30-9f42-79c170dea4dc",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        114.6,
+        83.45
+      ],
+      "end": [
+        114.5,
+        83.35
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "05c727de-01a4-45a2-959e-c54497eb1bdd",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        117.0,
+        84.55
+      ],
+      "end": [
+        116.9,
+        84.45
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "0ff654fe-5a89-429b-9d64-3377ec5b559d",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        117.4,
+        84.649999
+      ],
+      "end": [
+        117.3,
+        84.649999
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "102a1692-22d0-49ab-8352-0490dd6b5a20",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.2,
+        83.649999
+      ],
+      "end": [
+        115.1,
+        83.649999
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "178065f0-30b9-4fd2-95f1-1e08685f5301",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.1,
+        84.05
+      ],
+      "end": [
+        115.9,
+        84.05
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "1b5fad47-2fd5-4d9f-8e6b-6b9398357e6e",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.1,
+        83.649999
+      ],
+      "end": [
+        115.0,
+        83.55
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "1cf4f054-5b5f-41f8-a08d-e72afd013c24",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.5,
+        84.25
+      ],
+      "end": [
+        116.4,
+        84.25
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "2362b1fd-da26-4afe-be7d-d98c3cda1ba8",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        114.8,
+        83.55
+      ],
+      "end": [
+        114.7,
+        83.45
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "2d45ee67-c1b1-4cca-aa06-3d237a785194",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        117.2,
+        84.55
+      ],
+      "end": [
+        117.0,
+        84.55
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "2e3954ac-691e-43d2-8759-93355c0ac635",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        117.7,
+        84.85
+      ],
+      "end": [
+        117.6,
+        84.75
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "3a5dafd3-8dd4-490a-96a0-6e884928dc74",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        117.9,
+        84.95
+      ],
+      "end": [
+        117.8,
+        84.85
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "3eb783f1-2945-4f8a-b5e6-4a0ce431463c",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.6,
+        84.35
+      ],
+      "end": [
+        116.5,
+        84.25
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "4bb68035-4394-4baa-8746-849ce050e0bb",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.9,
+        84.45
+      ],
+      "end": [
+        116.8,
+        84.45
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "50905843-fc78-4064-9af6-f3c09b8e8aad",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        117.5,
+        84.75
+      ],
+      "end": [
+        117.4,
+        84.649999
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "5444cb98-9a47-479f-9ee0-b8f3cfd78afd",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.3,
+        84.149999
+      ],
+      "end": [
+        116.2,
+        84.149999
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "559b017a-5cf4-4471-9aa6-f373705f01d1",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.4,
+        83.75
+      ],
+      "end": [
+        115.3,
+        83.75
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "66e66f44-6097-4348-8cd1-35b409c1e2f1",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.7,
+        84.35
+      ],
+      "end": [
+        116.6,
+        84.35
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "684f7571-7da3-4b6f-9f2c-aeaf8c6a0a46",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        118.1,
+        85.05
+      ],
+      "end": [
+        118.0,
+        84.95
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "6d49d0e7-6e52-4d7b-9b95-ecb433c829ef",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.8,
+        84.45
+      ],
+      "end": [
+        116.7,
+        84.35
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "72ab5912-6a06-4a63-b459-760acb26c890",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        117.8,
+        84.85
+      ],
+      "end": [
+        117.7,
+        84.85
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "7a099ad3-7250-448e-9a3a-ae4d1c03b517",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.8,
+        83.95
+      ],
+      "end": [
+        115.7,
+        83.95
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "8f82ca8c-475d-4048-bded-a2299dea1b27",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.7,
+        83.95
+      ],
+      "end": [
+        115.6,
+        83.85
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "96edc56c-6cf0-46e4-83b2-e572fdbe5ff1",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.2,
+        84.149999
+      ],
+      "end": [
+        116.1,
+        84.05
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "9e7d638a-8e8b-44e5-821a-996476146c2c",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        117.3,
+        84.649999
+      ],
+      "end": [
+        117.2,
+        84.55
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "a8669984-ae7e-4726-bef8-f265855df322",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        114.5,
+        83.35
+      ],
+      "end": [
+        114.4,
+        83.35
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "aba369ad-ad29-4ea8-aae4-71ecf30e257a",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.9,
+        84.05
+      ],
+      "end": [
+        115.8,
+        83.95
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "b466b20a-b2e1-4dae-b2fc-a00020478ca4",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        114.7,
+        83.45
+      ],
+      "end": [
+        114.6,
+        83.45
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "b8aeb282-6812-4f00-8fa7-adc608f11e38",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.3,
+        83.75
+      ],
+      "end": [
+        115.2,
+        83.649999
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "c2d99f29-5e81-4a07-997d-494436fec70f",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.5,
+        83.85
+      ],
+      "end": [
+        115.4,
+        83.75
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        113.1,
+        82.05
+      ],
+      "end": [
+        111.6,
+        82.05
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "dea2d270-7010-40a0-b91c-ace8f41afb23",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.0,
+        83.55
+      ],
+      "end": [
+        114.8,
+        83.55
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "e75f3ad9-f564-4732-b28a-a2bf05c38e3a",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        118.0,
+        84.95
+      ],
+      "end": [
+        117.9,
+        84.95
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "eaeaf0a3-98f2-402e-a8d5-a7234d791456",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        116.4,
+        84.25
+      ],
+      "end": [
+        116.3,
+        84.149999
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        114.4,
+        83.35
+      ],
+      "end": [
+        113.1,
+        82.05
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "f899366c-150b-4d5f-ac1e-2f36236732a9",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        115.6,
+        83.85
+      ],
+      "end": [
+        115.5,
+        83.85
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "ffde8fb9-5572-49c1-8ae8-f393c3163b41",
+      "class": "PCB_TRACK",
+      "net": "LED_ENABLE",
+      "layers": [
+        "F.Cu"
+      ],
+      "start": [
+        117.6,
+        84.75
+      ],
+      "end": [
+        117.5,
+        84.75
+      ],
+      "width": 0.15
+    },
+    {
+      "uuid": "076a70b9-5723-4769-bb4f-c46720a33f03",
+      "class": "PAD",
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "ref": "U1",
+      "pad": "61",
+      "pos": [
+        112.2,
+        82.7
+      ],
+      "size": [
+        0.6,
+        0.6
+      ]
+    }
+  ]
+}

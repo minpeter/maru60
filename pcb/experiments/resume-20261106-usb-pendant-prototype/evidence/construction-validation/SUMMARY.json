@@ -1,0 +1,37 @@
+{
+  "status": "passed_bounded_geometric_cleanup_pending_independent_review_unselected",
+  "source_commit": "fa96a7c8b334f0f496ab7cdb4de9b18cf9276966",
+  "source_sha256": "88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e",
+  "candidate_sha256": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5",
+  "removed": [
+    "b04e3a6d-1e98-43d1-9b10-58c23321ca28"
+  ],
+  "changed_project_files": [
+    "maru60.kicad_pcb"
+  ],
+  "project_files": 58,
+  "native_warnings_before": 39,
+  "native_warnings_after": 38,
+  "physical_opens_unchanged": 9,
+  "erc": 0,
+  "parity": 0,
+  "xml_nodes_checked": 1064,
+  "pads": 1084,
+  "cold_files_identical": 58,
+  "all_retained_material_node_ids_equal": true,
+  "retained_material_nodes": 14715,
+  "all_retained_material_components_equal": true,
+  "components": 380,
+  "all_retained_island_contacts_preserved": true,
+  "retained_edges": 22525,
+  "any_raw_or_guarded_overlap_reduced": false,
+  "retained_object_layer_rows": 15361,
+  "retained_reference_rows": 25724,
+  "zone_rows": 11,
+  "changed_holes": 0,
+  "changed_zones": 0,
+  "retained_material_exact_unchanged": true,
+  "whole_GND_planes_exact_unchanged": true,
+  "inherited_guard_diagnostics": 51,
+  "historical_exact_no_loss_failure": "Inherited prior baseline comparison remains unresolved; current immediate-source proof does not cure it."
+}

@@ -1,0 +1,37 @@
+(via
+		(at 20.15 10.95)
+		(size 0.5)
+		(drill 0.25)
+		(layers "F.Cu" "B.Cu")
+		(net 117)
+		(uuid "1e6f9b6e-9a22-418a-8cde-6feb5aafb26e")
+	) (segment
+		(start 20.15 12.45)
+		(end 20.15 8.7)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 117)
+		(uuid "b83f85ff-dd51-4f3a-987a-b80209573fa1")
+	) (segment
+		(start 20.15 10.95)
+		(end 20.15 8.7)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 117)
+		(uuid "b83f85ff-dd51-4f3a-987a-b80209573fa1")
+	)
+{
+  "source_sha256": "2bacda8824b543df9be08628cd8ac14b2ed6628d7ee3e221626b869da74787d4",
+  "candidate_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "removed_via": "1e6f9b6e-9a22-418a-8cde-6feb5aafb26e",
+  "removed_form": "(via\n\t\t(at 20.15 10.95)\n\t\t(size 0.5)\n\t\t(drill 0.25)\n\t\t(layers \"F.Cu\" \"B.Cu\")\n\t\t(net 117)\n\t\t(uuid \"1e6f9b6e-9a22-418a-8cde-6feb5aafb26e\")\n\t)",
+  "old_net_names_unchanged": true,
+  "added_items": 0,
+  "removed_tracks": 0,
+  "removed_vias": 1,
+  "serialized_track_uuid": "b83f85ff-dd51-4f3a-987a-b80209573fa1",
+  "serialized_track_old_form": "(segment\n\t\t(start 20.15 12.45)\n\t\t(end 20.15 8.7)\n\t\t(width 0.2)\n\t\t(layer \"B.Cu\")\n\t\t(net 117)\n\t\t(uuid \"b83f85ff-dd51-4f3a-987a-b80209573fa1\")\n\t)",
+  "serialized_track_new_form": "(segment\n\t\t(start 20.15 10.95)\n\t\t(end 20.15 8.7)\n\t\t(width 0.2)\n\t\t(layer \"B.Cu\")\n\t\t(net 117)\n\t\t(uuid \"b83f85ff-dd51-4f3a-987a-b80209573fa1\")\n\t)",
+  "intent": "Remove single-layer VBUS via and serialize existing overlapping tracks without reducing their planar copper union",
+  "status": "UNSELECTED experiment pending complete material/reference validation"
+}

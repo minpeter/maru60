@@ -1,0 +1,93 @@
+{
+  "status": "BOUNDED_THREE_TRANSITION_PLAN_OPENS_WESTERN_REGION_NO_COMPLETE_ROUTE",
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": null,
+  "candidate_saved": false,
+  "route_closed": false,
+  "source_unchanged": true,
+  "modified_source_objects": [],
+  "source_DRC_inherited_not_rerun": {
+    "open_pairs": 9,
+    "warnings": 42
+  },
+  "native_candidate_DRC": "not run; no complete route or candidate exists",
+  "material_graph_contacts_net_identity_ERC_cold_refill": "not run for candidate; no candidate exists",
+  "actual_plane_proof": "Both native all-hole-cut source GND layers lose positive material to proposed via drill; all area and contour rows explicitly asserted",
+  "inherited_limits": [
+    "Strict exact-no-loss failure remains",
+    "51 guarded-contact proof failures remain separate from native warnings",
+    "No SI, active-power, hardware or manufacturing readiness claim"
+  ],
+  "initial_stop_superseded": true,
+  "qualification": "Declared rule-derived local via drill/antipad is allowed only in an isolated development prototype, not strict no-loss baseline.",
+  "transition_freeze": "qa/transition-freeze.json",
+  "route_topology": "qa/qualified-route-topology.json",
+  "source_component_bbox": [
+    112.1892755612236,
+    82.350002,
+    119.83416560646793,
+    89.22914151002624
+  ],
+  "source_component_strictly_inside_search_bounds": true,
+  "complete_route_plausible": false,
+  "next_scope_needed": "Stopped at explicit whole-region third-transition assessment cap. New western F region is useful for any future separately bounded continuation.",
+  "two_transition_escape_found": true,
+  "qualified_planning_portals": [
+    [
+      113.2,
+      82.9
+    ],
+    [
+      113.6,
+      83.6
+    ],
+    [
+      118.9,
+      86.1
+    ],
+    [
+      117.0,
+      86.7
+    ],
+    [
+      115.1,
+      87.0
+    ],
+    [
+      117.7,
+      87.1
+    ],
+    [
+      117.0,
+      87.6
+    ],
+    [
+      115.4,
+      87.8
+    ]
+  ],
+  "strongest_north_portal": [
+    113.2,
+    82.9
+  ],
+  "third_transition_sample_count": 40,
+  "third_transition_legal_count": 0,
+  "third_transition_whole_region_summary": "qa/third-whole-summary.json",
+  "strongest_sequence_mm": [
+    [
+      112.6,
+      84
+    ],
+    [
+      113.2,
+      82.9
+    ],
+    [
+      109.2,
+      83.7
+    ]
+  ],
+  "third_transition_whole_region_new_sites": 570,
+  "third_transition_whole_region_legal_sites": 66,
+  "third_transition_group_count": 2
+}

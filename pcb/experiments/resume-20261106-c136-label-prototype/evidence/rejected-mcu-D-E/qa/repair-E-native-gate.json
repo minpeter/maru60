@@ -1,0 +1,61 @@
+{
+  "schematic_parity": 0,
+  "unconnected_items": 9,
+  "violations": 45,
+  "severity_category_counts": {
+    "error:clearance": 2,
+    "warning:silk_over_copper": 13,
+    "warning:silk_overlap": 10,
+    "warning:text_height": 15,
+    "warning:track_dangling": 4,
+    "warning:via_dangling": 1
+  },
+  "hard_errors": [
+    {
+      "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1445 mm)",
+      "items": [
+        {
+          "description": "Track [LED_FAULT_N] on F.Cu, length 0.5000 mm",
+          "pos": {
+            "x": 110.8,
+            "y": 75.45
+          },
+          "uuid": "b995c2c7-f443-497b-bb80-da0d3312d10d"
+        },
+        {
+          "description": "Track [+1V1] on F.Cu, length 0.4851 mm",
+          "pos": {
+            "x": 111.4,
+            "y": 75.7
+          },
+          "uuid": "db39d882-6ecf-4006-b107-6b00b1abd04a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.1445 mm)",
+      "items": [
+        {
+          "description": "Track [+1V1] on F.Cu, length 0.4851 mm",
+          "pos": {
+            "x": 111.4,
+            "y": 75.7
+          },
+          "uuid": "db39d882-6ecf-4006-b107-6b00b1abd04a"
+        },
+        {
+          "description": "Track [LED_FAULT_N] on F.Cu, length 0.1414 mm",
+          "pos": {
+            "x": 110.8,
+            "y": 75.95
+          },
+          "uuid": "f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  ]
+}

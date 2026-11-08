@@ -1,0 +1,2107 @@
+{
+  "source_trial_sha256": "b1e3b41f868bebc2915264d1136e356a67b3b8896de3650068bd1c438aa62913",
+  "status": "READ ONLY; four reference fields; candidate and source unchanged",
+  "interpretation": "Three separately reported geometries: native cached filled courtyard, exact raw integer line/rectangle closed centerline interior; arc reconstruction bounded <1 nm, and actual drawn-stroke envelope. Stroked envelope is stricter optional audit, not a retroactive interpretation of earlier selected acceptance. Actual corrected poses target >=0.200 mm on both exact nominal and actual stroke envelope. No existing acceptance criterion is changed.",
+  "original_rows": [
+    {
+      "reference": "U13",
+      "typography": {
+        "uuid": "d5936da3-6a90-497b-8070-68fd872b012b",
+        "text": "U13",
+        "position_nm": [
+          89800000,
+          45300000
+        ],
+        "size_nm": [
+          800000,
+          800000
+        ],
+        "stroke_nm": 100000,
+        "angle_deg": 0.0,
+        "visible": true,
+        "mirrored": true,
+        "layer": "B.Silkscreen",
+        "bold": false,
+        "italic": false
+      },
+      "normal_native_geometry": {
+        "silk_intersections": [],
+        "silk_gap": {
+          "lower_bound_nm": 3821525,
+          "upper_bound_nm": 3821526,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "97e43664-7a40-4839-b2b8-2878c5871bc7",
+            "class": "PCB_FIELD",
+            "layer": "B.Silkscreen",
+            "position_nm": [
+              92900000,
+              40980000
+            ],
+            "reference": "J3"
+          }
+        },
+        "silk_target_pass": true,
+        "mask_intersections": [],
+        "mask_gap": {
+          "lower_bound_nm": 434525,
+          "upper_bound_nm": 434526,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "cb9f1787-a66e-484e-9936-55bd07afa5fc",
+            "class": "PAD",
+            "layer": "F.Cu",
+            "position_nm": [
+              92550000,
+              44758750
+            ],
+            "reference": "SW34",
+            "pad": "1",
+            "net": "COL4",
+            "source": "pad",
+            "mask_layer": "B.Mask",
+            "copper_layer": "B.Cu",
+            "expansion_nm": 0
+          }
+        },
+        "mask_target_pass": true,
+        "courtyard_intersections": [],
+        "courtyard_gap": {
+          "lower_bound_nm": 269895,
+          "upper_bound_nm": 269896,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "287dcfce-9676-44ea-870d-016045e22ba2",
+            "class": "FOOTPRINT",
+            "layer": "B.Cu",
+            "position_nm": [
+              90000000,
+              42500000
+            ],
+            "reference": "U13"
+          }
+        },
+        "courtyard_target_pass": true,
+        "fab_intersections": [],
+        "fab_gap": {
+          "lower_bound_nm": 564895,
+          "upper_bound_nm": 564896,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "287dcfce-9676-44ea-870d-016045e22ba2",
+            "reference": "U13",
+            "layer": "B.Fab"
+          }
+        },
+        "fab_target_pass": true,
+        "unreconstructed_fab_intersections": [],
+        "unreconstructed_fab_gap": {
+          "lower_bound_nm": 6089895,
+          "upper_bound_nm": 6089896,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "d9de16ba-ea78-4da8-98e0-3335edb6a6dc",
+            "class": "PCB_SHAPE",
+            "layer": "B.Fab",
+            "position_nm": [
+              88500000,
+              37967893
+            ],
+            "reference": "J3"
+          }
+        },
+        "unreconstructed_fab_target_pass": true,
+        "edge_intersections": [],
+        "edge_gap": {
+          "lower_bound_nm": 10000000,
+          "upper_bound_nm": null,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": false,
+          "capped_lower_bound": true,
+          "cap_nm": 10000000,
+          "partner": null
+        },
+        "edge_target_pass": true,
+        "whole_ink_inside_board": true
+      },
+      "exact_nominal_centerline_gap": {
+        "lower_bound_nm": 264895,
+        "upper_bound_nm": 264896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "reference": "U13",
+          "primitive_sources": [
+            {
+              "uuid": "7f7e986c-a153-4efb-b2c8-39e6d622a6da",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                91125000,
+                40450000
+              ],
+              "reference": "U13",
+              "stroke_width_nm": 50000,
+              "shape_type": 1
+            }
+          ],
+          "method": "exact_raw_integer_centerline_closed_interior",
+          "points_nm": [
+            [
+              91125000,
+              40450000
+            ],
+            [
+              88875000,
+              40450000
+            ],
+            [
+              88875000,
+              44550000
+            ],
+            [
+              91125000,
+              44550000
+            ]
+          ]
+        }
+      },
+      "raw_stroke_envelope_gap": {
+        "lower_bound_nm": 239895,
+        "upper_bound_nm": 239896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "7f7e986c-a153-4efb-b2c8-39e6d622a6da",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            91125000,
+            40450000
+          ],
+          "reference": "U13",
+          "stroke_width_nm": 50000,
+          "shape_type": 1
+        }
+      },
+      "nominal_150um_pass": true,
+      "stroke_150um_pass": true,
+      "nominal_200um_pass": true,
+      "stroke_200um_pass": true
+    },
+    {
+      "reference": "R135",
+      "typography": {
+        "uuid": "1fead33a-4bad-4c1e-915a-4d237e8f12b1",
+        "text": "R135",
+        "position_nm": [
+          117400000,
+          36400000
+        ],
+        "size_nm": [
+          800000,
+          800000
+        ],
+        "stroke_nm": 100000,
+        "angle_deg": 0.0,
+        "visible": true,
+        "mirrored": true,
+        "layer": "B.Silkscreen",
+        "bold": false,
+        "italic": false
+      },
+      "normal_native_geometry": {
+        "silk_intersections": [],
+        "silk_gap": {
+          "lower_bound_nm": 282724,
+          "upper_bound_nm": 282725,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "d26c4db7-f00b-4e58-b1f3-9d04c6192d53",
+            "class": "PCB_FIELD",
+            "layer": "B.Silkscreen",
+            "position_nm": [
+              117800000,
+              38500000
+            ],
+            "reference": "R145"
+          }
+        },
+        "silk_target_pass": true,
+        "mask_intersections": [],
+        "mask_gap": {
+          "lower_bound_nm": 486027,
+          "upper_bound_nm": 486028,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "ecf7cc17-210f-4a03-a207-582810bdaa4e",
+            "class": "PAD",
+            "layer": "F.Cu",
+            "position_nm": [
+              115000000,
+              36175000
+            ],
+            "reference": "R135",
+            "pad": "2",
+            "net": "GPIO27_ISO",
+            "source": "pad",
+            "mask_layer": "B.Mask",
+            "copper_layer": "B.Cu",
+            "expansion_nm": 0
+          }
+        },
+        "mask_target_pass": true,
+        "courtyard_intersections": [],
+        "courtyard_gap": {
+          "lower_bound_nm": 234523,
+          "upper_bound_nm": 234524,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "d6a437fb-272b-44d5-ac48-cf079167e319",
+            "class": "FOOTPRINT",
+            "layer": "B.Cu",
+            "position_nm": [
+              115000000,
+              37000000
+            ],
+            "reference": "R135"
+          }
+        },
+        "courtyard_target_pass": true,
+        "fab_intersections": [],
+        "fab_gap": {
+          "lower_bound_nm": 547023,
+          "upper_bound_nm": 547024,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "d6a437fb-272b-44d5-ac48-cf079167e319",
+            "reference": "R135",
+            "layer": "B.Fab"
+          }
+        },
+        "fab_target_pass": true,
+        "unreconstructed_fab_intersections": [],
+        "unreconstructed_fab_gap": {
+          "lower_bound_nm": 2153352,
+          "upper_bound_nm": 2153353,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "5601bd6a-ace1-419b-8308-c5fbf2800b63",
+            "class": "PCB_SHAPE",
+            "layer": "B.Fab",
+            "position_nm": [
+              120922500,
+              34398750
+            ],
+            "reference": "D21"
+          }
+        },
+        "unreconstructed_fab_target_pass": true,
+        "edge_intersections": [],
+        "edge_gap": {
+          "lower_bound_nm": 10000000,
+          "upper_bound_nm": null,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": false,
+          "capped_lower_bound": true,
+          "cap_nm": 10000000,
+          "partner": null
+        },
+        "edge_target_pass": true,
+        "whole_ink_inside_board": true
+      },
+      "exact_nominal_centerline_gap": {
+        "lower_bound_nm": 229523,
+        "upper_bound_nm": 229524,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "reference": "R135",
+          "primitive_sources": [
+            {
+              "uuid": "a2232c74-f136-4a5b-be76-09e875cafb01",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                114270000,
+                35520000
+              ],
+              "reference": "R135",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "4fa6bf0f-fab9-4ca8-ac8b-f57f3563d449",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                114270000,
+                38480000
+              ],
+              "reference": "R135",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "8c8b4c69-a8a0-470e-9184-d44a67b89416",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                115730000,
+                35520000
+              ],
+              "reference": "R135",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "646ab7d2-2c24-4125-a1aa-c1ded78639c1",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                115730000,
+                38480000
+              ],
+              "reference": "R135",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            }
+          ],
+          "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+          "endpoint_vertices_nm": [
+            [
+              114270000,
+              35520000
+            ],
+            [
+              114270000,
+              38480000
+            ],
+            [
+              115730000,
+              38480000
+            ],
+            [
+              115730000,
+              35520000
+            ]
+          ],
+          "arc_count": 0
+        }
+      },
+      "raw_stroke_envelope_gap": {
+        "lower_bound_nm": 204523,
+        "upper_bound_nm": 204524,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "646ab7d2-2c24-4125-a1aa-c1ded78639c1",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            115730000,
+            38480000
+          ],
+          "reference": "R135",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        }
+      },
+      "nominal_150um_pass": true,
+      "stroke_150um_pass": true,
+      "nominal_200um_pass": true,
+      "stroke_200um_pass": true
+    },
+    {
+      "reference": "R145",
+      "typography": {
+        "uuid": "d26c4db7-f00b-4e58-b1f3-9d04c6192d53",
+        "text": "R145",
+        "position_nm": [
+          117800000,
+          38500000
+        ],
+        "size_nm": [
+          800000,
+          800000
+        ],
+        "stroke_nm": 100000,
+        "angle_deg": 90.0,
+        "visible": true,
+        "mirrored": true,
+        "layer": "B.Silkscreen",
+        "bold": false,
+        "italic": false
+      },
+      "normal_native_geometry": {
+        "silk_intersections": [],
+        "silk_gap": {
+          "lower_bound_nm": 282724,
+          "upper_bound_nm": 282725,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "1fead33a-4bad-4c1e-915a-4d237e8f12b1",
+            "class": "PCB_FIELD",
+            "layer": "B.Silkscreen",
+            "position_nm": [
+              117400000,
+              36400000
+            ],
+            "reference": "R135"
+          }
+        },
+        "silk_target_pass": true,
+        "mask_intersections": [],
+        "mask_gap": {
+          "lower_bound_nm": 589895,
+          "upper_bound_nm": 589896,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "0edef198-5c80-419d-865b-5ec49cd8067c",
+            "class": "PAD",
+            "layer": "F.Cu",
+            "position_nm": [
+              116325000,
+              39500000
+            ],
+            "reference": "R145",
+            "pad": "1",
+            "net": "MCU_GPIO27",
+            "source": "pad",
+            "mask_layer": "B.Mask",
+            "copper_layer": "B.Cu",
+            "expansion_nm": 0
+          }
+        },
+        "mask_target_pass": true,
+        "courtyard_intersections": [],
+        "courtyard_gap": {
+          "lower_bound_nm": 301800,
+          "upper_bound_nm": 301801,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "b7ec7a0d-3dc9-46d2-8b2c-d2f59ce90a1c",
+            "class": "FOOTPRINT",
+            "layer": "B.Cu",
+            "position_nm": [
+              115500000,
+              39500000
+            ],
+            "reference": "R145"
+          }
+        },
+        "courtyard_target_pass": true,
+        "fab_intersections": [],
+        "fab_gap": {
+          "lower_bound_nm": 1001290,
+          "upper_bound_nm": 1001291,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "b7ec7a0d-3dc9-46d2-8b2c-d2f59ce90a1c",
+            "reference": "R145",
+            "layer": "B.Fab"
+          }
+        },
+        "fab_target_pass": true,
+        "unreconstructed_fab_intersections": [],
+        "unreconstructed_fab_gap": {
+          "lower_bound_nm": 3425592,
+          "upper_bound_nm": 3425593,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "5601bd6a-ace1-419b-8308-c5fbf2800b63",
+            "class": "PCB_SHAPE",
+            "layer": "B.Fab",
+            "position_nm": [
+              120922500,
+              34398750
+            ],
+            "reference": "D21"
+          }
+        },
+        "unreconstructed_fab_target_pass": true,
+        "edge_intersections": [],
+        "edge_gap": {
+          "lower_bound_nm": 10000000,
+          "upper_bound_nm": null,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": false,
+          "capped_lower_bound": true,
+          "cap_nm": 10000000,
+          "partner": null
+        },
+        "edge_target_pass": true,
+        "whole_ink_inside_board": true
+      },
+      "exact_nominal_centerline_gap": {
+        "lower_bound_nm": 296800,
+        "upper_bound_nm": 296801,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "reference": "R145",
+          "primitive_sources": [
+            {
+              "uuid": "151f6016-85a3-4e6b-a92f-6d1848e4aa83",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                114020000,
+                38770000
+              ],
+              "reference": "R145",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "eb86acf3-9922-4429-8fa3-d178e5afdb64",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                114020000,
+                40230000
+              ],
+              "reference": "R145",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "39dd892e-fb64-45be-8639-8c42ddd1d40d",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                116980000,
+                38770000
+              ],
+              "reference": "R145",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "d9c7d12d-e324-4c98-a49e-9ff11ad63505",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                116980000,
+                40230000
+              ],
+              "reference": "R145",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            }
+          ],
+          "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+          "endpoint_vertices_nm": [
+            [
+              114020000,
+              38770000
+            ],
+            [
+              114020000,
+              40230000
+            ],
+            [
+              116980000,
+              40230000
+            ],
+            [
+              116980000,
+              38770000
+            ]
+          ],
+          "arc_count": 0
+        }
+      },
+      "raw_stroke_envelope_gap": {
+        "lower_bound_nm": 271800,
+        "upper_bound_nm": 271801,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "d9c7d12d-e324-4c98-a49e-9ff11ad63505",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            116980000,
+            40230000
+          ],
+          "reference": "R145",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        }
+      },
+      "nominal_150um_pass": true,
+      "stroke_150um_pass": true,
+      "nominal_200um_pass": true,
+      "stroke_200um_pass": true
+    },
+    {
+      "reference": "U11",
+      "typography": {
+        "uuid": "b4d6de7b-9d6c-48fb-bb32-d6509af7050e",
+        "text": "U11",
+        "position_nm": [
+          105400000,
+          36300000
+        ],
+        "size_nm": [
+          800000,
+          800000
+        ],
+        "stroke_nm": 100000,
+        "angle_deg": 90.0,
+        "visible": true,
+        "mirrored": true,
+        "layer": "B.Silkscreen",
+        "bold": false,
+        "italic": false
+      },
+      "normal_native_geometry": {
+        "silk_intersections": [],
+        "silk_gap": {
+          "lower_bound_nm": 235220,
+          "upper_bound_nm": 235221,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "63596892-de69-45ca-9053-4f00515a64af",
+            "class": "PCB_FIELD",
+            "layer": "B.Silkscreen",
+            "position_nm": [
+              104500000,
+              38070000
+            ],
+            "reference": "C129"
+          }
+        },
+        "silk_target_pass": true,
+        "mask_intersections": [],
+        "mask_gap": {
+          "lower_bound_nm": 535105,
+          "upper_bound_nm": 535106,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "cff436d2-a051-486a-8eda-ad80c8687157",
+            "class": "PAD",
+            "layer": "F.Cu",
+            "position_nm": [
+              107100000,
+              37325000
+            ],
+            "reference": "U11",
+            "pad": "15",
+            "net": "EXT_GPIO25",
+            "source": "pad",
+            "mask_layer": "B.Mask",
+            "copper_layer": "B.Cu",
+            "expansion_nm": 0
+          }
+        },
+        "mask_target_pass": true,
+        "courtyard_intersections": [],
+        "courtyard_gap": {
+          "lower_bound_nm": 290105,
+          "upper_bound_nm": 290106,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "568a9c4b-fd3c-42f2-a480-f1953e4fbb18",
+            "class": "FOOTPRINT",
+            "layer": "B.Cu",
+            "position_nm": [
+              110000000,
+              37000000
+            ],
+            "reference": "U11"
+          }
+        },
+        "courtyard_target_pass": true,
+        "fab_intersections": [],
+        "fab_gap": {
+          "lower_bound_nm": 1781416,
+          "upper_bound_nm": 1781417,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "8e5e43ad-e6ea-4ac9-b30f-8dcdad168e57",
+            "reference": "C129",
+            "layer": "B.Fab"
+          }
+        },
+        "fab_target_pass": true,
+        "unreconstructed_fab_intersections": [],
+        "unreconstructed_fab_gap": {
+          "lower_bound_nm": 2600607,
+          "upper_bound_nm": 2600608,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "a14fe5e3-3d45-49b6-9c06-e6abbd3e2a2b",
+            "class": "PCB_SHAPE",
+            "layer": "B.Fab",
+            "position_nm": [
+              101872500,
+              34398750
+            ],
+            "reference": "D20"
+          }
+        },
+        "unreconstructed_fab_target_pass": true,
+        "edge_intersections": [],
+        "edge_gap": {
+          "lower_bound_nm": 10000000,
+          "upper_bound_nm": null,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": false,
+          "capped_lower_bound": true,
+          "cap_nm": 10000000,
+          "partner": null
+        },
+        "edge_target_pass": true,
+        "whole_ink_inside_board": true
+      },
+      "exact_nominal_centerline_gap": {
+        "lower_bound_nm": 285105,
+        "upper_bound_nm": 285106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "reference": "U11",
+          "primitive_sources": [
+            {
+              "uuid": "d2e6f172-f7f0-48c6-9835-f768120e185e",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                106100000,
+                33600000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "cd589c41-8d0f-46ce-a803-d1756d372c02",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                106100000,
+                40400000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "c7a92b5d-5ef8-4bea-9e1c-784010ff3926",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                107550000,
+                33500000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "88652bee-1fec-4abd-817c-d9c6d0b4aa6c",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                107550000,
+                33600000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "33d5d561-adb0-493e-8ee6-91b657f5153d",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                107550000,
+                40400000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "5108cf21-72e9-43d7-ae38-8c7b80b380e4",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                107550000,
+                40500000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "9103ec24-eaab-4ebc-9ddf-597da4537c37",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                112450000,
+                33500000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "69576ba6-5d58-4175-941b-f88d6b9eed78",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                112450000,
+                33600000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "78f81fd3-5be9-4422-aa77-2699d5ac7c86",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                112450000,
+                40400000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "7b6b425c-37dd-4371-9fe7-b8b2282cbf45",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                112450000,
+                40500000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "51f55fb9-6387-4985-86fa-d55111c3d08b",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                113900000,
+                33600000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            },
+            {
+              "uuid": "b1134f4c-2fbb-4194-a32a-1a8b6856eed4",
+              "class": "PCB_SHAPE",
+              "layer": "B.Courtyard",
+              "position_nm": [
+                113900000,
+                40400000
+              ],
+              "reference": "U11",
+              "stroke_width_nm": 50000,
+              "shape_type": 0
+            }
+          ],
+          "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+          "endpoint_vertices_nm": [
+            [
+              106100000,
+              33600000
+            ],
+            [
+              106100000,
+              40400000
+            ],
+            [
+              107550000,
+              40400000
+            ],
+            [
+              107550000,
+              40500000
+            ],
+            [
+              112450000,
+              40500000
+            ],
+            [
+              112450000,
+              40400000
+            ],
+            [
+              113900000,
+              40400000
+            ],
+            [
+              113900000,
+              33600000
+            ],
+            [
+              112450000,
+              33600000
+            ],
+            [
+              112450000,
+              33500000
+            ],
+            [
+              107550000,
+              33500000
+            ],
+            [
+              107550000,
+              33600000
+            ]
+          ],
+          "arc_count": 0
+        }
+      },
+      "raw_stroke_envelope_gap": {
+        "lower_bound_nm": 260105,
+        "upper_bound_nm": 260106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "d2e6f172-f7f0-48c6-9835-f768120e185e",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106100000,
+            33600000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        }
+      },
+      "nominal_150um_pass": true,
+      "stroke_150um_pass": true,
+      "nominal_200um_pass": true,
+      "stroke_200um_pass": true
+    }
+  ],
+  "proposed_readonly_rows": [],
+  "actual_corrected_fields_no_in_memory_mutation": true,
+  "nominal_inventory": [
+    {
+      "reference": "R144",
+      "primitive_sources": [
+        {
+          "uuid": "ef71501c-eff6-4bc7-bf42-395c1b80b500",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            114270000,
+            32520000
+          ],
+          "reference": "R144",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "2fba7da1-2cab-4607-9aed-967535cda43a",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            114270000,
+            35480000
+          ],
+          "reference": "R144",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "c687a60d-73a6-47b1-92d8-b3c9953c0585",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            115730000,
+            32520000
+          ],
+          "reference": "R144",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "0a6cab24-80fb-471f-bdc2-396db4576bac",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            115730000,
+            35480000
+          ],
+          "reference": "R144",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        }
+      ],
+      "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+      "endpoint_vertices_nm": [
+        [
+          114270000,
+          32520000
+        ],
+        [
+          114270000,
+          35480000
+        ],
+        [
+          115730000,
+          35480000
+        ],
+        [
+          115730000,
+          32520000
+        ]
+      ],
+      "arc_count": 0
+    },
+    {
+      "reference": "U13",
+      "primitive_sources": [
+        {
+          "uuid": "7f7e986c-a153-4efb-b2c8-39e6d622a6da",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            91125000,
+            40450000
+          ],
+          "reference": "U13",
+          "stroke_width_nm": 50000,
+          "shape_type": 1
+        }
+      ],
+      "method": "exact_raw_integer_centerline_closed_interior",
+      "points_nm": [
+        [
+          91125000,
+          40450000
+        ],
+        [
+          88875000,
+          40450000
+        ],
+        [
+          88875000,
+          44550000
+        ],
+        [
+          91125000,
+          44550000
+        ]
+      ]
+    },
+    {
+      "reference": "D21",
+      "primitive_sources": [
+        {
+          "uuid": "870c740f-6e05-4d85-a61a-b36f2b84093f",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            119772500,
+            31698750
+          ],
+          "reference": "D21",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "96e7923d-203d-4c5b-b11b-db00184e2837",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            122072500,
+            31698750
+          ],
+          "reference": "D21",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "9a72fd5a-9c20-4f31-940e-c41b37836479",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            122072500,
+            36398750
+          ],
+          "reference": "D21",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "7c6ce120-0d19-4e68-974a-9fe8637127c4",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            122072500,
+            36398750
+          ],
+          "reference": "D21",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        }
+      ],
+      "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+      "endpoint_vertices_nm": [
+        [
+          119772500,
+          31698750
+        ],
+        [
+          119772500,
+          36398750
+        ],
+        [
+          122072500,
+          36398750
+        ],
+        [
+          122072500,
+          31698750
+        ]
+      ],
+      "arc_count": 0
+    },
+    {
+      "reference": "U11",
+      "primitive_sources": [
+        {
+          "uuid": "d2e6f172-f7f0-48c6-9835-f768120e185e",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106100000,
+            33600000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "cd589c41-8d0f-46ce-a803-d1756d372c02",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106100000,
+            40400000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "c7a92b5d-5ef8-4bea-9e1c-784010ff3926",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            107550000,
+            33500000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "88652bee-1fec-4abd-817c-d9c6d0b4aa6c",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            107550000,
+            33600000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "33d5d561-adb0-493e-8ee6-91b657f5153d",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            107550000,
+            40400000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "5108cf21-72e9-43d7-ae38-8c7b80b380e4",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            107550000,
+            40500000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "9103ec24-eaab-4ebc-9ddf-597da4537c37",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            112450000,
+            33500000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "69576ba6-5d58-4175-941b-f88d6b9eed78",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            112450000,
+            33600000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "78f81fd3-5be9-4422-aa77-2699d5ac7c86",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            112450000,
+            40400000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "7b6b425c-37dd-4371-9fe7-b8b2282cbf45",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            112450000,
+            40500000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "51f55fb9-6387-4985-86fa-d55111c3d08b",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            113900000,
+            33600000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "b1134f4c-2fbb-4194-a32a-1a8b6856eed4",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            113900000,
+            40400000
+          ],
+          "reference": "U11",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        }
+      ],
+      "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+      "endpoint_vertices_nm": [
+        [
+          106100000,
+          33600000
+        ],
+        [
+          106100000,
+          40400000
+        ],
+        [
+          107550000,
+          40400000
+        ],
+        [
+          107550000,
+          40500000
+        ],
+        [
+          112450000,
+          40500000
+        ],
+        [
+          112450000,
+          40400000
+        ],
+        [
+          113900000,
+          40400000
+        ],
+        [
+          113900000,
+          33600000
+        ],
+        [
+          112450000,
+          33600000
+        ],
+        [
+          112450000,
+          33500000
+        ],
+        [
+          107550000,
+          33500000
+        ],
+        [
+          107550000,
+          33600000
+        ]
+      ],
+      "arc_count": 0
+    },
+    {
+      "reference": "R145",
+      "primitive_sources": [
+        {
+          "uuid": "151f6016-85a3-4e6b-a92f-6d1848e4aa83",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            114020000,
+            38770000
+          ],
+          "reference": "R145",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "eb86acf3-9922-4429-8fa3-d178e5afdb64",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            114020000,
+            40230000
+          ],
+          "reference": "R145",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "39dd892e-fb64-45be-8639-8c42ddd1d40d",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            116980000,
+            38770000
+          ],
+          "reference": "R145",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "d9c7d12d-e324-4c98-a49e-9ff11ad63505",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            116980000,
+            40230000
+          ],
+          "reference": "R145",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        }
+      ],
+      "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+      "endpoint_vertices_nm": [
+        [
+          114020000,
+          38770000
+        ],
+        [
+          114020000,
+          40230000
+        ],
+        [
+          116980000,
+          40230000
+        ],
+        [
+          116980000,
+          38770000
+        ]
+      ],
+      "arc_count": 0
+    },
+    {
+      "reference": "R135",
+      "primitive_sources": [
+        {
+          "uuid": "a2232c74-f136-4a5b-be76-09e875cafb01",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            114270000,
+            35520000
+          ],
+          "reference": "R135",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "4fa6bf0f-fab9-4ca8-ac8b-f57f3563d449",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            114270000,
+            38480000
+          ],
+          "reference": "R135",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "8c8b4c69-a8a0-470e-9184-d44a67b89416",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            115730000,
+            35520000
+          ],
+          "reference": "R135",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "646ab7d2-2c24-4125-a1aa-c1ded78639c1",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            115730000,
+            38480000
+          ],
+          "reference": "R135",
+          "stroke_width_nm": 50000,
+          "shape_type": 0
+        }
+      ],
+      "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+      "endpoint_vertices_nm": [
+        [
+          114270000,
+          35520000
+        ],
+        [
+          114270000,
+          38480000
+        ],
+        [
+          115730000,
+          38480000
+        ],
+        [
+          115730000,
+          35520000
+        ]
+      ],
+      "arc_count": 0
+    },
+    {
+      "reference": "SW35",
+      "primitive_sources": [
+        {
+          "uuid": "6425d34a-5ba4-4ee9-8370-4f5cf3b995a8",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            110235000,
+            43423750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "1ef89c08-d707-4088-a06c-be4ca77b44bf",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            110235000,
+            46098750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "69071407-a4dc-4c2b-9d8b-9b6e91ffb658",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            112185000,
+            43423750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "df7f8552-efee-4616-817f-8589d8779b96",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            112185000,
+            46098750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "01291be4-81d2-4577-a96c-5580dc6e95a8",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            112185000,
+            46098750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "902662d0-1daa-4b6c-8515-2e475aff0320",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            114685000,
+            40298750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "0e294a01-8352-4ca3-80ba-cf6ea3908d18",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            116285000,
+            46698750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "f73f6f57-8085-41e2-abcd-56860ddf2bb2",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            123985000,
+            40898750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "9591fe04-7991-4ce9-8023-e48f0f6546e8",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            123985000,
+            43548750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "fd6187d9-4480-48ce-9cb4-b1f48afd352f",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            123985000,
+            43548750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "b77e2ce9-efeb-41bf-aad2-73030a94c15d",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            123985000,
+            44698750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "fa6ec9ee-2915-44bb-8cae-be03968bb2e8",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            125885000,
+            40898750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "822fe1bc-891f-4a69-a6a1-2d754af24c42",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            125885000,
+            43548750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "5af09610-3d9d-453c-9dca-2563d6441abd",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            114685000,
+            42798750
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 2
+        },
+        {
+          "uuid": "0ed9b590-5866-4c0b-b1af-80fc753d8506",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            118284999,
+            46698749
+          ],
+          "reference": "SW35",
+          "stroke_width_nm": 127000,
+          "shape_type": 2
+        }
+      ],
+      "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+      "endpoint_vertices_nm": [
+        [
+          110235000,
+          43423750
+        ],
+        [
+          112185000,
+          43423750
+        ],
+        [
+          112185000,
+          42798750
+        ],
+        [
+          114685000,
+          40298750
+        ],
+        [
+          123985000,
+          40298750
+        ],
+        [
+          123985000,
+          40898750
+        ],
+        [
+          125885000,
+          40898750
+        ],
+        [
+          125885000,
+          43548750
+        ],
+        [
+          123985000,
+          43548750
+        ],
+        [
+          123985000,
+          44698750
+        ],
+        [
+          118285000,
+          44698750
+        ],
+        [
+          116285000,
+          46698750
+        ],
+        [
+          112185000,
+          46698750
+        ],
+        [
+          112185000,
+          46098750
+        ],
+        [
+          110235000,
+          46098750
+        ]
+      ],
+      "arc_count": 2
+    },
+    {
+      "reference": "SW34",
+      "primitive_sources": [
+        {
+          "uuid": "0d6a4db3-9499-4c95-aa43-e5919be3ef45",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            91185000,
+            43423750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "122d1265-17bf-4d1c-b730-9c870eebf7ac",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            91185000,
+            46098750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "3f58f2b7-5f62-458d-8760-460b8e3c5fcd",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            93135000,
+            43423750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "c8ff9598-e0b4-4041-ac63-55e654501978",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            93135000,
+            46098750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "75489060-ebda-4e92-8f46-d71a0c4b88d3",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            93135000,
+            46098750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "d5170b5e-2a6c-481a-a2c9-be0759622cb3",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            95635000,
+            40298750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "9f17a7ee-3524-47e1-98b6-93dcd086943d",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            97235000,
+            46698750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "53b9fc42-3fb9-4ec4-afe5-748accec0fbf",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            104935000,
+            40898750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "16211d07-5ab7-456f-9ec0-7e8eda917af7",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            104935000,
+            43548750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "729d53f4-2a05-4155-ae6e-09bd466a8db2",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            104935000,
+            43548750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "b17e1160-632c-46e2-9731-2150d3a73501",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            104935000,
+            44698750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "e78d1dfa-ef27-4b84-878b-3ac77a1faf10",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106835000,
+            40898750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "d22d95e0-f317-448b-898b-38b9e2438580",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106835000,
+            43548750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 0
+        },
+        {
+          "uuid": "2cf280ed-0e26-4803-9b41-aff2ab20bbee",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            95635000,
+            42798750
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 2
+        },
+        {
+          "uuid": "98746c65-d6cd-4ae4-b07c-01220e33e0cf",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            99234999,
+            46698749
+          ],
+          "reference": "SW34",
+          "stroke_width_nm": 127000,
+          "shape_type": 2
+        }
+      ],
+      "method": "raw integer closed centerline interior; raw 3-point arc chord sagitta <=0.25 nm plus <=0.708 nm integer rounding if present",
+      "endpoint_vertices_nm": [
+        [
+          91185000,
+          43423750
+        ],
+        [
+          93135000,
+          43423750
+        ],
+        [
+          93135000,
+          42798750
+        ],
+        [
+          95635000,
+          40298750
+        ],
+        [
+          104935000,
+          40298750
+        ],
+        [
+          104935000,
+          40898750
+        ],
+        [
+          106835000,
+          40898750
+        ],
+        [
+          106835000,
+          43548750
+        ],
+        [
+          104935000,
+          43548750
+        ],
+        [
+          104935000,
+          44698750
+        ],
+        [
+          99235000,
+          44698750
+        ],
+        [
+          97235000,
+          46698750
+        ],
+        [
+          93135000,
+          46698750
+        ],
+        [
+          93135000,
+          46098750
+        ],
+        [
+          91185000,
+          46098750
+        ]
+      ],
+      "arc_count": 2
+    }
+  ],
+  "unsupported": [],
+  "nominal_scope": "All footprints whose actual raw courtyard bounds enter any target actual ink bounding box expanded by 1.1 mm. No mutation is proposed in this read-only audit. Nearest reported gaps all <1.0 mm.",
+  "private_xdg": {
+    "XDG_CONFIG_HOME": "/workspace/shared/maru60-resume/xdg/run.W15k3N/config",
+    "XDG_DATA_HOME": "/workspace/shared/maru60-resume/xdg/run.W15k3N/data",
+    "XDG_CACHE_HOME": "/workspace/shared/maru60-resume/xdg/run.W15k3N/cache",
+    "XDG_STATE_HOME": "/workspace/shared/maru60-resume/xdg/run.W15k3N/state",
+    "XDG_RUNTIME_DIR": "/workspace/shared/maru60-resume/xdg/run.W15k3N/runtime"
+  },
+  "file_unchanged": true
+}

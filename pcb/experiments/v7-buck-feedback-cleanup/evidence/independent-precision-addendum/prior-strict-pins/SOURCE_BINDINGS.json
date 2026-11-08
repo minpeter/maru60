@@ -1,0 +1,82 @@
+{
+  "source-physical-graph.json": {
+    "source_path": "/tmp/v7-j3-unselected-closure-2c7e/qa/source-physical-graph.json",
+    "packet_copy": "bound-evidence/source-physical-graph.json",
+    "sha256": "e815296bf12af0f10b8ef43b90c19ac001ddfb31588f76229006df79e2547d47",
+    "bytes": 4333526
+  },
+  "source-drc.json": {
+    "source_path": "/tmp/v7-j3-unselected-closure-2c7e/qa/fresh-source-drc.json",
+    "packet_copy": "bound-evidence/source-drc.json",
+    "sha256": "fd672a83147cfe858b2055e505faf3ce24de53dd49fadea56939b4fc1ca00b57",
+    "bytes": 48928
+  },
+  "candidate-physical-graph.json": {
+    "source_path": "/tmp/v7-buck-deadarm-trial-2c7e/qa/candidate-physical-graph.json",
+    "packet_copy": "bound-evidence/candidate-physical-graph.json",
+    "sha256": "8a946ad009247e2d356ef0900e3a3b07e5dda5d9be9960dcd3ca2cab1a9344f1",
+    "bytes": 4333270
+  },
+  "candidate-drc.json": {
+    "source_path": "/tmp/v7-buck-deadarm-trial-2c7e/qa/drc.json",
+    "packet_copy": "bound-evidence/candidate-drc.json",
+    "sha256": "ebac2cb19dfdffa42f78efa10bf0b59f6514f326bc8944f7771d73f25a6af1da",
+    "bytes": 48442
+  },
+  "candidate-erc.json": {
+    "source_path": "/tmp/v7-buck-deadarm-trial-2c7e/qa/erc.json",
+    "packet_copy": "bound-evidence/candidate-erc.json",
+    "sha256": "0803890f3ecadbd6d106c5243036a72b0de8423b6dcbfbf45e850e3aa059b337",
+    "bytes": 1953
+  },
+  "build.json": {
+    "source_path": "/tmp/v7-buck-deadarm-trial-2c7e/qa/build.json",
+    "packet_copy": "bound-evidence/build.json",
+    "sha256": "8670b351921503273063c013063781d02bf59c34342f8eb3520e463bef983a49",
+    "bytes": 2717
+  },
+  "fill.json": {
+    "source_path": "/tmp/v7-buck-deadarm-trial-2c7e/qa/fill.json",
+    "packet_copy": "bound-evidence/fill.json",
+    "sha256": "ce00ec17bf839e0807826aa1e0b748c81fa3ecb5b92336aaaa48f37fc2106556",
+    "bytes": 272
+  },
+  "plan.json": {
+    "source_path": "/tmp/v7-buck-deadarm-2c7e-plan/PLAN.json",
+    "packet_copy": "bound-evidence/plan.json",
+    "sha256": "5ae1167087aa76122f2eba8d41267ca046cec0d98ed9ea62f8405519b673734f",
+    "bytes": 19717
+  },
+  "historical-passive-README.md": {
+    "source_path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-buck-feedback-study-20261104/README.md",
+    "packet_copy": "bound-evidence/historical-passive-README.md",
+    "sha256": "2c397910cfc78ed9b0352da8d22168bd525e1e9c83dd44db13e76f4cf75b3d33",
+    "bytes": 10369
+  },
+  "historical-passive-ERRATUM.md": {
+    "source_path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-buck-feedback-study-20261104/ERRATUM.md",
+    "packet_copy": "bound-evidence/historical-passive-ERRATUM.md",
+    "sha256": "d56c5898b13efbf08b24ee6b75d606d96d8d729dac2a561b960b91673c7e0280",
+    "bytes": 1685
+  },
+  "selected_board": {
+    "source_path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-four-reference-logo/candidate-four/pcb/maru60.kicad_pcb",
+    "sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+    "all54file_map": "raw-graph-review.json:complete_filemaps:selected"
+  },
+  "copied_source_board": {
+    "source_path": "/tmp/v7-buck-deadarm-trial-2c7e/source/pcb/maru60.kicad_pcb",
+    "sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+    "all54file_map": "raw-graph-review.json:complete_filemaps:copied_source"
+  },
+  "prefill_board": {
+    "source_path": "/tmp/v7-buck-deadarm-trial-2c7e/prefill/pcb/maru60.kicad_pcb",
+    "sha256": "f3b45ed754bbbb8d0c1d4cac091062f0296bae7d6b8a184b27f4631da3b23c1c",
+    "all54file_map": "raw-graph-review.json:complete_filemaps:prefill"
+  },
+  "candidate_board": {
+    "source_path": "/tmp/v7-buck-deadarm-trial-2c7e/filled/pcb/maru60.kicad_pcb",
+    "sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+    "all54file_map": "raw-graph-review.json:complete_filemaps:candidate"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "NOT_BUILT_PREREQUISITES_NOT_PROVIDED",
+  "scope": "Fresh recovery-runtime inspection, not the lost historical ARM receipt",
+  "arm_none_eabi_gcc_on_PATH": null,
+  "qmk_on_PATH": null,
+  "host_cc_on_PATH": "/usr/bin/cc",
+  "full_pinned_qmk_checkout_provided_for_this_candidate": false,
+  "required_qmk_commit": "431ed9ade0684e98a66eabc949563c3be8f446e8",
+  "compile_attempted": false,
+  "software_installed_or_downloaded": false,
+  "hardware_flashed": false,
+  "qualification_default": 0,
+  "candidate_manifest_sha256": "ab7f168c0f973c5d9447ec305a3973f1b418467af5fa7018c93a26f58b46d500",
+  "historical_missing_receipt_sha256": "1fb571cdc0aa3ed6da7072eca90e7ab61e463053b2733577d2582a8a6e125b55",
+  "historical_missing_receipt_recovered": false,
+  "next_acceptance": "Provide an authorized complete pinned QMK checkout with exact recursive submodules, QMK requirements and ARM compiler. Patch with supplied pinned tools and build both via and via_hhkb without qualification/settling overrides; retain full logs, preprocessing and output hashes."
+}

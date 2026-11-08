@@ -1,0 +1,1221 @@
+{
+  "board_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "source_register_board_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "native_drc_sha256": "55ff77472b7b66b8a6f42c36cb736b41d38a794214b51b329b2387f71df51c97",
+  "original_reviewed_warning_records": 51,
+  "remaining": 50,
+  "resolved_in_candidate": 1,
+  "warnings_suppressed": false,
+  "rows": [
+    {
+      "native_record": {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [GND] on F.Cu, length 0.9500 mm",
+            "pos": {
+              "x": 15.7,
+              "y": 10.75
+            },
+            "uuid": "bc0a06ab-785a-4a27-a164-9c3256c7f3bd"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      "prior_warning_identity_sha256": "c8e389871668eb178b34d6f4bce1174c8029581289daaabd558f5db483bebd81",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Connector-region GND open-ended stub, 0.9500 mm, directly contacts the existing GND via at (15.70,9.80).",
+      "next_action": "Review together with connector return geometry. Existing between-signal-via neck discontinuity remains; this stub or a new stitch cannot be described as restoring that neck.",
+      "priority": "electrical_review"
+    },
+    {
+      "native_record": {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [+3V3] on B.Cu, length 2.2484 mm",
+            "pos": {
+              "x": 105.0,
+              "y": 37.775
+            },
+            "uuid": "53e7b99f-308f-57ae-9e47-9e779e6b3272"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      "prior_warning_identity_sha256": "acf4cdc0453d9e73926e31f54a60452c1090987ea3b9e77893185e1b6670a2a0",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Retained original C128 supply stub. C128 itself was relocated and connected; the 2.248399 mm warned segment belongs to the longer retained rooted supply branch.",
+      "next_action": "No blind removal or damping change. The recovered C128 PDN study includes conditional antiresonance and unknown component/parasitic ranges; any trim needs before/after topology, reference and model comparison.",
+      "priority": "electrical_review"
+    },
+    {
+      "native_record": {
+        "description": "Via is not connected or connected on only one layer",
+        "items": [
+          {
+            "description": "Via [VBUS] on F.Cu - B.Cu",
+            "pos": {
+              "x": 20.15,
+              "y": 10.95
+            },
+            "uuid": "1e6f9b6e-9a22-418a-8cde-6feb5aafb26e"
+          }
+        ],
+        "severity": "warning",
+        "type": "via_dangling"
+      },
+      "prior_warning_identity_sha256": "f1b8440bed1e2ac6ddc6ea0496696f1d6da7618c41782b162502d947aafc6713",
+      "status": "RESOLVED_IN_PROTOTYPE_CANDIDATE",
+      "review_disposition": "The single-layer VBUS via was retired and the overlapping track was serialized without reducing the VBUS track copper union. Strict plane inclusion still fails by explicit bounded sub-nanometre differences; this is not fabrication approval.",
+      "next_action": "Preserve strict baseline and candidate boundary review; qualify active power and manufacturing before release.",
+      "priority": "electrical_review"
+    },
+    {
+      "native_record": {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [USB_DM_CONN] on F.Cu, length 0.4375 mm",
+            "pos": {
+              "x": 18.0,
+              "y": 12.4
+            },
+            "uuid": "b04e3a6d-1e98-43d1-9b10-58c23321ca28"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      "prior_warning_identity_sha256": "d75c7bbfe1dd539c578117b57e8c2aeabf78b6cd9d26445dc92ab671caaee416",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "USB_DM_CONN open-ended 0.4375 mm F.Cu branch. It contacts the active F.Cu trace and transition via at (18,12.4).",
+      "next_action": "A bounded branch trim could be tested, but do not remove its active junction/via. Require full USB topology, saved-reference preservation and explicit updated reduced-model inputs before a signal-quality claim.",
+      "priority": "electrical_review"
+    },
+    {
+      "native_record": {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [+4V_REG] on F.Cu, length 1.5556 mm",
+            "pos": {
+              "x": 22.6,
+              "y": 18.55
+            },
+            "uuid": "acf57724-d322-4087-84ab-2893c779cea3"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      "prior_warning_identity_sha256": "e733f1029d8babc6b759a3b3aff255f9aef1f0bd9df82e6bb9afeefcaa3c277d",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Open-ended +4V_REG F.Cu branch, 1.555635 mm, immediately connected to the active rail segment ending at (23.7,19.65).",
+      "next_action": "No blind deletion. A bounded trim must preserve source-to-load and old-reference requirements. It is not a fix for the unresolved input/buck headroom and brownout contract.",
+      "priority": "electrical_review"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R122",
+            "pos": {
+              "x": 17.5,
+              "y": 13.07
+            },
+            "uuid": "697a5456-3e4a-4b98-988a-38d82a4b54a1"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "92ac33b720f6c938c32ee3168ea7f271a1cf9565e216c3d9524326482aa24c0b",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R128",
+            "pos": {
+              "x": 108.5,
+              "y": 40.07
+            },
+            "uuid": "e641a3a7-4cc6-429f-b332-e7fe387caeeb"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "8f1c6943a8e187085d6fdec4f30c2551be9fb76552dc3d0f0d75b4b2eaf00b71",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R143",
+            "pos": {
+              "x": 103.93,
+              "y": 30.0
+            },
+            "uuid": "63be2583-040d-4c5a-9b54-4c4c9cb75547"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "1501eb0ae5561122eaa3d01aed361d21da56c3158d0ff77690af85057e656944",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of U13",
+            "pos": {
+              "x": 90.0,
+              "y": 39.9
+            },
+            "uuid": "d5936da3-6a90-497b-8070-68fd872b012b"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "ef8a51d6327d1d57562609f292533032d0b1d83fed13bd90deb4dffbf5cb2be9",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of U12",
+            "pos": {
+              "x": 107.6,
+              "y": 31.5
+            },
+            "uuid": "e07bb8f5-f971-42b4-a464-7c90e816f6a3"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "e138df5eb662b54a2ab5e69d835b9a243e4b3a9cc84ed9b9e53289c91604e471",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R123",
+            "pos": {
+              "x": 23.43,
+              "y": 23.5
+            },
+            "uuid": "6c885fd2-45e9-45a8-8f8b-0f4432afd25e"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "c65fcc8f16ccb98577e3b8372e48ebdcab0ff1f6c825a86b9482bc7ba7cdce00",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of U11",
+            "pos": {
+              "x": 110.0,
+              "y": 32.8
+            },
+            "uuid": "b4d6de7b-9d6c-48fb-bb32-d6509af7050e"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "1ab45ca5070dd3e602ab499f4f61cae7e00dbe79540d61135b1bfc9e31e68475",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R141",
+            "pos": {
+              "x": 98.57,
+              "y": 32.0
+            },
+            "uuid": "a8635f2b-19df-4ff9-978b-6e45e4bd2925"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "f6d5e1c5407a96fd4b3caf948f18c7082d0a80f89d4fd4fcb443147f89cadf6d",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of C136",
+            "pos": {
+              "x": 178.0,
+              "y": 85.77
+            },
+            "uuid": "b5120eb9-d306-4601-b797-acd685b5e840"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "b8cd4f28d7fa332e4fed5465885c176ab244ee0526e25b860360f60a685a4338",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of C125",
+            "pos": {
+              "x": 18.0,
+              "y": 14.57
+            },
+            "uuid": "5a256583-9054-4a15-ad08-40bb9483a623"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "184c9224b63c90b093b9718872324179fe5f9edc56df326073f5178982a41df9",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R130",
+            "pos": {
+              "x": 105.43,
+              "y": 32.5
+            },
+            "uuid": "594813be-f3b3-493a-8f09-6977bc5c439f"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "4bcde913055739b0d94b6eee5eee132e9a5b791df373a5fd48234e65599fbd4e",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of U8",
+            "pos": {
+              "x": 18.0,
+              "y": 16.5
+            },
+            "uuid": "e88a2119-129f-43a3-a49b-45562a4bb439"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "b6a0d7f994f206a138ee56d6c0cb929b0de6c9f3852665e278ee9732e207cb08",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R145",
+            "pos": {
+              "x": 115.5,
+              "y": 38.07
+            },
+            "uuid": "d26c4db7-f00b-4e58-b1f3-9d04c6192d53"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "cac204f89527ea749ec74d1337d33c525e2102d83acdd57c3fc10b469caa79aa",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R132",
+            "pos": {
+              "x": 108.5,
+              "y": 41.57
+            },
+            "uuid": "5b09f6be-3bc6-4846-8db7-b50308d8c527"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "780fcd943c56c3b3d0c27135997c464705e83ff9ba79285e6d6a0b49574ffa08",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R133",
+            "pos": {
+              "x": 99.93,
+              "y": 32.0
+            },
+            "uuid": "1bd1d959-3b52-4594-885f-c2d9882064ca"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "df1fadbaed461fb986986d72a377d995bef52ef7acdc87a39834dd41f5e183ff",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R142",
+            "pos": {
+              "x": 105.43,
+              "y": 29.5
+            },
+            "uuid": "a37d445a-364d-492b-9858-c8059b73976e"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "4d70a9ff0d1ea97404cebb25e958679664ffce7c06c70fd97a9031cc3d9507bd",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R131",
+            "pos": {
+              "x": 106.93,
+              "y": 31.0
+            },
+            "uuid": "09479e1a-7510-4a8e-936d-c822d8f873ee"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "993a51016954eaa435acfa4046fedd5934ac3de4a2075cdd2306adcd9f9ce535",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R135",
+            "pos": {
+              "x": 116.43,
+              "y": 37.0
+            },
+            "uuid": "1fead33a-4bad-4c1e-915a-4d237e8f12b1"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "7a5e2a713ba7836ae51e4d2af91f5b3a28fdc239e0cdac78207acd410eaecc9c",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+        "items": [
+          {
+            "description": "Reference field of R159",
+            "pos": {
+              "x": 181.57,
+              "y": 85.0
+            },
+            "uuid": "dbd31047-168e-40f6-b393-4f6e5518463a"
+          }
+        ],
+        "severity": "warning",
+        "type": "text_height"
+      },
+      "prior_warning_identity_sha256": "df5252cee519e4312a899664c684e80e6f5fe69fdc9a765fa5c1573cb2d30b97",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "The native reference/text-height rule is violated. This is an unresolved fabrication/readability warning, not an electrical open.",
+      "next_action": "Increase or relocate only after exact ink/mask/silk/courtyard checks and unambiguous component association. Preserve accepted labels and circuit placement.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R122",
+            "pos": {
+              "x": 17.5,
+              "y": 13.07
+            },
+            "uuid": "697a5456-3e4a-4b98-988a-38d82a4b54a1"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "f5b1f4c0904c54a78de579f5d1ed967f7d9b68b43aad0c1f17437a1be45a26db",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R128",
+            "pos": {
+              "x": 108.5,
+              "y": 40.07
+            },
+            "uuid": "e641a3a7-4cc6-429f-b332-e7fe387caeeb"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "6fb8117ab03ad030ac62d9dcdf1203323e7548346a5a4e8f206abc383881a5b6",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R143",
+            "pos": {
+              "x": 103.93,
+              "y": 30.0
+            },
+            "uuid": "63be2583-040d-4c5a-9b54-4c4c9cb75547"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "c9ae9c3c058f15f0900aa3fed0993116d8ed4e3ec61947bf131e7960cdf578ba",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of U13",
+            "pos": {
+              "x": 90.0,
+              "y": 39.9
+            },
+            "uuid": "d5936da3-6a90-497b-8070-68fd872b012b"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "e9e023dbb611d85578a91ea9425c469a0fb9ac7ec8f0366d3a9dbde655759bed",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R123",
+            "pos": {
+              "x": 23.43,
+              "y": 23.5
+            },
+            "uuid": "6c885fd2-45e9-45a8-8f8b-0f4432afd25e"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "3bf6d7c7179d46158b6e5c617411aace42284786c0b1d373bee65f7f92eac0bd",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of U11",
+            "pos": {
+              "x": 110.0,
+              "y": 32.8
+            },
+            "uuid": "b4d6de7b-9d6c-48fb-bb32-d6509af7050e"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "48c648c532c71bda5b59720724343ae5b5e713d3592d9770ee02a4503b62f37d",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R141",
+            "pos": {
+              "x": 98.57,
+              "y": 32.0
+            },
+            "uuid": "a8635f2b-19df-4ff9-978b-6e45e4bd2925"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "2dd230cd83518b4d934c802bec62c156fb9e6c8c586e29bf4107a8ecaeee02ca",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of C136",
+            "pos": {
+              "x": 178.0,
+              "y": 85.77
+            },
+            "uuid": "b5120eb9-d306-4601-b797-acd685b5e840"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "60a529aca0fb7219358c106b2c6947d7dc953b6273b4c1e08d7c3aa317a6ea33",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of C125",
+            "pos": {
+              "x": 18.0,
+              "y": 14.57
+            },
+            "uuid": "5a256583-9054-4a15-ad08-40bb9483a623"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "46a93238127f2099c554f8ce8f14930f5a45662cc287eb40688f8b196aa3d30c",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R130",
+            "pos": {
+              "x": 105.43,
+              "y": 32.5
+            },
+            "uuid": "594813be-f3b3-493a-8f09-6977bc5c439f"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "08e300f81bb8808c5f4f292978ac66c1dbf657fedd6926804c6ef13b59fe74b1",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of U8",
+            "pos": {
+              "x": 18.0,
+              "y": 16.5
+            },
+            "uuid": "e88a2119-129f-43a3-a49b-45562a4bb439"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "bb15a85b83075a0d63eff07606a90c45fd4ba96cba4a7db6bb64d08dcfe9927c",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R145",
+            "pos": {
+              "x": 115.5,
+              "y": 38.07
+            },
+            "uuid": "d26c4db7-f00b-4e58-b1f3-9d04c6192d53"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "5d0dbc428775a712d7c5edd0a9571fec95c65aeac9a1fed17a2dc2d4e605adf0",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R132",
+            "pos": {
+              "x": 108.5,
+              "y": 41.57
+            },
+            "uuid": "5b09f6be-3bc6-4846-8db7-b50308d8c527"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "f2c70c896b5d636649f299e0cf3f53d7fba4f1f9c201460b8bc1757b718266b0",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R133",
+            "pos": {
+              "x": 99.93,
+              "y": 32.0
+            },
+            "uuid": "1bd1d959-3b52-4594-885f-c2d9882064ca"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "3cbf243de81626da1c46195522de9b925be82ac94212028c1f4109264c2f9b7c",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R142",
+            "pos": {
+              "x": 105.43,
+              "y": 29.5
+            },
+            "uuid": "a37d445a-364d-492b-9858-c8059b73976e"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "844ef9fc4261bccc74d167598ae9491f647a193f55f4e95684f8aa9771861391",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen clipped by solder mask",
+        "items": [
+          {
+            "description": "Reference field of R159",
+            "pos": {
+              "x": 181.57,
+              "y": 85.0
+            },
+            "uuid": "dbd31047-168e-40f6-b393-4f6e5518463a"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_over_copper"
+      },
+      "prior_warning_identity_sha256": "2a0f8b0e1a46b24187bd080fe7ee98d3d9dc46c1e88255b067369a7835e389b6",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen overlaps an exposed-copper/mask area. It is not a copper-clearance error, but the marking can be clipped or obscure assembly identification.",
+      "next_action": "Check complete actual mask apertures and ink, not only pad bounding boxes. Move only with readable association and no new overlaps.",
+      "priority": "assembly_marking"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Segment of C139 on B.Silkscreen",
+            "pos": {
+              "x": 181.91,
+              "y": 84.85942
+            },
+            "uuid": "135c4327-c10d-4452-bb61-c9f94926e75d"
+          },
+          {
+            "description": "Reference field of R159",
+            "pos": {
+              "x": 181.57,
+              "y": 85.0
+            },
+            "uuid": "dbd31047-168e-40f6-b393-4f6e5518463a"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "9117025ca9f1ce8da28bd49a60b483d999d4c908cc92b37c6b4807f857d38475",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Segment of U11 on B.Silkscreen",
+            "pos": {
+              "x": 110.0,
+              "y": 40.41
+            },
+            "uuid": "9d7a06e5-17cc-41a9-aa99-0ba2d6941318"
+          },
+          {
+            "description": "Reference field of R128",
+            "pos": {
+              "x": 108.5,
+              "y": 40.07
+            },
+            "uuid": "e641a3a7-4cc6-429f-b332-e7fe387caeeb"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "8cb84c38a8a0b499ade1c56f5bb6dca1248d14e09ccfefd2033abb6e8e462998",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Segment of R142 on B.Silkscreen",
+            "pos": {
+              "x": 103.4775,
+              "y": 29.737258
+            },
+            "uuid": "3ce235c1-2679-4c1b-b78a-7c80224b8996"
+          },
+          {
+            "description": "Reference field of R143",
+            "pos": {
+              "x": 103.93,
+              "y": 30.0
+            },
+            "uuid": "63be2583-040d-4c5a-9b54-4c4c9cb75547"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "49861d8c62dcf140e74d1e7a45e2a0f42888b1c275717aa033db0b60ed1e292e",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Reference field of R123",
+            "pos": {
+              "x": 23.43,
+              "y": 23.5
+            },
+            "uuid": "6c885fd2-45e9-45a8-8f8b-0f4432afd25e"
+          },
+          {
+            "description": "Segment of R126 on B.Silkscreen",
+            "pos": {
+              "x": 22.9775,
+              "y": 24.237258
+            },
+            "uuid": "ba57a444-1d15-49ef-babe-0bdb64604415"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "dbfdee779572f0119751e51f8952be84aefa45afcbf7bc8695db2db71040fe9e",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Reference field of R133",
+            "pos": {
+              "x": 99.93,
+              "y": 32.0
+            },
+            "uuid": "1bd1d959-3b52-4594-885f-c2d9882064ca"
+          },
+          {
+            "description": "Segment of R141 on B.Silkscreen",
+            "pos": {
+              "x": 99.4775,
+              "y": 31.762742
+            },
+            "uuid": "e7040c79-8a8c-4c2d-8d77-61fbe56f4966"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "d4a9b2dae07d808371956ab5590e4f9d2c622e7ea3e9ed5402e121f61e28fc87",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Reference field of R122",
+            "pos": {
+              "x": 17.5,
+              "y": 13.07
+            },
+            "uuid": "697a5456-3e4a-4b98-988a-38d82a4b54a1"
+          },
+          {
+            "description": "Circle of TP2 on B.Silkscreen",
+            "pos": {
+              "x": 19.349999,
+              "y": 12.45
+            },
+            "uuid": "c0e55565-d9aa-483c-95cb-4c0535a831a8"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "f2afafb949f0723134c7df9b6ac41369aec7b9bd5e09e114fea9b0dba4265895",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Segment of C125 on B.Silkscreen",
+            "pos": {
+              "x": 18.14058,
+              "y": 16.51
+            },
+            "uuid": "7f82d98e-1030-41c2-acc5-0ff94e51efd8"
+          },
+          {
+            "description": "Reference field of U8",
+            "pos": {
+              "x": 18.0,
+              "y": 16.5
+            },
+            "uuid": "e88a2119-129f-43a3-a49b-45562a4bb439"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "97fac00bd3c18ffdde8e06253bbe3a0f18431c1cea9f423ed36ef5373018ed81",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Reference field of R131",
+            "pos": {
+              "x": 106.93,
+              "y": 31.0
+            },
+            "uuid": "09479e1a-7510-4a8e-936d-c822d8f873ee"
+          },
+          {
+            "description": "Reference field of U12",
+            "pos": {
+              "x": 107.6,
+              "y": 31.5
+            },
+            "uuid": "e07bb8f5-f971-42b4-a464-7c90e816f6a3"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "9dae356921d18cb7700c9057c60409838a53aa1c779cf426d1a68cd676b8f32e",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Reference field of R135",
+            "pos": {
+              "x": 116.43,
+              "y": 37.0
+            },
+            "uuid": "1fead33a-4bad-4c1e-915a-4d237e8f12b1"
+          },
+          {
+            "description": "Reference field of R145",
+            "pos": {
+              "x": 115.5,
+              "y": 38.07
+            },
+            "uuid": "d26c4db7-f00b-4e58-b1f3-9d04c6192d53"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "8e287de1fb1cb7b05a9d0dbd16f279e3e841c2a599f8225668c77d96bd84da23",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Segment of R131 on B.Silkscreen",
+            "pos": {
+              "x": 104.9775,
+              "y": 31.237258
+            },
+            "uuid": "1cc67f57-0293-4f7a-b26f-bf8bf29fc349"
+          },
+          {
+            "description": "Reference field of R130",
+            "pos": {
+              "x": 105.43,
+              "y": 32.5
+            },
+            "uuid": "594813be-f3b3-493a-8f09-6977bc5c439f"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "d7c6b9ed2076d1b8e6159e567fd17b82b0e95adcc6e4f46d30b4be0ed254f990",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    },
+    {
+      "native_record": {
+        "description": "Silkscreen overlap",
+        "items": [
+          {
+            "description": "Segment of R131 on B.Silkscreen",
+            "pos": {
+              "x": 104.9775,
+              "y": 31.237258
+            },
+            "uuid": "1cc67f57-0293-4f7a-b26f-bf8bf29fc349"
+          },
+          {
+            "description": "Reference field of R142",
+            "pos": {
+              "x": 105.43,
+              "y": 29.5
+            },
+            "uuid": "a37d445a-364d-492b-9858-c8059b73976e"
+          }
+        ],
+        "severity": "warning",
+        "type": "silk_overlap"
+      },
+      "prior_warning_identity_sha256": "73362e753f99d36516871a0b577745ff5f5463059b62f103ad62dbafc3470302",
+      "status": "OPEN_NOT_WAIVED",
+      "review_disposition": "Native silkscreen objects overlap. Whether a safe drawing/reference/logo move resolves it must be checked on actual ink and component association.",
+      "next_action": "Test an isolated label or intact-logo move. Reject ambiguous ownership even when warning totals fall; preserve unrelated objects.",
+      "priority": "legibility"
+    }
+  ]
+}

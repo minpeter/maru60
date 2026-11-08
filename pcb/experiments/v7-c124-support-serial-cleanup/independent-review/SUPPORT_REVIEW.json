@@ -1,0 +1,221 @@
+{
+  "status": "PASS independent native reconstruction of actual support union and all-hole reference",
+  "board_sha256": "abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d",
+  "source_material_files": {
+    "/tmp/v7-c124-d-actual/qa/source-local-material.json": "ce9322aeb950aa196be966d20d9076f8e6f83a48c96c24f826bc308893d0f59f",
+    "/tmp/v7-c124-c-actual/qa/actual-local-material.json": "82d0b8f770340af795349883345bb69fc1b6e14f18c65ca9c72af455480b3e99"
+  },
+  "source_support_ledger_sha256": "9891e454ff8e6e02d95471c13e840dcc45b88bb8bd41c85cc7b334cb90e814fd",
+  "actual_through_hole_count": 1270,
+  "supports": [
+    {
+      "source": "original",
+      "old": "f79380d7-c89c-4396-b53e-4918d8902c13",
+      "target": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "net": "GND",
+      "actual_direct_native_object_contributors": [
+        "d4d6f91a-e726-5530-80d1-f22a126456bc"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "f79380d7-c89c-4396-b53e-4918d8902c13",
+      "target": "19181a2b-164e-4055-9004-2860bebe32f4",
+      "net": "GND",
+      "actual_direct_native_object_contributors": [
+        "0dd51559-bc06-502f-8bb1-1b186fa751d0",
+        "d4d6f91a-e726-5530-80d1-f22a126456bc",
+        "ea24a1e4-dda5-5e54-815c-ce8d2a7844f6"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "437d8abf-8e4f-4587-99b7-93c610dd4000",
+      "target": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "net": "GND",
+      "actual_direct_native_object_contributors": [
+        "66453383-04ef-5371-8252-4d0004d7a05d",
+        "f58bc791-8a08-55a5-ada7-19575bcd7e75"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+      "target": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+      "net": "USB_DVDT",
+      "actual_direct_native_object_contributors": [
+        "2415b4fb-a4a8-5806-8904-da9a0189625c",
+        "fd0e066b-c366-5b5a-b501-15fcf42fddb4",
+        "e07df864-b2ae-41c6-8b80-01729167b27e",
+        "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+      "target": "e07df864-b2ae-41c6-8b80-01729167b27e",
+      "net": "USB_DVDT",
+      "actual_direct_native_object_contributors": [
+        "2415b4fb-a4a8-5806-8904-da9a0189625c",
+        "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+        "fd0e066b-c366-5b5a-b501-15fcf42fddb4",
+        "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+      "target": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+      "net": "USB_DVDT",
+      "actual_direct_native_object_contributors": [
+        "2415b4fb-a4a8-5806-8904-da9a0189625c",
+        "34ff4dac-01f8-5a27-b816-6afc433ee9e4",
+        "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+        "fd0e066b-c366-5b5a-b501-15fcf42fddb4",
+        "e07df864-b2ae-41c6-8b80-01729167b27e"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "eb147f3b-fbe7-5ff5-a09d-d36fa376b92f",
+      "target": "e218cfe4-e4ba-5b6c-985d-8f1da39a4402",
+      "net": "USB_OVLO",
+      "actual_direct_native_object_contributors": [
+        "ae94ea04-2d21-5f84-8952-7f8960275e00",
+        "cc1282fe-f0b3-5fea-9d45-66eea8068d66"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "target": "751dcade-77aa-4c93-aab3-170f1229e0e4",
+      "net": "USB_UVLO",
+      "actual_direct_native_object_contributors": [
+        "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed",
+        "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a",
+        "f41eeb49-8180-5bac-bccf-c1a0b3b4c547"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "target": "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed",
+      "net": "USB_UVLO",
+      "actual_direct_native_object_contributors": [
+        "751dcade-77aa-4c93-aab3-170f1229e0e4",
+        "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "a44d4a9f-aa40-4d02-9ed7-16774fbe4849",
+      "target": "7d18b97e-b287-4393-8a28-411c96dcc305",
+      "net": "USB_UVLO",
+      "actual_direct_native_object_contributors": [
+        "49e8a13b-3b5e-54c7-95ca-7a0d5b40ce34",
+        "ae8370c8-802f-534a-b14a-23daebf30ae6",
+        "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+        "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+        "f3315e28-7409-46a7-941e-c0e615c765be"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "bf30ad55-1b9f-467f-8fef-7ac60c4f920d",
+      "target": "7d18b97e-b287-4393-8a28-411c96dcc305",
+      "net": "USB_UVLO",
+      "actual_direct_native_object_contributors": [
+        "49e8a13b-3b5e-54c7-95ca-7a0d5b40ce34",
+        "ae8370c8-802f-534a-b14a-23daebf30ae6",
+        "d2cb1d31-5b41-48bd-9989-7d76f6912b59"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "a44d4a9f-aa40-4d02-9ed7-16774fbe4849",
+      "target": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+      "net": "USB_UVLO",
+      "actual_direct_native_object_contributors": [
+        "49e8a13b-3b5e-54c7-95ca-7a0d5b40ce34",
+        "7d18b97e-b287-4393-8a28-411c96dcc305",
+        "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+        "f3315e28-7409-46a7-941e-c0e615c765be"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "original",
+      "old": "a44d4a9f-aa40-4d02-9ed7-16774fbe4849",
+      "target": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+      "net": "USB_UVLO",
+      "actual_direct_native_object_contributors": [
+        "49e8a13b-3b5e-54c7-95ca-7a0d5b40ce34",
+        "7d18b97e-b287-4393-8a28-411c96dcc305",
+        "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+        "f3315e28-7409-46a7-941e-c0e615c765be"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    },
+    {
+      "source": "current",
+      "old": "d0e90a39-e58b-5cb7-8db8-b7abb248673b",
+      "target": "9f71c7e9-1999-5d93-bca7-92de689f89aa",
+      "net": "USB_OVLO",
+      "actual_direct_native_object_contributors": [
+        "9820d6a1-a966-5f57-ba9f-b4f6eebf98a8",
+        "a037876a-72ca-5e86-972b-a613ac79a8a3"
+      ],
+      "exact_support_loss_mm2": 0,
+      "outward2nm_old_vs_inward2nm_actual_support_loss_mm2": 0
+    }
+  ],
+  "new_reference_projections": [
+    {
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "plane": "In1.Cu",
+      "outward2nm_projection_loss_mm2": 0
+    },
+    {
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "plane": "In1.Cu",
+      "outward2nm_projection_loss_mm2": 0
+    },
+    {
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "plane": "In2.Cu",
+      "outward2nm_projection_loss_mm2": 0
+    },
+    {
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "plane": "In2.Cu",
+      "outward2nm_projection_loss_mm2": 0
+    }
+  ],
+  "all_actual_support_geometry_reloaded_from_candidate": true,
+  "cached_baseline_actual_object_material_not_used": true,
+  "no_area_tolerance": true
+}

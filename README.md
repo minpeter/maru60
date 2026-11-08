@@ -503,6 +503,16 @@ mount feels firmer; the 0.1 mm extra thickness sits inside the caps'
 a 14.00 mm switch cutout under every HHKB key, a stabilizer housing at each
 stabilizer position, router reach with a 1.0 mm bit and the copper pullback.
 
+## Maru60 PCB (RP2350A, work in progress)
+
+A four-layer RP2350A hot-swap PCB for this housing (WKL/HHKB, 7U, USB-C,
+QMK/VIA, per-key RGB) lives in [`pcb/`](pcb/README.md). It is **not
+fabrication-ready**. Start at [`pcb/CURRENT.md`](pcb/CURRENT.md) for the
+current V7 baseline and prototype; [`recovery/`](recovery/README.md) holds the
+V7 recovery log, and `pcb/experiments/`, `pcb/publication/` and
+`pcb/artwork/` keep the earlier A21/A22, B70, P3, placement, power and
+silkscreen studies.
+
 ## License and design history
 
 Copyright 2026 minpeter. Two licenses apply:

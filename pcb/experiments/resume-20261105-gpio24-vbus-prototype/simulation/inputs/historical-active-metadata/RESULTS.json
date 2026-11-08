@@ -1,0 +1,690 @@
+{
+  "scope": "Runtime capability and semantic eligibility, not board or hardware validation",
+  "runs": {
+    "buck-diagnostic-24v": {
+      "error_lines": [
+        "stderr doAnalyses: TRAN:  Timestep too small; time = 0.00151065, timestep = 1.57022e-20: trouble with node \"e.xu18.x_u10_u859.e_abm7#branch\"",
+        "stderr run simulation(s) aborted"
+      ],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: singular matrix:  check nodes xu18.x_u11.e_abm4_int1 and b.xu18.x_u11.be_abm4#branch",
+        "stderr Warning: singular matrix:  check nodes xu18.x_u10_u859.e_abm4_int1 and b.xu18.x_u10_u859.be_abm4#branch",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: singular matrix:  check nodes xu18.count and e.xu18.x_u11.e_e3#branch",
+        "stderr Warning: singular matrix:  check nodes xu18.count and e.xu18.x_u11.e_e3#branch",
+        "stderr Warning: singular matrix:  check nodes xu18.count and e.xu18.x_u11.e_e3#branch",
+        "stderr Warning: singular matrix:  check nodes xu18.count and e.xu18.x_u11.e_e3#branch",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "rows": 227070,
+      "last": [
+        0.001510645238081,
+        23.99919630419,
+        1.564478579258,
+        -0.01872868061303,
+        0.2523423597509,
+        0.2503165705786,
+        0.6660855459095
+      ],
+      "minimum": [
+        0.0,
+        2.637054388801e-09,
+        7.186086048544e-18,
+        -1.156957327877,
+        0.0005799243607801,
+        1.149773758109e-18,
+        -2.461486355982e-05
+      ],
+      "maximum": [
+        0.001510645238081,
+        24.00007725346,
+        5.666908306487,
+        25.25140624567,
+        0.2523423597509,
+        0.9067053214217,
+        14.99906159723
+      ],
+      "numerical_run_without_detected_fatal_error": false,
+      "requested_stop_seconds": 0.006,
+      "reached_requested_stop": false
+    },
+    "buck-original-portability": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr Warning: singular matrix:  check nodes xu18.x_u11.e_abm4_int1 and b.xu18.x_u11.be_abm4#branch",
+        "stderr Warning: singular matrix:  check nodes xu18.x_u10_u859.e_abm4_int1 and b.xu18.x_u10_u859.be_abm4#branch",
+        "stderr Warning: Dynamic gmin stepping failed",
+        "stderr Warning: singular matrix:  check nodes xu18.x_u10_u859.e_abm2_int1 and b.xu18.x_u10_u859.be_abm2#branch",
+        "stderr Warning: singular matrix:  check nodes xu18.x_u10_u859.e_abm2_int1 and b.xu18.x_u10_u859.be_abm2#branch",
+        "stderr Warning: singular matrix:  check nodes xu18.x_u10_u859.e_abm2_int1 and b.xu18.x_u10_u859.be_abm2#branch",
+        "stderr Warning: singular matrix:  check nodes xu18.x_u10_u859.e_abm2_int1 and b.xu18.x_u10_u859.be_abm2#branch",
+        "stderr Warning: True gmin stepping failed",
+        "stderr Warning: source stepping failed"
+      ],
+      "rows": 304545,
+      "last": [
+        0.03,
+        4.999999901,
+        1.998409852905e-05,
+        2.000614741235e-05,
+        0.1039586726651,
+        3.996819673836e-06,
+        4.999944379935e-07
+      ],
+      "minimum": [
+        0.0,
+        9.80913e-319,
+        -0.0005418400490757,
+        -0.8565246893369,
+        0.000579921724558,
+        -0.0001083680089482,
+        -0.002100433340176
+      ],
+      "maximum": [
+        0.03,
+        4.999999923739,
+        0.007618575388069,
+        5.806597557949,
+        1.199999976977,
+        0.001523715065424,
+        0.1993936837731
+      ],
+      "numerical_run_without_detected_fatal_error": true
+    },
+    "buck-original-static-logic-ps": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 1,
+      "last": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "minimum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "maximum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "numerical_run_without_detected_fatal_error": true,
+      "static_output_count": 40,
+      "maximum_absolute_error": 0.0
+    },
+    "buck-original-static-logic-psa": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 1,
+      "last": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "minimum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "maximum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "numerical_run_without_detected_fatal_error": true,
+      "static_output_count": 40,
+      "maximum_absolute_error": 0.0
+    },
+    "reversed-limit-control-ps": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 15,
+      "last": [
+        6.0,
+        6.0,
+        0.0,
+        0.0
+      ],
+      "minimum": [
+        -1.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "maximum": [
+        6.0,
+        6.0,
+        0.0,
+        0.0
+      ],
+      "numerical_run_without_detected_fatal_error": true
+    },
+    "reversed-limit-control-psa": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 15,
+      "last": [
+        6.0,
+        6.0,
+        5.0,
+        5.0
+      ],
+      "minimum": [
+        -1.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "maximum": [
+        6.0,
+        6.0,
+        5.0,
+        5.0
+      ],
+      "numerical_run_without_detected_fatal_error": true,
+      "maximum_clamp_error": 0.0
+    },
+    "switch-control": {
+      "error_lines": [
+        "stderr Simulation interrupted due to error!",
+        "stderr Error: circuit not parsed."
+      ],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stderr warning, model type mismatch in line"
+      ],
+      "rows": 0,
+      "numerical_run_without_detected_fatal_error": false
+    },
+    "switch-control-psa": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 11,
+      "last": [
+        1.0,
+        0.999000999001
+      ],
+      "minimum": [
+        0.0,
+        9.99999000001e-07
+      ],
+      "maximum": [
+        1.0,
+        0.999000999001
+      ],
+      "numerical_run_without_detected_fatal_error": true
+    },
+    "u7-original-internal-probes": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 10147,
+      "last": [
+        0.01,
+        3.3,
+        0.008506016150672,
+        1.0,
+        1.0,
+        -1.621014968742e-40,
+        1.061304768448e-06
+      ],
+      "minimum": [
+        0.0,
+        0.0,
+        0.008506016150672,
+        0.0,
+        1.0,
+        -1.178199649462e-10,
+        1.061304768448e-06
+      ],
+      "maximum": [
+        0.01,
+        3.3,
+        3.996564278475,
+        1.0,
+        1.0,
+        1.0,
+        0.99999999999
+      ],
+      "numerical_run_without_detected_fatal_error": true
+    },
+    "u7-original-portability": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 10147,
+      "last": [
+        0.01,
+        3.3,
+        0.008506016150672,
+        3.299670032997
+      ],
+      "minimum": [
+        0.0,
+        0.0,
+        0.008506016150672,
+        3.299670032997
+      ],
+      "maximum": [
+        0.01,
+        3.3,
+        3.996564278475,
+        3.299670032997
+      ],
+      "numerical_run_without_detected_fatal_error": true
+    },
+    "u7-original-xnor": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 1,
+      "last": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "minimum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "maximum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "numerical_run_without_detected_fatal_error": true,
+      "input_order": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expected": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "actual": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "semantic_pass": false
+    },
+    "u7-original-xnor-ltpsa": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 1,
+      "last": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "minimum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "maximum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "numerical_run_without_detected_fatal_error": true,
+      "input_order": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expected": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "actual": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "semantic_pass": false
+    },
+    "u7-original-xnor-psa": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 1,
+      "last": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "minimum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "maximum": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "numerical_run_without_detected_fatal_error": true,
+      "input_order": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expected": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "actual": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "semantic_pass": false
+    },
+    "u7-translation-ltpsa": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 0,
+      "numerical_run_without_detected_fatal_error": false
+    },
+    "u7-translation-ps": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 0,
+      "numerical_run_without_detected_fatal_error": false
+    },
+    "u7-translation-psa": {
+      "error_lines": [],
+      "warning_lines": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "rows": 0,
+      "numerical_run_without_detected_fatal_error": false
+    }
+  }
+}

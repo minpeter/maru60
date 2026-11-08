@@ -1,0 +1,275 @@
+03:22:28: Debug: Adding duplicate image handler for 'PNG file'
+03:22:28: Debug: Adding duplicate image handler for 'JPEG file'
+03:22:28: Debug: Adding duplicate image handler for 'TIFF file'
+03:22:28: Debug: Adding duplicate image handler for 'GIF file'
+03:22:28: Debug: Adding duplicate image handler for 'PNM file'
+03:22:28: Debug: Adding duplicate image handler for 'PCX file'
+03:22:28: Debug: Adding duplicate image handler for 'IFF file'
+03:22:28: Debug: Adding duplicate image handler for 'Windows icon file'
+03:22:28: Debug: Adding duplicate image handler for 'Windows cursor file'
+03:22:28: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+03:22:28: Debug: Adding duplicate image handler for 'TGA file'
+03:22:28: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "source_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "candidate_sha256": "ebf7bdb8556158df3f6c6c63ed985dec18a34ca709a6175d69efbde93389e634",
+  "plane_rows": [
+    {
+      "plane": "In1.Cu",
+      "loss_outside_envelope_parts": [
+        {
+          "area_mm2": 0.0018659075725,
+          "bbox_mm": [
+            111.816054,
+            76.582104,
+            111.876931,
+            76.691008
+          ]
+        },
+        {
+          "area_mm2": 4.586e-08,
+          "bbox_mm": [
+            90.577277,
+            76.5995,
+            90.690691,
+            76.629889
+          ]
+        },
+        {
+          "area_mm2": 0.0367452978855,
+          "bbox_mm": [
+            111.593187,
+            75.76963,
+            112.07232,
+            76.249061
+          ]
+        }
+      ],
+      "local_clips": [
+        {
+          "box_mm": [
+            111,
+            75,
+            113.1,
+            77.9
+          ],
+          "candidate_component_areas_mm2": [
+            0.361325745754,
+            2.703655828207
+          ],
+          "candidate_with_only_outside_loss_restored_component_areas_mm2": [
+            0.361325745754,
+            2.7422670045445
+          ]
+        },
+        {
+          "box_mm": [
+            110.5,
+            74.5,
+            113.6,
+            78.4
+          ],
+          "candidate_component_areas_mm2": [
+            0.2366948448025,
+            7.7831407444865
+          ],
+          "candidate_with_only_outside_loss_restored_component_areas_mm2": [
+            0.2366948448025,
+            7.821751920824
+          ]
+        },
+        {
+          "box_mm": [
+            110,
+            74,
+            114.1,
+            78.9
+          ],
+          "candidate_component_areas_mm2": [
+            0.872420775072,
+            13.55304967295
+          ],
+          "candidate_with_only_outside_loss_restored_component_areas_mm2": [
+            0.872420775072,
+            13.5916608492875
+          ]
+        }
+      ],
+      "global_candidate_components": 1,
+      "global_after_outside_loss_restoration_components": 1
+    },
+    {
+      "plane": "In2.Cu",
+      "loss_outside_envelope_parts": [
+        {
+          "area_mm2": 0.0018659075725,
+          "bbox_mm": [
+            111.816054,
+            76.582104,
+            111.876931,
+            76.691008
+          ]
+        },
+        {
+          "area_mm2": 4.586e-08,
+          "bbox_mm": [
+            90.577277,
+            76.5995,
+            90.690691,
+            76.629889
+          ]
+        },
+        {
+          "area_mm2": 0.0253905709585,
+          "bbox_mm": [
+            111.593187,
+            75.765892,
+            112.016338,
+            76.249061
+          ]
+        },
+        {
+          "area_mm2": 0.0097502148175,
+          "bbox_mm": [
+            112.457104,
+            75.818768,
+            112.723383,
+            76.067118
+          ]
+        }
+      ],
+      "local_clips": [
+        {
+          "box_mm": [
+            111,
+            75,
+            113.1,
+            77.9
+          ],
+          "candidate_component_areas_mm2": [
+            0.963909005734,
+            2.7212745522995
+          ],
+          "candidate_with_only_outside_loss_restored_component_areas_mm2": [
+            3.722190203236
+          ]
+        },
+        {
+          "box_mm": [
+            110.5,
+            74.5,
+            113.6,
+            78.4
+          ],
+          "candidate_component_areas_mm2": [
+            9.2946566190435
+          ],
+          "candidate_with_only_outside_loss_restored_component_areas_mm2": [
+            9.331663264246
+          ]
+        },
+        {
+          "box_mm": [
+            110,
+            74,
+            114.1,
+            78.9
+          ],
+          "candidate_component_areas_mm2": [
+            16.3256087348185
+          ],
+          "candidate_with_only_outside_loss_restored_component_areas_mm2": [
+            16.362615380021
+          ]
+        }
+      ],
+      "global_candidate_components": 1,
+      "global_after_outside_loss_restoration_components": 1
+    }
+  ],
+  "nearest_GND_transition_geometry": [
+    {
+      "signal_transition": "relocated_COL5",
+      "pos_mm": [
+        112.175,
+        76.3
+      ],
+      "nearest_existing_GND_vias": [
+        {
+          "uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+          "pos_mm": [
+            114.85,
+            77.65
+          ],
+          "center_distance_mm": 2.9963519486201897
+        },
+        {
+          "uuid": "be938d46-431d-4dbf-bb6e-742185b88b4f",
+          "pos_mm": [
+            111.6,
+            73.2
+          ],
+          "center_distance_mm": 3.1528756715100528
+        },
+        {
+          "uuid": "c06d8690-d245-43ad-8c56-efad36a7e289",
+          "pos_mm": [
+            114.5,
+            73.9
+          ],
+          "center_distance_mm": 3.3415004114918156
+        },
+        {
+          "uuid": "57331af9-9323-4e50-949c-123703e9d3d4",
+          "pos_mm": [
+            110.6,
+            73.2
+          ],
+          "center_distance_mm": 3.4771576035606975
+        }
+      ]
+    },
+    {
+      "signal_transition": "MCU_GPIO27",
+      "pos_mm": [
+        112.16,
+        77.0
+      ],
+      "nearest_existing_GND_vias": [
+        {
+          "uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+          "pos_mm": [
+            114.85,
+            77.65
+          ],
+          "center_distance_mm": 2.7674175687814073
+        },
+        {
+          "uuid": "be938d46-431d-4dbf-bb6e-742185b88b4f",
+          "pos_mm": [
+            111.6,
+            73.2
+          ],
+          "center_distance_mm": 3.8410415254198935
+        },
+        {
+          "uuid": "c06d8690-d245-43ad-8c56-efad36a7e289",
+          "pos_mm": [
+            114.5,
+            73.9
+          ],
+          "center_distance_mm": 3.884018537545873
+        },
+        {
+          "uuid": "5bcc3e01-7bf7-4484-aa21-f12e24210539",
+          "pos_mm": [
+            115.9,
+            78.4
+          ],
+          "center_distance_mm": 3.9934446283878886
+        }
+      ]
+    }
+  ],
+  "limits": "Local clipping changes connectivity at the artificial box boundary; component-count changes are diagnostic of a local corridor, not a global plane split or SI proof. Restoring outside loss is analytical only; no CAD changes."
+}

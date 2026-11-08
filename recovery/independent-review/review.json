@@ -1,0 +1,259 @@
+{
+  "decision": "exact_board_chain_recovered",
+  "scope": "Read-only hash, archive manifest and raw object-delta audit; no CAD load/fill/save, no constructors run, no DRC/ERC/native validation rerun.",
+  "board_hashes": {
+    "baseline3663.kicad_pcb": "3663aac96fb305eb4925fff938dd2db5862b880c6c262b2fa82707567a6e98f7",
+    "u10-original2bf.kicad_pcb": "2bfcb5292319626d4f33cad5e827ed0b1eb6c1b2ef852d8cc7fc2a3bf5792a55",
+    "u10-label-accepted400fd.kicad_pcb": "400fd2641ebd3208315359acf295ee630dab8d3319a6d990ea7ab8d558961fa2",
+    "native-c128-LR/reconstructed.kicad_pcb": "8a4ff6a646396a3faa11dda0f756c89e82c20eec18f37fe531cf730789106eea",
+    "width-reconstructed.kicad_pcb": "0e5bbc5ae365d9511ce51a81f75d9e9236fbb93af89b17b2e9486ceb038e026c",
+    "typography-reconstructed.kicad_pcb": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1"
+  },
+  "archive_manifests": [
+    {
+      "manifest": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/maru60-tscircuit-full/input/manifest.json",
+      "sha256": "e2dc45092619161195b6bc623e598b01e18f410168edf6731b9b70677bccd853",
+      "verified_file_count": 53,
+      "failures": []
+    },
+    {
+      "manifest": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-c128-pdn-study-20261104/MANIFEST.json",
+      "sha256": "31d92c3b7a912f68d6ca2a067925d78aac4634f4d57fb8bf808a761ba39c606a",
+      "verified_file_count": 149,
+      "failures": []
+    },
+    {
+      "manifest": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-si-advanced-20261104/return_geometry/manifest.json",
+      "sha256": "4be227e7035a7b15644f58325319381b97259af65a662acde0ed3eee1eaad1a2",
+      "verified_file_count": 13,
+      "failures": []
+    }
+  ],
+  "raw_delta_checks": {
+    "u10": {
+      "added": [
+        [
+          "segment",
+          "4386ae32-e6c7-51a8-9f51-4af5a03c9caf"
+        ],
+        [
+          "segment",
+          "5b08ec50-9d90-5d96-a298-8c2e65b8d7c6"
+        ],
+        [
+          "segment",
+          "987658e4-2786-5128-bd22-185c9ed388d3"
+        ],
+        [
+          "segment",
+          "a808b65d-1870-532d-86cd-6f8d7849a959"
+        ],
+        [
+          "segment",
+          "a963e830-796c-53b3-b9de-ef49be1314bc"
+        ],
+        [
+          "segment",
+          "abd413c6-ea9a-5122-a0aa-204e314f3ec4"
+        ],
+        [
+          "segment",
+          "ad6e4170-c174-50a4-9cc7-e4c180a76234"
+        ],
+        [
+          "segment",
+          "cd56f3a9-6491-546f-8ac4-245f866cb787"
+        ],
+        [
+          "segment",
+          "dde35e57-1aaa-56c2-98cd-55771e22bab1"
+        ],
+        [
+          "segment",
+          "fa960ce9-efd8-5c7b-a84a-e626be686c1f"
+        ]
+      ],
+      "removed": [
+        [
+          "segment",
+          "2c517f5c-8f2d-4a2a-9fea-dc1b7376c3cd"
+        ]
+      ],
+      "changed": [],
+      "unchanged_uuid_objects": 11065,
+      "all_zone_raw_blocks_equal": true
+    },
+    "voltage_labels": {
+      "changed_byte_offsets": [
+        1036107,
+        1444346
+      ],
+      "old_contexts": [
+        "\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)\n\t\t(property \"Value\" \"+5V TEST\"\n\t\t\t(at",
+        "\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)\n\t\t(property \"Value\" \"+5V_LED TEST\"\n\t\t"
+      ]
+    },
+    "c128": {
+      "added": [
+        [
+          "segment",
+          "99335a61-c21f-59c4-876b-507f6433e7c6"
+        ],
+        [
+          "segment",
+          "b0cc9de1-aec9-5121-a294-6107a6342d33"
+        ],
+        [
+          "via",
+          "74838ec4-2a2a-5ebb-82d1-e1c3369351cd"
+        ]
+      ],
+      "removed": [],
+      "changed": [
+        [
+          "footprint",
+          "47590d17-4db9-41bf-a1ff-5a7f2c886bb8"
+        ]
+      ],
+      "unchanged_uuid_objects": 11074,
+      "all_zone_raw_blocks_equal": true
+    },
+    "width": {
+      "added": [
+        [
+          "segment",
+          "0fcbbcbc-52de-5e52-b60d-79b83d0b7fa8"
+        ]
+      ],
+      "removed": [],
+      "changed": [],
+      "unchanged_uuid_objects": 11078,
+      "all_zone_raw_blocks_equal": true
+    },
+    "typography": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        [
+          "footprint",
+          "0d96c41f-3c00-4e04-ac52-662d3d577a5c"
+        ],
+        [
+          "footprint",
+          "28aefd6f-3714-4fae-8753-4bf59b0c6ed3"
+        ],
+        [
+          "footprint",
+          "33b04b5f-3065-4c2e-9a32-ab7a7511d695"
+        ],
+        [
+          "footprint",
+          "39d253c3-cb50-4d05-aca5-cd080aad6b11"
+        ],
+        [
+          "footprint",
+          "420902c9-2138-4c54-9cca-166e30dbf1b7"
+        ],
+        [
+          "footprint",
+          "4f79c638-fe88-4e5c-8cd3-7c9a34cef457"
+        ],
+        [
+          "footprint",
+          "539cebe2-e731-4ed4-ad6d-f50703531bf0"
+        ],
+        [
+          "footprint",
+          "6640fd3b-eaa4-498d-94be-d26e924421ac"
+        ],
+        [
+          "footprint",
+          "6bcbcd54-236f-4ee7-9713-7324e1b0fb18"
+        ],
+        [
+          "footprint",
+          "8e5e43ad-e6ea-4ac9-b30f-8dcdad168e57"
+        ],
+        [
+          "footprint",
+          "95d8d6bd-1c1b-4521-bfa3-9a94df8beca0"
+        ],
+        [
+          "footprint",
+          "977b8711-1e9d-4469-82dd-cbcc6c969514"
+        ],
+        [
+          "footprint",
+          "b8838aca-2857-4c0f-b268-a481073b7abd"
+        ],
+        [
+          "footprint",
+          "c907084c-5065-4318-be28-563b7d0654ef"
+        ],
+        [
+          "footprint",
+          "f0753f91-8ae0-4fb1-b7b3-ceca63bff468"
+        ]
+      ],
+      "unchanged_uuid_objects": 11064,
+      "all_zone_raw_blocks_equal": true,
+      "reference_names": [
+        "C101",
+        "C126",
+        "C129",
+        "C137",
+        "C141",
+        "C142",
+        "D100",
+        "J3",
+        "R120",
+        "R124",
+        "R126",
+        "R144",
+        "R163",
+        "U10",
+        "U2"
+      ],
+      "anchor_moves": {
+        "U2": [
+          "(at 0 2 0)",
+          "(at 0 -1.8 0)"
+        ],
+        "C101": [
+          "(at 0 1.4 90)",
+          "(at 0 1.7 90)"
+        ],
+        "J3": [
+          "(at 0 3.98 180)",
+          "(at -0.1 3.98 180)"
+        ],
+        "C142": [
+          "(at 0 1.25 0)",
+          "(at 0.05 1.25 0)"
+        ]
+      }
+    }
+  },
+  "reviewed_constructor_hashes": {
+    "recover_u10.py": "b46941e9f9710bcef8be1e9a369bb299672a882fbc9e49e8fcf13f70604ac684",
+    "recover_c128.py": "43f4ef6e7dafd482edcd04db4f26d91dc80da19be4b687ae1fa5c4065c191dc2",
+    "recover_width_typography.py": "be74b38378296b9aceb8ebda06b083bd1b9083c06285dd7355bdff590bb7f15f"
+  },
+  "recovered_source_files_verified_unchanged": 541,
+  "checks_passed": 88674,
+  "historical_qa_fully_recovered": false,
+  "historical_git_objects_recovered": false,
+  "full_selected_54_file_project_equality_established": false,
+  "limitations": [
+    "Exact full board SHA establishes the recovered board bytes, not restoration of missing historical validation scripts/results or Git commits.",
+    "Earlier 53-file project input manifest is exact. The later complete 54-file selected project map is not present in these artifacts, so that full package equality is not claimed.",
+    "Source-bound simulation snapshots remain partial circuit/geometry models, not hardware or manufacturing qualification.",
+    "Recovery constructor scripts are ad hoc deterministic recovery tools, not substitutes for historical acceptance gates."
+  ],
+  "recovery_script_notes": [
+    "recover_u10.py reports its initially expected original U10 hash as false because its source already has corrected labels; the resulting 400fd SHA is exact, and separate reversal of two PCB Value bytes yields original 2bf SHA.",
+    "recover_c128.py uses explicit layer-specific via.SetWidth, native footprint transformation/save, then canonical conductor sorting after fixed UUID substitution. Actual output SHA, not an assumed serializer equivalence, establishes recovery.",
+    "Width adds one fixed-UUID raw segment. Typography changes exactly 15 Reference sizes and four anchor positions."
+  ],
+  "native_new_tests_claimed": false
+}

@@ -1,0 +1,196 @@
+04:31:06: Debug: Adding duplicate image handler for 'PNG file'
+04:31:06: Debug: Adding duplicate image handler for 'JPEG file'
+04:31:06: Debug: Adding duplicate image handler for 'TIFF file'
+04:31:06: Debug: Adding duplicate image handler for 'GIF file'
+04:31:06: Debug: Adding duplicate image handler for 'PNM file'
+04:31:06: Debug: Adding duplicate image handler for 'PCX file'
+04:31:06: Debug: Adding duplicate image handler for 'IFF file'
+04:31:06: Debug: Adding duplicate image handler for 'Windows icon file'
+04:31:06: Debug: Adding duplicate image handler for 'Windows cursor file'
+04:31:06: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+04:31:06: Debug: Adding duplicate image handler for 'TGA file'
+04:31:06: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": "fb227c9af1b2c520452fee6815fdfecf6c44f7a42f090d432e5293fd3538d434",
+  "modified_LED_UUIDs": [
+    "97c06ea9-3805-4713-8c88-adc1818c3258",
+    "b995c2c7-f443-497b-bb80-da0d3312d10d",
+    "f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774",
+    "6673dcb6-419c-4720-a5a5-19baa7afaec4"
+  ],
+  "source_length_mm": 0.8828417124746191,
+  "candidate_length_mm": 1.0064488031195846,
+  "length_delta_mm": 0.12360709064496556,
+  "widths_mm": [
+    0.15,
+    0.15,
+    0.15,
+    0.15
+  ],
+  "removed_physical_copper_mm2": 0.062057239332,
+  "added_physical_copper_mm2": 0.079270660434,
+  "original_incident_contacts": [
+    {
+      "uuids": [
+        "39400596-6e89-4178-bfa6-e25ec113fdeb",
+        "97c06ea9-3805-4713-8c88-adc1818c3258"
+      ],
+      "source_overlap_mm2": 0.000287550396,
+      "candidate_overlap_mm2": 0.0002875768965,
+      "lost_old_patch_mm2": 2.7315e-09,
+      "source_2nm_guarded_overlap_mm2": 0.0002873408925,
+      "candidate_2nm_guarded_overlap_mm2": 0.0002873666735,
+      "both_changed": false
+    },
+    {
+      "uuids": [
+        "6673dcb6-419c-4720-a5a5-19baa7afaec4",
+        "6ef6f246-d5ef-41ba-8056-1f6e4650f1bb"
+      ],
+      "source_overlap_mm2": 0.0002875294635,
+      "candidate_overlap_mm2": 0.000345317395,
+      "lost_old_patch_mm2": 2.5515e-09,
+      "source_2nm_guarded_overlap_mm2": 0.0002873199675,
+      "candidate_2nm_guarded_overlap_mm2": 0.000345087112,
+      "both_changed": false
+    },
+    {
+      "uuids": [
+        "6673dcb6-419c-4720-a5a5-19baa7afaec4",
+        "b995c2c7-f443-497b-bb80-da0d3312d10d"
+      ],
+      "source_overlap_mm2": 0.000287564968,
+      "candidate_overlap_mm2": 0.0003453715815,
+      "lost_old_patch_mm2": 0.000287564968,
+      "source_2nm_guarded_overlap_mm2": 0.000287355322,
+      "candidate_2nm_guarded_overlap_mm2": 0.0003451289685,
+      "both_changed": true
+    },
+    {
+      "uuids": [
+        "6673dcb6-419c-4720-a5a5-19baa7afaec4",
+        "c764e55b-1599-4838-894f-3fe4f3bca590"
+      ],
+      "source_overlap_mm2": 0.017792199621,
+      "candidate_overlap_mm2": 0.0188784393335,
+      "lost_old_patch_mm2": 9.5165e-09,
+      "source_2nm_guarded_overlap_mm2": 0.017791239795,
+      "candidate_2nm_guarded_overlap_mm2": 0.0188774956285,
+      "both_changed": false
+    },
+    {
+      "uuids": [
+        "6673dcb6-419c-4720-a5a5-19baa7afaec4",
+        "f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774"
+      ],
+      "source_overlap_mm2": 0.0177922121875,
+      "candidate_overlap_mm2": 0.0188783658215,
+      "lost_old_patch_mm2": 0.012713316642,
+      "source_2nm_guarded_overlap_mm2": 0.0177912527025,
+      "candidate_2nm_guarded_overlap_mm2": 0.0188774224355,
+      "both_changed": true
+    },
+    {
+      "uuids": [
+        "97c06ea9-3805-4713-8c88-adc1818c3258",
+        "a67d3a82-3f3e-44c8-8014-bf320a87c984"
+      ],
+      "source_overlap_mm2": 0.017792148697,
+      "candidate_overlap_mm2": 0.0180338081365,
+      "lost_old_patch_mm2": 2.37885e-08,
+      "source_2nm_guarded_overlap_mm2": 0.017791188978,
+      "candidate_2nm_guarded_overlap_mm2": 0.018032794574,
+      "both_changed": false
+    },
+    {
+      "uuids": [
+        "97c06ea9-3805-4713-8c88-adc1818c3258",
+        "b995c2c7-f443-497b-bb80-da0d3312d10d"
+      ],
+      "source_overlap_mm2": 0.0177922121875,
+      "candidate_overlap_mm2": 0.01803380144,
+      "lost_old_patch_mm2": 0.013576577612,
+      "source_2nm_guarded_overlap_mm2": 0.0177912527025,
+      "candidate_2nm_guarded_overlap_mm2": 0.0180328092985,
+      "both_changed": true
+    },
+    {
+      "uuids": [
+        "97c06ea9-3805-4713-8c88-adc1818c3258",
+        "be904f09-91d8-4e67-a1bb-2737b3d38907"
+      ],
+      "source_overlap_mm2": 0.0045141002645,
+      "candidate_overlap_mm2": 0.004565381015,
+      "lost_old_patch_mm2": 5.8155e-09,
+      "source_2nm_guarded_overlap_mm2": 0.0045135118045,
+      "candidate_2nm_guarded_overlap_mm2": 0.004564771558,
+      "both_changed": false
+    },
+    {
+      "uuids": [
+        "a67d3a82-3f3e-44c8-8014-bf320a87c984",
+        "b995c2c7-f443-497b-bb80-da0d3312d10d"
+      ],
+      "source_overlap_mm2": 0.000287564968,
+      "candidate_overlap_mm2": 0.0,
+      "lost_old_patch_mm2": 0.000287564968,
+      "source_2nm_guarded_overlap_mm2": 0.000287355322,
+      "candidate_2nm_guarded_overlap_mm2": 0.0,
+      "both_changed": false
+    },
+    {
+      "uuids": [
+        "b995c2c7-f443-497b-bb80-da0d3312d10d",
+        "f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774"
+      ],
+      "source_overlap_mm2": 0.017792148697,
+      "candidate_overlap_mm2": 0.017792148697,
+      "lost_old_patch_mm2": 0.0137994388695,
+      "source_2nm_guarded_overlap_mm2": 0.017791188978,
+      "candidate_2nm_guarded_overlap_mm2": 0.017791188978,
+      "both_changed": true
+    },
+    {
+      "uuids": [
+        "c764e55b-1599-4838-894f-3fe4f3bca590",
+        "f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774"
+      ],
+      "source_overlap_mm2": 0.0038721266375,
+      "candidate_overlap_mm2": 0.0004031909105,
+      "lost_old_patch_mm2": 0.003634266127,
+      "source_2nm_guarded_overlap_mm2": 0.0038716153655,
+      "candidate_2nm_guarded_overlap_mm2": 0.000402952034,
+      "both_changed": false
+    }
+  ],
+  "terminals": [
+    {
+      "terminal": "upper",
+      "unchanged_neighbor_uuid": "a67d3a82-3f3e-44c8-8014-bf320a87c984",
+      "fixed_endpoint_mm": [
+        110.9,
+        75.35
+      ],
+      "source_contact_mm2": 0.017792148697,
+      "candidate_contact_mm2": 0.0180338086755,
+      "lost_original_contact_patch_mm2": 2.35845e-08,
+      "candidate_2nm_guarded_positive_overlap_mm2": 0.018032797035,
+      "same_net": true
+    },
+    {
+      "terminal": "lower",
+      "unchanged_neighbor_uuid": "c764e55b-1599-4838-894f-3fe4f3bca590",
+      "fixed_endpoint_mm": [
+        110.7,
+        76.149999
+      ],
+      "source_contact_mm2": 0.017792199621,
+      "candidate_contact_mm2": 0.0188784394385,
+      "lost_original_contact_patch_mm2": 9.5165e-09,
+      "candidate_2nm_guarded_positive_overlap_mm2": 0.0188774956285,
+      "same_net": true
+    }
+  ],
+  "limits": "Intentional local same-net contact patches can change or retire when the source geometry is refactored. Full pad partitions and absence of unrelated changes are independently checked in the material graph. Positive terminal contact is not a claim of identical patch area or signal integrity."
+}

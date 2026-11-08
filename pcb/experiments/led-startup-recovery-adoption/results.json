@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "candidate_manifest_sha256": "4ecbf22170617f42fccefb1ca5cbda496cb864d829965b0fcc80f241e72cefa0",
+  "packet_unchanged": true,
+  "host_results_sha256": "2b67679aede0c19ced06622e48cd24034ded8365dd87282019bff3933398149e",
+  "guard_results_sha256": "e8676dbb697ddac147d658a963f7663f97bd3e0a5aec43b5ffacfd2967f9256e",
+  "independent_results_sha256": "dfcf8c33c52c7b125abed1f5869f6eeef4196b27d2acf1285243d95425313c69",
+  "static_results_sha256": "b8e2dab54488522e4eaccf6abeb0292eabd58a8daec12174c007d64e8be4887e",
+  "startup_executions": 90,
+  "transport_executions": 288,
+  "independent_executions": 73,
+  "invalid_contract_rejections": 7,
+  "killed_mutations": [
+    "skip-settling",
+    "retain-state",
+    "forget-fault",
+    "between-chains",
+    "black-first",
+    "post-sync",
+    "final-dma"
+  ],
+  "expected_nonatomic_limit_controls": 2,
+  "static_gpio_bindings": 24,
+  "qualification_default": 0,
+  "full_arm_build": false,
+  "hardware_qualification": false
+}

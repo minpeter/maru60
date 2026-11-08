@@ -1,0 +1,22 @@
+from pathlib import Path
+from decimal import Decimal as D
+import json,hashlib,csv,xml.etree.ElementTree as E,itertools
+r=Path(__file__).resolve().parent;w=r.parent;pcb=w/'pcb-v7-recovery-20261104/pcb/experiments/v7-reference-legibility/candidate/pcb/maru60.kicad_pcb';xml=w/'pcb-v7-recovery-20261104/pcb/experiments/v7-reference-legibility/qa/recovery-native/netlist.xml';h=hashlib.sha256(pcb.read_bytes()).hexdigest();assert h=='7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1'
+x=E.parse(xml).getroot();comps={c.get('ref'):c.findtext('value')for c in x.find('components')};nets={n.get('name'):[dict(t.attrib)for t in n.findall('node')]for n in x.find('nets')};assert comps['C124']=='10nF 10% 50V';assert {(n['ref'],n['pin'])for n in nets['USB_DVDT']}=={('C124','1'),('U8','7')};direct=[(n['ref'],comps[n['ref']])for n in nets['VBUS_PROTECTED_RAW']if n['ref'].startswith('C')];assert direct==[('C126','1uF 50V'),('C136','100nF 50V'),('C137','4.7uF 50V effective>=2uF TBD')]
+options=[('baseline_10n_10pct_direct','10','.10','0',None),('same_10n_plus_100ohm','10','.10','100','R125 proposed; not selected'),('counterexample_8p2n_10pct','8.2','.10','0','not a recommended selection'),('YAGEO_CC0402JRX7R9BB822','8.2','.05','0','8.2nF ±5%,50V,X7R,0402'),('TDK_C1005X7R1H682K050BA','6.8','.10','0','6.8nF ±10%,50V,X7R,0402')]
+rows=[];sweeps=[]
+for name,c,tol,res,part in options:
+ c,tol,res=map(D,(c,tol,res));lo=c*(1-tol);hi=c*(1+tol);lot=lo*D('.85');hit=hi*D('1.15');nom_sr=D('2')/c
+ row={'option':name,'part':part,'cap_nominal_nF':float(c),'initial_cap_range_nF':[float(lo),float(hi)],'initial_plus_assumed_X7R_range_nF':[float(lot),float(hit)],'nominal_SR_design_V_per_ms':float(nom_sr),'nominal_5V_design_ramp_ms':float(D('5')/nom_sr),'5V_design_ramp_initial_plus_temp_ms':[float(lot*D('2.5')),float(hit*D('2.5'))],'nominal_5p8uF_capacitive_inrush_mA':float(D('5.8')*nom_sr),'nominal_slew_inrush_ratio_to_10n':float(D('10')/c),'upper_initial_plus_temp_headroom_to_10nF_pF':float((D('10')-hit)*1000),'initial_plus_temp_exceeds_10nF':hit>D('10'),'R_series_ohm':float(res),'R_plus1pct_C_upper_RC_us':float(res*D('1.01')*hit/D('1000')),'R_plus1pct_Idvdt_max_drop_mV':float(res*D('1.01')*D('3.82')/1000),'ideal_pin_C_over_I_ms_per_volt_range':[float(lot/D('3.82')),float(hit/D('.81'))]};rows.append(row)
+ for tolerance_sign,temp_sign,bias_age_factor,load_uF,vin in itertools.product([-1,1],[-1,1],['1','.90','.75','.50'],['1','5.8','10','50','100'],['4.4','5','5.25']):
+  eff=c*(1+D(tolerance_sign)*tol)*(1+D(temp_sign)*D('.15'))*D(bias_age_factor);sr=D('2')/eff;sweeps.append({'option':name,'initial_sign':tolerance_sign,'temperature_sign':temp_sign,'hypothetical_remaining_C_factor':bias_age_factor,'C_eff_nF':float(eff),'Cload_uF':load_uF,'input_V':vin,'SR_design_V_per_ms':float(sr),'ramp_design_ms':float(D(vin)/sr),'cap_only_inrush_mA':float(D(load_uF)*sr)})
+# Independent unit checks in SI units and exact counterexample values.
+for q in sweeps:
+ cF=q['C_eff_nF']*1e-9; vps=2e-6/cF; amps=float(q['Cload_uF'])*1e-6*vps;assert abs(amps*1000-q['cap_only_inrush_mA'])<1e-10;assert abs(float(q['input_V'])/vps*1000-q['ramp_design_ms'])<1e-10
+assert rows[2]['initial_plus_assumed_X7R_range_nF'][1]==10.373
+assert rows[3]['initial_plus_assumed_X7R_range_nF'][1]==9.9015
+assert rows[4]['initial_plus_assumed_X7R_range_nF'][1]==8.602
+results={'board_sha256':h,'netlist_sha256':hashlib.sha256(xml.read_bytes()).hexdigest(),'actual_dVdt_nodes':nets['USB_DVDT'],'actual_raw_output_capacitors':direct,'raw_output_capacitor_nominal_sum_uF':5.8,'nominal_sum_is_not_effective_or_total_dynamic_load':True,'selected_C124_exact_MPN_and_dielectric_unrecorded':True,'baseline_temperature_range_is_an_explicit_X7R_sensitivity_not_verified_baseline_spec':True,'model':'TI Eq4 design approximation SR[V/ms]=2/C[nF], Icap[mA]=Cload[uF]*SR; constant-capacitive load only. C/I pin charge is separately reported, not mapped to actual OUT slew.','no_active_efuse_or_buck_model':True,'not_guaranteed_output_timing':True,'no_BOM_CAD_changes':True,'options':rows,'sweep_rows':len(sweeps),'unit_crosschecks':len(sweeps),'source_unchanged':hashlib.sha256(pcb.read_bytes()).hexdigest()==h};(r/'results.json').write_text(json.dumps(results,indent=2)+'\n')
+with (r/'sensitivity.csv').open('w',newline='')as f:
+ dw=csv.DictWriter(f,fieldnames=sweeps[0]);dw.writeheader();dw.writerows(sweeps)
+print(json.dumps({'rows':rows,'sweep_rows':len(sweeps)},indent=2))

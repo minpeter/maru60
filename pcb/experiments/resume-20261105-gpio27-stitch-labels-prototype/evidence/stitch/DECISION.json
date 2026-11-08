@@ -1,0 +1,39 @@
+{
+  "status": "NARROW_GEOMETRY_VALIDATED_UNSELECTED_PROTOTYPE_INCREMENT_NOT_FABRICATION_OR_SI_ACCEPTANCE",
+  "strict_baseline_preserved": "bbf61e6 / 04be04e5;11 opens51 warnings",
+  "frozen_prototype_preserved": "c782123 / 56d66f65;10 opens50 warnings",
+  "source_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "candidate_sha256": "22761b0f007cd9b113843c0074924fee02c3728e98f33d88fc90eb7cdc14ec9c",
+  "native_checks": {
+    "opens": 10,
+    "warnings": 50,
+    "new_DRC_violations": 0,
+    "ERC": 0,
+    "parity": 0,
+    "net_identity": true,
+    "electrical_pins": 1064,
+    "cold58files_identical": true
+  },
+  "geometry": {
+    "added": "single0.50mm/0.25mm GND throughvia(105.65,36.05)",
+    "raw_inner_plane_boundary_changes": 0,
+    "old_direct_and_zone_contact_areas_exact": true,
+    "all_prior_pad_partitions_and10_physical_open_pairs_exact": true,
+    "new_stitch_to_each_plane_mm2": 0.147260768066,
+    "rooted_ground_pads": 247,
+    "nearest_GND_via_mm_before": 3.647687623687094,
+    "nearest_GND_via_mm_after": 1.4577379737113252,
+    "physical_plane_loss_mm2_each": 0.049087681002,
+    "loss_scope": "Only actual new drill; zero outside it, no old signal reference loss",
+    "inherited_guard_failures": 51,
+    "guard_failures_unchanged": true
+  },
+  "limits": [
+    "Strict composed no-loss remains FAIL inherited from frozen prototype; no threshold waiver.",
+    "51 preexisting guarded-contact proof failures remain explicit; no new failures.",
+    "10 open pairs50 warnings remain.",
+    "No SI/EMI/current-return or power-stability gain established by this geometric stitch.",
+    "No fabrication approval, no hardware measurement, no push/order/flash."
+  ],
+  "tool_observation": "Initial PCB_VIA.SetWidth issued no-layer warning; serialized0.5mm size and native0.5mm width on all4layers independently asserted. No geometry issue observed."
+}

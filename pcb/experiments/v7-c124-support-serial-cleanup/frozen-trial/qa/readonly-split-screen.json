@@ -1,0 +1,169 @@
+{
+  "source_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "status": "Read-only in-memory split screen; no PCB saved",
+  "plans": [
+    {
+      "support_uuid": "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+      "split_main_uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "split_xy_mm": [
+        14.54,
+        17.435
+      ],
+      "new_tail_uuid": "dfc6e0a8-95fe-4a05-9438-467299a0fa29",
+      "original_start_mm": [
+        14.0,
+        17.675
+      ],
+      "original_end_mm": [
+        14.54,
+        17.435
+      ],
+      "width_mm": 0.2,
+      "net": "GND",
+      "native_dangling_before": true,
+      "collinear_integer_cross_product": 0,
+      "material": {
+        "False": {
+          "single_track_split_union": {
+            "loss_nm2": 498553.0,
+            "gain_nm2": 6321.5,
+            "loss_contours": 46,
+            "gain_contours": 13
+          },
+          "including_unchanged_support": {
+            "loss_nm2": 110236.5,
+            "gain_nm2": 6321.5,
+            "loss_contours": 45,
+            "gain_contours": 13
+          }
+        },
+        "True": {
+          "single_track_split_union": {
+            "loss_nm2": 438350.0,
+            "gain_nm2": 317282.0,
+            "loss_contours": 40,
+            "gain_contours": 13
+          },
+          "including_unchanged_support": {
+            "loss_nm2": 368885.0,
+            "gain_nm2": 226577.5,
+            "loss_contours": 40,
+            "gain_contours": 13
+          }
+        }
+      },
+      "native_dangling_after": false,
+      "main_dangling_after": false,
+      "tail_dangling_after": false
+    },
+    {
+      "support_uuid": "cc1282fe-f0b3-5fea-9d45-66eea8068d66",
+      "split_main_uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "split_xy_mm": [
+        20.06625,
+        20.9975
+      ],
+      "new_tail_uuid": "7bbc7a3f-d50a-484e-9495-953ed09c3327",
+      "original_start_mm": [
+        18.0,
+        20.95
+      ],
+      "original_end_mm": [
+        20.06625,
+        20.9975
+      ],
+      "width_mm": 0.15,
+      "net": "USB_OVLO",
+      "native_dangling_before": true,
+      "collinear_integer_cross_product": 0,
+      "material": {
+        "False": {
+          "single_track_split_union": {
+            "loss_nm2": 15061.5,
+            "gain_nm2": 6.0,
+            "loss_contours": 26,
+            "gain_contours": 1
+          },
+          "including_unchanged_support": {
+            "loss_nm2": 0.0,
+            "gain_nm2": 0.0,
+            "loss_contours": 0,
+            "gain_contours": 0
+          }
+        },
+        "True": {
+          "single_track_split_union": {
+            "loss_nm2": 30184.5,
+            "gain_nm2": 819486.0,
+            "loss_contours": 27,
+            "gain_contours": 2
+          },
+          "including_unchanged_support": {
+            "loss_nm2": 0.0,
+            "gain_nm2": 10200.0,
+            "loss_contours": 0,
+            "gain_contours": 1
+          }
+        }
+      },
+      "native_dangling_after": false,
+      "main_dangling_after": false,
+      "tail_dangling_after": false
+    },
+    {
+      "support_uuid": "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a",
+      "split_main_uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "split_xy_mm": [
+        14.09,
+        16.42
+      ],
+      "new_tail_uuid": "0ea34de2-4f12-4c94-97d5-7f5be4aeecc7",
+      "original_start_mm": [
+        14.2,
+        16.35
+      ],
+      "original_end_mm": [
+        14.09,
+        16.42
+      ],
+      "width_mm": 0.15,
+      "net": "USB_UVLO",
+      "native_dangling_before": true,
+      "collinear_integer_cross_product": 0,
+      "material": {
+        "False": {
+          "single_track_split_union": {
+            "loss_nm2": 5531.0,
+            "gain_nm2": 764984.5,
+            "loss_contours": 14,
+            "gain_contours": 52
+          },
+          "including_unchanged_support": {
+            "loss_nm2": 0.0,
+            "gain_nm2": 62762.0,
+            "loss_contours": 0,
+            "gain_contours": 1
+          }
+        },
+        "True": {
+          "single_track_split_union": {
+            "loss_nm2": 98924.0,
+            "gain_nm2": 529118.5,
+            "loss_contours": 16,
+            "gain_contours": 42
+          },
+          "including_unchanged_support": {
+            "loss_nm2": 110499.5,
+            "gain_nm2": 0.0,
+            "loss_contours": 1,
+            "gain_contours": 0
+          }
+        }
+      },
+      "native_dangling_after": false,
+      "main_dangling_after": false,
+      "tail_dangling_after": false
+    }
+  ],
+  "source_unchanged": true
+}

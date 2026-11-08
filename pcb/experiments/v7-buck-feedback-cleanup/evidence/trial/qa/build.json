@@ -1,0 +1,106 @@
+{
+  "status": "UNSELECTED BUCK_FB dead-arm trim; no adoption or analog claim",
+  "source_board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "prefill_sha256": "f3b45ed754bbbb8d0c1d4cac091062f0296bae7d6b8a184b27f4631da3b23c1c",
+  "retired_objects": [
+    {
+      "uuid": "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+      "net": "BUCK_FB",
+      "type": "PCB_TRACK",
+      "physical_contacts": [
+        "37c51a69-ea1f-42e2-b356-72426fc3b1b2",
+        "3c804add-ee74-5104-b471-73062ffcaeb9",
+        "d20e66e3-44fb-4535-81e2-9bc53c5f6519",
+        "d382de57-3476-43c4-ac26-0a72b21acf7c"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_mm": [
+        178.15,
+        85.75
+      ],
+      "end_mm": [
+        182.95,
+        85.75
+      ],
+      "width_mm": 0.15,
+      "length_mm": 4.8
+    },
+    {
+      "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c",
+      "net": "BUCK_FB",
+      "type": "PCB_VIA",
+      "physical_contacts": [
+        "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa"
+      ],
+      "layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "xy_mm": [
+        178.15,
+        85.75
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.25
+    }
+  ],
+  "new_objects": [
+    {
+      "uuid": "6ffab701-7688-4850-9aad-8ab86bd0f04a",
+      "type": "track",
+      "net": "BUCK_FB",
+      "layer": "F.Cu",
+      "width_mm": 0.15,
+      "start_mm": [
+        181,
+        85.75
+      ],
+      "end_mm": [
+        182.95,
+        85.75
+      ],
+      "length_mm": 1.95
+    }
+  ],
+  "retired_dead_centerline_mm": 2.85,
+  "removed_drill": {
+    "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c",
+    "diameter_mm": 0.25,
+    "xy_mm": [
+      178.15,
+      85.75
+    ]
+  },
+  "declared_replacement_contact_uuids": [
+    "3c804add-ee74-5104-b471-73062ffcaeb9",
+    "d20e66e3-44fb-4535-81e2-9bc53c5f6519",
+    "37c51a69-ea1f-42e2-b356-72426fc3b1b2"
+  ],
+  "source_warning": {
+    "description": "Via is not connected or connected on only one layer",
+    "items": [
+      {
+        "description": "Via [BUCK_FB] on F.Cu - B.Cu",
+        "pos": {
+          "x": 178.15,
+          "y": 85.75
+        },
+        "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c"
+      }
+    ],
+    "severity": "warning",
+    "type": "via_dangling"
+  },
+  "native_foreign_clearance_failures": [],
+  "all_other_source_bytes_retained": true,
+  "release": {
+    "J3_archive_saved_to_Space": "libfile_4c3f0b9d90d08191a384b1b6f18de7d1",
+    "J3_archive_sha256": "c5bfd864e86edb09382f96ac96fd9fa12e8214e9dd10eebe2ab73be22877c79a",
+    "parent_release": "2026-11-04 10:42:57 UTC"
+  },
+  "qualification": "No improved noise, stability, pickup, hardware or manufacturing claim"
+}

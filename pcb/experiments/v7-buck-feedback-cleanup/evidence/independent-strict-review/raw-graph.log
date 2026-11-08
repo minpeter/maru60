@@ -1,0 +1,128 @@
+{
+  "pass_raw_graph_and_diagnostic_review": true,
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "raw_all_unchanged_nonzone_nodes_exact": true,
+  "raw_zone_settings_exact": true,
+  "all_original_native_direct_support_exact_except_four_retired_edges": true,
+  "four_retired_edges": [
+    [
+      [
+        "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+        "3c804add-ee74-5104-b471-73062ffcaeb9"
+      ],
+      [
+        [
+          "F.Cu",
+          0.02008558147
+        ]
+      ]
+    ],
+    [
+      [
+        "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+        "d20e66e3-44fb-4535-81e2-9bc53c5f6519"
+      ],
+      [
+        [
+          "F.Cu",
+          0.0177922107475
+        ]
+      ]
+    ],
+    [
+      [
+        "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+        "37c51a69-ea1f-42e2-b356-72426fc3b1b2"
+      ],
+      [
+        [
+          "F.Cu",
+          0.0374691473975
+        ]
+      ]
+    ],
+    [
+      [
+        "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+        "d382de57-3476-43c4-ac26-0a72b21acf7c"
+      ],
+      [
+        [
+          "F.Cu",
+          0.045765126534
+        ]
+      ]
+    ]
+  ],
+  "three_new_replacement_edges": [
+    [
+      [
+        "3c804add-ee74-5104-b471-73062ffcaeb9",
+        "6ffab701-7688-4850-9aad-8ab86bd0f04a"
+      ],
+      [
+        [
+          "F.Cu",
+          0.018878372011
+        ]
+      ]
+    ],
+    [
+      [
+        "6ffab701-7688-4850-9aad-8ab86bd0f04a",
+        "d20e66e3-44fb-4535-81e2-9bc53c5f6519"
+      ],
+      [
+        [
+          "F.Cu",
+          0.0177922107475
+        ]
+      ]
+    ],
+    [
+      [
+        "37c51a69-ea1f-42e2-b356-72426fc3b1b2",
+        "6ffab701-7688-4850-9aad-8ab86bd0f04a"
+      ],
+      [
+        [
+          "F.Cu",
+          0.0374691473975
+        ]
+      ]
+    ]
+  ],
+  "zone_contact_identities_exact": true,
+  "zone_contact_support_changes": [],
+  "all_245_pad_net_partitions_reconstructed_and_exact": true,
+  "all_ground_pad_root_membership_exact": true,
+  "ground_pads_in_J1_A1_root": 247,
+  "native_20_unproven_direct_pairs_exact": true,
+  "native_DRC": {
+    "warnings": 67,
+    "hard_errors": 0,
+    "opens": 12,
+    "parity": 0,
+    "removed_exact_warning": {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [BUCK_FB] on F.Cu - B.Cu",
+          "pos": {
+            "x": 178.15,
+            "y": 85.75
+          },
+          "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    "unconnected_records_exact": false
+  },
+  "native_ERC_violations": 0,
+  "source_graph_sha256": "e815296bf12af0f10b8ef43b90c19ac001ddfb31588f76229006df79e2547d47",
+  "candidate_graph_sha256": "8a946ad009247e2d356ef0900e3a3b07e5dda5d9be9960dcd3ca2cab1a9344f1",
+  "scope": "Observed source-bound native physical graph rechecked/reconstructed, not an independently rerun full graph. Independent native FB direct contacts and geometry were exported separately. Strict global plane loss remains a separate gate."
+}

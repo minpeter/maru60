@@ -1,0 +1,117 @@
+{
+  "accepted_commit": "29e2efc8cd3ae0ca2fe7f49099c8b3e9c5d57fd2",
+  "board_sha256": "400fd2641ebd3208315359acf295ee630dab8d3319a6d990ea7ab8d558961fa2",
+  "status": "analytical_proposal_not_constructed_not_electrically_qualified",
+  "footprint_uuid": "47590d17-4db9-41bf-a1ff-5a7f2c886bb8",
+  "old_position": [
+    105.0,
+    37.0
+  ],
+  "old_layer": "B.Cu",
+  "old_orientation": 90,
+  "new_position": [
+    113.0,
+    36.025
+  ],
+  "new_layer": "F.Cu",
+  "new_orientation_degrees": 180,
+  "old_pad_uuids": [
+    "8f2f4595-824d-4929-b4f5-34cd6c915c61",
+    "2ea22089-b6e8-49a9-94a7-091f48c56806"
+  ],
+  "pad1": [
+    113.775,
+    36.025
+  ],
+  "pad2": [
+    112.225,
+    36.025
+  ],
+  "power_source_uuid": "1d4427cb-95fe-5142-8c69-bbae765376e7",
+  "power_path": [
+    [
+      113.775,
+      36.025
+    ],
+    [
+      110.45,
+      33.4375
+    ]
+  ],
+  "power_width": 0.3,
+  "power_length": 4.213167602885032,
+  "ground_path": [
+    [
+      112.225,
+      36.025
+    ],
+    [
+      111.646017,
+      36.003416
+    ]
+  ],
+  "ground_width": 0.3,
+  "ground_length": 0.57938517701525,
+  "new_via": {
+    "position": [
+      111.346017,
+      36.003416
+    ],
+    "diameter": 0.5,
+    "drill": 0.25,
+    "net": "GND",
+    "layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "trace_endpoint_hole_center_distance": 0.3,
+    "guard_margin": 0.07790395118273838
+  },
+  "front_courtyard_clearance_mm": 0.9662499999999951,
+  "front_switch_envelope_courtyard_clearance_mm": 0.04624999999999346,
+  "front_switch_envelope_body_clearance_mm": 0.37624999999999886,
+  "retire_only_old_contact": [
+    "8f2f4595-824d-4929-b4f5-34cd6c915c61",
+    "53e7b99f-308f-57ae-9e47-9e779e6b3272"
+  ],
+  "old_feed_retained": true,
+  "old_shadow_retained": true,
+  "additional_changed_old_copper": [],
+  "new_drill_subtracted_from_full_reference": true,
+  "reference_masks": [],
+  "limitations": [
+    "No CAD file written, filled, or validated.",
+    "Source/decoupling usefulness needs independent review.",
+    "Front-body and case height not supplied; the full cap courtyard is outside every exported switch corner-marker envelope and unchanged front courtyard.",
+    "The old nine-track/one-via feed remains an open-ended rooted supply stub."
+  ],
+  "reference_field": {
+    "uuid": "b5208ae9-b032-4788-acea-260461cc3c48",
+    "text": "C128",
+    "layer": "F.Silkscreen",
+    "position": [
+      111.2,
+      37.5
+    ],
+    "height_mm": 0.8,
+    "width_mm": 0.8,
+    "stroke_mm": 0.1,
+    "angle_degrees": 0,
+    "mirrored": false,
+    "other_fields_follow_footprint_transform": true
+  },
+  "mechanical_envelope_status": "Unverified 14 mm switch corner-marker envelope from User.Drawings, not a confirmed front switch body/height/plate/case model.",
+  "additional_changed_own_graphics": [
+    "b5208ae9-b032-4788-acea-260461cc3c48"
+  ],
+  "permitted_new_old_copper_contacts": [
+    "1d4427cb-95fe-5142-8c69-bbae765376e7",
+    "7956735a-6e81-51d0-adb6-bd82ac28af8c",
+    "bcacc499-8dfb-5242-857f-bdd2745c9ec1",
+    "c1fe5939-4c99-544a-8f23-b6df8d5adbb3"
+  ],
+  "warning_delta_plan": "warning-delta-plan.json",
+  "conditional_acceptance": "Independent source/decoupling/geometry review, then actual normal-fill CAD construction and complete native/frozen replay validation. Not qualified high-frequency bypass or manufacturing hardware."
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/static-v7-check/check.py", line 36, in <module>
+    actual=mapping(root);negatives=[]
+           ^^^^^^^^^^^^^
+  File "/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/static-v7-check/check.py", line 34, in mapping
+    assert seen[gpio]=={'net':net,'physical_pin':pads[gpio]},(gpio,seen.get(gpio),net,pads[gpio])
+           ~~~~^^^^^^
+KeyError: 29

@@ -1,0 +1,18 @@
+{
+  "historical_directory": "/workspace/shared/maru60-resume/power-replay-20261105/inputs/v7-si-advanced-20261104",
+  "historical_board_sha256": "3663aac96fb305eb4925fff938dd2db5862b880c6c262b2fa82707567a6e98f7",
+  "source_geometry_includes_stub": true,
+  "historical_active_paths_include_stub": {
+    "J1.A7-R103.1": false,
+    "J1.B7-R103.1": false,
+    "J1.A7-U10.2": null
+  },
+  "model_inspection": "channel.py lines 18-20 use a uniform D+ mainline and lumped D- length correction, not a full extracted branched USB topology. Only the additional DP U10 stub is explicit (added_DP_stub_mm=4.128838816); this DM pendant stub is in inventory but not the main active paths or a distinct DM branch element.",
+  "candidate_validity": "Changed physical input: 0.4375 mm DM pendant removed. Historical reduced model omits that branch as a separate element. Historical source hash, routes, parasitics and return model do not bind this candidate. No historical SI numeric result reused or claimed unchanged. New 3D field/IBIS/eye analysis not performed.",
+  "inputs_sha256": {
+    "source_geometry.json": "c08b39e52e3df32ebc49fc10adae720dee4d512babd1a50a87151e1fd935ef76",
+    "channel.py": "dc9724088fcd5fc0b60e704e85cb605ee8601fdd2ee5e9c219ccb5de78286dad",
+    "channel_results.json": "04caae8650aa858b9481ff075c3d65c40031e6fa550021bb9267001e5dcb9e1d",
+    "verify.py": "ffbc02133b8f647e8e0e04bdb021ff7140ed786a067714f6ca98052fa31b0deb"
+  }
+}

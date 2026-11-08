@@ -1,0 +1,56 @@
+{
+  "source_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "prefill_sha256": "3cf686ff2dc183f14573bd189c62ff7ff3bbbd7297f4df5f8fe2724b19bc0647",
+  "candidate_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "retired_uuids": [
+    "577f36c1-4f15-4c40-b632-02db2931cfb0",
+    "68f95f8e-16e1-430a-a0b2-1c1d51d16fde"
+  ],
+  "only_declared_two_tracks_removed": true,
+  "all_remaining_raw_records_byte_identical": true,
+  "outside_records_only_whitespace_differences": true,
+  "all_12_zone_records_byte_identical": true,
+  "all_filled_polygon_coordinates_exact": true,
+  "strict_raw_plane_preservation_pass": true,
+  "all_918_vias_raw_exact": true,
+  "all_retained_footprint_and_pad_records_exact": true,
+  "all_1269_drills_retained_exact": true,
+  "all_zone_definitions_rules_settings_nets_exact": true,
+  "companion_file_count": 53,
+  "raw_top_level_record_counts": [
+    11332,
+    11330,
+    11330
+  ]
+}
+{
+  "source_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "candidate_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "source_drc_sha256": "9031bae4837fc39491c8de305e9d057f8286ceaf1e0b1fc89cc434298c6c5df7",
+  "candidate_drc_sha256": "d36d991b59314ab4e1aa50babdbd77f7bffd0b342d0f73f0bc254e36c490dfbf",
+  "native_counts": {
+    "warnings": 66,
+    "hard_errors": 0,
+    "opens": 12,
+    "schematic_parity": 0,
+    "erc": 0
+  },
+  "only_removed_warning": {
+    "description": "Track has unconnected end",
+    "items": [
+      {
+        "description": "Track [GND] on F.Cu, length 0.1000 mm",
+        "pos": {
+          "x": 133.4,
+          "y": 77.45
+        },
+        "uuid": "68f95f8e-16e1-430a-a0b2-1c1d51d16fde"
+      }
+    ],
+    "severity": "warning",
+    "type": "track_dangling"
+  },
+  "added_warnings": [],
+  "raw_open_rows_equal": true,
+  "semantic_open_pair_review": "Pending fresh R2"
+}

@@ -1,0 +1,22 @@
+** Profile: "TPS25947x_Startup-published"  [ C:\Users\a0489230\Documents\pspice modelling\TPS25947x_PSPICE_TRANS\tps25947x_trans-pspicefiles\tps25947x_startup\published.sim ] 
+
+** Creating circuit file "published.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../tps25947x_trans.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 70m 0 100n 
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1.0n
+.OPTIONS ITL4= 40
+.PROBE64 V(alias(*)) I(alias(*)) 
+.INC "..\TPS25947x_Startup.net" 
+
+
+.END
