@@ -307,6 +307,10 @@ def main() -> None:
     open_y = sy0 + 1.0
     bridge_probe = box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, bc.Y_BACK - 0.02,
                        Z["rim_top"] + 0.02, 11.88)
+    # A cap recess that reaches into the slot (PH60 Rev.3: 0.06 mm) keeps its full depth; the bridge must fill the rest.
+    for recess in bc.cap_recesses_p():
+        bridge_probe -= box(*bc.plate_to_world(recess).bounds[:2], *bc.plate_to_world(recess).bounds[2:],
+                            Z["rim_top"] - 1.0, bc.CAP_SEAT_ZP + 0.02)
     bridge_missing = vol(bridge_probe - bottom)
     assert bridge_missing < 0.0001, f"Lower USB bridge missing: {bridge_missing} mm^3"
     bridge_bounds = (bottom ^ box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02,
@@ -365,7 +369,9 @@ def main() -> None:
     rim = slice_material(bottom, Z["rim_top"] + 0.25)
     walls = []
     for r in (bc.plate_to_world(p) for p in bc.cap_recesses_p()):
-        if slot_plan.distance(r) < 3.0:
+        if slot_plan.intersects(r):  # the recess reaches into the slot: no rail left between them
+            walls.append(0.0)
+        elif slot_plan.distance(r) < 3.0:
             (_, ry0, _, ry1), (rx0, rx1) = r.bounds, (r.bounds[0], r.bounds[2])
             x0, x1 = (gaps[0][1], rx0) if rx0 >= gaps[0][1] else (rx1, gaps[0][0])
             between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1)))

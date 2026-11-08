@@ -244,7 +244,7 @@ def pad_centres() -> list[tuple[float, float]]:
 
 def usb_notch_print(board_id: str) -> tuple[float, float]:
     """Print X of the USB-C notch centre and its width for a board (spec/boards.json). The stock top-case notch sits at
-    plate X 19.35; the default board, the 6095 tri-mode kit PCB, measures 18.45 in public photos."""
+    plate X 19.35; the default board, the PH60 Rev.3 Multi PCB, has its USB-C at 18.65 in its design files."""
     centre_p, width = spec.usb_notch(board_id)
     return pw(centre_p, 0.0)[0], width
 
@@ -749,7 +749,7 @@ def main() -> None:
     )
 
     report = {
-        "version": "v7.11-usb-notch-14p75",
+        "version": "v7.12-ph60-rev3-default",
         "generator": "manifold3d mesh CSG (build_topcase_draft.py) + 28px/mm gasket metrology",
         "strike_pocket_spec_mm": {
             "pocket_width": 2 * STRIKE_POCKET_HALF_W,

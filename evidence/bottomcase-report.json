@@ -1,5 +1,5 @@
 {
-  "board": "6095-trimode",
+  "board": "ph60-rev3",
   "frames": {
     "world": "top-case print frame (topcase-draft): X_w = -(X_plate + DX_PW), Y_w = Y_plate + DY_PW, Z_p",
     "to_print_3x4": [
@@ -253,7 +253,7 @@
     }
   ],
   "usb_slot_world": {
-    "x": 124.4975,
+    "x": 124.2975,
     "width": 14.75,
     "y": [
       186.236,
@@ -270,9 +270,9 @@
     "inner_ledge_z_p": 21.08,
     "inner_connector_pocket": {
       "bounds_xy": [
-        114.4975,
+        114.2975,
         172.236,
-        134.4975,
+        134.2975,
         185.236
       ],
       "corner_r": 2.0,
@@ -290,9 +290,7 @@
       194.37
     ],
     "bridge_requires_print_support": true,
-    "cap_recess_walls_removed_mm": [
-      0.143
-    ],
+    "cap_recess_walls_removed_mm": [],
     "min_wall": 0.8
   },
   "bumpons_world": [

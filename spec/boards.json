@@ -93,7 +93,7 @@
   "plate_top_above_pcb": 5.0,
   "plate_top_above_pcb_source": "Cherry MX plate-mount drawing value (not re-checked here)"
  },
- "default": "6095-trimode",
+ "default": "ph60-rev3",
  "boards": [
   {
    "id": "6095-trimode",
@@ -7306,7 +7306,7 @@
     "part": "USB-C 16P",
     "daughterboard": false,
     "status": "design",
-    "source": "Production/PH60-Rev3-Multi drill + kicad_pcb USB footprint"
+    "source": "PCB_Rev3/Multi/PH60_Rev3.kicad_pcb at e8900d6: J3 footprint centre (pads +-4.32) at own X 18.200, Y 2.175; Edge.Cuts 285.0 x 94.6; Esc S1 at (9.15, 9.20)"
    },
    "battery": {
     "connector": "Molex PicoBlade 53261-0271 (1.25 mm)",
@@ -7331,7 +7331,7 @@
     "https://github.com/ph-design/PH60/tree/Rev.3"
    ],
    "confidence": "design files (Gerber + KiCad)",
-   "notes": "PCB antenna at the left edge on the bottom copper; keep metal out of that band",
+   "notes": "PCB antenna at the left edge on the bottom copper; keep metal out of that band. In Maru60 the band (world X 135.7-142.8) ends 16 mm past the steel weight plate's recess (X +-119.8). BT1 (PicoBlade, courtyard 9.5 x 6.8) sits over the battery bay: 8.8 mm free under the PCB, 8.0 with 0.8 mm plate travel. Fabrication (checked 2026-11-02): all parts on the bottom side, single-sided JLCPCB Economic PCBA; Production/PH60-Rev3-Multi/bom.xls lists three lines whose value and LCSC part disagree (C2 820p vs C1523 1 nF, R5/R6 1R vs C17168 0 ohm, C12 0.5p vs C40459 0.8 pF); a self-assembled board has a blank nRF52840 and needs the bootloader flashed over SWD (J1 SWCLK/SWDIO, J2 RESET/GND); the ph-design wiki (PH60 Rev3 Multi V2 page, wiki.phdesign.cc/en/PH60/rev_multi_v2) says the HHKB layout needs a manual remap, and the repository README lists 2.4 GHz as TBD. ph-design's case takes a 100 x 50 x 5 mm cell; the Rule60 bay is 140 x 45 x 4.69.",
    "rule60_reports": null,
    "surveyed_by": [
     "PH60Review"
