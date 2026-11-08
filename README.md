@@ -172,7 +172,8 @@ likely because the stock bottom-case feet hold the keyboard about 2 mm above
 the desk (estimated, not measured) while the model puts the wrist-rest
 underside level with the top-case lip. Bumpons under the wrist rest fill that
 gap. v7.6 adds bumpon pockets, v7.9 sets the USB-C notch from public PCB
-data and v7.10 keeps only the front pad row; none has been printed yet. Fixes
+data, v7.10 keeps only the front pad row, v7.11 widens the notch to 14.75 mm and
+v7.12 moves it to the PH60 Rev.3 default board; none has been printed yet. Fixes
 found by printing:
 
 - **v7.0:** v6.2 and earlier printed the mirror image: the DWG plate frame is a
@@ -194,7 +195,7 @@ found by printing:
 - **v7.7 and v7.8 (superseded):** the USB-C notch moved by eye on the owner's
   print, 2 mm outward and then back to the stock position.
 - **v7.9:** the notch follows public data only: the 6095 tri-mode kit PCB
-  (the default board) measures plate X 18.45 in top-side photos, 0.9 mm toward
+  (then the default board) measures plate X 18.45 in top-side photos, 0.9 mm toward
   the Esc-side edge of the stock notch (19.35).
 - **v7.10:** only the four front bumpon pads remain. On the printed bottom
   case the back row along the keyboard junction stood 24 mm in front of the
@@ -205,13 +206,18 @@ found by printing:
   12.8 for the stock width). The stock width left 0.22 mm per side for a
   12.35 mm USB-C plug, less than the ±0.3 mm photo reading of the board's
   connector centre.
+- **v7.12:** the default board is the [PH60 Rev.3 Multi](#pcb), whose KiCad
+  file puts the USB-C at plate X 18.65, 0.2 mm further from the Esc-side edge
+  than the 6095 tri-mode kit PCB. The 6095 right half stays published as the
+  cheaper option.
 
 [Fit photos](evidence/topcase/README.md#photos) are in the evidence folder.
 
 | File | Use |
 | --- | --- |
 | [Left half — 3MF](models/maru60-hhkb-topcase-left.3mf) | 206 × 197 mm print, 4 h 16 min / 76 g |
-| [Right half — 3MF](models/maru60-hhkb-topcase-right.3mf) | 149 × 197 mm print, 3 h 48 min / 65 g; 14.75 mm USB-C notch centred on the 6095 tri-mode kit PCB |
+| [Right half — 3MF](models/maru60-hhkb-topcase-right.3mf) | 149 × 197 mm print, 3 h 48 min / 65 g; 14.75 mm USB-C notch centred on the PH60 Rev.3 PCB (the default board) |
+| [Right half, 6095 tri-mode USB — 3MF](models/maru60-hhkb-topcase-right-usb-6095-trimode.3mf) | Same 14.75 mm notch, centred on the 6095 tri-mode kit PCB, the [cheaper option](#pcb) ([verification](evidence/topcase-verification-usb-6095-trimode.json)) |
 | [Right half, universal USB — 3MF](models/maru60-hhkb-topcase-right-usb-universal.3mf) | Same 14.75 mm notch, centred on the spread of every measured on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](evidence/topcase-verification-usb-universal.json)) |
 | [Fit coupons — 3MF](models/maru60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
 
@@ -287,7 +293,8 @@ position, or `universal`):
 
 | `--board` | Notch centre, plate X | Basis |
 | --- | --- | --- |
-| `6095-trimode` (default, published files) | 18.45 | 6095 tri-mode kit PCB, top-side photos (±0.3) |
+| `ph60-rev3` (default, published files) | 18.65 | PH60 Rev.3 Multi KiCad file, USB-C footprint centre |
+| `6095-trimode` (published top-case right half and bottom-case left half) | 18.45 | 6095 tri-mode kit PCB, top-side photos (±0.3) |
 | `rule60-kit-6095` / `yr6095` | 18.55 | Y&R 6095 wired kit PCB, three top-side photos (±0.3); the stock notch at 19.35 sits 0.8 mm right of it |
 | `gh60` and most open designs | 18.65 | GH60 rev C KiCad, 18.2 mm from the PCB edge |
 | `wish60-ble` | 19.12 | Maker's STEP, mid-mount USB-C |
@@ -317,8 +324,10 @@ connectors still agree within 0.3 mm. Every surveyed connector sits on the
 PCB bottom side or mid-mount, which the notch depth suits. `fit.reasons`,
 per-board sources and 51 owner reports from Rule 60 builds are in
 `spec/boards.json`. The universal right half covers every board that is not
-`no` and has a measured on-board USB position. Only the right half changes
-between boards.
+`no` and has a measured on-board USB position. Between boards only the top
+case's right half and the bottom case's left half change. The universal notch
+has no bottom-case half yet: with it, the bottom-case slot stays the default
+board's 12.8 mm.
 
 ### Reproduce
 
@@ -419,7 +428,8 @@ flush with the rim top, the balls would sit below the tongue tip.
 | --- | --- |
 | [Fit coupon — 3MF](models/maru60-hhkb-bottomcase-fit-coupon.3mf) | Front-left corner: front rail, open left end, front step, front-left catch, cap recess, bumpon pocket. 116 × 21 mm, 0 h 30 min / 10 g |
 | [Joint test — 3MF](models/maru60-hhkb-bottomcase-joint-test.3mf) | Both sides of the middle floor dovetail, 44 × 32 mm cut-outs. 0 h 18 min / 6 g |
-| [Left half — 3MF](models/maru60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot, back-left catch. 206 × 112 mm, 3 h 37 min / 71 g |
+| [Left half — 3MF](models/maru60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot for the PH60 Rev.3 (default board), back-left catch. 206 × 112 mm, 3 h 37 min / 71 g |
+| [Left half, 6095 tri-mode USB — 3MF](models/maru60-hhkb-bottomcase-left-usb-6095-trimode.3mf) | Same, with the slot for the 6095 tri-mode kit PCB ([verification](evidence/bottomcase-verification-usb-6095-trimode.json)) |
 | [Right half — 3MF](models/maru60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 52 min / 56 g |
 
 Print desk face down, **with support under the USB bridge** on the left half.
@@ -443,6 +453,9 @@ uv run build_bottomcase_draft.py [--board BOARD]
 uv run verify_bottomcase.py   # needs topcase-draft/ from build_topcase_draft.py
 uv run export_bottomcase.py
 ```
+
+A build for another `--board` exports only its left half,
+`models/maru60-hhkb-bottomcase-left-usb-<board>.3mf`, with its verification.
 
 The [verification](evidence/bottomcase-verification.json) checks the halves
 against the printed top case and virtual stock parts: free nesting at ±0.10 mm
@@ -503,7 +516,62 @@ mount feels firmer; the 0.1 mm extra thickness sits inside the caps'
 a 14.00 mm switch cutout under every HHKB key, a stabilizer housing at each
 stabilizer position, router reach with a 1.0 mm bit and the copper pullback.
 
-## Maru60 PCB (RP2350A, work in progress)
+## PCB
+
+### Off-the-shelf board: PH60 Rev.3 Multi
+
+Maru60 is built around the **PH60 Rev.3 Multi**
+([ph-design/PH60](https://github.com/ph-design/PH60/tree/Rev.3), CC BY-NC-SA
+4.0): an open GH60-size hot-swap board with an nRF52840, the HHKB layout,
+Bluetooth and USB (its README lists 2.4 GHz as TBD) and ZMK firmware. Its
+KiCad file puts the USB-C at plate X 18.65, which sets the published notch and
+slot. Its battery connector sits over the battery bay, with 8.8 mm of depth
+under the PCB there, and its PCB antenna at the Esc-side end lies 16 mm beyond
+the steel weight plate's recess.
+
+**Ordering it** (JLCPCB, checked 2026-11-02): upload
+`Production/PH60-Rev3-Multi` (Gerber ZIP, `bom.xls`, `positions.csv`) as a
+2-layer, 1.6 mm board with Economic PCBA; every part is on the bottom side.
+Five assembled boards:
+
+| Item | USD |
+| --- | --- |
+| PCB, 5 pcs (JLCPCB quote) | 17.00 |
+| Assembly setup and stencil | 9.71 |
+| SMT, 488 joints × 5 boards | 3.90 |
+| Extended-part feeders, 12 × $3.07 | 36.84 |
+| X-ray, one nRF52840 per board | 8.20 |
+| Parts, JLCPCB library prices with attrition | 64.84 |
+| UPS Express Saver (DDP) to Korea, 0.59 kg (JLCPCB quote) | 32.10 |
+| **Total** | **172.59, 34.52 per board** |
+
+Lead-free HASL, the two preferred extended parts, hand-soldered USB-C shell
+legs and a heavier parcel can add up to about $16. Two boards, the PCBA
+minimum, come to $129.70 ($64.85 each): the feeders, setup and shipping cost
+the same for any quantity. The assembly lines are computed from JLCPCB's
+published PCBA fee table and part prices, not from a logged-in PCBA quote.
+
+Before ordering, ask ph-design about three BOM lines whose value and LCSC part
+disagree: C2 (820 pF; C1523 is 1 nF), R5/R6 (1 Ω; C17168 is 0 Ω) and C12
+(0.5 pF; C40459 is 0.8 pF, in the antenna match). A self-assembled board has a
+blank nRF52840: flash the bootloader over SWD (pads J1 SWCLK/SWDIO, J2
+RESET/GND) with a debug probe, then copy the UF2 firmware from
+[ph_lite-zmk-config](https://github.com/ph-design/ph_lite-zmk-config). The
+[ph-design wiki](https://wiki.phdesign.cc/en/PH60/rev_multi_v2) notes that the
+HHKB layout needs a manual remap. The battery plugs into a 1.25 mm Molex
+PicoBlade 2-pin header; check its polarity. The bay takes a cell up to
+140 × 45 × 4.5 mm; ph-design's own case takes 100 × 50 × 5 mm, too wide for it.
+
+**Cheaper option:** the 6095 tri-mode kit PCB (`6095-trimode`), sold alone as
+the `Liner6095 1.6mm PCB` option of
+[AliExpress 1005008195693296](https://www.aliexpress.com/item/1005008195693296.html):
+₩51,000 (about $38) on 2026-11-02, one board with a battery, a 2.4 GHz
+receiver and foams (listing image). Its USB-C sits at plate X 18.45 (photos,
+±0.3), so print the 6095 top-case right half and bottom-case left half. The
+listing's only review reports a wrong part shipped; keep a screenshot of the
+option.
+
+### Maru60's own PCB (RP2350A, work in progress)
 
 A four-layer RP2350A hot-swap PCB for this housing (WKL/HHKB, 7U, USB-C,
 QMK/VIA, per-key RGB) lives in [`pcb/`](pcb/README.md). It is **not

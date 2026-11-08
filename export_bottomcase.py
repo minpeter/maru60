@@ -1,4 +1,8 @@
-"""Publish the Maru60 HHKB bottom-case draft print files and evidence from `bottomcase-draft/` (default board only)."""
+"""Publish the Maru60 HHKB bottom-case draft print files and evidence from `bottomcase-draft/`.
+
+A build for the default board publishes everything. A build for another `--board` changes only the USB-C slot in the
+left half, so it publishes just that half as `models/maru60-hhkb-bottomcase-left-usb-<board>.3mf` with its verification.
+"""
 from pathlib import Path
 import json
 import shutil
@@ -10,7 +14,15 @@ source = ROOT / 'bottomcase-draft'
 
 verification = json.loads((source / 'verification.json').read_text())
 assert verification['status'] == 'ALL_PASSED', verification['status']
-assert verification['board'] == spec.default_board(), 'publish the default-board build only'
+board = verification['board']
+
+if board != spec.default_board():
+    shutil.copyfile(source / 'maru60-hhkb-bottomcase-left.3mf',
+                    ROOT / 'models' / f'maru60-hhkb-bottomcase-left-usb-{board}.3mf')
+    shutil.copyfile(source / 'verification.json', ROOT / 'evidence' / f'bottomcase-verification-usb-{board}.json')
+    print(f'Exported the left half for board {board!r} and its verification.')
+    raise SystemExit
+
 for name in ('left', 'right', 'fit-coupon', 'joint-test'):
     shutil.copyfile(source / f'maru60-hhkb-bottomcase-{name}.3mf', ROOT / 'models' / f'maru60-hhkb-bottomcase-{name}.3mf')
 for src, dst in [('draft-report.json', 'bottomcase-report.json'), ('verification.json', 'bottomcase-verification.json')]:

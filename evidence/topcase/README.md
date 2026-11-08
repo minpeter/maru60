@@ -41,6 +41,7 @@ increasing toward the skirt lip.
 | v7.4 | Re-inspected: the connector looks nearly or exactly centred in the stock-position notch (owner, 2026-10-31) | v7.8 (not printed): notch back at plate X 19.35 |
 | — | Owner: design from public PCB data only, not from fits on his own board | v7.9: default board `6095-trimode` (6095 tri-mode kit PCB, top-side photos, plate X 18.45 ±0.3), 0.9 mm toward the Esc-side edge of the stock notch; the owner-fit board entry is removed from spec/boards.json |
 | — | Owner, reviewing the underside with the printed bottom case: too many bumpons (14). The wrist rest's back row stood 24 mm in front of the bottom case's front row (2026-10-31) | v7.10: back pad row removed (pads, hollow notches, undercuts, pockets); 4 front pads + 4 bottom-case corners. A rigid-body load share (self weight, two wrists, typing at the centre and the Esc corner) leaves every one of the 8 loaded |
+| — | Owner: build around the PH60 Rev.3 Multi (five boards assembled at JLCPCB) and keep a cheaper board as an option (2026-11-02) | v7.12: default board `ph60-rev3` (KiCad file, USB-C footprint centre at plate X 18.65), 0.2 mm right of the 6095 position; the `6095-trimode` top-case right half and bottom-case left half stay published as the cheaper option |
 
 Readings not used:
 

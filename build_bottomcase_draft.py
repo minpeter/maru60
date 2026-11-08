@@ -334,6 +334,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     bridge = prism(sg.box(usb_x - usb_w / 2 - 0.8, usb_open_y, usb_x + usb_w / 2 + 0.8, Y_BACK),
                    Z_RIM_TOP, USB_BRIDGE_BOTTOM_ZP + top.USB_END_R + 0.1)
     bridge -= top.prism_xz(arch_opening, usb_open_y - 0.1, Y_BACK + 0.1)
+    # A cap recess may reach into the slot (PH60 Rev.3: 0.06 mm with the 14.75 mm notch); the recess wins there.
     for recess in cap_recesses_p():
         bridge -= prism(plate_to_world(recess), Z_RIM_TOP - 1.0, CAP_SEAT_ZP)
     slot_fins = []
