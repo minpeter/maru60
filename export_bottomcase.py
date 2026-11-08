@@ -1,7 +1,8 @@
 """Publish the Maru60 HHKB bottom-case draft print files and evidence from `bottomcase-draft/`.
 
-A build for the default board publishes everything. A build for another `--board` changes only the USB-C slot in the
-left half, so it publishes just that half as `models/maru60-hhkb-bottomcase-left-usb-<board>.3mf` with its verification.
+A build for the default board publishes everything; `--no-battery-bay` adds a `-no-battery-bay` suffix. A build for
+another `--board` changes only the USB-C slot in the left half, so it publishes just that half as
+`models/maru60-hhkb-bottomcase-left[-no-battery-bay]-usb-<board>.3mf` with its verification.
 """
 from pathlib import Path
 import json
@@ -15,16 +16,20 @@ source = ROOT / 'bottomcase-draft'
 verification = json.loads((source / 'verification.json').read_text())
 assert verification['status'] == 'ALL_PASSED', verification['status']
 board = verification['board']
+report = json.loads((source / 'draft-report.json').read_text())
+assert verification['battery_bay'] == report['battery_bay'], 'verify the current battery-bay variant before export'
+suffix = '' if verification['battery_bay'] else '-no-battery-bay'
 
 if board != spec.default_board():
     shutil.copyfile(source / 'maru60-hhkb-bottomcase-left.3mf',
-                    ROOT / 'models' / f'maru60-hhkb-bottomcase-left-usb-{board}.3mf')
-    shutil.copyfile(source / 'verification.json', ROOT / 'evidence' / f'bottomcase-verification-usb-{board}.json')
+                    ROOT / 'models' / f'maru60-hhkb-bottomcase-left{suffix}-usb-{board}.3mf')
+    shutil.copyfile(source / 'verification.json', ROOT / 'evidence' / f'bottomcase-verification{suffix}-usb-{board}.json')
     print(f'Exported the left half for board {board!r} and its verification.')
     raise SystemExit
 
 for name in ('left', 'right', 'fit-coupon', 'joint-test'):
-    shutil.copyfile(source / f'maru60-hhkb-bottomcase-{name}.3mf', ROOT / 'models' / f'maru60-hhkb-bottomcase-{name}.3mf')
+    shutil.copyfile(source / f'maru60-hhkb-bottomcase-{name}.3mf',
+                    ROOT / 'models' / f'maru60-hhkb-bottomcase-{name}{suffix}.3mf')
 for src, dst in [('draft-report.json', 'bottomcase-report.json'), ('verification.json', 'bottomcase-verification.json')]:
-    shutil.copyfile(source / src, ROOT / 'evidence' / dst)
+    shutil.copyfile(source / src, ROOT / 'evidence' / f'{Path(dst).stem}{suffix}.json')
 print('Exported bottom-case downloads and evidence.')

@@ -1,0 +1,249 @@
+{
+  "status": "ALL_PASSED",
+  "board": "6095-trimode",
+  "strike_inserts": true,
+  "strike_insert_nominal_installation": [
+    {
+      "hole": "U-BL.1",
+      "recess_mm": 0.0,
+      "floor_reserve_mm": 0.55,
+      "surround_1p3_missing_mm3": 0.0,
+      "tool_blocked_mm3": 0.0
+    },
+    {
+      "hole": "U-BL.2",
+      "recess_mm": 0.35,
+      "floor_reserve_mm": 0.2,
+      "surround_1p3_missing_mm3": 0.0,
+      "tool_blocked_mm3": 0.0
+    },
+    {
+      "hole": "U-BR.1",
+      "recess_mm": 0.0,
+      "floor_reserve_mm": 0.55,
+      "surround_1p3_missing_mm3": 0.0,
+      "tool_blocked_mm3": 0.0
+    },
+    {
+      "hole": "U-BR.2",
+      "recess_mm": 0.0,
+      "floor_reserve_mm": 0.55,
+      "surround_1p3_missing_mm3": 0.0,
+      "tool_blocked_mm3": 0.0
+    },
+    {
+      "hole": "U-FL.1",
+      "recess_mm": 0.0,
+      "floor_reserve_mm": 0.55,
+      "surround_1p3_missing_mm3": 0.0,
+      "tool_blocked_mm3": 0.0
+    },
+    {
+      "hole": "U-FL.2",
+      "recess_mm": 0.0,
+      "floor_reserve_mm": 0.55,
+      "surround_1p3_missing_mm3": 0.0,
+      "tool_blocked_mm3": 0.0
+    },
+    {
+      "hole": "U-FR.1",
+      "recess_mm": 0.0,
+      "floor_reserve_mm": 0.55,
+      "surround_1p3_missing_mm3": 0.0,
+      "tool_blocked_mm3": 0.0
+    },
+    {
+      "hole": "U-FR.2",
+      "recess_mm": 0.0,
+      "floor_reserve_mm": 0.55,
+      "surround_1p3_missing_mm3": 0.0,
+      "tool_blocked_mm3": 0.0
+    }
+  ],
+  "closed_single_shell_exports": [
+    "left-half-print.stl",
+    "right-half-print.stl",
+    "coupon-ballcatch-gasket-left.stl",
+    "maru60-hhkb-left-plate.3mf",
+    "maru60-hhkb-right-plate.3mf",
+    "maru60-fit-test-coupons.3mf"
+  ],
+  "dovetail_insertion_path": {
+    "steps_checked": 91,
+    "free_slide_drag_dz_ge_3p2mm_mm3": 3e-06,
+    "max_overlap_outside_compression_ribs_mm3": 3e-06,
+    "seated_compression_rib_bite_mm3": 0.5115
+  },
+  "six_dof_retention_mm3": {
+    "pull_apart_x_1mm": 79.869,
+    "push_together_x_0p5mm": 728.801,
+    "shear_y_plus_0p5mm": 86.205,
+    "shear_y_minus_0p5mm": 84.471,
+    "overtravel_z_stop_0p3mm_past_clearance": 61.888,
+    "clean_release_dz_18mm": 0.0
+  },
+  "dovetail_z_stop_clearance": {
+    "design_mm": 0.2,
+    "overlap_at_0p18mm_mm3": 3e-06,
+    "landing_overlap_at_0p25mm_mm3": 2.408
+  },
+  "back_seam": {
+    "seam_faces_x_mm": {
+      "z1": [
+        53.1,
+        53.1
+      ],
+      "z12": [
+        53.1,
+        53.1
+      ]
+    },
+    "seam_strike": "BL",
+    "seam_strike_pilot_ring_cover_left_right": {
+      "left_pilot": [
+        1.0,
+        0.0
+      ],
+      "right_pilot": [
+        0.0,
+        1.0
+      ]
+    },
+    "pilot_open_above_bottom": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pilot_capped_below_bottom": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "seam_strike_bearing_left_right_mm2": [
+      69.6,
+      48.0
+    ],
+    "key_side_shift_0p05mm_overlap_mm3": [
+      0.315,
+      0.315
+    ],
+    "end_face_push_0p05mm_overlap_mm3": 4.634
+  },
+  "joint_glue_line_max_gap_mm": {
+    "WristFrontJoint": 0.199,
+    "WristMidJoint": 0.199,
+    "FrontBezelWallJoint": 0.199,
+    "BackSeamKey": 0.141
+  },
+  "floating_layer_islands_0p20mm": {
+    "LeftHalfPrint": 0,
+    "RightHalfPrint": 0,
+    "CornerCatchBossCoupon": 0,
+    "FrontJointLeft": 0,
+    "FrontJointRight": 0,
+    "BackSeamLeft": 0,
+    "BackSeamRight": 0
+  },
+  "flat_overhangs_over_2mm": {
+    "LeftHalfPrint": 0,
+    "RightHalfPrint": 0,
+    "CornerCatchBossCoupon": 0,
+    "FrontJointLeft": 0,
+    "FrontJointRight": 0,
+    "BackSeamLeft": 0,
+    "BackSeamRight": 0
+  },
+  "wrist_mirror_asymmetry_mm3": 8e-05,
+  "cap_pocket_wall_cover_skirt_side_and_ends": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "cap_pocket_and_relief_overlap_above_6p30_mm3": 0.0,
+  "floor_cover_outside_declared_cuts": 1.0,
+  "short_side_steps_2p85_4p90_5p66": {
+    "L40": true,
+    "R40": true,
+    "L60": true,
+    "R60": true,
+    "L80": true,
+    "R80": true
+  },
+  "chirality_usb_notch_x_and_back_pocket_centres": {
+    "usb_notch_x": [
+      117.12,
+      131.87
+    ],
+    "back_outer_pocket_abs_x": {
+      "usb": 94.93,
+      "far": 105.05
+    }
+  },
+  "usb_lip_corner_rounds": {
+    "-1.0": true,
+    "1.0": true
+  },
+  "bumpon_pockets_sj5012": {
+    "floor_cover": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "floor_1mm_cover": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "pocket_intrusion_mm2": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "wall_mm": [
+      1.2,
+      1.2,
+      1.2,
+      1.2
+    ],
+    "proud_of_desk_mm2": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bumpon_protrusion_mm": [
+      2.0
+    ]
+  },
+  "strike_tongue_to_plate_gap_mm": [
+    0.934,
+    0.784,
+    0.629,
+    0.629
+  ],
+  "virtual_hardware_mating_mm3": {
+    "dwg_6095_gas_pc_plate_seated": 0.0,
+    "dwg_6095_gas_pc_plate_upward_flex_0p25": 0.0,
+    "twelve_silicone_caps_wall_clearance": 0.0,
+    "twelve_silicone_caps_floor_bearing": 111.76,
+    "four_metal_ballcatch_strikes": 0.0,
+    "sixty_hhkb_keycaps_full_travel": 0.0,
+    "stock_base_pocket_past_floor": 0.0
+  }
+}

@@ -192,6 +192,7 @@ def main() -> None:
 
     z_strike = REPORT["calibrated_z_stack_mm"]["Z_strike_pocket_floor"]
     pilot_depth = GEOM["strike_pilot_depth"]
+    pilot_radius = GEOM.get("strike_pilot_diameter", 1.8) / 2
     strike_centres_w = [pw(x, y) for x, y in GEOM["strike_centers_plate_frame"]]
     sx_w, sy_w = min(strike_centres_w, key=lambda c: abs(c[0] - seam_x) + abs(c[1] - seam["key_y"]))
     assert abs(sx_w - seam_x) < 1e-6, (sx_w, seam_x)
@@ -199,17 +200,42 @@ def main() -> None:
     skin_l, skin_r = slice_material(left_mf, z_strike - 1.0), slice_material(right_mf, z_strike - 1.0)
     pilot_owner: dict[str, list[float]] = {}
     for side, px in (("left_pilot", sx_w - 6.5), ("right_pilot", sx_w + 6.5)):
-        ring = sg.Point(px, sy_w).buffer(1.6).difference(sg.Point(px, sy_w).buffer(0.95))
+        ring = sg.Point(px, sy_w).buffer(pilot_radius + 0.7).difference(sg.Point(px, sy_w).buffer(pilot_radius + 0.05))
         pilot_owner[side] = [round(ring.intersection(skin_l).area / ring.area, 3), round(ring.intersection(skin_r).area / ring.area, 3)]
     assert pilot_owner["left_pilot"][0] > 0.95 and pilot_owner["left_pilot"][1] < 0.01, pilot_owner
     assert pilot_owner["right_pilot"][1] > 0.95 and pilot_owner["right_pilot"][0] < 0.01, pilot_owner
     # All 8 pilots reach `pilot_depth` past the pocket floor and stop there (solid skin above them).
     full_open = slice_material(full_case_mf, z_strike - pilot_depth + 0.1)
     full_skin = slice_material(full_case_mf, z_strike - pilot_depth - 0.1)
-    pilots = [sg.Point(sx + dx, sy).buffer(0.7) for sx, sy in strike_centres_w for dx in (-6.5, 6.5)]
+    pilots = [sg.Point(sx + dx, sy).buffer(pilot_radius - 0.01) for sx, sy in strike_centres_w for dx in (-6.5, 6.5)]
     pilot_open = [round(p.intersection(full_open).area / p.area, 3) for p in pilots]
     pilot_capped = [round(p.intersection(full_skin).area / p.area, 3) for p in pilots]
     assert max(pilot_open) < 0.01 and min(pilot_capped) > 0.95, (pilot_open, pilot_capped)
+    hole_walls = [sg.Point(sx + dx, sy).buffer(pilot_radius + 0.15).difference(
+                  sg.Point(sx + dx, sy).buffer(pilot_radius + 0.05))
+                  for sx, sy in strike_centres_w for dx in (-6.5, 6.5)]
+    assert all(w.intersection(full_open).area / w.area > 0.99 for w in hole_walls), "Oversize strike bore"
+
+    insert_checks = []
+    if REPORT.get("strike_inserts", False):
+        trial = REPORT["strike_insert_trial"]
+        for index, (name, recess) in enumerate(trial["installation_recess_by_hole_mm"].items()):
+            x, y = strike_centres_w[index // 2]
+            x += -6.5 if index % 2 == 0 else 6.5
+            top = z_strike - recess
+            bottom = top - trial["length"]
+            def cylinder(radius: float, z: float, height: float) -> md.Manifold:
+                return md.Manifold.cylinder(height, radius, circular_segments=96).translate([x, y, z])
+            # This tests a conservative 1.3 mm surround along the metal band, not the thin entry neck.
+            surround = cylinder(trial["outer_d"] / 2 + 1.3, bottom + 0.001, trial["length"] - 0.002) - cylinder(
+                pilot_radius + 0.001, bottom, trial["length"])
+            missing = min(max(0.0, float((surround - half).volume())) for half in (left_mf, right_mf))
+            tool = cylinder(2.0, z_strike + 0.02, 20.0) + cylinder(trial["tool_tip_max_d"] / 2, top, recess + 0.03)
+            blocked = max(0.0, float((tool ^ full_case_mf).volume()))
+            reserve = bottom - (z_strike - pilot_depth)
+            assert missing < 0.001 and blocked < 0.001 and reserve >= 0.19, (name, missing, blocked, reserve)
+            insert_checks.append({"hole": name, "recess_mm": recess, "floor_reserve_mm": round(reserve, 3),
+                                  "surround_1p3_missing_mm3": missing, "tool_blocked_mm3": blocked})
     # The seam strike plate (20.5 x 6.55 mm) bears on the pocket floor of both halves.
     seam_plate = sg.box(sx_w - 10.25, sy_w - 3.275, sx_w + 10.25, sy_w + 3.275)
     floor_l, floor_r = slice_material(left_mf, z_strike - 0.05), slice_material(right_mf, z_strike - 0.05)
@@ -460,6 +486,9 @@ def main() -> None:
 
     verification = {
         "status": "ALL_PASSED",
+        "board": GEOM["usb_notch"]["board"],
+        "strike_inserts": REPORT.get("strike_inserts", False),
+        "strike_insert_nominal_installation": insert_checks,
         "closed_single_shell_exports": [
             "left-half-print.stl",
             "right-half-print.stl",
