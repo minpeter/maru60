@@ -1,0 +1,536 @@
+{
+  "source_sha256": "cacce2aa6872d3e060b9dbc37e6527b73f3e7a6c8d1e09921667d2d2d2fc39bf",
+  "candidate_sha256": "29a77ef306e78f3c6e25a5bdaca68aa22aef278acdabeed0cbb3db7d78a4a8e2",
+  "status": "P3_SOURCE_REGRESSION_REPAIRED_SCOPED_RECONSTRUCTION_NOT_A25_OR_POWERED_QUALIFICATION",
+  "exact14_positive_additions_only": true,
+  "retained_source_copper": 9037,
+  "retirements": [],
+  "all340_footprints_and_1275pads_exact": true,
+  "numbered_pin_identity_count": 924,
+  "all13_zone_definitions_exact": true,
+  "project_bytes_exact": true,
+  "all13_source_witness_comparison": [
+    {
+      "name": "1V1",
+      "physical_pad_count": 10,
+      "S3_unreached_components": 2,
+      "S2_unreached_components": 7,
+      "candidate_unreached_components": 2,
+      "remaining_physical_endpoints": [
+        [
+          "TP5",
+          "1"
+        ]
+      ],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "3V3",
+      "physical_pad_count": 28,
+      "S3_unreached_components": 15,
+      "S2_unreached_components": 11,
+      "candidate_unreached_components": 11,
+      "remaining_physical_endpoints": [
+        [
+          "R113",
+          "1"
+        ],
+        [
+          "C114",
+          "1"
+        ],
+        [
+          "C118",
+          "1"
+        ],
+        [
+          "C117",
+          "1"
+        ],
+        [
+          "C113",
+          "1"
+        ],
+        [
+          "C116",
+          "1"
+        ],
+        [
+          "R104",
+          "1"
+        ],
+        [
+          "C199",
+          "1"
+        ],
+        [
+          "C115",
+          "1"
+        ],
+        [
+          "U1",
+          "11"
+        ],
+        [
+          "U1",
+          "20"
+        ]
+      ],
+      "restored_vs_S3": [
+        [
+          "C102",
+          "1"
+        ],
+        [
+          "U1",
+          "30"
+        ],
+        [
+          "U1",
+          "38"
+        ],
+        [
+          "U1",
+          "49"
+        ]
+      ],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "5V",
+      "physical_pad_count": 7,
+      "S3_unreached_components": 2,
+      "S2_unreached_components": 2,
+      "candidate_unreached_components": 2,
+      "remaining_physical_endpoints": [
+        [
+          "TP3",
+          "1"
+        ],
+        [
+          "C120",
+          "1"
+        ],
+        [
+          "U7",
+          "1"
+        ]
+      ],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "AVDD",
+      "physical_pad_count": 3,
+      "S3_unreached_components": 2,
+      "S2_unreached_components": 2,
+      "candidate_unreached_components": 2,
+      "remaining_physical_endpoints": [
+        [
+          "C104",
+          "1"
+        ],
+        [
+          "U1",
+          "46"
+        ]
+      ],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "BOOT",
+      "physical_pad_count": 3,
+      "S3_unreached_components": 2,
+      "S2_unreached_components": 2,
+      "candidate_unreached_components": 2,
+      "remaining_physical_endpoints": [
+        [
+          "SW100",
+          "1"
+        ],
+        [
+          "SW100",
+          "1"
+        ]
+      ],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "GND",
+      "physical_pad_count": 215,
+      "S3_unreached_components": 1,
+      "S2_unreached_components": 1,
+      "candidate_unreached_components": 1,
+      "remaining_physical_endpoints": [
+        [
+          "C105",
+          "2"
+        ]
+      ],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "KEYBUF",
+      "physical_pad_count": 2,
+      "S3_unreached_components": 0,
+      "S2_unreached_components": 0,
+      "candidate_unreached_components": 0,
+      "remaining_physical_endpoints": [],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "KEYdata",
+      "physical_pad_count": 2,
+      "S3_unreached_components": 0,
+      "S2_unreached_components": 0,
+      "candidate_unreached_components": 0,
+      "remaining_physical_endpoints": [],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "LED5V",
+      "physical_pad_count": 160,
+      "S3_unreached_components": 0,
+      "S2_unreached_components": 0,
+      "candidate_unreached_components": 0,
+      "remaining_physical_endpoints": [],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "LX",
+      "physical_pad_count": 2,
+      "S3_unreached_components": 0,
+      "S2_unreached_components": 0,
+      "candidate_unreached_components": 0,
+      "remaining_physical_endpoints": [],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "SS",
+      "physical_pad_count": 4,
+      "S3_unreached_components": 3,
+      "S2_unreached_components": 3,
+      "candidate_unreached_components": 3,
+      "remaining_physical_endpoints": [
+        [
+          "R105",
+          "2"
+        ],
+        [
+          "R106",
+          "1"
+        ],
+        [
+          "U1",
+          "60"
+        ]
+      ],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "UGBUF",
+      "physical_pad_count": 2,
+      "S3_unreached_components": 0,
+      "S2_unreached_components": 0,
+      "candidate_unreached_components": 0,
+      "remaining_physical_endpoints": [],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    },
+    {
+      "name": "UGoutput",
+      "physical_pad_count": 2,
+      "S3_unreached_components": 0,
+      "S2_unreached_components": 0,
+      "candidate_unreached_components": 0,
+      "remaining_physical_endpoints": [],
+      "restored_vs_S3": [],
+      "lost_vs_S2": []
+    }
+  ],
+  "source_tap_real_root_proof": [
+    {
+      "zone_uuid": "06aa2b69-9687-4832-9b13-6d7169dc98b1",
+      "island": 1,
+      "root_component_pad": "C101.1",
+      "root_component_contains_U2_5": true
+    }
+  ],
+  "new_via_nearest_source_return": [
+    {
+      "new_3V3_via": "95ebb676-42c0-578a-9b7e-37e1420d1aa5",
+      "at": [
+        20.7,
+        30.4
+      ],
+      "nearest_real_source_GND_object_uuid": "768ddc7c-c42d-4f30-8722-9df2422fdc78",
+      "object_kind": "GND_through_via",
+      "GND_at": [
+        21.463,
+        30.425
+      ],
+      "center_distance_mm": 0.763409457630702,
+      "source_proof": [
+        {
+          "layer": "In1.Cu",
+          "same_GND_islands_as_U1_EP": [
+            {
+              "zone_uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+              "island": 0
+            }
+          ]
+        },
+        {
+          "layer": "In2.Cu",
+          "same_GND_islands_as_U1_EP": [
+            {
+              "zone_uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+              "island": 0
+            }
+          ]
+        }
+      ],
+      "scope": "Geometric nearest plated source-return transfer only; not complete loop length or impedance."
+    },
+    {
+      "new_3V3_via": "561a49c9-ac8c-5080-b6c7-ba1855a6a0e0",
+      "at": [
+        23.7,
+        31.6
+      ],
+      "nearest_real_source_GND_object_uuid": "1ffd4a98-bd5b-5790-ba61-5f019a684e12",
+      "object_kind": "GND_through_via",
+      "GND_at": [
+        23.1,
+        31.3
+      ],
+      "center_distance_mm": 0.6708203932499354,
+      "source_proof": [
+        {
+          "layer": "In1.Cu",
+          "same_GND_islands_as_U1_EP": [
+            {
+              "zone_uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+              "island": 0
+            }
+          ]
+        },
+        {
+          "layer": "In2.Cu",
+          "same_GND_islands_as_U1_EP": [
+            {
+              "zone_uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+              "island": 0
+            }
+          ]
+        }
+      ],
+      "scope": "Geometric nearest plated source-return transfer only; not complete loop length or impedance."
+    },
+    {
+      "new_3V3_via": "5b7fcc37-d668-52e5-b216-90d56d1e8b2d",
+      "at": [
+        22.825,
+        34.4
+      ],
+      "nearest_real_source_GND_object_uuid": "2685ccbe-bbd2-4fa6-a3f8-8d7db789d64e",
+      "object_kind": "U1_EP_plated_pad",
+      "GND_at": [
+        24.3,
+        34.0
+      ],
+      "center_distance_mm": 1.5282751715577936,
+      "source_proof": [
+        {
+          "layer": "In1.Cu",
+          "same_GND_islands_as_U1_EP": [
+            {
+              "zone_uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+              "island": 0
+            }
+          ]
+        },
+        {
+          "layer": "In2.Cu",
+          "same_GND_islands_as_U1_EP": [
+            {
+              "zone_uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+              "island": 0
+            }
+          ]
+        }
+      ],
+      "scope": "Geometric nearest plated source-return transfer only; not complete loop length or impedance."
+    }
+  ],
+  "C199_ground_same_F_island_as_real_EP_through_pads": [
+    {
+      "zone_uuid": "4f90ea77-32b9-4919-b508-4f93828f0c6e",
+      "island": 0
+    }
+  ],
+  "positive_path_witnesses": [
+    {
+      "from": "source tap B(20.7,30.4), actual U2.5 reached through original C101/source pour",
+      "to": "U1.49",
+      "new_positive_centerline_mm": 5.951351722014866,
+      "through_via_transitions": 2,
+      "path": [
+        {
+          "uuid": "95ebb676-42c0-578a-9b7e-37e1420d1aa5",
+          "kind": "via",
+          "length_mm": 0.0
+        },
+        {
+          "uuid": "fc6e456a-edaa-5d59-898e-af3038e4381c",
+          "kind": "track",
+          "length_mm": 1.5
+        },
+        {
+          "uuid": "b8aaa8bf-30cb-5363-afba-aaa36d9fe4e2",
+          "kind": "track",
+          "length_mm": 3.0500000000000007
+        },
+        {
+          "uuid": "cf903d29-e433-5624-aa05-0d9f3b3995d3",
+          "kind": "track",
+          "length_mm": 0.3041381265149083
+        },
+        {
+          "uuid": "561a49c9-ac8c-5080-b6c7-ba1855a6a0e0",
+          "kind": "via",
+          "length_mm": 0.0
+        },
+        {
+          "uuid": "284963fb-bbb5-5aaf-b594-b15500e67259",
+          "kind": "track",
+          "length_mm": 0.44721359549995954
+        },
+        {
+          "uuid": "c9e5e620-0cec-5dcd-8f26-99bc65f35d56",
+          "kind": "track",
+          "length_mm": 0.6499999999999986
+        }
+      ],
+      "scope": "Not full U2-to-load length, total loop length, DC/current/PI qualification; original source pour and physical barrel lengths excluded."
+    },
+    {
+      "from": "source tap B(20.7,30.4), actual U2.5 reached through original C101/source pour",
+      "to": "U1.38",
+      "new_positive_centerline_mm": 11.534172383465135,
+      "through_via_transitions": 2,
+      "path": [
+        {
+          "uuid": "95ebb676-42c0-578a-9b7e-37e1420d1aa5",
+          "kind": "via",
+          "length_mm": 0.0
+        },
+        {
+          "uuid": "fc6e456a-edaa-5d59-898e-af3038e4381c",
+          "kind": "track",
+          "length_mm": 1.5
+        },
+        {
+          "uuid": "b8aaa8bf-30cb-5363-afba-aaa36d9fe4e2",
+          "kind": "track",
+          "length_mm": 3.0500000000000007
+        },
+        {
+          "uuid": "46a0ef6a-4071-54f3-8403-d8609da12f54",
+          "kind": "track",
+          "length_mm": 1.1499999999999986
+        },
+        {
+          "uuid": "6d82ccaf-abf9-5791-af4b-09f5357e8420",
+          "kind": "track",
+          "length_mm": 2.700000000000003
+        },
+        {
+          "uuid": "70d897f6-56a6-50e3-91d5-b3fa5e453949",
+          "kind": "track",
+          "length_mm": 1.1999999999999993
+        },
+        {
+          "uuid": "0d103cd3-8272-5dc5-80d9-21d63ed3999b",
+          "kind": "track",
+          "length_mm": 0.8975661535508127
+        },
+        {
+          "uuid": "5b7fcc37-d668-52e5-b216-90d56d1e8b2d",
+          "kind": "via",
+          "length_mm": 0.0
+        },
+        {
+          "uuid": "4d1b2e39-db74-5a9d-98f7-2da4a6a3721a",
+          "kind": "track",
+          "length_mm": 0.4366062299143235
+        },
+        {
+          "uuid": "036ab17c-657e-5eb7-aa3a-da7332e7917f",
+          "kind": "track",
+          "length_mm": 0.5999999999999979
+        }
+      ],
+      "scope": "Not full U2-to-load length, total loop length, DC/current/PI qualification; original source pour and physical barrel lengths excluded."
+    }
+  ],
+  "added_trace_length_by_layer_width_mm": {
+    "F.Cu 0.3mm": 4.854138126514909,
+    "B.Cu 0.2mm": 2.1338198254142795,
+    "F.Cu 0.25mm": 5.947566153550813
+  },
+  "native": {
+    "opens": 79,
+    "hard": 0,
+    "warnings": 119,
+    "warning_types": {
+      "track_dangling": 107,
+      "via_dangling": 10,
+      "silk_over_copper": 2
+    },
+    "parity": 0,
+    "ERC": 0
+  },
+  "all7947_retained_outer_tracks_new_reference_loss_mm": {
+    "left": 0,
+    "center": 0,
+    "right": 0
+  },
+  "cold_byte_identical": true,
+  "EP_channel_geometry": {
+    "track_width_mm": 0.25,
+    "GND_plated_pad_diameter_mm": 0.6,
+    "center_pitch_mm": 1.2,
+    "nominal_track_to_pad_clearance_mm": 0.175,
+    "project_min_mm": 0.15,
+    "note": "Nominal rule margin0.025mm does not establish fabrication tolerance/process yield. All PTH pads and ground sources retained."
+  },
+  "AVDD_corridor_notice": "F source via20.7,30.4; F rise x20.7/y30.4..31.9, cross y31.9/x20.7..23.75, VIN junction23.75,31.9->23.7,31.6. Not a blanket reserved or closed AVDD corridor; coordinator must screen future actual U1.46/C104 routing.",
+  "new_route_reference_caveat": {
+    "left_edge": {
+      "raw_missing_mm": 2.886717793739879,
+      "outside_own_via_mm": 0.0,
+      "outside_interval_count": 0
+    },
+    "centerline": {
+      "raw_missing_mm": 2.8013760572933446,
+      "outside_own_via_mm": 0.0,
+      "outside_interval_count": 0
+    },
+    "right_edge": {
+      "raw_missing_mm": 3.075456876846154,
+      "outside_own_via_mm": 0.5091673086805488,
+      "outside_interval_count": 1
+    }
+  },
+  "frozen_candidate_path": "/workspace/shared/maru-a4l-P3-S3-3V3-bridge-worker-0334/handoff-3V3-source-repair-0357/candidate.kicad_pcb"
+}
