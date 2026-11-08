@@ -22,10 +22,17 @@ import trimesh
 
 import build_bottomcase_draft as bc
 import rule60_spec as spec
-from verify_topcase import plate_gas_world, slice_material, to_manifold
+from maru60.mesh_io import slice_material, to_manifold
+from maru60.frames import PlateFrame, plate_gas_world
+from maru60.paths import bottomcase_dir, topcase_dir
+from maru60.provenance import input_fingerprint, ensure_inputs_unchanged
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "bottomcase-draft"
+OUT = bottomcase_dir()
+TOP = topcase_dir()
+TOP_REPORT = json.loads((TOP / "draft-report.json").read_text())
+TOP_GEOM = TOP_REPORT["geometry_mm"]
+PLATE_FRAME = PlateFrame(*TOP_GEOM["plate_to_world_offset"], TOP_GEOM["plate_to_world_x_sign"])
 REPORT = json.loads((OUT / "draft-report.json").read_text())
 Z = REPORT["z_p"]
 top = bc.top
@@ -40,6 +47,9 @@ def vol(m: md.Manifold) -> float:
 
 
 def main() -> None:
+    inputs = input_fingerprint(OUT, (TOP,))
+    (OUT / "verification.json").unlink(missing_ok=True)
+    assert TOP_GEOM["usb_notch"]["board"] == REPORT["board"], "top/bottom board mismatch"
     # 1. Exports: closed single shells on the 256 mm bed.
     parts = ("bottom-left", "bottom-right", "coupon-front-left", "joint-test-left", "joint-test-right")
     for name in parts:
@@ -50,7 +60,7 @@ def main() -> None:
         sc = trimesh.load(OUT / f"maru60-hhkb-bottomcase-{name}.3mf", force="scene")
         assert len(sc.geometry) == n_obj and np.all(sc.bounds[0] >= -1e-6) and np.all(sc.bounds[1] <= 256.0), name
 
-    sc = trimesh.load(ROOT / "topcase-draft" / "halves-world.3mf", force="scene")
+    sc = trimesh.load(TOP / "halves-world.3mf", force="scene")
     top_mf = md.Manifold.batch_boolean([to_manifold(t) for t in sc.dump(concatenate=False)], md.OpType.Add)
     world = {name: to_manifold(trimesh.load_mesh(OUT / f"{name}-world.stl")) for name in parts}
     bottom = world["bottom-left"] + world["bottom-right"]
@@ -79,7 +89,7 @@ def main() -> None:
     # 3. Gasket plate and caps: the plate floats free seated and 1.0 mm down; the 12 cap bottom flanges (`gasket.cap_free`
     #    pushed fully onto the tab ends, compressed to 9.00..10.20) clear every wall and bear on the recess floors.
     plate_t = spec.value("plate.thickness")
-    plate = md.CrossSection([plate_gas_world()]).extrude(plate_t).translate([0.0, 0.0, top.Z_PLATE])
+    plate = md.CrossSection([plate_gas_world(PLATE_FRAME)]).extrude(plate_t).translate([0.0, 0.0, top.Z_PLATE])
     plate_free = {f"down_{d:.1f}": vol(plate.translate([0.0, 0.0, d]) ^ bottom) for d in (0.0, 0.5, 1.0)}
     assert max(plate_free.values()) < 0.01, plate_free
     caps_plan = [orient(sg.Polygon([top.pw(x, y) for x, y in pts])) for pts in spec.gasket_outlines_plate()]
@@ -341,7 +351,7 @@ def main() -> None:
     back = slice_material(bottom, z_usb).intersection(sg.box(-200.0, top.pw(0.0, bc.LEDGE_BACK_P)[1] - 0.5, 200.0, 250.0))
     ends = sorted(c for g in getattr(back, "geoms", [back]) for c in (g.bounds[0], g.bounds[2]))
     gaps = [(a, b) for a, b in zip(ends[1:-1:2], ends[2::2]) if b - a > 5.0]
-    notch = json.loads((ROOT / "topcase-draft" / "draft-report.json").read_text())["geometry_mm"]["usb_notch"]
+    notch = TOP_GEOM["usb_notch"]
     assert len(gaps) == 1 and abs((gaps[0][0] + gaps[0][1]) / 2 - notch["x_world"]) < 0.05, (gaps, notch)
     assert abs(gaps[0][1] - gaps[0][0] - notch["width"]) < 0.05 and gaps[0][0] > 0.0, (gaps, notch)
     # The lower-case roof over the port is flush with the surrounding rim, not a separate recessed beam.
@@ -520,6 +530,8 @@ def main() -> None:
                                     "tray_step_cantilever_mm2": v["tray_step_cantilever_mm2"]}
                                 for k, v in printability.items()},
     }
+    ensure_inputs_unchanged(OUT, inputs, (TOP,))
+    verification["input_sha256"] = inputs
     (OUT / "verification.json").write_text(json.dumps(verification, indent=2) + "\n")
     print(json.dumps(verification, indent=2))
 

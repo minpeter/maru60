@@ -2,11 +2,12 @@
 from pathlib import Path
 import json
 import sys
+import os
 import bpy
 from mathutils import Vector
 
 ONLY_UNDERSIDE = "--only-underside" in sys.argv
-ROOT = Path(__file__).resolve().parent / "topcase-draft"
+ROOT = Path(os.environ.get("MARU60_TOPCASE_DIR", Path(__file__).resolve().parent / "topcase-draft"))
 bpy.ops.object.delete(use_global=False)
 
 parts = []

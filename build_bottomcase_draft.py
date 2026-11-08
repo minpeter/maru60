@@ -31,7 +31,6 @@ from __future__ import annotations
 import argparse
 import json
 import math
-from pathlib import Path
 from typing import Any
 
 import manifold3d as md
@@ -43,9 +42,11 @@ import trimesh
 
 import build_topcase_draft as top
 import rule60_spec as spec
+from maru60.mesh_io import to_trimesh, write_3mf
+from maru60.paths import bottomcase_dir
+from maru60.frames import DX_PW, DY_PW, PW_SX, pw
 
-OUT = Path(__file__).resolve().parent / "bottomcase-draft"
-OUT.mkdir(exist_ok=True)
+OUT = bottomcase_dir()
 
 RIM_CLEAR = 0.15         # Rim to top-case pocket wall, per side
 RIM_CORNER_R = 2.70      # Stock bottom-case rim corner radius (v6.2 fit: held ~2.3 mm off an R5.0 pocket)
@@ -99,7 +100,7 @@ DECO_SCREW_LEN = 4.0    # of the outer face (the stock holes are blind); the hea
 # bodies, line-to-line plan dovetails on the floor seam (the halves slide together along the print Z axis, normal to
 # the desk face, and the tongues lock both in-plane directions), glue, and the steel weight plate under the back leg,
 # screwed to each half with two of its four M2 screws.
-_STRIKES_W = {n: top.pw(x, y) for n, x, y in top.strike_centers_p()}
+_STRIKES_W = {n: pw(x, y) for n, x, y in top.strike_centers_p()}
 SEAM_BACK_CATCH = next(n for n, (x, y) in _STRIKES_W.items() if y > 150.0 and x < 0.0)
 SEAM_FRONT_CATCH = next(n for n, (x, y) in _STRIKES_W.items() if y < 150.0 and x > 0.0)
 SEAM_BACK_X, SEAM_FRONT_X = _STRIKES_W[SEAM_BACK_CATCH][0], _STRIKES_W[SEAM_FRONT_CATCH][0]
@@ -115,8 +116,8 @@ BED = 256.0
 
 COS, SIN, TAN = math.cos(top.TILT_RAD), math.sin(top.TILT_RAD), math.tan(top.TILT_RAD)
 DESK_A = top.z_desk_in_print_frame(0.0)  # Desk plane: Z_p = DESK_A + Y * TAN (the wrist-rest pad faces)
-Y_FRONT = round(top.INNER_P[1] + RIM_CLEAR + top.DY_PW, 3)  # Front rail outer face (world Y)
-Y_BACK = round(top.INNER_P[3] - RIM_CLEAR + top.DY_PW, 3)   # Back rail outer face (world Y)
+Y_FRONT = round(top.INNER_P[1] + RIM_CLEAR + DY_PW, 3)  # Front rail outer face (world Y)
+Y_BACK = round(top.INNER_P[3] - RIM_CLEAR + DY_PW, 3)   # Back rail outer face (world Y)
 # World -> print frame: desk face on the bed (Z' = height above it), X kept, Y' = -(Y cos + Z_p sin); a proper rotation.
 TO_PRINT = np.array([[1.0, 0.0, 0.0, 0.0], [0.0, -COS, -SIN, 0.0], [0.0, SIN, -COS, DESK_A * COS]])
 FROM_PRINT = np.array([[1.0, 0.0, 0.0, 0.0], [0.0, -COS, SIN, -DESK_A * COS * SIN], [0.0, -SIN, -COS, DESK_A * COS * COS]])
@@ -175,7 +176,7 @@ def back_bevel() -> tuple[list[float], float]:
 def base_outline() -> Any:
     """Plan (world XY) of the triangular base at the tray bottom: the rail outline inset by the steps. The ends are
     clean square cuts (owner): vertical faces, sharp corners."""
-    x1 = abs(top.pw(RIM_P[0], 0.0)[0]) - END_STEP_W
+    x1 = abs(pw(RIM_P[0], 0.0)[0]) - END_STEP_W
     return orient(sg.box(-x1, Y_FRONT + FRONT_STEP_W, x1, Y_BACK - BACK_LEDGE_W))
 
 
@@ -202,7 +203,7 @@ def print_y(y: float) -> float:
 
 
 def plate_to_world(g: Any) -> Any:
-    return orient(sa.affine_transform(g, [top.PW_SX, 0.0, 0.0, 1.0, top.PW_SX * top.DX_PW, top.DY_PW]))
+    return orient(sa.affine_transform(g, [PW_SX, 0.0, 0.0, 1.0, PW_SX * DX_PW, DY_PW]))
 
 
 def plate_box(x0: float, y0: float, x1: float, y1: float, r: float = 0.0) -> Any:
@@ -318,7 +319,7 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
             s["notch_p"] = [sx-hl, sy-hw, sx+hl, sy+hw]
         cuts.append(prism(plate_box(*s["notch_p"]), Z_RIM_TOP - 1.0, catch_floor))
         for xp, yp in s["screws_p"]:
-            xw, yw = top.pw(xp, yp)
+            xw, yw = pw(xp, yp)
             if catch_inserts:
                 depth, diameter = insert["depth"], insert_hole_d if purchased_catches else insert["hole_d"]
                 # Local round bosses sit inside matching upper-skirt scallops. The rear pads also thicken the skin;
@@ -334,7 +335,7 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
             cuts.append(md.Manifold.cylinder(depth + 0.5, diameter / 2, diameter / 2, 96 if catch_inserts else 24).translate(
                 [xw, yw, catch_floor - 0.5]))
     usb_x, usb_w = top.usb_notch_print(board)
-    usb_y0, usb_y1 = top.pw(0.0, LEDGE_BACK_P - 1.0)[1], top.pw(0.0, RIM_P[3] + 1.0)[1]
+    usb_y0, usb_y1 = pw(0.0, LEDGE_BACK_P - 1.0)[1], pw(0.0, RIM_P[3] + 1.0)[1]
     slot = sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1)
     # Open below the passage, with a distinct lower-case bridge above it. The upper case has its own bridge.
     # Retain only 1 mm of the outer exit floor over the sloping underside.
@@ -381,7 +382,7 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
             bridge -= fin_cut
             slot_fins.append(round(wall, 3))
     bay_y1 = LEDGE_BACK_P - BAY_BACK_GAP
-    bay_cx = -top.DX_PW  # plate X of the case centre line (world X = 0)
+    bay_cx = -DX_PW  # plate X of the case centre line (world X = 0)
     bay_p = (bay_cx - _BAY["length"] / 2, bay_y1 - _BAY["width"], bay_cx + _BAY["length"] / 2, bay_y1)
     if battery_bay:
         cuts.append(prism(plate_box(*bay_p, r=_BAY["corner_r"]), FLOOR_ZP - 1.0, FLOOR_ZP + _BAY["height"]))
@@ -484,18 +485,6 @@ def split(body: md.Manifold) -> tuple[md.Manifold, md.Manifold]:
     return body ^ region, body - region
 
 
-def to_trimesh(m: md.Manifold) -> trimesh.Trimesh:
-    # As in the top-case exporter, retain precision at tangent cuts before removing zero-area seam triangles.
-    mesh = m.simplify(1e-6).to_mesh64()
-    tm = trimesh.Trimesh(mesh.vert_properties[:, :3], mesh.tri_verts, process=False)
-    tm.merge_vertices(digits_vertex=6)
-    tm.update_faces(tm.nondegenerate_faces(height=1e-8))
-    tm.remove_unreferenced_vertices()
-    assert tm.is_watertight and tm.is_winding_consistent, "non-manifold export"
-    assert abs(tm.volume - m.volume()) < 1e-3, "export changed solid volume"
-    return tm
-
-
 def on_bed(m: md.Manifold) -> trimesh.Trimesh:
     tm = to_trimesh(m.transform(TO_PRINT))
     (x0, y0, z0), (x1, y1, _) = tm.bounds
@@ -511,6 +500,8 @@ def main() -> None:
     ap.add_argument("--battery-bay", action=argparse.BooleanOptionalAction, default=True,
                     help="cut the stock battery bay; use --no-battery-bay for a wired case (default: enabled)")
     args = ap.parse_args()
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "verification.json").unlink(missing_ok=True)
     body, report = build(args.board, battery_bay=args.battery_bay)
     left, right = split(body)
     coupon = body ^ md.Manifold.cube([120.0, 21.0, 60.0]).translate([30.0, Y_FRONT - 1.0, -5.0])
@@ -525,16 +516,16 @@ def main() -> None:
         assert len(tm.split(only_watertight=False)) == 1, name
         tm.export(OUT / f"{name}-print.stl")
     lic = "CC BY-NC 4.0 (non-commercial use only)"
-    top.write_3mf(OUT / "maru60-hhkb-bottomcase-left.3mf", f"Maru60 HHKB bottom case, for Rule60 V3 - left half ({lic})",
+    write_3mf(OUT / "maru60-hhkb-bottomcase-left.3mf", f"Maru60 HHKB bottom case, for Rule60 V3 - left half ({lic})",
                   [("BottomLeft", printed["bottom-left"])], fine_layer_z=None)
-    top.write_3mf(OUT / "maru60-hhkb-bottomcase-right.3mf", f"Maru60 HHKB bottom case, for Rule60 V3 - right half ({lic})",
+    write_3mf(OUT / "maru60-hhkb-bottomcase-right.3mf", f"Maru60 HHKB bottom case, for Rule60 V3 - right half ({lic})",
                   [("BottomRight", printed["bottom-right"])], fine_layer_z=None)
-    top.write_3mf(OUT / "maru60-hhkb-bottomcase-fit-coupon.3mf", f"Maru60 HHKB bottom case fit coupon ({lic})",
+    write_3mf(OUT / "maru60-hhkb-bottomcase-fit-coupon.3mf", f"Maru60 HHKB bottom case fit coupon ({lic})",
                   [("CouponFrontLeft", printed["coupon-front-left"])], fine_layer_z=None)
     pair = [printed["joint-test-left"].copy(), printed["joint-test-right"].copy()]
     pair[0].apply_translation([-25.0, 0.0, 0.0])
     pair[1].apply_translation([25.0, 0.0, 0.0])
-    top.write_3mf(OUT / "maru60-hhkb-bottomcase-joint-test.3mf", f"Maru60 HHKB bottom case joint test ({lic})",
+    write_3mf(OUT / "maru60-hhkb-bottomcase-joint-test.3mf", f"Maru60 HHKB bottom case joint test ({lic})",
                   [("JointTestLeft", pair[0]), ("JointTestRight", pair[1])], fine_layer_z=None)
     report["parts"] = {name: {"print_extents": [round(v, 2) for v in tm.extents], "volume_cm3": round(tm.volume / 1e3, 1)}
                        for name, tm in printed.items()}

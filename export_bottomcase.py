@@ -9,15 +9,18 @@ import json
 import shutil
 
 import rule60_spec as spec
+from maru60.paths import topcase_dir, bottomcase_dir
+from maru60.provenance import require_verified
 
 ROOT = Path(__file__).resolve().parent
-source = ROOT / 'bottomcase-draft'
+source = bottomcase_dir()
 
+require_verified(source, (topcase_dir(),))
 verification = json.loads((source / 'verification.json').read_text())
 assert verification['status'] == 'ALL_PASSED', verification['status']
 board = verification['board']
 report = json.loads((source / 'draft-report.json').read_text())
-assert verification['battery_bay'] == report['battery_bay'], 'verify the current battery-bay variant before export'
+assert verification['board'] == report['board'] and verification['battery_bay'] == report['battery_bay'], 'verify the current board/battery-bay variant before export'
 suffix = '' if verification['battery_bay'] else '-no-battery-bay'
 
 if board != spec.default_board():

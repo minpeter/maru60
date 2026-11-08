@@ -39,9 +39,6 @@ import argparse
 import json
 import math
 from typing import Any
-import zipfile
-import xml.etree.ElementTree as ET
-from pathlib import Path
 
 import manifold3d as md
 import numpy as np
@@ -52,9 +49,12 @@ from shapely.geometry.polygon import orient
 import trimesh
 
 import rule60_spec as spec
+from maru60.mesh_io import FINE_LAYER_Z as FINE_LAYER_Z, FINE_LAYER_H as FINE_LAYER_H, to_trimesh, write_3mf
+from maru60.paths import topcase_dir
+from maru60.frames import (OPENING_P, BEZEL_SIDE as BEZEL_SIDE, BEZEL_BACK as BEZEL_BACK, BEZEL_FRONT as BEZEL_FRONT, SKIRT_WALL, FRONT_WALL,
+                           RIM_SEAT_W, OUTER_P, INNER_P, LEDGE_P, CASE_W, CASE_D, WRIST_D, DX_PW, DY_PW, PW_SX, pw)
 
-OUT = Path(__file__).resolve().parent / "topcase-draft"
-OUT.mkdir(exist_ok=True)
+OUT = topcase_dir()
 
 # ---------------------------------------------------------------------------
 # Plate frame = DWG `6095(gas)` plate / HHKB keycap layout seen from the top (X right, Y back); the keycap opening is
@@ -63,27 +63,6 @@ OUT.mkdir(exist_ok=True)
 # Y = WRIST_D, and X mirrored: X_world = -(X_plate + DX_PW), Y_world = Y_plate + DY_PW. v6.2 and earlier skipped the
 # mirror and printed the mirror image (USB on the wrong side, back gasket pockets 10 mm off the tabs).
 # ---------------------------------------------------------------------------
-OPENING_P = tuple(spec.value("top.keycap_opening_hhkb"))  # HHKB keycap opening bounds (plate frame); front edge = bottom-row middle
-BEZEL_SIDE, BEZEL_BACK, BEZEL_FRONT = (spec.value("top.bezel")[k] for k in ("side", "back", "front"))  # Top-face bezel
-SKIRT_WALL = spec.value("top.skirt_wall")["side_back"]  # Skirt wall thickness, sides and back (caliper, flipped)
-FRONT_WALL = spec.value("top.skirt_wall")["front"]      # Skirt wall thickness, front (caliper, flipped)
-RIM_SEAT_W = spec.value("top.rim_seat_w")  # Floor ledge (bottom-case rim seat) inside the skirt: short side 4.90 - 2.85 mm
-OUTER_P = (round(OPENING_P[0] - BEZEL_SIDE, 3), round(OPENING_P[1] - BEZEL_FRONT, 3),
-           round(OPENING_P[2] + BEZEL_SIDE, 3), round(OPENING_P[3] + BEZEL_BACK, 3))  # (-6.10, -4.82, 292.00, 112.55)
-INNER_P = (round(OUTER_P[0] + SKIRT_WALL, 3), round(OUTER_P[1] + FRONT_WALL, 3),
-           round(OUTER_P[2] - SKIRT_WALL, 3), round(OUTER_P[3] - SKIRT_WALL, 3))  # Inner skirt faces
-LEDGE_P = (round(INNER_P[0] + RIM_SEAT_W, 3), round(INNER_P[1] + RIM_SEAT_W, 3),
-           round(INNER_P[2] - RIM_SEAT_W, 3), round(INNER_P[3] - RIM_SEAT_W, 3))  # Inner edge of the floor ledge
-CASE_W = round(OUTER_P[2] - OUTER_P[0], 3)  # 298.10
-CASE_D = round(OUTER_P[3] - OUTER_P[1], 3)  # 117.37
-WRIST_D = 80.00         # Integrated honeycomb wrist-rest depth
-DX_PW = round(-(OUTER_P[0] + OUTER_P[2]) / 2, 3)  # -142.95
-DY_PW = round(WRIST_D - OUTER_P[1], 3)            # 84.82
-PW_SX = -1.0            # Plate X -> print X sign (underside view)
-
-
-def pw(xp: float, yp: float) -> tuple[float, float]:
-    return round(PW_SX * (xp + DX_PW), 4), round(yp + DY_PW, 4)
 
 
 TILT_DEG = spec.value("top.tilt_deg")  # IC spec: 6.0 deg typing angle
@@ -232,8 +211,6 @@ def orange_cut_poly_p() -> Any:
     return cut
 
 
-FINE_LAYER_Z = (5.40, 10.00)  # Print Z band sliced at `FINE_LAYER_H` (layer_config_ranges.xml in every print 3MF)
-FINE_LAYER_H = 0.10
 SKIN_T = 2.20           # Honeycomb wrist-rest top skin thickness
 WRIST_WALL = 2.20       # Wrist-rest outer perimeter wall thickness
 CORNER_R = 4.85         # Outer vertical corner radius: concentric with the R2.0 inner skirt corner (+ 2.85 mm wall)
@@ -338,7 +315,6 @@ def strike_pocket_poly(sx_p: float, sy_p: float, skirt_sign: float,
     shape = shape.simplify(0.01)
     assert shape.geom_type == "Polygon" and not shape.interiors, shape.geom_type
     return sg.Polygon([(x + sx_p, y + sy_p) for x, y in shape.exterior.coords[:-1]])
-
 
 
 def tongue_ramp_z(x: float, z_tongue: float, proj: float) -> float:
@@ -665,59 +641,6 @@ def build_halves(board_id: str, *, strike_inserts: bool = False, catch_inserts: 
     return left, right
 
 
-def write_3mf(path: Path, title: str, named_meshes: list[tuple[str, trimesh.Trimesh]],
-              fine_layer_z: tuple[float, float] | None = FINE_LAYER_Z) -> None:
-    model = ET.Element("model", {"unit": "millimeter", "xmlns": "http://schemas.microsoft.com/3dmanufacturing/core/2015/02"})
-    ET.SubElement(model, "metadata", {"name": "Title"}).text = title
-    ET.SubElement(model, "metadata", {"name": "Designer"}).text = "minpeter"
-    ET.SubElement(model, "metadata", {"name": "License"}).text = "CC BY-NC 4.0 (non-commercial use only) — https://creativecommons.org/licenses/by-nc/4.0/"
-    resources, build = ET.SubElement(model, "resources"), ET.SubElement(model, "build")
-    for idx, (name, m) in enumerate(named_meshes, 1):
-        obj = ET.SubElement(resources, "object", {"id": str(idx), "type": "model", "name": name})
-        mesh_el = ET.SubElement(obj, "mesh")
-        vs, ts = ET.SubElement(mesh_el, "vertices"), ET.SubElement(mesh_el, "triangles")
-        for v in m.vertices:
-            _ = ET.SubElement(vs, "vertex", dict(zip(("x", "y", "z"), (f"{float(val):.6f}" for val in v))))
-        for f in m.faces:
-            _ = ET.SubElement(ts, "triangle", dict(zip(("v1", "v2", "v3"), map(str, f))))
-        _ = ET.SubElement(build, "item", {"objectid": str(idx)})
-    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as zf:
-        zf.writestr("3D/3dmodel.model", ET.tostring(model, encoding="utf-8", xml_declaration=True))
-        zf.writestr(
-            "[Content_Types].xml",
-            (
-                '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
-                '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>'
-                '<Default Extension="model" ContentType="application/vnd.ms-package.3dmanufacturing-3dmodel+xml"/>'
-                "</Types>"
-            ),
-        )
-        zf.writestr(
-            "_rels/.rels",
-            (
-                '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
-                '<Relationship Target="/3D/3dmodel.model" Id="rel0" Type="http://schemas.microsoft.com/3dmanufacturing/2013/01/3dmodel"/>'
-                "</Relationships>"
-            ),
-        )
-        if fine_layer_z is None:
-            return
-        # Bambu Studio / Orca height-range modifier on every object: 0.10 mm layers across the strike, cap-pocket and
-        # base-pocket floors. With 0.20 mm layers the 6.30 cap floor prints at 6.4 and the 9.69 rim floor at 9.6, so the
-        # silicone caps sit 0.19 mm tighter between top and bottom case; at 0.10 mm they print at 6.3 / 9.7 (sliced).
-        zf.writestr(
-            "Metadata/layer_config_ranges.xml",
-            '<?xml version="1.0" encoding="utf-8"?>\n<objects>\n'
-            + "".join(
-                f' <object id="{idx}">\n  <range min_z="{fine_layer_z[0]}" max_z="{fine_layer_z[1]}">\n'
-                '   <option opt_key="extruder">0</option>\n'
-                f'   <option opt_key="layer_height">{FINE_LAYER_H}</option>\n  </range>\n </object>\n'
-                for idx in range(1, len(named_meshes) + 1)
-            )
-            + "</objects>\n",
-        )
-
-
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--board", choices=spec.board_ids(), default=spec.default_board(),
@@ -725,27 +648,17 @@ def main() -> None:
     ap.add_argument("--strike-inserts", action=argparse.BooleanOptionalAction, default=False,
                     help="Upper-only CANOT OD3.5/L3 trial bores, preserving original pockets/axes; default: no inserts")
     args = ap.parse_args()
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "verification.json").unlink(missing_ok=True)
 
     usb_x, usb_w = usb_notch_print(args.board)
     left_mf, right_mf = build_halves(args.board, strike_inserts=args.strike_inserts)
     for name, mf in (("LeftHalf", left_mf), ("RightHalf", right_mf)):
         assert mf.status() == md.Error.NoError and len(mf.decompose()) == 1, (name, mf.status(), len(mf.decompose()))
 
-    def to_trimesh(mf: md.Manifold) -> trimesh.Trimesh:
-        # Coplanar cut faces (the pad undercuts and the wrist hollows meet the skin underside at `SKIN_T`) leave pairs of
-        # zero-area triangles along their seams; drop them, then demand one closed shell of the same volume.
-        d = mf.simplify(1e-6).to_mesh64()
-        tm = trimesh.Trimesh(d.vert_properties[:, :3], d.tri_verts, process=False)
-        tm.merge_vertices(digits_vertex=6)
-        tm.update_faces(tm.nondegenerate_faces(height=1e-8))
-        tm.remove_unreferenced_vertices()
-        assert tm.is_watertight and tm.is_winding_consistent, (tm.is_watertight, tm.is_winding_consistent)
-        assert len(tm.split(only_watertight=False)) == 1 and abs(tm.volume - mf.volume()) < 1e-3, (tm.volume, mf.volume())
-        return tm
-
     # Both halves in the print frame, as built: the mating gauge for verify_topcase.py and verify_bottomcase.py.
     write_3mf(OUT / "halves-world.3mf", "Maru60 HHKB top case halves, print frame (as built)",
-              [("LeftHalf", to_trimesh(left_mf)), ("RightHalf", to_trimesh(right_mf))], fine_layer_z=None)
+              [("LeftHalf", to_trimesh(left_mf, single_shell=True)), ("RightHalf", to_trimesh(right_mf, single_shell=True))], fine_layer_z=None)
 
     seated_interference = float((left_mf ^ right_mf).volume())
     disengaged_overlap = float((left_mf.translate([0.0, 0.0, 17.5]) ^ right_mf).volume())
@@ -756,7 +669,7 @@ def main() -> None:
     assert blocked_x > 5.0 and blocked_z_stop > 1.0, (blocked_x, blocked_z_stop)
 
     def place_on_x2d(mf: md.Manifold) -> trimesh.Trimesh:
-        tm = to_trimesh(mf)
+        tm = to_trimesh(mf, single_shell=True)
         cx, cy = (tm.bounds[0][0] + tm.bounds[1][0]) / 2.0, (tm.bounds[0][1] + tm.bounds[1][1]) / 2.0
         z0 = tm.bounds[0][2]
         tm.apply_translation([128.0 - cx, 128.0 - cy, -z0])
@@ -771,8 +684,8 @@ def main() -> None:
     write_3mf(OUT / "maru60-hhkb-right-plate.3mf", "Maru60 HHKB top case + wrist rest, for Rule60 V3 - Right half (X2D)", [("RightHalf", right_plate_tm)])
 
     rot_deg = 180.0 - TILT_DEG
-    left_inst_tm = to_trimesh(left_mf.rotate([rot_deg, 0.0, 0.0]))
-    right_inst_tm = to_trimesh(right_mf.rotate([rot_deg, 0.0, 0.0]))
+    left_inst_tm = to_trimesh(left_mf.rotate([rot_deg, 0.0, 0.0]), single_shell=True)
+    right_inst_tm = to_trimesh(right_mf.rotate([rot_deg, 0.0, 0.0]), single_shell=True)
     z_desk_min = min(float(left_inst_tm.bounds[0][2]), float(right_inst_tm.bounds[0][2]))
     x_shift = CASE_W / 2.0
     y_shift = -min(float(left_inst_tm.bounds[0][1]), float(right_inst_tm.bounds[0][1]))
@@ -797,7 +710,7 @@ def main() -> None:
     front_jR_mf = right_mf ^ md.Manifold.cube([30.0, 66.0, 25.0]).translate([-15.0, 18.0, -0.5])
 
     def place_at(mf: md.Manifold, x0: float, y0: float) -> trimesh.Trimesh:
-        tm = to_trimesh(mf)
+        tm = to_trimesh(mf, single_shell=True)
         tm.apply_translation([x0 - tm.bounds[0][0], y0 - tm.bounds[0][1], -tm.bounds[0][2]])
         return tm
 

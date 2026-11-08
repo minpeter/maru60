@@ -10,10 +10,13 @@ import shutil
 import zipfile
 
 import rule60_spec as spec
+from maru60.paths import topcase_dir
+from maru60.provenance import require_verified
 
 ROOT = Path(__file__).resolve().parent
-source = ROOT / 'topcase-draft'
+source = topcase_dir()
 
+require_verified(source)
 verification = json.loads((source / 'verification.json').read_text())
 assert verification['status'] == 'ALL_PASSED', verification['status']
 report = json.loads((source / 'draft-report.json').read_text())

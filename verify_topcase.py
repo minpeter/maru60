@@ -33,7 +33,6 @@ from __future__ import annotations
 
 import json
 import math
-from pathlib import Path
 
 import manifold3d as md
 import numpy as np
@@ -45,8 +44,12 @@ from shapely.geometry import MultiLineString
 import trimesh
 
 import rule60_spec as spec
+from maru60.mesh_io import slice_material, to_manifold
+from maru60.paths import topcase_dir
+from maru60.frames import PlateFrame, plate_gas_world as plate_outline
+from maru60.provenance import input_fingerprint, ensure_inputs_unchanged
 
-ROOT = Path(__file__).resolve().parent / "topcase-draft"
+ROOT = topcase_dir()
 
 REPORT = json.loads((ROOT / "draft-report.json").read_text())
 GEOM = REPORT["geometry_mm"]
@@ -55,35 +58,20 @@ PW_SX = GEOM["plate_to_world_x_sign"]  # print frame = underside view: plate X i
 
 
 def pw(xp: float, yp: float) -> tuple[float, float]:
-    return PW_SX * (xp + DX_PW), yp + DY_PW
+    return PlateFrame(DX_PW, DY_PW, PW_SX).point(xp, yp)
 
 
 JOINT_Z_CLEAR = 0.20  # Designed vertical gap between each tongue landing and its socket roof
 
 
-def slice_material(mf: md.Manifold, z: float) -> sg.base.BaseGeometry:
-    rings = [sg.Polygon(p) for p in mf.slice(z).to_polygons() if len(p) >= 3]
-    material = sg.Polygon()
-    for ring in sorted(rings, key=lambda r: -abs(r.area)):
-        material = material.symmetric_difference(ring.buffer(0))
-    return material
-
-
-def to_manifold(tm: trimesh.Trimesh) -> md.Manifold:
-    m = tm.copy()
-    m.merge_vertices(digits_vertex=5)
-    mf = md.Manifold(md.Mesh64(np.asarray(m.vertices, dtype=np.float64), np.asarray(m.faces, dtype=np.uint64)))
-    assert mf.status() == md.Error.NoError, mf.status()
-    return mf
-
-
 def plate_gas_world() -> np.ndarray:
     """INKC `6095(gas)` plate outline (spec/rule60-v3-outlines.json) in the print frame, counter-clockwise."""
-    world = np.asarray([pw(x, y) for x, y in spec.outline_points("plate_gas")], dtype=np.float64)
-    return world if sg.LinearRing(world).is_ccw else world[::-1]
+    return plate_outline(PlateFrame(DX_PW, DY_PW, PW_SX))
 
 
 def main() -> None:
+    inputs = input_fingerprint(ROOT)
+    (ROOT / "verification.json").unlink(missing_ok=True)
     # -----------------------------------------------------------------------
     # 1. Exported STL & 3MF Watertightness, Single-Shell, and X2D Bed Check
     # -----------------------------------------------------------------------
@@ -542,6 +530,8 @@ def main() -> None:
             "stock_base_pocket_past_floor": round(pocket_ov, 5),
         },
     }
+    ensure_inputs_unchanged(ROOT, inputs)
+    verification["input_sha256"] = inputs
     (ROOT / "verification.json").write_text(json.dumps(verification, indent=2) + "\n")
     print(json.dumps(verification, indent=2))
 
