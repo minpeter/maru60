@@ -1,0 +1,386 @@
+{
+  "status": "ALL_PASSED",
+  "board": "ph60-rev3",
+  "battery_bay": false,
+  "battery_bay_geometry": {
+    "probe_blockage_mm3": 29244.8554,
+    "restored_floor_missing_mm3": 0.0
+  },
+  "top_case_pocket": {
+    "seated_overlap_mm3": 0.0008,
+    "lateral_shift_overlap_mm3": {
+      "x-0.10": 0.0008,
+      "x+0.10": 0.0008,
+      "x-0.25": 27.5444,
+      "x+0.25": 27.5444,
+      "y-0.10": 0.0008,
+      "y+0.10": 0.0008,
+      "y-0.25": 260.5019,
+      "y+0.25": 247.7361
+    },
+    "rim_top_bearing_on_9p69_floor_mm2": 1823.4,
+    "skirt_lip_contact_mm3": 0.0,
+    "material_outside_rail_outline_mm2": {
+      "z_p_9.99": 0.0,
+      "z_p_19.71": 0.0,
+      "z_p_20.31": 0.0,
+      "z_p_25.01": 0.0,
+      "z_p_30.01": 0.0
+    }
+  },
+  "gasket": {
+    "plate_free_mm3": {
+      "down_0.0": 0.0,
+      "down_0.5": 0.0,
+      "down_1.0": 0.0
+    },
+    "cap_flanges_seated_mm3": 0.0,
+    "cap_flanges_bearing_0p10_mm3": 40.2351,
+    "cap_seat_z_p": 10.2,
+    "individual_caps": [
+      {
+        "cap": 1,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 2,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 3,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 4,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 5,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 6,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 7,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 8,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 9,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 10,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 11,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 12,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      }
+    ],
+    "mouth_corner_material_mm3": []
+  },
+  "ball_catches": {
+    "strikes_and_tongues_vs_bottom_mm3": 0.0,
+    "catch_bodies_vs_bottom_mm3": 0.0,
+    "catch_bodies_vs_top_case_mm3": 0.0,
+    "catch_bodies_vs_strike_plates_mm3": 0.0,
+    "catch_floor_bearing_mm3": 31.3082,
+    "tongue_tip_past_barrel_axis_mm": 1.75,
+    "barrel_top_under_strike_plate_mm": 0.6,
+    "pilot_depths_mm": [
+      3.92,
+      3.92,
+      3.92,
+      3.92,
+      4.0,
+      4.0,
+      4.0,
+      4.0
+    ]
+  },
+  "pcb": {
+    "gh60_pcb_and_usb_free_mm3": {
+      "down_0.0": 0.0,
+      "down_0.8": 0.0
+    },
+    "usb_body_to_floor_mm": 0.84,
+    "usb_plug_free_mm3": {
+      "bottom_mm3": 0.0,
+      "top_mm3": 0.0
+    },
+    "usb_plug_side_clearance_mm": 1.2,
+    "other_plugs_free": {
+      "12.35_x+0.3": true,
+      "12.35_x-0.3": true,
+      "13.0": true
+    }
+  },
+  "drop_in_parts": {
+    "filler_overlap_mm3": null,
+    "deco_plate_overlap_mm3": 0.0,
+    "deco_roof_1mm_void_mm3": 0.0,
+    "bumpon_overlap_mm3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bumpon_roof_1mm_void_mm3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bumpon_wall_1mm_void_mm3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bumpon_protrusion_mm": 2.0
+  },
+  "weight_plate_screws": [
+    {
+      "plate_xy": [
+        8.8,
+        30.8
+      ],
+      "half": "right",
+      "overlap_mm3_centred_and_shifted": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "head_top_below_cavity_floor_mm": 4.41,
+      "thread_in_plate_mm": 1.5,
+      "tip_to_plate_outer_face_mm": 1.5,
+      "hole_to_plate_edge_mm": 3.8,
+      "cbore_to_seam_mm": 54.55
+    },
+    {
+      "plate_xy": [
+        38.9,
+        10.9
+      ],
+      "half": "right",
+      "overlap_mm3_centred_and_shifted": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "head_top_below_cavity_floor_mm": 2.32,
+      "thread_in_plate_mm": 1.5,
+      "tip_to_plate_outer_face_mm": 1.5,
+      "hole_to_plate_edge_mm": 3.9,
+      "cbore_to_seam_mm": 21.38
+    },
+    {
+      "plate_xy": [
+        200.7,
+        10.9
+      ],
+      "half": "left",
+      "overlap_mm3_centred_and_shifted": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "head_top_below_cavity_floor_mm": 2.32,
+      "thread_in_plate_mm": 1.5,
+      "tip_to_plate_outer_face_mm": 1.5,
+      "hole_to_plate_edge_mm": 3.9,
+      "cbore_to_seam_mm": 37.14
+    },
+    {
+      "plate_xy": [
+        230.8,
+        30.8
+      ],
+      "half": "left",
+      "overlap_mm3_centred_and_shifted": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "head_top_below_cavity_floor_mm": 4.41,
+      "thread_in_plate_mm": 1.5,
+      "tip_to_plate_outer_face_mm": 1.5,
+      "hole_to_plate_edge_mm": 3.8,
+      "cbore_to_seam_mm": 72.84
+    }
+  ],
+  "desk_plane": {
+    "bottom_min_z": -0.0,
+    "top_case_min_z": -0.0,
+    "wrist_pad_face_area_mm2": 2464.0
+  },
+  "tray_and_base": {
+    "material_outside_base_outline_mm2": {
+      "z_p_20.4803": 0.0,
+      "z_p_22.4303": 0.0,
+      "z_p_26.4303": 0.0,
+      "z_p_30.4303": 0.0
+    },
+    "material_behind_slope_mm3": 0.0,
+    "base_bounds_world": [
+      -141.55,
+      87.45,
+      141.55,
+      188.74
+    ],
+    "expected_base_bounds": [
+      -141.55,
+      87.45,
+      141.55,
+      189.17
+    ],
+    "tray_bottom_bounds_world": [
+      -146.05,
+      82.95,
+      146.05,
+      194.37
+    ],
+    "rail_outline_bounds": [
+      -146.05,
+      82.95,
+      146.05,
+      194.37
+    ],
+    "desk_face_back_edge_print_y": -181.289,
+    "expected_print_y": -181.25
+  },
+  "split_seam": {
+    "seated_overlap_mm3": 0.0,
+    "insertion_path_max_overlap_mm3": 0.0001,
+    "in_plane_shift_overlap_mm3": {
+      "x+0.3": 45.9297,
+      "x-0.3": 271.3583,
+      "print_y+0.3": 235.5866,
+      "print_y-0.3": 41.4416
+    },
+    "catch_screw_owner": {
+      "BL": [
+        "left",
+        "left"
+      ],
+      "BR": [
+        "left",
+        "right"
+      ],
+      "FL": [
+        "left",
+        "right"
+      ],
+      "FR": [
+        "right",
+        "right"
+      ]
+    }
+  },
+  "usb_slot_x_world": [
+    116.923,
+    131.673
+  ],
+  "usb_slot_section": {
+    "cap_recess_walls_mm": [
+      0.0
+    ],
+    "open_bottom_material_mm3": 0.0,
+    "arch_corner_missing_mm3": 0.0,
+    "arch_corner_blockage_mm3": 0.0,
+    "matching_lip_corner_rounds": {
+      "-1.0": true,
+      "1.0": true
+    },
+    "recessed_floor_blockage_mm3": 0.0,
+    "inner_connector_recess_blockage_mm3": 0.0,
+    "shallow_port_floor_missing_mm3": 0.0,
+    "raised_port_end_missing_mm3": 0.0,
+    "inner_ledge_missing_mm3": 0.0,
+    "bridge_missing_mm3": 0.0,
+    "bridge_to_upper_ceiling_mm": -0.0,
+    "bridge_to_generic_plug_mm": 0.08,
+    "plug_down_0p8_mm3": {
+      "bottom_mm3": 0.0,
+      "top_mm3": 0.0
+    }
+  },
+  "open_ends_material_above_floor_mm3": {
+    "left": 0.0,
+    "right": 0.0
+  },
+  "printability_0p20mm": {
+    "bottom-left": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 107.01,
+      "tray_step_cantilever_mm2": 1888.3
+    },
+    "bottom-right": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
+      "tray_step_cantilever_mm2": 1829.1
+    },
+    "coupon-front-left": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
+      "tray_step_cantilever_mm2": 590.4
+    },
+    "joint-test-left": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
+      "tray_step_cantilever_mm2": 0.0
+    },
+    "joint-test-right": {
+      "islands": 0,
+      "undeclared_overhangs": 0,
+      "usb_bridge_requires_support_mm2": 0.0,
+      "tray_step_cantilever_mm2": 0.0
+    }
+  }
+}

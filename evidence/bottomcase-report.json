@@ -1,5 +1,6 @@
 {
   "board": "ph60-rev3",
+  "battery_bay": true,
   "frames": {
     "world": "top-case print frame (topcase-draft): X_w = -(X_plate + DX_PW), Y_w = Y_plate + DY_PW, Z_p",
     "to_print_3x4": [
@@ -51,6 +52,7 @@
       212.95,
       98.416
     ],
+    "cap_mouth_radius": 0.5,
     "cap_recesses": [
       [
         15.97,
@@ -386,7 +388,8 @@
         "cbore_floor_print_z": 4.8,
         "cavity_floor_print_z": 11.21
       }
-    ]
+    ],
+    "positions_status": "photo estimate; unverified on purchased A plate"
   },
   "rim_clear": 0.15,
   "split": {

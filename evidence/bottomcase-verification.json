@@ -1,6 +1,11 @@
 {
   "status": "ALL_PASSED",
   "board": "ph60-rev3",
+  "battery_bay": true,
+  "battery_bay_geometry": {
+    "probe_blockage_mm3": 0.0,
+    "restored_floor_missing_mm3": 29244.8554
+  },
   "top_case_pocket": {
     "seated_overlap_mm3": 0.0008,
     "lateral_shift_overlap_mm3": {
@@ -31,7 +36,82 @@
     },
     "cap_flanges_seated_mm3": 0.0,
     "cap_flanges_bearing_0p10_mm3": 40.2351,
-    "cap_seat_z_p": 10.2
+    "cap_seat_z_p": 10.2,
+    "individual_caps": [
+      {
+        "cap": 1,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 2,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 3,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 4,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 5,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 6,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 7,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 8,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 9,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 10,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 11,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      },
+      {
+        "cap": 12,
+        "seated_mm3": 0.0,
+        "bearing_0p10_mm3": 3.3529,
+        "expected_full_bearing_mm3": 3.3529
+      }
+    ],
+    "mouth_corner_material_mm3": []
   },
   "ball_catches": {
     "strikes_and_tongues_vs_bottom_mm3": 0.0,

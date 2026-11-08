@@ -18,11 +18,13 @@ geometry comes from the parts it mates with, plus the owner's photos IMG_0462-04
   - Cavity floor under the MX stack (plate top 7.50, PCB top 12.50); 140 x 45 battery bay, 4.69 deep as the stock bay
     (owner caliper; published 4.5), at the back, back decoration plate recess (INKC drawing) on the underside with four
     counterbored M2 holes from the cavity to screw the steel plate on as the stock case does, USB-C slot under the
-    top-case notch, with a separate lower-case bridge over the open USB passage.
+    top-case notch, with a separate lower-case bridge over the open USB passage. The battery bay can be omitted
+    with --no-battery-bay for a wired build; all other cuts, including the underside weight-plate recess, remain.
   - Split at X = 0 into two halves for a 256 mm bed, printed desk face down with support under the USB bridge.
 
 Frames: the top-case print frame (`world`: X mirrored from the plate frame, Y from the wrist-rest front, Z_p down from the
-top face) and each part's print frame (desk face on the bed). Usage: uv run build_bottomcase_draft.py [--board BOARD]
+top face) and each part's print frame (desk face on the bed).
+Usage: uv run build_bottomcase_draft.py [--board BOARD] [--battery-bay | --no-battery-bay]
 """
 from __future__ import annotations
 
@@ -55,12 +57,11 @@ PLATE_EDGE_CLEAR = 0.50  # Rail inner faces from the INKC 6095(gas) plate body e
 CAP_SEAT_ZP = round(top.Z_PLATE + spec.value("plate.thickness") + spec.value("gasket.top_flange_compressed"), 2)  # 10.20
 CAP_REACH = round(top.CAP_FOOT_L / 2 + top.CAP_CLEAR - top.CAP_INSET, 3)  # Recess end past the tab end (1.55), as top
 CAP_SIDE = round(top.CAP_FOOT_W / 2 + top.CAP_CLEAR, 3)  # Recess skirt side from the cap centreline (2.65), as top
+CAP_MOUTH_R = 0.50      # Round the closed end of the USB-side cap entry, preserving the flat bearing seat and its height
 _CATCH = spec.value("ball_catch.catch_body")
 CATCH_TOP_ZP = 7.60      # Catch barrel top: 0.60 under the strike plate (Z_p 5.55 + 1.45); the tongue tip is at 12.70
 CATCH_FLOOR_ZP = round(CATCH_TOP_ZP + _CATCH["height"], 2)  # Notch floor the catch stands on (15.30)
 CATCH_NOTCH_HALF_L = round(_CATCH["length"] / 2 + 0.30, 2)  # 0.30 mm room at each catch end
-CATCH_SCREW_DX = round(top.STRIKE_PLATE_HALF_LEN + top.STRIKE_LOBE_REACH - top.STRIKE_LOBE_R, 3)  # 12.75 (lobe centre)
-CATCH_SCREW_DY = round(top.STRIKE_POCKET_HALF_W - top.STRIKE_LOBE_R, 3)  # 1.575 toward the skirt (lobe centre)
 PILOT_D, PILOT_MAX, PILOT_SKIN = 1.70, 4.00, 0.80  # M2 self-tapping pilots in PETG: depth up to 4.0, 0.8 skin left
 FLOOR_ZP = 18.20         # Cavity floor: PCB 12.50-14.10 (1.6 mm), bottom USB-C body to ~17.36, ~0.8 mm gasket travel
 _BAY = spec.value("bottom.battery_bay")
@@ -241,17 +242,18 @@ def cap_recesses_p() -> list[Any]:
     return polys
 
 
-def catch_sites_p() -> list[dict[str, Any]]:
+def catch_sites_p(*, purchased: bool = False) -> list[dict[str, Any]]:
     """Each strike (plate frame) with its catch notch and screw pilots; `skirt` is +1 when the outer wall is at +Y."""
     sites = []
-    for name, sx, sy in top.strike_centers_p():
+    for name, sx, sy in top.strike_centers_p(purchased=purchased):
         skirt = 1.0 if sy > 50.0 else -1.0
         y_out = RIM_P[3] + 1.0 if skirt > 0 else RIM_P[1] - 1.0
         y_in = LEDGE_BACK_P - 1.0 if skirt > 0 else LEDGE_FRONT_P + 1.0
+        notch = [sx-16.1, sy-4.3, sx+16.1, sy+4.3] if purchased else [
+            sx - CATCH_NOTCH_HALF_L, min(y_out, y_in), sx + CATCH_NOTCH_HALF_L, max(y_out, y_in)]
         sites.append({"name": name, "strike_p": [sx, sy], "skirt": skirt,
-                      "notch_p": [sx - CATCH_NOTCH_HALF_L, min(y_out, y_in), sx + CATCH_NOTCH_HALF_L, max(y_out, y_in)],
-                      "screws_p": [[round(sx + dx, 3), round(sy + skirt * CATCH_SCREW_DY, 3)]
-                                   for dx in (-CATCH_SCREW_DX, CATCH_SCREW_DX)]})
+                      "notch_p": notch,
+                      "screws_p": [list(axis) for axis in top.catch_screw_axes_p(sx, sy, purchased=purchased)]})
     return sites
 
 
@@ -277,18 +279,27 @@ def cavity_floor_print_z(y_p: float) -> float:
     return SIN * y - COS * FLOOR_ZP + DESK_A * COS
 
 
-def deco_screws_print() -> list[dict[str, Any]]:
+def deco_screws_print(holes: list[list[float]] | None = None) -> list[dict[str, Any]]:
     """Weight-plate screw axes, normal to the desk face like the plate's tapped holes: print (X, Y'), the counterbore
     floor `DECO_SCREW_CLAMP` above the recess roof, and the cavity floor Z' on the axis."""
     sites = []
-    for x, y in DECO_SCREWS["holes"]:
+    for x, y in DECO_SCREWS["holes"] if holes is None else holes:
         px, py = deco_to_print(x, y)
         sites.append({"plate": [x, y], "print": [px, py], "cbore_floor_z": DECO_RECESS + DECO_SCREW_CLAMP,
                       "cavity_floor_z": cavity_floor_print_z(py)})
     return sites
 
 
-def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
+def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
+          purchased_catches: bool = False, insert_hole_d: float = 3.2,
+          weight_holes: list[list[float]] | None = None,
+          sculpted_catches: bool = False) -> tuple[md.Manifold, dict[str, Any]]:
+    purchased_catches = purchased_catches or sculpted_catches
+    catch_inserts = catch_inserts or purchased_catches
+    insert = dict(top.PURCHASED_INSERT if purchased_catches else top.CATCH_INSERT)
+    if sculpted_catches:
+        insert["depth"] = top.SCULPTED_CATCH["depth"]
+    catch_floor = top.SCULPTED_CATCH["catch_z"] if sculpted_catches else top.PURCHASED_CATCH_Z if purchased_catches else CATCH_FLOOR_ZP
     # ㄷ tray (rail outline, rail tops to the tray bottom) + the inset triangular base, both cut by the desk plane.
     rim = plate_box(*RIM_P, r=RIM_CORNER_R)
     tray = prism(rim, Z_RIM_TOP, desk_zp(Y_FRONT) + 1.0).trim_by_plane(*tray_bottom_plane())
@@ -298,16 +309,30 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     # Cavity between the rails, through both short ends (no end walls).
     cuts = [prism(plate_box(RIM_P[0] - 1.0, LEDGE_FRONT_P, RIM_P[2] + 1.0, LEDGE_BACK_P), Z_RIM_TOP - 1.0, FLOOR_ZP)]
     cuts += [prism(plate_to_world(p), Z_RIM_TOP - 1.0, CAP_SEAT_ZP) for p in cap_recesses_p()]
-    sites = catch_sites_p()
+    sites = catch_sites_p(purchased=purchased_catches)
     pilots = []
     for s in sites:
-        cuts.append(prism(plate_box(*s["notch_p"]), Z_RIM_TOP - 1.0, CATCH_FLOOR_ZP))
+        if sculpted_catches:
+            sx, sy = s["strike_p"]
+            hl, hw = top.SCULPTED_CATCH["length"] / 2, top.SCULPTED_CATCH["width"] / 2
+            s["notch_p"] = [sx-hl, sy-hw, sx+hl, sy+hw]
+        cuts.append(prism(plate_box(*s["notch_p"]), Z_RIM_TOP - 1.0, catch_floor))
         for xp, yp in s["screws_p"]:
             xw, yw = top.pw(xp, yp)
-            depth = round(min(PILOT_MAX, underside_zp(yw) - CATCH_FLOOR_ZP - PILOT_SKIN), 2)
+            if catch_inserts:
+                depth, diameter = insert["depth"], insert_hole_d if purchased_catches else insert["hole_d"]
+                # Local round bosses sit inside matching upper-skirt scallops. The rear pads also thicken the skin;
+                # trimming to the existing desk plane prevents the front pads from becoming unintended feet.
+                pad_bottom = catch_floor + depth + 1.3
+                pad = md.Manifold.cylinder(pad_bottom - catch_floor, insert["boss_d"] / 2,
+                                          circular_segments=96).translate([xw, yw, catch_floor])
+                body += pad.trim_by_plane([0.0, SIN, -COS], -DESK_A * COS)
+            else:
+                depth = round(min(PILOT_MAX, underside_zp(yw) - catch_floor - PILOT_SKIN), 2)
+                diameter = PILOT_D
             pilots.append({"world": [xw, yw], "depth": depth})
-            cuts.append(md.Manifold.cylinder(depth + 0.5, PILOT_D / 2, PILOT_D / 2, 24).translate(
-                [xw, yw, CATCH_FLOOR_ZP - 0.5]))
+            cuts.append(md.Manifold.cylinder(depth + 0.5, diameter / 2, diameter / 2, 96 if catch_inserts else 24).translate(
+                [xw, yw, catch_floor - 0.5]))
     usb_x, usb_w = top.usb_notch_print(board)
     usb_y0, usb_y1 = top.pw(0.0, LEDGE_BACK_P - 1.0)[1], top.pw(0.0, RIM_P[3] + 1.0)[1]
     slot = sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1)
@@ -343,14 +368,23 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
         if 0.0 < wall < SLOT_MIN_WALL:  # join them down to the recess floor, its rounded corner included
             (sx0, sy0, sx1, sy1), (rx0, ry0, rx1, ry1) = slot.bounds, recess.bounds
             xa, xb = (sx1 - 0.01, rx0 + top.CAP_POCKET_R) if rx0 >= sx1 else (rx1 - top.CAP_POCKET_R, sx0 + 0.01)
-            fin_cut = prism(sg.box(xa, max(sy0, ry0), xb, min(sy1, ry1)), Z_RIM_TOP - 1.0, CAP_SEAT_ZP)
+            fin_plan = sg.box(xa, max(sy0, ry0), xb, min(sy1, ry1))
+            # Keep this USB-side mouth open, but do not let its rectangular relief erase the skirt-side round.
+            # Round the closed end, not the flat bearing floor; the cavity-side open end remains square.
+            x_tip, inward = (xa, 1.0) if rx0 >= sx1 else (xb, -1.0)
+            y_tip = min(sy1, ry1)
+            cx, cy = x_tip + inward * CAP_MOUTH_R, y_tip - CAP_MOUTH_R
+            corner = sg.box(min(x_tip, cx), cy, max(x_tip, cx), y_tip)
+            fin_plan = fin_plan.difference(corner.difference(sg.Point(cx, cy).buffer(CAP_MOUTH_R, quad_segs=16)))
+            fin_cut = prism(fin_plan, Z_RIM_TOP - 1.0, CAP_SEAT_ZP)
             cuts.append(fin_cut)
             bridge -= fin_cut
             slot_fins.append(round(wall, 3))
     bay_y1 = LEDGE_BACK_P - BAY_BACK_GAP
     bay_cx = -top.DX_PW  # plate X of the case centre line (world X = 0)
     bay_p = (bay_cx - _BAY["length"] / 2, bay_y1 - _BAY["width"], bay_cx + _BAY["length"] / 2, bay_y1)
-    cuts.append(prism(plate_box(*bay_p, r=_BAY["corner_r"]), FLOOR_ZP - 1.0, FLOOR_ZP + _BAY["height"]))
+    if battery_bay:
+        cuts.append(prism(plate_box(*bay_p, r=_BAY["corner_r"]), FLOOR_ZP - 1.0, FLOOR_ZP + _BAY["height"]))
     # Underside features, square to the desk face (print frame), mapped back to the world frame.
     pocket_r = top.POCKET_D / 2
     for xw, yw in bumpon_centres_world():
@@ -359,7 +393,7 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
     cuts.append(from_print(prism(deco_poly_print().buffer(DECO_CLEAR, quad_segs=8), -1.0, DECO_RECESS)))
     # Weight-plate screws from inside: a through hole from the recess roof and a counterbore down from the cavity floor.
     hole_r, cbore_r = DECO_SCREW_HOLE_D / 2, DECO_SCREW_CBORE_D / 2
-    for s in deco_screws_print():
+    for s in deco_screws_print(weight_holes):
         (px, py), z0 = s["print"], s["cbore_floor_z"]
         cuts.append(from_print(md.Manifold.cylinder(DECO_SCREW_CLAMP + 2.0, hole_r, hole_r, 32).translate(
             [px, py, DECO_RECESS - 1.0])))
@@ -370,15 +404,19 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
 
     report = {
         "board": board,
+        "battery_bay": battery_bay,
         "frames": {"world": "top-case print frame (topcase-draft): X_w = -(X_plate + DX_PW), Y_w = Y_plate + DY_PW, Z_p",
                    "to_print_3x4": TO_PRINT.round(9).tolist()},
-        "z_p": {"rim_top": Z_RIM_TOP, "cap_seat": CAP_SEAT_ZP, "catch_top": CATCH_TOP_ZP, "catch_floor": CATCH_FLOOR_ZP,
-                "cavity_floor": FLOOR_ZP, "bay_floor": round(FLOOR_ZP + _BAY["height"], 2), "lip": top.SKIRT_H,
+        "z_p": {"rim_top": Z_RIM_TOP, "cap_seat": CAP_SEAT_ZP,
+                "catch_top": catch_floor - 9.0 if purchased_catches else CATCH_TOP_ZP, "catch_floor": catch_floor,
+                "cavity_floor": FLOOR_ZP, "bay_floor": round(FLOOR_ZP + _BAY["height"], 2) if battery_bay else None,
+                "lip": top.SKIRT_H,
                 "desk_at_y0": round(DESK_A, 6), "desk_tan": round(TAN, 9)},
         "plate_frame": {"rim": RIM_P, "rim_corner_r": RIM_CORNER_R, "ledge_front_y": LEDGE_FRONT_P,
                         "ledge_back_y": LEDGE_BACK_P, "open_ends": "no short walls: the cavity runs through both ends",
-                        "battery_bay": [round(v, 3) for v in bay_p], "cap_recesses": [[round(v, 3) for v in p.bounds]
-                                                                                      for p in cap_recesses_p()]},
+                        "battery_bay": [round(v, 3) for v in bay_p] if battery_bay else None,
+                        "cap_mouth_radius": CAP_MOUTH_R,
+                        "cap_recesses": [[round(v, 3) for v in p.bounds] for p in cap_recesses_p()]},
         "catches": [{**s, "pilots": pilots[2 * k:2 * k + 2]} for k, s in enumerate(sites)],
         "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, usb_z1],
                            "open_bottom_y": [usb_open_y, usb_y1], "inner_ledge_z_p": USB_LEDGE_ZP,
@@ -399,7 +437,8 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
                         "cbore_d": DECO_SCREW_CBORE_D, "clamp": DECO_SCREW_CLAMP,
                         "sites": [{"plate": s["plate"], "print": [round(v, 3) for v in s["print"]],
                                    "world_x": round(s["print"][0], 3), "cbore_floor_print_z": s["cbore_floor_z"],
-                                   "cavity_floor_print_z": round(s["cavity_floor_z"], 3)} for s in deco_screws_print()]},
+                                   "cavity_floor_print_z": round(s["cavity_floor_z"], 3)} for s in deco_screws_print(weight_holes)],
+                        "positions_status": "user override; measure purchased A plate" if weight_holes is not None else "photo estimate; unverified on purchased A plate"},
         "rim_clear": RIM_CLEAR,
         "split": {"shape": "ㄴㄱ", "back_catch": SEAM_BACK_CATCH, "back_x_world": SEAM_BACK_X,
                   "front_catch": SEAM_FRONT_CATCH, "front_x_world": SEAM_FRONT_X, "cross_y_world": SEAM_CROSS_Y,
@@ -411,6 +450,10 @@ def build(board: str) -> tuple[md.Manifold, dict[str, Any]]:
                           "desk_face_back_inset": BACK_BEVEL_INSET,
                           "base_outline_world": [round(v, 3) for v in base_outline().bounds]},
     }
+    if catch_inserts:
+        report["experimental_catch_inserts"] = {**insert, "hole_d": diameter, "rear_pad_bottom_z_p": pad_bottom,
+                                                 "purchased_32mm": purchased_catches,
+                                                 "hardware_dimensions_unconfirmed": True}
     return body, report
 
 
@@ -465,8 +508,10 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--board", choices=spec.board_ids(), default=spec.default_board(),
                     help="PCB whose USB-C position sets the slot (spec/boards.json); default: %(default)s")
+    ap.add_argument("--battery-bay", action=argparse.BooleanOptionalAction, default=True,
+                    help="cut the stock battery bay; use --no-battery-bay for a wired case (default: enabled)")
     args = ap.parse_args()
-    body, report = build(args.board)
+    body, report = build(args.board, battery_bay=args.battery_bay)
     left, right = split(body)
     coupon = body ^ md.Manifold.cube([120.0, 21.0, 60.0]).translate([30.0, Y_FRONT - 1.0, -5.0])
     jx0, jy0, jx1, jy1 = JOINT_TEST_BOX

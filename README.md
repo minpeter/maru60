@@ -339,11 +339,59 @@ corners, keycap-opening fillets, screw pilots) and gives the same check values.
 No CAD (STEP) file is published.
 
 ```sh
-uv run build_topcase_draft.py [--board BOARD]
+uv run build_topcase_draft.py [--board BOARD] [--strike-inserts | --no-strike-inserts]
 uv run verify_topcase.py
 blender -b -P render_topcase_draft.py   # optional renders
 uv run export_topcase.py
 ```
+
+#### Optional upper strike inserts (CANOT OD3.5 × L3 trial)
+
+Choose `--no-strike-inserts` (the default) for the original Ø1.8 mm screw
+pilots, or `--strike-inserts` for the latest original-contour upper with eight
+Ø3.2 mm **trial** insert bores. Both keep the original mushroom pockets,
+rounded rails, alignment key, 13 mm hole pitch, 5.55 mm seats, 3.55 mm blind
+depth and 2.00 mm skin. No extra scallops, pads or purchased-catch layout are
+enabled. This option changes **only the upper**, not the lower catch mounts.
+
+```sh
+# Original screw pilots
+uv run build_topcase_draft.py --no-strike-inserts
+uv run verify_topcase.py
+uv run export_topcase.py
+
+# Same design, CANOT insert trial holes
+uv run build_topcase_draft.py --strike-inserts
+uv run verify_topcase.py
+uv run export_topcase.py
+```
+
+The insert files and evidence use a separate `-canot-inserts` suffix, e.g.
+`models/maru60-hhkb-topcase-left-canot-inserts.3mf`; they do not replace the
+original downloads. A non-default board adds `-usb-<board>` after that suffix
+and exports both insert-equipped halves. Rebuild and verify after switching
+options: `topcase-draft/` contains only the most recently generated variant.
+The report and verification record the option, and export rejects a mismatched
+board/insert verification. The independent lower `--battery-bay` /
+`--no-battery-bay` choices remain unchanged.
+
+Install seven inserts flush; **U-BL.2 must sit 0.35 mm below its seat** to keep
+the original key without reshaping it. This is an installation depth, not a
+new counterbore. The nominal 3 mm metal band has at least 1.3 mm of own-half
+surround in the CAD check (a conservative study criterion, not a CANOT spec);
+the entry neck is thinner. U-BL.2 leaves only 0.20 mm between the insert end
+and blind floor. The tool needs a tip no wider than Ø3.0 mm, at least 0.40 mm
+of narrow-tip reach, and controlled insertion depth.
+
+**Not a physical fit/strength guarantee:** CANOT's recommended hole and actual
+tool/insert tolerances are unconfirmed. Test Ø3.0/3.1/3.2 mm blind-hole coupons
+in the intended print material before choosing production dimensions. The
+larger bores reduce strike bearing area by about 8.48 mm² per mount. Original
+13 mm strike spacing is **not compatible with the purchased 11 mm strike**;
+this flag does not claim purchased 32 mm catch assembly compatibility. Run
+`uv run python -m unittest discover -s tests` for the option's geometry
+regression check, and the regular verifier for exported meshes, printability,
+assembly and nominal insert/tool envelopes.
 
 Outputs go to the ignored `topcase-draft/`; `export_topcase.py` copies the
 downloads, [report](evidence/topcase-report.json),
@@ -412,7 +460,7 @@ from the parts it mates with; the photos set the layout.
 | Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange: the Keebox cap's 1.9 mm flanges each squeeze 0.70 mm. A stock case reads about 4 mm between the seats (one owner, not ours); 4.00 here would leave the USB-C body 0.79 mm above the floor, short of the 0.8 mm plate travel |
 | Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](evidence/topcase/analysis/ball-catch-analysis.json)); pilots on the top-case strike-pocket lobe centres |
 | Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
-| 140 × 45 mm R2 battery bay, 4.69 mm deep, back centre | Length, width, radius: INKC post (which gives 4.5 deep); depth: owner's caliper on the stock bay; position from the owner's photos. The 4.5 mm filler rests on the bay floor, 0.19 mm under the cavity floor |
+| Optional 140 × 45 mm R2 battery bay, 4.69 mm deep, back centre (`--battery-bay`, enabled by default) | Length, width, radius: INKC post (which gives 4.5 deep); depth: owner's caliper on the stock bay; position from the owner's photos. The 4.5 mm filler rests on the bay floor, 0.19 mm under the cavity floor. `--no-battery-bay` omits only this pocket cut, restoring the normal Zp 18.20 cavity floor for a wired build; no filler is used |
 | Steel weight plate recess, 2.3 mm deep (the 3 mm plate stands 0.7 mm proud, 1.3 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. The plate's centre bump lies over the front of the bay: 2.3 mm leaves 1.03 mm of floor between them, 2.5 mm would leave 0.83 and a flush 3.0 mm recess 0.33 |
 | Four weight-plate screws from inside, as on the stock case: Ø3.0 holes through the recess roof, Ø5.4 counterbores from the cavity floor leaving 2.5 mm of floor under each head. Two per plate end, 8.8 / 38.9 mm in from the end and 4.8 / 24.7 mm from the straight back edge; two in each half | The stock plate's blind tapped holes, read off the owner's inside photo (IMG_0474) on the plate outline, ±0.5 mm; the holes float 0.5 mm per side. M2 × 4 goes 1.5 mm into the plate and stops 1.5 mm short of its outer face; the head sits 2.3–4.4 mm below the cavity floor |
 | USB-C slot | Same centre and 14.75 mm straight width as the top-case notch (`--board`). The lower roof is **flush with the surrounding rim** at Zp 9.69–11.90 (2.21 thick); its upper arch corners are R1.5. Both cases have matching **R0.5 free lip ends** and the passage stays open underneath, requiring print support. The inner floor has a **shallow bounded 20 × 13 mm R2 pocket, depth 0.50**, followed by a 1.0 mm raised end before the separate outer recess. The outer floor remains at Zp 21.08 with at least 0.8 mm skin; its **2.88 mm step is retained, not proven structurally necessary**. Zp increases downward. These are trial design values, not stock-part measurements. The 0.14 mm fin beside the back-left cap recess is removed down to its floor |
@@ -431,6 +479,10 @@ flush with the rim top, the balls would sit below the tongue tip.
 | [Left half — 3MF](models/maru60-hhkb-bottomcase-left.3mf) | Keyboard left, USB-C slot for the PH60 Rev.3 (default board), back-left catch. 206 × 112 mm, 3 h 37 min / 71 g |
 | [Left half, 6095 tri-mode USB — 3MF](models/maru60-hhkb-bottomcase-left-usb-6095-trimode.3mf) | Same, with the slot for the 6095 tri-mode kit PCB ([verification](evidence/bottomcase-verification-usb-6095-trimode.json)) |
 | [Right half — 3MF](models/maru60-hhkb-bottomcase-right.3mf) | Keyboard right, front-right catch. 205 × 112 mm, 2 h 52 min / 56 g |
+| [Left half, no battery bay — 3MF](models/maru60-hhkb-bottomcase-left-no-battery-bay.3mf) | Wired variant; normal floor instead of the battery pocket |
+| [Right half, no battery bay — 3MF](models/maru60-hhkb-bottomcase-right-no-battery-bay.3mf) | Wired variant; underside weight-plate recess and screws retained |
+| [Fit coupon, no battery bay — 3MF](models/maru60-hhkb-bottomcase-fit-coupon-no-battery-bay.3mf) | Same front-left coupon (outside the battery region) |
+| [Joint test, no battery bay — 3MF](models/maru60-hhkb-bottomcase-joint-test-no-battery-bay.3mf) | Same middle floor joint test (outside the battery region) |
 
 Print desk face down, **with support under the USB bridge** on the left half.
 The 3MF is geometry only: enable support in the slicer and check removal access
@@ -448,14 +500,60 @@ Fit on the coupon, in order: the rim slides into the top-case pocket and the
 top case sits flat on the rim; the catch clicks onto its strike and holds;
 the gasket plate with its caps closes without rattling or springing open.
 
+The lower gasket recess's **USB-side entry has an R0.5 mm closed-end transition**;
+the cavity-side open end beside B-L.1 remains square. The flat cap-bearing
+seats remain at Zp 10.20 mm (0.51 mm below the rim); their height and horizontal
+contact faces are not beveled. The other pocket corners are unchanged, and the
+entry stays open without the thin fin. Verification checks each of the 12 caps
+for seated clearance and bearing, as well as the rounded closed-end contour.
+
 ```sh
-uv run build_bottomcase_draft.py [--board BOARD]
+uv run build_bottomcase_draft.py [--board BOARD] [--battery-bay | --no-battery-bay]
 uv run verify_bottomcase.py   # needs topcase-draft/ from build_topcase_draft.py
 uv run export_bottomcase.py
 ```
 
 A build for another `--board` exports only its left half,
-`models/maru60-hhkb-bottomcase-left-usb-<board>.3mf`, with its verification.
+`models/maru60-hhkb-bottomcase-left[-no-battery-bay]-usb-<board>.3mf`, with its verification.
+
+The default keeps the existing battery bay. For the wired variant, run
+`uv run build_bottomcase_draft.py --no-battery-bay`, then the same verification
+and export commands. Return to the stock-bay variant with `--battery-bay`.
+Like `--board`, this option replaces the working files in `bottomcase-draft/`;
+verify after each build. The report records the option, and the verifier checks
+the exported pocket is empty or that the floor is fully restored, respectively.
+The exporter reads that verified option: wired downloads and evidence get a
+`-no-battery-bay` suffix, leaving existing bay-enabled downloads intact.
+Both variants retain the USB geometry, rails, gasket/catch seats, seam, screw
+holes, bumpon pockets, outer surfaces and underside weight-plate recess.
+The wired variant uses no battery-bay filler. It adds material, not a separate
+plug or a cover; print time, mass and physical stiffness need fresh assessment.
+See [wired verification](evidence/bottomcase-verification-no-battery-bay.json)
+and [wired build report](evidence/bottomcase-report-no-battery-bay.json).
+
+### Local M2 insert-mount study (not released)
+
+`tools/study_catch_inserts.py --output PATH` generates a separate baseline and
+TC-M2x3.0 trial, including both battery options, world-frame STLs, print 3MFs
+and a nominal-envelope verification report. Normal generator commands and
+published downloads still use the original self-tapping pilots.
+
+The trial follows [CNC Kitchen's insert drawing](https://cnckitchen.store/products/heat-set-insert-m2-x-3-100-pieces):
+Ø3.2 × 4.0 mm blind holes for the Ø3.6 × 3.0 mm insert, with at least 1.3 mm
+of lateral wall measured from the pilot hole. Lower Ø6.2 mm bosses nest in
+internal upper-skirt scallops with 0.20 mm radial clearance; underside pads
+add blind-floor skin without moving latch axes or seats. The upper back-seam
+wedge and matching notch shorten by 0.20 mm to preserve insert-hole wall;
+their seat and vertical glue gap are unchanged. Gasket and USB shapes remain
+unchanged. This is an opt-in Python build path (`catch_inserts=True`), not a
+new production CLI setting or an approved print release.
+
+The stock hardware remains photo-derived, the final PCB is not modeled, and
+the lower ear thickness is unknown. The illustrated M2 × 4 countersunk screws
+assume a 1.45 mm clamp thickness and are **not a confirmed lower-catch screw
+selection**. PETG heat-setting, screw-head seating, printing tolerances and
+retention strength need a physical coupon/assembly test; CAD clearance does
+not certify any of them. The study does not modify `models/` or `evidence/`.
 
 The [verification](evidence/bottomcase-verification.json) checks the halves
 against the printed top case and virtual stock parts: free nesting at ±0.10 mm
@@ -491,6 +589,84 @@ Not measured, so the coupon decides: cap-seat level (sets gasket preload),
 catch notch depth and the catch screw pitch (photos read 25.5–26.8 mm). The
 weight-plate screw positions are photo-read, not measured; the 0.5 mm float in
 each hole covers that.
+
+### Purchased 32 mm catches / CANOT inserts — separate local trial
+
+The published downloads and normal generators above still use the original
+photo-derived catches. For the purchased LUBAN 32 mm catches (body pitch
+25 mm, strike pitch 11 mm, 2 mm mounting ears, 11 mm engaged overall height)
+and CANOT M2 OD3.5 × L3 inserts, generate a **separate trial**, not a release:
+
+```sh
+uv run tools/build_purchased_catches.py --output .amp/in/purchased-catches
+```
+
+This builds and checks **both battery options**, upper/lower halves, world
+STLs, printable 3MFs, a three-hole insert coupon, and `verification.json`.
+Comparison files named `before-*` use the earlier TC OD3.6 insert study;
+`purchased-*` use the bought-parts layout. Neither overwrites `models/` or
+the normal case output directories. These derived case tools use the case's
+CC BY-NC 4.0 license.
+
+The paired mounting planes are Zp 4.70 / 15.70, not just a lowered bottom
+seat. Catches move toward the outer skirts to clear the plate; the upper
+pockets and split-seam key, lower pads and nested-skirt reliefs change with
+them. Existing gasket radii/seats, USB geometry and battery options are kept.
+Nominal insert bores are Ø3.2 × 3.7 deep, with a 0.7 mm well below L3; this
+is **not a CANOT recommendation**. `--insert-hole-d 3.0`, `3.1`, or `3.2`
+selects a trial diameter. Print the coupon in the actual case material and
+check insertion, retention and distortion before printing full cases. The
+coupon holes are Ø3.0 / 3.1 / 3.2 left-to-right, looking into the holes with
+the notched corner at bottom-left; their centres are X8 / 24 / 40 in its world STL.
+
+CAD checks cover all 16 bores, continuous surrounding material and blind
+floors, Ø4 tool access with the cases apart, case/split insertion, seam
+bridging, PCB/plate/USB gauges and all 12 gasket caps. They do **not** qualify
+thermal installation, pull-out strength, actual ball engagement, final PCB
+components, or print supports. The seller's Ø3.2 metal holes are not proof
+of countersinks: M2×4 engagement of 2 mm assumes a flush head through a
+2 mm ear; purchased screw material and head seating still need checking.
+
+Weight A retains the DWG 239.6 × 35.6 × 3 mm outline and existing recess.
+Its four tap positions remain photo-derived. After measurement, pass
+`--weight-holes measured-weight-holes.json` containing four `[x,y]` pairs
+in the DWG plate frame to regenerate and recheck, without editing the
+outline. Existing flat counterbores need suitable pan/cap screws; bought
+countersunk screws are not automatically interchangeable. Before release,
+measure engaged catch height/head seating and A's tapped face, hole centres
+and usable blind depth, then choose the coupon-proven insert hole and screw
+lengths. Do not treat this trial as a hardware-qualified assembly.
+
+#### Photo-refined sculpted alternative (C-derived, still experimental)
+
+```sh
+uv run tools/build_purchased_catches.py --mount-design sculpted --output .amp/in/sculpted-catches
+```
+
+The default `--mount-design boxed` reproduces the earlier bought-parts trial;
+neither alternative replaces the normal generator or its published downloads.
+The sculpted alternative retains the original upper Zp5.55 strike seat and
+mushroom-shaped shallow pocket, provisionally widens it to 8.6 mm, and puts
+the lower seat at Zp16.55. The 11 mm plane spacing is still a seller-drawing
+assumption, **not a measurement established by the new photos**. The
+photographed body reads 32.12 mm overall, 20.57 across the raised barrels,
+and 7.88 across its width; this does not identify it as the purchased SKU.
+The photographed empty recess reads 33.06 mm along its length. Use that as
+a provisional clearance length, not a screw pitch. The ambiguous 7.57/7.20
+rail measurements and 73.79 offset do not establish recess depth or axes.
+
+Body clearance starts only at Zp7.40, preserving the shallow sculpted seat,
+and continues to the open skirt lip: stopping at the installed body's floor
+trapped the conservative hardware envelope during disassembly. It still
+uses a full 31.6 × 8 × 9 mm body gauge, not an invented metal reconstruction.
+The back split key and its matching notch are locally shortened together
+(start Zp3.35 instead of 2.20 in the TC comparison, same Y axis/45-degree
+bearing) to retain continuous material around U-BL.2's new 11 mm-pitch bore.
+The insert well is provisionally 3.2 mm deep, leaving only 0.2 below L3;
+this **requires thermal-installation coupons** and is not a CANOT spec.
+All 16 bore surrounds/floors, split/assembled insertion, installed hardware
+opening, PCB/USB/plate gauges and 12 gasket caps are checked anew for both
+battery options. These checks are nominal CAD only, not physical qualification.
 
 ## HHKB gasket plate (INKC drawing)
 

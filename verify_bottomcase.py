@@ -86,13 +86,39 @@ def main() -> None:
     flange = spec.value("gasket.top_flange_compressed")
     z_flange = top.Z_PLATE + plate_t
     caps = md.Manifold()
-    for ring in caps_plan:
-        caps += md.CrossSection([np.asarray(ring.exterior.coords[:-1], dtype=np.float64)]).extrude(flange - 0.01).translate(
+    cap_checks = []
+    for i, ring in enumerate(caps_plan, 1):
+        cap = md.CrossSection([np.asarray(ring.exterior.coords[:-1], dtype=np.float64)]).extrude(flange - 0.01).translate(
             [0.0, 0.0, z_flange])
+        seated_cap = vol(cap ^ bottom)
+        cap_bearing = vol(cap.translate([0.0, 0.0, 0.10]) ^ bottom)
+        assert seated_cap < 0.01, (i, seated_cap)
+        assert cap_bearing > ring.area * 0.09 * 0.95, (i, cap_bearing)
+        cap_checks.append({"cap": i, "seated_mm3": seated_cap, "bearing_0p10_mm3": cap_bearing,
+                           "expected_full_bearing_mm3": round(ring.area * 0.09, 4)})
+        caps += cap
     caps_seated = vol(caps ^ bottom)
     caps_bear = vol(caps.translate([0.0, 0.0, 0.10]) ^ bottom)
     assert caps_seated < 0.01, f"Cap flanges collide with the recess walls: {caps_seated} mm^3"
     assert caps_bear > sum(c.area for c in caps_plan) * 0.09 * 0.95, f"Cap flanges do not all bear on the recess floors: {caps_bear}"
+
+    # Probe the USB-side entry shown in the B-L render, not the separate cavity-side ends of all six pockets.
+    usb = REPORT["usb_slot_world"]
+    slot_plan = sg.box(usb["x"] - usb["width"] / 2, usb["y"][0], usb["x"] + usb["width"] / 2, usb["y"][1])
+    mouth_material = []
+    for recess in (bc.plate_to_world(p) for p in bc.cap_recesses_p()):
+        if 0.0 < slot_plan.distance(recess) < 0.8:
+            rx0, _, _, ry1 = recess.bounds
+            x_tip, inward = (slot_plan.bounds[2] - 0.01, 1) if rx0 >= slot_plan.bounds[2] else (slot_plan.bounds[0] + 0.01, -1)
+            y_tip = min(slot_plan.bounds[3], ry1)
+            samples = []
+            for d in (0.05, 0.20):
+                x, y = x_tip + inward * d, y_tip - d
+                probe = box(x - 0.03, y - 0.03, x + 0.03, y + 0.03, 9.75, 10.15)
+                samples.append(vol(probe ^ bottom))
+            # A square pocket fails the first witness; a straight R0.5-sized chamfer fails the second.
+            assert samples[0] > 0.0013 and samples[1] == 0.0, f"USB-side cap entry is not rounded: {samples}"
+            mouth_material.append(samples)
 
     # 4. Ball catches: strike plates and tongues clear; each catch body (31.8 x 6.7 x 7.7: barrels over +-10.6 rising to
     #    the catch top, ears with the screws held below the rim top) sits on its notch floor, clear of both cases and of
@@ -156,15 +182,32 @@ def main() -> None:
     plug_reported = {k: max(v.values()) < 0.01 for k, v in plugs.items()}
     floor_gap = round(Z["cavity_floor"] - (z_pcb + 1.6 + 3.26), 2)
 
-    # 6. Battery-bay filler (INKC drawing, 4.5 mm) drops onto the floor of the 4.69 mm bay, its top below the cavity
-    #    floor; the decoration plate (3 mm) sits in its underside recess within the desk face; >= 1.0 mm of material
-    #    between that recess and the bay (outside the four screw holes), and over each bumpon pocket.
-    fil = spec.outline("battery_bay_filler")
-    bay = REPORT["plate_frame"]["battery_bay"]
-    fx0, fy0 = (bay[0] + bay[2]) / 2 - fil["bbox"][2] / 2, (bay[1] + bay[3]) / 2 - fil["bbox"][3] / 2
-    filler_p = sg.Polygon([(x + fx0, y + fy0) for x, y in spec.outline_points("battery_bay_filler")])
-    filler = bc.prism(bc.plate_to_world(filler_p), Z["bay_floor"] - fil["thickness"], Z["bay_floor"] - 0.01)
-    assert Z["bay_floor"] - fil["thickness"] >= Z["cavity_floor"], "filler stands above the cavity floor"
+    # 6. The optional stock bay is empty when enabled, or restored to the normal cavity floor when disabled.
+    #    Probe the exported solid, not just the option/report. Keep the underside decoration recess and bumpons.
+    battery_bay = REPORT["battery_bay"]
+    bay_size = spec.value("bottom.battery_bay")
+    bay_y1 = top.pw(0.0, REPORT["plate_frame"]["ledge_back_y"] - 4.0)[1]
+    bay_plan = sg.box(-bay_size["length"] / 2, bay_y1 - bay_size["width"], bay_size["length"] / 2, bay_y1)
+    bay_plan = bay_plan.buffer(-bay_size["corner_r"]).buffer(bay_size["corner_r"], quad_segs=16)
+    bay_probe = bc.prism(bay_plan.buffer(-0.02), Z["cavity_floor"] + 0.02,
+                         Z["cavity_floor"] + bay_size["height"] - 0.02)
+    bay_blockage = vol(bay_probe ^ bottom)
+    bay_floor_missing = vol(bay_probe - bottom)
+    if battery_bay:
+        assert bay_blockage < 0.01, f"Battery bay is blocked: {bay_blockage} mm^3"
+    else:
+        assert bay_floor_missing < 0.01, f"Wired case floor is not restored: {bay_floor_missing} mm^3"
+        assert REPORT["plate_frame"]["battery_bay"] is None and Z["bay_floor"] is None, REPORT
+    filler_overlap = None
+    if battery_bay:
+        fil = spec.outline("battery_bay_filler")
+        bay = REPORT["plate_frame"]["battery_bay"]
+        fx0, fy0 = (bay[0] + bay[2]) / 2 - fil["bbox"][2] / 2, (bay[1] + bay[3]) / 2 - fil["bbox"][3] / 2
+        filler_p = sg.Polygon([(x + fx0, y + fy0) for x, y in spec.outline_points("battery_bay_filler")])
+        filler = bc.prism(bc.plate_to_world(filler_p), Z["bay_floor"] - fil["thickness"], Z["bay_floor"] - 0.01)
+        assert Z["bay_floor"] - fil["thickness"] >= Z["cavity_floor"], "filler stands above the cavity floor"
+        filler_overlap = vol(filler ^ bottom)
+        assert filler_overlap < 0.01, f"Battery-bay filler collides: {filler_overlap} mm^3"
     deco_poly = bc.deco_poly_print()
     deco_t, deco_d = bc.DECO["thickness"], bc.DECO_RECESS  # the plate stands deco_t - deco_d proud of the desk face
     deco = bc.from_print(bc.prism(deco_poly, deco_d - deco_t, deco_d - 0.01))
@@ -186,7 +229,7 @@ def main() -> None:
                                 [0.0, 0.0, -0.05])).translate([x, bc.print_y(y), 0.05]))
              for x, y in bc.bumpon_centres_world()]
     fits = {
-        "filler_overlap_mm3": vol(filler ^ bottom),
+        "filler_overlap_mm3": filler_overlap,
         "deco_plate_overlap_mm3": vol(deco ^ bottom),
         "deco_roof_1mm_void_mm3": vol(deco_cover - bottom - screw_holes),
         "bumpon_overlap_mm3": [vol(b ^ bottom) for b in bumpons],
@@ -194,7 +237,7 @@ def main() -> None:
         "bumpon_wall_1mm_void_mm3": [vol(w - bottom) for w in walls],
         "bumpon_protrusion_mm": round(top.BUMPON_H - top.POCKET_DEPTH, 2),
     }
-    assert fits["filler_overlap_mm3"] < 0.01 and fits["deco_plate_overlap_mm3"] < 0.01, fits
+    assert fits["deco_plate_overlap_mm3"] < 0.01, fits
     assert fits["deco_roof_1mm_void_mm3"] < 0.05, fits
     assert max(fits["bumpon_overlap_mm3"]) < 0.01 and max(fits["bumpon_roof_1mm_void_mm3"]) < 0.05, fits
     assert max(fits["bumpon_wall_1mm_void_mm3"]) < 0.05, fits
@@ -364,7 +407,7 @@ def main() -> None:
                       ledge_z + 0.02, ledge_z + 0.82)
     ledge_missing = vol(ledge_probe - bottom)
     assert ledge_missing < 0.0001, ("USB inner ledge", ledge_missing)
-    # 8a. The slot leaves no fin: between it and each cap recess the rail top keeps `SLOT_MIN_WALL` or is cut away.
+    # 8a. The slot leaves no fin: apart from the R0.5 closed-end blend, keep SLOT_MIN_WALL or cut the web away.
     slot_plan = sg.box(gaps[0][0], sy0, gaps[0][1], sy1)
     rim = slice_material(bottom, Z["rim_top"] + 0.25)
     walls = []
@@ -374,7 +417,8 @@ def main() -> None:
         elif slot_plan.distance(r) < 3.0:
             (_, ry0, _, ry1), (rx0, rx1) = r.bounds, (r.bounds[0], r.bounds[2])
             x0, x1 = (gaps[0][1], rx0) if rx0 >= gaps[0][1] else (rx1, gaps[0][0])
-            between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1)))
+            # The last 0.5 mm is the attached corner blend checked above, not a free-standing thin fin.
+            between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1) - 0.50))
             walls.append(round(between.bounds[2] - between.bounds[0], 3) if between.area > 1e-4 else 0.0)
     slot_check = {"cap_recess_walls_mm": walls, "open_bottom_material_mm3": slot_bottom_material,
                   "arch_corner_missing_mm3": arch_missing, "arch_corner_blockage_mm3": arch_blockage,
@@ -452,11 +496,14 @@ def main() -> None:
     verification = {
         "status": "ALL_PASSED",
         "board": REPORT["board"],
+        "battery_bay": battery_bay,
+        "battery_bay_geometry": {"probe_blockage_mm3": bay_blockage, "restored_floor_missing_mm3": bay_floor_missing},
         "top_case_pocket": {"seated_overlap_mm3": seated, "lateral_shift_overlap_mm3": lateral,
                             "rim_top_bearing_on_9p69_floor_mm2": bearing_mm2, "skirt_lip_contact_mm3": lip_contact,
                             "material_outside_rail_outline_mm2": outside_rails},
         "gasket": {"plate_free_mm3": plate_free, "cap_flanges_seated_mm3": caps_seated,
-                   "cap_flanges_bearing_0p10_mm3": caps_bear, "cap_seat_z_p": Z["cap_seat"]},
+                   "cap_flanges_bearing_0p10_mm3": caps_bear, "cap_seat_z_p": Z["cap_seat"],
+                   "individual_caps": cap_checks, "mouth_corner_material_mm3": mouth_material},
         "ball_catches": catch_gauge,
         "pcb": {"gh60_pcb_and_usb_free_mm3": pcb_free, "usb_body_to_floor_mm": floor_gap, "usb_plug_free_mm3": plug_free,
                 "usb_plug_side_clearance_mm": round((notch["width"] - 12.35) / 2, 3), "other_plugs_free": plug_reported},

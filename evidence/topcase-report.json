@@ -1,6 +1,8 @@
 {
   "version": "v7.12-ph60-rev3-default",
   "generator": "manifold3d mesh CSG (build_topcase_draft.py) + 28px/mm gasket metrology",
+  "strike_inserts": false,
+  "strike_insert_trial": null,
   "strike_pocket_spec_mm": {
     "pocket_width": 7.25,
     "strike_plate_length": 20.5,
@@ -4083,6 +4085,7 @@
         ]
       ]
     },
+    "strike_pilot_diameter": 1.8,
     "strike_pilot_depth": 3.55,
     "dovetails": [
       {

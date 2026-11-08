@@ -1,0 +1,510 @@
+{
+  "board": "ph60-rev3",
+  "battery_bay": false,
+  "frames": {
+    "world": "top-case print frame (topcase-draft): X_w = -(X_plate + DX_PW), Y_w = Y_plate + DY_PW, Z_p",
+    "to_print_3x4": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.994521895,
+        -0.104528463,
+        0.0
+      ],
+      [
+        0.0,
+        0.104528463,
+        -0.994521895,
+        11.647722939
+      ]
+    ]
+  },
+  "z_p": {
+    "rim_top": 9.69,
+    "cap_seat": 10.2,
+    "catch_top": 7.6,
+    "catch_floor": 15.3,
+    "cavity_floor": 18.2,
+    "bay_floor": null,
+    "lip": 20.01,
+    "desk_at_y0": 11.711882,
+    "desk_tan": 0.105104235
+  },
+  "plate_frame": {
+    "rim": [
+      -3.1,
+      -1.87,
+      289.0,
+      109.55
+    ],
+    "rim_corner_r": 2.7,
+    "ledge_front_y": 5.07,
+    "ledge_back_y": 102.416,
+    "open_ends": "no short walls: the cavity runs through both ends",
+    "battery_bay": null,
+    "cap_mouth_radius": 0.5,
+    "cap_recesses": [
+      [
+        15.97,
+        -0.1,
+        60.07,
+        6.07
+      ],
+      [
+        120.96,
+        -0.1,
+        165.06,
+        6.07
+      ],
+      [
+        225.95,
+        -0.1,
+        270.05,
+        6.07
+      ],
+      [
+        25.97,
+        101.416,
+        70.07,
+        107.65
+      ],
+      [
+        120.96,
+        101.416,
+        165.06,
+        107.65
+      ],
+      [
+        225.95,
+        101.416,
+        270.05,
+        107.65
+      ]
+    ]
+  },
+  "catches": [
+    {
+      "name": "BL",
+      "strike_p": [
+        89.85,
+        105.55
+      ],
+      "skirt": 1.0,
+      "notch_p": [
+        73.64999999999999,
+        101.416,
+        106.05,
+        110.55
+      ],
+      "screws_p": [
+        [
+          77.1,
+          107.125
+        ],
+        [
+          102.6,
+          107.125
+        ]
+      ],
+      "pilots": [
+        {
+          "world": [
+            65.85,
+            191.945
+          ],
+          "depth": 3.92
+        },
+        {
+          "world": [
+            40.35,
+            191.945
+          ],
+          "depth": 3.92
+        }
+      ]
+    },
+    {
+      "name": "BR",
+      "strike_p": [
+        196.7,
+        105.4
+      ],
+      "skirt": 1.0,
+      "notch_p": [
+        180.5,
+        101.416,
+        212.89999999999998,
+        110.55
+      ],
+      "screws_p": [
+        [
+          183.95,
+          106.975
+        ],
+        [
+          209.45,
+          106.975
+        ]
+      ],
+      "pilots": [
+        {
+          "world": [
+            -41.0,
+            191.795
+          ],
+          "depth": 3.92
+        },
+        {
+          "world": [
+            -66.5,
+            191.795
+          ],
+          "depth": 3.92
+        }
+      ]
+    },
+    {
+      "name": "FL",
+      "strike_p": [
+        90.22,
+        2.24
+      ],
+      "skirt": -1.0,
+      "notch_p": [
+        74.02,
+        -2.87,
+        106.42,
+        6.07
+      ],
+      "screws_p": [
+        [
+          77.47,
+          0.665
+        ],
+        [
+          102.97,
+          0.665
+        ]
+      ],
+      "pilots": [
+        {
+          "world": [
+            65.48,
+            85.485
+          ],
+          "depth": 4.0
+        },
+        {
+          "world": [
+            39.98,
+            85.485
+          ],
+          "depth": 4.0
+        }
+      ]
+    },
+    {
+      "name": "FR",
+      "strike_p": [
+        196.28,
+        2.24
+      ],
+      "skirt": -1.0,
+      "notch_p": [
+        180.08,
+        -2.87,
+        212.48,
+        6.07
+      ],
+      "screws_p": [
+        [
+          183.53,
+          0.665
+        ],
+        [
+          209.03,
+          0.665
+        ]
+      ],
+      "pilots": [
+        {
+          "world": [
+            -40.58,
+            85.485
+          ],
+          "depth": 4.0
+        },
+        {
+          "world": [
+            -66.08,
+            85.485
+          ],
+          "depth": 4.0
+        }
+      ]
+    }
+  ],
+  "usb_slot_world": {
+    "x": 124.2975,
+    "width": 14.75,
+    "y": [
+      186.236,
+      195.37
+    ],
+    "z_p": [
+      9.69,
+      33.24609629666706
+    ],
+    "open_bottom_y": [
+      187.236,
+      195.37
+    ],
+    "inner_ledge_z_p": 21.08,
+    "inner_connector_pocket": {
+      "bounds_xy": [
+        114.2975,
+        172.236,
+        134.2975,
+        185.236
+      ],
+      "corner_r": 2.0,
+      "floor_z_p": 18.7,
+      "end_land_mm": 1.0
+    },
+    "bridge_z_p": [
+      9.69,
+      11.9
+    ],
+    "bridge_corner_r": 1.5,
+    "open_lip_corner_r": 0.5,
+    "bridge_y": [
+      187.236,
+      194.37
+    ],
+    "bridge_requires_print_support": true,
+    "cap_recess_walls_removed_mm": [],
+    "min_wall": 0.8
+  },
+  "bumpons_world": [
+    [
+      130.0,
+      95.95
+    ],
+    [
+      -130.0,
+      95.95
+    ],
+    [
+      130.0,
+      170.54
+    ],
+    [
+      -130.0,
+      170.54
+    ]
+  ],
+  "bumpon_pocket": {
+    "d": 13.6,
+    "depth": 1.5
+  },
+  "deco_recess_print": {
+    "outline_bounds": [
+      -119.8,
+      -174.75,
+      119.8,
+      -139.15
+    ],
+    "depth": 2.3,
+    "plate_thickness": 3.0,
+    "from_slope_edge": 6.5,
+    "clear": 0.2
+  },
+  "deco_screws": {
+    "thread": "M2",
+    "length": 4.0,
+    "hole_d": 3.0,
+    "cbore_d": 5.4,
+    "clamp": 2.5,
+    "sites": [
+      {
+        "plate": [
+          8.8,
+          30.8
+        ],
+        "print": [
+          -111.0,
+          -169.95
+        ],
+        "world_x": -111.0,
+        "cbore_floor_print_z": 4.8,
+        "cavity_floor_print_z": 11.21
+      },
+      {
+        "plate": [
+          38.9,
+          10.9
+        ],
+        "print": [
+          -80.9,
+          -150.05
+        ],
+        "world_x": -80.9,
+        "cbore_floor_print_z": 4.8,
+        "cavity_floor_print_z": 9.118
+      },
+      {
+        "plate": [
+          200.7,
+          10.9
+        ],
+        "print": [
+          80.9,
+          -150.05
+        ],
+        "world_x": 80.9,
+        "cbore_floor_print_z": 4.8,
+        "cavity_floor_print_z": 9.118
+      },
+      {
+        "plate": [
+          230.8,
+          30.8
+        ],
+        "print": [
+          111.0,
+          -169.95
+        ],
+        "world_x": 111.0,
+        "cbore_floor_print_z": 4.8,
+        "cavity_floor_print_z": 11.21
+      }
+    ],
+    "positions_status": "photo estimate; unverified on purchased A plate"
+  },
+  "rim_clear": 0.15,
+  "split": {
+    "shape": "\u3134\u3131",
+    "back_catch": "BR",
+    "back_x_world": -53.75,
+    "front_catch": "FL",
+    "front_x_world": 52.73,
+    "cross_y_world": 120.0,
+    "dovetails": [
+      {
+        "leg": "cross",
+        "at": -30.0,
+        "male": "left",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      },
+      {
+        "leg": "cross",
+        "at": 0.0,
+        "male": "right",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      },
+      {
+        "leg": "cross",
+        "at": 30.0,
+        "male": "left",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      },
+      {
+        "leg": "back",
+        "at": 130.0,
+        "male": "left",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      },
+      {
+        "leg": "front",
+        "at": 106.0,
+        "male": "right",
+        "neck_half": 5.2,
+        "head_half": 6.6,
+        "proj": 6.0,
+        "neck_taper": 0.55
+      }
+    ],
+    "clearance": 0.0,
+    "insertion_axis_world": [
+      0.0,
+      0.104528463,
+      -0.994521895
+    ]
+  },
+  "tray_and_base": {
+    "tray_bottom_z_p_front_back": [
+      20.43,
+      20.01
+    ],
+    "back_step": 5.2,
+    "back_slope_length": 14.59,
+    "front_step": 4.5,
+    "end_step": 4.5,
+    "desk_face_back_inset": 15.33,
+    "base_outline_world": [
+      -141.55,
+      87.45,
+      141.55,
+      189.17
+    ]
+  },
+  "parts": {
+    "bottom-left": {
+      "print_extents": [
+        205.8,
+        111.89,
+        22.33
+      ],
+      "volume_cm3": 137.5
+    },
+    "bottom-right": {
+      "print_extents": [
+        204.78,
+        111.89,
+        22.33
+      ],
+      "volume_cm3": 94.6
+    },
+    "coupon-front-left": {
+      "print_extents": [
+        116.05,
+        21.23,
+        11.41
+      ],
+      "volume_cm3": 12.6
+    },
+    "joint-test-left": {
+      "print_extents": [
+        44.0,
+        16.09,
+        7.76
+      ],
+      "volume_cm3": 4.4
+    },
+    "joint-test-right": {
+      "print_extents": [
+        44.0,
+        22.55,
+        6.79
+      ],
+      "volume_cm3": 4.2
+    }
+  }
+}
