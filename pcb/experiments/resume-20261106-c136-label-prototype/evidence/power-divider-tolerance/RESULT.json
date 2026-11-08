@@ -1,0 +1,298 @@
+{
+  "source_board_sha256": "2e532c1a16e64a34eafafdfbd5b85c05d70bb12ad9e52924c5cbe024fdc9aa2c",
+  "behavioral_deck_sha256": "aa5c9e72cc90e89b05170acfe4d25f953104da95db68e2da026048c73cb800a4",
+  "components": {
+    "R122": {
+      "value": "620k 0.1%",
+      "pin_nets": {
+        "1": "VBUS_FUSED",
+        "2": "USB_UVLO"
+      },
+      "nominal_ohm": 620000
+    },
+    "R123": {
+      "value": "267k 0.1%",
+      "pin_nets": {
+        "1": "USB_UVLO",
+        "2": "GND"
+      },
+      "nominal_ohm": 267000
+    },
+    "R120": {
+      "value": "590k 0.1%",
+      "pin_nets": {
+        "1": "VBUS_FUSED",
+        "2": "USB_OVLO"
+      },
+      "nominal_ohm": 590000
+    },
+    "R121": {
+      "value": "156k 0.1%",
+      "pin_nets": {
+        "1": "USB_OVLO",
+        "2": "GND"
+      },
+      "nominal_ohm": 156000
+    }
+  },
+  "assumed_comparator_thresholds_V": {
+    "upper": 1.2,
+    "lower": 1.09
+  },
+  "corner_count": 16,
+  "method": "Exact rational resistor ratios; independent monotonic closed-form extrema; no SPICE run needed or claimed. Positive Vtop*(1+Rtop/Rbottom) is increasing in top resistance and decreasing in bottom resistance.",
+  "ranges": {
+    "UV_enable_V": {
+      "nominal_V": 3.986516853932584,
+      "min_V": 3.9809493876909605,
+      "max_V": 3.9920954662527697
+    },
+    "UV_disable_V": {
+      "nominal_V": 3.6210861423220972,
+      "min_V": 3.6160290271526225,
+      "max_V": 3.6261533818462657
+    },
+    "OV_disable_V": {
+      "nominal_V": 5.7384615384615385,
+      "min_V": 5.729393683239837,
+      "max_V": 5.747547547547548
+    },
+    "OV_reenable_V": {
+      "nominal_V": 5.212435897435897,
+      "min_V": 5.204199262276186,
+      "max_V": 5.220689022355689
+    }
+  },
+  "corners": [
+    {
+      "resistor_errors_percent": {
+        "R122": -0.1,
+        "R123": -0.1,
+        "R120": -0.1,
+        "R121": -0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.986516853932584,
+        "UV_disable_V": 3.6210861423220972,
+        "OV_disable_V": 5.7384615384615385,
+        "OV_reenable_V": 5.212435897435897
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": -0.1,
+        "R123": -0.1,
+        "R120": -0.1,
+        "R121": 0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.986516853932584,
+        "UV_disable_V": 3.6210861423220972,
+        "OV_disable_V": 5.729393683239837,
+        "OV_reenable_V": 5.204199262276186
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": -0.1,
+        "R123": -0.1,
+        "R120": 0.1,
+        "R121": -0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.986516853932584,
+        "UV_disable_V": 3.6210861423220972,
+        "OV_disable_V": 5.747547547547548,
+        "OV_reenable_V": 5.220689022355689
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": -0.1,
+        "R123": -0.1,
+        "R120": 0.1,
+        "R121": 0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.986516853932584,
+        "UV_disable_V": 3.6210861423220972,
+        "OV_disable_V": 5.7384615384615385,
+        "OV_reenable_V": 5.212435897435897
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": -0.1,
+        "R123": 0.1,
+        "R120": -0.1,
+        "R121": -0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.9809493876909605,
+        "UV_disable_V": 3.6160290271526225,
+        "OV_disable_V": 5.7384615384615385,
+        "OV_reenable_V": 5.212435897435897
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": -0.1,
+        "R123": 0.1,
+        "R120": -0.1,
+        "R121": 0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.9809493876909605,
+        "UV_disable_V": 3.6160290271526225,
+        "OV_disable_V": 5.729393683239837,
+        "OV_reenable_V": 5.204199262276186
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": -0.1,
+        "R123": 0.1,
+        "R120": 0.1,
+        "R121": -0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.9809493876909605,
+        "UV_disable_V": 3.6160290271526225,
+        "OV_disable_V": 5.747547547547548,
+        "OV_reenable_V": 5.220689022355689
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": -0.1,
+        "R123": 0.1,
+        "R120": 0.1,
+        "R121": 0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.9809493876909605,
+        "UV_disable_V": 3.6160290271526225,
+        "OV_disable_V": 5.7384615384615385,
+        "OV_reenable_V": 5.212435897435897
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": 0.1,
+        "R123": -0.1,
+        "R120": -0.1,
+        "R121": -0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.9920954662527697,
+        "UV_disable_V": 3.6261533818462657,
+        "OV_disable_V": 5.7384615384615385,
+        "OV_reenable_V": 5.212435897435897
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": 0.1,
+        "R123": -0.1,
+        "R120": -0.1,
+        "R121": 0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.9920954662527697,
+        "UV_disable_V": 3.6261533818462657,
+        "OV_disable_V": 5.729393683239837,
+        "OV_reenable_V": 5.204199262276186
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": 0.1,
+        "R123": -0.1,
+        "R120": 0.1,
+        "R121": -0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.9920954662527697,
+        "UV_disable_V": 3.6261533818462657,
+        "OV_disable_V": 5.747547547547548,
+        "OV_reenable_V": 5.220689022355689
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": 0.1,
+        "R123": -0.1,
+        "R120": 0.1,
+        "R121": 0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.9920954662527697,
+        "UV_disable_V": 3.6261533818462657,
+        "OV_disable_V": 5.7384615384615385,
+        "OV_reenable_V": 5.212435897435897
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": 0.1,
+        "R123": 0.1,
+        "R120": -0.1,
+        "R121": -0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.986516853932584,
+        "UV_disable_V": 3.6210861423220972,
+        "OV_disable_V": 5.7384615384615385,
+        "OV_reenable_V": 5.212435897435897
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": 0.1,
+        "R123": 0.1,
+        "R120": -0.1,
+        "R121": 0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.986516853932584,
+        "UV_disable_V": 3.6210861423220972,
+        "OV_disable_V": 5.729393683239837,
+        "OV_reenable_V": 5.204199262276186
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": 0.1,
+        "R123": 0.1,
+        "R120": 0.1,
+        "R121": -0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.986516853932584,
+        "UV_disable_V": 3.6210861423220972,
+        "OV_disable_V": 5.747547547547548,
+        "OV_reenable_V": 5.220689022355689
+      }
+    },
+    {
+      "resistor_errors_percent": {
+        "R122": 0.1,
+        "R123": 0.1,
+        "R120": 0.1,
+        "R121": 0.1
+      },
+      "thresholds_V": {
+        "UV_enable_V": 3.986516853932584,
+        "UV_disable_V": 3.6210861423220972,
+        "OV_disable_V": 5.7384615384615385,
+        "OV_reenable_V": 5.212435897435897
+      }
+    }
+  ],
+  "all_UV_enable_corners_below_synthetic_4V_target": true,
+  "scope": "Current-CAD resistor nominal and 0.1% nameplate tolerance sensitivity only, conditional on frozen synthetic comparator thresholds. NOT real U8 guaranteed threshold bounds, buck startup/fault validation or a current-board active model.",
+  "omitted": [
+    "Actual U8 threshold/hysteresis tolerances, temperature, leakage, delay, dVdt, current limiting, reverse flow and fault dynamics.",
+    "Resistor MPN/TCR/aging, parasitic loading, effective capacitors, source/load/temperature and regulator dynamics."
+  ]
+}

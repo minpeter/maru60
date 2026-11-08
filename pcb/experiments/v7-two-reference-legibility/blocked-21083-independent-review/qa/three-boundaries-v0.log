@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/v7-two-label-independent-review/scripts/three_boundaries.py", line 26, in <module>
+    n.require(len(points)>=3 and all(len(v)==2 for v in adj.values()),'Open/ambiguous raw courtyard '+ref)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/v7-two-label-independent-review/scripts/native_ink.py", line 11, in require
+    if not ok:raise RuntimeError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Open/ambiguous raw courtyard SW38

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/build_candidate.py", line 20, in <module>
+    cf=filemap(D);n.require(len(cf)==53 and set(cf)==set(source_files),'Complete recovered53-file tree');n.require([r for r in cf if cf[r]!=source_files[r]]==['maru60.kicad_pcb'],'Only board differs');n.require(filemap(S)==source_files,'Source remains read-only')
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/native_ink.py", line 11, in require
+    if not ok:raise RuntimeError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Complete recovered53-file tree

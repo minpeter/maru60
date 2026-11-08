@@ -1,0 +1,340 @@
+{
+  "U18": {
+    "value": "TPS62932DRLR",
+    "footprint": "SOT-583-8",
+    "fields": {
+      "Reference": "U18",
+      "Value": "TPS62932DRLR",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "unconnected-(U18-RT_FLOAT_500KHZ-Pad1)",
+      "2": "unconnected-(U18-EN_FLOAT_ENABLE-Pad2)",
+      "3": "VBUS_PROTECTED_RAW",
+      "4": "GND",
+      "5": "BUCK_SW",
+      "6": "BUCK_BST",
+      "7": "BUCK_SS",
+      "8": "BUCK_FB"
+    },
+    "schematic_fields": {
+      "Status": "Provisional; DRL pad geometry/paste not independently qualified; EN intentionally floating per 9.3.6",
+      "Footprint": "Package_TO_SOT_SMD:SOT-583-8",
+      "Datasheet": "https://www.ti.com/lit/ds/symlink/tps62933.pdf",
+      "Description": null
+    },
+    "schematic_value": "TPS62932DRLR",
+    "net_parity": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true,
+      "8": true
+    }
+  },
+  "C138": {
+    "value": "100nF 16V BST-SW",
+    "footprint": "C_0603_1608Metric",
+    "fields": {
+      "Reference": "C138",
+      "Value": "100nF 16V BST-SW",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "BUCK_BST",
+      "2": "BUCK_SW"
+    },
+    "schematic_fields": {
+      "Status": "CANDIDATE - not procurement approved",
+      "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "100nF 16V BST-SW",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "L2": {
+    "value": "XAL4030-472MEC 4.7uH 20%",
+    "footprint": "L_Coilcraft_XAL4030-XXX",
+    "fields": {
+      "Reference": "L2",
+      "Value": "XAL4030-472MEC 4.7uH 20%",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "BUCK_SW",
+      "2": "+4V_REG"
+    },
+    "schematic_fields": {
+      "Status": "Candidate only; 3.1mm max height; footprint/assembly/thermal gates OPEN",
+      "Footprint": "Inductor_SMD:L_Coilcraft_XAL4030-XXX",
+      "Datasheet": "https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal40xx/xal4030-472/",
+      "Description": null
+    },
+    "schematic_value": "XAL4030-472MEC 4.7uH 20%",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "R160": {
+    "value": "10.0k 0.1%",
+    "footprint": "R_0603_1608Metric",
+    "fields": {
+      "Reference": "R160",
+      "Value": "10.0k 0.1%",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "BUCK_FB",
+      "2": "GND"
+    },
+    "schematic_fields": {
+      "Status": "CANDIDATE - not procurement approved",
+      "Footprint": "Resistor_SMD:R_0603_1608Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "10.0k 0.1%",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "C141": {
+    "value": "22uF 10V effective>=12uF TBD",
+    "footprint": "C_0603_1608Metric",
+    "fields": {
+      "Reference": "C141",
+      "Value": "22uF 10V effective>=12uF TBD",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "+4V_REG",
+      "2": "GND"
+    },
+    "schematic_fields": {
+      "Status": "CANDIDATE - not procurement approved",
+      "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "22uF 10V effective>=12uF TBD",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "C120": {
+    "value": "1u",
+    "footprint": "C_0402_1005Metric",
+    "fields": {
+      "Reference": "C120",
+      "Value": "1u",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "+4V_REG",
+      "2": "GND"
+    },
+    "schematic_fields": {
+      "Footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "1u",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "C137": {
+    "value": "4.7uF 50V effective>=2uF TBD",
+    "footprint": "C_0603_1608Metric",
+    "fields": {
+      "Reference": "C137",
+      "Value": "4.7uF 50V effective>=2uF TBD",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "VBUS_PROTECTED_RAW",
+      "2": "GND"
+    },
+    "schematic_fields": {
+      "Status": "CANDIDATE - not procurement approved",
+      "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "4.7uF 50V effective>=2uF TBD",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "C126": {
+    "value": "1uF 50V",
+    "footprint": "C_0603_1608Metric",
+    "fields": {
+      "Reference": "C126",
+      "Value": "1uF 50V",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "VBUS_PROTECTED_RAW",
+      "2": "GND"
+    },
+    "schematic_fields": {
+      "Status": "CANDIDATE - not procurement approved",
+      "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "1uF 50V",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "C139": {
+    "value": "100nF 10% 16V - soft start",
+    "footprint": "C_0603_1608Metric",
+    "fields": {
+      "Reference": "C139",
+      "Value": "100nF 10% 16V - soft start",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "BUCK_SS",
+      "2": "GND"
+    },
+    "schematic_fields": {
+      "Status": "CANDIDATE - not procurement approved",
+      "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "100nF 10% 16V - soft start",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "C136": {
+    "value": "100nF 50V",
+    "footprint": "C_0603_1608Metric",
+    "fields": {
+      "Reference": "C136",
+      "Value": "100nF 50V",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "VBUS_PROTECTED_RAW",
+      "2": "GND"
+    },
+    "schematic_fields": {
+      "Status": "CANDIDATE - not procurement approved",
+      "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "100nF 50V",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "C100": {
+    "value": "4.7uF 50V X7R 10%",
+    "footprint": "Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9",
+    "fields": {
+      "Reference": "C100",
+      "Value": "4.7uF 50V X7R 10%",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "+4V_REG",
+      "2": "GND"
+    },
+    "schematic_fields": {
+      "Status": "ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md",
+      "Manufacturer": "Murata",
+      "MPN": "GRM31CR71H475KA12L",
+      "Footprint": "MaruStudy:Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9",
+      "Datasheet": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM31CR71H475KA12-01A.pdf",
+      "Description": null
+    },
+    "schematic_value": "4.7uF 50V X7R 10%",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "C140": {
+    "value": "22uF 10V effective>=12uF TBD",
+    "footprint": "C_0603_1608Metric",
+    "fields": {
+      "Reference": "C140",
+      "Value": "22uF 10V effective>=12uF TBD",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "+4V_REG",
+      "2": "GND"
+    },
+    "schematic_fields": {
+      "Status": "CANDIDATE - not procurement approved",
+      "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "22uF 10V effective>=12uF TBD",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  },
+  "R159": {
+    "value": "40.0k 0.1%",
+    "footprint": "R_0603_1608Metric",
+    "fields": {
+      "Reference": "R159",
+      "Value": "40.0k 0.1%",
+      "Datasheet": "",
+      "Description": ""
+    },
+    "pads": {
+      "1": "+4V_REG",
+      "2": "BUCK_FB"
+    },
+    "schematic_fields": {
+      "Status": "CANDIDATE - not procurement approved",
+      "Footprint": "Resistor_SMD:R_0603_1608Metric",
+      "Datasheet": null,
+      "Description": null
+    },
+    "schematic_value": "40.0k 0.1%",
+    "net_parity": {
+      "1": true,
+      "2": true
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "status": "UNSELECTED combined full R2/DRC/companion comparison passes; strict physical geometry and independent review remain separate",
+  "source_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+  "candidate_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "source_graph_sha256": "2d4b25e398e2d635de747a696dd263ef1f83b638001a4beec4932583b1e4f98a",
+  "candidate_graph_sha256": "304954c5b4195c28bcea68ef950625584efd557fd3475430c1245c0078ff877c",
+  "checks": {
+    "pad_inventory_exact": true,
+    "pad_partitions_by_net_exact": true,
+    "direct_edges_exact": true,
+    "raw_unguarded_direct_edges_exact": true,
+    "guard_failing_material_edges_exact": true,
+    "empty_object_layers_exact": true,
+    "multiple_component_object_layers_exact": true,
+    "NPTH_material_exact": true,
+    "all_retained_material_edge_witnesses_exact": true,
+    "retained_barrel_proofs_exact": true,
+    "all_original_GND_pads_and_new_via_share_J1_A1_root": true,
+    "all_native_warning_entries_exact": true,
+    "all_native_open_entries_exact": true,
+    "schematic_parity_zero": true,
+    "all57_project_companions_exact": true
+  },
+  "retained_object_nodes": 14662,
+  "new_via_nodes": [
+    "object:cda2df4b-6411-5409-a933-5106751244d8:0:0",
+    "object:cda2df4b-6411-5409-a933-5106751244d8:2:0",
+    "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+    "object:cda2df4b-6411-5409-a933-5106751244d8:6:0"
+  ],
+  "changed_zone_node_areas": {
+    "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0": [
+      {
+        "kind": "zone",
+        "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+        "layer": "In1.Cu",
+        "index": 0,
+        "area_mm2": 23436.333089335607,
+        "net": "GND"
+      },
+      {
+        "kind": "zone",
+        "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+        "layer": "In1.Cu",
+        "index": 0,
+        "area_mm2": 23436.284001654607,
+        "net": "GND"
+      }
+    ],
+    "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0": [
+      {
+        "kind": "zone",
+        "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+        "layer": "In2.Cu",
+        "index": 0,
+        "area_mm2": 23486.85337147416,
+        "net": "GND"
+      },
+      {
+        "kind": "zone",
+        "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+        "layer": "In2.Cu",
+        "index": 0,
+        "area_mm2": 23486.80428379316,
+        "net": "GND"
+      }
+    ]
+  },
+  "new_material_edges": [
+    [
+      "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+      0.147260768066,
+      0.1472558792225
+    ],
+    [
+      "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:6:0",
+      0.147260768066,
+      0.1472558792225
+    ]
+  ],
+  "new_barrel_proof": {
+    "uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+    "type": "PCB_VIA",
+    "nodes": [
+      "object:cda2df4b-6411-5409-a933-5106751244d8:0:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:6:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:2:0"
+    ],
+    "proof": "through span asserted; one positive annulus per copper layer; centered circular via or exact convex PTH hole enclosure proved; all-hole material has exact normalized native coordinate contour equality to own annulus; no foreign drill severs annulus"
+  },
+  "pad_net_groups": 246,
+  "original_GND_pad_count": 247,
+  "native_metrics": {
+    "tracks": 9750,
+    "vias": 919,
+    "footprints": 383,
+    "track_length_mm": 13185.28691027245,
+    "warnings": 64,
+    "opens": 12,
+    "other_hard_DRC": 0,
+    "ERC": 0,
+    "parity": 0
+  },
+  "comparison_note": "Native candidate pair enumeration order differs. Full edge/witness records are compared as multisets, preserving duplicates; zero old records are removed or changed. Initial order-sensitive diagnostic is preserved.",
+  "limits": [
+    "No added via is a restored USB neck.",
+    "No inductance, impedance, waveform or hardware gain is inferred.",
+    "Area changes alone are not a strict inclusion proof; exact raw/physical-drill identity is reviewed separately."
+  ]
+}

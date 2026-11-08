@@ -1,0 +1,46 @@
+{
+  "input_board_sha256": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb",
+  "checked_saved_direct_edges": 21888,
+  "wrong_support_count": 1042,
+  "lost_positive_edges": [
+    [
+      "8a0af035-c52e-4652-816c-b152480bf29d",
+      "b460c437-7d6c-4227-b9a0-21224a370131",
+      [
+        [
+          "F.Cu",
+          0.02517116294
+        ]
+      ]
+    ],
+    [
+      "9ce1d223-d7c3-49f8-a54a-cd2573c67b14",
+      "901de7f9-8f2b-4fda-8701-779f97081ed1",
+      [
+        [
+          "F.Cu",
+          0.02517116294
+        ]
+      ]
+    ],
+    [
+      "4b67f996-1ff1-4142-8261-0c00f2db5d84",
+      "70579ce8-6408-4de2-bcc5-3bddeb1bb2a2",
+      [
+        [
+          "F.Cu",
+          0.02517116294
+        ]
+      ]
+    ]
+  ],
+  "saved_rejects_with_positive_support": [],
+  "wrapper_type_probe": {
+    "native_class": "PCB_VIA",
+    "python_class": "PCB_TRACK",
+    "is_PCB_VIA": false,
+    "has_hole": true,
+    "canonical_python_class": "PCB_VIA"
+  },
+  "scope": "Recompute support only on existing saved edge lists and rejection list; no new neighbor-pair discovery or full graph export. All native objects resolved by UUID to canonical board inventory before shape tests."
+}

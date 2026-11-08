@@ -1,0 +1,27 @@
+{
+  "status": "UNSELECTED; original7c23 source retained for this experiment; newer2c7 artwork carry pending",
+  "source_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "stages": [
+    {
+      "sha256": "db4f1277729b00c73d8e666313486dce2da4c955c6a11729d5397d8dbbe600fc",
+      "status": "invalid new net declared after C124.1; native load left that pad unnamed, preserved for diagnostic history only",
+      "path": "qa/prefill-invalid-net-order-db4f1277.kicad_pcb"
+    },
+    {
+      "sha256": "26102ec230619affecb661ee0179a89279a9e618c4534a66a276291e65b9da5c",
+      "status": "valid net declaration; first DRC0 hard,12 opens,93 warnings,parity0; two reference anchors later corrected",
+      "path": "qa/prefill-before-ink-26102ec2.kicad_pcb"
+    },
+    {
+      "sha256": "4aa454eb0124c33c3315dcba0e4539191edcf4458dc0f894bcbb2f4746636d2d",
+      "status": "prefill after2 reference anchor corrections; schematic symbol library completed,ERC0",
+      "path": "pcb/maru60.kicad_pcb"
+    },
+    {
+      "sha256": "8c45df3642599be269697ce9b225fe55ee6b886dce713b77f6ced533ea268fb6",
+      "status": "saved native fill;12 zone records exact vs7c23; DRC0 hard,12 opens,88 warnings,parity0; actual physical replay/review pending",
+      "path": "filled/pcb/maru60.kicad_pcb"
+    }
+  ],
+  "build_contract_note": "Original BUILD_CONTRACT candidate_prefill_sha256 records first emitted invalid-order diagnostic. Its UUID/geometry scope remains authoritative, but that hash is NOT the validated candidate. This explicit lineage binds all later artifacts to their actual hashes."
+}

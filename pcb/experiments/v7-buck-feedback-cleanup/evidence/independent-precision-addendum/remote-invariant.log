@@ -1,0 +1,771 @@
+{
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "one_board_load_no_save_fill": true,
+  "native_build": "9.0.2+dfsg-1",
+  "native_coordinate_grid": {
+    "PCB_IU_PER_MM": 1000000.0,
+    "FromMM_1": 1000000,
+    "ToMM_1_IU": 1e-06,
+    "VECTOR2I_doc": "Proxy of C++ VECTOR2< int > class.",
+    "coordinate_type": "int"
+  },
+  "native_collision_controls_pass": true,
+  "all_remote_patch_hulls_clear_correctly_typed_copper_and_holes_at_unchanged_normal_rules": true,
+  "old_shadow_and_ground_support_remote_hull_guard_pass": false,
+  "project_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+  "NPTH_pad_shapes_excluded_from_copper_and_tested_as_actual_holes": true,
+  "limitation": "Native collision checks use a conservative integer convex hull around each exact rational change band. They cover both gain and loss; they are separate from the exact opposite-material-distance proof and do not waive source/contour gates or constitute analog qualification."
+}
+[
+  {
+    "layer": "In1.Cu",
+    "all_remote_loss_and_gain_hulls_clear_all_old_nonGND_shadows_and_inner_GND_contact_copper_with_2nm_guard": false,
+    "invariant_patch_checks": [
+      {
+        "patch": 0,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 1,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "eb2e4e32-86fa-460b-a173-71b55f5e98f4",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 2,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 3,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 4,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 5,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "85712dfb-f292-4e2b-8f0d-d0112fabce1b",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 6,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 7,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "08821b49-6917-4c7e-b2fb-31e86d6bc5be",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 8,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 9,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 10,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 11,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "b80c896e-2c06-4a39-bb3b-ae78e863ec60",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 12,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 13,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "6e087696-2807-4a17-a27c-88e5cd4c1577",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 14,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 15,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 16,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 17,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "4ba04168-2586-402e-9596-170ee2fceaad",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 18,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "4e3ec419-3121-4dac-b8f2-c9b1e24efbc6",
+            "intersects_at_2nm_guard": false
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "98a27fbc-bb06-46a0-a97c-067be4118ba9",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 19,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "98a27fbc-bb06-46a0-a97c-067be4118ba9",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 20,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "1730bf89-ef3e-49cd-8b39-45e7cb1cd687",
+            "intersects_at_2nm_guard": true
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "3faef3cc-6d4c-4b81-985d-bbd7b0e40bcd",
+            "intersects_at_2nm_guard": true
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "66da563a-d05d-491f-8b6f-896c2f77a9c0",
+            "intersects_at_2nm_guard": true
+          }
+        ]
+      },
+      {
+        "patch": 21,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 22,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 23,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "c1ec2a21-5cd6-49a3-a46c-14d3312fd1a5",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 24,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 25,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 26,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 27,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 28,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 29,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "641073f0-3ac0-5267-9fc8-dff71592b618",
+            "intersects_at_2nm_guard": false
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 30,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "debdd49c-06b0-5a88-b3b7-3c80a26db631",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 31,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "debdd49c-06b0-5a88-b3b7-3c80a26db631",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 32,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "debdd49c-06b0-5a88-b3b7-3c80a26db631",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 33,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 34,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "fcbdc763-0bad-4ed4-a4ae-0a53ef2c0d3b",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 35,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 36,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 37,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 38,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "2cdc186c-8fae-4268-932e-9e17e2f8f66c",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 39,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 40,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "fccff7ed-e8a3-4213-bbec-1731cd7ad98d",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 41,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 42,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 43,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 44,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "25a7ff5d-543f-4fd8-a680-5fd4b8a4e31a",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 45,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 46,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "5995c635-83dd-4e7d-8eef-96e2646721f7",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 47,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 48,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 49,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 50,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "65868e41-b45b-4d74-9b61-b9dd150ad901",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      }
+    ],
+    "zone_clearance_nm": 200000,
+    "project_hole_clearance_nm": 150000,
+    "all_inner_foreign_objects_considered": 913,
+    "all_actual_holes_considered": 1269,
+    "patch_count": 51,
+    "failures": 0
+  },
+  {
+    "layer": "In2.Cu",
+    "all_remote_loss_and_gain_hulls_clear_all_old_nonGND_shadows_and_inner_GND_contact_copper_with_2nm_guard": false,
+    "invariant_patch_checks": [
+      {
+        "patch": 0,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 1,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "eb2e4e32-86fa-460b-a173-71b55f5e98f4",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 2,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 3,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 4,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 5,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "85712dfb-f292-4e2b-8f0d-d0112fabce1b",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 6,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 7,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "08821b49-6917-4c7e-b2fb-31e86d6bc5be",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 8,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 9,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 10,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 11,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "b80c896e-2c06-4a39-bb3b-ae78e863ec60",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 12,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 13,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "6e087696-2807-4a17-a27c-88e5cd4c1577",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 14,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 15,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 16,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 17,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "4ba04168-2586-402e-9596-170ee2fceaad",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 18,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "c251907b-66ef-460f-be74-418d0f406507",
+            "intersects_at_2nm_guard": false
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "cdd5d269-38a8-4713-be07-69180c62cc98",
+            "intersects_at_2nm_guard": false
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "7997dc47-4bb3-438c-822a-6104e7424fff",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 19,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "c251907b-66ef-460f-be74-418d0f406507",
+            "intersects_at_2nm_guard": false
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "cdd5d269-38a8-4713-be07-69180c62cc98",
+            "intersects_at_2nm_guard": false
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "7997dc47-4bb3-438c-822a-6104e7424fff",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 20,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "923e7bca-275b-45ab-ac17-f238c65f21ec",
+            "intersects_at_2nm_guard": true
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "14261030-fc7c-4fe1-8726-4cfe3ee86d41",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 21,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "772659ba-2727-4ae0-b200-c294ccfec039",
+            "intersects_at_2nm_guard": false
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "14261030-fc7c-4fe1-8726-4cfe3ee86d41",
+            "intersects_at_2nm_guard": false
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "c75d1479-48c6-4d68-b874-d5357bc009f9",
+            "intersects_at_2nm_guard": false
+          },
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "fac7b191-c1f5-4028-81d3-3f15e1c9d110",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 22,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "14261030-fc7c-4fe1-8726-4cfe3ee86d41",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 23,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 24,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 25,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "078881fc-24d6-4c58-ad39-e9d7dca12bab",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 26,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 27,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 28,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 29,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "f63c08bf-03b2-4611-a40f-cba77fe5e3cb",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 30,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "3e0f4780-c3cb-4f93-8b6d-604a0a8d295a",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 31,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "3e0f4780-c3cb-4f93-8b6d-604a0a8d295a",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 32,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "3e0f4780-c3cb-4f93-8b6d-604a0a8d295a",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 33,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 34,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "fcbdc763-0bad-4ed4-a4ae-0a53ef2c0d3b",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 35,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 36,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 37,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 38,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "2cdc186c-8fae-4268-932e-9e17e2f8f66c",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 39,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 40,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "fccff7ed-e8a3-4213-bbec-1731cd7ad98d",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 41,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 42,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 43,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 44,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "25a7ff5d-543f-4fd8-a680-5fd4b8a4e31a",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 45,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 46,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "5995c635-83dd-4e7d-8eef-96e2646721f7",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      },
+      {
+        "patch": 47,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 48,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 49,
+        "possible_intersecting_old_shadows_or_GND_supports": []
+      },
+      {
+        "patch": 50,
+        "possible_intersecting_old_shadows_or_GND_supports": [
+          {
+            "class": "all_old_nonGND_outer_shadows",
+            "uuid": "65868e41-b45b-4d74-9b61-b9dd150ad901",
+            "intersects_at_2nm_guard": false
+          }
+        ]
+      }
+    ],
+    "zone_clearance_nm": 200000,
+    "project_hole_clearance_nm": 150000,
+    "all_inner_foreign_objects_considered": 690,
+    "all_actual_holes_considered": 1269,
+    "patch_count": 51,
+    "failures": 0
+  }
+]

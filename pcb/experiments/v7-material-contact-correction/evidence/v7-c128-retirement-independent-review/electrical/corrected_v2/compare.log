@@ -1,0 +1,113 @@
+{
+  "per_board": {
+    "aead": {
+      "pad_nets": 245,
+      "changed_pad_nets": [],
+      "accepted_direct": 21796,
+      "accepted_zone": 731,
+      "guard_failures": 51,
+      "empty_net_bearing_objects": 20,
+      "multiple_object_layers": 17,
+      "direct_removed_vs_original": 105,
+      "direct_changed_vs_original": 2291
+    },
+    "2c7": {
+      "pad_nets": 245,
+      "changed_pad_nets": [],
+      "accepted_direct": 21797,
+      "accepted_zone": 731,
+      "guard_failures": 51,
+      "empty_net_bearing_objects": 20,
+      "multiple_object_layers": 17,
+      "direct_removed_vs_original": 105,
+      "direct_changed_vs_original": 2292
+    },
+    "cafa": {
+      "pad_nets": 245,
+      "changed_pad_nets": [],
+      "accepted_direct": 21783,
+      "accepted_zone": 731,
+      "guard_failures": 51,
+      "empty_net_bearing_objects": 20,
+      "multiple_object_layers": 17,
+      "direct_removed_vs_original": 105,
+      "direct_changed_vs_original": 2289
+    }
+  },
+  "transitions": {
+    "2c7-to-aead": {
+      "retired_native_object_uuids": [
+        "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+        "d382de57-3476-43c4-ac26-0a72b21acf7c"
+      ],
+      "added_native_object_uuids": [
+        "6ffab701-7688-4850-9aad-8ab86bd0f04a"
+      ],
+      "pad_inventory_exact": true,
+      "all_245_pad_partitions_exact": true,
+      "retained_material_vertex_partition_exact": true,
+      "retained_material_contact_edges_and_both_support_areas_exact": true,
+      "retained_nonzone_material_metadata_changed": [],
+      "retained_guard_failures_exact": true,
+      "retained_direct_and_zone": {
+        "direct": {
+          "source_count": 21793,
+          "target_count": 21793,
+          "removed": [],
+          "added": [],
+          "changed_positive_support": [],
+          "exact": true
+        },
+        "zone": {
+          "source_count": 731,
+          "target_count": 731,
+          "removed": [],
+          "added": [],
+          "changed_positive_support": [],
+          "exact": true
+        }
+      }
+    },
+    "aead-to-cafa": {
+      "retired_native_object_uuids": [
+        "0826a4b6-5567-52ab-a787-b898d20d23ac",
+        "0858c392-ee59-5350-bcaf-d8762f658a08",
+        "19fee20c-f24a-5570-9d2d-8ed9371d42bb",
+        "53e7b99f-308f-57ae-9e47-9e779e6b3272",
+        "7ffc8178-bb79-51de-b57d-c5c6afb0ad28",
+        "872bfd37-a607-537a-a7fa-650d69bca58e",
+        "9f355e92-2386-5d9a-b330-367e9a6d6370",
+        "cbe6ef4b-6ae2-561c-89a1-59cf696150b8",
+        "f9815195-95ae-5029-9575-af5b562417f2",
+        "fba8f2b5-a5de-578b-a107-ce7c9d080fb6"
+      ],
+      "added_native_object_uuids": [],
+      "pad_inventory_exact": true,
+      "all_245_pad_partitions_exact": true,
+      "retained_material_vertex_partition_exact": true,
+      "retained_material_contact_edges_and_both_support_areas_exact": true,
+      "retained_nonzone_material_metadata_changed": [],
+      "retained_guard_failures_exact": true,
+      "retained_direct_and_zone": {
+        "direct": {
+          "source_count": 21783,
+          "target_count": 21783,
+          "removed": [],
+          "added": [],
+          "changed_positive_support": [],
+          "exact": true
+        },
+        "zone": {
+          "source_count": 731,
+          "target_count": 731,
+          "removed": [],
+          "added": [],
+          "changed_positive_support": [],
+          "exact": true
+        }
+      }
+    }
+  },
+  "all_five_continuous_witnesses_exact": true,
+  "J1_A1_material_root_exact": true
+}

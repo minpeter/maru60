@@ -1,0 +1,17 @@
+{
+  "command": [
+    "kicad-cli",
+    "pcb",
+    "drc",
+    "--schematic-parity",
+    "--format",
+    "json",
+    "--severity-all",
+    "-o",
+    "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/selected-recovered/qa/drc.json",
+    "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/selected-recovered/pcb/maru60.kicad_pcb"
+  ],
+  "exit_code": 0,
+  "start_utc": "2026-11-04T09:08:11.176120+00:00",
+  "end_utc": "2026-11-04T09:08:15.505548+00:00"
+}

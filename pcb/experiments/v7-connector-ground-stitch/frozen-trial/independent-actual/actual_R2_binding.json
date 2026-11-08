@@ -1,0 +1,105 @@
+{
+  "status": "PASS independent actual R2/connectivity/native/cold-refill binding; combine with actual_geometry.json for strict material and reference acceptance",
+  "source_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "candidate_sha256": "aaafc033c6e9809afcb189290c3740157b7ab5596aaa0867e581f08d89807eca",
+  "contract_sha256": "c58baac31c087ddd115fb5ccbe7953ced52d8469c0efe675b2184ea00ff7d7a5",
+  "source_graph_sha256": "3d174b35c555dcce8b3df1097f664be12e4736cca1f750a005d46441b941452c",
+  "actual_graph_sha256": "1129a187d109ce4e5d8e98788f8c22cd7d3f0b9edd0e6a70f0badac5cc602824",
+  "exporter_sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9",
+  "checks": {
+    "pad_inventory_exact": true,
+    "pad_partitions_by_net_exact": true,
+    "empty_object_layers_exact": true,
+    "multiple_component_object_layers_exact": true,
+    "NPTH_material_exact": true,
+    "direct_edges_full_record_multiset_exact": true,
+    "raw_unguarded_direct_edges_full_record_multiset_exact": true,
+    "guard_failing_material_edges_full_record_multiset_exact": true,
+    "native_pairs_without_guarded_positive_copper_full_record_multiset_exact": true,
+    "material_edges_all_old_records_exact": true,
+    "zone_edges_all_old_records_exact": true,
+    "raw_unguarded_zone_edges_all_old_records_exact": true,
+    "retained_barrels_exact": true,
+    "all_old_material_partitions_reconstructed_exact": true,
+    "no_cross_net_accepted_material_or_barrel_join": true,
+    "new_barrel_intact_four_layers": true,
+    "exactly_two_new_inner_root_contacts": true,
+    "all_GND_pads_and_new_via_reconstructed_J1_root": true,
+    "native_full_warning_and_open_entries_exact": true,
+    "native_other_hard_DRC_zero": true,
+    "native_ERC_and_parity_zero": true,
+    "all_project_companions_exact": true,
+    "independent_normal_cold_refill_byte_equal": true
+  },
+  "new_via_nodes": [
+    "object:cda2df4b-6411-5409-a933-5106751244d8:0:0",
+    "object:cda2df4b-6411-5409-a933-5106751244d8:2:0",
+    "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+    "object:cda2df4b-6411-5409-a933-5106751244d8:6:0"
+  ],
+  "new_material_edges": [
+    [
+      "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+      0.147260768066,
+      0.1472558792225
+    ],
+    [
+      "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:6:0",
+      0.147260768066,
+      0.1472558792225
+    ]
+  ],
+  "new_barrel": {
+    "uuid": "cda2df4b-6411-5409-a933-5106751244d8",
+    "type": "PCB_VIA",
+    "nodes": [
+      "object:cda2df4b-6411-5409-a933-5106751244d8:0:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:4:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:6:0",
+      "object:cda2df4b-6411-5409-a933-5106751244d8:2:0"
+    ],
+    "proof": "through span asserted; one positive annulus per copper layer; centered circular via or exact convex PTH hole enclosure proved; all-hole material has exact normalized native coordinate contour equality to own annulus; no foreign drill severs annulus"
+  },
+  "retained_material_nodes": 14685,
+  "retained_material_edges_with_witnesses": 22529,
+  "old_material_components": 382,
+  "actual_material_components": 382,
+  "named_pad_count": 1082,
+  "pad_net_groups": 245,
+  "GND_pad_count": 247,
+  "saved_J1_A1_root": [
+    "object:0000af93-3d00-42f8-97ba-dc35153f7a15:0:0"
+  ],
+  "changed_zone_areas": [
+    {
+      "node": "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "before_area_mm2": 23436.333089335607,
+      "after_area_mm2": 23436.284001654607
+    },
+    {
+      "node": "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "before_area_mm2": 23486.85337147416,
+      "after_area_mm2": 23486.80428379316
+    }
+  ],
+  "native_warnings": 66,
+  "native_raw_opens": 12,
+  "companion_count": 53,
+  "evidence_file_hashes": {
+    "/tmp/v7-gnd-tail-cleanup-aead/qa/material-graph.json": "3d174b35c555dcce8b3df1097f664be12e4736cca1f750a005d46441b941452c",
+    "/tmp/v7-connector-gnd-stitch-c770/qa/material-graph.json": "1129a187d109ce4e5d8e98788f8c22cd7d3f0b9edd0e6a70f0badac5cc602824",
+    "/tmp/v7-connector-gnd-stitch-c770/qa/drc.json": "7edf20a315dbce23107dff72b57f5c927d0082b2dcff37e9c01345db0028157d",
+    "/tmp/v7-connector-gnd-stitch-c770/qa/erc.json": "b2a20dee7f9c882f778abdd14dfb7309c14bc675ce2388de437a33c58d2cd325",
+    "/tmp/v7-connector-gnd-stitch-c770/qa/drc.execution.json": "a1c36f9ae7fa1fc0dd4babff5259a32a61171f378cd56f24115bb8582e23f114",
+    "/tmp/v7-connector-gnd-stitch-c770/qa/erc.execution.json": "f97a80e63755ecc37cc673ecf822517880c2c9844546f01f74b2657f9944711e",
+    "/workspace/scratch/edd9a5be63e7/v7-connector-ground-actual-aaaf/cold_refill_results.json": "feb9d90bcd2cd423f034b01dbe677b938e0de9f46e4cd69f66eb911f77cf1219"
+  },
+  "limits": [
+    "Native geometric connectivity only; not SI, PDN, EMC, ESD or manufacturing qualification.",
+    "New grounded copper can alter USB local electromagnetic fields and coupling even though every existing signal object is unchanged.",
+    "No source-supported parasitic extraction or post-change waveform model is available for this stitch; no physical SI improvement is claimed.",
+    "Nearest-return distance is geometric only, not an inductance measurement."
+  ]
+}

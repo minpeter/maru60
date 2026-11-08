@@ -1,0 +1,942 @@
+{
+  "status": "verified bounded trial; UNSELECTED",
+  "candidate_sha256": "aaafc033c6e9809afcb189290c3740157b7ab5596aaa0867e581f08d89807eca",
+  "files": {
+    "BUILD_CONTRACT.json": {
+      "bytes": 1224,
+      "sha256": "a5ccc3c7f4ae36ab01c54afe08666b413e27bc8396cf85fb8be820958bf3aa7d"
+    },
+    "README.md": {
+      "bytes": 3898,
+      "sha256": "6f563176fb8216b3aef62bbf8bcaca8aed092df4aa56aec2cc5de495dd96e86e"
+    },
+    "SOURCE_TREE_MANIFEST.json": {
+      "bytes": 8812,
+      "sha256": "6e376e2558a355482f5df1284c00506206826a2c84d74ed94de32b0290706816"
+    },
+    "filled/pcb/Maru60.kicad_sym": {
+      "bytes": 14140,
+      "sha256": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27"
+    },
+    "filled/pcb/Maru60.pretty/Abracon_AOTA_B201610S3R3_Official_R4.kicad_mod": {
+      "bytes": 5911,
+      "sha256": "5d02afce5b5bc1b5df1612accf1159a32a8f872c4efebf5cf2cd9eb78744cbab"
+    },
+    "filled/pcb/Maru60.pretty/C_0402_Official_R4_Wide.kicad_mod": {
+      "bytes": 5609,
+      "sha256": "3c3c32d0f0fce504fb2d97554e977c53083e7fbce5202676335bc58e106618c4"
+    },
+    "filled/pcb/Maru60.pretty/OSHW_then_Minpeter_H6_Gap1p5_Silk_DRAFT.kicad_mod": {
+      "bytes": 43272,
+      "sha256": "48296c6e5118c4be1c9f2cc0e65392acdb2fd0eea3186e1c469c81a4382d56b4"
+    },
+    "filled/pcb/Maru60.pretty/RP2350A_QFN60_Official_R4.kicad_mod": {
+      "bytes": 29650,
+      "sha256": "7742df773afbd96c3b880fa83ac5c479e0e88a7c6ab159006e2c9302183c1eb5"
+    },
+    "filled/pcb/MaruStudy.pretty/MAX_T822-3C_90-0065_2x2_P0.5_EP0.8x1.38.kicad_mod": {
+      "bytes": 1645,
+      "sha256": "17fc287eacf647d25657fd0130d7e2d72a766832e703990ca3547201f271333f"
+    },
+    "filled/pcb/MaruStudy.pretty/Murata_GRM18_0603_Reflow_0.65x0.75_Gap0.7.kicad_mod": {
+      "bytes": 816,
+      "sha256": "046fff6d5daf2e160746e3484419fecff37fd7cfa8edff804fbfaf41cede98f1"
+    },
+    "filled/pcb/MaruStudy.pretty/Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9.kicad_mod": {
+      "bytes": 835,
+      "sha256": "d71235770392086ecd8640392d27615a1333ccbc6aab72f314fb61c47ba23cac"
+    },
+    "filled/pcb/Protection_Study.pretty/TI_RPW0010A_2x2mm_Official4225183A_DRAFT.kicad_mod": {
+      "bytes": 5455,
+      "sha256": "5365c9a0097cf7e60ca94cd47f0174329e878e4f6f7f77db18e4cf71080d1221"
+    },
+    "filled/pcb/Protection_Study.pretty/TI_RVZ14_1p35x3p5mm_P0p5_DERIVED_DRAFT.kicad_mod": {
+      "bytes": 3112,
+      "sha256": "071c2f08c1c5cf34a58a26dace06c68560f55f22848b38abe9dd2c80feb41034"
+    },
+    "filled/pcb/Study.kicad_sym": {
+      "bytes": 57340,
+      "sha256": "8649ada39a5a04fc52a35fc7770c3a9d0e012c9e2dc874f422c6ceca0a309077"
+    },
+    "filled/pcb/engineering/Maru60_Options.kicad_sym": {
+      "bytes": 5314,
+      "sha256": "f4f200b7b158eb086c33ec7ac46533e1a3d1e1fa29c13c0137208e97c0dad6e0"
+    },
+    "filled/pcb/engineering/candidates.pretty/LED_SK6805_EC15_001_Recommended_Candidate.kicad_mod": {
+      "bytes": 4420,
+      "sha256": "39140db32e14761f427271ac8835ee38d6eb78d63c81ad1d1ad74bed03a15536"
+    },
+    "filled/pcb/engineering/candidates.pretty/MX-Hotswap-2.25U-4L-NPTH.kicad_mod": {
+      "bytes": 7665,
+      "sha256": "1ac00209a2da353804340f03aee638db4ffcda526360fd65345902b54b46015e"
+    },
+    "filled/pcb/engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH-StabRot180.kicad_mod": {
+      "bytes": 7838,
+      "sha256": "771047bc0a6e997b3777336cfde7d721dce5fd511fd3756ad30a5b565f92968e"
+    },
+    "filled/pcb/engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH.kicad_mod": {
+      "bytes": 7639,
+      "sha256": "7e7ad37c16b33e15e57e1f2cf8a325f86fb32f91f5a07264bc22aa041a7dffd7"
+    },
+    "filled/pcb/engineering/candidates.pretty/MX_Study_Backspace_2U_or_1U_1U.kicad_mod": {
+      "bytes": 18410,
+      "sha256": "a91499fb17f62cfc75c22d00848cca1132ec2976d20d5c231ea946ba51954655"
+    },
+    "filled/pcb/engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab.kicad_mod": {
+      "bytes": 12720,
+      "sha256": "a63b66fdfbf5f17794e196185e28a9064febe254a2ca00cbeb36653900da85ab"
+    },
+    "filled/pcb/engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab_OutwardLED.kicad_mod": {
+      "bytes": 12727,
+      "sha256": "6957c3c738b01d6239b3e22afdc46d86cce5a5efd9445961328e68a1f9714da5"
+    },
+    "filled/pcb/engineering/candidates.pretty/MX_Study_Caps_Normal_or_Stepped.kicad_mod": {
+      "bytes": 12175,
+      "sha256": "2b1cad60710626c0930282d54c21e4ddd33dc9a3b6f41f20e32a8d8af267f903"
+    },
+    "filled/pcb/engineering/candidates.pretty/MX_Study_RShift_2.75U_or_1.75U_1U.kicad_mod": {
+      "bytes": 18427,
+      "sha256": "d712dfaaf1dafb9c2c0e95fac011053c0796b38532ac203344ead9ddbb37d1a7"
+    },
+    "filled/pcb/engineering/candidates.pretty/README.md": {
+      "bytes": 1526,
+      "sha256": "eac34e4c89d1c57747195156a243ebe9196fc61cf749911ec10625d4546fce6c"
+    },
+    "filled/pcb/engineering/candidates.pretty/STABILIZED_4L_PROVENANCE.md": {
+      "bytes": 1886,
+      "sha256": "37fa375cd0bf3909efb77e5a970278d593b8be8b5ab362e65efad515b863d574"
+    },
+    "filled/pcb/engineering/third_party/KiCad9_Experimental_Packages/COPYRIGHT.debian": {
+      "bytes": 19872,
+      "sha256": "48a86acd94e857211eac57a51700fc9b3d38539503c282e09ff9e9392fd6503f"
+    },
+    "filled/pcb/engineering/third_party/KiCad9_Experimental_Packages/Texas_DRT-3.kicad_mod": {
+      "bytes": 4266,
+      "sha256": "604d4ede018338d6f06294847ca35697900457a67805b30361dec213c690a510"
+    },
+    "filled/pcb/engineering/third_party/KiCad9_Experimental_Packages/Winbond_USON-8-2EP_3x4mm_P0.8mm_EP0.2x0.8mm.kicad_mod": {
+      "bytes": 5293,
+      "sha256": "b191db69e23241e78bc768ef06b4844cbcc2794a8a84e180759e0314658c321a"
+    },
+    "filled/pcb/engineering/third_party/MX_V2/LICENSE": {
+      "bytes": 1061,
+      "sha256": "55e456ffa58f1ff68b3bca4fe508cf2bcfc465feb3ea94e20466a68c0cbbb141"
+    },
+    "filled/pcb/engineering/third_party/MX_V2/MX-Hotswap-1U.kicad_mod": {
+      "bytes": 5915,
+      "sha256": "47b7469b01479914cd9b72bcc77125e8140c7ba7f6d8828f61f2cc4787f619e3"
+    },
+    "filled/pcb/engineering/third_party/MX_V2/MX-Hotswap-2.25U.kicad_mod": {
+      "bytes": 6625,
+      "sha256": "6946cee0b40c07032dca093aaeada4a1c2ba17a6a2c6faa3cf30725074b74b18"
+    },
+    "filled/pcb/engineering/third_party/MX_V2/MX-Hotswap-2.75U.kicad_mod": {
+      "bytes": 6545,
+      "sha256": "143d4859ffbd4fb1079227b1d2054af4fe6585423ed03fb90b6b629573b940c7"
+    },
+    "filled/pcb/engineering/third_party/MX_V2/MX-Hotswap-2U.kicad_mod": {
+      "bytes": 6512,
+      "sha256": "4f102ec158f45ca81d1d2773ee266890bfd59ed365b10f0bb31ee37f578cf6a4"
+    },
+    "filled/pcb/engineering/third_party/MX_V2/MX-Hotswap-7U.kicad_mod": {
+      "bytes": 6517,
+      "sha256": "213277058a2677d7c1bf033707fdb82d64534787d2a4a546ecf4bf106644f963"
+    },
+    "filled/pcb/engineering/third_party/RP2350A_Minimal/LICENSE.txt": {
+      "bytes": 1763,
+      "sha256": "b7d06548be326cac80f52434578cc6a5e7c32e555619ee4aac3e2a03490a25a6"
+    },
+    "filled/pcb/engineering/third_party/RP2350A_Minimal/PROVENANCE.md": {
+      "bytes": 1723,
+      "sha256": "e847e087b26825fae8c96b9aec2d0f0501ac1984fe4424b9c14920efde8f7eea"
+    },
+    "filled/pcb/engineering/third_party/RP2350A_Minimal/rp2350a-pins.json": {
+      "bytes": 4715,
+      "sha256": "bdf248e586f2abffdbc8a72c43024e463b1ec846535baff833bfef173f045953"
+    },
+    "filled/pcb/engineering/third_party/marbastlib-gateron/LICENSE": {
+      "bytes": 8852,
+      "sha256": "6e471d647db50527d0c75ee5f1a55a74012ab177c73282bef0bdc7f6562b7ded"
+    },
+    "filled/pcb/engineering/third_party/marbastlib-gateron/PROVENANCE.md": {
+      "bytes": 564,
+      "sha256": "f0f53f2b9fd72c76047ce0f4cde41f7838e6f383ade4bb2928d64c473425f182"
+    },
+    "filled/pcb/engineering/third_party/marbastlib-gateron/SW_MX_HS_KS-2P02B01-01_1u.kicad_mod": {
+      "bytes": 19034,
+      "sha256": "153fcc264590f072c07798d9ba0cda1ea7c56a9df42b54a7d8b87ddb19fa8483"
+    },
+    "filled/pcb/fp-lib-table": {
+      "bytes": 2635,
+      "sha256": "4b7ee21c0a04973afa8825d7144af6221af9b81790f755bdc7bb8016fffe8d5d"
+    },
+    "filled/pcb/maru60-core.kicad_sch": {
+      "bytes": 142771,
+      "sha256": "f0183190e194e30ec8e5b07a34bfc277fb2f95558511bba3676c3ea58a10dbe9"
+    },
+    "filled/pcb/maru60-expansion.kicad_sch": {
+      "bytes": 8377,
+      "sha256": "926f3ffa7423b76596cc6fcebfec065eb8f73d91d840a9b0fd37a4b6e8baf88d"
+    },
+    "filled/pcb/maru60-lighting.kicad_pro": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "filled/pcb/maru60-lighting.kicad_sch": {
+      "bytes": 272706,
+      "sha256": "dd10fd66b1a2b119b91194d436983732d042cf0949c92d4497479f4ca009bb10"
+    },
+    "filled/pcb/maru60-matrix.kicad_pro": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "filled/pcb/maru60-matrix.kicad_sch": {
+      "bytes": 181625,
+      "sha256": "a87a278408050f59df0912afaaf9f476f1648f828b7744b2f734ca3b62862f90"
+    },
+    "filled/pcb/maru60.kicad_pcb": {
+      "bytes": 6670764,
+      "sha256": "aaafc033c6e9809afcb189290c3740157b7ab5596aaa0867e581f08d89807eca"
+    },
+    "filled/pcb/maru60.kicad_prl": {
+      "bytes": 2057,
+      "sha256": "8c0a828ce6c58ebd31b8835a9bd58efb04385897813f3e5d51b961410868af58"
+    },
+    "filled/pcb/maru60.kicad_pro": {
+      "bytes": 9782,
+      "sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073"
+    },
+    "filled/pcb/maru60.kicad_sch": {
+      "bytes": 5062,
+      "sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51"
+    },
+    "filled/pcb/protection-gpio-isolation.kicad_sch": {
+      "bytes": 47770,
+      "sha256": "2ee16d2ad54943123666eaf35512592908e21d52ff4672760c5298e52e55f38e"
+    },
+    "filled/pcb/protection-input-protection.kicad_sch": {
+      "bytes": 24471,
+      "sha256": "8b684f93ea734a9e240f5ae6852c8e6490af441dd9153aa8cb7c16ac6491a6fc"
+    },
+    "filled/pcb/protection-supply-context.kicad_sch": {
+      "bytes": 19586,
+      "sha256": "b593e119667214a2d732eca470272e23f97190c7c630856bd7fa7fadc6875f15"
+    },
+    "filled/pcb/protection-v6-regulated-domain.kicad_sch": {
+      "bytes": 26588,
+      "sha256": "8cbd2694194d8ea807a86983cb821b585131a63467b30d915ba1517af10694cc"
+    },
+    "filled/pcb/sym-lib-table": {
+      "bytes": 1782,
+      "sha256": "288a9ed004a889ff4e26f486e35c2a83d1de11d94fffa140f1cd62eb9ef441ac"
+    },
+    "independent-actual/FINAL_ELIGIBILITY.json": {
+      "bytes": 2235,
+      "sha256": "27c41ca26cfa052bbb2f7c983152d285c584299d8dff5f40d4a3fced05d58d69"
+    },
+    "independent-actual/README.md": {
+      "bytes": 2721,
+      "sha256": "1346b7cdd60161b1662d8bbf3326b38785bafbb29080b6251d1843c011dea21c"
+    },
+    "independent-actual/SHA256SUMS": {
+      "bytes": 1222,
+      "sha256": "26f5d4d2f041f0424ab05df0593e72ec164fdaa0b7efdf83cfaa621de42e8269"
+    },
+    "independent-actual/actual_R2_binding.json": {
+      "bytes": 5307,
+      "sha256": "7e9d84844a7194961884d0510501d461087f0de0d8481f60310ba4ebf3dda333"
+    },
+    "independent-actual/actual_R2_binding.log": {
+      "bytes": 5307,
+      "sha256": "7e9d84844a7194961884d0510501d461087f0de0d8481f60310ba4ebf3dda333"
+    },
+    "independent-actual/actual_geometry.json": {
+      "bytes": 6143,
+      "sha256": "b5dbc9420ca44f9bd4d3908871c585d64bcaa4c30bfe87d4fa9995829c5dfae7"
+    },
+    "independent-actual/actual_geometry.log": {
+      "bytes": 6884,
+      "sha256": "5369dcf90e267039e3d0b2836ef1087c4ccc273eabf74dab33baa0aafbad2173"
+    },
+    "independent-actual/actual_geometry_v0_interrupted.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "independent-actual/audit_actual.py": {
+      "bytes": 9246,
+      "sha256": "567f74fbb2379e2bcc929c292b71329403335b790852c18843fd5aefc819a859"
+    },
+    "independent-actual/audit_actual_v0_slow.py.txt": {
+      "bytes": 8673,
+      "sha256": "39a347eb8f8632c1d9ba1ef0e19d340b5c04cd15bcfeb42578a6c6e1fffcac28"
+    },
+    "independent-actual/bind_actual_r2.py": {
+      "bytes": 9205,
+      "sha256": "0fb1c8dfa3465cc8205263f53681b4095d0f6cfedd7ecc5ac4ad501012f0c1a8"
+    },
+    "independent-actual/cold_refill.log": {
+      "bytes": 7297,
+      "sha256": "feb9d90bcd2cd423f034b01dbe677b938e0de9f46e4cd69f66eb911f77cf1219"
+    },
+    "independent-actual/cold_refill.py": {
+      "bytes": 1595,
+      "sha256": "7f32bc63656f6294630a2c2d514ad1ad4f44ef5e3d737ba8bb5819f7201a99b9"
+    },
+    "independent-actual/cold_refill_results.json": {
+      "bytes": 7297,
+      "sha256": "feb9d90bcd2cd423f034b01dbe677b938e0de9f46e4cd69f66eb911f77cf1219"
+    },
+    "independent-actual/fail_closed_controls.json": {
+      "bytes": 1661,
+      "sha256": "216937d9a3e32b155895df23b19d4d3707a00bb85a6d4d615e27e2f91dc6de76"
+    },
+    "independent-contract/CONSTRUCTION_CONTRACT.json": {
+      "bytes": 9490,
+      "sha256": "c58baac31c087ddd115fb5ccbe7953ced52d8469c0efe675b2184ea00ff7d7a5"
+    },
+    "independent-contract/README.md": {
+      "bytes": 6810,
+      "sha256": "171175af31423bdf4a060665580f5fa7d4cbe7e8119e9b02da5d3e90c0d478c9"
+    },
+    "independent-contract/SHA256SUMS": {
+      "bytes": 1426,
+      "sha256": "8172689dc8dc4115a64d995a358f979f8468b6be0ad5a901ba3d0b540df7b761"
+    },
+    "independent-contract/check_legacy_shadow.py": {
+      "bytes": 1883,
+      "sha256": "e7c9850d921ee1ea383c42e143b84ce0d2ba5f865308a29d087ba28db303256b"
+    },
+    "independent-contract/fail_closed_controls.json": {
+      "bytes": 400,
+      "sha256": "e76bcca1fe4c0a359d12f9f4c19ea6314bdffcf7b666ce9044fbd4da61fcbdf0"
+    },
+    "independent-contract/input-original-a9.kicad_pcb": {
+      "bytes": 6672170,
+      "sha256": "a9ff40100f8b34cd46b7706eb3264cbbc61508cc4c6895fdcefcb2cce35e7b67"
+    },
+    "independent-contract/inspect_site.py": {
+      "bytes": 11972,
+      "sha256": "2979fc4bc6be6f1d305f33ea1c399b1aef5caf65dcdadfa03ce0a2444b3977f2"
+    },
+    "independent-contract/legacy_shadow.log": {
+      "bytes": 4252,
+      "sha256": "d944a464996437c9e3b67181a83417b22cf4aff756bde161979e90aff3008aea"
+    },
+    "independent-contract/legacy_shadow_results.json": {
+      "bytes": 5232,
+      "sha256": "48968084d2447a0baa4df8235d3d45ec4a7e370017767c5ec6e2d222193584ef"
+    },
+    "independent-contract/original_source_provenance.json": {
+      "bytes": 479,
+      "sha256": "ab8491a0420cd8c3c50d8834731267a4c22eb239bc9087de678e00ef16646427"
+    },
+    "independent-contract/site.log": {
+      "bytes": 21106,
+      "sha256": "27da71b4a1db30d204397c49a32089aa0244b704ba851f35639efb03be43d1d0"
+    },
+    "independent-contract/site_results.json": {
+      "bytes": 21106,
+      "sha256": "27da71b4a1db30d204397c49a32089aa0244b704ba851f35639efb03be43d1d0"
+    },
+    "independent-contract/stub-review/README.md": {
+      "bytes": 3757,
+      "sha256": "6c8f0dc84865997ed8a37d2dabaf6de0855be1c295b05873f96a80272dd9873f"
+    },
+    "independent-contract/stub-review/report-core.json": {
+      "bytes": 22965,
+      "sha256": "57fdc2c530e742a56ec1edefe14f87d7826d9218009b175f58d65fac54aace9e"
+    },
+    "independent-contract/stub-review/review.py": {
+      "bytes": 7193,
+      "sha256": "e9d63dd81ee951e21b855c79bc0e046cab952337cd2205d60e74d5518dff0ffc"
+    },
+    "independent-contract/stub-review/review_core.py": {
+      "bytes": 7799,
+      "sha256": "bdccb53bba0b20e766cf11885267373e286cac5785194167d40161ee3e0c2eaf"
+    },
+    "independent-contract/stub-review/site-contract-review.md": {
+      "bytes": 4092,
+      "sha256": "a6caa200c600f0c3f579a6c00249aa744d784400fba39f1eda4d64b8702ed2cd"
+    },
+    "maru60-v7-connector-gnd-unselected-aaaf.png": {
+      "bytes": 527363,
+      "sha256": "59578e9e1bb158fa4ef60e69ff636cc025e93a230f92dbb1b64ca6807a54cce1"
+    },
+    "prefill/pcb/Maru60.kicad_sym": {
+      "bytes": 14140,
+      "sha256": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27"
+    },
+    "prefill/pcb/Maru60.pretty/Abracon_AOTA_B201610S3R3_Official_R4.kicad_mod": {
+      "bytes": 5911,
+      "sha256": "5d02afce5b5bc1b5df1612accf1159a32a8f872c4efebf5cf2cd9eb78744cbab"
+    },
+    "prefill/pcb/Maru60.pretty/C_0402_Official_R4_Wide.kicad_mod": {
+      "bytes": 5609,
+      "sha256": "3c3c32d0f0fce504fb2d97554e977c53083e7fbce5202676335bc58e106618c4"
+    },
+    "prefill/pcb/Maru60.pretty/OSHW_then_Minpeter_H6_Gap1p5_Silk_DRAFT.kicad_mod": {
+      "bytes": 43272,
+      "sha256": "48296c6e5118c4be1c9f2cc0e65392acdb2fd0eea3186e1c469c81a4382d56b4"
+    },
+    "prefill/pcb/Maru60.pretty/RP2350A_QFN60_Official_R4.kicad_mod": {
+      "bytes": 29650,
+      "sha256": "7742df773afbd96c3b880fa83ac5c479e0e88a7c6ab159006e2c9302183c1eb5"
+    },
+    "prefill/pcb/MaruStudy.pretty/MAX_T822-3C_90-0065_2x2_P0.5_EP0.8x1.38.kicad_mod": {
+      "bytes": 1645,
+      "sha256": "17fc287eacf647d25657fd0130d7e2d72a766832e703990ca3547201f271333f"
+    },
+    "prefill/pcb/MaruStudy.pretty/Murata_GRM18_0603_Reflow_0.65x0.75_Gap0.7.kicad_mod": {
+      "bytes": 816,
+      "sha256": "046fff6d5daf2e160746e3484419fecff37fd7cfa8edff804fbfaf41cede98f1"
+    },
+    "prefill/pcb/MaruStudy.pretty/Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9.kicad_mod": {
+      "bytes": 835,
+      "sha256": "d71235770392086ecd8640392d27615a1333ccbc6aab72f314fb61c47ba23cac"
+    },
+    "prefill/pcb/Protection_Study.pretty/TI_RPW0010A_2x2mm_Official4225183A_DRAFT.kicad_mod": {
+      "bytes": 5455,
+      "sha256": "5365c9a0097cf7e60ca94cd47f0174329e878e4f6f7f77db18e4cf71080d1221"
+    },
+    "prefill/pcb/Protection_Study.pretty/TI_RVZ14_1p35x3p5mm_P0p5_DERIVED_DRAFT.kicad_mod": {
+      "bytes": 3112,
+      "sha256": "071c2f08c1c5cf34a58a26dace06c68560f55f22848b38abe9dd2c80feb41034"
+    },
+    "prefill/pcb/Study.kicad_sym": {
+      "bytes": 57340,
+      "sha256": "8649ada39a5a04fc52a35fc7770c3a9d0e012c9e2dc874f422c6ceca0a309077"
+    },
+    "prefill/pcb/engineering/Maru60_Options.kicad_sym": {
+      "bytes": 5314,
+      "sha256": "f4f200b7b158eb086c33ec7ac46533e1a3d1e1fa29c13c0137208e97c0dad6e0"
+    },
+    "prefill/pcb/engineering/candidates.pretty/LED_SK6805_EC15_001_Recommended_Candidate.kicad_mod": {
+      "bytes": 4420,
+      "sha256": "39140db32e14761f427271ac8835ee38d6eb78d63c81ad1d1ad74bed03a15536"
+    },
+    "prefill/pcb/engineering/candidates.pretty/MX-Hotswap-2.25U-4L-NPTH.kicad_mod": {
+      "bytes": 7665,
+      "sha256": "1ac00209a2da353804340f03aee638db4ffcda526360fd65345902b54b46015e"
+    },
+    "prefill/pcb/engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH-StabRot180.kicad_mod": {
+      "bytes": 7838,
+      "sha256": "771047bc0a6e997b3777336cfde7d721dce5fd511fd3756ad30a5b565f92968e"
+    },
+    "prefill/pcb/engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH.kicad_mod": {
+      "bytes": 7639,
+      "sha256": "7e7ad37c16b33e15e57e1f2cf8a325f86fb32f91f5a07264bc22aa041a7dffd7"
+    },
+    "prefill/pcb/engineering/candidates.pretty/MX_Study_Backspace_2U_or_1U_1U.kicad_mod": {
+      "bytes": 18410,
+      "sha256": "a91499fb17f62cfc75c22d00848cca1132ec2976d20d5c231ea946ba51954655"
+    },
+    "prefill/pcb/engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab.kicad_mod": {
+      "bytes": 12720,
+      "sha256": "a63b66fdfbf5f17794e196185e28a9064febe254a2ca00cbeb36653900da85ab"
+    },
+    "prefill/pcb/engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab_OutwardLED.kicad_mod": {
+      "bytes": 12727,
+      "sha256": "6957c3c738b01d6239b3e22afdc46d86cce5a5efd9445961328e68a1f9714da5"
+    },
+    "prefill/pcb/engineering/candidates.pretty/MX_Study_Caps_Normal_or_Stepped.kicad_mod": {
+      "bytes": 12175,
+      "sha256": "2b1cad60710626c0930282d54c21e4ddd33dc9a3b6f41f20e32a8d8af267f903"
+    },
+    "prefill/pcb/engineering/candidates.pretty/MX_Study_RShift_2.75U_or_1.75U_1U.kicad_mod": {
+      "bytes": 18427,
+      "sha256": "d712dfaaf1dafb9c2c0e95fac011053c0796b38532ac203344ead9ddbb37d1a7"
+    },
+    "prefill/pcb/engineering/candidates.pretty/README.md": {
+      "bytes": 1526,
+      "sha256": "eac34e4c89d1c57747195156a243ebe9196fc61cf749911ec10625d4546fce6c"
+    },
+    "prefill/pcb/engineering/candidates.pretty/STABILIZED_4L_PROVENANCE.md": {
+      "bytes": 1886,
+      "sha256": "37fa375cd0bf3909efb77e5a970278d593b8be8b5ab362e65efad515b863d574"
+    },
+    "prefill/pcb/engineering/third_party/KiCad9_Experimental_Packages/COPYRIGHT.debian": {
+      "bytes": 19872,
+      "sha256": "48a86acd94e857211eac57a51700fc9b3d38539503c282e09ff9e9392fd6503f"
+    },
+    "prefill/pcb/engineering/third_party/KiCad9_Experimental_Packages/Texas_DRT-3.kicad_mod": {
+      "bytes": 4266,
+      "sha256": "604d4ede018338d6f06294847ca35697900457a67805b30361dec213c690a510"
+    },
+    "prefill/pcb/engineering/third_party/KiCad9_Experimental_Packages/Winbond_USON-8-2EP_3x4mm_P0.8mm_EP0.2x0.8mm.kicad_mod": {
+      "bytes": 5293,
+      "sha256": "b191db69e23241e78bc768ef06b4844cbcc2794a8a84e180759e0314658c321a"
+    },
+    "prefill/pcb/engineering/third_party/MX_V2/LICENSE": {
+      "bytes": 1061,
+      "sha256": "55e456ffa58f1ff68b3bca4fe508cf2bcfc465feb3ea94e20466a68c0cbbb141"
+    },
+    "prefill/pcb/engineering/third_party/MX_V2/MX-Hotswap-1U.kicad_mod": {
+      "bytes": 5915,
+      "sha256": "47b7469b01479914cd9b72bcc77125e8140c7ba7f6d8828f61f2cc4787f619e3"
+    },
+    "prefill/pcb/engineering/third_party/MX_V2/MX-Hotswap-2.25U.kicad_mod": {
+      "bytes": 6625,
+      "sha256": "6946cee0b40c07032dca093aaeada4a1c2ba17a6a2c6faa3cf30725074b74b18"
+    },
+    "prefill/pcb/engineering/third_party/MX_V2/MX-Hotswap-2.75U.kicad_mod": {
+      "bytes": 6545,
+      "sha256": "143d4859ffbd4fb1079227b1d2054af4fe6585423ed03fb90b6b629573b940c7"
+    },
+    "prefill/pcb/engineering/third_party/MX_V2/MX-Hotswap-2U.kicad_mod": {
+      "bytes": 6512,
+      "sha256": "4f102ec158f45ca81d1d2773ee266890bfd59ed365b10f0bb31ee37f578cf6a4"
+    },
+    "prefill/pcb/engineering/third_party/MX_V2/MX-Hotswap-7U.kicad_mod": {
+      "bytes": 6517,
+      "sha256": "213277058a2677d7c1bf033707fdb82d64534787d2a4a546ecf4bf106644f963"
+    },
+    "prefill/pcb/engineering/third_party/RP2350A_Minimal/LICENSE.txt": {
+      "bytes": 1763,
+      "sha256": "b7d06548be326cac80f52434578cc6a5e7c32e555619ee4aac3e2a03490a25a6"
+    },
+    "prefill/pcb/engineering/third_party/RP2350A_Minimal/PROVENANCE.md": {
+      "bytes": 1723,
+      "sha256": "e847e087b26825fae8c96b9aec2d0f0501ac1984fe4424b9c14920efde8f7eea"
+    },
+    "prefill/pcb/engineering/third_party/RP2350A_Minimal/rp2350a-pins.json": {
+      "bytes": 4715,
+      "sha256": "bdf248e586f2abffdbc8a72c43024e463b1ec846535baff833bfef173f045953"
+    },
+    "prefill/pcb/engineering/third_party/marbastlib-gateron/LICENSE": {
+      "bytes": 8852,
+      "sha256": "6e471d647db50527d0c75ee5f1a55a74012ab177c73282bef0bdc7f6562b7ded"
+    },
+    "prefill/pcb/engineering/third_party/marbastlib-gateron/PROVENANCE.md": {
+      "bytes": 564,
+      "sha256": "f0f53f2b9fd72c76047ce0f4cde41f7838e6f383ade4bb2928d64c473425f182"
+    },
+    "prefill/pcb/engineering/third_party/marbastlib-gateron/SW_MX_HS_KS-2P02B01-01_1u.kicad_mod": {
+      "bytes": 19034,
+      "sha256": "153fcc264590f072c07798d9ba0cda1ea7c56a9df42b54a7d8b87ddb19fa8483"
+    },
+    "prefill/pcb/fp-lib-table": {
+      "bytes": 2635,
+      "sha256": "4b7ee21c0a04973afa8825d7144af6221af9b81790f755bdc7bb8016fffe8d5d"
+    },
+    "prefill/pcb/maru60-core.kicad_sch": {
+      "bytes": 142771,
+      "sha256": "f0183190e194e30ec8e5b07a34bfc277fb2f95558511bba3676c3ea58a10dbe9"
+    },
+    "prefill/pcb/maru60-expansion.kicad_sch": {
+      "bytes": 8377,
+      "sha256": "926f3ffa7423b76596cc6fcebfec065eb8f73d91d840a9b0fd37a4b6e8baf88d"
+    },
+    "prefill/pcb/maru60-lighting.kicad_pro": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "prefill/pcb/maru60-lighting.kicad_sch": {
+      "bytes": 272706,
+      "sha256": "dd10fd66b1a2b119b91194d436983732d042cf0949c92d4497479f4ca009bb10"
+    },
+    "prefill/pcb/maru60-matrix.kicad_pro": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "prefill/pcb/maru60-matrix.kicad_sch": {
+      "bytes": 181625,
+      "sha256": "a87a278408050f59df0912afaaf9f476f1648f828b7744b2f734ca3b62862f90"
+    },
+    "prefill/pcb/maru60.kicad_pcb": {
+      "bytes": 6670764,
+      "sha256": "43cfe54820adaacc75625e60fec0d0e830949cdc51405bd9910e668c65e5179b"
+    },
+    "prefill/pcb/maru60.kicad_prl": {
+      "bytes": 2057,
+      "sha256": "8c0a828ce6c58ebd31b8835a9bd58efb04385897813f3e5d51b961410868af58"
+    },
+    "prefill/pcb/maru60.kicad_pro": {
+      "bytes": 9782,
+      "sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073"
+    },
+    "prefill/pcb/maru60.kicad_sch": {
+      "bytes": 5062,
+      "sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51"
+    },
+    "prefill/pcb/protection-gpio-isolation.kicad_sch": {
+      "bytes": 47770,
+      "sha256": "2ee16d2ad54943123666eaf35512592908e21d52ff4672760c5298e52e55f38e"
+    },
+    "prefill/pcb/protection-input-protection.kicad_sch": {
+      "bytes": 24471,
+      "sha256": "8b684f93ea734a9e240f5ae6852c8e6490af441dd9153aa8cb7c16ac6491a6fc"
+    },
+    "prefill/pcb/protection-supply-context.kicad_sch": {
+      "bytes": 19586,
+      "sha256": "b593e119667214a2d732eca470272e23f97190c7c630856bd7fa7fadc6875f15"
+    },
+    "prefill/pcb/protection-v6-regulated-domain.kicad_sch": {
+      "bytes": 26588,
+      "sha256": "8cbd2694194d8ea807a86983cb821b585131a63467b30d915ba1517af10694cc"
+    },
+    "prefill/pcb/sym-lib-table": {
+      "bytes": 1782,
+      "sha256": "288a9ed004a889ff4e26f486e35c2a83d1de11d94fffa140f1cd62eb9ef441ac"
+    },
+    "qa/build-v0-failed.log": {
+      "bytes": 397,
+      "sha256": "d53fb0819405f587e9e826a00b47c81eba869944eaf2f648f09deadb7af72440"
+    },
+    "qa/build.log": {
+      "bytes": 1349,
+      "sha256": "67c3bba0879e6f65fdfa9f78e4af983485fb1eb24490f683c7bb807e05bc6a26"
+    },
+    "qa/comparison-v0-order-sensitive.log": {
+      "bytes": 366,
+      "sha256": "26a9f606bc56272ab0a6a439f720c52d996c5effbac71a33734dd12100e17d60"
+    },
+    "qa/comparison.json": {
+      "bytes": 4185,
+      "sha256": "29209e20bae689b3302b35bee34b1ad69722d5bfd2a2a19e017a9aa30b9f76fa"
+    },
+    "qa/comparison.log": {
+      "bytes": 2911,
+      "sha256": "5a4894c90c0cdc80323e20dbb58302f81c98177d56e1d77501ec4b6e73046fff"
+    },
+    "qa/drc.execution.json": {
+      "bytes": 796,
+      "sha256": "a1c36f9ae7fa1fc0dd4babff5259a32a61171f378cd56f24115bb8582e23f114"
+    },
+    "qa/drc.json": {
+      "bytes": 47953,
+      "sha256": "7edf20a315dbce23107dff72b57f5c927d0082b2dcff37e9c01345db0028157d"
+    },
+    "qa/drc.log": {
+      "bytes": 145,
+      "sha256": "ee7f61e4967506bd3a8f3fb7373107de921582466bd9b051e2ca51680f9adf14"
+    },
+    "qa/erc.execution.json": {
+      "bytes": 745,
+      "sha256": "f97a80e63755ecc37cc673ecf822517880c2c9844546f01f74b2657f9944711e"
+    },
+    "qa/erc.json": {
+      "bytes": 1953,
+      "sha256": "b2a20dee7f9c882f778abdd14dfb7309c14bc675ce2388de437a33c58d2cd325"
+    },
+    "qa/erc.log": {
+      "bytes": 951,
+      "sha256": "0023e62914b07e4c90e8309cdf2bc4d75df55fdc71d70d58ce93c8e2a96535e9"
+    },
+    "qa/fill.log": {
+      "bytes": 712,
+      "sha256": "8f4c5252e841e61994aeb83eca0ccc87093e50beb94df76d1c40657fc090063a"
+    },
+    "qa/image-binding.json": {
+      "bytes": 457,
+      "sha256": "f2ef88e6ce9cb4d62ae42bd4498ab86bed970846efbad0f6d3866974cef139ed"
+    },
+    "qa/local-native-view.json": {
+      "bytes": 6327710,
+      "sha256": "a0055968431f4b45877fe2b83762f3401ac7df9a8fb667af24fc854aa0f00287"
+    },
+    "qa/material-graph.json": {
+      "bytes": 21452159,
+      "sha256": "1129a187d109ce4e5d8e98788f8c22cd7d3f0b9edd0e6a70f0badac5cc602824"
+    },
+    "qa/material-graph.log": {
+      "bytes": 967,
+      "sha256": "e6e70f76206093810a993312fcdf0fc3a7f4c7b8f595e0b82be45dcd56fd42d0"
+    },
+    "qa/native-fill.json": {
+      "bytes": 712,
+      "sha256": "8f4c5252e841e61994aeb83eca0ccc87093e50beb94df76d1c40657fc090063a"
+    },
+    "qa/raw-delta.json": {
+      "bytes": 533,
+      "sha256": "9dc0c23b85f73267ce4142f9cd34623ae2c3d0a45b5c3a4cb7cf6a122b2f2a01"
+    },
+    "qa/serialization-only.kicad_pcb": {
+      "bytes": 6670764,
+      "sha256": "8293bd11230723351d9fdfac193e92f07c3ba20962eccea945990112d5e93c35"
+    },
+    "qa/serialization-only.kicad_pro": {
+      "bytes": 9794,
+      "sha256": "650c6b827d11647a0438712ebb87359d72e23502378789969dced4ae00dce67f"
+    },
+    "qa/source-material-graph-R2.json": {
+      "bytes": 21448789,
+      "sha256": "3d174b35c555dcce8b3df1097f664be12e4736cca1f750a005d46441b941452c"
+    },
+    "qa/view-export.log": {
+      "bytes": 798,
+      "sha256": "de5dc48e91e12def42fa20b340becc1e613b0680790816176f7dbcd63638398f"
+    },
+    "scripts/__pycache__/sexpr_spans.cpython-312.pyc": {
+      "bytes": 2286,
+      "sha256": "fd0cd1748c71db101f00beb01cf1dd7c05daff92867c973184e822acd2000317"
+    },
+    "scripts/__pycache__/sexpr_spans.cpython-313.pyc": {
+      "bytes": 2336,
+      "sha256": "b1e252cfbfc954f65a9c0b6d63a899a440d4149536526805203479e779806357"
+    },
+    "scripts/build-v0.py.txt": {
+      "bytes": 2898,
+      "sha256": "2d5e2bbd0a9a0b59275344397bfacf3e1e67d0103b09b14b677a397970c56023"
+    },
+    "scripts/build.py": {
+      "bytes": 3029,
+      "sha256": "0df8245d552612570d22f981dd73f2f0caa1cd7a1f322899746e5ea2fb59a083"
+    },
+    "scripts/compare-v0-order-sensitive.py.txt": {
+      "bytes": 4268,
+      "sha256": "917af94784f18f3864535fe745c2769c2ca569ed5bfee63a3c92389bbf728a91"
+    },
+    "scripts/compare.py": {
+      "bytes": 4720,
+      "sha256": "5cf28adb480e2bc421f2b795538503905aa6dc6cf54c0170fd3756df6143ba75"
+    },
+    "scripts/export_material_graph.py": {
+      "bytes": 13942,
+      "sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9"
+    },
+    "scripts/export_view.py": {
+      "bytes": 1901,
+      "sha256": "2bdf7555dad916f29325a7b8eb4f9a2f6bdbad5fd868f0278db0fa3dd8560b80"
+    },
+    "scripts/fill.py": {
+      "bytes": 1632,
+      "sha256": "790816e932b8549765adef8f6c03bc53e4940ac37586a4447abc83fa1255ac3f"
+    },
+    "scripts/package.py": {
+      "bytes": 6825,
+      "sha256": "9ecd94d7b386648627058320d3dad196899057e82e40b99d0e7134defcfcf168"
+    },
+    "scripts/render.py": {
+      "bytes": 3921,
+      "sha256": "60da0f853a6115fcb2ef798975ba01592151f0cc366e536105aef90602017549"
+    },
+    "scripts/run_native.py": {
+      "bytes": 1172,
+      "sha256": "432cf435178eb2f702c5fdc17690fe09ad054b7afa95cfec182e87e04827dfc4"
+    },
+    "scripts/sexpr_spans.py": {
+      "bytes": 948,
+      "sha256": "f269c25e40c054f88134a24e96e9f37299b7528ba662ec0f2f76334f292facd2"
+    },
+    "source/pcb/Maru60.kicad_sym": {
+      "bytes": 14140,
+      "sha256": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27"
+    },
+    "source/pcb/Maru60.pretty/Abracon_AOTA_B201610S3R3_Official_R4.kicad_mod": {
+      "bytes": 5911,
+      "sha256": "5d02afce5b5bc1b5df1612accf1159a32a8f872c4efebf5cf2cd9eb78744cbab"
+    },
+    "source/pcb/Maru60.pretty/C_0402_Official_R4_Wide.kicad_mod": {
+      "bytes": 5609,
+      "sha256": "3c3c32d0f0fce504fb2d97554e977c53083e7fbce5202676335bc58e106618c4"
+    },
+    "source/pcb/Maru60.pretty/OSHW_then_Minpeter_H6_Gap1p5_Silk_DRAFT.kicad_mod": {
+      "bytes": 43272,
+      "sha256": "48296c6e5118c4be1c9f2cc0e65392acdb2fd0eea3186e1c469c81a4382d56b4"
+    },
+    "source/pcb/Maru60.pretty/RP2350A_QFN60_Official_R4.kicad_mod": {
+      "bytes": 29650,
+      "sha256": "7742df773afbd96c3b880fa83ac5c479e0e88a7c6ab159006e2c9302183c1eb5"
+    },
+    "source/pcb/MaruStudy.pretty/MAX_T822-3C_90-0065_2x2_P0.5_EP0.8x1.38.kicad_mod": {
+      "bytes": 1645,
+      "sha256": "17fc287eacf647d25657fd0130d7e2d72a766832e703990ca3547201f271333f"
+    },
+    "source/pcb/MaruStudy.pretty/Murata_GRM18_0603_Reflow_0.65x0.75_Gap0.7.kicad_mod": {
+      "bytes": 816,
+      "sha256": "046fff6d5daf2e160746e3484419fecff37fd7cfa8edff804fbfaf41cede98f1"
+    },
+    "source/pcb/MaruStudy.pretty/Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9.kicad_mod": {
+      "bytes": 835,
+      "sha256": "d71235770392086ecd8640392d27615a1333ccbc6aab72f314fb61c47ba23cac"
+    },
+    "source/pcb/Protection_Study.pretty/TI_RPW0010A_2x2mm_Official4225183A_DRAFT.kicad_mod": {
+      "bytes": 5455,
+      "sha256": "5365c9a0097cf7e60ca94cd47f0174329e878e4f6f7f77db18e4cf71080d1221"
+    },
+    "source/pcb/Protection_Study.pretty/TI_RVZ14_1p35x3p5mm_P0p5_DERIVED_DRAFT.kicad_mod": {
+      "bytes": 3112,
+      "sha256": "071c2f08c1c5cf34a58a26dace06c68560f55f22848b38abe9dd2c80feb41034"
+    },
+    "source/pcb/Study.kicad_sym": {
+      "bytes": 57340,
+      "sha256": "8649ada39a5a04fc52a35fc7770c3a9d0e012c9e2dc874f422c6ceca0a309077"
+    },
+    "source/pcb/engineering/Maru60_Options.kicad_sym": {
+      "bytes": 5314,
+      "sha256": "f4f200b7b158eb086c33ec7ac46533e1a3d1e1fa29c13c0137208e97c0dad6e0"
+    },
+    "source/pcb/engineering/candidates.pretty/LED_SK6805_EC15_001_Recommended_Candidate.kicad_mod": {
+      "bytes": 4420,
+      "sha256": "39140db32e14761f427271ac8835ee38d6eb78d63c81ad1d1ad74bed03a15536"
+    },
+    "source/pcb/engineering/candidates.pretty/MX-Hotswap-2.25U-4L-NPTH.kicad_mod": {
+      "bytes": 7665,
+      "sha256": "1ac00209a2da353804340f03aee638db4ffcda526360fd65345902b54b46015e"
+    },
+    "source/pcb/engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH-StabRot180.kicad_mod": {
+      "bytes": 7838,
+      "sha256": "771047bc0a6e997b3777336cfde7d721dce5fd511fd3756ad30a5b565f92968e"
+    },
+    "source/pcb/engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH.kicad_mod": {
+      "bytes": 7639,
+      "sha256": "7e7ad37c16b33e15e57e1f2cf8a325f86fb32f91f5a07264bc22aa041a7dffd7"
+    },
+    "source/pcb/engineering/candidates.pretty/MX_Study_Backspace_2U_or_1U_1U.kicad_mod": {
+      "bytes": 18410,
+      "sha256": "a91499fb17f62cfc75c22d00848cca1132ec2976d20d5c231ea946ba51954655"
+    },
+    "source/pcb/engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab.kicad_mod": {
+      "bytes": 12720,
+      "sha256": "a63b66fdfbf5f17794e196185e28a9064febe254a2ca00cbeb36653900da85ab"
+    },
+    "source/pcb/engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab_OutwardLED.kicad_mod": {
+      "bytes": 12727,
+      "sha256": "6957c3c738b01d6239b3e22afdc46d86cce5a5efd9445961328e68a1f9714da5"
+    },
+    "source/pcb/engineering/candidates.pretty/MX_Study_Caps_Normal_or_Stepped.kicad_mod": {
+      "bytes": 12175,
+      "sha256": "2b1cad60710626c0930282d54c21e4ddd33dc9a3b6f41f20e32a8d8af267f903"
+    },
+    "source/pcb/engineering/candidates.pretty/MX_Study_RShift_2.75U_or_1.75U_1U.kicad_mod": {
+      "bytes": 18427,
+      "sha256": "d712dfaaf1dafb9c2c0e95fac011053c0796b38532ac203344ead9ddbb37d1a7"
+    },
+    "source/pcb/engineering/candidates.pretty/README.md": {
+      "bytes": 1526,
+      "sha256": "eac34e4c89d1c57747195156a243ebe9196fc61cf749911ec10625d4546fce6c"
+    },
+    "source/pcb/engineering/candidates.pretty/STABILIZED_4L_PROVENANCE.md": {
+      "bytes": 1886,
+      "sha256": "37fa375cd0bf3909efb77e5a970278d593b8be8b5ab362e65efad515b863d574"
+    },
+    "source/pcb/engineering/third_party/KiCad9_Experimental_Packages/COPYRIGHT.debian": {
+      "bytes": 19872,
+      "sha256": "48a86acd94e857211eac57a51700fc9b3d38539503c282e09ff9e9392fd6503f"
+    },
+    "source/pcb/engineering/third_party/KiCad9_Experimental_Packages/Texas_DRT-3.kicad_mod": {
+      "bytes": 4266,
+      "sha256": "604d4ede018338d6f06294847ca35697900457a67805b30361dec213c690a510"
+    },
+    "source/pcb/engineering/third_party/KiCad9_Experimental_Packages/Winbond_USON-8-2EP_3x4mm_P0.8mm_EP0.2x0.8mm.kicad_mod": {
+      "bytes": 5293,
+      "sha256": "b191db69e23241e78bc768ef06b4844cbcc2794a8a84e180759e0314658c321a"
+    },
+    "source/pcb/engineering/third_party/MX_V2/LICENSE": {
+      "bytes": 1061,
+      "sha256": "55e456ffa58f1ff68b3bca4fe508cf2bcfc465feb3ea94e20466a68c0cbbb141"
+    },
+    "source/pcb/engineering/third_party/MX_V2/MX-Hotswap-1U.kicad_mod": {
+      "bytes": 5915,
+      "sha256": "47b7469b01479914cd9b72bcc77125e8140c7ba7f6d8828f61f2cc4787f619e3"
+    },
+    "source/pcb/engineering/third_party/MX_V2/MX-Hotswap-2.25U.kicad_mod": {
+      "bytes": 6625,
+      "sha256": "6946cee0b40c07032dca093aaeada4a1c2ba17a6a2c6faa3cf30725074b74b18"
+    },
+    "source/pcb/engineering/third_party/MX_V2/MX-Hotswap-2.75U.kicad_mod": {
+      "bytes": 6545,
+      "sha256": "143d4859ffbd4fb1079227b1d2054af4fe6585423ed03fb90b6b629573b940c7"
+    },
+    "source/pcb/engineering/third_party/MX_V2/MX-Hotswap-2U.kicad_mod": {
+      "bytes": 6512,
+      "sha256": "4f102ec158f45ca81d1d2773ee266890bfd59ed365b10f0bb31ee37f578cf6a4"
+    },
+    "source/pcb/engineering/third_party/MX_V2/MX-Hotswap-7U.kicad_mod": {
+      "bytes": 6517,
+      "sha256": "213277058a2677d7c1bf033707fdb82d64534787d2a4a546ecf4bf106644f963"
+    },
+    "source/pcb/engineering/third_party/RP2350A_Minimal/LICENSE.txt": {
+      "bytes": 1763,
+      "sha256": "b7d06548be326cac80f52434578cc6a5e7c32e555619ee4aac3e2a03490a25a6"
+    },
+    "source/pcb/engineering/third_party/RP2350A_Minimal/PROVENANCE.md": {
+      "bytes": 1723,
+      "sha256": "e847e087b26825fae8c96b9aec2d0f0501ac1984fe4424b9c14920efde8f7eea"
+    },
+    "source/pcb/engineering/third_party/RP2350A_Minimal/rp2350a-pins.json": {
+      "bytes": 4715,
+      "sha256": "bdf248e586f2abffdbc8a72c43024e463b1ec846535baff833bfef173f045953"
+    },
+    "source/pcb/engineering/third_party/marbastlib-gateron/LICENSE": {
+      "bytes": 8852,
+      "sha256": "6e471d647db50527d0c75ee5f1a55a74012ab177c73282bef0bdc7f6562b7ded"
+    },
+    "source/pcb/engineering/third_party/marbastlib-gateron/PROVENANCE.md": {
+      "bytes": 564,
+      "sha256": "f0f53f2b9fd72c76047ce0f4cde41f7838e6f383ade4bb2928d64c473425f182"
+    },
+    "source/pcb/engineering/third_party/marbastlib-gateron/SW_MX_HS_KS-2P02B01-01_1u.kicad_mod": {
+      "bytes": 19034,
+      "sha256": "153fcc264590f072c07798d9ba0cda1ea7c56a9df42b54a7d8b87ddb19fa8483"
+    },
+    "source/pcb/fp-lib-table": {
+      "bytes": 2635,
+      "sha256": "4b7ee21c0a04973afa8825d7144af6221af9b81790f755bdc7bb8016fffe8d5d"
+    },
+    "source/pcb/maru60-core.kicad_sch": {
+      "bytes": 142771,
+      "sha256": "f0183190e194e30ec8e5b07a34bfc277fb2f95558511bba3676c3ea58a10dbe9"
+    },
+    "source/pcb/maru60-expansion.kicad_sch": {
+      "bytes": 8377,
+      "sha256": "926f3ffa7423b76596cc6fcebfec065eb8f73d91d840a9b0fd37a4b6e8baf88d"
+    },
+    "source/pcb/maru60-lighting.kicad_pro": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "source/pcb/maru60-lighting.kicad_sch": {
+      "bytes": 272706,
+      "sha256": "dd10fd66b1a2b119b91194d436983732d042cf0949c92d4497479f4ca009bb10"
+    },
+    "source/pcb/maru60-matrix.kicad_pro": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "source/pcb/maru60-matrix.kicad_sch": {
+      "bytes": 181625,
+      "sha256": "a87a278408050f59df0912afaaf9f476f1648f828b7744b2f734ca3b62862f90"
+    },
+    "source/pcb/maru60.kicad_pcb": {
+      "bytes": 6670627,
+      "sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a"
+    },
+    "source/pcb/maru60.kicad_prl": {
+      "bytes": 2057,
+      "sha256": "8c0a828ce6c58ebd31b8835a9bd58efb04385897813f3e5d51b961410868af58"
+    },
+    "source/pcb/maru60.kicad_pro": {
+      "bytes": 9782,
+      "sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073"
+    },
+    "source/pcb/maru60.kicad_sch": {
+      "bytes": 5062,
+      "sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51"
+    },
+    "source/pcb/protection-gpio-isolation.kicad_sch": {
+      "bytes": 47770,
+      "sha256": "2ee16d2ad54943123666eaf35512592908e21d52ff4672760c5298e52e55f38e"
+    },
+    "source/pcb/protection-input-protection.kicad_sch": {
+      "bytes": 24471,
+      "sha256": "8b684f93ea734a9e240f5ae6852c8e6490af441dd9153aa8cb7c16ac6491a6fc"
+    },
+    "source/pcb/protection-supply-context.kicad_sch": {
+      "bytes": 19586,
+      "sha256": "b593e119667214a2d732eca470272e23f97190c7c630856bd7fa7fadc6875f15"
+    },
+    "source/pcb/protection-v6-regulated-domain.kicad_sch": {
+      "bytes": 26588,
+      "sha256": "8cbd2694194d8ea807a86983cb821b585131a63467b30d915ba1517af10694cc"
+    },
+    "source/pcb/sym-lib-table": {
+      "bytes": 1782,
+      "sha256": "288a9ed004a889ff4e26f486e35c2a83d1de11d94fffa140f1cd62eb9ef441ac"
+    },
+    "verify.py": {
+      "bytes": 609,
+      "sha256": "98afec40fe02b2241b3a232841ff31cbc1b67b35715fff74b247d1f38ddf4c1b"
+    }
+  }
+}

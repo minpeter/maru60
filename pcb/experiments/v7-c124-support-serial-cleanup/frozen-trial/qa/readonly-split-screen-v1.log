@@ -1,0 +1,6 @@
+METHOD TestTrackEndpointDangling(CONNECTIVITY_DATA self, PCB_TRACK aTrack, bool aIgnoreTracksInPads, VECTOR2I aPos=None) -> bool
+Traceback (most recent call last):
+  File "/tmp/v7-support-endpoint-trial/scripts/screen_splits.py", line 16, in <module>
+    n=p.PCB_TRACK(b);n.SetStart(m);n.SetEnd(end);n.SetWidth(q.GetWidth());n.SetLayer(q.GetLayer());n.SetNetCode(q.GetNetCode());n.m_Uuid=p.KIID(str(uuid.uuid5(uuid.NAMESPACE_URL,'v7-support-endpoint-split/'+main)));q.SetEnd(m);b.Add(n)
+                                                                                                                                ^^^^^^^^
+AttributeError: property 'm_Uuid' of 'PCB_TRACK' object has no setter

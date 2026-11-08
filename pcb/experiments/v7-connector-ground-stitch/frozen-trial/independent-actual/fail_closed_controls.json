@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "script": "audit_actual.py",
+      "python_flags": [
+        "-O"
+      ],
+      "environment_overrides": {},
+      "exit": 1,
+      "output": "Actual contract audit requires assertions; optimized Python forbidden"
+    },
+    {
+      "script": "audit_actual.py",
+      "python_flags": [],
+      "environment_overrides": {
+        "PYTHONOPTIMIZE": "1"
+      },
+      "exit": 1,
+      "output": "Actual contract audit requires assertions; optimized Python forbidden"
+    },
+    {
+      "script": "bind_actual_r2.py",
+      "python_flags": [
+        "-O"
+      ],
+      "environment_overrides": {},
+      "exit": 1,
+      "output": "R2 binding requires assertions; optimized Python forbidden"
+    },
+    {
+      "script": "bind_actual_r2.py",
+      "python_flags": [],
+      "environment_overrides": {
+        "PYTHONOPTIMIZE": "1"
+      },
+      "exit": 1,
+      "output": "R2 binding requires assertions; optimized Python forbidden"
+    },
+    {
+      "script": "cold_refill.py",
+      "python_flags": [
+        "-O"
+      ],
+      "environment_overrides": {},
+      "exit": 1,
+      "output": "Cold refill requires assertions"
+    },
+    {
+      "script": "cold_refill.py",
+      "python_flags": [],
+      "environment_overrides": {
+        "PYTHONOPTIMIZE": "1"
+      },
+      "exit": 1,
+      "output": "Cold refill requires assertions"
+    }
+  ],
+  "existing_result_json_hashes_unchanged": true,
+  "existing_result_hashes": {
+    "actual_R2_binding.json": "7e9d84844a7194961884d0510501d461087f0de0d8481f60310ba4ebf3dda333",
+    "cold_refill_results.json": "feb9d90bcd2cd423f034b01dbe677b938e0de9f46e4cd69f66eb911f77cf1219"
+  }
+}

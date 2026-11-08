@@ -1,0 +1,33 @@
+from pathlib import Path
+import hashlib,json,shutil,time,pcbnew as p
+from sexpr_spans import children,head,field
+R=Path('/tmp/v7-connector-gnd-stitch-c770')
+SRC=Path('/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-gnd-deadbranch-cleanup/candidate/pcb')
+SITE=Path('/workspace/scratch/edd9a5be63e7/v7-connector-ground-contract-c770/site_results.json')
+EXPECTED='c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a'
+UID='cda2df4b-6411-5409-a933-5106751244d8'
+H=lambda b:hashlib.sha256(b).hexdigest()
+raw=(SRC/'maru60.kicad_pcb').read_bytes(); assert H(raw)==EXPECTED
+site=json.loads(SITE.read_text()); assert site['board_sha256']==EXPECTED
+assert site['proposed']==dict(uuid=UID,net='GND',xy_mm=[17.2,9.9],diameter_mm=.5,drill_mm=.25,span=['F.Cu','B.Cu'],nominal_annular_width_mm=.125)
+assert p.Version()=='9.0.2'
+assert not (R/'source').exists() and not (R/'prefill').exists() and not (R/'filled').exists()
+shutil.copytree(SRC,R/'source/pcb');shutil.copytree(SRC,R/'prefill/pcb')
+b=p.LoadBoard(str(R/'source/pcb/maru60.kicad_pcb'))
+assert UID not in raw.decode()
+v=p.PCB_VIA(b);v.m_Uuid=p.KIID(UID);v.SetPosition(p.VECTOR2I(17200000,9900000));v.SetWidth(500000);v.SetDrill(250000);v.SetViaType(p.VIATYPE_THROUGH);v.SetLayerPair(p.F_Cu,p.B_Cu)
+gnd=next(n for n in b.GetNetInfo().NetsByName().values() if n.GetNetname()=='GND');v.SetNetCode(gnd.GetNetCode());b.Add(v)
+p.SaveBoard(str(R/'qa/serialization-only.kicad_pcb'),b)
+serialized=(R/'qa/serialization-only.kicad_pcb').read_text()
+node=next(t for a,z,t in children(serialized) if head(t)=='via' and field(t,'uuid')=='(uuid "'+UID+'")')
+s=raw.decode();at=s.rfind(')');out=(s[:at]+'\t'+node+'\n'+s[at:]).encode()
+(R/'prefill/pcb/maru60.kicad_pcb').write_bytes(out);shutil.copytree(R/'prefill/pcb',R/'filled/pcb')
+manifest={str(f.relative_to(SRC)):{'bytes':f.stat().st_size,'sha256':H(f.read_bytes())} for f in sorted(SRC.rglob('*')) if f.is_file()}
+assert len(manifest)==54
+for rel,d in manifest.items():
+ assert H((R/'source/pcb'/rel).read_bytes())==d['sha256']
+ if rel!='maru60.kicad_pcb': assert H((R/'prefill/pcb'/rel).read_bytes())==d['sha256']
+c={'status':'UNSELECTED one ordinary GND stitch; actual validation pending','source_sha256':EXPECTED,'prefill_sha256':H(out),'site_receipt_sha256':H(SITE.read_bytes()),'new_via':site['proposed'],'new_raw_record':node,'retired_objects':[],'existing_connector_stub_unchanged':'bc0a06ab-785a-4a27-a164-9c3256c7f3bd','scope':'No prior copper, footprint, schematic, rule, or drill is edited. The new through drill is explicit; it may remove ground outside old shadows. No neck restoration, SI gain or hardware qualification is claimed.'}
+(R/'BUILD_CONTRACT.json').write_text(json.dumps(c,indent=2)+'\n');(R/'SOURCE_TREE_MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
+assert (SRC/'maru60.kicad_pcb').read_bytes()==raw
+print(json.dumps(c,indent=2))

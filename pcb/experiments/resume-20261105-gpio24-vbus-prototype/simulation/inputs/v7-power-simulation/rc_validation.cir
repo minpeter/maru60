@@ -1,0 +1,6 @@
+RC control for shared ngspice
+V1 src 0 PULSE(0 1 0 1n 1n 10m 20m)
+R1 src out 1k
+C1 out 0 1u
+.tran 10u 5m
+.end

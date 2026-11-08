@@ -1,0 +1,26 @@
+05:31:01: Debug: Adding duplicate image handler for 'PNG file'
+05:31:01: Debug: Adding duplicate image handler for 'JPEG file'
+05:31:01: Debug: Adding duplicate image handler for 'TIFF file'
+05:31:01: Debug: Adding duplicate image handler for 'GIF file'
+05:31:01: Debug: Adding duplicate image handler for 'PNM file'
+05:31:01: Debug: Adding duplicate image handler for 'PCX file'
+05:31:01: Debug: Adding duplicate image handler for 'IFF file'
+05:31:01: Debug: Adding duplicate image handler for 'Windows icon file'
+05:31:01: Debug: Adding duplicate image handler for 'Windows cursor file'
+05:31:01: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+05:31:01: Debug: Adding duplicate image handler for 'TGA file'
+05:31:01: Debug: Adding duplicate image handler for 'XPM file'
+Traceback (most recent call last):
+  File "/workspace/shared/maru60-resume/continuation-fa96a7c/gpio24-via25/scripts/transitions.py", line 3, in <module>
+    b=p.LoadBoard(str(ROOT/'candidate/pcb/maru60.kicad_pcb'));g=json.loads((ROOT/'qa/material-graph.json').read_text());plan=json.loads((ROOT/'qa/FROZEN_SCOPE.json').read_text());idx={U(q):q for q in b.GetTracks()};grounds=[]
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 548, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/shared/maru60-resume/continuation-fa96a7c/gpio24-via25/qa/material-graph.json'

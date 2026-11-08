@@ -1,0 +1,156 @@
+[
+  {
+    "check": "exact_source_candidate_hashes",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "only_one_exact_new_via_and_all_D_records_ordered_exact",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "all_12_raw_saved_zones_identical_D_and_aaaf",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "all_57_companions_exact",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "all_64_warning_entries_exact",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "all_12_open_entries_exact",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "native_parity_zero",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "non_open_DRC_errors_zero",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "ERC_zero",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "complete_component_libpart_net_XML_exact",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "cold_refill_byte_fixed_point",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "frozen_aaaf_actual_and_contract_binding",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "native_via_dimensions_net_span",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "new_drill_disjoint_all_retained_material_and_outer_shadows",
+    "detail": {
+      "all_layer_shape_checks": 15332,
+      "outer_shape_checks": 13131
+    },
+    "pass": true
+  },
+  {
+    "check": "new_via_has_no_old_object_contact",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "all_1269_retained_physical_holes_exact",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "four_intact_annuli_no_foreign_drill_cut",
+    "detail": {
+      "B.Cu": 0.147260768066,
+      "F.Cu": 0.147260768066,
+      "In1.Cu": 0.147260768066,
+      "In2.Cu": 0.147260768066
+    },
+    "pass": true
+  },
+  {
+    "check": "inner_cut_exact_hole_In1.Cu",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "inner_cut_exact_hole_In2.Cu",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "only_two_exact_declared_inner_drill_losses",
+    "detail": [
+      {
+        "actual_physical_loss_mm2": 0.049087681002,
+        "gain_mm2": 0,
+        "layer": "In1.Cu",
+        "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2"
+      },
+      {
+        "actual_physical_loss_mm2": 0.049087681002,
+        "gain_mm2": 0,
+        "layer": "In2.Cu",
+        "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "check": "only_two_full_positive_guarded_inner_contacts",
+    "detail": [
+      {
+        "guarded_overlap_mm2": 0.1472558792225,
+        "layer": "In1.Cu",
+        "raw_overlap_mm2": 0.147260768066,
+        "zone": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2"
+      },
+      {
+        "guarded_overlap_mm2": 0.1472558792225,
+        "layer": "In2.Cu",
+        "raw_overlap_mm2": 0.147260768066,
+        "zone": "3a23a46c-3272-47d8-86cd-03a9240b82af"
+      }
+    ],
+    "pass": true
+  },
+  {
+    "check": "all_37_D_new_changed_shapes_outward2nm_disjoint_new_drill",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "all_29_D_new_nonGND_whole_guarded_shadows_disjoint",
+    "detail": null,
+    "pass": true
+  },
+  {
+    "check": "legacy_a9_frozen_shadows_bound",
+    "detail": null,
+    "pass": true
+  }
+]

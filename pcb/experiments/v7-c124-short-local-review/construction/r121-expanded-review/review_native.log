@@ -1,0 +1,347 @@
+{
+  "source_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "input_sha256": {
+    "counterfactual-uvlo-r121-ipc-v4.json": "0201051134f0ffe6b1498a83687ba7a3dc909869d6f117fdb8456351d4ad5c51",
+    "counterfactual-v4-contact-reference.json": "c731b943caa355e67060ef0c60adbc6b06a83183c90b9a84b42a537ea2212332"
+  },
+  "version": "9.0.2+dfsg-1",
+  "retirement_counts": {
+    "USB_DVDT": 5,
+    "USB_UVLO": 24,
+    "USB_OVLO": 2
+  },
+  "retirement_source_mismatches": [],
+  "independent_old_contact_count": 74,
+  "ledger_missing_pairs": [],
+  "ledger_spurious_pairs": [],
+  "external_boundaries": [
+    {
+      "old_boundary_uuid": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "net": "GND",
+      "new_contacts": [
+        {
+          "new": "old-ground-bridge",
+          "old": "763086b7-5549-4f5e-bb08-ce25387b3627",
+          "old_label": "GND via",
+          "net": "GND",
+          "area_mm2": 0.0478458239865
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "19181a2b-164e-4055-9004-2860bebe32f4",
+      "net": "GND",
+      "new_contacts": [
+        {
+          "new": "old-ground-bridge",
+          "old": "19181a2b-164e-4055-9004-2860bebe32f4",
+          "old_label": "GND track",
+          "net": "GND",
+          "area_mm2": 0.126415530208
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+      "net": "GND",
+      "new_contacts": [
+        {
+          "new": "R121.2",
+          "old": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "old_label": "GND track",
+          "net": "GND",
+          "area_mm2": 0.055103142777
+        },
+        {
+          "new": "old-ground-bridge",
+          "old": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "old_label": "GND track",
+          "net": "GND",
+          "area_mm2": 0.0411650268745
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+      "net": "USB_DVDT",
+      "new_contacts": [
+        {
+          "new": "DVDT0",
+          "old": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+          "old_label": "USB_DVDT track",
+          "net": "USB_DVDT",
+          "area_mm2": 0.017792209043
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "e07df864-b2ae-41c6-8b80-01729167b27e",
+      "net": "USB_DVDT",
+      "new_contacts": [
+        {
+          "new": "DVDT0",
+          "old": "e07df864-b2ae-41c6-8b80-01729167b27e",
+          "old_label": "U8.7",
+          "net": "USB_DVDT",
+          "area_mm2": 0.02383558147
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+      "net": "USB_DVDT",
+      "new_contacts": [
+        {
+          "new": "DVDT0",
+          "old": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+          "old_label": "U8.7",
+          "net": "USB_DVDT",
+          "area_mm2": 0.011589685699
+        },
+        {
+          "new": "DVDT1",
+          "old": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+          "old_label": "U8.7",
+          "net": "USB_DVDT",
+          "area_mm2": 0.001589663694
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "e218cfe4-e4ba-5b6c-985d-8f1da39a4402",
+      "net": "USB_OVLO",
+      "new_contacts": [
+        {
+          "new": "OVLO7",
+          "old": "e218cfe4-e4ba-5b6c-985d-8f1da39a4402",
+          "old_label": "USB_OVLO track",
+          "net": "USB_OVLO",
+          "area_mm2": 0.017690946176
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "751dcade-77aa-4c93-aab3-170f1229e0e4",
+      "net": "USB_UVLO",
+      "new_contacts": [
+        {
+          "new": "UVLO0",
+          "old": "751dcade-77aa-4c93-aab3-170f1229e0e4",
+          "old_label": "USB_UVLO track",
+          "net": "USB_UVLO",
+          "area_mm2": 0.017715203511
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed",
+      "net": "USB_UVLO",
+      "new_contacts": [
+        {
+          "new": "UVLO0",
+          "old": "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed",
+          "old_label": "USB_UVLO track",
+          "net": "USB_UVLO",
+          "area_mm2": 0.0038718109395
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "7d18b97e-b287-4393-8a28-411c96dcc305",
+      "net": "USB_UVLO",
+      "new_contacts": [
+        {
+          "new": "UVLO5",
+          "old": "7d18b97e-b287-4393-8a28-411c96dcc305",
+          "old_label": "USB_UVLO track",
+          "net": "USB_UVLO",
+          "area_mm2": 0.0181318794495
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "7d18b97e-b287-4393-8a28-411c96dcc305",
+      "net": "USB_UVLO",
+      "new_contacts": [
+        {
+          "new": "UVLO5",
+          "old": "7d18b97e-b287-4393-8a28-411c96dcc305",
+          "old_label": "USB_UVLO track",
+          "net": "USB_UVLO",
+          "area_mm2": 0.0181318794495
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+      "net": "USB_UVLO",
+      "new_contacts": [
+        {
+          "new": "UVLO5",
+          "old": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+          "old_label": "USB_UVLO track",
+          "net": "USB_UVLO",
+          "area_mm2": 0.0026191701635
+        }
+      ]
+    },
+    {
+      "old_boundary_uuid": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+      "net": "USB_UVLO",
+      "new_contacts": [
+        {
+          "new": "UVLO5",
+          "old": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+          "old_label": "USB_UVLO track",
+          "net": "USB_UVLO",
+          "area_mm2": 0.007766904377
+        }
+      ]
+    }
+  ],
+  "uvlo_endpoint_external_branches": [
+    {
+      "at_mm": [
+        14.2,
+        16.35
+      ],
+      "retained_tracks": [
+        "751dcade-77aa-4c93-aab3-170f1229e0e4"
+      ]
+    },
+    {
+      "at_mm": [
+        17.2,
+        21.15
+      ],
+      "retained_tracks": [
+        "7d18b97e-b287-4393-8a28-411c96dcc305"
+      ]
+    }
+  ],
+  "boundary_native_rechecks": [
+    {
+      "new": "UVLO0",
+      "old": "751dcade-77aa-4c93-aab3-170f1229e0e4",
+      "area_mm2": 0.017715203511,
+      "positive": true
+    },
+    {
+      "new": "UVLO0",
+      "old": "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed",
+      "area_mm2": 0.0038718109395,
+      "positive": true
+    },
+    {
+      "new": "UVLO5",
+      "old": "7d18b97e-b287-4393-8a28-411c96dcc305",
+      "area_mm2": 0.0181318794495,
+      "positive": true
+    },
+    {
+      "new": "UVLO5",
+      "old": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+      "area_mm2": 0.0026191701635,
+      "positive": true
+    },
+    {
+      "new": "UVLO5",
+      "old": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+      "area_mm2": 0.007766904377,
+      "positive": true
+    },
+    {
+      "new": "OVLO7",
+      "old": "e218cfe4-e4ba-5b6c-985d-8f1da39a4402",
+      "area_mm2": 0.017690946176,
+      "positive": true
+    },
+    {
+      "new": "DVDT0",
+      "old": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+      "area_mm2": 0.017792209043,
+      "positive": true
+    },
+    {
+      "new": "DVDT0",
+      "old": "e07df864-b2ae-41c6-8b80-01729167b27e",
+      "area_mm2": 0.02383558147,
+      "positive": true
+    },
+    {
+      "new": "DVDT0",
+      "old": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+      "area_mm2": 0.011589685699,
+      "positive": true
+    },
+    {
+      "new": "DVDT1",
+      "old": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+      "area_mm2": 0.001589663694,
+      "positive": true
+    }
+  ],
+  "support_recheck": [
+    {
+      "old_contact": "19181a2b-164e-4055-9004-2860bebe32f4",
+      "inside_area_mm2": 0.105707765104,
+      "outside_area_mm2": 0.105708073089,
+      "inside_support_minus_inside_bridge_mm2": 0.0,
+      "outside_support_minus_inside_bridge_mm2": 0.0
+    },
+    {
+      "old_contact": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "inside_area_mm2": 0.0091025205225,
+      "outside_area_mm2": 0.0091029973315,
+      "inside_support_minus_inside_bridge_mm2": 0.0,
+      "outside_support_minus_inside_bridge_mm2": 0.0
+    }
+  ],
+  "r121_ground_contact_mm2": 0.055103142777,
+  "r121_courtyard_collisions": [],
+  "new_courtyard_gaps_mm": {
+    "R121_C124": 0.15,
+    "R121_R125": 0.21,
+    "C124_R125": 0.05,
+    "U8_R125": 0.06
+  },
+  "root_rechecks": [
+    {
+      "via": "efadf2be-e519-469f-a84c-2e7cbb60672a",
+      "layer": "In1.Cu",
+      "area_mm2": 0.147260768066,
+      "positive": true
+    },
+    {
+      "via": "efadf2be-e519-469f-a84c-2e7cbb60672a",
+      "layer": "In2.Cu",
+      "area_mm2": 0.147260768066,
+      "positive": true
+    },
+    {
+      "via": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "layer": "In1.Cu",
+      "area_mm2": 0.147260768066,
+      "positive": true
+    },
+    {
+      "via": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "layer": "In2.Cu",
+      "area_mm2": 0.147260768066,
+      "positive": true
+    },
+    {
+      "via": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+      "layer": "In1.Cu",
+      "area_mm2": 0.147260768066,
+      "positive": true
+    },
+    {
+      "via": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+      "layer": "In2.Cu",
+      "area_mm2": 0.147260768066,
+      "positive": true
+    }
+  ],
+  "source_after_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1"
+}

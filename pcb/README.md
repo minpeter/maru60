@@ -1,5 +1,9 @@
 # Maru60 RP2350A PCB — engineering draft
 
+**Current state: see [CURRENT.md](CURRENT.md)** (V7 baseline and latest prototype). The V7 recovery log is in
+[../recovery/README.md](../recovery/README.md). Everything below describes earlier stages (A21/A22 foundation) and is
+kept for history.
+
 ## Recovered native checkpoints (2026-11-03)
 
 The [A21 checkpoint](checkpoints/a21/README.md) now includes the actual native four-layer board, schematic, project, local libraries and evidence. Its A22 predecessor is retained at `checkpoints/a21/coordinator-evidence/source.kicad_pcb`. Fresh checks and publication limits are in [publication/a21-a22](publication/a21-a22/README.md). A21 still has 21 opens and A22 22; neither is fabrication-ready. The foundation notes below are historical and do not describe the current existence of native CAD.

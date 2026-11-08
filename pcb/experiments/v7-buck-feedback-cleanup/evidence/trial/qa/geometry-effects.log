@@ -1,0 +1,54 @@
+19:50:14: Debug: Adding duplicate image handler for 'PNG file'
+19:50:14: Debug: Adding duplicate image handler for 'JPEG file'
+19:50:14: Debug: Adding duplicate image handler for 'TIFF file'
+19:50:14: Debug: Adding duplicate image handler for 'GIF file'
+19:50:14: Debug: Adding duplicate image handler for 'PNM file'
+19:50:14: Debug: Adding duplicate image handler for 'PCX file'
+19:50:14: Debug: Adding duplicate image handler for 'IFF file'
+19:50:14: Debug: Adding duplicate image handler for 'Windows icon file'
+19:50:14: Debug: Adding duplicate image handler for 'Windows cursor file'
+19:50:14: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+19:50:14: Debug: Adding duplicate image handler for 'TGA file'
+19:50:14: Debug: Adding duplicate image handler for 'XPM file'
+{
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "replacement_exact_declared_geometry": true,
+  "replacement_copper_outside_old_track_mm2": 0.0,
+  "reference_interpretation": "Absolute inherited active-end deficit remains, but actual replacement is an exact subset of original copper and introduces no copper or new missing-reference region. No arbitrary endpoint mask/exemption used.",
+  "removed_drill": {
+    "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c",
+    "xy_mm": [
+      178.15,
+      85.75
+    ],
+    "diameter_mm": 0.25,
+    "projected_native_area_mm2": 0.049087681002,
+    "physical_drill_count_before": 1270,
+    "physical_drill_count_after": 1269
+  },
+  "active_contact_support": [
+    {
+      "uuid": "3c804add-ee74-5104-b471-73062ffcaeb9",
+      "old_support_mm2": 0.020085808222,
+      "replacement_support_mm2": 0.018878712333,
+      "support_loss_mm2": 0.001207095889,
+      "support_gain_mm2": 0.0
+    },
+    {
+      "uuid": "d20e66e3-44fb-4535-81e2-9bc53c5f6519",
+      "old_support_mm2": 0.017792597385,
+      "replacement_support_mm2": 0.017792597385,
+      "support_loss_mm2": 0.0,
+      "support_gain_mm2": 0.0
+    },
+    {
+      "uuid": "37c51a69-ea1f-42e2-b356-72426fc3b1b2",
+      "old_support_mm2": 0.0374695328475,
+      "replacement_support_mm2": 0.0374695328475,
+      "support_loss_mm2": 0.0,
+      "support_gain_mm2": 0.0
+    }
+  ],
+  "analog_claims": false
+}

@@ -1,0 +1,68 @@
+{
+  "source_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+  "candidate_sha256": "22761b0f007cd9b113843c0074924fee02c3728e98f33d88fc90eb7cdc14ec9c",
+  "raw_scope": {
+    "removed": [],
+    "added": [
+      "(via (at 105.65 36.05) (size 0.5) (drill 0.25) (layers \"F.Cu\" \"B.Cu\") (net 83) (uuid \"efdf2c37-5653-4018-9cc8-dfb15999bb91\") )"
+    ],
+    "zone_configuration_equal": true,
+    "all57_companions_equal": true
+  },
+  "drc_added": [],
+  "drc_removed": [],
+  "open_records_equal": false,
+  "planes": [
+    {
+      "layer": "F.Cu",
+      "raw_loss_mm2": 0.0,
+      "raw_gain_mm2": 0.0,
+      "physical_loss_mm2": 0.0,
+      "physical_gain_mm2": 0.0,
+      "loss_outside_actual_new_drill_mm2": 0.0,
+      "loss_outside_contours_nm": [],
+      "old_signal_reference_losses": [],
+      "old_physical_components": 9,
+      "new_physical_components": 9
+    },
+    {
+      "layer": "In1.Cu",
+      "raw_loss_mm2": 0.0,
+      "raw_gain_mm2": 0.0,
+      "physical_loss_mm2": 0.049087681002,
+      "physical_gain_mm2": 0.0,
+      "loss_outside_actual_new_drill_mm2": 0.0,
+      "loss_outside_contours_nm": [],
+      "old_signal_reference_losses": [],
+      "old_physical_components": 1,
+      "new_physical_components": 1
+    },
+    {
+      "layer": "In2.Cu",
+      "raw_loss_mm2": 0.0,
+      "raw_gain_mm2": 0.0,
+      "physical_loss_mm2": 0.049087681002,
+      "physical_gain_mm2": 0.0,
+      "loss_outside_actual_new_drill_mm2": 0.0,
+      "loss_outside_contours_nm": [],
+      "old_signal_reference_losses": [],
+      "old_physical_components": 1,
+      "new_physical_components": 1
+    },
+    {
+      "layer": "B.Cu",
+      "raw_loss_mm2": 0.0,
+      "raw_gain_mm2": 0.0,
+      "physical_loss_mm2": 0.0,
+      "physical_gain_mm2": 0.0,
+      "loss_outside_actual_new_drill_mm2": 0.0,
+      "loss_outside_contours_nm": [],
+      "old_signal_reference_losses": [],
+      "old_physical_components": 2,
+      "new_physical_components": 2
+    }
+  ],
+  "nearest_GND_via_before_mm": 3.647687623687094,
+  "nearest_GND_via_after_mm": 1.4577379737113252,
+  "note": "No SI gain inferred from nearest-via distance. Strict prior prototype no-loss FAIL retained."
+}

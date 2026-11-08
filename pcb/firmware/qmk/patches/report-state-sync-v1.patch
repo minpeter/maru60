@@ -1,0 +1,110 @@
+--- a/tmk_core/protocol/report.c
++++ b/tmk_core/protocol/report.c
+@@ -150,6 +150,11 @@
+  * FIXME: Needs doc
+  */
+ void add_key_to_report(uint8_t key) {
++#if defined(NKRO_ENABLE) && defined(KEEP_REPORT_STATE_SYNCHRONIZED)
++    add_key_bit(nkro_report, key);
++    add_key_byte(keyboard_report, key);
++    return;
++#endif
+ #ifdef NKRO_ENABLE
+     if (host_can_send_nkro() && keymap_config.nkro) {
+         add_key_bit(nkro_report, key);
+@@ -164,6 +169,11 @@
+  * FIXME: Needs doc
+  */
+ void del_key_from_report(uint8_t key) {
++#if defined(NKRO_ENABLE) && defined(KEEP_REPORT_STATE_SYNCHRONIZED)
++    del_key_bit(nkro_report, key);
++    del_key_byte(keyboard_report, key);
++    return;
++#endif
+ #ifdef NKRO_ENABLE
+     if (host_can_send_nkro() && keymap_config.nkro) {
+         del_key_bit(nkro_report, key);
+@@ -178,6 +188,11 @@
+  * FIXME: Needs doc
+  */
+ void clear_keys_from_report(void) {
++#if defined(NKRO_ENABLE) && defined(KEEP_REPORT_STATE_SYNCHRONIZED)
++    memset(nkro_report->bits, 0, sizeof(nkro_report->bits));
++    memset(keyboard_report->keys, 0, sizeof(keyboard_report->keys));
++    return;
++#endif
+     // not clear mods
+ #ifdef NKRO_ENABLE
+     if (host_can_send_nkro() && keymap_config.nkro) {
+--- a/quantum/action_util.c
++++ b/quantum/action_util.c
+@@ -26,6 +26,10 @@
+ 
+ extern keymap_config_t keymap_config;
+ 
++#ifdef KEEP_REPORT_STATE_SYNCHRONIZED
++static bool force_keyboard_report;
++#endif
++
+ static uint8_t real_mods = 0;
+ static uint8_t weak_mods = 0;
+ #ifdef KEY_OVERRIDE_ENABLE
+@@ -307,7 +311,11 @@
+     static report_keyboard_t last_report;
+ 
+     /* Only send the report if there are changes to propagate to the host. */
+-    if (memcmp(keyboard_report, &last_report, sizeof(report_keyboard_t)) != 0) {
++    if (
++#ifdef KEEP_REPORT_STATE_SYNCHRONIZED
++        force_keyboard_report ||
++#endif
++        memcmp(keyboard_report, &last_report, sizeof(report_keyboard_t)) != 0) {
+         memcpy(&last_report, keyboard_report, sizeof(report_keyboard_t));
+         host_keyboard_send(keyboard_report);
+     }
+@@ -321,7 +329,11 @@
+     static report_nkro_t last_report;
+ 
+     /* Only send the report if there are changes to propagate to the host. */
+-    if (memcmp(nkro_report, &last_report, sizeof(report_nkro_t)) != 0) {
++    if (
++#ifdef KEEP_REPORT_STATE_SYNCHRONIZED
++        force_keyboard_report ||
++#endif
++        memcmp(nkro_report, &last_report, sizeof(report_nkro_t)) != 0) {
+         memcpy(&last_report, nkro_report, sizeof(report_nkro_t));
+         host_nkro_send(nkro_report);
+     }
+@@ -594,3 +606,13 @@
+     }
+ }
+ #endif
++
++#ifdef KEEP_REPORT_STATE_SYNCHRONIZED
++// Main-task context only. Retain held key/modifier state while bypassing the
++// changed-only cache after the host resets or switches HID protocol.
++void send_keyboard_report_force(void) {
++    force_keyboard_report = true;
++    send_keyboard_report();
++    force_keyboard_report = false;
++}
++#endif
+--- a/quantum/action_util.h
++++ b/quantum/action_util.h
+@@ -48,6 +48,9 @@
+ #endif
+ 
+ void send_keyboard_report(void);
++#ifdef KEEP_REPORT_STATE_SYNCHRONIZED
++void send_keyboard_report_force(void);
++#endif
+ 
+ /* key */
+ inline void add_key(uint8_t key) {
+--- /dev/null
++++ b/quantum/report_sync.h
+@@ -0,0 +1,4 @@
++// SPDX-License-Identifier: GPL-2.0-or-later
++#pragma once
++// Opt-in synchronized ordinary-key buffers and task-context forced flush.
++#define QMK_REPORT_SYNC_API_VERSION 1

@@ -1,0 +1,493 @@
+{
+  "tool_version": "9.0.2",
+  "source_hashes": {
+    "/workspace/shared/maru60-resume/selected-repo/pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/maru60.kicad_pcb": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5",
+    "/workspace/shared/maru60-resume/selected-repo/pcb/experiments/resume-20261106-usb-pendant-prototype/pcb/maru60.kicad_pro": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+    "/workspace/shared/maru60-resume/continuation-fa96a7c/power-audit/tps62932.pdf": "16ec2eac43c7374eb9e7edd7df7bdb24de6862f695e1582c68716ced4820e5f6",
+    "/usr/share/kicad/footprints/Package_TO_SOT_SMD.pretty/SOT-583-8.kicad_mod": "4a99a0885fbc14c9aeda998bea64fa0996c6fc16f23359333d1858a5da7f9747"
+  },
+  "vendor_url": "https://www.ti.com/lit/ds/symlink/tps62932.pdf",
+  "drawing": "DRL0008A, 4224486/G 11/2024; physical PDF pages 48-50, visually reviewed",
+  "footprint": "SOT-583-8",
+  "reference": "U18",
+  "value": "TPS62932DRLR",
+  "position_mm": [
+    179.25,
+    84.25
+  ],
+  "angle_deg": 90.0,
+  "flipped": true,
+  "transform": "Canonical top-view (x,y) -> inline (x,-y); board=(179.25-y,84.25-x) at 90 deg B.Cu",
+  "pads": [
+    {
+      "number": 1,
+      "net": "unconnected-(U18-RT_FLOAT_500KHZ-Pad1)",
+      "inline_relative_mm": [
+        -0.74,
+        0.75
+      ],
+      "board_xy_mm": [
+        180.0,
+        84.99
+      ],
+      "canonical_component_top_view_mm": [
+        -0.74,
+        -0.75
+      ],
+      "size_mm": [
+        0.67,
+        0.3
+      ],
+      "rotation_deg": 90.0,
+      "shape": "Roundrect",
+      "radius_mm": 0.05,
+      "layers": [
+        "B.Cu",
+        "B.Mask",
+        "B.Paste"
+      ],
+      "effective_mask_expansion_per_side_mm": 0.0,
+      "effective_paste_margin_per_side_mm": [
+        0.0,
+        0.0
+      ],
+      "pad_mask_override": null,
+      "pad_paste_override": null,
+      "pad_paste_ratio_override": null,
+      "matches_vendor_position": true,
+      "matches_installed_library_position_and_size": true
+    },
+    {
+      "number": 2,
+      "net": "unconnected-(U18-EN_FLOAT_ENABLE-Pad2)",
+      "inline_relative_mm": [
+        -0.74,
+        0.25
+      ],
+      "board_xy_mm": [
+        179.5,
+        84.99
+      ],
+      "canonical_component_top_view_mm": [
+        -0.74,
+        -0.25
+      ],
+      "size_mm": [
+        0.67,
+        0.3
+      ],
+      "rotation_deg": 90.0,
+      "shape": "Roundrect",
+      "radius_mm": 0.05,
+      "layers": [
+        "B.Cu",
+        "B.Mask",
+        "B.Paste"
+      ],
+      "effective_mask_expansion_per_side_mm": 0.0,
+      "effective_paste_margin_per_side_mm": [
+        0.0,
+        0.0
+      ],
+      "pad_mask_override": null,
+      "pad_paste_override": null,
+      "pad_paste_ratio_override": null,
+      "matches_vendor_position": true,
+      "matches_installed_library_position_and_size": true
+    },
+    {
+      "number": 3,
+      "net": "VBUS_PROTECTED_RAW",
+      "inline_relative_mm": [
+        -0.74,
+        -0.25
+      ],
+      "board_xy_mm": [
+        179.0,
+        84.99
+      ],
+      "canonical_component_top_view_mm": [
+        -0.74,
+        0.25
+      ],
+      "size_mm": [
+        0.67,
+        0.3
+      ],
+      "rotation_deg": 90.0,
+      "shape": "Roundrect",
+      "radius_mm": 0.05,
+      "layers": [
+        "B.Cu",
+        "B.Mask",
+        "B.Paste"
+      ],
+      "effective_mask_expansion_per_side_mm": 0.0,
+      "effective_paste_margin_per_side_mm": [
+        0.0,
+        0.0
+      ],
+      "pad_mask_override": null,
+      "pad_paste_override": null,
+      "pad_paste_ratio_override": null,
+      "matches_vendor_position": true,
+      "matches_installed_library_position_and_size": true
+    },
+    {
+      "number": 4,
+      "net": "GND",
+      "inline_relative_mm": [
+        -0.74,
+        -0.75
+      ],
+      "board_xy_mm": [
+        178.5,
+        84.99
+      ],
+      "canonical_component_top_view_mm": [
+        -0.74,
+        0.75
+      ],
+      "size_mm": [
+        0.67,
+        0.3
+      ],
+      "rotation_deg": 90.0,
+      "shape": "Roundrect",
+      "radius_mm": 0.05,
+      "layers": [
+        "B.Cu",
+        "B.Mask",
+        "B.Paste"
+      ],
+      "effective_mask_expansion_per_side_mm": 0.0,
+      "effective_paste_margin_per_side_mm": [
+        0.0,
+        0.0
+      ],
+      "pad_mask_override": null,
+      "pad_paste_override": null,
+      "pad_paste_ratio_override": null,
+      "matches_vendor_position": true,
+      "matches_installed_library_position_and_size": true
+    },
+    {
+      "number": 5,
+      "net": "BUCK_SW",
+      "inline_relative_mm": [
+        0.74,
+        -0.75
+      ],
+      "board_xy_mm": [
+        178.5,
+        83.51
+      ],
+      "canonical_component_top_view_mm": [
+        0.74,
+        0.75
+      ],
+      "size_mm": [
+        0.67,
+        0.3
+      ],
+      "rotation_deg": 90.0,
+      "shape": "Roundrect",
+      "radius_mm": 0.05,
+      "layers": [
+        "B.Cu",
+        "B.Mask",
+        "B.Paste"
+      ],
+      "effective_mask_expansion_per_side_mm": 0.0,
+      "effective_paste_margin_per_side_mm": [
+        0.0,
+        0.0
+      ],
+      "pad_mask_override": null,
+      "pad_paste_override": null,
+      "pad_paste_ratio_override": null,
+      "matches_vendor_position": true,
+      "matches_installed_library_position_and_size": true
+    },
+    {
+      "number": 6,
+      "net": "BUCK_BST",
+      "inline_relative_mm": [
+        0.74,
+        -0.25
+      ],
+      "board_xy_mm": [
+        179.0,
+        83.51
+      ],
+      "canonical_component_top_view_mm": [
+        0.74,
+        0.25
+      ],
+      "size_mm": [
+        0.67,
+        0.3
+      ],
+      "rotation_deg": 90.0,
+      "shape": "Roundrect",
+      "radius_mm": 0.05,
+      "layers": [
+        "B.Cu",
+        "B.Mask",
+        "B.Paste"
+      ],
+      "effective_mask_expansion_per_side_mm": 0.0,
+      "effective_paste_margin_per_side_mm": [
+        0.0,
+        0.0
+      ],
+      "pad_mask_override": null,
+      "pad_paste_override": null,
+      "pad_paste_ratio_override": null,
+      "matches_vendor_position": true,
+      "matches_installed_library_position_and_size": true
+    },
+    {
+      "number": 7,
+      "net": "BUCK_SS",
+      "inline_relative_mm": [
+        0.74,
+        0.25
+      ],
+      "board_xy_mm": [
+        179.5,
+        83.51
+      ],
+      "canonical_component_top_view_mm": [
+        0.74,
+        -0.25
+      ],
+      "size_mm": [
+        0.67,
+        0.3
+      ],
+      "rotation_deg": 90.0,
+      "shape": "Roundrect",
+      "radius_mm": 0.05,
+      "layers": [
+        "B.Cu",
+        "B.Mask",
+        "B.Paste"
+      ],
+      "effective_mask_expansion_per_side_mm": 0.0,
+      "effective_paste_margin_per_side_mm": [
+        0.0,
+        0.0
+      ],
+      "pad_mask_override": null,
+      "pad_paste_override": null,
+      "pad_paste_ratio_override": null,
+      "matches_vendor_position": true,
+      "matches_installed_library_position_and_size": true
+    },
+    {
+      "number": 8,
+      "net": "BUCK_FB",
+      "inline_relative_mm": [
+        0.74,
+        0.75
+      ],
+      "board_xy_mm": [
+        180.0,
+        83.51
+      ],
+      "canonical_component_top_view_mm": [
+        0.74,
+        -0.75
+      ],
+      "size_mm": [
+        0.67,
+        0.3
+      ],
+      "rotation_deg": 90.0,
+      "shape": "Roundrect",
+      "radius_mm": 0.05,
+      "layers": [
+        "B.Cu",
+        "B.Mask",
+        "B.Paste"
+      ],
+      "effective_mask_expansion_per_side_mm": 0.0,
+      "effective_paste_margin_per_side_mm": [
+        0.0,
+        0.0
+      ],
+      "pad_mask_override": null,
+      "pad_paste_override": null,
+      "pad_paste_ratio_override": null,
+      "matches_vendor_position": true,
+      "matches_installed_library_position_and_size": true
+    }
+  ],
+  "graphics": [
+    {
+      "layer": "B.Silkscreen",
+      "start_board_mm": [
+        178.09,
+        83.6
+      ],
+      "end_board_mm": [
+        178.09,
+        84.9
+      ],
+      "width_mm": 0.12
+    },
+    {
+      "layer": "B.Silkscreen",
+      "start_board_mm": [
+        180.41,
+        83.6
+      ],
+      "end_board_mm": [
+        180.41,
+        84.65
+      ],
+      "width_mm": 0.12
+    },
+    {
+      "layer": "B.Silkscreen",
+      "start_board_mm": [
+        0.0,
+        0.0
+      ],
+      "end_board_mm": [
+        0.0,
+        0.0
+      ],
+      "width_mm": 0.12
+    },
+    {
+      "layer": "B.Courtyard",
+      "start_board_mm": [
+        177.95,
+        82.93
+      ],
+      "end_board_mm": [
+        177.95,
+        85.57
+      ],
+      "width_mm": 0.05
+    },
+    {
+      "layer": "B.Courtyard",
+      "start_board_mm": [
+        177.95,
+        85.57
+      ],
+      "end_board_mm": [
+        180.55,
+        85.57
+      ],
+      "width_mm": 0.05
+    },
+    {
+      "layer": "B.Courtyard",
+      "start_board_mm": [
+        180.55,
+        82.93
+      ],
+      "end_board_mm": [
+        177.95,
+        82.93
+      ],
+      "width_mm": 0.05
+    },
+    {
+      "layer": "B.Courtyard",
+      "start_board_mm": [
+        180.55,
+        85.57
+      ],
+      "end_board_mm": [
+        180.55,
+        82.93
+      ],
+      "width_mm": 0.05
+    },
+    {
+      "layer": "B.Fab",
+      "start_board_mm": [
+        178.2,
+        84.85
+      ],
+      "end_board_mm": [
+        178.2,
+        83.65
+      ],
+      "width_mm": 0.1
+    },
+    {
+      "layer": "B.Fab",
+      "start_board_mm": [
+        180.0,
+        84.85
+      ],
+      "end_board_mm": [
+        178.2,
+        84.85
+      ],
+      "width_mm": 0.1
+    },
+    {
+      "layer": "B.Fab",
+      "start_board_mm": [
+        180.3,
+        83.65
+      ],
+      "end_board_mm": [
+        178.2,
+        83.65
+      ],
+      "width_mm": 0.1
+    },
+    {
+      "layer": "B.Fab",
+      "start_board_mm": [
+        180.3,
+        83.65
+      ],
+      "end_board_mm": [
+        180.3,
+        84.55
+      ],
+      "width_mm": 0.1
+    },
+    {
+      "layer": "B.Fab",
+      "start_board_mm": [
+        180.3,
+        84.55
+      ],
+      "end_board_mm": [
+        180.0,
+        84.85
+      ],
+      "width_mm": 0.1
+    }
+  ],
+  "derived_mm": {
+    "pitch": 0.5,
+    "row_center_spacing": 1.48,
+    "same_row_edge_gap": 0.2,
+    "opposing_pad_edge_gap": 0.81,
+    "outer_copper_span": 2.15,
+    "row_end_span": 1.8
+  },
+  "footprint_overrides": {
+    "mask": null,
+    "paste": null,
+    "paste_ratio": null
+  },
+  "board_settings": {
+    "m_SolderMaskExpansion": 0,
+    "m_SolderMaskMinWidth": 0,
+    "m_SolderPasteMargin": 0,
+    "m_SolderPasteMarginRatio": 0.0
+  },
+  "status": "CAD copper matches example; mask fabrication and stencil/assembly/thermal/hardware qualification remain provisional; no CAD changes"
+}

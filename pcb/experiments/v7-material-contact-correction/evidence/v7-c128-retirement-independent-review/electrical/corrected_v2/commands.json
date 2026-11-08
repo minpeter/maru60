@@ -1,0 +1,50 @@
+[
+  {
+    "label": "aead",
+    "command": [
+      "/usr/bin/python3",
+      "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/export_material_graph.py",
+      "/tmp/v7-c128-stub-retirement-aead/source/pcb/maru60.kicad_pcb",
+      "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/aead/physical-graph.json"
+    ],
+    "exit_code": 0,
+    "seconds": 117.05238565499894,
+    "input_sha256_before": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+    "input_sha256_after": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+    "output_sha256": "7a6ca935a3699b2d0a2e1e7b21de7c27059aa802e07080f904b8b80314170741",
+    "log_sha256": "4137e091a9db88d190ad32c882578908427116b3a8afe8aa7329c326b796a639",
+    "checker_sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9"
+  },
+  {
+    "label": "2c7",
+    "command": [
+      "/usr/bin/python3",
+      "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/export_material_graph.py",
+      "/tmp/v7-buck-deadarm-final-recheck/source/pcb/maru60.kicad_pcb",
+      "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/2c7/physical-graph.json"
+    ],
+    "exit_code": 0,
+    "seconds": 106.0879046730006,
+    "input_sha256_before": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+    "input_sha256_after": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+    "output_sha256": "06dd8fd881396d5232dd732ac7fd33f09b211979c8a981941816cbacc9ba3e2a",
+    "log_sha256": "0f1c2dedfce71cd225e4073edba2912bf0c6fcfa1603cc9686124f6eccbd7ff4",
+    "checker_sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9"
+  },
+  {
+    "label": "cafa",
+    "command": [
+      "/usr/bin/python3",
+      "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/export_material_graph.py",
+      "/tmp/v7-c128-stub-retirement-aead/filled/pcb/maru60.kicad_pcb",
+      "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/cafa/physical-graph.json"
+    ],
+    "exit_code": 0,
+    "seconds": 110.94710153899905,
+    "input_sha256_before": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb",
+    "input_sha256_after": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb",
+    "output_sha256": "942185a631001efa5c93fa3ae9d8ca2f576cc1e49758729188c0b008488174ca",
+    "log_sha256": "88ed6e2a603d0f6671caf855d45db3c72f1c4f9c7f2468652b0404ae13e56f5b",
+    "checker_sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9"
+  }
+]

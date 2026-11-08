@@ -1,0 +1,60 @@
+{
+  "violations": {
+    "before": 39,
+    "after": 38,
+    "removed": [
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [USB_DM_CONN] on F.Cu, length 0.4375 mm",
+            "pos": {
+              "x": 18.0,
+              "y": 12.4
+            },
+            "uuid": "b04e3a6d-1e98-43d1-9b10-58c23321ca28"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      }
+    ],
+    "added": [],
+    "before_categories": {
+      "warning:track_dangling": 3,
+      "warning:text_height": 14,
+      "warning:silk_over_copper": 12,
+      "warning:silk_overlap": 10
+    },
+    "after_categories": {
+      "warning:track_dangling": 2,
+      "warning:text_height": 14,
+      "warning:silk_over_copper": 12,
+      "warning:silk_overlap": 10
+    }
+  },
+  "unconnected_items": {
+    "before": 9,
+    "after": 9,
+    "removed": [],
+    "added": [],
+    "before_categories": {
+      "error:unconnected_items": 9
+    },
+    "after_categories": {
+      "error:unconnected_items": 9
+    }
+  },
+  "schematic_parity": {
+    "before": 0,
+    "after": 0,
+    "removed": [],
+    "added": [],
+    "before_categories": {},
+    "after_categories": {}
+  },
+  "severity_item_gate_pass": true,
+  "open_count_unchanged": true,
+  "physical_open_pair_gate": "PASS: all nine complete material pad pairs identical",
+  "pass_full_native_gate": true
+}

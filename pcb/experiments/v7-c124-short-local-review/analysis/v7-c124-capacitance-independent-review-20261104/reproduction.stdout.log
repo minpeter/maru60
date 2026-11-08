@@ -1,0 +1,155 @@
+{
+  "rows": [
+    {
+      "option": "baseline_10n_10pct_direct",
+      "part": null,
+      "cap_nominal_nF": 10.0,
+      "initial_cap_range_nF": [
+        9.0,
+        11.0
+      ],
+      "initial_plus_assumed_X7R_range_nF": [
+        7.65,
+        12.65
+      ],
+      "nominal_SR_design_V_per_ms": 0.2,
+      "nominal_5V_design_ramp_ms": 25.0,
+      "5V_design_ramp_initial_plus_temp_ms": [
+        19.125,
+        31.625
+      ],
+      "nominal_5p8uF_capacitive_inrush_mA": 1.16,
+      "nominal_slew_inrush_ratio_to_10n": 1.0,
+      "upper_initial_plus_temp_headroom_to_10nF_pF": -2650.0,
+      "initial_plus_temp_exceeds_10nF": true,
+      "R_series_ohm": 0.0,
+      "R_plus1pct_C_upper_RC_us": 0.0,
+      "R_plus1pct_Idvdt_max_drop_mV": 0.0,
+      "ideal_pin_C_over_I_ms_per_volt_range": [
+        2.0026178010471205,
+        15.617283950617283
+      ]
+    },
+    {
+      "option": "same_10n_plus_100ohm",
+      "part": "R125 proposed; not selected",
+      "cap_nominal_nF": 10.0,
+      "initial_cap_range_nF": [
+        9.0,
+        11.0
+      ],
+      "initial_plus_assumed_X7R_range_nF": [
+        7.65,
+        12.65
+      ],
+      "nominal_SR_design_V_per_ms": 0.2,
+      "nominal_5V_design_ramp_ms": 25.0,
+      "5V_design_ramp_initial_plus_temp_ms": [
+        19.125,
+        31.625
+      ],
+      "nominal_5p8uF_capacitive_inrush_mA": 1.16,
+      "nominal_slew_inrush_ratio_to_10n": 1.0,
+      "upper_initial_plus_temp_headroom_to_10nF_pF": -2650.0,
+      "initial_plus_temp_exceeds_10nF": true,
+      "R_series_ohm": 100.0,
+      "R_plus1pct_C_upper_RC_us": 1.27765,
+      "R_plus1pct_Idvdt_max_drop_mV": 0.38582,
+      "ideal_pin_C_over_I_ms_per_volt_range": [
+        2.0026178010471205,
+        15.617283950617283
+      ]
+    },
+    {
+      "option": "counterexample_8p2n_10pct",
+      "part": "not a recommended selection",
+      "cap_nominal_nF": 8.2,
+      "initial_cap_range_nF": [
+        7.38,
+        9.02
+      ],
+      "initial_plus_assumed_X7R_range_nF": [
+        6.273,
+        10.373
+      ],
+      "nominal_SR_design_V_per_ms": 0.24390243902439024,
+      "nominal_5V_design_ramp_ms": 20.5,
+      "5V_design_ramp_initial_plus_temp_ms": [
+        15.6825,
+        25.9325
+      ],
+      "nominal_5p8uF_capacitive_inrush_mA": 1.4146341463414633,
+      "nominal_slew_inrush_ratio_to_10n": 1.2195121951219512,
+      "upper_initial_plus_temp_headroom_to_10nF_pF": -373.0,
+      "initial_plus_temp_exceeds_10nF": true,
+      "R_series_ohm": 0.0,
+      "R_plus1pct_C_upper_RC_us": 0.0,
+      "R_plus1pct_Idvdt_max_drop_mV": 0.0,
+      "ideal_pin_C_over_I_ms_per_volt_range": [
+        1.6421465968586388,
+        12.806172839506173
+      ]
+    },
+    {
+      "option": "YAGEO_CC0402JRX7R9BB822",
+      "part": "8.2nF \u00b15%,50V,X7R,0402",
+      "cap_nominal_nF": 8.2,
+      "initial_cap_range_nF": [
+        7.79,
+        8.61
+      ],
+      "initial_plus_assumed_X7R_range_nF": [
+        6.6215,
+        9.9015
+      ],
+      "nominal_SR_design_V_per_ms": 0.24390243902439024,
+      "nominal_5V_design_ramp_ms": 20.5,
+      "5V_design_ramp_initial_plus_temp_ms": [
+        16.55375,
+        24.75375
+      ],
+      "nominal_5p8uF_capacitive_inrush_mA": 1.4146341463414633,
+      "nominal_slew_inrush_ratio_to_10n": 1.2195121951219512,
+      "upper_initial_plus_temp_headroom_to_10nF_pF": 98.5,
+      "initial_plus_temp_exceeds_10nF": false,
+      "R_series_ohm": 0.0,
+      "R_plus1pct_C_upper_RC_us": 0.0,
+      "R_plus1pct_Idvdt_max_drop_mV": 0.0,
+      "ideal_pin_C_over_I_ms_per_volt_range": [
+        1.7333769633507854,
+        12.224074074074075
+      ]
+    },
+    {
+      "option": "TDK_C1005X7R1H682K050BA",
+      "part": "6.8nF \u00b110%,50V,X7R,0402",
+      "cap_nominal_nF": 6.8,
+      "initial_cap_range_nF": [
+        6.12,
+        7.48
+      ],
+      "initial_plus_assumed_X7R_range_nF": [
+        5.202,
+        8.602
+      ],
+      "nominal_SR_design_V_per_ms": 0.29411764705882354,
+      "nominal_5V_design_ramp_ms": 17.0,
+      "5V_design_ramp_initial_plus_temp_ms": [
+        13.005,
+        21.505
+      ],
+      "nominal_5p8uF_capacitive_inrush_mA": 1.7058823529411764,
+      "nominal_slew_inrush_ratio_to_10n": 1.4705882352941178,
+      "upper_initial_plus_temp_headroom_to_10nF_pF": 1398.0,
+      "initial_plus_temp_exceeds_10nF": false,
+      "R_series_ohm": 0.0,
+      "R_plus1pct_C_upper_RC_us": 0.0,
+      "R_plus1pct_Idvdt_max_drop_mV": 0.0,
+      "ideal_pin_C_over_I_ms_per_volt_range": [
+        1.361780104712042,
+        10.619753086419752
+      ]
+    }
+  ],
+  "sweep_rows": 1200
+}

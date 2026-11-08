@@ -1,0 +1,52 @@
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/integration-ready/evidence/static-v7/check.py --netlist /workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/integration-ready/evidence/static-v7/current-v7-netlist.xml --expected-sha256 1b46d899330d9aba0b86380ab08b7a60d309fa7a1c8962b9e6fab3ad556f2d29 --source /workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/integration-ready/candidate/firmware/qmk/keyboards/maru60/rp2350 --matrix-script /workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/integration-ready/candidate/firmware/tests/matrix_simultaneous_model.py --output /workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/package-replay/static-v7.json
+{
+  "pass": true,
+  "bindings": 24,
+  "matrix_results": [
+    {
+      "layout": "LAYOUT_wkl_7u_split",
+      "keys": 60,
+      "exhaustive_pressed_subsets": {
+        "1": 60,
+        "2": 1770,
+        "3": 34220
+      },
+      "all_pressed_and_all_released": "PASS",
+      "reversed_diode_negative_fixture": "detected",
+      "duplicate_matrix_coordinates": false,
+      "ideal_model_no_missing_or_ghost_keys": "PASS",
+      "netlist_sha256": "1b46d899330d9aba0b86380ab08b7a60d309fa7a1c8962b9e6fab3ad556f2d29",
+      "config_sha256": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69"
+    },
+    {
+      "layout": "LAYOUT_hhkb_7u",
+      "keys": 60,
+      "exhaustive_pressed_subsets": {
+        "1": 60,
+        "2": 1770,
+        "3": 34220
+      },
+      "all_pressed_and_all_released": "PASS",
+      "reversed_diode_negative_fixture": "detected",
+      "duplicate_matrix_coordinates": false,
+      "ideal_model_no_missing_or_ghost_keys": "PASS",
+      "netlist_sha256": "1b46d899330d9aba0b86380ab08b7a60d309fa7a1c8962b9e6fab3ad556f2d29",
+      "config_sha256": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69"
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "wrong_gpio_function",
+      "rejected": true
+    },
+    {
+      "case": "wrong_led_net",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_selected_gpio",
+      "rejected": true
+    }
+  ],
+  "report": "/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/package-replay/static-v7.json"
+}

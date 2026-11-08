@@ -1,0 +1,20 @@
+{
+  "change": "Documentation-only clarification of non-latching EN-loss restart; no code, tests, wrapper or fixture changes",
+  "prior_reviewed_manifest_sha256": "ab7f168c0f973c5d9447ec305a3973f1b418467af5fa7018c93a26f58b46d500",
+  "current_manifest_sha256": "4ecbf22170617f42fccefb1ca5cbda496cb864d829965b0fcc80f241e72cefa0",
+  "prior_readme_sha256": "60566648d93835d2091549efa2ad679696eec77d3f6f8095e0c5fde5a22ef13e",
+  "current_readme_sha256": "29b11d200976f7487889877bea9c158e1df256f96590d60d65344d732bb9ca54",
+  "changed_candidate_files_excluding_manifest": [
+    "README.md"
+  ],
+  "all_other_candidate_files_unchanged": true,
+  "unchanged_non_manifest_files": 60,
+  "exact_old_sentence": "Faults and failures during enabled operation remain latched across USB reconfiguration.",
+  "exact_new_sentences": "Observed `/FAULT` LOW and transport-not-ready while non-OFF remain latched across USB reconfiguration. Unexpected EN readback LOW cancels the current epoch without latching; a later allowed task may start a new full settling epoch.",
+  "independent_review_applies_to_unchanged_code_and_test_bytes": true,
+  "new_documentation_has_not_been_reissued_as_a_new_independent_review": true,
+  "behavior_test": "Original independent/lifecycle_test.c enable-loss case explicitly performs EN LOW, rejection/OFF, next housekeeping and full-settle assertion under O0/O2 at synthetic1/7/2147483647ms",
+  "full_suite_rerun_for_documentation_only_change": false,
+  "relocated_full_suite_before_documentation_change": "../relocation-replay-before-documentation/results.json",
+  "qualification_default": 0
+}

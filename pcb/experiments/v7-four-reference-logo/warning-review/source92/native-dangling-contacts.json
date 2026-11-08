@@ -1,0 +1,308 @@
+{
+  "board_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "native_version": "9.0.2",
+  "scope": "Read-only native immediate track/pad contacts. No refill, save, complete geometric graph or stability/return-current claim.",
+  "rows": [
+    {
+      "uuid": "68f95f8e-16e1-430a-a0b2-1c1d51d16fde",
+      "kind": "track",
+      "net": "GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        133.4,
+        77.45
+      ],
+      "b_mm": [
+        133.4,
+        77.35
+      ],
+      "width_mm": 0.25,
+      "length_mm": 0.1,
+      "drill_mm": null,
+      "warning_type": "track_dangling",
+      "connected_tracks": [
+        {
+          "uuid": "577f36c1-4f15-4c40-b632-02db2931cfb0",
+          "kind": "track",
+          "net": "GND",
+          "layer": "F.Cu",
+          "a_mm": [
+            133.4,
+            77.35
+          ],
+          "b_mm": [
+            132.1,
+            76.05
+          ],
+          "width_mm": 0.25,
+          "length_mm": 1.8384776310850237,
+          "drill_mm": null
+        }
+      ],
+      "connected_pads": []
+    },
+    {
+      "uuid": "bc0a06ab-785a-4a27-a164-9c3256c7f3bd",
+      "kind": "track",
+      "net": "GND",
+      "layer": "F.Cu",
+      "a_mm": [
+        15.7,
+        10.75
+      ],
+      "b_mm": [
+        15.7,
+        9.8
+      ],
+      "width_mm": 0.25,
+      "length_mm": 0.95,
+      "drill_mm": null,
+      "warning_type": "track_dangling",
+      "connected_tracks": [
+        {
+          "uuid": "5a2cb39f-cff7-4876-a0b9-7db4a3b9b0bc",
+          "kind": "via",
+          "net": "GND",
+          "layer": "F.Cu",
+          "a_mm": [
+            15.7,
+            9.8
+          ],
+          "b_mm": [
+            15.7,
+            9.8
+          ],
+          "width_mm": 0.5,
+          "length_mm": 0.0,
+          "drill_mm": 0.25
+        }
+      ],
+      "connected_pads": []
+    },
+    {
+      "uuid": "53e7b99f-308f-57ae-9e47-9e779e6b3272",
+      "kind": "track",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "a_mm": [
+        105.0,
+        37.775
+      ],
+      "b_mm": [
+        102.87,
+        38.495
+      ],
+      "width_mm": 0.3,
+      "length_mm": 2.248399430706208,
+      "drill_mm": null,
+      "warning_type": "track_dangling",
+      "connected_tracks": [
+        {
+          "uuid": "f9815195-95ae-5029-9575-af5b562417f2",
+          "kind": "track",
+          "net": "+3V3",
+          "layer": "B.Cu",
+          "a_mm": [
+            102.87,
+            38.495
+          ],
+          "b_mm": [
+            101.7375,
+            39.4375
+          ],
+          "width_mm": 0.3,
+          "length_mm": 1.4733847087573566,
+          "drill_mm": null
+        }
+      ],
+      "connected_pads": []
+    },
+    {
+      "uuid": "1e6f9b6e-9a22-418a-8cde-6feb5aafb26e",
+      "kind": "via",
+      "net": "VBUS",
+      "layer": "F.Cu",
+      "a_mm": [
+        20.15,
+        10.95
+      ],
+      "b_mm": [
+        20.15,
+        10.95
+      ],
+      "width_mm": 0.5,
+      "length_mm": 0.0,
+      "drill_mm": 0.25,
+      "warning_type": "via_dangling",
+      "connected_tracks": [
+        {
+          "uuid": "70e36160-f13a-412d-88ce-0f2e2515b226",
+          "kind": "track",
+          "net": "VBUS",
+          "layer": "B.Cu",
+          "a_mm": [
+            20.15,
+            12.45
+          ],
+          "b_mm": [
+            20.15,
+            10.95
+          ],
+          "width_mm": 0.3,
+          "length_mm": 1.5,
+          "drill_mm": null
+        },
+        {
+          "uuid": "b83f85ff-dd51-4f3a-987a-b80209573fa1",
+          "kind": "track",
+          "net": "VBUS",
+          "layer": "B.Cu",
+          "a_mm": [
+            20.15,
+            12.45
+          ],
+          "b_mm": [
+            20.15,
+            8.7
+          ],
+          "width_mm": 0.2,
+          "length_mm": 3.75,
+          "drill_mm": null
+        }
+      ],
+      "connected_pads": []
+    },
+    {
+      "uuid": "b04e3a6d-1e98-43d1-9b10-58c23321ca28",
+      "kind": "track",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "a_mm": [
+        18.0,
+        12.4
+      ],
+      "b_mm": [
+        17.5625,
+        12.4
+      ],
+      "width_mm": 0.15,
+      "length_mm": 0.4375,
+      "drill_mm": null,
+      "warning_type": "track_dangling",
+      "connected_tracks": [
+        {
+          "uuid": "cc183bf5-15f3-5270-ae14-886f402cad67",
+          "kind": "track",
+          "net": "USB_DM_CONN",
+          "layer": "F.Cu",
+          "a_mm": [
+            20.8,
+            11.7
+          ],
+          "b_mm": [
+            18.0,
+            12.4
+          ],
+          "width_mm": 0.15,
+          "length_mm": 2.8861739379323623,
+          "drill_mm": null
+        },
+        {
+          "uuid": "ba0e0532-1586-4050-a390-d87dcee11d2c",
+          "kind": "via",
+          "net": "USB_DM_CONN",
+          "layer": "F.Cu",
+          "a_mm": [
+            18.0,
+            12.4
+          ],
+          "b_mm": [
+            18.0,
+            12.4
+          ],
+          "width_mm": 0.5,
+          "length_mm": 0.0,
+          "drill_mm": 0.25
+        }
+      ],
+      "connected_pads": []
+    },
+    {
+      "uuid": "acf57724-d322-4087-84ab-2893c779cea3",
+      "kind": "track",
+      "net": "+4V_REG",
+      "layer": "F.Cu",
+      "a_mm": [
+        22.6,
+        18.55
+      ],
+      "b_mm": [
+        23.7,
+        19.65
+      ],
+      "width_mm": 0.8,
+      "length_mm": 1.5556349186104048,
+      "drill_mm": null,
+      "warning_type": "track_dangling",
+      "connected_tracks": [
+        {
+          "uuid": "05a61be2-0243-4f1b-be73-9b2474fa2d93",
+          "kind": "track",
+          "net": "+4V_REG",
+          "layer": "F.Cu",
+          "a_mm": [
+            23.7,
+            19.65
+          ],
+          "b_mm": [
+            33.4,
+            19.65
+          ],
+          "width_mm": 0.8,
+          "length_mm": 9.7,
+          "drill_mm": null
+        }
+      ],
+      "connected_pads": []
+    },
+    {
+      "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c",
+      "kind": "via",
+      "net": "BUCK_FB",
+      "layer": "F.Cu",
+      "a_mm": [
+        178.15,
+        85.75
+      ],
+      "b_mm": [
+        178.15,
+        85.75
+      ],
+      "width_mm": 0.5,
+      "length_mm": 0.0,
+      "drill_mm": 0.25,
+      "warning_type": "via_dangling",
+      "connected_tracks": [
+        {
+          "uuid": "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+          "kind": "track",
+          "net": "BUCK_FB",
+          "layer": "F.Cu",
+          "a_mm": [
+            178.15,
+            85.75
+          ],
+          "b_mm": [
+            182.95,
+            85.75
+          ],
+          "width_mm": 0.15,
+          "length_mm": 4.8,
+          "drill_mm": null
+        }
+      ],
+      "connected_pads": []
+    }
+  ],
+  "source_unchanged": true
+}

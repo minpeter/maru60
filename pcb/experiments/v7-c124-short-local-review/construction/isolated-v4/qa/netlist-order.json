@@ -1,0 +1,70 @@
+{
+  "USB_DVDT": [
+    {
+      "ref": "R125",
+      "pin": "1",
+      "pinfunction": "1",
+      "pintype": "passive"
+    },
+    {
+      "ref": "U8",
+      "pin": "7",
+      "pinfunction": "DVDT",
+      "pintype": "passive"
+    }
+  ],
+  "USB_DVDT_CAP": [
+    {
+      "ref": "C124",
+      "pin": "1",
+      "pinfunction": "1",
+      "pintype": "passive"
+    },
+    {
+      "ref": "R125",
+      "pin": "2",
+      "pinfunction": "2",
+      "pintype": "passive"
+    }
+  ],
+  "USB_OVLO": [
+    {
+      "ref": "R120",
+      "pin": "2",
+      "pinfunction": "2",
+      "pintype": "passive"
+    },
+    {
+      "ref": "R121",
+      "pin": "1",
+      "pinfunction": "1",
+      "pintype": "passive"
+    },
+    {
+      "ref": "U8",
+      "pin": "2",
+      "pinfunction": "OVLO",
+      "pintype": "input"
+    }
+  ],
+  "USB_UVLO": [
+    {
+      "ref": "R122",
+      "pin": "2",
+      "pinfunction": "2",
+      "pintype": "passive"
+    },
+    {
+      "ref": "R123",
+      "pin": "1",
+      "pinfunction": "1",
+      "pintype": "passive"
+    },
+    {
+      "ref": "U8",
+      "pin": "1",
+      "pinfunction": "EN/UVLO",
+      "pintype": "input"
+    }
+  ]
+}

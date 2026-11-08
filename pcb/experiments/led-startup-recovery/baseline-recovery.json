@@ -1,0 +1,140 @@
+{
+  "archive": "/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/downloads/accepted-main-7fb63a6-ADC.zip",
+  "archive_sha256": "85b4b5991d33a31e632cb9a358c3a64efc3ec3a374256b02defea4bb833e171b",
+  "baseline_matched": 22,
+  "active_matched": 18,
+  "rows": [
+    {
+      "path": "config.h",
+      "actual": "c5a057f276e90c70c4e4e81a4d39e20597465b2b13daf223cacc3f0059b3ac61",
+      "baseline_match": true,
+      "active_match": false
+    },
+    {
+      "path": "keyboard.json",
+      "actual": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "keymaps/via/keymap.c",
+      "actual": "bb80f8601a6818ca1c822745ef7a85d16ae94c627c2222478ec26956a762b494",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "keymaps/via_hhkb/keymap.c",
+      "actual": "9d83cc8687de165cb52793cdb4808058d90b67625119ecad3402dc85068401ab",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "keymaps/via_hhkb/rules.mk",
+      "actual": "a249d7b848b9ef246d4fa73a3fe8591fab9859323d7845d2681ead37eebc2e75",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "led_config.c",
+      "actual": "e0845ffafa16aab35e58fdfe1bb1df97b56a18f2b63f9d2565b89e2fe0206291",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru60.c",
+      "actual": "14ff9750932b512bca6d794398bef2a3dfe940da9a29e30346e4e5151d660036",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_key_transport.c",
+      "actual": "063d101e0c98e10fbf34ad3e2b10bf98962e58cfa160a7f97515bb8d8854c4c6",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_layout.c",
+      "actual": "e40b7484c8ef7821fa6b6033bcd353ecd9c1e66010a4b851467ea827c686dbc4",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_layout_policy.h",
+      "actual": "5311a1bef83dab42db1c6a0ce6897570cfbfe19a3c029b6bf2b1911ebe9254a9",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_led_counts.h",
+      "actual": "9f3f8775c3a775e6c973dc10b0c0694a42d8ba4d3ea49d37f588992d450f3b6b",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_report_sync.c",
+      "actual": "5a01ae6b906eeaed2b3ce8b056c913d9419032e4cbf377aa01dd98ccaaaf53f1",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_report_sync.h",
+      "actual": "6f87ef8a8c082b5ae9e57b797bce753eace04c46901810cdb7a9eccffb0dec53",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_rgb.c",
+      "actual": "5c4b67d772bc32a7f44c8406f359eacc3e94c4730f7c2daa9448c48414429ead",
+      "baseline_match": true,
+      "active_match": false
+    },
+    {
+      "path": "maru_rgb.h",
+      "actual": "66c74ab0cd4613345f7d9c99a706263ebd854b84043e7dea12f630f901a6d24e",
+      "baseline_match": true,
+      "active_match": false
+    },
+    {
+      "path": "maru_rgb_policy.h",
+      "actual": "db89d46aeae1d944d980f61f5d7c0544c8c985a8d561a2fea54e55cc788a99a7",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_suspend.c",
+      "actual": "5b9609f7911f6f6bdf46a5f7d27ccea0b5b6cd11d92cbd1b2746a7882f73982e",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_suspend_masks.h",
+      "actual": "9e8906bb18e76fe55cb4549e9ec03e6e4cdbea78085a5ddc1243adb9e8938ccd",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_ug_transport.c",
+      "actual": "caed702d6652ae0ffa2704d979b02eb84e35dae8783f0bc3c6f731877c3d3320",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_via_schema.h",
+      "actual": "2c81294491303c0d9ec1fb25e9f3b4161235e4843b74387ffa46f6cfc09bf172",
+      "baseline_match": true,
+      "active_match": true
+    },
+    {
+      "path": "maru_ws2812_transport.inc",
+      "actual": "9b7446c8b921998db92d0441c574d44673ae6e8be9c18c07544f6ebaf195d73a",
+      "baseline_match": true,
+      "active_match": false
+    },
+    {
+      "path": "rules.mk",
+      "actual": "509eed120a163447ac2462fb961f6026ca950397734458c927e990b4605b1a26",
+      "baseline_match": true,
+      "active_match": true
+    }
+  ]
+}

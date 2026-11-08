@@ -1,0 +1,345 @@
+{
+  "script_inventory": [
+    {
+      "path": "/tmp/v7-buck-deadarm-trial-2c7e/tools/export_native_physical_graph.py",
+      "sha256": "f53420eea14c81281a0f103951f25880ae9afe72631ac7370d299d98374fb6a9",
+      "role": "BUCK 2c7\u2192aead global graph",
+      "call_sites": [
+        {
+          "line": 15,
+          "text": "def cu(q,l):"
+        },
+        {
+          "line": 19,
+          "text": "  if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():z.BooleanSubtract(poly(q.GetEffectiveHoleShape(),True))"
+        },
+        {
+          "line": 27,
+          "text": " for z in list(cn.GetConnectedTracks(q))+list(cn.GetConnectedPads(q)):"
+        },
+        {
+          "line": 35,
+          "text": "    v=area(cu(q,l),cu(z,l))"
+        },
+        {
+          "line": 43,
+          "text": " if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():drills.Append(poly(q.GetEffectiveHoleShape(),True))"
+        },
+        {
+          "line": 48,
+          "text": " contacts=list(cn.GetConnectedTracks(z))+list(cn.GetConnectedPads(z))"
+        },
+        {
+          "line": 59,
+          "text": "    ar=area(cu(q,l),s)"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/v7-j3-unselected-closure-2c7e/tools/export_native_physical_graph.py",
+      "sha256": "f53420eea14c81281a0f103951f25880ae9afe72631ac7370d299d98374fb6a9",
+      "role": "J3 2c7\u2192b5c global graph",
+      "call_sites": [
+        {
+          "line": 15,
+          "text": "def cu(q,l):"
+        },
+        {
+          "line": 19,
+          "text": "  if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():z.BooleanSubtract(poly(q.GetEffectiveHoleShape(),True))"
+        },
+        {
+          "line": 27,
+          "text": " for z in list(cn.GetConnectedTracks(q))+list(cn.GetConnectedPads(q)):"
+        },
+        {
+          "line": 35,
+          "text": "    v=area(cu(q,l),cu(z,l))"
+        },
+        {
+          "line": 43,
+          "text": " if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():drills.Append(poly(q.GetEffectiveHoleShape(),True))"
+        },
+        {
+          "line": 48,
+          "text": " contacts=list(cn.GetConnectedTracks(z))+list(cn.GetConnectedPads(z))"
+        },
+        {
+          "line": 59,
+          "text": "    ar=area(cu(q,l),s)"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/v7-c124-rebound-short/main/export_native_physical_graph.py",
+      "sha256": "f53420eea14c81281a0f103951f25880ae9afe72631ac7370d299d98374fb6a9",
+      "role": "C124 V4 actual global graph",
+      "call_sites": [
+        {
+          "line": 15,
+          "text": "def cu(q,l):"
+        },
+        {
+          "line": 19,
+          "text": "  if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():z.BooleanSubtract(poly(q.GetEffectiveHoleShape(),True))"
+        },
+        {
+          "line": 27,
+          "text": " for z in list(cn.GetConnectedTracks(q))+list(cn.GetConnectedPads(q)):"
+        },
+        {
+          "line": 35,
+          "text": "    v=area(cu(q,l),cu(z,l))"
+        },
+        {
+          "line": 43,
+          "text": " if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():drills.Append(poly(q.GetEffectiveHoleShape(),True))"
+        },
+        {
+          "line": 48,
+          "text": " contacts=list(cn.GetConnectedTracks(z))+list(cn.GetConnectedPads(z))"
+        },
+        {
+          "line": 59,
+          "text": "    ar=area(cu(q,l),s)"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/v7-c128-stub-retirement-aead/tools/export_native_physical_graph.py",
+      "sha256": "f53420eea14c81281a0f103951f25880ae9afe72631ac7370d299d98374fb6a9",
+      "role": "Current C128 aead\u2192cafa global graph",
+      "call_sites": [
+        {
+          "line": 15,
+          "text": "def cu(q,l):"
+        },
+        {
+          "line": 19,
+          "text": "  if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():z.BooleanSubtract(poly(q.GetEffectiveHoleShape(),True))"
+        },
+        {
+          "line": 27,
+          "text": " for z in list(cn.GetConnectedTracks(q))+list(cn.GetConnectedPads(q)):"
+        },
+        {
+          "line": 35,
+          "text": "    v=area(cu(q,l),cu(z,l))"
+        },
+        {
+          "line": 43,
+          "text": " if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():drills.Append(poly(q.GetEffectiveHoleShape(),True))"
+        },
+        {
+          "line": 48,
+          "text": " contacts=list(cn.GetConnectedTracks(z))+list(cn.GetConnectedPads(z))"
+        },
+        {
+          "line": 59,
+          "text": "    ar=area(cu(q,l),s)"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/v7-buck-deadarm-independent-review/export_native.py",
+      "sha256": "f747b3a528991ff6a98c757c2ea9cf79320d52d04e480f76863ca1e4c8a0872b",
+      "role": "BUCK independent canonical FB local material",
+      "call_sites": [
+        {
+          "line": 26,
+          "text": " if isinstance(x,(p.PAD,p.PCB_VIA)) and x.HasHole():"
+        },
+        {
+          "line": 39,
+          "text": "   if isinstance(x,(p.PAD,p.PCB_VIA)) and x.HasHole():q.BooleanSubtract(poly(x.GetEffectiveHoleShape()))"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/v7-buck-deadarm-independent-review/audit_raw_graph.py",
+      "sha256": "0de2097b49e3efd7415d2813a80837232d94550a4f45b1a3dae84146123dfa48",
+      "role": "BUCK independent reuse of stored global graph",
+      "call_sites": []
+    },
+    {
+      "path": "/tmp/v7-j3-transition-independent-review/export.py",
+      "sha256": "e0b232d3f9b879c08d86cfca7ee4b86084e5d276c87246fe15671fa9d2a132fd",
+      "role": "J3 independent canonical inventory/reference exports",
+      "call_sites": [
+        {
+          "line": 33,
+          "text": " if isinstance(x,(p.PAD,p.PCB_VIA)) and x.HasHole():"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/v7-j3-transition-independent-review/verify_return.py",
+      "sha256": "86d8b1660ead46c240b579b9ed246b2dfb9e294447593e6fb61c27410cc9f7a8",
+      "role": "J3 explicit canonical rooted return witness",
+      "call_sites": [
+        {
+          "line": 13,
+          "text": "def cu(x,l):"
+        },
+        {
+          "line": 15,
+          "text": " if isinstance(x,(p.PAD,p.PCB_VIA)) and x.HasHole():q.BooleanSubtract(poly(x.GetEffectiveHoleShape(),True))"
+        },
+        {
+          "line": 20,
+          "text": " if isinstance(x,(p.PAD,p.PCB_VIA)) and x.HasHole():"
+        },
+        {
+          "line": 27,
+          "text": " ar=overlap(cu(objects[a],p.B_Cu),cu(objects[z],p.B_Cu));assert ar>0;edges.append({'from':a,'to':z,'layer':'B.Cu','positive_copper_overlap_mm2':ar})"
+        },
+        {
+          "line": 32,
+          "text": " contacts={u:overlap(cu(objects[u],l),q) for u in [chain[-1],returnid]};assert all(a>0 for a in contacts.values())"
+        },
+        {
+          "line": 37,
+          "text": " if not isinstance(x,(p.PAD,p.PCB_VIA)) or not x.HasHole() or x.GetNetname()!='GND':continue"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/v7-j3-transition-independent-review/audit_raw_graph.py",
+      "sha256": "0802f3b2eb63d2fa82d6a89b7ebbd986811af2f6264b161b50f0a04e32f69cfd",
+      "role": "J3 independent reuse of stored global graph",
+      "call_sites": []
+    },
+    {
+      "path": "/tmp/v7-c124-rebound-short/main/common.py",
+      "sha256": "aa525a4df424f60b9994d90ed739a8a5d417b0d02fffaf26f329c57808d86261",
+      "role": "C124 analytical canonical copper helper",
+      "call_sites": [
+        {
+          "line": 7,
+          "text": "def copper(q,l):"
+        },
+        {
+          "line": 9,
+          "text": " if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():o.BooleanSubtract(poly(q.GetEffectiveHoleShape(),p.ERROR_OUTSIDE))"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/v7-c124-rebound-short/main/contact_reference_v4.py",
+      "sha256": "4cd3e9f22c1426395ac728d5eba8d4dd3330516d21b65a4afa40cc117c388ae6",
+      "role": "C124 analytical canonical local pair contacts",
+      "call_sites": [
+        {
+          "line": 58,
+          "text": "  if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole()and q.IsOnLayer(l):planes[l].BooleanSubtract(poly(q.GetEffectiveHoleShape(),p.ERROR_OUTSIDE))"
+        },
+        {
+          "line": 70,
+          "text": "  if isinstance(q,(p.PAD,p.PCB_VIA))and q.HasHole():rows.append(dict(uuid=uid(q),net=q.GetNetname(),gap_mm=s.GetClearance(q.GetEffectiveHoleShape())/1e6))"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/v7-c124-rebound-short/r121-study/drill_annulus_correction.py",
+      "sha256": "f0ae37bb6d161edaf611d40135759dd36c1dfe36abbe345bc2eb713741747b55",
+      "role": "C124 earlier explicitly corrected canonical spur annulus",
+      "call_sites": [
+        {
+          "line": 12,
+          "text": "def copper(obj,loc):"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-four-reference-logo/native_electrical.py",
+      "sha256": "f0ebf605a39f190c8f6569d07d10e5817ae8a7109588e397f8426028e1498544",
+      "role": "Selected artwork native edge inventory, explicitly not fresh physical plane graph",
+      "call_sites": [
+        {
+          "line": 15,
+          "text": " for y in list(cn.GetConnectedTracks(x))+list(cn.GetConnectedPads(x)):"
+        },
+        {
+          "line": 33,
+          "text": " if x.HasHole():holes[u]={'position_nm':n.XY(x.GetPosition()),'drill_nm':n.XY(x.GetDrillSize())if isinstance(x,p.PAD)else[x.GetDrillValue()]*2,'copper_layers':[b.GetLayerName(layer)for layer in [p.F_Cu,p.In1_Cu,p.In2_Cu,p.B_Cu]if x.IsOnLayer(layer)]}"
+        },
+        {
+          "line": 46,
+          "text": "result={'board_sha256':scene.before,'native_version':p.GetBuildVersion(),'native_board_loads':1,'private_xdg':scene.homes,'raw_native_net_identity_before_after_connectivity_exact':True,'net_identity':raw,'track_geometry':geometry,'pad_geometry':pad_geometry,'hole_geometry':holes,'footprint_placement':fp_geo,'edges':sorted(map(list,edges)),'native_components':components,'diagnostic_items':diagnostics,'net_table':{str(k):v for k,v in nets.items()},'lengths_mm':lengths,'length_fsum_mm':math.fsum(lengths[u]for u in sorted(lengths)),'counts':{'tracks':len(lengths),'vias':len(geometry)-len(lengths),'pads':len(pad_geometry),'footprints':len(fp_geo),'native_contact_edges':len(edges)},'fresh_physical_plane_graph_or_simulation':False,'board_file_unchanged':True};out.write_text(json.dumps(result,indent=2,sort_keys=True)+'\\n');print(json.dumps({'board_sha256':scene.before,'counts':result['counts'],'length_fsum_mm':result['length_fsum_mm']}))"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/exact-reconstruction/recover_c128.py",
+      "sha256": "43f4ef6e7dafd482edcd04db4f26d91dc80da19be4b687ae1fa5c4065c191dc2",
+      "role": "Exact historical C128 reconstruction, not contact helper",
+      "call_sites": []
+    },
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-c128-pdn-study-20261104/extract_inputs.py",
+      "sha256": "b6b4841bd33cfa3298cc4e6e93cf79895af41690330d8bbe94f7439543fef33b",
+      "role": "Historical PDN component/geometry extraction, not original graph helper",
+      "call_sites": []
+    }
+  ],
+  "reachable_exact_boards": [
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/exact-reconstruction/u10-original2bf.kicad_pcb",
+      "sha256": "2bfcb5292319626d4f33cad5e827ed0b1eb6c1b2ef852d8cc7fc2a3bf5792a55"
+    },
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/exact-reconstruction/u10-reconstructed.kicad_pcb",
+      "sha256": "400fd2641ebd3208315359acf295ee630dab8d3319a6d990ea7ab8d558961fa2"
+    },
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/exact-reconstruction/native-c128-LR/reconstructed.kicad_pcb",
+      "sha256": "8a4ff6a646396a3faa11dda0f756c89e82c20eec18f37fe531cf730789106eea"
+    },
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/selected-recovered/pcb/maru60.kicad_pcb",
+      "sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1"
+    },
+    {
+      "path": "/tmp/v7-buck-deadarm-trial-2c7e/source/pcb/maru60.kicad_pcb",
+      "sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373"
+    },
+    {
+      "path": "/tmp/v7-buck-deadarm-trial-2c7e/filled/pcb/maru60.kicad_pcb",
+      "sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f"
+    },
+    {
+      "path": "/tmp/v7-j3-unselected-closure-2c7e/filled/pcb/maru60.kicad_pcb",
+      "sha256": "b5c33bbc25a0c01a43b1444156508fc3b74e9b62dd0ebe96bd4bd8e09a3ff687"
+    },
+    {
+      "path": "/tmp/v7-c124-rebound-short/isolated-v4/filled/pcb/maru60.kicad_pcb",
+      "sha256": "8c45df3642599be269697ce9b225fe55ee6b886dce713b77f6ced533ea268fb6"
+    },
+    {
+      "path": "/tmp/v7-c128-stub-retirement-aead/filled/pcb/maru60.kicad_pcb",
+      "sha256": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb"
+    }
+  ],
+  "historical_receipts": [
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-c128-pdn-study-20261104/inputs/candidate-qa/graph-delta.json",
+      "sha256": "a141c8f90cc50b2e90030be9b330acb561e87868e86d5b48696496d0c369b520"
+    },
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-c128-pdn-study-20261104/inputs/candidate-qa/native-delta.json",
+      "sha256": "86f5b85bfa80a814bb974eb0b1675a25990e651bc5c890a42198d3ede5555288"
+    },
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-c128-pdn-study-20261104/inputs/candidate-qa/evidence.json",
+      "sha256": "4d9b9b5b86d7f39167ac2b90b3f0016e91311a25341418a8840c0531511e1bd8"
+    },
+    {
+      "path": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-c128-pdn-study-20261104/inputs/MANIFEST.json",
+      "sha256": "3f333257ab4292be128dbfda93087a1ce93ddc777eabf5309e3d0e2121291130"
+    }
+  ],
+  "historical_original_execution_root": "/workspace/scratch/edd9a5be63e7/v7-c128-candidate-build",
+  "historical_execution_root_exists": false,
+  "historical_original_graph_helper": "Not found in checked recovered study, exact-reconstruction and current recovery project artifacts. Hash-only original graph receipts do not establish helper equivalence or safety. Exact source boards permit fresh canonical replay.",
+  "scope": "Read-only lineage inventory. No sealed code edited, no corrected full-board run duplicated. Native wrapper identity can bypass isinstance guards and contaminate the UUID/layer cache. Exact contact areas, direct edge sets and derived partitions require corrected canonical comparison; no blanket no-impact conclusion."
+}

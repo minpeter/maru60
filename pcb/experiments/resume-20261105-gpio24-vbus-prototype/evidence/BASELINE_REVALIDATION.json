@@ -1,0 +1,103 @@
+{
+  "created_utc": "2026-11-05T16:44:20.131374+00:00",
+  "kind": "Fresh verification of unchanged selected recovery baseline",
+  "baseline_commit": "321785ad9af76405c23ca6f6b215b1a07f8ae948",
+  "baseline_pcb_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+  "drc_unconnected_pairs": 12,
+  "drc_warnings": 51,
+  "drc_other_errors": 0,
+  "schematic_parity_findings": 0,
+  "erc_violations": 0,
+  "raw_native_identity": {
+    "board_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+    "native_build": "9.0.2+dfsg-1",
+    "raw_object_count": 12108,
+    "raw_to_loaded_equal": true,
+    "loaded_to_built_equal": true,
+    "electrical_xml_nodes_checked": 1064,
+    "source_pin_mismatches": [],
+    "board_unchanged": true,
+    "pass": true
+  },
+  "cold_refill": {
+    "native_build": "9.0.2+dfsg-1",
+    "source_pcb_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+    "after_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+    "all_files_byte_identical": true,
+    "source_unchanged": true,
+    "names_stable_load_build_refill": true,
+    "metrics": {
+      "track_segments": 9750,
+      "vias": 919,
+      "footprints": 383,
+      "summed_track_length_mm": 13184.45545001526
+    },
+    "seconds": 4.696226660000093
+  },
+  "material_graph_reproduction": {
+    "before_pcb_sha256": "abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d",
+    "current_pcb_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+    "checks": {
+      "pad_inventory": true,
+      "pad_partitions_by_net": true,
+      "direct_edges": true,
+      "guard_failing_material_edges": true,
+      "zone_edges": true,
+      "material_nodes": true,
+      "material_edges": true,
+      "material_roots": true,
+      "object_material_roots": true,
+      "barrel_joins": true
+    },
+    "net_partition_count": 246,
+    "extra_pad_components": {
+      "MCU_GPIO26": 2,
+      "MCU_GPIO25": 2,
+      "EXT_GPIO27": 2,
+      "EXT_GPIO26": 2,
+      "EXT_GPIO25": 3,
+      "EXT_GPIO24": 3,
+      "MCU_GPIO10": 2,
+      "MCU_GPIO3": 2,
+      "MCU_GPIO27": 2,
+      "MCU_GPIO24": 2
+    },
+    "accepted_guarded_material_edges": 22512,
+    "rejected_tiny_contacts": 51,
+    "rejected_tiny_contacts_preserved": true,
+    "all_comparison_fields_equal": true
+  },
+  "firmware_host_replay": {
+    "pass": true,
+    "candidate_manifest_sha256": "4ecbf22170617f42fccefb1ca5cbda496cb864d829965b0fcc80f241e72cefa0",
+    "packet_unchanged": true,
+    "host_results_sha256": "50f571275a52cde9fd036a4c3ce47e8d46221f5ff6ca38a70c83306421b4f073",
+    "guard_results_sha256": "1fe7145497dbc38bbc004f14c8b354e0e463bc1bd4c179b23d30ea0ad43aa4de",
+    "independent_results_sha256": "5ad42fcdc98d9695e384e1d49a120d083ac6bc4f6702dbb8ce120587990f7ce7",
+    "static_results_sha256": "f49afd0dc58020931884062fb8c0394a488cc7c44261fa831c458314105b1ac1",
+    "startup_executions": 90,
+    "transport_executions": 288,
+    "independent_executions": 73,
+    "invalid_contract_rejections": 7,
+    "killed_mutations": [
+      "skip-settling",
+      "retain-state",
+      "forget-fault",
+      "between-chains",
+      "black-first",
+      "post-sync",
+      "final-dma"
+    ],
+    "expected_nonatomic_limit_controls": 2,
+    "static_gpio_bindings": 24,
+    "qualification_default": 0,
+    "full_arm_build": false,
+    "hardware_qualification": false
+  },
+  "limitations": [
+    "No routing change selected in this baseline checkpoint.",
+    "No full ARM/QMK build, flashing or physical hardware verification.",
+    "LED qualification remains OFF.",
+    "Native and bounded material checks do not qualify SI/EMC, power dynamics, fault response, mechanical fit or manufacturing."
+  ]
+}

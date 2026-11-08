@@ -1,0 +1,129 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": "fb227c9af1b2c520452fee6815fdfecf6c44f7a42f090d432e5293fd3538d434",
+  "zones": [
+    {
+      "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "source_components": 9,
+      "candidate_components": 9,
+      "source_area_mm2": 289.5180412826205,
+      "candidate_area_mm2": 288.800184572338,
+      "lost_mm2": 1.0707921261125,
+      "gained_mm2": 0.352935532797
+    },
+    {
+      "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 23434.10645782092,
+      "candidate_area_mm2": 23433.75047907435,
+      "lost_mm2": 0.4863510432655,
+      "gained_mm2": 0.130372431028
+    },
+    {
+      "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 23484.626739959473,
+      "candidate_area_mm2": 23484.022833296098,
+      "lost_mm2": 0.733131710302,
+      "gained_mm2": 0.129225117366
+    },
+    {
+      "uuid": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 2.619929507342,
+      "candidate_area_mm2": 2.619929507342,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "18251378-06a1-40ae-8f44-01acf0d3371a",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "source_components": 6,
+      "candidate_components": 6,
+      "source_area_mm2": 133.523232524245,
+      "candidate_area_mm2": 132.599948403587,
+      "lost_mm2": 0.923284476239,
+      "gained_mm2": 7.5305e-09
+    },
+    {
+      "uuid": "3f67c971-a794-46bf-8f55-e7568aa08387",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "source_components": 2,
+      "candidate_components": 2,
+      "source_area_mm2": 6.627001297286,
+      "candidate_area_mm2": 6.627001297286,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "431dc987-81d8-4e96-9039-7fb10f89e34d",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 5.2582800266875,
+      "candidate_area_mm2": 5.2582800266875,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 28.377362951863,
+      "candidate_area_mm2": 28.377362951863,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 0.5892129551275,
+      "candidate_area_mm2": 0.5892129551275,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 1.6577277238375,
+      "candidate_area_mm2": 1.6577277238375,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 2.262728066674,
+      "candidate_area_mm2": 2.262728066674,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    }
+  ],
+  "method": "Native actual filled zones with every physical through-hole subtracted; no Unfracture. Global counts do not establish local web adequacy.",
+  "limits": "Full-board physical copper changes, not SI/current distribution."
+}

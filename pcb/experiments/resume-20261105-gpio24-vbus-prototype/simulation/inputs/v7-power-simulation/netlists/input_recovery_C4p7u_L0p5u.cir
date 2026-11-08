@@ -1,0 +1,9 @@
+Abrupt protected-feed recovery sensitivity; no eFuse slew model
+Vin source 0 PWL(0 0 100n 5)
+Rseries source n1 0.3582870323
+Lfeed n1 capin 0.5u
+RESR capin cnode 0.02
+Cin cnode 0 4.7u
+Rload capin 0 33
+.tran 2n 30u 0 2n
+.end

@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "Independent pure command/source/output/log/root/NPTH reconstruction for the two completed current-family corrected exports. No native rerun or selection.",
+  "runs": [
+    {
+      "label": "j3_b5c",
+      "board_sha256": "b5c33bbc25a0c01a43b1444156508fc3b74e9b62dd0ebe96bd4bd8e09a3ff687",
+      "graph_sha256": "4d0d0f54ed624761053be8f8e3f4cf129f849d98130b334d0640cf7f8f14ef01",
+      "commands_bound": true,
+      "roots_independently_reconstructed": true,
+      "pad_partitions_independently_reconstructed": true,
+      "named_pad_count": 1082,
+      "net_count": 245,
+      "material_nodes": 14697,
+      "material_edges": 22536,
+      "barrels": 936,
+      "npth_fragment_nodes": 56,
+      "npth_accepted_edges": 0,
+      "npth_guard_failed_edges": 0,
+      "npth_named_pad_participation": 0,
+      "guard_failures": 51,
+      "direct_edges": 21801,
+      "zone_edges": 731
+    },
+    {
+      "label": "c124_ec487",
+      "board_sha256": "ec48735f21b813f84873a4dfcd8a984a395f59a6d48d30e5bcfff19aaefe52a7",
+      "graph_sha256": "88b407f2b222782d8cc0b70c901b30a93b7270663daa1cb2c7d05dfef491be86",
+      "commands_bound": true,
+      "roots_independently_reconstructed": true,
+      "pad_partitions_independently_reconstructed": true,
+      "named_pad_count": 1084,
+      "net_count": 246,
+      "material_nodes": 14683,
+      "material_edges": 22494,
+      "barrels": 935,
+      "npth_fragment_nodes": 56,
+      "npth_accepted_edges": 0,
+      "npth_guard_failed_edges": 0,
+      "npth_named_pad_participation": 0,
+      "guard_failures": 51,
+      "direct_edges": 21759,
+      "zone_edges": 731
+    }
+  ],
+  "source_bindings": {
+    "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/extra-commands.json": "4533939973ee4cc27bfe711c01d607e36b79ba425b1a7fb32eb6f693678b7d85",
+    "/tmp/v7-contact-checker-final-review/verify_completed.py": "b5ad57dfa0cd87b3e2dc356d4a98a5a9e64db74e9c7300cacaf9c7aa6db23a37"
+  },
+  "script_sha256": "8023cebe2d511f62441b457c4131bad40163b4aa48723480b6b15a8cc793fb0e"
+}

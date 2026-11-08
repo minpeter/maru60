@@ -1,0 +1,72 @@
+{
+  "status": "PASS independent exact byte-delta and native DRC comparison",
+  "source_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "candidate_sha256": "abdbf4c80e11cadc525389060d2215b73fc3cbcc85b2bff6ddb0e8d2581e052d",
+  "changed_tracks": [
+    "abcd4fb1-881b-43f9-906e-39d93366692e",
+    "ae94ea04-2d21-5f84-8952-7f8960275e00",
+    "f41eeb49-8180-5bac-bccf-c1a0b3b4c547"
+  ],
+  "changed_fields": "exactly one coordinate child per track",
+  "replacing_three_declared_children_recovers_source_exact_bytes": true,
+  "all12_saved_zone_blocks_exact": true,
+  "all_other_raw_track_via_pad_hole_footprint_setup_and_net_records_exact": true,
+  "all57_companions_identical": true,
+  "warnings": {
+    "before": 64,
+    "after": 61,
+    "removed": [
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [GND] on B.Cu, length 0.5909 mm",
+            "pos": {
+              "x": 14.0,
+              "y": 17.675
+            },
+            "uuid": "f58bc791-8a08-55a5-ada7-19575bcd7e75"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [USB_OVLO] on B.Cu, length 0.1047 mm",
+            "pos": {
+              "x": 20.175,
+              "y": 21.0
+            },
+            "uuid": "cc1282fe-f0b3-5fea-9d45-66eea8068d66"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [USB_UVLO] on B.Cu, length 0.1414 mm",
+            "pos": {
+              "x": 14.2,
+              "y": 16.35
+            },
+            "uuid": "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      }
+    ],
+    "added": []
+  },
+  "opens_exactly_preserved": 12,
+  "all_remaining_violations_are_warnings": true,
+  "parity_entries": [],
+  "remaining_gate": "material graph and strengthened support/reference review; cold refill independently pending",
+  "geometry_equal_claim": false
+}

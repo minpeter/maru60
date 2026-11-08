@@ -1,0 +1,44 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": "2e532c1a16e64a34eafafdfbd5b85c05d70bb12ad9e52924c5cbe024fdc9aa2c",
+  "independent_full_raw_byte_reversal_exact": true,
+  "all57_companion_files_exact": true,
+  "only_C136_Reference_changed": true,
+  "two_native_warning_records_removed": [
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of C136",
+          "pos": {
+            "x": 178.0,
+            "y": 85.77
+          },
+          "uuid": "b5120eb9-d306-4601-b797-acd685b5e840"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of C136",
+          "pos": {
+            "x": 178.0,
+            "y": 85.77
+          },
+          "uuid": "b5120eb9-d306-4601-b797-acd685b5e840"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    }
+  ],
+  "all_other_warnings_exact": true,
+  "raw_electrical_and_zone_fill_bytes_exact": true,
+  "independent_visual_review": "Viewed images/C136.png: vertical C136 label begins directly below its own capacitor at the right-hand side; adjacent C137 keeps its horizontal label below. Names remain readable and associated, though physical assembly visibility is not qualified.",
+  "material_inheritance": "The final ef45f84 material graph and full-plane results apply unchanged to copper/electrical geometry by the exact byte reversal proof; this is not a new material run.",
+  "pass": true
+}

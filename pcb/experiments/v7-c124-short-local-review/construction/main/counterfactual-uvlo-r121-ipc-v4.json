@@ -1,0 +1,7405 @@
+{
+  "source_sha": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "status": "COUNTERFACTUAL analytical expanded UVLO contract; not approved for construction",
+  "terms": [
+    {
+      "name": "R125.1",
+      "land_center": [
+        15.989999999999998,
+        20.27
+      ],
+      "land_size": [
+        0.4,
+        0.3
+      ],
+      "land_clearance": [
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 0.987941
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 1.162941
+        },
+        {
+          "uuid": "7d18b97e-b287-4393-8a28-411c96dcc305",
+          "net": "USB_UVLO",
+          "gap_mm": 1.171194
+        },
+        {
+          "uuid": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+          "net": "USB_UVLO",
+          "gap_mm": 1.241054
+        },
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 1.261019
+        },
+        {
+          "uuid": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+          "net": "USB_UVLO",
+          "gap_mm": 1.28165
+        },
+        {
+          "uuid": "f3315e28-7409-46a7-941e-c0e615c765be",
+          "net": "USB_UVLO",
+          "gap_mm": 1.351359
+        },
+        {
+          "uuid": "86b08d6a-8df4-42ae-9e3f-08564aa8211a",
+          "net": "USB_UVLO",
+          "gap_mm": 1.39231
+        }
+      ],
+      "terminal_clearance": [
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 0.746403
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 0.921403
+        },
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 1.017241
+        },
+        {
+          "uuid": "7d18b97e-b287-4393-8a28-411c96dcc305",
+          "net": "USB_UVLO",
+          "gap_mm": 1.037495
+        },
+        {
+          "uuid": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+          "net": "USB_UVLO",
+          "gap_mm": 1.104541
+        },
+        {
+          "uuid": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+          "net": "USB_UVLO",
+          "gap_mm": 1.149292
+        },
+        {
+          "uuid": "b80dd0c3-ce04-4d6c-893d-44f3b1c09597",
+          "net": "GND",
+          "gap_mm": 1.207448
+        },
+        {
+          "uuid": "f3315e28-7409-46a7-941e-c0e615c765be",
+          "net": "USB_UVLO",
+          "gap_mm": 1.216341
+        }
+      ],
+      "land": [
+        {
+          "o": [
+            [
+              15.79,
+              20.12
+            ],
+            [
+              16.19,
+              20.12
+            ],
+            [
+              16.19,
+              20.42
+            ],
+            [
+              15.79,
+              20.42
+            ]
+          ],
+          "h": []
+        }
+      ],
+      "terminal": [
+        {
+          "o": [
+            [
+              15.605296,
+              19.875973
+            ],
+            [
+              16.199262,
+              19.875973
+            ],
+            [
+              16.199262,
+              20.664027
+            ],
+            [
+              15.605296,
+              20.664027
+            ]
+          ],
+          "h": []
+        }
+      ]
+    },
+    {
+      "name": "R125.2",
+      "land_center": [
+        15.09,
+        20.27
+      ],
+      "land_size": [
+        0.4,
+        0.3
+      ],
+      "land_clearance": [
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 1.399393
+        },
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 1.483492
+        },
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 1.530168
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 1.574393
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 1.645
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 1.645
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 1.645
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 1.695
+        }
+      ],
+      "terminal_clearance": [
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 1.094877
+        },
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 1.187906
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 1.269877
+        },
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 1.286639
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 1.400973
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 1.400973
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 1.400973
+        },
+        {
+          "uuid": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+          "net": "USB_DVDT",
+          "gap_mm": 1.441034
+        }
+      ],
+      "land": [
+        {
+          "o": [
+            [
+              14.89,
+              20.12
+            ],
+            [
+              15.29,
+              20.12
+            ],
+            [
+              15.29,
+              20.42
+            ],
+            [
+              14.89,
+              20.42
+            ]
+          ],
+          "h": []
+        }
+      ],
+      "terminal": [
+        {
+          "o": [
+            [
+              14.880738,
+              19.875973
+            ],
+            [
+              15.474704,
+              19.875973
+            ],
+            [
+              15.474704,
+              20.664027
+            ],
+            [
+              14.880738,
+              20.664027
+            ]
+          ],
+          "h": []
+        }
+      ]
+    },
+    {
+      "name": "C124.1",
+      "land_center": [
+        15.005,
+        19.17
+      ],
+      "land_size": [
+        0.35,
+        0.5
+      ],
+      "land_clearance": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.334636
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.445
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.445
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.445
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.495
+        },
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 0.970163
+        },
+        {
+          "uuid": "19181a2b-164e-4055-9004-2860bebe32f4",
+          "net": "GND",
+          "gap_mm": 1.137103
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 1.145163
+        }
+      ],
+      "terminal_clearance": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.179286
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.301845
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.301845
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.301845
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.351845
+        },
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 0.785326
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 0.960326
+        },
+        {
+          "uuid": "19181a2b-164e-4055-9004-2860bebe32f4",
+          "net": "GND",
+          "gap_mm": 0.960514
+        }
+      ],
+      "land": [
+        {
+          "o": [
+            [
+              14.83,
+              18.92
+            ],
+            [
+              15.18,
+              18.92
+            ],
+            [
+              15.18,
+              19.42
+            ],
+            [
+              14.83,
+              19.42
+            ]
+          ],
+          "h": []
+        }
+      ],
+      "terminal": [
+        {
+          "o": [
+            [
+              14.745722,
+              18.776845
+            ],
+            [
+              15.364674,
+              18.776845
+            ],
+            [
+              15.364674,
+              19.563155
+            ],
+            [
+              14.745722,
+              19.563155
+            ]
+          ],
+          "h": []
+        }
+      ]
+    },
+    {
+      "name": "C124.2",
+      "land_center": [
+        15.755,
+        19.17
+      ],
+      "land_size": [
+        0.35,
+        0.5
+      ],
+      "land_clearance": [
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.445
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.667495
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.703973
+        },
+        {
+          "uuid": "b9dab5d1-ff7a-5213-8cca-f67ad89603a5",
+          "net": "USB_ILM",
+          "gap_mm": 0.734197
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.774588
+        },
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.798475
+        },
+        {
+          "uuid": "59b1bce4-5aa0-468b-896c-923f6c81c9d3",
+          "net": "USB_ILM",
+          "gap_mm": 0.843312
+        },
+        {
+          "uuid": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+          "net": "USB_DVDT",
+          "gap_mm": 0.87
+        }
+      ],
+      "terminal_clearance": [
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.301845
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.436138
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.471163
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.541856
+        },
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.565889
+        },
+        {
+          "uuid": "b9dab5d1-ff7a-5213-8cca-f67ad89603a5",
+          "net": "USB_ILM",
+          "gap_mm": 0.579988
+        },
+        {
+          "uuid": "59b1bce4-5aa0-468b-896c-923f6c81c9d3",
+          "net": "USB_ILM",
+          "gap_mm": 0.690727
+        },
+        {
+          "uuid": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+          "net": "USB_DVDT",
+          "gap_mm": 0.785722
+        }
+      ],
+      "land": [
+        {
+          "o": [
+            [
+              15.58,
+              18.92
+            ],
+            [
+              15.93,
+              18.92
+            ],
+            [
+              15.93,
+              19.42
+            ],
+            [
+              15.58,
+              19.42
+            ]
+          ],
+          "h": []
+        }
+      ],
+      "terminal": [
+        {
+          "o": [
+            [
+              15.395326,
+              18.776845
+            ],
+            [
+              16.014278,
+              18.776845
+            ],
+            [
+              16.014278,
+              19.563155
+            ],
+            [
+              15.395326,
+              19.563155
+            ]
+          ],
+          "h": []
+        }
+      ]
+    }
+  ],
+  "r121_shift_mm": [
+    -0.32,
+    0.15
+  ],
+  "uvlo_retirement_uuids": [
+    "8305ea6c-327f-407d-9092-892db2d90da5",
+    "efb452e0-b8d1-484b-9a90-3179d99b1aa8",
+    "2bef712b-2271-470e-9ed0-961aa43325cd",
+    "a621cda3-f605-4bff-b3d7-2213de164c79",
+    "db0f565d-8915-441b-b9f8-50cdd933467c",
+    "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+    "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93",
+    "4174a692-19ae-4049-916a-e21e775415e2",
+    "800b2e7b-f1bf-428e-b54f-6431e8b4af81",
+    "1cad25a0-be8b-4cb5-8379-06fa21c6eea4",
+    "681a81ab-2f2d-4b74-b71a-83e09245dca9",
+    "8a91626f-c454-43dc-876d-58c563ab2be4",
+    "d340564d-1097-4e0e-8f38-4b0385b0a0bb",
+    "c635b040-8e23-4da7-9cec-9b59b66c88e3",
+    "bca2758e-28c6-41dd-97f0-2c9466f8ca97",
+    "f0a66333-ec8a-4243-a130-df6b6aa03b1d",
+    "17c10e7b-5920-47bd-8de6-90bf22d6522c",
+    "b2509e57-5e09-46f8-8514-02052efec7ae",
+    "33383b43-6318-422d-a220-1199026db482",
+    "1274878c-3b2f-48be-b335-ff839fe8150d",
+    "a1d85406-3c20-4dc4-850f-7efdab0cdfd6",
+    "de44c09a-0455-40a8-8f3e-d6d7fa9dcec0",
+    "bf30ad55-1b9f-467f-8fef-7ac60c4f920d",
+    "a44d4a9f-aa40-4d02-9ed7-16774fbe4849"
+  ],
+  "uvlo_old_length_mm": 8.352691193458119,
+  "r121_terminal_condition": "Vishay TNPW0603 e3 family geometry only, not a selected/verified actualR121 MPN. MaxL1.60,W0.95,term0.50; \u00b10.05XY/\u00b12deg/0.05solder. No substitution or qualification.",
+  "all_terminal_old": [
+    {
+      "name": "R125.1",
+      "nearest": [
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 0.746403
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 0.921403
+        },
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 1.017241
+        },
+        {
+          "uuid": "7d18b97e-b287-4393-8a28-411c96dcc305",
+          "net": "USB_UVLO",
+          "gap_mm": 1.037495
+        },
+        {
+          "uuid": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+          "net": "USB_UVLO",
+          "gap_mm": 1.104541
+        },
+        {
+          "uuid": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+          "net": "USB_UVLO",
+          "gap_mm": 1.149292
+        },
+        {
+          "uuid": "b80dd0c3-ce04-4d6c-893d-44f3b1c09597",
+          "net": "GND",
+          "gap_mm": 1.207448
+        },
+        {
+          "uuid": "f3315e28-7409-46a7-941e-c0e615c765be",
+          "net": "USB_UVLO",
+          "gap_mm": 1.216341
+        }
+      ]
+    },
+    {
+      "name": "R125.2",
+      "nearest": [
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 1.094877
+        },
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 1.187906
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 1.269877
+        },
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 1.286639
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 1.400973
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 1.400973
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 1.400973
+        },
+        {
+          "uuid": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+          "net": "USB_DVDT",
+          "gap_mm": 1.441034
+        }
+      ]
+    },
+    {
+      "name": "C124.1",
+      "nearest": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.179286
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.301845
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.301845
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.301845
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.351845
+        },
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 0.785326
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 0.960326
+        },
+        {
+          "uuid": "19181a2b-164e-4055-9004-2860bebe32f4",
+          "net": "GND",
+          "gap_mm": 0.960514
+        }
+      ]
+    },
+    {
+      "name": "C124.2",
+      "nearest": [
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.301845
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.436138
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.471163
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.541856
+        },
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.565889
+        },
+        {
+          "uuid": "b9dab5d1-ff7a-5213-8cca-f67ad89603a5",
+          "net": "USB_ILM",
+          "gap_mm": 0.579988
+        },
+        {
+          "uuid": "59b1bce4-5aa0-468b-896c-923f6c81c9d3",
+          "net": "USB_ILM",
+          "gap_mm": 0.690727
+        },
+        {
+          "uuid": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+          "net": "USB_DVDT",
+          "gap_mm": 0.785722
+        }
+      ]
+    },
+    {
+      "name": "R121.1",
+      "nearest": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.351598
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.526598
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.720679
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.738336
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.78276
+        },
+        {
+          "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "net": "GND",
+          "gap_mm": 1.00827
+        },
+        {
+          "uuid": "5cd30845-f09e-4ecf-9e5d-f0638932fe94",
+          "net": "COL0",
+          "gap_mm": 1.217765
+        },
+        {
+          "uuid": "763086b7-5549-4f5e-bb08-ce25387b3627",
+          "net": "GND",
+          "gap_mm": 1.379731
+        }
+      ]
+    },
+    {
+      "name": "R121.2",
+      "nearest": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.16737
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.34237
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.59237
+        },
+        {
+          "uuid": "5cd30845-f09e-4ecf-9e5d-f0638932fe94",
+          "net": "COL0",
+          "gap_mm": 0.631629
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.64237
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.69237
+        },
+        {
+          "uuid": "32cafb61-7c4a-401d-aa5c-d3d30a7be132",
+          "net": "+4V_LED",
+          "gap_mm": 1.178538
+        },
+        {
+          "uuid": "5dae3b2b-80de-484b-a3da-27be2c3303dc",
+          "net": "+4V_LED",
+          "gap_mm": 1.303538
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "name": "UVLO0",
+      "net": "USB_UVLO",
+      "start": [
+        14.2,
+        16.35
+      ],
+      "end": [
+        13.1,
+        17.05
+      ],
+      "length": 1.303840481040529,
+      "old": [
+        {
+          "uuid": "5cd30845-f09e-4ecf-9e5d-f0638932fe94",
+          "net": "COL0",
+          "gap_mm": 0.193392
+        },
+        {
+          "uuid": "763086b7-5549-4f5e-bb08-ce25387b3627",
+          "net": "GND",
+          "gap_mm": 0.835011
+        },
+        {
+          "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "net": "GND",
+          "gap_mm": 0.835475
+        },
+        {
+          "uuid": "efadf2be-e519-469f-a84c-2e7cbb60672a",
+          "net": "GND",
+          "gap_mm": 1.059061
+        },
+        {
+          "uuid": "32cafb61-7c4a-401d-aa5c-d3d30a7be132",
+          "net": "+4V_LED",
+          "gap_mm": 1.107838
+        },
+        {
+          "uuid": "5dae3b2b-80de-484b-a3da-27be2c3303dc",
+          "net": "+4V_LED",
+          "gap_mm": 1.203932
+        },
+        {
+          "uuid": "9fe90867-6c68-4285-9d85-be950577b1aa",
+          "net": "+4V_LED",
+          "gap_mm": 1.203932
+        },
+        {
+          "uuid": "19181a2b-164e-4055-9004-2860bebe32f4",
+          "net": "GND",
+          "gap_mm": 1.209061
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R121.2",
+          "gap_mm": 0.60891
+        },
+        {
+          "name": "R121.1",
+          "gap_mm": 1.65827
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 2.26542
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 2.614176
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 3.265232
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 3.654196
+        }
+      ]
+    },
+    {
+      "name": "UVLO1",
+      "net": "USB_UVLO",
+      "start": [
+        13.1,
+        17.05
+      ],
+      "end": [
+        12.8,
+        17.55
+      ],
+      "length": 0.5830951894845295,
+      "old": [
+        {
+          "uuid": "5cd30845-f09e-4ecf-9e5d-f0638932fe94",
+          "net": "COL0",
+          "gap_mm": 0.193392
+        },
+        {
+          "uuid": "32cafb61-7c4a-401d-aa5c-d3d30a7be132",
+          "net": "+4V_LED",
+          "gap_mm": 0.79215
+        },
+        {
+          "uuid": "5dae3b2b-80de-484b-a3da-27be2c3303dc",
+          "net": "+4V_LED",
+          "gap_mm": 0.91715
+        },
+        {
+          "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "net": "GND",
+          "gap_mm": 0.918303
+        },
+        {
+          "uuid": "9fe90867-6c68-4285-9d85-be950577b1aa",
+          "net": "+4V_LED",
+          "gap_mm": 0.96877
+        },
+        {
+          "uuid": "a60ef2b8-12e5-4d41-9147-b6f45629d7bb",
+          "net": "+4V_LED",
+          "gap_mm": 1.098084
+        },
+        {
+          "uuid": "388d5929-016d-4a65-9915-a67a697f1172",
+          "net": "+4V_LED",
+          "gap_mm": 1.139412
+        },
+        {
+          "uuid": "a5fdcb9c-4841-4c46-8018-1f43ab2071ee",
+          "net": "+4V_LED",
+          "gap_mm": 1.274118
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R121.2",
+          "gap_mm": 0.257801
+        },
+        {
+          "name": "R121.1",
+          "gap_mm": 1.189076
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 2.225214
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 2.78168
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 3.045837
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 3.569151
+        }
+      ]
+    },
+    {
+      "name": "UVLO2",
+      "net": "USB_UVLO",
+      "start": [
+        12.8,
+        17.55
+      ],
+      "end": [
+        12.8,
+        19.9
+      ],
+      "length": 2.349999999999998,
+      "old": [
+        {
+          "uuid": "5cd30845-f09e-4ecf-9e5d-f0638932fe94",
+          "net": "COL0",
+          "gap_mm": 0.223836
+        },
+        {
+          "uuid": "32cafb61-7c4a-401d-aa5c-d3d30a7be132",
+          "net": "+4V_LED",
+          "gap_mm": 0.792151
+        },
+        {
+          "uuid": "5dae3b2b-80de-484b-a3da-27be2c3303dc",
+          "net": "+4V_LED",
+          "gap_mm": 0.917151
+        },
+        {
+          "uuid": "9fe90867-6c68-4285-9d85-be950577b1aa",
+          "net": "+4V_LED",
+          "gap_mm": 0.968771
+        },
+        {
+          "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "net": "GND",
+          "gap_mm": 1.025
+        },
+        {
+          "uuid": "a60ef2b8-12e5-4d41-9147-b6f45629d7bb",
+          "net": "+4V_LED",
+          "gap_mm": 1.098085
+        },
+        {
+          "uuid": "388d5929-016d-4a65-9915-a67a697f1172",
+          "net": "+4V_LED",
+          "gap_mm": 1.139412
+        },
+        {
+          "uuid": "a5fdcb9c-4841-4c46-8018-1f43ab2071ee",
+          "net": "+4V_LED",
+          "gap_mm": 1.274118
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R121.1",
+          "gap_mm": 0.20237
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 0.20237
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 1.870722
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 2.005738
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 2.520326
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 2.730296
+        }
+      ]
+    },
+    {
+      "name": "UVLO3",
+      "net": "USB_UVLO",
+      "start": [
+        12.8,
+        19.9
+      ],
+      "end": [
+        14.2,
+        21.3
+      ],
+      "length": 1.9798989873223336,
+      "old": [
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 1.349846
+        },
+        {
+          "uuid": "5cd30845-f09e-4ecf-9e5d-f0638932fe94",
+          "net": "COL0",
+          "gap_mm": 1.536463
+        },
+        {
+          "uuid": "8efe877c-3dc1-4699-938e-9a553703aa93",
+          "net": "USB_ILM",
+          "gap_mm": 1.930957
+        },
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 2.114518
+        },
+        {
+          "uuid": "354f25c2-a8fb-4cca-8cd6-98944b94fb32",
+          "net": "USB_ILM",
+          "gap_mm": 2.180992
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 2.289518
+        },
+        {
+          "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "net": "GND",
+          "gap_mm": 2.352969
+        },
+        {
+          "uuid": "3238fe2f-52f8-4c6c-b367-80026374f6ab",
+          "net": "USB_ILM",
+          "gap_mm": 2.355992
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R121.1",
+          "gap_mm": 0.359086
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 0.856593
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 1.335804
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 1.467504
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 1.539018
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 1.998358
+        }
+      ]
+    },
+    {
+      "name": "UVLO4",
+      "net": "USB_UVLO",
+      "start": [
+        14.2,
+        21.3
+      ],
+      "end": [
+        16.85,
+        21.3
+      ],
+      "length": 2.650000000000002,
+      "old": [
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 0.29375
+        },
+        {
+          "uuid": "566ce949-2f5f-5fd5-9689-47e2045ab0a6",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.473529
+        },
+        {
+          "uuid": "9a256a4d-8b07-5fcd-b07c-54b8f2800161",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.473529
+        },
+        {
+          "uuid": "2c171cec-e817-53fd-9c14-9c7fe32ca85f",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.524285
+        },
+        {
+          "uuid": "e07df864-b2ae-41c6-8b80-01729167b27e",
+          "net": "USB_DVDT",
+          "gap_mm": 1.561713
+        },
+        {
+          "uuid": "15284d94-979d-4777-83c2-aa9142034d34",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.708711
+        },
+        {
+          "uuid": "3894cb7e-4c60-47d2-b8c8-fa3bdb8b802b",
+          "net": "KEY_16",
+          "gap_mm": 1.727069
+        },
+        {
+          "uuid": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+          "net": "USB_DVDT",
+          "gap_mm": 1.791649
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R125.1",
+          "gap_mm": 0.560973
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 0.560973
+        },
+        {
+          "name": "R121.1",
+          "gap_mm": 1.65891
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 1.661845
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 1.661845
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 2.70827
+        }
+      ]
+    },
+    {
+      "name": "UVLO5",
+      "net": "USB_UVLO",
+      "start": [
+        16.85,
+        21.3
+      ],
+      "end": [
+        17.2,
+        21.15
+      ],
+      "length": 0.3807886552931943,
+      "old": [
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 0.336079
+        },
+        {
+          "uuid": "566ce949-2f5f-5fd5-9689-47e2045ab0a6",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.135147
+        },
+        {
+          "uuid": "9a256a4d-8b07-5fcd-b07c-54b8f2800161",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.135147
+        },
+        {
+          "uuid": "2c171cec-e817-53fd-9c14-9c7fe32ca85f",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.232737
+        },
+        {
+          "uuid": "e07df864-b2ae-41c6-8b80-01729167b27e",
+          "net": "USB_DVDT",
+          "gap_mm": 1.375
+        },
+        {
+          "uuid": "15284d94-979d-4777-83c2-aa9142034d34",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.441045
+        },
+        {
+          "uuid": "3894cb7e-4c60-47d2-b8c8-fa3bdb8b802b",
+          "net": "KEY_16",
+          "gap_mm": 1.491353
+        },
+        {
+          "uuid": "7c494a73-d1ac-5d4f-ae2d-7b26d0b153f3",
+          "net": "USB_DVDT",
+          "gap_mm": 1.600714
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R125.1",
+          "gap_mm": 0.834902
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 1.440223
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 1.852449
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 2.210349
+        },
+        {
+          "name": "R121.1",
+          "gap_mm": 3.023036
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 3.711552
+        }
+      ]
+    },
+    {
+      "name": "OVLO0",
+      "net": "USB_OVLO",
+      "start": [
+        13.68,
+        19.45
+      ],
+      "end": [
+        14.5,
+        19.45
+      ],
+      "length": 0.8200000000000003,
+      "old": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.793033
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.968033
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 1.012971
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 1.012971
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 1.035327
+        },
+        {
+          "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "net": "GND",
+          "gap_mm": 1.6
+        },
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 1.653003
+        },
+        {
+          "uuid": "19181a2b-164e-4055-9004-2860bebe32f4",
+          "net": "GND",
+          "gap_mm": 1.818897
+        }
+      ],
+      "terminals": [
+        {
+          "name": "C124.1",
+          "gap_mm": 0.170723
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 0.496326
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 0.820327
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 0.85827
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 1.109539
+        }
+      ]
+    },
+    {
+      "name": "OVLO1",
+      "net": "USB_OVLO",
+      "start": [
+        14.5,
+        19.45
+      ],
+      "end": [
+        14.5,
+        19.95
+      ],
+      "length": 0.5,
+      "old": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.793033
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.968033
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 1.012971
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 1.012971
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 1.035327
+        },
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 1.653003
+        },
+        {
+          "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "net": "GND",
+          "gap_mm": 1.669078
+        },
+        {
+          "uuid": "19181a2b-164e-4055-9004-2860bebe32f4",
+          "net": "GND",
+          "gap_mm": 1.818897
+        }
+      ],
+      "terminals": [
+        {
+          "name": "C124.1",
+          "gap_mm": 0.170722
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 0.305738
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 0.820326
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 0.88325
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 1.030296
+        }
+      ]
+    },
+    {
+      "name": "OVLO2",
+      "net": "USB_OVLO",
+      "start": [
+        14.5,
+        19.95
+      ],
+      "end": [
+        14.55,
+        20.67
+      ],
+      "length": 0.7217340230306477,
+      "old": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 1.287451
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 1.462451
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 1.47865
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 1.47865
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 1.494688
+        },
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 1.564068
+        },
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 1.845829
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 2.020829
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R125.2",
+          "gap_mm": 0.255792
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 0.383288
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 0.900324
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 0.980313
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 1.374659
+        }
+      ]
+    },
+    {
+      "name": "OVLO3",
+      "net": "USB_OVLO",
+      "start": [
+        14.55,
+        20.67
+      ],
+      "end": [
+        14.8,
+        20.97
+      ],
+      "length": 0.39051248379533055,
+      "old": [
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 1.174001
+        },
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 1.999844
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 2.164174
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 2.164174
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 2.174414
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 2.174844
+        },
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 2.235351
+        },
+        {
+          "uuid": "7d18b97e-b287-4393-8a28-411c96dcc305",
+          "net": "USB_UVLO",
+          "gap_mm": 2.25674
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R125.2",
+          "gap_mm": 0.182903
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 0.786465
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 1.049017
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 1.317724
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 2.094806
+        }
+      ]
+    },
+    {
+      "name": "OVLO4",
+      "net": "USB_OVLO",
+      "start": [
+        14.8,
+        20.97
+      ],
+      "end": [
+        16.8,
+        20.97
+      ],
+      "length": 2.0,
+      "old": [
+        {
+          "uuid": "7d18b97e-b287-4393-8a28-411c96dcc305",
+          "net": "USB_UVLO",
+          "gap_mm": 0.288635
+        },
+        {
+          "uuid": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+          "net": "USB_UVLO",
+          "gap_mm": 0.355371
+        },
+        {
+          "uuid": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+          "net": "USB_UVLO",
+          "gap_mm": 0.400363
+        },
+        {
+          "uuid": "f3315e28-7409-46a7-941e-c0e615c765be",
+          "net": "USB_UVLO",
+          "gap_mm": 0.46717
+        },
+        {
+          "uuid": "86b08d6a-8df4-42ae-9e3f-08564aa8211a",
+          "net": "USB_UVLO",
+          "gap_mm": 0.512118
+        },
+        {
+          "uuid": "d9c9ebfb-cde5-4cc3-b554-a3c44b3602e6",
+          "net": "USB_UVLO",
+          "gap_mm": 0.578971
+        },
+        {
+          "uuid": "4aeca723-e904-4998-98f6-e5f1d0ed1c68",
+          "net": "",
+          "gap_mm": 0.62375
+        },
+        {
+          "uuid": "9ba1a322-5359-4420-884e-c6552e842bcc",
+          "net": "USB_UVLO",
+          "gap_mm": 0.623886
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R125.1",
+          "gap_mm": 0.230973
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 0.230973
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 1.331845
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 1.331845
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 2.432231
+        }
+      ]
+    },
+    {
+      "name": "OVLO5",
+      "net": "USB_OVLO",
+      "start": [
+        16.8,
+        20.97
+      ],
+      "end": [
+        17.2,
+        20.8
+      ],
+      "length": 0.4346262762420126,
+      "old": [
+        {
+          "uuid": "7d18b97e-b287-4393-8a28-411c96dcc305",
+          "net": "USB_UVLO",
+          "gap_mm": 0.172115
+        },
+        {
+          "uuid": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+          "net": "USB_UVLO",
+          "gap_mm": 0.237689
+        },
+        {
+          "uuid": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+          "net": "USB_UVLO",
+          "gap_mm": 0.257246
+        },
+        {
+          "uuid": "f3315e28-7409-46a7-941e-c0e615c765be",
+          "net": "USB_UVLO",
+          "gap_mm": 0.32282
+        },
+        {
+          "uuid": "86b08d6a-8df4-42ae-9e3f-08564aa8211a",
+          "net": "USB_UVLO",
+          "gap_mm": 0.342442
+        },
+        {
+          "uuid": "d9c9ebfb-cde5-4cc3-b554-a3c44b3602e6",
+          "net": "USB_UVLO",
+          "gap_mm": 0.409018
+        },
+        {
+          "uuid": "9ba1a322-5359-4420-884e-c6552e842bcc",
+          "net": "USB_UVLO",
+          "gap_mm": 0.433095
+        },
+        {
+          "uuid": "f8b9e135-602b-40eb-9e6a-dcec710632b9",
+          "net": "USB_UVLO",
+          "gap_mm": 0.50192
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R125.1",
+          "gap_mm": 0.59917
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 1.285157
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 1.536388
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 1.93482
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 3.440065
+        }
+      ]
+    },
+    {
+      "name": "OVLO6",
+      "net": "USB_OVLO",
+      "start": [
+        17.2,
+        20.8
+      ],
+      "end": [
+        18.0,
+        20.95
+      ],
+      "length": 0.8139410298049857,
+      "old": [
+        {
+          "uuid": "7d18b97e-b287-4393-8a28-411c96dcc305",
+          "net": "USB_UVLO",
+          "gap_mm": 0.194005
+        },
+        {
+          "uuid": "c206500a-2fd7-49e9-ac49-5158c4d9181e",
+          "net": "USB_UVLO",
+          "gap_mm": 0.22472
+        },
+        {
+          "uuid": "d2cb1d31-5b41-48bd-9989-7d76f6912b59",
+          "net": "USB_UVLO",
+          "gap_mm": 0.22472
+        },
+        {
+          "uuid": "86b08d6a-8df4-42ae-9e3f-08564aa8211a",
+          "net": "USB_UVLO",
+          "gap_mm": 0.255434
+        },
+        {
+          "uuid": "f3315e28-7409-46a7-941e-c0e615c765be",
+          "net": "USB_UVLO",
+          "gap_mm": 0.255434
+        },
+        {
+          "uuid": "9ba1a322-5359-4420-884e-c6552e842bcc",
+          "net": "USB_UVLO",
+          "gap_mm": 0.286149
+        },
+        {
+          "uuid": "d9c9ebfb-cde5-4cc3-b554-a3c44b3602e6",
+          "net": "USB_UVLO",
+          "gap_mm": 0.286149
+        },
+        {
+          "uuid": "d0f88a07-a621-42a2-80df-40a923fad313",
+          "net": "USB_UVLO",
+          "gap_mm": 0.316864
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R125.1",
+          "gap_mm": 0.934934
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 1.638395
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 1.655645
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 2.138189
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 3.629641
+        }
+      ]
+    },
+    {
+      "name": "OVLO7",
+      "net": "USB_OVLO",
+      "start": [
+        18.0,
+        20.95
+      ],
+      "end": [
+        20.175,
+        21.0
+      ],
+      "length": 2.1755746367339373,
+      "old": [
+        {
+          "uuid": "8dc4f020-c585-43de-bdee-f0f67f5cbf01",
+          "net": "USB_UVLO",
+          "gap_mm": 0.409017
+        },
+        {
+          "uuid": "dd3804f3-148a-4cf9-906e-00f43ccbd9a0",
+          "net": "USB_UVLO",
+          "gap_mm": 0.409017
+        },
+        {
+          "uuid": "d0f88a07-a621-42a2-80df-40a923fad313",
+          "net": "USB_UVLO",
+          "gap_mm": 0.415686
+        },
+        {
+          "uuid": "f8b9e135-602b-40eb-9e6a-dcec710632b9",
+          "net": "USB_UVLO",
+          "gap_mm": 0.415686
+        },
+        {
+          "uuid": "d4466670-9ae8-4b4e-9bbd-97dc62ae5f72",
+          "net": "USB_UVLO",
+          "gap_mm": 0.420205
+        },
+        {
+          "uuid": "9ba1a322-5359-4420-884e-c6552e842bcc",
+          "net": "USB_UVLO",
+          "gap_mm": 0.45208
+        },
+        {
+          "uuid": "d9c9ebfb-cde5-4cc3-b554-a3c44b3602e6",
+          "net": "USB_UVLO",
+          "gap_mm": 0.460327
+        },
+        {
+          "uuid": "86b08d6a-8df4-42ae-9e3f-08564aa8211a",
+          "net": "USB_UVLO",
+          "gap_mm": 0.50192
+        }
+      ],
+      "terminals": [
+        {
+          "name": "R125.1",
+          "gap_mm": 1.748305
+        },
+        {
+          "name": "C124.2",
+          "gap_mm": 2.347071
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 2.466436
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 2.902966
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 4.367932
+        }
+      ]
+    },
+    {
+      "name": "DVDT0",
+      "net": "USB_DVDT",
+      "start": [
+        17.25,
+        19.4
+      ],
+      "end": [
+        16.85,
+        19.4
+      ],
+      "length": 0.3999999999999986,
+      "old": [
+        {
+          "uuid": "2c171cec-e817-53fd-9c14-9c7fe32ca85f",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 0.275001
+        },
+        {
+          "uuid": "15284d94-979d-4777-83c2-aa9142034d34",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 0.275001
+        },
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 0.347681
+        },
+        {
+          "uuid": "9a256a4d-8b07-5fcd-b07c-54b8f2800161",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 0.415312
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 0.444212
+        },
+        {
+          "uuid": "b80dd0c3-ce04-4d6c-893d-44f3b1c09597",
+          "net": "GND",
+          "gap_mm": 0.475
+        },
+        {
+          "uuid": "566ce949-2f5f-5fd5-9689-47e2045ab0a6",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 0.767472
+        },
+        {
+          "uuid": "c449f69e-1985-41b5-96fd-8e509eed6cbf",
+          "net": "VBUS_FUSED",
+          "gap_mm": 0.775001
+        }
+      ],
+      "terminals": [
+        {
+          "name": "C124.2",
+          "gap_mm": 0.760723
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 1.380331
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 1.410327
+        },
+        {
+          "name": "R121.1",
+          "gap_mm": 2.492371
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 2.64006
+        }
+      ]
+    },
+    {
+      "name": "DVDT1",
+      "net": "USB_DVDT",
+      "start": [
+        16.85,
+        19.4
+      ],
+      "end": [
+        16.5,
+        19.8
+      ],
+      "length": 0.531507290636735,
+      "old": [
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 0.347681
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 0.444212
+        },
+        {
+          "uuid": "b80dd0c3-ce04-4d6c-893d-44f3b1c09597",
+          "net": "GND",
+          "gap_mm": 0.475
+        },
+        {
+          "uuid": "2c171cec-e817-53fd-9c14-9c7fe32ca85f",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 0.675
+        },
+        {
+          "uuid": "15284d94-979d-4777-83c2-aa9142034d34",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 0.675
+        },
+        {
+          "uuid": "9a256a4d-8b07-5fcd-b07c-54b8f2800161",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 0.759886
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.89403
+        },
+        {
+          "uuid": "b9dab5d1-ff7a-5213-8cca-f67ad89603a5",
+          "net": "USB_ILM",
+          "gap_mm": 0.89403
+        }
+      ],
+      "terminals": [
+        {
+          "name": "C124.2",
+          "gap_mm": 0.46539
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 0.953107
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 1.084768
+        },
+        {
+          "name": "R121.1",
+          "gap_mm": 2.154673
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 2.486934
+        }
+      ]
+    },
+    {
+      "name": "DVDT2",
+      "net": "USB_DVDT",
+      "start": [
+        16.5,
+        19.8
+      ],
+      "end": [
+        15.989999999999998,
+        20.27
+      ],
+      "length": 0.6935416353759885,
+      "old": [
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 0.580538
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 0.755538
+        },
+        {
+          "uuid": "b80dd0c3-ce04-4d6c-893d-44f3b1c09597",
+          "net": "GND",
+          "gap_mm": 0.934481
+        },
+        {
+          "uuid": "2c171cec-e817-53fd-9c14-9c7fe32ca85f",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.025
+        },
+        {
+          "uuid": "9a256a4d-8b07-5fcd-b07c-54b8f2800161",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.025
+        },
+        {
+          "uuid": "15284d94-979d-4777-83c2-aa9142034d34",
+          "net": "VBUS_PROTECTED_RAW",
+          "gap_mm": 1.034741
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 1.25
+        },
+        {
+          "uuid": "b9dab5d1-ff7a-5213-8cca-f67ad89603a5",
+          "net": "USB_ILM",
+          "gap_mm": 1.250892
+        }
+      ],
+      "terminals": [
+        {
+          "name": "C124.2",
+          "gap_mm": 0.428329
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 0.440297
+        },
+        {
+          "name": "C124.1",
+          "gap_mm": 0.868554
+        },
+        {
+          "name": "R121.1",
+          "gap_mm": 1.771781
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 2.372256
+        }
+      ]
+    },
+    {
+      "name": "CAP0",
+      "net": "USB_DVDT_CAP",
+      "start": [
+        15.09,
+        20.27
+      ],
+      "end": [
+        15.005,
+        19.17
+      ],
+      "length": 1.1032792031031833,
+      "old": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.549886
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.62
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.620017
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.621314
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.671843
+        },
+        {
+          "uuid": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+          "net": "GND",
+          "gap_mm": 1.095889
+        },
+        {
+          "uuid": "406d468c-87d5-5b67-aa13-7b2d4d7263d4",
+          "net": "GND",
+          "gap_mm": 1.270889
+        },
+        {
+          "uuid": "19181a2b-164e-4055-9004-2860bebe32f4",
+          "net": "GND",
+          "gap_mm": 1.352432
+        }
+      ],
+      "terminals": [
+        {
+          "name": "C124.2",
+          "gap_mm": 0.283876
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 0.440296
+        },
+        {
+          "name": "R121.1",
+          "gap_mm": 0.64737
+        },
+        {
+          "name": "R121.2",
+          "gap_mm": 0.898951
+        }
+      ]
+    },
+    {
+      "name": "GND0",
+      "net": "GND",
+      "start": [
+        15.755,
+        19.17
+      ],
+      "end": [
+        16.4,
+        18.9
+      ],
+      "length": 0.699231721248399,
+      "old": [
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.35
+        },
+        {
+          "uuid": "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7",
+          "net": "USB_DVDT",
+          "gap_mm": 0.367443
+        },
+        {
+          "uuid": "b9dab5d1-ff7a-5213-8cca-f67ad89603a5",
+          "net": "USB_ILM",
+          "gap_mm": 0.372015
+        },
+        {
+          "uuid": "59b1bce4-5aa0-468b-896c-923f6c81c9d3",
+          "net": "USB_ILM",
+          "gap_mm": 0.454151
+        },
+        {
+          "uuid": "32e0ac16-6974-4c0a-af23-1cb215dbdcfd",
+          "net": "USB_ILM",
+          "gap_mm": 0.585633
+        },
+        {
+          "uuid": "16e7568b-4ab8-47d4-a88e-91674d39283d",
+          "net": "USB_ILM",
+          "gap_mm": 0.593303
+        },
+        {
+          "uuid": "34be75be-c38d-4885-863d-9d3810bce045",
+          "net": "USB_ILM",
+          "gap_mm": 0.663941
+        },
+        {
+          "uuid": "e07df864-b2ae-41c6-8b80-01729167b27e",
+          "net": "USB_DVDT",
+          "gap_mm": 0.699621
+        }
+      ],
+      "terminals": [
+        {
+          "name": "C124.1",
+          "gap_mm": 0.315326
+        },
+        {
+          "name": "R125.1",
+          "gap_mm": 0.630973
+        },
+        {
+          "name": "R125.2",
+          "gap_mm": 0.684581
+        },
+        {
+          "name": "R121.1",
+          "gap_mm": 1.39737
+        }
+      ]
+    }
+  ],
+  "r121_old": [
+    {
+      "name": "R121.1",
+      "nearest": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.582406
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.757406
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.93267
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.94107
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.981834
+        },
+        {
+          "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+          "net": "GND",
+          "gap_mm": 1.225
+        },
+        {
+          "uuid": "5cd30845-f09e-4ecf-9e5d-f0638932fe94",
+          "net": "COL0",
+          "gap_mm": 1.42395
+        },
+        {
+          "uuid": "763086b7-5549-4f5e-bb08-ce25387b3627",
+          "net": "GND",
+          "gap_mm": 1.619231
+        }
+      ]
+    },
+    {
+      "name": "R121.2",
+      "nearest": [
+        {
+          "uuid": "ff31c038-3a4c-4c1b-880e-025462019509",
+          "net": "USB_ILM",
+          "gap_mm": 0.272398
+        },
+        {
+          "uuid": "5e783b89-bafa-4dc3-b250-0348ab34e8a7",
+          "net": "USB_ILM",
+          "gap_mm": 0.447398
+        },
+        {
+          "uuid": "5cd30845-f09e-4ecf-9e5d-f0638932fe94",
+          "net": "COL0",
+          "gap_mm": 0.530246
+        },
+        {
+          "uuid": "99cc98d4-2112-4ff8-87e9-4646fa1191dc",
+          "net": "USB_ILM",
+          "gap_mm": 0.696621
+        },
+        {
+          "uuid": "14f613ca-fbe8-479b-91b6-5a61d7346def",
+          "net": "USB_ILM",
+          "gap_mm": 0.751075
+        },
+        {
+          "uuid": "2aa1548e-40ed-5870-8e20-2519c0040e88",
+          "net": "USB_ILM",
+          "gap_mm": 0.800728
+        },
+        {
+          "uuid": "751dcade-77aa-4c93-aab3-170f1229e0e4",
+          "net": "USB_UVLO",
+          "gap_mm": 0.97519
+        },
+        {
+          "uuid": "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed",
+          "net": "USB_UVLO",
+          "gap_mm": 0.981834
+        }
+      ]
+    }
+  ],
+  "terminal_new": [
+    {
+      "terminal": "R125.1",
+      "copper": "C124.1",
+      "gap_mm": 0.623528
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "C124.2",
+      "gap_mm": 0.455973
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "R121.1",
+      "gap_mm": 1.425296
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "R121.2",
+      "gap_mm": 2.12489
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "old-ground-bridge",
+      "gap_mm": 1.928707
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "UVLO0",
+      "gap_mm": 3.654196
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "UVLO1",
+      "gap_mm": 3.569151
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "UVLO2",
+      "gap_mm": 2.730296
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "UVLO3",
+      "gap_mm": 1.467504
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "UVLO4",
+      "gap_mm": 0.560973
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "UVLO5",
+      "gap_mm": 0.834902
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "OVLO0",
+      "gap_mm": 1.109539
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "OVLO1",
+      "gap_mm": 1.030296
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "OVLO2",
+      "gap_mm": 0.980313
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "OVLO3",
+      "gap_mm": 0.786465
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "OVLO4",
+      "gap_mm": 0.230973
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "OVLO5",
+      "gap_mm": 0.59917
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "OVLO6",
+      "gap_mm": 0.934934
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "OVLO7",
+      "gap_mm": 1.748305
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "CAP0",
+      "gap_mm": 0.440296
+    },
+    {
+      "terminal": "R125.1",
+      "copper": "GND0",
+      "gap_mm": 0.630973
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "C124.2",
+      "gap_mm": 0.467972
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "R121.1",
+      "gap_mm": 0.700738
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "R121.2",
+      "gap_mm": 1.724739
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "old-ground-bridge",
+      "gap_mm": 1.92613
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "UVLO0",
+      "gap_mm": 3.265232
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "UVLO1",
+      "gap_mm": 3.045837
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "UVLO2",
+      "gap_mm": 2.005738
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "UVLO3",
+      "gap_mm": 0.856593
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "UVLO4",
+      "gap_mm": 0.560973
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "UVLO5",
+      "gap_mm": 1.440223
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "OVLO0",
+      "gap_mm": 0.496326
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "OVLO1",
+      "gap_mm": 0.305738
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "OVLO2",
+      "gap_mm": 0.255792
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "OVLO3",
+      "gap_mm": 0.182903
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "OVLO4",
+      "gap_mm": 0.230973
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "OVLO5",
+      "gap_mm": 1.285157
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "OVLO6",
+      "gap_mm": 1.655645
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "OVLO7",
+      "gap_mm": 2.466436
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "DVDT0",
+      "gap_mm": 1.380331
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "DVDT1",
+      "gap_mm": 0.953107
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "DVDT2",
+      "gap_mm": 0.440297
+    },
+    {
+      "terminal": "R125.2",
+      "copper": "GND0",
+      "gap_mm": 0.684581
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "R125.1",
+      "gap_mm": 0.700698
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "R121.1",
+      "gap_mm": 0.565722
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "R121.2",
+      "gap_mm": 0.73988
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "old-ground-bridge",
+      "gap_mm": 0.836672
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "UVLO0",
+      "gap_mm": 2.26542
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "UVLO1",
+      "gap_mm": 2.225214
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "UVLO2",
+      "gap_mm": 1.870722
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "UVLO3",
+      "gap_mm": 1.539018
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "UVLO4",
+      "gap_mm": 1.661845
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "UVLO5",
+      "gap_mm": 2.210349
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "OVLO0",
+      "gap_mm": 0.170723
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "OVLO1",
+      "gap_mm": 0.170722
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "OVLO2",
+      "gap_mm": 0.383288
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "OVLO3",
+      "gap_mm": 1.049017
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "OVLO4",
+      "gap_mm": 1.331845
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "OVLO5",
+      "gap_mm": 1.93482
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "OVLO6",
+      "gap_mm": 2.138189
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "OVLO7",
+      "gap_mm": 2.902966
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "DVDT0",
+      "gap_mm": 1.410327
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "DVDT1",
+      "gap_mm": 1.084768
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "DVDT2",
+      "gap_mm": 0.868554
+    },
+    {
+      "terminal": "C124.1",
+      "copper": "GND0",
+      "gap_mm": 0.315326
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "R125.1",
+      "gap_mm": 0.556845
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "R125.2",
+      "gap_mm": 0.566718
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "R121.1",
+      "gap_mm": 1.215326
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "UVLO0",
+      "gap_mm": 2.614176
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "UVLO1",
+      "gap_mm": 2.78168
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "UVLO2",
+      "gap_mm": 2.520326
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "UVLO3",
+      "gap_mm": 1.998358
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "UVLO4",
+      "gap_mm": 1.661845
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "UVLO5",
+      "gap_mm": 1.852449
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "OVLO0",
+      "gap_mm": 0.820327
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "OVLO1",
+      "gap_mm": 0.820326
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "OVLO2",
+      "gap_mm": 0.900324
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "OVLO3",
+      "gap_mm": 1.317724
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "OVLO4",
+      "gap_mm": 1.331845
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "OVLO5",
+      "gap_mm": 1.536388
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "OVLO6",
+      "gap_mm": 1.638395
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "OVLO7",
+      "gap_mm": 2.347071
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "DVDT0",
+      "gap_mm": 0.760723
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "DVDT1",
+      "gap_mm": 0.46539
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "DVDT2",
+      "gap_mm": 0.428329
+    },
+    {
+      "terminal": "C124.2",
+      "copper": "CAP0",
+      "gap_mm": 0.283876
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "R125.1",
+      "gap_mm": 1.60592
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "R125.2",
+      "gap_mm": 0.822018
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "C124.1",
+      "gap_mm": 0.54737
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "C124.2",
+      "gap_mm": 1.29737
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "old-ground-bridge",
+      "gap_mm": 1.433943
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "UVLO0",
+      "gap_mm": 1.65827
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "UVLO1",
+      "gap_mm": 1.189076
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "UVLO2",
+      "gap_mm": 0.20237
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "UVLO3",
+      "gap_mm": 0.359086
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "UVLO4",
+      "gap_mm": 1.65891
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "UVLO5",
+      "gap_mm": 3.023036
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "DVDT0",
+      "gap_mm": 2.492371
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "DVDT1",
+      "gap_mm": 2.154673
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "DVDT2",
+      "gap_mm": 1.771781
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "CAP0",
+      "gap_mm": 0.64737
+    },
+    {
+      "terminal": "R121.1",
+      "copper": "GND0",
+      "gap_mm": 1.39737
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "R125.1",
+      "gap_mm": 2.200599
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "R125.2",
+      "gap_mm": 1.714459
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "C124.1",
+      "gap_mm": 0.679882
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "UVLO0",
+      "gap_mm": 0.60891
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "UVLO1",
+      "gap_mm": 0.257801
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "UVLO2",
+      "gap_mm": 0.20237
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "UVLO3",
+      "gap_mm": 1.335804
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "UVLO4",
+      "gap_mm": 2.70827
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "UVLO5",
+      "gap_mm": 3.711552
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "OVLO0",
+      "gap_mm": 0.85827
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "OVLO1",
+      "gap_mm": 0.88325
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "OVLO2",
+      "gap_mm": 1.374659
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "OVLO3",
+      "gap_mm": 2.094806
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "OVLO4",
+      "gap_mm": 2.432231
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "OVLO5",
+      "gap_mm": 3.440065
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "OVLO6",
+      "gap_mm": 3.629641
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "OVLO7",
+      "gap_mm": 4.367932
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "DVDT0",
+      "gap_mm": 2.64006
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "DVDT1",
+      "gap_mm": 2.486934
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "DVDT2",
+      "gap_mm": 2.372256
+    },
+    {
+      "terminal": "R121.2",
+      "copper": "CAP0",
+      "gap_mm": 0.898951
+    }
+  ],
+  "pairs": [
+    {
+      "a": "UVLO5",
+      "b": "OVLO5",
+      "gap_mm": 0.172115
+    },
+    {
+      "a": "UVLO5",
+      "b": "OVLO4",
+      "gap_mm": 0.173013
+    },
+    {
+      "a": "R121.2",
+      "b": "UVLO1",
+      "gap_mm": 0.173673
+    },
+    {
+      "a": "UVLO4",
+      "b": "OVLO4",
+      "gap_mm": 0.18
+    },
+    {
+      "a": "UVLO4",
+      "b": "OVLO5",
+      "gap_mm": 0.18
+    },
+    {
+      "a": "UVLO4",
+      "b": "OVLO3",
+      "gap_mm": 0.180001
+    },
+    {
+      "a": "R121.1",
+      "b": "UVLO3",
+      "gap_mm": 0.1937
+    },
+    {
+      "a": "UVLO5",
+      "b": "OVLO6",
+      "gap_mm": 0.194006
+    },
+    {
+      "a": "C124.1",
+      "b": "OVLO0",
+      "gap_mm": 0.256361
+    },
+    {
+      "a": "C124.1",
+      "b": "OVLO1",
+      "gap_mm": 0.256361
+    },
+    {
+      "a": "R125.2",
+      "b": "OVLO2",
+      "gap_mm": 0.281502
+    },
+    {
+      "a": "R121.2",
+      "b": "UVLO0",
+      "gap_mm": 0.284027
+    },
+    {
+      "a": "R121.1",
+      "b": "UVLO2",
+      "gap_mm": 0.305
+    },
+    {
+      "a": "R121.2",
+      "b": "UVLO2",
+      "gap_mm": 0.305
+    },
+    {
+      "a": "R125.2",
+      "b": "OVLO3",
+      "gap_mm": 0.34624
+    },
+    {
+      "a": "R125.2",
+      "b": "OVLO1",
+      "gap_mm": 0.350441
+    },
+    {
+      "a": "OVLO0",
+      "b": "CAP0",
+      "gap_mm": 0.375071
+    },
+    {
+      "a": "OVLO1",
+      "b": "CAP0",
+      "gap_mm": 0.375071
+    },
+    {
+      "a": "C124.1",
+      "b": "C124.2",
+      "gap_mm": 0.4
+    },
+    {
+      "a": "OVLO2",
+      "b": "CAP0",
+      "gap_mm": 0.413592
+    },
+    {
+      "a": "UVLO4",
+      "b": "OVLO6",
+      "gap_mm": 0.460328
+    },
+    {
+      "a": "R125.1",
+      "b": "OVLO4",
+      "gap_mm": 0.475
+    },
+    {
+      "a": "R125.2",
+      "b": "OVLO4",
+      "gap_mm": 0.475
+    },
+    {
+      "a": "C124.2",
+      "b": "CAP0",
+      "gap_mm": 0.47903
+    },
+    {
+      "a": "UVLO4",
+      "b": "OVLO2",
+      "gap_mm": 0.48
+    },
+    {
+      "a": "R125.1",
+      "b": "R125.2",
+      "gap_mm": 0.5
+    },
+    {
+      "a": "C124.1",
+      "b": "GND0",
+      "gap_mm": 0.5
+    },
+    {
+      "a": "OVLO3",
+      "b": "CAP0",
+      "gap_mm": 0.520912
+    },
+    {
+      "a": "UVLO3",
+      "b": "OVLO3",
+      "gap_mm": 0.522193
+    },
+    {
+      "a": "DVDT0",
+      "b": "GND0",
+      "gap_mm": 0.52268
+    },
+    {
+      "a": "DVDT1",
+      "b": "GND0",
+      "gap_mm": 0.52268
+    },
+    {
+      "a": "UVLO3",
+      "b": "OVLO4",
+      "gap_mm": 0.534762
+    },
+    {
+      "a": "UVLO3",
+      "b": "OVLO2",
+      "gap_mm": 0.542964
+    },
+    {
+      "a": "C124.1",
+      "b": "OVLO2",
+      "gap_mm": 0.549338
+    },
+    {
+      "a": "OVLO4",
+      "b": "CAP0",
+      "gap_mm": 0.55
+    },
+    {
+      "a": "OVLO4",
+      "b": "DVDT2",
+      "gap_mm": 0.550001
+    },
+    {
+      "a": "C124.2",
+      "b": "DVDT2",
+      "gap_mm": 0.590713
+    },
+    {
+      "a": "CAP0",
+      "b": "GND0",
+      "gap_mm": 0.597772
+    },
+    {
+      "a": "C124.2",
+      "b": "DVDT1",
+      "gap_mm": 0.610054
+    },
+    {
+      "a": "R125.1",
+      "b": "CAP0",
+      "gap_mm": 0.625
+    },
+    {
+      "a": "R125.2",
+      "b": "DVDT2",
+      "gap_mm": 0.625001
+    },
+    {
+      "a": "C124.1",
+      "b": "R121.1",
+      "gap_mm": 0.65
+    },
+    {
+      "a": "UVLO5",
+      "b": "OVLO7",
+      "gap_mm": 0.674621
+    },
+    {
+      "a": "R125.1",
+      "b": "C124.2",
+      "gap_mm": 0.7
+    },
+    {
+      "a": "R121.1",
+      "b": "R121.2",
+      "gap_mm": 0.7
+    },
+    {
+      "a": "R125.2",
+      "b": "OVLO0",
+      "gap_mm": 0.700242
+    },
+    {
+      "a": "DVDT2",
+      "b": "GND0",
+      "gap_mm": 0.71881
+    },
+    {
+      "a": "UVLO2",
+      "b": "OVLO0",
+      "gap_mm": 0.730001
+    },
+    {
+      "a": "R125.2",
+      "b": "R121.1",
+      "gap_mm": 0.743303
+    },
+    {
+      "a": "R125.1",
+      "b": "OVLO5",
+      "gap_mm": 0.74634
+    },
+    {
+      "a": "R121.1",
+      "b": "CAP0",
+      "gap_mm": 0.75
+    },
+    {
+      "a": "DVDT2",
+      "b": "CAP0",
+      "gap_mm": 0.750001
+    },
+    {
+      "a": "R125.2",
+      "b": "C124.2",
+      "gap_mm": 0.757693
+    },
+    {
+      "a": "UVLO3",
+      "b": "OVLO0",
+      "gap_mm": 0.790453
+    },
+    {
+      "a": "R125.1",
+      "b": "UVLO4",
+      "gap_mm": 0.805
+    },
+    {
+      "a": "R125.2",
+      "b": "UVLO4",
+      "gap_mm": 0.805
+    },
+    {
+      "a": "C124.2",
+      "b": "DVDT0",
+      "gap_mm": 0.845001
+    },
+    {
+      "a": "R125.1",
+      "b": "GND0",
+      "gap_mm": 0.875644
+    },
+    {
+      "a": "UVLO4",
+      "b": "CAP0",
+      "gap_mm": 0.88
+    },
+    {
+      "a": "UVLO4",
+      "b": "DVDT2",
+      "gap_mm": 0.880001
+    },
+    {
+      "a": "C124.1",
+      "b": "R121.2",
+      "gap_mm": 0.898276
+    },
+    {
+      "a": "OVLO5",
+      "b": "DVDT2",
+      "gap_mm": 0.913672
+    },
+    {
+      "a": "R125.1",
+      "b": "C124.1",
+      "gap_mm": 0.928493
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "UVLO0",
+      "gap_mm": 0.945012
+    },
+    {
+      "a": "R125.2",
+      "b": "GND0",
+      "gap_mm": 0.982697
+    },
+    {
+      "a": "R125.1",
+      "b": "OVLO6",
+      "gap_mm": 1.00412
+    },
+    {
+      "a": "C124.2",
+      "b": "OVLO0",
+      "gap_mm": 1.005416
+    },
+    {
+      "a": "C124.2",
+      "b": "OVLO1",
+      "gap_mm": 1.005416
+    },
+    {
+      "a": "UVLO3",
+      "b": "OVLO1",
+      "gap_mm": 1.016727
+    },
+    {
+      "a": "C124.1",
+      "b": "old-ground-bridge",
+      "gap_mm": 1.016825
+    },
+    {
+      "a": "OVLO4",
+      "b": "DVDT1",
+      "gap_mm": 1.02
+    },
+    {
+      "a": "R125.1",
+      "b": "UVLO5",
+      "gap_mm": 1.025
+    },
+    {
+      "a": "R125.2",
+      "b": "UVLO3",
+      "gap_mm": 1.035157
+    },
+    {
+      "a": "OVLO5",
+      "b": "DVDT1",
+      "gap_mm": 1.044128
+    },
+    {
+      "a": "UVLO4",
+      "b": "OVLO7",
+      "gap_mm": 1.052081
+    },
+    {
+      "a": "R125.1",
+      "b": "OVLO3",
+      "gap_mm": 1.057519
+    },
+    {
+      "a": "OVLO6",
+      "b": "DVDT2",
+      "gap_mm": 1.059734
+    },
+    {
+      "a": "OVLO6",
+      "b": "DVDT1",
+      "gap_mm": 1.070655
+    },
+    {
+      "a": "R121.2",
+      "b": "OVLO0",
+      "gap_mm": 1.075
+    },
+    {
+      "a": "C124.1",
+      "b": "DVDT2",
+      "gap_mm": 1.099138
+    },
+    {
+      "a": "R121.2",
+      "b": "OVLO1",
+      "gap_mm": 1.118692
+    },
+    {
+      "a": "R121.2",
+      "b": "CAP0",
+      "gap_mm": 1.123969
+    },
+    {
+      "a": "C124.2",
+      "b": "OVLO2",
+      "gap_mm": 1.128037
+    },
+    {
+      "a": "OVLO0",
+      "b": "GND0",
+      "gap_mm": 1.135856
+    },
+    {
+      "a": "OVLO1",
+      "b": "GND0",
+      "gap_mm": 1.135856
+    },
+    {
+      "a": "R125.2",
+      "b": "DVDT1",
+      "gap_mm": 1.176599
+    },
+    {
+      "a": "R125.1",
+      "b": "OVLO2",
+      "gap_mm": 1.179339
+    },
+    {
+      "a": "UVLO5",
+      "b": "DVDT2",
+      "gap_mm": 1.191827
+    },
+    {
+      "a": "UVLO4",
+      "b": "OVLO1",
+      "gap_mm": 1.200001
+    },
+    {
+      "a": "C124.1",
+      "b": "OVLO3",
+      "gap_mm": 1.205976
+    },
+    {
+      "a": "UVLO3",
+      "b": "CAP0",
+      "gap_mm": 1.207645
+    },
+    {
+      "a": "R125.1",
+      "b": "OVLO1",
+      "gap_mm": 1.226153
+    },
+    {
+      "a": "OVLO3",
+      "b": "DVDT2",
+      "gap_mm": 1.230615
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "CAP0",
+      "gap_mm": 1.234761
+    },
+    {
+      "a": "OVLO5",
+      "b": "DVDT0",
+      "gap_mm": 1.25
+    },
+    {
+      "a": "OVLO6",
+      "b": "DVDT0",
+      "gap_mm": 1.250001
+    },
+    {
+      "a": "DVDT1",
+      "b": "CAP0",
+      "gap_mm": 1.292019
+    },
+    {
+      "a": "C124.1",
+      "b": "DVDT1",
+      "gap_mm": 1.298608
+    },
+    {
+      "a": "OVLO2",
+      "b": "DVDT2",
+      "gap_mm": 1.314251
+    },
+    {
+      "a": "R121.1",
+      "b": "UVLO4",
+      "gap_mm": 1.325142
+    },
+    {
+      "a": "OVLO2",
+      "b": "GND0",
+      "gap_mm": 1.327641
+    },
+    {
+      "a": "UVLO4",
+      "b": "DVDT1",
+      "gap_mm": 1.35
+    },
+    {
+      "a": "UVLO5",
+      "b": "DVDT1",
+      "gap_mm": 1.366588
+    },
+    {
+      "a": "OVLO1",
+      "b": "DVDT2",
+      "gap_mm": 1.373975
+    },
+    {
+      "a": "R125.1",
+      "b": "OVLO0",
+      "gap_mm": 1.378616
+    },
+    {
+      "a": "C124.2",
+      "b": "R121.1",
+      "gap_mm": 1.4
+    },
+    {
+      "a": "OVLO4",
+      "b": "DVDT0",
+      "gap_mm": 1.420797
+    },
+    {
+      "a": "R121.1",
+      "b": "UVLO1",
+      "gap_mm": 1.423965
+    },
+    {
+      "a": "C124.1",
+      "b": "OVLO4",
+      "gap_mm": 1.475
+    },
+    {
+      "a": "C124.2",
+      "b": "OVLO4",
+      "gap_mm": 1.475
+    },
+    {
+      "a": "R121.1",
+      "b": "GND0",
+      "gap_mm": 1.5
+    },
+    {
+      "a": "R125.2",
+      "b": "OVLO5",
+      "gap_mm": 1.532046
+    },
+    {
+      "a": "C124.2",
+      "b": "OVLO3",
+      "gap_mm": 1.544691
+    },
+    {
+      "a": "UVLO2",
+      "b": "OVLO1",
+      "gap_mm": 1.55
+    },
+    {
+      "a": "UVLO2",
+      "b": "OVLO2",
+      "gap_mm": 1.550735
+    },
+    {
+      "a": "OVLO0",
+      "b": "DVDT2",
+      "gap_mm": 1.550736
+    },
+    {
+      "a": "R121.2",
+      "b": "UVLO3",
+      "gap_mm": 1.569506
+    },
+    {
+      "a": "OVLO7",
+      "b": "DVDT0",
+      "gap_mm": 1.571917
+    },
+    {
+      "a": "C124.1",
+      "b": "DVDT0",
+      "gap_mm": 1.595001
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "UVLO1",
+      "gap_mm": 1.599008
+    },
+    {
+      "a": "UVLO5",
+      "b": "DVDT0",
+      "gap_mm": 1.6
+    },
+    {
+      "a": "R121.2",
+      "b": "OVLO2",
+      "gap_mm": 1.605744
+    },
+    {
+      "a": "R125.1",
+      "b": "R121.1",
+      "gap_mm": 1.624961
+    },
+    {
+      "a": "R125.2",
+      "b": "DVDT0",
+      "gap_mm": 1.643138
+    },
+    {
+      "a": "OVLO4",
+      "b": "GND0",
+      "gap_mm": 1.65
+    },
+    {
+      "a": "R121.1",
+      "b": "old-ground-bridge",
+      "gap_mm": 1.650685
+    },
+    {
+      "a": "DVDT0",
+      "b": "CAP0",
+      "gap_mm": 1.671796
+    },
+    {
+      "a": "OVLO5",
+      "b": "CAP0",
+      "gap_mm": 1.697729
+    },
+    {
+      "a": "C124.1",
+      "b": "UVLO3",
+      "gap_mm": 1.699838
+    },
+    {
+      "a": "UVLO4",
+      "b": "OVLO0",
+      "gap_mm": 1.7
+    },
+    {
+      "a": "C124.2",
+      "b": "OVLO5",
+      "gap_mm": 1.70247
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "OVLO0",
+      "gap_mm": 1.711796
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "OVLO1",
+      "gap_mm": 1.711796
+    },
+    {
+      "a": "R125.2",
+      "b": "UVLO5",
+      "gap_mm": 1.716088
+    },
+    {
+      "a": "OVLO7",
+      "b": "DVDT1",
+      "gap_mm": 1.736145
+    },
+    {
+      "a": "OVLO7",
+      "b": "DVDT2",
+      "gap_mm": 1.740106
+    },
+    {
+      "a": "R125.1",
+      "b": "UVLO3",
+      "gap_mm": 1.742278
+    },
+    {
+      "a": "UVLO4",
+      "b": "DVDT0",
+      "gap_mm": 1.75
+    },
+    {
+      "a": "UVLO2",
+      "b": "OVLO3",
+      "gap_mm": 1.761911
+    },
+    {
+      "a": "R121.1",
+      "b": "DVDT2",
+      "gap_mm": 1.77243
+    },
+    {
+      "a": "OVLO3",
+      "b": "GND0",
+      "gap_mm": 1.774065
+    },
+    {
+      "a": "C124.2",
+      "b": "OVLO6",
+      "gap_mm": 1.800447
+    },
+    {
+      "a": "C124.1",
+      "b": "UVLO4",
+      "gap_mm": 1.805
+    },
+    {
+      "a": "C124.2",
+      "b": "UVLO4",
+      "gap_mm": 1.805
+    },
+    {
+      "a": "R125.1",
+      "b": "OVLO7",
+      "gap_mm": 1.811001
+    },
+    {
+      "a": "OVLO1",
+      "b": "DVDT1",
+      "gap_mm": 1.85
+    },
+    {
+      "a": "OVLO2",
+      "b": "DVDT1",
+      "gap_mm": 1.855617
+    },
+    {
+      "a": "R125.2",
+      "b": "OVLO6",
+      "gap_mm": 1.872435
+    },
+    {
+      "a": "R121.1",
+      "b": "UVLO0",
+      "gap_mm": 1.876641
+    },
+    {
+      "a": "OVLO0",
+      "b": "DVDT1",
+      "gap_mm": 1.880394
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "DVDT0",
+      "gap_mm": 1.88048
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "DVDT1",
+      "gap_mm": 1.880481
+    },
+    {
+      "a": "UVLO5",
+      "b": "CAP0",
+      "gap_mm": 1.889239
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "UVLO2",
+      "gap_mm": 1.902929
+    },
+    {
+      "a": "OVLO5",
+      "b": "GND0",
+      "gap_mm": 1.911552
+    },
+    {
+      "a": "OVLO6",
+      "b": "GND0",
+      "gap_mm": 1.911552
+    },
+    {
+      "a": "OVLO3",
+      "b": "DVDT1",
+      "gap_mm": 1.91371
+    },
+    {
+      "a": "UVLO3",
+      "b": "DVDT2",
+      "gap_mm": 1.915188
+    },
+    {
+      "a": "UVLO5",
+      "b": "OVLO3",
+      "gap_mm": 1.926391
+    },
+    {
+      "a": "UVLO1",
+      "b": "OVLO0",
+      "gap_mm": 1.943897
+    },
+    {
+      "a": "R125.2",
+      "b": "R121.2",
+      "gap_mm": 1.953586
+    },
+    {
+      "a": "C124.1",
+      "b": "UVLO2",
+      "gap_mm": 1.955
+    },
+    {
+      "a": "UVLO4",
+      "b": "GND0",
+      "gap_mm": 1.98
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "DVDT2",
+      "gap_mm": 2.016462
+    },
+    {
+      "a": "C124.2",
+      "b": "UVLO5",
+      "gap_mm": 2.018036
+    },
+    {
+      "a": "OVLO6",
+      "b": "CAP0",
+      "gap_mm": 2.025546
+    },
+    {
+      "a": "R125.2",
+      "b": "UVLO2",
+      "gap_mm": 2.026547
+    },
+    {
+      "a": "UVLO2",
+      "b": "CAP0",
+      "gap_mm": 2.055
+    },
+    {
+      "a": "UVLO2",
+      "b": "OVLO4",
+      "gap_mm": 2.118237
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "OVLO2",
+      "gap_mm": 2.150941
+    },
+    {
+      "a": "C124.1",
+      "b": "OVLO5",
+      "gap_mm": 2.167075
+    },
+    {
+      "a": "R125.2",
+      "b": "old-ground-bridge",
+      "gap_mm": 2.179693
+    },
+    {
+      "a": "R125.1",
+      "b": "old-ground-bridge",
+      "gap_mm": 2.188449
+    },
+    {
+      "a": "OVLO0",
+      "b": "DVDT0",
+      "gap_mm": 2.200533
+    },
+    {
+      "a": "OVLO1",
+      "b": "DVDT0",
+      "gap_mm": 2.200533
+    },
+    {
+      "a": "C124.2",
+      "b": "UVLO3",
+      "gap_mm": 2.230168
+    },
+    {
+      "a": "UVLO5",
+      "b": "GND0",
+      "gap_mm": 2.234402
+    },
+    {
+      "a": "UVLO5",
+      "b": "OVLO2",
+      "gap_mm": 2.234723
+    },
+    {
+      "a": "R121.1",
+      "b": "DVDT1",
+      "gap_mm": 2.245
+    },
+    {
+      "a": "OVLO2",
+      "b": "DVDT0",
+      "gap_mm": 2.263503
+    },
+    {
+      "a": "UVLO0",
+      "b": "OVLO0",
+      "gap_mm": 2.319089
+    },
+    {
+      "a": "R121.2",
+      "b": "OVLO3",
+      "gap_mm": 2.323708
+    },
+    {
+      "a": "C124.1",
+      "b": "OVLO6",
+      "gap_mm": 2.371386
+    },
+    {
+      "a": "C124.1",
+      "b": "UVLO1",
+      "gap_mm": 2.37404
+    },
+    {
+      "a": "UVLO1",
+      "b": "OVLO1",
+      "gap_mm": 2.39951
+    },
+    {
+      "a": "R125.1",
+      "b": "R121.2",
+      "gap_mm": 2.429917
+    },
+    {
+      "a": "C124.1",
+      "b": "UVLO0",
+      "gap_mm": 2.431441
+    },
+    {
+      "a": "OVLO3",
+      "b": "DVDT0",
+      "gap_mm": 2.432131
+    },
+    {
+      "a": "C124.1",
+      "b": "UVLO5",
+      "gap_mm": 2.439617
+    },
+    {
+      "a": "OVLO7",
+      "b": "GND0",
+      "gap_mm": 2.450481
+    },
+    {
+      "a": "UVLO3",
+      "b": "GND0",
+      "gap_mm": 2.455689
+    },
+    {
+      "a": "UVLO3",
+      "b": "OVLO5",
+      "gap_mm": 2.470858
+    },
+    {
+      "a": "C124.2",
+      "b": "OVLO7",
+      "gap_mm": 2.499063
+    },
+    {
+      "a": "UVLO5",
+      "b": "OVLO1",
+      "gap_mm": 2.560166
+    },
+    {
+      "a": "UVLO1",
+      "b": "CAP0",
+      "gap_mm": 2.586133
+    },
+    {
+      "a": "R121.1",
+      "b": "DVDT0",
+      "gap_mm": 2.595001
+    },
+    {
+      "a": "UVLO3",
+      "b": "DVDT1",
+      "gap_mm": 2.595907
+    },
+    {
+      "a": "R121.2",
+      "b": "DVDT2",
+      "gap_mm": 2.600253
+    },
+    {
+      "a": "UVLO0",
+      "b": "OVLO1",
+      "gap_mm": 2.628489
+    },
+    {
+      "a": "UVLO0",
+      "b": "CAP0",
+      "gap_mm": 2.661309
+    },
+    {
+      "a": "R121.2",
+      "b": "OVLO4",
+      "gap_mm": 2.66604
+    },
+    {
+      "a": "R125.2",
+      "b": "OVLO7",
+      "gap_mm": 2.68634
+    },
+    {
+      "a": "R121.2",
+      "b": "DVDT1",
+      "gap_mm": 2.68768
+    },
+    {
+      "a": "C124.2",
+      "b": "UVLO2",
+      "gap_mm": 2.705
+    },
+    {
+      "a": "UVLO1",
+      "b": "OVLO2",
+      "gap_mm": 2.791089
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "OVLO3",
+      "gap_mm": 2.800718
+    },
+    {
+      "a": "UVLO2",
+      "b": "GND0",
+      "gap_mm": 2.805
+    },
+    {
+      "a": "R121.2",
+      "b": "DVDT0",
+      "gap_mm": 2.812716
+    },
+    {
+      "a": "C124.2",
+      "b": "UVLO0",
+      "gap_mm": 2.834098
+    },
+    {
+      "a": "OVLO7",
+      "b": "CAP0",
+      "gap_mm": 2.838394
+    },
+    {
+      "a": "UVLO5",
+      "b": "OVLO0",
+      "gap_mm": 2.84082
+    },
+    {
+      "a": "UVLO3",
+      "b": "OVLO6",
+      "gap_mm": 2.891382
+    },
+    {
+      "a": "R125.1",
+      "b": "UVLO2",
+      "gap_mm": 2.923083
+    },
+    {
+      "a": "R121.2",
+      "b": "UVLO4",
+      "gap_mm": 2.925066
+    },
+    {
+      "a": "R121.1",
+      "b": "UVLO5",
+      "gap_mm": 2.939781
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "OVLO4",
+      "gap_mm": 2.945001
+    },
+    {
+      "a": "C124.2",
+      "b": "UVLO1",
+      "gap_mm": 3.013689
+    },
+    {
+      "a": "UVLO2",
+      "b": "DVDT2",
+      "gap_mm": 3.061386
+    },
+    {
+      "a": "UVLO0",
+      "b": "GND0",
+      "gap_mm": 3.063967
+    },
+    {
+      "a": "UVLO0",
+      "b": "OVLO2",
+      "gap_mm": 3.070248
+    },
+    {
+      "a": "UVLO3",
+      "b": "DVDT0",
+      "gap_mm": 3.110751
+    },
+    {
+      "a": "C124.1",
+      "b": "OVLO7",
+      "gap_mm": 3.133317
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "UVLO3",
+      "gap_mm": 3.146641
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "OVLO5",
+      "gap_mm": 3.204916
+    },
+    {
+      "a": "UVLO1",
+      "b": "GND0",
+      "gap_mm": 3.217374
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "OVLO6",
+      "gap_mm": 3.229776
+    },
+    {
+      "a": "R125.2",
+      "b": "UVLO1",
+      "gap_mm": 3.237552
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "UVLO4",
+      "gap_mm": 3.275001
+    },
+    {
+      "a": "UVLO1",
+      "b": "OVLO3",
+      "gap_mm": 3.427276
+    },
+    {
+      "a": "R125.2",
+      "b": "UVLO0",
+      "gap_mm": 3.478731
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "UVLO5",
+      "gap_mm": 3.527841
+    },
+    {
+      "a": "UVLO2",
+      "b": "DVDT1",
+      "gap_mm": 3.55
+    },
+    {
+      "a": "R121.2",
+      "b": "OVLO5",
+      "gap_mm": 3.665761
+    },
+    {
+      "a": "UVLO3",
+      "b": "OVLO7",
+      "gap_mm": 3.666085
+    },
+    {
+      "a": "UVLO0",
+      "b": "OVLO3",
+      "gap_mm": 3.749604
+    },
+    {
+      "a": "old-ground-bridge",
+      "b": "OVLO7",
+      "gap_mm": 3.807463
+    },
+    {
+      "a": "UVLO1",
+      "b": "OVLO4",
+      "gap_mm": 3.811868
+    },
+    {
+      "a": "R121.2",
+      "b": "OVLO6",
+      "gap_mm": 3.845511
+    },
+    {
+      "a": "R125.1",
+      "b": "UVLO1",
+      "gap_mm": 3.867714
+    },
+    {
+      "a": "UVLO0",
+      "b": "DVDT0",
+      "gap_mm": 3.89042
+    },
+    {
+      "a": "UVLO0",
+      "b": "DVDT1",
+      "gap_mm": 3.890421
+    },
+    {
+      "a": "UVLO2",
+      "b": "DVDT0",
+      "gap_mm": 3.900001
+    },
+    {
+      "a": "R121.2",
+      "b": "UVLO5",
+      "gap_mm": 3.94108
+    },
+    {
+      "a": "R125.1",
+      "b": "UVLO0",
+      "gap_mm": 3.959235
+    },
+    {
+      "a": "UVLO2",
+      "b": "OVLO5",
+      "gap_mm": 3.99064
+    },
+    {
+      "a": "UVLO0",
+      "b": "DVDT2",
+      "gap_mm": 3.996385
+    },
+    {
+      "a": "UVLO1",
+      "b": "DVDT2",
+      "gap_mm": 4.042196
+    },
+    {
+      "a": "UVLO0",
+      "b": "OVLO4",
+      "gap_mm": 4.12275
+    },
+    {
+      "a": "UVLO1",
+      "b": "DVDT1",
+      "gap_mm": 4.180417
+    },
+    {
+      "a": "UVLO1",
+      "b": "DVDT0",
+      "gap_mm": 4.274663
+    },
+    {
+      "a": "UVLO2",
+      "b": "OVLO6",
+      "gap_mm": 4.341102
+    },
+    {
+      "a": "R121.2",
+      "b": "OVLO7",
+      "gap_mm": 4.574182
+    },
+    {
+      "a": "UVLO1",
+      "b": "OVLO5",
+      "gap_mm": 5.112737
+    },
+    {
+      "a": "UVLO0",
+      "b": "OVLO5",
+      "gap_mm": 5.143593
+    },
+    {
+      "a": "UVLO2",
+      "b": "OVLO7",
+      "gap_mm": 5.154952
+    },
+    {
+      "a": "UVLO0",
+      "b": "OVLO6",
+      "gap_mm": 5.216796
+    },
+    {
+      "a": "UVLO1",
+      "b": "OVLO6",
+      "gap_mm": 5.320146
+    },
+    {
+      "a": "UVLO0",
+      "b": "OVLO7",
+      "gap_mm": 5.816574
+    },
+    {
+      "a": "UVLO1",
+      "b": "OVLO7",
+      "gap_mm": 6.062891
+    }
+  ],
+  "court": [
+    {
+      "a": "R125",
+      "b": "C124",
+      "gap_mm": 0.05,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R125",
+      "gap_mm": 0.05,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U8",
+      "gap_mm": 0.06,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R121",
+      "gap_mm": 0.15,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R121",
+      "gap_mm": 0.21,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U8",
+      "gap_mm": 0.32,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW16",
+      "gap_mm": 0.45875,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW16",
+      "gap_mm": 1.55875,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C125",
+      "gap_mm": 1.950749,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW1",
+      "gap_mm": 2.656145,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C125",
+      "gap_mm": 3.021195,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R124",
+      "gap_mm": 3.355,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R122",
+      "gap_mm": 3.42,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R124",
+      "gap_mm": 3.425656,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW1",
+      "gap_mm": 3.734193,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C126",
+      "gap_mm": 3.735,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C126",
+      "gap_mm": 3.995,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R122",
+      "gap_mm": 4.52,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R123",
+      "gap_mm": 4.989,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R123",
+      "gap_mm": 5.602492,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW2",
+      "gap_mm": 5.706718,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "TP2",
+      "gap_mm": 5.965538,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW2",
+      "gap_mm": 6.16841,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R126",
+      "gap_mm": 6.566972,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "TP2",
+      "gap_mm": 6.856787,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D2",
+      "gap_mm": 6.915,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D2",
+      "gap_mm": 7.175,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R126",
+      "gap_mm": 7.176553,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U10",
+      "gap_mm": 7.359729,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U10",
+      "gap_mm": 8.395845,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "J1",
+      "gap_mm": 10.09,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "J1",
+      "gap_mm": 11.19,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D16",
+      "gap_mm": 11.404229,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D1",
+      "gap_mm": 11.435,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D1",
+      "gap_mm": 11.495,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D16",
+      "gap_mm": 12.532449,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW17",
+      "gap_mm": 13.32834,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW17",
+      "gap_mm": 13.909781,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "TP3",
+      "gap_mm": 16.762715,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "TP3",
+      "gap_mm": 17.022446,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED63",
+      "gap_mm": 22.566384,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED63",
+      "gap_mm": 22.825,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW3",
+      "gap_mm": 25.004532,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW3",
+      "gap_mm": 25.262091,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C262",
+      "gap_mm": 26.666704,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C262",
+      "gap_mm": 26.915,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SWCAP1",
+      "gap_mm": 27.202473,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SWCAP1",
+      "gap_mm": 28.320745,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW31",
+      "gap_mm": 28.654745,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D17",
+      "gap_mm": 29.247986,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW31",
+      "gap_mm": 29.619129,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D17",
+      "gap_mm": 29.91376,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D30",
+      "gap_mm": 31.25826,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW18",
+      "gap_mm": 32.088252,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D30",
+      "gap_mm": 32.38679,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW18",
+      "gap_mm": 32.486909,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D3",
+      "gap_mm": 36.741052,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D3",
+      "gap_mm": 36.945422,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW43",
+      "gap_mm": 38.563633,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW43",
+      "gap_mm": 39.667781,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW4",
+      "gap_mm": 43.012165,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW4",
+      "gap_mm": 43.047497,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW32",
+      "gap_mm": 43.075621,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D31",
+      "gap_mm": 43.762274,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW32",
+      "gap_mm": 43.882103,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D31",
+      "gap_mm": 44.709187,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D18",
+      "gap_mm": 47.458255,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED64",
+      "gap_mm": 47.565656,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED64",
+      "gap_mm": 47.825,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D18",
+      "gap_mm": 47.974788,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW44",
+      "gap_mm": 49.296298,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D43",
+      "gap_mm": 50.114392,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW44",
+      "gap_mm": 50.327863,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW19",
+      "gap_mm": 51.063413,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D43",
+      "gap_mm": 51.244442,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW19",
+      "gap_mm": 51.411297,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C263",
+      "gap_mm": 51.66104,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C263",
+      "gap_mm": 51.915,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED69",
+      "gap_mm": 54.212944,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C268",
+      "gap_mm": 54.947534,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED69",
+      "gap_mm": 55.316152,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D4",
+      "gap_mm": 55.764223,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D4",
+      "gap_mm": 55.987623,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C268",
+      "gap_mm": 56.065851,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW56",
+      "gap_mm": 57.60875,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW56",
+      "gap_mm": 58.70875,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D32",
+      "gap_mm": 59.105237,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D32",
+      "gap_mm": 59.892486,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW57",
+      "gap_mm": 60.044271,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW33",
+      "gap_mm": 60.123012,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW33",
+      "gap_mm": 60.784969,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW57",
+      "gap_mm": 61.173411,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW5",
+      "gap_mm": 61.593877,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW5",
+      "gap_mm": 61.649583,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW45",
+      "gap_mm": 62.206635,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW45",
+      "gap_mm": 63.13999,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D44",
+      "gap_mm": 64.170773,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D44",
+      "gap_mm": 65.180718,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D19",
+      "gap_mm": 66.14327,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D19",
+      "gap_mm": 66.589282,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D56",
+      "gap_mm": 68.139922,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D56",
+      "gap_mm": 69.251605,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW20",
+      "gap_mm": 70.079193,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW58",
+      "gap_mm": 70.312119,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW20",
+      "gap_mm": 70.403471,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "J3",
+      "gap_mm": 70.85476,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "J3",
+      "gap_mm": 71.318626,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW58",
+      "gap_mm": 71.36791,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED70",
+      "gap_mm": 72.119021,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED70",
+      "gap_mm": 73.119263,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D57",
+      "gap_mm": 73.26962,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D57",
+      "gap_mm": 74.387873,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D5",
+      "gap_mm": 74.801052,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D5",
+      "gap_mm": 75.033784,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U13",
+      "gap_mm": 75.060436,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C269",
+      "gap_mm": 75.271518,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U13",
+      "gap_mm": 75.606002,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D33",
+      "gap_mm": 76.14149,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C269",
+      "gap_mm": 76.252145,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D33",
+      "gap_mm": 76.818705,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW46",
+      "gap_mm": 77.406947,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D45",
+      "gap_mm": 77.840113,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW34",
+      "gap_mm": 78.10153,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW46",
+      "gap_mm": 78.222339,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW34",
+      "gap_mm": 78.675224,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D45",
+      "gap_mm": 78.73771,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW6",
+      "gap_mm": 80.376175,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW6",
+      "gap_mm": 80.480437,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R133",
+      "gap_mm": 81.914926,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R133",
+      "gap_mm": 82.310588,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R141",
+      "gap_mm": 83.404497,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R141",
+      "gap_mm": 83.797779,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D20",
+      "gap_mm": 84.99049,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D58",
+      "gap_mm": 85.017033,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D20",
+      "gap_mm": 85.396076,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R143",
+      "gap_mm": 85.684392,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R143",
+      "gap_mm": 86.049247,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D58",
+      "gap_mm": 86.054615,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R142",
+      "gap_mm": 87.135469,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R130",
+      "gap_mm": 87.435519,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R142",
+      "gap_mm": 87.492444,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R130",
+      "gap_mm": 87.828855,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C129",
+      "gap_mm": 88.432135,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R131",
+      "gap_mm": 88.765337,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C129",
+      "gap_mm": 88.916255,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW21",
+      "gap_mm": 89.109593,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R131",
+      "gap_mm": 89.138672,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW21",
+      "gap_mm": 89.420249,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U11",
+      "gap_mm": 90.575428,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U11",
+      "gap_mm": 90.99447,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U12",
+      "gap_mm": 92.387306,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R134",
+      "gap_mm": 92.485418,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R128",
+      "gap_mm": 92.76229,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U12",
+      "gap_mm": 92.768764,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R134",
+      "gap_mm": 93.015968,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R132",
+      "gap_mm": 93.096899,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R128",
+      "gap_mm": 93.258674,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D46",
+      "gap_mm": 93.413506,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R132",
+      "gap_mm": 93.609136,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D6",
+      "gap_mm": 93.843226,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D34",
+      "gap_mm": 93.954399,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW47",
+      "gap_mm": 94.020266,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D6",
+      "gap_mm": 94.081499,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D46",
+      "gap_mm": 94.215354,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D34",
+      "gap_mm": 94.556448,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW47",
+      "gap_mm": 94.745001,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R140",
+      "gap_mm": 95.830241,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R140",
+      "gap_mm": 96.206511,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW35",
+      "gap_mm": 96.492106,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW35",
+      "gap_mm": 97.008115,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R144",
+      "gap_mm": 98.535679,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED65",
+      "gap_mm": 98.565317,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED65",
+      "gap_mm": 98.825,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R144",
+      "gap_mm": 98.93047,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R135",
+      "gap_mm": 98.937657,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R145",
+      "gap_mm": 99.227579,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW7",
+      "gap_mm": 99.260557,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED71",
+      "gap_mm": 99.323327,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R135",
+      "gap_mm": 99.364067,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW7",
+      "gap_mm": 99.394847,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "Y1",
+      "gap_mm": 99.507307,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R145",
+      "gap_mm": 99.687965,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED71",
+      "gap_mm": 100.153865,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "Y1",
+      "gap_mm": 100.368021,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C123",
+      "gap_mm": 102.274315,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R110",
+      "gap_mm": 102.61394,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C264",
+      "gap_mm": 102.658039,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C264",
+      "gap_mm": 102.915,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C270",
+      "gap_mm": 103.039562,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C107",
+      "gap_mm": 103.113672,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C123",
+      "gap_mm": 103.195599,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R110",
+      "gap_mm": 103.541666,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U6",
+      "gap_mm": 103.733091,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C270",
+      "gap_mm": 103.856341,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D21",
+      "gap_mm": 103.911691,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C107",
+      "gap_mm": 103.952131,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D21",
+      "gap_mm": 104.291188,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U6",
+      "gap_mm": 104.645982,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C106",
+      "gap_mm": 104.825097,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C115",
+      "gap_mm": 105.106347,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C109",
+      "gap_mm": 105.186515,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C106",
+      "gap_mm": 105.680997,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R108",
+      "gap_mm": 105.830854,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C115",
+      "gap_mm": 105.898675,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C109",
+      "gap_mm": 106.025439,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R108",
+      "gap_mm": 106.676884,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C117",
+      "gap_mm": 107.32932,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C113",
+      "gap_mm": 107.515107,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U1",
+      "gap_mm": 107.544494,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW22",
+      "gap_mm": 108.146895,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R111",
+      "gap_mm": 108.174774,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C117",
+      "gap_mm": 108.179987,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C113",
+      "gap_mm": 108.284234,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U1",
+      "gap_mm": 108.352719,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C110",
+      "gap_mm": 108.390199,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW22",
+      "gap_mm": 108.448689,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R111",
+      "gap_mm": 109.072607,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C110",
+      "gap_mm": 109.155593,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D47",
+      "gap_mm": 110.085821,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C122",
+      "gap_mm": 110.589902,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C116",
+      "gap_mm": 110.778473,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D47",
+      "gap_mm": 110.81175,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U5",
+      "gap_mm": 111.031636,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW48",
+      "gap_mm": 111.416293,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C122",
+      "gap_mm": 111.503429,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C199",
+      "gap_mm": 111.505396,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C116",
+      "gap_mm": 111.538941,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U5",
+      "gap_mm": 111.930745,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW48",
+      "gap_mm": 112.07275,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D35",
+      "gap_mm": 112.174581,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C199",
+      "gap_mm": 112.27932,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D35",
+      "gap_mm": 112.723269,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D7",
+      "gap_mm": 112.88804,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D7",
+      "gap_mm": 113.129982,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C104",
+      "gap_mm": 113.50894,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C114",
+      "gap_mm": 113.964548,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C104",
+      "gap_mm": 114.281204,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C114",
+      "gap_mm": 114.818245,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C102",
+      "gap_mm": 114.978772,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW36",
+      "gap_mm": 115.097389,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R104",
+      "gap_mm": 115.098947,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW36",
+      "gap_mm": 115.573193,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C103",
+      "gap_mm": 115.591618,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C102",
+      "gap_mm": 115.762767,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R104",
+      "gap_mm": 115.864626,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C108",
+      "gap_mm": 115.922385,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "L1",
+      "gap_mm": 116.157911,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C103",
+      "gap_mm": 116.373071,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C108",
+      "gap_mm": 116.767065,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "L1",
+      "gap_mm": 116.932158,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R103",
+      "gap_mm": 117.681718,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C112",
+      "gap_mm": 117.902189,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R107",
+      "gap_mm": 118.088741,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R102",
+      "gap_mm": 118.197575,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW8",
+      "gap_mm": 118.198105,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW8",
+      "gap_mm": 118.352758,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "TP4",
+      "gap_mm": 118.429163,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R103",
+      "gap_mm": 118.471729,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C112",
+      "gap_mm": 118.738087,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C111",
+      "gap_mm": 118.741886,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R107",
+      "gap_mm": 118.832094,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R102",
+      "gap_mm": 118.993405,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "TP4",
+      "gap_mm": 119.190413,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C111",
+      "gap_mm": 119.54343,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "TP1",
+      "gap_mm": 120.799259,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "TP1",
+      "gap_mm": 121.566522,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U3",
+      "gap_mm": 122.292257,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "TP8",
+      "gap_mm": 122.773391,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D22",
+      "gap_mm": 122.872702,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C105",
+      "gap_mm": 122.971774,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U3",
+      "gap_mm": 123.084511,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D22",
+      "gap_mm": 123.234002,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "TP8",
+      "gap_mm": 123.531798,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C105",
+      "gap_mm": 123.741478,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "TP7",
+      "gap_mm": 123.86316,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "TP7",
+      "gap_mm": 124.600522,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "J2",
+      "gap_mm": 126.805976,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW23",
+      "gap_mm": 127.187999,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D48",
+      "gap_mm": 127.426442,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW23",
+      "gap_mm": 127.483569,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "J2",
+      "gap_mm": 127.542756,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D48",
+      "gap_mm": 128.092779,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW49",
+      "gap_mm": 129.279447,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW49",
+      "gap_mm": 129.883764,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R105",
+      "gap_mm": 130.149824,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D36",
+      "gap_mm": 130.63173,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R105",
+      "gap_mm": 130.943226,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D36",
+      "gap_mm": 131.140969,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D8",
+      "gap_mm": 131.934353,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C118",
+      "gap_mm": 132.060673,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C101",
+      "gap_mm": 132.085738,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D8",
+      "gap_mm": 132.178905,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW59",
+      "gap_mm": 132.368004,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C101",
+      "gap_mm": 132.760979,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C142",
+      "gap_mm": 132.777015,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C118",
+      "gap_mm": 132.847091,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW59",
+      "gap_mm": 133.106494,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R106",
+      "gap_mm": 133.216688,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C121",
+      "gap_mm": 133.391414,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C142",
+      "gap_mm": 133.438709,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "TP9",
+      "gap_mm": 133.659484,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C120",
+      "gap_mm": 133.816148,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW37",
+      "gap_mm": 133.827861,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R106",
+      "gap_mm": 134.02445,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C121",
+      "gap_mm": 134.157421,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW37",
+      "gap_mm": 134.274184,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "TP9",
+      "gap_mm": 134.451642,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C120",
+      "gap_mm": 134.571429,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U7",
+      "gap_mm": 134.694967,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U2",
+      "gap_mm": 134.813063,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R163",
+      "gap_mm": 135.350739,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U7",
+      "gap_mm": 135.468157,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U2",
+      "gap_mm": 135.487338,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R163",
+      "gap_mm": 136.005369,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R112",
+      "gap_mm": 136.670628,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW9",
+      "gap_mm": 137.166799,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW9",
+      "gap_mm": 137.336157,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R112",
+      "gap_mm": 137.468238,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C100",
+      "gap_mm": 137.6213,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C100",
+      "gap_mm": 138.280793,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R113",
+      "gap_mm": 139.239616,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R113",
+      "gap_mm": 140.028163,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R109",
+      "gap_mm": 140.100145,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R109",
+      "gap_mm": 140.862083,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D23",
+      "gap_mm": 141.857559,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D23",
+      "gap_mm": 142.205455,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "TP10",
+      "gap_mm": 143.192617,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "TP10",
+      "gap_mm": 143.972039,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D49",
+      "gap_mm": 145.196119,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D49",
+      "gap_mm": 145.815229,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW24",
+      "gap_mm": 146.23142,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW24",
+      "gap_mm": 146.522379,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW50",
+      "gap_mm": 147.44004,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW50",
+      "gap_mm": 148.003676,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D59",
+      "gap_mm": 148.434837,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D59",
+      "gap_mm": 149.172726,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D37",
+      "gap_mm": 149.237953,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D37",
+      "gap_mm": 149.716991,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D9",
+      "gap_mm": 150.981596,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D9",
+      "gap_mm": 151.228098,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW38",
+      "gap_mm": 152.637443,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW38",
+      "gap_mm": 153.061278,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R114",
+      "gap_mm": 153.845964,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW100",
+      "gap_mm": 153.895429,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R114",
+      "gap_mm": 154.572496,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW100",
+      "gap_mm": 154.58689,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED66",
+      "gap_mm": 155.5652,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED66",
+      "gap_mm": 155.825,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW10",
+      "gap_mm": 156.155289,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW10",
+      "gap_mm": 156.33576,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C265",
+      "gap_mm": 159.656954,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C265",
+      "gap_mm": 159.915,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D24",
+      "gap_mm": 160.85782,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D24",
+      "gap_mm": 161.195436,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW101",
+      "gap_mm": 163.064721,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D50",
+      "gap_mm": 163.25481,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW101",
+      "gap_mm": 163.73334,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D50",
+      "gap_mm": 163.835915,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED72",
+      "gap_mm": 165.07154,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW25",
+      "gap_mm": 165.276358,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "TP6",
+      "gap_mm": 165.554869,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW25",
+      "gap_mm": 165.563764,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED72",
+      "gap_mm": 165.687195,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW51",
+      "gap_mm": 165.800363,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "TP6",
+      "gap_mm": 166.208431,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "L2",
+      "gap_mm": 166.240471,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW51",
+      "gap_mm": 166.331564,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "L2",
+      "gap_mm": 166.869421,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D38",
+      "gap_mm": 167.943708,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D38",
+      "gap_mm": 168.398948,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C271",
+      "gap_mm": 169.108786,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C271",
+      "gap_mm": 169.719561,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D10",
+      "gap_mm": 170.029456,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D10",
+      "gap_mm": 170.277472,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW39",
+      "gap_mm": 171.500106,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C140",
+      "gap_mm": 171.656168,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C138",
+      "gap_mm": 171.795348,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW39",
+      "gap_mm": 171.906249,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C140",
+      "gap_mm": 172.270653,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C138",
+      "gap_mm": 172.427925,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C136",
+      "gap_mm": 173.034879,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "U18",
+      "gap_mm": 173.056276,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C136",
+      "gap_mm": 173.695386,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "U18",
+      "gap_mm": 173.696425,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C137",
+      "gap_mm": 174.532316,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW11",
+      "gap_mm": 175.157138,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C137",
+      "gap_mm": 175.19808,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW11",
+      "gap_mm": 175.346299,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C139",
+      "gap_mm": 175.807247,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C139",
+      "gap_mm": 176.445101,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D100",
+      "gap_mm": 177.115643,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R159",
+      "gap_mm": 177.302848,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C141",
+      "gap_mm": 177.342085,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D100",
+      "gap_mm": 177.769836,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R159",
+      "gap_mm": 177.937679,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C141",
+      "gap_mm": 177.954243,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "R160",
+      "gap_mm": 178.706617,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "R160",
+      "gap_mm": 179.338654,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D25",
+      "gap_mm": 179.868604,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D25",
+      "gap_mm": 180.198088,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D51",
+      "gap_mm": 181.516275,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D51",
+      "gap_mm": 182.066301,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW52",
+      "gap_mm": 184.300734,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW26",
+      "gap_mm": 184.322342,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW26",
+      "gap_mm": 184.606926,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW52",
+      "gap_mm": 184.805561,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D39",
+      "gap_mm": 186.719084,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D39",
+      "gap_mm": 187.155121,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D11",
+      "gap_mm": 189.077748,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D11",
+      "gap_mm": 189.326971,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW40",
+      "gap_mm": 190.400076,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW40",
+      "gap_mm": 190.791946,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW12",
+      "gap_mm": 194.168424,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW12",
+      "gap_mm": 194.364565,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D26",
+      "gap_mm": 198.886892,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D26",
+      "gap_mm": 199.209784,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D52",
+      "gap_mm": 199.924956,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D52",
+      "gap_mm": 200.44918,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED67",
+      "gap_mm": 201.565155,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED67",
+      "gap_mm": 201.825,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW53",
+      "gap_mm": 202.902847,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW27",
+      "gap_mm": 203.369078,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW53",
+      "gap_mm": 203.385855,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW27",
+      "gap_mm": 203.651367,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D40",
+      "gap_mm": 205.545005,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C266",
+      "gap_mm": 205.656517,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C266",
+      "gap_mm": 205.915,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D40",
+      "gap_mm": 205.965234,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW60",
+      "gap_mm": 207.655048,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D12",
+      "gap_mm": 208.126352,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW60",
+      "gap_mm": 208.227687,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D12",
+      "gap_mm": 208.376563,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW41",
+      "gap_mm": 209.327247,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED73",
+      "gap_mm": 209.693355,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW41",
+      "gap_mm": 209.707368,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED73",
+      "gap_mm": 210.231245,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW13",
+      "gap_mm": 213.186621,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW13",
+      "gap_mm": 213.388493,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C272",
+      "gap_mm": 213.784591,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C272",
+      "gap_mm": 214.319947,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D27",
+      "gap_mm": 217.91072,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D27",
+      "gap_mm": 218.228161,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D53",
+      "gap_mm": 218.443638,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D53",
+      "gap_mm": 218.946146,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW28",
+      "gap_mm": 222.416373,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW28",
+      "gap_mm": 222.696759,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D60",
+      "gap_mm": 223.489952,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D60",
+      "gap_mm": 224.074677,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D41",
+      "gap_mm": 224.408749,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D41",
+      "gap_mm": 224.81575,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D13",
+      "gap_mm": 227.175191,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D13",
+      "gap_mm": 227.426222,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW61",
+      "gap_mm": 230.531534,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW61",
+      "gap_mm": 231.074277,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW14",
+      "gap_mm": 232.210033,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW14",
+      "gap_mm": 232.416692,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D28",
+      "gap_mm": 236.938754,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D28",
+      "gap_mm": 237.251612,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW42",
+      "gap_mm": 240.125336,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW42",
+      "gap_mm": 240.490245,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SWRS1",
+      "gap_mm": 240.649559,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SWRS1",
+      "gap_mm": 241.131603,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D14",
+      "gap_mm": 246.224209,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW29",
+      "gap_mm": 246.226081,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D61",
+      "gap_mm": 246.278229,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D14",
+      "gap_mm": 246.475934,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW29",
+      "gap_mm": 246.504501,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D61",
+      "gap_mm": 246.834054,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D54",
+      "gap_mm": 249.088421,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D54",
+      "gap_mm": 249.578018,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED68",
+      "gap_mm": 251.065124,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW15",
+      "gap_mm": 251.237473,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED68",
+      "gap_mm": 251.325,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW15",
+      "gap_mm": 251.448192,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "SW62",
+      "gap_mm": 253.580417,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "SW62",
+      "gap_mm": 254.098296,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D42",
+      "gap_mm": 255.121375,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C267",
+      "gap_mm": 255.156222,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C267",
+      "gap_mm": 255.415,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D42",
+      "gap_mm": 255.510955,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D29",
+      "gap_mm": 260.728308,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D29",
+      "gap_mm": 261.036372,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D15",
+      "gap_mm": 265.273368,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D15",
+      "gap_mm": 265.525688,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "LED74",
+      "gap_mm": 266.532734,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "LED74",
+      "gap_mm": 267.011032,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D62",
+      "gap_mm": 269.243836,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "D55",
+      "gap_mm": 269.751833,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D62",
+      "gap_mm": 269.775295,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "D55",
+      "gap_mm": 270.209335,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "R125",
+      "b": "C273",
+      "gap_mm": 271.516223,
+      "overlap_mm2": 0.0
+    },
+    {
+      "a": "C124",
+      "b": "C273",
+      "gap_mm": 272.003462,
+      "overlap_mm2": 0.0
+    }
+  ],
+  "r121_proposed_footprint": {
+    "mpn": "TNPW0603156KBEEA (proposed only)",
+    "pads": {
+      "1": [
+        13.68,
+        19.45,
+        1.0,
+        0.9
+      ],
+      "2": [
+        13.68,
+        17.85,
+        1.0,
+        0.9
+      ]
+    },
+    "court_mm": [
+      1.5,
+      3.0
+    ],
+    "source": "https://www.vishay.com/doc?28950",
+    "process": "IPC land option; no assembler qualification"
+  },
+  "retired_other_uuids": [
+    "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+    "18d72adc-e983-48eb-b7d1-3047b981e17d",
+    "3aa399c7-b37b-4cb6-b1bb-33266155cd74",
+    "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+    "5b54e93a-0faf-402b-8565-7a7da068e6bb",
+    "c69210ed-fc0a-5e8b-994b-e205b18141f3",
+    "eb147f3b-fbe7-5ff5-a09d-d36fa376b92f"
+  ],
+  "pad_via_gaps": [
+    {
+      "pad": "R125.1",
+      "via": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+      "net": "GND",
+      "outer_gap_mm": 0.987941,
+      "drill_gap_mm": 1.112941
+    },
+    {
+      "pad": "C124.1",
+      "via": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+      "net": "GND",
+      "outer_gap_mm": 0.970163,
+      "drill_gap_mm": 1.095163
+    },
+    {
+      "pad": "C124.1",
+      "via": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "net": "USB_ILM",
+      "outer_gap_mm": 0.334636,
+      "drill_gap_mm": 0.459636
+    },
+    {
+      "pad": "C124.2",
+      "via": "8e0fa85d-f2bc-543d-aae7-d8f6ff75061a",
+      "net": "GND",
+      "outer_gap_mm": 0.220425,
+      "drill_gap_mm": 0.345425
+    },
+    {
+      "pad": "C124.2",
+      "via": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "net": "USB_ILM",
+      "outer_gap_mm": 0.798475,
+      "drill_gap_mm": 0.923475
+    },
+    {
+      "pad": "R121.1",
+      "via": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "net": "USB_ILM",
+      "outer_gap_mm": 0.582406,
+      "drill_gap_mm": 0.707406
+    },
+    {
+      "pad": "R121.2",
+      "via": "763086b7-5549-4f5e-bb08-ce25387b3627",
+      "net": "GND",
+      "outer_gap_mm": 0.48077,
+      "drill_gap_mm": 0.60577
+    },
+    {
+      "pad": "R121.2",
+      "via": "ff31c038-3a4c-4c1b-880e-025462019509",
+      "net": "USB_ILM",
+      "outer_gap_mm": 0.272398,
+      "drill_gap_mm": 0.397398
+    }
+  ]
+}

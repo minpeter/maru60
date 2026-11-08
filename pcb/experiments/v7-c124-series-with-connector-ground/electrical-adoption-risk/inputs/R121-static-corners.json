@@ -1,0 +1,293 @@
+{
+  "binding": {
+    "netlist_sha256": "e8c372078de57478f807872d71fc5b43f878d751c924e4dd1d96157a7763e77b",
+    "source_board_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+    "actual_C_board_sha256": "2c57bb80b6e985fd63b6414cfea52c9ce6f9b631928a3d4476d175d05c1f38ca",
+    "R120_ohm": 590000.0,
+    "R121_ohm": 156000.0,
+    "tolerance_each": 0.001,
+    "R120_MPN_TCR": "unspecified in exact netlist"
+  },
+  "equations": {
+    "node": "V=(Vin/Rtop-Ipin)/(1/Rtop+1/Rbottom); positive Ipin sinks current",
+    "R121_power": "V^2/Rbottom",
+    "threshold": "Vin=Vth+Rtop*(Vth/Rbottom+Ipin)"
+  },
+  "limits": "Static resistor-only arithmetic. \u00b10.1uA pin leakage bound only used where 0.5<VOVLO<1.5V. Parasitic pickup/ESD/clamps/dynamics absent. No accepted input fault maximum. No BOM/CAD changes.",
+  "operating_examples": [
+    {
+      "Vin_V": 5,
+      "kind": "example only; no accepted operating/fault contract",
+      "nominal_node_V": 1.0455764075067024,
+      "nominal_bottom_W": 7.0078847688116796e-06,
+      "node_min_V": 1.031592892612073,
+      "node_max_V": 1.059576202235617,
+      "max_bottom_W": 7.189616334588829e-06,
+      "corners": [
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.0579018713136732,
+          "bottom_W": 7.181260551121451e-06
+        },
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.033250943699732,
+          "bottom_W": 6.850488390033538e-06
+        },
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.059576202235617,
+          "bottom_W": 7.189616334588829e-06
+        },
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.034886259840175,
+          "bottom_W": 6.85845930227456e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.0562541240029262,
+          "bottom_W": 7.158907461777091e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.031592892612073,
+          "bottom_W": 6.828520161749852e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.05792654691689,
+          "bottom_W": 7.167246719123791e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.0332262680965145,
+          "bottom_W": 6.8364745580358786e-06
+        }
+      ]
+    },
+    {
+      "Vin_V": 5.25,
+      "kind": "example only; no accepted operating/fault contract",
+      "nominal_node_V": 1.0978552278820375,
+      "nominal_bottom_W": 7.726192957614874e-06,
+      "node_min_V": 1.083789068027448,
+      "node_max_V": 1.1119377637875116,
+      "max_bottom_W": 7.917759103311896e-06,
+      "corners": [
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.1101806916890082,
+          "bottom_W": 7.908557071167866e-06
+        },
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.085529764075067,
+          "bottom_W": 7.561246302025555e-06
+        },
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.1119377637875116,
+          "bottom_W": 7.917759103311896e-06
+        },
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.0872478213920695,
+          "bottom_W": 7.570044219381912e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.1084502994183012,
+          "bottom_W": 7.883922809222824e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.083789068027448,
+          "bottom_W": 7.537016144194222e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.1102053672922252,
+          "bottom_W": 7.893106621355983e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.0855050884718498,
+          "bottom_W": 7.545795852213675e-06
+        }
+      ]
+    },
+    {
+      "Vin_V": 5.5,
+      "kind": "example only; no accepted operating/fault contract",
+      "nominal_node_V": 1.1501340482573725,
+      "nominal_bottom_W": 8.479540570262128e-06,
+      "node_min_V": 1.135985243442823,
+      "node_max_V": 1.1642993253394065,
+      "max_bottom_W": 8.68101718144546e-06,
+      "corners": [
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.1624595120643433,
+          "bottom_W": 8.670928089556679e-06
+        },
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.1378085844504022,
+          "bottom_W": 8.307078712359976e-06
+        },
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.1642993253394065,
+          "bottom_W": 8.68101718144546e-06
+        },
+        {
+          "Rtop_ohm": 589410.0,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.1396093829439644,
+          "bottom_W": 8.316744445899763e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.1606464748336762,
+          "bottom_W": 8.643901847641484e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 155844.0,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.135985243442823,
+          "bottom_W": 8.280475817611522e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": -1e-07,
+          "node_V": 1.1624841876675605,
+          "bottom_W": 8.653970943012809e-06
+        },
+        {
+          "Rtop_ohm": 590589.9999999999,
+          "Rbottom_ohm": 156155.99999999997,
+          "pin_sink_A": 1e-07,
+          "node_V": 1.1377839088471848,
+          "bottom_W": 8.2901215658161e-06
+        }
+      ]
+    }
+  ],
+  "23V_diagnostic": {
+    "ideal_no_leakage_node_range_V": [
+      4.802048138214498,
+      4.817263662774321
+    ],
+    "ideal_no_leakage_bottom_max_W": 0.0001486079894252278,
+    "no_leakage_bound_applicable": "Node exceeds documented 1.5V OVLO recommended range; not an operating/survival claim"
+  },
+  "nominal_ratio": 0.20911528150134048,
+  "nominal_Rth_ohm": 123378.01608579088,
+  "nominal_1p2V_threshold_V": 5.7384615384615385,
+  "threshold_reference_resistor_leakage_only_range_V": [
+    5.589286272727273,
+    5.916767875542209
+  ],
+  "KOA_RN73R1E_standard_limits": {
+    "W_at_85C": 0.063,
+    "max_working_V": 50,
+    "sqrt_PR_V": 99.13626985114983,
+    "applicable_working_ceiling_V": 50,
+    "voltage_limit_over_5p5V_example_max": 42.94428323697983,
+    "derating": [
+      {
+        "ambient_C": 25,
+        "derated_W_standard_mode": 0.063,
+        "ratio_over_5p5V_example_max_power": 7257.214066417731
+      },
+      {
+        "ambient_C": 85,
+        "derated_W_standard_mode": 0.063,
+        "ratio_over_5p5V_example_max_power": 7257.214066417731
+      },
+      {
+        "ambient_C": 125,
+        "derated_W_standard_mode": 0.027000000000000003,
+        "ratio_over_5p5V_example_max_power": 3110.2345998933138
+      },
+      {
+        "ambient_C": 150,
+        "derated_W_standard_mode": 0.0045,
+        "ratio_over_5p5V_example_max_power": 518.3724333155521
+      }
+    ]
+  },
+  "R121_tempco_only_sensitivity": [
+    {
+      "C": -40,
+      "R121_fractional_tempco_bound_relative_25C": 0.0016250000000000001,
+      "threshold_relative_change_R121_only": [
+        0.001287279496742455,
+        -0.001283102625793231
+      ],
+      "excludes_R120_tempco_leakage_reference_aging": true
+    },
+    {
+      "C": 85,
+      "R121_fractional_tempco_bound_relative_25C": 0.0015,
+      "threshold_relative_change_R121_only": [
+        0.0011881092416103911,
+        -0.0011845502523695206
+      ],
+      "excludes_R120_tempco_leakage_reference_aging": true
+    },
+    {
+      "C": 125,
+      "R121_fractional_tempco_bound_relative_25C": 0.0025,
+      "threshold_relative_change_R121_only": [
+        0.0019821672142823488,
+        -0.0019722810935127733
+      ],
+      "excludes_R120_tempco_leakage_reference_aging": true
+    }
+  ]
+}

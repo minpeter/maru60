@@ -1,0 +1,66 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "exhaustive_via_contacts": [
+    {
+      "layer": "F.Cu",
+      "contacts": [
+        {
+          "uuid": "05a61be2-0243-4f1b-be73-9b2474fa2d93",
+          "net": "+4V_REG",
+          "area_mm2": 0.212055984718,
+          "outlines": 1
+        }
+      ],
+      "zone_contacts": []
+    },
+    {
+      "layer": "In1.Cu",
+      "contacts": [],
+      "zone_contacts": []
+    },
+    {
+      "layer": "In2.Cu",
+      "contacts": [],
+      "zone_contacts": []
+    },
+    {
+      "layer": "B.Cu",
+      "contacts": [
+        {
+          "uuid": "495170b7-a1dd-4ce1-a342-da4842fa597e",
+          "net": "+4V_REG",
+          "area_mm2": 0.212055984718,
+          "outlines": 1
+        },
+        {
+          "uuid": "ec862796-4c8c-41ec-8cd8-90ffc1fdbe4e",
+          "net": "+4V_REG",
+          "area_mm2": 0.031270172518,
+          "outlines": 1
+        }
+      ],
+      "zone_contacts": []
+    }
+  ],
+  "retained_BCu_direct_contacts": [
+    {
+      "a": "495170b7-a1dd-4ce1-a342-da4842fa597e",
+      "b": "ec862796-4c8c-41ec-8cd8-90ffc1fdbe4e",
+      "area_mm2": 0.085537916654,
+      "guarded_area_mm2": 0.0855352354145
+    },
+    {
+      "a": "495170b7-a1dd-4ce1-a342-da4842fa597e",
+      "b": "63b6ad78-ea99-409c-ae95-f861249c5bf6",
+      "area_mm2": 0.23009815719,
+      "guarded_area_mm2": 0.2300942595665
+    },
+    {
+      "a": "ec862796-4c8c-41ec-8cd8-90ffc1fdbe4e",
+      "b": "63b6ad78-ea99-409c-ae95-f861249c5bf6",
+      "area_mm2": 0.11503691374,
+      "guarded_area_mm2": 0.1150339005785
+    }
+  ],
+  "interpretation": "After deleting both F.Cu leaves via has only B.Cu contacts; every pair among rail, TP3 lead and TP3 pad directly contacts without via annulus. Via hole removal may alter surrounding fill: not yet qualified."
+}

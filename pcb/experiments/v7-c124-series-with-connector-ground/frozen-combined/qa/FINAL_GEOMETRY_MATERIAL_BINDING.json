@@ -1,0 +1,33 @@
+{
+  "status": "PASS actual geometry/R2 binding; combined remains UNSELECTED",
+  "source_sha256": "f987edb49e7eb99e6db711ea428a5efb66a36653fe9dce77b02aae12f281441b",
+  "candidate_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "actual_geometry_sha256": "0c1e4272b57faafbb6bacfae310bd0589ab83bf2395882b3fd2e667dd38235d8",
+  "actual_graph_sha256": "304954c5b4195c28bcea68ef950625584efd557fd3475430c1245c0078ff877c",
+  "exact_two_inner_plane_contacts": [
+    {
+      "layer": "In1.Cu",
+      "zone": "zone:7a0e11fe-4433-4b0d-914b-0fa7262b6aa2:4:0",
+      "overlap_mm2": 0.147260768066,
+      "guarded_overlap_mm2": 0.1472558792225
+    },
+    {
+      "layer": "In2.Cu",
+      "zone": "zone:3a23a46c-3272-47d8-86cd-03a9240b82af:6:0",
+      "overlap_mm2": 0.147260768066,
+      "guarded_overlap_mm2": 0.1472558792225
+    }
+  ],
+  "exact_one_proven_through_barrel": true,
+  "all_old_R2_material_contact_witnesses_unchanged": true,
+  "D_14_support_and_58_reference_proofs_preserved": true,
+  "source_D_physical_new_shape_checks": 37,
+  "source_D_current_outer_shadow_checks": 13131,
+  "c770_and_a9_historical_shadows_rebound": true,
+  "physical_drill_loss_each_inner_plane_mm2": 0.049087681002,
+  "no_other_physical_zone_loss": true,
+  "no_new_old_object_contacts": true,
+  "all_native_warning_and_open_entries_exact": true,
+  "qualification": false,
+  "phase_disposition": "actual_geometry.json earlier pending-R2 labels are closed by this exact actual-graph binding. comparison.json note about initial order-sensitive diagnostic is inherited aaaf-method provenance; combined only used multiset comparison and preserves one premature comparison invocation before export completion."
+}

@@ -1,0 +1,3544 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "scan_bounds_mm": [
+    108.2,
+    81.6,
+    113.8,
+    82.3
+  ],
+  "scan_step_mm": 0.1,
+  "scan_count_inside_F_pocket": 40,
+  "copper_legal_count": 0,
+  "retained_reference_legal_count": 0,
+  "legal_second_via_count": 0,
+  "site_rows": [
+    {
+      "xy_mm": [
+        113.0,
+        81.6
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.29999999999999716,
+          "layer": "B.Cu",
+          "uuid": "93871cb8-e131-418e-90bf-c10ef22d0323",
+          "class": "PAD",
+          "net": "GND",
+          "layers": [
+            "B.Cu"
+          ],
+          "ref": "U1",
+          "pad": "61",
+          "pos": [
+            111.0,
+            81.5
+          ],
+          "size": [
+            3.4,
+            3.4
+          ]
+        },
+        {
+          "center_to_copper_mm": 0.3064840478752455,
+          "layer": "F.Cu",
+          "uuid": "2572248b-07d6-4085-82e9-5f0435be0a3f",
+          "class": "PCB_TRACK",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1495,
+            81.01223
+          ],
+          "end": [
+            113.16173,
+            81.0
+          ],
+          "width": 0.6
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.29999999999999716,
+          "layer": "B.Cu",
+          "uuid": "93871cb8-e131-418e-90bf-c10ef22d0323",
+          "class": "PAD",
+          "net": "GND",
+          "layers": [
+            "B.Cu"
+          ],
+          "ref": "U1",
+          "pad": "61",
+          "pos": [
+            111.0,
+            81.5
+          ],
+          "size": [
+            3.4,
+            3.4
+          ]
+        },
+        {
+          "center_to_copper_mm": 0.3064840478752455,
+          "layer": "F.Cu",
+          "uuid": "2572248b-07d6-4085-82e9-5f0435be0a3f",
+          "class": "PCB_TRACK",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1495,
+            81.01223
+          ],
+          "end": [
+            113.16173,
+            81.0
+          ],
+          "width": 0.6
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.1,
+        81.6
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.2898493241944839,
+          "layer": "F.Cu",
+          "uuid": "90af1e63-2491-4173-9506-868f85dc3b35",
+          "class": "PCB_VIA",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "pos": [
+            113.1495,
+            81.01223
+          ],
+          "width": 0.6,
+          "drill": 0.25
+        },
+        {
+          "center_to_copper_mm": 0.2898493241944839,
+          "layer": "In1.Cu",
+          "uuid": "90af1e63-2491-4173-9506-868f85dc3b35",
+          "class": "PCB_VIA",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "pos": [
+            113.1495,
+            81.01223
+          ],
+          "width": 0.6,
+          "drill": 0.25
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.2898493241944839,
+          "layer": "F.Cu",
+          "uuid": "90af1e63-2491-4173-9506-868f85dc3b35",
+          "class": "PCB_VIA",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "pos": [
+            113.1495,
+            81.01223
+          ],
+          "width": 0.6,
+          "drill": 0.25
+        },
+        {
+          "center_to_copper_mm": 0.2898493241944839,
+          "layer": "B.Cu",
+          "uuid": "90af1e63-2491-4173-9506-868f85dc3b35",
+          "class": "PCB_VIA",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "pos": [
+            113.1495,
+            81.01223
+          ],
+          "width": 0.6,
+          "drill": 0.25
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.2,
+        81.6
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.2899342524366491,
+          "layer": "F.Cu",
+          "uuid": "90af1e63-2491-4173-9506-868f85dc3b35",
+          "class": "PCB_VIA",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "pos": [
+            113.1495,
+            81.01223
+          ],
+          "width": 0.6,
+          "drill": 0.25
+        },
+        {
+          "center_to_copper_mm": 0.2899342524366491,
+          "layer": "In1.Cu",
+          "uuid": "90af1e63-2491-4173-9506-868f85dc3b35",
+          "class": "PCB_VIA",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "pos": [
+            113.1495,
+            81.01223
+          ],
+          "width": 0.6,
+          "drill": 0.25
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.2899342524366491,
+          "layer": "F.Cu",
+          "uuid": "90af1e63-2491-4173-9506-868f85dc3b35",
+          "class": "PCB_VIA",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "pos": [
+            113.1495,
+            81.01223
+          ],
+          "width": 0.6,
+          "drill": 0.25
+        },
+        {
+          "center_to_copper_mm": 0.2899342524366491,
+          "layer": "B.Cu",
+          "uuid": "90af1e63-2491-4173-9506-868f85dc3b35",
+          "class": "PCB_VIA",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "pos": [
+            113.1495,
+            81.01223
+          ],
+          "width": 0.6,
+          "drill": 0.25
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.3,
+        81.6
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.29999999999999716,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        },
+        {
+          "center_to_copper_mm": 0.29999999999999716,
+          "layer": "F.Cu",
+          "uuid": "8ced2f34-575e-48f3-a500-8677f6d5ef41",
+          "class": "PCB_TRACK",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.16173,
+            81.0
+          ],
+          "end": [
+            116.8,
+            81.0
+          ],
+          "width": 0.6
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.29999999999999716,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        },
+        {
+          "center_to_copper_mm": 0.29999999999999716,
+          "layer": "F.Cu",
+          "uuid": "8ced2f34-575e-48f3-a500-8677f6d5ef41",
+          "class": "PCB_TRACK",
+          "net": "+1V1",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.16173,
+            81.0
+          ],
+          "end": [
+            116.8,
+            81.0
+          ],
+          "width": 0.6
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.0,
+        81.7
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.2749999999999915,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2890054640112131,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.2749999999999915,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2890054640112131,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.1,
+        81.7
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.2749999999999915,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2749999999999915,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.2749999999999915,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2749999999999915,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.2,
+        81.7
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.2890053074266296,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2890054640112149,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.2890053074266296,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2890054640112149,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.3,
+        81.7
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.29999999999999716,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        },
+        {
+          "center_to_copper_mm": 0.3281122484912712,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.29999999999999716,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        },
+        {
+          "center_to_copper_mm": 0.3281122484912712,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.0,
+        81.8
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.1942569794524789,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.1942569794524789,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.1,
+        81.8
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.2,
+        81.8
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.1942569794524842,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.19425828002945356,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.1942569794524842,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.19425828002945356,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.3,
+        81.8
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.2451552215760441,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.24515584575734373,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.2451552215760441,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.24515584575734373,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.0,
+        81.9
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.07499999999998862,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.10527813150374579,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.07499999999998862,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.10527813150374579,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.1,
+        81.9
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.07499999999998862,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.07499999999998863,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.07499999999998862,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.07499999999998863,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.2,
+        81.9
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.105276934581182,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.10527813150374818,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.105276934581182,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.10527813150374818,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.3,
+        81.9
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.17248738556194637,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499929195570968,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.17248738556194637,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499929195570968,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.0,
+        82.0
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.0368034303155372,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.0368034303155372,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.1,
+        82.0
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.2,
+        82.0
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.031066029324644858,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.036803152851314934,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.031066029324644858,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.036803152851314934,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.3,
+        82.0
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.10177670744329559,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.13115463124114465,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.10177670744329559,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.13115463124114465,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.0,
+        82.1
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.0368034303155372,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.0368034303155372,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.1,
+        82.1
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.2,
+        82.1
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.036803152851314934,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.036803152851314934,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.3,
+        82.1
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.031066029324644865,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.1311546312411412,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.031066029324644865,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.1311546312411412,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.4,
+        82.1
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.10177670744330564,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.22913818418190657,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.10177670744330564,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.22913818418190657,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.0,
+        82.2
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.07500000000000284,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.10177670744330561,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.07500000000000284,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.10177670744330561,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.1,
+        82.2
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.031066029324654874,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.07500000000000284,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.031066029324654874,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.07500000000000284,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.2,
+        82.2
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.10527693458118384,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.10527693458118384,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.3,
+        82.2
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499929195570968,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499929195570968,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.4,
+        82.2
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.03106602932464485,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.26040991337432223,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.03106602932464485,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.26040991337432223,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.5,
+        82.2
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.10177670744329557,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2605548316637227,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.10177670744329557,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2605548316637227,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.0,
+        82.3
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.17248738556195645,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.17248738556195645,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.1,
+        82.3
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.10177670744330572,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.10177670744330572,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.17499999999999716,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.2,
+        82.3
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.031066029324644855,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.19425828002945356,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.031066029324644855,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.19425828002945356,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.3,
+        82.3
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.24515584575734373,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.24515584575734373,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.4,
+        82.3
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.3155114952786951,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.0,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.3155114952786951,
+          "layer": "F.Cu",
+          "uuid": "cfb87ae1-c486-4a8d-89f0-ba832a7e2bf4",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            113.1,
+            82.05
+          ],
+          "end": [
+            111.6,
+            82.05
+          ],
+          "width": 0.15
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.5,
+        82.3
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.03106602932464485,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.34721350505099824,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.03106602932464485,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.34721350505099824,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.6,
+        82.3
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.10177670744329557,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.3123097321890512,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.10177670744329557,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.3123097321890512,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.7,
+        82.3
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.1724873855619564,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2999999999999971,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.1724873855619564,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2999999999999971,
+          "layer": "B.Cu",
+          "uuid": "543cfde6-c0cc-494d-bd0d-690025e63549",
+          "class": "PCB_TRACK",
+          "net": "+3V3",
+          "layers": [
+            "B.Cu"
+          ],
+          "start": [
+            113.7,
+            81.9
+          ],
+          "end": [
+            113.7,
+            81.5
+          ],
+          "width": 0.2
+        }
+      ]
+    },
+    {
+      "xy_mm": [
+        113.8,
+        82.3
+      ],
+      "all_layer_copper_clearance_pass": false,
+      "retained_reference_envelope_pass": false,
+      "nearest_copper": [
+        {
+          "center_to_copper_mm": 0.24319806368060715,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2999999999999971,
+          "layer": "B.Cu",
+          "uuid": "2ada2ba1-caee-40a5-940f-a670874dd213",
+          "class": "PAD",
+          "net": "QSPI_SD3",
+          "layers": [
+            "B.Cu"
+          ],
+          "ref": "U1",
+          "pad": "55",
+          "pos": [
+            114.45,
+            82.3
+          ],
+          "size": [
+            0.7,
+            0.23
+          ]
+        }
+      ],
+      "nearest_retained_shadow": [
+        {
+          "center_to_copper_mm": 0.24319806368060715,
+          "layer": "F.Cu",
+          "uuid": "f658d4c1-a6e7-4eff-9539-754bcf96661b",
+          "class": "PCB_TRACK",
+          "net": "LED_ENABLE",
+          "layers": [
+            "F.Cu"
+          ],
+          "start": [
+            114.4,
+            83.35
+          ],
+          "end": [
+            113.1,
+            82.05
+          ],
+          "width": 0.15
+        },
+        {
+          "center_to_copper_mm": 0.2999999999999971,
+          "layer": "B.Cu",
+          "uuid": "2ada2ba1-caee-40a5-940f-a670874dd213",
+          "class": "PAD",
+          "net": "QSPI_SD3",
+          "layers": [
+            "B.Cu"
+          ],
+          "ref": "U1",
+          "pad": "55",
+          "pos": [
+            114.45,
+            82.3
+          ],
+          "size": [
+            0.7,
+            0.23
+          ]
+        }
+      ]
+    }
+  ],
+  "selected_site_count": 0,
+  "selection": "At most eight sites in north-first order, at least0.4mm apart",
+  "B_reach_results": [],
+  "scope": "Read-only third-transition planning; fixed first(112.6,84.0) and second(113.2,82.9); no candidate. 0.5/0.25 mm second through-via; all-layer copper clearance 0.15 mm; inner envelope radius 0.45 mm. Retained-reference screen conservatively rejects contact with any retained outer conductor. Actual native shapes/all-hole-cut GND. Each B reach has only its own candidate transition allowance, not other trial sites. B reach lacks target-via windows, so negatives at destination are conservative."
+}

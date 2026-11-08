@@ -1,0 +1,92 @@
+{
+  "status": "READ ONLY PLAN; no board constructed; awaiting explicit Space-save release",
+  "source_board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "source_project": "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-four-reference-logo/candidate-four/pcb",
+  "source_study": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/extracted/v7-buck-feedback-study-20261104",
+  "study_board_is_different": "8a4ff6a646396a3faa11dda0f756c89e82c20eec18f37fe531cf730789106eea; current2c7 reverified independently",
+  "retire_uuids": [
+    "d382de57-3476-43c4-ac26-0a72b21acf7c",
+    "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa"
+  ],
+  "replacement": {
+    "uuid": "assign new UUID only after release",
+    "net": "BUCK_FB",
+    "layer": "F.Cu",
+    "width_mm": 0.15,
+    "start_mm": [
+      181.0,
+      85.75
+    ],
+    "end_mm": [
+      182.95,
+      85.75
+    ],
+    "active_centerline_mm": 1.95,
+    "retained_contacts": [
+      {
+        "uuid": "3c804add-ee74-5104-b471-73062ffcaeb9",
+        "area_mm2": 0.018878372011
+      },
+      {
+        "uuid": "d20e66e3-44fb-4535-81e2-9bc53c5f6519",
+        "area_mm2": 0.0177922107475
+      },
+      {
+        "uuid": "37c51a69-ea1f-42e2-b356-72426fc3b1b2",
+        "area_mm2": 0.0207041367245
+      }
+    ]
+  },
+  "removed_dead_centerline_mm": 2.85,
+  "removed_drill": {
+    "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c",
+    "diameter_mm": 0.25,
+    "xy_mm": [
+      178.15,
+      85.75
+    ]
+  },
+  "graph_controls": {
+    "original_reachable_FB_pads": [
+      "4439645c-928a-49ba-a4d7-2d7b4d71331f",
+      "627b5668-4734-49f4-9bbc-ede74a820505",
+      "7cb748f0-4e2e-4d12-9da8-d950bc9c538d"
+    ],
+    "via_only_removal_reachable_FB_pads": [
+      "4439645c-928a-49ba-a4d7-2d7b4d71331f",
+      "627b5668-4734-49f4-9bbc-ede74a820505",
+      "7cb748f0-4e2e-4d12-9da8-d950bc9c538d"
+    ],
+    "entire_track_removed_without_replacement_reachable_FB_pads": [
+      "4439645c-928a-49ba-a4d7-2d7b4d71331f"
+    ],
+    "proper_trim_reachable_FB_pads": [
+      "4439645c-928a-49ba-a4d7-2d7b4d71331f",
+      "627b5668-4734-49f4-9bbc-ede74a820505",
+      "7cb748f0-4e2e-4d12-9da8-d950bc9c538d"
+    ]
+  },
+  "proposed_replacement_native_foreign_clearance_failures": [],
+  "preserve": [
+    "Every original conductor except named via and track",
+    "Original1.95mm active geometry and all three physical FB pads",
+    "All other footprints/drills/net names/project settings/fill rules",
+    "All-net physical pad partitions and rooted contacts",
+    "All original retained full-width reference shadows; quantify actual fill gain and removed hole separately"
+  ],
+  "required_after_release": [
+    "Separate immutable source/prefill/filled snapshots",
+    "Normal native refill,DRC,schematic parity,ERC",
+    "Exact retirement/replacement and unrelated geometry diff",
+    "All-net physical pad-partition and root/contact comparison",
+    "Full actual saved-fill gain/loss and old-shadow comparison",
+    "Exact warning delta including potential dangling replacement",
+    "Independent actual-board review before any parent selection"
+  ],
+  "prohibited_claims": [
+    "No improved noise or loop stability inferred",
+    "No pickup reduction inferred from lower shunt capacitance",
+    "No hardware/SI/manufacturing qualification",
+    "No wider/reworked active feedback routing"
+  ]
+}

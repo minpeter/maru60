@@ -1,0 +1,43 @@
+{
+  "status": "FROZEN_QUALIFIED_DEVELOPMENT_PROTOTYPE_NOT_STRICT_ACCEPTANCE_OR_FABRICATION",
+  "candidate": {
+    "pcb_sha256": "2e532c1a16e64a34eafafdfbd5b85c05d70bb12ad9e52924c5cbe024fdc9aa2c",
+    "open_pairs": 9,
+    "warnings": 40,
+    "other_DRC_errors": 0,
+    "ERC": 0,
+    "schematic_parity": 0,
+    "cold_refill_identical_files": 58,
+    "tracks": 9773,
+    "vias": 923,
+    "footprints": 383,
+    "track_length_mm": 13210.809199693245
+  },
+  "only_change_from_ef45f84": "C136 Reference field size, position and orientation; all copper, hole geometry, placements, masks, fills, rules, other labels and57 companions exactly unchanged.",
+  "source_commit": "ef45f84cb6d31dec90782d69cd757e2a26dc9961",
+  "source_pcb_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "removed_warning_types": [
+    "C136 text_height",
+    "C136 silk_over_copper"
+  ],
+  "fresh_material_recomputed": true,
+  "all9_physical_open_components_preserved": true,
+  "remaining_pairs": {
+    "header": 3,
+    "MCU": 6
+  },
+  "strict_baseline_preserved": {
+    "commit": "bbf61e6ae1bb54d31d7fa2b353fd19ca1410275a",
+    "open_pairs": 11,
+    "warnings": 51
+  },
+  "strict_exact_no_loss": "FAIL inherited from c782 and ef45; no NEW copper or fill difference in this candidate.",
+  "inherited_guarded_contact_proof_failures": 51,
+  "new_power_supplement": "16 exact-rational resistor-only tolerance corners, conditional on frozen synthetic comparator thresholds. No active circuit solve or hardware voltage bounds.",
+  "limitations": [
+    "Nine open pairs and40 native warnings remain.",
+    "No full current-board active-power, SI/EMI, full firmware-build, fabrication or hardware qualification.",
+    "LED qualification remains OFF.",
+    "No public push, purchase, manufacture or flashing."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "target_uuid": "acf57724-d322-4087-84ab-2893c779cea3",
+  "target_endpoints": [
+    [
+      22.6,
+      18.55
+    ],
+    [
+      23.7,
+      19.65
+    ]
+  ],
+  "width_mm": 0.8,
+  "material_nodes": {
+    "object:acf57724-d322-4087-84ab-2893c779cea3:0:0": {
+      "kind": "object",
+      "uuid": "acf57724-d322-4087-84ab-2893c779cea3",
+      "layer": "F.Cu",
+      "index": 0,
+      "area_mm2": 1.747162505989,
+      "net": "+4V_REG"
+    }
+  },
+  "only_material_edge": [
+    [
+      "object:05a61be2-0243-4f1b-be73-9b2474fa2d93:0:0",
+      "object:acf57724-d322-4087-84ab-2893c779cea3:0:0",
+      0.5060958015915,
+      0.5060906766015
+    ]
+  ],
+  "neighbor_endpoints": [
+    [
+      23.7,
+      19.65
+    ],
+    [
+      33.4,
+      19.65
+    ]
+  ],
+  "proof": "One positive non-pad material node with exactly one guarded contact and no other raw zone or unproved contacts: removing graph leaf cannot disconnect retained vertices or pad partitions. Other geometry must still be validated after refill.",
+  "candidate_sha256": "d937b8a5f5040ae15d4c748d789b90996b6ba7ee2024a503a8f11d8d371905b7"
+}

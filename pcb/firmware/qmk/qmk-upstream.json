@@ -8,5 +8,15 @@
   ],
   "sample_keyboard_json_blob": "ea6b62193d06cb9401b6d86947bff122c8c8c7ff",
   "qmk_build_command": "qmk compile -kb maru60/rp2350 -km via",
-  "verification": "NOT RUN: no local QMK checkout/toolchain in this execution environment"
+  "local_patches": [
+    "patches/via-eeprom-schema-v1.patch",
+    "patches/report-state-sync-v1.patch"
+  ],
+  "patch_apply_tool": "apply_via_schema_patch.py",
+  "patch_apply_tools": [
+    "apply_via_schema_patch.py",
+    "apply_report_sync_patch.py"
+  ],
+  "historical_verification": "Five full ARM builds PASS with exact VIA schema and opt-in report-sync patches; six native QMK matrix/action/report tests and protocol source-model pass; no physical hardware/USB validation.",
+  "verification": "NEW recovery candidate, NOT BUILT against full QMK/ARM. Historical field refers to recovered baseline only."
 }

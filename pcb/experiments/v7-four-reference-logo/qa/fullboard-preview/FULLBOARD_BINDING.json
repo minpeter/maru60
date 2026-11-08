@@ -1,0 +1,123 @@
+{
+  "candidate_board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "displayed_layers": [
+    "F.Cu",
+    "F.Mask",
+    "F.Silkscreen",
+    "B.Cu",
+    "B.Mask",
+    "B.Silkscreen",
+    "Edge.Cuts"
+  ],
+  "manufacturing_or_3D_qualified": false,
+  "native_and_raster_records": [
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--layers",
+        "F.Cu,F.Mask,F.Silkscreen,Edge.Cuts",
+        "--page-size-mode",
+        "2",
+        "--exclude-drawing-sheet",
+        "--mode-single",
+        "--output",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/fullboard-preview/F-copper-mask-silk.svg",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "log_sha256": "ec808cabc3693ea78eb10b6a236ffb63fc58741f4c30aded428f81a271fc110f",
+      "private_xdg": {
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-F/xdg_cache_home",
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-F/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-F/xdg_data_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-F/xdg_runtime_dir",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-F/xdg_state_home"
+      },
+      "side": "F",
+      "svg_sha256": "e113f24a52d74d9a407d9ad0b0d84bf5e3835b835a4154fec3ff173ab386e32f"
+    },
+    {
+      "command": [
+        "inkscape",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/fullboard-preview/F-copper-mask-silk.svg",
+        "--export-type=png",
+        "--export-filename=/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/fullboard-preview/F-copper-mask-silk.png",
+        "--export-width=2600",
+        "--export-background=#122129",
+        "--export-background-opacity=1"
+      ],
+      "exit_code": 0,
+      "log_sha256": "ee14fd4edc96135f7ee457358bbffe9c9c2c9d8ae5ca704ff720f9c902d0ada8",
+      "png_sha256": "cba0f110fc03178debbb96458c089b0c5e30e8adde61331031c4fac738d13b46",
+      "private_xdg": {
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-F/xdg_cache_home",
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-F/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-F/xdg_data_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-F/xdg_runtime_dir",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-F/xdg_state_home"
+      },
+      "side": "F"
+    },
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--layers",
+        "B.Cu,B.Mask,B.Silkscreen,Edge.Cuts",
+        "--page-size-mode",
+        "2",
+        "--exclude-drawing-sheet",
+        "--mode-single",
+        "--output",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/fullboard-preview/B-copper-mask-silk.svg",
+        "--mirror",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "log_sha256": "6385c3f10b9752576bdbcee2d257a281e5c3d3039ff157626a39518b420e6b48",
+      "private_xdg": {
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-B/xdg_cache_home",
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-B/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-B/xdg_data_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-B/xdg_runtime_dir",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-native-B/xdg_state_home"
+      },
+      "side": "B",
+      "svg_sha256": "1d1adae498e43f3458a6044f1741abb4cb76b277018db1714f378731b154df04"
+    },
+    {
+      "command": [
+        "inkscape",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/fullboard-preview/B-copper-mask-silk.svg",
+        "--export-type=png",
+        "--export-filename=/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/fullboard-preview/B-copper-mask-silk.png",
+        "--export-width=2600",
+        "--export-background=#122129",
+        "--export-background-opacity=1"
+      ],
+      "exit_code": 0,
+      "log_sha256": "dd62d3dbd4fbfb6e29b9f0b70ed13570093bbfedc19f9f1e70c95a131335872c",
+      "png_sha256": "65d222aa628f27a2c3cf13d502ee85a710e83f07eacba5cbf6b26866fc8e5bda",
+      "private_xdg": {
+        "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-B/xdg_cache_home",
+        "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-B/xdg_config_home",
+        "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-B/xdg_data_home",
+        "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-B/xdg_runtime_dir",
+        "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/fullboard-raster-B/xdg_state_home"
+      },
+      "side": "B"
+    }
+  ],
+  "original_binding_preserved": "qa/provenance-history/FULLBOARD_BINDING.json",
+  "preview_png_sha256": "a00b4ddb18e3888149a2363f80699094a848858db47d594596fab2b5c9c38c9e",
+  "provenance_description_correction_only_no_rerender": true,
+  "same_snapshot_ERC_XML_source_sha256": "4e1392264c277d5d1b848a8e579dc4e52f02d5482ee0b2d051cea1dab0b75f89",
+  "same_snapshot_metrics_source_sha256": "e26c35c291b255ac49531f263afd7d7b801e181cce00d2b7ad137bf965c5dede",
+  "schematic_path_binding_sha256": "361caa2996d6a841d367b027c2a8034d2aa2d0976153c89b718e9cac8ea64d4e",
+  "selected": false
+}

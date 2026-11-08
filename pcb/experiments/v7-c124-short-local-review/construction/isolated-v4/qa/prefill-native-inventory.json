@@ -1,0 +1,111 @@
+{
+  "pcb_sha256": "db4f1277729b00c73d8e666313486dce2da4c955c6a11729d5397d8dbbe600fc",
+  "tracks": 9742,
+  "vias": 919,
+  "footprints": 383,
+  "length_mm": 13186.830228728211,
+  "parts": {
+    "R125": {
+      "value": "100 1%",
+      "fp": "C124_Short_Study:R_KOA_RK73H1E_0402_Reflow_B",
+      "pos": [
+        15.54,
+        20.27
+      ],
+      "pads": [
+        {
+          "num": "1",
+          "net": "USB_DVDT",
+          "pos": [
+            15.99,
+            20.27
+          ],
+          "size": [
+            0.4,
+            0.3
+          ]
+        },
+        {
+          "num": "2",
+          "net": "USB_DVDT_CAP",
+          "pos": [
+            15.09,
+            20.27
+          ],
+          "size": [
+            0.4,
+            0.3
+          ]
+        }
+      ]
+    },
+    "C124": {
+      "value": "10nF 10% 50V",
+      "fp": "C124_Short_Study:C_Murata_GRM155_0402_B_Conditional",
+      "pos": [
+        15.38,
+        19.17
+      ],
+      "pads": [
+        {
+          "num": "1",
+          "net": "",
+          "pos": [
+            15.005,
+            19.17
+          ],
+          "size": [
+            0.35,
+            0.5
+          ]
+        },
+        {
+          "num": "2",
+          "net": "GND",
+          "pos": [
+            15.755,
+            19.17
+          ],
+          "size": [
+            0.35,
+            0.5
+          ]
+        }
+      ]
+    },
+    "R121": {
+      "value": "156k 0.1%",
+      "fp": "C124_Short_Study:R_Vishay_TNPW0603_IPC_Vertical_B",
+      "pos": [
+        13.68,
+        18.65
+      ],
+      "pads": [
+        {
+          "num": "1",
+          "net": "USB_OVLO",
+          "pos": [
+            13.68,
+            19.45
+          ],
+          "size": [
+            1.0,
+            0.9
+          ]
+        },
+        {
+          "num": "2",
+          "net": "GND",
+          "pos": [
+            13.68,
+            17.85
+          ],
+          "size": [
+            1.0,
+            0.9
+          ]
+        }
+      ]
+    }
+  }
+}

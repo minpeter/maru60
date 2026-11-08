@@ -1,0 +1,23 @@
+{
+  "command": [
+    "kicad-cli",
+    "pcb",
+    "drc",
+    "--schematic-parity",
+    "--format",
+    "json",
+    "-o",
+    "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/candidate-four-drc.json",
+    "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_pcb"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 4.67913582500023,
+  "private_xdg": {
+    "XDG_CONFIG_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/candidate-four-drc/xdg_config_home",
+    "XDG_DATA_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/candidate-four-drc/xdg_data_home",
+    "XDG_CACHE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/candidate-four-drc/xdg_cache_home",
+    "XDG_STATE_HOME": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/candidate-four-drc/xdg_state_home",
+    "XDG_RUNTIME_DIR": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/runtime/candidate-four-drc/xdg_runtime_dir"
+  },
+  "log_sha256": "a7c6bb2e97c9cb8624ac47c778e787b6304ff9f3554b85066a08835dd35a570c"
+}

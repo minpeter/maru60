@@ -1,0 +1,200 @@
+{
+  "arithmetic_pass": true,
+  "scope": "Analytical sensitivity audit only; no CAD/BOM edits, active SPICE, native CAD load/fill/save or hardware qualification.",
+  "original_study_files": {
+    "MANIFEST.json": "07afdc6421442d78b7c1a569761007c8a00a267033cc4cbd0a2e328e6c777476",
+    "README.md": "c33e019d6f551cf23a9ce394a15eca3a0b6c5e01fc11c9b47ac4624e0ea6ae56",
+    "REVIEW-CORRECTIONS.md": "6ba1c2f5194374c609ead3032dc223935090f8361bf8e1b0d0b2790a3ff05cdb",
+    "calculate.py": "868ab4bb8bf97e0c43d3dc8ca409a3d5519a2af3c0d5606aa6849745a4d6de02",
+    "results.json": "4064a007fb8afa2ab976cf6559e2182fe285402fcd5ce1e890a12ec9cd05376f",
+    "sensitivity.csv": "72ab3cdf514dd9c30d8fd943b9b230e225f4798f79d1fbc0ba05594e9c30703a"
+  },
+  "source_file_hashes": {
+    "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-reference-legibility/candidate/pcb/maru60.kicad_pcb": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+    "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-reference-legibility/qa/recovery-native/netlist.xml": "1b46d899330d9aba0b86380ab08b7a60d309fa7a1c8962b9e6fab3ad556f2d29"
+  },
+  "isolated_reproduction_exit_code": 0,
+  "both_results_byte_equal": true,
+  "unique_complete_sweep_rows": 1200,
+  "independent_SI_max_absolute_errors": {
+    "C_eff_nF": 0,
+    "SR_design_V_per_ms": 5.05847571845e-17,
+    "ramp_design_ms": 1e-26,
+    "cap_only_inrush_mA": 5.72176495759e-15
+  },
+  "exact_corner_caps_nF": {
+    "8.2nF_10pct_plus15pct": 10.373,
+    "8.2nF_5pct_plus15pct": 9.9015,
+    "6.8nF_10pct_plus15pct": 8.602
+  },
+  "source_pin_inventory": {
+    "C124": {
+      "value": "10nF 10% 50V",
+      "pads": [
+        [
+          "1",
+          "USB_DVDT"
+        ],
+        [
+          "2",
+          "GND"
+        ]
+      ]
+    },
+    "C126": {
+      "value": "1uF 50V",
+      "pads": [
+        [
+          "1",
+          "VBUS_PROTECTED_RAW"
+        ],
+        [
+          "2",
+          "GND"
+        ]
+      ]
+    },
+    "C136": {
+      "value": "100nF 50V",
+      "pads": [
+        [
+          "1",
+          "VBUS_PROTECTED_RAW"
+        ],
+        [
+          "2",
+          "GND"
+        ]
+      ]
+    },
+    "C137": {
+      "value": "4.7uF 50V effective>=2uF TBD",
+      "pads": [
+        [
+          "1",
+          "VBUS_PROTECTED_RAW"
+        ],
+        [
+          "2",
+          "GND"
+        ]
+      ]
+    },
+    "U8": {
+      "value": "TPS259470LRPW",
+      "pads": [
+        [
+          "1",
+          "USB_UVLO"
+        ],
+        [
+          "1",
+          "USB_UVLO"
+        ],
+        [
+          "2",
+          "USB_OVLO"
+        ],
+        [
+          "3",
+          "unconnected-(U8-AUXOFF-Pad3)"
+        ],
+        [
+          "4",
+          "USB_INPUT_FAULT_N"
+        ],
+        [
+          "4",
+          "USB_INPUT_FAULT_N"
+        ],
+        [
+          "5",
+          "VBUS_FUSED"
+        ],
+        [
+          "6",
+          "VBUS_PROTECTED_RAW"
+        ],
+        [
+          "7",
+          "USB_DVDT"
+        ],
+        [
+          "7",
+          "USB_DVDT"
+        ],
+        [
+          "8",
+          "GND"
+        ],
+        [
+          "9",
+          "USB_ILM"
+        ],
+        [
+          "10",
+          "unconnected-(U8-ITIMER-Pad10)"
+        ],
+        [
+          "10",
+          "unconnected-(U8-ITIMER-Pad10)"
+        ]
+      ]
+    },
+    "U18": {
+      "value": "TPS62932DRLR",
+      "pads": [
+        [
+          "1",
+          "unconnected-(U18-RT_FLOAT_500KHZ-Pad1)"
+        ],
+        [
+          "2",
+          "unconnected-(U18-EN_FLOAT_ENABLE-Pad2)"
+        ],
+        [
+          "3",
+          "VBUS_PROTECTED_RAW"
+        ],
+        [
+          "4",
+          "GND"
+        ],
+        [
+          "5",
+          "BUCK_SW"
+        ],
+        [
+          "6",
+          "BUCK_BST"
+        ],
+        [
+          "7",
+          "BUCK_SS"
+        ],
+        [
+          "8",
+          "BUCK_FB"
+        ]
+      ]
+    }
+  },
+  "XML_U18_EN_nets": {
+    "unconnected-(U18-EN_FLOAT_ENABLE-Pad2)": [
+      [
+        "U18",
+        "2"
+      ]
+    ]
+  },
+  "U18_EN_intentionally_floating_in_netlist_status": "Provisional; DRL pad geometry/paste not independently qualified; EN intentionally floating per 9.3.6",
+  "baseline_C124_footprint": "0603 metric1608",
+  "proposed_both_package": "0402 metric1005; not assumed drop-in",
+  "source_study_unchanged": true,
+  "limitations": [
+    "The 1200 rows are a complete factorial of assumed constant-capacitance cases, not vendor active-controller simulations.",
+    "Manufacturer capacitance tolerance and X7R temperature factors alone do not prove combined all-condition effective capacitance.",
+    "The 5.8uF nominal sum excludes active buck/downstream load, capacitor bias/aging, source impedance, current limits and thermal dynamics.",
+    "No source/physical net completeness beyond the stated source bindings and checked relevant pin sets is newly claimed."
+  ]
+}

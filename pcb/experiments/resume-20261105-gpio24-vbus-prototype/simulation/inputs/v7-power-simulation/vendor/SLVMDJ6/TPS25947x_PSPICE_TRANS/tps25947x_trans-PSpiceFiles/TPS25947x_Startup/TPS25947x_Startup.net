@@ -1,0 +1,40 @@
+* source TPS25947X_TRANS
+R_R50         0 PGTH_72_74  630k TC=0,0 
+R_R34         VCC FLTB_70  1k TC=0,0 
+R_R51         N41060 PG_72_74  10k TC=0,0 
+C_C44         0 N21460  0.01u  
+X_D14          VIN3 0 SMBJ18A
+R_R55         0 AUX_OFF_70  1T TC=0,0 
+V_VCC1         N41060 0 5
+R_R46         VCC AUX_OFF_70  100k TC=0,0 
+V_V6         VIN3 0  
++PULSE 0 12 100n 1n 1n 1 2
+X_C40    0 VOUT3 TPS25947x_Startup_C40 
+D_D15          0 VOUT3 DI_B330A 
+C_C38         0 VIN3  1u  
+R_R48         0 OVC_72  390k TC=0,0 
+C_C43         0 ITIMER3  2.2n  
+C_C41         0 VOUT3  10u  
+R_R57         0 FLTB_70  1T TC=0,0 
+R_R49         PGTH_72_74 VOUT3  1Meg TC=0,0 
+R_RLOAD         0 VOUT3  12 TC=0,0 
+V_VCC         VCC 0 5
+C_C39         0 VIN3  100n  
+R_R35         0 EN_UVLO3  124k TC=0,0 
+R_R32         EN_UVLO3 VIN3  1Meg TC=0,0 
+R_R58         0 OVC_72  1T TC=0,0 
+C_C42         0 EN_UVLO3  100p  
+R_R56         0 PG_72_74  1T TC=0,0 
+R_R45         DVDT3 N21460  100 TC=0,0 
+R_R38         0 OVLO_70_74  78.7k TC=0,0 
+R_R33         OVLO_70_74 VIN3  1Meg TC=0,0 
+R_R37         0 ILM3  549 TC=0,0 
+X_U1         AUX_OFF_70 DVDT3 EN_UVLO3 FLTB_70 0 ILM3 VIN3 ITIMER3 VOUT3
++  OVLO_70_74 TPS25947X_TRANS PARAMS: TPS259474LRPW=0 TPS259474ARPW=0 TA=25
++  TPS259470ARPW=1 TPS259470LRPW=0 TPS259472ARPW=0 TPS259472LRPW=0
+
+.subckt TPS25947x_Startup_C40 1 2  
+C_C40         1 _SR C_C40 220u  
+.model         C_C40 CAP C=1      
+RESR_C40         _SR 2 0.15   
+.ends TPS25947x_Startup_C40

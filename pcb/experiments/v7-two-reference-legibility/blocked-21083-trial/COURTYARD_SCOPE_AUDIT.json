@@ -1,0 +1,1417 @@
+{
+  "source_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "scope": "Existing measured fields on exact currently selected source; no CAD edits. Raw courtyard stroke shapes supplement filled cache, not replace interiors.",
+  "rows": [
+    {
+      "reference": "R120",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 219895,
+        "upper_bound_nm": 219896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "f0753f91-8ae0-4fb1-b7b3-ceca63bff468",
+          "class": "FOOTPRINT",
+          "layer": "F.Cu",
+          "position_nm": [
+            20500000,
+            18500000
+          ],
+          "reference": "R120"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 189895,
+        "upper_bound_nm": 189896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "bd302441-cdeb-473e-8dc4-8227066c79fa",
+          "class": "PCB_SHAPE",
+          "layer": "F.Courtyard",
+          "position_nm": [
+            21230000,
+            17020000
+          ],
+          "reference": "R120",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "R144",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 181800,
+        "upper_bound_nm": 181801,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "0d96c41f-3c00-4e04-ac52-662d3d577a5c",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            115000000,
+            34000000
+          ],
+          "reference": "R144"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 151800,
+        "upper_bound_nm": 151801,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "0a6cab24-80fb-471f-bdc2-396db4576bac",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            115730000,
+            35480000
+          ],
+          "reference": "R144",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "J3",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 59110,
+        "upper_bound_nm": 59111,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "fb0a5bf0-7da8-4534-872b-a1b28b80c717",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            99635000,
+            47298750
+          ],
+          "reference": "SW34"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": null,
+        "upper_bound_nm": 0,
+        "lower_noncollision_verified": false,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "2cf280ed-0e26-4803-9b41-aff2ab20bbee",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            95635000,
+            42798750
+          ],
+          "reference": "SW34",
+          "width_nm": 127000
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "fb0a5bf0-7da8-4534-872b-a1b28b80c717",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            99635000,
+            47298750
+          ],
+          "reference": "SW34"
+        },
+        {
+          "uuid": "2cf280ed-0e26-4803-9b41-aff2ab20bbee",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            95635000,
+            42798750
+          ],
+          "reference": "SW34",
+          "width_nm": 127000
+        }
+      ]
+    },
+    {
+      "reference": "D100",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 419895,
+        "upper_bound_nm": 419896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "33b04b5f-3065-4c2e-9a32-ab7a7511d695",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            183000000,
+            88000000
+          ],
+          "reference": "D100"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 389895,
+        "upper_bound_nm": 389896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "2f8fb2c7-b48d-48d8-87b1-63eb13dc794e",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            180750000,
+            89100000
+          ],
+          "reference": "D100",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "R124",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 181800,
+        "upper_bound_nm": 181801,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "39d253c3-cb50-4d05-aca5-cd080aad6b11",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            10500000,
+            18000000
+          ],
+          "reference": "R124"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 151800,
+        "upper_bound_nm": 151801,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "9eb106ee-987f-403a-978c-943d0a29f259",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            11230000,
+            19480000
+          ],
+          "reference": "R124",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "C142",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 90105,
+        "upper_bound_nm": 90106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "420902c9-2138-4c54-9cca-166e30dbf1b7",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            140500000,
+            72000000
+          ],
+          "reference": "C142"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 60105,
+        "upper_bound_nm": 60106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "53a16c69-2607-4740-ac95-fec4c518dbbd",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            141750000,
+            71250000
+          ],
+          "reference": "C142",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "420902c9-2138-4c54-9cca-166e30dbf1b7",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            140500000,
+            72000000
+          ],
+          "reference": "C142"
+        },
+        {
+          "uuid": "53a16c69-2607-4740-ac95-fec4c518dbbd",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            141750000,
+            71250000
+          ],
+          "reference": "C142",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "C141",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 290105,
+        "upper_bound_nm": 290106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "4f79c638-fe88-4e5c-8cd3-7c9a34cef457",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            184500000,
+            81000000
+          ],
+          "reference": "C141"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 260105,
+        "upper_bound_nm": 260106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "071e9b12-c8c7-4caa-9bd1-663429d5431d",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            183770000,
+            79520000
+          ],
+          "reference": "C141",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "R163",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 290105,
+        "upper_bound_nm": 290106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "539cebe2-e731-4ed4-ad6d-f50703531bf0",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            143500000,
+            72000000
+          ],
+          "reference": "R163"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 260105,
+        "upper_bound_nm": 260106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "b01ea41a-d8e2-45b2-ae24-c49e1555b802",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            144980000,
+            71270000
+          ],
+          "reference": "R163",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "C137",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 219895,
+        "upper_bound_nm": 219896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "6640fd3b-eaa4-498d-94be-d26e924421ac",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            179000000,
+            88700000
+          ],
+          "reference": "C137"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 189895,
+        "upper_bound_nm": 189896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "2cb7aca8-4916-48df-8d24-b375f7d6fde9",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            177520000,
+            89430000
+          ],
+          "reference": "C137",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "C126",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 219895,
+        "upper_bound_nm": 219896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "6bcbcd54-236f-4ee7-9713-7324e1b0fb18",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            20900000,
+            18500000
+          ],
+          "reference": "C126"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 189895,
+        "upper_bound_nm": 189896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "3bdd415c-5f15-4c18-a27c-37410862b1ac",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            21630000,
+            19980000
+          ],
+          "reference": "C126",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "C129",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 164524,
+        "upper_bound_nm": 164525,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "568a9c4b-fd3c-42f2-a480-f1953e4fbb18",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            110000000,
+            37000000
+          ],
+          "reference": "U11"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 134524,
+        "upper_bound_nm": 134525,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "d2e6f172-f7f0-48c6-9835-f768120e185e",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106100000,
+            33600000
+          ],
+          "reference": "U11",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "d2e6f172-f7f0-48c6-9835-f768120e185e",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106100000,
+            33600000
+          ],
+          "reference": "U11",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "U2",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 69895,
+        "upper_bound_nm": 69896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "95d8d6bd-1c1b-4521-bfa3-9a94df8beca0",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            142000000,
+            75000000
+          ],
+          "reference": "U2"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 39895,
+        "upper_bound_nm": 39896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "61a5e017-6e9f-4aa6-bf65-2d3bdd37815d",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            143590000,
+            73750000
+          ],
+          "reference": "U2",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "95d8d6bd-1c1b-4521-bfa3-9a94df8beca0",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            142000000,
+            75000000
+          ],
+          "reference": "U2"
+        },
+        {
+          "uuid": "61a5e017-6e9f-4aa6-bf65-2d3bdd37815d",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            143590000,
+            73750000
+          ],
+          "reference": "U2",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "R126",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 219895,
+        "upper_bound_nm": 219896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "977b8711-1e9d-4469-82dd-cbcc6c969514",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            23500000,
+            24000000
+          ],
+          "reference": "R126"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 189895,
+        "upper_bound_nm": 189896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "984e607b-3d9b-41ba-85b2-a8b03c911c4a",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            24230000,
+            25480000
+          ],
+          "reference": "R126",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "U10",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 209895,
+        "upper_bound_nm": 209896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "5ebb49f5-a6f9-4fbb-987f-09d4ea825de4",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            18000000,
+            3800000
+          ],
+          "reference": "J1"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 179895,
+        "upper_bound_nm": 179896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "7b368b7e-0bb4-45fc-a235-8b895712150a",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            12680000,
+            8560000
+          ],
+          "reference": "J1",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "C101",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 140105,
+        "upper_bound_nm": 140106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "c907084c-5065-4318-be28-563b7d0654ef",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            139000000,
+            75000000
+          ],
+          "reference": "C101"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 110105,
+        "upper_bound_nm": 110106,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "77fc706d-f625-463e-864c-1c3408afef53",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            137850000,
+            72800000
+          ],
+          "reference": "C101",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "c907084c-5065-4318-be28-563b7d0654ef",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            139000000,
+            75000000
+          ],
+          "reference": "C101"
+        },
+        {
+          "uuid": "77fc706d-f625-463e-864c-1c3408afef53",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            137850000,
+            72800000
+          ],
+          "reference": "C101",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "C100",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 169895,
+        "upper_bound_nm": 169896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "936d1b8f-2579-4255-b41c-cc9654291283",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            145000000,
+            75000000
+          ],
+          "reference": "C100"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 139895,
+        "upper_bound_nm": 139896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "16d4d756-187d-4914-b2d6-31b10977b3d0",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            143850000,
+            72800000
+          ],
+          "reference": "C100",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "16d4d756-187d-4914-b2d6-31b10977b3d0",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            143850000,
+            72800000
+          ],
+          "reference": "C100",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "R131",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 246764,
+        "upper_bound_nm": 246765,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "c98b2856-a2a1-4ad3-96dd-1e6bc7b31357",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            105500000,
+            31000000
+          ],
+          "reference": "R131"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 216764,
+        "upper_bound_nm": 216765,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "00704410-b782-4cd1-9ef3-4e370090a9dc",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106230000,
+            32480000
+          ],
+          "reference": "R131",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "R140",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 204523,
+        "upper_bound_nm": 204524,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "7b318399-ba02-4c74-af7c-24a406884d8a",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            112500000,
+            32000000
+          ],
+          "reference": "R140"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 174523,
+        "upper_bound_nm": 174524,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "e070cac8-b7ed-4eae-8367-7318325f34ed",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            113230000,
+            33480000
+          ],
+          "reference": "R140",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "R160",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 239895,
+        "upper_bound_nm": 239896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "319c8d90-2e8c-4fbe-b044-eb183bcc2c22",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            184500000,
+            85000000
+          ],
+          "reference": "R160"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 209895,
+        "upper_bound_nm": 209896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "ee5a8ae0-3d1e-4e7b-bdd7-79e4fe0a409d",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            185230000,
+            86480000
+          ],
+          "reference": "R160",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": true,
+      "hit_partners": []
+    },
+    {
+      "reference": "R134",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 159895,
+        "upper_bound_nm": 159896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "e8bd1f07-b665-43fb-a3a3-9ba1bca55842",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            107500000,
+            44500000
+          ],
+          "reference": "R134"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 129895,
+        "upper_bound_nm": 129896,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "ec7986c4-145e-4f19-8462-f66d26b2f510",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106020000,
+            45230000
+          ],
+          "reference": "R134",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "ec7986c4-145e-4f19-8462-f66d26b2f510",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            106020000,
+            45230000
+          ],
+          "reference": "R134",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "C124",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 176332,
+        "upper_bound_nm": 176333,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "39d253c3-cb50-4d05-aca5-cd080aad6b11",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            10500000,
+            18000000
+          ],
+          "reference": "R124"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 144964,
+        "upper_bound_nm": 144965,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "bd05fc06-ddf6-4034-b693-5dcefa4c9aaf",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            9770000,
+            16520000
+          ],
+          "reference": "R124",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "bd05fc06-ddf6-4034-b693-5dcefa4c9aaf",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            9770000,
+            16520000
+          ],
+          "reference": "R124",
+          "width_nm": 50000
+        },
+        {
+          "uuid": "294e6d56-0fc8-400a-869c-f134c86bbd84",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            9770000,
+            19480000
+          ],
+          "reference": "R124",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "R121",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": 162620,
+        "upper_bound_nm": 162621,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "39d253c3-cb50-4d05-aca5-cd080aad6b11",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            10500000,
+            18000000
+          ],
+          "reference": "R124"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": 132620,
+        "upper_bound_nm": 132621,
+        "lower_noncollision_verified": true,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "bd05fc06-ddf6-4034-b693-5dcefa4c9aaf",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            9770000,
+            16520000
+          ],
+          "reference": "R124",
+          "width_nm": 50000
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "bd05fc06-ddf6-4034-b693-5dcefa4c9aaf",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            9770000,
+            16520000
+          ],
+          "reference": "R124",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "U8",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": null,
+        "upper_bound_nm": 0,
+        "lower_noncollision_verified": false,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "880fc231-8519-4fe3-b966-5e009c6802f3",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            18000000,
+            16000000
+          ],
+          "reference": "C125"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": null,
+        "upper_bound_nm": 0,
+        "lower_noncollision_verified": false,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "880fc231-8519-4fe3-b966-5e009c6802f3",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            18000000,
+            16000000
+          ],
+          "reference": "C125"
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "880fc231-8519-4fe3-b966-5e009c6802f3",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            18000000,
+            16000000
+          ],
+          "reference": "C125"
+        },
+        {
+          "uuid": "a1f79810-94aa-4bc1-82d7-8f56f7f8b4f0",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            18000000,
+            18500000
+          ],
+          "reference": "U8"
+        },
+        {
+          "uuid": "fa1c1174-754a-438b-ab1b-fef2f2853b87",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            16520000,
+            16730000
+          ],
+          "reference": "C125",
+          "width_nm": 50000
+        },
+        {
+          "uuid": "6c3a7d6a-560a-4372-b1fc-80778a56ba68",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            19500000,
+            17000000
+          ],
+          "reference": "U8",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "R125",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": null,
+        "upper_bound_nm": 0,
+        "lower_noncollision_verified": false,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "6e6cc605-4fb0-4ef8-85fb-1112bb6601a9",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            13910000,
+            28248750
+          ],
+          "reference": "SW16"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": null,
+        "upper_bound_nm": 0,
+        "lower_noncollision_verified": false,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "6e6cc605-4fb0-4ef8-85fb-1112bb6601a9",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            13910000,
+            28248750
+          ],
+          "reference": "SW16"
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "6e6cc605-4fb0-4ef8-85fb-1112bb6601a9",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            13910000,
+            28248750
+          ],
+          "reference": "SW16"
+        },
+        {
+          "uuid": "40df5f7c-1710-4f1b-a3b5-379fd338d1dd",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            9910000,
+            21248750
+          ],
+          "reference": "SW16",
+          "width_nm": 127000
+        },
+        {
+          "uuid": "b5744c1c-32b8-4b1d-a686-7c008d5a5140",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            9910000,
+            23748750
+          ],
+          "reference": "SW16",
+          "width_nm": 127000
+        }
+      ]
+    },
+    {
+      "reference": "U18",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": null,
+        "upper_bound_nm": 0,
+        "lower_noncollision_verified": false,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "7bef23cd-c46f-4532-8994-ad000c87041a",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            181400000,
+            85000000
+          ],
+          "reference": "C139"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": null,
+        "upper_bound_nm": 0,
+        "lower_noncollision_verified": false,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "7bef23cd-c46f-4532-8994-ad000c87041a",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            181400000,
+            85000000
+          ],
+          "reference": "C139"
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "7bef23cd-c46f-4532-8994-ad000c87041a",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            181400000,
+            85000000
+          ],
+          "reference": "C139"
+        },
+        {
+          "uuid": "3d9b4732-9781-41a0-8836-1739c97a66f9",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            182130000,
+            83520000
+          ],
+          "reference": "C139",
+          "width_nm": 50000
+        }
+      ]
+    },
+    {
+      "reference": "L2",
+      "old_filled_cache_gap": {
+        "lower_bound_nm": null,
+        "upper_bound_nm": 0,
+        "lower_noncollision_verified": false,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "14ed5757-8e58-44f9-a774-e3b4c5afddf6",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            178750000,
+            81900000
+          ],
+          "reference": "C138"
+        }
+      },
+      "full_raw_stroke_plus_filled_gap": {
+        "lower_bound_nm": null,
+        "upper_bound_nm": 0,
+        "lower_noncollision_verified": false,
+        "upper_collision_verified": true,
+        "capped_lower_bound": false,
+        "cap_nm": 10000000,
+        "partner": {
+          "uuid": "14ed5757-8e58-44f9-a774-e3b4c5afddf6",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            178750000,
+            81900000
+          ],
+          "reference": "C138"
+        }
+      },
+      "full_target_pass": false,
+      "hit_partners": [
+        {
+          "uuid": "14ed5757-8e58-44f9-a774-e3b4c5afddf6",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            178750000,
+            81900000
+          ],
+          "reference": "C138"
+        },
+        {
+          "uuid": "baeb2373-3d9f-4e76-bf7e-c09e695d28eb",
+          "class": "FOOTPRINT",
+          "layer": "B.Cu",
+          "position_nm": [
+            179000000,
+            79500000
+          ],
+          "reference": "C140"
+        },
+        {
+          "uuid": "49757898-f13f-4c28-9938-2e326f05e9a1",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            177270000,
+            81170000
+          ],
+          "reference": "C138",
+          "width_nm": 50000
+        },
+        {
+          "uuid": "098d5cd5-a5a3-47c8-87f9-55cef8239808",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            180230000,
+            81170000
+          ],
+          "reference": "C138",
+          "width_nm": 50000
+        },
+        {
+          "uuid": "95f08640-74b9-4031-8fa7-1c3b9d7d26c3",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            178270000,
+            78020000
+          ],
+          "reference": "C140",
+          "width_nm": 50000
+        },
+        {
+          "uuid": "808f771a-871c-4990-b9fb-441a03cc6d1b",
+          "class": "PCB_SHAPE",
+          "layer": "B.Courtyard",
+          "position_nm": [
+            178270000,
+            80980000
+          ],
+          "reference": "C140",
+          "width_nm": 50000
+        }
+      ]
+    }
+  ],
+  "board_unchanged": true
+}

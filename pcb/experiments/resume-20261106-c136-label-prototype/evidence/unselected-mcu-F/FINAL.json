@@ -1,0 +1,1066 @@
+{
+  "status": "CHECKED_PARTIAL_LAUNCH_UNSELECTED_NO_PAIR_CLOSED",
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "candidate_sha256": "fb227c9af1b2c520452fee6815fdfecf6c44f7a42f090d432e5293fd3538d434",
+  "candidate_pcb": "/workspace/shared/maru60-resume/continuation-9d787/mcu-led-repair/candidate-F/pcb/maru60.kicad_pcb",
+  "native_DRC_open_pairs": 9,
+  "native_DRC_warnings": 43,
+  "native_other_hard_errors": 0,
+  "native_severity_categories": {
+    "warning:silk_over_copper": 13,
+    "warning:silk_overlap": 10,
+    "warning:text_height": 15,
+    "warning:track_dangling": 4,
+    "warning:via_dangling": 1
+  },
+  "ERC": 0,
+  "schematic_parity": 0,
+  "all58_source_files_unchanged": true,
+  "all58_cold_files_exact": true,
+  "all_prior_rejected_C_D_E_unchanged": true,
+  "all_named_pad_partitions_exact": true,
+  "physical_open_component_pairs_equal_source": true,
+  "net_identity_checked_objects": 12141,
+  "net_identity_checked_schematic_pins": 1064,
+  "unrelated_accepted_material_edge_or_witness_changes": 0,
+  "inherited_guarded_contact_diagnostics_unchanged": 51,
+  "all247_GND_pads_in_J1_root": true,
+  "all10_power_pad_bindings_single_root": true,
+  "source_conductive_objects_modified": 9,
+  "new_objects": 6,
+  "metrics": {
+    "tracks": 9778,
+    "vias": 924,
+    "footprints": 383,
+    "track_length_mm": 13212.459481491958
+  },
+  "metric_delta": {
+    "tracks": 5,
+    "vias": 1,
+    "footprints": 0,
+    "track_length_mm": 1.6502817987129674
+  },
+  "new_modified_reference_checked_track_count": 13,
+  "new_modified_reference_uncovered_outside_own_transitions_mm2": 0,
+  "retained_source_nearest_reference_losses": 0,
+  "ground_return_native_corridors": [
+    {
+      "name": "MCU_GPIO27_B_reference",
+      "reference_plane": "In2.Cu",
+      "validated_corridor_width_mm": 0.15,
+      "corridor_area_mm2": 0.377671616444,
+      "native_material_outside_actual_plane_mm2": 0.0,
+      "target_GND_via_uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+      "native_positive_corridor_to_GND_annulus_mm2": 0.0095002569395,
+      "guarded_2nm_contact_mm2": 0.009499445789,
+      "pass": true
+    },
+    {
+      "name": "COL5_B_reference",
+      "reference_plane": "In2.Cu",
+      "validated_corridor_width_mm": 0.15,
+      "corridor_area_mm2": 0.3267600075005,
+      "native_material_outside_actual_plane_mm2": 0.0,
+      "target_GND_via_uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+      "native_positive_corridor_to_GND_annulus_mm2": 0.0095333385535,
+      "guarded_2nm_contact_mm2": 0.0095325400735,
+      "pass": true
+    },
+    {
+      "name": "COL5_In1_reference",
+      "reference_plane": "In2.Cu",
+      "validated_corridor_width_mm": 0.2,
+      "corridor_area_mm2": 0.5000483532895,
+      "native_material_outside_actual_plane_mm2": 0.0,
+      "target_GND_via_uuid": "be938d46-431d-4dbf-bb6e-742185b88b4f",
+      "native_positive_corridor_to_GND_annulus_mm2": 0.015125488405,
+      "guarded_2nm_contact_mm2": 0.0151245067115,
+      "pass": true
+    },
+    {
+      "name": "modified_1V1_F_reference",
+      "reference_plane": "In1.Cu",
+      "validated_corridor_width_mm": 0.2,
+      "corridor_area_mm2": 0.6817207601495,
+      "native_material_outside_actual_plane_mm2": 0.0,
+      "target_GND_via_uuid": "57331af9-9323-4e50-949c-123703e9d3d4",
+      "native_positive_corridor_to_GND_annulus_mm2": 0.0151384170505,
+      "guarded_2nm_contact_mm2": 0.015137420136,
+      "pass": true
+    },
+    {
+      "name": "modified_LED_FAULT_N_F_reference",
+      "reference_plane": "In1.Cu",
+      "validated_corridor_width_mm": 0.2,
+      "corridor_area_mm2": 0.486416146178,
+      "native_material_outside_actual_plane_mm2": 0.0,
+      "target_GND_via_uuid": "57331af9-9323-4e50-949c-123703e9d3d4",
+      "native_positive_corridor_to_GND_annulus_mm2": 0.0151384170505,
+      "guarded_2nm_contact_mm2": 0.015137420136,
+      "pass": true
+    }
+  ],
+  "ground_corridor_paths": [
+    {
+      "name": "MCU_GPIO27_B_reference",
+      "reference_plane": "In2.Cu",
+      "start_mm": [
+        112.175,
+        77.55
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "start_outside_eroded_plane"
+        },
+        {
+          "radius_mm": 0.075,
+          "status": "path_found",
+          "visited": 10087
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.075,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.09949999999999193,
+        "twice_minimum_path_clearance_mm": 0.19899999999998386,
+        "length_mm": 2.4000000000000057,
+        "path_mm": [
+          [
+            112.175,
+            77.55
+          ],
+          [
+            114.575,
+            77.55
+          ]
+        ],
+        "target_GND_via_uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+        "target_GND_via_mm": [
+          114.85,
+          77.65
+        ],
+        "target_material_root_is_J1": true
+      }
+    },
+    {
+      "name": "COL5_B_reference",
+      "reference_plane": "In2.Cu",
+      "start_mm": [
+        112.7,
+        77.1
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "start_outside_eroded_plane"
+        },
+        {
+          "radius_mm": 0.075,
+          "status": "path_found",
+          "visited": 8213
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.075,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.09698199158158496,
+        "twice_minimum_path_clearance_mm": 0.19396398316316993,
+        "length_mm": 2.061396103067894,
+        "path_mm": [
+          [
+            112.7,
+            77.1
+          ],
+          [
+            114.125,
+            77.1
+          ],
+          [
+            114.575,
+            77.55
+          ]
+        ],
+        "target_GND_via_uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+        "target_GND_via_mm": [
+          114.85,
+          77.65
+        ],
+        "target_material_root_is_J1": true
+      }
+    },
+    {
+      "name": "COL5_In1_reference",
+      "reference_plane": "In2.Cu",
+      "start_mm": [
+        112.35,
+        75.5
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "path_found",
+          "visited": 10482
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.1,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.12122044079280178,
+        "twice_minimum_path_clearance_mm": 0.24244088158560356,
+        "length_mm": 2.344238815542507,
+        "path_mm": [
+          [
+            112.35,
+            75.5
+          ],
+          [
+            112.35,
+            74.075
+          ],
+          [
+            111.7,
+            73.425
+          ]
+        ],
+        "target_GND_via_uuid": "be938d46-431d-4dbf-bb6e-742185b88b4f",
+        "target_GND_via_mm": [
+          111.6,
+          73.2
+        ],
+        "target_material_root_is_J1": true
+      }
+    },
+    {
+      "name": "modified_1V1_F_reference",
+      "reference_plane": "In1.Cu",
+      "start_mm": [
+        111.275,
+        76.45
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "path_found",
+          "visited": 18491
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.1,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.10667077090462083,
+        "twice_minimum_path_clearance_mm": 0.21334154180924167,
+        "length_mm": 3.2631727983645327,
+        "path_mm": [
+          [
+            111.275,
+            76.45
+          ],
+          [
+            110.875,
+            76.05
+          ],
+          [
+            110.875,
+            76.025
+          ],
+          [
+            110.85,
+            76.0
+          ],
+          [
+            110.85,
+            75.975
+          ],
+          [
+            110.825,
+            75.95
+          ],
+          [
+            110.825,
+            75.9
+          ],
+          [
+            110.8,
+            75.875
+          ],
+          [
+            110.8,
+            75.825
+          ],
+          [
+            110.775,
+            75.8
+          ],
+          [
+            110.775,
+            73.575
+          ],
+          [
+            110.7,
+            73.5
+          ],
+          [
+            110.7,
+            73.425
+          ]
+        ],
+        "target_GND_via_uuid": "57331af9-9323-4e50-949c-123703e9d3d4",
+        "target_GND_via_mm": [
+          110.6,
+          73.2
+        ],
+        "target_material_root_is_J1": true
+      }
+    },
+    {
+      "name": "modified_LED_FAULT_N_F_reference",
+      "reference_plane": "In1.Cu",
+      "start_mm": [
+        110.7,
+        75.7
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "path_found",
+          "visited": 13886
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.1,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.12122044079280178,
+        "twice_minimum_path_clearance_mm": 0.24244088158560356,
+        "length_mm": 2.2750000000000057,
+        "path_mm": [
+          [
+            110.7,
+            75.7
+          ],
+          [
+            110.7,
+            73.425
+          ]
+        ],
+        "target_GND_via_uuid": "57331af9-9323-4e50-949c-123703e9d3d4",
+        "target_GND_via_mm": [
+          110.6,
+          73.2
+        ],
+        "target_material_root_is_J1": true
+      }
+    }
+  ],
+  "all_zone_changes": [
+    {
+      "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "net": "GND",
+      "layer": "F.Cu",
+      "source_components": 9,
+      "candidate_components": 9,
+      "source_area_mm2": 289.5180412826205,
+      "candidate_area_mm2": 288.800184572338,
+      "lost_mm2": 1.0707921261125,
+      "gained_mm2": 0.352935532797
+    },
+    {
+      "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 23434.10645782092,
+      "candidate_area_mm2": 23433.75047907435,
+      "lost_mm2": 0.4863510432655,
+      "gained_mm2": 0.130372431028
+    },
+    {
+      "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "net": "GND",
+      "layer": "In2.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 23484.626739959473,
+      "candidate_area_mm2": 23484.022833296098,
+      "lost_mm2": 0.733131710302,
+      "gained_mm2": 0.129225117366
+    },
+    {
+      "uuid": "0263a319-be98-46c7-be76-b4690077fb70",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 2.619929507342,
+      "candidate_area_mm2": 2.619929507342,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "18251378-06a1-40ae-8f44-01acf0d3371a",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "source_components": 6,
+      "candidate_components": 6,
+      "source_area_mm2": 133.523232524245,
+      "candidate_area_mm2": 132.599948403587,
+      "lost_mm2": 0.923284476239,
+      "gained_mm2": 7.5305e-09
+    },
+    {
+      "uuid": "3f67c971-a794-46bf-8f55-e7568aa08387",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "source_components": 2,
+      "candidate_components": 2,
+      "source_area_mm2": 6.627001297286,
+      "candidate_area_mm2": 6.627001297286,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "431dc987-81d8-4e96-9039-7fb10f89e34d",
+      "net": "+1V1",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 5.2582800266875,
+      "candidate_area_mm2": 5.2582800266875,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "4568b524-9e43-496b-a69d-6a08336db9f4",
+      "net": "GND",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 28.377362951863,
+      "candidate_area_mm2": 28.377362951863,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "50076224-0e58-4ba3-98c7-35566c0b3ee7",
+      "net": "+3V3",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 0.5892129551275,
+      "candidate_area_mm2": 0.5892129551275,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "598fd50b-9500-4edd-a58c-41bf97902cb1",
+      "net": "GND",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 1.6577277238375,
+      "candidate_area_mm2": 1.6577277238375,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    },
+    {
+      "uuid": "9a8312b0-46b6-4fab-9af6-76adb9edcfb2",
+      "net": "VREG_LX",
+      "layer": "B.Cu",
+      "source_components": 1,
+      "candidate_components": 1,
+      "source_area_mm2": 2.262728066674,
+      "candidate_area_mm2": 2.262728066674,
+      "lost_mm2": 0.0,
+      "gained_mm2": 0.0
+    }
+  ],
+  "declared_exceptions": {
+    "intentional_existing_geometry_changes": [
+      {
+        "uuid": "f44d59d3-0c42-48c1-b89c-540ea6a07763",
+        "net": "COL5",
+        "layer": "F.Cu",
+        "old_start_end": [
+          [
+            112.35,
+            76.8
+          ],
+          [
+            112.35,
+            76.8
+          ]
+        ],
+        "new_start_end": [
+          [
+            112.175,
+            76.3
+          ],
+          [
+            112.175,
+            76.3
+          ]
+        ]
+      },
+      {
+        "uuid": "224e7239-5039-4cc7-b38b-ca258f485b01",
+        "net": "COL5",
+        "layer": "B.Cu",
+        "old_start_end": [
+          [
+            112.6,
+            77.5
+          ],
+          [
+            112.35,
+            77.25
+          ]
+        ],
+        "new_start_end": [
+          [
+            112.6,
+            77.5
+          ],
+          [
+            112.695,
+            77.405
+          ]
+        ]
+      },
+      {
+        "uuid": "65c0b9cf-87fb-4ae5-a2e0-e11b853cd699",
+        "net": "COL5",
+        "layer": "B.Cu",
+        "old_start_end": [
+          [
+            112.35,
+            77.25
+          ],
+          [
+            112.35,
+            76.8
+          ]
+        ],
+        "new_start_end": [
+          [
+            112.695,
+            77.405
+          ],
+          [
+            112.695,
+            76.6
+          ]
+        ]
+      },
+      {
+        "uuid": "d94e477a-28ae-41a9-bdea-441b16be174c",
+        "net": "COL5",
+        "layer": "In1.Cu",
+        "old_start_end": [
+          [
+            112.35,
+            76.8
+          ],
+          [
+            112.35,
+            73.65
+          ]
+        ],
+        "new_start_end": [
+          [
+            112.35,
+            76.3
+          ],
+          [
+            112.35,
+            73.65
+          ]
+        ]
+      },
+      {
+        "uuid": "14d35ed0-d9e6-45a6-a698-4e8b482aba5f",
+        "net": "+1V1",
+        "layer": "F.Cu",
+        "old_start_end": [
+          [
+            111.4,
+            75.7
+          ],
+          [
+            111.4,
+            79.3505
+          ]
+        ],
+        "new_start_end": [
+          [
+            111.28,
+            76.17
+          ],
+          [
+            111.28,
+            79.2305
+          ]
+        ],
+        "retained_width_mm": 0.6
+      },
+      {
+        "uuid": "97c06ea9-3805-4713-8c88-adc1818c3258",
+        "net": "LED_FAULT_N",
+        "layer": "F.Cu",
+        "old_start_end": [
+          [
+            110.9,
+            75.35
+          ],
+          [
+            110.8,
+            75.45
+          ]
+        ],
+        "new_start_end": [
+          [
+            110.9,
+            75.35
+          ],
+          [
+            110.7,
+            75.45
+          ]
+        ],
+        "retained_width_mm": 0.15
+      },
+      {
+        "uuid": "b995c2c7-f443-497b-bb80-da0d3312d10d",
+        "net": "LED_FAULT_N",
+        "layer": "F.Cu",
+        "old_start_end": [
+          [
+            110.8,
+            75.45
+          ],
+          [
+            110.8,
+            75.95
+          ]
+        ],
+        "new_start_end": [
+          [
+            110.7,
+            75.45
+          ],
+          [
+            110.7,
+            75.95
+          ]
+        ],
+        "retained_width_mm": 0.15
+      },
+      {
+        "uuid": "f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774",
+        "net": "LED_FAULT_N",
+        "layer": "F.Cu",
+        "old_start_end": [
+          [
+            110.8,
+            75.95
+          ],
+          [
+            110.7,
+            76.05
+          ]
+        ],
+        "new_start_end": [
+          [
+            110.7,
+            75.95
+          ],
+          [
+            110.6,
+            76.05
+          ]
+        ],
+        "retained_width_mm": 0.15
+      },
+      {
+        "uuid": "6673dcb6-419c-4720-a5a5-19baa7afaec4",
+        "net": "LED_FAULT_N",
+        "layer": "F.Cu",
+        "old_start_end": [
+          [
+            110.7,
+            76.05
+          ],
+          [
+            110.7,
+            76.149999
+          ]
+        ],
+        "new_start_end": [
+          [
+            110.6,
+            76.05
+          ],
+          [
+            110.7,
+            76.149999
+          ]
+        ],
+        "retained_width_mm": 0.15
+      }
+    ],
+    "removed_source_material_edges": [
+      {
+        "nodes": [
+          "object:65c0b9cf-87fb-4ae5-a2e0-e11b853cd699:2:0",
+          "object:f44d59d3-0c42-48c1-b89c-540ea6a07763:2:0"
+        ],
+        "old_witness": [
+          0.019374781037,
+          0.0193735779165
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:a67d3a82-3f3e-44c8-8014-bf320a87c984:0:0",
+          "object:b995c2c7-f443-497b-bb80-da0d3312d10d:0:0"
+        ],
+        "old_witness": [
+          0.000287564968,
+          0.000287355322
+        ],
+        "declared_changed_incident": true
+      }
+    ],
+    "changed_source_material_witnesses": [
+      {
+        "nodes": [
+          "object:d94e477a-28ae-41a9-bdea-441b16be174c:4:0",
+          "object:f44d59d3-0c42-48c1-b89c-540ea6a07763:4:0"
+        ],
+        "witnesses": [
+          [
+            0.019374781122,
+            0.0193735788875
+          ],
+          [
+            0.031542052138,
+            0.031540492046
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:224e7239-5039-4cc7-b38b-ca258f485b01:2:0",
+          "object:65c0b9cf-87fb-4ae5-a2e0-e11b853cd699:2:0"
+        ],
+        "witnesses": [
+          [
+            0.0177922110415,
+            0.0177912516125
+          ],
+          [
+            0.0177921539595,
+            0.0177911943705
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:224e7239-5039-4cc7-b38b-ca258f485b01:2:0",
+          "object:896ef6ef-19c8-4fe6-bef7-965e4b34c9f9:2:0"
+        ],
+        "witnesses": [
+          [
+            0.0177921450215,
+            0.0177911855595
+          ],
+          [
+            0.017792211866,
+            0.017791252635
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0",
+          "object:2df4c211-ae72-4021-a11a-f400d90108b2:0:0"
+        ],
+        "witnesses": [
+          [
+            0.233654438848,
+            0.233648898866
+          ],
+          [
+            0.027619233668,
+            0.027617697731
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:14d35ed0-d9e6-45a6-a698-4e8b482aba5f:0:0",
+          "object:a3dac412-9c4c-48cf-81b8-b7016c33b879:0:0"
+        ],
+        "witnesses": [
+          [
+            0.233654438848,
+            0.233648898866
+          ],
+          [
+            0.134501965855,
+            0.134497101666
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:39400596-6e89-4178-bfa6-e25ec113fdeb:0:0",
+          "object:97c06ea9-3805-4713-8c88-adc1818c3258:0:0"
+        ],
+        "witnesses": [
+          [
+            0.000287550396,
+            0.0002873408925
+          ],
+          [
+            0.0002875768965,
+            0.0002873666735
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:6673dcb6-419c-4720-a5a5-19baa7afaec4:0:0",
+          "object:6ef6f246-d5ef-41ba-8056-1f6e4650f1bb:0:0"
+        ],
+        "witnesses": [
+          [
+            0.0002875294635,
+            0.0002873199675
+          ],
+          [
+            0.000345317395,
+            0.000345087112
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:6673dcb6-419c-4720-a5a5-19baa7afaec4:0:0",
+          "object:b995c2c7-f443-497b-bb80-da0d3312d10d:0:0"
+        ],
+        "witnesses": [
+          [
+            0.000287564968,
+            0.000287355322
+          ],
+          [
+            0.0003453715815,
+            0.0003451289685
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:6673dcb6-419c-4720-a5a5-19baa7afaec4:0:0",
+          "object:c764e55b-1599-4838-894f-3fe4f3bca590:0:0"
+        ],
+        "witnesses": [
+          [
+            0.017792199621,
+            0.017791239795
+          ],
+          [
+            0.0188784393335,
+            0.0188774956285
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:6673dcb6-419c-4720-a5a5-19baa7afaec4:0:0",
+          "object:f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774:0:0"
+        ],
+        "witnesses": [
+          [
+            0.0177922121875,
+            0.0177912527025
+          ],
+          [
+            0.0188783658215,
+            0.0188774224355
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:97c06ea9-3805-4713-8c88-adc1818c3258:0:0",
+          "object:a67d3a82-3f3e-44c8-8014-bf320a87c984:0:0"
+        ],
+        "witnesses": [
+          [
+            0.017792148697,
+            0.017791188978
+          ],
+          [
+            0.0180338081365,
+            0.018032794574
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:97c06ea9-3805-4713-8c88-adc1818c3258:0:0",
+          "object:b995c2c7-f443-497b-bb80-da0d3312d10d:0:0"
+        ],
+        "witnesses": [
+          [
+            0.0177922121875,
+            0.0177912527025
+          ],
+          [
+            0.01803380144,
+            0.0180328092985
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:97c06ea9-3805-4713-8c88-adc1818c3258:0:0",
+          "object:be904f09-91d8-4e67-a1bb-2737b3d38907:0:0"
+        ],
+        "witnesses": [
+          [
+            0.0045141002645,
+            0.0045135118045
+          ],
+          [
+            0.004565381015,
+            0.004564771558
+          ]
+        ],
+        "declared_changed_incident": true
+      },
+      {
+        "nodes": [
+          "object:c764e55b-1599-4838-894f-3fe4f3bca590:0:0",
+          "object:f6f5406e-c528-4d4f-a9d3-6a7ddc1ae774:0:0"
+        ],
+        "witnesses": [
+          [
+            0.0038721266375,
+            0.0038716153655
+          ],
+          [
+            0.0004031909105,
+            0.000402952034
+          ]
+        ],
+        "declared_changed_incident": true
+      }
+    ],
+    "LED_terminal_patch_changes": [
+      {
+        "terminal": "upper",
+        "unchanged_neighbor_uuid": "a67d3a82-3f3e-44c8-8014-bf320a87c984",
+        "fixed_endpoint_mm": [
+          110.9,
+          75.35
+        ],
+        "source_contact_mm2": 0.017792148697,
+        "candidate_contact_mm2": 0.0180338086755,
+        "lost_original_contact_patch_mm2": 2.35845e-08,
+        "candidate_2nm_guarded_positive_overlap_mm2": 0.018032797035,
+        "same_net": true
+      },
+      {
+        "terminal": "lower",
+        "unchanged_neighbor_uuid": "c764e55b-1599-4838-894f-3fe4f3bca590",
+        "fixed_endpoint_mm": [
+          110.7,
+          76.149999
+        ],
+        "source_contact_mm2": 0.017792199621,
+        "candidate_contact_mm2": 0.0188784394385,
+        "lost_original_contact_patch_mm2": 9.5165e-09,
+        "candidate_2nm_guarded_positive_overlap_mm2": 0.0188774956285,
+        "same_net": true
+      }
+    ],
+    "power_endpoint_polygonized_diagnostics": [
+      {
+        "uuid": "2df4c211-ae72-4021-a11a-f400d90108b2",
+        "position_mm": [
+          111.4,
+          75.7
+        ],
+        "unchanged_native_geometry": true,
+        "old_physical_power_overlap_mm2": 0.233654438848,
+        "new_physical_power_overlap_mm2": 0.2336542891845,
+        "lost_original_endpoint_contact_mm2": 2.70661e-07
+      },
+      {
+        "uuid": "a3dac412-9c4c-48cf-81b8-b7016c33b879",
+        "position_mm": [
+          111.4,
+          79.3505
+        ],
+        "unchanged_native_geometry": true,
+        "old_physical_power_overlap_mm2": 0.233654438848,
+        "new_physical_power_overlap_mm2": 0.233654383044,
+        "lost_original_endpoint_contact_mm2": 5.6933e-08
+      }
+    ],
+    "real_plane_web_changes": "qa/candidate-F-local-neck.json",
+    "no_exact_unchanged_geometry_or_contact_patch_claim": true,
+    "strict_no_plane_loss_outside_transition_windows": false
+  },
+  "remaining_open_net_counts": {
+    "EXT_GPIO24": 1,
+    "EXT_GPIO25": 2,
+    "MCU_GPIO3": 1,
+    "MCU_GPIO10": 1,
+    "MCU_GPIO24": 1,
+    "MCU_GPIO25": 1,
+    "MCU_GPIO26": 1,
+    "MCU_GPIO27": 1
+  },
+  "independent_review": "Not yet performed; candidate not selected or merged.",
+  "continuation_search": "Not run in this one-candidate corrective task. A full GPIO27 route and its F/B transition return remain absent.",
+  "limits": [
+    "No complete MCU pair closed and no routing success counted",
+    "Geometric continuity/coverage only; no SI, EMI, active power stability, current-capacity, thermal or hardware qualification",
+    "Real plane-web/pour losses and changed incident contacts are retained, not waived",
+    "Unchanged strict baseline and current checkpoint remain separate"
+  ],
+  "read_only_next_route_assessment": {
+    "evidence": "qa/read-only-old-pocket-assessment.json",
+    "no_route_search_or_CAD_mutation": true,
+    "former_bounding_box_mm": [
+      111.81,
+      76.5,
+      116.06,
+      78.5
+    ],
+    "all3526_cells_per_layer_masks_unchanged": true,
+    "no_new_obstacle_or_reference_geometry_inside_former_pocket": true,
+    "twenty_screened_sites_are_preexisting_not_previously_reachable": true,
+    "F_does_not_demonstrate_new_exit": true,
+    "next_question": "Unsearched exterior south of y78.5, or access past unchanged eastern LED staircase toward preexisting x115.46\u2013116.06/y76.50\u201376.60 screened sites. No such search or redesign performed."
+  },
+  "frozen_validation": true,
+  "not_composed_into_newer_C136_checkpoint": true
+}

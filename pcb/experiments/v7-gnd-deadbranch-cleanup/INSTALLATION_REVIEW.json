@@ -1,0 +1,37 @@
+{
+  "status": "INSTALLATION_ELIGIBLE_FOR_PARENT_COMMIT_AND_FULL_REPOSITORY_BACKUP",
+  "repository_head": "594c1c4e8aa44c393cf8dd609dfc41685b68186c",
+  "selected_board_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "installed_unit": "pcb/experiments/v7-gnd-deadbranch-cleanup",
+  "adoption_receipt_sha256": "5503570f13446f97e59b9fdae32f5ce3457fd7d059e3aeaadac61181d5171421",
+  "evidence_manifest_sha256": "ddb17cbfd8f12226add2b8a3e3db241cdc9de63278fe4f9934890168eb490fe8",
+  "evidence_members_exact": 255,
+  "installed_project_members_exact": 54,
+  "nonPCB_companion_members_equal_aead": 53,
+  "independent_final_eligibility_sha256": "262450e261c621c1dfedef8a0f460859ab7db032ecdc043eae2895ee1eb18f43",
+  "warning_register_sha256": "015eecc075c36f3c402a09b495096de4523d63bd916a5e37e6643174996f8353",
+  "original_warning_history": 92,
+  "resolved": 26,
+  "remaining": 66,
+  "sole_changed_warning_uuid": "68f95f8e-16e1-430a-a0b2-1c1d51d16fde",
+  "all_other91_warning_rows_exact_to_prior": true,
+  "current_warning_identities_match_native_DRC": true,
+  "CSV_and_JSON_statuses_match": true,
+  "selection_pointers_consistent": true,
+  "old_tracked_changes_only": [
+    "README.md",
+    "pcb/CURRENT.md"
+  ],
+  "previous_PCBS_sources_evidence_firmware_unchanged": true,
+  "pre_adoption_backup_zip_verified_locally": {
+    "sha256": "1e7d4e81198c59749025d902e03efcf41f4e6a48324e81af45be27752751331c",
+    "zip_members": 256,
+    "CRC_pass": true,
+    "all_manifest_members_hash_exact": true
+  },
+  "Space_backup_receipt_matches_parent_report": {
+    "library_file_id": "libfile_e20445c96e308191a4bf28888309f774",
+    "version": 0
+  },
+  "limitations": "Space upload success accepted from parent confirmation; this audit independently checked receipt binding and local ZIP contents. No fresh native export, source change, Git commit, push, or additional hardware qualification performed."
+}

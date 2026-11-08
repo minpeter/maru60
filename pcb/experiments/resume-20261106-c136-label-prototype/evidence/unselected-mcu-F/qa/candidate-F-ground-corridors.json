@@ -1,0 +1,264 @@
+{
+  "candidate_sha256": "fb227c9af1b2c520452fee6815fdfecf6c44f7a42f090d432e5293fd3538d434",
+  "region_mm": [
+    109,
+    72.5,
+    116.0,
+    78.1
+  ],
+  "grid_mm": 0.025,
+  "paths": [
+    {
+      "name": "MCU_GPIO27_B_reference",
+      "reference_plane": "In2.Cu",
+      "start_mm": [
+        112.175,
+        77.55
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "start_outside_eroded_plane"
+        },
+        {
+          "radius_mm": 0.075,
+          "status": "path_found",
+          "visited": 10087
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.075,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.09949999999999193,
+        "twice_minimum_path_clearance_mm": 0.19899999999998386,
+        "length_mm": 2.4000000000000057,
+        "path_mm": [
+          [
+            112.175,
+            77.55
+          ],
+          [
+            114.575,
+            77.55
+          ]
+        ],
+        "target_GND_via_uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+        "target_GND_via_mm": [
+          114.85,
+          77.65
+        ],
+        "target_material_root_is_J1": true
+      }
+    },
+    {
+      "name": "COL5_B_reference",
+      "reference_plane": "In2.Cu",
+      "start_mm": [
+        112.7,
+        77.1
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "start_outside_eroded_plane"
+        },
+        {
+          "radius_mm": 0.075,
+          "status": "path_found",
+          "visited": 8213
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.075,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.09698199158158496,
+        "twice_minimum_path_clearance_mm": 0.19396398316316993,
+        "length_mm": 2.061396103067894,
+        "path_mm": [
+          [
+            112.7,
+            77.1
+          ],
+          [
+            114.125,
+            77.1
+          ],
+          [
+            114.575,
+            77.55
+          ]
+        ],
+        "target_GND_via_uuid": "56cd01e8-ffb4-4d10-83b6-47e65b8fbc6a",
+        "target_GND_via_mm": [
+          114.85,
+          77.65
+        ],
+        "target_material_root_is_J1": true
+      }
+    },
+    {
+      "name": "COL5_In1_reference",
+      "reference_plane": "In2.Cu",
+      "start_mm": [
+        112.35,
+        75.5
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "path_found",
+          "visited": 10482
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.1,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.12122044079280178,
+        "twice_minimum_path_clearance_mm": 0.24244088158560356,
+        "length_mm": 2.344238815542507,
+        "path_mm": [
+          [
+            112.35,
+            75.5
+          ],
+          [
+            112.35,
+            74.075
+          ],
+          [
+            111.7,
+            73.425
+          ]
+        ],
+        "target_GND_via_uuid": "be938d46-431d-4dbf-bb6e-742185b88b4f",
+        "target_GND_via_mm": [
+          111.6,
+          73.2
+        ],
+        "target_material_root_is_J1": true
+      }
+    },
+    {
+      "name": "modified_1V1_F_reference",
+      "reference_plane": "In1.Cu",
+      "start_mm": [
+        111.275,
+        76.45
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "path_found",
+          "visited": 18491
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.1,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.10667077090462083,
+        "twice_minimum_path_clearance_mm": 0.21334154180924167,
+        "length_mm": 3.2631727983645327,
+        "path_mm": [
+          [
+            111.275,
+            76.45
+          ],
+          [
+            110.875,
+            76.05
+          ],
+          [
+            110.875,
+            76.025
+          ],
+          [
+            110.85,
+            76.0
+          ],
+          [
+            110.85,
+            75.975
+          ],
+          [
+            110.825,
+            75.95
+          ],
+          [
+            110.825,
+            75.9
+          ],
+          [
+            110.8,
+            75.875
+          ],
+          [
+            110.8,
+            75.825
+          ],
+          [
+            110.775,
+            75.8
+          ],
+          [
+            110.775,
+            73.575
+          ],
+          [
+            110.7,
+            73.5
+          ],
+          [
+            110.7,
+            73.425
+          ]
+        ],
+        "target_GND_via_uuid": "57331af9-9323-4e50-949c-123703e9d3d4",
+        "target_GND_via_mm": [
+          110.6,
+          73.2
+        ],
+        "target_material_root_is_J1": true
+      }
+    },
+    {
+      "name": "modified_LED_FAULT_N_F_reference",
+      "reference_plane": "In1.Cu",
+      "start_mm": [
+        110.7,
+        75.7
+      ],
+      "attempts": [
+        {
+          "radius_mm": 0.1,
+          "status": "path_found",
+          "visited": 13886
+        }
+      ],
+      "path": {
+        "screen_radius_mm": 0.1,
+        "native_polygon_derived_path_contained": true,
+        "minimum_path_to_plane_boundary_distance_mm": 0.12122044079280178,
+        "twice_minimum_path_clearance_mm": 0.24244088158560356,
+        "length_mm": 2.2750000000000057,
+        "path_mm": [
+          [
+            110.7,
+            75.7
+          ],
+          [
+            110.7,
+            73.425
+          ]
+        ],
+        "target_GND_via_uuid": "57331af9-9323-4e50-949c-123703e9d3d4",
+        "target_GND_via_mm": [
+          110.6,
+          73.2
+        ],
+        "target_material_root_is_J1": true
+      }
+    }
+  ],
+  "method": "Actual native filled planes minus every through drill, converted with make_valid preserving positive-area polygons and holes; zero-area fracture bridge lines are not copper boundaries. Candidate path containment and minimum boundary distance are checked against the resulting polygon, not inferred from graph connectedness. Width is a nominal available plane corridor along this chosen path, not a global maximum or a signal/power return-current simulation.",
+  "limits": "Local finite grid. Representative plane points, not claimed measured current paths. MCU_GPIO27 has no F.Cu continuation yet, so an actual F-to-B transition return path is not qualified. No SI, EMI or power stability claim."
+}

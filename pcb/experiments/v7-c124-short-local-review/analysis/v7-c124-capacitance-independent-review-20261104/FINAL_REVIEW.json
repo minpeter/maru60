@@ -1,0 +1,42 @@
+{
+  "decision": "approval_eligible_as_read_only_analytical_screen_only",
+  "CAD_BOM_selection_approved": false,
+  "source_board_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "study_final_files": {
+    "MANIFEST.json": "e464f29c028ddcac9cefe7d02dea68af994063fa7e38bcbd4481fd0ba2f73ae3",
+    "NP0-ALTERNATIVE.md": "a6165f21a6c944b825eb49821986bd45e40b29796c3557324fd4810efe976d2f",
+    "README.md": "c33e019d6f551cf23a9ce394a15eca3a0b6c5e01fc11c9b47ac4624e0ea6ae56",
+    "REVIEW-CORRECTIONS.md": "6ba1c2f5194374c609ead3032dc223935090f8361bf8e1b0d0b2790a3ff05cdb",
+    "calculate.py": "868ab4bb8bf97e0c43d3dc8ca409a3d5519a2af3c0d5606aa6849745a4d6de02",
+    "np0-option.json": "e70c3afb38f0e094c4376facdee34570d1ab9c001b910aec4753e2ee39e4f189",
+    "np0_option.py": "fa628dcdc3a5129faf5b0dab4db988d2d33e541ef7b02130ff19abac4ace24f4",
+    "results.json": "4064a007fb8afa2ab976cf6559e2182fe285402fcd5ce1e890a12ec9cd05376f",
+    "sensitivity.csv": "72ab3cdf514dd9c30d8fd943b9b230e225f4798f79d1fbc0ba05594e9c30703a"
+  },
+  "original_1200_row_numerical_files_unchanged": true,
+  "original_reproduction_byte_exact": true,
+  "NP0_reproduction_byte_exact": true,
+  "independent_decimal_and_SI_crosschecks_pass": true,
+  "official_source_facts_verified": true,
+  "documentation_corrections_verified": [
+    "TI current RevC section7.3.5.1/p30 citation",
+    "TDK0402 alternative Production(NRND) disclosure",
+    "Existing0603 versus initial0402 alternatives clearly distinguished"
+  ],
+  "blocking_numerical_or_source_defects": [],
+  "remaining_limits": [
+    "The 1200-row sweep is assumed constant-capacitance sensitivity, not active vendorSPICE, extracted circuit transient simulation or hardware measurement.",
+    "The 5.8uF nominal sum is directly connected capacitor values only; active U18 buck/downstream startup load and effective capacitance are omitted.",
+    "The supported NP0 option is current Production but not selected. A constant\u00b130ppm/degree coefficient applied to the entire-55..150C catalog range is a screening extrapolation; detailed coefficient test points do not independently guarantee a pointwise fullrange bound.",
+    "The NP0 pad gap meets the manufacturer recommendation, but existing pad length/width exceed it. This requires assembly review, not an assumption of unsafe assembly or automatic drop-in.",
+    "TI100ohm advice for capacitance above10nF is a design recommendation, not an absolute-maximum rating or proof of failure.",
+    "No capacitor change fixes the existing UVLO/buck operating-headroom problem."
+  ],
+  "source_study_unchanged_during_final_review": true,
+  "review_artifacts": {
+    "arithmetic_source_review": "54c414bf3ad7dbb9caeea3d2519a3be0ec465e5cfc539402042cf014d65feca6",
+    "np0_alternative_review": "ccfcc25cf0a186ad5a494a01b0d7ccead379c28f7fa296f12de522d16ee54a7c",
+    "official_original_facts": "984930978a69bb19e6b508f96c953ed3e0a21329c7fa72d49b3735f6751b22f8",
+    "official_NP0_facts": "c8ff711643992ef0f2290e02da262a59a7ffff20b4b4cb91aed415bbb6dc0211"
+  }
+}

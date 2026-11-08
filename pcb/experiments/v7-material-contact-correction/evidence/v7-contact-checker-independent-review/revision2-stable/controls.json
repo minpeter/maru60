@@ -1,0 +1,217 @@
+{
+  "status": "PASS",
+  "board_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "checker_sha256": "57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9",
+  "controls": [
+    {
+      "name": "canonical-via equals native base wrapper after all holes",
+      "layer": "F.Cu",
+      "area_mm2": 0.147260768066
+    },
+    {
+      "name": "canonical-via equals native base wrapper after all holes",
+      "layer": "In1.Cu",
+      "area_mm2": 0.147260768066
+    },
+    {
+      "name": "canonical-via equals native base wrapper after all holes",
+      "layer": "In2.Cu",
+      "area_mm2": 0.147260768066
+    },
+    {
+      "name": "canonical-via equals native base wrapper after all holes",
+      "layer": "B.Cu",
+      "area_mm2": 0.147260768066
+    },
+    {
+      "name": "known positive annular contact survives",
+      "area_mm2": 0.0564735324735
+    },
+    {
+      "name": "observed drill-only track-via contact rejected and track has zero metal",
+      "track": "8a0af035-c52e-4652-816c-b152480bf29d",
+      "via": "b460c437-7d6c-4227-b9a0-21224a370131"
+    },
+    {
+      "name": "observed drill-only track-via contact rejected and track has zero metal",
+      "track": "9ce1d223-d7c3-49f8-a54a-cd2573c67b14",
+      "via": "901de7f9-8f2b-4fda-8701-779f97081ed1"
+    },
+    {
+      "name": "observed drill-only track-via contact rejected and track has zero metal",
+      "track": "4b67f996-1ff1-4142-8261-0c00f2db5d84",
+      "via": "70579ce8-6408-4de2-bcc5-3bddeb1bb2a2"
+    },
+    {
+      "name": "actual NPTH drill removes crossing track-track overlap on every copper layer",
+      "NPTH_uuid": "646a4156-fdb6-46f1-aeb4-44fe981d5b8f",
+      "pre_area_mm2": 0.145161,
+      "post_area_mm2": 0,
+      "layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "physical_hole_is_through_despite_pad_copper_membership": true
+    },
+    {
+      "name": "partial crossing copper remains positive and splits into distinct islands",
+      "before_mm2": 5.10118706922,
+      "after_mm2": 2.803036089958,
+      "positive_islands": 2
+    },
+    {
+      "name": "compound pad primitives are exact-unioned before island identity",
+      "pad": "C220.1",
+      "raw_outline_count": 5,
+      "raw_summed_area_mm2": 0.688698465768,
+      "union_outline_count": 1,
+      "union_area_mm2": 0.3303746175,
+      "repeated_BooleanAdd_matches_Simplify_exactly": true
+    },
+    {
+      "name": "actual NPTH approximation fragments retained with separate layer/island nodes and no barrel",
+      "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+      "nodes": 56,
+      "net": "",
+      "nodes_by_layer": {
+        "F.Cu": [
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13"
+        ],
+        "In1.Cu": [
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13"
+        ],
+        "In2.Cu": [
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13"
+        ],
+        "B.Cu": [
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12",
+          "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13"
+        ]
+      }
+    },
+    {
+      "name": "raw coordinate mismatch rejected even if native BooleanSubtract area is zero both ways",
+      "own_contours": [
+        [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1000,
+              0
+            ],
+            [
+              1000,
+              1000
+            ],
+            [
+              0,
+              1000
+            ]
+          ],
+          []
+        ]
+      ],
+      "forged_contours": [
+        [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1000,
+              0
+            ],
+            [
+              1000,
+              1000
+            ],
+            [
+              500,
+              1000
+            ],
+            [
+              0,
+              1000
+            ]
+          ],
+          []
+        ]
+      ],
+      "bidirectional_native_difference_area_zero": true,
+      "exact_contours_equal": false
+    },
+    {
+      "name": "contour canonicalization preserves orientation and normalizes cyclic start",
+      "pass_": true
+    },
+    {
+      "name": "one-piece copper with outside/offset hole cannot establish a plated barrel",
+      "inside_hole_enclosed": true,
+      "outside_hole_rejected": true
+    },
+    {
+      "name": "2 nm inward contact guard rejects microscopic native overlap and preserves wide positive interior",
+      "narrow_unguarded_area_mm2": 1e-09,
+      "narrow_guarded_area_mm2": 0,
+      "wide_guarded_area_mm2": 9.5616e-08
+    }
+  ],
+  "no_source_or_candidate_mutations": true
+}

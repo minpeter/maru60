@@ -1,0 +1,13 @@
+# GPIO25 transition resume: finite study rejected early
+
+The previously completed j0-b0 candidate is rejected, not selected. Its stored native DRC was independently compared with the pinned source: 8 opens, exactly the same 38 warning records, zero schematic-parity differences. Native results are necessary but insufficient.
+
+Fresh exact rational point-in-polygon tests of both GND fills find five source-interior / candidate-exterior points per inner plane. None lies on either polygon boundary. The 455 µm circles were used only to find distant negative evidence, not to establish allowable local changes or acceptance. The rational witnesses are checked independently against all source and candidate drill-hole outer polygons, including boundaries. No Boolean-zero result is used as proof.
+
+All six frozen via sites were independently rechecked against source pad/via/track effective copper on all four layers and actual drill shapes. They match SITE_INVENTORY's ordinary 150 µm clear results. All six FAIL screen.py's more conservative viaok rule (205 µm from signal copper). Thus plan_native.py's hardcoded true values are not results of that conservative function; they represent a different ordinary-clearance policy. This does not invalidate j0-b0's actual native DRC, but should not be presented as passing the conservative screen. Detailed nearby per-layer copper and drill gaps are in SITE_RECHECK.json. These screen results are not a complete GND antipad-locality proof.
+
+The finite batch was stopped at supported negative evidence for j0-b0. No other frozen pair was constructed or claimed to fail. j0-b1 contains only its frozen scope and empty build log; no PCB candidate exists. All eight remaining pairs remain untested. This is not a global impossibility claim.
+
+Not run after rejection: full local antipad attribution, material semantic component merge/retained contacts, full track reference area and contour checks, cold 58 guards, ERC and net-identity audit. No simulation, SI, stability, manufacturing, or production acceptance claim is made. Existing strict-loss and 51-guard requirements remain in force.
+
+Preservation: INITIAL_MANIFEST.json checkpoints all 85 preexisting files with size and SHA-256. partial-j0-b1-snapshot preserves the interrupted state. FINAL_INTEGRITY.json verifies every preexisting file remains byte-identical and source PCB SHA-256 remains 41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5. No original log, candidate, frozen plan, source file or fill cache was overwritten. Added evidence under j0-b0/qa is fresh output, not a replacement.

@@ -1,0 +1,61 @@
+{
+  "all_circuit_component_pin_and_net_fields_retained": true,
+  "all_other_XML_nodes_text_and_attributes_exact": true,
+  "candidate_board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_netlist_sha256": "5eaf85f22764e0d71dd773f87c518d0f75747aaadad83e370a0fbedf0f04d483",
+  "complete_exported_netlists_equal_after_only_provenance_normalization": true,
+  "earlier_incomplete_description_preserved": {
+    "path": "qa/provenance-history/SCHEMATIC_CHECKS.json",
+    "sha256": "256cffd7bcee5df42992990821f36173745173e49abbe621cfe9ff1b0a66c47e"
+  },
+  "fresh_candidate_ERC_violations": 0,
+  "ignored_design_provenance": [
+    {
+      "export": "source-netlist.xml",
+      "path": "design/source",
+      "value": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/maru60.kicad_sch"
+    },
+    {
+      "export": "source-netlist.xml",
+      "path": "design/date",
+      "value": "2026-11-04T18:35:31+0900"
+    },
+    {
+      "export": "candidate-four-netlist.xml",
+      "path": "design/source",
+      "value": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_sch"
+    },
+    {
+      "export": "candidate-four-netlist.xml",
+      "path": "design/date",
+      "value": "2026-11-04T18:35:32+0900"
+    }
+  ],
+  "normalization_scope": "Only design/source, design/date, and the three enumerated, hash-identical local project symbol-library URI roots.",
+  "normalized_local_library_URI_pairs": [
+    {
+      "candidate_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/Maru60.kicad_sym",
+      "identical_library_sha256": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27",
+      "logical_library": "Maru60",
+      "relative_path": "Maru60.kicad_sym",
+      "source_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/Maru60.kicad_sym"
+    },
+    {
+      "candidate_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/engineering/Maru60_Options.kicad_sym",
+      "identical_library_sha256": "f4f200b7b158eb086c33ec7ac46533e1a3d1e1fa29c13c0137208e97c0dad6e0",
+      "logical_library": "Maru60_Options",
+      "relative_path": "engineering/Maru60_Options.kicad_sym",
+      "source_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/engineering/Maru60_Options.kicad_sym"
+    },
+    {
+      "candidate_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/Study.kicad_sym",
+      "identical_library_sha256": "8649ada39a5a04fc52a35fc7770c3a9d0e012c9e2dc874f422c6ceca0a309077",
+      "logical_library": "Study",
+      "relative_path": "Study.kicad_sym",
+      "source_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/Study.kicad_sym"
+    }
+  ],
+  "normalized_xml_sha256": "85733d746584cb2ed475259ab644aab53215e96c06c467da03948805ef6cdf15",
+  "selected": false,
+  "source_netlist_sha256": "17c06a936c0dcdc1337adc03fae86549973042efc5229db0d10e89cf396b6b86"
+}

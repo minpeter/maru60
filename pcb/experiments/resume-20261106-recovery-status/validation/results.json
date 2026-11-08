@@ -1,0 +1,55 @@
+{
+  "manifest": {
+    "entries": 844,
+    "actual_files": 844,
+    "missing": [],
+    "extra": [],
+    "hash_or_size_errors": []
+  },
+  "repo_head": "be51692d6b7c3069d20602cfb518370028179307",
+  "comparisons": {
+    "cad": {
+      "study_count": 58,
+      "repo_count": 58,
+      "missing_in_repo": [],
+      "extra_in_repo": [],
+      "different": []
+    },
+    "firmware": {
+      "study_count": 22,
+      "repo_count": 22,
+      "missing_in_repo": [],
+      "extra_in_repo": [],
+      "different": []
+    }
+  },
+  "tests": {
+    "replay.py": {
+      "returncode": 0,
+      "stdout": "PASS: portable snapshot parity, 36 components / 181 numbered pads; no dynamic or hardware claim.\n",
+      "stderr": ""
+    },
+    "current_limits.py": {
+      "returncode": 0,
+      "stdout": "{\"U8\": {\"R_ohm\": [6643.35, 6650.0, 6656.65], \"nominal_equation_mA\": 501.3533834586466, \"table_mA\": [425, 500, 575], \"recommended_R_ohm\": [549, 6650], \"high_R_corner_numerically_above_table_endpoint_not_violation\": true, \"nominal_equation_resistor_only_mA\": [500.8525309277189, 501.85523869734396]}, \"U7\": {\"R_kohm\": [131.67, 133.0, 134.33], \"equation_mA\": [173.65746919875536, 201.512719722154, 233.90117254047115], \"recommended_R_kohm\": [15, 232]}, \"arithmetic\": \"PASS\"}\n",
+      "stderr": ""
+    }
+  },
+  "current_limits_reproduced_exact": true,
+  "u18": {
+    "status": "NOT RUN: hardcoded original source paths and required vendor PDF are unavailable; geometry snapshot is manifest-verified only",
+    "pcbnew_available": "Available under /usr/bin/python3: 9.0.2; unavailable under default python3 (find_spec returned None)",
+    "original_source_exists": false,
+    "vendor_pdf_exists": false
+  },
+  "source_unchanged_after_tests": true,
+  "power_source_binding": {
+    "count": 29,
+    "errors": []
+  },
+  "u18_source_binding": {
+    "cad_count": 2,
+    "errors": [],
+    "vendor_and_installed_library": "Not verified: unavailable external inputs"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "source_sha256": "7882c9d916b0b773bfc146d03b3f2bc66ba18494d87279c51c302d95b0baa401",
+  "trial_sha256": "99c2ef0ef03406fda6bff02d1d9dcf81712698eed2657514826593911b12c552",
+  "status": "PASS exact raw two-Reference-only scope; geometry acceptance separate",
+  "changed_footprints": [
+    {
+      "uuid": "083c35a1-0d98-4eb7-8c28-836670d6f379",
+      "reference": "U18",
+      "source_reference_raw": "(property \"Reference\" \"U18\"\n\t\t\t(at 0 2.2 270)\n\t\t\t(unlocked yes)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"f9562ce8-f253-4b52-a957-48b8d7f3f37d\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.75 0.75)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)",
+      "trial_reference_raw": "(property \"Reference\" \"U18\"\n\t\t\t(at 0 -2.6 0)\n\t\t\t(unlocked yes)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"f9562ce8-f253-4b52-a957-48b8d7f3f37d\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.8 0.8)\n\t\t\t\t\t(thickness 0.12)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)"
+    },
+    {
+      "uuid": "2cb0d1d3-38da-4a29-a3fe-bd10e99dc83c",
+      "reference": "L2",
+      "source_reference_raw": "(property \"Reference\" \"L2\"\n\t\t\t(at 0 3.15 270)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"540b3dae-dfa9-42bb-81ce-22a3e5ae32ea\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.75 0.75)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)",
+      "trial_reference_raw": "(property \"Reference\" \"L2\"\n\t\t\t(at 3.1 0.25 0)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"540b3dae-dfa9-42bb-81ce-22a3e5ae32ea\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.8 0.8)\n\t\t\t\t\t(thickness 0.12)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)"
+    }
+  ],
+  "all_other_raw_top_level_objects_exact": true,
+  "all_non_reference_bytes_in_changed_footprints_exact": true,
+  "all12_raw_zones_exact": true,
+  "all_tracks_vias_holes_pads_nets_settings_exact": true,
+  "source_file_count": 58,
+  "all_companions_exact": true,
+  "eight_selected_full_footprints_exact": {
+    "C100": {
+      "footprint_uuid": "936d1b8f-2579-4255-b41c-cc9654291283",
+      "full_raw_footprint_exact": true
+    },
+    "R140": {
+      "footprint_uuid": "7b318399-ba02-4c74-af7c-24a406884d8a",
+      "full_raw_footprint_exact": true
+    },
+    "R160": {
+      "footprint_uuid": "319c8d90-2e8c-4fbe-b044-eb183bcc2c22",
+      "full_raw_footprint_exact": true
+    },
+    "R134": {
+      "footprint_uuid": "e8bd1f07-b665-43fb-a3a3-9ba1bca55842",
+      "full_raw_footprint_exact": true
+    },
+    "C124": {
+      "footprint_uuid": "c16684c6-e6e9-4d9e-ab06-ad0653958e94",
+      "full_raw_footprint_exact": true
+    },
+    "R121": {
+      "footprint_uuid": "d422a027-2eda-4bf9-9c83-1580d56a84b7",
+      "full_raw_footprint_exact": true
+    },
+    "R125": {
+      "footprint_uuid": "7f46d8aa-a5e8-5221-bb89-7f6d1360b233",
+      "full_raw_footprint_exact": true
+    },
+    "U8": {
+      "footprint_uuid": "a1f79810-94aa-4bc1-82d7-8f56f7f8b4f0",
+      "full_raw_footprint_exact": true
+    }
+  },
+  "source_drc_sha256": "8d8660dbaa5f5ec736579281f638c9a180d8b13224f9741f843ed8210842ba81",
+  "trial_drc_sha256": "a400b3d4de279cb6af2738a97907ab0c83adb2d04a3ba197d984846d8ba4c5ad",
+  "warning_counts": [
+    64,
+    58
+  ],
+  "removed_warnings": [
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+      "items": [
+        {
+          "description": "Reference field of L2",
+          "pos": {
+            "x": 177.85,
+            "y": 81.0
+          },
+          "uuid": "540b3dae-dfa9-42bb-81ce-22a3e5ae32ea"
+        }
+      ],
+      "severity": "warning",
+      "type": "text_height"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen clipped by solder mask",
+      "items": [
+        {
+          "description": "Reference field of L2",
+          "pos": {
+            "x": 177.85,
+            "y": 81.0
+          },
+          "uuid": "540b3dae-dfa9-42bb-81ce-22a3e5ae32ea"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_over_copper"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Reference field of R159",
+          "pos": {
+            "x": 181.57,
+            "y": 85.0
+          },
+          "uuid": "dbd31047-168e-40f6-b393-4f6e5518463a"
+        },
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    },
+    {
+      "description": "Silkscreen overlap",
+      "items": [
+        {
+          "description": "Segment of C139 on B.Silkscreen",
+          "pos": {
+            "x": 181.91,
+            "y": 84.85942
+          },
+          "uuid": "135c4327-c10d-4452-bb61-c9f94926e75d"
+        },
+        {
+          "description": "Reference field of U18",
+          "pos": {
+            "x": 181.45,
+            "y": 84.25
+          },
+          "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+        }
+      ],
+      "severity": "warning",
+      "type": "silk_overlap"
+    }
+  ],
+  "added_warnings": [],
+  "raw12opens_exact": true,
+  "hard_DRC": 0,
+  "parity": 0
+}

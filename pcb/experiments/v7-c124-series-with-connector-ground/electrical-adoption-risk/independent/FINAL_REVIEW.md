@@ -1,0 +1,11 @@
+# Final memo check
+
+Reviewed MEMO.md, BRIEF.md, nominal-and-drift-deltas.json and calculate_deltas.py. Independent direct arithmetic checks passed; no simulation or CAD changes performed.
+
+- Selected generic c770 R121 is correctly separated from the unselected TNPW0603 proposal. No selected-baseline TCR, lifetime, humidity or dielectric properties are invented.
+- Section 2 correctly limits TI's wording to a recommendation for CdVdt >10 nF and treats ±10% as a 9–11 nF initial-tolerance interval, not operating effective capacitance. Opening wording correction, now implemented by the parent: replace “implements TI's tolerance-aware series-resistor recommendation” with “adds TI's recommended 100 Ω series value as a conservative response to the 10 nF ±10% tolerance range.” The tolerance-aware application is an engineering inference, not a separately stated TI instruction.
+- Nominal/tolerance-only divider currents, 1.20 V rising and 1.09 V falling thresholds, Thevenin resistance and 0.891–1.111 microsecond passive RC product are correct. TI Rev C §6.5, printed p9 (confirmed from the supplied extracted text and its page footer), explicitly supplies the two typical OVLO pin thresholds. The original p6 citation in this review was an error and is corrected here. No active timing inference is made.
+- Approximate ±4.54 mV KOA and ±2.27 mV unselected Vishay drift sensitivities correctly map their published R121-only test allowances with fixed R120/reference. Exact signs/asymmetry in JSON are correct. Different test conditions and absence of a selected-baseline lifetime guarantee are explicit; these are not comparative measured drift claims.
+- Startup, brownout, pulse/reset, noise, unknown input-fault contract, drift/tracking and assembly/production gates remain. Preference is explicitly for an unqualified prototype candidate, not adoption or release.
+
+No blocking logical or numerical error found. This check does not independently re-establish selected CAD identity or all manufacturer specifications; it uses the supplied verified identity and sealed review evidence. BRIEF.md has now been checked: it preserves the nominal/tolerance interpretation, unknown selected baseline, proposal-only drift comparison, and qualification gates without introducing a numerical or logical overclaim. No further correction is required.

@@ -1,0 +1,1946 @@
+{
+  "status": "PASS: fragments explicit, no electrical or cross-layer participation",
+  "boards": {
+    "aead": {
+      "board_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+      "NPTH_objects": 335,
+      "empty_NPTH_objects": 334,
+      "nonempty_NPTH_objects": [
+        {
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "ref": "SWRS1",
+          "nodes_by_layer": {
+            "F.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13"
+            ],
+            "In1.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13"
+            ],
+            "In2.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13"
+            ],
+            "B.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13"
+            ]
+          },
+          "material_roots": [
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9"
+          ]
+        }
+      ],
+      "all_NPTH_fragment_nodes": {
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9"
+        }
+      },
+      "NPTH_fragment_count": 56,
+      "accepted_edges_involving_NPTH_fragments": [],
+      "guard_failed_edges_involving_NPTH_fragments": [],
+      "barrel_joins_involving_NPTH": [],
+      "named_pad_root_participation": [],
+      "NPTH_roots_disjoint_from_every_named_pad_root": true
+    },
+    "2c7": {
+      "board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+      "NPTH_objects": 335,
+      "empty_NPTH_objects": 334,
+      "nonempty_NPTH_objects": [
+        {
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "ref": "SWRS1",
+          "nodes_by_layer": {
+            "F.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13"
+            ],
+            "In1.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13"
+            ],
+            "In2.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13"
+            ],
+            "B.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13"
+            ]
+          },
+          "material_roots": [
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9"
+          ]
+        }
+      ],
+      "all_NPTH_fragment_nodes": {
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9"
+        }
+      },
+      "NPTH_fragment_count": 56,
+      "accepted_edges_involving_NPTH_fragments": [],
+      "guard_failed_edges_involving_NPTH_fragments": [],
+      "barrel_joins_involving_NPTH": [],
+      "named_pad_root_participation": [],
+      "NPTH_roots_disjoint_from_every_named_pad_root": true
+    },
+    "cafa": {
+      "board_sha256": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb",
+      "NPTH_objects": 335,
+      "empty_NPTH_objects": 334,
+      "nonempty_NPTH_objects": [
+        {
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "ref": "SWRS1",
+          "nodes_by_layer": {
+            "F.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13"
+            ],
+            "In1.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13"
+            ],
+            "In2.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13"
+            ],
+            "B.Cu": [
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12",
+              "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13"
+            ]
+          },
+          "material_roots": [
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8",
+            "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9"
+          ]
+        }
+      ],
+      "all_NPTH_fragment_nodes": {
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "F.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:0:9"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "B.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:2:9"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In1.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:4:9"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 0,
+          "area_mm2": 1.65e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:0"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 1,
+          "area_mm2": 9.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:1"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 10,
+          "area_mm2": 2.15e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:10"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 11,
+          "area_mm2": 9.5e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:11"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 12,
+          "area_mm2": 4e-12,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:12"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 13,
+          "area_mm2": 2.95e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:13"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 2,
+          "area_mm2": 1.84e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:2"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 3,
+          "area_mm2": 1.795e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:3"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 4,
+          "area_mm2": 1.01697e-07,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:4"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 5,
+          "area_mm2": 1.955e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:5"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 6,
+          "area_mm2": 4.35e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:6"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 7,
+          "area_mm2": 1.68855e-08,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:7"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 8,
+          "area_mm2": 8.5e-11,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:8"
+        },
+        "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9": {
+          "kind": "object",
+          "uuid": "c8b60afe-345a-4f16-b725-3dd069ce05bc",
+          "layer": "In2.Cu",
+          "index": 9,
+          "area_mm2": 1.205e-10,
+          "net": "",
+          "material_root": "object:c8b60afe-345a-4f16-b725-3dd069ce05bc:6:9"
+        }
+      },
+      "NPTH_fragment_count": 56,
+      "accepted_edges_involving_NPTH_fragments": [],
+      "guard_failed_edges_involving_NPTH_fragments": [],
+      "barrel_joins_involving_NPTH": [],
+      "named_pad_root_participation": [],
+      "NPTH_roots_disjoint_from_every_named_pad_root": true
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "scope": "Independent pure result/command/root/NPTH audit; no native rerun, no acceptance or selection.",
+  "main_runs": [
+    {
+      "label": "aead",
+      "board_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+      "graph_sha256": "7a6ca935a3699b2d0a2e1e7b21de7c27059aa802e07080f904b8b80314170741",
+      "commands_bound": true,
+      "roots_independently_reconstructed": true,
+      "pad_partitions_independently_reconstructed": true,
+      "named_pad_count": 1082,
+      "net_count": 245,
+      "material_nodes": 14687,
+      "material_edges": 22531,
+      "barrels": 934,
+      "npth_fragment_nodes": 56,
+      "npth_accepted_edges": 0,
+      "npth_guard_failed_edges": 0,
+      "npth_named_pad_participation": 0,
+      "guard_failures": 51,
+      "direct_edges": 21796,
+      "zone_edges": 731
+    },
+    {
+      "label": "2c7",
+      "board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+      "graph_sha256": "06dd8fd881396d5232dd732ac7fd33f09b211979c8a981941816cbacc9ba3e2a",
+      "commands_bound": true,
+      "roots_independently_reconstructed": true,
+      "pad_partitions_independently_reconstructed": true,
+      "named_pad_count": 1082,
+      "net_count": 245,
+      "material_nodes": 14691,
+      "material_edges": 22532,
+      "barrels": 935,
+      "npth_fragment_nodes": 56,
+      "npth_accepted_edges": 0,
+      "npth_guard_failed_edges": 0,
+      "npth_named_pad_participation": 0,
+      "guard_failures": 51,
+      "direct_edges": 21797,
+      "zone_edges": 731
+    },
+    {
+      "label": "cafa",
+      "board_sha256": "cafa92133d336fef0b8236b8eafb2071bd6535cb991e95223a4b3fc233c4c4cb",
+      "graph_sha256": "942185a631001efa5c93fa3ae9d8ca2f576cc1e49758729188c0b008488174ca",
+      "commands_bound": true,
+      "roots_independently_reconstructed": true,
+      "pad_partitions_independently_reconstructed": true,
+      "named_pad_count": 1082,
+      "net_count": 245,
+      "material_nodes": 14674,
+      "material_edges": 22518,
+      "barrels": 933,
+      "npth_fragment_nodes": 56,
+      "npth_accepted_edges": 0,
+      "npth_guard_failed_edges": 0,
+      "npth_named_pad_participation": 0,
+      "guard_failures": 51,
+      "direct_edges": 21783,
+      "zone_edges": 731
+    }
+  ],
+  "source_bindings": {
+    "/tmp/v7-c128-retirement-independent-review/electrical/corrected_v2/commands.json": "b5ebc53d61b28135ab0f4fcc710bf0d1089fd7f7d33927a662983e82f931ace6"
+  },
+  "selected_exact_interior_supplement": {
+    "sha256": "a90feb222e30bd7bea2273786d85cca2f5749433ffcbfd1e3e411a2aa716bfac",
+    "all_22531_edges_covered_exactly_once": true,
+    "all_component_coordinate_hashes_present": true,
+    "method": "Exact outer-and-hole PIP and exact segment-distance >=2 nm for both original physical components; native intersections generate seeds only.",
+    "bound_inputs_rehashed": true,
+    "scope": "Only R2 accepted material edges; existing guard failures excluded, barrel proofs reconstructed/compared but not treated as coplanar witness edges. Source topology is reconstructed by pinned native R2 code, not independently certified."
+  },
+  "script_sha256": "b5ad57dfa0cd87b3e2dc356d4a98a5a9e64db74e9c7300cacaf9c7aa6db23a37"
+}

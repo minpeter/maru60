@@ -1,0 +1,135 @@
+{
+  "source_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "rejected_pcb_sha256": "a60175d59abb204a050c008d229e0a968f33604383134912f1c812cab7f07a68",
+  "native_drc": {
+    "opens": 9,
+    "warnings": 42,
+    "warning_instances": 42,
+    "new_hard_errors": 5,
+    "parity": 0,
+    "warning_records_exact": true,
+    "hard_error_records": [
+      {
+        "description": "Items shorting two nets (nets GPIO3_ISO and GPIO_ISOLATE)",
+        "items": [
+          {
+            "description": "Via [GPIO3_ISO] on F.Cu - B.Cu",
+            "pos": {
+              "x": 109.7,
+              "y": 35.25
+            },
+            "uuid": "00b76649-ed82-4e2e-a708-dc3f517fd018"
+          },
+          {
+            "description": "Track [GPIO_ISOLATE] on B.Cu, length 1.5000 mm",
+            "pos": {
+              "x": 108.1,
+              "y": 35.05
+            },
+            "uuid": "24f3167b-afc3-488d-a067-471ce6085f7a"
+          }
+        ],
+        "severity": "error",
+        "type": "shorting_items"
+      },
+      {
+        "description": "Clearance violation (netclass 'Default' clearance 0.1500 mm; actual 0.0621 mm)",
+        "items": [
+          {
+            "description": "Track [GPIO_ISOLATE] on B.Cu, length 1.5000 mm",
+            "pos": {
+              "x": 108.1,
+              "y": 35.05
+            },
+            "uuid": "24f3167b-afc3-488d-a067-471ce6085f7a"
+          },
+          {
+            "description": "Track [GPIO3_ISO] on B.Cu, length 0.7778 mm",
+            "pos": {
+              "x": 110.25,
+              "y": 34.7
+            },
+            "uuid": "7b5e9124-9875-4909-ba8e-4aa4176aca03"
+          }
+        ],
+        "severity": "error",
+        "type": "clearance"
+      },
+      {
+        "description": "Tracks crossing",
+        "items": [
+          {
+            "description": "Track [COL5] on B.Cu, length 18.8043 mm",
+            "pos": {
+              "x": 106.8375,
+              "y": 25.70875
+            },
+            "uuid": "1a0b9af6-88ec-455f-ba43-9d292abfa567"
+          },
+          {
+            "description": "Track [GPIO_ISOLATE] on B.Cu, length 1.5000 mm",
+            "pos": {
+              "x": 108.1,
+              "y": 35.05
+            },
+            "uuid": "24f3167b-afc3-488d-a067-471ce6085f7a"
+          }
+        ],
+        "severity": "error",
+        "type": "tracks_crossing"
+      },
+      {
+        "description": "Items shorting two nets (nets GPIO3_ISO and GPIO_ISOLATE)",
+        "items": [
+          {
+            "description": "Via [GPIO3_ISO] on F.Cu - B.Cu",
+            "pos": {
+              "x": 109.7,
+              "y": 35.25
+            },
+            "uuid": "00b76649-ed82-4e2e-a708-dc3f517fd018"
+          },
+          {
+            "description": "Track [GPIO_ISOLATE] on B.Cu, length 4.9500 mm",
+            "pos": {
+              "x": 109.6,
+              "y": 35.05
+            },
+            "uuid": "9b74b63a-b6ba-4663-96c7-5cd06ae2fd31"
+          }
+        ],
+        "severity": "error",
+        "type": "shorting_items"
+      },
+      {
+        "description": "Tracks crossing",
+        "items": [
+          {
+            "description": "Track [COL5] on B.Cu, length 18.8043 mm",
+            "pos": {
+              "x": 106.8375,
+              "y": 25.70875
+            },
+            "uuid": "1a0b9af6-88ec-455f-ba43-9d292abfa567"
+          },
+          {
+            "description": "Track [GPIO_ISOLATE] on B.Cu, length 4.9500 mm",
+            "pos": {
+              "x": 109.6,
+              "y": 35.05
+            },
+            "uuid": "9b74b63a-b6ba-4663-96c7-5cd06ae2fd31"
+          }
+        ],
+        "severity": "error",
+        "type": "tracks_crossing"
+      }
+    ]
+  },
+  "source_unchanged": true,
+  "all57_companions_exact": true,
+  "removed_tracks": 49,
+  "added_tracks": 4,
+  "deeper_checks": "Not run because the native severity gate fails. No material, return-path, SI or stability pass is claimed.",
+  "decision": "REJECTED. No closure and no candidate selection."
+}

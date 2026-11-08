@@ -1,0 +1,50 @@
+{
+  "part": "TDK C1608NP01H822J080AA",
+  "lifecycle_official": "Production",
+  "status": "read_only_not_selected",
+  "rated_V": 50,
+  "nominal_nF": 8.2,
+  "initial_tolerance_fraction": 0.05,
+  "temperature_coefficient_ppm_per_C": 30,
+  "reference_C": 25,
+  "catalog_temperature_C": [
+    -55,
+    150
+  ],
+  "coefficient_only_symmetric_envelope_nF": [
+    7.7607875,
+    8.6422875
+  ],
+  "coefficient_only_margin_to_10nF_nF": 1.3577125,
+  "nominal_design_5V_ramp_ms": 20.5,
+  "coefficient_only_design_5V_ramp_ms": [
+    19.40196875,
+    21.60571875
+  ],
+  "nominal_cap_only_5p8uF_inrush_mA": 1.4146341463414633,
+  "coefficient_only_cap_only_inrush_range_mA": [
+    1.3422372259659263,
+    1.4946936763827126
+  ],
+  "full_range_constant_coefficient_is_screening_assumption": true,
+  "complete_all_stress_bound": false,
+  "actual_existing_0603_pad_mm": {
+    "length": 0.9,
+    "width": 0.95,
+    "inner_gap": 0.65
+  },
+  "manufacturer_recommended_reflow_each_range_mm": [
+    0.6,
+    0.8
+  ],
+  "pad_length_exceeds_recommendation_mm": 0.1,
+  "pad_width_exceeds_recommendation_mm": 0.15,
+  "recommendation_mismatch_is_not_proof_of_unsafe_assembly": true,
+  "CAD_BOM_unchanged": true,
+  "notes": [
+    "Coefficient-only algebra is not an all-stress assembled-circuit guarantee.",
+    "Environmental, soldering and drift tests have separate conditions; do not silently sum or ignore them.",
+    "Actual load is not purely capacitive: this is not total board startup current.",
+    "No mechanical/drop-in approval, active model, hardware measurement or production qualification."
+  ]
+}

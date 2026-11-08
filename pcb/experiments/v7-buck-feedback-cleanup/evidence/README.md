@@ -1,0 +1,7 @@
+# BUCK_FB dead-arm experiment: UNSELECTED, strict global plane gate FAIL
+
+This packet preserves the exact selected 2c7 source project, unselected aead dead-arm cleanup, native prefill/filled diagnostics, source-bound plan, independent strict rejection, and separate no-edit/repeat normal-refill controls. No selection, tolerance waiver, manual fill repair, noise reduction, loop-stability, hardware or manufacturing qualification is implied.
+
+Read trial/TECHNICAL_REVIEW.md first. The independent-strict-review packet is included unchanged with its own manifest. Read CASE_SPECIFIC_ENGINEERING_DECISION.md for the separate case-specific precision condition. It does not retroactively change the original strict rejection; independent precision proof and fresh final rechecks are separate evidence. Both normal-refill controls are byte-identical fixed points; the real remote saved-contour losses remain.
+
+Scripts preserve their original absolute paths and exact source-hash assertions. For replay on another machine, map the original /tmp/v7-buck-deadarm-trial-2c7e to trial/, the plan and control directories to the corresponding bundled folders, and the selected repository project to trial/source/pcb/. KiCad 9.0.2+dfsg-1 and Python pcbnew are required. Runtime caches are excluded; native evidence and failed/interrupted diagnostic records are retained. Do not replay scripts against the selected project without isolation. The source-bound CAD is supplied directly, not reconstructed from a report.

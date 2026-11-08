@@ -1,0 +1,429 @@
+{
+  "classification": "Fresh passive/behavioral frozen-deck replay only; not an active power or hardware qualification",
+  "selected_board_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "original_saved_deck_board_sha256": "3663aac96fb305eb4925fff938dd2db5862b880c6c262b2fa82707567a6e98f7",
+  "not_reextracted_from_selected_board": true,
+  "libngspice_sha256": "8b24e526865425243ee57efa9dcbdde99e7220393eb77a1ab863e849a2e0d761",
+  "runner_sha256": "9fae08c3d57c996f2212f96b2f0b3a4f78990fed0773bc0ec9aeea8b2d82d762",
+  "runs": [
+    {
+      "name": "capacitor_24u_load",
+      "deck_sha256": "0b5db0a66e35aa6c1f0ed0209ab26ca218ddedd11e02d9d70ca0bc23dac77824",
+      "rows": 1120,
+      "end_time_s": 5.5e-05,
+      "signals": [
+        "v(out)",
+        "v(cnode)"
+      ],
+      "min_V": [
+        3.579374583334,
+        3.583374583334
+      ],
+      "max_V": [
+        4.0,
+        4.0
+      ],
+      "final_V": [
+        3.579374583334,
+        3.583374583334
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "b548a0f6c408f51db8c21953e6b85fb685a9cc888759c2f60e52be6534d3e87d",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "finite_ramp_analytic_endpoint_V": 3.5793749999999998,
+      "analytic_endpoint_error_V": 4.166659999249589e-07
+    },
+    {
+      "name": "capacitor_24u_unload",
+      "deck_sha256": "cb21c11e7b1700f1be189d2a5060198cb628a4223c16fd292bcce73e455e497f",
+      "rows": 1120,
+      "end_time_s": 5.5e-05,
+      "signals": [
+        "v(out)",
+        "v(cnode)"
+      ],
+      "min_V": [
+        4.0,
+        4.0
+      ],
+      "max_V": [
+        4.420625416667,
+        4.416625416667
+      ],
+      "final_V": [
+        4.420625416667,
+        4.416625416667
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "19627c68087fd492d2acfd47ee57287393789c1482ed6d8c744cca06efdefe59",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "finite_ramp_analytic_endpoint_V": 4.420625,
+      "analytic_endpoint_error_V": 4.1666699956977027e-07
+    },
+    {
+      "name": "capacitor_44u_load",
+      "deck_sha256": "e0ea2a6da5aa30fcf6e027d571e3f9c4cae525e5966e6b3c2115451e83123b6c",
+      "rows": 1120,
+      "end_time_s": 5.5e-05,
+      "signals": [
+        "v(out)",
+        "v(cnode)"
+      ],
+      "min_V": [
+        3.768749772728,
+        3.772749772728
+      ],
+      "max_V": [
+        4.0,
+        4.0
+      ],
+      "final_V": [
+        3.768749772728,
+        3.772749772728
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "dd122beaa8bec56c433b7385e4367eec48da416905d58265f69e1488ed597d85",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "finite_ramp_analytic_endpoint_V": 3.76875,
+      "analytic_endpoint_error_V": 2.2727199988636926e-07
+    },
+    {
+      "name": "capacitor_44u_unload",
+      "deck_sha256": "af293d0f92725c20df5514be94cfa68e27e4e9c9e632349224b44981b6578670",
+      "rows": 1120,
+      "end_time_s": 5.5e-05,
+      "signals": [
+        "v(out)",
+        "v(cnode)"
+      ],
+      "min_V": [
+        4.0,
+        4.0
+      ],
+      "max_V": [
+        4.231250227273,
+        4.227250227273
+      ],
+      "final_V": [
+        4.231250227273,
+        4.227250227273
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "2577729f71a56f80c5ba38115c7ba05b15a723a81dd7fe5236ee2d669f9967e0",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "finite_ramp_analytic_endpoint_V": 4.23125,
+      "analytic_endpoint_error_V": 2.2727299953118063e-07
+    },
+    {
+      "name": "capacitor_8u_load",
+      "deck_sha256": "409147473c5280f7c53b736d41114f5e2cddbee21646bff1906e230c302669ba",
+      "rows": 1120,
+      "end_time_s": 5.5e-05,
+      "signals": [
+        "v(out)",
+        "v(cnode)"
+      ],
+      "min_V": [
+        2.74612375,
+        2.75012375
+      ],
+      "max_V": [
+        4.0,
+        4.0
+      ],
+      "final_V": [
+        2.74612375,
+        2.75012375
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "a8aa27140e6515db88ba36588bb191fc8568e0c1ecce15b6382b1fd35586852a",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "finite_ramp_analytic_endpoint_V": 2.746125,
+      "analytic_endpoint_error_V": 1.2499999999526779e-06
+    },
+    {
+      "name": "capacitor_8u_unload",
+      "deck_sha256": "89e530e248ac64e64f050e445029763c37992b1b27f3faccdd18f6913d008459",
+      "rows": 1120,
+      "end_time_s": 5.5e-05,
+      "signals": [
+        "v(out)",
+        "v(cnode)"
+      ],
+      "min_V": [
+        4.0,
+        4.0
+      ],
+      "max_V": [
+        5.25387625,
+        5.24987625
+      ],
+      "final_V": [
+        5.25387625,
+        5.24987625
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "a96b2720935ee58a666c8ecda77eb933b30262fe90322a1e85f644489ad5b6b7",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "finite_ramp_analytic_endpoint_V": 5.253875,
+      "analytic_endpoint_error_V": 1.250000000396767e-06
+    },
+    {
+      "name": "efuse_hysteresis",
+      "deck_sha256": "aa5c9e72cc90e89b05170acfe4d25f953104da95db68e2da026048c73cb800a4",
+      "rows": 20011,
+      "end_time_s": 2.0,
+      "signals": [
+        "v(fused)",
+        "v(out)",
+        "v(uv)",
+        "v(ov)"
+      ],
+      "min_V": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_V": [
+        6.5,
+        5.733465119306,
+        1.956595264938,
+        1.359249329759
+      ],
+      "final_V": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "aa4359c1ff675d31b735216cb2436c348986128f5ce89581cbf89224708251c7",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "transition_input_V": [
+        3.986632,
+        5.739031999999,
+        5.212025,
+        3.620825
+      ]
+    },
+    {
+      "name": "input_recovery_C2u_L0p1u",
+      "deck_sha256": "bf2687d41f89b5eb6f1213daf2482e3614ff9367123b5e06e251660fa7b6ce54",
+      "rows": 15017,
+      "end_time_s": 3e-05,
+      "signals": [
+        "v(source)",
+        "v(capin)"
+      ],
+      "min_V": [
+        0.0,
+        0.0
+      ],
+      "max_V": [
+        5.0,
+        4.980984042434
+      ],
+      "final_V": [
+        5.0,
+        4.946297147698
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "216f1d99becdd3a56afd7cdae39fd689681fca2dd0c914f149717f410cf92d49",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ]
+    },
+    {
+      "name": "input_recovery_C2u_L0p5u",
+      "deck_sha256": "1434c252ccb2860eb12029fec901d2da91ce24502dd43a8cad7e3bbabc7bcbe2",
+      "rows": 15016,
+      "end_time_s": 3e-05,
+      "signals": [
+        "v(source)",
+        "v(capin)"
+      ],
+      "min_V": [
+        0.0,
+        0.0
+      ],
+      "max_V": [
+        5.0,
+        6.286691156263
+      ],
+      "final_V": [
+        5.0,
+        4.946331087899
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "ca4c4a3a0a1fa160f95c59ae9fc7449c96ea85841e1aea6fd06257f8a4a9b926",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ]
+    },
+    {
+      "name": "input_recovery_C2u_L1p0u",
+      "deck_sha256": "084819343a9b11191ffbdb4625d80a9b58b2c6e654f5d6fd197adc4675086fa0",
+      "rows": 15016,
+      "end_time_s": 3e-05,
+      "signals": [
+        "v(source)",
+        "v(capin)"
+      ],
+      "min_V": [
+        0.0,
+        0.0
+      ],
+      "max_V": [
+        5.0,
+        6.947959415621
+      ],
+      "final_V": [
+        5.0,
+        4.943232925569
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "86eec5f79f0c5208d5a898d084e34188cb69c8a703593d7c9364d77dbe652f78",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ]
+    },
+    {
+      "name": "input_recovery_C4p7u_L0p1u",
+      "deck_sha256": "27e1128eb356e43661e5793b42f915944c9a54e3070824bc9f99a32dae8ba227",
+      "rows": 15017,
+      "end_time_s": 3e-05,
+      "signals": [
+        "v(source)",
+        "v(capin)"
+      ],
+      "min_V": [
+        0.0,
+        0.0
+      ],
+      "max_V": [
+        5.0,
+        4.946297142192
+      ],
+      "final_V": [
+        5.0,
+        4.946297142192
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "eb634aab13580d079c13c14eb237abdcd1cfc1ca75443848d1861c47a8b34524",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ]
+    },
+    {
+      "name": "input_recovery_C4p7u_L0p5u",
+      "deck_sha256": "17f55300ea486962f9ab9c83a3c7ad64db980af3d2694dfe14d5fa49117b9cfa",
+      "rows": 15016,
+      "end_time_s": 3e-05,
+      "signals": [
+        "v(source)",
+        "v(capin)"
+      ],
+      "min_V": [
+        0.0,
+        0.0
+      ],
+      "max_V": [
+        5.0,
+        5.469850873869
+      ],
+      "final_V": [
+        5.0,
+        4.946358219232
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "9251908dd586b258efcc5af378522ff53a3508f27786f5b932d4ef2aad196c5c",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ]
+    },
+    {
+      "name": "input_recovery_C4p7u_L1p0u",
+      "deck_sha256": "56e1ec46a6b331adc4ff3074e314e2c91807ea921a540ab08b8336e0d52cccaf",
+      "rows": 15016,
+      "end_time_s": 3e-05,
+      "signals": [
+        "v(source)",
+        "v(capin)"
+      ],
+      "min_V": [
+        0.0,
+        0.0
+      ],
+      "max_V": [
+        5.0,
+        6.127971961486
+      ],
+      "final_V": [
+        5.0,
+        4.930336809409
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "9dc4695770524f282f2a1b1ba04d6cbcd42db03eae8288522253d62b2e768955",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ]
+    },
+    {
+      "name": "rc_control",
+      "deck_sha256": "5d9bf7241b30231e1c22d7aee5bb93d5f4f7f51554af0351c3de1f09646503b0",
+      "rows": 526,
+      "end_time_s": 0.005,
+      "signals": [
+        "v(src)",
+        "v(out)"
+      ],
+      "min_V": [
+        0.0,
+        0.0
+      ],
+      "max_V": [
+        1.0,
+        0.9932623296535
+      ],
+      "final_V": [
+        1.0,
+        0.9932623296535
+      ],
+      "saved_replay_same_shape": true,
+      "saved_replay_max_abs_difference": 0.0,
+      "waveform_sha256": "30b94743fd8d007a7565f6d92503a181178c9f8fa6be1ea2dd71f22cd3ab765f",
+      "warnings": [
+        "stderr Warning: can't find the initialization file spinit."
+      ],
+      "analytic_max_abs_error_V": 3.0351160698049995e-06
+    }
+  ]
+}

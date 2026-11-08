@@ -1,0 +1,61 @@
+{
+  "status": "FROZEN_PROTOTYPE_CANDIDATE_FOR_FURTHER_EVALUATION_NOT_STRICT_ACCEPTANCE",
+  "strict_baseline_retained": {
+    "commit": "bbf61e6ae1bb54d31d7fa2b353fd19ca1410275a",
+    "pcb_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+    "opens": 11,
+    "warnings": 51
+  },
+  "candidate": {
+    "pcb_sha256": "56d66f65bb1f30d6ec7860f398cfd4f2399f3a9d305ef80d4bebab721d2571d9",
+    "opens": 10,
+    "warnings": 50,
+    "other_DRC_errors": 0,
+    "ERC": 0,
+    "schematic_parity": 0,
+    "raw_native_net_identity": true,
+    "electrical_pin_bindings": 1064,
+    "cold_refill_all58_files_byte_identical": true,
+    "tracks": 9758,
+    "vias": 921,
+    "footprints": 383,
+    "track_length_mm": 13202.977293816894
+  },
+  "completed_connections_vs_original": [
+    "EXT_GPIO26 header J3 to existing U11/U13 component",
+    "EXT_GPIO24 header J3 to U11; U13 still open"
+  ],
+  "remaining_open_pairs": {
+    "header": 4,
+    "MCU": 6,
+    "total": 10
+  },
+  "exact_no_loss_diagnostic": "FAIL, retained without tolerance waiver",
+  "prototype_geometry_basis": [
+    "Corrected all-drill material graph preserves all named pad partitions except intended header merges; composed VBUS patch preserves all10 remaining physical open-component pairs.",
+    "Two GND planes remain connected. New route references are continuous outside declared signal-via transition windows.",
+    "GPIO24 remote boundary movement is exactly bounded below0.767898nm; unrelated raw +4V_LED shadow loss is real and explicitly recorded,2.7676778318142192e-08mm2 perplane.",
+    "VBUS remote boundary shifts are bounded below0.733nm; exact rational proof disproves its apparent GND annulus contact shrink. Raw plane losses remain recorded.",
+    "These are narrow nominal geometry observations, not complete electrical or production qualification."
+  ],
+  "simulation": {
+    "fresh_frozen_decks_replayed": 14,
+    "full_current_board_decks": 0,
+    "sensitivity_decks": 13,
+    "simulator_control_decks": 1,
+    "current_components_and_pin_nets_crosschecked": 29,
+    "direct_nameplate_uF": {
+      "+4V_REG": 49.7,
+      "VBUS_PROTECTED_RAW": 5.8
+    },
+    "effective_capacitance_known": false,
+    "active_model_startup": "No waveform; missing XSPICE models; historical semantic/regulation failures also remain"
+  },
+  "limits": [
+    "Ten open pairs and50 warnings remain.",
+    "No SI/EMI/current-return, power startup/fault/brownout/pulse, thermal, fabrication or reliability qualification.",
+    "U11-side GPIO24 nearest existing GND via is3.647688mm away. Screened closer stitch is not yet added or validated.",
+    "Full QMK/ARM builds and physical hardware tests not run. LED qualification stays OFF.",
+    "No rule suppression, public push, order, purchase or flashing."
+  ]
+}

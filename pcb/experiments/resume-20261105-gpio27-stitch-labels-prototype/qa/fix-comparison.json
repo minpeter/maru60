@@ -1,0 +1,77 @@
+{
+  "source_sha256": "b1e3b41f868bebc2915264d1136e356a67b3b8896de3650068bd1c438aa62913",
+  "candidate_sha256": "9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed",
+  "raw_scope": "One old track end and one added track only; all other raw forms including all serialized fills exact.",
+  "all57_companions_exact": true,
+  "all_pad_partitions_exact": true,
+  "all9_complete_open_pairs_exact": true,
+  "all42_warning_records_exact": true,
+  "all_undeclared_contact_areas_exact": true,
+  "declared_changed_contacts": [
+    {
+      "edge": [
+        "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+        "df690eec-df6a-52bf-82fe-eace87245374",
+        "F.Cu"
+      ],
+      "before": 0.0019396436365,
+      "after": null
+    },
+    {
+      "edge": [
+        "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+        "075334c3-e6fd-4cf3-8599-1a58cef3db7f",
+        "F.Cu"
+      ],
+      "before": 0.019374667347,
+      "after": 0.019374803264
+    },
+    {
+      "edge": [
+        "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+        "bd60c430-58d5-568a-b034-a604187f20ee",
+        "F.Cu"
+      ],
+      "before": 0.0193748671165,
+      "after": null
+    }
+  ],
+  "declared_remapped_contacts": [
+    {
+      "retired_pair": [
+        "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+        "df690eec-df6a-52bf-82fe-eace87245374",
+        "F.Cu"
+      ],
+      "before_area_mm2": 0.0019396436365,
+      "replacement_pair": [
+        "adb09d04-e93c-4f35-bbef-200d2bb1eb64",
+        "df690eec-df6a-52bf-82fe-eace87245374",
+        "F.Cu"
+      ],
+      "after_area_mm2": 0.001970426796,
+      "exact_patch_identity_claimed": false
+    },
+    {
+      "retired_pair": [
+        "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+        "bd60c430-58d5-568a-b034-a604187f20ee",
+        "F.Cu"
+      ],
+      "before_area_mm2": 0.0193748671165,
+      "replacement_pair": [
+        "adb09d04-e93c-4f35-bbef-200d2bb1eb64",
+        "bd60c430-58d5-568a-b034-a604187f20ee",
+        "F.Cu"
+      ],
+      "after_area_mm2": 0.019374863805,
+      "exact_patch_identity_claimed": false
+    }
+  ],
+  "only_old_track_material_nodes_changed": [
+    "object:55e5d0cf-c179-4e88-925d-241a5a9d4416:0:0"
+  ],
+  "zone_contacts_barrels_and_guard_diagnostics_exact": true,
+  "fullplane_gate": "See full-plane-review.json and successful full-plane.log machine assertions.",
+  "pass": true
+}

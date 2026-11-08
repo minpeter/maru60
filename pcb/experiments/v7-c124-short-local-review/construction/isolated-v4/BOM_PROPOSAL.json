@@ -1,0 +1,143 @@
+{
+  "status": "UNSELECTED; no procurement or assembly approval",
+  "parts": {
+    "R125": {
+      "name": "R_KOA_RK73H1E_0402_Reflow_B",
+      "value": "100 1%",
+      "mpn": "RK73H1ETTP1000F",
+      "maker": "KOA",
+      "datasheet": "https://www.koaspeer.com/catimages/Products/RK73H/RK73H.pdf",
+      "at": [
+        15.54,
+        20.27
+      ],
+      "pads": [
+        [
+          "1",
+          0.45,
+          0,
+          0.4,
+          0.3,
+          "USB_DVDT"
+        ],
+        [
+          "2",
+          -0.45,
+          0,
+          0.4,
+          0.3,
+          "USB_DVDT_CAP"
+        ]
+      ],
+      "body": [
+        1,
+        0.5
+      ],
+      "court": [
+        1.8,
+        1.05
+      ],
+      "refat": [
+        10.6,
+        21.0
+      ],
+      "sch": "df651488-38c6-56ef-a04a-104cfcce243d",
+      "uuid": "7f46d8aa-a5e8-5221-bb89-7f6d1360b233",
+      "pad_uuids": {}
+    },
+    "C124": {
+      "name": "C_Murata_GRM155_0402_B_Conditional",
+      "value": "10nF 10% 50V",
+      "mpn": "GRM155R71H103KA88D",
+      "maker": "Murata",
+      "datasheet": "https://pim.murata.com/en-us/pim/details/?partNum=GRM155R71H103KA88%23",
+      "at": [
+        15.38,
+        19.17
+      ],
+      "pads": [
+        [
+          "1",
+          -0.375,
+          0,
+          0.35,
+          0.5,
+          "USB_DVDT_CAP"
+        ],
+        [
+          "2",
+          0.375,
+          0,
+          0.35,
+          0.5,
+          "GND"
+        ]
+      ],
+      "body": [
+        1,
+        0.5
+      ],
+      "court": [
+        1.6,
+        1.05
+      ],
+      "refat": [
+        10.6,
+        19.8
+      ],
+      "sch": "2beed947-16ca-5de9-a318-0eac08db31e1",
+      "uuid": "c16684c6-e6e9-4d9e-ab06-ad0653958e94",
+      "pad_uuids": {
+        "1": "e99fab95-384f-4c82-aa22-4b94524bb476",
+        "2": "f79380d7-c89c-4396-b53e-4918d8902c13"
+      }
+    },
+    "R121": {
+      "name": "R_Vishay_TNPW0603_IPC_Vertical_B",
+      "value": "156k 0.1%",
+      "mpn": "TNPW0603156KBEEA",
+      "maker": "Vishay",
+      "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "at": [
+        13.68,
+        18.65
+      ],
+      "pads": [
+        [
+          "1",
+          0,
+          0.8,
+          1,
+          0.9,
+          "USB_OVLO"
+        ],
+        [
+          "2",
+          0,
+          -0.8,
+          1,
+          0.9,
+          "GND"
+        ]
+      ],
+      "body": [
+        0.85,
+        1.55
+      ],
+      "court": [
+        1.5,
+        3
+      ],
+      "refat": [
+        10.6,
+        18.6
+      ],
+      "sch": "3c9a1e86-b5b6-52b9-8936-5c621f352915",
+      "uuid": "d422a027-2eda-4bf9-9c83-1580d56a84b7",
+      "pad_uuids": {
+        "1": "2ceda713-c41e-4c74-9962-f6a642f1e236",
+        "2": "437d8abf-8e4f-4587-99b7-93c610dd4000"
+      }
+    }
+  }
+}

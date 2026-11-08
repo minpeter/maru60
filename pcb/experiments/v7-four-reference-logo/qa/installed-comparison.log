@@ -1,0 +1,92 @@
+{
+  "passed_scoped_geometry_and_no_regression_checks": true,
+  "source_board_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "candidate_board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "warnings_before_after": [
+    92,
+    68
+  ],
+  "new_warning_records": [],
+  "remaining_warning_types": {
+    "track_dangling": 5,
+    "via_dangling": 2,
+    "text_height": 24,
+    "silk_over_copper": 21,
+    "silk_overlap": 16
+  },
+  "native_open_pair_count": 12,
+  "open_representatives_changed": 5,
+  "complete_native_component_count": 508,
+  "complete_native_electrical_and_copper_saved_plane_raw_geometry_unchanged": true,
+  "native_counts": {
+    "footprints": 382,
+    "native_contact_edges": 21922,
+    "pads": 1437,
+    "tracks": 9752,
+    "vias": 919
+  },
+  "length_fsum_mm": 13181.60473138763,
+  "all53_recovered_source_files_preserved": true,
+  "declared_native_generated_local_metadata": {
+    "path": "maru60.kicad_prl",
+    "bytes": 2057,
+    "sha256": "8c0a828ce6c58ebd31b8835a9bd58efb04385897813f3e5d51b961410868af58",
+    "not_a_circuit_change_or_full_historical_packet_restoration": true
+  },
+  "new_four_reference_minimum_brackets_nm": {
+    "mask": [
+      409895,
+      409896
+    ],
+    "silk": [
+      302395,
+      302396
+    ],
+    "courtyard": [
+      159895,
+      159896
+    ],
+    "fab": [
+      472395,
+      472396
+    ],
+    "edge": [
+      8134524,
+      8134525
+    ]
+  },
+  "whole_logo_minimum_brackets_nm": {
+    "mask": [
+      2831699,
+      2831700
+    ],
+    "silk": [
+      3398932,
+      3398933
+    ],
+    "courtyard": [
+      2863468,
+      2863469
+    ],
+    "fab": [
+      3698412,
+      3698413
+    ],
+    "unreconstructed_fab": [
+      4753890,
+      4753891
+    ],
+    "edge": [
+      6475000,
+      6475001
+    ]
+  },
+  "all1759_mask_apertures_checked": true,
+  "accepted15_and_reserved_C124_R121_U8_and_R131_unchanged": true,
+  "R131_dropped_due_to_unmoved_U12_label_dependency": true,
+  "association_review_status": "Pending independent actual-candidate review; not implied by geometric pass.",
+  "full_acceptance_replay_or_new_simulation_performed": false,
+  "historical_QA_packets_restored": false,
+  "manufacturing_or_actual_3D_visibility_qualified": false,
+  "selected": false
+}

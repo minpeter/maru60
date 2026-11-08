@@ -1,0 +1,103 @@
+{
+  "decision": "hold_unselected_strict_global_plane_loss_gate_failed",
+  "review_scope_completed": true,
+  "source_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "candidate_sha256": "aead2fb0c61ee3cb565f03e3a271f213911767c37f47e86d0adae87735428b3f",
+  "bounded_cleanup_geometry_pass": true,
+  "retired_uuids": [
+    "2c0aa2c5-bec8-4dff-bff7-2e823d3e36fa",
+    "d382de57-3476-43c4-ac26-0a72b21acf7c"
+  ],
+  "replacement_uuid": "6ffab701-7688-4850-9aad-8ab86bd0f04a",
+  "active_length_mm": 1.95,
+  "removed_dead_length_mm": 2.85,
+  "removed_drill_diameter_mm": 0.25,
+  "counts_before": {
+    "tracks": 9752,
+    "vias": 919,
+    "pads": 1437,
+    "holes": 1270,
+    "all_track_centerline_mm": 13181.60473138763
+  },
+  "counts_after": {
+    "tracks": 9752,
+    "vias": 918,
+    "pads": 1437,
+    "holes": 1269,
+    "all_track_centerline_mm": 13178.75473138763
+  },
+  "all54_source_and_candidate_filemaps_rechecked_unchanged": true,
+  "other_nonboard_files_exact": true,
+  "all_other_raw_electrical_geometry_exact": true,
+  "no_new_copper_outside_original_track": true,
+  "all_three_feedback_pads_and_declared_contacts_preserved": true,
+  "all245_net_pad_partitions_and_247_ground_root_pads_exact": true,
+  "all731_plane_contact_identities_and_support_areas_exact": true,
+  "retained_old_shadow_loss_mm2": 0,
+  "retained_segment_absolute_inherited_reference_gap_mm2": 0.068332661731,
+  "introduced_reference_gap_mm2": 0,
+  "strict_global_no_plane_loss": false,
+  "global_loss_is_not_only_Boolean_artifact": true,
+  "global_loss_native_reported_mm2": [
+    1.42282e-07,
+    1.40974e-07
+  ],
+  "exact_rational_real_loss_witnesses_by_layer": [
+    10,
+    9
+  ],
+  "reported_loss_polygons_by_layer": [
+    17,
+    16
+  ],
+  "maximum_reported_sliver_enclosing_width_nm_upper_bound": 0.8117981434316204,
+  "zero_operation_controls_per_layer": 4,
+  "loss_intersects_retained_physical_contact_support": false,
+  "loss_intersects_removed_via_0_50mm_radius_region": false,
+  "native_diagnostics": {
+    "hard_errors": 0,
+    "warnings_before": 68,
+    "warnings_after": 67,
+    "exact_warning_removed": {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [BUCK_FB] on F.Cu - B.Cu",
+          "pos": {
+            "x": 178.15,
+            "y": 85.75
+          },
+          "uuid": "d382de57-3476-43c4-ac26-0a72b21acf7c"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    "new_warnings": 0,
+    "ERC_violations": 0,
+    "parity_violations": 0,
+    "unconnected_complete_component_pairs": 12,
+    "native_endpoint_representative_changes": 4,
+    "all48_native_endpoint_identities_and_geometry_validated": true
+  },
+  "qualification": {
+    "selected_by_reviewer": false,
+    "noise_improvement_proven": false,
+    "loop_stability_proven": false,
+    "SI_qualified": false,
+    "hardware_qualified": false,
+    "new_active_simulation": false,
+    "cold_refill_replay_by_reviewer": false
+  },
+  "blocker": "At least one real positive-area subset of the original serialized inner plane is absent in the candidate outside the intended local restoration. No epsilon or old-shadow-only waiver has been applied.",
+  "next_condition": "Preserve this candidate. Either construct a separate result that meets the unchanged strict global no-loss condition and remeasure, or explicitly review/authorize a narrowly justified alternate serialization-geometry criterion before adoption. This review does not supply or authorize such a criterion.",
+  "numerical_limit": "Reported total loss areas and enclosing-width bounds describe native integer Boolean polygons. Exact rational interior witnesses establish real raw-contour loss, but do not claim the Boolean total is an exact rational integral of every changed sliver. Unproven slivers are not silently called real or discarded.",
+  "evidence": {
+    "strip-geometry-review.json": "f226eff0d33cc5df08965a77fdc270afc8d29e377a48d7b1069d8fa00c88a572",
+    "contour-loss-audit.json": "8eaedd4efd2e91a4a87d70457dd36b16edc1370cf6a1136911523c43cfb1b54f",
+    "loss-support-review.json": "df7eb912fb063bc13fe04af13312915042faf2c147bf135f63a7ed1158780223",
+    "raw-graph-review.json": "bf3e13cdc584fc266402df69e2311c1de1a19a6ce3441b4e50a13ff5eed07614",
+    "open-pair-review.json": "575f97cc68cfb9e6fb4e4314cbcf330a439b2e0c24ba2758d50ab61f690bb7fe",
+    "SOURCE_BINDINGS.json": "f1c04556a7b4d10f6995a0c39318442b546e787a01dc5f2b6eb00b6dfed6bd77"
+  }
+}

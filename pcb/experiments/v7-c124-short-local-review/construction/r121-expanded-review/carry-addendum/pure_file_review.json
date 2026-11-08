@@ -1,0 +1,742 @@
+{
+  "method": "Pure UTF-8 file parsing and hashing; no pcbnew import, BOARD load, fill, export, or candidate write.",
+  "hashes": {
+    "/tmp/v7-c124-rebound-short/isolated-v4/filled/pcb/maru60.kicad_pcb": "8c45df3642599be269697ce9b225fe55ee6b886dce713b77f6ced533ea268fb6",
+    "/tmp/v7-c124-rebound-short/isolated-v4-label-carry/pcb/maru60.kicad_pcb": "ec48735f21b813f84873a4dfcd8a984a395f59a6d48d30e5bcfff19aaefe52a7",
+    "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-four-reference-logo/candidate-four/pcb/maru60.kicad_pcb": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+    "/tmp/v7-c124-rebound-short/isolated-v4-label-carry/CARRY_PROOF.json": "14e3012219eea6835d2a0bf16612a00b403065baf37e7c8681a2963e11ea4c4f"
+  },
+  "scope": "Separate unselected artwork carry only; no adoption or qualification.",
+  "footprint_count": 383,
+  "unchanged_footprints": 378,
+  "outside_five_footprints_byte_identical": true,
+  "changed_footprints": [
+    {
+      "uuid": "319c8d90-2e8c-4fbe-b044-eb183bcc2c22",
+      "reference": "R160",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "41d2af2d45337223dcebff059d88f4c4ecc07641626a036e58a9bc1b26fcf235",
+      "new_block_sha256": "d23ff6eb07b8e136ed8a70d292be29e4c188157de8a37f750cc0428e3350ce79",
+      "reference_field_only": true,
+      "reference_layer_before_after": "B.SilkS",
+      "old_reference": "(property \"Reference\" \"R160\"\n\t\t\t(at 0 1.43 90)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"2563a2ab-7d0d-4b06-b187-9f48c19d0c5f\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.75 0.75)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)",
+      "new_reference": "(property \"Reference\" \"R160\"\n\t\t\t(at 0 -1.45 90)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"2563a2ab-7d0d-4b06-b187-9f48c19d0c5f\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.8 0.8)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)"
+    },
+    {
+      "uuid": "7b318399-ba02-4c74-af7c-24a406884d8a",
+      "reference": "R140",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "3331a4566cc8eba5a75405040b402add330f73bbfff476b45e6fb99454e21758",
+      "new_block_sha256": "1588fdb06093c214f8bfc18f73802dea250111f1b80fb2fb30aa9bc4eb687046",
+      "reference_field_only": true,
+      "reference_layer_before_after": "B.SilkS",
+      "old_reference": "(property \"Reference\" \"R140\"\n\t\t\t(at 0 1.43 90)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"a4dd193c-a165-4d5d-a1cf-ffd33b5a818f\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.75 0.75)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)",
+      "new_reference": "(property \"Reference\" \"R140\"\n\t\t\t(at -0.2 -2.37 180)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"a4dd193c-a165-4d5d-a1cf-ffd33b5a818f\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.8 0.8)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)"
+    },
+    {
+      "uuid": "936d1b8f-2579-4255-b41c-cc9654291283",
+      "reference": "C100",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "921e787e8b6c187be9e07a5ec7c03f214507db8aa719f19b64f0300342a9f421",
+      "new_block_sha256": "baca99ab4c78623a4321b7e5baf04f0ff62593060d08a1a212f14a56032da9a2",
+      "reference_field_only": true,
+      "reference_layer_before_after": "B.SilkS",
+      "old_reference": "(property \"Reference\" \"C100\"\n\t\t\t(at 0 1.4 90)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"bd770a67-5f68-4f2e-b218-a52c3359784e\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.75 0.75)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)",
+      "new_reference": "(property \"Reference\" \"C100\"\n\t\t\t(at 0 -1.8 90)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"bd770a67-5f68-4f2e-b218-a52c3359784e\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.8 0.8)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)"
+    },
+    {
+      "uuid": "ba7f51cc-1007-44c0-8919-491491f7c29a",
+      "reference": "LOGO1",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "fbc2c388be68e8a5fb4ea4a3541d7179ebef75bb07513873fbbf7e30cd9247db",
+      "new_block_sha256": "c119e28a109562edfbcba24a78bcd544a77baca8725911d52fdcb947c9aa8a7e",
+      "old_and_new_logo_have_no_conductive_children": true,
+      "child_counts": {
+        "layer": 1,
+        "uuid": 1,
+        "at": 1,
+        "descr": 1,
+        "property": 4,
+        "attr": 1,
+        "fp_poly": 2,
+        "embedded_fonts": 1
+      },
+      "all_layer_uses": {
+        "B.Cu": 1,
+        "B.SilkS": 3,
+        "B.Fab": 3
+      },
+      "graphic_layer_uses": {
+        "B.SilkS": 3,
+        "B.Fab": 3
+      },
+      "zero_pad_drill_zone_copper_primitive": true
+    },
+    {
+      "uuid": "e8bd1f07-b665-43fb-a3a3-9ba1bca55842",
+      "reference": "R134",
+      "exact_selected_block_copy": true,
+      "old_block_sha256": "f0d8ca806df8c8576179015a46536b2243d5d97b6040c14b9d7ac86d902da92f",
+      "new_block_sha256": "9a5d9b56d32c6d4e8f7234b9219c8f452c1d13f9d75cff4fdcbcab949d8c227b",
+      "reference_field_only": true,
+      "reference_layer_before_after": "B.SilkS",
+      "old_reference": "(property \"Reference\" \"R134\"\n\t\t\t(at 0 1.43 0)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"447d5608-d0a3-4a2f-94ed-8aba71e076ba\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.75 0.75)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)",
+      "new_reference": "(property \"Reference\" \"R134\"\n\t\t\t(at 0.6 -1.37 0)\n\t\t\t(layer \"B.SilkS\")\n\t\t\t(uuid \"447d5608-d0a3-4a2f-94ed-8aba71e076ba\")\n\t\t\t(effects\n\t\t\t\t(font\n\t\t\t\t\t(size 0.8 0.8)\n\t\t\t\t\t(thickness 0.1)\n\t\t\t\t)\n\t\t\t\t(justify mirror)\n\t\t\t)\n\t\t)"
+    }
+  ],
+  "top_level_counts": {
+    "version": 1,
+    "generator": 1,
+    "generator_version": 1,
+    "general": 1,
+    "paper": 1,
+    "layers": 1,
+    "setup": 1,
+    "net": 247,
+    "footprint": 383,
+    "gr_line": 4,
+    "gr_arc": 4,
+    "gr_text": 6,
+    "segment": 9742,
+    "via": 919,
+    "zone": 12,
+    "embedded_fonts": 1
+  },
+  "identical_copper_drills_fills_nets_board_settings": true,
+  "complete_zone_count": 12,
+  "companion_files": {
+    "Maru60.kicad_sym": {
+      "base_sha256": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27",
+      "carry_sha256": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27",
+      "byte_identical": true
+    },
+    "Study.kicad_sym": {
+      "base_sha256": "9478f0f495e54e4c44b03766b44c20d1c3a53b4da8cd22e836ccc970af9c4ba3",
+      "carry_sha256": "9478f0f495e54e4c44b03766b44c20d1c3a53b4da8cd22e836ccc970af9c4ba3",
+      "byte_identical": true
+    },
+    "fp-lib-table": {
+      "base_sha256": "ccb372f66e83a780fac479454c5754a1be96fff08714a8b862d4480001b4a66b",
+      "carry_sha256": "ccb372f66e83a780fac479454c5754a1be96fff08714a8b862d4480001b4a66b",
+      "byte_identical": true
+    },
+    "maru60-core.kicad_sch": {
+      "base_sha256": "f0183190e194e30ec8e5b07a34bfc277fb2f95558511bba3676c3ea58a10dbe9",
+      "carry_sha256": "f0183190e194e30ec8e5b07a34bfc277fb2f95558511bba3676c3ea58a10dbe9",
+      "byte_identical": true
+    },
+    "maru60-expansion.kicad_sch": {
+      "base_sha256": "926f3ffa7423b76596cc6fcebfec065eb8f73d91d840a9b0fd37a4b6e8baf88d",
+      "carry_sha256": "926f3ffa7423b76596cc6fcebfec065eb8f73d91d840a9b0fd37a4b6e8baf88d",
+      "byte_identical": true
+    },
+    "maru60-lighting.kicad_pro": {
+      "base_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "carry_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "byte_identical": true
+    },
+    "maru60-lighting.kicad_sch": {
+      "base_sha256": "dd10fd66b1a2b119b91194d436983732d042cf0949c92d4497479f4ca009bb10",
+      "carry_sha256": "dd10fd66b1a2b119b91194d436983732d042cf0949c92d4497479f4ca009bb10",
+      "byte_identical": true
+    },
+    "maru60-matrix.kicad_pro": {
+      "base_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "carry_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "byte_identical": true
+    },
+    "maru60-matrix.kicad_sch": {
+      "base_sha256": "a87a278408050f59df0912afaaf9f476f1648f828b7744b2f734ca3b62862f90",
+      "carry_sha256": "a87a278408050f59df0912afaaf9f476f1648f828b7744b2f734ca3b62862f90",
+      "byte_identical": true
+    },
+    "maru60.kicad_prl": {
+      "base_sha256": "8c0a828ce6c58ebd31b8835a9bd58efb04385897813f3e5d51b961410868af58",
+      "carry_sha256": "8c0a828ce6c58ebd31b8835a9bd58efb04385897813f3e5d51b961410868af58",
+      "byte_identical": true
+    },
+    "maru60.kicad_pro": {
+      "base_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "carry_sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+      "byte_identical": true
+    },
+    "maru60.kicad_sch": {
+      "base_sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51",
+      "carry_sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51",
+      "byte_identical": true
+    },
+    "protection-gpio-isolation.kicad_sch": {
+      "base_sha256": "2ee16d2ad54943123666eaf35512592908e21d52ff4672760c5298e52e55f38e",
+      "carry_sha256": "2ee16d2ad54943123666eaf35512592908e21d52ff4672760c5298e52e55f38e",
+      "byte_identical": true
+    },
+    "protection-input-protection.kicad_sch": {
+      "base_sha256": "59a777fd5a7d65d8b06d0fe86f8ae937fc652fa796db6fe7e4bed6525eeb46a5",
+      "carry_sha256": "59a777fd5a7d65d8b06d0fe86f8ae937fc652fa796db6fe7e4bed6525eeb46a5",
+      "byte_identical": true
+    },
+    "protection-supply-context.kicad_sch": {
+      "base_sha256": "b593e119667214a2d732eca470272e23f97190c7c630856bd7fa7fadc6875f15",
+      "carry_sha256": "b593e119667214a2d732eca470272e23f97190c7c630856bd7fa7fadc6875f15",
+      "byte_identical": true
+    },
+    "protection-v6-regulated-domain.kicad_sch": {
+      "base_sha256": "8cbd2694194d8ea807a86983cb821b585131a63467b30d915ba1517af10694cc",
+      "carry_sha256": "8cbd2694194d8ea807a86983cb821b585131a63467b30d915ba1517af10694cc",
+      "byte_identical": true
+    },
+    "sym-lib-table": {
+      "base_sha256": "288a9ed004a889ff4e26f486e35c2a83d1de11d94fffa140f1cd62eb9ef441ac",
+      "carry_sha256": "288a9ed004a889ff4e26f486e35c2a83d1de11d94fffa140f1cd62eb9ef441ac",
+      "byte_identical": true
+    }
+  },
+  "drc": {
+    "path": "/tmp/v7-c124-rebound-short/isolated-v4-label-carry/qa/drc.json",
+    "sha256": "9b27678138c097ecf4156d916bb97c0bac26d6d6fcc1e3e0582e487fd125aac8",
+    "date": "2026-11-04T19:12:50+0900",
+    "source": "maru60.kicad_pcb",
+    "kicad_version": "9.0.2",
+    "base_counts": {
+      "track_dangling": 6,
+      "via_dangling": 2,
+      "text_height": 26,
+      "silk_over_copper": 24,
+      "silk_overlap": 30
+    },
+    "carry_counts": {
+      "track_dangling": 6,
+      "via_dangling": 2,
+      "text_height": 22,
+      "silk_over_copper": 19,
+      "silk_overlap": 15
+    },
+    "carry_severity": {
+      "warning": 64
+    },
+    "categories": {
+      "violations": {
+        "base_count": 88,
+        "carry_count": 64,
+        "added": [],
+        "removed": [
+          {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+            "items": [
+              {
+                "description": "Reference field of R160",
+                "pos": {
+                  "x": 183.07,
+                  "y": 85.0
+                },
+                "uuid": "2563a2ab-7d0d-4b06-b187-9f48c19d0c5f"
+              }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+          },
+          {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+            "items": [
+              {
+                "description": "Reference field of R140",
+                "pos": {
+                  "x": 111.07,
+                  "y": 32.0
+                },
+                "uuid": "a4dd193c-a165-4d5d-a1cf-ffd33b5a818f"
+              }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+          },
+          {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+            "items": [
+              {
+                "description": "Reference field of C100",
+                "pos": {
+                  "x": 143.6,
+                  "y": 75.0
+                },
+                "uuid": "bd770a67-5f68-4f2e-b218-a52c3359784e"
+              }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+          },
+          {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7500 mm)",
+            "items": [
+              {
+                "description": "Reference field of R134",
+                "pos": {
+                  "x": 107.5,
+                  "y": 43.07
+                },
+                "uuid": "447d5608-d0a3-4a2f-94ed-8aba71e076ba"
+              }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+          },
+          {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+              {
+                "description": "Reference field of R160",
+                "pos": {
+                  "x": 183.07,
+                  "y": 85.0
+                },
+                "uuid": "2563a2ab-7d0d-4b06-b187-9f48c19d0c5f"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+          },
+          {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+              {
+                "description": "Reference field of R140",
+                "pos": {
+                  "x": 111.07,
+                  "y": 32.0
+                },
+                "uuid": "a4dd193c-a165-4d5d-a1cf-ffd33b5a818f"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+          },
+          {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+              {
+                "description": "Reference field of C100",
+                "pos": {
+                  "x": 143.6,
+                  "y": 75.0
+                },
+                "uuid": "bd770a67-5f68-4f2e-b218-a52c3359784e"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+          },
+          {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+          },
+          {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+              {
+                "description": "Reference field of R134",
+                "pos": {
+                  "x": 107.5,
+                  "y": 43.07
+                },
+                "uuid": "447d5608-d0a3-4a2f-94ed-8aba71e076ba"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Reference field of R160",
+                "pos": {
+                  "x": 183.07,
+                  "y": 85.0
+                },
+                "uuid": "2563a2ab-7d0d-4b06-b187-9f48c19d0c5f"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Segment of R160 on B.Silkscreen",
+                "pos": {
+                  "x": 183.9775,
+                  "y": 84.762742
+                },
+                "uuid": "8a30386c-9df9-4cb7-9d73-774128a8adfe"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Reference field of U18",
+                "pos": {
+                  "x": 181.45,
+                  "y": 84.25
+                },
+                "uuid": "f9562ce8-f253-4b52-a957-48b8d7f3f37d"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Segment of C139 on B.Silkscreen",
+                "pos": {
+                  "x": 180.89,
+                  "y": 84.85942
+                },
+                "uuid": "8d0aa5bf-4bbc-467d-93fd-f9f84e1dab06"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Reference field of R159",
+                "pos": {
+                  "x": 181.57,
+                  "y": 85.0
+                },
+                "uuid": "dbd31047-168e-40f6-b393-4f6e5518463a"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Segment of C139 on B.Silkscreen",
+                "pos": {
+                  "x": 181.91,
+                  "y": 84.85942
+                },
+                "uuid": "135c4327-c10d-4452-bb61-c9f94926e75d"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Segment of R159 on B.Silkscreen",
+                "pos": {
+                  "x": 182.4775,
+                  "y": 84.762742
+                },
+                "uuid": "54afe107-e09d-4854-a9eb-f334ea294580"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Segment of R159 on B.Silkscreen",
+                "pos": {
+                  "x": 183.5225,
+                  "y": 84.762742
+                },
+                "uuid": "416fcef5-db41-4f48-905b-26bd4f4ca5c2"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Segment of D100 on B.Silkscreen",
+                "pos": {
+                  "x": 180.74,
+                  "y": 87.05
+                },
+                "uuid": "7f12f53e-4f18-4308-939b-20e9f75e3c9a"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Segment of D100 on B.Silkscreen",
+                "pos": {
+                  "x": 180.74,
+                  "y": 88.95
+                },
+                "uuid": "3c83c04c-6a6a-475c-829d-404596921d39"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Segment of D100 on B.Silkscreen",
+                "pos": {
+                  "x": 180.74,
+                  "y": 88.95
+                },
+                "uuid": "2cbcc762-68dd-40a4-9892-b213b0ee9e23"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Reference field of C139",
+                "pos": {
+                  "x": 179.97,
+                  "y": 85.0
+                },
+                "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Reference field of C136",
+                "pos": {
+                  "x": 178.0,
+                  "y": 85.77
+                },
+                "uuid": "b5120eb9-d306-4601-b797-acd685b5e840"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Polygon of LOGO1 on B.Silkscreen",
+                "pos": {
+                  "x": 182.36012,
+                  "y": 83.126084
+                },
+                "uuid": "8f912fc9-810a-4e3f-8b96-ff337f3ede9b"
+              },
+              {
+                "description": "Polygon of U18 on B.Silkscreen",
+                "pos": {
+                  "x": 180.41,
+                  "y": 85.01
+                },
+                "uuid": "bdb55a9b-b916-42b1-9de8-aba56533c21e"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          },
+          {
+            "description": "Silkscreen overlap",
+            "items": [
+              {
+                "description": "Reference field of R140",
+                "pos": {
+                  "x": 111.07,
+                  "y": 32.0
+                },
+                "uuid": "a4dd193c-a165-4d5d-a1cf-ffd33b5a818f"
+              },
+              {
+                "description": "Reference field of U11",
+                "pos": {
+                  "x": 110.0,
+                  "y": 32.8
+                },
+                "uuid": "b4d6de7b-9d6c-48fb-bb32-d6509af7050e"
+              }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+          }
+        ]
+      },
+      "unconnected_items": {
+        "base_count": 12,
+        "carry_count": 12,
+        "added": [],
+        "removed": []
+      },
+      "schematic_parity": {
+        "base_count": 0,
+        "carry_count": 0,
+        "added": [],
+        "removed": []
+      }
+    },
+    "bridge_b_records": [
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [GND] on B.Cu, length 0.6000 mm",
+            "pos": {
+              "x": 15.5,
+              "y": 17.85
+            },
+            "uuid": "0dd51559-bc06-502f-8bb1-1b186fa751d0"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      }
+    ]
+  },
+  "final_hashes": {
+    "/tmp/v7-c124-rebound-short/isolated-v4/filled/pcb/maru60.kicad_pcb": "8c45df3642599be269697ce9b225fe55ee6b886dce713b77f6ced533ea268fb6",
+    "/tmp/v7-c124-rebound-short/isolated-v4-label-carry/pcb/maru60.kicad_pcb": "ec48735f21b813f84873a4dfcd8a984a395f59a6d48d30e5bcfff19aaefe52a7",
+    "/workspace/scratch/edd9a5be63e7/pcb-v7-recovery-20261104/pcb/experiments/v7-four-reference-logo/candidate-four/pcb/maru60.kicad_pcb": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+    "/tmp/v7-c124-rebound-short/isolated-v4-label-carry/CARRY_PROOF.json": "14e3012219eea6835d2a0bf16612a00b403065baf37e7c8681a2963e11ea4c4f"
+  }
+}

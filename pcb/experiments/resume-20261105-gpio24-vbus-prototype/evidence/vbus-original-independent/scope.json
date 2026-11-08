@@ -1,0 +1,35 @@
+{
+  "source_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "candidate_sha256": "9bcd6e46965ef471309af503ba49d5438fad5b974984dc2485525f52487359f6",
+  "removed_nonzone_forms": [
+    "(via (at 20.15 10.95) (size 0.5) (drill 0.25) (layers \"F.Cu\" \"B.Cu\") (net 117) (uuid \"1e6f9b6e-9a22-418a-8cde-6feb5aafb26e\") )",
+    "(segment (start 20.15 12.45) (end 20.15 8.7) (width 0.2) (layer \"B.Cu\") (net 117) (uuid \"b83f85ff-dd51-4f3a-987a-b80209573fa1\") )"
+  ],
+  "added_nonzone_forms": [
+    "(segment (start 20.15 10.95) (end 20.15 8.7) (width 0.2) (layer \"B.Cu\") (net 117) (uuid \"b83f85ff-dd51-4f3a-987a-b80209573fa1\") )"
+  ],
+  "zone_configuration_equal": true,
+  "companion_count": 57,
+  "companions_equal": true,
+  "drc_removed": [
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [VBUS] on F.Cu - B.Cu",
+          "pos": {
+            "x": 20.15,
+            "y": 10.95
+          },
+          "uuid": "1e6f9b6e-9a22-418a-8cde-6feb5aafb26e"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    }
+  ],
+  "drc_added": [],
+  "open_records_equal": true,
+  "open_count": 11,
+  "warnings": 50
+}

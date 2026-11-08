@@ -1,0 +1,54 @@
+{
+  "status": "FROZEN_QUALIFIED_DEVELOPMENT_PROTOTYPE_NOT_STRICT_ACCEPTANCE_OR_FABRICATION",
+  "source_commit": "97d9eb718d2ce8d0297a2d001f4b401ba2d8cfd7",
+  "source_pcb_sha256": "2e532c1a16e64a34eafafdfbd5b85c05d70bb12ad9e52924c5cbe024fdc9aa2c",
+  "candidate_pcb_sha256": "88fbac1d15c3ad320bcdd8af3a6f7c8293da39342bb8869d71cfed406ce44d5e",
+  "native": {
+    "open_pairs": 9,
+    "warnings": 39,
+    "other_errors": 0,
+    "ERC": 0,
+    "parity": 0
+  },
+  "metrics": {
+    "tracks": 9764,
+    "vias": 922,
+    "footprints": 383,
+    "track_length_mm": 13202.305576244167
+  },
+  "removed_objects": [
+    "0826a4b6-5567-52ab-a787-b898d20d23ac",
+    "0858c392-ee59-5350-bcaf-d8762f658a08",
+    "19fee20c-f24a-5570-9d2d-8ed9371d42bb",
+    "53e7b99f-308f-57ae-9e47-9e779e6b3272",
+    "7ffc8178-bb79-51de-b57d-c5c6afb0ad28",
+    "872bfd37-a607-537a-a7fa-650d69bca58e",
+    "9f355e92-2386-5d9a-b330-367e9a6d6370",
+    "cbe6ef4b-6ae2-561c-89a1-59cf696150b8",
+    "f9815195-95ae-5029-9575-af5b562417f2",
+    "fba8f2b5-a5de-578b-a107-ce7c9d080fb6"
+  ],
+  "retired_track_length_mm": 8.503623449077,
+  "retained_material_rows_exact": 15362,
+  "retained_reference_rows": 25726,
+  "physical_pad_partitions_and9_open_pairs_unchanged": true,
+  "retained_contacts": 22526,
+  "exact_full_plane_loss_nm2": 0,
+  "plane_loss_exception_used": false,
+  "independent_review": "PASS_BOUNDED_RELATIVE_CLEANUP",
+  "inherited_strict_no_loss_failure": "Still unresolved from earlier c782/ef45 changes. This new relative cleanup adds no loss.",
+  "inherited_guarded_contact_diagnostics": 51,
+  "strict_baseline_preserved": "bbf61e6 / PCB04be04e5, 11 opens and51 warnings",
+  "source_prototype_preserved": "97d9eb7 / PCB2e532c1a, 9 opens and40 warnings",
+  "remaining_pairs": {
+    "header": 3,
+    "MCU": 6
+  },
+  "power": "64 datasheet-table-based exact-rational static corners with current resistor markings and leakage/threshold limits; conditions and omitted dynamics explicit. Not active circuit qualification.",
+  "limitations": [
+    "No strict baseline promotion or fabrication release.",
+    "No SI/PDN, active-power stability, full firmware or hardware qualification.",
+    "LED qualification remains OFF.",
+    "No public push, purchase, manufacture or flashing."
+  ]
+}

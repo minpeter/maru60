@@ -1,0 +1,315 @@
+{
+  "source_board_sha256": "4765dfd82f70cfcfc00c06b4d9abfb614c7d657ec086fcf57c28d49bc3236136",
+  "candidate_board_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+  "source_files": {
+    "C124_Short_Study.pretty/C_YAGEO_CC0402_050x050_P100_B_Conditional.kicad_mod": "fe53d0d879844b6f4b64c5ad96fdd5b7bbc6ea131cdce76dcd7f82d1eb82eaa9",
+    "C124_Short_Study.pretty/R_KOA_RK73H1E_0402_Reflow_B.kicad_mod": "5c1faf79bcf45aa9b6004f410957a0a3a1d390dd0b62e2c0e0fa8225bfab341c",
+    "C124_Short_Study.pretty/R_KOA_RN73R1E_0402_Reflow_Vertical_B.kicad_mod": "61efbb121bb2fe9ab06fe8670613f1bd52f4fd2964c1a43dc368d034e311492a",
+    "C124_Short_Study.pretty/R_Vishay_TNPW0603_IPC_Vertical_B.kicad_mod": "2f6cd946d1cb4d2c65612ec63ff8619d05a5268dbbfc8b5e586ad80a373bfc12",
+    "Maru60.kicad_sym": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27",
+    "Maru60.pretty/Abracon_AOTA_B201610S3R3_Official_R4.kicad_mod": "5d02afce5b5bc1b5df1612accf1159a32a8f872c4efebf5cf2cd9eb78744cbab",
+    "Maru60.pretty/C_0402_Official_R4_Wide.kicad_mod": "3c3c32d0f0fce504fb2d97554e977c53083e7fbce5202676335bc58e106618c4",
+    "Maru60.pretty/OSHW_then_Minpeter_H6_Gap1p5_Silk_DRAFT.kicad_mod": "48296c6e5118c4be1c9f2cc0e65392acdb2fd0eea3186e1c469c81a4382d56b4",
+    "Maru60.pretty/RP2350A_QFN60_Official_R4.kicad_mod": "7742df773afbd96c3b880fa83ac5c479e0e88a7c6ab159006e2c9302183c1eb5",
+    "MaruStudy.pretty/MAX_T822-3C_90-0065_2x2_P0.5_EP0.8x1.38.kicad_mod": "17fc287eacf647d25657fd0130d7e2d72a766832e703990ca3547201f271333f",
+    "MaruStudy.pretty/Murata_GRM18_0603_Reflow_0.65x0.75_Gap0.7.kicad_mod": "046fff6d5daf2e160746e3484419fecff37fd7cfa8edff804fbfaf41cede98f1",
+    "MaruStudy.pretty/Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9.kicad_mod": "d71235770392086ecd8640392d27615a1333ccbc6aab72f314fb61c47ba23cac",
+    "Protection_Study.pretty/TI_RPW0010A_2x2mm_Official4225183A_DRAFT.kicad_mod": "5365c9a0097cf7e60ca94cd47f0174329e878e4f6f7f77db18e4cf71080d1221",
+    "Protection_Study.pretty/TI_RVZ14_1p35x3p5mm_P0p5_DERIVED_DRAFT.kicad_mod": "071c2f08c1c5cf34a58a26dace06c68560f55f22848b38abe9dd2c80feb41034",
+    "Study.kicad_sym": "9478f0f495e54e4c44b03766b44c20d1c3a53b4da8cd22e836ccc970af9c4ba3",
+    "engineering/Maru60_Options.kicad_sym": "f4f200b7b158eb086c33ec7ac46533e1a3d1e1fa29c13c0137208e97c0dad6e0",
+    "engineering/candidates.pretty/LED_SK6805_EC15_001_Recommended_Candidate.kicad_mod": "39140db32e14761f427271ac8835ee38d6eb78d63c81ad1d1ad74bed03a15536",
+    "engineering/candidates.pretty/MX-Hotswap-2.25U-4L-NPTH.kicad_mod": "1ac00209a2da353804340f03aee638db4ffcda526360fd65345902b54b46015e",
+    "engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH-StabRot180.kicad_mod": "771047bc0a6e997b3777336cfde7d721dce5fd511fd3756ad30a5b565f92968e",
+    "engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH.kicad_mod": "7e7ad37c16b33e15e57e1f2cf8a325f86fb32f91f5a07264bc22aa041a7dffd7",
+    "engineering/candidates.pretty/MX_Study_Backspace_2U_or_1U_1U.kicad_mod": "a91499fb17f62cfc75c22d00848cca1132ec2976d20d5c231ea946ba51954655",
+    "engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab.kicad_mod": "a63b66fdfbf5f17794e196185e28a9064febe254a2ca00cbeb36653900da85ab",
+    "engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab_OutwardLED.kicad_mod": "6957c3c738b01d6239b3e22afdc46d86cce5a5efd9445961328e68a1f9714da5",
+    "engineering/candidates.pretty/MX_Study_Caps_Normal_or_Stepped.kicad_mod": "2b1cad60710626c0930282d54c21e4ddd33dc9a3b6f41f20e32a8d8af267f903",
+    "engineering/candidates.pretty/MX_Study_RShift_2.75U_or_1.75U_1U.kicad_mod": "d712dfaaf1dafb9c2c0e95fac011053c0796b38532ac203344ead9ddbb37d1a7",
+    "engineering/candidates.pretty/README.md": "eac34e4c89d1c57747195156a243ebe9196fc61cf749911ec10625d4546fce6c",
+    "engineering/candidates.pretty/STABILIZED_4L_PROVENANCE.md": "37fa375cd0bf3909efb77e5a970278d593b8be8b5ab362e65efad515b863d574",
+    "engineering/third_party/KiCad9_Experimental_Packages/COPYRIGHT.debian": "48a86acd94e857211eac57a51700fc9b3d38539503c282e09ff9e9392fd6503f",
+    "engineering/third_party/KiCad9_Experimental_Packages/Texas_DRT-3.kicad_mod": "604d4ede018338d6f06294847ca35697900457a67805b30361dec213c690a510",
+    "engineering/third_party/KiCad9_Experimental_Packages/Winbond_USON-8-2EP_3x4mm_P0.8mm_EP0.2x0.8mm.kicad_mod": "b191db69e23241e78bc768ef06b4844cbcc2794a8a84e180759e0314658c321a",
+    "engineering/third_party/MX_V2/LICENSE": "55e456ffa58f1ff68b3bca4fe508cf2bcfc465feb3ea94e20466a68c0cbbb141",
+    "engineering/third_party/MX_V2/MX-Hotswap-1U.kicad_mod": "47b7469b01479914cd9b72bcc77125e8140c7ba7f6d8828f61f2cc4787f619e3",
+    "engineering/third_party/MX_V2/MX-Hotswap-2.25U.kicad_mod": "6946cee0b40c07032dca093aaeada4a1c2ba17a6a2c6faa3cf30725074b74b18",
+    "engineering/third_party/MX_V2/MX-Hotswap-2.75U.kicad_mod": "143d4859ffbd4fb1079227b1d2054af4fe6585423ed03fb90b6b629573b940c7",
+    "engineering/third_party/MX_V2/MX-Hotswap-2U.kicad_mod": "4f102ec158f45ca81d1d2773ee266890bfd59ed365b10f0bb31ee37f578cf6a4",
+    "engineering/third_party/MX_V2/MX-Hotswap-7U.kicad_mod": "213277058a2677d7c1bf033707fdb82d64534787d2a4a546ecf4bf106644f963",
+    "engineering/third_party/RP2350A_Minimal/LICENSE.txt": "b7d06548be326cac80f52434578cc6a5e7c32e555619ee4aac3e2a03490a25a6",
+    "engineering/third_party/RP2350A_Minimal/PROVENANCE.md": "e847e087b26825fae8c96b9aec2d0f0501ac1984fe4424b9c14920efde8f7eea",
+    "engineering/third_party/RP2350A_Minimal/rp2350a-pins.json": "bdf248e586f2abffdbc8a72c43024e463b1ec846535baff833bfef173f045953",
+    "engineering/third_party/marbastlib-gateron/LICENSE": "6e471d647db50527d0c75ee5f1a55a74012ab177c73282bef0bdc7f6562b7ded",
+    "engineering/third_party/marbastlib-gateron/PROVENANCE.md": "f0f53f2b9fd72c76047ce0f4cde41f7838e6f383ade4bb2928d64c473425f182",
+    "engineering/third_party/marbastlib-gateron/SW_MX_HS_KS-2P02B01-01_1u.kicad_mod": "153fcc264590f072c07798d9ba0cda1ea7c56a9df42b54a7d8b87ddb19fa8483",
+    "fp-lib-table": "ccb372f66e83a780fac479454c5754a1be96fff08714a8b862d4480001b4a66b",
+    "maru60-core.kicad_sch": "f0183190e194e30ec8e5b07a34bfc277fb2f95558511bba3676c3ea58a10dbe9",
+    "maru60-expansion.kicad_sch": "926f3ffa7423b76596cc6fcebfec065eb8f73d91d840a9b0fd37a4b6e8baf88d",
+    "maru60-lighting.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "maru60-lighting.kicad_sch": "dd10fd66b1a2b119b91194d436983732d042cf0949c92d4497479f4ca009bb10",
+    "maru60-matrix.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "maru60-matrix.kicad_sch": "a87a278408050f59df0912afaaf9f476f1648f828b7744b2f734ca3b62862f90",
+    "maru60.kicad_pcb": "4765dfd82f70cfcfc00c06b4d9abfb614c7d657ec086fcf57c28d49bc3236136",
+    "maru60.kicad_prl": "8c0a828ce6c58ebd31b8835a9bd58efb04385897813f3e5d51b961410868af58",
+    "maru60.kicad_pro": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+    "maru60.kicad_sch": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51",
+    "protection-gpio-isolation.kicad_sch": "2ee16d2ad54943123666eaf35512592908e21d52ff4672760c5298e52e55f38e",
+    "protection-input-protection.kicad_sch": "ead85b4d9213b619fba8745710f5f97a6d30ee28c5d857c063206e5b306f0125",
+    "protection-supply-context.kicad_sch": "b593e119667214a2d732eca470272e23f97190c7c630856bd7fa7fadc6875f15",
+    "protection-v6-regulated-domain.kicad_sch": "8cbd2694194d8ea807a86983cb821b585131a63467b30d915ba1517af10694cc",
+    "sym-lib-table": "288a9ed004a889ff4e26f486e35c2a83d1de11d94fffa140f1cd62eb9ef441ac"
+  },
+  "candidate_files": {
+    "C124_Short_Study.pretty/C_YAGEO_CC0402_050x050_P100_B_Conditional.kicad_mod": "fe53d0d879844b6f4b64c5ad96fdd5b7bbc6ea131cdce76dcd7f82d1eb82eaa9",
+    "C124_Short_Study.pretty/R_KOA_RK73H1E_0402_Reflow_B.kicad_mod": "5c1faf79bcf45aa9b6004f410957a0a3a1d390dd0b62e2c0e0fa8225bfab341c",
+    "C124_Short_Study.pretty/R_KOA_RN73R1E_0402_Reflow_Vertical_B.kicad_mod": "61efbb121bb2fe9ab06fe8670613f1bd52f4fd2964c1a43dc368d034e311492a",
+    "C124_Short_Study.pretty/R_Vishay_TNPW0603_IPC_Vertical_B.kicad_mod": "2f6cd946d1cb4d2c65612ec63ff8619d05a5268dbbfc8b5e586ad80a373bfc12",
+    "Maru60.kicad_sym": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27",
+    "Maru60.pretty/Abracon_AOTA_B201610S3R3_Official_R4.kicad_mod": "5d02afce5b5bc1b5df1612accf1159a32a8f872c4efebf5cf2cd9eb78744cbab",
+    "Maru60.pretty/C_0402_Official_R4_Wide.kicad_mod": "3c3c32d0f0fce504fb2d97554e977c53083e7fbce5202676335bc58e106618c4",
+    "Maru60.pretty/OSHW_then_Minpeter_H6_Gap1p5_Silk_DRAFT.kicad_mod": "48296c6e5118c4be1c9f2cc0e65392acdb2fd0eea3186e1c469c81a4382d56b4",
+    "Maru60.pretty/RP2350A_QFN60_Official_R4.kicad_mod": "7742df773afbd96c3b880fa83ac5c479e0e88a7c6ab159006e2c9302183c1eb5",
+    "MaruStudy.pretty/MAX_T822-3C_90-0065_2x2_P0.5_EP0.8x1.38.kicad_mod": "17fc287eacf647d25657fd0130d7e2d72a766832e703990ca3547201f271333f",
+    "MaruStudy.pretty/Murata_GRM18_0603_Reflow_0.65x0.75_Gap0.7.kicad_mod": "046fff6d5daf2e160746e3484419fecff37fd7cfa8edff804fbfaf41cede98f1",
+    "MaruStudy.pretty/Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9.kicad_mod": "d71235770392086ecd8640392d27615a1333ccbc6aab72f314fb61c47ba23cac",
+    "Protection_Study.pretty/TI_RPW0010A_2x2mm_Official4225183A_DRAFT.kicad_mod": "5365c9a0097cf7e60ca94cd47f0174329e878e4f6f7f77db18e4cf71080d1221",
+    "Protection_Study.pretty/TI_RVZ14_1p35x3p5mm_P0p5_DERIVED_DRAFT.kicad_mod": "071c2f08c1c5cf34a58a26dace06c68560f55f22848b38abe9dd2c80feb41034",
+    "Study.kicad_sym": "9478f0f495e54e4c44b03766b44c20d1c3a53b4da8cd22e836ccc970af9c4ba3",
+    "engineering/Maru60_Options.kicad_sym": "f4f200b7b158eb086c33ec7ac46533e1a3d1e1fa29c13c0137208e97c0dad6e0",
+    "engineering/candidates.pretty/LED_SK6805_EC15_001_Recommended_Candidate.kicad_mod": "39140db32e14761f427271ac8835ee38d6eb78d63c81ad1d1ad74bed03a15536",
+    "engineering/candidates.pretty/MX-Hotswap-2.25U-4L-NPTH.kicad_mod": "1ac00209a2da353804340f03aee638db4ffcda526360fd65345902b54b46015e",
+    "engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH-StabRot180.kicad_mod": "771047bc0a6e997b3777336cfde7d721dce5fd511fd3756ad30a5b565f92968e",
+    "engineering/candidates.pretty/MX-Hotswap-7U-4L-NPTH.kicad_mod": "7e7ad37c16b33e15e57e1f2cf8a325f86fb32f91f5a07264bc22aa041a7dffd7",
+    "engineering/candidates.pretty/MX_Study_Backspace_2U_or_1U_1U.kicad_mod": "a91499fb17f62cfc75c22d00848cca1132ec2976d20d5c231ea946ba51954655",
+    "engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab.kicad_mod": "a63b66fdfbf5f17794e196185e28a9064febe254a2ca00cbeb36653900da85ab",
+    "engineering/candidates.pretty/MX_Study_Backspace_MillMax3305_2U_or_1U_1U_PCBStab_OutwardLED.kicad_mod": "6957c3c738b01d6239b3e22afdc46d86cce5a5efd9445961328e68a1f9714da5",
+    "engineering/candidates.pretty/MX_Study_Caps_Normal_or_Stepped.kicad_mod": "2b1cad60710626c0930282d54c21e4ddd33dc9a3b6f41f20e32a8d8af267f903",
+    "engineering/candidates.pretty/MX_Study_RShift_2.75U_or_1.75U_1U.kicad_mod": "d712dfaaf1dafb9c2c0e95fac011053c0796b38532ac203344ead9ddbb37d1a7",
+    "engineering/candidates.pretty/README.md": "eac34e4c89d1c57747195156a243ebe9196fc61cf749911ec10625d4546fce6c",
+    "engineering/candidates.pretty/STABILIZED_4L_PROVENANCE.md": "37fa375cd0bf3909efb77e5a970278d593b8be8b5ab362e65efad515b863d574",
+    "engineering/third_party/KiCad9_Experimental_Packages/COPYRIGHT.debian": "48a86acd94e857211eac57a51700fc9b3d38539503c282e09ff9e9392fd6503f",
+    "engineering/third_party/KiCad9_Experimental_Packages/Texas_DRT-3.kicad_mod": "604d4ede018338d6f06294847ca35697900457a67805b30361dec213c690a510",
+    "engineering/third_party/KiCad9_Experimental_Packages/Winbond_USON-8-2EP_3x4mm_P0.8mm_EP0.2x0.8mm.kicad_mod": "b191db69e23241e78bc768ef06b4844cbcc2794a8a84e180759e0314658c321a",
+    "engineering/third_party/MX_V2/LICENSE": "55e456ffa58f1ff68b3bca4fe508cf2bcfc465feb3ea94e20466a68c0cbbb141",
+    "engineering/third_party/MX_V2/MX-Hotswap-1U.kicad_mod": "47b7469b01479914cd9b72bcc77125e8140c7ba7f6d8828f61f2cc4787f619e3",
+    "engineering/third_party/MX_V2/MX-Hotswap-2.25U.kicad_mod": "6946cee0b40c07032dca093aaeada4a1c2ba17a6a2c6faa3cf30725074b74b18",
+    "engineering/third_party/MX_V2/MX-Hotswap-2.75U.kicad_mod": "143d4859ffbd4fb1079227b1d2054af4fe6585423ed03fb90b6b629573b940c7",
+    "engineering/third_party/MX_V2/MX-Hotswap-2U.kicad_mod": "4f102ec158f45ca81d1d2773ee266890bfd59ed365b10f0bb31ee37f578cf6a4",
+    "engineering/third_party/MX_V2/MX-Hotswap-7U.kicad_mod": "213277058a2677d7c1bf033707fdb82d64534787d2a4a546ecf4bf106644f963",
+    "engineering/third_party/RP2350A_Minimal/LICENSE.txt": "b7d06548be326cac80f52434578cc6a5e7c32e555619ee4aac3e2a03490a25a6",
+    "engineering/third_party/RP2350A_Minimal/PROVENANCE.md": "e847e087b26825fae8c96b9aec2d0f0501ac1984fe4424b9c14920efde8f7eea",
+    "engineering/third_party/RP2350A_Minimal/rp2350a-pins.json": "bdf248e586f2abffdbc8a72c43024e463b1ec846535baff833bfef173f045953",
+    "engineering/third_party/marbastlib-gateron/LICENSE": "6e471d647db50527d0c75ee5f1a55a74012ab177c73282bef0bdc7f6562b7ded",
+    "engineering/third_party/marbastlib-gateron/PROVENANCE.md": "f0f53f2b9fd72c76047ce0f4cde41f7838e6f383ade4bb2928d64c473425f182",
+    "engineering/third_party/marbastlib-gateron/SW_MX_HS_KS-2P02B01-01_1u.kicad_mod": "153fcc264590f072c07798d9ba0cda1ea7c56a9df42b54a7d8b87ddb19fa8483",
+    "fp-lib-table": "ccb372f66e83a780fac479454c5754a1be96fff08714a8b862d4480001b4a66b",
+    "maru60-core.kicad_sch": "f0183190e194e30ec8e5b07a34bfc277fb2f95558511bba3676c3ea58a10dbe9",
+    "maru60-expansion.kicad_sch": "926f3ffa7423b76596cc6fcebfec065eb8f73d91d840a9b0fd37a4b6e8baf88d",
+    "maru60-lighting.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "maru60-lighting.kicad_sch": "dd10fd66b1a2b119b91194d436983732d042cf0949c92d4497479f4ca009bb10",
+    "maru60-matrix.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "maru60-matrix.kicad_sch": "a87a278408050f59df0912afaaf9f476f1648f828b7744b2f734ca3b62862f90",
+    "maru60.kicad_pcb": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+    "maru60.kicad_prl": "8c0a828ce6c58ebd31b8835a9bd58efb04385897813f3e5d51b961410868af58",
+    "maru60.kicad_pro": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+    "maru60.kicad_sch": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51",
+    "protection-gpio-isolation.kicad_sch": "2ee16d2ad54943123666eaf35512592908e21d52ff4672760c5298e52e55f38e",
+    "protection-input-protection.kicad_sch": "ead85b4d9213b619fba8745710f5f97a6d30ee28c5d857c063206e5b306f0125",
+    "protection-supply-context.kicad_sch": "b593e119667214a2d732eca470272e23f97190c7c630856bd7fa7fadc6875f15",
+    "protection-v6-regulated-domain.kicad_sch": "8cbd2694194d8ea807a86983cb821b585131a63467b30d915ba1517af10694cc",
+    "sym-lib-table": "288a9ed004a889ff4e26f486e35c2a83d1de11d94fffa140f1cd62eb9ef441ac"
+  },
+  "changes": [
+    {
+      "reference": "C139",
+      "before": {
+        "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18",
+        "text": "C139",
+        "position_nm": [
+          179970000,
+          85000000
+        ],
+        "size_nm": [
+          750000,
+          750000
+        ],
+        "stroke_nm": 100000,
+        "angle_deg": 90.0,
+        "visible": true,
+        "mirrored": true,
+        "layer": "B.Silkscreen",
+        "bold": false,
+        "italic": false
+      },
+      "after": {
+        "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18",
+        "text": "C139",
+        "position_nm": [
+          181400000,
+          81800000
+        ],
+        "size_nm": [
+          800000,
+          800000
+        ],
+        "stroke_nm": 100000,
+        "angle_deg": 90.0,
+        "visible": true,
+        "mirrored": true,
+        "layer": "B.Silkscreen",
+        "bold": false,
+        "italic": false
+      }
+    }
+  ],
+  "native_ink": [
+    {
+      "reference": "C139",
+      "typography": {
+        "uuid": "a7e903e6-58a0-4923-9231-ef2738cfee18",
+        "text": "C139",
+        "position_nm": [
+          181400000,
+          81800000
+        ],
+        "size_nm": [
+          800000,
+          800000
+        ],
+        "stroke_nm": 100000,
+        "angle_deg": 90.0,
+        "visible": true,
+        "mirrored": true,
+        "layer": "B.Silkscreen",
+        "bold": false,
+        "italic": false
+      },
+      "footprint_center_nm": [
+        181400000,
+        85000000
+      ],
+      "geometry": {
+        "silk_intersections": [],
+        "silk_gap": {
+          "lower_bound_nm": 441666,
+          "upper_bound_nm": 441667,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "dbd31047-168e-40f6-b393-4f6e5518463a",
+            "class": "PCB_FIELD",
+            "layer": "B.Silkscreen",
+            "position_nm": [
+              181570000,
+              85000000
+            ],
+            "reference": "R159"
+          }
+        },
+        "silk_target_pass": true,
+        "mask_intersections": [],
+        "mask_gap": {
+          "lower_bound_nm": 534524,
+          "upper_bound_nm": 534525,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "160d11b2-fdff-46a2-8362-4f0d6c655a4c",
+            "class": "PAD",
+            "layer": "F.Cu",
+            "position_nm": [
+              181400000,
+              84225000
+            ],
+            "reference": "C139",
+            "pad": "1",
+            "net": "BUCK_SS",
+            "source": "pad",
+            "mask_layer": "B.Mask",
+            "copper_layer": "B.Cu",
+            "expansion_nm": 0
+          }
+        },
+        "mask_target_pass": true,
+        "courtyard_intersections": [],
+        "courtyard_gap": {
+          "lower_bound_nm": 284524,
+          "upper_bound_nm": 284525,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "7bef23cd-c46f-4532-8994-ad000c87041a",
+            "class": "FOOTPRINT",
+            "layer": "B.Cu",
+            "position_nm": [
+              181400000,
+              85000000
+            ],
+            "reference": "C139"
+          }
+        },
+        "courtyard_target_pass": true,
+        "fab_intersections": [],
+        "fab_gap": {
+          "lower_bound_nm": 833846,
+          "upper_bound_nm": 833847,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "083c35a1-0d98-4eb7-8c28-836670d6f379",
+            "reference": "U18",
+            "layer": "B.Fab"
+          }
+        },
+        "fab_target_pass": true,
+        "unreconstructed_fab_intersections": [],
+        "unreconstructed_fab_gap": {
+          "lower_bound_nm": 4330169,
+          "upper_bound_nm": 4330170,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": true,
+          "capped_lower_bound": false,
+          "cap_nm": 10000000,
+          "partner": {
+            "uuid": "d88265f0-f4a3-4050-afa5-2285d3b7a29e",
+            "class": "PCB_SHAPE",
+            "layer": "B.Fab",
+            "position_nm": [
+              182650000,
+              88550000
+            ],
+            "reference": "D100"
+          }
+        },
+        "unreconstructed_fab_target_pass": true,
+        "edge_intersections": [],
+        "edge_gap": {
+          "lower_bound_nm": 10000000,
+          "upper_bound_nm": null,
+          "lower_noncollision_verified": true,
+          "upper_collision_verified": false,
+          "capped_lower_bound": true,
+          "cap_nm": 10000000,
+          "partner": null
+        },
+        "edge_target_pass": true,
+        "whole_ink_inside_board": true
+      }
+    }
+  ],
+  "only_C139_reference_field_differs": true,
+  "all_electrical_objects_holes_zones_unchanged": true,
+  "selected": false,
+  "association_visual_review_pending": true,
+  "fresh_drc_pending": true
+}

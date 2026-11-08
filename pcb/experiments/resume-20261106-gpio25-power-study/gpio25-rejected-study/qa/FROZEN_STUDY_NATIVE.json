@@ -1,0 +1,181 @@
+{
+  "source_sha256": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5",
+  "fixed_gpio24": {
+    "via24_old": [
+      105.8,
+      37.5
+    ],
+    "via24_new": [
+      105.7,
+      37.525
+    ],
+    "via_uuid": "79e90551-63f2-4d3a-82a7-9d5d6259c3d6",
+    "retarget_tracks": [
+      "b9d330ac-1b1c-42cf-989e-7a81dbfe810a",
+      "27d5bab5-97b2-409f-970d-ef67b5e0bc6a"
+    ],
+    "J3": [
+      [
+        93.5,
+        39
+      ],
+      [
+        93.925,
+        40.175
+      ]
+    ],
+    "F": [
+      [
+        93.925,
+        40.175
+      ],
+      [
+        94.925,
+        39.65
+      ],
+      [
+        95.625,
+        39.625
+      ],
+      [
+        96.975,
+        39.625
+      ],
+      [
+        97.2,
+        39.7
+      ],
+      [
+        98.15,
+        40.6
+      ]
+    ],
+    "B": [
+      [
+        98.15,
+        40.6
+      ],
+      [
+        100.65,
+        40.125
+      ],
+      [
+        103.05,
+        38.55
+      ],
+      [
+        103.275,
+        38.45
+      ],
+      [
+        105.9,
+        37.975
+      ],
+      [
+        106.025,
+        37.875
+      ],
+      [
+        106.125,
+        37.775
+      ],
+      [
+        106.2,
+        37.625
+      ],
+      [
+        106.35,
+        37.525
+      ],
+      [
+        107.1,
+        37.325
+      ]
+    ],
+    "gpio25_vias": [
+      [
+        93.925,
+        40.175
+      ],
+      [
+        98.15,
+        40.6
+      ]
+    ],
+    "modified_tracks": [
+      {
+        "uuid": "b9d330ac-1b1c-42cf-989e-7a81dbfe810a",
+        "start": [
+          104.35,
+          38.0
+        ],
+        "old_end": [
+          105.8,
+          37.5
+        ],
+        "retain_to": [
+          105.51,
+          37.6
+        ],
+        "new_end": [
+          105.7,
+          37.525
+        ],
+        "width_nm": 150000,
+        "layer": "F.Cu"
+      },
+      {
+        "uuid": "27d5bab5-97b2-409f-970d-ef67b5e0bc6a",
+        "start": [
+          106.275,
+          36.9
+        ],
+        "old_end": [
+          105.8,
+          37.5
+        ],
+        "retain_to": [
+          105.99,
+          37.26
+        ],
+        "new_end": [
+          105.7,
+          37.525
+        ],
+        "width_nm": 150000,
+        "layer": "B.Cu"
+      }
+    ]
+  },
+  "sites_J3": [
+    [
+      93.6,
+      39.9
+    ],
+    [
+      93.825,
+      40.05
+    ],
+    [
+      93.925,
+      40.3
+    ]
+  ],
+  "sites_bridge": [
+    [
+      97.9,
+      40.925
+    ],
+    [
+      98.075,
+      40.7
+    ],
+    [
+      98.275,
+      40.55
+    ]
+  ],
+  "finite_cases": "All 9 pair combinations; same internal route vertices initially. At most one native-clearance A* route each for J3/F/B per pair if necessary, step0.025mm. No other retained edits.",
+  "acceptance": "Native exact38 warning records,8opens,parity0 first; exact remote-plane witnesses reject; full exact antipad/hole scope attribution plus material/reference/58cold required for acceptance. Historical455um envelope may be used only to locate remote rejection witnesses, never acceptance.",
+  "rationale": "Frozen follow-up of initial conservative site failure: 150um ordinary native-shape inventory has223 J3 sites and76 bridge sites. Select three spread positions on each side, each clear against all four physical layers. Reuses exactly fixed GPIO24 geometry; no board constructed before this amendment."
+}

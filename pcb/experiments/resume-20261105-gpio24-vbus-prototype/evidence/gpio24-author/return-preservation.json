@@ -1,0 +1,169 @@
+{
+  "source_sha256": "2b5787cc27e7fea92dff2ad483185fccfab1d2d27bf07662395de26f7ab14d69",
+  "candidate_sha256": "2bacda8824b543df9be08628cd8ac14b2ed6628d7ee3e221626b869da74787d4",
+  "method": "Native copied filled polygons minus every actual through drill; Boolean subtraction without Unfracture. Source copper projections conservatively outside-rounded at 1nm. Antipad disk outside-rounded at 1nm. No SI/manufacturing claim.",
+  "planes": [
+    {
+      "plane": "In1.Cu",
+      "old_area_mm2": 23436.284001654607,
+      "new_area_mm2": 23434.360242067,
+      "lost_mm2": 2.0138602518735,
+      "gained_mm2": 0.0901006580205,
+      "lost_outside_0p455mm_new_via_envelope_mm2": 1.02208e-07,
+      "old_signal_projection_losses": [
+        {
+          "uuid": "b928a2a5-bde8-464d-aac1-e446062d5f57",
+          "net": "EXT_GPIO3",
+          "source_layer": "F.Cu",
+          "lost_reference_area_mm2": 0.000578146491
+        },
+        {
+          "uuid": "48e89f5e-c7ba-4a20-a4a3-4d002c478a59",
+          "net": "EXT_GPIO3",
+          "source_layer": "B.Cu",
+          "lost_reference_area_mm2": 3.2982482e-05
+        }
+      ],
+      "old_components": 1,
+      "new_components": 1
+    },
+    {
+      "plane": "In2.Cu",
+      "old_area_mm2": 23486.80428379316,
+      "new_area_mm2": 23484.880524205553,
+      "lost_mm2": 2.0138602518735,
+      "gained_mm2": 0.0901006580205,
+      "lost_outside_0p455mm_new_via_envelope_mm2": 1.02208e-07,
+      "old_signal_projection_losses": [
+        {
+          "uuid": "b928a2a5-bde8-464d-aac1-e446062d5f57",
+          "net": "EXT_GPIO3",
+          "source_layer": "F.Cu",
+          "lost_reference_area_mm2": 0.000578146491
+        },
+        {
+          "uuid": "48e89f5e-c7ba-4a20-a4a3-4d002c478a59",
+          "net": "EXT_GPIO3",
+          "source_layer": "B.Cu",
+          "lost_reference_area_mm2": 3.2982482e-05
+        }
+      ],
+      "old_components": 1,
+      "new_components": 1
+    }
+  ],
+  "new_outer_signal_reference": [
+    {
+      "uuid": "00b68394-0b19-40a6-b4e3-cab6790326f1",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In1.Cu",
+      "projection_area_mm2": 0.723491417546,
+      "uncovered_projection_mm2": 0.0499089441615
+    },
+    {
+      "uuid": "00b68394-0b19-40a6-b4e3-cab6790326f1",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In2.Cu",
+      "projection_area_mm2": 0.723491417546,
+      "uncovered_projection_mm2": 0.0499089441615
+    },
+    {
+      "uuid": "34ffdcfe-cf0c-499a-a320-27d024a06ef2",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In1.Cu",
+      "projection_area_mm2": 1.086421616444,
+      "uncovered_projection_mm2": 0.0
+    },
+    {
+      "uuid": "34ffdcfe-cf0c-499a-a320-27d024a06ef2",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In2.Cu",
+      "projection_area_mm2": 1.086421616444,
+      "uncovered_projection_mm2": 0.0
+    },
+    {
+      "uuid": "b9d330ac-1b1c-42cf-989e-7a81dbfe810a",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In1.Cu",
+      "projection_area_mm2": 0.2213485469825,
+      "uncovered_projection_mm2": 0.0498897460875
+    },
+    {
+      "uuid": "b9d330ac-1b1c-42cf-989e-7a81dbfe810a",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In2.Cu",
+      "projection_area_mm2": 0.2213485469825,
+      "uncovered_projection_mm2": 0.0498897460875
+    },
+    {
+      "uuid": "79e90551-63f2-4d3a-82a7-9d5d6259c3d6",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In1.Cu",
+      "projection_area_mm2": 0.14726236222,
+      "uncovered_projection_mm2": 0.14726236222
+    },
+    {
+      "uuid": "79e90551-63f2-4d3a-82a7-9d5d6259c3d6",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In2.Cu",
+      "projection_area_mm2": 0.14726236222,
+      "uncovered_projection_mm2": 0.14726236222
+    },
+    {
+      "uuid": "fd677751-ef57-49df-a129-311565d44173",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In1.Cu",
+      "projection_area_mm2": 0.14726236222,
+      "uncovered_projection_mm2": 0.14726236222
+    },
+    {
+      "uuid": "fd677751-ef57-49df-a129-311565d44173",
+      "net": "EXT_GPIO24",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In2.Cu",
+      "projection_area_mm2": 0.14726236222,
+      "uncovered_projection_mm2": 0.14726236222
+    },
+    {
+      "uuid": "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+      "net": "EXT_GPIO26",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In1.Cu",
+      "projection_area_mm2": 0.317808705332,
+      "uncovered_projection_mm2": 0.099852111747
+    },
+    {
+      "uuid": "55e5d0cf-c179-4e88-925d-241a5a9d4416",
+      "net": "EXT_GPIO26",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In2.Cu",
+      "projection_area_mm2": 0.317808705332,
+      "uncovered_projection_mm2": 0.099852111747
+    },
+    {
+      "uuid": "075334c3-e6fd-4cf3-8599-1a58cef3db7f",
+      "net": "EXT_GPIO26",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In1.Cu",
+      "projection_area_mm2": 0.14726236222,
+      "uncovered_projection_mm2": 0.14726236222
+    },
+    {
+      "uuid": "075334c3-e6fd-4cf3-8599-1a58cef3db7f",
+      "net": "EXT_GPIO26",
+      "signal_layer": "F.Cu",
+      "reference_plane": "In2.Cu",
+      "projection_area_mm2": 0.14726236222,
+      "uncovered_projection_mm2": 0.14726236222
+    }
+  ]
+}

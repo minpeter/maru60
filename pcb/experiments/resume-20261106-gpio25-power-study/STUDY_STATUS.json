@@ -1,0 +1,31 @@
+{
+  "kind": "ANALYSIS_SUPPLEMENT_NOT_NEW_SELECTED_DESIGN",
+  "selected_commit": "be51692d6b7c3069d20602cfb518370028179307",
+  "selected_pcb_sha256": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5",
+  "selected_native_counts_inherited_from_frozen_checkpoint": {
+    "open_pairs": 9,
+    "warnings": 38,
+    "ERC": 0,
+    "parity": 0
+  },
+  "previous_complete_checkpoint_library_file_id": "libfile_f8a874f544e481919100bf3b114b576f",
+  "new_route_candidates_selected": 0,
+  "finite_GPIO25_pairs_tested": 9,
+  "all9_native_gate": "8 open pairs / identical38 warning records / parity0",
+  "all9_final_verdict": "REJECTED: exact remote GND loss and retained COL14 reference regression",
+  "independent_rejection_replay_cases": [
+    "j0-b0",
+    "j1-b1",
+    "j2-b2"
+  ],
+  "power_native_components_checked": 36,
+  "power_numbered_pad_nets_checked": 181,
+  "U18_copper_dimensions": "Match TI DRL0008A example; assembly/mask/stencil qualification remains open",
+  "limitations": [
+    "No accepted routing improvement this study.",
+    "No active transient/loop model, physical power measurement, SI/thermal qualification or production release.",
+    "Default LED qualification remains0.",
+    "Earlier strict no-loss failure and51 guarded-contact diagnostics remain unresolved.",
+    "No CAD or firmware edits, public push, order or flashing."
+  ]
+}

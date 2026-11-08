@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "audit_date_utc": "2026-11-06T10:53:05.324841+00:00",
+  "verdict": "No blocking secret, credential, or prohibited runtime/cache artifact identified by bounded audit.",
+  "historical_scope": {
+    "head": "be51692d6b7c3069d20602cfb518370028179307",
+    "reachable_commits": 18,
+    "unique_reachable_blobs": 3632,
+    "uncompressed_blob_bytes": 1336182096,
+    "git_fsck": "passed",
+    "zip_containers_including_nested": 7,
+    "zip_entries_including_nested": 706,
+    "zip_expanded_bytes": 225742221,
+    "largest_blob": {
+      "git_blob": "1e22d862ed1ffb81e84307952cab675e2c300b14",
+      "path": "pcb/experiments/v7-c124-series-with-connector-ground/evidence/actual-D-frozen.zip",
+      "bytes": 54579147
+    },
+    "blobs_over_100_MiB": 0,
+    "existing_pack_MiB": 122.66
+  },
+  "supplement_scope": {
+    "commit": "4c90cdc95c7d1d29ab5fecf72cc5d24407b86714",
+    "files": 855,
+    "bytes": 89913303,
+    "previously_scanned_files": 853,
+    "previously_scanned_bytes": 89907164,
+    "unchanged_previous_files_verified_by_sha256": 851,
+    "changed_previous_files_fully_reviewed": 2,
+    "added_files_fully_reviewed": 2,
+    "additional_full_text_reviews": [
+      {
+        "path": "pcb/experiments/resume-20261106-recovery-status/UNRECOVERED_WORK_NOTES.md",
+        "bytes": 5148,
+        "sha256": "f6884a3d1744a88da083ea3339bde19056ec59046a635b06e9a0e8edd7a3ce27",
+        "git_blob": "5b7b8bf1ab3bad02fd619f8663c5c957c41b8a87",
+        "change": "added",
+        "review": "Read in full: status/validation/reconstruction prose or JSON; no credential or sensitive personal data found."
+      },
+      {
+        "path": "pcb/experiments/resume-20261106-recovery-status/PUBLICATION_STATUS.json",
+        "bytes": 824,
+        "sha256": "596149e8265e4ef5355c7413719f147eb66cc9139cfc1d3fddb5e82ee43c4d51",
+        "git_blob": "2a416bc9a0e0b7ebcbc3292cd8f92a81f90bd65a",
+        "change": "added",
+        "review": "Read in full: status/validation/reconstruction prose or JSON; no credential or sensitive personal data found."
+      },
+      {
+        "path": "pcb/experiments/resume-20261106-recovery-status/validation/results.json",
+        "bytes": 1968,
+        "sha256": "dc24b8e2fb53874cb119f817aef5545d5ca784ed7b2b9b1946bbd818cc3a6d57",
+        "git_blob": "c54f58e5fdfd90a07184b7ddd26daf1b03712b1e",
+        "change": "updated",
+        "review": "Read in full: status/validation/reconstruction prose or JSON; no credential or sensitive personal data found."
+      },
+      {
+        "path": "pcb/experiments/resume-20261106-recovery-status/validation/REPORT.md",
+        "bytes": 2050,
+        "sha256": "fdaa4e5b824c245849bad1e6b1f3b1e3e2145642a8bbded4ee064d2054e4ed33",
+        "git_blob": "7327ca0f9ef7065b10aa52f0fe4b83d31ab980ab",
+        "change": "updated",
+        "review": "Read in full: status/validation/reconstruction prose or JSON; no credential or sensitive personal data found."
+      }
+    ],
+    "inventory_sha256": "72bb19e155c71e3b3fe4a1c52f00914c73cc306094c94d28b61b511a167de599"
+  },
+  "findings": {
+    "high_risk_credential_matches": 0,
+    "suspicious_secret_assignment_matches": 0,
+    "historical_low_signal_email_records": 8,
+    "historical_low_signal_local_path_records": 11,
+    "historical_qa_log_name_matches": 1632,
+    "supplement_vendor_copyright_email_records": 11,
+    "supplement_qa_log_name_matches": 52,
+    "classification": "Public copyright contacts, PSpice component identifiers, compressed-byte false positives, generic render-environment paths, and vendor model author paths. QA logs and KiCad preferences are intentional engineering evidence."
+  },
+  "methods": [
+    "Read-only rev-list and cat-file over every reachable historical blob",
+    "Read-only git fsck --no-reflogs --full",
+    "Signatures: private keys, GitHub, AWS, Slack, Google, OpenAI, JWT, URL passwords, secret assignments, email and local-path indicators",
+    "Recursive ZIP decompression and runtime/cache path checks",
+    "SHA-256 comparison of prior supplement snapshot with current files and full text review of four additions/updates"
+  ],
+  "limitations": [
+    "Bounded signature/pattern audit, not proof that no secrets exist.",
+    "No image OCR or semantic extraction of compressed PDF streams.",
+    "Unknown or obfuscated credentials may evade detection.",
+    "Historical blob report deduplicates identical blobs and uses representative paths.",
+    "Negotiated push-pack size was not measured.",
+    "Future edits and unrelated artifacts are outside scope.",
+    "No remote mutation, push, or credential creation by auditor."
+  ]
+}

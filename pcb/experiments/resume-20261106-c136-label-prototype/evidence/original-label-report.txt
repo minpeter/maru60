@@ -1,0 +1,14 @@
+C136 label-only bounded candidate, based on qualified combined27fix2.
+
+PCB SHA256: 2e532c1a16e64a34eafafdfbd5b85c05d70bb12ad9e52924c5cbe024fdc9aa2c
+Source SHA256: 9d787421bddf23dd06eb8ec51a984ab6cbcc7a36b92a8700a041cb41fc1f18ed
+
+Only C136 Reference changed: position (176.8,89.6) mm, 90 degrees, visible mirrored B.Silkscreen, 0.80 mm text and 0.10 mm stroke. No names hidden or removed. R159 was not changed. The prior search on identical label geometry found no individual R159 placement; no new claim is made about exhaustive joint placement.
+
+Early native KiCad 9.0.2 DRC gate: 42 to 40 warnings, exactly C136 text-height and mask-clipping warnings removed, none added; 9 open connection pairs unchanged; parity 0. Fresh ERC 0. Actual native ink checks have executable assertions for mask, other silk, Fab, cached courtyard, edge and whole ink inside board. Separate raw closed courtyard interior gap 0.229523 mm and actual drawn-stroke envelope gap 0.204523 mm both exceed 0.20 mm. Native cached courtyard gap 0.234523 mm. Native bottom-side SVG was cropped/mirrored and rendered; the PNG was viewed for readability and association. The vertical C136 name is below-right of its capacitor, next to C137 which retains a horizontal label below. No physical assembly visibility claim.
+
+Raw full-file reversal proves only the declared Reference property form differs. All copper, pads, placements, masks, fills, clearances and rules are byte exact. All 57 companion files exact. Cold native load/connectivity/refill/save leaves all 58 CAD files byte identical. 1,064 pin bindings and 12,135 raw/loaded/built conductive object identities pass.
+
+Semantic physical open-component pairs match using inherited combined27fix2 material graph. This is valid inheritance under raw electrical/fill identity, NOT a fresh material-graph run. Existing strict no-loss and conservative contact-proof limitations remain unchanged. This does not qualify fabrication, active stability, SI or hardware safety. Sources and older prototypes were not modified.
+
+Evidence: qa/build.json, drc-gate.json, three-boundaries.json, verification.json, net-identity.json, erc.json; images/C136.png and VISUAL_REVIEW.json. Complete CAD: pcb/ (58 files). Cold copy: cold/pcb/ (58 files). Scripts contain executable checks; verify.py requires unchanged sibling combined27fix2 for source-bound inheritance and an unused cold directory. No install, push, order or flashing.

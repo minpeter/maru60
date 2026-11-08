@@ -1,0 +1,17 @@
+$ cc -std=c11 -Wall -Wextra -Werror -Wno-pointer-to-int-cast -O0 -DMARU60_LED_POWER_QUALIFIED=1 -DMARU60_LED_POWER_SETTLE_REPORT="TEST" -I/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/validation/final-run/guard/reject-missing-interval-build -I/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/tests/startup_guard/mock -I/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/firmware/qmk/keyboards/maru60/rp2350 /workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/tests/startup_guard/guard_test.c /workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c -o /workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/validation/final-run/guard/invalid-missing-interval
+/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:14:10: error: #error Qualified LED power requires a measured settling interval and qualification report
+   14 | #        error Qualified LED power requires a measured settling interval and qualification report
+      |          ^~~~~
+/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c: In function ‘maru_rgb_task’:
+/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:19:32: error: ‘MARU60_LED_POWER_SETTLE_MS’ undeclared (first use in this function); did you mean ‘MARU60_LED_POWER_SETTLE_REPORT’?
+   19 | #    define MARU_LED_SETTLE_MS MARU60_LED_POWER_SETTLE_MS
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:103:43: note: in expansion of macro ‘MARU_LED_SETTLE_MS’
+  103 |     if (timer_elapsed32(settle_started) < MARU_LED_SETTLE_MS) return;
+      |                                           ^~~~~~~~~~~~~~~~~~
+/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:19:32: note: each undeclared identifier is reported only once for each function it appears in
+   19 | #    define MARU_LED_SETTLE_MS MARU60_LED_POWER_SETTLE_MS
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/edd9a5be63e7/v7-firmware-recovery-20261104/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:103:43: note: in expansion of macro ‘MARU_LED_SETTLE_MS’
+  103 |     if (timer_elapsed32(settle_started) < MARU_LED_SETTLE_MS) return;
+      |                                           ^~~~~~~~~~~~~~~~~~

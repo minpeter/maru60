@@ -1,0 +1,2275 @@
+[
+  {
+    "ref": "LED1",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_5V",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_1",
+      "4": "GND"
+    },
+    "x_mm": 9.1475,
+    "y_mm": 4.11875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW1",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C200",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 13.1475,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED2",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_1",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_2",
+      "4": "GND"
+    },
+    "x_mm": 28.1975,
+    "y_mm": 4.11875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW2",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C201",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 32.197500000000005,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED3",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_2",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_3",
+      "4": "GND"
+    },
+    "x_mm": 47.2475,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW3",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C202",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 51.2475,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED4",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_3",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_4",
+      "4": "GND"
+    },
+    "x_mm": 66.2975,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW4",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C203",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 70.2975,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED5",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_4",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_5",
+      "4": "GND"
+    },
+    "x_mm": 85.3475,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW5",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C204",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 89.3475,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED6",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_5",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_6",
+      "4": "GND"
+    },
+    "x_mm": 104.3975,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW6",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C205",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 108.3975,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED7",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_6",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_7",
+      "4": "GND"
+    },
+    "x_mm": 123.4475,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW7",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C206",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 127.4475,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED8",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_7",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_8",
+      "4": "GND"
+    },
+    "x_mm": 142.4975,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW8",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C207",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 146.4975,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED9",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_8",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_9",
+      "4": "GND"
+    },
+    "x_mm": 161.5475,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW9",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C208",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 165.5475,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED10",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_9",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_10",
+      "4": "GND"
+    },
+    "x_mm": 180.5975,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW10",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C209",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 184.5975,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED11",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_10",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_11",
+      "4": "GND"
+    },
+    "x_mm": 199.6475,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW11",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C210",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 203.6475,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED12",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_11",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_12",
+      "4": "GND"
+    },
+    "x_mm": 218.6975,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW12",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C211",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 222.6975,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED13",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_12",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_13",
+      "4": "GND"
+    },
+    "x_mm": 237.7475,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW13",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C212",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 241.7475,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED14",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_13",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_14",
+      "4": "GND"
+    },
+    "x_mm": 256.7975,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW14",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C213",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 260.7975,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED15",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_14",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_15",
+      "4": "GND"
+    },
+    "x_mm": 275.8475,
+    "y_mm": 14.27875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW15",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C214",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 279.8475,
+    "y_mm": 14.27875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED29",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_15",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_16",
+      "4": "GND"
+    },
+    "x_mm": 271.085,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW29",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C228",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 275.085,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED28",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_16",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_17",
+      "4": "GND"
+    },
+    "x_mm": 247.2725,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW28",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C227",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 251.2725,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED27",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_17",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_18",
+      "4": "GND"
+    },
+    "x_mm": 228.2225,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW27",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C226",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 232.2225,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED26",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_18",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_19",
+      "4": "GND"
+    },
+    "x_mm": 209.1725,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW26",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C225",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 213.1725,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED25",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_19",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_20",
+      "4": "GND"
+    },
+    "x_mm": 190.1225,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW25",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C224",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 194.1225,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED24",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_20",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_21",
+      "4": "GND"
+    },
+    "x_mm": 171.0725,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW24",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C223",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 175.0725,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED23",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_21",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_22",
+      "4": "GND"
+    },
+    "x_mm": 152.0225,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW23",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C222",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 156.0225,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED22",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_22",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_23",
+      "4": "GND"
+    },
+    "x_mm": 132.9725,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW22",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C221",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 136.9725,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED21",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_23",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_24",
+      "4": "GND"
+    },
+    "x_mm": 113.9225,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW21",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C220",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 117.9225,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED20",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_24",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_25",
+      "4": "GND"
+    },
+    "x_mm": 94.8725,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW20",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C219",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 98.8725,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED19",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_25",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_26",
+      "4": "GND"
+    },
+    "x_mm": 75.8225,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW19",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C218",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 79.8225,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED18",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_26",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_27",
+      "4": "GND"
+    },
+    "x_mm": 56.7725,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW18",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C217",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 60.7725,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED17",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_27",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_28",
+      "4": "GND"
+    },
+    "x_mm": 37.7225,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW17",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C216",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 41.7225,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED16",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_28",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_29",
+      "4": "GND"
+    },
+    "x_mm": 13.91,
+    "y_mm": 33.32875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW16",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C215",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 17.91,
+    "y_mm": 33.32875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED30",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_29",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_30",
+      "4": "GND"
+    },
+    "x_mm": 16.49125,
+    "y_mm": 42.21875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SWCAP1",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C229",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 18.6,
+    "y_mm": 40.0,
+    "side": "F",
+    "role": "local LED bypass",
+    "rotation": 0.0
+  },
+  {
+    "ref": "LED75",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_30",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_31",
+      "4": "GND"
+    },
+    "x_mm": 11.32875,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SWCAP1",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C274",
+    "value": "100nF 10V X7R candidate",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 8.0,
+    "y_mm": 54.2,
+    "side": "F",
+    "role": "local LED bypass",
+    "rotation": 0
+  },
+  {
+    "ref": "LED31",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_31",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_32",
+      "4": "GND"
+    },
+    "x_mm": 42.485,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW31",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C230",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 46.485,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED32",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_32",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_33",
+      "4": "GND"
+    },
+    "x_mm": 61.535,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW32",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C231",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 65.535,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED33",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_33",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_34",
+      "4": "GND"
+    },
+    "x_mm": 80.585,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW33",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C232",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 84.585,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED34",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_34",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_35",
+      "4": "GND"
+    },
+    "x_mm": 99.635,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW34",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C233",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 103.635,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED35",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_35",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_36",
+      "4": "GND"
+    },
+    "x_mm": 118.685,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW35",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C234",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 122.685,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED36",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_36",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_37",
+      "4": "GND"
+    },
+    "x_mm": 137.735,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW36",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C235",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 141.735,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED37",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_37",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_38",
+      "4": "GND"
+    },
+    "x_mm": 156.785,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW37",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C236",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 160.785,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED38",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_38",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_39",
+      "4": "GND"
+    },
+    "x_mm": 175.835,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW38",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C237",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 179.835,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED39",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_39",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_40",
+      "4": "GND"
+    },
+    "x_mm": 194.885,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW39",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C238",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 198.885,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED40",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_40",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_41",
+      "4": "GND"
+    },
+    "x_mm": 213.935,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW40",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C239",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 217.935,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED41",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_41",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_42",
+      "4": "GND"
+    },
+    "x_mm": 232.985,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW41",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C240",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 236.985,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED42",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_42",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_43",
+      "4": "GND"
+    },
+    "x_mm": 263.94125,
+    "y_mm": 52.37875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW42",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C241",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 267.94125,
+    "y_mm": 52.37875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED55",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_43",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_44",
+      "4": "GND"
+    },
+    "x_mm": 275.8475,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SWRS1",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C254",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 279.8475,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED76",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_44",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_45",
+      "4": "GND"
+    },
+    "x_mm": 259.17875,
+    "y_mm": 61.26875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SWRS1",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C275",
+    "value": "100nF 10V X7R candidate",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 261.6,
+    "y_mm": 59.0,
+    "side": "F",
+    "role": "local LED bypass",
+    "rotation": 0
+  },
+  {
+    "ref": "LED54",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_45",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_46",
+      "4": "GND"
+    },
+    "x_mm": 249.65375,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SWRS1",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C253",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 253.65375,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED53",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_46",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_47",
+      "4": "GND"
+    },
+    "x_mm": 223.46,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW53",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C252",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 227.46,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED52",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_47",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_48",
+      "4": "GND"
+    },
+    "x_mm": 204.41,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW52",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C251",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 208.41,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED51",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_48",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_49",
+      "4": "GND"
+    },
+    "x_mm": 185.36,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW51",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C250",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 189.36,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED50",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_49",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_50",
+      "4": "GND"
+    },
+    "x_mm": 166.31,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW50",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C249",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 170.31,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED49",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_50",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_51",
+      "4": "GND"
+    },
+    "x_mm": 147.26,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW49",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C248",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 151.26,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED48",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_51",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_52",
+      "4": "GND"
+    },
+    "x_mm": 128.21,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW48",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C247",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 132.21,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED47",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_52",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_53",
+      "4": "GND"
+    },
+    "x_mm": 109.16,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW47",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C246",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 113.16,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED46",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_53",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_54",
+      "4": "GND"
+    },
+    "x_mm": 90.11,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW46",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C245",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 94.11,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED45",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_54",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_55",
+      "4": "GND"
+    },
+    "x_mm": 71.06,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW45",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C244",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 75.06,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED44",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_55",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_56",
+      "4": "GND"
+    },
+    "x_mm": 52.01,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW44",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C243",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 56.01,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED43",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_56",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_57",
+      "4": "GND"
+    },
+    "x_mm": 21.05375,
+    "y_mm": 71.42875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW43",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C242",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 25.05375,
+    "y_mm": 71.42875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED56",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_57",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_58",
+      "4": "GND"
+    },
+    "x_mm": 13.91,
+    "y_mm": 90.47875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW56",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C255",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 17.91,
+    "y_mm": 90.47875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED57",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_58",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_59",
+      "4": "GND"
+    },
+    "x_mm": 37.7225,
+    "y_mm": 90.47875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW57",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C256",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 41.7225,
+    "y_mm": 90.47875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED58",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_59",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_60",
+      "4": "GND"
+    },
+    "x_mm": 61.535,
+    "y_mm": 90.47875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW58",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C257",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 65.535,
+    "y_mm": 90.47875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED59",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_60",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_61",
+      "4": "GND"
+    },
+    "x_mm": 142.4975,
+    "y_mm": 90.47875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW59",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C258",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 146.4975,
+    "y_mm": 90.47875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED60",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_61",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_62",
+      "4": "GND"
+    },
+    "x_mm": 223.46,
+    "y_mm": 90.47875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW60",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C259",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 227.46,
+    "y_mm": 90.47875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED61",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_62",
+      "2": "+5V_LED",
+      "3": "KEY_RGB_CHAIN_63",
+      "4": "GND"
+    },
+    "x_mm": 247.2725,
+    "y_mm": 90.47875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW61",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C260",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 251.2725,
+    "y_mm": 90.47875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED62",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "KEY_RGB_CHAIN_63",
+      "2": "+5V_LED",
+      "3": "unconnected-(LED62-DOUT-Pad3)",
+      "4": "GND"
+    },
+    "x_mm": 271.085,
+    "y_mm": 90.47875,
+    "rotation": 0,
+    "side": "F",
+    "role": "SW62",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C261",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 275.085,
+    "y_mm": 90.47875,
+    "side": "F",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED63",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UNDERGLOW_5V",
+      "2": "+5V_LED",
+      "3": "UG_LED_1",
+      "4": "GND"
+    },
+    "x_mm": 18,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C262",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 22,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED64",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_1",
+      "2": "+5V_LED",
+      "3": "UG_LED_2",
+      "4": "GND"
+    },
+    "x_mm": 65,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C263",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 69,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED65",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_2",
+      "2": "+5V_LED",
+      "3": "UG_LED_3",
+      "4": "GND"
+    },
+    "x_mm": 112,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C264",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 116,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED66",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_3",
+      "2": "+5V_LED",
+      "3": "UG_LED_4",
+      "4": "GND"
+    },
+    "x_mm": 173,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C265",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 177,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED67",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_4",
+      "2": "+5V_LED",
+      "3": "UG_LED_5",
+      "4": "GND"
+    },
+    "x_mm": 220,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C266",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 224,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED68",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_5",
+      "2": "+5V_LED",
+      "3": "UG_LED_6",
+      "4": "GND"
+    },
+    "x_mm": 267,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C267",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 271,
+    "y_mm": 19.8,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED69",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_6",
+      "2": "+5V_LED",
+      "3": "UG_LED_7",
+      "4": "GND"
+    },
+    "x_mm": 18,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C268",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 22,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED70",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_7",
+      "2": "+5V_LED",
+      "3": "UG_LED_8",
+      "4": "GND"
+    },
+    "x_mm": 65,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C269",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 69,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED71",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_8",
+      "2": "+5V_LED",
+      "3": "UG_LED_9",
+      "4": "GND"
+    },
+    "x_mm": 112,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C270",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 116,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED72",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_9",
+      "2": "+5V_LED",
+      "3": "UG_LED_10",
+      "4": "GND"
+    },
+    "x_mm": 173,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C271",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 177,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED73",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_10",
+      "2": "+5V_LED",
+      "3": "UG_LED_11",
+      "4": "GND"
+    },
+    "x_mm": 220,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "underglow",
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C272",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 224,
+    "y_mm": 77.0,
+    "side": "B",
+    "role": "local LED bypass"
+  },
+  {
+    "ref": "LED74",
+    "value": "SK6805-EC15-001",
+    "footprint": "candidates:LED_SK6805_EC15_001_Recommended_Candidate",
+    "pins": {
+      "1": "UG_LED_11",
+      "2": "+5V_LED",
+      "3": "unconnected-(LED74-DOUT-Pad3)",
+      "4": "GND"
+    },
+    "x_mm": 278.5,
+    "y_mm": 75.5,
+    "side": "B",
+    "role": "underglow",
+    "rotation": 0.0,
+    "lib": "Maru60:SK6805_EC15_001"
+  },
+  {
+    "ref": "C273",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0402_1005Metric",
+    "pins": {
+      "1": "+5V_LED",
+      "2": "GND"
+    },
+    "x_mm": 282.8,
+    "y_mm": 78.3,
+    "side": "B",
+    "role": "local LED bypass",
+    "rotation": 0.0
+  }
+]

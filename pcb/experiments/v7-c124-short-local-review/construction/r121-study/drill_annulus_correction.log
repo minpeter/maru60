@@ -1,0 +1,80 @@
+{
+  "source": "/workspace/scratch/edd9a5be63e7/v7-recovered-library-20261104/selected-recovered/pcb/maru60.kicad_pcb",
+  "source_sha256_before": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "pcbnew_version": "9.0.2+dfsg-1",
+  "track": {
+    "uuid": "abcd4fb1-881b-43f9-906e-39d93366692e",
+    "net": "GND",
+    "start_mm": [
+      14.0,
+      17.675
+    ],
+    "end_mm": [
+      14.9,
+      17.275
+    ],
+    "width_mm": 0.2
+  },
+  "via": {
+    "uuid": "763086b7-5549-4f5e-bb08-ce25387b3627",
+    "net": "GND",
+    "center_mm": [
+      14.9,
+      17.275
+    ],
+    "outer_diameter_BCu_mm": 0.5,
+    "actual_drill_mm": 0.25,
+    "stored_drill_mm": 0.25,
+    "has_drilled_hole": true,
+    "hole_shape": "<class 'pcbnew.SHAPE_SEGMENT'>"
+  },
+  "polygon_error_nm": 1,
+  "outer_disk_overlap_inside_outside_mm2": [
+    0.0643403097475,
+    0.064340777041
+  ],
+  "actual_hole_overlap_inside_outside_mm2": [
+    0.037696617479,
+    0.037697177913
+  ],
+  "annulus_area_lower_upper_mm2": [
+    0.147260768066,
+    0.147263176264
+  ],
+  "physical_annular_contact_area_lower_upper_mm2": [
+    0.026643447977,
+    0.0266438978185
+  ],
+  "physical_annular_contact_positive_both": true,
+  "independent_intersection_then_hole_subtraction_mm2": [
+    0.026643486929,
+    0.0266438665085
+  ],
+  "contact_polygons_lower_upper": {
+    "outline_counts": [
+      1,
+      1
+    ],
+    "hole_counts": [
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  "correction_scope": "Supersedes only the reported spur-to-via full-disk contact area. R121-pad/track overlap values have no via or hole. No other nonzero track/via overlap areas were reported. Via-based clearances used conservative outer-copper envelopes; tested R121 pads lie outside those disks, so their nearest annular outer edge is unchanged.",
+  "retained_raw_file_sha256": {
+    "final_verify.json": "c7edba5b5dc4974a5a7f40bdbd5559c8bd1e9143d1c48407fc53645a8dda2597",
+    "final_verify.log": "8c4b12cd236aae0ea505470ae12565ec77629f8c426dcd11ba5124dec18650a4",
+    "scan.json": "1980de7d249704e0471855f173c794d251dfc76fef91528a5465023ccd79e2c5",
+    "scan.log": "743e028f87e0a1374929fba4b428bad0e2bb66485be7643837c93f70516f8763",
+    "refine.json": "a7f60f793f72c26c5b459eec34c890c7b27c9114fd79422e10b71d2faa8f256f",
+    "refine.log": "f24f871ca01849d2467d2d5133712cf44f6a0dfa37cab874c27eceb65c0077a5",
+    "evaluate.json": "659e15ecba195ac23702886022b5146d7a372ab8b7010ea6ef2853b6804a1852",
+    "initial.json": "df007e15327f6936c82269222f014e839ae56fa01faeaca903257c13c3148aba"
+  },
+  "source_sha256_after": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "retained_raw_files_unchanged": true
+}

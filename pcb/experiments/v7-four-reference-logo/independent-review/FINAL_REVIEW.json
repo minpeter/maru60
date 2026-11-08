@@ -1,0 +1,198 @@
+{
+  "decision": "adoption_eligible_bounded_reference_and_logo_only_change",
+  "candidate_board_sha256": "2c7e100a450ead86bdd1b790876a8890ec5befea25ea04ae2aeb5a62c08e2373",
+  "source_board_sha256": "7c23d6ea36b158fa706fa3e05f0e1f10fa4aa435deecb2d3bcd38c71cf9f8cb1",
+  "selection_performed": false,
+  "basis": [
+    "Independent exact whole-board byte restoration after undoing only four reference fields and one whole-logo anchor.",
+    "Independent actual native ink probe passed all four labels, both complete logo polygons and the prior15 reference set.",
+    "Actual native preview inspected for owner association; no current crossed-component blocker.",
+    "All24 exact removed warning records involve the changed fields or logo; zero new records.",
+    "Full recorded native inventory/edges unchanged; independent reconstruction of all508 native partitions and exact12 endpoint-component open pairs agrees.",
+    "All53 source members preserved except board, with one separately named and hashed generated local-metadata file.",
+    "Fresh candidateERC0 and complete XML equality after exact design-source/date and three hash-identical local-library URI provenance normalization."
+  ],
+  "native_probe_sha256": "8b805bbf4c8133753df0a6993d1a37904077f57a72846662a8be918c1ed51b45",
+  "native_probe_checker_sha256": "63b889d8ed4c58e0e7a234206942f8b9158164c42f9c5a6bc5ce7b616ed454be",
+  "preliminary_visual_raw_record_review_sha256": "d8121c7dde9bd8f8ccc94d8e03ddc581e564c09104aeb6d70a29dd76de69d583",
+  "warning_counts": [
+    92,
+    68
+  ],
+  "hard_DRC_excluding_existing_opens": 0,
+  "existing_open_pair_count": 12,
+  "complete_native_component_count": 508,
+  "open_representative_changes": 5,
+  "fresh_candidate_ERC_violations": 0,
+  "local_library_uri_provenance": [
+    {
+      "logical": "Maru60",
+      "source_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/Maru60.kicad_sym",
+      "candidate_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/Maru60.kicad_sym",
+      "same_file_sha256": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27"
+    },
+    {
+      "logical": "Maru60_Options",
+      "source_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/engineering/Maru60_Options.kicad_sym",
+      "candidate_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/engineering/Maru60_Options.kicad_sym",
+      "same_file_sha256": "f4f200b7b158eb086c33ec7ac46533e1a3d1e1fa29c13c0137208e97c0dad6e0"
+    },
+    {
+      "logical": "Study",
+      "source_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/Study.kicad_sym",
+      "candidate_uri": "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/Study.kicad_sym",
+      "same_file_sha256": "8649ada39a5a04fc52a35fc7770c3a9d0e012c9e2dc874f422c6ceca0a309077"
+    }
+  ],
+  "recorded_native_counts": {
+    "footprints": 382,
+    "native_contact_edges": 21922,
+    "pads": 1437,
+    "tracks": 9752,
+    "vias": 919
+  },
+  "recorded_native_length_fsum_mm": 13181.60473138763,
+  "actual_independent_minimum_clearance_checked_nm": {
+    "new_four_and_both_logo_mask_silk_courtyard_closedFab_unreconstructedFab": 150000,
+    "boardedge": 250000,
+    "prior15_mask_silk": 150000
+  },
+  "producer_stage_bindings": {
+    "source-drc": {
+      "execution_sha256": "307f14ed75ee22a13aad017dd80824df85580686a73f53dba76c8453c04b3185",
+      "output_sha256": "046b8bb3fafa424be4d793ba07de83c01a6e8923e12df99b4bb1eb50e770d456",
+      "log_sha256": "42d03daecb3e264b7c05e6dd0fe2815d9090eacedc052446595f85a4687a7dac",
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "drc",
+        "--schematic-parity",
+        "--format",
+        "json",
+        "-o",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/source-drc.json",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/maru60.kicad_pcb"
+      ]
+    },
+    "candidate-four-drc": {
+      "execution_sha256": "4f43908f3539437df9ce349c7c3a2b897e942bfe59e4af9a60f109532adfce3f",
+      "output_sha256": "cbb487227008184a1c273faaf625b5dadf4ff3a15154e458997f9517e8b56e5e",
+      "log_sha256": "a7c6bb2e97c9cb8624ac47c778e787b6304ff9f3554b85066a08835dd35a570c",
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "drc",
+        "--schematic-parity",
+        "--format",
+        "json",
+        "-o",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/candidate-four-drc.json",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_pcb"
+      ]
+    },
+    "source-ink": {
+      "execution_sha256": "1acbf2d01c402ba556a4188b02c0be98ee52f9607bcbf5f53b78122211ba1189",
+      "output_sha256": "51e1704ef7a8df00ffe569a8a6036dedee3cb2c3763bcb6d39b102267b4d9320",
+      "log_sha256": "653c735eb97ad144216cdd28eeb9747fae5ad39c40df3c4f8441197e4cd6abda",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/native_ink.py",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/maru60.kicad_pcb",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/source-ink.json",
+        "R120,R144,J3,D100,R124,C142,C141,R163,C137,C126,C129,U2,R126,U10,C101,C100,R131,R140,R160,R134,C124,R121,U8"
+      ]
+    },
+    "candidate-four-ink": {
+      "execution_sha256": "36f03c535fc0c3ad7ad65be9a1dd30ac4c8b5ac7fee3f9760137ca7d786e82b5",
+      "output_sha256": "5b607d6aa8e81f9a28f982bc98559bd1cd7d02820bc3eea7aa0185f2cb11a234",
+      "log_sha256": "34f362858a5d8848e8eb0577d1ce00ae10b17ca3ff7e050388d52bb3a9acd13e",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/native_ink.py",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_pcb",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/candidate-four-ink.json",
+        "R120,R144,J3,D100,R124,C142,C141,R163,C137,C126,C129,U2,R126,U10,C101,C100,R131,R140,R160,R134,C124,R121,U8"
+      ]
+    },
+    "source-native": {
+      "execution_sha256": "a5d9bf67baa5d64df6654774eaaf41602beb28cc312755207ef2f468e0174408",
+      "output_sha256": "59bd982ebe695d55f0535f74865baa58c6946bc27137b86055e5885f355e6c91",
+      "log_sha256": "734c8e119d6ad5360c19ad752591a13386126525d2a304202347de4d8b676340",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/native_electrical.py",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/maru60.kicad_pcb",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/source-native.json"
+      ]
+    },
+    "candidate-four-native": {
+      "execution_sha256": "ce9d05c9a78d5a32f3a0eec0da6eaba0db5b583dd7a0c44e91baeaa9d397f8c0",
+      "output_sha256": "c0aee08d4291439d1c40cc2b17682472af4f7002f103243c8d8f9c15eabad1ca",
+      "log_sha256": "77bd417d56e0152e9b38adcd9652da0507e74cda661f9884652997df3819134d",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/native_electrical.py",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_pcb",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/candidate-four-native.json"
+      ]
+    },
+    "candidate-four-erc": {
+      "execution_sha256": "bcefbeb3f4e85052871fbc3d680ca91cfd729666f17a5c5019ab1edfbc0171e2",
+      "output_sha256": "d286771cab42bcc3c1d3de6fcfee51a103424e14dc502562df32cc7e8ebc3bd3",
+      "log_sha256": "e3686354ce77fb7119d34dea85999e34665ec62a2cb413f7caf9bba1f32caeaf",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "-o",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/candidate-four-erc.json",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_sch"
+      ]
+    },
+    "source-netlist": {
+      "execution_sha256": "0af3ee61ad7e2db89840728fc603486b4625c95420d53ae0b5a89f51df96ae06",
+      "output_sha256": "17c06a936c0dcdc1337adc03fae86549973042efc5229db0d10e89cf396b6b86",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "-o",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/source-netlist.xml",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/input/maru60.kicad_sch"
+      ]
+    },
+    "candidate-four-netlist": {
+      "execution_sha256": "7798c9bce74843bdbcc2d12e61dd183bff684356712a88debe240401a87b7e81",
+      "output_sha256": "5eaf85f22764e0d71dd773f87c518d0f75747aaadad83e370a0fbedf0f04d483",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "-o",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/qa/candidate-four-netlist.xml",
+        "/workspace/scratch/edd9a5be63e7/v7-safe-five-logo-recovered/candidate-four/pcb/maru60.kicad_sch"
+      ]
+    }
+  },
+  "all_current_source_and_candidate_maps_still_exact": true,
+  "limitations": [
+    "This recommendation is for these exact metadata/artwork-only bytes, not certification of the rebuilt generic checker for arbitrary future edits.",
+    "No new source-rooted physical-plane graph, cold-fill replay or active circuit simulation was performed. Raw electrical geometry and saved fills remain exactly the accepted source bytes.",
+    "Existing12GPIO opens and68remaining warnings remain unresolved; no global electrical-connectivity or manufacturing pass is implied.",
+    "Mechanical/courtyard/Fab checks are2D proxies. Actual assembly3D visibility, supplier approval and hardware qualification remain false.",
+    "Independent fixed-threshold checks prove the stated150/250um bounds. Larger producer bracket values were not independently recomputed here."
+  ],
+  "hardware_qualified": false,
+  "manufacturing_qualified": false,
+  "actual_3D_qualified": false
+}

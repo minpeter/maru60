@@ -1,0 +1,95 @@
+import sys,json,math,hashlib,re,collections
+from fractions import Fraction as F
+from decimal import Decimal
+from pathlib import Path
+sys.dont_write_bytecode=True
+import pcbnew as p
+R=Path(__file__).resolve().parent; S=json.loads((R/'source-strip.json').read_text());C=json.loads((R/'candidate-strip.json').read_text())
+def poly(rows):
+ q=p.SHAPE_POLY_SET()
+ for r in rows:
+  def line(v):
+   z=p.SHAPE_LINE_CHAIN()
+   for x,y in v:z.Append(p.VECTOR2I(x,y))
+   z.SetClosed(True);return z
+  n=q.AddOutline(line(r['outline']))
+  for h in r['holes']:q.AddHole(line(h),n)
+ return q
+def rows(q):
+ def pts(v):return [[v.CPoint(i).x,v.CPoint(i).y] for i in range(v.PointCount())]
+ return [{'outline':pts(q.COutline(i)),'holes':[pts(q.CHole(i,j)) for j in range(q.HoleCount(i))]} for i in range(q.OutlineCount())]
+def minus(a,b):q=p.SHAPE_POLY_SET(a);q.BooleanSubtract(b);return q
+def inring(x,y,ps):
+ d=math.lcm(x.denominator,y.denominator);xn=x.numerator*(d//x.denominator);yn=y.numerator*(d//y.denominator);hit=False
+ for (ax,ay),(bx,by) in zip(ps,ps[1:]+ps[:1]):
+  cr=(bx-ax)*(yn-ay*d)-(by-ay)*(xn-ax*d)
+  if cr==0 and min(ax,bx)*d<=xn<=max(ax,bx)*d and min(ay,by)*d<=yn<=max(ay,by)*d:return None
+  if (ay*d>yn)!=(by*d>yn):
+   v=ax*d*(by-ay)+(bx-ax)*(yn-ay*d)-xn*(by-ay)
+   if (v>0 and by>ay) or (v<0 and by<ay):hit=not hit
+ return hit
+def inside(x,y,rs):
+ for row in rs:
+  hit=inring(x,y,row['outline'])
+  if hit is None:return None
+  if hit:
+   hole=False
+   for h in row['holes']:
+    v=inring(x,y,h)
+    if v is None:return None
+    hole=hole or v
+   if not hole:return True
+ return False
+def canon(ps):
+ # Raw exact coordinates, orientation retained; cyclic start differences alone are not geometry changes.
+ q=[tuple(v) for v in ps];minimum=min(q);starts=[j for j,v in enumerate(q) if v==minimum];i=min(starts,key=lambda j:q[j:]+q[:j]);return tuple(q[i:]+q[:i])
+def nodes(s):
+ dep=0;quote=False;esc=False;start=0;ans=[]
+ for i,c in enumerate(s):
+  if quote:
+   if esc:esc=False
+   elif c=='\\':esc=True
+   elif c=='"':quote=False
+  elif c=='"':quote=True
+  elif c=='(':
+   if dep==1:start=i
+   dep+=1
+  elif c==')':
+   dep-=1
+   if dep==1:ans.append(s[start:i+1])
+ assert dep==0 and not quote;return ans
+head=lambda n:n.split(None,1)[0][1:].rstrip(')')
+def rawzones(d):
+ text=Path(d['source_board']).read_text();zz={}
+ for n in nodes(text):
+  if head(n)!='zone':continue
+  u=re.search(r'\(uuid "([^"]+)"',n).group(1)
+  for child in nodes(n):
+   if head(child)!='filled_polygon':continue
+   l=re.search(r'\(layer "([^"]+)"',child).group(1)
+   pts=[[int(Decimal(x)*1000000),int(Decimal(y)*1000000)] for x,y in re.findall(r'\(xy ([^\s]+) ([^\s\)]+)\)',child)]
+   zz.setdefault((u,l),[]).append(pts)
+ return zz
+rawS=rawzones(S);rawC=rawzones(C);out=[]
+for source in S['zones']:
+ if source['net']!='GND' or source['layer'] not in ('In1.Cu','In2.Cu'):continue
+ key=source['uuid'],source['layer'];dest=next(v for v in C['zones'] if (v['uuid'],v['layer'])==key);a,b=poly(source['fills']),poly(dest['fills']);loss=minus(a,b);rr=rows(loss)
+ assert not any(v['holes'] for v in source['fills']+dest['fills'])
+ rawold=collections.Counter(canon(v) for v in rawS[key]);rawn=collections.Counter(canon(v) for v in rawC[key]);nativeold=collections.Counter(canon(v['outline']) for v in source['fills']);nativen=collections.Counter(canon(v['outline']) for v in dest['fills']);assert rawold==nativeold and rawn==nativen
+ tests={'source_minus_itself_nm2':minus(a,a).Area(),'candidate_minus_itself_nm2':minus(b,b).Area(),'source_minus_identical_reparse_nm2':minus(a,poly(source['fills'])).Area(),'candidate_minus_identical_reparse_nm2':minus(b,poly(dest['fills'])).Area()};assert all(v==0 for v in tests.values())
+ record=[]
+ for row in rr:
+  ps=row['outline']; widths=[]
+  for (ax,ay),(bx,by) in zip(ps,ps[1:]+ps[:1]):
+   dx,dy=bx-ax,by-ay
+   if dx==dy==0:continue
+   cv=[dx*(y-ay)-dy*(x-ax) for x,y in ps];widths.append((max(cv)-min(cv))/math.hypot(dx,dy))
+  witnesses=[]
+  for j in range(1,len(ps)-1):
+   x=F(ps[0][0]+ps[j][0]+ps[j+1][0],3);y=F(ps[0][1]+ps[j][1]+ps[j+1][1],3)
+   if inside(x,y,[row]) is not True:continue
+   old,new=inside(x,y,source['fills']),inside(x,y,dest['fills']);witnesses.append({'x_nm_fraction':str(x),'y_nm_fraction':str(y),'inside_source_saved_contours_exact':old,'inside_candidate_saved_contours_exact':new,'proves_real_saved_contour_loss':old is True and new is False})
+  record.append({'polygon':row,'area_nm2':poly([row]).Area(),'enclosing_strip_width_nm_upper_bound':min(widths),'exact_rational_witnesses':witnesses})
+ out.append({'zone_uuid':key[0],'layer':key[1],'saved_raw_contours_equal_to_native_export':True,'raw_contour_multisets_identical':rawold==rawn,'old_contour_count':sum(rawold.values()),'new_contour_count':sum(rawn.values()),'unchanged_contour_count':sum((rawold&rawn).values()),'old_raw_contour_sha256':hashlib.sha256(json.dumps(rawS[key],separators=(',',':')).encode()).hexdigest(),'new_raw_contour_sha256':hashlib.sha256(json.dumps(rawC[key],separators=(',',':')).encode()).hexdigest(),'zero_operation_controls':tests,'reported_loss_mm2':loss.Area()/1e12,'loss_polygons':record,'number_reported_loss_polygons':len(record),'polygons_with_exact_real_loss_witness':sum(any(w['proves_real_saved_contour_loss'] for w in q['exact_rational_witnesses']) for q in record),'max_enclosing_strip_width_nm_upper_bound':max(x['enclosing_strip_width_nm_upper_bound'] for x in record)})
+r={'source_sha256':S['board_sha256'],'candidate_sha256':C['board_sha256'],'method':'Exact integer raw serialized contour equality to native export; native Boolean loss and zero-operation controls; Fraction ray-crossing of nonboundary interior witnesses against original saved contours without Boolean clipping or epsilon. Width is an enclosing-strip bound, not a dielectric or manufacturing tolerance.','layers':out}
+(R/'contour-loss-audit.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps({k:v for k,v in r.items() if k!='layers'},indent=2));print(json.dumps([{k:v for k,v in x.items() if k!='loss_polygons'} for x in out],indent=2))

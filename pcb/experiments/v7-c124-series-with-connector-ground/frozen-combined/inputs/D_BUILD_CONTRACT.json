@@ -1,0 +1,849 @@
+{
+  "status": "UNSELECTED actual D, native validation pending",
+  "source_sha256": "c77020ca2e05de0684d6a6c724bf568937bd7e7cbce4ce0c395924d0c97a8e4a",
+  "C_analysis_sha256": "2c57bb80b6e985fd63b6414cfea52c9ce6f9b631928a3d4476d175d05c1f38ca",
+  "construction_contract_sha256": "15835e0f49534e7250626669db5645dccc80034a3cefd88651578731627d62bd",
+  "candidate_prefill_sha256": "a07cc6b2e6bfa33616e2cd712a272e13c134399def9cfa55ce2bf3532663034b",
+  "retired_track_uuids": [
+    "05a0b97d-79af-50e5-b191-fe26b55d2c02",
+    "0bf33e40-59fe-4d2e-b57a-4f027a536d54",
+    "1274878c-3b2f-48be-b335-ff839fe8150d",
+    "17c10e7b-5920-47bd-8de6-90bf22d6522c",
+    "18d72adc-e983-48eb-b7d1-3047b981e17d",
+    "1cad25a0-be8b-4cb5-8379-06fa21c6eea4",
+    "2bef712b-2271-470e-9ed0-961aa43325cd",
+    "33383b43-6318-422d-a220-1199026db482",
+    "3a13a9a0-dbbd-42a5-ad34-f1171f7bdf93",
+    "3aa399c7-b37b-4cb6-b1bb-33266155cd74",
+    "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+    "4174a692-19ae-4049-916a-e21e775415e2",
+    "5b54e93a-0faf-402b-8565-7a7da068e6bb",
+    "681a81ab-2f2d-4b74-b71a-83e09245dca9",
+    "800b2e7b-f1bf-428e-b54f-6431e8b4af81",
+    "8305ea6c-327f-407d-9092-892db2d90da5",
+    "8a91626f-c454-43dc-876d-58c563ab2be4",
+    "a1d85406-3c20-4dc4-850f-7efdab0cdfd6",
+    "a44d4a9f-aa40-4d02-9ed7-16774fbe4849",
+    "a621cda3-f605-4bff-b3d7-2213de164c79",
+    "b2509e57-5e09-46f8-8514-02052efec7ae",
+    "bca2758e-28c6-41dd-97f0-2c9466f8ca97",
+    "bf30ad55-1b9f-467f-8fef-7ac60c4f920d",
+    "c635b040-8e23-4da7-9cec-9b59b66c88e3",
+    "c69210ed-fc0a-5e8b-994b-e205b18141f3",
+    "d340564d-1097-4e0e-8f38-4b0385b0a0bb",
+    "db0f565d-8915-441b-b9f8-50cdd933467c",
+    "de44c09a-0455-40a8-8f3e-d6d7fa9dcec0",
+    "eb147f3b-fbe7-5ff5-a09d-d36fa376b92f",
+    "efb452e0-b8d1-484b-9a90-3179d99b1aa8",
+    "f0a66333-ec8a-4243-a130-df6b6aa03b1d"
+  ],
+  "C_relative_retired": [
+    "0b861aff-a06a-5fa5-898f-e20e602a950a",
+    "d0e90a39-e58b-5cb7-8db8-b7abb248673b"
+  ],
+  "changed_old_footprint_uuids": [
+    "c16684c6-e6e9-4d9e-ab06-ad0653958e94",
+    "d422a027-2eda-4bf9-9c83-1580d56a84b7"
+  ],
+  "added_tracks": [
+    {
+      "name": "UVLO0",
+      "net": "USB_UVLO",
+      "start": [
+        14.2,
+        16.35
+      ],
+      "end": [
+        13.1,
+        17.05
+      ],
+      "width": 0.15,
+      "uuid": "f41eeb49-8180-5bac-bccf-c1a0b3b4c547",
+      "retained_from_V4": true
+    },
+    {
+      "name": "UVLO1",
+      "net": "USB_UVLO",
+      "start": [
+        13.1,
+        17.05
+      ],
+      "end": [
+        12.8,
+        17.55
+      ],
+      "width": 0.15,
+      "uuid": "32e162df-abf9-5325-93bb-b71d84e9d850",
+      "retained_from_V4": true
+    },
+    {
+      "name": "UVLO2",
+      "net": "USB_UVLO",
+      "start": [
+        12.8,
+        17.55
+      ],
+      "end": [
+        12.8,
+        19.9
+      ],
+      "width": 0.15,
+      "uuid": "b77e3c63-f801-5830-836d-8b5fd1860cba",
+      "retained_from_V4": true
+    },
+    {
+      "name": "OVLO6",
+      "net": "USB_OVLO",
+      "start": [
+        17.2,
+        20.8
+      ],
+      "end": [
+        18.0,
+        20.95
+      ],
+      "width": 0.15,
+      "uuid": "b9c65313-e1f2-5c81-8e18-abc631b792ae",
+      "retained_from_V4": true
+    },
+    {
+      "name": "OVLO7",
+      "net": "USB_OVLO",
+      "start": [
+        18.0,
+        20.95
+      ],
+      "end": [
+        20.175,
+        21.0
+      ],
+      "width": 0.15,
+      "uuid": "ae94ea04-2d21-5f84-8952-7f8960275e00",
+      "retained_from_V4": true
+    },
+    {
+      "name": "DVDT0",
+      "net": "USB_DVDT",
+      "start": [
+        17.25,
+        19.4
+      ],
+      "end": [
+        16.85,
+        19.4
+      ],
+      "width": 0.15,
+      "uuid": "fd0e066b-c366-5b5a-b501-15fcf42fddb4",
+      "retained_from_V4": true
+    },
+    {
+      "name": "GND0",
+      "net": "GND",
+      "start": [
+        15.755,
+        19.17
+      ],
+      "end": [
+        16.4,
+        18.9
+      ],
+      "width": 0.15,
+      "uuid": "94047f09-e88d-56e7-aee2-15e0dcdca1ac",
+      "retained_from_V4": true
+    },
+    {
+      "name": "GROUND_BRIDGE_A",
+      "net": "GND",
+      "start": [
+        15.5,
+        17.725
+      ],
+      "end": [
+        14.9,
+        17.275
+      ],
+      "width": 0.28,
+      "uuid": "d4d6f91a-e726-5530-80d1-f22a126456bc",
+      "retained_from_V4": true
+    },
+    {
+      "name": "GROUND_BRIDGE_B",
+      "net": "GND",
+      "start": [
+        15.5,
+        17.85
+      ],
+      "end": [
+        15.5,
+        17.25
+      ],
+      "width": 0.2,
+      "uuid": "0dd51559-bc06-502f-8bb1-1b186fa751d0",
+      "retained_from_V4": true
+    },
+    {
+      "name": "DVDT1",
+      "net": "USB_DVDT",
+      "start": [
+        16.85,
+        19.4
+      ],
+      "end": [
+        16.6,
+        19.85
+      ],
+      "width_mm": 0.15,
+      "retained_uuid": null,
+      "uuid": "34ff4dac-01f8-5a27-b816-6afc433ee9e4",
+      "width": 0.15,
+      "retained_from_V4": false
+    },
+    {
+      "name": "DVDT2",
+      "net": "USB_DVDT",
+      "start": [
+        16.6,
+        19.85
+      ],
+      "end": [
+        15.81,
+        20.48
+      ],
+      "width_mm": 0.15,
+      "retained_uuid": null,
+      "uuid": "bb6b5e8e-366e-5318-bb1e-c9bde07c56e9",
+      "width": 0.15,
+      "retained_from_V4": false
+    },
+    {
+      "name": "CAP0",
+      "net": "USB_DVDT_CAP",
+      "start": [
+        14.91,
+        20.48
+      ],
+      "end": [
+        14.76,
+        19.4
+      ],
+      "width_mm": 0.15,
+      "retained_uuid": null,
+      "uuid": "14ce044c-5d14-57b8-a5b8-96edcd04f5e9",
+      "width": 0.15,
+      "retained_from_V4": false
+    },
+    {
+      "name": "OVLO2",
+      "net": "USB_OVLO",
+      "start": [
+        14.25,
+        20.75
+      ],
+      "end": [
+        14.6,
+        21.13
+      ],
+      "width_mm": 0.15,
+      "retained_uuid": null,
+      "uuid": "9f71c7e9-1999-5d93-bca7-92de689f89aa",
+      "width": 0.15,
+      "retained_from_V4": false
+    },
+    {
+      "name": "OVLO3",
+      "net": "USB_OVLO",
+      "start": [
+        14.6,
+        21.13
+      ],
+      "end": [
+        15.95,
+        21.13
+      ],
+      "width_mm": 0.15,
+      "retained_uuid": null,
+      "uuid": "a74eeba1-1677-5103-9d24-8f1325cc2689",
+      "width": 0.15,
+      "retained_from_V4": false
+    },
+    {
+      "name": "OVLO4",
+      "net": "USB_OVLO",
+      "start": [
+        15.95,
+        21.13
+      ],
+      "end": [
+        17.05,
+        20.86375
+      ],
+      "width_mm": 0.15,
+      "retained_uuid": null,
+      "uuid": "2f172817-a869-561b-9617-cad76ccd385e",
+      "width": 0.15,
+      "retained_from_V4": false
+    },
+    {
+      "name": "OVLO5",
+      "net": "USB_OVLO",
+      "start": [
+        17.05,
+        20.86375
+      ],
+      "end": [
+        17.2,
+        20.8
+      ],
+      "width_mm": 0.16,
+      "retained_uuid": null,
+      "uuid": "1ee63e90-13d4-5a87-aa3a-851c027d505e",
+      "width": 0.16,
+      "retained_from_V4": false
+    },
+    {
+      "name": "UVLO0",
+      "net": "USB_UVLO",
+      "start": [
+        12.8,
+        19.9
+      ],
+      "end": [
+        12.95,
+        20.05
+      ],
+      "width_mm": 0.16,
+      "retained_uuid": null,
+      "uuid": "0d4c7461-d4c1-51d0-aa44-752e38bdf90f",
+      "width": 0.16,
+      "retained_from_V4": false
+    },
+    {
+      "name": "UVLO1",
+      "net": "USB_UVLO",
+      "start": [
+        12.95,
+        20.05
+      ],
+      "end": [
+        14.05,
+        21.47
+      ],
+      "width_mm": 0.15,
+      "retained_uuid": null,
+      "uuid": "53e4abd7-6073-554e-94ef-7b4edee4f767",
+      "width": 0.15,
+      "retained_from_V4": false
+    },
+    {
+      "name": "UVLO2",
+      "net": "USB_UVLO",
+      "start": [
+        14.05,
+        21.47
+      ],
+      "end": [
+        15.9,
+        21.47
+      ],
+      "width_mm": 0.15,
+      "retained_uuid": null,
+      "uuid": "35e48064-f402-56a7-8121-f32b5830f6a5",
+      "width": 0.15,
+      "retained_from_V4": false
+    },
+    {
+      "name": "UVLO3",
+      "net": "USB_UVLO",
+      "start": [
+        15.9,
+        21.47
+      ],
+      "end": [
+        17.05,
+        21.214286
+      ],
+      "width_mm": 0.15,
+      "retained_uuid": null,
+      "uuid": "ae8370c8-802f-534a-b14a-23daebf30ae6",
+      "width": 0.15,
+      "retained_from_V4": false
+    },
+    {
+      "name": "UVLO4",
+      "net": "USB_UVLO",
+      "start": [
+        17.05,
+        21.214286
+      ],
+      "end": [
+        17.2,
+        21.15
+      ],
+      "width_mm": 0.16,
+      "retained_uuid": null,
+      "uuid": "49e8a13b-3b5e-54c7-95ca-7a0d5b40ce34",
+      "width": 0.16,
+      "retained_from_V4": false
+    },
+    {
+      "name": "R121_GND_LEG",
+      "net": "GND",
+      "start": [
+        13.68,
+        18.2
+      ],
+      "end": [
+        14,
+        17.675
+      ],
+      "width_mm": 0.2,
+      "uuid": "66453383-04ef-5371-8252-4d0004d7a05d",
+      "layer": "B.Cu",
+      "start_nm": [
+        13680000,
+        18200000
+      ],
+      "end_nm": [
+        14000000,
+        17675000
+      ],
+      "width_nm": 200000,
+      "length_mm": 0.6148373768729408,
+      "width": 0.2
+    },
+    {
+      "name": "R121_OLD_GND_SUPPORT",
+      "net": "GND",
+      "start": [
+        14,
+        17.675
+      ],
+      "end": [
+        14.54,
+        17.435
+      ],
+      "width_mm": 0.21,
+      "uuid": "f58bc791-8a08-55a5-ada7-19575bcd7e75",
+      "layer": "B.Cu",
+      "start_nm": [
+        14000000,
+        17675000
+      ],
+      "end_nm": [
+        14540000,
+        17435000
+      ],
+      "width_nm": 210000,
+      "length_mm": 0.5909314681077663,
+      "width": 0.21
+    },
+    {
+      "name": "R121_OVLO0",
+      "net": "USB_OVLO",
+      "start": [
+        13.68,
+        19.1
+      ],
+      "end": [
+        14.2,
+        19.45
+      ],
+      "width_mm": 0.15,
+      "uuid": "cc032d04-9495-5992-8324-8e98a3065b14",
+      "layer": "B.Cu",
+      "start_nm": [
+        13680000,
+        19100000
+      ],
+      "end_nm": [
+        14200000,
+        19450000
+      ],
+      "width_nm": 150000,
+      "length_mm": 0.6268173577685912,
+      "width": 0.15
+    },
+    {
+      "name": "R121_OVLO1",
+      "net": "USB_OVLO",
+      "start": [
+        14.2,
+        19.45
+      ],
+      "end": [
+        14.2,
+        20.55
+      ],
+      "width_mm": 0.15,
+      "uuid": "53bcbb0a-ce50-5c23-bcbc-c7e42eff2bc6",
+      "layer": "B.Cu",
+      "start_nm": [
+        14200000,
+        19450000
+      ],
+      "end_nm": [
+        14200000,
+        20550000
+      ],
+      "width_nm": 150000,
+      "length_mm": 1.1000000000000014,
+      "width": 0.15
+    },
+    {
+      "name": "R121_OVLO2",
+      "net": "USB_OVLO",
+      "start": [
+        14.2,
+        20.55
+      ],
+      "end": [
+        14.25,
+        20.6
+      ],
+      "width_mm": 0.15,
+      "uuid": "9820d6a1-a966-5f57-ba9f-b4f6eebf98a8",
+      "layer": "B.Cu",
+      "start_nm": [
+        14200000,
+        20550000
+      ],
+      "end_nm": [
+        14250000,
+        20600000
+      ],
+      "width_nm": 150000,
+      "length_mm": 0.07071067811865575,
+      "width": 0.15
+    },
+    {
+      "name": "R121_OVLO3",
+      "net": "USB_OVLO",
+      "start": [
+        14.25,
+        20.6
+      ],
+      "end": [
+        14.25,
+        20.75
+      ],
+      "width_mm": 0.16,
+      "uuid": "a037876a-72ca-5e86-972b-a613ac79a8a3",
+      "layer": "B.Cu",
+      "start_nm": [
+        14250000,
+        20600000
+      ],
+      "end_nm": [
+        14250000,
+        20750000
+      ],
+      "width_nm": 160000,
+      "length_mm": 0.14999999999999858,
+      "width": 0.16
+    },
+    {
+      "name": "C124_OLD_GND_SUPPORT_GUARD",
+      "net": "GND",
+      "start": [
+        15.5,
+        17.85
+      ],
+      "end": [
+        15.5,
+        17.25
+      ],
+      "width_mm": 0.21,
+      "uuid": "ea24a1e4-dda5-5e54-815c-ce8d2a7844f6",
+      "layer": "B.Cu",
+      "start_nm": [
+        15500000,
+        17850000
+      ],
+      "end_nm": [
+        15500000,
+        17250000
+      ],
+      "width_nm": 210000,
+      "length_mm": 0.6000000000000014,
+      "width": 0.21
+    },
+    {
+      "name": "DVDT_OLD_SUPPORT",
+      "net": "USB_DVDT",
+      "start": [
+        17.25,
+        19.4
+      ],
+      "end": [
+        16.775,
+        19.4
+      ],
+      "width_mm": 0.16,
+      "old": "3dce1fa7-ff7a-5b39-a41c-9aedbc2eba57",
+      "targets": [
+        "e5357bcd-1b36-4b99-a325-1f57b9e1a8b7"
+      ],
+      "layer": "B.Cu",
+      "uuid": "2415b4fb-a4a8-5806-8904-da9a0189625c",
+      "start_nm": [
+        17250000,
+        19400000
+      ],
+      "end_nm": [
+        16775000,
+        19400000
+      ],
+      "width_nm": 160000,
+      "length_mm": 0.4750000000000014,
+      "width": 0.16
+    },
+    {
+      "name": "OVLO_OLD_SUPPORT",
+      "net": "USB_OVLO",
+      "start": [
+        20.175,
+        21.0
+      ],
+      "end": [
+        20.0725,
+        20.9785
+      ],
+      "width_mm": 0.16,
+      "old": "eb147f3b-fbe7-5ff5-a09d-d36fa376b92f",
+      "targets": [
+        "e218cfe4-e4ba-5b6c-985d-8f1da39a4402"
+      ],
+      "layer": "B.Cu",
+      "uuid": "cc1282fe-f0b3-5fea-9d45-66eea8068d66",
+      "start_nm": [
+        20175000,
+        21000000
+      ],
+      "end_nm": [
+        20072500,
+        20978500
+      ],
+      "width_nm": 160000,
+      "length_mm": 0.1047306067966753,
+      "width": 0.16
+    },
+    {
+      "name": "UVLO_OLD_SUPPORT",
+      "net": "USB_UVLO",
+      "start": [
+        14.2,
+        16.35
+      ],
+      "end": [
+        14.1,
+        16.45
+      ],
+      "width_mm": 0.16,
+      "old": "8305ea6c-327f-407d-9092-892db2d90da5",
+      "targets": [
+        "751dcade-77aa-4c93-aab3-170f1229e0e4",
+        "78c0ab16-8ae4-4d8f-93ff-7810ecf41eed"
+      ],
+      "layer": "B.Cu",
+      "uuid": "d4be2091-cd02-51f1-b2e5-0505e7ec1e8a",
+      "start_nm": [
+        14200000,
+        16350000
+      ],
+      "end_nm": [
+        14100000,
+        16450000
+      ],
+      "width_nm": 160000,
+      "length_mm": 0.14142135623730775,
+      "width": 0.16
+    }
+  ],
+  "parts": {
+    "R121": {
+      "name": "R_KOA_RN73R1E_0402_Reflow_Vertical_B",
+      "value": "156k 0.1%",
+      "mpn": "RN73R1ETTP1563B25",
+      "maker": "KOA",
+      "datasheet": "https://www.koaspeer.com/pdfs/RN73R.pdf",
+      "at": [
+        13.68,
+        18.65
+      ],
+      "pads": [
+        [
+          "1",
+          0,
+          0.45,
+          0.3,
+          0.4,
+          "USB_OVLO"
+        ],
+        [
+          "2",
+          0,
+          -0.45,
+          0.3,
+          0.4,
+          "GND"
+        ]
+      ],
+      "body": [
+        0.5,
+        1.0
+      ],
+      "court": [
+        1.05,
+        1.8
+      ],
+      "refat": [
+        8.2,
+        18.6
+      ],
+      "sch": "3c9a1e86-b5b6-52b9-8936-5c621f352915",
+      "uuid": "d422a027-2eda-4bf9-9c83-1580d56a84b7",
+      "pad_uuids": {
+        "1": "2ceda713-c41e-4c74-9962-f6a642f1e236",
+        "2": "437d8abf-8e4f-4587-99b7-93c610dd4000"
+      },
+      "footprint": "C124_Short_Study:R_KOA_RN73R1E_0402_Reflow_Vertical_B",
+      "TCR_ppm_per_K": 25,
+      "derived_court_is_not_manufacturer_approval": true,
+      "body_max_global_mm": [
+        0.55,
+        1.1
+      ],
+      "body_height_range_mm": [
+        0.3,
+        0.4
+      ],
+      "terminal_envelope_local_half_axis_range_mm": [
+        0.125,
+        0.55
+      ],
+      "terminal_envelope_transverse_halfwidth_mm": 0.275,
+      "terminal_range_basis": "min(L)/2-max(top termination c)=0.95/2-0.35=0.125; outer=max(L)/2=0.55; top/bottom dimension intervals conservatively unioned without invented correlations."
+    },
+    "C124": {
+      "name": "C_YAGEO_CC0402_050x050_P100_B_Conditional",
+      "value": "10nF 10% 50V",
+      "mpn": "CC0402KRX7R9BB103",
+      "maker": "YAGEO",
+      "datasheet": "https://yageogroup.com/download/specsheet/CC0402KRX7R9BB103",
+      "at": [
+        15.185,
+        19.375
+      ],
+      "pads": [
+        [
+          "1",
+          -0.5,
+          0.0,
+          0.5,
+          0.5,
+          "USB_DVDT_CAP"
+        ],
+        [
+          "2",
+          0.5,
+          0.0,
+          0.5,
+          0.5,
+          "GND"
+        ]
+      ],
+      "body": [
+        1,
+        0.5
+      ],
+      "court": [
+        1.9,
+        1.1
+      ],
+      "refat": [
+        8.2,
+        19.8
+      ],
+      "sch": "2beed947-16ca-5de9-a318-0eac08db31e1",
+      "uuid": "c16684c6-e6e9-4d9e-ab06-ad0653958e94",
+      "pad_uuids": {
+        "1": "e99fab95-384f-4c82-aa22-4b94524bb476",
+        "2": "f79380d7-c89c-4396-b53e-4918d8902c13"
+      },
+      "dielectric": "X7R",
+      "footprint": "C124_Short_Study:C_YAGEO_CC0402_050x050_P100_B_Conditional",
+      "reference_local_at": [
+        -6.985,
+        0.425
+      ],
+      "courtyard_change": "Enlarge the future candidate board AND project-local module courtyard from1.60x1.05 to1.90x1.10, encoding the maximum occupied-area screen. No sealed original file changes.",
+      "maximum_occupied_bounds": [
+        14.235,
+        18.825,
+        16.135,
+        19.925
+      ]
+    },
+    "R125": {
+      "name": "R_KOA_RK73H1E_0402_Reflow_B",
+      "value": "100 1%",
+      "mpn": "RK73H1ETTP1000F",
+      "maker": "KOA",
+      "datasheet": "https://www.koaspeer.com/catimages/Products/RK73H/RK73H.pdf",
+      "at": [
+        15.36,
+        20.48
+      ],
+      "pads": [
+        [
+          "1",
+          0.45000000000000107,
+          0.0,
+          0.4,
+          0.3,
+          "USB_DVDT"
+        ],
+        [
+          "2",
+          -0.4499999999999993,
+          0.0,
+          0.4,
+          0.3,
+          "USB_DVDT_CAP"
+        ]
+      ],
+      "body": [
+        1,
+        0.5
+      ],
+      "court": [
+        1.8,
+        1.05
+      ],
+      "refat": [
+        10.6,
+        21.0
+      ],
+      "sch": "df651488-38c6-56ef-a04a-104cfcce243d",
+      "uuid": "7f46d8aa-a5e8-5221-bb89-7f6d1360b233",
+      "pad_uuids": {},
+      "footprint": "C124_Short_Study:R_KOA_RK73H1E_0402_Reflow_B",
+      "unchanged_relative_actual_C": true
+    }
+  },
+  "new_drills": 0,
+  "preserved_remote_retirements": [
+    "577f36c1-4f15-4c40-b632-02db2931cfb0",
+    "68f95f8e-16e1-430a-a0b2-1c1d51d16fde"
+  ],
+  "qualification": {
+    "assembly": false,
+    "procurement": false,
+    "manufacturer_process": false,
+    "switch_socket_plate_case": false,
+    "analog_startup": false,
+    "active_SPICE": false,
+    "hardware_stability": false,
+    "RN73R_equivalent_to_TNPW_drift": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "kicad-cli",
+    "pcb",
+    "drc",
+    "--format",
+    "json",
+    "--output",
+    "/tmp/v7-selected-label-screen-7882/trial-drc.json",
+    "/tmp/v7-selected-label-screen-7882/candidate/pcb/maru60.kicad_pcb"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 3.858478513000591,
+  "board_sha256": "21083e9498512939d40d95eb6866850367939e590fcf949440b4d4642b46727b",
+  "private_xdg": {
+    "XDG_CONFIG_HOME": "/tmp/v7-selected-label-screen-7882/drc-runtime/xdg_config_home",
+    "XDG_DATA_HOME": "/tmp/v7-selected-label-screen-7882/drc-runtime/xdg_data_home",
+    "XDG_CACHE_HOME": "/tmp/v7-selected-label-screen-7882/drc-runtime/xdg_cache_home",
+    "XDG_STATE_HOME": "/tmp/v7-selected-label-screen-7882/drc-runtime/xdg_state_home",
+    "XDG_RUNTIME_DIR": "/tmp/v7-selected-label-screen-7882/drc-runtime/xdg_runtime_dir"
+  }
+}
