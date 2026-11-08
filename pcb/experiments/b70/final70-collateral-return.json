@@ -1,0 +1,155 @@
+{
+  "method": "Native Boolean old GND minus candidate GND, continuous boundary intersections with every retained outer track centerline and parallel edges, exact oldContains and !newContains midpoint confirmation. Excludes newly added/retired tracks. No sampling approximation.",
+  "retained_track_count": 8733,
+  "affected_tracks": [
+    {
+      "uuid": "efd0a9d1-75ae-47ab-98b5-51309584f1ce",
+      "net": "ROW0",
+      "layer": "F.Cu",
+      "start": [
+        100.444852,
+        16.399999
+      ],
+      "end": [
+        103.8,
+        16.399999
+      ],
+      "new_missing_intervals": {
+        "left": [],
+        "center": [
+          {
+            "start": [
+              101.8106831718082,
+              16.399999
+            ],
+            "end": [
+              101.8106836246391,
+              16.399999
+            ],
+            "length_mm": 4.5283090492502404e-07
+          }
+        ],
+        "right": []
+      }
+    },
+    {
+      "uuid": "6729b5cf-38d0-4790-a196-3d0334c6bbb6",
+      "net": "+5V_LED",
+      "layer": "F.Cu",
+      "start": [
+        118.303062,
+        55.25
+      ],
+      "end": [
+        247.08,
+        55.25
+      ],
+      "new_missing_intervals": {
+        "left": [
+          {
+            "start": [
+              119.28961581800056,
+              55.0
+            ],
+            "end": [
+              119.28961599996236,
+              55.0
+            ],
+            "length_mm": 1.8196181339294174e-07
+          }
+        ],
+        "center": [],
+        "right": []
+      }
+    },
+    {
+      "uuid": "07c240c8-21b4-40bf-9da0-50ced5e3d844",
+      "net": "UG_LED_2",
+      "layer": "F.Cu",
+      "start": [
+        106.8,
+        18.0
+      ],
+      "end": [
+        100.739357,
+        18.0
+      ],
+      "new_missing_intervals": {
+        "left": [
+          {
+            "start": [
+              102.08367846652273,
+              18.075
+            ],
+            "end": [
+              102.08367813406616,
+              18.075
+            ],
+            "length_mm": 3.324565716850519e-07
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              102.73433865933303,
+              18.0
+            ],
+            "end": [
+              102.73433848324711,
+              18.0
+            ],
+            "length_mm": 1.7608592162292387e-07
+          }
+        ],
+        "right": []
+      }
+    },
+    {
+      "uuid": "de893a99-36dd-474c-a16d-3a801a87597b",
+      "net": "KEY_RGB_CHAIN_5",
+      "layer": "F.Cu",
+      "start": [
+        100.124852,
+        14.8
+      ],
+      "end": [
+        103.9,
+        14.8
+      ],
+      "new_missing_intervals": {
+        "left": [],
+        "center": [
+          {
+            "start": [
+              100.88702901493865,
+              14.8
+            ],
+            "end": [
+              100.88702974451243,
+              14.8
+            ],
+            "length_mm": 7.295737769842467e-07
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              100.94475743582507,
+              14.9
+            ],
+            "end": [
+              100.94475814810112,
+              14.9
+            ],
+            "length_mm": 7.122760489468348e-07
+          }
+        ]
+      }
+    }
+  ],
+  "totals_mm": {
+    "left": 5.144183850779936e-07,
+    "center": 1.3584906035321947e-06,
+    "right": 7.122760489468348e-07
+  }
+}

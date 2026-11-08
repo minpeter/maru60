@@ -1,0 +1,1254 @@
+{
+  "source_sha256": "8f6d2a91146370424ce7950ad99b40208724119dcea96a696bf1c48a420c6d08",
+  "candidate_sha256": "1b585bd5858f7bf40811ba6fbd285809b1c1d927f35a2eb6916f89f86ea6f60b",
+  "method": "Continuous exact polygon-boundary intersections for new-track center and edges; native effective full-copper polygonization 1nm lower/upper bounds minus opposite filled-GND union. No Unfracture and no via/endpoint exclusions. Geometric reference only, not source-connected return or powered qualification.",
+  "tracks": [
+    {
+      "uuid": "c0e7c175-f489-43cd-a0ce-8f5194e87a5f",
+      "net": "COL5",
+      "layer": "F.Cu",
+      "reference_layer": "B.Cu",
+      "start_mm": [
+        117.175,
+        71.25
+      ],
+      "end_mm": [
+        117.2,
+        71.2
+      ],
+      "length_mm": 0.05590169943749474,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.0855572809,
+              71.20527864044999
+            ],
+            "end": [
+              117.11055728090001,
+              71.15527864044999
+            ],
+            "length_mm": 0.05590169943749474
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              117.175,
+              71.25
+            ],
+            "end": [
+              117.2,
+              71.2
+            ],
+            "length_mm": 0.05590169943749474
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              117.26444271909999,
+              71.29472135955001
+            ],
+            "end": [
+              117.2894427191,
+              71.24472135955001
+            ],
+            "length_mm": 0.05590169943749474
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0425959586685,
+      "full_copper_projection_missing_upper_mm2": 0.0425965212285
+    },
+    {
+      "uuid": "e056ea31-6519-4543-a09e-9de88892fd82",
+      "net": "COL5",
+      "layer": "F.Cu",
+      "reference_layer": "B.Cu",
+      "start_mm": [
+        117.2,
+        71.2
+      ],
+      "end_mm": [
+        117.2,
+        71.8
+      ],
+      "length_mm": 0.5999999999999943,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.3,
+              71.2
+            ],
+            "end": [
+              117.3,
+              71.8
+            ],
+            "length_mm": 0.5999999999999943
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              117.2,
+              71.2
+            ],
+            "end": [
+              117.2,
+              71.8
+            ],
+            "length_mm": 0.5999999999999943
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              117.10000000000001,
+              71.2
+            ],
+            "end": [
+              117.10000000000001,
+              71.8
+            ],
+            "length_mm": 0.5999999999999943
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.151415530208,
+      "full_copper_projection_missing_upper_mm2": 0.151416146178
+    },
+    {
+      "uuid": "08b67bfb-1cbe-4f44-bed7-9f2fe3aca3e5",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        100.2,
+        13.7
+      ],
+      "end_mm": [
+        100.1,
+        13.6
+      ],
+      "length_mm": 0.14142135623731528,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "0d7c4638-6846-4599-9ce0-c9e862de899a",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        103.565957,
+        20.041623
+      ],
+      "end_mm": [
+        103.6,
+        20.0
+      ],
+      "length_mm": 0.05377173958502644,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "0f6f6f6e-069b-4920-8a6b-dd145f984c87",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        114.8,
+        54.8
+      ],
+      "end_mm": [
+        115.0,
+        55.0
+      ],
+      "length_mm": 0.282842712474623,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              114.94092135623725,
+              54.79949999999994
+            ],
+            "end": [
+              115.07071067811866,
+              54.92928932188134
+            ],
+            "length_mm": 0.18354981925588562
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              114.8,
+              54.8
+            ],
+            "end": [
+              115.0,
+              55.0
+            ],
+            "length_mm": 0.28284271247462306
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              114.72928932188134,
+              54.870710678118655
+            ],
+            "end": [
+              114.92928932188134,
+              55.07071067811866
+            ],
+            "length_mm": 0.28284271247462306
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0713239459325,
+      "full_copper_projection_missing_upper_mm2": 0.0713241789825
+    },
+    {
+      "uuid": "1be881ab-e8a9-4e01-8a32-f5ae8bae4777",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        100.2,
+        14.2
+      ],
+      "end_mm": [
+        100.2,
+        13.7
+      ],
+      "length_mm": 0.5,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "2a8cbcc8-0ea8-4b74-af58-c83fdf43fc7f",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        103.6,
+        19.7
+      ],
+      "end_mm": [
+        103.5,
+        19.6
+      ],
+      "length_mm": 0.14142135623730398,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "3209d1fe-b9c8-47ea-b53f-50ff0ffd2633",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        114.736211,
+        54.496688
+      ],
+      "end_mm": [
+        114.7,
+        54.5
+      ],
+      "length_mm": 0.03636214879513592,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "348eab4b-b114-4e53-be15-a993925730d4",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        103.5,
+        19.6
+      ],
+      "end_mm": [
+        103.5,
+        19.5
+      ],
+      "length_mm": 0.10000000000000142,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "3938deab-6e96-45df-9e19-448fbe23d4cb",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        115.114584,
+        55.04819
+      ],
+      "end_mm": [
+        115.1,
+        55.0
+      ],
+      "length_mm": 0.050348477196433684,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              115.01887107543232,
+              55.07715611935868
+            ],
+            "end": [
+              115.00428707543232,
+              55.028966119358685
+            ],
+            "length_mm": 0.05034847719643369
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              115.114584,
+              55.04819
+            ],
+            "end": [
+              115.1,
+              55.0
+            ],
+            "length_mm": 0.05034847719643369
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              115.21029692456767,
+              55.01922388064131
+            ],
+            "end": [
+              115.19571292456767,
+              54.971033880641315
+            ],
+            "length_mm": 0.05034847719643369
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0414851344925,
+      "full_copper_projection_missing_upper_mm2": 0.041485760677
+    },
+    {
+      "uuid": "51fe0d53-0ee0-43fd-be65-22fcf8b0b55c",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        114.7,
+        54.5
+      ],
+      "end_mm": [
+        114.7,
+        54.6
+      ],
+      "length_mm": 0.10000000000000142,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "5aeba634-9d30-4db7-951a-150450e8d935",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        99.5,
+        12.9
+      ],
+      "end_mm": [
+        99.4,
+        12.9
+      ],
+      "length_mm": 0.09999999999999432,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "5c476aed-3f34-4b6c-8c5a-72aa6f49a2ab",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        114.8,
+        54.7
+      ],
+      "end_mm": [
+        114.8,
+        54.8
+      ],
+      "length_mm": 0.09999999999999432,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              114.89999999999999,
+              54.799499999999995
+            ],
+            "end": [
+              114.89999999999999,
+              54.8
+            ],
+            "length_mm": 0.000499999999999972
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              114.8,
+              54.799499999999995
+            ],
+            "end": [
+              114.8,
+              54.8
+            ],
+            "length_mm": 0.000499999999999972
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              114.7,
+              54.799499999999995
+            ],
+            "end": [
+              114.7,
+              54.8
+            ],
+            "length_mm": 0.000499999999999972
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.015807765104,
+      "full_copper_projection_missing_upper_mm2": 0.015808073089
+    },
+    {
+      "uuid": "6539d2f5-7883-4518-8eec-924c86c2af95",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        117.45,
+        71.25
+      ],
+      "end_mm": [
+        117.4,
+        71.2
+      ],
+      "length_mm": 0.07071067811865073,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.37928932188134,
+              71.32071067811866
+            ],
+            "end": [
+              117.32928932188135,
+              71.27071067811866
+            ],
+            "length_mm": 0.07071067811865074
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              117.45,
+              71.25
+            ],
+            "end": [
+              117.4,
+              71.2
+            ],
+            "length_mm": 0.07071067811865074
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              117.52071067811866,
+              71.17928932188134
+            ],
+            "end": [
+              117.47071067811866,
+              71.12928932188134
+            ],
+            "length_mm": 0.07071067811865074
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0455577472355,
+      "full_copper_projection_missing_upper_mm2": 0.0455583259795
+    },
+    {
+      "uuid": "670dddce-8ec7-4759-9a87-ced0c79d283e",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        100.1,
+        13.5
+      ],
+      "end_mm": [
+        99.5,
+        12.9
+      ],
+      "length_mm": 0.8485281374238528,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "74642e78-1837-498f-aa1b-b0fe043078cb",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        99.442811,
+        12.899308
+      ],
+      "end_mm": [
+        99.4,
+        12.9
+      ],
+      "length_mm": 0.04281659240294624,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "80a67ce8-c557-4f15-8fbb-3ea3784adc52",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        103.5,
+        19.5
+      ],
+      "end_mm": [
+        103.2,
+        19.2
+      ],
+      "length_mm": 0.424264068711927,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "823c9be8-d352-40b9-af6c-64108acd841d",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        100.216836,
+        14.240111
+      ],
+      "end_mm": [
+        100.2,
+        14.2
+      ],
+      "length_mm": 0.04350107144657514,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "93f184dc-ffbe-4b0a-8b35-2a446f69f5b1",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        103.6,
+        20.0
+      ],
+      "end_mm": [
+        103.6,
+        19.7
+      ],
+      "length_mm": 0.3000000000000007,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "96976f64-9b5a-4efd-a47d-3f7ef0d0dceb",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        103.063074,
+        19.170504
+      ],
+      "end_mm": [
+        103.1,
+        19.2
+      ],
+      "length_mm": 0.04726037972762652,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "98250626-fbe7-43fc-bf92-1c1c333d5f3c",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        115.0,
+        55.0
+      ],
+      "end_mm": [
+        115.1,
+        55.0
+      ],
+      "length_mm": 0.09999999999999432,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              115.0,
+              54.9
+            ],
+            "end": [
+              115.1,
+              54.9
+            ],
+            "length_mm": 0.09999999999999432
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              115.0,
+              55.0
+            ],
+            "end": [
+              115.1,
+              55.0
+            ],
+            "length_mm": 0.09999999999999432
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              115.0,
+              55.1
+            ],
+            "end": [
+              115.1,
+              55.1
+            ],
+            "length_mm": 0.09999999999999432
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.051415530208,
+      "full_copper_projection_missing_upper_mm2": 0.051416146178
+    },
+    {
+      "uuid": "b2b90b50-a0a9-4574-bd07-5f75b7779fe4",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        117.2,
+        71.4
+      ],
+      "end_mm": [
+        117.4,
+        71.2
+      ],
+      "length_mm": 0.282842712474623,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.12928932188134,
+              71.32928932188135
+            ],
+            "end": [
+              117.32928932188135,
+              71.12928932188134
+            ],
+            "length_mm": 0.28284271247462306
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              117.2,
+              71.4
+            ],
+            "end": [
+              117.4,
+              71.2
+            ],
+            "length_mm": 0.28284271247462306
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              117.27071067811866,
+              71.47071067811866
+            ],
+            "end": [
+              117.47071067811866,
+              71.27071067811866
+            ],
+            "length_mm": 0.28284271247462306
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0879841907025,
+      "full_copper_projection_missing_upper_mm2": 0.0879846234305
+    },
+    {
+      "uuid": "bd5edc03-4bce-4394-a325-80edb46dba1e",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        103.2,
+        19.2
+      ],
+      "end_mm": [
+        103.1,
+        19.2
+      ],
+      "length_mm": 0.10000000000000853,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "d1554749-d481-4984-8671-49ffd235a294",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        114.7,
+        54.6
+      ],
+      "end_mm": [
+        114.8,
+        54.7
+      ],
+      "length_mm": 0.14142135623730648,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 6.645366e-06,
+      "full_copper_projection_missing_upper_mm2": 6.661932e-06
+    },
+    {
+      "uuid": "dbeca096-119b-45fe-92f5-3f88cb3cdf95",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        100.1,
+        13.6
+      ],
+      "end_mm": [
+        100.1,
+        13.5
+      ],
+      "length_mm": 0.09999999999999964,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [],
+        "center": [],
+        "right": []
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0,
+      "full_copper_projection_missing_upper_mm2": 0.0
+    },
+    {
+      "uuid": "e802db28-28d7-4f47-95e0-3d79ec392643",
+      "net": "COL5",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        117.2,
+        71.8
+      ],
+      "end_mm": [
+        117.2,
+        71.4
+      ],
+      "length_mm": 0.3999999999999915,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.10000000000001,
+              71.8
+            ],
+            "end": [
+              117.10000000000001,
+              71.4
+            ],
+            "length_mm": 0.3999999999999915
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              117.2,
+              71.8
+            ],
+            "end": [
+              117.2,
+              71.4
+            ],
+            "length_mm": 0.3999999999999915
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              117.3,
+              71.8
+            ],
+            "end": [
+              117.3,
+              71.4
+            ],
+            "length_mm": 0.3999999999999915
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.111415530208,
+      "full_copper_projection_missing_upper_mm2": 0.111416146178
+    },
+    {
+      "uuid": "29316dea-b236-473b-9fa7-85edcd0f3462",
+      "net": "COL6",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        117.296004,
+        53.396004
+      ],
+      "end_mm": [
+        117.3,
+        53.4
+      ],
+      "length_mm": 0.005651197395243986,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.36671467811865,
+              53.32529332188134
+            ],
+            "end": [
+              117.37071067811866,
+              53.32928932188134
+            ],
+            "length_mm": 0.005651197395243986
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              117.296004,
+              53.396004
+            ],
+            "end": [
+              117.3,
+              53.4
+            ],
+            "length_mm": 0.005651197395243986
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              117.22529332188134,
+              53.466714678118656
+            ],
+            "end": [
+              117.22928932188134,
+              53.47071067811866
+            ],
+            "length_mm": 0.005651197395243986
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0325457223275,
+      "full_copper_projection_missing_upper_mm2": 0.032546348212
+    },
+    {
+      "uuid": "6d6e349c-099e-46cc-bf00-c650dfa3828c",
+      "net": "COL6",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        118.0,
+        53.8
+      ],
+      "end_mm": [
+        117.6,
+        53.4
+      ],
+      "length_mm": 0.565685424949241,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.92928932188134,
+              53.870710678118655
+            ],
+            "end": [
+              117.52928932188134,
+              53.47071067811866
+            ],
+            "length_mm": 0.565685424949241
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              118.0,
+              53.8
+            ],
+            "end": [
+              117.6,
+              53.4
+            ],
+            "length_mm": 0.565685424949241
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              118.07071067811866,
+              53.72928932188134
+            ],
+            "end": [
+              117.67071067811865,
+              53.32928932188134
+            ],
+            "length_mm": 0.565685424949241
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.1445526456165,
+      "full_copper_projection_missing_upper_mm2": 0.144553254192
+    },
+    {
+      "uuid": "9c646a5a-d7d2-469a-a1b1-cca4337db68b",
+      "net": "COL6",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        117.6,
+        53.4
+      ],
+      "end_mm": [
+        117.3,
+        53.4
+      ],
+      "length_mm": 0.29999999999999716,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.6,
+              53.5
+            ],
+            "end": [
+              117.3,
+              53.5
+            ],
+            "length_mm": 0.29999999999999716
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              117.6,
+              53.4
+            ],
+            "end": [
+              117.3,
+              53.4
+            ],
+            "length_mm": 0.29999999999999716
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              117.6,
+              53.3
+            ],
+            "end": [
+              117.3,
+              53.3
+            ],
+            "length_mm": 0.29999999999999716
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.091415530208,
+      "full_copper_projection_missing_upper_mm2": 0.091416146178
+    },
+    {
+      "uuid": "df80e5a9-bd57-478a-9478-6dfa664c8659",
+      "net": "COL6",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        118.006517,
+        54.106517
+      ],
+      "end_mm": [
+        118.0,
+        54.1
+      ],
+      "length_mm": 0.009216429785983726,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.93580632188139,
+              54.17722767811869
+            ],
+            "end": [
+              117.92928932188138,
+              54.170710678118695
+            ],
+            "length_mm": 0.009216429785983726
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              118.006517,
+              54.106517
+            ],
+            "end": [
+              118.0,
+              54.1
+            ],
+            "length_mm": 0.009216429785983726
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              118.07722767811862,
+              54.0358063218813
+            ],
+            "end": [
+              118.07071067811862,
+              54.02928932188131
+            ],
+            "length_mm": 0.009216429785983726
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.0332587310045,
+      "full_copper_projection_missing_upper_mm2": 0.033259342023
+    },
+    {
+      "uuid": "f638c3e8-81af-4f29-afa5-9b40d64a11cb",
+      "net": "COL6",
+      "layer": "B.Cu",
+      "reference_layer": "F.Cu",
+      "start_mm": [
+        118.0,
+        54.1
+      ],
+      "end_mm": [
+        118.0,
+        53.8
+      ],
+      "length_mm": 0.30000000000000426,
+      "width_mm": 0.2,
+      "missing_intervals": {
+        "left": [
+          {
+            "start": [
+              117.9,
+              54.1
+            ],
+            "end": [
+              117.9,
+              53.8
+            ],
+            "length_mm": 0.30000000000000426
+          }
+        ],
+        "center": [
+          {
+            "start": [
+              118.0,
+              54.1
+            ],
+            "end": [
+              118.0,
+              53.8
+            ],
+            "length_mm": 0.30000000000000426
+          }
+        ],
+        "right": [
+          {
+            "start": [
+              118.1,
+              54.1
+            ],
+            "end": [
+              118.1,
+              53.8
+            ],
+            "length_mm": 0.30000000000000426
+          }
+        ]
+      },
+      "full_copper_projection_missing_lower_mm2": 0.091415530208,
+      "full_copper_projection_missing_upper_mm2": 0.091416146178
+    }
+  ],
+  "vias": [
+    {
+      "uuid": "c3c8219c-6ea5-426c-bbbb-7365a56c33b0",
+      "net": "COL5",
+      "at_mm": [
+        117.2,
+        71.8
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.25
+    }
+  ],
+  "totals_by_net": {
+    "COL5": {
+      "length_mm": 5.163414486506821,
+      "missing_length_mm": {
+        "left": 1.7438533864830679,
+        "center": 1.8431462797018054,
+        "right": 1.8431462797018054
+      }
+    },
+    "COL6": {
+      "length_mm": 1.1805530521304701,
+      "missing_length_mm": {
+        "left": 1.1805530521304701,
+        "center": 1.1805530521304701,
+        "right": 1.1805530521304701
+      }
+    }
+  }
+}

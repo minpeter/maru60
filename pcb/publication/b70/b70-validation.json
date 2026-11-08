@@ -1,0 +1,29 @@
+{
+  "checkpoint": "b70",
+  "tool": "KiCad 9.0.2",
+  "pcb_sha256": "1b585bd5858f7bf40811ba6fbd285809b1c1d927f35a2eb6916f89f86ea6f60b",
+  "commands": [
+    {
+      "kind": "drc",
+      "exit_code": 0
+    },
+    {
+      "kind": "erc",
+      "exit_code": 0
+    }
+  ],
+  "drc": {
+    "opens": 70,
+    "parity": 0,
+    "hard": 0,
+    "warnings": 105,
+    "types": {
+      "track_dangling": 70,
+      "via_dangling": 35
+    }
+  },
+  "erc": {
+    "violations": 0
+  },
+  "cad_bytes_unchanged": true
+}

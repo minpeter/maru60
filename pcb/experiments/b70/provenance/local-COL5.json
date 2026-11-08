@@ -1,0 +1,665 @@
+{
+  "net": "COL5",
+  "source": "input.kicad_pcb",
+  "width_mm": 0.2,
+  "full_board_grid_mm": 0.1,
+  "maximum_per_link_cost_mm": 25,
+  "strategy": "Cost-bounded (25mm including 4.5mm via penalty) native connected components, dense original track anchors at <=0.1mm, nearest cross-component A* spanning tree, additive routing only; fixed USB strip, existing escapes and power/core protection unchanged",
+  "components_before": [
+    {
+      "members": [
+        "3a0077e9-f5cc-47d7-95b2-12d5d726d76c",
+        "5d31daf6-ea60-4f41-b99e-baefc27b8630",
+        "9a7823fc-f140-4635-9083-3f1d11139d21",
+        "42f1aeb1-ab2d-4c1a-8743-dfc107dca6d3",
+        "ea84bc74-eea4-48b1-8a27-f2860fc1fa1f",
+        "a3a72a1e-c165-4606-96e5-9d0785b543d6",
+        "6299feb6-b64c-4318-a1cc-c5e9219a2aab",
+        "50403a15-f962-4c4f-b880-bba56868e504",
+        "da475886-b1e2-403c-b7d1-839bc9746e7d"
+      ],
+      "pads": [
+        "SW48.1"
+      ]
+    },
+    {
+      "members": [
+        "8185a79f-f8b9-4894-858e-6098c899caac",
+        "f9cca61c-a040-495a-86ad-6990a69c04df",
+        "724b12aa-91db-48e8-b273-2ccee903ed59",
+        "bb630749-334f-438f-9d65-92065f9ccb57",
+        "8b9d856e-fd82-46cf-bf4a-52879e6ae62c",
+        "f6f7cca4-ddd9-4971-bb92-c2b85f40dbdd"
+      ],
+      "pads": []
+    },
+    {
+      "members": [
+        "f44d59d3-0c42-48c1-b89c-540ea6a07763",
+        "65c0b9cf-87fb-4ae5-a2e0-e11b853cd699",
+        "224e7239-5039-4cc7-b38b-ca258f485b01",
+        "896ef6ef-19c8-4fe6-bef7-965e4b34c9f9",
+        "aa20f907-bad3-443a-93c1-c6fb06a39c8f"
+      ],
+      "pads": [
+        "U1.42"
+      ]
+    },
+    {
+      "members": [
+        "1a0b9af6-88ec-455f-ba43-9d292abfa567",
+        "d8eae460-0737-4e3a-9624-65f4a052f962",
+        "eb7c08ff-e71a-44f2-b69f-d5bc556a8c6e",
+        "72793c09-0d85-4e68-bbff-53bb32a8ef49",
+        "4a020581-fdb5-41ed-978f-f72b2d2f9d00",
+        "2797566d-c218-4c22-a75e-fb72525091c2",
+        "6a93f78c-b429-4884-95ea-1573a1ee1f09",
+        "cfbbb6de-08ec-4ac5-892b-5962f6df9d45",
+        "18865e3a-4f05-4f83-8d2c-67c5c3655ec5"
+      ],
+      "pads": [
+        "SW35.1",
+        "SW21.1",
+        "SW6.1"
+      ]
+    },
+    {
+      "members": [
+        "2797566d-c218-4c22-a75e-fb72525091c2"
+      ],
+      "pads": []
+    },
+    {
+      "members": [
+        "546e52be-d659-444e-8d24-d144e5a709d6"
+      ],
+      "pads": []
+    },
+    {
+      "members": [
+        "6a93f78c-b429-4884-95ea-1573a1ee1f09",
+        "cfbbb6de-08ec-4ac5-892b-5962f6df9d45",
+        "18865e3a-4f05-4f83-8d2c-67c5c3655ec5"
+      ],
+      "pads": [
+        "SW6.1"
+      ]
+    },
+    {
+      "members": [
+        "81c0b68e-3c45-4c0d-900c-dd5200d99523",
+        "953f5854-4396-4e3d-be6b-f6c4f1bd5c14"
+      ],
+      "pads": []
+    },
+    {
+      "members": [
+        "953f5854-4396-4e3d-be6b-f6c4f1bd5c14"
+      ],
+      "pads": []
+    },
+    {
+      "members": [
+        "f6f7cca4-ddd9-4971-bb92-c2b85f40dbdd"
+      ],
+      "pads": []
+    }
+  ],
+  "connections": [
+    {
+      "groups": [
+        1,
+        9
+      ],
+      "euclidean_gap_mm": 0.0,
+      "expanded_states": 1258,
+      "found": true
+    },
+    {
+      "groups": [
+        7,
+        8
+      ],
+      "euclidean_gap_mm": 0.6403124237432849,
+      "expanded_states": 10,
+      "found": true
+    },
+    {
+      "groups": [
+        3,
+        4
+      ],
+      "euclidean_gap_mm": 0.9433981132056604,
+      "expanded_states": 15,
+      "found": true
+    },
+    {
+      "groups": [
+        3,
+        5
+      ],
+      "euclidean_gap_mm": 1.5264337522473748,
+      "expanded_states": 23,
+      "found": true
+    },
+    {
+      "groups": [
+        4,
+        5
+      ],
+      "euclidean_gap_mm": 2.012461179749811,
+      "expanded_states": 39,
+      "found": false
+    },
+    {
+      "groups": [
+        0,
+        1
+      ],
+      "euclidean_gap_mm": 2.0518284528683193,
+      "expanded_states": 57277,
+      "found": false
+    },
+    {
+      "groups": [
+        3,
+        4
+      ],
+      "euclidean_gap_mm": 2.220360331117452,
+      "expanded_states": 168103,
+      "found": false
+    },
+    {
+      "groups": [
+        0,
+        5
+      ],
+      "euclidean_gap_mm": 2.5806975801127883,
+      "expanded_states": 57120,
+      "found": false
+    },
+    {
+      "groups": [
+        3,
+        5
+      ],
+      "euclidean_gap_mm": 4.17612260356422,
+      "expanded_states": 167902,
+      "found": false
+    },
+    {
+      "groups": [
+        1,
+        2
+      ],
+      "euclidean_gap_mm": 6.545991139621257,
+      "expanded_states": 16860,
+      "found": false
+    },
+    {
+      "groups": [
+        0,
+        2
+      ],
+      "euclidean_gap_mm": 9.620810776644555,
+      "expanded_states": 57153,
+      "found": false
+    },
+    {
+      "groups": [
+        0,
+        4
+      ],
+      "euclidean_gap_mm": 11.704699910719626,
+      "expanded_states": 57131,
+      "found": false
+    },
+    {
+      "groups": [
+        1,
+        5
+      ],
+      "euclidean_gap_mm": 13.200000000000001,
+      "expanded_states": 16557,
+      "found": false
+    },
+    {
+      "groups": [
+        0,
+        3
+      ],
+      "euclidean_gap_mm": 13.743725841270262,
+      "expanded_states": 57139,
+      "found": false
+    },
+    {
+      "groups": [
+        2,
+        5
+      ],
+      "euclidean_gap_mm": 19.403092537015848,
+      "expanded_states": 115,
+      "found": false
+    },
+    {
+      "groups": [
+        1,
+        4
+      ],
+      "euclidean_gap_mm": 21.298356744124654,
+      "expanded_states": 16419,
+      "found": false
+    },
+    {
+      "groups": [
+        1,
+        3
+      ],
+      "euclidean_gap_mm": 23.515314159075146,
+      "expanded_states": 16479,
+      "found": false
+    },
+    {
+      "groups": [
+        2,
+        4
+      ],
+      "euclidean_gap_mm": 26.500188678573593,
+      "expanded_states": 117,
+      "found": false
+    },
+    {
+      "groups": [
+        2,
+        3
+      ],
+      "euclidean_gap_mm": 28.702787321094792,
+      "expanded_states": 117,
+      "found": false
+    }
+  ],
+  "elapsed_seconds": 7.1759588249988155,
+  "path_found": true,
+  "components_remaining": 6,
+  "output": "/workspace/shared/maru-b2l-usb-return/coordinated/nov03-multiterm/local-COL5.kicad_pcb",
+  "native_opens_presave": 71,
+  "segments": [
+    {
+      "net": "COL5",
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "start": [
+        117.2,
+        71.2
+      ],
+      "end": [
+        117.2,
+        71.8
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        117.2,
+        71.8
+      ],
+      "end": [
+        117.2,
+        71.4
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        117.2,
+        71.4
+      ],
+      "end": [
+        117.4,
+        71.2
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "start": [
+        117.175,
+        71.25
+      ],
+      "end": [
+        117.2,
+        71.2
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        117.45,
+        71.25
+      ],
+      "end": [
+        117.4,
+        71.2
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.7,
+        54.5
+      ],
+      "end": [
+        114.7,
+        54.6
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.7,
+        54.6
+      ],
+      "end": [
+        114.80000000000001,
+        54.7
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.80000000000001,
+        54.7
+      ],
+      "end": [
+        114.80000000000001,
+        54.800000000000004
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.80000000000001,
+        54.800000000000004
+      ],
+      "end": [
+        115.0,
+        55.0
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        115.0,
+        55.0
+      ],
+      "end": [
+        115.10000000000001,
+        55.0
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        114.736211,
+        54.496688
+      ],
+      "end": [
+        114.7,
+        54.5
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        115.114584,
+        55.04819
+      ],
+      "end": [
+        115.10000000000001,
+        55.0
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        103.60000000000001,
+        20.0
+      ],
+      "end": [
+        103.60000000000001,
+        19.700000000000003
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        103.60000000000001,
+        19.700000000000003
+      ],
+      "end": [
+        103.5,
+        19.6
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        103.5,
+        19.6
+      ],
+      "end": [
+        103.5,
+        19.5
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        103.5,
+        19.5
+      ],
+      "end": [
+        103.2,
+        19.200000000000003
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        103.2,
+        19.200000000000003
+      ],
+      "end": [
+        103.10000000000001,
+        19.200000000000003
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        103.565957,
+        20.041623
+      ],
+      "end": [
+        103.60000000000001,
+        20.0
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        103.063074,
+        19.170504
+      ],
+      "end": [
+        103.10000000000001,
+        19.200000000000003
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        100.2,
+        14.200000000000001
+      ],
+      "end": [
+        100.2,
+        13.700000000000001
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        100.2,
+        13.700000000000001
+      ],
+      "end": [
+        100.10000000000001,
+        13.600000000000001
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        100.10000000000001,
+        13.600000000000001
+      ],
+      "end": [
+        100.10000000000001,
+        13.5
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        100.10000000000001,
+        13.5
+      ],
+      "end": [
+        99.5,
+        12.9
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        99.5,
+        12.9
+      ],
+      "end": [
+        99.4,
+        12.9
+      ],
+      "role": "row bridge"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        100.216836,
+        14.240111
+      ],
+      "end": [
+        100.2,
+        14.200000000000001
+      ],
+      "role": "exact native track interior anchor"
+    },
+    {
+      "net": "COL5",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "start": [
+        99.442811,
+        12.899308
+      ],
+      "end": [
+        99.4,
+        12.9
+      ],
+      "role": "exact native track interior anchor"
+    }
+  ],
+  "vias": [
+    {
+      "net": "COL5",
+      "at": [
+        117.2,
+        71.8
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.25,
+      "from_diode": "row bridge"
+    }
+  ],
+  "added_length_mm": 5.1634144865068485
+}
