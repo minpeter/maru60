@@ -1,0 +1,68 @@
+{
+  "scope": "isolated component implementation study, not production approval",
+  "completed": [
+    "exact five-part BOM",
+    "official U2 land dimensions and pad numbering",
+    "native capacitor land candidates",
+    "all pin/net endpoints preserved",
+    "ERC 0",
+    "placement-only pad/net check and DRC with 12 declared unrouted connections",
+    "bounded resistor error allocation",
+    "supported 10 nF BYP comparison versus68 nF and omission rejection",
+    "explicit hardware RUN/reset/USB restart architecture contract",
+    "unchanged accepted PCB and prior correction manifest"
+  ],
+  "pending": [
+    {
+      "action": "Obtain approved effective C and ESR limits",
+      "target": "C101 GRM31CR71H475KA12L and ADI ESR frequency contract",
+      "reason": "public no-bias X7R/DF data does not bound bias, aging or applicable <30mOhm ESR"
+    },
+    {
+      "action": "Qualify local input impedance/capacitance",
+      "target": "C100 and upstream buck/source waveform",
+      "reason": "ADI recommends4.7uF; no published2uF input minimum"
+    },
+    {
+      "action": "Approve applicable leakage and cleanliness envelope",
+      "target": "C142 GRM1885C1H103JA01D plus assembled PCB",
+      "reason": "public IR tests are room-temperature/rated-voltage, not guaranteed hot assembled leakage"
+    },
+    {
+      "action": "Approve declared life/environment error allocation",
+      "target": "R163 TNPW060331K6BYEA",
+      "reason": "sum of individual test limits is not an arbitrary combined-life warranty"
+    },
+    {
+      "action": "Complete routed Kelvin/EP thermal implementation",
+      "target": "isolated LDO tile before PCB adoption",
+      "reason": "tile intentionally contains no tracks, vias or planes"
+    },
+    {
+      "action": "Implement and qualify external RUN/reset and enable-isolation path",
+      "target": "additional isolated reset revision",
+      "reason": "current V6 supervisor drives GPIO_ISOLATE only; typical-only propagation cannot guarantee all dips"
+    },
+    {
+      "action": "Close preconfiguration charging and whole-USB state ledger",
+      "target": "10nF BYP startup and complete board",
+      "reason": "nominal capacitor charge53.5mA consumes most conditional startup headroom; no all-corner waveform available"
+    }
+  ],
+  "uncertain": [
+    "supplier approval",
+    "assembled effective C/ESR/leakage",
+    "actual fault waveforms and thermal behavior",
+    "whole-device current and reset feasibility"
+  ],
+  "denied": [],
+  "not_performed": [
+    "accepted CAD/firmware edits",
+    "supplier contact",
+    "orders",
+    "fabrication",
+    "flashing",
+    "public push",
+    "physical measurements"
+  ]
+}

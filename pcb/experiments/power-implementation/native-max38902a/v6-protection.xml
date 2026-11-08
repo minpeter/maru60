@@ -1,0 +1,2391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/workspace/shared/maru-protection-design/implementation-study-20261102/native-max38902a/v6-protection.kicad_sch</source>
+    <date>2026-11-03T05:57:54+0900</date>
+    <tool>Eeschema 9.0.2+dfsg-1</tool>
+    <sheet number="1" name="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/">
+      <title_block>
+        <title>U2 correction - NOT FOR FAB</title>
+        <company/>
+        <rev>STUDY ONLY</rev>
+        <date/>
+        <source>supply-context.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/">
+      <title_block>
+        <title>Maru60 input protection candidate - fixed direct USB-C</title>
+        <company/>
+        <rev>ISOLATED STUDY 4 - NOT RELEASE</rev>
+        <date/>
+        <source>input-protection.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/">
+      <title_block>
+        <title>Maru60 V6 regulated domain - ISOLATED UNQUALIFIED CIRCUIT</title>
+        <company/>
+        <rev>ISOLATED STUDY 1 - NOT RELEASE</rev>
+        <date/>
+        <source>v6-regulated-domain.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/v6-rgb-translation/" tstamps="/3d42d5f5-a324-5787-a9ed-1e72f86f180f/">
+      <title_block>
+        <title>Maru60 V6 RGB dual supply interface - isolated circuit</title>
+        <company/>
+        <rev>ISOLATED STUDY 1 - NOT RELEASE</rev>
+        <date/>
+        <source>v6-rgb-translation.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/">
+      <title_block>
+        <title>Maru60 protected digital-only six GPIO header candidate</title>
+        <company/>
+        <rev>ISOLATED STUDY 4 - NOT RELEASE</rev>
+        <date/>
+        <source>gpio-isolation.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/" tstamps="/">
+      <title_block>
+        <title>V6 protected power / GPIO circuit study - NOT MAIN</title>
+        <company/>
+        <rev>V6 UNQUALIFIED</rev>
+        <date/>
+        <source>v6-protection.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C100">
+      <value>4.7uF 50V X7R 10%</value>
+      <footprint>MaruStudy:Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM31CR71H475KA12-01A.pdf</datasheet>
+      <fields>
+        <field name="Status">ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM31CR71H475KA12L</field>
+        <field name="Footprint">MaruStudy:Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM31CR71H475KA12-01A.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C100" description=""/>
+      <property name="Status" value="ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM31CR71H475KA12L"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>762192f0-f77f-5073-a362-af23b36983fe</tstamps>
+    </comp>
+    <comp ref="C101">
+      <value>4.7uF 50V X7R 10%</value>
+      <footprint>MaruStudy:Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM31CR71H475KA12-01A.pdf</datasheet>
+      <fields>
+        <field name="Status">ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM31CR71H475KA12L</field>
+        <field name="Footprint">MaruStudy:Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM31CR71H475KA12-01A.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C101" description=""/>
+      <property name="Status" value="ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM31CR71H475KA12L"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>4b09c031-18c9-5100-8014-6146dd4c3bc6</tstamps>
+    </comp>
+    <comp ref="C142">
+      <value>10nF 50V C0G 5%</value>
+      <footprint>MaruStudy:Murata_GRM18_0603_Reflow_0.65x0.75_Gap0.7</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM1885C1H103JA01-01A.pdf</datasheet>
+      <fields>
+        <field name="Status">ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM1885C1H103JA01D</field>
+        <field name="Footprint">MaruStudy:Murata_GRM18_0603_Reflow_0.65x0.75_Gap0.7</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM1885C1H103JA01-01A.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C142" description=""/>
+      <property name="Status" value="ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM1885C1H103JA01D"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>70d9e228-103a-5fe6-b125-0655e95310af</tstamps>
+    </comp>
+    <comp ref="F1">
+      <value>SF-1206F100-2 CANDIDATE</value>
+      <footprint>Fuse:Fuse_1206_3216Metric</footprint>
+      <fields>
+        <field name="Status">Existing unselected candidate retained; hotR/I2t coordination OPEN</field>
+        <field name="Footprint">Fuse:Fuse_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="F1" description=""/>
+      <property name="Status" value="Existing unselected candidate retained; hotR/I2t coordination OPEN"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>e79d84ad-4114-5f98-a1ee-12020e0136e6</tstamps>
+    </comp>
+    <comp ref="P904">
+      <value>EXTERNAL/MAIN BOUNDARY ONLY</value>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="P904" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>beb93898-5105-50d3-b19f-c62884c6c2e4</tstamps>
+    </comp>
+    <comp ref="R109">
+      <value>100k EXISTING</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R109" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>ec9f9521-5ce6-5567-8d31-dd4d33aa4900</tstamps>
+    </comp>
+    <comp ref="R112">
+      <value>133k1% EXISTING - budget review OPEN</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R112" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>679b56d6-e294-5ca1-a3bb-e295d2b3e1a1</tstamps>
+    </comp>
+    <comp ref="R113">
+      <value>10k EXISTING</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R113" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>fc3bd887-7f51-578a-a17f-96ae56cbb963</tstamps>
+    </comp>
+    <comp ref="R163">
+      <value>31.6k 0.1% 10ppm/K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.vishay.com/docs/28758/tnpw_e3.pdf</datasheet>
+      <fields>
+        <field name="Status">ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="MPN">TNPW060331K6BYEA</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.vishay.com/docs/28758/tnpw_e3.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R163" description=""/>
+      <property name="Status" value="ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="MPN" value="TNPW060331K6BYEA"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>498faa96-b730-5744-b926-6b5d08e8ad6a</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>MAX38902AATA+T</value>
+      <footprint>MaruStudy:MAX_T822-3C_90-0065_2x2_P0.5_EP0.8x1.38</footprint>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/MAX38902A-MAX38902D.pdf</datasheet>
+      <fields>
+        <field name="Status">ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md</field>
+        <field name="Manufacturer">Analog Devices</field>
+        <field name="MPN">MAX38902AATA+T</field>
+        <field name="Footprint">MaruStudy:MAX_T822-3C_90-0065_2x2_P0.5_EP0.8x1.38</field>
+        <field name="Datasheet">https://www.analog.com/media/en/technical-documentation/data-sheets/MAX38902A-MAX38902D.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="U2" description=""/>
+      <property name="Status" value="ISOLATED BOM STUDY: qualification gates in IMPLEMENTATION.md"/>
+      <property name="Manufacturer" value="Analog Devices"/>
+      <property name="MPN" value="MAX38902AATA+T"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>7b0be2f9-c757-5a71-81b8-2744853edec2</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>TPS2553DBVR-1 EXISTING</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps2553.pdf</datasheet>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2553.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="U7" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="supply-context"/>
+      <property name="Sheetfile" value="supply-context.kicad_sch"/>
+      <sheetpath names="/supply-context/" tstamps="/a9fb2c47-735f-5769-89fd-4fde54d08dd6/"/>
+      <tstamps>a54a3cc8-1ed1-58a3-a0b3-083cccc05ef7</tstamps>
+    </comp>
+    <comp ref="C124">
+      <value>10nF 10% 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C124" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>2beed947-16ca-5de9-a318-0eac08db31e1</tstamps>
+    </comp>
+    <comp ref="C125">
+      <value>1uF 50V effective TBD</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C125" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>7788f501-624c-5cdc-9081-9fda9ade039f</tstamps>
+    </comp>
+    <comp ref="C126">
+      <value>1uF 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C126" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>14352bad-87fe-5b19-b369-abce0fd437b4</tstamps>
+    </comp>
+    <comp ref="P901">
+      <value>EXISTING BOARD INTERFACE</value>
+      <fields>
+        <field name="Status">Diagram boundary only, NOT a physical connector</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="P901" description=""/>
+      <property name="Status" value="Diagram boundary only, NOT a physical connector"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>2184df97-eb12-5b62-837c-1694647a0a05</tstamps>
+    </comp>
+    <comp ref="R120">
+      <value>590k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R120" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>538d52ad-9bd3-51e9-bba8-b58d9b184fd5</tstamps>
+    </comp>
+    <comp ref="R121">
+      <value>156k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R121" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>3c9a1e86-b5b6-52b9-8936-5c621f352915</tstamps>
+    </comp>
+    <comp ref="R122">
+      <value>620k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R122" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>31a681d5-d8df-58b0-9e78-6c5af6926f6a</tstamps>
+    </comp>
+    <comp ref="R123">
+      <value>267k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R123" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>ff72f404-55f5-5dc3-9765-6b11be9a3ded</tstamps>
+    </comp>
+    <comp ref="R124">
+      <value>6.65k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R124" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>67a38ace-fe14-51c2-8c3a-d9ca63053dcf</tstamps>
+    </comp>
+    <comp ref="R126">
+      <value>100k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R126" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>8bfc5068-1a14-5b21-b2d5-a99609414546</tstamps>
+    </comp>
+    <comp ref="U8">
+      <value>TPS259470LRPW</value>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps25947.pdf</datasheet>
+      <fields>
+        <field name="Status">RPW0010A land pattern not implemented; pin map from Rev C Table 5-1</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps25947.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="U8" description=""/>
+      <property name="Status" value="RPW0010A land pattern not implemented; pin map from Rev C Table 5-1"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>d8484df1-3892-5cbd-b989-942ed5ae6190</tstamps>
+    </comp>
+    <comp ref="U10">
+      <value>TPD2EUSB30DRTR</value>
+      <footprint>Package_TO_SOT_SMD:Texas_DRT-3</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf</datasheet>
+      <fields>
+        <field name="Status">Proposed U4 replacement; rail-less clamp, no raw VBUS pin; ESD system test OPEN</field>
+        <field name="Footprint">Package_TO_SOT_SMD:Texas_DRT-3</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="U10" description=""/>
+      <property name="Status" value="Proposed U4 replacement; rail-less clamp, no raw VBUS pin; ESD system test OPEN"/>
+      <property name="Sheetname" value="input-protection"/>
+      <property name="Sheetfile" value="input-protection.kicad_sch"/>
+      <sheetpath names="/input-protection/" tstamps="/4796d5ee-6f9b-5989-9f38-c1efadb01cc7/"/>
+      <tstamps>8b7d85bc-22a2-5658-a97f-2da4fb9dad77</tstamps>
+    </comp>
+    <comp ref="C136">
+      <value>100nF 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C136" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>4b68f2bb-7709-5092-824a-153ab87ee579</tstamps>
+    </comp>
+    <comp ref="C137">
+      <value>4.7uF 50V effective&gt;=2uF TBD</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C137" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>0e95741e-7ff4-570c-a2f1-d9d755b2dcd1</tstamps>
+    </comp>
+    <comp ref="C138">
+      <value>100nF 16V BST-SW</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C138" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>03312500-ae2d-533a-8c8c-cce8389f804d</tstamps>
+    </comp>
+    <comp ref="C139">
+      <value>100nF 10% 16V - soft start</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C139" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>3aefd542-752b-5d14-90a2-3d5f6cb6f383</tstamps>
+    </comp>
+    <comp ref="C140">
+      <value>22uF 10V effective&gt;=12uF TBD</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C140" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>36332545-a91d-578f-a6fc-737b48eb8642</tstamps>
+    </comp>
+    <comp ref="C141">
+      <value>22uF 10V effective&gt;=12uF TBD</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C141" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>b74bfd6d-1300-5e33-9d0d-b90879e6be2c</tstamps>
+    </comp>
+    <comp ref="D100">
+      <value>PMEG4030ER - reverse discharge bypass</value>
+      <footprint>Diode_SMD:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/PMEG4030ER.pdf</datasheet>
+      <fields>
+        <field name="Status">Provisional bypass per TPS62932 section11; NOT guaranteed &lt;=0.3V clamp; pulse/current/leakage/temp/footprint review OPEN</field>
+        <field name="Footprint">Diode_SMD:Nexperia_CFP3_SOD-123W</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/PMEG4030ER.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="D100" description=""/>
+      <property name="Status" value="Provisional bypass per TPS62932 section11; NOT guaranteed &lt;=0.3V clamp; pulse/current/leakage/temp/footprint review OPEN"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>2bb7619e-cee4-5fa1-b40c-369f4168daf2</tstamps>
+    </comp>
+    <comp ref="L2">
+      <value>XAL4030-472MEC 4.7uH 20%</value>
+      <datasheet>https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal40xx/xal4030-472/</datasheet>
+      <fields>
+        <field name="Status">Candidate only; 3.1mm max height; footprint/assembly/thermal gates OPEN</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal40xx/xal4030-472/</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="L2" description=""/>
+      <property name="Status" value="Candidate only; 3.1mm max height; footprint/assembly/thermal gates OPEN"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>d9017bfa-40c8-5c4b-b3ab-aa76363deacd</tstamps>
+    </comp>
+    <comp ref="P906">
+      <value>NONPHYSICAL BOUNDARY</value>
+      <fields>
+        <field name="Status">Boundary only; U7 OUT becomes +4V_LED, U14/R146/R147 removed in proposed integration</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="P906" description=""/>
+      <property name="Status" value="Boundary only; U7 OUT becomes +4V_LED, U14/R146/R147 removed in proposed integration"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>36b4ae58-310b-58cd-ad5c-2f711e46ebee</tstamps>
+    </comp>
+    <comp ref="P908">
+      <value>REGULATOR OUTPUT FLAG</value>
+      <fields>
+        <field name="Status">ERC power flag only, not a connector or independent supply</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="P908" description=""/>
+      <property name="Status" value="ERC power flag only, not a connector or independent supply"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>e8864a2d-a3bf-515b-9425-ee730794686a</tstamps>
+    </comp>
+    <comp ref="R159">
+      <value>40.0k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R159" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>af051f0d-67dd-5cc2-85cd-8e4cd035f37b</tstamps>
+    </comp>
+    <comp ref="R160">
+      <value>10.0k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R160" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>f018ca2d-85f4-5cfe-91e9-3651aad711e7</tstamps>
+    </comp>
+    <comp ref="U18">
+      <value>TPS62932DRLR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-583-8</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps62933.pdf</datasheet>
+      <fields>
+        <field name="Status">Provisional; DRL pad geometry/paste not independently qualified; EN intentionally floating per 9.3.6</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-583-8</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps62933.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="U18" description=""/>
+      <property name="Status" value="Provisional; DRL pad geometry/paste not independently qualified; EN intentionally floating per 9.3.6"/>
+      <property name="Sheetname" value="v6-regulated-domain"/>
+      <property name="Sheetfile" value="v6-regulated-domain.kicad_sch"/>
+      <sheetpath names="/v6-regulated-domain/" tstamps="/200d11f1-8e47-521d-8854-b40af6121c9c/"/>
+      <tstamps>04113746-1913-57d1-bc58-ffaa8515bf1d</tstamps>
+    </comp>
+    <comp ref="C122">
+      <value>100nF 16V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C122" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-rgb-translation"/>
+      <property name="Sheetfile" value="v6-rgb-translation.kicad_sch"/>
+      <sheetpath names="/v6-rgb-translation/" tstamps="/3d42d5f5-a324-5787-a9ed-1e72f86f180f/"/>
+      <tstamps>b3f43bd9-baf5-568b-8751-48e75a1f9914</tstamps>
+    </comp>
+    <comp ref="C123">
+      <value>100nF 16V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C123" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-rgb-translation"/>
+      <property name="Sheetfile" value="v6-rgb-translation.kicad_sch"/>
+      <sheetpath names="/v6-rgb-translation/" tstamps="/3d42d5f5-a324-5787-a9ed-1e72f86f180f/"/>
+      <tstamps>81f93893-9f9c-55f9-ab5d-d91fa90d5e0b</tstamps>
+    </comp>
+    <comp ref="P907">
+      <value>NONPHYSICAL BOUNDARY</value>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="P907" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-rgb-translation"/>
+      <property name="Sheetfile" value="v6-rgb-translation.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/v6-rgb-translation/" tstamps="/3d42d5f5-a324-5787-a9ed-1e72f86f180f/"/>
+      <tstamps>f8b86f40-982f-503c-84f5-d0eddbafb06f</tstamps>
+    </comp>
+    <comp ref="R161">
+      <value>47.0k 1% - reset data LOW</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R161" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-rgb-translation"/>
+      <property name="Sheetfile" value="v6-rgb-translation.kicad_sch"/>
+      <sheetpath names="/v6-rgb-translation/" tstamps="/3d42d5f5-a324-5787-a9ed-1e72f86f180f/"/>
+      <tstamps>47eb8993-888b-54df-bf0e-a131ccc1acd9</tstamps>
+    </comp>
+    <comp ref="R162">
+      <value>47.0k 1% - reset data LOW</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R162" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="v6-rgb-translation"/>
+      <property name="Sheetfile" value="v6-rgb-translation.kicad_sch"/>
+      <sheetpath names="/v6-rgb-translation/" tstamps="/3d42d5f5-a324-5787-a9ed-1e72f86f180f/"/>
+      <tstamps>7c0c317d-7dad-5bfd-a6d0-e0c68db6fbf3</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>SN74LVC2T45DCUR</value>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc2t45.pdf</datasheet>
+      <fields>
+        <field name="Status">Candidate DCU8 footprint intentionally unresolved; existing output net names retained but voltage is no longer nominal5V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc2t45.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="U5" description=""/>
+      <property name="Status" value="Candidate DCU8 footprint intentionally unresolved; existing output net names retained but voltage is no longer nominal5V"/>
+      <property name="Sheetname" value="v6-rgb-translation"/>
+      <property name="Sheetfile" value="v6-rgb-translation.kicad_sch"/>
+      <sheetpath names="/v6-rgb-translation/" tstamps="/3d42d5f5-a324-5787-a9ed-1e72f86f180f/"/>
+      <tstamps>5a6d2159-ed65-51a4-85a0-0024c3260baa</tstamps>
+    </comp>
+    <comp ref="C128">
+      <value>100nF 16V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C128" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>d149601f-b409-571e-9519-b0c7f3c7b715</tstamps>
+    </comp>
+    <comp ref="C129">
+      <value>100nF 16V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="C129" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>1a51518a-2e96-555c-8ba5-ea7a0c287b76</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>SM10B-SRSS-TB</value>
+      <footprint>Connector_JST:JST_SH_SM10B-SRSS-TB_1x10-1MP_P1.00mm_Horizontal</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eSH.pdf</datasheet>
+      <fields>
+        <field name="Status">Pin10 NC is not physical keying; polarized housing; exact mating/body/case fit OPEN</field>
+        <field name="Footprint">Connector_JST:JST_SH_SM10B-SRSS-TB_1x10-1MP_P1.00mm_Horizontal</field>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eSH.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="J3" description=""/>
+      <property name="Status" value="Pin10 NC is not physical keying; polarized housing; exact mating/body/case fit OPEN"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>3a54ac42-0492-5e04-a91f-16845f8746ee</tstamps>
+    </comp>
+    <comp ref="P902">
+      <value>EXISTING MCU INTERFACE</value>
+      <fields>
+        <field name="Status">Boundary only, NOT physical connector; actual MCU pads must be atomically mapped</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="P902" description=""/>
+      <property name="Status" value="Boundary only, NOT physical connector; actual MCU pads must be atomically mapped"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>f4edeccf-ded6-5ad3-851e-34167951db9b</tstamps>
+    </comp>
+    <comp ref="R128">
+      <value>100k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R128" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>87a20a2e-4a92-564c-96b3-a331104c7ef6</tstamps>
+    </comp>
+    <comp ref="R130">
+      <value>1.00k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R130" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>4f6fdacd-ba11-529b-ad10-42af411c8d64</tstamps>
+    </comp>
+    <comp ref="R131">
+      <value>1.00k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R131" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>45d0d85d-8048-5f05-9118-99d678434af9</tstamps>
+    </comp>
+    <comp ref="R132">
+      <value>1.00k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R132" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>e1ad0adb-cc11-521a-af43-53974920bad9</tstamps>
+    </comp>
+    <comp ref="R133">
+      <value>1.00k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R133" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>f7008d83-433f-5682-a4c1-f1120cdb1e7e</tstamps>
+    </comp>
+    <comp ref="R134">
+      <value>1.00k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R134" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>5028eb5d-1e2b-5147-8daf-30d34e037982</tstamps>
+    </comp>
+    <comp ref="R135">
+      <value>1.00k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R135" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>179fb9af-fced-5e6e-b23a-9bb22e578715</tstamps>
+    </comp>
+    <comp ref="R140">
+      <value>39.0k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R140" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>d2984e2b-603d-5bf8-8ca0-2c2257590389</tstamps>
+    </comp>
+    <comp ref="R141">
+      <value>39.0k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R141" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>12a6b571-ddff-5d0d-b548-c96c0a72efa3</tstamps>
+    </comp>
+    <comp ref="R142">
+      <value>39.0k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R142" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>654b9860-a26d-5e0b-b318-e69712a46319</tstamps>
+    </comp>
+    <comp ref="R143">
+      <value>39.0k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R143" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>024d233a-7296-579d-b63b-a131ed35fd04</tstamps>
+    </comp>
+    <comp ref="R144">
+      <value>39.0k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R144" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>61c60c7e-5130-5207-80d8-90d73ec131ef</tstamps>
+    </comp>
+    <comp ref="R145">
+      <value>39.0k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="R145" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>0c1523e3-9e70-5919-9c47-7760fd9bbebc</tstamps>
+    </comp>
+    <comp ref="U11">
+      <value>SN74CB3T3245PWR</value>
+      <footprint>Package_SO:Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74cb3t3245.pdf</datasheet>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Package_SO:Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74cb3t3245.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="U11" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>4c87c595-82d6-5674-b248-dc253f315823</tstamps>
+    </comp>
+    <comp ref="U12">
+      <value>TLV810EA29DBZR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tlv810e.pdf</datasheet>
+      <fields>
+        <field name="Status">CANDIDATE - not procurement approved</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv810e.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="U12" description=""/>
+      <property name="Status" value="CANDIDATE - not procurement approved"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>6188fef0-2bf7-53c5-bb24-77f9f58770f9</tstamps>
+    </comp>
+    <comp ref="U13">
+      <value>TPD6E05U06RVZR</value>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd6e05u06.pdf</datasheet>
+      <fields>
+        <field name="Status">RVZ14 land pattern not yet implemented; pin map from Table4-3</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd6e05u06.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Study" part="U13" description=""/>
+      <property name="Status" value="RVZ14 land pattern not yet implemented; pin map from Table4-3"/>
+      <property name="Sheetname" value="gpio-isolation"/>
+      <property name="Sheetfile" value="gpio-isolation.kicad_sch"/>
+      <sheetpath names="/gpio-isolation/" tstamps="/2df00294-1da6-5e72-a3fa-ed51209bd5a0/"/>
+      <tstamps>e30ad1ab-24aa-5d60-8128-33826cbd200c</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Study" part="C100">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4.7uF X7R10V eff&gt;=2uF STUDY</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C101">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4.7uF X7R10V eff&gt;=2uF STUDY</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C122">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100nF 16V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C123">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100nF 16V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C124">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">10nF 10% 50V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C125">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">1uF 50V effective TBD</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C126">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">1uF 50V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C128">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100nF 16V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C129">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100nF 16V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C136">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100nF 50V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C137">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4.7uF 50V effective&gt;=2uF TBD</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C138">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100nF 16V BST-SW</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C139">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100nF 10% 16V - soft start</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C140">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">22uF 10V effective&gt;=12uF TBD</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C141">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">22uF 10V effective&gt;=12uF TBD</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="C142">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">68nF BYP-OUT low leakage STUDY</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="D100">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PMEG4030ER - reverse discharge bypass</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="F1">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SF-1206F100-2 CANDIDATE</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="passive"/>
+        <pin num="2" name="OUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="J3">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SM10B-SRSS-TB</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="L2">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">XAL4030-472MEC 4.7uH 20%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="P901">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">EXISTING BOARD INTERFACE</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="F1_OUT" type="passive"/>
+        <pin num="2" name="BOARD_GND" type="passive"/>
+        <pin num="3" name="REGULATOR_3V3" type="passive"/>
+        <pin num="4" name="USB_D+" type="bidirectional"/>
+        <pin num="5" name="USB_D-" type="bidirectional"/>
+        <pin num="6" name="ALL_5V_LOADS" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="P902">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">EXISTING MCU INTERFACE</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GP3" type="bidirectional"/>
+        <pin num="2" name="GP10" type="bidirectional"/>
+        <pin num="3" name="GP24" type="bidirectional"/>
+        <pin num="4" name="GP25" type="bidirectional"/>
+        <pin num="5" name="GP26" type="bidirectional"/>
+        <pin num="6" name="GP27" type="bidirectional"/>
+        <pin num="7" name="BOARD_GND" type="passive"/>
+        <pin num="8" name="IOVDD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="P904">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">EXTERNAL/MAIN BOUNDARY ONLY</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="USB_VBUS" type="power_out"/>
+        <pin num="2" name="GND" type="power_out"/>
+        <pin num="3" name="GP22" type="output"/>
+        <pin num="4" name="GP23" type="input"/>
+        <pin num="5" name="ALL_LED_RAIL_LOADS" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="P906">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NONPHYSICAL BOUNDARY</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="U8_OUT" type="passive"/>
+        <pin num="2" name="GROUND" type="passive"/>
+        <pin num="3" name="U2_AP2112_IN" type="power_in"/>
+        <pin num="4" name="U7_TPS2553_IN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="P907">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NONPHYSICAL BOUNDARY</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="passive"/>
+        <pin num="2" name="U7_OUT" type="passive"/>
+        <pin num="3" name="GND" type="passive"/>
+        <pin num="4" name="GP20" type="output"/>
+        <pin num="5" name="GP21" type="output"/>
+        <pin num="6" name="R110_INPUT" type="input"/>
+        <pin num="7" name="R111_INPUT" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="P908">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">REGULATOR OUTPUT FLAG</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="BUCK_OUTPUT_THROUGH_L2" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R109">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100k EXISTING</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R112">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">133k1% EXISTING - budget review OPEN</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R113">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">10k EXISTING</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R120">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">590k 0.1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R121">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">156k 0.1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R122">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">620k 0.1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R123">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">267k 0.1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R124">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">6.65k 0.1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R126">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R128">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">100k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R130">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">1.00k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R131">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">1.00k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R132">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">1.00k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R133">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">1.00k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R134">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">1.00k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R135">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">1.00k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R140">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">39.0k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R141">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">39.0k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R142">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">39.0k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R143">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">39.0k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R144">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">39.0k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R145">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">39.0k 1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R159">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">40.0k 0.1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R160">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">10.0k 0.1%</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R161">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">47.0k 1% - reset data LOW</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R162">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">47.0k 1% - reset data LOW</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="R163">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">31.6k1% total tolerance STUDY</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="U10">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPD2EUSB30DRTR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="D+" type="passive"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="U11">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN74CB3T3245PWR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="A1" type="bidirectional"/>
+        <pin num="3" name="A2" type="bidirectional"/>
+        <pin num="4" name="A3" type="bidirectional"/>
+        <pin num="5" name="A4" type="bidirectional"/>
+        <pin num="6" name="A5" type="bidirectional"/>
+        <pin num="7" name="A6" type="bidirectional"/>
+        <pin num="8" name="A7" type="bidirectional"/>
+        <pin num="9" name="A8" type="bidirectional"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="B8" type="bidirectional"/>
+        <pin num="12" name="B7" type="bidirectional"/>
+        <pin num="13" name="B6" type="bidirectional"/>
+        <pin num="14" name="B5" type="bidirectional"/>
+        <pin num="15" name="B4" type="bidirectional"/>
+        <pin num="16" name="B3" type="bidirectional"/>
+        <pin num="17" name="B2" type="bidirectional"/>
+        <pin num="18" name="B1" type="bidirectional"/>
+        <pin num="19" name="OE_N" type="input"/>
+        <pin num="20" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="U12">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV810EA29DBZR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="RESET_HIGH" type="output"/>
+        <pin num="3" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="U13">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPD6E05U06RVZR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="NC" type="no_connect"/>
+        <pin num="3" name="NC" type="no_connect"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="NC" type="no_connect"/>
+        <pin num="7" name="NC" type="no_connect"/>
+        <pin num="8" name="D3-" type="passive"/>
+        <pin num="9" name="D3+" type="passive"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="D2-" type="passive"/>
+        <pin num="12" name="D2+" type="passive"/>
+        <pin num="13" name="D1-" type="passive"/>
+        <pin num="14" name="D1+" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="U18">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS62932DRLR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="RT_FLOAT_500KHZ" type="passive"/>
+        <pin num="2" name="EN_FLOAT_ENABLE" type="input"/>
+        <pin num="3" name="VIN" type="power_in"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="SW" type="power_out"/>
+        <pin num="6" name="BST" type="passive"/>
+        <pin num="7" name="SS" type="passive"/>
+        <pin num="8" name="FB" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="U2">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX38902AATA+T STUDY ONLY</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="SELA" type="input"/>
+        <pin num="5" name="SELB_OPEN" type="input"/>
+        <pin num="6" name="OUTS" type="input"/>
+        <pin num="7" name="BYP" type="passive"/>
+        <pin num="8" name="OUT" type="power_out"/>
+        <pin num="9" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="U5">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN74LVC2T45DCUR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VCCA" type="power_in"/>
+        <pin num="2" name="A1" type="input"/>
+        <pin num="3" name="A2" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="DIR_A_TO_B" type="input"/>
+        <pin num="6" name="B2" type="output"/>
+        <pin num="7" name="B1" type="output"/>
+        <pin num="8" name="VCCB" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="U7">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS2553DBVR-1 EXISTING</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="FAULT_N" type="open_collector"/>
+        <pin num="5" name="ILIM" type="passive"/>
+        <pin num="6" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Study" part="U8">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS259470LRPW</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="EN/UVLO" type="input"/>
+        <pin num="2" name="OVLO" type="input"/>
+        <pin num="3" name="AUXOFF" type="open_collector"/>
+        <pin num="4" name="FLT_N" type="open_collector"/>
+        <pin num="5" name="IN" type="power_in"/>
+        <pin num="6" name="OUT" type="power_out"/>
+        <pin num="7" name="DVDT" type="passive"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="ILM" type="passive"/>
+        <pin num="10" name="ITIMER" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Study">
+      <uri>/workspace/shared/maru-protection-design/implementation-study-20261102/native-max38902a/Study.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3" class="Default">
+      <node ref="C101" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C122" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C128" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C129" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C142" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="P901" pin="3" pinfunction="REGULATOR_3V3" pintype="passive"/>
+      <node ref="P902" pin="8" pinfunction="IOVDD" pintype="passive"/>
+      <node ref="P907" pin="1" pinfunction="3V3" pintype="passive"/>
+      <node ref="R113" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R126" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R128" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R163" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U11" pin="20" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U12" pin="3" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U2" pin="6" pinfunction="OUTS" pintype="input"/>
+      <node ref="U2" pin="8" pinfunction="OUT" pintype="power_out"/>
+      <node ref="U5" pin="1" pinfunction="VCCA" pintype="power_in"/>
+      <node ref="U5" pin="5" pinfunction="DIR_A_TO_B" pintype="input"/>
+    </net>
+    <net code="2" name="+4V_LED" class="Default">
+      <node ref="C123" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="P904" pin="5" pinfunction="ALL_LED_RAIL_LOADS" pintype="power_in"/>
+      <node ref="P907" pin="2" pinfunction="U7_OUT" pintype="passive"/>
+      <node ref="U5" pin="8" pinfunction="VCCB" pintype="power_in"/>
+      <node ref="U7" pin="6" pinfunction="OUT" pintype="power_out"/>
+    </net>
+    <net code="3" name="+4V_REG" class="Default">
+      <node ref="C100" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C140" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C141" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="D100" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="L2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="P906" pin="3" pinfunction="U2_AP2112_IN" pintype="power_in"/>
+      <node ref="P906" pin="4" pinfunction="U7_TPS2553_IN" pintype="power_in"/>
+      <node ref="P908" pin="1" pinfunction="BUCK_OUTPUT_THROUGH_L2" pintype="power_out"/>
+      <node ref="R159" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="IN" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="EN" pintype="input"/>
+      <node ref="U7" pin="1" pinfunction="IN" pintype="power_in"/>
+    </net>
+    <net code="4" name="BUCK_BST" class="Default">
+      <node ref="C138" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U18" pin="6" pinfunction="BST" pintype="passive"/>
+    </net>
+    <net code="5" name="BUCK_FB" class="Default">
+      <node ref="R159" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R160" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U18" pin="8" pinfunction="FB" pintype="input"/>
+    </net>
+    <net code="6" name="BUCK_SS" class="Default">
+      <node ref="C139" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U18" pin="7" pinfunction="SS" pintype="passive"/>
+    </net>
+    <net code="7" name="BUCK_SW" class="Default">
+      <node ref="C138" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="L2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U18" pin="5" pinfunction="SW" pintype="power_out"/>
+    </net>
+    <net code="8" name="EXT_GPIO3" class="Default">
+      <node ref="J3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U11" pin="18" pinfunction="B1" pintype="bidirectional"/>
+      <node ref="U13" pin="14" pinfunction="D1+" pintype="passive"/>
+    </net>
+    <net code="9" name="EXT_GPIO10" class="Default">
+      <node ref="J3" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U11" pin="17" pinfunction="B2" pintype="bidirectional"/>
+      <node ref="U13" pin="13" pinfunction="D1-" pintype="passive"/>
+    </net>
+    <net code="10" name="EXT_GPIO24" class="Default">
+      <node ref="J3" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="U11" pin="16" pinfunction="B3" pintype="bidirectional"/>
+      <node ref="U13" pin="12" pinfunction="D2+" pintype="passive"/>
+    </net>
+    <net code="11" name="EXT_GPIO25" class="Default">
+      <node ref="J3" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="U11" pin="15" pinfunction="B4" pintype="bidirectional"/>
+      <node ref="U13" pin="11" pinfunction="D2-" pintype="passive"/>
+    </net>
+    <net code="12" name="EXT_GPIO26" class="Default">
+      <node ref="J3" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="U11" pin="14" pinfunction="B5" pintype="bidirectional"/>
+      <node ref="U13" pin="9" pinfunction="D3+" pintype="passive"/>
+    </net>
+    <net code="13" name="EXT_GPIO27" class="Default">
+      <node ref="J3" pin="9" pinfunction="9" pintype="passive"/>
+      <node ref="U11" pin="13" pinfunction="B6" pintype="bidirectional"/>
+      <node ref="U13" pin="8" pinfunction="D3-" pintype="passive"/>
+    </net>
+    <net code="14" name="GND" class="Default">
+      <node ref="C100" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C101" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C122" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C123" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C124" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C125" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C126" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C128" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C129" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C136" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C137" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C139" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C140" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C141" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="J3" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="P901" pin="2" pinfunction="BOARD_GND" pintype="passive"/>
+      <node ref="P902" pin="7" pinfunction="BOARD_GND" pintype="passive"/>
+      <node ref="P904" pin="2" pinfunction="GND" pintype="power_out"/>
+      <node ref="P906" pin="2" pinfunction="GROUND" pintype="passive"/>
+      <node ref="P907" pin="3" pinfunction="GND" pintype="passive"/>
+      <node ref="R109" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R112" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R121" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R123" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R124" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R140" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R141" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R142" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R143" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R144" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R145" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R160" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R161" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R162" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R163" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U10" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U11" pin="10" pinfunction="GND" pintype="power_in"/>
+      <node ref="U12" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U13" pin="10" pinfunction="GND" pintype="power_in"/>
+      <node ref="U13" pin="5" pinfunction="GND" pintype="power_in"/>
+      <node ref="U18" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="SELA" pintype="input"/>
+      <node ref="U2" pin="9" pinfunction="EP" pintype="power_in"/>
+      <node ref="U5" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="8" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="15" name="GPIO3_ISO" class="Default">
+      <node ref="R130" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U11" pin="2" pinfunction="A1" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="GPIO10_ISO" class="Default">
+      <node ref="R131" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U11" pin="3" pinfunction="A2" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="GPIO24_ISO" class="Default">
+      <node ref="R132" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U11" pin="4" pinfunction="A3" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="GPIO25_ISO" class="Default">
+      <node ref="R133" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U11" pin="5" pinfunction="A4" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="GPIO26_ISO" class="Default">
+      <node ref="R134" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U11" pin="6" pinfunction="A5" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="GPIO27_ISO" class="Default">
+      <node ref="R135" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U11" pin="7" pinfunction="A6" pintype="bidirectional"/>
+    </net>
+    <net code="21" name="GPIO_ISOLATE" class="Default">
+      <node ref="R128" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U11" pin="19" pinfunction="OE_N" pintype="input"/>
+      <node ref="U12" pin="2" pinfunction="RESET_HIGH" pintype="output"/>
+    </net>
+    <net code="22" name="KEY_RGB" class="Default">
+      <node ref="P907" pin="4" pinfunction="GP20" pintype="output"/>
+      <node ref="R161" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U5" pin="2" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="23" name="KEY_RGB_5V_BUF" class="Default">
+      <node ref="P907" pin="6" pinfunction="R110_INPUT" pintype="input"/>
+      <node ref="U5" pin="7" pinfunction="B1" pintype="output"/>
+    </net>
+    <net code="24" name="LDO_BYP" class="Default">
+      <node ref="C142" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="BYP" pintype="passive"/>
+    </net>
+    <net code="25" name="LED_ENABLE" class="Default">
+      <node ref="P904" pin="3" pinfunction="GP22" pintype="output"/>
+      <node ref="R109" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U7" pin="3" pinfunction="EN" pintype="input"/>
+    </net>
+    <net code="26" name="LED_FAULT_N" class="Default">
+      <node ref="P904" pin="4" pinfunction="GP23" pintype="input"/>
+      <node ref="R113" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U7" pin="4" pinfunction="FAULT_N" pintype="open_collector"/>
+    </net>
+    <net code="27" name="LED_ILIM" class="Default">
+      <node ref="R112" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U7" pin="5" pinfunction="ILIM" pintype="passive"/>
+    </net>
+    <net code="28" name="MCU_GPIO3" class="Default">
+      <node ref="P902" pin="1" pinfunction="GP3" pintype="bidirectional"/>
+      <node ref="R130" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R140" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="29" name="MCU_GPIO10" class="Default">
+      <node ref="P902" pin="2" pinfunction="GP10" pintype="bidirectional"/>
+      <node ref="R131" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R141" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="30" name="MCU_GPIO24" class="Default">
+      <node ref="P902" pin="3" pinfunction="GP24" pintype="bidirectional"/>
+      <node ref="R132" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R142" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="31" name="MCU_GPIO25" class="Default">
+      <node ref="P902" pin="4" pinfunction="GP25" pintype="bidirectional"/>
+      <node ref="R133" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R143" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="32" name="MCU_GPIO26" class="Default">
+      <node ref="P902" pin="5" pinfunction="GP26" pintype="bidirectional"/>
+      <node ref="R134" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R144" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="33" name="MCU_GPIO27" class="Default">
+      <node ref="P902" pin="6" pinfunction="GP27" pintype="bidirectional"/>
+      <node ref="R135" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R145" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="34" name="UNDERGLOW" class="Default">
+      <node ref="P907" pin="5" pinfunction="GP21" pintype="output"/>
+      <node ref="R162" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="A2" pintype="input"/>
+    </net>
+    <net code="35" name="UNDERGLOW_5V_BUF" class="Default">
+      <node ref="P907" pin="7" pinfunction="R111_INPUT" pintype="input"/>
+      <node ref="U5" pin="6" pinfunction="B2" pintype="output"/>
+    </net>
+    <net code="36" name="USB_DM_CONN" class="Default">
+      <node ref="P901" pin="5" pinfunction="USB_D-" pintype="bidirectional"/>
+      <node ref="U10" pin="2" pinfunction="D-" pintype="passive"/>
+    </net>
+    <net code="37" name="USB_DP_CONN" class="Default">
+      <node ref="P901" pin="4" pinfunction="USB_D+" pintype="bidirectional"/>
+      <node ref="U10" pin="1" pinfunction="D+" pintype="passive"/>
+    </net>
+    <net code="38" name="USB_DVDT" class="Default">
+      <node ref="C124" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U8" pin="7" pinfunction="DVDT" pintype="passive"/>
+    </net>
+    <net code="39" name="USB_ILM" class="Default">
+      <node ref="R124" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U8" pin="9" pinfunction="ILM" pintype="passive"/>
+    </net>
+    <net code="40" name="USB_INPUT_FAULT_N" class="Default">
+      <node ref="R126" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U8" pin="4" pinfunction="FLT_N" pintype="open_collector"/>
+    </net>
+    <net code="41" name="USB_OVLO" class="Default">
+      <node ref="R120" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R121" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U8" pin="2" pinfunction="OVLO" pintype="input"/>
+    </net>
+    <net code="42" name="USB_UVLO" class="Default">
+      <node ref="R122" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R123" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U8" pin="1" pinfunction="EN/UVLO" pintype="input"/>
+    </net>
+    <net code="43" name="VBUS" class="Default">
+      <node ref="F1" pin="1" pinfunction="IN" pintype="passive"/>
+      <node ref="P904" pin="1" pinfunction="USB_VBUS" pintype="power_out"/>
+    </net>
+    <net code="44" name="VBUS_FUSED" class="Default">
+      <node ref="C125" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="F1" pin="2" pinfunction="OUT" pintype="passive"/>
+      <node ref="P901" pin="1" pinfunction="F1_OUT" pintype="passive"/>
+      <node ref="R120" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R122" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U8" pin="5" pinfunction="IN" pintype="power_in"/>
+    </net>
+    <net code="45" name="VBUS_PROTECTED_RAW" class="Default">
+      <node ref="C126" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C136" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C137" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="D100" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="P901" pin="6" pinfunction="ALL_5V_LOADS" pintype="power_in"/>
+      <node ref="P906" pin="1" pinfunction="U8_OUT" pintype="passive"/>
+      <node ref="U18" pin="3" pinfunction="VIN" pintype="power_in"/>
+      <node ref="U8" pin="6" pinfunction="OUT" pintype="power_out"/>
+    </net>
+    <net code="46" name="unconnected-(J3-Pad10)" class="Default">
+      <node ref="J3" pin="10" pinfunction="10" pintype="passive+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(U2-SELB_OPEN-Pad5)" class="Default">
+      <node ref="U2" pin="5" pinfunction="SELB_OPEN" pintype="input+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U8-AUXOFF-Pad3)" class="Default">
+      <node ref="U8" pin="3" pinfunction="AUXOFF" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(U8-ITIMER-Pad10)" class="Default">
+      <node ref="U8" pin="10" pinfunction="ITIMER" pintype="passive+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(U11-A7-Pad8)" class="Default">
+      <node ref="U11" pin="8" pinfunction="A7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(U11-A8-Pad9)" class="Default">
+      <node ref="U11" pin="9" pinfunction="A8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U11-B7-Pad12)" class="Default">
+      <node ref="U11" pin="12" pinfunction="B7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U11-B8-Pad11)" class="Default">
+      <node ref="U11" pin="11" pinfunction="B8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U11-NC-Pad1)" class="Default">
+      <node ref="U11" pin="1" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U13-NC-Pad1)" class="Default">
+      <node ref="U13" pin="1" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U13-NC-Pad2)" class="Default">
+      <node ref="U13" pin="2" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U13-NC-Pad3)" class="Default">
+      <node ref="U13" pin="3" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U13-NC-Pad4)" class="Default">
+      <node ref="U13" pin="4" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U13-NC-Pad6)" class="Default">
+      <node ref="U13" pin="6" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U13-NC-Pad7)" class="Default">
+      <node ref="U13" pin="7" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U18-EN_FLOAT_ENABLE-Pad2)" class="Default">
+      <node ref="U18" pin="2" pinfunction="EN_FLOAT_ENABLE" pintype="input+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U18-RT_FLOAT_500KHZ-Pad1)" class="Default">
+      <node ref="U18" pin="1" pinfunction="RT_FLOAT_500KHZ" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
