@@ -1,0 +1,136 @@
+{
+  "$schema": "https://schemas.kicad.org/drc.v1.json",
+  "coordinateUnits": "mm",
+  "date": "2026-11-02T19:48:12.175438165+09:00",
+  "kicadVersion": "N/A",
+  "freeroutingVersion": "Freerouting 2.5.0",
+  "source": "input.dsn",
+  "unconnectedItems": [],
+  "violations": [
+    {
+      "description": "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+      "items": [
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.60,
+            "y": -10.00
+          },
+          "uuid": "8"
+        },
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.00,
+            "y": -10.00
+          },
+          "uuid": "7"
+        }
+      ],
+      "severity": "error",
+      "type": "holeClearance"
+    },
+    {
+      "description": "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+      "items": [
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.60,
+            "y": -10.00
+          },
+          "uuid": "8"
+        },
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.00,
+            "y": -10.00
+          },
+          "uuid": "7"
+        }
+      ],
+      "severity": "error",
+      "type": "holeClearance"
+    },
+    {
+      "description": "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+      "items": [
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.60,
+            "y": -10.00
+          },
+          "uuid": "8"
+        },
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.00,
+            "y": -10.00
+          },
+          "uuid": "7"
+        }
+      ],
+      "severity": "error",
+      "type": "holeClearance"
+    },
+    {
+      "description": "Hole clearance violation between Via [GND] and Via [GND] (expected: 0.1500 mm, actual: 0.0001 mm)",
+      "items": [
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.60,
+            "y": -10.00
+          },
+          "uuid": "8"
+        },
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.00,
+            "y": -10.00
+          },
+          "uuid": "7"
+        }
+      ],
+      "severity": "error",
+      "type": "holeClearance"
+    },
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.60,
+            "y": -10.00
+          },
+          "uuid": "8"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    },
+    {
+      "description": "Via is not connected or connected on only one layer",
+      "items": [
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 10.00,
+            "y": -10.00
+          },
+          "uuid": "7"
+        }
+      ],
+      "severity": "warning",
+      "type": "via_dangling"
+    }
+  ],
+  "schematicParity": [],
+  "qualityScore": 965.01,
+  "optimizerScore": 500.00
+}

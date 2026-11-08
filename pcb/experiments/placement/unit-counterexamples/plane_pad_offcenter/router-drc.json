@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schemas.kicad.org/drc.v1.json",
+  "coordinateUnits": "mm",
+  "date": "2026-11-02T19:48:14.606008092+09:00",
+  "kicadVersion": "N/A",
+  "freeroutingVersion": "Freerouting 2.5.0",
+  "source": "input.dsn",
+  "unconnectedItems": [
+    {
+      "description": "Unconnected items: Pin [GND] and Pin [GND] (7 total items in net)",
+      "items": [
+        {
+          "description": "Pin [GND]",
+          "pos": {
+            "x": 15.00,
+            "y": -5.00
+          },
+          "uuid": "3"
+        },
+        {
+          "description": "Trace [GND]",
+          "pos": {
+            "x": 5.60,
+            "y": -5.00
+          },
+          "uuid": "6"
+        },
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 14.00,
+            "y": -5.00
+          },
+          "uuid": "8"
+        },
+        {
+          "description": "Via [GND]",
+          "pos": {
+            "x": 6.00,
+            "y": -5.00
+          },
+          "uuid": "7"
+        },
+        {
+          "description": "Trace [GND]",
+          "pos": {
+            "x": 14.50,
+            "y": -5.00
+          },
+          "uuid": "5"
+        },
+        {
+          "description": "Conduction Area [GND]",
+          "pos": {
+            "x": 10.00,
+            "y": -10.00
+          },
+          "uuid": "2"
+        },
+        {
+          "description": "Pin [GND]",
+          "pos": {
+            "x": 5.00,
+            "y": -5.00
+          },
+          "uuid": "4"
+        }
+      ],
+      "severity": "warning",
+      "type": "unconnectedItems"
+    }
+  ],
+  "violations": [
+    {
+      "description": "Track has unconnected end",
+      "items": [
+        {
+          "description": "Track [GND] on F.Cu, length 0.8000 mm",
+          "pos": {
+            "x": 5.60,
+            "y": -5.00
+          },
+          "uuid": "6"
+        }
+      ],
+      "severity": "warning",
+      "type": "track_dangling"
+    }
+  ],
+  "schematicParity": [],
+  "qualityScore": 333.33,
+  "optimizerScore": 750.00
+}
