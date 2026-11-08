@@ -1,0 +1,99 @@
+{
+  "status": "CANONICAL_ISOLATED_A21_ACTUAL_ENABLE_CLOSURE_NOT_RELEASE",
+  "completed_utc": "2026-11-03T05:09:47.084875+00:00",
+  "pcb_sha256": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+  "source_sha256": "fdd9ce12580c1dc8a1fe14dfced60f0199b2911b2d7c87a818a2bf7affb5fa33",
+  "native": {
+    "opens": 21,
+    "hard": 0,
+    "warnings": 58,
+    "parity": 0,
+    "ERC": 0
+  },
+  "numbered_pins": 924,
+  "physical_pads": 1275,
+  "footprints": 340,
+  "vias": 890,
+  "segments": 9817,
+  "track_centerline_mm": 12111.263716154526,
+  "actual_closure": "U1.34 joins populated R109.1/U7.3 component; exactly three physical pads, two components to one",
+  "all_other_populated_net_partitions_identical": true,
+  "new_ENABLE_tracks": 41,
+  "new_ENABLE_vias": 5,
+  "new_GND_vias": 4,
+  "ENABLE_track_centerline_mm": 120.36887152575491,
+  "replacement_lengths_mm": {
+    "UNDERGLOW": 6.545437621447077,
+    "COL1": 6.224685530292942,
+    "LED_FAULT_N": 6.933021279348029
+  },
+  "retired_copper_objects": 127,
+  "added_copper_objects": 67,
+  "footprint_changes": 0,
+  "removed_GND_only_uuid": "7feee974-e301-44e1-95ec-db424b6bbee6",
+  "B_3V3_fill_lost_mm2": 0.268960924894,
+  "other_positive_rail_fills_exact": true,
+  "all13_original_and_physical_drill_sources_and_7_signals_pass": true,
+  "cold_byte_identity": true,
+  "retained_outer_tracks": 9545,
+  "retained_new_reference_loss_mm": {
+    "left": 0,
+    "center": 0,
+    "right": 0
+  },
+  "new_projection_outside_own_launch_disks_mm": {
+    "COL1": {
+      "left": 0.0,
+      "center": 0.0,
+      "right": 0.0
+    },
+    "LED_ENABLE": {
+      "left": 0.0,
+      "center": 0.0,
+      "right": 0.0
+    },
+    "LED_FAULT_N": {
+      "left": 0.0,
+      "center": 0.0,
+      "right": 0.0
+    },
+    "UNDERGLOW": {
+      "left": 0.0,
+      "center": 0.0,
+      "right": 0.0
+    }
+  },
+  "nearest_source_ground_via_distances_mm": [
+    0.7999999999999972,
+    0.7810249675906665,
+    0.7999999999999972,
+    0.9499999999999957,
+    0.7999999999999972
+  ],
+  "distance_not_full_return_loop": true,
+  "remaining_opens_by_net": {
+    "ROW0": 2,
+    "COL3": 1,
+    "COL4": 1,
+    "COL5": 1,
+    "COL6": 1,
+    "COL7": 1,
+    "COL8": 1,
+    "COL9": 1,
+    "COL10": 1,
+    "COL11": 1,
+    "COL12": 1,
+    "COL13": 1,
+    "COL14": 1,
+    "ROW1": 1,
+    "ROW2": 1,
+    "ROW3": 1,
+    "ROW4": 1,
+    "SWDIO": 1,
+    "RUN": 1,
+    "KEY_RGB": 1
+  },
+  "limits": "Connectivity and native/reference geometry only. B3V3 fill retreat is explicit; current/PI/oscillator/SI/actual-SKU/assembly/process not qualified. LV1T asynchronous off-state remains logical release blocker. Actual AP2112 and current parts retained.",
+  "main_sha256": "80681cd392d1ca83bd37e58faef07a0def301f2d93763102982eaf1c0148f831",
+  "worker_manifest_sha256": "01d8884f938c4d5af10e7a9b064e0a2a45dda6e11650e2fa0f923f8372c138b6"
+}

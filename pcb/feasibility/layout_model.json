@@ -1,0 +1,482 @@
+{
+  "schema": "maru60-layout-model/6",
+  "status": "draft",
+  "units": "mm",
+  "reference": {
+    "board_width_mm": 285,
+    "board_depth_mm": 94.6,
+    "pitch_mm": 19.05,
+    "esc_center_gh60_mm": [
+      9.1475,
+      9.19875
+    ],
+    "plate_frame_transform": "x_plate = x_gh60 + 0.4525; y_plate = 101.06775 - y_gh60",
+    "top_row_plate_y_mm": 91.8688,
+    "row_pitch_mm": 19.05,
+    "source": "spec/boards.json GH60 outline and spec/rule60-v3-outlines.json Esc center/pitch; key coordinates are nominal modeling assumptions, pending measured PCB/plate geometry."
+  },
+  "rows": [
+    {
+      "id": "number",
+      "keys": [
+        [
+          "Esc",
+          1
+        ],
+        [
+          "1",
+          1
+        ],
+        [
+          "2",
+          1
+        ],
+        [
+          "3",
+          1
+        ],
+        [
+          "4",
+          1
+        ],
+        [
+          "5",
+          1
+        ],
+        [
+          "6",
+          1
+        ],
+        [
+          "7",
+          1
+        ],
+        [
+          "8",
+          1
+        ],
+        [
+          "9",
+          1
+        ],
+        [
+          "0",
+          1
+        ],
+        [
+          "Minus",
+          1
+        ],
+        [
+          "Equal",
+          1
+        ],
+        [
+          "Backspace",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "qwerty",
+      "keys": [
+        [
+          "Tab",
+          1.5
+        ],
+        [
+          "Q",
+          1
+        ],
+        [
+          "W",
+          1
+        ],
+        [
+          "E",
+          1
+        ],
+        [
+          "R",
+          1
+        ],
+        [
+          "T",
+          1
+        ],
+        [
+          "Y",
+          1
+        ],
+        [
+          "U",
+          1
+        ],
+        [
+          "I",
+          1
+        ],
+        [
+          "O",
+          1
+        ],
+        [
+          "P",
+          1
+        ],
+        [
+          "LeftBracket",
+          1
+        ],
+        [
+          "RightBracket",
+          1
+        ],
+        [
+          "Backslash",
+          1.5
+        ]
+      ]
+    },
+    {
+      "id": "home",
+      "keys": [
+        [
+          "Caps",
+          1.75
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "D",
+          1
+        ],
+        [
+          "F",
+          1
+        ],
+        [
+          "G",
+          1
+        ],
+        [
+          "H",
+          1
+        ],
+        [
+          "J",
+          1
+        ],
+        [
+          "K",
+          1
+        ],
+        [
+          "L",
+          1
+        ],
+        [
+          "Semicolon",
+          1
+        ],
+        [
+          "Quote",
+          1
+        ],
+        [
+          "Enter",
+          2.25
+        ]
+      ]
+    },
+    {
+      "id": "shift",
+      "keys": [
+        [
+          "LeftShift",
+          2.25
+        ],
+        [
+          "Z",
+          1
+        ],
+        [
+          "X",
+          1
+        ],
+        [
+          "C",
+          1
+        ],
+        [
+          "V",
+          1
+        ],
+        [
+          "B",
+          1
+        ],
+        [
+          "N",
+          1
+        ],
+        [
+          "M",
+          1
+        ],
+        [
+          "Comma",
+          1
+        ],
+        [
+          "Period",
+          1
+        ],
+        [
+          "Slash",
+          1
+        ],
+        [
+          "RightShift",
+          2.75
+        ]
+      ]
+    }
+  ],
+  "bottom_layouts": {
+    "WKL": {
+      "7": {
+        "total_u": 15,
+        "validation_status": "validated against independent QMK fixture",
+        "segments": [
+          {
+            "name": "LCtrl",
+            "keycap_start_u": 0,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 0.75
+          },
+          {
+            "name": "LWinBlock",
+            "keycap_start_u": 1.5,
+            "keycap_width_u": 1,
+            "kind": "blocker",
+            "switch_center_u": null
+          },
+          {
+            "name": "LAlt",
+            "keycap_start_u": 2.5,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 3.25
+          },
+          {
+            "name": "Space",
+            "keycap_start_u": 4,
+            "keycap_width_u": 7,
+            "kind": "key",
+            "switch_center_u": 7.5
+          },
+          {
+            "name": "RAlt",
+            "keycap_start_u": 11,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 11.75
+          },
+          {
+            "name": "RWinBlock",
+            "keycap_start_u": 12.5,
+            "keycap_width_u": 1,
+            "kind": "blocker",
+            "switch_center_u": null
+          },
+          {
+            "name": "RCtrl",
+            "keycap_start_u": 13.5,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 14.25
+          }
+        ]
+      }
+    },
+    "HHKB": {
+      "7": {
+        "total_u": 15,
+        "validation_status": "validated against independent QMK fixture",
+        "segments": [
+          {
+            "name": "LeftBlock",
+            "keycap_start_u": 0,
+            "keycap_width_u": 1.5,
+            "kind": "blocker",
+            "switch_center_u": null
+          },
+          {
+            "name": "LMeta",
+            "keycap_start_u": 1.5,
+            "keycap_width_u": 1,
+            "kind": "key",
+            "switch_center_u": 2
+          },
+          {
+            "name": "LAlt",
+            "keycap_start_u": 2.5,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 3.25
+          },
+          {
+            "name": "Space",
+            "keycap_start_u": 4,
+            "keycap_width_u": 7,
+            "kind": "key",
+            "switch_center_u": 7.5
+          },
+          {
+            "name": "RAlt",
+            "keycap_start_u": 11,
+            "keycap_width_u": 1.5,
+            "kind": "key",
+            "switch_center_u": 11.75
+          },
+          {
+            "name": "RMeta",
+            "keycap_start_u": 12.5,
+            "keycap_width_u": 1,
+            "kind": "key",
+            "switch_center_u": 13
+          },
+          {
+            "name": "RightBlock",
+            "keycap_start_u": 13.5,
+            "keycap_width_u": 1.5,
+            "kind": "blocker",
+            "switch_center_u": null
+          }
+        ]
+      }
+    }
+  },
+  "alternatives": {
+    "split_backspace": {
+      "from": "Backspace 2U",
+      "to": [
+        [
+          "Backspace_L",
+          1
+        ],
+        [
+          "Backspace_R",
+          1
+        ]
+      ]
+    },
+    "split_right_shift": {
+      "from": "RightShift 2.75U",
+      "to": [
+        [
+          "RightShift_L",
+          1.75
+        ],
+        [
+          "RightShift_R",
+          1
+        ]
+      ]
+    },
+    "stepped_caps": {
+      "keycap_outline_offset_u": 0,
+      "stem_center_offset_candidate_u": -0.25,
+      "status": "UNVALIDATED",
+      "reason": "Conventional stem-center offset candidate is -0.25U; confirm against selected manufacturer footprint, stepped keycap and plate; exclude from passing cases."
+    },
+    "stabilizer_options": [
+      "PCB-mount",
+      "plate-mount"
+    ],
+    "socket_geometry_available": false,
+    "plate_geometry_available": false
+  },
+  "excluded_variants": [
+    "WK removed from v1 by user decision",
+    "6.25U removed from v1 by user decision",
+    "split spacebar not requested"
+  ],
+  "scope": {
+    "spacebar_u": 7,
+    "layouts": [
+      "WKL",
+      "HHKB"
+    ],
+    "six_point_two_five_u": false,
+    "split_spacebar": false,
+    "decision_history": "WK and 6.25U were considered earlier; user selected WKL and HHKB only, both with 7U spacebars."
+  },
+  "provenance": {
+    "mechanical_reference": "spec/boards.json GH60 outline, spec/rule60-v3-outlines.json Esc center/pitch",
+    "independent_qmk_fixtures": "pcb/feasibility/fixtures/qmk-60-percent.json",
+    "note": "QMK keycap layout rectangles do not prove selected switch-footprint, socket, plate, or case clearance."
+  },
+  "physical_switch_union_sites": [
+    {
+      "center_u": 0.75,
+      "center_gh60_x_mm": 13.91,
+      "present_for": [
+        "WKL"
+      ]
+    },
+    {
+      "center_u": 2,
+      "center_gh60_x_mm": 37.7225,
+      "present_for": [
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 3.25,
+      "center_gh60_x_mm": 61.535,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 7.5,
+      "center_gh60_x_mm": 142.4975,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 11.75,
+      "center_gh60_x_mm": 223.46,
+      "present_for": [
+        "WKL",
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 13,
+      "center_gh60_x_mm": 247.2725,
+      "present_for": [
+        "HHKB"
+      ]
+    },
+    {
+      "center_u": 14.25,
+      "center_gh60_x_mm": 271.085,
+      "present_for": [
+        "WKL"
+      ]
+    }
+  ]
+}

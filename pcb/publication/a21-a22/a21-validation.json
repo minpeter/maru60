@@ -1,0 +1,30 @@
+{
+  "checkpoint": "a21",
+  "tool": "KiCad 9.0.2",
+  "pcb_sha256": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+  "commands": [
+    {
+      "kind": "drc",
+      "exit_code": 0
+    },
+    {
+      "kind": "erc",
+      "exit_code": 0
+    }
+  ],
+  "drc": {
+    "opens": 21,
+    "parity": 0,
+    "hard": 0,
+    "warnings": 58,
+    "types": {
+      "track_dangling": 51,
+      "via_dangling": 5,
+      "silk_over_copper": 2
+    }
+  },
+  "erc": {
+    "violations": 0
+  },
+  "cad_bytes_unchanged": true
+}

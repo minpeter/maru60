@@ -1,0 +1,39 @@
+{
+  "keyboard_name": "Maru60 RP2350A (draft)",
+  "manufacturer": "Minpeter",
+  "maintainer": "minpeter",
+  "processor": "RP2350",
+  "bootloader": "rp2350",
+  "diode_direction": "COL2ROW",
+  "matrix_pins": {
+    "rows": [
+      "GP0",
+      "GP1",
+      "GP2",
+      "GP3",
+      "GP4"
+    ],
+    "cols": [
+      "GP5",
+      "GP6",
+      "GP7",
+      "GP8",
+      "GP9",
+      "GP10",
+      "GP11",
+      "GP12",
+      "GP13",
+      "GP14",
+      "GP15",
+      "GP16",
+      "GP17",
+      "GP18",
+      "GP19"
+    ]
+  },
+  "usb": {
+    "vid": "0xFEED",
+    "pid": "0x6060",
+    "device_version": "0.0.1"
+  }
+}

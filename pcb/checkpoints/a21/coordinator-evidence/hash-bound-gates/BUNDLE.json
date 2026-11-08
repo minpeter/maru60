@@ -1,0 +1,537 @@
+{
+  "status": "COMPLETED_EXACT_INPUT_BOUND_BUNDLE",
+  "started_utc": "2026-11-03T05:04:39.761505+00:00",
+  "input_board": "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+  "input_board_sha256": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+  "bound_inputs": {
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pro": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_sch": "167f3ba31238c93e03faf5de98f09f348e9f42c71ae227364a04962d3e6eeb03",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/maru60-core.kicad_sch": "0822c75b7f910bb346a7bb23c9e8b08892611414ccf41b29762034a8b97e9399",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/maru60-expansion.kicad_sch": "d77c668ee62e4e5c0faca59f5c0f82bb5d4d01e8a4e9f6b9897b6a49a74a931d",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/maru60-lighting.kicad_sch": "81861206a78f883b3f6a857629025ab169cb1804494acf7d0057fd3191989abc",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/maru60-matrix.kicad_sch": "bd11bf6b6e31ab801e13e566d3b41331b8dc69a23a132ab5121e23c51be51127",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/Maru60.kicad_sym": "a76de627a3413a7f44967c47a9dbf3ddc1710310cc48664a649b896045257c27",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/fp-lib-table": "728ee12f3a7d30483982b66567126a20a133099184fa6e6de61e64fc6a52625e",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/sym-lib-table": "bbc9a5145b562c04d1d873cf24327b6897a2dfdd86e2ecf8fe9eb2e95c9365b3",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/Maru60.pretty/Abracon_AOTA_B201610S3R3_Official_R4.kicad_mod": "5d02afce5b5bc1b5df1612accf1159a32a8f872c4efebf5cf2cd9eb78744cbab",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/Maru60.pretty/C_0402_Official_R4_Wide.kicad_mod": "3c3c32d0f0fce504fb2d97554e977c53083e7fbce5202676335bc58e106618c4",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/Maru60.pretty/OSHW_then_Minpeter_H6_Gap1p5_Silk_DRAFT.kicad_mod": "48296c6e5118c4be1c9f2cc0e65392acdb2fd0eea3186e1c469c81a4382d56b4",
+    "/workspace/shared/maru-a4l-ENABLE-integration-0502/Maru60.pretty/RP2350A_QFN60_Official_R4.kicad_mod": "7742df773afbd96c3b880fa83ac5c479e0e88a7c6ab159006e2c9302183c1eb5"
+  },
+  "native_version": "9.0.2",
+  "steps": [
+    {
+      "name": "intended-net-identity",
+      "started_utc": "2026-11-03T05:04:39.871483+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru-native-net-assignment-guard-0215/net_assignment_guard.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/intended-net-identity.json"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru-native-net-assignment-guard-0215/net_assignment_guard.py": "12b416953c8d0d3a696cea51983c4280d50537f0e72e62c5da3c8604f14fc5ea"
+      },
+      "completed_utc": "2026-11-03T05:04:41.963516+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "46e45eeca3c38bd01ce1df9a369a3e1d30fe1af4c71bb7c3d21fc09770bb01cc",
+      "report_exists": true,
+      "report_sha256": "d9591fe29764dc133737402f54e96ed809c20289193e58d24020805a07ea88e6",
+      "json_parsed": true,
+      "semantic_pass": true
+    },
+    {
+      "name": "native-drc",
+      "started_utc": "2026-11-03T05:04:41.979509+00:00",
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--all-track-errors",
+        "--severity-all",
+        "--schematic-parity",
+        "-o",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/native-drc.json",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {},
+      "completed_utc": "2026-11-03T05:04:45.028775+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "1237d8f2f8245ca2ad6fe3622f34ea45632cb4002a312626e1ee92a80e15d21b",
+      "report_exists": true,
+      "report_sha256": "4dabf2af74dc8833c8d52be29f9b43da528af632abd4ad9295055dacc0f81721",
+      "json_parsed": true,
+      "hard_errors": 0,
+      "warnings": 58,
+      "opens": 21,
+      "semantic_pass": true
+    },
+    {
+      "name": "ground",
+      "started_utc": "2026-11-03T05:04:45.039166+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/ground.json"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:46.522347+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "1b50e7678c4e21ecd1d9171aec7fe46514766ba650e76fce4fc59ef1d1accff3",
+      "report_exists": true,
+      "report_sha256": "7421a6d49f029b04201812873b33636f9c023c7d21fd82530fe6171667a6aa33",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "3v3",
+      "started_utc": "2026-11-03T05:04:46.533883+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/3v3.json",
+        "+3V3",
+        "U2",
+        "5"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:47.490655+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "2c2da025ca78827c731a4963647f6cea109d7eb495ddbfaa4ad58528b7d840e2",
+      "report_exists": true,
+      "report_sha256": "9b8fc929110dd2af41ab214d33ddd2fb17e80b11a3e87deda2f1fd9ff034b29d",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "1v1",
+      "started_utc": "2026-11-03T05:04:47.501088+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/1v1.json",
+        "+1V1",
+        "L1",
+        "1"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:48.446332+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "58f1c80a76e27442138aca011523826f0e5ebf28ce0e4c1a8313ec48981942ed",
+      "report_exists": true,
+      "report_sha256": "dd284e31651c2a7348a2149505f040434007482886cbe227397e6fa1743d7838",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "5v",
+      "started_utc": "2026-11-03T05:04:48.456150+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/5v.json",
+        "+5V",
+        "F1",
+        "2"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:49.405499+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "8633815aca657a13022cea48aa5035aa098b27b254eb997451d329168983bc46",
+      "report_exists": true,
+      "report_sha256": "1ce4a8ce4d89987532e1ffdaf6e38ec8a7d250a5c1d33c84e64705f434b878be",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "LX",
+      "started_utc": "2026-11-03T05:04:49.416162+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/LX.json",
+        "VREG_LX",
+        "U1",
+        "48"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:50.484109+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "a521b886813e34d7047b88a481248cc3d8eacab64b869c7c31feb67882894334",
+      "report_exists": true,
+      "report_sha256": "0f40b948b7ccd3da93a3fe80adc42aa2d26c4bf8e5e1da0267ecce4e0497b740",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "AVDD",
+      "started_utc": "2026-11-03T05:04:50.497665+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/AVDD.json",
+        "VREG_AVDD",
+        "R104",
+        "2"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:51.428117+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "0125ff0967621005581f4b5def5f42c74c081ff1e8ba9d77f9a75619da9c5abf",
+      "report_exists": true,
+      "report_sha256": "ddefa3728ba318d100d07baa5c0d921bf626b32ba39755294e11843eec1866a6",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "LED5V",
+      "started_utc": "2026-11-03T05:04:51.441109+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/LED5V.json",
+        "+5V_LED",
+        "U7",
+        "6"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:52.548182+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "316268bb050f9fb432e95af9603e6673aecafc7e7aacdd007c7cee3e1e4917ae",
+      "report_exists": true,
+      "report_sha256": "9b9b2401af9142631c4867f8739bfdf0bb0619e11da738033962c99295a21458",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "KEY-data",
+      "started_utc": "2026-11-03T05:04:52.562488+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/KEY-data.json",
+        "KEY_RGB_5V",
+        "R110",
+        "2"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:53.372377+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "316268bb050f9fb432e95af9603e6673aecafc7e7aacdd007c7cee3e1e4917ae",
+      "report_exists": true,
+      "report_sha256": "605a723cc1bdc50f43945ec93bcf454d57e4b6f99edb81a74e0c541d0fdf1d5b",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "BOOT",
+      "started_utc": "2026-11-03T05:04:53.383115+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/BOOT.json",
+        "BOOT_BUTTON",
+        "R106",
+        "2"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:54.248101+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "ff4dfaed4a82ba9645f607873a5b64623aeaf0620ef2477c62d6abc9550d90ed",
+      "report_exists": true,
+      "report_sha256": "90adc84013dfc0ded577d7dcc8ad584eea8dbb8eea3391d1aae64ef2f9a35e30",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "SS",
+      "started_utc": "2026-11-03T05:04:54.257787+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/SS.json",
+        "QSPI_SS",
+        "U3",
+        "1"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:55.018430+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "fee0a6617a85efa5700a66a97c0a614ff8d3cbcde9834df7271906770db242d5",
+      "report_exists": true,
+      "report_sha256": "d78db4f070438bd43610bd9d92d837968b92a15ce26795f2129b9602e1452c5f",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "UG-BUF",
+      "started_utc": "2026-11-03T05:04:55.027720+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/UG-BUF.json",
+        "UNDERGLOW_5V_BUF",
+        "U6",
+        "4"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:55.826425+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "316268bb050f9fb432e95af9603e6673aecafc7e7aacdd007c7cee3e1e4917ae",
+      "report_exists": true,
+      "report_sha256": "1a35db132a3727531f8049541992832b34a9510c1be90e5991cd5c898f993eb0",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "UG-output",
+      "started_utc": "2026-11-03T05:04:55.836197+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/UG-output.json",
+        "UNDERGLOW_5V",
+        "R111",
+        "2"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:56.643350+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "316268bb050f9fb432e95af9603e6673aecafc7e7aacdd007c7cee3e1e4917ae",
+      "report_exists": true,
+      "report_sha256": "b8b6c08ef6833239fdb899f8f7cead7e2fa10ebffdfcfadb4a7fdd8a1a35c962",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "KEY-BUF",
+      "started_utc": "2026-11-03T05:04:56.654351+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/KEY-BUF.json",
+        "KEY_RGB_5V_BUF",
+        "U5",
+        "4"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a_power_witness.py": "e1ec3826d730d7674752aec0cb99711863bf7451aa486a8768e6a0ef478bb508",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_ground_witness.py": "78081c922d62e513e0b2af9feea491bc077b660bf7b71777527417db75b4b4b3"
+      },
+      "completed_utc": "2026-11-03T05:04:57.418840+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "316268bb050f9fb432e95af9603e6673aecafc7e7aacdd007c7cee3e1e4917ae",
+      "report_exists": true,
+      "report_sha256": "374aa2839836defa06b35bc0f9ab59670ee25e25da402d72bf6a77fb9a9895b4",
+      "json_parsed": true,
+      "semantic_pass": true,
+      "unreached_components": 0
+    },
+    {
+      "name": "critical-reference",
+      "started_utc": "2026-11-03T05:04:57.428344+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_reference.py",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/critical-reference.json"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {
+        "/workspace/shared/maru60-kicad-linux/pcb/tools/studies/experiment_a4l_reference.py": "f7133adee393a215edb48fccb6f79e66aa7f8fe562c20633d78b7d55a87808fe"
+      },
+      "completed_utc": "2026-11-03T05:05:02.050385+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "554b17c9dec20c6d35a2312b822ef358f0dedd8fde2a590beb68171213beff70",
+      "report_exists": true,
+      "report_sha256": "dca92f9cad75cbb4202ba19fb216f700ffc0d8b10b37ad81066182a9a068e07a",
+      "json_parsed": true,
+      "semantic_pass": null,
+      "meaning": "Data recorded; comparison/reference exception disposition required separately."
+    },
+    {
+      "name": "native-erc",
+      "started_utc": "2026-11-03T05:05:02.061227+00:00",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "-o",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/hash-bound-gates/native-erc.json",
+        "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_sch"
+      ],
+      "input_board_sha256_before": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "code_hashes_before": {},
+      "completed_utc": "2026-11-03T05:05:02.803924+00:00",
+      "returncode": 0,
+      "input_board_sha256_after": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+      "all_bound_inputs_unchanged": true,
+      "code_unchanged": true,
+      "log_sha256": "0aad732ae7d7eaa25090313c1dcf4546ef2c743574acf0880e52b3308b52858d",
+      "report_exists": true,
+      "report_sha256": "81bc58966459f62b5f4fa60bfee2c40298074d86a4ebcd39ec5b12a25a116302",
+      "json_parsed": true,
+      "semantic_pass": true
+    }
+  ],
+  "complete": true,
+  "completed_utc": "2026-11-03T05:05:02.813463+00:00",
+  "all_bound_inputs_unchanged": true,
+  "all_boolean_semantic_gates_pass": true,
+  "native_open_contract": {
+    "all_item_UUIDs_resolved": true,
+    "unexpected_net_open_items": [],
+    "open_counts_by_net": {
+      "ROW0": 2,
+      "COL3": 1,
+      "COL4": 1,
+      "COL5": 1,
+      "COL6": 1,
+      "COL7": 1,
+      "COL8": 1,
+      "COL9": 1,
+      "COL10": 1,
+      "COL11": 1,
+      "COL12": 1,
+      "COL13": 1,
+      "COL14": 1,
+      "ROW1": 1,
+      "ROW2": 1,
+      "ROW3": 1,
+      "ROW4": 1,
+      "SWDIO": 1,
+      "RUN": 1,
+      "KEY_RGB": 1
+    }
+  },
+  "caveat": "Complete means all listed processes terminated successfully and reports bind exact unchanged inputs; reference acceptance, cold refill, exact delta/functions, powered/physical qualification remain separate. Never report a RUNNING/FAILED bundle as complete. P3 reconstruction may intentionally fail source/open contract and is not A25-comparable."
+}

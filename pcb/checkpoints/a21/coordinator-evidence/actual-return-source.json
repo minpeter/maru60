@@ -1,0 +1,337 @@
+{
+  "candidate_sha256": "b5dc3fbab560f200a4144b38a11a273d24fd432eee98bc14eb0515703008906f",
+  "physical_source_report_sha256": "58ebafdc205f65c9b4a5108515c627a6187b2f42f21c97fd654ec1ec4f3dd0a4",
+  "method": "Nearest actual GND via is in a source-reached conductor component and has explicit conservative drill-subtracted annular positive contacts on both native inner islands. Distances are via centers, NOT full return loops or SI qualification.",
+  "returns": [
+    {
+      "signal_via": {
+        "uuid": "2ec98ab9-fc61-4a67-9d76-861000c03059",
+        "type": "via",
+        "net": "LED_ENABLE",
+        "layer": "F.Cu",
+        "start": [
+          51.7,
+          31.6
+        ],
+        "end": [
+          51.7,
+          31.6
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0
+      },
+      "nearest_source_GND_via": {
+        "uuid": "0dcf8874-313c-4656-806a-f7c6319d98ba",
+        "type": "via",
+        "net": "GND",
+        "layer": "F.Cu",
+        "start": [
+          52.5,
+          31.6
+        ],
+        "end": [
+          52.5,
+          31.6
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0,
+        "center_distance_mm": 0.7999999999999972,
+        "filled_annulus_intersection_mm2": {
+          "In1.Cu": 0.14724737113747333,
+          "In2.Cu": 0.14724737113747333
+        }
+      },
+      "ground_source_component": 139,
+      "physical_drill_subtracted_contacts": [
+        {
+          "component": 139,
+          "island": 42,
+          "object_uuid": "0dcf8874-313c-4656-806a-f7c6319d98ba",
+          "net": "GND",
+          "layer": "In2.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        },
+        {
+          "component": 139,
+          "island": 41,
+          "object_uuid": "0dcf8874-313c-4656-806a-f7c6319d98ba",
+          "net": "GND",
+          "layer": "In1.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        }
+      ]
+    },
+    {
+      "signal_via": {
+        "uuid": "5f005b92-afc5-4c7c-a164-8eeee929284a",
+        "type": "via",
+        "net": "LED_ENABLE",
+        "layer": "F.Cu",
+        "start": [
+          36.4,
+          19.2
+        ],
+        "end": [
+          36.4,
+          19.2
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0
+      },
+      "nearest_source_GND_via": {
+        "uuid": "4933999c-112c-479d-a0c4-e8845703917e",
+        "type": "via",
+        "net": "GND",
+        "layer": "F.Cu",
+        "start": [
+          35.9,
+          19.8
+        ],
+        "end": [
+          35.9,
+          19.8
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0,
+        "center_distance_mm": 0.7810249675906665,
+        "filled_annulus_intersection_mm2": {
+          "In1.Cu": 0.14724737113747338,
+          "In2.Cu": 0.14724737113747338
+        }
+      },
+      "ground_source_component": 13,
+      "physical_drill_subtracted_contacts": [
+        {
+          "component": 13,
+          "island": 42,
+          "object_uuid": "4933999c-112c-479d-a0c4-e8845703917e",
+          "net": "GND",
+          "layer": "In2.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        },
+        {
+          "component": 13,
+          "island": 41,
+          "object_uuid": "4933999c-112c-479d-a0c4-e8845703917e",
+          "net": "GND",
+          "layer": "In1.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        }
+      ]
+    },
+    {
+      "signal_via": {
+        "uuid": "74d342ac-9de1-46de-a574-64a5a52136bf",
+        "type": "via",
+        "net": "LED_ENABLE",
+        "layer": "F.Cu",
+        "start": [
+          82.2,
+          78.4
+        ],
+        "end": [
+          82.2,
+          78.4
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0
+      },
+      "nearest_source_GND_via": {
+        "uuid": "c7364a43-744f-447d-9077-f7de5b6db3ee",
+        "type": "via",
+        "net": "GND",
+        "layer": "F.Cu",
+        "start": [
+          82.2,
+          79.2
+        ],
+        "end": [
+          82.2,
+          79.2
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0,
+        "center_distance_mm": 0.7999999999999972,
+        "filled_annulus_intersection_mm2": {
+          "In1.Cu": 0.14724737113747738,
+          "In2.Cu": 0.14724737113747738
+        }
+      },
+      "ground_source_component": 220,
+      "physical_drill_subtracted_contacts": [
+        {
+          "component": 220,
+          "island": 42,
+          "object_uuid": "c7364a43-744f-447d-9077-f7de5b6db3ee",
+          "net": "GND",
+          "layer": "In2.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        },
+        {
+          "component": 220,
+          "island": 41,
+          "object_uuid": "c7364a43-744f-447d-9077-f7de5b6db3ee",
+          "net": "GND",
+          "layer": "In1.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        }
+      ]
+    },
+    {
+      "signal_via": {
+        "uuid": "bf089900-8d2a-410b-b544-8135f8ca7f9c",
+        "type": "via",
+        "net": "LED_ENABLE",
+        "layer": "F.Cu",
+        "start": [
+          40.7,
+          20.2
+        ],
+        "end": [
+          40.7,
+          20.2
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0
+      },
+      "nearest_source_GND_via": {
+        "uuid": "90821cea-4158-4656-9826-76b5979d55c1",
+        "type": "via",
+        "net": "GND",
+        "layer": "F.Cu",
+        "start": [
+          41.65,
+          20.2
+        ],
+        "end": [
+          41.65,
+          20.2
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0,
+        "center_distance_mm": 0.9499999999999957,
+        "filled_annulus_intersection_mm2": {
+          "In1.Cu": 0.14724737113747335,
+          "In2.Cu": 0.14724737113747335
+        }
+      },
+      "ground_source_component": 195,
+      "physical_drill_subtracted_contacts": [
+        {
+          "component": 195,
+          "island": 42,
+          "object_uuid": "90821cea-4158-4656-9826-76b5979d55c1",
+          "net": "GND",
+          "layer": "In2.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        },
+        {
+          "component": 195,
+          "island": 41,
+          "object_uuid": "90821cea-4158-4656-9826-76b5979d55c1",
+          "net": "GND",
+          "layer": "In1.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        }
+      ]
+    },
+    {
+      "signal_via": {
+        "uuid": "e045bfaa-78d9-4da2-994b-9d67b9332efc",
+        "type": "via",
+        "net": "LED_ENABLE",
+        "layer": "F.Cu",
+        "start": [
+          43.3,
+          25.7
+        ],
+        "end": [
+          43.3,
+          25.7
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0
+      },
+      "nearest_source_GND_via": {
+        "uuid": "1f1871ea-7278-444f-9576-19e7775b28c1",
+        "type": "via",
+        "net": "GND",
+        "layer": "F.Cu",
+        "start": [
+          42.5,
+          25.7
+        ],
+        "end": [
+          42.5,
+          25.7
+        ],
+        "width": 0.5,
+        "drill": 0.25,
+        "length_mm": 0,
+        "center_distance_mm": 0.7999999999999972,
+        "filled_annulus_intersection_mm2": {
+          "In1.Cu": 0.1472473711374734,
+          "In2.Cu": 0.1472473711374734
+        }
+      },
+      "ground_source_component": 144,
+      "physical_drill_subtracted_contacts": [
+        {
+          "component": 144,
+          "island": 42,
+          "object_uuid": "1f1871ea-7278-444f-9576-19e7775b28c1",
+          "net": "GND",
+          "layer": "In2.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        },
+        {
+          "component": 144,
+          "island": 41,
+          "object_uuid": "1f1871ea-7278-444f-9576-19e7775b28c1",
+          "net": "GND",
+          "layer": "In1.Cu",
+          "classification": "positive_area",
+          "positive_overlap_mm2": 0.146297021136,
+          "finite_shared_boundary_mm": 0.0,
+          "drill_excluded": true
+        }
+      ]
+    }
+  ]
+}

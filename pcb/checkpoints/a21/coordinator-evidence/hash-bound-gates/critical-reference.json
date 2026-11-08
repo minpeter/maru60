@@ -1,0 +1,198 @@
+{
+  "board": "/workspace/shared/maru-a4l-ENABLE-integration-0502/candidate.kicad_pcb",
+  "method": "0.1mm longitudinal samples at trace center and both copper edges; nearest inner GND fill only (F\u2192In1,B\u2192In2); own signal-via0.55mm neighborhoods excluded",
+  "caveat": "This detects missing projected ground, not proof of acceptable coplanar return, impedance or EMI. Incomplete nets remain incomplete.",
+  "nets": {
+    "USB_DM": {
+      "routed_length_mm": 4.4085995641732225,
+      "samples": 165,
+      "own_signal_via_excluded": 43,
+      "opposite_ground_void_samples": []
+    },
+    "USB_DP": {
+      "routed_length_mm": 3.0065180361560877,
+      "samples": 114,
+      "own_signal_via_excluded": 41,
+      "opposite_ground_void_samples": []
+    },
+    "USB_DM_CONN": {
+      "routed_length_mm": 34.32606751897343,
+      "samples": 1113,
+      "own_signal_via_excluded": 186,
+      "opposite_ground_void_samples": [
+        {
+          "at": [
+            17.325,
+            8.33764705882353
+          ],
+          "track_uuid": "38dc9b81-4edc-471e-add7-2572a3c28274",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            17.325,
+            8.432941176470589
+          ],
+          "track_uuid": "38dc9b81-4edc-471e-add7-2572a3c28274",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            17.325,
+            8.528235294117646
+          ],
+          "track_uuid": "38dc9b81-4edc-471e-add7-2572a3c28274",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.175,
+            8.528235294117646
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.25,
+            8.528235294117646
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.325,
+            8.528235294117646
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.175,
+            8.432941176470589
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.25,
+            8.432941176470589
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.325,
+            8.432941176470589
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.175,
+            8.33764705882353
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.25,
+            8.33764705882353
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.325,
+            8.33764705882353
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.175,
+            8.24235294117647
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        },
+        {
+          "at": [
+            18.325,
+            8.24235294117647
+          ],
+          "track_uuid": "3fe3010e-a535-4b13-a56a-356a8b7dad32",
+          "reference": "In2.Cu"
+        }
+      ]
+    },
+    "USB_DP_CONN": {
+      "routed_length_mm": 30.82125810797985,
+      "samples": 999,
+      "own_signal_via_excluded": 231,
+      "opposite_ground_void_samples": []
+    },
+    "XIN": {
+      "routed_length_mm": 11.919696669091458,
+      "samples": 714,
+      "own_signal_via_excluded": 37,
+      "opposite_ground_void_samples": []
+    },
+    "XOUT": {
+      "routed_length_mm": 1.8024621202458762,
+      "samples": 243,
+      "own_signal_via_excluded": 0,
+      "opposite_ground_void_samples": []
+    },
+    "XTAL_OUT": {
+      "routed_length_mm": 5.893566114934343,
+      "samples": 594,
+      "own_signal_via_excluded": 83,
+      "opposite_ground_void_samples": []
+    },
+    "QSPI_SS": {
+      "routed_length_mm": 32.35690117756572,
+      "samples": 2463,
+      "own_signal_via_excluded": 206,
+      "opposite_ground_void_samples": []
+    },
+    "QSPI_SCLK": {
+      "routed_length_mm": 9.682481467899642,
+      "samples": 657,
+      "own_signal_via_excluded": 0,
+      "opposite_ground_void_samples": []
+    },
+    "QSPI_SD0": {
+      "routed_length_mm": 13.984225891162822,
+      "samples": 936,
+      "own_signal_via_excluded": 229,
+      "opposite_ground_void_samples": []
+    },
+    "QSPI_SD1": {
+      "routed_length_mm": 10.258648497727007,
+      "samples": 507,
+      "own_signal_via_excluded": 0,
+      "opposite_ground_void_samples": []
+    },
+    "QSPI_SD2": {
+      "routed_length_mm": 9.14608536479661,
+      "samples": 654,
+      "own_signal_via_excluded": 0,
+      "opposite_ground_void_samples": []
+    },
+    "QSPI_SD3": {
+      "routed_length_mm": 16.065755278913546,
+      "samples": 969,
+      "own_signal_via_excluded": 240,
+      "opposite_ground_void_samples": []
+    }
+  }
+}
