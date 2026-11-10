@@ -394,7 +394,7 @@ def main() -> None:
     # Probe exported geometry: both the ceiling-less exit and recessed-roof revisions must fail.
     sy0, sy1 = REPORT["usb_slot_world"]["y"]
     open_y = sy0 + 1.0
-    bridge_probe = box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, bc.Y_BACK - 0.02,
+    bridge_probe = box(gaps[0][0] + 0.02, open_y + bc.USB_RAIL_NOTCH_D + 0.02, gaps[0][1] - 0.02, bc.Y_BACK - 0.02,
                        Z["rim_top"] + 0.02, 11.88)
     # A cap recess that reaches into the slot (PH60 Rev.3: 0.06 mm) keeps its full depth; the bridge must fill the rest.
     for recess in bc.cap_recesses_p():
@@ -402,7 +402,7 @@ def main() -> None:
                             Z["rim_top"] - 1.0, bc.CAP_SEAT_ZP + 0.02)
     bridge_missing = vol(bridge_probe - bottom)
     assert bridge_missing < 0.0001, f"Lower USB bridge missing: {bridge_missing} mm^3"
-    bridge_bounds = (bottom ^ box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02,
+    bridge_bounds = (bottom ^ box(gaps[0][0] + 0.02, open_y + bc.USB_RAIL_NOTCH_D + 0.02, gaps[0][1] - 0.02,
                                   bc.Y_BACK - 0.02, 9.0, 12.4)).bounding_box()
     # Both upper inside corners follow the top-case radius, not a square corner or a chamfer.
     radius = notch["closed_end_corner_r"]
@@ -410,19 +410,27 @@ def main() -> None:
     for edge, sign in ((gaps[0][0], 1.0), (gaps[0][1], -1.0)):
         for offset, solid in ((radius * 2 / 15, True), (radius / 3, False)):
             x, z = edge + sign * offset, 11.90 + offset
-            probe = box(x - 0.02, open_y + 0.02, x + 0.02, bc.Y_BACK - 0.02, z - 0.02, z + 0.02)
+            probe = box(x - 0.02, open_y + bc.USB_RAIL_NOTCH_D + 0.02, x + 0.02, bc.Y_BACK - 0.02, z - 0.02, z + 0.02)
             if solid:
                 arch_missing += vol(probe - bottom)
             else:
                 arch_blockage += vol(probe ^ bottom)
     assert arch_missing < 0.0001 and arch_blockage < 0.0001, ("USB arch radius", arch_missing, arch_blockage)
-    slot_column = box(gaps[0][0] + radius + 0.02, open_y + 0.02,
-                      gaps[0][1] - radius - 0.02, sy1 - 0.02, 11.92, bottom.bounding_box()[5] + 1.0)
-    slot_column += box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, sy1 - 0.02,
-                       11.90 + radius + 0.02, bottom.bounding_box()[5] + 1.0)
-    slot_bottom_material = vol(bottom ^ slot_column)
-    assert slot_bottom_material < 0.0001, f"USB exit is not open underneath: {slot_bottom_material} mm^3"
-    # The lower case must have the same small free-end rounds as the upper case, not square corners behind them.
+    # The passage stays clear from the arch down to the tray bottom, and the back slope under it stays whole: no slot
+    # cut down through the base (it printed as a stair-stepped groove).
+    floor_z = bc.USB_TUNNEL_FLOOR_ZP
+    tunnel_air = box(gaps[0][0] + radius + 0.02, open_y + 0.02, gaps[0][1] - radius - 0.02, sy1 - 0.02,
+                     11.92, floor_z - 0.02)
+    tunnel_air += box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, sy1 - 0.02,
+                      11.90 + radius + 0.02, floor_z - 0.02)
+    tunnel_blockage = vol(bottom ^ tunnel_air)
+    assert tunnel_blockage < 0.0001, f"USB passage is blocked: {tunnel_blockage} mm^3"
+    n_bev, off_bev = bc.back_bevel()
+    base_under = box(gaps[0][0] + 0.02, open_y + 0.02, gaps[0][1] - 0.02, bc.Y_BACK - bc.BACK_LEDGE_W + 0.5,
+                     floor_z + 0.02, bc.desk_zp(open_y) - 0.5).trim_by_plane(n_bev, off_bev + 0.02)
+    slope_missing = vol(base_under - bottom)
+    assert slope_missing < 0.0001, f"USB slot cuts into the back slope: {slope_missing} mm^3"
+    # The lower case keeps the same small free-end rounds as the upper case on the rail ends over the open step.
     lip_corner_checks = {}
     lip_radius = 0.5
     for edge, side in ((gaps[0][0], -1.0), (gaps[0][1], 1.0)):
@@ -430,29 +438,42 @@ def main() -> None:
             sg.Point(edge + side * lip_radius * 2 / 15, bc.Y_BACK - 0.2))
         shoulder = slice_material(bottom, top.SKIRT_H - lip_radius * 0.4).contains(
             sg.Point(edge + side * lip_radius * 0.4, bc.Y_BACK - 0.2))
-        # Continue into the open exit below the lip; a shallow groove with a square ledge underneath is not a round.
-        open_below = not slice_material(bottom, top.SKIRT_H + 0.2).contains(
-            sg.Point(edge + side * lip_radius / 2, open_y + 0.2))
-        lip_corner_checks[str(side)] = bool(cut and shoulder and open_below)
+        lip_corner_checks[str(side)] = bool(cut and shoulder)
     assert all(lip_corner_checks.values()), ("Lower USB lip rounds differ from upper case", lip_corner_checks)
-    ledge_z = 21.08  # Proposed deeper mating floor; independent exported-geometry contract, not a stock measurement
-    floor_air = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02, 20.10, 21.06)
-    floor_blockage = vol(bottom ^ floor_air)
-    assert floor_blockage < 0.0001, f"USB mating floor is not recessed deeply enough: {floor_blockage} mm^3"
-    # A shallow local pocket, not a deep channel: its floor and raised end must both remain.
-    inner_port_air = box(usb_xw - 8.0, sy0 - 13.9, usb_xw + 8.0, sy0 - 1.1, 18.22, 18.68)
+    # The port pocket (owner caliper depth) runs straight into the passage: no raised end or deeper strip between
+    # them, and its floor keeps material under it.
+    pocket_floor = bc.FLOOR_ZP + bc.USB_PORT_POCKET_DEPTH
+    hw, py0 = bc.USB_PORT_POCKET_W / 2, open_y + bc.USB_RAIL_NOTCH_D - bc.USB_PORT_POCKET_L
+    inner_port_air = box(usb_xw - hw + 0.02, py0 + bc.USB_PORT_POCKET_R, usb_xw + hw - 0.02, open_y - 0.02,
+                         18.22, pocket_floor - 0.02)
+    inner_port_air += box(usb_xw - hw + bc.USB_PORT_POCKET_R, py0 + 0.02, usb_xw + hw - bc.USB_PORT_POCKET_R, open_y - 0.02,
+                          18.22, pocket_floor - 0.02)
     inner_port_blockage = vol(bottom ^ inner_port_air)
-    assert inner_port_blockage < 0.0001, f"Floor still fills the inner USB connector recess: {inner_port_blockage} mm^3"
-    inner_floor = box(usb_xw - 8.0, sy0 - 13.9, usb_xw + 8.0, sy0 - 1.1, 18.72, 19.52)
-    end_land = box(usb_xw - 8.0, sy0 - 0.9, usb_xw + 8.0, sy0 - 0.1, 18.22, 18.62)
-    shallow_floor_missing = vol(inner_floor - bottom)
-    raised_end_missing = vol(end_land - bottom)
-    assert shallow_floor_missing < 0.0001 and raised_end_missing < 0.0001, (shallow_floor_missing, raised_end_missing)
-    # At least 0.8 mm remains under the separate outer ledge, including its thinnest rear edge.
-    ledge_probe = box(gaps[0][0] + 0.02, sy0 + 0.02, gaps[0][1] - 0.02, open_y - 0.02,
-                      ledge_z + 0.02, ledge_z + 0.82)
-    ledge_missing = vol(ledge_probe - bottom)
-    assert ledge_missing < 0.0001, ("USB inner ledge", ledge_missing)
+    assert inner_port_blockage < 0.0001, f"Floor or a raised end still fills the USB port pocket: {inner_port_blockage} mm^3"
+    inner_floor = box(usb_xw - hw - 0.5, py0 - 0.5, usb_xw + hw + 0.5, open_y - 0.02, pocket_floor + 0.02, pocket_floor + 0.82)
+    pocket_floor_missing = vol(inner_floor - bottom)
+    assert pocket_floor_missing < 0.0001, f"USB port pocket floor missing: {pocket_floor_missing} mm^3"
+    # Measured size, not larger: the cavity floor stays just outside its sides and front edge.
+    rim_band = (box(usb_xw - hw - 0.5, py0 - 0.5, usb_xw + hw + 0.5, open_y - 0.02, 18.22, pocket_floor - 0.02)
+                - box(usb_xw - hw - 0.02, py0 - 0.02, usb_xw + hw + 0.02, open_y + 1.0, 18.0, 21.0))
+    pocket_oversize = vol(rim_band - bottom)
+    assert pocket_oversize < 0.0001, f"USB port pocket larger than measured: {pocket_oversize} mm^3"
+    # The rail's inner face is notched to the pocket width, full height, USB_RAIL_NOTCH_D deep; the wall beyond stays.
+    nd = bc.USB_RAIL_NOTCH_D
+    rail_notch_air = box(usb_xw - hw + bc.USB_PORT_POCKET_R, open_y + 0.02, usb_xw + hw - bc.USB_PORT_POCKET_R,
+                         open_y + nd - 0.02, Z["rim_top"] + 0.02, bc.USB_TUNNEL_FLOOR_ZP - 0.02)
+    rail_notch_blockage = vol(bottom ^ rail_notch_air)
+    assert rail_notch_blockage < 0.0001, f"Rail notch over the USB pocket not cut: {rail_notch_blockage} mm^3"
+    # Side probes start below the cap seat: a nearby cap recess and its slot-fin relief (6095) are cut down to it.
+    rail_beyond = (box(gaps[0][0] + 0.02, open_y + nd + 0.05, gaps[0][1] - 0.02, open_y + nd + 0.6,
+                       Z["rim_top"] + 0.02, 11.88)
+                   + box(usb_xw - hw - 1.0, open_y + 0.02, usb_xw - hw - 0.05, open_y + nd + 0.6, bc.CAP_SEAT_ZP + 0.02, 18.0)
+                   + box(usb_xw + hw + 0.05, open_y + 0.02, usb_xw + hw + 1.0, open_y + nd + 0.6, bc.CAP_SEAT_ZP + 0.02, 18.0))
+    for recess in bc.cap_recesses_p():
+        rail_beyond -= box(*bc.plate_to_world(recess).bounds[:2], *bc.plate_to_world(recess).bounds[2:],
+                           Z["rim_top"] - 1.0, bc.CAP_SEAT_ZP + 0.02)
+    rail_overcut = vol(rail_beyond - bottom)
+    assert rail_overcut < 0.0001, f"Rail notch deeper or wider than intended: {rail_overcut} mm^3"
     # 8a. The slot leaves no fin: apart from the R0.5 closed-end blend, keep SLOT_MIN_WALL or cut the web away.
     slot_plan = sg.box(gaps[0][0], sy0, gaps[0][1], sy1)
     rim = slice_material(bottom, Z["rim_top"] + 0.25)
@@ -466,13 +487,13 @@ def main() -> None:
             # The last 0.5 mm is the attached corner blend checked above, not a free-standing thin fin.
             between = rim.intersection(sg.box(x0, max(sy0, ry0), x1, min(sy1, ry1) - 0.50))
             walls.append(round(between.bounds[2] - between.bounds[0], 3) if between.area > 1e-4 else 0.0)
-    slot_check = {"cap_recess_walls_mm": walls, "open_bottom_material_mm3": slot_bottom_material,
+    slot_check = {"cap_recess_walls_mm": walls, "tunnel_blockage_mm3": tunnel_blockage,
+                  "back_slope_missing_mm3": slope_missing, "matching_lip_corner_rounds": lip_corner_checks,
                   "arch_corner_missing_mm3": arch_missing, "arch_corner_blockage_mm3": arch_blockage,
-                  "matching_lip_corner_rounds": lip_corner_checks,
-                  "recessed_floor_blockage_mm3": floor_blockage,
-                  "inner_connector_recess_blockage_mm3": inner_port_blockage,
-                  "shallow_port_floor_missing_mm3": shallow_floor_missing, "raised_port_end_missing_mm3": raised_end_missing,
-                  "inner_ledge_missing_mm3": ledge_missing, "bridge_missing_mm3": bridge_missing,
+                  "port_pocket_blockage_mm3": inner_port_blockage, "port_pocket_floor_missing_mm3": pocket_floor_missing,
+                  "port_pocket_oversize_mm3": pocket_oversize,
+                  "rail_notch_blockage_mm3": rail_notch_blockage, "rail_notch_overcut_mm3": rail_overcut,
+                  "bridge_missing_mm3": bridge_missing,
                   "bridge_to_upper_ceiling_mm": round(bridge_bounds[2] - Z["rim_top"], 3),
                   "bridge_to_generic_plug_mm": round(zc - 3.25 - bridge_bounds[5], 3),
                   "plug_down_0p8_mm3": plug_down_free}
@@ -536,7 +557,8 @@ def main() -> None:
             {"down_facing_face_at": [round(float(v), 1) for v in c]} for c in shallow[:5]],
             "usb_bridge_requires_support_mm2": round(usb_area, 2),
             "tray_step_cantilever_mm2": round(step_area, 1)}
-    assert printability["bottom-left"]["usb_bridge_requires_support_mm2"] > 80.0, printability
+    # The declared roof must exist (about 14.75 x 5 mm once the 2 mm rail notch shortens the bridge).
+    assert printability["bottom-left"]["usb_bridge_requires_support_mm2"] > 60.0, printability
     assert not any(v["islands"] or v["undeclared_overhangs"] for v in printability.values()), printability
 
     verification = {
