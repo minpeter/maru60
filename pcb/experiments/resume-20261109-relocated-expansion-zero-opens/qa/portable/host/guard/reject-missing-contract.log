@@ -1,0 +1,24 @@
+$ cc -std=c11 -Wall -Wextra -Werror -Wno-pointer-to-int-cast -O0 -DMARU60_LED_POWER_QUALIFIED=1 -I/home/minpeter/github.com/minpeter/maru60/.omo/evidence/pcb-routing-20261109/repair2-portable/host/guard/reject-missing-contract-build -I/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/tests/startup_guard/mock -I/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350 /home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/tests/startup_guard/guard_test.c /home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c -o /home/minpeter/github.com/minpeter/maru60/.omo/evidence/pcb-routing-20261109/repair2-portable/host/guard/invalid-missing-contract
+/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:14:10: error: #error Qualified LED power requires a measured settling interval and qualification report
+   14 | #        error Qualified LED power requires a measured settling interval and qualification report
+      |          ^~~~~
+/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:18:25: error: expected ‘)’ before ‘MARU60_LED_POWER_SETTLE_REPORT’
+   18 | _Static_assert(sizeof("" MARU60_LED_POWER_SETTLE_REPORT) > 1, "Missing LED settling qualification report");
+      |                      ~  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         )
+/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:18:1: error: static assertion failed: "Missing LED settling qualification report"
+   18 | _Static_assert(sizeof("" MARU60_LED_POWER_SETTLE_REPORT) > 1, "Missing LED settling qualification report");
+      | ^~~~~~~~~~~~~~
+/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c: In function ‘maru_rgb_task’:
+/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:19:32: error: ‘MARU60_LED_POWER_SETTLE_MS’ undeclared (first use in this function); did you mean ‘MARU_LED_SETTLE_MS’?
+   19 | #    define MARU_LED_SETTLE_MS MARU60_LED_POWER_SETTLE_MS
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:103:43: note: in expansion of macro ‘MARU_LED_SETTLE_MS’
+  103 |     if (timer_elapsed32(settle_started) < MARU_LED_SETTLE_MS) return;
+      |                                           ^~~~~~~~~~~~~~~~~~
+/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:19:32: note: each undeclared identifier is reported only once for each function it appears in
+   19 | #    define MARU_LED_SETTLE_MS MARU60_LED_POWER_SETTLE_MS
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/qmk/keyboards/maru60/rp2350/maru_rgb.c:103:43: note: in expansion of macro ‘MARU_LED_SETTLE_MS’
+  103 |     if (timer_elapsed32(settle_started) < MARU_LED_SETTLE_MS) return;
+      |                                           ^~~~~~~~~~~~~~~~~~

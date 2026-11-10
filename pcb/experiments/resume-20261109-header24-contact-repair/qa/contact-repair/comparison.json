@@ -1,0 +1,67 @@
+{
+  "pass": true,
+  "source_board_sha256": "ddea15f7eb9188617f81af2e998ed49bf385cfcc473d68bd40beb66ec4ff6020",
+  "candidate_board_sha256": "194180467c8ae7ead7d6bc23fe23d6dbb737cbd0ca04a3c1513bd141fe6890d0",
+  "source_graph_sha256": "0184209ad3ce231277c3a1e331171b69182daee48c5551e815cace1af58de61d",
+  "candidate_graph_sha256": "36756f4c7cf6d1aee5b7f342828bda55764d4c9c3d10eed378e7ad83794ca63a",
+  "guard_failures_before": 51,
+  "guard_failures_after": 0,
+  "edited_track_uuids": [
+    "03541c60-b755-4eed-bf08-8fed3b4895a8",
+    "0bd60fc2-ec4e-4348-b467-5f01497afe9f",
+    "1d39ba93-1f93-4fb9-bfe3-2e93908fbe80",
+    "5ce56230-080b-4d52-991d-22a3c4c4d705",
+    "67ae0c35-9c95-4a62-8825-e228d96514c6",
+    "79d317e3-4db5-4e68-8005-b3fdd47ad297",
+    "911ee5e0-45d0-4299-83bc-baa5c2f4ba04",
+    "c23df0e2-d574-46b8-a7c5-1926cd1c06fb",
+    "d72d4736-3c93-4f80-827b-d6df34d28939",
+    "dd554aa0-2f90-4832-bb08-c12736fd4716"
+  ],
+  "serialized_changes": "10 outer-layer widths0.25mm ->0.26mm plus1 generated F.Cu GND fill line",
+  "generated_fill_delta": [
+    [
+      "\t\t\t\t(xy 109.050499 82.090687) (xy 109.044672 82.068942) (xy 109.019799 81.976113) (xy 109.010945 81.960778)",
+      "\t\t\t\t(xy 109.050499 82.090687) (xy 109.048309 82.082515) (xy 109.019799 81.976113) (xy 109.009238 81.957821)"
+    ]
+  ],
+  "all_drilled_holes_and_inner_copper_bytes_unchanged": true,
+  "pad_partitions_equal": true,
+  "barrel_joins_equal": true,
+  "unchanged_material_nodes_equal": 14637,
+  "generated_outer_zone_node_delta": {
+    "zone:abadb040-0e38-4dde-9ed2-fe817c008499:0:3": [
+      {
+        "kind": "zone",
+        "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+        "layer": "F.Cu",
+        "index": 3,
+        "area_mm2": 94.432693940882,
+        "net": "GND"
+      },
+      {
+        "kind": "zone",
+        "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+        "layer": "F.Cu",
+        "index": 3,
+        "area_mm2": 94.432693921669,
+        "net": "GND"
+      }
+    ]
+  },
+  "old_accepted_material_edges": 22525,
+  "new_accepted_material_edges": 22525,
+  "lost_accepted_material_edges": 0,
+  "edited_viable_node_remapping": {
+    "object:0bd60fc2-ec4e-4348-b467-5f01497afe9f:0:0": "object:0bd60fc2-ec4e-4348-b467-5f01497afe9f:0:0",
+    "object:911ee5e0-45d0-4299-83bc-baa5c2f4ba04:0:3": "object:911ee5e0-45d0-4299-83bc-baa5c2f4ba04:0:0",
+    "object:5ce56230-080b-4d52-991d-22a3c4c4d705:0:0": "object:5ce56230-080b-4d52-991d-22a3c4c4d705:0:0",
+    "object:79d317e3-4db5-4e68-8005-b3fdd47ad297:2:0": "object:79d317e3-4db5-4e68-8005-b3fdd47ad297:2:0",
+    "object:67ae0c35-9c95-4a62-8825-e228d96514c6:0:0": "object:67ae0c35-9c95-4a62-8825-e228d96514c6:0:0",
+    "object:03541c60-b755-4eed-bf08-8fed3b4895a8:2:2": "object:03541c60-b755-4eed-bf08-8fed3b4895a8:2:0",
+    "object:d72d4736-3c93-4f80-827b-d6df34d28939:2:0": "object:d72d4736-3c93-4f80-827b-d6df34d28939:2:0",
+    "object:1d39ba93-1f93-4fb9-bfe3-2e93908fbe80:0:6": "object:1d39ba93-1f93-4fb9-bfe3-2e93908fbe80:0:0",
+    "object:c23df0e2-d574-46b8-a7c5-1926cd1c06fb:2:0": "object:c23df0e2-d574-46b8-a7c5-1926cd1c06fb:2:0",
+    "object:dd554aa0-2f90-4832-bb08-c12736fd4716:2:2": "object:dd554aa0-2f90-4832-bb08-c12736fd4716:2:0"
+  }
+}

@@ -1,0 +1,54 @@
+argv: ["/home/minpeter/.cache/uv/environments-v2/check-pcb-portable-89b138fb614ce50b/bin/python", "-B", "/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/evidence/static-v7/check.py", "--netlist", "/home/minpeter/github.com/minpeter/maru60/pcb/experiments/resume-20261109-header25-u13-contact-repair/qa/netlist.xml", "--expected-sha256", "2258e9920ce2b6c72daa6c1198c2325a8bb7ab7eea3384ba6b8af1fa57057306", "--source", "/home/minpeter/github.com/minpeter/maru60/pcb/firmware/qmk/keyboards/maru60/rp2350", "--matrix-script", "/home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/firmware/tests/matrix_simultaneous_model.py", "--output", "/home/minpeter/github.com/minpeter/maru60/.omo/evidence/pcb-routing-20261109/integration/portable-promoted7/static.json"]
+{
+  "pass": true,
+  "bindings": 24,
+  "matrix_results": [
+    {
+      "layout": "LAYOUT_wkl_7u_split",
+      "keys": 60,
+      "exhaustive_pressed_subsets": {
+        "1": 60,
+        "2": 1770,
+        "3": 34220
+      },
+      "all_pressed_and_all_released": "PASS",
+      "reversed_diode_negative_fixture": "detected",
+      "duplicate_matrix_coordinates": false,
+      "ideal_model_no_missing_or_ghost_keys": "PASS",
+      "netlist_sha256": "2258e9920ce2b6c72daa6c1198c2325a8bb7ab7eea3384ba6b8af1fa57057306",
+      "config_sha256": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69"
+    },
+    {
+      "layout": "LAYOUT_hhkb_7u",
+      "keys": 60,
+      "exhaustive_pressed_subsets": {
+        "1": 60,
+        "2": 1770,
+        "3": 34220
+      },
+      "all_pressed_and_all_released": "PASS",
+      "reversed_diode_negative_fixture": "detected",
+      "duplicate_matrix_coordinates": false,
+      "ideal_model_no_missing_or_ghost_keys": "PASS",
+      "netlist_sha256": "2258e9920ce2b6c72daa6c1198c2325a8bb7ab7eea3384ba6b8af1fa57057306",
+      "config_sha256": "47566ddd3940f63dd56947b24b8201a6511ddafd61761afb73a9ddf8ab4cbe69"
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "wrong_gpio_function",
+      "rejected": true
+    },
+    {
+      "case": "wrong_led_net",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_selected_gpio",
+      "rejected": true
+    }
+  ],
+  "report": "/home/minpeter/github.com/minpeter/maru60/.omo/evidence/pcb-routing-20261109/integration/portable-promoted7/static.json"
+}
+
+exit_code: 0

@@ -1,0 +1,14 @@
+$ /home/minpeter/.cache/uv/environments-v2/check-pcb-portable-89b138fb614ce50b/bin/python /home/minpeter/github.com/minpeter/maru60/pcb/experiments/led-startup-recovery/candidate/verify_sources.py
+{
+  "pass": true,
+  "candidate_files": 62,
+  "baseline_files_exact": 22,
+  "former_working_files_exact": 19,
+  "new_implementation_files": [
+    "maru_rgb.c",
+    "maru_rgb.h",
+    "maru_ws2812_transport.inc"
+  ],
+  "qualification_default": 0,
+  "original_complete_packet_recovered": false
+}

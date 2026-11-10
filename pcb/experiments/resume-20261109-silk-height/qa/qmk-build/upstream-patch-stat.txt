@@ -1,0 +1,13 @@
+ lib/chibios                |  2 +-
+ lib/chibios-contrib        |  0
+ lib/googletest             |  0
+ lib/lufa                   |  0
+ lib/lvgl                   |  0
+ lib/pico-sdk               |  0
+ lib/printf                 |  0
+ lib/vusb                   |  0
+ quantum/action_util.c      | 26 ++++++++++++++++++++++++--
+ quantum/action_util.h      |  3 +++
+ quantum/via.c              | 31 +++++++++++++++++++++++--------
+ tmk_core/protocol/report.c | 15 +++++++++++++++
+ 12 files changed, 66 insertions(+), 11 deletions(-)

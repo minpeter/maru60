@@ -1,0 +1,1150 @@
+{
+  "25C": {
+    "assumption": "Conservative signed magnitude |IFB| <= 0.15uA, although table prints a positive MAX, not a signed min/max pair. Resistor initial tolerance only. Regulated operation.",
+    "min": 3.9476763296703297,
+    "max": 4.05247647047047,
+    "corners": [
+      {
+        "vref": {
+          "exact": "99/125",
+          "decimal": 0.792
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "1977003/500000",
+          "decimal": 3.954006
+        }
+      },
+      {
+        "vref": {
+          "exact": "99/125",
+          "decimal": 0.792
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "1982997/500000",
+          "decimal": 3.965994
+        }
+      },
+      {
+        "vref": {
+          "exact": "99/125",
+          "decimal": 0.792
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "179619273/45500000",
+          "decimal": 3.9476763296703297
+        }
+      },
+      {
+        "vref": {
+          "exact": "99/125",
+          "decimal": 0.792
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "180164727/45500000",
+          "decimal": 3.9596643296703298
+        }
+      },
+      {
+        "vref": {
+          "exact": "99/125",
+          "decimal": 0.792
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "219798667/55500000",
+          "decimal": 3.9603363423423423
+        }
+      },
+      {
+        "vref": {
+          "exact": "99/125",
+          "decimal": 0.792
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "220465333/55500000",
+          "decimal": 3.9723483423423422
+        }
+      },
+      {
+        "vref": {
+          "exact": "99/125",
+          "decimal": 0.792
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "1976997/500000",
+          "decimal": 3.953994
+        }
+      },
+      {
+        "vref": {
+          "exact": "99/125",
+          "decimal": 0.792
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "1983003/500000",
+          "decimal": 3.966006
+        }
+      },
+      {
+        "vref": {
+          "exact": "101/125",
+          "decimal": 0.808
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2017003/500000",
+          "decimal": 4.034006
+        }
+      },
+      {
+        "vref": {
+          "exact": "101/125",
+          "decimal": 0.808
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2022997/500000",
+          "decimal": 4.045994
+        }
+      },
+      {
+        "vref": {
+          "exact": "101/125",
+          "decimal": 0.808
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2015788003/500500000",
+          "decimal": 4.027548457542458
+        }
+      },
+      {
+        "vref": {
+          "exact": "101/125",
+          "decimal": 0.808
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2021787997/500500000",
+          "decimal": 4.039536457542457
+        }
+      },
+      {
+        "vref": {
+          "exact": "101/125",
+          "decimal": 0.808
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2018212003/499500000",
+          "decimal": 4.040464470470471
+        }
+      },
+      {
+        "vref": {
+          "exact": "101/125",
+          "decimal": 0.808
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2024211997/499500000",
+          "decimal": 4.05247647047047
+        }
+      },
+      {
+        "vref": {
+          "exact": "101/125",
+          "decimal": 0.808
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2016997/500000",
+          "decimal": 4.033994
+        }
+      },
+      {
+        "vref": {
+          "exact": "101/125",
+          "decimal": 0.808
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2023003/500000",
+          "decimal": 4.046006
+        }
+      }
+    ],
+    "without_leak_min": {
+      "exact": "44973/11375",
+      "decimal": 3.9536703296703295
+    },
+    "without_leak_max": {
+      "exact": "505303/124875",
+      "decimal": 4.046470470470471
+    }
+  },
+  "0_to_85C": {
+    "assumption": "Conservative signed magnitude |IFB| <= 0.15uA, although table prints a positive MAX, not a signed min/max pair. Resistor initial tolerance only. Regulated operation.",
+    "min": 3.927708297702298,
+    "max": 4.072508502502503,
+    "corners": [
+      {
+        "vref": {
+          "exact": "197/250",
+          "decimal": 0.788
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "1967003/500000",
+          "decimal": 3.934006
+        }
+      },
+      {
+        "vref": {
+          "exact": "197/250",
+          "decimal": 0.788
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "1972997/500000",
+          "decimal": 3.945994
+        }
+      },
+      {
+        "vref": {
+          "exact": "197/250",
+          "decimal": 0.788
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "1965818003/500500000",
+          "decimal": 3.927708297702298
+        }
+      },
+      {
+        "vref": {
+          "exact": "197/250",
+          "decimal": 0.788
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "1971817997/500500000",
+          "decimal": 3.9396962977022976
+        }
+      },
+      {
+        "vref": {
+          "exact": "197/250",
+          "decimal": 0.788
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "1968182003/499500000",
+          "decimal": 3.94030431031031
+        }
+      },
+      {
+        "vref": {
+          "exact": "197/250",
+          "decimal": 0.788
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "1974181997/499500000",
+          "decimal": 3.9523163103103105
+        }
+      },
+      {
+        "vref": {
+          "exact": "197/250",
+          "decimal": 0.788
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "1966997/500000",
+          "decimal": 3.933994
+        }
+      },
+      {
+        "vref": {
+          "exact": "197/250",
+          "decimal": 0.788
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "1973003/500000",
+          "decimal": 3.946006
+        }
+      },
+      {
+        "vref": {
+          "exact": "203/250",
+          "decimal": 0.812
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2027003/500000",
+          "decimal": 4.054006
+        }
+      },
+      {
+        "vref": {
+          "exact": "203/250",
+          "decimal": 0.812
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2032997/500000",
+          "decimal": 4.065994
+        }
+      },
+      {
+        "vref": {
+          "exact": "203/250",
+          "decimal": 0.812
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "289397429/71500000",
+          "decimal": 4.04751648951049
+        }
+      },
+      {
+        "vref": {
+          "exact": "203/250",
+          "decimal": 0.812
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "290254571/71500000",
+          "decimal": 4.0595044895104895
+        }
+      },
+      {
+        "vref": {
+          "exact": "203/250",
+          "decimal": 0.812
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2028218003/499500000",
+          "decimal": 4.060496502502502
+        }
+      },
+      {
+        "vref": {
+          "exact": "203/250",
+          "decimal": 0.812
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2034217997/499500000",
+          "decimal": 4.072508502502503
+        }
+      },
+      {
+        "vref": {
+          "exact": "203/250",
+          "decimal": 0.812
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2026997/500000",
+          "decimal": 4.053994
+        }
+      },
+      {
+        "vref": {
+          "exact": "203/250",
+          "decimal": 0.812
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2033003/500000",
+          "decimal": 4.066006
+        }
+      }
+    ],
+    "without_leak_min": {
+      "exact": "984409/250250",
+      "decimal": 3.9337022977022977
+    },
+    "without_leak_max": {
+      "exact": "1015609/249750",
+      "decimal": 4.066502502502503
+    }
+  },
+  "minus40_to_150C": {
+    "assumption": "Conservative signed magnitude |IFB| <= 0.15uA, although table prints a positive MAX, not a signed min/max pair. Resistor initial tolerance only. Regulated operation.",
+    "min": 3.9077402657342657,
+    "max": 4.0925405345345345,
+    "corners": [
+      {
+        "vref": {
+          "exact": "98/125",
+          "decimal": 0.784
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "1957003/500000",
+          "decimal": 3.914006
+        }
+      },
+      {
+        "vref": {
+          "exact": "98/125",
+          "decimal": 0.784
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "1962997/500000",
+          "decimal": 3.925994
+        }
+      },
+      {
+        "vref": {
+          "exact": "98/125",
+          "decimal": 0.784
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "279403429/71500000",
+          "decimal": 3.9077402657342657
+        }
+      },
+      {
+        "vref": {
+          "exact": "98/125",
+          "decimal": 0.784
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "280260571/71500000",
+          "decimal": 3.919728265734266
+        }
+      },
+      {
+        "vref": {
+          "exact": "98/125",
+          "decimal": 0.784
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "1958176003/499500000",
+          "decimal": 3.9202722782782784
+        }
+      },
+      {
+        "vref": {
+          "exact": "98/125",
+          "decimal": 0.784
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "1964175997/499500000",
+          "decimal": 3.9322842782782783
+        }
+      },
+      {
+        "vref": {
+          "exact": "98/125",
+          "decimal": 0.784
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "1956997/500000",
+          "decimal": 3.913994
+        }
+      },
+      {
+        "vref": {
+          "exact": "98/125",
+          "decimal": 0.784
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "1963003/500000",
+          "decimal": 3.926006
+        }
+      },
+      {
+        "vref": {
+          "exact": "102/125",
+          "decimal": 0.816
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2037003/500000",
+          "decimal": 4.074006
+        }
+      },
+      {
+        "vref": {
+          "exact": "102/125",
+          "decimal": 0.816
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2042997/500000",
+          "decimal": 4.085994
+        }
+      },
+      {
+        "vref": {
+          "exact": "102/125",
+          "decimal": 0.816
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2035776003/500500000",
+          "decimal": 4.067484521478521
+        }
+      },
+      {
+        "vref": {
+          "exact": "102/125",
+          "decimal": 0.816
+        },
+        "rt": {
+          "exact": "39960",
+          "decimal": 39960.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2041775997/500500000",
+          "decimal": 4.079472521478522
+        }
+      },
+      {
+        "vref": {
+          "exact": "102/125",
+          "decimal": 0.816
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "679408001/166500000",
+          "decimal": 4.080528534534534
+        }
+      },
+      {
+        "vref": {
+          "exact": "102/125",
+          "decimal": 0.816
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "9990",
+          "decimal": 9990.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "681407999/166500000",
+          "decimal": 4.0925405345345345
+        }
+      },
+      {
+        "vref": {
+          "exact": "102/125",
+          "decimal": 0.816
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "-3/20000000",
+          "decimal": -1.5e-07
+        },
+        "vout": {
+          "exact": "2036997/500000",
+          "decimal": 4.073994
+        }
+      },
+      {
+        "vref": {
+          "exact": "102/125",
+          "decimal": 0.816
+        },
+        "rt": {
+          "exact": "40040",
+          "decimal": 40040.0
+        },
+        "rb": {
+          "exact": "10010",
+          "decimal": 10010.0
+        },
+        "assumed_signed_leak_A": {
+          "exact": "3/20000000",
+          "decimal": 1.5e-07
+        },
+        "vout": {
+          "exact": "2043003/500000",
+          "decimal": 4.086006
+        }
+      }
+    ],
+    "without_leak_min": {
+      "exact": "69958/17875",
+      "decimal": 3.9137342657342655
+    },
+    "without_leak_max": {
+      "exact": "170102/41625",
+      "decimal": 4.086534534534534
+    }
+  },
+  "soft_start": {
+    "nominal_s": {
+      "exact": "4/275",
+      "decimal": 0.014545454545454545
+    },
+    "conditional_min_s": {
+      "exact": "441/40625",
+      "decimal": 0.010855384615384616
+    },
+    "conditional_max_s": {
+      "exact": "187/9375",
+      "decimal": 0.019946666666666668
+    },
+    "assumption": "C139 nameplate +/-10% only; no DC bias, temperature or aging loss. Time is SS-reference ramp, not observed board startup."
+  },
+  "nominal_design_screen": {
+    "assumption": "5V at U18 VIN; 4V regulated output; nominal 4.7uH, 500kHz, CCM. This is a design calculation, not a verified USB input range or load. 2A is IC rating only. No losses, saturation, frequency spread, PFM or transient effects.",
+    "delta_i_A": {
+      "exact": "16/47",
+      "decimal": 0.3404255319148936
+    },
+    "K_at_IC_2A_rating": {
+      "exact": "8/47",
+      "decimal": 0.1702127659574468
+    },
+    "peak_at_IC_rating_A": {
+      "exact": "102/47",
+      "decimal": 2.1702127659574466
+    },
+    "Cout_nominal_only_uF": 49.7,
+    "capacitive_ripple_nominal_only_V": {
+      "exact": "40/23359",
+      "decimal": 0.0017124020720065071
+    },
+    "L_at_K_0p4_at_IC_rating_H": {
+      "exact": "1/500000",
+      "decimal": 2e-06
+    },
+    "minimum_Vin_no_foldback_ideal_V": {
+      "exact": "400/93",
+      "decimal": 4.301075268817204
+    },
+    "minimum_Vin_98percent_ideal_V": {
+      "exact": "200/49",
+      "decimal": 4.081632653061225
+    }
+  }
+}

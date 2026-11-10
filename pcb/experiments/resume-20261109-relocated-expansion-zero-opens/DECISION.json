@@ -1,0 +1,156 @@
+{
+  "status": "PASS_ZERO_OPENS_RELOCATED_DEVELOPMENT_PROTOTYPE",
+  "candidate_sha256": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d",
+  "source_header7_sha256": "df21164e0a5a5a711c206739d603bb581cc65adda2d5c9ea6472f69ca00018d4",
+  "strict_baseline_sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99",
+  "native": {
+    "pass": true,
+    "board_sha256": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d",
+    "kicad_version": "9.0.2+dfsg-1",
+    "open_pairs": 0,
+    "warnings": 0,
+    "other_errors": 0,
+    "ERC": 0,
+    "schematic_parity": 0,
+    "cold_refill_files_identical": 58,
+    "source_unchanged": true,
+    "material_recomputed": true,
+    "manufacturing_ready": false,
+    "scope": "Native CAD replay against the expected open count; physical, SI and active-power qualification remain separate."
+  },
+  "pad_inventory_identical": true,
+  "source_pad_component_splits": [],
+  "merges": [
+    {
+      "net": "EXT_GPIO25",
+      "before": 2,
+      "after": 1
+    },
+    {
+      "net": "MCU_GPIO10",
+      "before": 2,
+      "after": 1
+    },
+    {
+      "net": "MCU_GPIO24",
+      "before": 2,
+      "after": 1
+    },
+    {
+      "net": "MCU_GPIO25",
+      "before": 2,
+      "after": 1
+    },
+    {
+      "net": "MCU_GPIO26",
+      "before": 2,
+      "after": 1
+    },
+    {
+      "net": "MCU_GPIO27",
+      "before": 2,
+      "after": 1
+    },
+    {
+      "net": "MCU_GPIO3",
+      "before": 2,
+      "after": 1
+    }
+  ],
+  "multi_group_nets_remaining": {},
+  "unchanged_object_direct_contacts_checked": 17701,
+  "missing_direct_contacts": [],
+  "reduced_direct_contacts": [],
+  "retained_barrel_count": 754,
+  "candidate_barrel_count": 910,
+  "all_retained_barrel_records_equal_by_UUID": true,
+  "guard_failures": 0,
+  "new_empty_object_layers": [],
+  "new_multiple_component_object_layers": [],
+  "footprints_summary": {
+    "total": 383,
+    "unchanged_electrical_count": 363,
+    "relocated_expansion_block_count": 19,
+    "relocated_silkscreen_only_count": 1
+  },
+  "inner_gnd_planes": {
+    "In1.Cu": {
+      "islands_source": 1,
+      "islands_candidate": 1,
+      "area_source_mm2": 23450.8724,
+      "area_candidate_mm2": 23494.2804,
+      "delta_mm2": 43.408
+    },
+    "In2.Cu": {
+      "islands_source": 1,
+      "islands_candidate": 1,
+      "area_source_mm2": 23501.3927,
+      "area_candidate_mm2": 23521.9331,
+      "delta_mm2": 20.5404
+    }
+  },
+  "inner_plane_via_necks": {
+    "min_different_net_neck_mm": 0.1512,
+    "min_all_neck_mm": 0.1124,
+    "sub_015mm_different_net_pairs_count": 0,
+    "sub_015mm_same_net_pairs_count": 2,
+    "sub_020mm_pairs_count": 21
+  },
+  "reference_coverage": {
+    "checked_track_plane_rows": 2286,
+    "u1_fanout_box_mm": [
+      106.3,
+      76.8,
+      115.7,
+      86.2
+    ],
+    "zone_thermal_gap_mm": 0.5,
+    "zone_min_thickness_mm": 0.25,
+    "u1_fanout_exempt_rows": 42,
+    "adjacent_antipad_crescent_rows_count": 324,
+    "min_thickness_cusp_fillet_rows_count": 30,
+    "uncovered_outside_zone_antipad_envelope_and_u1_count": 0,
+    "uncovered_outside_zone_antipad_envelope_and_u1": [],
+    "retained_tracks_antipad_crescent_count": 65,
+    "retained_tracks_new_unsupported_outside_declared_windows": []
+  },
+  "geos_replay": {
+    "engine": "GEOS 3.13.1",
+    "invalid_input_polygons": {
+      "source:In1.Cu": 0,
+      "source:In2.Cu": 0,
+      "candidate:In1.Cu": 0,
+      "candidate:In2.Cu": 0
+    },
+    "retained_reference_lost_support_outside_windows_max_nm2": 97070.52395249158,
+    "planes": [
+      {
+        "layer": "In1.Cu",
+        "outside_window_area_nm2": 270373826809.79376,
+        "outside_window_area_mm2": 0.27037382680979377,
+        "outside_empty": false,
+        "raw_loss_area_nm2": 76271400362871.47
+      },
+      {
+        "layer": "In2.Cu",
+        "outside_window_area_nm2": 280586640402.9662,
+        "outside_window_area_mm2": 0.2805866404029662,
+        "outside_empty": false,
+        "raw_loss_area_nm2": 78671739683138.67
+      }
+    ],
+    "strict_q2_interior_witnesses": 1837,
+    "strict_q2_witness_total_geos_area_mm2": 0.55096
+  },
+  "design_rules_relaxed": false,
+  "hidden_reference_designators": [],
+  "remaining_pairs": {
+    "header": 0,
+    "MCU": 0
+  },
+  "selected_as_development_prototype": true,
+  "strict_baseline_promotion": false,
+  "led_power_qualified_default": 0,
+  "manufacturing_ready": false,
+  "scope_limit": "Zero-open routed development prototype with relocated B.Cu GPIO expansion/isolation block; physical fit, SI/EMI, thermal, active-power and hardware qualification remain outstanding."
+}

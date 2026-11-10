@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "source": "pcb/CURRENT.md",
+  "scope": "Primary project, PCB and root schematic identity only; not a full CAD dependency inventory or qualification replay.",
+  "strict_baseline": {
+    "status": "strict_geometry_baseline_not_manufacturing_ready",
+    "manufacturing_ready": false,
+    "reported_diagnostics": {
+      "open_pairs": 11,
+      "warnings": 51
+    },
+    "files": [
+      {
+        "path": "pcb/experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro",
+        "sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073"
+      },
+      {
+        "path": "pcb/experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pcb",
+        "sha256": "04be04e5d098c974a20a60f0d0be89e0379d20e5f2e709a155418d406396ba99"
+      },
+      {
+        "path": "pcb/experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_sch",
+        "sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51"
+      }
+    ]
+  },
+  "development_prototype": {
+    "status": "bounded_development_prototype_not_strict_acceptance_or_manufacturing_ready",
+    "manufacturing_ready": false,
+    "reported_diagnostics": {
+      "open_pairs": 0,
+      "warnings": 0,
+      "guard_failures": 0
+    },
+    "files": [
+      {
+        "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pro",
+        "sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073"
+      },
+      {
+        "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb",
+        "sha256": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d"
+      },
+      {
+        "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_sch",
+        "sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51"
+      }
+    ]
+  }
+}

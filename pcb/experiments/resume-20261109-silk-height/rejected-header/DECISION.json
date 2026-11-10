@@ -1,0 +1,29 @@
+{
+  "accepted": false,
+  "reason": "Exact remote inner-plane copper loss outside all new-via455000nm envelopes; no tolerance waiver.",
+  "source_sha256": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5",
+  "candidate_sha256": "4a7d0a5159723398de17a1e47696ec2e61afae9e044ba18484a8a0e5226f59b0",
+  "native": {
+    "pass": true,
+    "board_sha256": "4a7d0a5159723398de17a1e47696ec2e61afae9e044ba18484a8a0e5226f59b0",
+    "kicad_version": "9.0.2+dfsg-1",
+    "open_pairs": 8,
+    "warnings": 38,
+    "other_errors": 0,
+    "ERC": 0,
+    "schematic_parity": 0,
+    "cold_refill_files_identical": 58,
+    "source_unchanged": true,
+    "material_recomputed": false,
+    "manufacturing_ready": false,
+    "scope": "Native CAD replay against the expected open count; physical, SI and active-power qualification remain separate."
+  },
+  "plane_loss_artifact": "qa/rational-loss-strict.json",
+  "source_contact_artifact": "qa/source-chain.json",
+  "not_run_due_to_plane_failure": [
+    "full candidate material graph",
+    "candidate named-pad partition comparison",
+    "complete retained-contact and new-reference audit"
+  ],
+  "historical_CAD_modified": false
+}
