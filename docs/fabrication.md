@@ -225,7 +225,13 @@ found by printing:
 | [Right half, universal USB — 3MF](../models/maru60-hhkb-topcase-right-usb-universal.3mf) | Same 14.75 mm notch, centred on the spread of every measured on-board USB position in [Interface spec and PCB boards](#interface-spec-and-pcb-boards) ([verification](../evidence/topcase-verification-usb-universal.json)) |
 | [Fit coupons — 3MF](../models/maru60-hhkb-topcase-fit-coupons.3mf) | Front-left corner, front joints and back seam |
 
-Assembled: **298.1 × 198.3 mm**, 20.01 mm case height. The halves split at the
+Assembled: **298.5 × 197.8 mm**, 20.01 mm case height. The skirt sits 0.20 mm
+further out on every side than the caliper-measured stock top case, walls kept
+at 2.85 / 2.80 mm: the caliper pocket left the stock bottom case (111.63 mm
+wide) only 0.05 mm per side and both bottom cases pressed in hard and ground
+(owner, 2026-11-10). The pocket now leaves the stock bottom case about 0.25 mm
+per side; the plate, keycap opening, strikes and the 9.69 mm ledge stay where
+they were. The halves split at the
 centre through the wrist rest and front bezel, joined by three sliding
 dovetails with compression ribs. The back bezel continues on the left half to
 the back-left ball-catch strike (the one nearest the USB-C side of centre),
@@ -253,8 +259,10 @@ Gaskets, 20 pcs** ([AliExpress 1005008463912507](https://www.aliexpress.com/item
 a semi-clear U-sock with a rounded end, 8 × 5 × 5 mm, with a 6.5 × 2.8 × 1.2 mm
 slot for 1.2–1.6 mm plates. Push one fully onto each end of the six plate tabs
 (12 in all). Pushed fully on, a cap clears the pockets of both printed cases by
-0.02–0.05 mm. The 3.90 mm gap between the two seats squeezes each 1.9 mm flange
-by 0.70 mm; a stock case measures about 4 mm (one owner's reading).
+0.02–0.05 mm. The Maru bottom case's cap seats sit 1.05 mm below its rim (4.44
+mm between the two seats), aiming at the stock 1.2–1.5 mm once printed. The
+first prints, 0.51 mm deep by design and 0.7–0.9 mm as printed, over-squeezed
+the caps and pushed the assembled case open against the stock catches.
 
 ### Printing
 
@@ -463,13 +471,13 @@ photos set the layout.
 
 | Feature | Source |
 | --- | --- |
-| Front and back rails: 292.1 mm long, R2.7 corners, top bears on the 9.69 mm top-case floor | Top-case pocket (caliper) less 0.15 mm per side; corner radius from the v6.2 fit |
+| Front and back rails: 292.1 mm long, R2.7 corners, top bears on the 9.69 mm top-case floor | Stock top-case pocket (caliper) less 0.15 mm per side, 0.35 mm inside the Maru top case's grown pocket; corner radius from the v6.2 fit. Printed, the front-to-back width reads 111.46 mm against 111.63 on the stock case (owner, 2026-11-10); the length matches it |
 | Open ends: no wall at either short end; the floor runs out between the rails | Stock bottom case (owner's photos IMG_0462, 0472, 0473); the top-case side skirts close the ends |
 | Two bodies: a ㄷ tray (both rails and the floor, rail outline, 10.32 mm from the rail tops at the back, tilted 0.2° so its front edge meets the desk plane) and a triangular base under it, inset so the tray bottom shows as a step all round: 5.2 mm at the back, 4.5 mm at the front and at each end, where the base ends in clean square cuts | Stock bottom case (owner's calipers, approximate). Only the rail tops bear, so the 9.69 seat alone sets the gasket stack. The steps print as cantilevers at 6° |
 | Base back face: one 14.59 mm straight slope from the back step to the desk face (15.3 mm in from the rail face) | Owner's caliper readings and an edge trace of IMG_0465 (5.0 / 14.5 mm, 47°). The owner's direct inset reading, 18.61 mm, does not fit those lengths at this case height |
 | Desk face on the wrist rest's 6° plane, four bumpon pockets at the corners (X ±130; 13.0 mm from the front rail face, 8.5 mm in from the back slope's desk-face edge) | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons, 8 in all with the wrist rest's front row. Rigid-body load share (self weight 9 N, wrists 15 N, typing 5 N; assumed): 3.7–5.6 N each with both wrists down, all 8 loaded |
-| Six cap recesses, floor at Z 10.20 | 6.30 top-case seat + 1.20 compressed flange + 1.50 plate + 1.20 compressed flange: the Keebox cap's 1.9 mm flanges each squeeze 0.70 mm. A stock case reads about 4 mm between the seats (one owner, not ours); 4.00 here would leave the USB-C body 0.79 mm above the floor, short of the 0.8 mm plate travel |
-| Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](../evidence/topcase/analysis/ball-catch-analysis.json)); pilots on the top-case strike-pocket lobe centres |
+| Six cap recesses, floor at Z 10.74 (1.05 mm below the rim) | Stock case: 1.2–1.5 mm below the rim (owner caliper, 2026-11-10). The first print's 0.51 mm design read 0.7–0.9 mm printed, so 1.05 should print about 1.3. 4.44 mm between the seats; the plate rests about 0.27 mm lower than the top-case model's, leaving the USB-C body about 0.57 mm above the floor at rest |
+| Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](../evidence/topcase/analysis/ball-catch-analysis.json)); 0.60 mm room at each catch end; pilots on the top-case strike-pocket lobe centres. Printed, a stock catch's crest stands 2.3–2.4 mm above the rail (design 2.09; owner, 2026-11-10): about 0.34 mm under the strike plate, engaging deeper than designed |
 | Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
 | Optional 140 × 45 mm R2 battery bay, 4.69 mm deep, back centre (`--battery-bay`, enabled by default) | Length, width, radius: INKC post (which gives 4.5 deep); depth: owner's caliper on the stock bay; position from the owner's photos. The 4.5 mm filler rests on the bay floor, 0.19 mm under the cavity floor. `--no-battery-bay` omits only this pocket cut, restoring the normal Zp 18.20 cavity floor for a wired build; no filler is used |
 | Steel weight plate recess, 2.3 mm deep (the 2.88 mm plate, caliper, stands 0.58 mm proud, 1.42 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. The plate's centre bump lies over the front of the bay: 2.3 mm leaves 1.03 mm of floor between them, 2.5 mm would leave 0.83 and a flush 3.0 mm recess 0.33 |
@@ -513,7 +521,7 @@ the gasket plate with its caps closes without rattling or springing open.
 
 The lower gasket recess's **USB-side entry has an R0.5 mm closed-end transition**;
 the cavity-side open end beside B-L.1 remains square. The flat cap-bearing
-seats remain at Zp 10.20 mm (0.51 mm below the rim); their height and horizontal
+seats remain at Zp 10.74 mm (1.05 mm below the rim); their height and horizontal
 contact faces are not beveled. The other pocket corners are unchanged, and the
 entry stays open without the thin fin. Verification checks each of the 12 caps
 for seated clearance and bearing, as well as the rounded closed-end contour.

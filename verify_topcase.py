@@ -405,14 +405,15 @@ def main() -> None:
     #     keycap opening at 5.66. Probe both sides at three depths, 0.2 mm inside each band.
     material_lip, material_mid, material_top = material_at(z_floor + 2.0), material_at((z_gasket + z_floor) / 2), material_at(z_gasket - 0.3)
     outer_x = abs(pw(GEOM["outer_plate_frame"][2], 0.0)[0])  # outline symmetric about X = 0
+    grow = GEOM.get("pocket_grow", 0.0)  # outline grown past the caliper one; the wall keeps 2.85, the rest stays put
     side_steps_ok: dict[str, bool] = {}
     for y_p in (40.0, 60.0, 80.0):
         for sgn in (-1.0, 1.0):
             at = lambda d: sg.Point(sgn * (outer_x - d), y_p + DY_PW)
             side_steps_ok[f"{'L' if sgn < 0 else 'R'}{y_p:.0f}"] = (
                 material_lip.contains(at(2.6)) and not material_lip.contains(at(3.1))      # skirt wall 2.85
-                and material_mid.contains(at(4.7)) and not material_mid.contains(at(5.1))  # 9.69 ledge to 4.90
-                and material_top.contains(at(5.4)) and not material_top.contains(at(5.9))  # 6.30 strip to 5.65
+                and material_mid.contains(at(4.7 + grow)) and not material_mid.contains(at(5.1 + grow))  # ledge to 4.90
+                and material_top.contains(at(5.4 + grow)) and not material_top.contains(at(5.9 + grow))  # strip to 5.65
             )
     assert all(side_steps_ok.values()), f"Short-side steps differ from the caliper 2.85 / 4.90 / 5.66: {side_steps_ok}"
     # 6h. Chirality (v6.2 printed the mirror image). The print frame is the underside with the front at low Y, so the

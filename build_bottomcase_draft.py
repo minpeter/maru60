@@ -49,21 +49,27 @@ from maru60.frames import DX_PW, DY_PW, PW_SX, pw
 
 OUT = bottomcase_dir()
 
-RIM_CLEAR = 0.15         # Rim to top-case pocket wall, per side
+RIM_CLEAR = 0.15         # Rim to the caliper inner skirt, per side (printed 111.46 wide; stock 111.63); the printed top
+                         # case adds `POCKET_GROW` on top
 RIM_CORNER_R = 2.70      # Stock bottom-case rim corner radius (v6.2 fit: held ~2.3 mm off an R5.0 pocket)
 Z_RIM_TOP = top.Z_FLOOR  # Rim top bears on the top-case pocket floor (9.69)
 # No outer step (owner): below the top-case lip the case stays inside the top-case skirt; the rail faces run straight
 # down to the desk face, and the floor between them is a 6-deg wedge, thin at the front and thick at the back.
 PLATE_EDGE_CLEAR = 0.50  # Rail inner faces from the INKC 6095(gas) plate body edge (body Y)
-# Gasket caps: top flange on the 6.30 top-case seat, PC plate, bottom flange on this seat (both flanges compressed alike).
-CAP_SEAT_ZP = round(top.Z_PLATE + spec.value("plate.thickness") + spec.value("gasket.top_flange_compressed"), 2)  # 10.20
+# Gasket caps: top flange on the 6.30 top-case seat, PC plate, bottom flange on this seat. A seat 0.51 below the rim
+# (3.90 seat gap) printed 0.7-0.9 deep and over-squeezed the caps, pushing the assembled case open against the stock
+# catches; the stock case reads 1.2-1.5 (owner caliper, 2026-11-10). `CAP_SEAT_RELIEF` sets the seat 1.05 below the rim
+# (4.44 gap), which should print about 1.3 deep, inside the stock range.
+CAP_SEAT_RELIEF = 0.54
+CAP_SEAT_ZP = round(top.Z_PLATE + spec.value("plate.thickness") + spec.value("gasket.top_flange_compressed")
+                    + CAP_SEAT_RELIEF, 2)  # 10.74
 CAP_REACH = round(top.CAP_FOOT_L / 2 + top.CAP_CLEAR - top.CAP_INSET, 3)  # Recess end past the tab end (1.55), as top
 CAP_SIDE = round(top.CAP_FOOT_W / 2 + top.CAP_CLEAR, 3)  # Recess skirt side from the cap centreline (2.65), as top
 CAP_MOUTH_R = 0.50      # Round the closed end of the USB-side cap entry, preserving the flat bearing seat and its height
 _CATCH = spec.value("ball_catch.catch_body")
 CATCH_TOP_ZP = 7.60      # Catch barrel top: 0.60 under the strike plate (Z_p 5.55 + 1.45); the tongue tip is at 12.70
 CATCH_FLOOR_ZP = round(CATCH_TOP_ZP + _CATCH["height"], 2)  # Notch floor the catch stands on (15.30)
-CATCH_NOTCH_HALF_L = round(_CATCH["length"] / 2 + 0.30, 2)  # 0.30 mm room at each catch end
+CATCH_NOTCH_HALF_L = round(_CATCH["length"] / 2 + 0.60, 2)  # 0.60 mm room at each catch end (length photo-read +-0.5)
 PILOT_D, PILOT_MAX, PILOT_SKIN = 1.70, 4.00, 0.80  # M2 self-tapping pilots in PETG: depth up to 4.0, 0.8 skin left
 FLOOR_ZP = 18.20         # Cavity floor: PCB 12.50-14.10 (1.6 mm), bottom USB-C body to ~17.36, ~0.8 mm gasket travel
 _BAY = spec.value("bottom.battery_bay")
@@ -118,8 +124,8 @@ BED = 256.0
 
 COS, SIN, TAN = math.cos(top.TILT_RAD), math.sin(top.TILT_RAD), math.tan(top.TILT_RAD)
 DESK_A = top.z_desk_in_print_frame(0.0)  # Desk plane: Z_p = DESK_A + Y * TAN (the wrist-rest pad faces)
-Y_FRONT = round(top.INNER_P[1] + RIM_CLEAR + DY_PW, 3)  # Front rail outer face (world Y)
-Y_BACK = round(top.INNER_P[3] - RIM_CLEAR + DY_PW, 3)   # Back rail outer face (world Y)
+Y_FRONT = round(top.STOCK_INNER_P[1] + RIM_CLEAR + DY_PW, 3)  # Front rail outer face (world Y)
+Y_BACK = round(top.STOCK_INNER_P[3] - RIM_CLEAR + DY_PW, 3)   # Back rail outer face (world Y)
 # World -> print frame: desk face on the bed (Z' = height above it), X kept, Y' = -(Y cos + Z_p sin); a proper rotation.
 TO_PRINT = np.array([[1.0, 0.0, 0.0, 0.0], [0.0, -COS, -SIN, 0.0], [0.0, SIN, -COS, DESK_A * COS]])
 FROM_PRINT = np.array([[1.0, 0.0, 0.0, 0.0], [0.0, -COS, SIN, -DESK_A * COS * SIN], [0.0, -SIN, -COS, DESK_A * COS * COS]])
@@ -226,7 +232,7 @@ def from_print(m: md.Manifold) -> md.Manifold:
 _BODY_Y = spec.value("plate.body_y")
 LEDGE_FRONT_P = round(_BODY_Y[0] - PLATE_EDGE_CLEAR, 3)
 LEDGE_BACK_P = round(_BODY_Y[1] + PLATE_EDGE_CLEAR, 3)
-RIM_P = tuple(round(v + d, 3) for v, d in zip(top.INNER_P, (RIM_CLEAR, RIM_CLEAR, -RIM_CLEAR, -RIM_CLEAR)))
+RIM_P = tuple(round(v + d, 3) for v, d in zip(top.STOCK_INNER_P, (RIM_CLEAR, RIM_CLEAR, -RIM_CLEAR, -RIM_CLEAR)))
 
 
 def cap_recesses_p() -> list[Any]:

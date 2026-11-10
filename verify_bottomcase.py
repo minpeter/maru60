@@ -66,13 +66,14 @@ def main() -> None:
     world = {name: to_manifold(trimesh.load_mesh(OUT / f"{name}-world.stl")) for name in parts}
     bottom = world["bottom-left"] + world["bottom-right"]
 
-    # 2. Nesting in the top-case pocket: free when seated and 0.10 mm off centre (0.15 per side), located at 0.25 mm,
+    # 2. Nesting in the top-case pocket: free when seated and 0.10 mm off centre, located 0.10 past the pocket wall,
     #    and only the rail tops bear on the 9.69 floor: lifting the bottom case 0.05 mm into the top case touches a wide
     #    band there and nothing at the skirt lip (20.01). No outer step (stock part): at every height below the rail tops
     #    the case stays inside the rail outline, so the top-case skirt wraps it from outside.
     seated = vol(bottom ^ top_mf)
+    d_located = round(bc.RIM_CLEAR + TOP_GEOM.get("pocket_grow", 0.0) + 0.10, 2)  # pocket wall plus 0.10
     lateral = {f"{ax}{d:+.2f}": vol(bottom.translate([d if ax == "x" else 0.0, d if ax == "y" else 0.0, 0.0]) ^ top_mf)
-               for ax in ("x", "y") for d in (-0.10, 0.10, -0.25, 0.25)}
+               for ax in ("x", "y") for d in (-0.10, 0.10, -d_located, d_located)}
     lifted = bottom.translate([0.0, 0.0, -0.05]) ^ top_mf
     bearing_mm2 = round(vol(lifted) / 0.05, 1)
     lip_contact = vol(lifted ^ box(-200.0, 0.0, 200.0, 250.0, top.SKIRT_H - 1.0, top.SKIRT_H + 1.0))
@@ -82,20 +83,20 @@ def main() -> None:
                                top.SKIRT_H + 10.0)}
     assert seated < 0.01, f"Bottom case collides with the top case when seated: {seated} mm^3"
     assert max(v for k, v in lateral.items() if "0.10" in k) < 0.01, lateral
-    assert min(v for k, v in lateral.items() if "0.25" in k) > 0.1, lateral
+    assert min(v for k, v in lateral.items() if f"{d_located:.2f}" in k) > 0.1, lateral
     assert bearing_mm2 > 1000.0, f"Rim top bearing on the 9.69 floor only {bearing_mm2} mm^2"
     assert lip_contact < 0.01, f"Bottom case touches the top-case skirt lip: {lip_contact} mm^3"
     assert max(outside_rails.values()) < 0.01, f"Material outside the rail outline (outer step): {outside_rails}"
 
     # 3. Gasket plate and caps: the plate floats free seated and 1.0 mm down; the 12 cap bottom flanges (`gasket.cap_free`
-    #    pushed fully onto the tab ends, compressed to 9.00..10.20) clear every wall and bear on the recess floors.
+    #    pushed fully onto the tab ends, compressed to 9.00..CAP_SEAT_ZP) clear every wall and bear on the recess floors.
     plate_t = spec.value("plate.thickness")
     plate = md.CrossSection([plate_gas_world(PLATE_FRAME)]).extrude(plate_t).translate([0.0, 0.0, top.Z_PLATE])
     plate_free = {f"down_{d:.1f}": vol(plate.translate([0.0, 0.0, d]) ^ bottom) for d in (0.0, 0.5, 1.0)}
     assert max(plate_free.values()) < 0.01, plate_free
     caps_plan = [orient(sg.Polygon([top.pw(x, y) for x, y in pts])) for pts in spec.gasket_outlines_plate()]
-    flange = spec.value("gasket.top_flange_compressed")
     z_flange = top.Z_PLATE + plate_t
+    flange = bc.CAP_SEAT_ZP - z_flange  # bottom flange down to the seat, with the plate held at the top-case Z_PLATE
     caps = md.Manifold()
     cap_checks = []
     for i, ring in enumerate(caps_plan, 1):
