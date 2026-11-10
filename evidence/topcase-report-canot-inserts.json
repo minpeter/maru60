@@ -2,6 +2,8 @@
   "version": "v7.12-ph60-rev3-default",
   "generator": "manifold3d mesh CSG (build_topcase_draft.py) + 28px/mm gasket metrology",
   "strike_inserts": true,
+  "catch_hardware": "stock",
+  "luban32": null,
   "strike_insert_trial": {
     "hole_d": 3.2,
     "outer_d": 3.5,
@@ -4072,6 +4074,12 @@
         2.24
       ]
     ],
+    "strike_pocket_half_w": 3.625,
+    "strike_plate_mm": {
+      "length": 20.5,
+      "width": 6.55,
+      "thickness": 1.45
+    },
     "joint_yc_world": {
       "WristFrontJoint": 23.5,
       "WristMidJoint": 50.0,
@@ -4107,6 +4115,7 @@
     },
     "strike_pilot_diameter": 3.2,
     "strike_pilot_depth": 3.55,
+    "strike_pilot_half_pitch": 6.5,
     "dovetails": [
       {
         "name": "WristFrontJoint",
