@@ -18,7 +18,7 @@ geometry comes from the parts it mates with, plus the owner's photos IMG_0462-04
   - Cavity floor under the MX stack (plate top 7.50, PCB top 12.50); 140 x 45 battery bay, 4.69 deep as the stock bay
     (owner caliper; published 4.5), at the back, back decoration plate recess (INKC drawing) on the underside with four
     counterbored M2 holes from the cavity to screw the steel plate on as the stock case does, USB-C slot under the
-    top-case notch, with a separate lower-case bridge over the open USB passage. The battery bay can be omitted
+    top-case notch, with a separate lower-case bridge over the USB passage (floor at the tray bottom, back slope uncut). The battery bay can be omitted
     with --no-battery-bay for a wired build; all other cuts, including the underside weight-plate recess, remain.
   - Split at X = 0 into two halves for a 256 mm bed, printed desk face down with support under the USB bridge.
 
@@ -88,8 +88,18 @@ END_STEP_W = 4.5         # Tray bottom showing past each end of the base, from t
 SLOT_MIN_WALL = 0.8      # Rail left between the USB-C slot and a cap recess: anything thinner (under two 0.4 mm
                          # perimeters) is cut away, so the slot opens into the recess instead of leaving a fin
 USB_BRIDGE_BOTTOM_ZP = 11.90  # Roof underside; its top is flush with the surrounding rim, not a separate recessed beam
-USB_LEDGE_ZP = 21.08    # Deeper USB mating-floor relief; design trial, not a depth measured from the owner's photo
-USB_PORT_POCKET_DEPTH = 0.50  # Shallow, bounded recess seen in the owner's photo; preview depth, not a measurement
+# The passage floor stops at the tray bottom (owner, IMG_0795-0800): it leaves over the open back step and the back
+# slope under it stays whole, instead of a slot cut down through the slope that printed as a stair-stepped groove.
+# 0.05 under the tray bottom so no film is left; the 12.35 x 6.5 plug gauge with 0.8 mm gasket travel reaches 19.78.
+USB_TUNNEL_FLOOR_ZP = round(TRAY_BOTTOM_ZP + 0.05, 2)  # 20.06
+USB_PORT_POCKET_DEPTH = 2.44  # Bounded recess in front of the port: stock depth below the cavity floor (owner
+                              # caliper 2026-11-10, 2.44; a first reading gave 2.9)
+USB_PORT_POCKET_W = 15.5     # Across X, centred on the port (owner caliper, long side)
+USB_PORT_POCKET_L = 11.4     # Front edge to the back of the rail notch, notch included (owner caliper, short side)
+USB_PORT_POCKET_R = 2.0      # Front corners; the back end opens square into the passage (radius not measured)
+USB_RAIL_NOTCH_D = 2.0       # Stock: the pocket's end-mill pass also shaves the rail's inner wall face, full height,
+                             # to the pocket width with the same R2 corners (owner: ~1.5-2 mm deep, same curvature as the
+                             # pocket). Depth = R keeps both quarter arcs whole and tangent to the pocket sides
 DECO_CLEAR = 0.20        # Recess around the steel weight / decoration plate outline (INKC drawing), per side
 DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, along the desk face (owner)
 DECO_RECESS = 2.3        # Recess depth: the 2.88 mm plate stands 0.58 proud of the desk face (1.42 under the bumpons'
@@ -352,27 +362,38 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
     usb_x, usb_w = top.usb_notch_print(board)
     usb_y0, usb_y1 = pw(0.0, LEDGE_BACK_P - 1.0)[1], pw(0.0, RIM_P[3] + 1.0)[1]
     slot = sg.box(usb_x - usb_w / 2, usb_y0, usb_x + usb_w / 2, usb_y1)
-    # Open below the passage, with a distinct lower-case bridge above it. The upper case has its own bridge.
-    # Retain only 1 mm of the outer exit floor over the sloping underside.
-    # The shallow inner port pocket is separate: its end rises back to the cavity floor before the exit.
+    # A passage with a distinct lower-case bridge above it (the upper case has its own bridge): its floor stops at
+    # `USB_TUNNEL_FLOOR_ZP`, flush with the tray bottom, so it leaves over the open back step without cutting the back
+    # slope. The port pocket in front runs straight into it: no raised end or deeper strip between them (owner).
     usb_open_y = usb_y0 + 1.0
-    usb_z1 = desk_zp(usb_y1) + 1.0
-    cuts.append(prism(slot, Z_RIM_TOP - 1.0, USB_LEDGE_ZP))
-    inner_relief = sg.box(usb_x - 10.0, usb_y0 - 14.0, usb_x + 10.0, usb_y0 - 1.0)
-    inner_relief = inner_relief.buffer(-2.0).buffer(2.0, quad_segs=16)
+    px0, px1 = usb_x - USB_PORT_POCKET_W / 2, usb_x + USB_PORT_POCKET_W / 2
+    py0 = usb_open_y + USB_RAIL_NOTCH_D - USB_PORT_POCKET_L  # the measured length includes the rail notch
+    inner_relief = sg.box(px0, py0, px1, usb_open_y).buffer(-USB_PORT_POCKET_R).buffer(USB_PORT_POCKET_R, quad_segs=16)
+    inner_relief = inner_relief.union(sg.box(px0, py0 + USB_PORT_POCKET_R, px1, usb_open_y))
     cuts.append(prism(inner_relief, FLOOR_ZP - 0.01, FLOOR_ZP + USB_PORT_POCKET_DEPTH))
-    cuts.append(prism(sg.box(usb_x - usb_w / 2, usb_open_y, usb_x + usb_w / 2, usb_y1),
-                      Z_RIM_TOP - 1.0, usb_z1))
-    # Use the very same X/Z_p lip contour as the top case so square lower-case tips do not show behind its rounds.
-    cuts.append(top.prism_xz(top.usb_lip_round_xz(usb_x, usb_w, usb_z1), usb_y0, usb_y1))
+    # The R2 tool's last pass along the pocket's back edge runs USB_RAIL_NOTCH_D into the wall, from above the rim down
+    # to the passage floor (not the pocket floor, so the back slope stays whole): a shallow notch with tool-radius ends.
+    tool_y = usb_open_y + USB_RAIL_NOTCH_D - USB_PORT_POCKET_R
+    rail_notch = sg.LineString([(px0 + USB_PORT_POCKET_R, tool_y), (px1 - USB_PORT_POCKET_R, tool_y)]).buffer(
+        USB_PORT_POCKET_R, quad_segs=16)
+    cuts.append(prism(rail_notch, Z_RIM_TOP - 1.0, USB_TUNNEL_FLOOR_ZP))
+    # Overlap the deeper pocket (which contains this section) so no zero-thickness membrane is left at usb_open_y.
+    cuts.append(prism(sg.box(usb_x - usb_w / 2, usb_open_y - 0.1, usb_x + usb_w / 2, usb_y1),
+                      Z_RIM_TOP - 1.0, USB_TUNNEL_FLOOR_ZP))
+    # Same X/Z_p lip contour as the top case on the free rail ends over the step, so square lower-case tips do not
+    # show behind its rounds; kept off the base so the slope stays whole.
+    cuts.append(top.prism_xz(top.usb_lip_round_xz(usb_x, usb_w, TRAY_BOTTOM_ZP + 1.0),
+                             Y_BACK - BACK_LEDGE_W + 0.3, usb_y1))  # 0.3 clear of the base edge: no shared edge
     # Continue the rim plane over the port, preserving its existing cap recesses and fin relief.
     # Match the top-case opening's upper corner curves without lowering the central ceiling.
-    arch_box = sg.box(usb_x - usb_w / 2, USB_BRIDGE_BOTTOM_ZP, usb_x + usb_w / 2, USB_LEDGE_ZP)
+    arch_box = sg.box(usb_x - usb_w / 2, USB_BRIDGE_BOTTOM_ZP, usb_x + usb_w / 2, USB_TUNNEL_FLOOR_ZP)
     arch_opening = arch_box.buffer(-top.USB_END_R).buffer(top.USB_END_R, quad_segs=12).union(
         sg.box(usb_x - usb_w / 2, USB_BRIDGE_BOTTOM_ZP + top.USB_END_R,
-               usb_x + usb_w / 2, USB_LEDGE_ZP)).simplify(1e-4)
+               usb_x + usb_w / 2, USB_TUNNEL_FLOOR_ZP)).simplify(1e-4)
     # Overlap the side walls beyond the arc tangency so the STL has no zero-width junction there.
-    bridge = prism(sg.box(usb_x - usb_w / 2 - 0.8, usb_open_y, usb_x + usb_w / 2 + 0.8, Y_BACK),
+    # Its front edge follows the rail notch's R2 outline, which the stock CNC pass leaves open over the full height,
+    # so from above the notch reads as round instead of showing the passage's square corners below it.
+    bridge = prism(sg.box(usb_x - usb_w / 2 - 0.8, usb_open_y, usb_x + usb_w / 2 + 0.8, Y_BACK).difference(rail_notch),
                    Z_RIM_TOP, USB_BRIDGE_BOTTOM_ZP + top.USB_END_R + 0.1)
     bridge -= top.prism_xz(arch_opening, usb_open_y - 0.1, Y_BACK + 0.1)
     # A cap recess may reach into the slot (PH60 Rev.3: 0.06 mm with the 14.75 mm notch); the recess wins there.
@@ -434,14 +455,15 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
                         "cap_mouth_radius": CAP_MOUTH_R,
                         "cap_recesses": [[round(v, 3) for v in p.bounds] for p in cap_recesses_p()]},
         "catches": [{**s, "pilots": pilots[2 * k:2 * k + 2]} for k, s in enumerate(sites)],
-        "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, usb_z1],
-                           "open_bottom_y": [usb_open_y, usb_y1], "inner_ledge_z_p": USB_LEDGE_ZP,
-                           "inner_connector_pocket": {"bounds_xy": list(inner_relief.bounds), "corner_r": 2.0,
+        "usb_slot_world": {"x": usb_x, "width": usb_w, "y": [usb_y0, usb_y1], "z_p": [Z_RIM_TOP, USB_TUNNEL_FLOOR_ZP],
+                           "tunnel_y": [usb_open_y, usb_y1], "exit_over_open_step_y": [Y_BACK - BACK_LEDGE_W, Y_BACK],
+                           "open_lip_corner_r": top.USB_LIP_R,
+                           "inner_connector_pocket": {"bounds_xy": list(inner_relief.bounds), "corner_r": USB_PORT_POCKET_R, "size": [USB_PORT_POCKET_W, USB_PORT_POCKET_L],
+                                                      "rail_notch_depth": USB_RAIL_NOTCH_D,
                                                       "floor_z_p": FLOOR_ZP + USB_PORT_POCKET_DEPTH,
-                                                      "end_land_mm": 1.0},
+                                                      "end_land_mm": 0.0},
                            "bridge_z_p": [Z_RIM_TOP, USB_BRIDGE_BOTTOM_ZP],
                            "bridge_corner_r": top.USB_END_R,
-                           "open_lip_corner_r": top.USB_LIP_R,
                            "bridge_y": [usb_open_y, Y_BACK], "bridge_requires_print_support": True,
                            "cap_recess_walls_removed_mm": slot_fins, "min_wall": SLOT_MIN_WALL},
         "bumpons_world": [[x, round(y, 3)] for x, y in bumpon_centres_world()],

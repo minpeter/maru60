@@ -9,18 +9,18 @@
     "restored_floor_missing_mm3": 0.0
   },
   "top_case_pocket": {
-    "seated_overlap_mm3": 0.0008,
+    "seated_overlap_mm3": 0.0007,
     "lateral_shift_overlap_mm3": {
-      "x-0.10": 0.0008,
-      "x+0.10": 0.0008,
+      "x-0.10": 0.0007,
+      "x+0.10": 0.0007,
       "x-0.45": 27.5444,
       "x+0.45": 27.5444,
-      "y-0.10": 0.0008,
-      "y+0.10": 0.0008,
-      "y-0.45": 259.8168,
+      "y-0.10": 0.0007,
+      "y+0.10": 0.0007,
+      "y-0.45": 259.8167,
       "y+0.45": 247.093
     },
-    "rim_top_bearing_on_9p69_floor_mm2": 1806.5,
+    "rim_top_bearing_on_9p69_floor_mm2": 1777.7,
     "skirt_lip_contact_mm3": 0.0,
     "material_outside_rail_outline_mm2": {
       "z_p_9.99": 0.0,
@@ -295,7 +295,7 @@
     "expected_print_y": -181.475
   },
   "split_seam": {
-    "seated_overlap_mm3": -0.0,
+    "seated_overlap_mm3": 0.0,
     "insertion_path_max_overlap_mm3": 0.0001,
     "in_plane_shift_overlap_mm3": {
       "x+0.3": 45.9297,
@@ -330,18 +330,19 @@
     "cap_recess_walls_mm": [
       0.0
     ],
-    "open_bottom_material_mm3": 0.0,
-    "arch_corner_missing_mm3": 0.0,
-    "arch_corner_blockage_mm3": 0.0,
+    "tunnel_blockage_mm3": 0.0,
+    "back_slope_missing_mm3": 0.0,
     "matching_lip_corner_rounds": {
       "-1.0": true,
       "1.0": true
     },
-    "recessed_floor_blockage_mm3": 0.0,
-    "inner_connector_recess_blockage_mm3": 0.0,
-    "shallow_port_floor_missing_mm3": 0.0,
-    "raised_port_end_missing_mm3": 0.0,
-    "inner_ledge_missing_mm3": 0.0,
+    "arch_corner_missing_mm3": 0.0,
+    "arch_corner_blockage_mm3": 0.0,
+    "port_pocket_blockage_mm3": 0.0,
+    "port_pocket_floor_missing_mm3": 0.0,
+    "port_pocket_oversize_mm3": 0.0,
+    "rail_notch_blockage_mm3": 0.0,
+    "rail_notch_overcut_mm3": 0.0,
     "bridge_missing_mm3": 0.0,
     "bridge_to_upper_ceiling_mm": -0.0,
     "bridge_to_generic_plug_mm": 0.08,
@@ -358,8 +359,8 @@
     "bottom-left": {
       "islands": 0,
       "undeclared_overhangs": 0,
-      "usb_bridge_requires_support_mm2": 107.01,
-      "tray_step_cantilever_mm2": 1888.3
+      "usb_bridge_requires_support_mm2": 76.62,
+      "tray_step_cantilever_mm2": 1908.5
     },
     "bottom-right": {
       "islands": 0,
@@ -387,30 +388,30 @@
     }
   },
   "input_sha256": {
-    "build/bottom-left-print.stl": "7531aa6d0ac57ceb1354d8b8b9defe0418fde916d38e50ecc49b1fe2efc220eb",
-    "build/bottom-left-world.stl": "021083f0796f84dce1215f5fdaa0b2cc59514f78f94955dea05b74a69d9c394c",
-    "build/bottom-right-print.stl": "13036c69a00ebbaa533e575887b9b6e3a39133960e05a53d18b1db55fff82b2b",
-    "build/bottom-right-world.stl": "83322b06489f8265bcc1f6701d72292da5d5ab4f617b0bb635de5d66ce350173",
+    "build/bottom-left-print.stl": "8989357a4d1ef6efeb7eb72f688e896fade53aaf13cc3e756d884c567a491aca",
+    "build/bottom-left-world.stl": "294804aa7026662d11fe021bb001a769cc7960c57e8f62bccb63fc677d588b53",
+    "build/bottom-right-print.stl": "71fe32d5c0ef3aa61b3633a587fc004400fd5ee7abdcf16bc40194d6a430a41e",
+    "build/bottom-right-world.stl": "fc87fb688be822ebcb9e87c21c8e82b3cc8b234f50ae4016cfbd81565f5e16bd",
     "build/coupon-front-left-print.stl": "1aa9b923b7960b505a9808271dc60d66a6421e1ea2a931277672f8e4cf0aa1ed",
     "build/coupon-front-left-world.stl": "d5c005f99c615e11be91fa40668a06916aab6a751e0596d814b58f4ab0bc24f5",
-    "build/draft-report.json": "df3506d8dbaa17b1b965452b38cf9734b3aae44347a36ce8c3277e74794cce4d",
+    "build/draft-report.json": "f652eb6533dc7f9b6fe9c8c2cb8a2c621f0b86e4798f412c950a7a0335808fc1",
     "build/joint-test-left-print.stl": "644a211127ae2b9847382d16b0b635143f67b5af9833305354bf5992c12ab50c",
     "build/joint-test-left-world.stl": "936329a9739d791086b26b68224d1b7008126f8b5144c3acaf36b9362134caad",
     "build/joint-test-right-print.stl": "f8bda955547e810c6d0f9716db46211d7af9d4783ce46d9ae71392eea674e2de",
     "build/joint-test-right-world.stl": "b879b83683dd3a54355592839719b0e9b77712fee41ff0dcd20acfdb7a09f335",
-    "build/maru60-hhkb-bottomcase-fit-coupon.3mf": "f5e95a3b05ceca2a2ba1f326868cc7897eaf5780823088a729d83eee61e10260",
-    "build/maru60-hhkb-bottomcase-joint-test.3mf": "bdc91d5ef7d177c6270f97b19ff4351992238d658b930921479d167e325f5d76",
-    "build/maru60-hhkb-bottomcase-left.3mf": "d571bd69da64bbe80a5d30948e8ecb8c7f442252bc1d6e53718117e6ebb2e08e",
-    "build/maru60-hhkb-bottomcase-right.3mf": "df561240fb443a09f22433df140c96e1125c868f589757fe97d0d714eab6819a",
-    "build_bottomcase_draft.py": "480f622c2cd4624034637d811831250cfa98c1d56f43769dd4de56ace4a22e5e",
+    "build/maru60-hhkb-bottomcase-fit-coupon.3mf": "051bdc94146bbef74f759447a87bdb52c7e56bed6b96a6cffe4b084a33207395",
+    "build/maru60-hhkb-bottomcase-joint-test.3mf": "95435ad09a3b62802cc851b61b391fbb28f38e94c461ff5190edd35dc8a757cf",
+    "build/maru60-hhkb-bottomcase-left.3mf": "0ffdd016c691dde43e4c32ab269d3f2c21edf663cbca61e155ee4b52bc9a8fde",
+    "build/maru60-hhkb-bottomcase-right.3mf": "9e88e7044ea1b1f6e226a8c5abf7e4f4a619221e4b7f977eec04baafec421fb5",
+    "build_bottomcase_draft.py": "d5b6ac691d7038b70b765cd375dfeac37c1d06468047c8a2b5a4bdbf316c5fbc",
     "build_topcase_draft.py": "544da833b3751da8f8a939f9e1b0eb6a90c71457826b32b3218a37e13d02c793",
     "dependency-0/coupon-ballcatch-gasket-left.stl": "6b279c3f50e4eac5f0c26834ca964e80836e78d6432fa9de7551b319fb27343a",
     "dependency-0/draft-report.json": "c5f2e24710956c893021858efb15f242c4c1dbfde1499ceaa63cf43ea56ae910",
-    "dependency-0/halves-world.3mf": "67c80f156a5b0917c1a4b0a7aa874f5c32399a5dff2eaad625f611a2611fbb99",
+    "dependency-0/halves-world.3mf": "c3e25206696eba9a0170ce9d0dc59408e3f49a13754685fafdb3ded146a29ace",
     "dependency-0/left-half-print.stl": "34e2d24d6b67e97db84993541a461d3a6dbc6624123d3d92443dd75834033987",
-    "dependency-0/maru60-fit-test-coupons.3mf": "4cda03126017c93fd15475d0794a98b8a8220df7a2da24a7e16f92f6b8fe69f1",
-    "dependency-0/maru60-hhkb-left-plate.3mf": "6e022f145fa769e89de56ba71f22b0ba9c2500b50ecb46273bbceddb02b206dd",
-    "dependency-0/maru60-hhkb-right-plate.3mf": "b3440cc09684b5ce791faf995985599e72bd17392ad7a31698f6d11f17e20c7d",
+    "dependency-0/maru60-fit-test-coupons.3mf": "1dcea26b6b6cf32fdf3008de56a4b8a142303f01e4ab2d79495f0d4ee1828115",
+    "dependency-0/maru60-hhkb-left-plate.3mf": "b7ab2c520ac5654cb4a168d48bf80f44d4e460ad5d926b78a1344e140711958e",
+    "dependency-0/maru60-hhkb-right-plate.3mf": "d1e81be27e9cffba47cf5578467168773bcfe37d3e8581aa3e343a8584d062ab",
     "dependency-0/right-half-print.stl": "8bdb64199391f076ba40704fa9a102d4c4b45e3afee89b318c6a84b251e3c77d",
     "maru60/__init__.py": "49ec24caa935fc5b5040d7c653ef5fe04b5356b3178780c479036ab8e9499c08",
     "maru60/exterior.py": "bc565e9bdf78ae6770b2874856703b07a93e5b9e012a9968bab4d557680170d8",
@@ -423,7 +424,7 @@
     "spec/boards.json": "64f89606713cd0f621bc42168daf565c44f471544addb3b2d85b05a94af88a0e",
     "spec/rule60-v3-outlines.json": "acff832b570715bb261defe752e226e86c554d629dbe344b42f0eb93674bee97",
     "spec/rule60-v3.json": "bfc76674a8b4c35dbf459efb985728eec2053352906a5a7db8cb5e878098885a",
-    "verify_bottomcase.py": "1d3f51a2b7fcaffa7cade433d505bce0e8012acf040521a96246667e7e1a02ea",
+    "verify_bottomcase.py": "496b3651da119c527af24bbfd501540086f253db6528b4f87dbf278181c9f3b4",
     "verify_topcase.py": "cef8ae2a3b9990c2c78c47846ddcdd0b0114b979da78d645a039c6c6e0b17f71"
   }
 }
