@@ -21,8 +21,9 @@ uv run tools/check_pcb_current.py
 ```
 
 The housing pipeline builds and verifies both cases in a variant-specific
-folder under `build/`. Add `--strike-inserts` for the upper insert trial or
-`--no-battery-bay` for the wired lower case. Published `models/` and `evidence/`
+folder under `build/`. Add `--strike-inserts` for the upper insert trial,
+`--catches luban32` for the purchased LUBAN 32 mm catches with inserts (assumed
+widths, caliper first) or `--no-battery-bay` for the wired lower case. Published `models/` and `evidence/`
 change only with `--publish`; review [housing guidance](docs/housing.md) first.
 CAD checks do not establish physical fit or strength. The custom PCB is **not
 manufacturing-ready**.

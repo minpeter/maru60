@@ -22,6 +22,7 @@ import trimesh
 
 import build_bottomcase_draft as bc
 import rule60_spec as spec
+from maru60.exterior import exposed_changes
 from maru60.mesh_io import slice_material, to_manifold
 from maru60.frames import PlateFrame, plate_gas_world
 from maru60.paths import bottomcase_dir, topcase_dir
@@ -130,37 +131,70 @@ def main() -> None:
             assert samples[0] > 0.0013 and samples[1] == 0.0, f"USB-side cap entry is not rounded: {samples}"
             mouth_material.append(samples)
 
-    # 4. Ball catches: strike plates and tongues clear; each catch body (31.8 x 6.7 x 7.7: barrels over +-10.6 rising to
-    #    the catch top, ears with the screws held below the rim top) sits on its notch floor, clear of both cases and of
-    #    the strike plate; the tongue tip passes the barrel axis.
-    sp, (tx, ty, tz) = spec.value("ball_catch.strike_plate"), spec.value("ball_catch.strike_tongue")
-    body = spec.value("ball_catch.catch_body")
-    z_sp = top.Z_STRIKE + sp["thickness"]
+    # 4. Ball catches: strike plates and tongues clear; each catch body sits on its notch floor, clear of both cases,
+    #    the strike plate and the gasket plate (0.25 up to 1.0 down). Stock (31.8 x 6.7 x 7.7): barrels over +-10.6
+    #    rising to the catch top, ears with the screws held below the rim top; the tongue tip passes the barrel axis.
+    #    LUBAN 32 mm (assumed widths): barrels over `barrel_length` up to the catch top, full-length ears at the seat;
+    #    its tongue engages inside that envelope at the seller's assembled height.
+    catch_kind = REPORT.get("catch_hardware", "stock")
+    assert TOP_REPORT.get("catch_hardware", "stock") == catch_kind, "top/bottom catch hardware mismatch"
+    z_strike = TOP_REPORT["calibrated_z_stack_mm"]["Z_strike_pocket_floor"]
+    luban = REPORT["luban32"]["hardware_assumed"] if catch_kind == "luban32" else None
+    sp = luban["strike"] if luban else spec.value("ball_catch.strike_plate")
+    body = luban["catch"] if luban else spec.value("ball_catch.catch_body")
+    tx, ty, tz = spec.value("ball_catch.strike_tongue")
+    z_sp = z_strike + sp["thickness"]
     strikes, tongues, catches = md.Manifold(), md.Manifold(), md.Manifold()
-    for _, sxp, syp in top.strike_centers_p():
+    for sxp, syp in TOP_GEOM["strike_centers_plate_frame"]:
         x, y = top.pw(sxp, syp)
         strikes += box(x - sp["length"] / 2, y - sp["width"] / 2, x + sp["length"] / 2, y + sp["width"] / 2,
-                       top.Z_STRIKE + 0.01, z_sp)
-        tongues += box(x - tx / 2, y - ty / 2, x + tx / 2, y + ty / 2, z_sp, z_sp + tz)
+                       z_strike + 0.01, z_sp)
         hw, hl = body["width"] / 2, body["length"] / 2
+        if luban:
+            bl = body["barrel_length"] / 2
+            catches += box(x - bl, y - hw, x + bl, y + hw, Z["catch_top"], Z["catch_floor"] - 0.01)
+            catches += box(x - hl, y - hw, x + hl, y + hw, Z["catch_floor"] - body["ear_thickness"], Z["catch_floor"] - 0.01)
+            continue
+        tongues += box(x - tx / 2, y - ty / 2, x + tx / 2, y + ty / 2, z_sp, z_sp + tz)
         catches += box(x - 10.6, y - hw, x + 10.6, y + hw, Z["catch_top"], Z["catch_floor"] - 0.01)
         for s in (-1.0, 1.0):
             catches += box(min(x + s * 10.6, x + s * hl), y - hw, max(x + s * 10.6, x + s * hl), y + hw,
                            top.Z_FLOOR + 0.10, Z["catch_floor"] - 0.01)
     catch_gauge = {
+        "catches": catch_kind,
         "strikes_and_tongues_vs_bottom_mm3": vol((strikes + tongues) ^ bottom),
         "catch_bodies_vs_bottom_mm3": vol(catches ^ bottom),
         "catch_bodies_vs_top_case_mm3": vol(catches ^ top_mf),
         "catch_bodies_vs_strike_plates_mm3": vol(catches ^ strikes),
         "catch_floor_bearing_mm3": vol(catches.translate([0.0, 0.0, 0.05]) ^ bottom),
-        "tongue_tip_past_barrel_axis_mm": round(z_sp + tz - (Z["catch_top"] + body["width"] / 2), 2),
+        "tongue_tip_past_barrel_axis_mm": None if luban else round(z_sp + tz - (Z["catch_top"] + body["width"] / 2), 2),
         "barrel_top_under_strike_plate_mm": round(Z["catch_top"] - z_sp, 2),
         "pilot_depths_mm": [p["depth"] for c in REPORT["catches"] for p in c["pilots"]],
     }
+    if luban:  # the photo-derived stock gauge sits 0.02 mm into the plate edge at the front catches; not re-judged
+        catch_gauge["catch_bodies_vs_gasket_plate_mm3"] = max(vol(catches ^ plate.translate([0.0, 0.0, d]))
+                                                             for d in (-0.25, 0.0, 1.0))
     assert max(v for k, v in catch_gauge.items() if k.endswith("_mm3") and "bearing" not in k) < 0.01, catch_gauge
-    assert catch_gauge["catch_floor_bearing_mm3"] > 4 * 31.8 * 6.7 * 0.05 * 0.5, catch_gauge
-    assert catch_gauge["tongue_tip_past_barrel_axis_mm"] >= 1.0, catch_gauge
+    assert catch_gauge["catch_floor_bearing_mm3"] > 4 * body["length"] * body["width"] * 0.05 * 0.5, catch_gauge
+    assert luban or catch_gauge["tongue_tip_past_barrel_axis_mm"] >= 1.0, catch_gauge
+    assert catch_gauge["barrel_top_under_strike_plate_mm"] >= 0.0, catch_gauge
     assert min(catch_gauge["pilot_depths_mm"]) >= 3.0, catch_gauge
+
+    # 4b. Hardware variants change hidden faces only: rebuilt in-process against the stock-catch pair, no face the
+    #     variant removes or creates looks out of the assembled housing. The gasket plate is in place, and the 0.15 mm
+    #     slit between the skirt and the rails is closed near the lip: nothing shows through it.
+    exterior = None
+    if luban:
+        ix0, iy0, ix1, iy1 = TOP_GEOM["inner_skirt_world"]
+        slit = sg.box(ix0, iy0, ix1, iy1).buffer(0.5, join_style="mitre").difference(rail_outline.buffer(-0.5))
+        slit_cap = md.CrossSection([np.asarray(orient(slit).exterior.coords[:-1]), *[
+            np.asarray(h.coords[:-1]) for h in orient(slit).interiors]]).extrude(0.5).translate([0.0, 0.0, top.SKIRT_H - 1.0])
+        stock_parts = [*top.build_halves(REPORT["board"]), bc.build(REPORT["board"], battery_bay=REPORT["battery_bay"])[0]]
+        variant_parts = [*top.build_halves(REPORT["board"], luban_catches=True),
+                         bc.build(REPORT["board"], battery_bay=REPORT["battery_bay"], luban_catches=True)[0]]
+        exterior = exposed_changes(stock_parts, variant_parts, [plate, slit_cap])
+        assert exterior["exterior_samples"] == 0, exterior
+        assert exterior["changed_face_samples"] > 1000, exterior
 
     # 5. PCB: a GH60 outline (285.0 x 94.6, 1.6 mm) under the MX plate with 2.0 mm bottom-side parts and the board's
     #    USB-C receptacle (9.0 x 7.4 x 3.26 under the PCB, mouth 0.6 past the back edge) clears the cavity with the
@@ -219,7 +253,7 @@ def main() -> None:
         filler_overlap = vol(filler ^ bottom)
         assert filler_overlap < 0.01, f"Battery-bay filler collides: {filler_overlap} mm^3"
     deco_poly = bc.deco_poly_print()
-    deco_t, deco_d = bc.DECO["thickness"], bc.DECO_RECESS  # the plate stands deco_t - deco_d proud of the desk face
+    deco_t, deco_d = bc.DECO_T, bc.DECO_RECESS  # the plate stands deco_t - deco_d proud of the desk face
     deco = bc.from_print(bc.prism(deco_poly, deco_d - deco_t, deco_d - 0.01))
     deco_cover = bc.from_print(bc.prism(deco_poly.buffer(bc.DECO_CLEAR), deco_d + 0.05, deco_d + 1.0))
     screws = bc.deco_screws_print()
@@ -332,10 +366,11 @@ def main() -> None:
             "in_plane_shift_overlap_mm3": {k: vol(hl.translate(v) ^ hr) for k, v in shifts.items()}}
     sl, sr = slice_material(hl, Z["catch_floor"] + 1.0), slice_material(hr, Z["catch_floor"] + 1.0)
     owners = {}
+    hole_r = (REPORT["luban32"]["bore_d"] if luban else bc.PILOT_D) / 2
     for c in REPORT["catches"]:
         owners[c["name"]] = []
         for p in c["pilots"]:
-            ring = sg.Point(*p["world"]).buffer(1.6).difference(sg.Point(*p["world"]).buffer(0.95))
+            ring = sg.Point(*p["world"]).buffer(hole_r + 0.75).difference(sg.Point(*p["world"]).buffer(hole_r + 0.1))
             cover = [ring.intersection(s).area / ring.area for s in (sl, sr)]
             owners[c["name"]].append("left" if cover[0] > 0.95 > 0.01 > cover[1] else
                                      "right" if cover[1] > 0.95 > 0.01 > cover[0] else f"? {cover}")
@@ -507,6 +542,8 @@ def main() -> None:
         "status": "ALL_PASSED",
         "board": REPORT["board"],
         "battery_bay": battery_bay,
+        "catch_hardware": catch_kind,
+        "exterior_vs_stock_catches": exterior,
         "battery_bay_geometry": {"probe_blockage_mm3": bay_blockage, "restored_floor_missing_mm3": bay_floor_missing},
         "top_case_pocket": {"seated_overlap_mm3": seated, "lateral_shift_overlap_mm3": lateral,
                             "rim_top_bearing_on_9p69_floor_mm2": bearing_mm2, "skirt_lip_contact_mm3": lip_contact,

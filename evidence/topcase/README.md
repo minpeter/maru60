@@ -73,15 +73,22 @@ the values on this page in machine-readable form.
 
 ## Still to measure
 
-Values the design uses that no caliper has confirmed yet, in the order they
-matter. Each one names what to measure and what it would change.
+Values the design uses that no caliper has confirmed yet, grouped by the
+[product line](../../docs/housing.md) that depends on them and in the order
+they matter. Each one names what to measure and what it would change.
 
-| Part | Measure | Now (source) | Sets |
-| --- | --- | --- | --- |
-| Stock steel weight plate, with it out of the case | Hole centres from the nearer short end (two per end) and from the straight back edge; hole thread and depth; plate thickness | 8.8 / 38.9 from the end, 4.8 / 24.7 from the back edge, M2, blind (IMG_0474 / IMG_0463, ±0.5); 3.0 thick (drawing) | Bottom-case screw holes (`bottom.weight_plate_holes`, 0.5 mm float per side, could shrink), M2 × 4 length, recess depth 2.3 |
-| Stock keyboard on its feet | Gap between the desk and the top-case skirt lip | ~2.0 (estimated, `desk.gap`) | How far the wrist-rest and bottom-case bumpons stand proud |
-| Stock bottom case | Cap-seat level, ball-catch notch depth, catch screw pitch | Derived from the top case; pitch 25.5 (photos read 25.5–26.8) | Gasket preload, catch engagement, catch pilots |
-| Stock top case | Front strike distance from the inner front wall; outer corner radius | 4.26 (centred, not measured); R4.85 (concentric with the fitted R2.0 pocket) | Front strike pockets; outer corners |
+| Line | Part | Measure | Now (source) | Sets |
+| --- | --- | --- | --- | --- |
+| Stock-compatible | Stock bottom case | Rail outline length and width; rail corner radius | Top-case pocket less 0.15 mm per side; ~R2.7 (v6.2 print fit) | How the stock bottom case nests in the top-case pocket |
+| Both | Stock bottom case | Cap-seat level, ball-catch notch depth, catch screw pitch | Derived from the top case; pitch 25.5 (photos read 25.5–26.8) | Gasket preload, catch engagement, catch pilots |
+| Both | Stock ball catch and strike | Catch width, length and height; strike plate size and screw pitch | 6.7 × 31.8 × 7.7, 20.5 × 6.55, 13 (photo, ±0.4–0.6); the catch gauge sits 0.02 mm into the plate edge at the front catches | Strike pockets, catch notches |
+| Both | Stock top case | Front strike distance from the inner front wall; outer corner radius | 4.26 (centred, not measured); R4.85 (concentric with the fitted R2.0 pocket) | Front strike pockets; outer corners |
+| Both | Gasket plate and caps | Plate outline and tab positions against the DWG; cap size | DWG assumed; caps photo-derived | Cap pockets (front caps clear their pocket wall by 0.07 mm) |
+| Both | Stock keyboard on its feet | Gap between the desk and the top-case skirt lip | ~2.0 (estimated, `desk.gap`) | How far the wrist-rest and bottom-case bumpons stand proud |
+| Both | CANOT M2 OD3.5 × L3 insert | Heat-set coupon at Ø3.0 / 3.1 / 3.2 in the print material | Ø3.2 trial bore | `--strike-inserts` and `--catches luban32` bores |
+| Maru | LUBAN 32 mm catch | Widest catch width and its width 3 mm below the top; strike width and thickness; engaged height; barrel length | 7.2 / 7.2 / 2.0 / 11.0 / 20.6 assumed (`ball_catch.luban32`; seller box 8.0) | Whether `--catches luban32` fits beside the gasket plate; seats and pocket width |
+| Maru | Weight plate (stock steel or purchased Weight Stack A), out of the case | Hole centres from the nearer short end (two per end) and from the straight back edge; hole thread and depth; plate thickness | 9.45 / 39.5 from the end, 4.7 / 24.8 from the back edge, M2, blind (IMG_0760 rectified on the plate outline reads 9.7 / 39.5, ±0.3; the owner's rough reading of the outer holes is ~9.2, so they take the midpoint; IMG_0463). Fit-checked 2026-11-09: the [overlay coupon](../../tools/build_weight_plate_coupon.py) matches the plate outline and an M2 screw threads through all four d3.0 holes. Thickness 2.88 (caliper, 2026-11-09; drawing 3.0). Still open: hole depth | Bottom-case screw holes (`bottom.weight_plate_holes`, 0.5 mm float per side, could shrink), M2 × 4 length, recess depth 2.3 |
+| Maru | Maru60 RP2350A PCB | Outline, tallest bottom-side part, USB-C position | GH60 envelope with 2.0 mm parts | Cavity and USB slot clearance |
 
 ## Photos
 

@@ -137,25 +137,40 @@ PURCHASED_CATCH_Z = 15.7  # 11 mm assembled height from seller drawing, not the 
 # Neither the 11 mm engagement nor the CANOT bore/depth is established by the new photographs.
 SCULPTED_CATCH = {"length": 33.06, "width": 8.6, "body_relief_z": 7.4,
                   "strike_z": 5.55, "catch_z": 16.55, "depth": 3.2, "key_z0": 3.35}
+# `--catches luban32`: the purchased LUBAN 32 mm catch with CANOT OD3.5/L3 inserts in both cases, on the original
+# pocket contours. Only faces hidden inside the assembled housing change (verify_bottomcase.py proves the exterior).
+# The hardware widths are assumed (`ball_catch.luban32`): caliper the parts before printing.
+LUBAN = spec.value("ball_catch.luban32")
+LUBAN_STRIKE_Z = 5.00   # Strike seat 0.55 above Z_STRIKE: the lower seat (+ the 11.0 engaged height) then leaves
+                        # 0.8 mm of bottom-case skin under its 3.2 mm bores at the back rail
+LUBAN_CATCH_Z = round(LUBAN_STRIKE_Z + LUBAN["assembled_height"], 3)
+LUBAN_BORE_DEPTH = 3.20  # CANOT L3 + 0.2 well, both cases (1.80 mm top skin left over the upper bores)
+LUBAN_WALL_OFFSET = round(0.17 + LUBAN["catch"]["width"] / 2, 3)  # Hardware centre line from the inner skirt wall:
+                        # its outer side 0.02 inside the bottom-case rail face, its inner side clear of the plate edge
+LUBAN_POCKET_HALF_W = LUBAN_WALL_OFFSET  # The pocket widens inward only; its skirt side runs on the inner skirt wall
+LUBAN_KEY_Z0 = 2.80      # Back-seam key underside: 0.8 shorter, keeping 1.3 mm round the U-BL.2 insert past its notch
 
 
-def strike_centers_p(*, purchased: bool = False) -> list[tuple[str, float, float]]:
+def strike_centers_p(*, purchased: bool = False, luban: bool = False) -> list[tuple[str, float, float]]:
+    if luban:
+        return [(n, x, round(INNER_P[3] - LUBAN_WALL_OFFSET if wall == "back" else INNER_P[1] + LUBAN_WALL_OFFSET, 3))
+                for n, x, wall, _ in STRIKE_SITES]
     return [(n, x, round((INNER_P[3] - d + (1.0 if purchased else 0.0)) if wall == "back"
                         else (1.0 if purchased else INNER_P[1] + d), 3)) for n, x, wall, d in STRIKE_SITES]
 
 
-def catch_screw_axes_p(sx: float, sy: float, *, purchased: bool = False) -> list[tuple[float, float]]:
+def catch_screw_axes_p(sx: float, sy: float, *, purchased: bool = False, luban: bool = False) -> list[tuple[float, float]]:
     """Lower catch ears align with the skirt-side lobes of the upper strike pocket, not its 13 mm screw pitch."""
-    dx = 12.5 if purchased else STRIKE_PLATE_HALF_LEN + STRIKE_LOBE_REACH - STRIKE_LOBE_R
-    dy = 0.0 if purchased else (1.0 if sy > 50.0 else -1.0) * (STRIKE_POCKET_HALF_W - STRIKE_LOBE_R)
+    dx = LUBAN["catch"]["screw_pitch"] / 2 if luban else 12.5 if purchased else STRIKE_PLATE_HALF_LEN + STRIKE_LOBE_REACH - STRIKE_LOBE_R
+    dy = 0.0 if purchased or luban else (1.0 if sy > 50.0 else -1.0) * (STRIKE_POCKET_HALF_W - STRIKE_LOBE_R)
     return [(round(sx + sign * dx, 3), round(sy + dy, 3)) for sign in (-1.0, 1.0)]
 
 
-def back_seam_key(*, z0: float = BACK_KEY_Z0, purchased: bool = False) -> dict[str, Any]:
+def back_seam_key(*, z0: float = BACK_KEY_Z0, purchased: bool = False, luban: bool = False) -> dict[str, Any]:
     """World X/Y, Z_p of the back-seam wedge key (LeftHalf) and its notch (RightHalf), centred on the seam strike. The
     notch is the wedge lowered by `JOINT_Z_CLEAR`: a uniform glue line under the slope, no void (`notch_xz`: X, Z_p)."""
-    _, _, by_p = next(s for s in strike_centers_p(purchased=purchased) if s[0] == BACK_SEAM_STRIKE)
-    seat = PURCHASED_STRIKE_Z if purchased else Z_STRIKE
+    _, _, by_p = next(s for s in strike_centers_p(purchased=purchased, luban=luban) if s[0] == BACK_SEAM_STRIKE)
+    seat = LUBAN_STRIKE_Z if luban else PURCHASED_STRIKE_Z if purchased else Z_STRIKE
     key_y = round(by_p + DY_PW, 3)
     key_x0 = round(BACK_SEAM_X - BACK_SEAM_GAP / 2, 3)  # LeftHalf seam face
     key_tip_x = round(key_x0 + seat - z0, 3)
@@ -438,16 +453,20 @@ def prism_xz(shape_xz: Any, y0: float, y1: float) -> md.Manifold:
 
 
 def build_halves(board_id: str, *, strike_inserts: bool = False, catch_inserts: bool = False, purchased_catches: bool = False,
-                 insert_hole_d: float = 3.2, sculpted_catches: bool = False) -> tuple[md.Manifold, md.Manifold]:
+                 insert_hole_d: float = 3.2, sculpted_catches: bool = False,
+                 luban_catches: bool = False) -> tuple[md.Manifold, md.Manifold]:
     """LeftHalf (X <= 0 plus the back strip) and RightHalf in the print frame, in the CNC order of the docstring."""
     if strike_inserts and (catch_inserts or purchased_catches or sculpted_catches):
         raise ValueError("Original-contour strike inserts cannot be combined with the earlier catch-layout studies")
+    if luban_catches and (strike_inserts or catch_inserts or purchased_catches or sculpted_catches):
+        raise ValueError("The LUBAN catch layout already carries its CANOT bores; it combines with no other catch option")
     purchased_catches = purchased_catches or sculpted_catches
     catch_inserts = catch_inserts or purchased_catches
     insert = dict(PURCHASED_INSERT if purchased_catches else CATCH_INSERT)
     if sculpted_catches:
         insert["depth"] = SCULPTED_CATCH["depth"]
-    strike_z = SCULPTED_CATCH["strike_z"] if sculpted_catches else PURCHASED_STRIKE_Z if purchased_catches else Z_STRIKE
+    strike_z = (LUBAN_STRIKE_Z if luban_catches else SCULPTED_CATCH["strike_z"] if sculpted_catches
+                else PURCHASED_STRIKE_Z if purchased_catches else Z_STRIKE)
     usb_x, usb_w = usb_notch_print(board_id)
     total_d = WRIST_D + CASE_D
 
@@ -478,9 +497,10 @@ def build_halves(board_id: str, *, strike_inserts: bool = False, catch_inserts: 
 
     # 6. Four strike pockets (`strike_pocket_poly`, lobes on the skirt half), floor at `z_strike`, and the blind M2
     #    pilots (Ø1.8 mm, `STRIKE_PILOT_DEPTH` past the pocket floor).
-    strikes = strike_centers_p(purchased=purchased_catches)
+    strikes = strike_centers_p(purchased=purchased_catches, luban=luban_catches)
     pockets = unary_union([sg.Polygon([pw(x, y) for x, y in
-                           (strike_pocket_poly(sx, sy, 1.0 if sy > 50.0 else -1.0, half_width=4.3) if sculpted_catches else
+                           (strike_pocket_poly(sx, sy, 1.0 if sy > 50.0 else -1.0, half_width=LUBAN_POCKET_HALF_W) if luban_catches else
+                            strike_pocket_poly(sx, sy, 1.0 if sy > 50.0 else -1.0, half_width=4.3) if sculpted_catches else
                             sg.box(sx-16.1, sy-4.3, sx+16.1, sy+4.3) if purchased_catches else
                             strike_pocket_poly(sx, sy, 1.0 if sy > 50.0 else -1.0)).exterior.coords[:-1]])
                            for _, sx, sy in strikes])
@@ -496,7 +516,8 @@ def build_halves(board_id: str, *, strike_inserts: bool = False, catch_inserts: 
     pitch_half = 5.5 if purchased_catches else 6.5
     pilots = unary_union([circle(pw(sx, sy)[0] + dx, pw(sx, sy)[1], pilot_r)
                           for _, sx, sy in strikes for dx in (-pitch_half, pitch_half)])
-    body -= prism_xy(pilots, strike_z - pilot_depth, strike_z + 2.0)
+    if not luban_catches:  # its insert bores are cut after the seam key, below
+        body -= prism_xy(pilots, strike_z - pilot_depth, strike_z + 2.0)
     if catch_inserts:
         # Keep the original latch axes and plate travel. Hide the lower bosses in local internal skirt scallops,
         # instead of moving the hardware toward the PCB or changing the outside silhouette.
@@ -616,8 +637,9 @@ def build_halves(board_id: str, *, strike_inserts: bool = False, catch_inserts: 
     # matching wedge profiles by 0.20 mm, keeping the seat, alignment axis and uniform 0.20 mm glue line unchanged.
     # The 11 mm strike pitch brings U-BL.2 toward this notch. Shorten the matched wedge/notch locally,
     # retaining its original Y axis and 45-degree bearing instead of leaving a 0.2 mm insert web.
-    key_z0 = SCULPTED_CATCH["key_z0"] if sculpted_catches else 2.6 if purchased_catches else BACK_KEY_Z0 + (0.20 if catch_inserts else 0.0)
-    bk = back_seam_key(z0=key_z0, purchased=purchased_catches and not sculpted_catches)
+    key_z0 = (LUBAN_KEY_Z0 if luban_catches else SCULPTED_CATCH["key_z0"] if sculpted_catches
+              else 2.6 if purchased_catches else BACK_KEY_Z0 + (0.20 if catch_inserts else 0.0))
+    bk = back_seam_key(z0=key_z0, purchased=purchased_catches and not sculpted_catches, luban=luban_catches)
     root_x, root_z = bk["key_x0"] - 0.3, key_z0 - 0.3
     left += prism_xz(sg.Polygon([(root_x, root_z), (root_x, strike_z), (bk["key_tip_x"], strike_z)]),
                      bk["key_y"] - BACK_KEY_HW, bk["key_y"] + BACK_KEY_HW)
@@ -638,6 +660,14 @@ def build_halves(board_id: str, *, strike_inserts: bool = False, catch_inserts: 
                 bores += md.Manifold.cylinder(STRIKE_PILOT_DEPTH + 0.02, CANOT_INSERT["hole_d"] / 2,
                                               circular_segments=96).translate([x + dx, y, Z_STRIKE - STRIKE_PILOT_DEPTH])
         left, right = left - bores, right - bores
+    if luban_catches:
+        bores = md.Manifold()
+        for _, sx, sy in strikes:
+            x, y = pw(sx, sy)
+            for dx in (-LUBAN["strike"]["screw_pitch"] / 2, LUBAN["strike"]["screw_pitch"] / 2):
+                bores += md.Manifold.cylinder(LUBAN_BORE_DEPTH + 0.02, CANOT_INSERT["hole_d"] / 2,
+                                              circular_segments=96).translate([x + dx, y, strike_z - LUBAN_BORE_DEPTH])
+        left, right = left - bores, right - bores
     return left, right
 
 
@@ -647,12 +677,21 @@ def main() -> None:
                     help="PCB whose USB-C position sets the notch (spec/boards.json); default: %(default)s")
     ap.add_argument("--strike-inserts", action=argparse.BooleanOptionalAction, default=False,
                     help="Upper-only CANOT OD3.5/L3 trial bores, preserving original pockets/axes; default: no inserts")
+    ap.add_argument("--catches", choices=["stock", "luban32"], default="stock",
+                    help="Ball-catch hardware: stock, or the purchased LUBAN 32 mm catch with CANOT inserts "
+                         "(assumed widths, spec ball_catch.luban32); default: %(default)s")
     args = ap.parse_args()
+    luban = args.catches == "luban32"
+    if luban and args.strike_inserts:
+        ap.error("--catches luban32 already cuts CANOT insert bores; drop --strike-inserts")
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "verification.json").unlink(missing_ok=True)
 
     usb_x, usb_w = usb_notch_print(args.board)
-    left_mf, right_mf = build_halves(args.board, strike_inserts=args.strike_inserts)
+    left_mf, right_mf = build_halves(args.board, strike_inserts=args.strike_inserts, luban_catches=luban)
+    strike_z = LUBAN_STRIKE_Z if luban else Z_STRIKE
+    key_z0 = LUBAN_KEY_Z0 if luban else BACK_KEY_Z0
+    strike_hw = LUBAN["strike"] if luban else spec.value("ball_catch.strike_plate")
     for name, mf in (("LeftHalf", left_mf), ("RightHalf", right_mf)):
         assert mf.status() == md.Error.NoError and len(mf.decompose()) == 1, (name, mf.status(), len(mf.decompose()))
 
@@ -737,7 +776,27 @@ def main() -> None:
         "version": "v7.12-ph60-rev3-default",
         "generator": "manifold3d mesh CSG (build_topcase_draft.py) + 28px/mm gasket metrology",
         "strike_inserts": args.strike_inserts,
+        "catch_hardware": args.catches,
+        "luban32": {
+            "hardware_assumed": LUBAN,
+            "strike_seat_zp": LUBAN_STRIKE_Z,
+            "catch_seat_zp": LUBAN_CATCH_Z,
+            "bore_depth": LUBAN_BORE_DEPTH,
+            "centre_from_inner_skirt_wall": LUBAN_WALL_OFFSET,
+            "pocket_half_width": LUBAN_POCKET_HALF_W,
+            "back_key_underside_zp": LUBAN_KEY_Z0,
+            "status": "widths assumed (spec ball_catch.luban32); caliper the purchased parts before printing",
+        } if luban else None,
         "strike_insert_trial": {
+            **CANOT_INSERT,
+            "bl2_recess": 0.0,
+            "depth": LUBAN_BORE_DEPTH,
+            "installation_recess_by_hole_mm": {f"U-{name}.{i}": 0.0 for name, *_ in strike_centers_p() for i in (1, 2)},
+            "tool_tip_max_d": 3.0,
+            "tool_tip_min_reach": 0.40,
+            "coupon_required": True,
+            "purchased_32mm_catch_compatible": True,
+        } if luban else {
             **CANOT_INSERT,
             "depth": STRIKE_PILOT_DEPTH,
             "installation_recess_by_hole_mm": {
@@ -774,7 +833,7 @@ def main() -> None:
         },
         "calibrated_z_stack_mm": {
             "Z_top_surface": 0.0,
-            "Z_strike_pocket_floor": Z_STRIKE,
+            "Z_strike_pocket_floor": strike_z,
             "Z_gasket_trough_floor": Z_GASKET,
             "cap_pocket_polys_plate_frame": [[[round(x, 4), round(y, 4)] for x, y in p.exterior.coords[:-1]]
                                              for p in cap_pocket_polys_p()],
@@ -797,20 +856,23 @@ def main() -> None:
             "inner_skirt_corner_r": INNER_SKIRT_R,
             "outer_corner_r": CORNER_R,
             "floor_ledge_width": RIM_SEAT_W,
-            "strike_centers_plate_frame": [[x, y] for _, x, y in strike_centers_p()],
+            "strike_centers_plate_frame": [[x, y] for _, x, y in strike_centers_p(luban=luban)],
+            "strike_pocket_half_w": LUBAN_POCKET_HALF_W if luban else STRIKE_POCKET_HALF_W,
+            "strike_plate_mm": {k: strike_hw[k] for k in ("length", "width", "thickness")},
             "joint_yc_world": JOINT_YC,
             "back_seam": {
                 "x_world": BACK_SEAM_X,
                 "gap": BACK_SEAM_GAP,
                 "split_step_y_world": SPLIT_STEP_Y,
                 "key_half_width": BACK_KEY_HW,
-                "key_underside_z_at_seam": BACK_KEY_Z0,
+                "key_underside_z_at_seam": key_z0,
                 "notch_clearance_y_per_side": BACK_KEY_CLR_Y,
                 "notch_clearance_under_wedge_vertical": JOINT_Z_CLEAR,
-                **back_seam_key(),
+                **back_seam_key(z0=key_z0, luban=luban),
             },
-            "strike_pilot_diameter": CANOT_INSERT["hole_d"] if args.strike_inserts else 1.8,
-            "strike_pilot_depth": STRIKE_PILOT_DEPTH,
+            "strike_pilot_diameter": CANOT_INSERT["hole_d"] if args.strike_inserts or luban else 1.8,
+            "strike_pilot_depth": LUBAN_BORE_DEPTH if luban else STRIKE_PILOT_DEPTH,
+            "strike_pilot_half_pitch": strike_hw["screw_pitch"] / 2,
             "dovetails": [{"name": n, "yc": yc, "proj": proj, "z_stop": z_stop, "z_top": z_top}
                           for n, yc, _, _, proj, z_stop, z_top, *_ in JOINTS_SPEC],
             "bumpon_pads": {
