@@ -71,21 +71,21 @@
   ],
   "dovetail_insertion_path": {
     "steps_checked": 91,
-    "free_slide_drag_dz_ge_3p2mm_mm3": 3e-06,
-    "max_overlap_outside_compression_ribs_mm3": 3e-06,
+    "free_slide_drag_dz_ge_3p2mm_mm3": 1.2e-05,
+    "max_overlap_outside_compression_ribs_mm3": 1.3e-05,
     "seated_compression_rib_bite_mm3": 0.5115
   },
   "six_dof_retention_mm3": {
-    "pull_apart_x_1mm": 79.869,
-    "push_together_x_0p5mm": 728.801,
-    "shear_y_plus_0p5mm": 86.205,
-    "shear_y_minus_0p5mm": 84.471,
+    "pull_apart_x_1mm": 94.766,
+    "push_together_x_0p5mm": 765.217,
+    "shear_y_plus_0p5mm": 103.889,
+    "shear_y_minus_0p5mm": 94.354,
     "overtravel_z_stop_0p3mm_past_clearance": 61.888,
     "clean_release_dz_18mm": 0.0
   },
   "dovetail_z_stop_clearance": {
     "design_mm": 0.2,
-    "overlap_at_0p18mm_mm3": 3e-06,
+    "overlap_at_0p18mm_mm3": 1.2e-05,
     "landing_overlap_at_0p25mm_mm3": 2.408
   },
   "back_seam": {
@@ -138,7 +138,7 @@
       0.315,
       0.315
     ],
-    "end_face_push_0p05mm_overlap_mm3": 4.634
+    "end_face_push_0p05mm_overlap_mm3": 4.731
   },
   "joint_glue_line_max_gap_mm": {
     "WristFrontJoint": 0.199,
@@ -164,7 +164,7 @@
     "BackSeamLeft": 0,
     "BackSeamRight": 0
   },
-  "wrist_mirror_asymmetry_mm3": 8e-05,
+  "wrist_mirror_asymmetry_mm3": 0.00017,
   "cap_pocket_wall_cover_skirt_side_and_ends": [
     1.0,
     1.0,
@@ -217,10 +217,10 @@
       0.0
     ],
     "wall_mm": [
-      1.2,
-      1.2,
-      1.2,
-      1.2
+      1.197,
+      1.197,
+      1.197,
+      1.197
     ],
     "proud_of_desk_mm2": [
       0.0,
@@ -248,19 +248,19 @@
     "stock_base_pocket_past_floor": 0.0
   },
   "input_sha256": {
-    "build/coupon-ballcatch-gasket-left.stl": "ebe89bab8328a650eaa2877cb17d2479c6893a759322dbe3c774c4cf2a0261db",
-    "build/draft-report.json": "1bc712d2e8c9722504e615bdeb3123427a151017656f6a6a8e5ca771ad987861",
-    "build/halves-world.3mf": "eba2f98fa4023f3e777ae7acfa15f50cd76dac902c1b518e6339b370b49c62ef",
-    "build/left-half-print.stl": "22ef24c5f68cb0dc1406e2d18c3d566652047b21cd98570a5a42dd173d845ff8",
-    "build/maru60-fit-test-coupons.3mf": "18398b423b5ff47790a1209139b67e2bec78c8a88588fe17d483bfbd032d6b1c",
-    "build/maru60-hhkb-left-plate.3mf": "d6f9100f533689a2bd8003018590b0aadb82749761e13380de5f791f4c6a986b",
-    "build/maru60-hhkb-right-plate.3mf": "75de477c2183fea64d300a34a02fb76bbfe5bd4a2a87e1526b740eb3c8fe6a32",
-    "build/right-half-print.stl": "6705a767430846f7030d06d338ffb1c8f21d60021ccffd306e313fc44541e2a6",
-    "build_bottomcase_draft.py": "6049f4795b43ff1247647cf607de0bc9bfe1debd1bda9674800603127f03e7e2",
-    "build_topcase_draft.py": "481a8dddaa960dad7b7e3f1e591004f1d6823d22c78f2af2e5ac906ac0745e85",
+    "build/coupon-ballcatch-gasket-left.stl": "6ad344adefb4f107b19b66592d8e793acf86b56cb2c7252f69fbbbe8009bc966",
+    "build/draft-report.json": "71fd9a059e01466aa89fff4f115f2ecdfdb01cf5f400a22ffe130af84461a988",
+    "build/halves-world.3mf": "2a6b0ccd4180ac3b53ea7d713ffa978d81e8794df6027d2a32d01a0318623b2e",
+    "build/left-half-print.stl": "20e00700ff526011c5aeffbef9488f987295eeefc8c95e7b0357aa1397413e87",
+    "build/maru60-fit-test-coupons.3mf": "2b097ca3eb16f35dbcefaace811f238daefa22789959d261ccbc3747a5a0f334",
+    "build/maru60-hhkb-left-plate.3mf": "3740ebb3b8f717fdce168f54b32c93273b517f13be481cab7e5698dc88e101a6",
+    "build/maru60-hhkb-right-plate.3mf": "03e1b53bee5f2f7be7b2422423528fc523a9bb18211eac3620a53f80244f9a3e",
+    "build/right-half-print.stl": "c9a8a5b28d24c63176fd8acebd522bdf9b282ff76fb5d989817ca7ceb24c313a",
+    "build_bottomcase_draft.py": "480f622c2cd4624034637d811831250cfa98c1d56f43769dd4de56ace4a22e5e",
+    "build_topcase_draft.py": "544da833b3751da8f8a939f9e1b0eb6a90c71457826b32b3218a37e13d02c793",
     "maru60/__init__.py": "49ec24caa935fc5b5040d7c653ef5fe04b5356b3178780c479036ab8e9499c08",
     "maru60/exterior.py": "bc565e9bdf78ae6770b2874856703b07a93e5b9e012a9968bab4d557680170d8",
-    "maru60/frames.py": "7440e0bf11fc916c3f5a8be32222694bcd578dfb1d98301b0c94c2f2f2add63e",
+    "maru60/frames.py": "3906e5f54949fe00fa3b04d1f5fde7b3caa35405fd374a6d7a27cc5ef9b5b1d8",
     "maru60/mesh_io.py": "0375ad0531b7757974cf3b097364d56599244457fe9c24c8c33f14794841389e",
     "maru60/paths.py": "713f1b9650d339f896fb66c21e3049cfd8373be8387d9d729c9128500354de68",
     "maru60/pipeline.py": "f2b61e09227d679cbd6180c7a35ae72473ef5f97cfab0676cfcf9f2f2aac193e",
@@ -269,7 +269,7 @@
     "spec/boards.json": "64f89606713cd0f621bc42168daf565c44f471544addb3b2d85b05a94af88a0e",
     "spec/rule60-v3-outlines.json": "acff832b570715bb261defe752e226e86c554d629dbe344b42f0eb93674bee97",
     "spec/rule60-v3.json": "bfc76674a8b4c35dbf459efb985728eec2053352906a5a7db8cb5e878098885a",
-    "verify_bottomcase.py": "01daf6d56e6755761b5b66fcbda4583ae26df31d4d7a8a0aef22887db5af64ce",
-    "verify_topcase.py": "9180aedc200ba8bcc93ab4acc4d36d13a2d6a2316cca26a617c87346c72d70c8"
+    "verify_bottomcase.py": "1d3f51a2b7fcaffa7cade433d505bce0e8012acf040521a96246667e7e1a02ea",
+    "verify_topcase.py": "cef8ae2a3b9990c2c78c47846ddcdd0b0114b979da78d645a039c6c6e0b17f71"
   }
 }

@@ -4028,20 +4028,21 @@
   "geometry_mm": {
     "plate_to_world_offset": [
       -142.95,
-      84.82
+      85.02
     ],
     "plate_to_world_x_sign": -1.0,
     "outer_plate_frame": [
-      -6.1,
-      -4.82,
-      292.0,
-      112.55
+      -6.3,
+      -5.02,
+      292.2,
+      112.75
     ],
+    "pocket_grow": 0.2,
     "inner_skirt_world": [
-      -146.2,
+      -146.4,
       82.8,
-      146.2,
-      194.52
+      146.4,
+      194.92
     ],
     "back_seam_strike": "BL",
     "usb_notch": {
@@ -4088,16 +4089,16 @@
     "back_seam": {
       "x_world": 53.1,
       "gap": 0.0,
-      "split_step_y_world": 138.745,
+      "split_step_y_world": 138.945,
       "key_half_width": 1.5,
       "key_underside_z_at_seam": 2.0,
       "notch_clearance_y_per_side": 0.0,
       "notch_clearance_under_wedge_vertical": 0.2,
-      "key_y": 190.37,
+      "key_y": 190.57,
       "key_x0": 53.1,
       "key_tip_x": 56.65,
-      "notch_y0": 188.87,
-      "notch_y1": 191.87,
+      "notch_y0": 189.07,
+      "notch_y1": 192.07,
       "notch_xz": [
         [
           52.8,
@@ -4122,21 +4123,21 @@
         "yc": 23.5,
         "proj": 6.0,
         "z_stop": 4.0,
-        "z_top": 13.0
+        "z_top": 13.468
       },
       {
         "name": "WristMidJoint",
         "yc": 50.0,
         "proj": 6.0,
         "z_stop": 4.0,
-        "z_top": 15.7
+        "z_top": 16.253
       },
       {
         "name": "FrontBezelWallJoint",
         "yc": 75.5,
         "proj": 6.0,
         "z_stop": 4.0,
-        "z_top": 17.6
+        "z_top": 18.955
       }
     ],
     "bumpon_pads": {
@@ -4150,6 +4151,7 @@
       "pad_w": 16.0,
       "pad_d": 16.0,
       "column_d": 6.0,
+      "inner_end_r": 8.0,
       "tip_land": 2.5,
       "centres_world": [
         [
@@ -4176,51 +4178,51 @@
   "bodies": [
     {
       "name": "LeftHalf",
-      "volume_mm3": 90410.82,
-      "mass_petg_g": 114.8,
-      "triangles": 10770,
+      "volume_mm3": 91449.31,
+      "mass_petg_g": 116.1,
+      "triangles": 11524,
       "print_plate_bounds_mm": [
         [
-          25.15,
-          29.32,
+          25.05,
+          29.11,
           0.0
         ],
         [
-          230.85,
-          226.68,
+          230.95,
+          226.89,
           20.12
         ]
       ]
     },
     {
       "name": "RightHalf",
-      "volume_mm3": 78571.03,
-      "mass_petg_g": 99.8,
-      "triangles": 9526,
+      "volume_mm3": 79571.5,
+      "mass_petg_g": 101.1,
+      "triangles": 10288,
       "print_plate_bounds_mm": [
         [
-          53.48,
-          29.32,
+          53.38,
+          29.11,
           0.0
         ],
         [
-          202.52,
-          226.68,
+          202.62,
+          226.89,
           20.12
         ]
       ]
     }
   ],
   "installed_assembly_extents_mm": [
-    298.1,
-    198.31,
-    32.21
+    298.5,
+    198.71,
+    32.25
   ],
   "verification": {
     "watertight": true,
     "compression_rib_intentional_interference_mm3": 0.512,
     "disengaged_overlap_mm3": 0.0,
-    "blocked_x_separation_1mm_overlap_mm3": 79.869,
+    "blocked_x_separation_1mm_overlap_mm3": 94.766,
     "blocked_z_overtravel_0p3mm_past_clearance_overlap_mm3": 61.888,
     "dovetail_z_stop_clearance_mm": 0.2,
     "fits_bambu_x2d_256x256": true,
