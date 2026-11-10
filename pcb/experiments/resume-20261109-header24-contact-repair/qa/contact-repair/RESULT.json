@@ -1,0 +1,56 @@
+{
+  "status": "PASS requested contact-remediation criteria; optional exact native polygon containment FAIL",
+  "selected_candidate": "width-260000/pcb/maru60.kicad_pcb",
+  "candidate_board_sha256": "194180467c8ae7ead7d6bc23fe23d6dbb737cbd0ca04a3c1513bd141fe6890d0",
+  "source_board_sha256": "ddea15f7eb9188617f81af2e998ed49bf385cfcc473d68bd40beb66ec4ff6020",
+  "guard_failures_before": 51,
+  "guard_failures_after": 0,
+  "retained_material_contacts": 22525,
+  "lost_material_contacts": 0,
+  "all_pad_partitions_preserved": true,
+  "exact_nine_native_open_pairs_preserved": true,
+  "holes_and_inner_copper_unchanged": true,
+  "edits": "10 outer track widths0.25->0.26mm plus1 generated F.Cu GND contour line",
+  "native": {
+    "pass": true,
+    "board_sha256": "194180467c8ae7ead7d6bc23fe23d6dbb737cbd0ca04a3c1513bd141fe6890d0",
+    "kicad_version": "9.0.2+dfsg-1",
+    "open_pairs": 9,
+    "warnings": 26,
+    "other_errors": 0,
+    "ERC": 0,
+    "schematic_parity": 0,
+    "cold_refill_files_identical": 58,
+    "source_unchanged": true,
+    "material_recomputed": true,
+    "manufacturing_ready": false,
+    "scope": "Native CAD replay against the expected open count; physical, SI and active-power qualification remain separate."
+  },
+  "source_negative": "negative-250um.json: freshly reproduced51 original failures",
+  "variants": [
+    "0.251mm native/cold PASS, local positive components77->10; no full material graph claimed",
+    "0.260mm native/cold/fullgraph PASS; positive components77->10"
+  ],
+  "optional_native_exact_containment": {
+    "status": "FAIL",
+    "objects_with_residual": 5,
+    "maximum_residual_nm2": 465.0,
+    "total_residual_nm2": 1285.5,
+    "guarded_residual_nm2": 0,
+    "not_used_to_waive_guard": true
+  },
+  "evidence": [
+    "comparison.json",
+    "component-mapping.json",
+    "guard-identity.json",
+    "width-260000.patch",
+    "native-260000/RESULT.json",
+    "native-260000/material-graph.json",
+    "negative-250um.json",
+    "containment.json",
+    "open-pair-check.txt"
+  ],
+  "promoted": false,
+  "tracked_files_modified": false,
+  "hardware_validation": false
+}

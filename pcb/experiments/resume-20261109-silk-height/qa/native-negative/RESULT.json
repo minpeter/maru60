@@ -1,0 +1,59 @@
+{
+  "pass": true,
+  "source_CAD_unchanged": true,
+  "cases": [
+    {
+      "name": "source-output",
+      "argv": [
+        "tools/run_kicad9.sh",
+        "python3",
+        "tools/check_pcb_native.py",
+        "--output",
+        "pcb/experiments/resume-20261109-silk-height/qa/forbidden-output"
+      ],
+      "exit_code": 2,
+      "intended_failure": "in-repository output must"
+    },
+    {
+      "name": "existing-output",
+      "argv": [
+        "tools/run_kicad9.sh",
+        "python3",
+        "tools/check_pcb_native.py",
+        "--output",
+        ".omo/evidence/pcb-routing-20261109/native-selected"
+      ],
+      "exit_code": 2,
+      "intended_failure": "output must be new"
+    },
+    {
+      "name": "optimized-python",
+      "argv": [
+        "tools/run_kicad9.sh",
+        "python3",
+        "-O",
+        "tools/check_pcb_native.py",
+        "--output",
+        ".omo/evidence/pcb-routing-20261109/native-negative/optimized"
+      ],
+      "exit_code": 2,
+      "intended_failure": "geometry assertions require normal Python"
+    },
+    {
+      "name": "wrong-open-count",
+      "argv": [
+        "tools/run_kicad9.sh",
+        "python3",
+        "tools/check_pcb_native.py",
+        "--checkpoint",
+        "pcb/experiments/resume-20261109-silk-height",
+        "--expected-opens",
+        "8",
+        "--output",
+        ".omo/evidence/pcb-routing-20261109/native-negative/wrong-count"
+      ],
+      "exit_code": 1,
+      "intended_failure": "AssertionError"
+    }
+  ]
+}

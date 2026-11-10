@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "scope": "Portable checks only; no native CAD or hardware qualification",
+  "active_candidate_files_exact": 22,
+  "inputs_unchanged": true,
+  "host_report": "host/results.json",
+  "static_report": "static.json",
+  "power_report": "power/calculation-replay-result.json",
+  "qualification_default": 0,
+  "not_run": [
+    "Fresh KiCad export/ERC/DRC",
+    "Full pinned QMK/ARM builds",
+    "Official VIA application validation",
+    "Physical hardware qualification"
+  ]
+}

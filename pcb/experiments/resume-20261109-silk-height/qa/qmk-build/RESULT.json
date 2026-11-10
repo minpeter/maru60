@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scope": "Fresh complete ARM QMK WKL via and HHKB via_hhkb builds, qualification OFF",
+  "upstream": "https://github.com/emolitor/qmk_firmware",
+  "commit": "431ed9ade0684e98a66eabc949563c3be8f446e8",
+  "overlay_files": 22,
+  "qualification": 0,
+  "compiler": "arm-none-eabi-gcc (15:14.2.rel1-1) 14.2.1 20241119",
+  "qmk_cli": "1.2.0",
+  "python": "3.13.5",
+  "docker_image": "sha256:b2aa67ba2898e871b0c994222117abcc039cb6d4b6a0bd73145e4bfed15b579e",
+  "scenarios": [
+    {"layout":"WKL", "keymap":"via", "invocation":"make maru60/rp2350:via -j4 VERBOSE=true DUMP_C_MACROS='maru_key_transport.c maru_ug_transport.c maru_rgb.c'", "exit":0, "log":"via.log", "macro_evidence":"via-macro-check.txt", "elf":"maru60_rp2350_via.elf", "elf_sha256":"506ec0aca528e85a1c0f6f5212155ae8cb63ad709fcfa599eb5762e5d30fb05e", "uf2":"maru60_rp2350_via.uf2", "uf2_sha256":"4f59858f3ef88cb773460acf6d7688df927f9b13b7431c74266fd624b7c0ee43"},
+    {"layout":"HHKB", "keymap":"via_hhkb", "invocation":"make maru60/rp2350:via_hhkb -j4 VERBOSE=true DUMP_C_MACROS='maru_key_transport.c maru_ug_transport.c maru_rgb.c'", "exit":0, "log":"via_hhkb.log", "macro_evidence":"via_hhkb-macro-check.txt", "elf":"maru60_rp2350_via_hhkb.elf", "elf_sha256":"0d1423479f47d4b58b8e226d9ccf612509b9fbfd330d8d70d98381ec6ae9543c", "uf2":"maru60_rp2350_via_hhkb.uf2", "uf2_sha256":"112058c9deeba701bddf3ecc8b01cdcf829f1a45a4503d8c45492a403be28d75"}
+  ],
+  "observables": ["Both make exit codes zero", "Both linked ELF and generated UF2 are nonempty and SHA256 verified", "All six actual LED translation-unit macro dumps define MARU60_LED_POWER_QUALIFIED 0", "WKL layout0 and HHKB layout1; keyGP20 and underglowGP21; prototype FEED:6060; suspend experiment absent"],
+  "source_evidence": ["upstream-commit.txt", "submodule-identities.txt", "overlay-source.sha256", "overlay-postbuild-diff.txt", "patches.log", "patch-inputs.sha256", "overlay-and-patches.tar.gz"],
+  "validation_evidence": ["acceptance-check.txt", "artifact-hash-check.txt", "via-flags", "via_hhkb-flags"],
+  "setup_note": "Initial docker build hit600s timeout after successful image export while unpacking. Exported image subsequently started successfully and both actual builds passed. docker-build.log preserves timeout; not represented as setup command success.",
+  "hardware_validated": false,
+  "flashed": false,
+  "production_source_modified": false
+}

@@ -1,0 +1,23 @@
+{
+  "selected_as_development_prototype": true,
+  "strict_acceptance": false,
+  "manufacturing_ready": false,
+  "source_board_sha256": "41f82c80f242eb8ded04d24c02f1ba1f39a900cd971d4bca6976d28353fcfdc5",
+  "board_sha256": "ddea15f7eb9188617f81af2e998ed49bf385cfcc473d68bd40beb66ec4ff6020",
+  "change": "Twelve reference-height changes and one 75um reference move only; all other CAD bytes preserved",
+  "open_pairs": 9,
+  "warnings": 26,
+  "new_warning_identities": 0,
+  "copper_geometry_unchanged": true,
+  "fresh_material_fields_equal_except_provenance_and_runtime": true,
+  "cold_refill_files_identical": 58,
+  "rejected_electrical_candidate": "rejected-header/DECISION.json",
+  "remaining": [
+    "Three header open pairs",
+    "Six MCU open pairs",
+    "Inherited exact-no-loss failure against strict baseline",
+    "51 guarded-contact diagnostics remain rejected",
+    "Active-power, SI, physical fit and hardware qualification"
+  ],
+  "LED_qualification": 0
+}

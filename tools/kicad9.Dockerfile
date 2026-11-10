@@ -1,0 +1,15 @@
+FROM debian:trixie-slim@sha256:a72b4433de1cf7d6bae0c4cee74d0547f58601a643b3375f070c51600d63b6b2
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       kicad=9.0.2+dfsg-1 python3 python3-numpy python3-shapely ca-certificates \
+    && rm -rf /var/lib/apt/lists/* \
+    && test "$(kicad-cli version)" = "9.0.2" \
+    && python3 -c 'import pcbnew; assert pcbnew.GetBuildVersion() == "9.0.2+dfsg-1"'
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends kicad-footprints=9.0.2-1 kicad-symbols=9.0.2-1 \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV QT_QPA_PLATFORM=offscreen PYTHONDONTWRITEBYTECODE=1
+WORKDIR /workspace

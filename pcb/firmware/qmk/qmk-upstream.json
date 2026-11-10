@@ -18,5 +18,6 @@
     "apply_report_sync_patch.py"
   ],
   "historical_verification": "Five full ARM builds PASS with exact VIA schema and opt-in report-sync patches; six native QMK matrix/action/report tests and protocol source-model pass; no physical hardware/USB validation.",
-  "verification": "NEW recovery candidate, NOT BUILT against full QMK/ARM. Historical field refers to recovered baseline only."
+  "verification": "2026-11-09: fresh full WKL via and HHKB via_hhkb ARM/QMK builds PASS against this commit, exact recursive submodules and both hash-guarded patches. Current 22-file recovery overlay unchanged; all six LED translation-unit macro dumps confirm qualification 0. No flashing or hardware qualification.",
+  "verification_evidence": "pcb/experiments/resume-20261109-silk-height/qa/qmk-build/RESULT.json"
 }

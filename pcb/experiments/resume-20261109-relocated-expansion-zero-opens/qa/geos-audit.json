@@ -1,0 +1,3184 @@
+{
+  "engine": "GEOS 3.13.1",
+  "shapely": "2.1.2",
+  "coordinate_units": "nanometres, original integer vertices; no precision grid or tolerance snapping",
+  "invalid_input_polygons": {
+    "source:In1.Cu": 0,
+    "source:In2.Cu": 0,
+    "candidate:In1.Cu": 0,
+    "candidate:In2.Cu": 0
+  },
+  "allowed_window_approximation": "1024-sided INSCRIBED circles (strictly inside exact declared window disks).",
+  "retained_reference_lost_support_max_nm2": 30996010286.46605,
+  "retained_reference_lost_support_outside_windows_max_nm2": 97070.52395249158,
+  "planes": [
+    {
+      "layer": "In1.Cu",
+      "outside_window_area_nm2": 270373826809.79376,
+      "outside_window_area_mm2": 0.27037382680979377,
+      "outside_empty": false,
+      "raw_loss_area_nm2": 76271400362871.47
+    },
+    {
+      "layer": "In2.Cu",
+      "outside_window_area_nm2": 280586640402.9662,
+      "outside_window_area_mm2": 0.2805866404029662,
+      "outside_empty": false,
+      "raw_loss_area_nm2": 78671739683138.67
+    }
+  ],
+  "retained_reference": [
+    {
+      "uuid": "150d60d8-7244-4e16-9d39-aee227cd019f",
+      "net": "COL1",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "150d60d8-7244-4e16-9d39-aee227cd019f",
+      "net": "COL1",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "7ad390f5-cd69-4f20-be02-31f010f006eb",
+      "net": "COL2",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 801523812.0898438,
+      "lost_support_outside_windows_area_nm2": 0.017041245926451787,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "7ad390f5-cd69-4f20-be02-31f010f006eb",
+      "net": "COL2",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 801523812.0898438,
+      "lost_support_outside_windows_area_nm2": 0.017041245926451787,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "2a9238da-e762-43b2-b226-2f9bda2ed8f6",
+      "net": "COL4",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 3118651374.882797,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "2a9238da-e762-43b2-b226-2f9bda2ed8f6",
+      "net": "COL4",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 3118651374.882797,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "66e2dd18-5ba1-4563-b4c7-ec83e3509e82",
+      "net": "COL4",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 3052956828.670791,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "66e2dd18-5ba1-4563-b4c7-ec83e3509e82",
+      "net": "COL4",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 3052956828.670791,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "117d94ea-9e59-45ab-9854-b767021743a7",
+      "net": "COL5",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "117d94ea-9e59-45ab-9854-b767021743a7",
+      "net": "COL5",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3390ded2-97e8-4340-afa4-048f1d136cfd",
+      "net": "COL5",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3390ded2-97e8-4340-afa4-048f1d136cfd",
+      "net": "COL5",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ffbc38a0-da18-4e23-9042-b71562d2b456",
+      "net": "COL7",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ffbc38a0-da18-4e23-9042-b71562d2b456",
+      "net": "COL7",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "21a91443-86ec-431a-85fd-118448e43eb0",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "21a91443-86ec-431a-85fd-118448e43eb0",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "77ea276a-34ac-45a3-8e34-c32867ab313c",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "77ea276a-34ac-45a3-8e34-c32867ab313c",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "15e2d155-322b-47dc-978a-c237783e67fc",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 7098473137.079353,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "15e2d155-322b-47dc-978a-c237783e67fc",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 7098473137.079353,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1feccf5d-bfc8-428e-81c2-e0091f775428",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1feccf5d-bfc8-428e-81c2-e0091f775428",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2b6d5c9b-1fd9-4aef-b1f4-9847e50ca01d",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 3118664369.798623,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2b6d5c9b-1fd9-4aef-b1f4-9847e50ca01d",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 3118664369.798623,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2c48d409-9229-4d92-b6c0-d2d110be2e28",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 17575.5,
+      "lost_support_outside_windows_area_nm2": 17575.5,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "2c48d409-9229-4d92-b6c0-d2d110be2e28",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 17575.5,
+      "lost_support_outside_windows_area_nm2": 17575.5,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "352aab90-eb79-42b8-b7cf-f618ac2825f5",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "352aab90-eb79-42b8-b7cf-f618ac2825f5",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6412567e-4661-4fb1-83a8-e28ab96429c3",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6412567e-4661-4fb1-83a8-e28ab96429c3",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "64b4a58f-94b2-4a5d-b07c-a5088b36ba9f",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "64b4a58f-94b2-4a5d-b07c-a5088b36ba9f",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "70a6ffa2-d6da-4965-b3f2-852c069090f8",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "70a6ffa2-d6da-4965-b3f2-852c069090f8",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a1956bba-ecf7-4882-8087-60d09ec6a099",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 3052973748.74359,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a1956bba-ecf7-4882-8087-60d09ec6a099",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 3052973748.74359,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d28fcabf-cbd3-4828-be49-247e19d5b663",
+      "net": "COL9",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d28fcabf-cbd3-4828-be49-247e19d5b663",
+      "net": "COL9",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "04fd3cb4-3a40-4480-b20f-921e1113c470",
+      "net": "COL10",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "04fd3cb4-3a40-4480-b20f-921e1113c470",
+      "net": "COL10",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4959a978-5697-4803-9d9b-08f4ca890644",
+      "net": "COL10",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4959a978-5697-4803-9d9b-08f4ca890644",
+      "net": "COL10",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "627d2dce-0de7-4186-b800-aa6f652b4de8",
+      "net": "COL10",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "627d2dce-0de7-4186-b800-aa6f652b4de8",
+      "net": "COL10",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "84f985cd-65e2-443e-8c18-1abcfcf7a8d9",
+      "net": "COL10",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "84f985cd-65e2-443e-8c18-1abcfcf7a8d9",
+      "net": "COL10",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "8ba119db-ebfd-4681-96b6-08642d959540",
+      "net": "COL10",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "8ba119db-ebfd-4681-96b6-08642d959540",
+      "net": "COL10",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "acbf367a-44cb-4f2c-9c0f-27632b9d6981",
+      "net": "COL10",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "acbf367a-44cb-4f2c-9c0f-27632b9d6981",
+      "net": "COL10",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "bdda8b1c-e8dd-46c2-9512-28eb35a01fe8",
+      "net": "COL10",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "bdda8b1c-e8dd-46c2-9512-28eb35a01fe8",
+      "net": "COL10",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d1b923eb-7ea9-4cdd-839b-fc45a5bfb448",
+      "net": "COL10",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d1b923eb-7ea9-4cdd-839b-fc45a5bfb448",
+      "net": "COL10",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "aa825356-acf5-4c5e-877f-0d5eb9cf54c5",
+      "net": "COL14",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "aa825356-acf5-4c5e-877f-0d5eb9cf54c5",
+      "net": "COL14",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4c749632-b3f0-4c35-9657-7867c04a54eb",
+      "net": "ROW3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4c749632-b3f0-4c35-9657-7867c04a54eb",
+      "net": "ROW3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "8b1c0240-4b9e-4438-940f-eb3f8328953e",
+      "net": "ROW3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 3708.002606123686,
+      "lost_support_outside_windows_area_nm2": 3708.002606123686,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "8b1c0240-4b9e-4438-940f-eb3f8328953e",
+      "net": "ROW3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "aee76192-2cff-4fac-853e-3451152b0bc4",
+      "net": "ROW3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 30996010286.46605,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "aee76192-2cff-4fac-853e-3451152b0bc4",
+      "net": "ROW3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 30996010286.46605,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "c69f139d-5a93-4335-b946-d33ba56ee009",
+      "net": "ROW3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 60242005.079329014,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "c69f139d-5a93-4335-b946-d33ba56ee009",
+      "net": "ROW3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 60242005.079329014,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "cd1ab2f5-dc5a-4785-b6a7-9e11b7780b17",
+      "net": "ROW3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 3.698729955647906e-08,
+      "lost_support_outside_windows_area_nm2": 3.698729955647906e-08,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "cd1ab2f5-dc5a-4785-b6a7-9e11b7780b17",
+      "net": "ROW3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 3.698729955647906e-08,
+      "lost_support_outside_windows_area_nm2": 3.698729955647906e-08,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "d6f219cb-34fb-4195-ac30-8f7ea9394f47",
+      "net": "ROW3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d6f219cb-34fb-4195-ac30-8f7ea9394f47",
+      "net": "ROW3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d92cb3d8-3a99-46ff-a75d-766ded69e0b3",
+      "net": "ROW3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d92cb3d8-3a99-46ff-a75d-766ded69e0b3",
+      "net": "ROW3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "22d7dd8e-5832-44fa-9d67-9ac6db8efe27",
+      "net": "ROW3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "22d7dd8e-5832-44fa-9d67-9ac6db8efe27",
+      "net": "ROW3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "cc9053f4-a976-40fd-9d63-bf54833e6444",
+      "net": "ROW3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "cc9053f4-a976-40fd-9d63-bf54833e6444",
+      "net": "ROW3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2cc78efa-102e-4fd8-a5c0-8a69e1b2c6ed",
+      "net": "KEY_46",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 18721815762.823727,
+      "lost_support_outside_windows_area_nm2": 0.007583178736763785,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "2cc78efa-102e-4fd8-a5c0-8a69e1b2c6ed",
+      "net": "KEY_46",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 18721815762.823727,
+      "lost_support_outside_windows_area_nm2": 0.007583178736763785,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "5ef583a5-fe68-491c-a93f-a5494f4421de",
+      "net": "KEY_47",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "5ef583a5-fe68-491c-a93f-a5494f4421de",
+      "net": "KEY_47",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "c58d7b2c-cf48-41c0-a575-e5064b00310c",
+      "net": "KEY_57",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 1846608436.613083,
+      "lost_support_outside_windows_area_nm2": 0.0185546875,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "c58d7b2c-cf48-41c0-a575-e5064b00310c",
+      "net": "KEY_57",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 1846608436.613083,
+      "lost_support_outside_windows_area_nm2": 0.0185546875,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "bf613692-3e58-4687-9e24-2ce32c4f0ede",
+      "net": "KEY_58",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "bf613692-3e58-4687-9e24-2ce32c4f0ede",
+      "net": "KEY_58",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6e3cb75b-c76d-458c-99e6-3e4c491c096c",
+      "net": "KEY_RGB_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6e3cb75b-c76d-458c-99e6-3e4c491c096c",
+      "net": "KEY_RGB_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "670004ef-1bbf-44a2-bcfd-2b51d966a34f",
+      "net": "KEY_RGB_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "670004ef-1bbf-44a2-bcfd-2b51d966a34f",
+      "net": "KEY_RGB_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "95719c76-7b9d-4ecd-9dd5-3349d8f081ae",
+      "net": "KEY_RGB_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "95719c76-7b9d-4ecd-9dd5-3349d8f081ae",
+      "net": "KEY_RGB_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a361ec37-b275-47f9-b883-a96777076427",
+      "net": "KEY_RGB_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a361ec37-b275-47f9-b883-a96777076427",
+      "net": "KEY_RGB_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "5ed39867-ddc5-4851-aca2-71ca2490d8a0",
+      "net": "UNDERGLOW_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "5ed39867-ddc5-4851-aca2-71ca2490d8a0",
+      "net": "UNDERGLOW_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d2087549-39d4-4305-a6c2-2cf2d28a3fbd",
+      "net": "UNDERGLOW_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d2087549-39d4-4305-a6c2-2cf2d28a3fbd",
+      "net": "UNDERGLOW_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d76265e2-8db2-40a7-a2ba-bc9c5e5a53fc",
+      "net": "UNDERGLOW_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 7098282707.59285,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d76265e2-8db2-40a7-a2ba-bc9c5e5a53fc",
+      "net": "UNDERGLOW_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 7098282707.59285,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "54a06e11-8cf8-4148-990e-87dccbcd7c26",
+      "net": "UNDERGLOW_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "54a06e11-8cf8-4148-990e-87dccbcd7c26",
+      "net": "UNDERGLOW_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a77ad7b4-352b-4cb6-ab64-64194665b9fb",
+      "net": "UNDERGLOW_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a77ad7b4-352b-4cb6-ab64-64194665b9fb",
+      "net": "UNDERGLOW_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b2b235ef-72c2-4e16-a3a2-4aa07de1c50d",
+      "net": "UNDERGLOW_5V",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 7098282707.592848,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b2b235ef-72c2-4e16-a3a2-4aa07de1c50d",
+      "net": "UNDERGLOW_5V",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 7098283861.645092,
+      "lost_support_outside_windows_area_nm2": 1154.0522440802306,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "128fea76-7a6c-42e4-ba12-27d48d7a114d",
+      "net": "UG_LED_7",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "128fea76-7a6c-42e4-ba12-27d48d7a114d",
+      "net": "UG_LED_7",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "88055fb7-560f-4370-bc8d-5a724be347d8",
+      "net": "UG_LED_7",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 21648300305.84716,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "88055fb7-560f-4370-bc8d-5a724be347d8",
+      "net": "UG_LED_7",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 21648300305.84716,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1730bf89-ef3e-49cd-8b39-45e7cb1cd687",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1730bf89-ef3e-49cd-8b39-45e7cb1cd687",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2702184a-0b18-4e2d-ad4f-e56aa172c9a6",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2702184a-0b18-4e2d-ad4f-e56aa172c9a6",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3bf1b371-5cf0-419f-b8fa-7c725ff5db21",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3bf1b371-5cf0-419f-b8fa-7c725ff5db21",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3faef3cc-6d4c-4b81-985d-bbd7b0e40bcd",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3faef3cc-6d4c-4b81-985d-bbd7b0e40bcd",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "7c024157-4a80-4d6d-8811-9cdbc5eff51d",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 60241999.17529151,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "7c024157-4a80-4d6d-8811-9cdbc5eff51d",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 60241999.17529151,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "9bd5e828-18e0-4280-9063-2158fa803f1b",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "9bd5e828-18e0-4280-9063-2158fa803f1b",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "be0ffe7a-0ebf-4cbb-b96b-cb234c8c18dd",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "be0ffe7a-0ebf-4cbb-b96b-cb234c8c18dd",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d40e4428-1c59-43c9-9cf6-131418f340bf",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d40e4428-1c59-43c9-9cf6-131418f340bf",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "02d6c67d-6f79-4098-ba54-1cba3ea2b025",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "02d6c67d-6f79-4098-ba54-1cba3ea2b025",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1b88b72a-f9c0-4cc8-bf97-866a3ab5db5c",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1b88b72a-f9c0-4cc8-bf97-866a3ab5db5c",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1f7b9e46-f197-40a6-8c39-915c1677ed60",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1f7b9e46-f197-40a6-8c39-915c1677ed60",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2f5f88c9-39cd-48dd-93c7-575c3e0f8029",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2f5f88c9-39cd-48dd-93c7-575c3e0f8029",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "30a71798-2240-4ec2-848c-350b94bbfe13",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 848834225.9356173,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "30a71798-2240-4ec2-848c-350b94bbfe13",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 848834225.9356173,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "34731794-43aa-4a7c-b199-6635de3b36ee",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "34731794-43aa-4a7c-b199-6635de3b36ee",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3684b537-a874-4438-88e7-50680865ca5c",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3684b537-a874-4438-88e7-50680865ca5c",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4d2eebfe-fe8e-4120-a760-f60ac8d132d8",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4d2eebfe-fe8e-4120-a760-f60ac8d132d8",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "5454a262-6ba2-44f9-846c-3bdd8c16d254",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "5454a262-6ba2-44f9-846c-3bdd8c16d254",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "54b9d150-89ff-400e-8c20-ad70186aaf8a",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "54b9d150-89ff-400e-8c20-ad70186aaf8a",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "5b709423-1926-45a4-9aa2-4444f57d10bc",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 3910782404.31876,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "5b709423-1926-45a4-9aa2-4444f57d10bc",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 3910782404.31876,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6134dc65-3e6a-4fb1-8fb1-84553bde6b46",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6134dc65-3e6a-4fb1-8fb1-84553bde6b46",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6fd86447-6835-480c-baa0-da55dc449c84",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6fd86447-6835-480c-baa0-da55dc449c84",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "8c3fa07b-5857-4838-8493-542de7980701",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "8c3fa07b-5857-4838-8493-542de7980701",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "9071b20f-84ac-4937-a29f-28adabc1b631",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "9071b20f-84ac-4937-a29f-28adabc1b631",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "9a4487b0-72bf-4dbd-a61f-968f4b79e548",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "9a4487b0-72bf-4dbd-a61f-968f4b79e548",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a381a623-4d4d-423c-96ee-ade8ed2276c9",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a381a623-4d4d-423c-96ee-ade8ed2276c9",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a5296cdf-d12a-493d-b081-563eb017fef5",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a5296cdf-d12a-493d-b081-563eb017fef5",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b9bd870b-92ec-4fc8-ac93-fbcc2376ce82",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b9bd870b-92ec-4fc8-ac93-fbcc2376ce82",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "bfe2f727-1f68-477c-b3eb-f3ec11eeb8c2",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "bfe2f727-1f68-477c-b3eb-f3ec11eeb8c2",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ca6461b4-19f1-45a3-a364-8dd7f466fe01",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 848176882.7679777,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "ca6461b4-19f1-45a3-a364-8dd7f466fe01",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 848176882.7679777,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "d10fb1d4-9cd3-4d79-9ff4-fd6506a7d4ea",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d10fb1d4-9cd3-4d79-9ff4-fd6506a7d4ea",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d14a6540-9c93-4fcf-ac7a-d86d8a67aece",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d14a6540-9c93-4fcf-ac7a-d86d8a67aece",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d532d601-8349-4b02-9350-8fcfe99eb046",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d532d601-8349-4b02-9350-8fcfe99eb046",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d6012ccc-c65e-4417-941a-ab158d78cbe2",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d6012ccc-c65e-4417-941a-ab158d78cbe2",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "e4a37257-7670-4259-b987-164ee9873329",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "e4a37257-7670-4259-b987-164ee9873329",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "eadd4402-2a02-4f36-808f-9d5993cc9ebf",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "eadd4402-2a02-4f36-808f-9d5993cc9ebf",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "fadaad7b-7242-4cef-ae92-41ce19eb27a1",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "fadaad7b-7242-4cef-ae92-41ce19eb27a1",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "fb4ef947-f1e5-4e60-bf46-a3b4ca22d528",
+      "net": "+3V3",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "fb4ef947-f1e5-4e60-bf46-a3b4ca22d528",
+      "net": "+3V3",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "23346d3f-171c-46b2-8b22-d74590ba3f0f",
+      "net": "+1V1",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "23346d3f-171c-46b2-8b22-d74590ba3f0f",
+      "net": "+1V1",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "619c6b58-4ef0-4d49-a50d-f6302403ac50",
+      "net": "+1V1",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "619c6b58-4ef0-4d49-a50d-f6302403ac50",
+      "net": "+1V1",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4fe9cd84-94bb-4eda-93dc-a51ff56e21fb",
+      "net": "XIN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 5451510384.319804,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4fe9cd84-94bb-4eda-93dc-a51ff56e21fb",
+      "net": "XIN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 5451510384.319804,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "8d34d413-a6d5-4ce6-a742-c027399a9770",
+      "net": "XIN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "8d34d413-a6d5-4ce6-a742-c027399a9770",
+      "net": "XIN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a242b68e-af75-4508-b2f9-c0afc1f62f70",
+      "net": "XIN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a242b68e-af75-4508-b2f9-c0afc1f62f70",
+      "net": "XIN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "0a1044b7-f0d6-4d8b-b944-65fe95387b02",
+      "net": "SWCLK",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 7505085324.985955,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "0a1044b7-f0d6-4d8b-b944-65fe95387b02",
+      "net": "SWCLK",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 7505085324.985955,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "35e08cde-1363-4cd9-9ea9-25b228bea242",
+      "net": "SWCLK",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "35e08cde-1363-4cd9-9ea9-25b228bea242",
+      "net": "SWCLK",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "57bf04cd-293e-4403-a99f-9bdccc013fb7",
+      "net": "SWCLK",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "57bf04cd-293e-4403-a99f-9bdccc013fb7",
+      "net": "SWCLK",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "e490204f-41ef-4232-b985-593527a09036",
+      "net": "SWCLK",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "e490204f-41ef-4232-b985-593527a09036",
+      "net": "SWCLK",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "fed37873-8986-4a1c-80a3-5286699abaf1",
+      "net": "SWCLK",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "fed37873-8986-4a1c-80a3-5286699abaf1",
+      "net": "SWCLK",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "83cc0cd3-d1cd-4225-81ae-d8e41e60a6d5",
+      "net": "KEY_RGB",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "83cc0cd3-d1cd-4225-81ae-d8e41e60a6d5",
+      "net": "KEY_RGB",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ddb5d376-dffe-4170-ac93-08ac42e7aa46",
+      "net": "LED_ENABLE",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ddb5d376-dffe-4170-ac93-08ac42e7aa46",
+      "net": "LED_ENABLE",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "14261030-fc7c-4fe1-8726-4cfe3ee86d41",
+      "net": "QSPI_SD2",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "14261030-fc7c-4fe1-8726-4cfe3ee86d41",
+      "net": "QSPI_SD2",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "99787095-7bbb-41f5-ac6c-c6a50d5e68e5",
+      "net": "QSPI_SS",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "99787095-7bbb-41f5-ac6c-c6a50d5e68e5",
+      "net": "QSPI_SS",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a9b2ff90-242a-4e5f-8dd3-92d388e88a63",
+      "net": "QSPI_SS",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 5451510384.319804,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a9b2ff90-242a-4e5f-8dd3-92d388e88a63",
+      "net": "QSPI_SS",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 5451510384.319804,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "59fb5e73-b17f-41c4-9ea2-b03a223680a0",
+      "net": "USB_DP_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "59fb5e73-b17f-41c4-9ea2-b03a223680a0",
+      "net": "USB_DP_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ad7b182a-68e4-4cb6-8ff3-30b367f9b005",
+      "net": "USB_DP_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ad7b182a-68e4-4cb6-8ff3-30b367f9b005",
+      "net": "USB_DP_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "800e0dc0-7465-4738-a2a5-8b093e6b178d",
+      "net": "USB_DP_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "800e0dc0-7465-4738-a2a5-8b093e6b178d",
+      "net": "USB_DP_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b8ffdfe8-3f19-494b-a8c3-d84df8694f6d",
+      "net": "USB_DP_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b8ffdfe8-3f19-494b-a8c3-d84df8694f6d",
+      "net": "USB_DP_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "13fd182e-091c-4ccf-b329-da65bef2d2f6",
+      "net": "USB_DM_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "13fd182e-091c-4ccf-b329-da65bef2d2f6",
+      "net": "USB_DM_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "16296dfd-4598-492b-9811-7f9ff1ba5087",
+      "net": "USB_DM_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "16296dfd-4598-492b-9811-7f9ff1ba5087",
+      "net": "USB_DM_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "82355cf6-0c23-45dc-90a1-a9c6eaa173b6",
+      "net": "USB_DM_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "82355cf6-0c23-45dc-90a1-a9c6eaa173b6",
+      "net": "USB_DM_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "c6e1d003-4a58-448a-b845-baf0b391b28c",
+      "net": "USB_DM_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "c6e1d003-4a58-448a-b845-baf0b391b28c",
+      "net": "USB_DM_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d47c3a04-295a-4251-829f-5041f03024e4",
+      "net": "USB_DM_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d47c3a04-295a-4251-829f-5041f03024e4",
+      "net": "USB_DM_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "83f404b1-4012-4b3e-92b6-59acc6fe1da6",
+      "net": "USB_DM_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 60241998.839665204,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "83f404b1-4012-4b3e-92b6-59acc6fe1da6",
+      "net": "USB_DM_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 60241998.839665204,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ab8d62a4-0415-4bf9-a4d2-4582afe029bd",
+      "net": "USB_DM_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 120484014.1363442,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ab8d62a4-0415-4bf9-a4d2-4582afe029bd",
+      "net": "USB_DM_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 120484014.1363442,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ca601a64-fcc7-4639-b97d-263e9ad38170",
+      "net": "USB_DM_CONN",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ca601a64-fcc7-4639-b97d-263e9ad38170",
+      "net": "USB_DM_CONN",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "0f68275e-6bfb-4e97-9226-e97a7af40817",
+      "net": "RESET_GND",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "0f68275e-6bfb-4e97-9226-e97a7af40817",
+      "net": "RESET_GND",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "213e971b-84ef-4cb6-9ff1-7f09092ca04a",
+      "net": "RESET_GND",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "213e971b-84ef-4cb6-9ff1-7f09092ca04a",
+      "net": "RESET_GND",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "691f6cec-d8e8-489b-a7f3-38f72dc0fafa",
+      "net": "RESET_GND",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "691f6cec-d8e8-489b-a7f3-38f72dc0fafa",
+      "net": "RESET_GND",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "78f36f2e-3fea-41ad-a9f6-bfbcf60f004b",
+      "net": "RESET_GND",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "78f36f2e-3fea-41ad-a9f6-bfbcf60f004b",
+      "net": "RESET_GND",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a1e67797-2082-48e4-b599-80fbf14aea08",
+      "net": "RESET_GND",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a1e67797-2082-48e4-b599-80fbf14aea08",
+      "net": "RESET_GND",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "aa68cc22-23a7-48e2-b8f5-61b80370624a",
+      "net": "RESET_GND",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "aa68cc22-23a7-48e2-b8f5-61b80370624a",
+      "net": "RESET_GND",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ab15c706-fa15-4d98-b4e2-059558e68596",
+      "net": "RESET_GND",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ab15c706-fa15-4d98-b4e2-059558e68596",
+      "net": "RESET_GND",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "c1a7bdc6-0b98-4423-955b-aab3b0241546",
+      "net": "RESET_GND",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "c1a7bdc6-0b98-4423-955b-aab3b0241546",
+      "net": "RESET_GND",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "167993ff-8689-4322-baae-f335fc6d4996",
+      "net": "XTAL_OUT",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "167993ff-8689-4322-baae-f335fc6d4996",
+      "net": "XTAL_OUT",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1815884e-02f5-4307-8f77-4c6ebd39255f",
+      "net": "XTAL_OUT",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1815884e-02f5-4307-8f77-4c6ebd39255f",
+      "net": "XTAL_OUT",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2483422d-431e-4ca7-b666-635374be260a",
+      "net": "XTAL_OUT",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 9670024611.472088,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2483422d-431e-4ca7-b666-635374be260a",
+      "net": "XTAL_OUT",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 9670024611.472088,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2c509925-4094-4576-afff-78cd0a3a9e2f",
+      "net": "XTAL_OUT",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2c509925-4094-4576-afff-78cd0a3a9e2f",
+      "net": "XTAL_OUT",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a1ade107-f8b4-46e3-a254-67a1d3801648",
+      "net": "XTAL_OUT",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a1ade107-f8b4-46e3-a254-67a1d3801648",
+      "net": "XTAL_OUT",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1fa68cfa-8e09-4a35-9c6f-448522db9172",
+      "net": "KEY_RGB_CHAIN_56",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 60242001.89653225,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1fa68cfa-8e09-4a35-9c6f-448522db9172",
+      "net": "KEY_RGB_CHAIN_56",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 60242001.89653225,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "fb57c6b5-2621-4667-9b49-570b5abfc545",
+      "net": "KEY_RGB_CHAIN_56",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "fb57c6b5-2621-4667-9b49-570b5abfc545",
+      "net": "KEY_RGB_CHAIN_56",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "569fadd4-f2fa-4c9b-815a-daf2e917c323",
+      "net": "KEY_RGB_CHAIN_54",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "569fadd4-f2fa-4c9b-815a-daf2e917c323",
+      "net": "KEY_RGB_CHAIN_54",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b783eef7-37bc-4c4b-b6f5-ff3f507ee47f",
+      "net": "KEY_RGB_CHAIN_54",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b783eef7-37bc-4c4b-b6f5-ff3f507ee47f",
+      "net": "KEY_RGB_CHAIN_54",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "11a08fd4-a7be-48fb-bff1-fa18cb8d7f54",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 361532922.1960007,
+      "lost_support_outside_windows_area_nm2": 80807.01179789007,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "11a08fd4-a7be-48fb-bff1-fa18cb8d7f54",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 361549185.7081553,
+      "lost_support_outside_windows_area_nm2": 97070.52395249158,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "17f6aefa-1879-4105-a996-9175556abdf3",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "17f6aefa-1879-4105-a996-9175556abdf3",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 3327.60499240458,
+      "lost_support_outside_windows_area_nm2": 3327.60499240458,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "189ef266-0c51-4855-ba17-87de83192662",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "189ef266-0c51-4855-ba17-87de83192662",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "18e67176-55b6-4cb5-bd86-213a5bf2a7ad",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "18e67176-55b6-4cb5-bd86-213a5bf2a7ad",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1cb9a1b2-8458-4069-a8ce-4cea426e7cd1",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1cb9a1b2-8458-4069-a8ce-4cea426e7cd1",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "269d9bd3-aa4f-464b-826e-5f10b20be059",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 1.254675000672556e-06,
+      "lost_support_outside_windows_area_nm2": 1.254675000672556e-06,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "269d9bd3-aa4f-464b-826e-5f10b20be059",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "26b0ca7d-f493-4aa8-91d2-5875c7c53948",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "26b0ca7d-f493-4aa8-91d2-5875c7c53948",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "31de6c8b-d986-4ea1-b3b5-2f197a6951da",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "31de6c8b-d986-4ea1-b3b5-2f197a6951da",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "34b0c3c4-c07f-4b7d-910b-81a9afc7cd5b",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "34b0c3c4-c07f-4b7d-910b-81a9afc7cd5b",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3516d735-3bdb-4821-aa9c-b702d6382a2b",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 6494591181.882294,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3516d735-3bdb-4821-aa9c-b702d6382a2b",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 6494591181.882294,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "36f7a32b-e3a1-487f-8860-7920ad765e69",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 60257634.86570557,
+      "lost_support_outside_windows_area_nm2": 15633.727379671884,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "36f7a32b-e3a1-487f-8860-7920ad765e69",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 60257634.86570557,
+      "lost_support_outside_windows_area_nm2": 15633.727379671884,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "3b4a2730-d575-4d23-a6ef-b0e0633baae1",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 37139093.9985998,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3b4a2730-d575-4d23-a6ef-b0e0633baae1",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 60242007.0681721,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3e1731bd-324f-4fe6-9991-28ef223d6ae8",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 2.097100026299259e-06,
+      "lost_support_outside_windows_area_nm2": 2.097100026299259e-06,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "3e1731bd-324f-4fe6-9991-28ef223d6ae8",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 60242026.7123729,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3f406512-3b14-48b3-9e34-a100e1c8c538",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "3f406512-3b14-48b3-9e34-a100e1c8c538",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4ff6006b-7ba3-4916-8b86-7985f40b20d5",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4ff6006b-7ba3-4916-8b86-7985f40b20d5",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "570a866c-49e4-463b-a60c-c3c8eec8e7e5",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "570a866c-49e4-463b-a60c-c3c8eec8e7e5",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "57a687ad-bcca-4261-9e23-8dbe01936d90",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "57a687ad-bcca-4261-9e23-8dbe01936d90",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "69f83d4f-9800-46d5-9df8-04b893497fc2",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "69f83d4f-9800-46d5-9df8-04b893497fc2",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "72b5029c-0205-437c-bbf4-c1b2dde69206",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 10005.0,
+      "lost_support_outside_windows_area_nm2": 10005.0,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "72b5029c-0205-437c-bbf4-c1b2dde69206",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 36259.182153984904,
+      "lost_support_outside_windows_area_nm2": 36259.1821539402,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "7315b7d6-f096-4fcd-a851-39dbecf1b7a8",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "7315b7d6-f096-4fcd-a851-39dbecf1b7a8",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "79f7a697-2931-4e82-a53b-a868a9e379ce",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "79f7a697-2931-4e82-a53b-a868a9e379ce",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "95341f1f-f29f-45f5-92c8-055e1569232c",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "95341f1f-f29f-45f5-92c8-055e1569232c",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "9dc94dc6-8406-49f7-9ea6-fdb042184565",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 11436.0,
+      "lost_support_outside_windows_area_nm2": 11436.0,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "9dc94dc6-8406-49f7-9ea6-fdb042184565",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 12095.744902200997,
+      "lost_support_outside_windows_area_nm2": 12095.744902193546,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "a1d582a9-82c4-4f28-aac9-2e3b9c00844d",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a1d582a9-82c4-4f28-aac9-2e3b9c00844d",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a8343318-e622-45ae-ba21-f1dc29f5d011",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a8343318-e622-45ae-ba21-f1dc29f5d011",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "bb18ca3b-aeca-4ae6-8131-2e39c0bf4015",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 12950.147355481982,
+      "lost_support_outside_windows_area_nm2": 12950.147355481982,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "bb18ca3b-aeca-4ae6-8131-2e39c0bf4015",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "c6e0489e-8198-405f-9291-e74ed0c0b3cf",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "c6e0489e-8198-405f-9291-e74ed0c0b3cf",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d43e9372-eafe-40d1-8cf7-5ae8272bb882",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d43e9372-eafe-40d1-8cf7-5ae8272bb882",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "da3a3a09-58bc-4025-8116-cc2f8d4d1d37",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "da3a3a09-58bc-4025-8116-cc2f8d4d1d37",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "f5570a44-a1f9-4968-9001-94cfcb06848b",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 1105629482.716095,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "f5570a44-a1f9-4968-9001-94cfcb06848b",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 1105625641.9339294,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "00a0ade4-147a-40a8-9838-0cebb76eba6e",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "00a0ade4-147a-40a8-9838-0cebb76eba6e",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "040fc6c6-dfce-4385-be06-f2b9c9e71c06",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "040fc6c6-dfce-4385-be06-f2b9c9e71c06",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "0d75530b-0a67-4ba6-b848-9c2dc7ad3478",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "0d75530b-0a67-4ba6-b848-9c2dc7ad3478",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "14b8362b-fc7d-4431-a670-41a578dc9af1",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "14b8362b-fc7d-4431-a670-41a578dc9af1",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1bd2e48d-6e75-4c60-b30b-0c0b0d5d29ee",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1bd2e48d-6e75-4c60-b30b-0c0b0d5d29ee",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2d19c6a9-8f58-44f0-aa1b-056b3312b560",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2d19c6a9-8f58-44f0-aa1b-056b3312b560",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2fc7a38a-a72a-44d3-950a-1594c7094f49",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "2fc7a38a-a72a-44d3-950a-1594c7094f49",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "306f6874-e04a-49be-b58d-6c539f35107c",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "306f6874-e04a-49be-b58d-6c539f35107c",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "33b6a200-e973-4023-ac87-2c0a2abae1f6",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "33b6a200-e973-4023-ac87-2c0a2abae1f6",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 3300.946063682437,
+      "lost_support_outside_windows_area_nm2": 3300.946063682437,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "4a0194c6-c1cc-48a6-8f98-2e469423f285",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "4a0194c6-c1cc-48a6-8f98-2e469423f285",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "687b3eec-f79f-4685-a2aa-bdbc1da23108",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "687b3eec-f79f-4685-a2aa-bdbc1da23108",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6d29706a-5e70-464f-a36d-d2c5a2058c44",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "6d29706a-5e70-464f-a36d-d2c5a2058c44",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "7280604c-558f-4b4e-980c-12f3109eeeaa",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 8704.89859691558,
+      "lost_support_outside_windows_area_nm2": 8704.898596914485,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "7280604c-558f-4b4e-980c-12f3109eeeaa",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 13296.745053369716,
+      "lost_support_outside_windows_area_nm2": 13296.74505352974,
+      "empty_outside_windows": false
+    },
+    {
+      "uuid": "8739b421-f8f5-45dc-90c7-9bd09b018c63",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "8739b421-f8f5-45dc-90c7-9bd09b018c63",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "926c6604-4469-4994-ad1a-3eb020c67ce9",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "926c6604-4469-4994-ad1a-3eb020c67ce9",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "98f4f818-0624-4db4-b624-bd5ae1e89804",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "98f4f818-0624-4db4-b624-bd5ae1e89804",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "99121a97-23ac-4d07-b080-5965063287a6",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "99121a97-23ac-4d07-b080-5965063287a6",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "99eb4e83-659d-4441-af90-a283ced4e882",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "99eb4e83-659d-4441-af90-a283ced4e882",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "9d629528-f9f6-40d1-b4ca-94cc6adafcd1",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "9d629528-f9f6-40d1-b4ca-94cc6adafcd1",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a8397ecd-a7d3-4d21-900a-e3d3cec29831",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "a8397ecd-a7d3-4d21-900a-e3d3cec29831",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b70d8f96-b63a-401e-be7c-29e8b4e2837b",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "b70d8f96-b63a-401e-be7c-29e8b4e2837b",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "bb2d8b82-709f-493d-9ee5-efb39b103491",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "bb2d8b82-709f-493d-9ee5-efb39b103491",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "cb3823d5-bd6f-4186-a5da-d4dd2e3a180e",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "cb3823d5-bd6f-4186-a5da-d4dd2e3a180e",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d0bd8d91-41f2-4f47-944f-78491ec357a7",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d0bd8d91-41f2-4f47-944f-78491ec357a7",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d74cc6fb-008f-4804-8021-b28ce6817e5c",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 5451508757.267425,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "d74cc6fb-008f-4804-8021-b28ce6817e5c",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 5451508757.267425,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "dcf5bf3e-4c06-4757-b0bd-93c5f274485f",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "dcf5bf3e-4c06-4757-b0bd-93c5f274485f",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "e92a8159-7e43-4dd4-820e-df87c38f7bb5",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "e92a8159-7e43-4dd4-820e-df87c38f7bb5",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ea8a5955-c836-481a-ad29-8fcb0898ebbf",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ea8a5955-c836-481a-ad29-8fcb0898ebbf",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "f913a70b-482e-4014-b383-8738f7fea330",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "f913a70b-482e-4014-b383-8738f7fea330",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ff69644a-2883-4509-af1c-c488efa5c19c",
+      "net": "+4V_LED",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "ff69644a-2883-4509-af1c-c488efa5c19c",
+      "net": "+4V_LED",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1bc68042-0eb6-485f-b30d-eacd5e6d6354",
+      "net": "+4V_REG",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 9550896398.32632,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "1bc68042-0eb6-485f-b30d-eacd5e6d6354",
+      "net": "+4V_REG",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 9550896398.32632,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "e0fe60e2-dba4-457a-9f69-e264e4df57d8",
+      "net": "+4V_REG",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 72035183.6932137,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "e0fe60e2-dba4-457a-9f69-e264e4df57d8",
+      "net": "+4V_REG",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 72035183.6932137,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "faa1c6c3-1a01-4024-9b6b-c7a17238cd78",
+      "net": "+4V_REG",
+      "layer": "In1.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    },
+    {
+      "uuid": "faa1c6c3-1a01-4024-9b6b-c7a17238cd78",
+      "net": "+4V_REG",
+      "layer": "In2.Cu",
+      "lost_support_area_nm2": 0.0,
+      "lost_support_outside_windows_area_nm2": 0.0,
+      "empty_outside_windows": true
+    }
+  ]
+}
