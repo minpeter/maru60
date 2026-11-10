@@ -181,13 +181,14 @@ def main() -> None:
     z_strike = REPORT["calibrated_z_stack_mm"]["Z_strike_pocket_floor"]
     pilot_depth = GEOM["strike_pilot_depth"]
     pilot_radius = GEOM.get("strike_pilot_diameter", 1.8) / 2
+    half_pitch = GEOM.get("strike_pilot_half_pitch", 6.5)
     strike_centres_w = [pw(x, y) for x, y in GEOM["strike_centers_plate_frame"]]
     sx_w, sy_w = min(strike_centres_w, key=lambda c: abs(c[0] - seam_x) + abs(c[1] - seam["key_y"]))
     assert abs(sx_w - seam_x) < 1e-6, (sx_w, seam_x)
     # Each half owns exactly one seam-strike pilot: a ring around it, 1 mm under the pocket floor, is solid in that half only.
     skin_l, skin_r = slice_material(left_mf, z_strike - 1.0), slice_material(right_mf, z_strike - 1.0)
     pilot_owner: dict[str, list[float]] = {}
-    for side, px in (("left_pilot", sx_w - 6.5), ("right_pilot", sx_w + 6.5)):
+    for side, px in (("left_pilot", sx_w - half_pitch), ("right_pilot", sx_w + half_pitch)):
         ring = sg.Point(px, sy_w).buffer(pilot_radius + 0.7).difference(sg.Point(px, sy_w).buffer(pilot_radius + 0.05))
         pilot_owner[side] = [round(ring.intersection(skin_l).area / ring.area, 3), round(ring.intersection(skin_r).area / ring.area, 3)]
     assert pilot_owner["left_pilot"][0] > 0.95 and pilot_owner["left_pilot"][1] < 0.01, pilot_owner
@@ -195,21 +196,21 @@ def main() -> None:
     # All 8 pilots reach `pilot_depth` past the pocket floor and stop there (solid skin above them).
     full_open = slice_material(full_case_mf, z_strike - pilot_depth + 0.1)
     full_skin = slice_material(full_case_mf, z_strike - pilot_depth - 0.1)
-    pilots = [sg.Point(sx + dx, sy).buffer(pilot_radius - 0.01) for sx, sy in strike_centres_w for dx in (-6.5, 6.5)]
+    pilots = [sg.Point(sx + dx, sy).buffer(pilot_radius - 0.01) for sx, sy in strike_centres_w for dx in (-half_pitch, half_pitch)]
     pilot_open = [round(p.intersection(full_open).area / p.area, 3) for p in pilots]
     pilot_capped = [round(p.intersection(full_skin).area / p.area, 3) for p in pilots]
     assert max(pilot_open) < 0.01 and min(pilot_capped) > 0.95, (pilot_open, pilot_capped)
     hole_walls = [sg.Point(sx + dx, sy).buffer(pilot_radius + 0.15).difference(
                   sg.Point(sx + dx, sy).buffer(pilot_radius + 0.05))
-                  for sx, sy in strike_centres_w for dx in (-6.5, 6.5)]
+                  for sx, sy in strike_centres_w for dx in (-half_pitch, half_pitch)]
     assert all(w.intersection(full_open).area / w.area > 0.99 for w in hole_walls), "Oversize strike bore"
 
     insert_checks = []
-    if REPORT.get("strike_inserts", False):
+    if REPORT.get("strike_insert_trial"):
         trial = REPORT["strike_insert_trial"]
         for index, (name, recess) in enumerate(trial["installation_recess_by_hole_mm"].items()):
             x, y = strike_centres_w[index // 2]
-            x += -6.5 if index % 2 == 0 else 6.5
+            x += -half_pitch if index % 2 == 0 else half_pitch
             top = z_strike - recess
             bottom = top - trial["length"]
             def cylinder(radius: float, z: float, height: float) -> md.Manifold:
@@ -224,8 +225,10 @@ def main() -> None:
             assert missing < 0.001 and blocked < 0.001 and reserve >= 0.19, (name, missing, blocked, reserve)
             insert_checks.append({"hole": name, "recess_mm": recess, "floor_reserve_mm": round(reserve, 3),
                                   "surround_1p3_missing_mm3": missing, "tool_blocked_mm3": blocked})
-    # The seam strike plate (20.5 x 6.55 mm) bears on the pocket floor of both halves.
-    seam_plate = sg.box(sx_w - 10.25, sy_w - 3.275, sx_w + 10.25, sy_w + 3.275)
+    # The seam strike plate (stock 20.5 x 6.55 mm) bears on the pocket floor of both halves.
+    strike = GEOM.get("strike_plate_mm") or spec.value("ball_catch.strike_plate")
+    seam_plate = sg.box(sx_w - strike["length"] / 2, sy_w - strike["width"] / 2,
+                        sx_w + strike["length"] / 2, sy_w + strike["width"] / 2)
     floor_l, floor_r = slice_material(left_mf, z_strike - 0.05), slice_material(right_mf, z_strike - 0.05)
     strike_bearing = [round(seam_plate.intersection(floor_l).area, 1), round(seam_plate.intersection(floor_r).area, 1)]
     assert min(strike_bearing) > 40.0, f"Seam strike plate does not bear on both halves: {strike_bearing} mm^2"
@@ -345,22 +348,25 @@ def main() -> None:
     orange_overlap = float((orange_mf.extrude(z_floor - z_gasket + 0.3).translate([0, 0, z_gasket + 0.01]) ^ full_case_mf).volume())
     assert orange_overlap < 0.01, f"Material left inside the {z_gasket} mm cap-pocket/relief cut: {orange_overlap} mm^3"
 
-    # 6c. 4 Stock Metal Ball-Catch Strike Plates and their tongues (spec/rule60-v3.json, two-view photo fit):
-    strike = spec.value("ball_catch.strike_plate")
+    # 6c. 4 Metal Ball-Catch Strike Plates (report `strike_plate_mm`: stock two-view photo fit, or the assumed LUBAN
+    #     strike) and the stock tongues. The LUBAN tongue stays inside its catch envelope, which verify_bottomcase.py
+    #     checks against both cases and the gasket plate.
+    stock_catches = REPORT.get("catch_hardware", "stock") == "stock"
     tongue_x, tongue_y, tongue_z = spec.value("ball_catch.strike_tongue")
     strikes_mf = md.Manifold()
     tongue_plate_gap: list[float] = []
     for sx_w, sy_w in strikes_w:
-        tongue = sg.box(sx_w - tongue_x / 2, sy_w - tongue_y / 2, sx_w + tongue_x / 2, sy_w + tongue_y / 2)
-        tongue_plate_gap.append(round(tongue.distance(sg.Polygon(gas_world)), 3))
         strikes_mf += md.Manifold.cube([strike["length"], strike["width"], strike["thickness"]], center=True).translate(
             [sx_w, sy_w, z_strike + 0.01 + strike["thickness"] / 2])
-        strikes_mf += md.Manifold.cube([tongue_x, tongue_y, tongue_z], center=True).translate(
-            [sx_w, sy_w, z_strike + 0.01 + strike["thickness"] + tongue_z / 2])
+        if stock_catches:
+            tongue = sg.box(sx_w - tongue_x / 2, sy_w - tongue_y / 2, sx_w + tongue_x / 2, sy_w + tongue_y / 2)
+            tongue_plate_gap.append(round(tongue.distance(sg.Polygon(gas_world)), 3))
+            strikes_mf += md.Manifold.cube([tongue_x, tongue_y, tongue_z], center=True).translate(
+                [sx_w, sy_w, z_strike + 0.01 + strike["thickness"] + tongue_z / 2])
     strikes_ov = float((strikes_mf ^ full_case_mf).volume())
     assert strikes_ov < 0.01, f"Metal ball-catch strike plate collision: {strikes_ov} mm^3"
     # The strike tongue rises through the gasket-plate level: keep it clear of the plate edge in plan.
-    assert min(tongue_plate_gap) >= 0.4, f"Strike tongue too close to the gasket plate: {tongue_plate_gap} mm"
+    assert not stock_catches or min(tongue_plate_gap) >= 0.4, f"Strike tongue too close to the gasket plate: {tongue_plate_gap} mm"
 
     # 6d. Full 60-Key HHKB Cherry/OEM Keycap Array (spec/rule60-v3.json) + 0.18 mm Extra Clearance through 10 mm Stroke:
     kc_poly_p = sg.Polygon(spec.value("keycaps.hhkb_gauge")).buffer(0.18, join_style="mitre")
@@ -387,9 +393,10 @@ def main() -> None:
     # 6f. Floor (IMG_0334): the frame stays at the 9.69 mm floor everywhere except the declared cuts: plate footprint,
     #     the 6.30 cut (relief + cap pockets), keycap opening and 4 strike pockets (with pilots). No side tab pockets.
     plate_fp = sg.Polygon(gas_world).buffer(0.35, join_style="mitre")
+    pocket_hw = GEOM.get("strike_pocket_half_w", 3.625) + 0.075
     declared = unary_union(
         [plate_fp, orange_w.buffer(0.05), sg.Polygon(kc_pts_w)]
-        + [sg.box(sx - 14.85, sy - 3.7, sx + 14.85, sy + 3.7) for sx, sy in strikes_w]
+        + [sg.box(sx - 14.85, sy - pocket_hw, sx + 14.85, sy + pocket_hw) for sx, sy in strikes_w]
     )
     floor_region = inner_skirt.buffer(-0.05).difference(declared)
     floor_cover = round(material_at(z_floor - 0.05).intersection(floor_region).area / floor_region.area, 3)
@@ -476,6 +483,7 @@ def main() -> None:
         "status": "ALL_PASSED",
         "board": GEOM["usb_notch"]["board"],
         "strike_inserts": REPORT.get("strike_inserts", False),
+        "catch_hardware": REPORT.get("catch_hardware", "stock"),
         "strike_insert_nominal_installation": insert_checks,
         "closed_single_shell_exports": [
             "left-half-print.stl",

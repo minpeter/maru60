@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import sys
 from typing import Any
 
 import manifold3d as md
@@ -83,16 +84,17 @@ SLOT_MIN_WALL = 0.8      # Rail left between the USB-C slot and a cap recess: an
 USB_BRIDGE_BOTTOM_ZP = 11.90  # Roof underside; its top is flush with the surrounding rim, not a separate recessed beam
 USB_LEDGE_ZP = 21.08    # Deeper USB mating-floor relief; design trial, not a depth measured from the owner's photo
 USB_PORT_POCKET_DEPTH = 0.50  # Shallow, bounded recess seen in the owner's photo; preview depth, not a measurement
-DECO_CLEAR = 0.20        # Recess around the 3 mm steel weight / decoration plate outline (INKC drawing), per side
+DECO_CLEAR = 0.20        # Recess around the steel weight / decoration plate outline (INKC drawing), per side
 DECO_FROM_SLOPE = 6.5    # Plate straight edge from the slope's desk-face edge, along the desk face (owner)
-DECO_RECESS = 2.3        # Recess depth: the 3 mm plate stands 0.7 proud of the desk face (1.3 under the bumpons'
+DECO_RECESS = 2.3        # Recess depth: the 2.88 mm plate stands 0.58 proud of the desk face (1.42 under the bumpons'
                          # 2.0). The plate's centre bump lies over the front of the 4.69 deep battery bay: 2.3 leaves
                          # 1.03 mm of floor between them; 2.5 left 0.83 and a flush 3.0 would leave 0.33
 DECO = spec.outline("back_deco_plate")
+DECO_T = spec.value("bottom.weight_plate_thickness")  # Caliper; the drawing label says 3 mm
 DECO_SCREWS = spec.value("bottom.weight_plate_holes")  # Tapped holes of the stock plate, plate-outline frame (photo)
 DECO_SCREW_HOLE_D = 3.0  # Through the floor for the M2 shank: 0.5 mm float per side covers the photo-read positions
 DECO_SCREW_CBORE_D = 5.4  # Counterbore from the cavity side for an M2 head up to 4.0 (socket cap 3.8, pan 4.0), same float
-DECO_SCREW_CLAMP = 2.5  # Floor under each head: an M2 x 4 screw reaches 1.5 mm into the 3 mm plate, its tip 1.5 short
+DECO_SCREW_CLAMP = 2.5  # Floor under each head: an M2 x 4 screw reaches 1.5 mm into the 2.88 mm plate, its tip 1.38 short
 DECO_SCREW_LEN = 4.0    # of the outer face (the stock holes are blind); the head sits 2.2-4.3 mm below the cavity floor
 # ㄴㄱ split (owner): the seam runs through one back and one front ball catch, so each of those two stock catch bodies
 # bridges it with one M2 screw in each half; between them it crosses the floor in front of the battery bay. Staggered
@@ -243,18 +245,19 @@ def cap_recesses_p() -> list[Any]:
     return polys
 
 
-def catch_sites_p(*, purchased: bool = False) -> list[dict[str, Any]]:
+def catch_sites_p(*, purchased: bool = False, luban: bool = False) -> list[dict[str, Any]]:
     """Each strike (plate frame) with its catch notch and screw pilots; `skirt` is +1 when the outer wall is at +Y."""
     sites = []
-    for name, sx, sy in top.strike_centers_p(purchased=purchased):
+    half_l = round(top.LUBAN["catch"]["length"] / 2 + 0.30, 2) if luban else CATCH_NOTCH_HALF_L
+    for name, sx, sy in top.strike_centers_p(purchased=purchased, luban=luban):
         skirt = 1.0 if sy > 50.0 else -1.0
         y_out = RIM_P[3] + 1.0 if skirt > 0 else RIM_P[1] - 1.0
         y_in = LEDGE_BACK_P - 1.0 if skirt > 0 else LEDGE_FRONT_P + 1.0
         notch = [sx-16.1, sy-4.3, sx+16.1, sy+4.3] if purchased else [
-            sx - CATCH_NOTCH_HALF_L, min(y_out, y_in), sx + CATCH_NOTCH_HALF_L, max(y_out, y_in)]
+            sx - half_l, min(y_out, y_in), sx + half_l, max(y_out, y_in)]
         sites.append({"name": name, "strike_p": [sx, sy], "skirt": skirt,
                       "notch_p": notch,
-                      "screws_p": [list(axis) for axis in top.catch_screw_axes_p(sx, sy, purchased=purchased)]})
+                      "screws_p": [list(axis) for axis in top.catch_screw_axes_p(sx, sy, purchased=purchased, luban=luban)]})
     return sites
 
 
@@ -294,13 +297,16 @@ def deco_screws_print(holes: list[list[float]] | None = None) -> list[dict[str, 
 def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
           purchased_catches: bool = False, insert_hole_d: float = 3.2,
           weight_holes: list[list[float]] | None = None,
-          sculpted_catches: bool = False) -> tuple[md.Manifold, dict[str, Any]]:
+          sculpted_catches: bool = False, luban_catches: bool = False) -> tuple[md.Manifold, dict[str, Any]]:
+    if luban_catches and (catch_inserts or purchased_catches or sculpted_catches):
+        raise ValueError("The LUBAN catch layout carries its own CANOT bores; it combines with no catch study")
     purchased_catches = purchased_catches or sculpted_catches
     catch_inserts = catch_inserts or purchased_catches
     insert = dict(top.PURCHASED_INSERT if purchased_catches else top.CATCH_INSERT)
     if sculpted_catches:
         insert["depth"] = top.SCULPTED_CATCH["depth"]
-    catch_floor = top.SCULPTED_CATCH["catch_z"] if sculpted_catches else top.PURCHASED_CATCH_Z if purchased_catches else CATCH_FLOOR_ZP
+    catch_floor = (top.LUBAN_CATCH_Z if luban_catches else top.SCULPTED_CATCH["catch_z"] if sculpted_catches
+                   else top.PURCHASED_CATCH_Z if purchased_catches else CATCH_FLOOR_ZP)
     # ㄷ tray (rail outline, rail tops to the tray bottom) + the inset triangular base, both cut by the desk plane.
     rim = plate_box(*RIM_P, r=RIM_CORNER_R)
     tray = prism(rim, Z_RIM_TOP, desk_zp(Y_FRONT) + 1.0).trim_by_plane(*tray_bottom_plane())
@@ -310,7 +316,7 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
     # Cavity between the rails, through both short ends (no end walls).
     cuts = [prism(plate_box(RIM_P[0] - 1.0, LEDGE_FRONT_P, RIM_P[2] + 1.0, LEDGE_BACK_P), Z_RIM_TOP - 1.0, FLOOR_ZP)]
     cuts += [prism(plate_to_world(p), Z_RIM_TOP - 1.0, CAP_SEAT_ZP) for p in cap_recesses_p()]
-    sites = catch_sites_p(purchased=purchased_catches)
+    sites = catch_sites_p(purchased=purchased_catches, luban=luban_catches)
     pilots = []
     for s in sites:
         if sculpted_catches:
@@ -328,11 +334,14 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
                 pad = md.Manifold.cylinder(pad_bottom - catch_floor, insert["boss_d"] / 2,
                                           circular_segments=96).translate([xw, yw, catch_floor])
                 body += pad.trim_by_plane([0.0, SIN, -COS], -DESK_A * COS)
+            elif luban_catches:  # CANOT OD3.5/L3 bores on the original underside: no pads, >= 0.8 mm skin left
+                depth, diameter = top.LUBAN_BORE_DEPTH, top.CANOT_INSERT["hole_d"]
+                assert underside_zp(yw) - catch_floor - depth >= PILOT_SKIN, (s["name"], underside_zp(yw))
             else:
                 depth = round(min(PILOT_MAX, underside_zp(yw) - catch_floor - PILOT_SKIN), 2)
                 diameter = PILOT_D
             pilots.append({"world": [xw, yw], "depth": depth})
-            cuts.append(md.Manifold.cylinder(depth + 0.5, diameter / 2, diameter / 2, 96 if catch_inserts else 24).translate(
+            cuts.append(md.Manifold.cylinder(depth + 0.5, diameter / 2, diameter / 2, 96 if catch_inserts or luban_catches else 24).translate(
                 [xw, yw, catch_floor - 0.5]))
     usb_x, usb_w = top.usb_notch_print(board)
     usb_y0, usb_y1 = pw(0.0, LEDGE_BACK_P - 1.0)[1], pw(0.0, RIM_P[3] + 1.0)[1]
@@ -409,7 +418,7 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
         "frames": {"world": "top-case print frame (topcase-draft): X_w = -(X_plate + DX_PW), Y_w = Y_plate + DY_PW, Z_p",
                    "to_print_3x4": TO_PRINT.round(9).tolist()},
         "z_p": {"rim_top": Z_RIM_TOP, "cap_seat": CAP_SEAT_ZP,
-                "catch_top": catch_floor - 9.0 if purchased_catches else CATCH_TOP_ZP, "catch_floor": catch_floor,
+                "catch_top": catch_floor - 9.0 if purchased_catches or luban_catches else CATCH_TOP_ZP, "catch_floor": catch_floor,
                 "cavity_floor": FLOOR_ZP, "bay_floor": round(FLOOR_ZP + _BAY["height"], 2) if battery_bay else None,
                 "lip": top.SKIRT_H,
                 "desk_at_y0": round(DESK_A, 6), "desk_tan": round(TAN, 9)},
@@ -432,7 +441,7 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
         "bumpons_world": [[x, round(y, 3)] for x, y in bumpon_centres_world()],
         "bumpon_pocket": {"d": top.POCKET_D, "depth": top.POCKET_DEPTH},
         "deco_recess_print": {"outline_bounds": [round(v, 3) for v in deco_poly_print().bounds], "depth": DECO_RECESS,
-                              "plate_thickness": DECO["thickness"], "from_slope_edge": DECO_FROM_SLOPE,
+                              "plate_thickness": DECO_T, "from_slope_edge": DECO_FROM_SLOPE,
                               "clear": DECO_CLEAR},
         "deco_screws": {"thread": DECO_SCREWS["thread"], "length": DECO_SCREW_LEN, "hole_d": DECO_SCREW_HOLE_D,
                         "cbore_d": DECO_SCREW_CBORE_D, "clamp": DECO_SCREW_CLAMP,
@@ -451,6 +460,11 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
                           "desk_face_back_inset": BACK_BEVEL_INSET,
                           "base_outline_world": [round(v, 3) for v in base_outline().bounds]},
     }
+    report["catch_hardware"] = "luban32" if luban_catches else "stock"
+    if luban_catches:
+        report["luban32"] = {"hardware_assumed": top.LUBAN, "catch_seat_zp": catch_floor, "bore_depth": top.LUBAN_BORE_DEPTH,
+                             "bore_d": top.CANOT_INSERT["hole_d"], "insert": "CANOT M2 OD3.5 x L3",
+                             "status": "widths assumed (spec ball_catch.luban32); caliper the purchased parts before printing"}
     if catch_inserts:
         report["experimental_catch_inserts"] = {**insert, "hole_d": diameter, "rear_pad_bottom_z_p": pad_bottom,
                                                  "purchased_32mm": purchased_catches,
@@ -499,10 +513,15 @@ def main() -> None:
                     help="PCB whose USB-C position sets the slot (spec/boards.json); default: %(default)s")
     ap.add_argument("--battery-bay", action=argparse.BooleanOptionalAction, default=True,
                     help="cut the stock battery bay; use --no-battery-bay for a wired case (default: enabled)")
+    ap.add_argument("--catches", choices=["stock", "luban32"], default="stock",
+                    help="Ball-catch hardware, matching the top case build; default: %(default)s")
     args = ap.parse_args()
+    if args.battery_bay:
+        print("WARNING: the battery-bay bottom case is on hold and not reviewed for printing; "
+              "--no-battery-bay builds the current wired bottom case.", file=sys.stderr)
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "verification.json").unlink(missing_ok=True)
-    body, report = build(args.board, battery_bay=args.battery_bay)
+    body, report = build(args.board, battery_bay=args.battery_bay, luban_catches=args.catches == "luban32")
     left, right = split(body)
     coupon = body ^ md.Manifold.cube([120.0, 21.0, 60.0]).translate([30.0, Y_FRONT - 1.0, -5.0])
     jx0, jy0, jx1, jy1 = JOINT_TEST_BOX

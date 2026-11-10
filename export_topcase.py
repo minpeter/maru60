@@ -22,9 +22,11 @@ assert verification['status'] == 'ALL_PASSED', verification['status']
 report = json.loads((source / 'draft-report.json').read_text())
 board = report['geometry_mm']['usb_notch']['board']
 inserts = report['strike_inserts']
+luban = report.get('catch_hardware', 'stock') == 'luban32'
 assert verification['board'] == board and verification['strike_inserts'] == inserts, 'Verify the current board/insert variant before export'
-suffix = '-canot-inserts' if inserts else ''
-if inserts and board != spec.default_board():
+assert verification.get('catch_hardware', 'stock') == report.get('catch_hardware', 'stock'), 'Verify the current catch variant before export'
+suffix = '-luban32' if luban else '-canot-inserts' if inserts else ''
+if (inserts or luban) and board != spec.default_board():
     suffix += f'-usb-{board}'
 
 
@@ -35,7 +37,7 @@ def publish_3mf(src: str, dst: str) -> None:
     shutil.copyfile(source / src, ROOT / 'models' / dst)
 
 
-if board != spec.default_board() and not inserts:
+if board != spec.default_board() and not inserts and not luban:
     publish_3mf('maru60-hhkb-right-plate.3mf', f'maru60-hhkb-topcase-right-usb-{board}.3mf')
     shutil.copyfile(source / 'verification.json', ROOT / 'evidence' / f'topcase-verification-usb-{board}.json')
     print(f'Exported the right half for board {board!r} and its verification.')

@@ -2,6 +2,7 @@
   "status": "ALL_PASSED",
   "board": "6095-trimode",
   "strike_inserts": false,
+  "catch_hardware": "stock",
   "strike_insert_nominal_installation": [],
   "closed_single_shell_exports": [
     "left-half-print.stl",
@@ -188,5 +189,30 @@
     "four_metal_ballcatch_strikes": 0.0,
     "sixty_hhkb_keycaps_full_travel": 0.0,
     "stock_base_pocket_past_floor": 0.0
+  },
+  "input_sha256": {
+    "build/coupon-ballcatch-gasket-left.stl": "83a2eb80c4789b02f7d926c4b9e5744e6de059c48d1c1c638e2a6f93f15cdd93",
+    "build/draft-report.json": "8786c73c162e429350aed96641ffcc5f9482379c65f3575dd7daead02865da5c",
+    "build/halves-world.3mf": "399727310baeef84b7a646e54ab96bffdfaf30bd778613070d9005f2c3f41ab5",
+    "build/left-half-print.stl": "d99c5cfdd3eb84d263a4395613e3392e0b1f808bc0f88635365a1b752c6d0136",
+    "build/maru60-fit-test-coupons.3mf": "a1c6791177d32638a4d7de9183e96fa1d45062a45cb16945a16a178726c0dca3",
+    "build/maru60-hhkb-left-plate.3mf": "2ddaebc08bc9df6b647b721d2d45d57ff34a0f5eef598be7ff67ce32c3de4d7d",
+    "build/maru60-hhkb-right-plate.3mf": "c82dae0cc897f3996646537210e7a0f675b96f2f87131546299d530b161acc8e",
+    "build/right-half-print.stl": "6d0a835d2ca1d70b1a67f5a6720419444ad7f9b264b8b5462d6cae7c145d23bb",
+    "build_bottomcase_draft.py": "6049f4795b43ff1247647cf607de0bc9bfe1debd1bda9674800603127f03e7e2",
+    "build_topcase_draft.py": "481a8dddaa960dad7b7e3f1e591004f1d6823d22c78f2af2e5ac906ac0745e85",
+    "maru60/__init__.py": "49ec24caa935fc5b5040d7c653ef5fe04b5356b3178780c479036ab8e9499c08",
+    "maru60/exterior.py": "bc565e9bdf78ae6770b2874856703b07a93e5b9e012a9968bab4d557680170d8",
+    "maru60/frames.py": "7440e0bf11fc916c3f5a8be32222694bcd578dfb1d98301b0c94c2f2f2add63e",
+    "maru60/mesh_io.py": "0375ad0531b7757974cf3b097364d56599244457fe9c24c8c33f14794841389e",
+    "maru60/paths.py": "713f1b9650d339f896fb66c21e3049cfd8373be8387d9d729c9128500354de68",
+    "maru60/pipeline.py": "f2b61e09227d679cbd6180c7a35ae72473ef5f97cfab0676cfcf9f2f2aac193e",
+    "maru60/provenance.py": "7fca2fc54c50aaac5f464214c2a566d2af195299bad722ac711a29651d2aa25b",
+    "rule60_spec.py": "327ca5c513663eaef8b643a7c4d003304a26a8778f8a6111623b3cbea866fc19",
+    "spec/boards.json": "64f89606713cd0f621bc42168daf565c44f471544addb3b2d85b05a94af88a0e",
+    "spec/rule60-v3-outlines.json": "acff832b570715bb261defe752e226e86c554d629dbe344b42f0eb93674bee97",
+    "spec/rule60-v3.json": "bfc76674a8b4c35dbf459efb985728eec2053352906a5a7db8cb5e878098885a",
+    "verify_bottomcase.py": "01daf6d56e6755761b5b66fcbda4583ae26df31d4d7a8a0aef22887db5af64ce",
+    "verify_topcase.py": "9180aedc200ba8bcc93ab4acc4d36d13a2d6a2316cca26a617c87346c72d70c8"
   }
 }

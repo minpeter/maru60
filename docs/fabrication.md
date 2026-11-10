@@ -428,8 +428,11 @@ layer heights, passed the same checks except one: the wedge-key tip's top
 bears after ~0.15 mm of the 0.20 mm vertical glue line instead of 0.20 mm
 ([as-printed check](../evidence/topcase/checks/as-printed-check.json)).
 
-Not covered: the stock bottom case was not measured (its pocket copies the
-stock top case, its corner radius comes from the v6.2 fit); the front
+Not covered: the stock bottom case's rail outline was not measured directly
+(the pocket copies the stock top case, its corner radius comes from the v6.2
+fit). The owner's 10.12 mm reading on the stock bottom case, rail tops to tray
+bottom, agrees with the 10.32 mm pocket: the stock bottom case sits 0.2 mm
+inside the skirt lip, as in the stock top case. The front
 ball-catch strikes are centred in the available band, not measured; cap size
 is photo-derived and the front caps clear their pocket wall by only 0.07 mm;
 the stock plate is assumed to match the DWG; the outer corner radius is not
@@ -450,9 +453,13 @@ decoration plate. It nests in the stock top case or the Maru60 top case above.
 **Draft: print the fit coupon first.** Same license as the top case
 ([CC BY-NC 4.0](../LICENSE-topcase)).
 
-No caliper reading of the stock bottom case exists yet: the caliper displays
-in the owner's bottom-case photos are out of frame. The geometry is derived
-from the parts it mates with; the photos set the layout.
+The owner's caliper readings of the stock bottom case set its outside shape:
+10.12 mm from the rail tops to the tray bottom, the ~4.5 mm front step, the
+5.0 / 14.5 mm back slope (with an IMG_0465 edge trace; the direct desk-face
+inset reading was 18.61 mm), the 4.69 mm battery-bay depth and the weight
+plate 6.5 mm in from the slope. Its rail outline, catch notches and cap seats
+were not measured: they are derived from the parts it mates with, and the
+photos set the layout.
 
 | Feature | Source |
 | --- | --- |
@@ -465,8 +472,8 @@ from the parts it mates with; the photos set the layout.
 | Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](../evidence/topcase/analysis/ball-catch-analysis.json)); pilots on the top-case strike-pocket lobe centres |
 | Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
 | Optional 140 × 45 mm R2 battery bay, 4.69 mm deep, back centre (`--battery-bay`, enabled by default) | Length, width, radius: INKC post (which gives 4.5 deep); depth: owner's caliper on the stock bay; position from the owner's photos. The 4.5 mm filler rests on the bay floor, 0.19 mm under the cavity floor. `--no-battery-bay` omits only this pocket cut, restoring the normal Zp 18.20 cavity floor for a wired build; no filler is used |
-| Steel weight plate recess, 2.3 mm deep (the 3 mm plate stands 0.7 mm proud, 1.3 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. The plate's centre bump lies over the front of the bay: 2.3 mm leaves 1.03 mm of floor between them, 2.5 mm would leave 0.83 and a flush 3.0 mm recess 0.33 |
-| Four weight-plate screws from inside, as on the stock case: Ø3.0 holes through the recess roof, Ø5.4 counterbores from the cavity floor leaving 2.5 mm of floor under each head. Two per plate end, 8.8 / 38.9 mm in from the end and 4.8 / 24.7 mm from the straight back edge; two in each half | The stock plate's blind tapped holes, read off the owner's inside photo (IMG_0474) on the plate outline, ±0.5 mm; the holes float 0.5 mm per side. M2 × 4 goes 1.5 mm into the plate and stops 1.5 mm short of its outer face; the head sits 2.3–4.4 mm below the cavity floor |
+| Steel weight plate recess, 2.3 mm deep (the 2.88 mm plate, caliper, stands 0.58 mm proud, 1.42 mm under the bumpons), its straight edge 6.5 mm from the slope's desk-face edge | INKC drawing outline + 0.20 mm per side; position from the owner. The plate's centre bump lies over the front of the bay: 2.3 mm leaves 1.03 mm of floor between them, 2.5 mm would leave 0.83 and a flush 3.0 mm recess 0.33 |
+| Four weight-plate screws from inside, as on the stock case: Ø3.0 holes through the recess roof, Ø5.4 counterbores from the cavity floor leaving 2.5 mm of floor under each head. Two per plate end, 9.45 / 39.5 mm in from the end and 4.7 / 24.8 mm from the straight back edge; two in each half | The plate's blind tapped holes, read off the owner's photo of the plate (IMG_0760) and fit-checked with the printed overlay coupon (`tools/build_weight_plate_coupon.py`): an M2 screw threads through all four Ø3.0 holes on the plate outline, ±0.5 mm; the holes float 0.5 mm per side. M2 × 4 goes 1.5 mm into the plate and stops 1.5 mm short of its outer face; the head sits 2.3–4.4 mm below the cavity floor |
 | USB-C slot | Same centre and 14.75 mm straight width as the top-case notch (`--board`). The lower roof is **flush with the surrounding rim** at Zp 9.69–11.90 (2.21 thick); its upper arch corners are R1.5. Both cases have matching **R0.5 free lip ends** and the passage stays open underneath, requiring print support. The inner floor has a **shallow bounded 20 × 13 mm R2 pocket, depth 0.50**, followed by a 1.0 mm raised end before the separate outer recess. The outer floor remains at Zp 21.08 with at least 0.8 mm skin; its **2.88 mm step is retained, not proven structurally necessary**. Zp increases downward. These are trial design values, not stock-part measurements. The 0.14 mm fin beside the back-left cap recess is removed down to its floor |
 | ㄴㄱ split: the seam runs through the back-right catch (53.75 mm right of centre), crosses the floor 37.3 mm behind the front rail face, and leaves through the front-left catch (52.73 mm left of centre) | Owner. Both seam catches bridge it with one M2 screw in each half; the other two stay in one half. Staggered against the top-case seams |
 | Hybrid joint: five line-to-line dovetails (three across the floor, one on each leg) that slide together normal to the desk face and lock both in-plane directions, plus the two seam catches, glue and the weight plate | Top-case joint profile (5.2/6.6 mm half widths, 6.0 mm projection). Where the back leg runs under the battery bay and weight-plate recess the floor is only 1.6–4.6 mm, so that stretch is a straight glued butt; the weight plate spans it, screwed to each half with two of its four screws |
@@ -591,8 +598,8 @@ is not qualified for the full travel.
 
 Not measured, so the coupon decides: cap-seat level (sets gasket preload),
 catch notch depth and the catch screw pitch (photos read 25.5–26.8 mm). The
-weight-plate screw positions are photo-read, not measured; the 0.5 mm float in
-each hole covers that.
+weight-plate screw positions are photo-read and fit-checked with the overlay
+coupon, not caliper-measured; the 0.5 mm float in each hole stays.
 
 ### Purchased 32 mm catches / CANOT inserts — separate local trial
 

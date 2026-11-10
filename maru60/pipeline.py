@@ -57,6 +57,7 @@ def run_step(
 class Options(argparse.Namespace):
     board: str = spec.default_board()
     strike_inserts: bool = False
+    catches: str = "stock"
     no_battery_bay: bool = False
     publish: bool = False
 
@@ -73,6 +74,12 @@ def main() -> None:
         default=spec.default_board(),
     )
     _ = parser.add_argument("--strike-inserts", action="store_true")
+    _ = parser.add_argument(
+        "--catches",
+        choices=["stock", "luban32"],
+        default="stock",
+        help="ball-catch hardware; luban32 also cuts CANOT insert bores in both cases",
+    )
     _ = parser.add_argument("--no-battery-bay", action="store_true")
     _ = parser.add_argument(
         "--publish",
@@ -81,10 +88,16 @@ def main() -> None:
     )
     args = Options()
     _ = parser.parse_args(namespace=args)
+    if args.catches == "luban32" and args.strike_inserts:
+        parser.error("--catches luban32 already cuts CANOT insert bores; drop --strike-inserts")
+    if not args.no_battery_bay:
+        print("WARNING: the battery-bay bottom case is on hold and not reviewed for printing; "
+              "--no-battery-bay builds the current wired bottom case.", file=sys.stderr)
     top, bottom = variant_dirs(
         args.board,
         strike_inserts=args.strike_inserts,
         battery_bay=not args.no_battery_bay,
+        catches=args.catches,
     )
     environment = {
         **os.environ,
@@ -94,10 +107,11 @@ def main() -> None:
     with build_lock(top.parent / ".lock"):
         top.mkdir(parents=True, exist_ok=True)
         bottom.mkdir(parents=True, exist_ok=True)
-        top_options = ["--board", args.board] + (
+        catch_options = ["--catches", args.catches]
+        top_options = ["--board", args.board, *catch_options] + (
             ["--strike-inserts"] if args.strike_inserts else []
         )
-        bottom_options = ["--board", args.board] + (
+        bottom_options = ["--board", args.board, *catch_options] + (
             ["--no-battery-bay"] if args.no_battery_bay else []
         )
         run_step("build_topcase_draft.py", top_options, top, environment)
