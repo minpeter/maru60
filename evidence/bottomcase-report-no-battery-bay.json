@@ -258,30 +258,38 @@
     ],
     "z_p": [
       9.69,
-      33.26711714372019
+      20.06
     ],
-    "open_bottom_y": [
+    "tunnel_y": [
       187.436,
       195.57
     ],
-    "inner_ledge_z_p": 21.08,
+    "exit_over_open_step_y": [
+      189.37,
+      194.57
+    ],
+    "open_lip_corner_r": 0.5,
     "inner_connector_pocket": {
       "bounds_xy": [
-        114.2975,
-        172.436,
-        134.2975,
-        185.436
+        116.5475,
+        178.036,
+        132.0475,
+        187.436
       ],
       "corner_r": 2.0,
-      "floor_z_p": 18.7,
-      "end_land_mm": 1.0
+      "size": [
+        15.5,
+        11.4
+      ],
+      "rail_notch_depth": 2.0,
+      "floor_z_p": 20.64,
+      "end_land_mm": 0.0
     },
     "bridge_z_p": [
       9.69,
       11.9
     ],
     "bridge_corner_r": 1.5,
-    "open_lip_corner_r": 0.5,
     "bridge_y": [
       187.436,
       194.57
@@ -473,7 +481,7 @@
         111.89,
         22.35
       ],
-      "volume_cm3": 137.6
+      "volume_cm3": 137.4
     },
     "bottom-right": {
       "print_extents": [
