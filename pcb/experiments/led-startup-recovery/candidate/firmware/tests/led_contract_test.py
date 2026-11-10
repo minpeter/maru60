@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Check current physical map regeneration without modifying checked-in files."""
 from pathlib import Path
-import json,subprocess,tempfile
+import json,subprocess,sys,tempfile
 pcb=Path(__file__).resolve().parents[2];overlay=pcb/'firmware/qmk/keyboards/maru60/rp2350'
 j=json.loads((pcb/'engineering/key-rgb-index-map.json').read_text());assert len(j['pixels'])==64
 assert len({x['led_ref'] for x in j['pixels']})==64
 with tempfile.TemporaryDirectory() as d:
- subprocess.run(['python',str(pcb/'firmware/tools/generate_led_config.py'),'--map',str(pcb/'engineering/key-rgb-index-map.json'),'--components',str(pcb/'engineering/lighting-components.json'),'--output',d],check=True)
+ subprocess.run([sys.executable,str(pcb/'firmware/tools/generate_led_config.py'),'--map',str(pcb/'engineering/key-rgb-index-map.json'),'--components',str(pcb/'engineering/lighting-components.json'),'--output',d],check=True)
  for name in ['led_config.c','maru_led_counts.h','maru_layout.c','maru_layout_policy.h']:
   assert (Path(d)/name).read_bytes()==(overlay/name).read_bytes(),name+' stale'
 # Exact intended overrides are compile-checked in the dedicated transports.

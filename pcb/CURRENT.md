@@ -65,6 +65,35 @@ pinned upstream, recursive submodules and both patches. All six LED translation
 units confirm qualification zero. [Logs, ELF/UF2 files and hashes](experiments/resume-20261109-silk-height/qa/qmk-build/RESULT.json)
 are retained; no flashing or hardware operation is claimed.
 
+## 2026-11-11 review artifacts
+
+The 0/0 result is now reproducible from the tracked repository, and the open
+gates have dedicated evidence:
+
+- [REPRODUCE.md](experiments/resume-20261109-relocated-expansion-zero-opens/REPRODUCE.md)
+  and the promoted `pcb/tools/audit_relocated_zero_opens.py` /
+  `geos_witness_zero_opens.py`; `tools/check_pcb_native.py` now asserts
+  `--expected-warnings` (default 0) and records its command in `RESULT.json`.
+- [Strict-promotion decision](experiments/resume-20261109-relocated-expansion-zero-opens/qa/strict-promotion/REPORT.md):
+  **CONDITIONAL**. The 0.551 mm² outside-window area is 92.0% designed 0.25 mm
+  fillet cusp, 7.7% single-antipad crescent and 0.23% Clipper2 keyhole-chord
+  artifact; it is a tolerance-policy artifact, not a physical defect. Promotion
+  needs a documented window-policy amendment (or cusp waiver) and resolution of
+  the keyhole-chord slivers.
+- [Mechanical fit](experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/REPORT.md):
+  relocated block 18 pass / 1 tight (J3 0.33 mm); the stock 12.8 mm USB-C notch
+  fails a 12.35 mm plug while the printed 14.75 mm notch passes; the 7U
+  PCB-mount stabilizer fails the current plate cutout (plate-mount is unaffected).
+- [Power review](experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-review/REPORT.md):
+  5.8 µF nominal / 5.336 µF effective at 5 V vs TI 10 µF typical; inrush
+  1.16 mA; **LED full-white 1.14 A vs 173.7–233.9 mA limiter — full white is not
+  supported** and needs a firmware brightness cap or a different limiter/source.
+- [Fabrication draft](fabrication/README.md): BOM 382 rows (374 missing MPN),
+  CPL 370 SMD, Gerbers/drill/IPC-D-356/STEP, provenance and 23 verification
+  checks. Not an assembly approval.
+- [License](LICENSE-DECISION.md) and [USB ID](USB-ID-DECISION.md) decision
+  documents; both remain the owner's choice.
+
 Earlier prototypes `df21164e` (7/26), `41f82c80` (9/38), `88fbac1d` (9/39),
 `2e532c1a` (9/40), `9d787421` (9/42) and `56d66f65` (10/50) remain preserved. This
 selection is not strict baseline promotion or manufacturing release. Return to the

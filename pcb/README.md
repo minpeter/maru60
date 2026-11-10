@@ -4,6 +4,26 @@
 [../recovery/README.md](../recovery/README.md). Everything below describes earlier stages (A21/A22 foundation) and is
 kept for history.
 
+## Current artifacts (2026-11-11)
+
+The relocated-expansion 0/0 prototype now has a reproducible evidence set and a
+draft fabrication package. None of it is a manufacturing release.
+
+| Artifact | What it is |
+| --- | --- |
+| [fabrication/](fabrication/README.md) | Draft BOM (382 rows), CPL (370 SMD), Gerbers/drill/IPC-D-356/STEP, `PROVENANCE.json`, `VERIFICATION.json`. 374/382 BOM rows still lack an MPN. |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/REPRODUCE.md](experiments/resume-20261109-relocated-expansion-zero-opens/REPRODUCE.md) | Full native/portable/material/audit/GEOS reproduction sequence with expected numbers. |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/qa/strict-promotion/REPORT.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/strict-promotion/REPORT.md) | Strict-baseline promotion decision: **CONDITIONAL**. 92% of the 0.551 mm² outside-window area is a designed 0.25 mm fillet cusp, 7.7% a single-antipad crescent, 0.23% a Clipper2 keyhole-chord artifact. |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/REPORT.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/REPORT.md) | CAD fit: relocated block 18 pass / 1 tight (J3 0.33 mm); USB-C stock 12.8 mm notch fails a 12.35 mm plug, printed 14.75 mm passes; 7U PCB-mount stabilizer fails the current plate cutout. |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-review/REPORT.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-review/REPORT.md) | Power analysis: 5.8 µF vs TI 10 µF typical (5.336 µF effective at 5 V); inrush 1.16 mA; LED full-white 1.14 A vs 173.7–233.9 mA limiter — full white is not supported. |
+| [LICENSE-DECISION.md](LICENSE-DECISION.md) | PCB license options and recommendation (CERN-OHL-S-2.0); owner decides. |
+| [USB-ID-DECISION.md](USB-ID-DECISION.md) | VID/PID options and recommendation (pid.codes 0x1209); owner decides. |
+
+The promoted tools are `pcb/tools/audit_relocated_zero_opens.py`,
+`geos_witness_zero_opens.py`, `analyze_strict_promotion.py`,
+`check_mechanical_fit.py`, `analyze_power.py` and `export_fabrication.py`; see
+[pcb/tools/README.md](tools/README.md).
+
 ## Recovered native checkpoints (2026-11-03)
 
 The [A21 checkpoint](checkpoints/a21/README.md) now includes the actual native four-layer board, schematic, project, local libraries and evidence. Its A22 predecessor is retained at `checkpoints/a21/coordinator-evidence/source.kicad_pcb`. Fresh checks and publication limits are in [publication/a21-a22](publication/a21-a22/README.md). A21 still has 21 opens and A22 22; neither is fabrication-ready. The foundation notes below are historical and do not describe the current existence of native CAD.

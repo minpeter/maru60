@@ -1,0 +1,380 @@
+{
+  "schema": "maru60-mechanical-clearance/1",
+  "status": "recorded_design_geometry_not_physical_qualification",
+  "board": {
+    "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb",
+    "sha256": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d",
+    "kicad_version": "9.0.2+dfsg-1",
+    "outline_bbox_mm": [
+      0.0,
+      0.0,
+      285.0,
+      94.6
+    ]
+  },
+  "relocated_parts": {
+    "source": "pcb/tools/audit_relocated_zero_opens.py BLOCK_REFS + SILK_ONLY_REFS; positions, layers, orientations and B.CrtYd courtyards read from the board with pcbnew 9.0.2+dfsg-1",
+    "parts": [
+      {
+        "ref": "J3",
+        "position_mm": [
+          44.25,
+          75.0
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 0.0,
+        "courtyard_bbox_mm": [
+          37.305,
+          71.675,
+          51.195,
+          78.325
+        ],
+        "pad_count": 12
+      },
+      {
+        "ref": "U11",
+        "position_mm": [
+          80.6,
+          86.2
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 180.0,
+        "courtyard_bbox_mm": [
+          76.655,
+          82.655,
+          84.545,
+          89.745
+        ],
+        "pad_count": 20
+      },
+      {
+        "ref": "U13",
+        "position_mm": [
+          47.1,
+          79.5
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": -90.0,
+        "courtyard_bbox_mm": [
+          45.005,
+          78.33,
+          49.195,
+          80.67
+        ],
+        "pad_count": 14
+      },
+      {
+        "ref": "U12",
+        "position_mm": [
+          72.0,
+          77.8
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 180.0,
+        "courtyard_bbox_mm": [
+          70.025,
+          76.055,
+          73.975,
+          79.545
+        ],
+        "pad_count": 3
+      },
+      {
+        "ref": "R128",
+        "position_mm": [
+          77.7,
+          79.5
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 90.0,
+        "courtyard_bbox_mm": [
+          76.925,
+          77.975,
+          78.475,
+          81.025
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "C128",
+        "position_mm": [
+          78.7,
+          81.875
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 0.0,
+        "courtyard_bbox_mm": [
+          77.175,
+          81.1,
+          80.225,
+          82.65
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "C129",
+        "position_mm": [
+          75.75,
+          77.2
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 90.0,
+        "courtyard_bbox_mm": [
+          74.975,
+          75.675,
+          76.525,
+          78.725
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R130",
+        "position_mm": [
+          86.1,
+          84.0
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 180.0,
+        "courtyard_bbox_mm": [
+          84.575,
+          83.225,
+          87.625,
+          84.775
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R131",
+        "position_mm": [
+          86.1,
+          85.6
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 180.0,
+        "courtyard_bbox_mm": [
+          84.575,
+          84.825,
+          87.625,
+          86.375
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R132",
+        "position_mm": [
+          86.1,
+          87.2
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 180.0,
+        "courtyard_bbox_mm": [
+          84.575,
+          86.425,
+          87.625,
+          87.975
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R133",
+        "position_mm": [
+          85.4,
+          81.7
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": -90.0,
+        "courtyard_bbox_mm": [
+          84.625,
+          80.175,
+          86.175,
+          83.225
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R134",
+        "position_mm": [
+          87.4,
+          88.8
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 180.0,
+        "courtyard_bbox_mm": [
+          85.875,
+          88.025,
+          88.925,
+          89.575
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R135",
+        "position_mm": [
+          92.3,
+          85.7
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 180.0,
+        "courtyard_bbox_mm": [
+          90.775,
+          84.925,
+          93.825,
+          86.475
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R140",
+        "position_mm": [
+          89.2,
+          84.0
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 0.0,
+        "courtyard_bbox_mm": [
+          87.675,
+          83.225,
+          90.725,
+          84.775
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R141",
+        "position_mm": [
+          89.2,
+          85.6
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 0.0,
+        "courtyard_bbox_mm": [
+          87.675,
+          84.825,
+          90.725,
+          86.375
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R142",
+        "position_mm": [
+          89.2,
+          87.2
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 0.0,
+        "courtyard_bbox_mm": [
+          87.675,
+          86.425,
+          90.725,
+          87.975
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R143",
+        "position_mm": [
+          90.4,
+          81.4
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 0.0,
+        "courtyard_bbox_mm": [
+          88.875,
+          80.625,
+          91.925,
+          82.175
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R144",
+        "position_mm": [
+          90.5,
+          88.8
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 0.0,
+        "courtyard_bbox_mm": [
+          88.975,
+          88.025,
+          92.025,
+          89.575
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "R145",
+        "position_mm": [
+          95.4,
+          85.7
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 0.0,
+        "courtyard_bbox_mm": [
+          93.875,
+          84.925,
+          96.925,
+          86.475
+        ],
+        "pad_count": 2
+      },
+      {
+        "ref": "LOGO1",
+        "position_mm": [
+          100.0,
+          35.0
+        ],
+        "layer": "B.Cu",
+        "orientation_deg": 180.0,
+        "courtyard_bbox_mm": [
+          84.923214,
+          34.75,
+          100.25,
+          41.0
+        ],
+        "pad_count": 0
+      }
+    ]
+  },
+  "j3_plug_corridor": {
+    "bbox_mm": [
+      37.305,
+      68.175,
+      51.195,
+      71.675
+    ],
+    "width_mm": 3.5,
+    "source": "relocate_j3.py CORRIDOR = 3.5; corridor is 3.5 mm from the J3 B.CrtYd edge toward the signal pins (away from the mounting pads). README records y = 68.2..71.7 mm."
+  },
+  "case": {
+    "cavity_floor_zp_mm": 18.2,
+    "source": "build_bottomcase_draft.py:74 FLOOR_ZP = 18.20; build/ph60-rev3/stock/battery-bay/bottomcase/draft-report.json z_p.cavity_floor = 18.2"
+  },
+  "pcb_stack": {
+    "plate_top_zp_mm": 7.5,
+    "plate_top_source": "build_topcase_draft.py:91 Z_PLATE = Z_GASKET + CAP_TOP_COMPRESSED = 6.30 + 1.20 = 7.50",
+    "pcb_top_zp_mm": 12.5,
+    "pcb_top_source": "docs/fabrication.md:481 'plate top 7.50 + 5.0 -> 1.6 mm PCB at 12.50'; build_bottomcase_draft.py:18,74",
+    "pcb_thickness_mm": 1.6,
+    "pcb_thickness_source": "spec/boards.json gh60.outline.thickness = 1.6",
+    "pcb_bottom_zp_mm": 14.1,
+    "pcb_bottom_source": "12.50 + 1.6 = 14.10 (build_bottomcase_draft.py:74)"
+  },
+  "gasket_travel": {
+    "full_travel_mm": 0.8,
+    "source": "build_bottomcase_draft.py:74 '~0.8 mm gasket travel'; docs/fabrication.md:595 '0.8 mm downward travel'"
+  },
+  "computed": {
+    "free_height_at_rest_mm": 4.1,
+    "free_height_at_full_gasket_travel_mm": 3.3,
+    "free_height_formula": "18.20 - 14.10 - 0.80 = 3.30",
+    "insertion_corridor_mm": 3.5,
+    "insertion_corridor_formula": "3.5 mm clear from the J3 courtyard edge toward the signal pins; bbox y 68.175..71.675 mm"
+  },
+  "notes": [
+    "The 3.3 mm is the vertical gap from the PCB bottom to the bottom-case cavity floor after 0.8 mm of gasket travel; it is not a measurement of the J3/U13 part height.",
+    "The 3.5 mm is the horizontal plug-insertion corridor under the board, not a vertical clearance.",
+    "Physical fit, actual part height and gasket compression remain unqualified; this artifact records the design numbers and their sources."
+  ]
+}
