@@ -1,0 +1,97 @@
+* matrix: 1 key(s) of the same row closed, RON 125 ohm, RPU 86 k, 27 C
+.options temp=27 method=gear
+Vdd vdd 0 3.3
+.model D4148 D(IS=2.52n RS=0.568 N=1.752 CJO=0.9p M=0.4 VJ=0.7 TT=4n BV=100 IBV=1u)
+.model SWROW SW(RON=1 ROFF=1G VT=0.5 VH=0.01)
+Vsel sel 0 PWL(0 0 100n 0 101.5n 1 2000n 1 2001.5n 0)
+Srow rowpin rdrv sel 0 SWROW
+Rron rdrv 0 124
+Rpur vdd rowpin 86000.0
+Cpinr rowpin 0 5.0p
+Rr0 rowpin rw1x 0.066568
+Lr0 rw1x rw1 10.579n
+Cr0 rw1 0 5.7917p
+Rr1 rw1 rw2x 0.066568
+Lr1 rw2x rw2 10.579n
+Cr1 rw2 0 5.7917p
+Rr2 rw2 rw3x 0.066568
+Lr2 rw3x rw3 10.579n
+Cr2 rw3 0 5.7917p
+Rr3 rw3 rw4x 0.066568
+Lr3 rw4x rw4 10.579n
+Cr3 rw4 0 5.7917p
+Rr4 rw4 rw5x 0.066568
+Lr4 rw5x rw5 10.579n
+Cr4 rw5 0 5.7917p
+Rr5 rw5 rw6x 0.066568
+Lr5 rw6x rw6 10.579n
+Cr5 rw6 0 5.7917p
+Rr6 rw6 rw7x 0.066568
+Lr6 rw7x rw7 10.579n
+Cr6 rw7 0 5.7917p
+Rr7 rw7 rw8x 0.066568
+Lr7 rw8x rw8 10.579n
+Cr7 rw8 0 5.7917p
+Rr8 rw8 rw9x 0.066568
+Lr8 rw9x rw9 10.579n
+Cr8 rw9 0 5.7917p
+Rr9 rw9 rw10x 0.066568
+Lr9 rw10x rw10 10.579n
+Cr9 rw10 0 5.7917p
+Rr10 rw10 rw11x 0.066568
+Lr10 rw11x rw11 10.579n
+Cr10 rw11 0 5.7917p
+Rr11 rw11 rowfarx 0.066568
+Lr11 rowfarx rowfar 10.579n
+Cr11 rowfar 0 5.7917p
+D0 key0 rowfar D4148
+Ckey0 key0 0 8.8p
+Rsw0 key0 colfar0 0.2
+Rpuc0 vdd colpin0 86000.0
+Cpinc0 colpin0 0 5.0p
+Rc0_0 colfar0 c0_0x 0.052583
+Lc0_0 c0_0x c0_0 8.3567n
+Cc0_0 c0_0 0 3.6733p
+Rc0_1 c0_0 c0_1x 0.052583
+Lc0_1 c0_1x c0_1 8.3567n
+Cc0_1 c0_1 0 3.6733p
+Rc0_2 c0_1 c0_2x 0.052583
+Lc0_2 c0_2x c0_2 8.3567n
+Cc0_2 c0_2 0 3.6733p
+Rc0_3 c0_2 c0_3x 0.052583
+Lc0_3 c0_3x c0_3 8.3567n
+Cc0_3 c0_3 0 3.6733p
+Rc0_4 c0_3 c0_4x 0.052583
+Lc0_4 c0_4x c0_4 8.3567n
+Cc0_4 c0_4 0 3.6733p
+Rc0_5 c0_4 c0_5x 0.052583
+Lc0_5 c0_5x c0_5 8.3567n
+Cc0_5 c0_5 0 3.6733p
+Rc0_6 c0_5 c0_6x 0.052583
+Lc0_6 c0_6x c0_6 8.3567n
+Cc0_6 c0_6 0 3.6733p
+Rc0_7 c0_6 c0_7x 0.052583
+Lc0_7 c0_7x c0_7 8.3567n
+Cc0_7 c0_7 0 3.6733p
+Rc0_8 c0_7 c0_8x 0.052583
+Lc0_8 c0_8x c0_8 8.3567n
+Cc0_8 c0_8 0 3.6733p
+Rc0_9 c0_8 c0_9x 0.052583
+Lc0_9 c0_9x c0_9 8.3567n
+Cc0_9 c0_9 0 3.6733p
+Rc0_10 c0_9 c0_10x 0.052583
+Lc0_10 c0_10x c0_10 8.3567n
+Cc0_10 c0_10 0 3.6733p
+Rc0_11 c0_10 colpin0x 0.052583
+Lc0_11 colpin0x colpin0 8.3567n
+Cc0_11 colpin0 0 3.6733p
+.tran 0.2n 40u 0 20n
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=7
+run
+
+wrdata /out/matrix_limit_1k_125.txt v(rowpin) v(rowfar) v(colpin0) v(sel)
+.endc
+.end

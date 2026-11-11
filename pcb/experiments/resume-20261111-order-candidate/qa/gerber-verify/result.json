@@ -5,7 +5,7 @@
   {
    "check": "F_Cu: parses and has objects",
    "pass": true,
-   "detail": 6188
+   "detail": 6190
   },
   {
    "check": "In1_Cu: parses and has objects",
@@ -20,7 +20,7 @@
   {
    "check": "B_Cu: parses and has objects",
    "pass": true,
-   "detail": 6227
+   "detail": 6255
   },
   {
    "check": "F_Paste: parses and has objects",
@@ -30,7 +30,7 @@
   {
    "check": "B_Paste: parses and has objects",
    "pass": true,
-   "detail": 747
+   "detail": 749
   },
   {
    "check": "F_Silkscreen: parses and has objects",
@@ -40,7 +40,7 @@
   {
    "check": "B_Silkscreen: parses and has objects",
    "pass": true,
-   "detail": 3322
+   "detail": 3362
   },
   {
    "check": "F_Mask: parses and has objects",
@@ -50,7 +50,7 @@
   {
    "check": "B_Mask: parses and has objects",
    "pass": true,
-   "detail": 1024
+   "detail": 1026
   },
   {
    "check": "Edge_Cuts: parses and has objects",
@@ -160,7 +160,7 @@
    "check": "B_Cu: SMD pads present as flashes",
    "pass": true,
    "detail": {
-    "pads": 675,
+    "pads": 677,
     "not_flashed_at_centre": 0,
     "examples": []
    }
@@ -169,7 +169,7 @@
    "check": "B_Mask: SMD pads present as flashes",
    "pass": true,
    "detail": {
-    "pads": 675,
+    "pads": 677,
     "not_flashed_at_centre": 1,
     "examples": [
      "U1.61"
@@ -180,7 +180,7 @@
    "check": "B_Paste: SMD pads present as flashes",
    "pass": true,
    "detail": {
-    "pads": 651,
+    "pads": 653,
     "not_flashed_at_centre": 0,
     "examples": []
    }

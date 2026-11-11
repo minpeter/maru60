@@ -16,6 +16,8 @@ place (use a checkpoint copy) and every zone is refilled at the end.
   {"op": "remove_footprint", "ref": "C142"}
   {"op": "replace_footprint", "ref", "lib_dir", "name", "fpid", "side": "F.Cu"|"B.Cu",
         "x", "y", "rot", "value", "pad_nets": {"1": "NET", ...}, "expect_pads": {"1": [x, y]}}
+  {"op": "add_footprint", "ref", "lib_dir", "name", "fpid", "side", "x", "y", "rot", "value", "pad_nets", "path", "sheetname", "sheetfile"}
+  {"op": "set_pad_net", "ref", "pad", "net"}
   {"op": "move_footprint", "ref", "x", "y", "rot"}
   {"op": "add_pads", "ref", "pads": [{"num", "x", "y", "side", "sx", "sy", "like": pad number to copy net/function from}]}
   {"op": "set_pad_geometry", "ref", "pads": {"1": {"x", "y", "sx_local", "sy_local"}, ...}}   absolute position, size in the pad's own frame
@@ -150,6 +152,40 @@ def main():
             doomed_items.append(old)
             fps[op["ref"]] = new
             log.append({"replace": op["ref"], "pads": got})
+        elif kind == "add_footprint":
+            new = pcbnew.FootprintLoad(op["lib_dir"], op["name"])
+            nick, name = op["fpid"].split(":")
+            new.SetFPID(pcbnew.LIB_ID(nick, name))
+            new.SetReference(op["ref"])
+            new.SetValue(op["value"])
+            new.SetPath(pcbnew.KIID_PATH(op["path"]))
+            new.SetSheetname(op["sheetname"])
+            new.SetSheetfile(op["sheetfile"])
+            b.Add(new)
+            new.SetPosition(P(op["x"], op["y"]))
+            if op["side"] == "B.Cu":
+                new.Flip(new.GetPosition(), pcbnew.FLIP_DIRECTION_TOP_BOTTOM)
+            new.SetOrientationDegrees(op.get("rot", 0))
+            for p in new.Pads():
+                net = op["pad_nets"][p.GetNumber()]
+                if net not in nets:
+                    b.Add(pcbnew.NETINFO_ITEM(b, net))
+                    nets = b.GetNetsByName()
+                p.SetNet(nets[net])
+            got = {p.GetNumber(): [round(pcbnew.ToMM(p.GetPosition().x), 4), round(pcbnew.ToMM(p.GetPosition().y), 4)] for p in new.Pads()}
+            for k, v in op.get("expect_pads", {}).items():
+                if abs(got[k][0] - v[0]) > 2e-3 or abs(got[k][1] - v[1]) > 2e-3:
+                    raise SystemExit(f"{op['ref']}: pads are at {got}, expected {op['expect_pads']}")
+            fps[op["ref"]] = new
+            log.append({"add": op["ref"], "pads": got})
+        elif kind == "set_pad_net":
+            net = op["net"]
+            if net not in nets:
+                b.Add(pcbnew.NETINFO_ITEM(b, net))
+                nets = b.GetNetsByName()
+            for p in fps[op["ref"]].Pads():
+                if p.GetNumber() == op["pad"]:
+                    p.SetNet(nets[net])
         elif kind == "move_footprint":
             fp = fps[op["ref"]]
             fp.SetPosition(P(op["x"], op["y"]))

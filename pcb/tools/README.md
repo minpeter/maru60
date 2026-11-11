@@ -69,7 +69,19 @@ of `set_component_values.py` need the KiCad 9 `pcbnew` bindings and run through
 | `save_board_footprint_to_lib.py` | Renames an edited footprint and saves a normalised copy to a project library. |
 | `apply_review_fixes.py` | U13 land pattern, L1 pour keep-out, C102 position. |
 | `set_component_values.py` | Sets values in the schematic sheets and on the board from one change list. |
-| `export_order_package.py` | DRC, BOM, CPL, Gerbers, drill files and provenance into `../order/`. |
+| `local_router.py` | Library: one-pad single-layer router with exact clearance check, and via placement checked on all layers. |
+| `apply_layout_ops.py` | Applies an operation list (tracks, vias, footprints, pads, drills, text, graphics) to a board. |
+| `plan_ldo_swap.py`, `edit_schematic_ldo_swap.py` | Board and schematic side of replacing the MAX38902A by an AP2112K-3.3. |
+| `plan_bottom_sites.py` | Bottom-side land sites fed through new vias (used for `C200`). |
+| `plan_series_resistor.py` | `R115` at the source of the long underglow data hop. |
+| `fit_jlcpcb_placement.py` | Fetches JLCPCB's footprint for each part and solves the placement rotation and centre. Needs network. |
+| `export_order_package.py` | DRC, BOM, CPL (using the fitted placements), Gerbers, drill files and provenance into `../order/`. |
+| `verify_gerbers.py` | Reads the exported Gerber and drill files with gerbonara and compares holes, pads and outline with the board. |
+| `analyze_pdn.py` | Resistance network of the power nets from the routed copper: drops, track loading, LED rail voltage. |
+| `power_sim/` | ngspice decks and behavioural models of the power tree; `run_power_sim.py` runs every case. |
+| `signal_integrity/` | Field solver, line models and ngspice decks for LED data, USB, crystal, matrix and flash. |
+| `check_dfm_jlcpcb.py` | JLCPCB checks a rule deck cannot express: via holes in SMD pads, mask web on fine-pitch parts, stencil area ratio, parts near the edge, fiducials. Holds the JLCPCB limits with their sources; the rule deck itself is in the checkpoint's `qa/dfm-jlcpcb/`. |
+| `plan_via_out_of_pad.py` | Moves via holes out of SMD pads where a free position exists. |
 
 ## Current physical-material checker
 

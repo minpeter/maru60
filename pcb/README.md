@@ -10,7 +10,9 @@ kept for history.
 placement) and the ordering steps. They are exported from
 [`experiments/resume-20261111-order-candidate`](experiments/resume-20261111-order-candidate/README.md):
 DRC/ERC/parity clean, top-side parts cleared from under the switch housings,
-parts checked against datasheets and JLCPCB stock. It is a first-prototype
+every assembled part in stock at JLCPCB and checked against its data sheet,
+power tree and critical signals simulated, placement file fitted to JLCPCB's
+footprints, Gerbers read back with a second parser. It is a first-prototype
 order, not a hardware-qualified design.
 
 ## Current artifacts (2026-11-11)

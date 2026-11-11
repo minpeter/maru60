@@ -3,8 +3,8 @@
   "generated_by": "pcb/tools/check_mechanical_fit.py",
   "board": {
     "path": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb",
-    "sha256": "5f7ff617b316981689269df468170212b5168ae0b779bac2190b70e5a66cc149",
-    "footprints": 383
+    "sha256": "c24899aaf0356446aac753b649a9f7747ebf66a4df8dc9dae3937b8fcfbb162f",
+    "footprints": 382
   },
   "assumptions": {
     "board_top_z_p_mm": 12.5,
@@ -695,6 +695,105 @@
           "clearance_mm": 2.8,
           "nominal_clearance_mm": 2.8,
           "status": "pass"
+        },
+        {
+          "ref": "U2",
+          "footprint": "Maru60:SOT-23-5_TightCourtyard",
+          "position_board_mm": [
+            142.0,
+            74.7,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            140.16,
+            73.0,
+            143.84,
+            76.4
+          ],
+          "courtyard_world_mm": [
+            -1.3425,
+            109.6877,
+            2.3375,
+            113.0877
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "C200",
+          "footprint": "Capacitor_SMD:C_0402_1005Metric",
+          "position_board_mm": [
+            11.4,
+            3.71,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            10.49,
+            3.25,
+            12.31,
+            4.17
+          ],
+          "courtyard_world_mm": [
+            130.1875,
+            181.9178,
+            132.0075,
+            182.8377
+          ],
+          "case_surface_z_p_mm": 20.64,
+          "case_surface_z_p_max_mm": 20.64,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 5.74,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 5.24,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R115",
+          "footprint": "Resistor_SMD:R_0402_1005Metric",
+          "position_board_mm": [
+            265.9625,
+            19.8625,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            265.0325,
+            19.3925,
+            266.8925,
+            20.3325
+          ],
+          "courtyard_world_mm": [
+            -124.395,
+            165.7552,
+            -122.535,
+            166.6952
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
         }
       ],
       "j3_plug_corridor": {
@@ -711,7 +810,7 @@
         "note": "3.5 mm wide insertion corridor; the JST SH plug body height is not in CAD, so only the corridor free height is checked."
       },
       "counts": {
-        "pass": 20,
+        "pass": 23,
         "tight": 0,
         "fail": 0,
         "unknown": 0
@@ -860,7 +959,7 @@
       ]
     },
     "stabilizer_7u": {
-      "footprint": "Maru60_Candidates:MX-Hotswap-7U-4L-NPTH-StabRot180",
+      "footprint": "Maru60_Candidates:MX-Hotswap-7U-4L-NPTH-StabRot180_H305",
       "position_board_mm": [
         142.4975,
         85.39875,
@@ -955,9 +1054,9 @@
             145.49,
             20.749
           ],
-          "diameter_mm": 3.0,
+          "diameter_mm": 3.05,
           "distance_to_cutout_boundary_mm": 1.92,
-          "clearance_mm": 0.42,
+          "clearance_mm": 0.395,
           "status": "pass"
         },
         {
@@ -985,9 +1084,9 @@
             139.14,
             18.209
           ],
-          "diameter_mm": 3.0,
+          "diameter_mm": 3.05,
           "distance_to_cutout_boundary_mm": 3.2034,
-          "clearance_mm": 1.7034,
+          "clearance_mm": 1.6784,
           "status": "pass"
         },
         {
@@ -1076,9 +1175,9 @@
           145.49,
           20.749
         ],
-        "diameter_mm": 3.0,
+        "diameter_mm": 3.05,
         "distance_to_cutout_boundary_mm": 1.92,
-        "clearance_mm": 0.42,
+        "clearance_mm": 0.395,
         "status": "pass"
       },
       "status": "pass",
@@ -1091,7 +1190,7 @@
   },
   "summary": {
     "relocated_block": {
-      "pass": 20,
+      "pass": 23,
       "tight": 0,
       "fail": 0,
       "unknown": 0
@@ -1102,8 +1201,8 @@
     "usb_c_selected_notch": "j1centred",
     "stabilizer_7u_status": "pass",
     "stabilizer_min_clearance_mm": 0.3,
-    "overall_minimum_clearance_mm": 0.3998,
-    "overall_minimum_clearance_check": "stabilizer_7u:stabilizer_screw@[200.1, 8.684]",
+    "overall_minimum_clearance_mm": 0.395,
+    "overall_minimum_clearance_check": "stabilizer_7u:switch@[145.49, 20.749]",
     "overall": "PASS_WITH_TIGHT_ITEMS"
   },
   "missing_inputs": [

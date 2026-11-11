@@ -1,9 +1,11 @@
 # Maru60 PCB — order package (JLCPCB)
 
-**Status: order candidate for a first prototype run.** The CAD checks are clean
-and every part has been checked against its datasheet, but no board has been
-built yet: electrical behaviour, fit and firmware are still unproven on
-hardware. Order a small quantity (5 boards, 2 assembled) first.
+**Status: order candidate for a first prototype run.** The CAD checks are
+clean, every part has been checked against its data sheet, the power tree and
+the critical signals have been simulated, and the exported files have been read
+back and compared with the board. No board has been built: electrical
+behaviour, fit and firmware are unproven on hardware. Order a small quantity
+(5 boards, 2 assembled) first.
 
 Source board: [`resume-20261111-order-candidate`](../experiments/resume-20261111-order-candidate/README.md),
 SHA256 in [`PROVENANCE.json`](PROVENANCE.json). Regenerate everything here with
@@ -12,16 +14,17 @@ SHA256 in [`PROVENANCE.json`](PROVENANCE.json). Regenerate everything here with
 | File | Use |
 | --- | --- |
 | `maru60-gerbers.zip` | Upload as the PCB. 11 Gerber layers, PTH and NPTH drill files. |
-| `bom-jlcpcb.csv` | Upload as the assembly BOM (51 part numbers, 307 placements). |
-| `cpl-jlcpcb.csv` | Upload as the placement file (130 top, 177 bottom). |
+| `bom-jlcpcb.csv` | Upload as the assembly BOM (51 part numbers, 308 placements). |
+| `cpl-jlcpcb.csv` | Upload as the placement file (130 top, 178 bottom). Rotations and centres are fitted to JLCPCB's own footprints. |
 | `bom-full.csv` | Every footprint, including what is *not* assembled and why. |
 | `parts.json` | Part selection rules and the stock snapshot date. |
+| `jlcpcb-placement.json` | Per part: the rotation and centre fitted to the footprint JLCPCB places from, and how well the two land patterns agree. |
 
 ## 1. Before ordering: parts to arrange
 
 | Part | Situation on 2026-11-11 | What to do |
 | --- | --- | --- |
-| `U2` AP2112K-3.3TRG1 (C51118) | in stock | Replaces the out-of-stock MAX38902AATA+T. 3.3 V 600 mA in SOT-23-5; no BYP capacitor, output sense or minimum load. |
+| Everything in `bom-jlcpcb.csv` | in stock | Nothing to source separately. |
 | Hot-swap sockets, Kailh CPG151101S11 (C2803348) | 0 in stock | Not in the BOM. Hand-solder one per switch (62 for HHKB/WKL), or pre-order and add the `SW*` rows from `bom-full.csv`. |
 | `U13` TPD6E05U06RVZR | 51 in stock | Check stock on the day. |
 | `U1` RP2350A | in stock | Stepping **A4** is required. Ask in the order remark that the marking is confirmed. |
@@ -41,31 +44,43 @@ review, which is why the BOM names the constant-current `TPS2553DBVR`).
 | Vias | 0.25 mm drill, 0.5 mm pad, tented |
 | Surface finish | ENIG (0.4 mm pitch QFN, exposed socket pads) |
 | Remove order number | Specify a location, or pay for removal |
+| Edge rails / fiducials | The board has no fiducials or tooling holes, and 23 parts sit within 2.5 mm of an edge (the USB connector is at the edge). Let JLCPCB add edge rails and fiducials ("added by JLCPCB"). |
 
 ## 3. Assembly options
 
 - **Assemble both sides** (Standard PCBA). Top: 63 LEDs, 63 capacitors, F1,
   R100, R101, R120. Bottom: everything else.
-- Turn on **Confirm Parts Placement** and check the preview yourself. The
-  rotations in `cpl-jlcpcb.csv` are KiCad's and carry **no JLCPCB per-package
-  correction**, so some parts will look turned in the preview and must be
-  corrected there. Check at least:
-  - `U1`–`U3`, `U5`–`U8`, `U10`–`U13`, `U18`: pin 1 against the silkscreen.
-  - `L1`: polarised. The dot on the part goes to the silkscreen dot (the +1V1
-    pad). Do not describe it by +/−.
-  - `LED1`–`LED76`: no silkscreen mark. DIN is pad 1; on the top side it is
-    the pad at the lower left of each LED (toward the front-left of the board).
-  - `D1`–`D62`, `D100`: cathode band to the silkscreen bar.
-  - `J1`, `J3`, `Y1`.
+- Turn on **Confirm Parts Placement** and look through the preview before
+  paying. The placement file is not raw KiCad output: for each part the
+  footprint JLCPCB uses was fetched and the rotation and centre that put its
+  pads on the board's pads were solved (307 of 308 placements; `R123`, a
+  resistor, uses the plain convention because JLCPCB publishes no footprint for
+  it). The preview should therefore already be right. Still check:
+  - `L1`: polarised, and JLCPCB's footprint cannot tell which end has the dot.
+    The dot on the part goes to the silkscreen dot (the +1V1 pad).
+  - `D100`, `U2`, `U7`, `SW100`, `SW101`: JLCPCB's land pattern differs from the
+    board's by 0.15–0.3 mm, so the drawn outline will look slightly off-centre
+    on the pads. Orientation is what matters.
+  - `U1`: pin 1 at the silkscreen mark; stepping A4.
+  - LEDs: every land site has a silkscreen dot at pin 1 (DIN).
+  - 14 joints have a via inside the pad and will take less solder: `R140`–`R143`,
+    `R145`, `R159`, `Y1`, `U12`, `U6`, `U7`, `C122`, `LED70`, `LED71`. Inspect
+    them when the boards arrive.
+  - `J1`: centred on its pads (JLCPCB's origin for this connector is 1.3 mm
+    from KiCad's; the file already accounts for it).
 
 ## 4. After the boards arrive
 
-1. Inspect, then power from a current-limited 5 V supply before using a
-   computer port. Expected rails: `TP3` 4.0 V, `TP4` 3.3 V, `TP5` 1.1 V.
-2. Hold BOOTSEL (`SW100`) while plugging in; the board must enumerate as an
+1. Inspect, then power from a current-limited 5 V supply (300 mA limit) before
+   using a computer port. Expected rails: `TP3` 4.0 V, `TP4` 3.3 V, `TP5` 1.1 V;
+   idle current about 20 mA.
+2. With a scope on `TP3`, switch a load on the 4 V rail (the LED rail is the
+   easy one) and check that it settles without ringing: the simulated buck
+   phase margin is about 40°.
+3. Hold BOOTSEL (`SW100`) while plugging in; the board must enumerate as an
    RP2350 mass-storage device. Flash the UF2 from `pcb/firmware`.
-3. Solder the sockets and test the matrix.
-4. Per-key LEDs stay off: the firmware keeps `MARU60_LED_POWER_QUALIFIED` at 0
+4. Solder the sockets and test the matrix.
+5. Per-key LEDs stay off: the firmware keeps `MARU60_LED_POWER_QUALIFIED` at 0
    until the LED rail has been measured. Full white (1.14 A) is far above the
    174–234 mA limiter; keep the brightness cap.
 
@@ -80,17 +95,12 @@ Shift (1.75U + 1U)**.
 | Option | What it needs |
 | --- | --- |
 | Stepped Caps Lock | Move `LED75` from its bottom relay site to its top pads (in the stepped switch window) and `LED30` from its window to its second top site in the row gap above. Each LED has both sites on the board; fit exactly one. |
-| 2.75U right Shift | `LED54` lies under the left stabilizer housing and cannot simply be left out (the LEDs are in series). Not supported with a stabilizer in this revision. |
+| 2.75U right Shift | Expected to work with a plate-mount stabilizer (the stock plate), which hangs from the plate about 1.5 mm above the PCB by nominal dimensions; `LED54` is 0.65 mm tall. Not checked against a real part. With a PCB-mount stabilizer `LED54` lies under the left stabilizer housing and cannot be left out (the LEDs are in series); not supported in this revision. |
 | 2U Backspace | Not supported. Backspace is split only. |
 
-## 6. What changed since the 0/0 prototype
+## 6. What was changed and checked
 
-See the [checkpoint README](../experiments/resume-20261111-order-candidate/README.md).
-In short: 64 top-side parts moved out from under switch housings, `C200` moved
-to the bottom beside the LED rail via and is populated again, the Caps Lock LEDs
-got a second land site, three footprint/layout corrections from the datasheet
-review, the out-of-stock MAX38902A LDO became an AP2112K-3.3 in SOT-23-5 (so
-`C142`, `R163` and the In2 sense jumper went away), switch pin holes grew to
-Kailh's 3.05 mm, every SK6805 land site got a pin-1 dot, the buck input
-capacitor went to 10 µF on both C136 and C137 and `C100` to 22 µF, and five
-values now name parts that can be bought.
+The [checkpoint README](../experiments/resume-20261111-order-candidate/README.md)
+lists every change from the 0/0 prototype, the analyses run on the result
+(JLCPCB rule check, power simulation, copper resistance and heating, signal
+integrity, Gerber read-back) and what was deliberately left as it is.
