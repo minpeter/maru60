@@ -3,7 +3,7 @@
 Derived from [`resume-20261109-relocated-expansion-zero-opens`](../resume-20261109-relocated-expansion-zero-opens/README.md)
 (PCB `cb7b5b29`). This checkpoint fixes what stood between that board and an
 order, and records the analyses run on the result. PCB SHA256:
-`c24899aaf0356446aac753b649a9f7747ebf66a4df8dc9dae3937b8fcfbb162f`. The order
+`43d2a2585d50bb2846a96450b88d3b95adc11475505df1c3134213f52a2df2fc`. The order
 files exported from it are in [`pcb/order`](../../order/README.md).
 
 **It is an order candidate for a first prototype, not a qualified design.**
@@ -15,14 +15,14 @@ simulation. Nothing has been measured on hardware.
 | Check | Result | Evidence |
 | --- | --- | --- |
 | KiCad 9.0.2 DRC: opens / warnings / other errors | 0 / 0 / 0 | [`qa/native/RESULT.json`](qa/native/RESULT.json) |
-| ERC, schematic parity, net identity, cold refill | 0, 0, pass, 67 files identical | same |
+| ERC, schematic parity, net identity, cold refill | 0, 0, pass, 68 files identical | same |
 | Material (copper connectivity) graph | recomputed, pass | same |
 | Netlist against the 0/0 prototype | only the intended differences: U2's pins, C142 and R163 removed, R115 added, values and footprint names | `qa/netlist.xml` |
 | Firmware GPIO and matrix bindings on this netlist | 24 bindings match, negative controls rejected | [`qa/firmware-static/static.json`](qa/firmware-static/static.json) |
 | Top-side parts under a switch housing (default build) | none | `pcb/tools/plan_topside_relocation.py` keep-out |
 | Bottom-case fit, including the new bottom-side parts (`U2`, `C200`, `R115`, `LED75`) | 23 pass, USB-C pass, 7U stabilizer pass | [`qa/mechanical-fit/REPORT.md`](qa/mechanical-fit/REPORT.md) |
 | Pin tables and land patterns against manufacturer data sheets | all pin tables match | [`qa/datasheet-review/`](qa/datasheet-review/) |
-| DRC with JLCPCB's limits as rules | see the report | [`qa/dfm-jlcpcb/REPORT.md`](qa/dfm-jlcpcb/REPORT.md) |
+| DRC with JLCPCB's limits as rules, 30 rules | every copper, hole, via and edge minimum met; silkscreen findings and the USB connector's own land pattern remain | [`qa/dfm-jlcpcb/REPORT.md`](qa/dfm-jlcpcb/REPORT.md) |
 | Power tree, ngspice | no change needed | [`qa/power-sim/REPORT.md`](qa/power-sim/REPORT.md) |
 | Power-net copper: drop, current, heating | no change needed | [`qa/pdn/REPORT.md`](qa/pdn/REPORT.md) |
 | Signal integrity | one change (R115) | [`qa/signal-integrity/REPORT.md`](qa/signal-integrity/REPORT.md) |
@@ -87,9 +87,13 @@ soldering.
 - `L1`: pour keep-out between the pads of the RP2350 core-regulator inductor.
 - `C102`: 0.18 mm further from `C103` (pad gap 0.24 → 0.42 mm).
 - Switch pin holes 3.00 → 3.05 mm (Kailh KH-PS1607-10: 3.05 ± 0.05 mm).
-- Copper at least 0.2 mm from non-plated holes where the routing allowed it,
-  one via moved away from a switch pin hole, silkscreen reference text enlarged
-  to 1.0 mm / 0.15 mm where it fitted.
+- Copper at least 0.2 mm from every non-plated hole (JLCPCB's limit; the board
+  rule was 0.15 mm): tracks follow the hole on a tangent polygon, the GND
+  planes keep 0.25 mm, and the `LED30` and `LED75` window pads beside the Caps
+  Lock pin holes are 0.03 mm narrower on the hole side. The rule is now in the
+  board's own `maru60.kicad_dru`. Two vias moved away from switch holes.
+- Silkscreen reference text enlarged to 1.0 mm / 0.15 mm where it fitted; the
+  other ten keep 0.8 mm height with a 0.15 mm stroke.
 - `R115`, 100 Ω, in series at the source of the 276 mm underglow data hop.
 - 25 of the 39 via holes that sat inside SMD pads moved out of the pad (an
   open via in a pad draws solder away from the joint); each pad keeps a short
@@ -132,9 +136,11 @@ and the USB-C connector needed a 1.3 mm centre shift.
   and the DIN pads of `LED70` and `LED71`. Expect less solder on those joints;
   inspect them on the first boards, or order the vias filled and capped if
   JLCPCB offers it for this stack.
-- Track ends that stay 0.15–0.19 mm from a non-plated hole and 10 reference
-  texts that stay at 0.8 mm, where the change would have broken another rule;
-  the JLCPCB-rule report counts them.
+- Against JLCPCB's limits: the USB connector's own GND pads are 0.194 mm from
+  its locating-peg holes (limit 0.20 mm; it is the manufacturer's land
+  pattern), 10 reference texts are 0.8 mm high (1.0 mm asked), and the outline
+  dashes of the stock 0402 footprint are 0.10 mm from their pads (0.15 mm
+  asked). The JLCPCB-rule report lists them.
 - Hardware qualification, license and USB ID are as in [`pcb/CURRENT.md`](../../CURRENT.md).
 
 ## Reproduce

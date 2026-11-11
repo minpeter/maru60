@@ -81,6 +81,8 @@ of `set_component_values.py` need the KiCad 9 `pcbnew` bindings and run through
 | `power_sim/` | ngspice decks and behavioural models of the power tree; `run_power_sim.py` runs every case. |
 | `signal_integrity/` | Field solver, line models and ngspice decks for LED data, USB, crystal, matrix and flash. |
 | `check_dfm_jlcpcb.py` | JLCPCB checks a rule deck cannot express: via holes in SMD pads, mask web on fine-pitch parts, stencil area ratio, parts near the edge, fiducials. Holds the JLCPCB limits with their sources; the rule deck itself is in the checkpoint's `qa/dfm-jlcpcb/`. |
+| `run_dfm_jlcpcb_drc.py` | Runs KiCad DRC once per rule of the JLCPCB rule deck on scratch copies of the project and collects every finding (`qa/dfm-jlcpcb/drc-per-rule.json`). |
+| `plan_npth_clearance.py` | Plans the track detours that keep copper 0.2 mm from non-plated holes: tangent polygons round the hole, neighbours pushed outward where needed. Output is an operation list for `apply_layout_ops.py`. |
 | `plan_via_out_of_pad.py` | Moves via holes out of SMD pads where a free position exists. |
 
 ## Current physical-material checker

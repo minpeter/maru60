@@ -12,6 +12,7 @@ place (use a checkpoint copy) and every zone is refilled at the end.
   {"op": "remove_vias", "vias": [{x,y,net}, ...]}
   {"op": "move_vias", "moves": [{"net", "from": [x, y], "to": [x, y]}]}
   {"op": "set_ref_text", "min_height": 1.0, "min_thickness": 0.15}       visible silkscreen reference fields
+  {"op": "move_ref_text", "ref", "x", "y"}                           reference text of one footprint, absolute position
   {"op": "move_track_points", "moves": [{"layer", "net", "from": [x, y], "to": [x, y]}]}   every track end at `from`
   {"op": "remove_footprint", "ref": "C142"}
   {"op": "replace_footprint", "ref", "lib_dir", "name", "fpid", "side": "F.Cu"|"B.Cu",
@@ -21,6 +22,7 @@ place (use a checkpoint copy) and every zone is refilled at the end.
   {"op": "move_footprint", "ref", "x", "y", "rot"}
   {"op": "add_pads", "ref", "pads": [{"num", "x", "y", "side", "sx", "sy", "like": pad number to copy net/function from}]}
   {"op": "set_pad_geometry", "ref", "pads": {"1": {"x", "y", "sx_local", "sy_local"}, ...}}   absolute position, size in the pad's own frame
+  {"op": "reshape_pads", "ref", "pads": [{"at": [x, y], "to": [x, y], "sx_local", "sy_local"}]}   one pad, found by its position
   {"op": "set_drill", "refs_re", "from", "to"}                       NPTH pads: drill and pad size
   {"op": "add_circles", "items": [{"ref", "x", "y", "r", "layer", "fill": true, "w": 0.1}]}   footprint graphics
   {"op": "set_fpid", "refs": [...], "fpid": "nick:name"}
@@ -113,6 +115,8 @@ def main():
                     t.SetTextThickness(mm(max(op["min_thickness"], pcbnew.ToMM(t.GetTextThickness()))))
                     n += 1
             log.append({"ref_texts_enlarged": n})
+        elif kind == "move_ref_text":
+            fps[op["ref"]].Reference().SetPosition(P(op["x"], op["y"]))
         elif kind == "remove_vias":
             for v in op["vias"]:
                 hit = [rec for rec in vias if rec[1] == v["net"] and abs(rec[2] - v["x"]) < 1e-3 and abs(rec[3] - v["y"]) < 1e-3]
@@ -220,6 +224,16 @@ def main():
                 layer = pcbnew.B_Cu if p.IsOnLayer(pcbnew.B_Cu) and not p.IsOnLayer(pcbnew.F_Cu) else pcbnew.F_Cu
                 p.SetSize(layer, pcbnew.VECTOR2I(mm(g["sx_local"]), mm(g["sy_local"])))
                 p.SetPosition(P(g["x"], g["y"]))
+        elif kind == "reshape_pads":
+            fp = fps[op["ref"]]
+            for g in op["pads"]:
+                hit = [p for p in fp.Pads() if abs(pcbnew.ToMM(p.GetPosition().x) - g["at"][0]) < 1e-3 and abs(pcbnew.ToMM(p.GetPosition().y) - g["at"][1]) < 1e-3]
+                if len(hit) != 1:
+                    raise SystemExit(f"{op['ref']}: pad at {g['at']} not found")
+                p = hit[0]
+                layer = pcbnew.B_Cu if p.IsOnLayer(pcbnew.B_Cu) and not p.IsOnLayer(pcbnew.F_Cu) else pcbnew.F_Cu
+                p.SetSize(layer, pcbnew.VECTOR2I(mm(g["sx_local"]), mm(g["sy_local"])))
+                p.SetPosition(P(*g["to"]))
         elif kind == "set_drill":
             n = 0
             for ref, fp in fps.items():

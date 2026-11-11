@@ -5,13 +5,12 @@
 # Each rule name carries the JLC table row it encodes.
 #
 # KiCad evaluates only the highest-priority (= last in file) matching rule per
-# constraint type, so two tiers of the same constraint cannot both fire in one
-# run. The file therefore has two sections:
+# constraint type, so the minimum and the recommended tier of one constraint
+# cannot both fire in one run, and one run with the whole file takes about an
+# hour on this board. pcb/tools/run_dfm_jlcpcb_drc.py therefore runs every
+# rule alone on a scratch copy of the project (a few seconds each):
 #   SECTION 1  JLC absolute minimum      -> severity error
-#   SECTION 2  JLC recommended/preferred -> severity warning (shadows section 1)
-# pcb/tools/check_dfm_jlcpcb.py runs DRC twice: once with section 1 only (file
-# cut at the "SECTION 2" marker line) and once with the whole file. Loading the
-# whole file in the board editor shows the recommended tier.
+#   SECTION 2  JLC recommended/preferred -> severity warning
 #
 # Not expressible as KiCad rules (checked geometrically by the script instead):
 # solder-mask dam, paste area ratio, via-in-pad, silkscreen stroke width of
