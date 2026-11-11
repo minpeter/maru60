@@ -16,6 +16,7 @@ for f in b.GetFootprints():
           "layer": f.GetLayerName(), "attr": f.GetAttributes(), "pads": [], "dnp": f.IsDNP(),
           "bbox": [bb.GetX()*mm, bb.GetY()*mm, bb.GetWidth()*mm, bb.GetHeight()*mm]}
     try:
+        f.BuildCourtyardCaches()
         cy = f.GetCourtyard(pcbnew.F_CrtYd if f.GetLayer()==pcbnew.F_Cu else pcbnew.B_CrtYd)
         fp["courtyard"] = poly(cy)
     except Exception as e:

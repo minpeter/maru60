@@ -264,6 +264,31 @@ class Layout:
                     best = (dd, round(x, 4), round(y, 4))
         return None if best is None else (best[1], best[2])
 
+    def via_candidates(self, net, layer, near, radius=6.0, step=0.2, spacing=0.6, limit=14, **kw):
+        """Valid via positions on same-net tracks of a layer, nearest first, at least `spacing` apart."""
+        pts = []
+        for c in self.cu[layer]:
+            if c[1] != net or c[2] != "track":
+                continue
+            t = c[3]
+            L = math.hypot(t["x2"] - t["x1"], t["y2"] - t["y1"])
+            k = max(1, int(L / step))
+            for i in range(k + 1):
+                x, y = t["x1"] + (t["x2"] - t["x1"]) * i / k, t["y1"] + (t["y2"] - t["y1"]) * i / k
+                dd = math.hypot(x - near[0], y - near[1])
+                if dd <= radius:
+                    pts.append((dd, round(x, 4), round(y, 4)))
+        pts.sort()
+        out = []
+        for dd, x, y in pts:
+            if any(math.hypot(x - ox, y - oy) < spacing for ox, oy in out):
+                continue
+            if self.via_ok(x, y, net, **kw):
+                out.append((x, y))
+                if len(out) >= limit:
+                    break
+        return out
+
     def via_near(self, net, near, radii=(0.0, 0.5, 0.8, 1.0, 1.3, 1.6, 2.0, 2.5, 3.0), **kw):
         """Free via position near a point (for GND, or a net that is then routed to it)."""
         for r in radii:

@@ -10,12 +10,13 @@ place (use a checkpoint copy) and every zone is refilled at the end.
   {"op": "add_tracks", "tracks": [{x1,y1,x2,y2,w,layer,net}, ...]}
   {"op": "add_vias", "vias": [{x,y,net}, ...]}                      0.5 / 0.25 mm through vias
   {"op": "remove_vias", "vias": [{x,y,net}, ...]}
+  {"op": "move_track_points", "moves": [{"layer", "net", "from": [x, y], "to": [x, y]}]}   every track end at `from`
   {"op": "remove_footprint", "ref": "C142"}
   {"op": "replace_footprint", "ref", "lib_dir", "name", "fpid", "side": "F.Cu"|"B.Cu",
         "x", "y", "rot", "value", "pad_nets": {"1": "NET", ...}, "expect_pads": {"1": [x, y]}}
   {"op": "move_footprint", "ref", "x", "y", "rot"}
   {"op": "add_pads", "ref", "pads": [{"num", "x", "y", "side", "sx", "sy", "like": pad number to copy net/function from}]}
-  {"op": "set_pad_geometry", "ref", "pads": {"1": {"x", "y", "sx", "sy"}, ...}}   absolute position, board-frame size
+  {"op": "set_pad_geometry", "ref", "pads": {"1": {"x", "y", "sx_local", "sy_local"}, ...}}   absolute position, size in the pad's own frame
   {"op": "set_drill", "refs_re", "from", "to"}                       NPTH pads: drill and pad size
   {"op": "add_circles", "items": [{"ref", "x", "y", "r", "layer", "fill": true, "w": 0.1}]}   footprint graphics
   {"op": "set_fpid", "refs": [...], "fpid": "nick:name"}
@@ -23,6 +24,7 @@ place (use a checkpoint copy) and every zone is refilled at the end.
   {"op": "set_dnp", "ref", "dnp": true|false}
 """
 import json
+import math
 import re
 import sys
 
@@ -32,7 +34,8 @@ mm = pcbnew.FromMM
 
 
 def P(x, y):
-    return pcbnew.VECTOR2I(mm(float(x)), mm(float(y)))
+    # round to the nearest nanometre; pcbnew.FromMM truncates
+    return pcbnew.VECTOR2I(int(round(float(x) * 1e6)), int(round(float(y) * 1e6)))
 
 
 def main():
@@ -75,6 +78,19 @@ def main():
                 via.SetPosition(P(v["x"], v["y"]))
                 via.SetNet(nets[v["net"]])
                 b.Add(via)
+        elif kind == "move_track_points":
+            n = 0
+            for m in op["moves"]:
+                for rec in live:
+                    if rec[1] != m["layer"] or rec[2] != m["net"]:
+                        continue
+                    if abs(rec[3] - m["from"][0]) < 1e-4 and abs(rec[4] - m["from"][1]) < 1e-4:
+                        rec[0].SetStart(P(*m["to"]))
+                        n += 1
+                    if abs(rec[5] - m["from"][0]) < 1e-4 and abs(rec[6] - m["from"][1]) < 1e-4:
+                        rec[0].SetEnd(P(*m["to"]))
+                        n += 1
+            log.append({"moved_track_ends": n})
         elif kind == "remove_vias":
             for v in op["vias"]:
                 hit = [rec for rec in vias if rec[1] == v["net"] and abs(rec[2] - v["x"]) < 1e-3 and abs(rec[3] - v["y"]) < 1e-3]
@@ -146,17 +162,7 @@ def main():
                 if not g:
                     continue
                 layer = pcbnew.B_Cu if p.IsOnLayer(pcbnew.B_Cu) and not p.IsOnLayer(pcbnew.F_Cu) else pcbnew.F_Cu
-                cur = p.GetSize(layer)
-                bb = p.GetBoundingBox()
-                horizontal_now = bb.GetWidth() >= bb.GetHeight()
-                want_horizontal = g["sx"] >= g["sy"]
-                long_, short = max(g["sx"], g["sy"]), min(g["sx"], g["sy"])
-                cur_long_is_x = cur.x >= cur.y
-                # keep the pad's own orientation: put the long side on whichever local axis is currently long
-                if horizontal_now == want_horizontal:
-                    p.SetSize(layer, pcbnew.VECTOR2I(mm(long_), mm(short)) if cur_long_is_x else pcbnew.VECTOR2I(mm(short), mm(long_)))
-                else:
-                    p.SetSize(layer, pcbnew.VECTOR2I(mm(short), mm(long_)) if cur_long_is_x else pcbnew.VECTOR2I(mm(long_), mm(short)))
+                p.SetSize(layer, pcbnew.VECTOR2I(mm(g["sx_local"]), mm(g["sy_local"])))
                 p.SetPosition(P(g["x"], g["y"]))
         elif kind == "set_drill":
             n = 0
@@ -176,7 +182,9 @@ def main():
                 s = pcbnew.PCB_SHAPE(fp)
                 s.SetShape(pcbnew.SHAPE_T_CIRCLE)
                 s.SetCenter(P(a["x"], a["y"]))
-                s.SetEnd(P(a["x"] + a["r"], a["y"]))
+                # the radius point lies on the footprint's own +x axis, so every instance matches the library copy
+                th = math.radians(fp.GetOrientationDegrees())
+                s.SetEnd(P(a["x"] + a["r"] * math.cos(th), a["y"] - a["r"] * math.sin(th)))
                 s.SetLayer(b.GetLayerID(a["layer"]))
                 s.SetWidth(mm(a.get("w", 0.1)))
                 s.SetFilled(bool(a.get("fill", True)))
