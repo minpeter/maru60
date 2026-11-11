@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Trim or remove the dangling F.Cu track stubs reported by a KiCad DRC JSON report.
+"""Trim or remove the dangling track stubs reported by a KiCad DRC JSON report.
 
 usage: prune_dangling_tracks.py BOARD.kicad_pcb DRC.json [--nets GND,+4V_LED] [--max-length 6.0]
 
@@ -27,18 +27,19 @@ def main():
     for t in b.GetTracks():
         net = t.GetNetname()
         if t.Type() == pcbnew.PCB_TRACE_T:
-            if t.GetLayerName() != "F.Cu":
-                continue
+            layer = t.GetLayerName()
             i = len(recs)
             s, e = (mm(t.GetStart().x), mm(t.GetStart().y)), (mm(t.GetEnd().x), mm(t.GetEnd().y))
-            recs.append({"t": t, "net": net, "w": mm(t.GetWidth()), "s": s, "e": e})
-            anchors.setdefault(net, []).extend([(s[0], s[1], i), (e[0], e[1], i)])
+            recs.append({"t": t, "net": net, "layer": layer, "w": mm(t.GetWidth()), "s": s, "e": e})
+            anchors.setdefault((net, layer), []).extend([(s[0], s[1], i), (e[0], e[1], i)])
         elif t.Type() == pcbnew.PCB_VIA_T:
-            anchors.setdefault(net, []).append((mm(t.GetPosition().x), mm(t.GetPosition().y), None))
+            for layer in ("F.Cu", "In1.Cu", "In2.Cu", "B.Cu"):
+                anchors.setdefault((net, layer), []).append((mm(t.GetPosition().x), mm(t.GetPosition().y), None))
     for f in b.GetFootprints():
         for p in f.Pads():
-            if p.IsOnLayer(pcbnew.F_Cu):
-                anchors.setdefault(p.GetNetname(), []).append((mm(p.GetPosition().x), mm(p.GetPosition().y), None))
+            for layer, lid in (("F.Cu", pcbnew.F_Cu), ("B.Cu", pcbnew.B_Cu)):
+                if p.IsOnLayer(lid):
+                    anchors.setdefault((p.GetNetname(), layer), []).append((mm(p.GetPosition().x), mm(p.GetPosition().y), None))
     removed = trimmed = 0
     done = set()
     for v in drc["violations"]:
@@ -52,7 +53,7 @@ def main():
 
             def lonely(pt):
                 return not any(owner != i and owner not in done and math.hypot(ax - pt[0], ay - pt[1]) <= r["w"] / 2 + 1e-6
-                               for ax, ay, owner in anchors.get(r["net"], []))
+                               for ax, ay, owner in anchors.get((r["net"], r["layer"]), []))
 
             ls, le = lonely(r["s"]), lonely(r["e"])
             if ls != le:
@@ -68,7 +69,7 @@ def main():
             tmax = 0.0
             if L > 1e-9:
                 ux, uy = (d[0] - c[0]) / L, (d[1] - c[1]) / L
-                for ax, ay, owner in anchors.get(r["net"], []):
+                for ax, ay, owner in anchors.get((r["net"], r["layer"]), []):
                     if owner == i or owner in done:
                         continue
                     t = (ax - c[0]) * ux + (ay - c[1]) * uy
