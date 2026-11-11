@@ -24,9 +24,11 @@ uv run tools/check_pcb_current.py
 ```
 
 The housing pipeline builds and verifies both cases in a variant-specific
-folder under `build/`. Add `--strike-inserts` for the upper insert trial,
-`--catches luban32` for the purchased LUBAN 32 mm catches with inserts (assumed
-widths, caliper first) or `--no-battery-bay` for the wired lower case. Published `models/` and `evidence/`
+folder under `build/`. Both cases default to `--catches stock` with M2
+self-tapping screw pilots (`--no-inserts`). Add `--catches luban32` for the
+compatible LUBAN 32 mm ball catches (assumed widths, caliper first), `--inserts`
+for CANOT M2 OD3.5 x L3 heat-set insert bores in both cases, or
+`--no-battery-bay` for the wired lower case. Published `models/` and `evidence/`
 change only with `--publish`; review [housing guidance](docs/housing.md) first.
 CAD checks do not establish physical fit or strength. The custom PCB has an
 [order candidate](pcb/order/README.md) for a first prototype run; it has **not

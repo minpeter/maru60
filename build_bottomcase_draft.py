@@ -24,7 +24,7 @@ geometry comes from the parts it mates with, plus the owner's photos IMG_0462-04
 
 Frames: the top-case print frame (`world`: X mirrored from the plate frame, Y from the wrist-rest front, Z_p down from the
 top face) and each part's print frame (desk face on the bed).
-Usage: uv run build_bottomcase_draft.py [--board BOARD] [--battery-bay | --no-battery-bay]
+Usage: uv run build_bottomcase_draft.py [--board BOARD] [--catches {stock,luban32}] [--inserts | --no-inserts] [--battery-bay | --no-battery-bay]
 """
 from __future__ import annotations
 
@@ -71,6 +71,7 @@ CATCH_TOP_ZP = 7.60      # Catch barrel top: 0.60 under the strike plate (Z_p 5.
 CATCH_FLOOR_ZP = round(CATCH_TOP_ZP + _CATCH["height"], 2)  # Notch floor the catch stands on (15.30)
 CATCH_NOTCH_HALF_L = round(_CATCH["length"] / 2 + 0.60, 2)  # 0.60 mm room at each catch end (length photo-read +-0.5)
 PILOT_D, PILOT_MAX, PILOT_SKIN = 1.70, 4.00, 0.80  # M2 self-tapping pilots in PETG: depth up to 4.0, 0.8 skin left
+STOCK_INSERT_DEPTH = 3.55  # CANOT OD3.5/L3 blind bore depth on the stock catch seat (15.30..18.85, >= 1.16 skin left)
 FLOOR_ZP = 18.20         # Cavity floor: PCB 12.50-14.10 (1.6 mm), bottom USB-C body to ~17.36, ~0.8 mm gasket travel
 _BAY = spec.value("bottom.battery_bay")
 BAY_BACK_GAP = 4.0       # Battery bay from the back ledge face (IMG_0474: filler block against the back, centred in X)
@@ -114,21 +115,26 @@ DECO_SCREW_CLAMP = 2.5  # Floor under each head: an M2 x 4 screw reaches 1.5 mm 
 DECO_SCREW_LEN = 4.0    # of the outer face (the stock holes are blind); the head sits 2.2-4.3 mm below the cavity floor
 # ㄴㄱ split (owner): the seam runs through one back and one front ball catch, so each of those two stock catch bodies
 # bridges it with one M2 screw in each half; between them it crosses the floor in front of the battery bay. Staggered
-# against the top-case seams (back at its BL strike, front at X = 0). Hybrid joint as on the top case: the two catch
-# bodies, line-to-line plan dovetails on the floor seam (the halves slide together along the print Z axis, normal to
-# the desk face, and the tongues lock both in-plane directions), glue, and the steel weight plate under the back leg,
-# screwed to each half with two of its four M2 screws.
+# against the top-case seams (back at its BL strike, front at X = 0). Hybrid joint matching the top case: the two catch
+# bodies, five ramped sliding dovetails with chevron compression ribs and a 0.20 mm vertical glue line above a blind
+# desk-face roof (LeftHalf carries all five tongues and slides down normal to the desk face into RightHalf's sockets),
+# glue, and the steel weight plate under the back leg, screwed to each half with two of its four M2 screws.
 _STRIKES_W = {n: pw(x, y) for n, x, y in top.strike_centers_p()}
 SEAM_BACK_CATCH = next(n for n, (x, y) in _STRIKES_W.items() if y > 150.0 and x < 0.0)
 SEAM_FRONT_CATCH = next(n for n, (x, y) in _STRIKES_W.items() if y < 150.0 and x > 0.0)
 SEAM_BACK_X, SEAM_FRONT_X = _STRIKES_W[SEAM_BACK_CATCH][0], _STRIKES_W[SEAM_FRONT_CATCH][0]
 SEAM_CROSS_Y = 120.0     # World Y (desk face) of the floor crossing: 18 mm in front of the bay, floor ~6 mm thick
-DOVETAIL = {"neck_half": 5.2, "head_half": 6.6, "proj": 6.0, "neck_taper": 0.55}  # top-case wrist-rest profile
-SEAM_DOVETAILS = [("cross", -30.0, "left"), ("cross", 0.0, "right"), ("cross", 30.0, "left"),
-                  ("back", 130.0, "left"), ("front", 106.0, "right")]
+SEAM_Z_STOP = 0.80       # Blind socket floor on the desk face (4 x 0.20 mm layers): straight seam on the underside
+SEAM_Z_TONGUE = round(SEAM_Z_STOP + top.JOINT_Z_CLEAR, 3)  # Tongue landing (1.00 mm): 0.20 mm vertical glue gap
+SEAM_LAND = 0.80         # Flat horizontal landing before the print ramp (two 0.4 mm perimeters; < 2 mm, no support)
+SEAM_RAMP_SLOPE = 1.05   # Self-supporting print ramp slope dz'/du (46.4 deg above horizontal); socket fill matches it
+SEAM_RIB_TOP = 3.30      # Chevron compression ribs reach SEAM_Z_TONGUE + SEAM_RIB_TOP (4.30 mm), below the cavity floor
+DOVETAIL = {"neck_half": 5.0, "head_half": 6.2, "proj": 3.8, "neck_taper": 0.55}
+SEAM_DOVETAILS = [("cross", -30.0, "left"), ("cross", 0.0, "left"), ("cross", 30.0, "left"),
+                  ("back", 128.5, "left"), ("front", 111.0, "left")]
 # ^ (seam leg, world X on the crossing / world Y on a leg, half carrying the tongue). Floor at the seam: crossing 6.2 mm,
-#   front leg 3.2-6.2 mm (tongue in ~4.7), back leg ~7 mm at its tongue but only 1.6-4.6 mm where it runs under the
-#   battery bay and the weight-plate recess: a straight glued butt there, which the screwed steel plate spans.
+#   front leg 4.6-6.0 mm across the tongue, back leg ~7 mm at its tongue and 1.6-4.6 mm where it runs under the battery
+#   bay and the weight-plate recess: a straight glued butt there, which the screwed steel plate spans.
 JOINT_TEST_BOX = (-22.0, 104.0, 22.0, 136.0)  # World XY around the middle crossing tongue: the joint test pair
 BED = 256.0
 
@@ -310,12 +316,12 @@ def deco_screws_print(holes: list[list[float]] | None = None) -> list[dict[str, 
     return sites
 
 
-def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
+def build(board: str, *, battery_bay: bool = True, inserts: bool = False, catch_inserts: bool = False,
           purchased_catches: bool = False, insert_hole_d: float = 3.2,
           weight_holes: list[list[float]] | None = None,
           sculpted_catches: bool = False, luban_catches: bool = False) -> tuple[md.Manifold, dict[str, Any]]:
-    if luban_catches and (catch_inserts or purchased_catches or sculpted_catches):
-        raise ValueError("The LUBAN catch layout carries its own CANOT bores; it combines with no catch study")
+    if (inserts or luban_catches) and (catch_inserts or purchased_catches or sculpted_catches):
+        raise ValueError("Published catch/insert options cannot be combined with the separate local catch studies")
     purchased_catches = purchased_catches or sculpted_catches
     catch_inserts = catch_inserts or purchased_catches
     insert = dict(top.PURCHASED_INSERT if purchased_catches else top.CATCH_INSERT)
@@ -350,14 +356,16 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
                 pad = md.Manifold.cylinder(pad_bottom - catch_floor, insert["boss_d"] / 2,
                                           circular_segments=96).translate([xw, yw, catch_floor])
                 body += pad.trim_by_plane([0.0, SIN, -COS], -DESK_A * COS)
-            elif luban_catches:  # CANOT OD3.5/L3 bores on the original underside: no pads, >= 0.8 mm skin left
-                depth, diameter = top.LUBAN_BORE_DEPTH, top.CANOT_INSERT["hole_d"]
-                assert underside_zp(yw) - catch_floor - depth >= PILOT_SKIN, (s["name"], underside_zp(yw))
+            elif inserts:  # CANOT OD3.5/L3 bores on the original underside: no pads, >= 0.8 mm skin left across bore
+                depth = top.LUBAN_BORE_DEPTH if luban_catches else STOCK_INSERT_DEPTH
+                diameter = top.CANOT_INSERT["hole_d"]
+                min_under = min(underside_zp(yw), underside_zp(yw - diameter / 2), underside_zp(yw + diameter / 2))
+                assert min_under - catch_floor - depth >= PILOT_SKIN, (s["name"], min_under)
             else:
                 depth = round(min(PILOT_MAX, underside_zp(yw) - catch_floor - PILOT_SKIN), 2)
                 diameter = PILOT_D
-            pilots.append({"world": [xw, yw], "depth": depth})
-            cuts.append(md.Manifold.cylinder(depth + 0.5, diameter / 2, diameter / 2, 96 if catch_inserts or luban_catches else 24).translate(
+            pilots.append({"world": [xw, yw], "depth": depth, "diameter": diameter})
+            cuts.append(md.Manifold.cylinder(depth + 0.5, diameter / 2, diameter / 2, 96 if catch_inserts or inserts else 24).translate(
                 [xw, yw, catch_floor - 0.5]))
     usb_x, usb_w = top.usb_notch_print(board)
     usb_y0, usb_y1 = pw(0.0, LEDGE_BACK_P - 1.0)[1], pw(0.0, RIM_P[3] + 1.0)[1]
@@ -480,6 +488,8 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
         "rim_clear": RIM_CLEAR,
         "split": {"shape": "ㄴㄱ", "back_catch": SEAM_BACK_CATCH, "back_x_world": SEAM_BACK_X,
                   "front_catch": SEAM_FRONT_CATCH, "front_x_world": SEAM_FRONT_X, "cross_y_world": SEAM_CROSS_Y,
+                  "z_stop": SEAM_Z_STOP, "z_clear": top.JOINT_Z_CLEAR, "land": SEAM_LAND,
+                  "ramp_slope": SEAM_RAMP_SLOPE, "rib_top": SEAM_RIB_TOP, "comp_interf": top.COMP_INTERF,
                   "dovetails": [{"leg": leg, "at": at, "male": male, **DOVETAIL} for leg, at, male in SEAM_DOVETAILS],
                   "clearance": top.JOINT_CLEAR, "insertion_axis_world": FROM_PRINT[:, 2].round(9).tolist()},
         "tray_and_base": {"tray_bottom_z_p_front_back": [round(tray_bottom_zp(Y_FRONT), 3), TRAY_BOTTOM_ZP],
@@ -488,10 +498,26 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
                           "desk_face_back_inset": BACK_BEVEL_INSET,
                           "base_outline_world": [round(v, 3) for v in base_outline().bounds]},
     }
+    report["inserts"] = inserts
     report["catch_hardware"] = "luban32" if luban_catches else "stock"
+    report["catch_insert_trial"] = (
+        {
+            "hole_d": top.CANOT_INSERT["hole_d"],
+            "outer_d": top.CANOT_INSERT["outer_d"],
+            "length": top.CANOT_INSERT["length"],
+            "depth": top.LUBAN_BORE_DEPTH if luban_catches else STOCK_INSERT_DEPTH,
+            "min_wall_from_hole_mm": 1.30 if luban_catches else 0.80,
+            "tool_tip_max_d": 4.0,
+            "coupon_required": True,
+        }
+        if inserts
+        else None
+    )
     if luban_catches:
-        report["luban32"] = {"hardware_assumed": top.LUBAN, "catch_seat_zp": catch_floor, "bore_depth": top.LUBAN_BORE_DEPTH,
-                             "bore_d": top.CANOT_INSERT["hole_d"], "insert": "CANOT M2 OD3.5 x L3",
+        report["luban32"] = {"hardware_assumed": top.LUBAN, "catch_seat_zp": catch_floor, "inserts": inserts,
+                             "bore_depth": top.LUBAN_BORE_DEPTH if inserts else None,
+                             "bore_d": top.CANOT_INSERT["hole_d"] if inserts else PILOT_D,
+                             "insert": "CANOT M2 OD3.5 x L3" if inserts else None,
                              "status": "widths assumed (spec ball_catch.luban32); caliper the purchased parts before printing"}
     if catch_inserts:
         report["experimental_catch_inserts"] = {**insert, "hole_d": diameter, "rear_pad_bottom_z_p": pad_bottom,
@@ -500,31 +526,102 @@ def build(board: str, *, battery_bay: bool = True, catch_inserts: bool = False,
     return body, report
 
 
-def left_region_print() -> Any:
-    """Print-plane (X, Y') region of the left half (world +X, keyboard left): X > `SEAM_BACK_X` behind the crossing,
-    X > `SEAM_FRONT_X` in front of it, with the dovetail tongues added (left male) or taken out (right male)."""
+def seam_ramp_z(u: float) -> float:
+    """Print-frame Z' of the self-supporting print ramp under a male tongue at local distance u >= 0 from the seam."""
+    return SEAM_Z_TONGUE + SEAM_RAMP_SLOPE * max(0.0, u - SEAM_LAND)
+
+
+def dovetail_local_matrix(leg: str, at: float) -> np.ndarray:
+    """Rigid right-handed 3x4 transform from a dovetail's local frame (u into RightHalf, v along seam, z = Z') to print."""
+    yc = print_y(SEAM_CROSS_Y)
+    if leg == "cross":  # seam at Y' = yc; u along +Y' (into RightHalf), v along -X centred at X = at (det +1)
+        return np.array([[0.0, -1.0, 0.0, at],
+                         [1.0,  0.0, 0.0, yc],
+                         [0.0,  0.0, 1.0, 0.0]])
+    x0 = SEAM_BACK_X if leg == "back" else SEAM_FRONT_X
+    yp = print_y(at)
+    return np.array([[-1.0,  0.0, 0.0, x0],
+                     [ 0.0, -1.0, 0.0, yp],
+                     [ 0.0,  0.0, 1.0, 0.0]])
+
+
+def straight_left_region_print() -> Any:
+    """Straight ㄴㄱ region of the left half on the desk face (Z' = 0 .. SEAM_Z_STOP), without dovetail cutouts."""
     yc = print_y(SEAM_CROSS_Y)  # Y' grows toward the front
-    region = sg.Polygon([(SEAM_BACK_X, -1e3), (1e3, -1e3), (1e3, 1e3), (SEAM_FRONT_X, 1e3), (SEAM_FRONT_X, yc),
-                         (SEAM_BACK_X, yc)])
+    return orient(sg.Polygon([(SEAM_BACK_X, -1e3), (1e3, -1e3), (1e3, 1e3), (SEAM_FRONT_X, 1e3), (SEAM_FRONT_X, yc),
+                              (SEAM_BACK_X, yc)]))
+
+
+def left_region_print() -> Any:
+    """Print-plane (X, Y') region of the left half above `SEAM_Z_STOP`, including all five male dovetail tongues."""
+    region = straight_left_region_print()
+    tongue = top.dovetail_poly(0.0, clear=0.0, **DOVETAIL)
     for leg, at, male in SEAM_DOVETAILS:
-        into_right = male == "left"
-        if leg == "cross":  # tongue along +-Y' from the crossing; the left half owns its back side
-            tongue = top.dovetail_poly(at, clear=0.0, **DOVETAIL)
-            m = [0.0, 1.0, 1.0 if into_right else -1.0, 0.0, 0.0, yc]
-        else:  # tongue along +-X from a leg at X = x0; the left half owns X > x0
-            x0 = SEAM_BACK_X if leg == "back" else SEAM_FRONT_X
-            tongue = top.dovetail_poly(print_y(at), clear=0.0, **DOVETAIL)
-            m = [-1.0 if into_right else 1.0, 0.0, 0.0, 1.0, x0, 0.0]
-        tongue = sa.affine_transform(tongue, m)
-        region = region.union(tongue) if into_right else region.difference(tongue)
+        assert male == "left", (leg, at, male)
+        m = dovetail_local_matrix(leg, at)
+        aff = [m[0, 0], m[0, 1], m[1, 0], m[1, 1], m[0, 3], m[1, 3]]
+        region = region.union(orient(sa.affine_transform(tongue, aff)))
     assert region.geom_type == "Polygon" and not region.interiors, region.geom_type
     return orient(region)
 
 
+def dovetail_landing_polys_print() -> list[Any]:
+    """Print-plane (X, Y') outlines of the 0.80 mm horizontal landing strips under the five male tongues."""
+    nh = DOVETAIL["neck_half"]
+    land_box = sg.box(0.0, -nh, SEAM_LAND, nh)
+    polys = []
+    for leg, at, _ in SEAM_DOVETAILS:
+        m = dovetail_local_matrix(leg, at)
+        aff = [m[0, 0], m[0, 1], m[1, 0], m[1, 1], m[0, 3], m[1, 3]]
+        polys.append(orient(sa.affine_transform(land_box, aff)))
+    return polys
+
+
+def seam_rib_zones_world() -> md.Manifold:
+    """World-frame bounding boxes around the chevron compression-rib bands of all five dovetails."""
+    hh, proj = DOVETAIL["head_half"], DOVETAIL["proj"]
+    zone_loc = md.Manifold.cube([proj + 0.2, 2.0 * (hh + 0.4), SEAM_RIB_TOP + top.JOINT_Z_CLEAR]).translate(
+        [0.5, -hh - 0.4, SEAM_Z_STOP])
+    zones_p = md.Manifold.batch_boolean(
+        [zone_loc.transform(dovetail_local_matrix(leg, at)) for leg, at, _ in SEAM_DOVETAILS], md.OpType.Add)
+    return from_print(zones_p)
+
+
 def split(body: md.Manifold) -> tuple[md.Manifold, md.Manifold]:
-    """Left and right halves along the ㄴㄱ seam, line-to-line (`top.JOINT_CLEAR` = 0), cut normal to the desk face."""
-    region = from_print(prism(left_region_print(), -20.0, 80.0))
-    return body ^ region, body - region
+    """Split into LeftHalf (male) and RightHalf (female) along the ㄴㄱ seam, matching the top-case dovetail system:
+    straight seam on the desk face (0 .. SEAM_Z_STOP), 0.20 mm vertical glue line under each landing and print ramp,
+    and chevron compression ribs in RightHalf's sockets."""
+    body_p = body.transform(TO_PRINT)
+    left_p = body_p ^ prism(left_region_print(), -20.0, 80.0)
+    right_p = body_p - prism(straight_left_region_print(), -20.0, 80.0)
+
+    nh, hh, proj, taper = DOVETAIL["neck_half"], DOVETAIL["head_half"], DOVETAIL["proj"], DOVETAIL["neck_taper"]
+    sock_poly = top.dovetail_poly(0.0, nh, hh, proj, clear=top.JOINT_CLEAR, neck_taper=taper)
+    rib_polys = top.socket_rib_polys(0.0, nh, hh, proj, taper)
+
+    under_tongue_xz = sg.Polygon([
+        (0.0, -1.0), (proj + 0.6, -1.0), (proj + 0.6, seam_ramp_z(proj + 0.6)),
+        (SEAM_LAND, SEAM_Z_TONGUE), (0.0, SEAM_Z_TONGUE),
+    ])
+    under_cut_loc = top.prism_xz(under_tongue_xz, -hh - 1.2, hh + 1.2)
+
+    z_base, u_end = SEAM_Z_STOP - 0.3, proj + 0.5
+    u_start = SEAM_LAND - 0.3 / SEAM_RAMP_SLOPE
+    z_end = SEAM_Z_STOP + SEAM_RAMP_SLOPE * (u_end - SEAM_LAND)
+    fill_loc = top.prism_xz(sg.Polygon([(u_start, z_base), (u_end, z_base), (u_end, z_end)]), -hh - 1.0, hh + 1.0)
+    socket_loc = top.prism_xy(sock_poly, SEAM_Z_STOP, 30.0)
+    ribs_loc = top.prism_xy(sg.MultiPolygon(rib_polys), SEAM_Z_TONGUE + 0.3, SEAM_Z_TONGUE + SEAM_RIB_TOP)
+
+    for leg, at, _ in SEAM_DOVETAILS:
+        mat = dovetail_local_matrix(leg, at)
+        left_p -= under_cut_loc.transform(mat)
+        sock_p = socket_loc.transform(mat)
+        fill_p = fill_loc.transform(mat)
+        assert ((sock_p ^ fill_p) - right_p).volume() < 1e-6, f"{leg}@{at}: socket fill outside RightHalf"
+        right_p -= sock_p - fill_p
+        right_p += ribs_loc.transform(mat) ^ body_p
+
+    return from_print(left_p), from_print(right_p)
 
 
 def on_bed(m: md.Manifold) -> trimesh.Trimesh:
@@ -543,13 +640,19 @@ def main() -> None:
                     help="cut the stock battery bay; use --no-battery-bay for a wired case (default: enabled)")
     ap.add_argument("--catches", choices=["stock", "luban32"], default="stock",
                     help="Ball-catch hardware, matching the top case build; default: %(default)s")
+    ap.add_argument("--inserts", action=argparse.BooleanOptionalAction, default=False,
+                    help="CANOT M2 OD3.5/L3 heat-set insert bores instead of self-tapping pilots; default: self-tapping")
+    ap.add_argument("--strike-inserts", action=argparse.BooleanOptionalAction, default=None,
+                    help="Alias for --inserts / --no-inserts")
     args = ap.parse_args()
+    use_inserts = args.strike_inserts if args.strike_inserts is not None else bool(args.inserts)
     if args.battery_bay:
         print("WARNING: the battery-bay bottom case is on hold and not reviewed for printing; "
               "--no-battery-bay builds the current wired bottom case.", file=sys.stderr)
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "verification.json").unlink(missing_ok=True)
-    body, report = build(args.board, battery_bay=args.battery_bay, luban_catches=args.catches == "luban32")
+    body, report = build(args.board, battery_bay=args.battery_bay, inserts=use_inserts,
+                         luban_catches=args.catches == "luban32")
     left, right = split(body)
     coupon = body ^ md.Manifold.cube([120.0, 21.0, 60.0]).translate([30.0, Y_FRONT - 1.0, -5.0])
     jx0, jy0, jx1, jy1 = JOINT_TEST_BOX

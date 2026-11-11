@@ -351,20 +351,23 @@ corners, keycap-opening fillets, screw pilots) and gives the same check values.
 No CAD (STEP) file is published.
 
 ```sh
-uv run build_topcase_draft.py [--board BOARD] [--strike-inserts | --no-strike-inserts]
+uv run build_topcase_draft.py [--board BOARD] [--catches {stock,luban32}] [--inserts | --no-inserts]
 uv run verify_topcase.py
 blender -b -P render_topcase_draft.py   # optional renders
 uv run export_topcase.py
 ```
 
-#### Optional upper strike inserts (CANOT OD3.5 × L3 trial)
+<a id="optional-upper-strike-inserts-canot-od35--l3-trial"></a>
+#### Optional CANOT heat-set inserts (`--inserts`, OD3.5 × L3 trial)
 
-Choose `--no-strike-inserts` (the default) for the original Ø1.8 mm screw
-pilots, or `--strike-inserts` for the latest original-contour upper with eight
-Ø3.2 mm **trial** insert bores. Both keep the original mushroom pockets,
-rounded rails, alignment key, 13 mm hole pitch, 5.55 mm seats, 3.55 mm blind
-depth and 2.00 mm skin. No extra scallops, pads or purchased-catch layout are
-enabled. This option changes **only the upper**, not the lower catch mounts.
+Both cases (`build_topcase_draft.py` and `build_bottomcase_draft.py`) accept
+`--catches {stock,luban32}` and `--inserts` / `--no-inserts` (alias
+`--strike-inserts` / `--no-strike-inserts`). Choose `--no-inserts` (the default)
+for M2 self-tapping screw pilots (`Ø1.8 mm` in the top case, `Ø1.7 mm` in the
+bottom case), or `--inserts` for eight `Ø3.2 mm` **trial** CANOT M2 OD3.5 × L3
+blind bores in each case (`3.55 mm` deep on `stock`, `3.20 mm` deep on
+`luban32`), without protruding outer pads, skirt scallops or outside silhouette
+changes.
 
 ```sh
 # Original screw pilots
@@ -484,7 +487,7 @@ photos set the layout.
 | Four weight-plate screws from inside, as on the stock case: Ø3.0 holes through the recess roof, Ø5.4 counterbores from the cavity floor leaving 2.5 mm of floor under each head. Two per plate end, 9.45 / 39.5 mm in from the end and 4.7 / 24.8 mm from the straight back edge; two in each half | The plate's blind tapped holes, read off the owner's photo of the plate (IMG_0760) and fit-checked with the printed overlay coupon (`tools/build_weight_plate_coupon.py`): an M2 screw threads through all four Ø3.0 holes on the plate outline, ±0.5 mm; the holes float 0.5 mm per side. M2 × 4 goes 1.5 mm into the plate and stops 1.5 mm short of its outer face; the head sits 2.3–4.4 mm below the cavity floor |
 | USB-C slot | Same centre and 14.75 mm straight width as the top-case notch (`--board`). The lower roof is **flush with the surrounding rim** at Zp 9.69–11.90 (2.21 thick); its upper arch corners are R1.5. The passage floor stops **at the tray bottom** (Zp 20.06) and leaves over the open back step; the **back slope under it stays whole** (owner, photos IMG_0795–0800). The earlier slot cut down through the slope printed as a stair-stepped groove. Both cases keep matching **R0.5 free lip ends**. The roof needs print support. The inner floor has a **15.5 mm wide pocket, 2.44 deep, 11.4 mm long including the rail notch below** in front of the port (owner caliper on the stock case; R2 front corners, radius not measured). As on the stock CNC part, the same R2 end-mill pass shaves the rail's inner wall face above it **2.0 mm deep, full height**, continuing the pocket's width and R2 corners (the roof's front edge follows those R2 arcs, so from above the pocket and notch read as one 15.5 × 11.4 R2 outline); it stops at the passage floor so the back slope stays whole, running straight into the passage with no raised end or deeper strip between them (owner). Zp increases downward. These are trial design values, not stock-part measurements. The 0.14 mm fin beside the back-left cap recess is removed down to its floor |
 | ㄴㄱ split: the seam runs through the back-right catch (53.75 mm right of centre), crosses the floor 37.3 mm behind the front rail face, and leaves through the front-left catch (52.73 mm left of centre) | Owner. Both seam catches bridge it with one M2 screw in each half; the other two stay in one half. Staggered against the top-case seams |
-| Hybrid joint: five line-to-line dovetails (three across the floor, one on each leg) that slide together normal to the desk face and lock both in-plane directions, plus the two seam catches, glue and the weight plate | Top-case joint profile (5.2/6.6 mm half widths, 6.0 mm projection). Where the back leg runs under the battery bay and weight-plate recess the floor is only 1.6–4.6 mm, so that stretch is a straight glued butt; the weight plate spans it, screwed to each half with two of its four screws |
+| Hybrid joint: five ramped sliding dovetails on the left half (three across the floor, one on each leg) that slide normal to the desk face into blind-roofed sockets in the right half with chevron compression ribs and a 0.20 mm vertical glue line, plus the two seam catches and the weight plate | Same joint architecture as the top case (`5.0/6.2 mm` half widths, `3.8 mm` projection, `0.80 mm` blind desk-face socket roof so the underside reads as one straight `ㄴㄱ` seam, `0.80 mm` horizontal landing + `46.4°` self-supporting print ramp over a matching socket fill wedge, `0.08 mm` chevron compression ribs). Where the back leg runs under the battery bay and weight-plate recess the floor is only 1.6–4.6 mm, so that stretch is a straight glued butt; the weight plate spans it, screwed to each half with two of its four screws |
 
 Z is measured from the top case's top face, as in the top-case evidence. The
 catches stand on their notch floor with the barrels 0.60 mm under the strike
@@ -506,9 +509,11 @@ flush with the rim top, the balls would sit below the tongue tip.
 Print desk face down, **with support under the USB bridge** on the left half.
 The 3MF is geometry only: enable support in the slicer and check removal access
 through the USB opening. Estimates above predate this bridge
-and its support; they have not been re-sliced. Print the joint test first: the two
-pieces should press together by hand along the desk-face normal and not move
-sideways. Join the halves with glue in the seam and screw the two seam catches
+and its support; they have not been re-sliced. Print the joint test first: the
+left piece should slide freely into the right piece's blind socket along the
+desk-face normal, bite on the chevron compression ribs in the final ~2 mm of
+travel until the underside faces sit flush, and lock sideways. Join the halves
+with glue in the 0.20 mm dovetail ramps and seam, and screw the two seam catches
 across it. Lay the steel weight plate in its recess and screw it on from inside
 with four **M2 × 4** screws (pan or socket head, up to Ø4.0); any longer screw
 could bottom out in the plate's blind holes. Move the four catches from the
@@ -527,7 +532,7 @@ entry stays open without the thin fin. Verification checks each of the 12 caps
 for seated clearance and bearing, as well as the rounded closed-end contour.
 
 ```sh
-uv run build_bottomcase_draft.py [--board BOARD] [--battery-bay | --no-battery-bay]
+uv run build_bottomcase_draft.py [--board BOARD] [--catches {stock,luban32}] [--inserts | --no-inserts] [--battery-bay | --no-battery-bay]
 uv run verify_bottomcase.py   # needs topcase-draft/ from build_topcase_draft.py
 uv run export_bottomcase.py
 ```

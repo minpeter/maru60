@@ -138,7 +138,10 @@ def main() -> None:
     #    LUBAN 32 mm (assumed widths): barrels over `barrel_length` up to the catch top, full-length ears at the seat;
     #    its tongue engages inside that envelope at the seller's assembled height.
     catch_kind = REPORT.get("catch_hardware", "stock")
+    inserts = bool(REPORT.get("inserts", False))
+    top_inserts = bool(TOP_REPORT.get("inserts", TOP_REPORT.get("strike_inserts", False)))
     assert TOP_REPORT.get("catch_hardware", "stock") == catch_kind, "top/bottom catch hardware mismatch"
+    assert top_inserts == inserts, "top/bottom insert option mismatch"
     z_strike = TOP_REPORT["calibrated_z_stack_mm"]["Z_strike_pocket_floor"]
     luban = REPORT["luban32"]["hardware_assumed"] if catch_kind == "luban32" else None
     sp = luban["strike"] if luban else spec.value("ball_catch.strike_plate")
@@ -181,21 +184,60 @@ def main() -> None:
     assert catch_gauge["barrel_top_under_strike_plate_mm"] >= 0.0, catch_gauge
     assert min(catch_gauge["pilot_depths_mm"]) >= 3.0, catch_gauge
 
+    insert_checks = []
+    if REPORT.get("catch_insert_trial"):
+        trial = REPORT["catch_insert_trial"]
+        bore_r = trial["hole_d"] / 2
+        depth = trial["depth"]
+        min_wall = trial["min_wall_from_hole_mm"]
+        for c in REPORT["catches"]:
+            for idx, p in enumerate(c["pilots"], 1):
+                xw, yw = p["world"]
+                hole_name = f"L-{c['name']}.{idx}"
+                bore_air = md.Manifold.cylinder(depth - 0.04, bore_r - 0.01, circular_segments=96).translate(
+                    [xw, yw, Z["catch_floor"] + 0.02])
+                surround = (
+                    md.Manifold.cylinder(trial["length"] - 0.04, bore_r + min_wall, circular_segments=96).translate(
+                        [xw, yw, Z["catch_floor"] + 0.02])
+                    - md.Manifold.cylinder(trial["length"], bore_r + 0.005, circular_segments=96).translate(
+                        [xw, yw, Z["catch_floor"]])
+                )
+                floor_cyl = md.Manifold.cylinder(bc.PILOT_SKIN - 0.04, bore_r - 0.01, circular_segments=96).translate(
+                    [xw, yw, Z["catch_floor"] + depth + 0.02])
+                tool = md.Manifold.cylinder(20.0, trial["tool_tip_max_d"] / 2, circular_segments=96).translate(
+                    [xw, yw, Z["catch_floor"] - 20.02])
+                bore_blocked = vol(bore_air ^ bottom)
+                wall_missing = min(vol(surround - h) for h in (world["bottom-left"], world["bottom-right"]))
+                floor_missing = vol(floor_cyl - bottom)
+                tool_blocked = vol(tool ^ bottom)
+                reserve = round(depth - trial["length"], 3)
+                assert bore_blocked < 0.001 and wall_missing < 0.001 and floor_missing < 0.001 and tool_blocked < 0.001, (
+                    hole_name, bore_blocked, wall_missing, floor_missing, tool_blocked)
+                assert reserve >= 0.19, (hole_name, reserve)
+                insert_checks.append({
+                    "hole": hole_name,
+                    "floor_reserve_mm": reserve,
+                    "bore_blocked_mm3": bore_blocked,
+                    "surround_missing_mm3": wall_missing,
+                    "blind_floor_missing_mm3": floor_missing,
+                    "tool_blocked_mm3": tool_blocked,
+                })
+
     # 4b. Hardware variants change hidden faces only: rebuilt in-process against the stock-catch pair, no face the
     #     variant removes or creates looks out of the assembled housing. The gasket plate is in place, and the 0.15 mm
     #     slit between the skirt and the rails is closed near the lip: nothing shows through it.
     exterior = None
-    if luban:
+    if luban or inserts:
         ix0, iy0, ix1, iy1 = TOP_GEOM["inner_skirt_world"]
         slit = sg.box(ix0, iy0, ix1, iy1).buffer(0.5, join_style="mitre").difference(rail_outline.buffer(-0.5))
         slit_cap = md.CrossSection([np.asarray(orient(slit).exterior.coords[:-1]), *[
             np.asarray(h.coords[:-1]) for h in orient(slit).interiors]]).extrude(0.5).translate([0.0, 0.0, top.SKIRT_H - 1.0])
         stock_parts = [*top.build_halves(REPORT["board"]), bc.build(REPORT["board"], battery_bay=REPORT["battery_bay"])[0]]
-        variant_parts = [*top.build_halves(REPORT["board"], luban_catches=True),
-                         bc.build(REPORT["board"], battery_bay=REPORT["battery_bay"], luban_catches=True)[0]]
+        variant_parts = [*top.build_halves(REPORT["board"], inserts=inserts, luban_catches=bool(luban)),
+                         bc.build(REPORT["board"], battery_bay=REPORT["battery_bay"], inserts=inserts, luban_catches=bool(luban))[0]]
         exterior = exposed_changes(stock_parts, variant_parts, [plate, slit_cap])
         assert exterior["exterior_samples"] == 0, exterior
-        assert exterior["changed_face_samples"] > 1000, exterior
+        assert exterior["changed_face_samples"] > (1000 if luban else 100), exterior
 
     # 5. PCB: a GH60 outline (285.0 x 94.6, 1.6 mm) under the MX plate with 2.0 mm bottom-side parts and the board's
     #    USB-C receptacle (9.0 x 7.4 x 3.26 under the PCB, mouth 0.6 past the back edge) clears the cavity with the
@@ -354,20 +396,67 @@ def main() -> None:
     assert all(abs(a - b) < 0.1 for a, b in zip(tray_base["tray_bottom_bounds_world"], tray_base["rail_outline_bounds"])), tray_base
     assert abs(tray_base["desk_face_back_edge_print_y"] - tray_base["expected_print_y"]) < 0.1, tray_base
 
-    # 7c. ㄴㄱ seam, hybrid joint: the halves meet line-to-line without overlap, slide together freely along the
-    #     insertion axis (normal to the desk face), and every in-plane shift of 0.3 mm collides on the dovetails. Each
-    #     seam catch has one screw pilot in each half (its body bridges the seam); the other two sit in one half.
+    # 7c. ㄴㄱ seam, hybrid joint (top-case architecture): blind 0.80 mm desk-face roof (straight seam on the underside),
+    #     five ramped male dovetails on LeftHalf with a 0.20 mm vertical glue line over matching socket fill wedges, and
+    #     chevron compression ribs in RightHalf's sockets (zero drag for dz' >= 2.0 mm, intentional rib bite at home).
+    #     Every in-plane shift of 0.3 mm collides on the dovetails. Each seam catch has one screw pilot in each half.
     hl, hr = world["bottom-left"], world["bottom-right"]
     axis, yp_axis = np.asarray(bc.FROM_PRINT)[:, 2], np.asarray(bc.FROM_PRINT)[:, 1]
+    rib_zones = bc.seam_rib_zones_world()
+    dz_steps = np.linspace(0.0, 12.0, 61)
     shifts = {"x+0.3": [0.3, 0.0, 0.0], "x-0.3": [-0.3, 0.0, 0.0],
               "print_y+0.3": (0.3 * yp_axis).tolist(), "print_y-0.3": (-0.3 * yp_axis).tolist()}
-    seam = {"seated_overlap_mm3": vol(hl ^ hr),
-            "insertion_path_max_overlap_mm3": max(vol(hl.translate((t * axis).tolist()) ^ hr)
-                                                  for t in (0.2, 1.0, 3.0, 6.0, 12.0, 24.0)),
-            "in_plane_shift_overlap_mm3": {k: vol(hl.translate(v) ^ hr) for k, v in shifts.items()}}
+    z_desk_seam = 0.5 * bc.SEAM_Z_STOP
+    hl_desk = slice_material(hl.transform(to_p), z_desk_seam)
+    hr_desk = slice_material(hr.transform(to_p), z_desk_seam)
+    straight_left = bc.straight_left_region_print()
+    hl_p_mf, hr_p_mf = hl.transform(to_p), hr.transform(to_p)
+    glue_gaps: dict[str, dict[str, float]] = {}
+    for leg, at, _ in bc.SEAM_DOVETAILS:
+        m_loc = bc.dovetail_local_matrix(leg, at)
+        r_mat, t_vec = m_loc[:, :3], m_loc[:, 3]
+        inv_loc = np.hstack([r_mat.T, (-r_mat.T @ t_vec)[:, None]])
+        tm_l = bc.to_trimesh(hl_p_mf.transform(inv_loc))
+        tm_r = bc.to_trimesh(hr_p_mf.transform(inv_loc))
+        gaps_at_joint = []
+        for v_off in (-2.5, 0.0, 2.5):
+            sec_l = tm_l.section(plane_origin=[0.0, v_off, 0.0], plane_normal=[0.0, 1.0, 0.0])
+            sec_r = tm_r.section(plane_origin=[0.0, v_off, 0.0], plane_normal=[0.0, 1.0, 0.0])
+            assert sec_l is not None and sec_r is not None, (leg, at, v_off)
+            poly_l = build_area(MultiLineString([p[:, [0, 2]] for p in sec_l.discrete]))
+            poly_r = build_area(MultiLineString([p[:, [0, 2]] for p in sec_r.discrete]))
+            for u_off in np.linspace(0.08, bc.DOVETAIL["proj"] - 0.08, 19):
+                probe_line = sg.LineString([(float(u_off), 0.0), (float(u_off), 10.0)])
+                zl = probe_line.intersection(poly_l).bounds[1]
+                zr = probe_line.intersection(poly_r).bounds[3]
+                gaps_at_joint.append(zl - zr)
+        glue_gaps[f"{leg}@{at:g}"] = {"min_mm": round(float(min(gaps_at_joint)), 3),
+                                      "max_mm": round(float(max(gaps_at_joint)), 3)}
+    seam = {
+        "seated_compression_rib_bite_mm3": vol(hl ^ hr),
+        "free_slide_drag_dz_ge_2p0mm_mm3": max(vol(hl.translate((float(t) * axis).tolist()) ^ hr)
+                                               for t in dz_steps if t >= 2.0),
+        "max_overlap_outside_compression_ribs_mm3": max(
+            vol((hl.translate((float(t) * axis).tolist()) ^ hr) - rib_zones) for t in dz_steps),
+        "dovetail_z_stop_clearance": {
+            "nominal_mm": top.JOINT_Z_CLEAR,
+            "before_stop_overlap_mm3": vol(
+                (hl.translate((-float(top.JOINT_Z_CLEAR - 0.02) * axis).tolist()) ^ hr) - rib_zones),
+            "past_stop_overlap_mm3": vol(
+                (hl.translate((-float(top.JOINT_Z_CLEAR + 0.05) * axis).tolist()) ^ hr) - rib_zones),
+        },
+        "desk_face_blind_seam": {
+            "z_probe_mm": z_desk_seam,
+            "left_outside_straight_mm2": round(float(hl_desk.difference(straight_left.buffer(0.01)).area), 4),
+            "right_inside_straight_mm2": round(float(hr_desk.intersection(straight_left.buffer(-0.01)).area), 4),
+            "contact_band_mm2": round(float(hl_desk.buffer(0.01).intersection(hr_desk.buffer(0.01)).area), 2),
+        },
+        "joint_glue_line_gaps_mm": glue_gaps,
+        "in_plane_shift_overlap_mm3": {k: vol(hl.translate(v) ^ hr) for k, v in shifts.items()},
+    }
     sl, sr = slice_material(hl, Z["catch_floor"] + 1.0), slice_material(hr, Z["catch_floor"] + 1.0)
     owners = {}
-    hole_r = (REPORT["luban32"]["bore_d"] if luban else bc.PILOT_D) / 2
+    hole_r = (top.CANOT_INSERT["hole_d"] if inserts else bc.PILOT_D) / 2
     for c in REPORT["catches"]:
         owners[c["name"]] = []
         for p in c["pilots"]:
@@ -376,7 +465,15 @@ def main() -> None:
             owners[c["name"]].append("left" if cover[0] > 0.95 > 0.01 > cover[1] else
                                      "right" if cover[1] > 0.95 > 0.01 > cover[0] else f"? {cover}")
     seam["catch_screw_owner"] = owners
-    assert seam["seated_overlap_mm3"] < 0.01 and seam["insertion_path_max_overlap_mm3"] < 0.01, seam
+    assert 0.15 < seam["seated_compression_rib_bite_mm3"] < 3.0, seam
+    assert seam["free_slide_drag_dz_ge_2p0mm_mm3"] < 0.005, seam
+    assert seam["max_overlap_outside_compression_ribs_mm3"] < 0.005, seam
+    assert seam["dovetail_z_stop_clearance"]["before_stop_overlap_mm3"] < 0.005, seam
+    assert seam["dovetail_z_stop_clearance"]["past_stop_overlap_mm3"] > 1.0, seam
+    assert seam["desk_face_blind_seam"]["left_outside_straight_mm2"] < 0.01, seam
+    assert seam["desk_face_blind_seam"]["right_inside_straight_mm2"] < 0.01, seam
+    assert seam["desk_face_blind_seam"]["contact_band_mm2"] > 2.5, seam
+    assert all(0.17 <= g["min_mm"] and g["max_mm"] <= 0.25 for g in glue_gaps.values()), seam
     assert min(seam["in_plane_shift_overlap_mm3"].values()) > 5.0, seam
     for name, o in owners.items():
         assert all(v in ("left", "right") for v in o), owners
@@ -513,10 +610,12 @@ def main() -> None:
 
     # 9. Printability, desk face down at 0.20 mm layers: no island without the layer below; no flat overhang wider than
     #    2 mm per layer, and no down-facing surface shallower than 45 deg above the bed, except the declared ones:
-    #    USB bridge (requires support), bumpon-pocket roofs and decoration-recess roof, and the tray bottom (the steps:
-    #    a cantilever at 6 deg; the per-layer test alone misses it because each 0.20 mm layer grows only ~1.9 mm).
+    #    USB bridge (requires support), bumpon-pocket roofs, decoration-recess roof, 0.80 mm dovetail tongue landings,
+    #    and the tray bottom (the steps: a cantilever at 6 deg; the per-layer test alone misses it because each 0.20 mm
+    #    layer grows only ~1.9 mm).
     bridges = unary_union([sg.Point(x, bc.print_y(y)).buffer(pocket_r + 0.3) for x, y in bc.bumpon_centres_world()]
-                          + [deco_poly.buffer(bc.DECO_CLEAR + 0.3)])
+                          + [deco_poly.buffer(bc.DECO_CLEAR + 0.3)]
+                          + [p.buffer(0.25) for p in bc.dovetail_landing_polys_print()])
     steps_world = bc.plate_box(*bc.RIM_P, r=bc.RIM_CORNER_R).difference(base_ol)
     to_print_xy = [1.0, 0.0, 0.0, -bc.COS, 0.0, -bc.SIN * tz]  # tray-bottom points (x, y, tz) -> print (x', y')
     step_band = sa.affine_transform(steps_world, to_print_xy).buffer(0.3)
@@ -565,7 +664,9 @@ def main() -> None:
         "status": "ALL_PASSED",
         "board": REPORT["board"],
         "battery_bay": battery_bay,
+        "inserts": inserts,
         "catch_hardware": catch_kind,
+        "catch_insert_nominal_installation": insert_checks,
         "exterior_vs_stock_catches": exterior,
         "battery_bay_geometry": {"probe_blockage_mm3": bay_blockage, "restored_floor_missing_mm3": bay_floor_missing},
         "top_case_pocket": {"seated_overlap_mm3": seated, "lateral_shift_overlap_mm3": lateral,

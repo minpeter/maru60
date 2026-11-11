@@ -17,11 +17,18 @@ def bottomcase_dir() -> Path:
 
 
 def variant_dirs(
-    board: str, *, strike_inserts: bool, battery_bay: bool, catches: str = "stock"
+    board: str,
+    *,
+    inserts: bool = False,
+    strike_inserts: bool = False,
+    battery_bay: bool,
+    catches: str = "stock",
 ) -> tuple[Path, Path]:
-    top_variant = (
-        "luban32" if catches == "luban32" else "canot-inserts" if strike_inserts else "stock"
-    )
+    use_inserts = inserts or strike_inserts
+    if catches == "luban32":
+        top_variant = "luban32-canot-inserts" if use_inserts else "luban32"
+    else:
+        top_variant = "canot-inserts" if use_inserts else "stock"
     bottom_variant = "battery-bay" if battery_bay else "no-battery-bay"
     return (
         ROOT / "build" / board / top_variant / "topcase",

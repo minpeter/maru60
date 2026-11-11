@@ -172,7 +172,8 @@ def main():
         check(checks,'cases_seated_mm3',vol(L^U))
         check(checks,'cases_xy_0p1_mm3',max(vol(L.translate([dx,dy,0])^U) for dx in [-.1,0,.1] for dy in [-.1,0,.1]))
         check(checks,'case_insertion_mm3',max(vol(L.translate([0,0,d])^U) for d in [.1,.2,1,3,6,12,24]))
-        check(checks,'lower_split_insertion_mm3',max(vol(parts[0].translate((d*np.asarray(b.FROM_PRINT)[:,2]).tolist())^parts[1]) for d in [0,.2,1,3,6,12,24]))
+        lower_rib_zones=b.seam_rib_zones_world()
+        check(checks,'lower_split_insertion_mm3',max(vol((parts[0].translate((d*np.asarray(b.FROM_PRINT)[:,2]).tolist())^parts[1])-lower_rib_zones) for d in [0,.2,1,3,6,12,24]))
         # The existing dovetails intentionally compress three rib bands. Test outside those
         # same permitted zones, rather than mistaking the unchanged press fit for a collision.
         rib_zones=union(box(.5,y-7,6.7,y+7,4,9.2) for y in t.JOINT_YC.values())

@@ -402,50 +402,56 @@
     "front_catch": "FL",
     "front_x_world": 52.73,
     "cross_y_world": 120.0,
+    "z_stop": 0.8,
+    "z_clear": 0.2,
+    "land": 0.8,
+    "ramp_slope": 1.05,
+    "rib_top": 3.3,
+    "comp_interf": 0.08,
     "dovetails": [
       {
         "leg": "cross",
         "at": -30.0,
         "male": "left",
-        "neck_half": 5.2,
-        "head_half": 6.6,
-        "proj": 6.0,
+        "neck_half": 5.0,
+        "head_half": 6.2,
+        "proj": 3.8,
         "neck_taper": 0.55
       },
       {
         "leg": "cross",
         "at": 0.0,
-        "male": "right",
-        "neck_half": 5.2,
-        "head_half": 6.6,
-        "proj": 6.0,
+        "male": "left",
+        "neck_half": 5.0,
+        "head_half": 6.2,
+        "proj": 3.8,
         "neck_taper": 0.55
       },
       {
         "leg": "cross",
         "at": 30.0,
         "male": "left",
-        "neck_half": 5.2,
-        "head_half": 6.6,
-        "proj": 6.0,
+        "neck_half": 5.0,
+        "head_half": 6.2,
+        "proj": 3.8,
         "neck_taper": 0.55
       },
       {
         "leg": "back",
-        "at": 130.0,
+        "at": 128.5,
         "male": "left",
-        "neck_half": 5.2,
-        "head_half": 6.6,
-        "proj": 6.0,
+        "neck_half": 5.0,
+        "head_half": 6.2,
+        "proj": 3.8,
         "neck_taper": 0.55
       },
       {
         "leg": "front",
-        "at": 106.0,
-        "male": "right",
-        "neck_half": 5.2,
-        "head_half": 6.6,
-        "proj": 6.0,
+        "at": 111.0,
+        "male": "left",
+        "neck_half": 5.0,
+        "head_half": 6.2,
+        "proj": 3.8,
         "neck_taper": 0.55
       }
     ],
@@ -477,19 +483,19 @@
   "parts": {
     "bottom-left": {
       "print_extents": [
-        205.8,
+        203.6,
         111.89,
         22.35
       ],
-      "volume_cm3": 137.4
+      "volume_cm3": 137.6
     },
     "bottom-right": {
       "print_extents": [
-        204.78,
+        198.78,
         111.89,
         22.35
       ],
-      "volume_cm3": 94.4
+      "volume_cm3": 94.1
     },
     "coupon-front-left": {
       "print_extents": [
@@ -502,18 +508,18 @@
     "joint-test-left": {
       "print_extents": [
         44.0,
-        16.09,
+        19.89,
         7.76
       ],
-      "volume_cm3": 4.4
+      "volume_cm3": 5.0
     },
     "joint-test-right": {
       "print_extents": [
         44.0,
-        22.55,
-        6.79
+        16.55,
+        6.16
       ],
-      "volume_cm3": 4.2
+      "volume_cm3": 3.7
     }
   }
 }

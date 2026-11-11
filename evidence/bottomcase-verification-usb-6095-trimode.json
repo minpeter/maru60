@@ -218,7 +218,7 @@
       "thread_in_plate_mm": 1.5,
       "tip_to_plate_outer_face_mm": 1.38,
       "hole_to_plate_edge_mm": 3.8,
-      "cbore_to_seam_mm": 20.91
+      "cbore_to_seam_mm": 23.78
     },
     {
       "plate_xy": [
@@ -300,13 +300,47 @@
     "expected_print_y": -181.475
   },
   "split_seam": {
-    "seated_overlap_mm3": 0.0,
-    "insertion_path_max_overlap_mm3": 0.0001,
+    "seated_compression_rib_bite_mm3": 0.3343,
+    "free_slide_drag_dz_ge_2p0mm_mm3": 0.0002,
+    "max_overlap_outside_compression_ribs_mm3": 0.0004,
+    "dovetail_z_stop_clearance": {
+      "nominal_mm": 0.2,
+      "before_stop_overlap_mm3": 0.0004,
+      "past_stop_overlap_mm3": 1.9932
+    },
+    "desk_face_blind_seam": {
+      "z_probe_mm": 0.4,
+      "left_outside_straight_mm2": 0.0,
+      "right_inside_straight_mm2": 0.0,
+      "contact_band_mm2": 3.45
+    },
+    "joint_glue_line_gaps_mm": {
+      "cross@-30": {
+        "min_mm": 0.2,
+        "max_mm": 0.2
+      },
+      "cross@0": {
+        "min_mm": 0.2,
+        "max_mm": 0.2
+      },
+      "cross@30": {
+        "min_mm": 0.2,
+        "max_mm": 0.2
+      },
+      "back@128.5": {
+        "min_mm": 0.2,
+        "max_mm": 0.2
+      },
+      "front@111": {
+        "min_mm": 0.2,
+        "max_mm": 0.2
+      }
+    },
     "in_plane_shift_overlap_mm3": {
-      "x+0.3": 45.9297,
-      "x-0.3": 208.7228,
-      "print_y+0.3": 235.5866,
-      "print_y-0.3": 41.4416
+      "x+0.3": 18.9382,
+      "x-0.3": 168.7664,
+      "print_y+0.3": 189.2241,
+      "print_y-0.3": 18.5754
     },
     "catch_screw_owner": {
       "BL": [
@@ -393,30 +427,30 @@
     }
   },
   "input_sha256": {
-    "build/bottom-left-print.stl": "134ba43a2284d7516156bf02efee08d9f968723bc5f667beacaa9ab6d4eea9a3",
-    "build/bottom-left-world.stl": "c6474fb00c7fe0f5d2ca24bad10f1a5a4c3ea29580dbaf6a887df110254d10db",
-    "build/bottom-right-print.stl": "3a74f72b3e2f2f4673ec4ff042399a498230f99a35e0eb320839053aac5a8980",
-    "build/bottom-right-world.stl": "7d4ce5ebbc1e5485418242d5532fa602da8be15d80271bf507ec311cd7bc9089",
+    "build/bottom-left-print.stl": "cce5b4a3c8e7d5d01894306c4382d644fb07f146ecec7f438b2e68db2fa95def",
+    "build/bottom-left-world.stl": "3821b54bfeb2318fa4ec287a30476420e1deac54b2d590a7b6febe9764b6467b",
+    "build/bottom-right-print.stl": "65dc34b99f8c885b5b5b101252cb65e267fc8f63c7890abbb0c5ec26c1af54af",
+    "build/bottom-right-world.stl": "d214bea2345d5cc712b6c12f93b8831d2034b97203d3b48623400a004d9106c9",
     "build/coupon-front-left-print.stl": "1aa9b923b7960b505a9808271dc60d66a6421e1ea2a931277672f8e4cf0aa1ed",
     "build/coupon-front-left-world.stl": "d5c005f99c615e11be91fa40668a06916aab6a751e0596d814b58f4ab0bc24f5",
-    "build/draft-report.json": "d2c44ee332f6e3c7caa7b9b039cee4f080233b3b3beda55636eac21c5e4db148",
-    "build/joint-test-left-print.stl": "804a821e8255adf04b21fd890a386e4b5d70cb335831b40829e8940d27e5a11a",
-    "build/joint-test-left-world.stl": "295b914bafbe1530095a8cde61a99f560fa5db3c629000a64bd6ff2e9c7f2b4b",
-    "build/joint-test-right-print.stl": "81074c92ee091e82186d3560737a5efa1c597221c53ca36e1b98e900e937511d",
-    "build/joint-test-right-world.stl": "a6e15ee5d54beb3e4bdaf56ff7b853410ee26666cb0b5e6c8a8599b8b2c0bea6",
-    "build/maru60-hhkb-bottomcase-fit-coupon.3mf": "f1f2b7f3b236026f9c67833220beb0033e2c198575e6e3e1706604b53e538b45",
-    "build/maru60-hhkb-bottomcase-joint-test.3mf": "823c5355a7b8d04a441228b63e91b709ccdab3d7565442c8866185545ce4f92c",
-    "build/maru60-hhkb-bottomcase-left.3mf": "c9c51d8cd495a079b772e1a2b1d8dc6b0cb2e344452a6c9f0b57287a59a035dd",
-    "build/maru60-hhkb-bottomcase-right.3mf": "5bbf9b568bf1a6c92c4aab84c8e7bd7f1a169bbb176577c1625873efbed46903",
-    "build_bottomcase_draft.py": "d5b6ac691d7038b70b765cd375dfeac37c1d06468047c8a2b5a4bdbf316c5fbc",
+    "build/draft-report.json": "bbfe302bfbccaaf4029262d746270538f645831a9e5a4147ad6c03d1e1e568c0",
+    "build/joint-test-left-print.stl": "768a59190da16f77af8b4e6be75bfbb07c78448c01c948f74212de0581fa8ec2",
+    "build/joint-test-left-world.stl": "ce2fafe68cefc7f0dd95eb7a62c59f9eaf38968f36be9d31bf2268fd80ea2f28",
+    "build/joint-test-right-print.stl": "7b17586b815c858d83306ca88cfa57e6a37690f7e6267775c149c573dbb8bd19",
+    "build/joint-test-right-world.stl": "30b73773fd7f803ee15012811cdad7b84395241b8d8e24355a1a50cf8759968c",
+    "build/maru60-hhkb-bottomcase-fit-coupon.3mf": "fc4b70978e6c2bca3ee7043128cbeb8ca4f702cf1c663b079bec522af4836ecd",
+    "build/maru60-hhkb-bottomcase-joint-test.3mf": "84eb838aa0e1beecc5832659173cc38ab55697a0985bec8625f8addc446f5b94",
+    "build/maru60-hhkb-bottomcase-left.3mf": "52ada0d404d5eb11ace6a138d38640c9dcd1b39b698346e17fd42da37b326b22",
+    "build/maru60-hhkb-bottomcase-right.3mf": "624a303f574cca9ec272e0b14d9385ceda6cdcd4dd11cbadbcc3541337fd25aa",
+    "build_bottomcase_draft.py": "71495087c5e198b4727a16aee61383dbe4a6595e9c174d060b12f1fc724da620",
     "build_topcase_draft.py": "544da833b3751da8f8a939f9e1b0eb6a90c71457826b32b3218a37e13d02c793",
     "dependency-0/coupon-ballcatch-gasket-left.stl": "6b279c3f50e4eac5f0c26834ca964e80836e78d6432fa9de7551b319fb27343a",
     "dependency-0/draft-report.json": "7729c77c733b386bd9b160b48c5643b66de12dd15e7ecc4f9e32c4e8120370bd",
-    "dependency-0/halves-world.3mf": "40484294ee4e8e93e27db89267cbbece08864a3cb813ffe553832bb6a92012de",
+    "dependency-0/halves-world.3mf": "a02a5985f7fe29df6ae05009cf0671fb91ea19dbdb1e91af9159829b2bec53cb",
     "dependency-0/left-half-print.stl": "34e2d24d6b67e97db84993541a461d3a6dbc6624123d3d92443dd75834033987",
-    "dependency-0/maru60-fit-test-coupons.3mf": "7aa0f9220a172e291753760a5bcc486c94d4f0359af4d055f590788b7961cfcf",
-    "dependency-0/maru60-hhkb-left-plate.3mf": "7703b84fc7f61bbef3e9a1fe50ef2f223be6f47784920e6e03ff841bcfb3166f",
-    "dependency-0/maru60-hhkb-right-plate.3mf": "2b777ff9f1786b6e0258132c9becc7d37702daff6f1f546dc82f1477deb4ef7a",
+    "dependency-0/maru60-fit-test-coupons.3mf": "bac215769646a3ee328476415a74f700d28c5e43298a0829ab1c4f2b1d80f145",
+    "dependency-0/maru60-hhkb-left-plate.3mf": "6c7154a7e4f1045ed624d97c29860b8c0c8261365a1f96291d9c3018c5532000",
+    "dependency-0/maru60-hhkb-right-plate.3mf": "77aad7c8d042e43e5d62a28042fc73a9c169a893301486d05d428ab56e617c68",
     "dependency-0/right-half-print.stl": "96cb8f61c8f136013cbd875fb8406d7b4a1c0ea25246ba3486aa0b4cf7f2a51b",
     "maru60/__init__.py": "49ec24caa935fc5b5040d7c653ef5fe04b5356b3178780c479036ab8e9499c08",
     "maru60/exterior.py": "bc565e9bdf78ae6770b2874856703b07a93e5b9e012a9968bab4d557680170d8",
@@ -429,7 +463,7 @@
     "spec/boards.json": "64f89606713cd0f621bc42168daf565c44f471544addb3b2d85b05a94af88a0e",
     "spec/rule60-v3-outlines.json": "acff832b570715bb261defe752e226e86c554d629dbe344b42f0eb93674bee97",
     "spec/rule60-v3.json": "bfc76674a8b4c35dbf459efb985728eec2053352906a5a7db8cb5e878098885a",
-    "verify_bottomcase.py": "496b3651da119c527af24bbfd501540086f253db6528b4f87dbf278181c9f3b4",
+    "verify_bottomcase.py": "db535082456f04fc6ce5824c842383cced6205fd186613f916e7303f788827cd",
     "verify_topcase.py": "cef8ae2a3b9990c2c78c47846ddcdd0b0114b979da78d645a039c6c6e0b17f71"
   }
 }
