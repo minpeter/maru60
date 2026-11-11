@@ -1,6 +1,6 @@
 # Signal integrity
 
-Board `pcb/maru60.kicad_pcb`, SHA-256 `abd978a43c72…` (`results.json` carries the
+Board `pcb/maru60.kicad_pcb`, SHA-256 `36700843ef6c…` (`results.json` carries the
 full hash; `run_all.py --check` compares it with the board file). Everything is
 computed or simulated from the routed copper with the tools in
 [`pcb/tools/signal_integrity`](../../../../tools/signal_integrity/README.md): a 2-D
@@ -18,9 +18,8 @@ value used is stated and swept).
 | Signal | Result | Margin | Basis |
 | --- | --- | --- | --- |
 | LED data, first hops: GPIO → U5/U6 → 330 Ω → LED1 (137 mm, 7 vias) / LED63 (116 mm, 8 vias) | pass. Rise/fall 14–28 ns, no overshoot, no ring-back | noise margin 0.88 V high, 1.40 V low; pulse-width error −16.4 / +7.7 ns against ±100 ns | simulated; buffer output 15–100 Ω and its tPLH/tPHL difference assumed |
-| LED data, 74 LED-to-LED hops (key: median 21 mm, longest 81 mm; underglow: median 56 mm) | pass with an LED output of 35 Ω or more at any edge, or 20 Ω with a 2 ns or slower edge | full noise margin with 100 Ω / 10 ns; pulse-width error at most −35 / +16 ns with a 1 kΩ output | simulated; SK6805 output strength assumed |
-| LED data, the two long underglow hops with a series part: `UG_LED_6` (274 mm, `R115` 100 Ω), `UG_LED_9` (102 mm, `R116` 100 Ω) | pass for every output swept (10–1000 Ω, 1–30 ns edges): no overshoot, no ring-back | noise margin 0.87 V / 1.36 V; pulse-width error at most −60 / +29 ns (274 mm), −39 / +19 ns (102 mm) | simulated |
-| LED data, longest hops without a series part: `KEY_RGB_CHAIN_60`/`_61` (81 mm), `_52` (64 mm) | pass, **except** with an LED output of 20 Ω and a 1 ns edge, or 10 Ω and a 2 ns or faster edge | 0.13 V (81 mm) and 0.19 V (64 mm) at 20 Ω / 2 ns | simulated; finding 3 |
+| LED data, the 69 LED-to-LED hops without a series part (key: median 21 mm, longest 33 mm; underglow: 28–62 mm) | pass with an LED output of 35 Ω or more at any edge, or 20 Ω with a 2 ns or slower edge | at 20 Ω / 2 ns the longest (`UG_LED_11`, 62 mm) keeps 0.40 V; full noise margin with 100 Ω / 10 ns; pulse-width error at most −33 / +15 ns with a 1 kΩ output | simulated; SK6805 output strength assumed; finding 3 |
+| LED data, the five hops longer than 62 mm, each with 100 Ω at its source: `UG_LED_6` (274 mm, `R115`), `UG_LED_9` (102 mm, `R116`), `KEY_RGB_CHAIN_60` (79 mm, `R117`), `_61` (72 mm, `R118`), `_52` (63 mm, `R119`) | pass for every output swept (10–1000 Ω, 1–30 ns edges): no overshoot, no ring-back | noise margin 0.87–0.88 V / 1.36–1.40 V; pulse-width error at most −60 / +29 ns (274 mm), −39 / +19 ns (the others) | simulated |
 | LED data, Caps Lock alternative sites (`KEY_RGB_CHAIN_29/30/31`, stubs to 22 mm, one via) | pass, same as a plain hop in all four fitted combinations | noise margin ≥ 0.67 V even with 20 Ω / 2 ns | simulated |
 | Matrix edges coupling into LED data | ±0.30 V on the worst routed pair (`UG_LED_6` beside `COL10`, 49 mm at 0.25 mm) | 0.88 V available; 0.65 V for a hypothetical 80 mm at 0.15 mm | simulated, 3.3 V / 1 ns aggressor |
 | Buck switch node (500 kHz) into LED data and `RUN` | ≤ 1.0 mV into `UG_LED_10` (2.85 mm away), ≤ 1.5 mV into `RUN` (1.72 mm) | > 500 × | computed (field-solve mutual capacitance over the plane) |
@@ -35,49 +34,54 @@ value used is stated and swept).
 | SWD | `SWCLK` 35 mm, `SWDIO` 67 mm (0.4 ns) | 2.5 % of a half period at 30 MHz | computed |
 | `RUN` | 87 mm, 14 pF, internal pull-up only; all neighbours switching together couple 47 mV | 2.5 V needed for a reset: 53 × | computed |
 | BOOTSEL | button net is behind 1 kΩ (R106); pressed level 0.30 V | VIL 0.8 V | computed |
-| Key matrix, column valid after row select | 13 ns typical; 45 ns at the pin limits; 120 ns with six keys of the row held | QMK waits 247 ns: 19 × / 5.5 × / 2.1 × | simulated |
-| Key matrix, all 15 keys of row 0 held, pin at its data-sheet limits | **228 ns at 27 °C, 250 ns at 0 °C** | 1.1 × / 1.0 ×: no margin; finding 1 | simulated |
+| Key matrix, column valid after row select | 13 ns typical; 45 ns at the pin limits; 120 ns with six keys of the row held | the firmware waits 800 ns: 63 × / 18 × / 6.7 × | simulated |
+| Key matrix, all 15 keys of row 0 held, pin at its data-sheet limits | 228 ns at 27 °C, 250 ns at 0 °C | 3.5 × / 3.2 × with the 800 ns wait (1.1 × / 1.0 × with QMK's 247 ns default, which the firmware used before) | simulated; finding 1, closed |
 | Key matrix, column back high after row release | 1.5–4.4 µs | QMK waits 30 µs: ≥ 6.9 × | simulated |
 | Key matrix leakage at 60 °C | 0.65 V droop with all 61 other diodes at maximum leakage | 1.3 V allowed: 2.0 × | computed from the 1N4148W data sheet |
 | Expansion port, switch off or board unpowered | ≤ 10 µA per line into the port, no path into a supply rail | MCU pin offset ≤ 0.39 V, VIL 0.8 V | datasheet (SN74CB3T3245, TPD6E05U06) |
 | Expansion port, 3.3 V and 5 V signals from outside | 2.83–3.02 V and 3.02–3.36 V at the MCU pin | ≥ 0.83 V above VIH; below IOVDD + 0.3 V | datasheet curves, scaled to 3.3 V |
 
-## Changes needed, ranked
+## Changes made and what is left
 
-No finding blocks the order. One firmware line is recommended; two items are
-recorded for bring-up.
+No finding blocks the order. Findings 1 and 3 of the earlier runs are acted
+on; finding 2 is recorded.
 
-1. **Firmware: lengthen the matrix read delay.** QMK reads the columns 37 CPU
-   cycles (247 ns) after it drives a row. With all 15 keys of row 0 held, the
-   row pin at its 125 Ω limit and 86 kΩ pull-ups, the last column is below 0.8 V
-   after 228 ns at 27 °C and 250 ns at 0 °C. With a typical 40 Ω pin it is 76 ns.
-   Smallest fix, in `keyboards/maru60/rp2350/config.h`:
+1. **Matrix read delay: done in the firmware.** QMK's default reads the
+   columns 37 CPU cycles (247 ns) after it drives a row. With all 15 keys of
+   row 0 held, the row pin at its 125 Ω limit and 86 kΩ pull-ups, the last
+   column is below 0.8 V after 228 ns at 27 °C and 250 ns at 0 °C: no margin.
+   `keyboards/maru60/rp2350/config.h` now has
 
    ```c
    #define GPIO_INPUT_PIN_DELAY 120   /* CPU cycles: 0.8 µs at 150 MHz */
    ```
 
-   **Do not use `(CPU_CLOCK / 1000000L)`.** That is 150, and QMK's
-   `wait_cpuclock()` handles 1–135 only (`platforms/chibios/_wait.c`): above
-   135 no 8-cycle block runs and the delay becomes 6 cycles (40 ns), shorter
-   than today. 120 cycles gives 3.2 × in the worst corner and costs 2.8 µs per
-   scan. Not applied here; the firmware is not part of this task's paths.
-2. **USB: record the delay as a deviation, or shorten the pair by 13 mm.** The
-   pair runs 156 mm (plus 4 mm after the 27 Ω parts) with four vias per line.
-   USB 2.0 §7.1.16 allows 1 ns from the connector to the transceiver; this
-   route is 1.03–1.07 ns. The allowance is one device's share of a 30 ns
-   one-way budget through five hubs and 5 m cables, so 70 ps has no effect on
-   a keyboard on an ordinary port, and every waveform limit passes with large
-   margin. No change is needed for function. To meet the number: remove 13 mm
-   of route, or one via pair and 8 mm.
-3. **LED data: the 81 mm and 64 mm key hops have no series part.** `R115`
-   and `R116` make the two long underglow hops independent of the LED output.
-   `KEY_RGB_CHAIN_60` and `_61` (81 mm) and `_52` (64 mm, 8 vias) are
-   unterminated and keep 0.13 V and 0.19 V above the 3.12 V high threshold with
-   a 20 Ω / 2 ns output. They ring back under it only with 20 Ω and a 1 ns
-   edge, or 10 Ω and 2 ns or faster. The data sheet gives no output figure;
-   a 5 V CMOS output that strong and that fast is unlikely for an LED driver
-   pin. No change is asked for. Look at LED59 DIN with a scope at bring-up.
+   which gives 3.2 × in that corner and costs 2.8 µs per scan. Both layouts
+   were rebuilt; the linked `matrix_output_select_delay` holds 120 `nop`
+   instructions ([`qa/qmk-build`](../qmk-build/RESULT.json)). The value must
+   stay within 1–135: `wait_cpuclock()` (`platforms/chibios/_wait.c`) runs no
+   8-cycle block above that, so 150, for example, waits 6 cycles (40 ns).
+   `config.h` rejects a value outside the range at compile time.
+2. **USB delay: recorded, not changed.** The pair runs 156 mm (plus 4 mm after
+   the 27 Ω parts) with four vias per line. USB 2.0 §7.1.16 allows 1 ns from
+   the connector to the transceiver; this route is 1.03–1.07 ns. The allowance
+   is one device's share of a 30 ns one-way budget through five hubs and 5 m
+   cables, so 70 ps has no effect on a keyboard on an ordinary port, and every
+   waveform limit passes with large margin. Meeting the number means removing
+   13 mm. The route is a staircase between the switch holes from the connector
+   to the MCU, 156 mm against 132 mm for the shortest octilinear path with no
+   obstacles, and the last 20 mm thread between vias beside the MCU; the
+   excess is spread over the whole run and cannot be taken out locally.
+3. **LED data: the five hops longer than 62 mm now have a series resistor.**
+   `R115`–`R119` make those hops independent of the LED output. Without the
+   parts the same hops ring back under the 3.12 V high threshold with a
+   20 Ω / 2 ns output (274 mm and 102 mm) or keep only 0.13–0.34 V
+   (63–79 mm). The 69 remaining hops are 62 mm or shorter. The longest,
+   `UG_LED_11`, keeps 0.40 V with a 20 Ω / 2 ns output and rings back only
+   with 20 Ω and a 1 ns edge, or 10 Ω and 2 ns or faster. The data sheet gives
+   no output figure; a 5 V CMOS output that strong and that fast is unlikely
+   for an LED driver pin. Look at one LED input after a long hop (`LED59`,
+   `LED74`) with a scope at bring-up.
 
 ## LED data
 
@@ -89,7 +93,7 @@ T1H ≥ 700 ns, T0L ≥ 700 ns, T1L ≥ 200 ns, so the budget is ±100 ns on a "
 along the chain. The sheet gives no DOUT strength and no DIN capacitance:
 four cases are assumed (20 Ω / 2 ns, 100 Ω / 10 ns, 500 Ω / 30 ns into 5 pF,
 1 kΩ / 30 ns into 15 pF) and the strength is swept from 10 to 100 Ω and 1 to
-10 ns on the long hops.
+10 ns on the hops with a series part and on the longest one without.
 
 | Hop | Length, vias, stubs | 100 Ω / 10 ns: rise, width error | 1 kΩ, 15 pF: width error | 20 Ω / 2 ns: overshoot, high level after the peak |
 | --- | --- | --- | --- | --- |
@@ -99,8 +103,13 @@ four cases are assumed (20 Ω / 2 ns, 100 Ω / 10 ns, 500 Ω / 30 ns into 5 pF,
 | `UG_LED_6` with R115 shorted (before the change) | same | 9.1 ns, −6.1 / +3.2 ns | −55.6 / +27.0 ns | 2.31 V, **2.67 V** |
 | `UG_LED_9` with R116 100 Ω | 2.3 + 102.0 mm, 4 | 10.3 ns, −6.2 / +3.3 ns | −39.2 / +18.5 ns | none, 4.00 V |
 | `UG_LED_9` with R116 shorted (before the change) | same | 8.4 ns, −5.7 / +3.1 ns | −36.5 / +17.1 ns | 1.74 V, **3.08 V** |
-| `KEY_RGB_CHAIN_60` | 81.4 mm, 4 | 8.3 ns, −5.7 / +3.0 ns | −34.5 / +16.1 ns | 1.41 V, 3.25 V |
-| `KEY_RGB_CHAIN_52` | 64.3 mm, 8 | 8.4 ns, −5.7 / +3.0 ns | −34.9 / +16.3 ns | 1.34 V, 3.31 V |
+| `KEY_RGB_CHAIN_60` with R117 100 Ω | 2.9 + 78.9 mm, 3 | 9.7 ns, −6.1 / +3.2 ns | −36.8 / +17.3 ns | none, 4.00 V |
+| `KEY_RGB_CHAIN_60` with R117 shorted (before the change) | same | 8.3 ns, −5.7 / +3.0 ns | −34.5 / +16.1 ns | 1.41 V, 3.25 V |
+| `KEY_RGB_CHAIN_61` with R118 100 Ω | 9.5 + 72.1 mm, 0 | 9.5 ns, −6.0 / +3.2 ns | −35.5 / +16.6 ns | none, 4.00 V |
+| `KEY_RGB_CHAIN_61` with R118 shorted (before the change) | same | 8.3 ns, −5.7 / +3.0 ns | −33.3 / +15.5 ns | 1.06 V, 3.46 V |
+| `KEY_RGB_CHAIN_52` with R119 100 Ω | 1.8 + 63.1 mm, 7 | 9.9 ns, −6.1 / +3.2 ns | −37.5 / +17.7 ns | none, 4.00 V |
+| `KEY_RGB_CHAIN_52` with R119 shorted (before the change) | same | 8.4 ns, −5.7 / +3.0 ns | −35.1 / +16.4 ns | 1.37 V, 3.31 V |
+| `UG_LED_11`, the longest hop without a series part | 61.7 mm, 2 | 8.2 ns, −5.7 / +3.0 ns | −31.5 / +14.6 ns | 0.93 V, 3.52 V |
 | `KEY_RGB_CHAIN_30`, LED30 on its alternative site, LED75 on the bottom | 52.5 mm, 1, stubs 8.8 + 5.5 mm | 8.3 ns, −5.7 / +3.0 ns | −33.0 / +15.4 ns | 0.54 V, 3.80 V |
 | `KEY_RGB_CHAIN_30`, default sites | 39.1 mm, 1, stubs 22.3 + 5.5 mm | 8.3 ns, −5.7 / +3.0 ns | −32.7 / +15.2 ns | 0.37 V, 3.86 V |
 | `KEY_RGB_CHAIN_30`, LED75 on its top pads | 40.7 mm, 0, stubs 17.1 mm (with a via) + 8.8 mm | 8.3 ns, −5.7 / +3.0 ns | −32.8 / +15.3 ns | 0.37 V, 3.87 V |
@@ -109,14 +118,17 @@ four cases are assumed (20 Ω / 2 ns, 100 Ω / 10 ns, 500 Ω / 30 ns into 5 pF,
 | `KEY_RGB_CHAIN_3` (ordinary hop) | 18.7 mm, 0 | 8.1 ns, −5.6 / +3.0 ns | −27.1 / +12.6 ns | 0.22 V, 3.92 V |
 
 - All 76 links were extracted (length, layers, vias, stubs, capacitance,
-  neighbours, plane openings): `led_hop_table` in `results.json`. Key hops:
-  63, 15.3–81.4 mm, vias only on `_44`, `_46`, `_51` (2 each), `_52` (8),
-  `_60` (4). Underglow hops: 27.7–61.7 mm with 2–4 vias, plus the 102 mm and
-  274 mm ones, each behind its 100 Ω part (2.3 mm and 3.7 mm from the LED).
-- Strength sweep (10–100 Ω, 1–10 ns) with the series part in place: both
-  underglow hops keep the full 0.88 V / 1.40 V at every point. With the part
-  as 0 Ω the 274 mm hop goes under the threshold up to 20 Ω / 4 ns and the
-  102 mm hop up to 20 Ω / 2 ns; that is what the two parts remove.
+  neighbours, plane openings): `led_hop_table` in `results.json`. Key hops
+  without a series part: 15.3–33.0 mm, vias only on `_44`, `_46`, `_51`
+  (2 each). Underglow hops without one: 27.7–61.7 mm with 2–4 vias. The five
+  longer hops each sit behind a 100 Ω part 1.8–3.7 mm from the LED (`R118`:
+  9.5 mm, the nearest place outside the spacebar's stabilizer zone).
+- Strength sweep (10–100 Ω, 1–10 ns) with the series part in place: all five
+  hops keep the full 0.88 V / 1.40 V at every point. With the part as 0 Ω the
+  274 mm hop goes under the threshold up to 20 Ω / 4 ns, the 102 mm hop up to
+  20 Ω / 2 ns and the three key hops at 20 Ω / 1 ns and 10 Ω / 2 ns; that is
+  what the parts remove. `UG_LED_11` without a part: under the threshold at
+  10 Ω / 1–2 ns (−1.01 V, −0.06 V) and 20 Ω / 1 ns (−0.09 V), clear elsewhere.
 - The stubs and vias added for the Caps Lock sites are electrically short
   (22 mm is 0.13 ns) and change nothing visible.
 - The ground plane is continuous under every hop; the only openings are the
@@ -213,7 +225,9 @@ Geometry:
 ## Key matrix
 
 QMK timing read from the pinned tree (`quantum/matrix.c`,
-`platforms/chibios/_wait.h`): read 37 cycles after select, 30 µs after release.
+`platforms/chibios/_wait.h`) and the keyboard's `config.h`: read 120 cycles
+(0.8 µs) after select, 30 µs after release. QMK's default is 37 cycles
+(247 ns); the margins against it are in `results.json` as `default_…`.
 Pin limits from the RP2350 data sheet: VOL ≤ 0.5 V at 4 mA (125 Ω), pull-up
 32–86 kΩ, VIL 0.8 V, VIH 2.0 V; 40 Ω typical and 5 pF per pin are assumed.
 

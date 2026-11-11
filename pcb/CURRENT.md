@@ -17,7 +17,7 @@ dependency. Diagnostic counts in the manifest are saved observations.
 
 ## Order candidate (2026-11-11)
 
-PCB `abd978a4`, derived from the development prototype. It is what
+PCB `36700843`, derived from the development prototype. It is what
 [`pcb/order`](order/README.md) (Gerbers, JLCPCB BOM and placement file) is
 exported from. Its [README](experiments/resume-20261111-order-candidate/README.md)
 lists every change, the evidence, and what was left as it is. In short:
@@ -40,19 +40,24 @@ lists every change, the evidence, and what was left as it is. In short:
   the LED data links, USB, crystal, flash and key matrix, and a read-back of
   the exported Gerbers with a second parser. They led to copper being kept
   0.2 mm from every non-plated hole (now a rule in the board's own rule file),
-  larger silkscreen text, `R115` and `R116` (series damping
-  on the 274 mm and 105 mm underglow data hops) and 25 vias being moved out of SMD pads.
+  silkscreen kept 0.15 mm from pads, `R115`–`R119` (series damping on the five
+  LED data hops longer than 60 mm), `C143` (feed-forward capacitor of the
+  buck, phase margin 38–44° → 46–51° in the model) and 33 vias being moved out of SMD pads (6 remain).
 - **RP2350 USB is full speed only**, so the high-speed eye, the 90 Ω target and
   the skew in the USB SI report below do not apply. No impedance control is
   ordered.
-- **The placement file is fitted to JLCPCB's own footprints** (308 of 309
+- **Firmware reads the matrix 0.8 µs after driving a row** (`GPIO_INPUT_PIN_DELAY
+  120`; the 247 ns default had no margin with a full row held and a
+  worst-case pin). Both layouts were rebuilt:
+  [build packet](experiments/resume-20261111-order-candidate/qa/qmk-build/RESULT.json).
+- **The placement file is fitted to JLCPCB's own footprints** (312 of 313
   parts), not raw KiCad angles.
-- Native check: 0 opens, 0 warnings, ERC 0, parity 0, 68 cold-refill files
-  identical, material graph recomputed. Bottom-case fit: 24 pass.
+- Native check: 0 opens, 0 warnings, ERC 0, parity 0, 72 cold-refill files
+  identical, material graph recomputed. Bottom-case fit: 27 pass.
 
 Still open: a 2.75U right Shift with a PCB-mount stabilizer and a 2U Backspace
-are unsupported; one firmware delay should be lengthened at the next rebuild
-(signal-integrity report); hardware qualification, license and USB ID are
+are unsupported; the USB pair is 3–7 % over the 1 ns connector-to-transceiver
+allowance (recorded, not rerouted); hardware qualification, license and USB ID are
 unchanged from the sections below. The power, thermal and USB reports listed
 further down describe the development prototype and are superseded for the
 order candidate by the reports in its `qa/` folder. The older

@@ -34,7 +34,7 @@ def run(job):
     shutil.copytree(src, d)
     (d / "maru60.kicad_dru").write_text("(version 1)\n" + rule)
     out = d / "drc.json"
-    r = subprocess.run([str(ROOT / "tools/run_kicad9.sh"), "kicad-cli", "pcb", "drc", "--severity-all", "--format", "json", "--output", str(out.relative_to(ROOT)),
+    r = subprocess.run([str(ROOT / "tools/run_kicad9.sh"), "kicad-cli", "pcb", "drc", "--severity-all", "--all-track-errors", "--format", "json", "--output", str(out.relative_to(ROOT)),
                         str((d / "maru60.kicad_pcb").relative_to(ROOT))], capture_output=True, text=True)
     if not out.exists():
         raise SystemExit(f"{name}: DRC wrote nothing\n{r.stdout}{r.stderr}")

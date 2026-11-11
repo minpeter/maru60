@@ -2,7 +2,8 @@
 
 QMK timing (build/pcb-qmk-20261109/qmk_firmware, quantum/matrix.c, matrix_common.c,
 platforms/chibios/_wait.h): the row is driven low, matrix_output_select_delay()
-waits GPIO_INPUT_PIN_DELAY = CPU_CLOCK/1e6/4 = 37 CPU cycles = 0.25 us at 150 MHz,
+waits GPIO_INPUT_PIN_DELAY CPU cycles (120 = 0.8 us at 150 MHz in this keyboard's config.h;
+QMK's default is CPU_CLOCK/1e6/4 = 37 cycles = 0.25 us, the "default" figures below),
 the 15 columns are read, the row is released to an input with pull-up, and
 matrix_output_unselect_delay() waits MATRIX_IO_DELAY = 30 us before the next row.
 
@@ -33,7 +34,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import spice  # noqa: E402
 
 VIL, VIH, VDD = 0.8, 2.0, 3.3
-SELECT_DELAY_NS = 37 / 150e6 * 1e9
+SELECT_DELAY_NS = 120 / 150e6 * 1e9            # keyboards/maru60/rp2350/config.h: GPIO_INPUT_PIN_DELAY 120
+DEFAULT_SELECT_DELAY_NS = 37 / 150e6 * 1e9     # QMK default, what the firmware used before
 UNSELECT_DELAY_US = 30.0
 PIN_C = 5.0
 
@@ -88,6 +90,8 @@ def run_case(name, row, cols, n_keys, ron, rpu, temp=27):
         "t_col_below_VIL_ns": round(float(fall[0] - 100e-9) * 1e9, 1) if fall else None,
         "select_delay_ns": round(SELECT_DELAY_NS, 1),
         "select_margin_x": round(float(SELECT_DELAY_NS / ((fall[0] - 100e-9) * 1e9)), 1) if fall else None,
+        "default_select_delay_ns": round(DEFAULT_SELECT_DELAY_NS, 1),
+        "default_select_margin_x": round(float(DEFAULT_SELECT_DELAY_NS / ((fall[0] - 100e-9) * 1e9)), 1) if fall else None,
         "col_low_level_V": round(low, 3), "low_level_margin_to_VIL_V": round(VIL - low, 3),
         "t_col_above_VIH_after_release_us": round(float(rise[0] - 2000e-9) * 1e6, 2) if rise else None,
         "unselect_delay_us": UNSELECT_DELAY_US,
@@ -157,8 +161,10 @@ def main():
         axes[0].plot((r["time"] - 100e-9) * 1e9, r["v(colpin0)"], color=col, linewidth=1.6, label=lab)
         axes[1].plot((r["time"] - 2e-6) * 1e6, r["v(colpin0)"], color=col, linewidth=1.6, label=lab)
     axes[0].axhline(VIL, color=spice.INK2, linewidth=0.8, linestyle="--")
+    axes[0].axvline(DEFAULT_SELECT_DELAY_NS, color=spice.INK2, linewidth=0.8, linestyle=":")
+    axes[0].text(DEFAULT_SELECT_DELAY_NS - 5, 3.0, "QMK default read\n(0.25 µs)", fontsize=7.5, color=spice.INK2, ha="right")
     axes[0].axvline(SELECT_DELAY_NS, color=spice.INK2, linewidth=0.8, linestyle=":")
-    axes[0].text(SELECT_DELAY_NS - 5, 3.0, "QMK reads columns\n(0.25 µs)", fontsize=7.5, color=spice.INK2, ha="right")
+    axes[0].text(SELECT_DELAY_NS - 5, 3.0, "this firmware reads\n(0.8 µs)", fontsize=7.5, color=spice.INK2, ha="right")
     axes[0].text(395, VIL + 0.07, "VIL 0.8 V", fontsize=7.5, color=spice.INK2, ha="right")
     axes[0].set_xlim(-20, 400)
     spice.style(axes[0], f"Column {wc} at the MCU pin after {wr} is driven low", "time after row select, ns", "V")

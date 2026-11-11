@@ -14,8 +14,8 @@ SHA256 in [`PROVENANCE.json`](PROVENANCE.json). Regenerate everything here with
 | File | Use |
 | --- | --- |
 | `maru60-gerbers.zip` | Upload as the PCB. 11 Gerber layers, PTH and NPTH drill files. |
-| `bom-jlcpcb.csv` | Upload as the assembly BOM (51 part numbers, 309 placements). |
-| `cpl-jlcpcb.csv` | Upload as the placement file (130 top, 179 bottom). Rotations and centres are fitted to JLCPCB's own footprints. |
+| `bom-jlcpcb.csv` | Upload as the assembly BOM (52 part numbers, 313 placements). |
+| `cpl-jlcpcb.csv` | Upload as the placement file (131 top, 182 bottom). Rotations and centres are fitted to JLCPCB's own footprints. |
 | `bom-full.csv` | Every footprint, including what is *not* assembled and why. |
 | `parts.json` | Part selection rules and the stock snapshot date. |
 | `jlcpcb-placement.json` | Per part: the rotation and centre fitted to the footprint JLCPCB places from, and how well the two land patterns agree. |
@@ -49,11 +49,11 @@ review, which is why the BOM names the constant-current `TPS2553DBVR`).
 ## 3. Assembly options
 
 - **Assemble both sides** (Standard PCBA). Top: 63 LEDs, 63 capacitors, F1,
-  R100, R101, R120. Bottom: everything else.
+  R100, R101, R118, R120. Bottom: everything else.
 - Turn on **Confirm Parts Placement** and look through the preview before
   paying. The placement file is not raw KiCad output: for each part the
   footprint JLCPCB uses was fetched and the rotation and centre that put its
-  pads on the board's pads were solved (308 of 309 placements; `R123`, a
+  pads on the board's pads were solved (312 of 313 placements; `R123`, a
   resistor, uses the plain convention because JLCPCB publishes no footprint for
   it). The preview should therefore already be right. Still check:
   - `L1`: polarised, and JLCPCB's footprint cannot tell which end has the dot.
@@ -63,9 +63,9 @@ review, which is why the BOM names the constant-current `TPS2553DBVR`).
     on the pads. Orientation is what matters.
   - `U1`: pin 1 at the silkscreen mark; stepping A4.
   - LEDs: every land site has a silkscreen dot at pin 1 (DIN).
-  - 14 joints have a via inside the pad and will take less solder: `R140`–`R143`,
-    `R145`, `R159`, `Y1`, `U12`, `U6`, `U7`, `C122`, `LED70`, `LED71`. Inspect
-    them when the boards arrive.
+  - Six joints have a via inside the pad and will take less solder: `R140`,
+    `R143`, `R159`, `Y1` (pad 2), `U12` (pad 1), `LED71` (pad 1). Inspect them
+    when the boards arrive.
   - `J1`: centred on its pads (JLCPCB's origin for this connector is 1.3 mm
     from KiCad's; the file already accounts for it).
 
@@ -76,19 +76,20 @@ review, which is why the BOM names the constant-current `TPS2553DBVR`).
    idle current about 20 mA.
 2. With a scope on `TP3`, switch a load on the 4 V rail (the LED rail is the
    easy one) and check that it settles without ringing: the simulated buck
-   phase margin is about 40°.
+   phase margin is 46–51° with the 22 pF feed-forward capacitor `C143`. If it
+   rings, `C143` can go up to 47 pF on the same pads.
 3. Hold BOOTSEL (`SW100`) while plugging in; the board must enumerate as an
-   RP2350 mass-storage device. Flash the UF2 from `pcb/firmware`.
+   RP2350 mass-storage device. Flash `maru60_rp2350_via_hhkb.uf2` (HHKB) or
+   `maru60_rp2350_via.uf2` (WKL) from the checkpoint's
+   [`qa/qmk-build`](../experiments/resume-20261111-order-candidate/qa/qmk-build/RESULT.json).
 4. Solder the sockets and test the matrix.
 5. Per-key LEDs stay off: the firmware keeps `MARU60_LED_POWER_QUALIFIED` at 0
    until the LED rail has been measured. Full white (1.14 A) is far above the
    174–234 mA limiter; keep the brightness cap.
-6. When the LEDs are first enabled, look at the data input of `LED59` (81 mm
-   hop, no series resistor) with a scope: the high level must stay above
-   3.1 V after the edge.
-7. Firmware, at the next rebuild: `#define GPIO_INPUT_PIN_DELAY 120` in the
-   keyboard's `config.h`. With the default delay a row with all 15 keys held
-   has no timing margin at a worst-case pin. Do not use a value above 135.
+6. When the LEDs are first enabled, look at the data input of one LED after a
+   long hop (`LED59`, `LED69`) with a scope: the high level must stay above
+   3.1 V after the edge. The five long hops each have a 100 Ω series resistor
+   (`R115`–`R119`).
 
 Use switches with an SMD-LED opening in the bottom housing. The spacebar
 stabilizer holes are reversed (wire at the back) so they clear the board edge.

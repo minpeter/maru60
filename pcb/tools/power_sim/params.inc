@@ -40,6 +40,8 @@
 .param rdo=0.417
 .param fugb=100k
 .param ios=0.2015
+* C143, feed-forward capacitor across R159 (TPS6293x data sheet 10.2.2.10). 1f = not fitted.
+.param cff=22p
 .param kea=1
 .param vref=0.8
 .param iss=5.5u

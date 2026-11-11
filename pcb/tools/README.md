@@ -73,7 +73,8 @@ of `set_component_values.py` need the KiCad 9 `pcbnew` bindings and run through
 | `apply_layout_ops.py` | Applies an operation list (tracks, vias, footprints, pads, drills, text, graphics) to a board. |
 | `plan_ldo_swap.py`, `edit_schematic_ldo_swap.py` | Board and schematic side of replacing the MAX38902A by an AP2112K-3.3. |
 | `plan_bottom_sites.py` | Bottom-side land sites fed through new vias (used for `C200`). |
-| `plan_series_resistor.py` | `R115` and `R116`: cuts a long underglow data hop at its source and places a series resistor at the cut. |
+| `plan_series_resistor.py` | `R115`–`R119`: follows an LED data hop from DOUT through tracks and vias, cuts it near the source and places a series resistor at the cut, on B.Cu or (outside the switch keep-out) F.Cu. |
+| `plan_two_pad_part.py` | A new 0402 two-pad part beside an existing one, routed to its two nets (`C143`, the buck feed-forward capacitor). |
 | `fit_jlcpcb_placement.py` | Fetches JLCPCB's footprint for each part and solves the placement rotation and centre. Needs network. |
 | `export_order_package.py` | DRC, BOM, CPL (using the fitted placements), Gerbers, drill files and provenance into `../order/`. |
 | `verify_gerbers.py` | Reads the exported Gerber and drill files with gerbonara and compares holes, pads and outline with the board. |
@@ -84,6 +85,7 @@ of `set_component_values.py` need the KiCad 9 `pcbnew` bindings and run through
 | `run_dfm_jlcpcb_drc.py` | Runs KiCad DRC once per rule of the JLCPCB rule deck on scratch copies of the project and collects every finding (`qa/dfm-jlcpcb/drc-per-rule.json`). |
 | `plan_npth_clearance.py` | Plans the track detours that keep copper 0.2 mm from non-plated holes: tangent polygons round the hole, neighbours pushed outward where needed. Output is an operation list for `apply_layout_ops.py`. |
 | `plan_via_out_of_pad.py` | Moves via holes out of SMD pads where a free position exists. |
+| `plan_via_relocate.py` | For the vias that could not simply be nudged: takes the via out of the pad, finds a free position up to a few millimetres away and routes both layers to it. |
 
 ## Current physical-material checker
 

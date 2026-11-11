@@ -49,6 +49,7 @@ L2    sw l2x {l2}
 Rl2   l2x v4 {dcr}
 C139  ss 0 {cssx}
 R159  v4 fb 40.0k
+C143  v4 fb {cff}
 R160  fb 0 10.0k
 Cfb   fb 0 5p
 * C140 + C141 next to the inductor (5.6 / 14 mOhm of track [CALC])

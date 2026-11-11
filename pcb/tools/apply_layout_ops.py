@@ -22,7 +22,8 @@ place (use a checkpoint copy) and every zone is refilled at the end.
   {"op": "move_footprint", "ref", "x", "y", "rot"}
   {"op": "add_pads", "ref", "pads": [{"num", "x", "y", "side", "sx", "sy", "like": pad number to copy net/function from}]}
   {"op": "set_pad_geometry", "ref", "pads": {"1": {"x", "y", "sx_local", "sy_local"}, ...}}   absolute position, size in the pad's own frame
-  {"op": "reshape_pads", "ref", "pads": [{"at": [x, y], "to": [x, y], "sx_local", "sy_local"}]}   one pad, found by its position
+  {"op": "reshape_pads", "ref", "pads": [{"at": [x, y], "to": [x, y], "sx_local", "sy_local"}]}   the pad(s) at a position
+  {"op": "remove_graphics", "fpid" | "refs", "layer_re"}             lines, arcs and circles of footprints on matching layers (texts stay)
   {"op": "set_drill", "refs_re", "from", "to"}                       NPTH pads: drill and pad size
   {"op": "add_circles", "items": [{"ref", "x", "y", "r", "layer", "fill": true, "w": 0.1}]}   footprint graphics
   {"op": "set_fpid", "refs": [...], "fpid": "nick:name"}
@@ -58,7 +59,7 @@ def main():
             for t in b.GetTracks() if t.Type() == pcbnew.PCB_TRACE_T]
     vias = [(t, t.GetNetname(), pcbnew.ToMM(t.GetPosition().x), pcbnew.ToMM(t.GetPosition().y)) for t in b.GetTracks() if t.Type() == pcbnew.PCB_VIA_T]
     fps = {f.GetReference(): f for f in b.GetFootprints()}
-    doomed_tracks, doomed_items = [], []
+    doomed_tracks, doomed_items, doomed_graphics = [], [], []
     for op in ops:
         kind = op["op"]
         if kind == "remove_tracks":
@@ -228,12 +229,22 @@ def main():
             fp = fps[op["ref"]]
             for g in op["pads"]:
                 hit = [p for p in fp.Pads() if abs(pcbnew.ToMM(p.GetPosition().x) - g["at"][0]) < 1e-3 and abs(pcbnew.ToMM(p.GetPosition().y) - g["at"][1]) < 1e-3]
-                if len(hit) != 1:
+                if not hit:
                     raise SystemExit(f"{op['ref']}: pad at {g['at']} not found")
-                p = hit[0]
-                layer = pcbnew.B_Cu if p.IsOnLayer(pcbnew.B_Cu) and not p.IsOnLayer(pcbnew.F_Cu) else pcbnew.F_Cu
-                p.SetSize(layer, pcbnew.VECTOR2I(mm(g["sx_local"]), mm(g["sy_local"])))
-                p.SetPosition(P(*g["to"]))
+                for p in hit:                  # connectors stack two pad numbers on one land
+                    layer = pcbnew.B_Cu if p.IsOnLayer(pcbnew.B_Cu) and not p.IsOnLayer(pcbnew.F_Cu) else pcbnew.F_Cu
+                    p.SetSize(layer, pcbnew.VECTOR2I(int(round(g["sx_local"] * 1e6)), int(round(g["sy_local"] * 1e6))))
+                    p.SetPosition(P(*g["to"]))
+        elif kind == "remove_graphics":
+            n = 0
+            for ref, fp in fps.items():
+                if ("fpid" in op and fp.GetFPID().GetUniStringLibId() != op["fpid"]) or ("refs" in op and ref not in op["refs"]):
+                    continue
+                for item in fp.GraphicalItems():
+                    if item.Type() == pcbnew.PCB_SHAPE_T and re.search(op["layer_re"], item.GetLayerName()):
+                        doomed_graphics.append((fp, item))
+                        n += 1
+            log.append({"graphics_removed": n})
         elif kind == "set_drill":
             n = 0
             for ref, fp in fps.items():
@@ -280,6 +291,8 @@ def main():
         b.Remove(rec[0])
     for item in doomed_items:
         b.Remove(item)
+    for fp, item in doomed_graphics:
+        fp.Remove(item)
     pcbnew.ZONE_FILLER(b).Fill(b.Zones())
     b.BuildConnectivity()
     pcbnew.SaveBoard(path, b)

@@ -24,9 +24,9 @@ build/si/venv/bin/python pcb/tools/signal_integrity/run_all.py --check
 
 `results.json` carries the SHA-256 of the board file the geometry was dumped from.
 Rerun after any change to the board: the scripts read copper, not the netlist, and
-find the LED chains and the series resistors in a hop (`R115`, `R116`) by following pads.
+find the LED chains and the series resistors in a hop (`R115`–`R119`) by following pads.
 The matrix timing reads the QMK tree in `build/pcb-qmk-20261109/qmk_firmware` only
-as documentation; its numbers (37-cycle read delay, 30 µs release delay, 135-cycle
+as documentation; its numbers (120-cycle read delay from the keyboard's `config.h`, QMK's 37-cycle default, 30 µs release delay, 135-cycle
 limit of `wait_cpuclock`) are constants in `sim_matrix.py`.
 
 Outputs: `results.json` in this folder, the generated ngspice decks in `decks/`,

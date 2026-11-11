@@ -142,7 +142,13 @@ def main():
                         ("0.3 A, nominal capacitors, kea 1", {"rload": 13.3}, {}),
                         ("0.3 A, capacitors at -20 % / -10 %, kea 1", {"rload": 13.3}, {"cloc": "13.9u", "c100": "14.2u"}),
                         ("0.3 A, nominal capacitors, kea 0.68", {"rload": 13.3}, {"kea": 0.68}),
-                        ("0.02 A, nominal capacitors, kea 1", {"rload": 200}, {})):
+                        ("0.02 A, nominal capacitors, kea 1", {"rload": 200}, {}),
+                        ("0.3 A, capacitors at -20 % / -10 %, kea 1.3", {"rload": 13.3}, {"cloc": "13.9u", "c100": "14.2u", "kea": 1.3}),
+                        ("0.3 A, nominal capacitors, kea 1, C143 not fitted", {"rload": 13.3}, {"cff": "1f"}),
+                        ("0.3 A, capacitors at -20 % / -10 %, kea 1, C143 not fitted", {"rload": 13.3}, {"cloc": "13.9u", "c100": "14.2u", "cff": "1f"}),
+                        ("0.3 A, nominal capacitors, kea 0.68, C143 not fitted", {"rload": 13.3}, {"kea": 0.68, "cff": "1f"}),
+                        ("0.3 A, nominal capacitors, kea 1, C143 47 pF", {"rload": 13.3}, {"cff": "47p"}),
+                        ("0.3 A, capacitors at -20 % / -10 %, kea 1.3, C143 47 pF", {"rload": 13.3}, {"cloc": "13.9u", "c100": "14.2u", "kea": 1.3, "cff": "47p"})):
         w = run("loop", "loop_ac", p, dp)
         f = w["frequency"]
         T = w["tr"] + 1j * w["ti"]

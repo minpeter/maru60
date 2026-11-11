@@ -1,0 +1,117 @@
+{
+ "note": "C143 22pF between +4V_REG and BUCK_FB, beside R159. Feed-forward capacitor of the buck (TPS6293x data sheet 10.2.2.10).",
+ "symbol_uuid": "f16181cb-796c-5092-a779-74addbfe177c",
+ "ops": [
+  {
+   "op": "add_footprint",
+   "ref": "C143",
+   "lib_dir": "/usr/share/kicad/footprints/Capacitor_SMD.pretty",
+   "name": "C_0402_1005Metric",
+   "fpid": "Capacitor_SMD:C_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 185.875,
+   "y": 85.0,
+   "rot": 90,
+   "value": "22pF",
+   "pad_nets": {
+    "1": "+4V_REG",
+    "2": "BUCK_FB"
+   },
+   "path": "/249c6d4c-b333-5b24-9f4d-47a79b0f14f8/f16181cb-796c-5092-a779-74addbfe177c",
+   "sheetname": "",
+   "sheetfile": "",
+   "expect_pads": {
+    "1": [
+     185.875,
+     85.48
+    ],
+    "2": [
+     185.875,
+     84.52
+    ]
+   }
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 185.875,
+     "y1": 84.52,
+     "x2": 185.525,
+     "y2": 84.87,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "BUCK_FB"
+    },
+    {
+     "x1": 185.525,
+     "y1": 84.87,
+     "x2": 185.175,
+     "y2": 84.87,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "BUCK_FB"
+    },
+    {
+     "x1": 185.175,
+     "y1": 84.87,
+     "x2": 184.475,
+     "y2": 84.17,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "BUCK_FB"
+    },
+    {
+     "x1": 184.475,
+     "y1": 84.17,
+     "x2": 184.475,
+     "y2": 84.175,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "BUCK_FB"
+    },
+    {
+     "x1": 185.875,
+     "y1": 85.48,
+     "x2": 186.225,
+     "y2": 85.83,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "+4V_REG"
+    },
+    {
+     "x1": 186.225,
+     "y1": 85.83,
+     "x2": 184.175,
+     "y2": 87.88,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "+4V_REG"
+    },
+    {
+     "x1": 184.175,
+     "y1": 87.88,
+     "x2": 184.2,
+     "y2": 87.9,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "+4V_REG"
+    }
+   ]
+  },
+  {
+   "op": "remove_graphics",
+   "refs": [
+    "C143"
+   ],
+   "layer_re": "Silkscreen"
+  },
+  {
+   "op": "set_fpid",
+   "refs": [
+    "C143"
+   ],
+   "fpid": "Maru60:C_0402_1005Metric"
+  }
+ ]
+}

@@ -238,7 +238,7 @@ def main():
 
     win, alt = (16.49, 42.22), (19.99, 38.22)
     both = lambda a, b: (lambda p: a(p) and b(p))
-    # Hops with a series resistor at their source (R115 on UG_LED_6, R116 on UG_LED_9), as
+    # Hops with a series resistor at their source (R115-R119), as
     # extract_geometry.py found them. Each is simulated as built and with the part as 0 ohm.
     pres, ser_hop = {}, {}
 
@@ -256,11 +256,19 @@ def main():
 
     ug6, ug9 = series_hop("UG_LED_6"), series_hop("UG_LED_9")
     UG6, UG6_SHORT, UG9, UG9_SHORT = ug6["built"], ug6["short"], ug9["built"], ug9["short"]
+    k60, k61, k52 = series_hop("KEY_RGB_CHAIN_60"), series_hop("KEY_RGB_CHAIN_61"), series_hop("KEY_RGB_CHAIN_52")     # R117, R118, R119
+    # the longest LED-to-LED hop that has no series part
+    bare = max((x for x in geo["led"]["underglow"] + geo["led"]["key"] if "series_at_source" not in x and x["from"].startswith("LED")), key=lambda x: x["length_mm"])
+    BARE = f"{bare['net']} (longest hop without a series part: {bare['length_mm']:.0f} mm, {bare['vias']} vias)"
+    bare_spec = (bare["net"], tuple(bare["from"].split(".")), tuple(bare["to"].split(".")), None)
+    out["longest_hop_without_series_part"] = {"net": bare["net"], "length_mm": bare["length_mm"], "vias": bare["vias"], "from": bare["from"], "to": bare["to"]}
     hops = {
         UG6: ug6["spec"],
         UG9: ug9["spec"],
-        "KEY_RGB_CHAIN_60 (longest key hop: 81 mm, 4 vias)": ("KEY_RGB_CHAIN_60", ("LED58", "3"), ("LED59", "1"), None),
-        "KEY_RGB_CHAIN_52 (64 mm, 8 vias)": ("KEY_RGB_CHAIN_52", ("LED48", "3"), ("LED47", "1"), None),
+        k60["built"]: k60["spec"],
+        k61["built"]: k61["spec"],
+        k52["built"]: k52["spec"],
+        BARE: bare_spec,
         "KEY_RGB_CHAIN_29 default (stub to LED30 alt site)": ("KEY_RGB_CHAIN_29", ("LED16", "3"), ("LED30", "1"), both(site("LED30", near=win), site("LED75", layer="B.Cu"))),
         "KEY_RGB_CHAIN_29 stepped (LED30 on alt site)": ("KEY_RGB_CHAIN_29", ("LED16", "3"), ("LED30", "1"), both(site("LED30", near=alt), site("LED75", layer="B.Cu"))),
         "KEY_RGB_CHAIN_30 default (LED30 window, LED75 bottom)": ("KEY_RGB_CHAIN_30", ("LED30", "3"), ("LED75", "1"), both(site("LED30", near=win), site("LED75", layer="B.Cu"))),
@@ -271,6 +279,9 @@ def main():
         "KEY_RGB_CHAIN_3 (typical 18.8 mm hop)": ("KEY_RGB_CHAIN_3", ("LED3", "3"), ("LED4", "1"), None),
         UG6_SHORT: ug6["spec"],
         UG9_SHORT: ug9["spec"],
+        k60["short"]: k60["spec"],
+        k61["short"]: k61["spec"],
+        k52["short"]: k52["spec"],
     }
     waves = {}
     for i, (label, (net, a, b, pick)) in enumerate(hops.items()):
@@ -294,8 +305,9 @@ def main():
             f"UG_LED_6 with {ug6['ser']['ref']} replaced by 0 ohm": (*ug6["spec"][:3], pres[UG6_SHORT]),
             f"UG_LED_9 with {ug9['ser']['ref']} {ug9['ser']['ohm']:g} ohm": (*ug9["spec"][:3], pres[UG9]),
             f"UG_LED_9 with {ug9['ser']['ref']} replaced by 0 ohm": (*ug9["spec"][:3], pres[UG9_SHORT]),
-            "KEY_RGB_CHAIN_52 64 mm, 8 vias": ("KEY_RGB_CHAIN_52", ("LED48", "3"), ("LED47", "1"), None),
-            "KEY_RGB_CHAIN_60 81 mm": ("KEY_RGB_CHAIN_60", ("LED58", "3"), ("LED59", "1"), None)}.items():
+            **{f"{k['hop']['net']} with {k['ser']['ref']} {k['ser']['ohm']:g} ohm": (*k["spec"][:3], pres[k["built"]]) for k in (k60, k61, k52)},
+            **{f"{k['hop']['net']} with {k['ser']['ref']} replaced by 0 ohm": (*k["spec"][:3], pres[k["short"]]) for k in (k60, k61, k52)},
+            f"{bare['net']} {bare['length_mm']:.0f} mm, no series part": (*bare_spec[:3], None)}.items():
         route = board.route(net, a, b)
         rows = []
         for rr in (10.0, 20.0, 35.0, 50.0, 75.0, 100.0):
@@ -355,8 +367,8 @@ def main():
     (spice.OUT / "led.json").write_text(json.dumps(out, indent=1))
 
     # ---- plots ----
-    fig, axes = plt.subplots(3, 2, figsize=(11, 9.6), facecolor="#fcfcfb")
-    panels = [UG6, UG6_SHORT, UG9, UG9_SHORT, "KEY_RGB_CHAIN_60 (longest key hop: 81 mm, 4 vias)",
+    fig, axes = plt.subplots(4, 2, figsize=(11, 12.8), facecolor="#fcfcfb")
+    panels = [UG6, UG6_SHORT, UG9, UG9_SHORT, k60["built"], k60["short"], BARE,
               "KEY_RGB_CHAIN_30 LED75 on top pads (stub with via)"]
     t0 = 100e-9 + 2 * (T0H + T0L)
     for ax, label in zip(axes.ravel(), panels):

@@ -33,6 +33,7 @@ C138,100nF 16V BST-SW,C_0603_1608Metric,Bottom,yes,,Samsung,CL10B104KB8NNNC,C159
 C139,100nF 10% 16V - soft start,C_0603_1608Metric,Bottom,yes,,Samsung,CL10B104KB8NNNC,C1591,extended,,
 C140,22uF 10V X5R,C_0603_1608Metric,Bottom,yes,,Samsung,CL10A226MP8NUNE,C86295,extended,,"Buck output. Samsung DC-bias data: -60.4% at 4 V, 8.7 uF effective each. No 0603 part does better; C100 supplies the rest of the output capacitance."
 C141,22uF 10V X5R,C_0603_1608Metric,Bottom,yes,,Samsung,CL10A226MP8NUNE,C86295,extended,,"Buck output. Samsung DC-bias data: -60.4% at 4 V, 8.7 uF effective each. No 0603 part does better; C100 supplies the rest of the output capacitance."
+C143,22pF,C_0402_1005Metric,Bottom,yes,,FH (Fenghua),0402CG220J500NT,C1555,basic,,
 C199,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
 C200,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
 C201,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
@@ -273,6 +274,9 @@ R113,10k,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1002TCE,C25744,basic,,
 R114,10k,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1002TCE,C25744,basic,,
 R115,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
 R116,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R117,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R118,100 1%,R_0402_1005Metric,Top,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R119,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
 R120,590k 0.1%,R_0603_1608Metric,Top,yes,,YAGEO,RT0603BRD07590KL,C861479,extended,,
 R121,154k 0.1%,R_KOA_RN73R1E_0402_Reflow_Vertical_B,Bottom,yes,,YAGEO,RT0402BRD07154KL,C852540,extended,,"OVLO divider bottom resistor. 156 k (E192) is not stocked; 154 k moves the OVLO rising threshold from 5.74 V to 5.80 V nominal, further from the 5.5 V USB maximum."
 R122,620k 0.1%,R_0603_1608Metric,Bottom,yes,,YAGEO,RT0603BRD07620KL,C861500,extended,,

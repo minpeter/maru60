@@ -3,7 +3,7 @@
 Derived from [`resume-20261109-relocated-expansion-zero-opens`](../resume-20261109-relocated-expansion-zero-opens/README.md)
 (PCB `cb7b5b29`). This checkpoint fixes what stood between that board and an
 order, and records the analyses run on the result. PCB SHA256:
-`abd978a43c723d4d7358becb6a7f15646fdec8d6cd6b16dbe50d1d8da96b35ee`. The order
+`36700843ef6c11179ef8453efac2747133c23870c03e9ecf52e248d44c42779e`. The order
 files exported from it are in [`pcb/order`](../../order/README.md).
 
 **It is an order candidate for a first prototype, not a qualified design.**
@@ -15,17 +15,18 @@ simulation. Nothing has been measured on hardware.
 | Check | Result | Evidence |
 | --- | --- | --- |
 | KiCad 9.0.2 DRC: opens / warnings / other errors | 0 / 0 / 0 | [`qa/native/RESULT.json`](qa/native/RESULT.json) |
-| ERC, schematic parity, net identity, cold refill | 0, 0, pass, 68 files identical | same |
+| ERC, schematic parity, net identity, cold refill | 0, 0, pass, 72 files identical | same |
 | Material (copper connectivity) graph | recomputed, pass | same |
-| Netlist against the 0/0 prototype | only the intended differences: U2's pins, C142 and R163 removed, R115 and R116 added, values and footprint names | `qa/netlist.xml` |
+| Netlist against the 0/0 prototype | only the intended differences: U2's pins, C142 and R163 removed, R115–R119 and C143 added, five LED DOUT pins on their own `_SRC` nets, values and footprint names | `qa/netlist.xml` |
 | Firmware GPIO and matrix bindings on this netlist | 24 bindings match, negative controls rejected | [`qa/firmware-static/static.json`](qa/firmware-static/static.json) |
 | Top-side parts under a switch housing (default build) | none | `pcb/tools/plan_topside_relocation.py` keep-out |
-| Bottom-case fit, including the new bottom-side parts (`U2`, `C200`, `R115`, `R116`, `LED75`) | 24 pass, USB-C pass, 7U stabilizer pass | [`qa/mechanical-fit/REPORT.md`](qa/mechanical-fit/REPORT.md) |
+| Bottom-case fit, including the new bottom-side parts (`U2`, `C200`, `R115`–`R117`, `R119`, `C143`, `LED75`) | 27 pass, USB-C pass, 7U stabilizer pass | [`qa/mechanical-fit/REPORT.md`](qa/mechanical-fit/REPORT.md) |
 | Pin tables and land patterns against manufacturer data sheets | all pin tables match | [`qa/datasheet-review/`](qa/datasheet-review/) |
-| DRC with JLCPCB's limits as rules, 30 rules | every copper, hole, via and edge minimum met; silkscreen findings and the USB connector's own land pattern remain | [`qa/dfm-jlcpcb/REPORT.md`](qa/dfm-jlcpcb/REPORT.md) |
-| Power tree, ngspice | no change needed | [`qa/power-sim/REPORT.md`](qa/power-sim/REPORT.md) |
+| DRC with JLCPCB's limits as rules, 30 rules | every minimum met; two orientation marks are within 0.15 mm of a pad or hole | [`qa/dfm-jlcpcb/REPORT.md`](qa/dfm-jlcpcb/REPORT.md) |
+| Power tree, ngspice | one change (C143) | [`qa/power-sim/REPORT.md`](qa/power-sim/REPORT.md) |
 | Power-net copper: drop, current, heating | no change needed | [`qa/pdn/REPORT.md`](qa/pdn/REPORT.md) |
-| Signal integrity | two changes (R115, R116) | [`qa/signal-integrity/REPORT.md`](qa/signal-integrity/REPORT.md) |
+| Signal integrity | R115–R119, and the matrix read delay in the firmware | [`qa/signal-integrity/REPORT.md`](qa/signal-integrity/REPORT.md) |
+| Firmware built with the matrix read delay, both layouts | exit 0; delay 120 cycles and LED qualification 0 in the macro dumps; 120 `nop` in the linked delay routine | [`qa/qmk-build/RESULT.json`](qa/qmk-build/RESULT.json) |
 | Gerber and drill files read back with a second parser | 962 plated and 334 non-plated holes and every SMD pad match | [`qa/gerber-verify/result.json`](qa/gerber-verify/result.json) |
 
 ## Changes from the 0/0 prototype
@@ -92,23 +93,33 @@ soldering.
   planes keep 0.25 mm, and the `LED30` and `LED75` window pads beside the Caps
   Lock pin holes are 0.03 mm narrower on the hole side. The rule is now in the
   board's own `maru60.kicad_dru`. Two vias moved away from switch holes.
-- Silkscreen reference text enlarged to 1.0 mm / 0.15 mm where it fitted; the
-  other ten keep 0.8 mm height with a 0.15 mm stroke.
-- `R115` and `R116`, 100 Ω each, in series at the source of the two long
-  underglow data hops (274 mm from `LED68`, 105 mm from `LED71`). The LED data
-  sheet does not give the output strength; with a strong, fast output an
+- Silkscreen: every reference text is 1.0 mm high with a 0.15 mm stroke and
+  at least 0.15 mm from every pad; the outline dashes of the 0402 capacitor
+  and resistor footprints and the test-point circles, which sat 0.10–0.14 mm
+  from their own pads, are removed. Those footprints and the USB connector's
+  (GND lands 0.02 mm shorter beside the locating-peg holes) are now in the
+  project's `Maru60` library; pads and courtyards are otherwise unchanged.
+- `R115`–`R119`, 100 Ω each, in series at the source of the five LED data hops
+  longer than 62 mm: underglow 274 mm (`LED68`) and 102 mm (`LED71`), key
+  79 mm (`LED58`), 72 mm (`LED59`) and 63 mm (`LED48`). The LED data sheet
+  does not give the output strength; with a strong, fast output an
   unterminated hop of this length rings back through the input threshold.
-  With the resistors both hops are clean for every output simulated
-  (10 Ω–1 kΩ, 1–30 ns).
-- 25 of the 39 via holes that sat inside SMD pads moved out of the pad (an
-  open via in a pad draws solder away from the joint); each pad keeps a short
-  track to its via.
+  With the resistors all five are clean for every output simulated
+  (10 Ω–1 kΩ, 1–30 ns). `R118` is on the top side under the spacebar, outside
+  the switch housing and stabilizer zones; the others are on the bottom.
+- `C143`, 22 pF, across the buck's top feedback resistor `R159`: the
+  feed-forward capacitor of TPS6293x data sheet section 10.2.2.10. In the
+  loop model the phase margin goes from 38–44° to 46–51° with the crossover
+  unchanged.
+- 33 of the 39 via holes that sat inside SMD pads are out of the pad (an open
+  via in a pad draws solder away from the joint): 25 moved up to 1.3 mm with
+  their tracks, 8 rerouted to a position up to 3.3 mm away.
 
 ### 7. Placement file fitted to JLCPCB's footprints
 
 `fit_jlcpcb_placement.py` fetches the footprint JLCPCB places from for each
 LCSC part and solves the rotation and centre that put its pads on the board's
-pads. 308 of 309 placements are fitted (the remaining one is a non-polar
+pads. 312 of 313 placements are fitted (the remaining one is a non-polar
 resistor); SOIC, TSSOP and SOT-23 agree with the community correction tables,
 and the USB-C connector needed a 1.3 mm centre shift.
 
@@ -130,37 +141,29 @@ and the USB-C connector needed a 1.3 mm centre shift.
 - **2U Backspace:** not supported; Backspace is split only.
 - **`F1`:** the Bourns land pattern does not fit between its neighbours; the
   standard 1206 land stays. The fuse terminals are fully on the pads.
-- **Matrix read delay (firmware):** QMK reads the columns 247 ns after it
-  drives a row. With all 15 keys of one row held and the row pin at its
-  data-sheet limit, the last column is valid after 228 ns at 27 °C and 250 ns
-  at 0 °C: no margin in that corner (76 ns with a typical pin, 13 ns for one
-  key). `#define GPIO_INPUT_PIN_DELAY 120` in the keyboard's `config.h` gives
-  3 × there. Do not use a value above 135: QMK's `wait_cpuclock()` then waits
-  only 6 cycles. The firmware overlay is hash-pinned to its build evidence
-  and was not changed here; it needs its own rebuild. The board is not
-  affected.
 - **USB delay:** connector to transceiver is 1.03–1.07 ns; USB 2.0 allows a
   device 1 ns. The allowance is a share of the budget through five hubs; every
-  full-speed waveform limit passes with margin. Shortening the pair by 13 mm
-  would meet the number.
-- **Key LED hops of 81 mm and 64 mm** (`KEY_RGB_CHAIN_60`, `_61`, `_52`) have no
-  series resistor. In simulation they keep 0.13 V and 0.19 V above the input
-  threshold with a 20 Ω, 2 ns LED output and ring back under it only with
-  20 Ω and 1 ns, or 10 Ω and 2 ns. The data sheet gives no output figure; an
-  output that strong and fast is unlikely. Look at `LED59` DIN with a scope at
-  bring-up.
-- **Buck phase margin** is 38–44° in the model and **VBUS rings on hot-plug**;
-  both are for the first bring-up, see the power-simulation report.
-- **14 vias remain inside SMD pads** where no free position exists: the GND
-  pads of `R140`–`R143`, `R145`, `R159`, `Y1` (two), `U12`, `U6`, `U7`, `C122`
-  and the DIN pads of `LED70` and `LED71`. Expect less solder on those joints;
-  inspect them on the first boards, or order the vias filled and capped if
-  JLCPCB offers it for this stack.
-- Against JLCPCB's limits: the USB connector's own GND pads are 0.194 mm from
-  its locating-peg holes (limit 0.20 mm; it is the manufacturer's land
-  pattern), 10 reference texts are 0.8 mm high (1.0 mm asked), and the outline
-  dashes of the stock 0402 footprint are 0.10 mm from their pads (0.15 mm
-  asked). The JLCPCB-rule report lists them.
+  full-speed waveform limit passes with margin. Meeting the number needs 13 mm
+  less route. The pair is a 156 mm staircase between the switch holes (the
+  shortest path with no obstacles would be 132 mm) and the excess is spread
+  over the whole run, so it means laying the pair again from the connector to
+  the MCU. Left as a recorded deviation.
+- **LED hops of 62 mm and less** have no series resistor. The longest keeps
+  0.40 V above the input threshold with a 20 Ω, 2 ns LED output and rings
+  back under it only with 20 Ω and 1 ns, or 10 Ω and 2 ns. Look at `LED74`
+  DIN with a scope at bring-up.
+- **VBUS rings on hot-plug** (about 1.5 × the source for microseconds, into a
+  50 V capacitor and a 28 V eFuse input): harmless from a 5 V port. There is
+  no TVS on VBUS. See the power-simulation report.
+- **Six vias remain inside SMD pads**: the GND pads of `R140`, `R143`, `Y1.2`
+  and `U12`, the DIN pad of `LED71` (no free position with a route within
+  6.5 mm) and the feedback pad of `R159` (kept on purpose: moving it adds
+  2.4 mm to the buck's feedback node beside the switch node). Expect less
+  solder on those joints; inspect them on the first boards.
+- **Two orientation marks** are closer than 0.15 mm to a pad or hole: the
+  pin-1 dot of `LED30`'s window site (0.088 mm from a switch pin hole) and the
+  pin-1 triangle of `U11` (0.115 mm from a pad of `R130`). Kept, because they
+  show orientation.
 - Hardware qualification, license and USB ID are as in [`pcb/CURRENT.md`](../../CURRENT.md).
 
 ## Reproduce
