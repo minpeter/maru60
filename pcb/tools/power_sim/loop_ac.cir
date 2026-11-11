@@ -1,0 +1,47 @@
+Maru60 power tree (e) buck loop gain, averaged model, AC analysis
+* The loop is opened for AC at the top of the feedback divider with a
+* voltage source (Middlebrook voltage injection; the divider is 50 kOhm
+* against an output impedance below 1 Ohm, so T = -V(v4)/V(fbt)).
+* Load: resistor rload on +4V_REG. Input: ideal vsrc behind the 0.224 Ohm
+* track and the input capacitors.
+.param rload=40
+.include models.lib
+.include params.inc
+Vin vp 0 {vsrc}
+Rtr1 vp vp1 {rtrin}
+Ltr1 vp1 vbk 60n
+Ccin vbk cine {cin}
+Rcin cine 0 5m
+XU18 vbk sw fb ss v4 0 tps62932_avg lnom={l2} kea={kea} vref={vref} iss={iss}
+L2 sw l2x {l2}
+Rl2 l2x v4 {dcr}
+Vssf ss 0 2.5
+Vinj fbt v4 dc 0 ac 1
+R159 fbt fb 40.0k
+R160 fb 0 10.0k
+Cfb fb 0 5p
+Ccloc v4 cloce {cloc}
+Rcloc cloce 0 6m
+Rtr2 v4 v4x 43m
+Ltr2 v4x v4b 20n
+Cc100 v4b c100e {c100}
+Rc100 c100e 0 3m
+Rtr3 v4b v4y 48m
+Ltr3 v4y v4c 15n
+Cc120 v4c c120e {c120}
+Rc120 c120e 0 10m
+Rload v4b 0 {rload}
+.nodeset v(v4)=4 v(fb)=0.8 v(xu18.q)=1 v(xu18.xuv.q)=1 v(xu18.comp)=3
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+op
+print v(v4) v(xu18.comp) v(xu18.d) v(xu18.en)
+ac dec 100 10 1meg
+let tr = real(-v(v4)/v(fbt))
+let ti = imag(-v(v4)/v(fbt))
+wrdata out.txt tr ti
+quit
+.endc
+.end

@@ -1,0 +1,134 @@
+{
+ "plugin_5.0V": {
+  "inrush_peak_a": 3.3839,
+  "t_vprot_4v_ms": 23.82,
+  "t_4v_rail_3p9_ms": 36.0,
+  "t_3v3_3p135_ms": 33.26,
+  "v4_max": 4.0005,
+  "v33_max": 3.332,
+  "v33_largest_dip_after_2v_mv": 32.07,
+  "v33_slew_at_1v8_v_per_ms": 0.272
+ },
+ "plugin_5.5V": {
+  "inrush_peak_a": 3.7171,
+  "t_vprot_4v_ms": 23.82,
+  "t_4v_rail_3p9_ms": 36.0,
+  "t_3v3_3p135_ms": 33.25,
+  "v4_max": 4.0005,
+  "v33_max": 3.3305,
+  "v33_largest_dip_after_2v_mv": 30.56,
+  "v33_slew_at_1v8_v_per_ms": 0.272
+ },
+ "steady_input_current_ma": {
+  "idle 20 mA on 3V3, LEDs off": 18.3,
+  "typing 60 mA on 3V3, LEDs off": 54.0,
+  "60 mA on 3V3, LEDs at the firmware cap (38 mA static + 25 mA)": 111.1,
+  "120 mA on 3V3, LED rail at the 234 mA limiter maximum": 295.1
+ },
+ "loadstep_avg": {
+  "3v3_step_20_to_120mA:3v3_droop_mv": 15.7,
+  "3v3_step_20_to_120mA:4v_reg_droop_mv": 12.9,
+  "3v3_step_20_to_120mA:vprot_droop_mv": 51.3,
+  "led_rail_enable:3v3_droop_mv": 0.0,
+  "led_rail_enable:4v_reg_droop_mv": 3.3,
+  "led_rail_enable:vprot_droop_mv": 25.1,
+  "led_step_0_to_150mA:3v3_droop_mv": 0.0,
+  "led_step_0_to_150mA:4v_reg_droop_mv": 16.2,
+  "led_step_0_to_150mA:vprot_droop_mv": 72.9,
+  "led_step_0_to_150mA:4v_led_droop_mv": 42.2,
+  "led_enable_inrush_peak_ma": 72.1
+ },
+ "loadstep_sw": {
+  "3v3_step_20_to_120mA:3v3_droop_mv": 15.5,
+  "3v3_step_20_to_120mA:4v_reg_droop_mv": 12.6,
+  "3v3_step_20_to_120mA:vprot_droop_mv": 78.1,
+  "led_rail_enable:3v3_droop_mv": 0.0,
+  "led_rail_enable:4v_reg_droop_mv": 11.7,
+  "led_rail_enable:vprot_droop_mv": 66.1,
+  "led_step_0_to_150mA:3v3_droop_mv": 0.0,
+  "led_step_0_to_150mA:4v_reg_droop_mv": 12.3,
+  "led_step_0_to_150mA:vprot_droop_mv": 98.2,
+  "led_step_0_to_150mA:4v_led_droop_mv": 37.9,
+  "led_enable_inrush_peak_ma": 98.0
+ },
+ "buck_loop": {
+  "0.1 A, nominal capacitors, kea 1": {
+   "crossover_khz": 35.8,
+   "phase_margin_deg": 39.9,
+   "gain_margin_db": 31.5
+  },
+  "0.3 A, nominal capacitors, kea 1": {
+   "crossover_khz": 35.7,
+   "phase_margin_deg": 40.1,
+   "gain_margin_db": 31.6
+  },
+  "0.3 A, capacitors at -20 % / -10 %, kea 1": {
+   "crossover_khz": 40.1,
+   "phase_margin_deg": 37.9,
+   "gain_margin_db": 31.7
+  },
+  "0.3 A, nominal capacitors, kea 0.68": {
+   "crossover_khz": 26.9,
+   "phase_margin_deg": 44.1,
+   "gain_margin_db": 34.9
+  },
+  "0.02 A, nominal capacitors, kea 1": {
+   "crossover_khz": 35.6,
+   "phase_margin_deg": 40.2,
+   "gain_margin_db": 31.5
+  }
+ },
+ "brownout": {
+  "at_4p2v_source: 3v3_min": 3.16,
+  "at_4p2v_source: 4v_reg_min": 3.223,
+  "at_3p9v_source: 3v3_min": 2.981,
+  "at_3p9v_source: 4v_reg_min": 3.041,
+  "at_3p3v_source: 3v3_min": 0.85,
+  "efuse_enable_transitions": 5,
+  "3v3_after_recovery": 3.3
+ },
+ "fault_led_rail": {
+  "short applied to the running LED rail": {
+   "short_current_peak_a": 39.992,
+   "short_current_settled_a": 0.201,
+   "4v_reg_min": 3.488,
+   "3v3_min": 3.3,
+   "input_current_peak_a": 0.39
+  },
+  "LED rail enabled into a short": {
+   "short_current_peak_a": 0.216,
+   "short_current_settled_a": 0.201,
+   "4v_reg_min": 3.977,
+   "3v3_min": 3.3,
+   "input_current_peak_a": 0.233
+  }
+ },
+ "fault_3v3_short": {
+  "4v_reg_min": 3.991,
+  "input_current_peak_a": 0.125,
+  "input_current_during_short_a": 0.064,
+  "3v3_after_release": 3.3
+ },
+ "wrong_source": {
+  "6 V source": {
+   "vbus_max": 9.0,
+   "vprot_max": -0.0,
+   "4v_reg_max": -0.0,
+   "3v3_max": -0.0,
+   "efuse_ever_enabled": true
+  },
+  "20 V source": {
+   "vbus_max": 31.34,
+   "vprot_max": -0.0,
+   "4v_reg_max": -0.0,
+   "3v3_max": -0.0,
+   "efuse_ever_enabled": true
+  },
+  "6 V surge for 10 ms while running": {
+   "vprot_max": 5.776,
+   "4v_reg_max": 4.021,
+   "3v3_min_during_and_after": 1.5,
+   "3v3_at_end": 3.3
+  }
+ }
+}

@@ -1,0 +1,34 @@
+Maru60 power tree (c) wrong input voltage, averaged buck model
+* Source: 0 -> va at 1 ms (1 us edge), va -> vb at tb, back to va at tc
+* (10 us edges).
+*   va=6  vb=6            : plugged into a 6 V source
+*   va=20 vb=20 c125=0.5u : plugged into a 20 V source (C125 at 20 V bias
+*                           [ASSUMED -50 %])
+*   va=5  vb=6 tb=60m tc=70m : 6 V surge while running
+.param va=5
+.param vb=6
+.param tb=60m
+.param tc=70m
+.include models.lib
+.include params.inc
+.param cssx={css}
+.param kdvdtx={kdvdt}
+.include board.inc
+Vsrc src 0 pwl(0 0 1m 0 1.001m {va} {tb} {va} {tb+10u} {vb} {tc} {vb} {tc+10u} {va})
+XU18 vbk sw fb ss v4 0 tps62932_avg lnom={l2} kea={kea} vref={vref} iss={iss}
+Vlen len 0 0
+Vi33 i33cmd 0 {i33a}
+Vled ledcmd 0 0
+Vsh33 sh33 0 0
+Vshl shled 0 0
+.options method=gear reltol=1e-3 abstol=1e-9 vntol=1e-6 chgtol=1e-15 itl4=200
+.ic v(v4)=0 v(v33)=0 v(vprot)=0
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 2u 130m 0 20u uic
+wrdata out.txt v(src) v(vbus) v(vfused) v(vprot) v(vbk) v(v4) v(v4b) v(v4c) v(v33) v(v33m) v(vled) i(Vsrc) i(L2) v(uvlo) v(ovlo) v(xu18.comp) v(xu8.en) v(dvdt) v(ss)
+quit
+.endc
+.end

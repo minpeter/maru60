@@ -1,0 +1,19 @@
+Maru60 power tree (b) load steps, averaged buck model (no PFM ripple)
+.include models.lib
+.include params.inc
+.param cssx=10n
+.param kdvdtx=50
+.include board.inc
+.include loadstep.inc
+XU18 vbk sw fb ss v4 0 tps62932_avg lnom={l2} kea={kea} vref={vref} iss={iss}
+.options method=gear reltol=1e-3 abstol=1e-9 vntol=1e-6 chgtol=1e-15 itl4=200
+.ic v(v4)=0 v(v33)=0 v(vprot)=0
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 0.2u 21m 0 2u uic
+wrdata out.txt v(src) v(vbus) v(vfused) v(vprot) v(vbk) v(v4) v(v4b) v(v4c) v(v33) v(v33m) v(vled) i(Vsrc) i(L2) v(uvlo) v(ovlo) v(xu18.comp) v(xu8.en) v(dvdt) v(ss)
+quit
+.endc
+.end
