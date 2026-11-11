@@ -1,0 +1,170 @@
+{
+  "outline": "plate_gas (identical vertices): the outline the Maru60 top and bottom cases are verified around",
+  "bounds_mm": [
+    -0.0,
+    1.018,
+    285.9,
+    106.467
+  ],
+  "cutouts": 62,
+  "hhkb_keys": 60,
+  "switch_cutout_mm": 14.0,
+  "spare_cutouts_under_blockers": [
+    [
+      7.35,
+      8.67,
+      21.35,
+      22.67
+    ],
+    [
+      264.52,
+      8.67,
+      278.52,
+      22.67
+    ]
+  ],
+  "shared_wider_cutouts": [
+    {
+      "key": [
+        16.74,
+        53.77,
+        1.75
+      ],
+      "x_from_centre": [
+        -11.77,
+        7.0
+      ]
+    }
+  ],
+  "stabilizer_housings": [
+    {
+      "key_u": 2.25,
+      "x": 252.456,
+      "y_span_from_centre": [
+        -8.0,
+        5.5
+      ]
+    },
+    {
+      "key_u": 2.25,
+      "x": 276.332,
+      "y_span_from_centre": [
+        -8.0,
+        5.5
+      ]
+    },
+    {
+      "key_u": 2.25,
+      "x": 9.569,
+      "y_span_from_centre": [
+        -8.0,
+        5.5
+      ]
+    },
+    {
+      "key_u": 2.25,
+      "x": 33.445,
+      "y_span_from_centre": [
+        -8.0,
+        5.5
+      ]
+    },
+    {
+      "key_u": 7.0,
+      "x": 85.8,
+      "y_span_from_centre": [
+        -8.91,
+        10.0
+      ]
+    },
+    {
+      "key_u": 7.0,
+      "x": 200.1,
+      "y_span_from_centre": [
+        -8.91,
+        10.0
+      ]
+    }
+  ],
+  "router_bit_mm": 1.0,
+  "max_uncut_void_mm2": 0.0052,
+  "copper_pullback_mm": 0.5,
+  "plate_area_mm2": 15080.2,
+  "variant": "pcb-mount-7u",
+  "source_plate": "models/rule60-v3-hhkb-gas-plate.dxf (unchanged)",
+  "npth_margin_mm": 0.4,
+  "npth_clearances": [
+    {
+      "plate_mm": [
+        85.8,
+        8.684
+      ],
+      "diameter_mm": 3.048,
+      "distance_to_cutout_boundary_mm": 1.9239,
+      "clearance_mm": 0.3999,
+      "status": "pass"
+    },
+    {
+      "plate_mm": [
+        85.8,
+        23.924
+      ],
+      "diameter_mm": 3.9878,
+      "distance_to_cutout_boundary_mm": 2.3937,
+      "clearance_mm": 0.3998,
+      "status": "pass"
+    },
+    {
+      "plate_mm": [
+        200.1,
+        8.684
+      ],
+      "diameter_mm": 3.048,
+      "distance_to_cutout_boundary_mm": 1.9239,
+      "clearance_mm": 0.3999,
+      "status": "pass"
+    },
+    {
+      "plate_mm": [
+        200.1,
+        23.924
+      ],
+      "diameter_mm": 3.9878,
+      "distance_to_cutout_boundary_mm": 2.3937,
+      "clearance_mm": 0.3998,
+      "status": "pass"
+    }
+  ],
+  "seven_u_cutout": {
+    "index": 3,
+    "stock_bbox_plate_mm": [
+      81.5551,
+      8.669,
+      204.5051,
+      23.6395
+    ],
+    "new_bbox_plate_mm": [
+      81.5551,
+      6.76,
+      204.5051,
+      26.3179
+    ],
+    "stock_area_mm2": 803.059,
+    "new_area_mm2": 849.587,
+    "area_delta_mm2": 46.528,
+    "bbox_delta_mm": [
+      0.0,
+      -1.909,
+      0.0,
+      2.6784
+    ]
+  },
+  "unchanged_cutouts": 61,
+  "changed_cutouts": [
+    3
+  ],
+  "files": [
+    "models/rule60-v3-hhkb-gas-plate-pcb-mount.dxf",
+    "models/rule60-v3-hhkb-gas-plate-pcb-mount-fr4-gerber.zip: rule60-v3-hhkb-gas-plate-pcb-mount.GBL, rule60-v3-hhkb-gas-plate-pcb-mount.GBS, rule60-v3-hhkb-gas-plate-pcb-mount.GKO, rule60-v3-hhkb-gas-plate-pcb-mount.GTL, rule60-v3-hhkb-gas-plate-pcb-mount.GTS"
+  ]
+}

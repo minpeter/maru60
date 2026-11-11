@@ -75,19 +75,37 @@ gates have dedicated evidence:
   `geos_witness_zero_opens.py`; `tools/check_pcb_native.py` now asserts
   `--expected-warnings` (default 0) and records its command in `RESULT.json`.
 - [Strict-promotion decision](experiments/resume-20261109-relocated-expansion-zero-opens/qa/strict-promotion/REPORT.md):
-  **CONDITIONAL**. The 0.551 mm² outside-window area is 92.0% designed 0.25 mm
-  fillet cusp, 7.7% single-antipad crescent and 0.23% Clipper2 keyhole-chord
-  artifact; it is a tolerance-policy artifact, not a physical defect. Promotion
-  needs a documented window-policy amendment (or cusp waiver) and resolution of
-  the keyhole-chord slivers.
-- [Mechanical fit](experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/REPORT.md):
-  relocated block 18 pass / 1 tight (J3 0.33 mm); the stock 12.8 mm USB-C notch
-  fails a 12.35 mm plug while the printed 14.75 mm notch passes; the 7U
-  PCB-mount stabilizer fails the current plate cutout (plate-mount is unaffected).
+  **PROMOTE_UNDER_AMENDED_POLICY**. The amended pair-capsule window covers the
+  26 designed 0.25 mm fillet cusps (0.507 mm²); the residual is 9 single-antipad
+  crescents (0.0426 mm²) + 1,802 Clipper2 keyhole slivers (0.00128 mm²) =
+  0.0439 mm². The strict zero-outside-window rule still needs the crescents and
+  keyhole slivers resolved; the cusp is a designed DFM feature, not a defect.
+- [Mechanical fit](experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/REPORT.md)
+  and [FIXES.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/FIXES.md):
+  after the variant fixes, the relocated block is 19 pass / 0 tight (J3 0.85 mm),
+  the J1-centred 14.75 mm USB-C notch passes (1.20 mm), and the 7U PCB-mount
+  stabilizer passes the new plate variant (0.40 mm). New files:
+  `models/rule60-v3-hhkb-gas-plate-pcb-mount.dxf`,
+  `models/maru60-hhkb-topcase-right-usb-14p75-j1centred.3mf`,
+  `models/maru60-hhkb-bottomcase-j3-relief-{left,right}.3mf`. The original
+  plate-mount DXF and stock top case are unchanged.
 - [Power review](experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-review/REPORT.md):
   5.8 µF nominal / 5.336 µF effective at 5 V vs TI 10 µF typical; inrush
   1.16 mA; **LED full-white 1.14 A vs 173.7–233.9 mA limiter — full white is not
   supported** and needs a firmware brightness cap or a different limiter/source.
+- [Power transient simulation](experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-sim/REPORT.md):
+  eFuse 25 ms ramp / 1.07 mA inrush; 4 V startup monotonic; UVLO/OVLO
+  3.987/3.621 V and 5.738/5.212 V. **The 0.76 mA/ch LED cap is at the limiter
+  edge (0.22% margin) and latches if the load is present at enable; sequence
+  the LED load after the rail is up, or cap at ≤0.70 mA/ch.**
+- [Thermal simulation](experiments/resume-20261109-relocated-expansion-zero-opens/qa/thermal-sim/REPORT.md):
+  U2 is the thermal limit (needs θJA ≤78.4 °C/W at 5 V input / 85 °C; the
+  as-built screening value is 120 °C/W because the EP has no thermal via);
+  U18 and U7 are not the limit; LED full-white is 4.56 W.
+- [USB SI simulation](experiments/resume-20261109-relocated-expansion-zero-opens/qa/usb-si-sim/REPORT.md):
+  the 167 mm D+/D- route has 5.28 mm intra-pair skew; the 0.25 mm pair is
+  **112.8 Ω** differential, not 90 Ω (about 0.36 mm is needed); the HS eye is
+  299 mV / 0.53 UI, at the 0.3 V template edge.
 - [Fabrication draft](fabrication/README.md): BOM 382 rows (374 missing MPN),
   CPL 370 SMD, Gerbers/drill/IPC-D-356/STEP, provenance and 23 verification
   checks. Not an assembly approval.

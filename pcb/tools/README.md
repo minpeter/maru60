@@ -39,8 +39,14 @@ for the full sequence and expected numbers.
 | `check_mechanical_fit.py` | Ray-casts the bottom-case 3MF for the relocated block, USB-C notch and 7U stabilizer. | `qa/mechanical-fit/{REPORT.md,fit.json}` |
 | `analyze_power.py` | Input capacitance, inrush, UVLO/OVLO, soft-start, LED limiter and sequencing arithmetic. | `qa/power-review/{REPORT.md,power-review.json}` |
 | `export_fabrication.py` | Parses the board, writes BOM/CPL, runs the KiCad CLI for Gerbers/drill/IPC-D-356/STEP, and records provenance. | `../fabrication/` |
+| `build_plate_pcb_mount.py` | Generates the PCB-mount 7U plate variant (enlarged cutout) from the INKC outline. | `models/rule60-v3-hhkb-gas-plate-pcb-mount.dxf` + FR4 zip |
+| `build_topcase_usb14p75.py` | Generates the right top-case half with the 14.75 mm USB-C notch centred on J1. | `models/maru60-hhkb-topcase-right-usb-14p75-j1centred.3mf` |
+| `build_bottomcase_j3_relief.py` | Generates the bottom-case halves with the local J3 relief pocket. | `models/maru60-hhkb-bottomcase-j3-relief-{left,right}.3mf` |
+| `simulate_power.py` | Deterministic transient model of the eFuse, buck, UVLO/OVLO, LED rail and sequencing. | `qa/power-sim/{REPORT.md,power-sim.json,*.png}` |
+| `simulate_thermal.py` | Lumped thermal network and 2D board spreading for U2/U18/U7/LEDs. | `qa/thermal-sim/{REPORT.md,thermal-sim.json,*.png}` |
+| `simulate_usb_si.py` | Extracts the D+/D- route, solves the microstrip impedance and runs a PRBS-7 eye at the MCU. | `qa/usb-si-sim/{REPORT.md,usb-si-sim.json,*.png}` |
 
-All four run with the repository venv (`.venv/bin/python`), except
+All run with the repository venv (`.venv/bin/python`), except
 `export_fabrication.py`, which also calls `tools/run_kicad9.sh`. They are
 analysis/export tools, not qualification: see each report's limitations.
 

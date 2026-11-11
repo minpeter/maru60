@@ -1,0 +1,45 @@
+{
+  "variant": "j3-relief",
+  "board": "ph60-rev3",
+  "battery_bay": true,
+  "j3_plate_bbox_mm": [
+    37.8025,
+    22.7877,
+    51.6025,
+    29.3478
+  ],
+  "pocket_plate_bbox_mm": [
+    37.3025,
+    22.2877,
+    52.1025,
+    29.8478
+  ],
+  "pocket_world_bbox_mm": [
+    90.8475,
+    107.3077,
+    105.6475,
+    114.8678
+  ],
+  "pocket_margin_mm": 0.5,
+  "pocket_depth_mm": 0.5,
+  "pocket_corner_r_mm": 0.5,
+  "floor_before_z_p_mm": 18.2,
+  "floor_after_z_p_mm": 18.7,
+  "tray_bottom_z_p_mm": 20.01,
+  "remaining_floor_slab_mm": 1.31,
+  "j3_body_height_mm": 2.95,
+  "board_bottom_z_p_mm": 14.1,
+  "gasket_travel_mm": 0.8,
+  "free_height_before_mm": 3.3,
+  "free_height_after_mm": 3.8,
+  "clearance_before_mm": 0.35,
+  "clearance_after_mm": 0.85,
+  "expected_mesh_surface_z_p_mm": 18.68,
+  "expected_mesh_clearance_mm": 0.83,
+  "files": [
+    "models/maru60-hhkb-bottomcase-j3-relief-left.3mf",
+    "models/maru60-hhkb-bottomcase-j3-relief-right.3mf"
+  ],
+  "world_stl_dir": "build/j3-relief",
+  "note": "The pocket is in the left half only; the right half is unchanged. The 3MFs are in the X2D print frame."
+}

@@ -1,0 +1,26 @@
+{
+  "variant": "usb-14p75-j1centred",
+  "source_builder": "build_topcase_draft.py",
+  "board": "ph60-rev3",
+  "j1_plate_x_mm": 18.4525,
+  "notch_width_mm": 14.75,
+  "notch_x_range_plate_mm": [
+    11.0775,
+    25.8275
+  ],
+  "plug_12p35_x_range_plate_mm": [
+    12.2775,
+    24.6275
+  ],
+  "plug_min_side_clearance_mm": 1.2,
+  "stock_notch_width_mm": 12.8,
+  "stock_notch_centre_plate_x_mm": 19.35,
+  "stock_plug_min_side_clearance_mm": -0.6725,
+  "default_printed_notch_centre_plate_x_mm": 18.65,
+  "default_printed_plug_min_side_clearance_mm": 1.0025,
+  "files": [
+    "models/maru60-hhkb-topcase-right-usb-14p75-j1centred.3mf"
+  ],
+  "build_dir": "build/topcase-usb14p75",
+  "note": "The notch is cut in the right half; the left half is unchanged. The 3MF is the X2D print-frame right half."
+}

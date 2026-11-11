@@ -47,8 +47,8 @@ CHECKPOINT = ROOT / "pcb/experiments/resume-20261109-relocated-expansion-zero-op
 DEFAULT_BOARD = CHECKPOINT / "pcb/maru60.kicad_pcb"
 DEFAULT_OUT = CHECKPOINT / "qa/mechanical-fit"
 MODELS = ROOT / "models"
-BOTTOMCASE_DRAFT = ROOT / "bottomcase-draft"
-PLATE_DXF = MODELS / "rule60-v3-hhkb-gas-plate.dxf"
+BOTTOMCASE_DRAFT = ROOT / "build/j3-relief"
+PLATE_DXF = MODELS / "rule60-v3-hhkb-gas-plate-pcb-mount.dxf"
 OUTLINES = ROOT / "spec/rule60-v3-outlines.json"
 BOARDS = ROOT / "spec/boards.json"
 
@@ -218,7 +218,9 @@ def npth_pads(blk: str) -> list[dict[str, Any]]:
 
 
 # --- 3MF loading and ray casting ----------------------------------------------
-def load_case_meshes() -> list[dict[str, Any]]:
+def load_case_meshes(prefix: str = "maru60-hhkb-bottomcase",
+                     world_dir: Path = BOTTOMCASE_DRAFT,
+                     world_prefix: str = "bottom") -> list[dict[str, Any]]:
     """Load the two bottom-case 3MF halves and recover their print-frame offsets.
 
     The 3MF is in the print frame (desk face on the bed, centred on the 256 mm
@@ -231,9 +233,9 @@ def load_case_meshes() -> list[dict[str, Any]]:
     tp = bc.TO_PRINT[:3, 3]
     meshes: list[dict[str, Any]] = []
     for half, key in (("left", "BottomLeft"), ("right", "BottomRight")):
-        scene = trimesh.load(MODELS / f"maru60-hhkb-bottomcase-{half}.3mf")
+        scene = trimesh.load(MODELS / f"{prefix}-{half}.3mf")
         mesh = scene.geometry[key]
-        world = trimesh.load_mesh(BOTTOMCASE_DRAFT / f"bottom-{half}-world.stl")
+        world = trimesh.load_mesh(world_dir / f"{world_prefix}-{half}-world.stl")
         pcal = world.vertices @ R.T + tp
         tbed = mesh.bounds[0] - pcal.min(axis=0)
         # Verify the recovered offset maps the 3MF back onto the world STL bounds.
@@ -390,7 +392,8 @@ def check_relocated(footprints: list[dict[str, Any]], meshes: list[dict[str, Any
 
 
 # --- check 2: USB-C J1 ---------------------------------------------------------
-def check_usb(footprints: list[dict[str, Any]], meshes: list[dict[str, Any]]) -> dict[str, Any]:
+def check_usb(footprints: list[dict[str, Any]], meshes: list[dict[str, Any]],
+              selected: str = "stock") -> dict[str, Any]:
     by_ref = {f["ref"]: f for f in footprints}
     j1 = by_ref.get("J1")
     if j1 is None:
@@ -423,6 +426,8 @@ def check_usb(footprints: list[dict[str, Any]], meshes: list[dict[str, Any]]) ->
     stock = notch(STOCK_NOTCH_WIDTH, STOCK_NOTCH_CENTRE_PLATE_X)
     printed = notch(PRINTED_NOTCH_WIDTH, spec.usb_notch("ph60-rev3")[0])
     centred_on_j1 = notch(STOCK_NOTCH_WIDTH, jpx)
+    j1_centred_14p75 = notch(PRINTED_NOTCH_WIDTH, jpx)
+    selected_record = {"stock": stock, "printed": printed, "j1centred": j1_centred_14p75}[selected]
 
     # Bottom-case USB passage: body box vs the case mesh.
     wx0, wy0 = plate_to_world(body_left, body_front)
@@ -468,9 +473,12 @@ def check_usb(footprints: list[dict[str, Any]], meshes: list[dict[str, Any]]) ->
             "body_height_mm": J1_BODY_HEIGHT,
             "body_height_source": "bottom-case verification: 18.20 - 0.84 - 14.10; GCT USB4105 nominal",
         },
+        "selected_notch": selected,
+        "selected_notch_record": selected_record,
         "stock_notch_12p8": stock,
         "printed_notch_14p75": printed,
         "stock_notch_12p8_centred_on_j1": centred_on_j1,
+        "j1_centred_14p75": j1_centred_14p75,
         "bottom_case_passage": {
             "body_box_intersection_volume_mm3": round(inter_vol, 6) if inter_vol is not None else None,
             "body_bottom_to_cavity_floor_mm": round(body_to_floor, 4),
@@ -484,9 +492,9 @@ def check_usb(footprints: list[dict[str, Any]], meshes: list[dict[str, Any]]) ->
             "status": "pass" if vertical_above_body >= 0 else "fail",
             "note": "The J1 body is below the board; the notch closed end is above the board top. The plug overmold height above the board is not in CAD.",
         },
-        "status": ("fail" if "fail" in (stock["status"], printed["status"], body_status) else
-                   "tight" if "tight" in (stock["status"], printed["status"], body_status) else
-                   "unknown" if "unknown" in (stock["status"], printed["status"], body_status) else "pass"),
+        "status": ("fail" if "fail" in (selected_record["status"], body_status) else
+                   "tight" if "tight" in (selected_record["status"], body_status) else
+                   "unknown" if "unknown" in (selected_record["status"], body_status) else "pass"),
         "missing_inputs": [
             "USB-C plug overmold height above the board (the 12.8 mm notch depth is 8.7 mm from the lip; the J1 body is below the board)",
             "actual plug overmold width and corner radius (12.35 mm is the spec maximum, not a measured plug)",
@@ -495,10 +503,10 @@ def check_usb(footprints: list[dict[str, Any]], meshes: list[dict[str, Any]]) ->
 
 
 # --- check 3: 7U stabilizer NPTH vs plate cutout ------------------------------
-def load_plate_cutouts() -> list[dict[str, Any]]:
+def load_plate_cutouts(plate_dxf: Path = PLATE_DXF) -> list[dict[str, Any]]:
     import ezdxf
 
-    doc = ezdxf.readfile(PLATE_DXF)
+    doc = ezdxf.readfile(plate_dxf)
     out: list[dict[str, Any]] = []
     for e in doc.modelspace():
         if e.dxftype() != "POLYLINE":
@@ -523,7 +531,8 @@ def load_plate_cutouts() -> list[dict[str, Any]]:
     return out
 
 
-def check_stabilizer(footprints: list[dict[str, Any]]) -> dict[str, Any]:
+def check_stabilizer(footprints: list[dict[str, Any]], plate_dxf: Path = PLATE_DXF,
+                     min_clearance: float = 0.50) -> dict[str, Any]:
     fp = next((f for f in footprints if "7U" in f["name"]), None)
     if fp is None:
         return {"status": "unknown", "missing": "7U footprint not found"}
@@ -531,7 +540,7 @@ def check_stabilizer(footprints: list[dict[str, Any]]) -> dict[str, Any]:
     if not pads:
         return {"status": "unknown", "missing": "no NPTH pads in 7U footprint"}
 
-    cutouts = load_plate_cutouts()
+    cutouts = load_plate_cutouts(plate_dxf)
     switch_plate = board_to_plate(fp["x"], fp["y"])
     candidates = [c for c in cutouts
                   if c["bbox"][0] < switch_plate[0] < c["bbox"][2]
@@ -577,7 +586,7 @@ def check_stabilizer(footprints: list[dict[str, Any]]) -> dict[str, Any]:
             "diameter_mm": pad["diameter"],
             "distance_to_cutout_boundary_mm": round(dist, 4),
             "clearance_mm": round(clearance, 4),
-            "status": "pass" if clearance >= 0.50 else ("tight" if clearance >= 0 else "fail"),
+            "status": "pass" if clearance >= min_clearance else ("tight" if clearance >= 0 else "fail"),
         })
 
     inserts = [r for r in records if r["role"] == "stabilizer_insert"]
@@ -589,7 +598,7 @@ def check_stabilizer(footprints: list[dict[str, Any]]) -> dict[str, Any]:
         status = "unknown"
     elif worst_insert["clearance_mm"] < 0:
         status = "fail"
-    elif worst_insert["clearance_mm"] < 0.50:
+    elif worst_insert["clearance_mm"] < min_clearance:
         status = "tight"
     else:
         status = "pass"
@@ -597,11 +606,12 @@ def check_stabilizer(footprints: list[dict[str, Any]]) -> dict[str, Any]:
         "footprint": fp["name"],
         "position_board_mm": [fp["x"], fp["y"], fp["rot"]],
         "switch_plate_mm": [round(switch_plate[0], 4), round(switch_plate[1], 4)],
+        "min_clearance_mm": min_clearance,
         "plate_cutout": {
             "handle": cut["handle"],
             "bbox_plate_mm": [round(v, 4) for v in cut["bbox"]],
             "vertices": cut["n"],
-            "source": str(PLATE_DXF.relative_to(ROOT)),
+            "source": str(plate_dxf.relative_to(ROOT)),
         },
         "plate_outline_check": outline_check,
         "npth": records,
@@ -652,11 +662,36 @@ def write_report(path: Path, data: dict[str, Any]) -> None:
     lines.append("- The battery-bay bottom-case 3MF is used. The relocated block is in front of the battery bay, so the no-battery-bay variant has the same cavity floor under it.\n")
     lines.append("## Summary\n")
     counts = rel["counts"]
+    min_part = next((r for r in rel["parts"] if r["ref"] == rel["minimum_clearance_ref"]), None)
+    min_status = min_part["status"] if min_part else "unknown"
     lines.append(f"- Relocated B.Cu block: **{counts['pass']} pass, {counts['tight']} tight, {counts['fail']} fail**; "
-                 f"minimum **{fmt(rel['minimum_clearance_mm'])} mm** at **{rel['minimum_clearance_ref']}** (tight).")
-    lines.append(f"- USB-C J1: **{usb['status']}** for the stock 12.8 mm notch; the printed 14.75 mm notch passes.")
-    lines.append(f"- 7U stabilizer: **{stab['status']}** as drawn for a PCB-mount stabilizer; N/A for plate-mount.")
+                 f"minimum **{fmt(rel['minimum_clearance_mm'])} mm** at **{rel['minimum_clearance_ref']}** ({min_status}).")
+    lines.append(f"- USB-C J1: **{usb['status']}** for the selected `{usb['selected_notch']}` notch; "
+                 f"stock 12.8 mm {usb['stock_notch_12p8']['status']}, printed 14.75 mm {usb['printed_notch_14p75']['status']}, "
+                 f"J1-centred 14.75 mm {usb['j1_centred_14p75']['status']}.")
+    lines.append(f"- 7U stabilizer: **{stab['status']}** for the PCB-mount NPTH pattern "
+                 f"(worst insert {fmt(stab['worst_stabilizer_insert']['clearance_mm'])} mm; "
+                 f"threshold {fmt(stab['min_clearance_mm'])} mm).")
     lines.append("")
+    if data.get("comparison"):
+        c = data["comparison"]
+        s, u, j, o = c["stabilizer_7u"], c["usb_c_j1"], c["j3"], c["overall_minimum"]
+        lines.append("## Before/after (variant fixes)\n")
+        lines.append("| Item | Before | After | Delta |")
+        lines.append("|---|---:|---:|---:|")
+        lines.append(f"| 7U stabilizer insert clearance | {fmt(s['before_worst_insert_clearance_mm'])} mm ({s['before_status']}) | "
+                     f"{fmt(s['after_worst_insert_clearance_mm'])} mm ({s['after_status']}) | {fmt(s['delta_mm'])} mm |")
+        lines.append(f"| USB-C 12.35 mm plug side clearance | {fmt(u['before_stock_12p8_plug_clearance_mm'])} mm (stock 12.8) | "
+                     f"{fmt(u['after_selected_plug_clearance_mm'])} mm ({u['after_selected_notch']} {u['after_notch_width_mm']} mm) | "
+                     f"{fmt(u['delta_mm'])} mm |")
+        lines.append(f"| J3 clearance | {fmt(j['before_clearance_mm'])} mm ({j['before_status']}) | "
+                     f"{fmt(j['after_clearance_mm'])} mm ({j['after_status']}) | {fmt(j['delta_mm'])} mm |")
+        lines.append(f"| Overall minimum | {fmt(o['before_mm'])} mm | {fmt(o['after_mm'])} mm | |")
+        lines.append("")
+        lines.append(f"Baseline: `{c['baseline_fit_json']}`.  ")
+        lines.append(f"7U plate: `{s['before_plate_dxf']}` -> `{s['after_plate_dxf']}`.  ")
+        lines.append(f"USB-C notch: stock 12.8 mm -> {u['after_selected_notch']} {u['after_notch_width_mm']} mm at plate X {u['after_notch_centre_plate_x_mm']}.  ")
+        lines.append("J3: bottom-case local relief pocket (see FIXES.md).\n")
     lines.append("## 1. Relocated B.Cu block\n")
     lines.append("The case surface below each part is the first mesh hit from Z 14.10 downward, sampled on a grid over the B.CrtYd bounding box. Free height is `surface - (14.10 + 0.80)`. Clearance subtracts the nominal package height.\n")
     lines.append("| Ref | Footprint | Surface Z (mm) | Free at full travel (mm) | Part height (mm) | Clearance (mm) | Status |")
@@ -668,17 +703,23 @@ def write_report(path: Path, data: dict[str, Any]) -> None:
     lines.append("")
     lines.append(f"J3 plug corridor: free height **{fmt(rel['j3_plug_corridor']['free_height_full_travel_mm'])} mm** "
                  f"over the 3.5 mm-wide corridor; the JST SH plug body height is not in CAD.\n")
-    lines.append(f"Minimum part clearance: **{fmt(rel['minimum_clearance_mm'])} mm** at **{rel['minimum_clearance_ref']}** "
-                 f"(nominal 2.95 mm JST SH body). This is **tight**, not a failure.  "
-                 f"Using the stated 18.20 mm floor instead of the quantized 3MF surface (18.18 mm) gives 0.35 mm; "
-                 f"the 0.02 mm difference is mesh quantization, not a design change.\n")
+    j3 = next((r for r in rel["parts"] if r["ref"] == "J3"), None)
+    if j3 is not None:
+        lines.append(f"Minimum part clearance: **{fmt(rel['minimum_clearance_mm'])} mm** at **{rel['minimum_clearance_ref']}** "
+                     f"(nominal 2.95 mm JST SH body). This is **{j3['status']}**.  "
+                     f"The J3 relief variant floor is Z {fmt(j3.get('case_surface_z_p_mm'))} mm; the stock floor was 18.20 mm "
+                     f"(0.33 mm clearance).\n")
+    else:
+        lines.append(f"Minimum part clearance: **{fmt(rel['minimum_clearance_mm'])} mm** at "
+                     f"**{rel['minimum_clearance_ref']}**.\n")
     lines.append("## 2. USB-C J1\n")
     lines.append(f"J1 at board `{usb['j1']['position_board_mm']}` -> plate `{usb['j1']['position_plate_mm']}`. "
                  f"Body X `{usb['j1']['body_x_range_plate_mm']}`, Z `{usb['j1']['body_z_p_mm']}`.\n")
     lines.append("| Notch | Width (mm) | Centre X (mm) | J1 body min side (mm) | 12.35 mm plug min side (mm) | Status |")
     lines.append("|---|---:|---:|---:|---:|---|")
     for key, label in (("stock_notch_12p8", "stock 12.8"), ("printed_notch_14p75", "printed 14.75"),
-                       ("stock_notch_12p8_centred_on_j1", "12.8 centred on J1")):
+                       ("stock_notch_12p8_centred_on_j1", "12.8 centred on J1"),
+                       ("j1_centred_14p75", "14.75 centred on J1")):
         n = usb[key]
         lines.append(f"| {label} | {n['width_mm']} | {n['centre_plate_x_mm']} | "
                      f"{n['j1_body_min_side_clearance_mm']} | {n['plug_12p35_min_side_clearance_mm']} | **{n['status']}** |")
@@ -689,9 +730,14 @@ def write_report(path: Path, data: dict[str, Any]) -> None:
     lines.append(f"Vertical: notch closed end Z **{usb['vertical']['notch_closed_end_z_p_mm']} mm**, "
                  f"J1 body top Z **{usb['vertical']['j1_body_top_z_p_mm']} mm**, "
                  f"closed end above body **{usb['vertical']['notch_closed_end_above_body_mm']} mm**.\n")
-    lines.append("The 12.8 mm stock notch is **FAIL** for a 12.35 mm overmold: the stock notch is centred at plate X 19.35, "
-                 "the J1/plug at 18.45, so the plug's left edge is 0.67 mm outside the notch and would hit the case shell. "
-                 "The printed 14.75 mm notch (centred at 18.65) is comfortable (~1.00 mm per side). "
+    lines.append(f"The 12.8 mm stock notch is **{usb['stock_notch_12p8']['status'].upper()}** for a 12.35 mm overmold: "
+                 f"the stock notch is centred at plate X {usb['stock_notch_12p8']['centre_plate_x_mm']}, "
+                 f"the J1/plug at {usb['j1']['position_plate_mm'][0]}, so the plug's left edge is "
+                 f"{fmt(-usb['stock_notch_12p8']['plug_12p35_min_side_clearance_mm'])} mm outside the notch and would hit the case shell. "
+                 f"The printed 14.75 mm notch (centred at {usb['printed_notch_14p75']['centre_plate_x_mm']}) gives "
+                 f"{fmt(usb['printed_notch_14p75']['plug_12p35_min_side_clearance_mm'])} mm per side; the J1-centred 14.75 mm variant "
+                 f"(centre {usb['j1_centred_14p75']['centre_plate_x_mm']}) gives "
+                 f"{fmt(usb['j1_centred_14p75']['plug_12p35_min_side_clearance_mm'])} mm per side. "
                  "The top-case 3MF is not used for the J1 body because the body is below the board; the notch is checked analytically. "
                  "The plug overmold height above the board is not in CAD, so the vertical plug fit cannot be concluded.\n")
     lines.append("## 3. 7U stabilizer NPTH vs plate cutout\n")
@@ -707,15 +753,20 @@ def write_report(path: Path, data: dict[str, Any]) -> None:
     lines.append("")
     wi = stab["worst_stabilizer_insert"]
     if wi:
-        lines.append(f"Worst stabilizer insert: **{fmt(wi['clearance_mm'])} mm** at plate `{wi['plate_mm']}`. "
-                     f"**{stab['status'].upper()}** as drawn for a PCB-mount stabilizer: the insert holes are outside the plate cutout, "
-                     f"so the plate would interfere with the stabilizer legs/housing. If the build uses a plate-mount stabilizer, "
-                     f"the PCB NPTH holes are unused and this check is not applicable.")
+        if wi["clearance_mm"] >= 0:
+            lines.append(f"Worst stabilizer insert: **{fmt(wi['clearance_mm'])} mm** at plate `{wi['plate_mm']}`. "
+                         f"**{stab['status'].upper()}** for the PCB-mount NPTH pattern: the insert holes are inside the plate cutout "
+                         f"with {fmt(wi['clearance_mm'])} mm to the cutout boundary (threshold {fmt(stab['min_clearance_mm'])} mm).")
+        else:
+            lines.append(f"Worst stabilizer insert: **{fmt(wi['clearance_mm'])} mm** at plate `{wi['plate_mm']}`. "
+                         f"**{stab['status'].upper()}** as drawn for a PCB-mount stabilizer: the insert holes are outside the plate cutout, "
+                         f"so the plate would interfere with the stabilizer legs/housing. If the build uses a plate-mount stabilizer, "
+                         f"the PCB NPTH holes are unused and this check is not applicable.")
     else:
         lines.append("No stabilizer insert NPTH holes were found; the check is **unknown**.")
     ws = stab.get("worst_switch")
     if ws:
-        lines.append(f"The 3.0 mm switch hole at plate `{ws['plate_mm']}` is also **tight**: "
+        lines.append(f"The 3.0 mm switch hole at plate `{ws['plate_mm']}` is **{ws['status']}**: "
                      f"{fmt(ws['clearance_mm'])} mm to the 14 x 14 mm switch cutout.\n")
     lines.append("## What cannot be concluded from CAD\n")
     for item in data["missing_inputs"]:
@@ -729,12 +780,19 @@ def write_report(path: Path, data: dict[str, Any]) -> None:
     counts = rel["counts"]
     lines.append(f"- Relocated block: **{counts['pass']} pass, {counts['tight']} tight, {counts['fail']} fail, "
                  f"{counts['unknown']} unknown**; minimum **{fmt(rel['minimum_clearance_mm'])} mm** at "
-                 f"**{rel['minimum_clearance_ref']}** (tight).")
-    lines.append(f"- USB-C: **{usb['status']}**; the stock 12.8 mm notch is 0.90 mm right of the J1 centre, so the "
-                 f"12.35 mm plug overhangs it by 0.67 mm on the left; the printed 14.75 mm notch passes.")
-    lines.append(f"- 7U stabilizer: **{stab['status']}** as drawn for PCB-mount; N/A for plate-mount.")
+                 f"**{rel['minimum_clearance_ref']}** ({min_status}).")
+    lines.append(f"- USB-C: **{usb['status']}** for the selected `{usb['selected_notch']}` notch; "
+                 f"stock 12.8 mm {usb['stock_notch_12p8']['status']} "
+                 f"({fmt(usb['stock_notch_12p8']['plug_12p35_min_side_clearance_mm'])} mm), "
+                 f"printed 14.75 mm {usb['printed_notch_14p75']['status']} "
+                 f"({fmt(usb['printed_notch_14p75']['plug_12p35_min_side_clearance_mm'])} mm), "
+                 f"J1-centred 14.75 mm {usb['j1_centred_14p75']['status']} "
+                 f"({fmt(usb['j1_centred_14p75']['plug_12p35_min_side_clearance_mm'])} mm).")
+    lines.append(f"- 7U stabilizer: **{stab['status']}** for the PCB-mount NPTH pattern "
+                 f"(worst insert {fmt(stab['worst_stabilizer_insert']['clearance_mm'])} mm, "
+                 f"threshold {fmt(stab['min_clearance_mm'])} mm).")
     lines.append(f"- Overall minimum clearance: **{fmt(data['summary']['overall_minimum_clearance_mm'])} mm** "
-                 f"({data['summary']['overall_minimum_clearance_check']}); the minimum positive clearance is "
+                 f"({data['summary']['overall_minimum_clearance_check']}); the minimum relocated-block clearance is "
                  f"**{fmt(rel['minimum_clearance_mm'])} mm** at **{rel['minimum_clearance_ref']}**.")
     lines.append("")
     path.write_text("\n".join(lines) + "\n")
@@ -746,8 +804,26 @@ def main() -> None:
     ap.add_argument("--board", type=Path, default=DEFAULT_BOARD)
     ap.add_argument("--output-dir", type=Path, default=DEFAULT_OUT)
     ap.add_argument("--grid", type=int, default=9, help="samples per courtyard axis (default 9)")
+    ap.add_argument("--plate-dxf", type=Path, default=PLATE_DXF,
+                    help="plate DXF to check (default: the stock plate)")
+    ap.add_argument("--bottomcase-3mf-prefix", default="maru60-hhkb-bottomcase-j3-relief",
+                    help="3MF name prefix under models/ (default: maru60-hhkb-bottomcase-j3-relief)")
+    ap.add_argument("--bottomcase-world-dir", type=Path, default=BOTTOMCASE_DRAFT,
+                    help="directory holding the world-frame STLs for the 3MF offset recovery")
+    ap.add_argument("--bottomcase-world-prefix", default="bottom",
+                    help="world STL name prefix (default: bottom)")
+    ap.add_argument("--usb-notch", choices=["stock", "printed", "j1centred"], default="j1centred",
+                    help="USB-C notch variant used for the overall status (default: j1centred)")
+    ap.add_argument("--stabilizer-min-clearance", type=float, default=0.30,
+                    help="pass threshold for the 7U NPTH clearance (default: 0.30 mm)")
+    ap.add_argument("--compare", type=Path, default=None,
+                    help="baseline fit.json to add a before/after section")
     args = ap.parse_args()
     args.output_dir = args.output_dir.resolve()
+    args.plate_dxf = args.plate_dxf.resolve()
+    args.bottomcase_world_dir = args.bottomcase_world_dir.resolve()
+    if args.compare is not None:
+        args.compare = args.compare.resolve()
 
     # Assumption guards: fail loudly if the build/spec drifts from the stated numbers.
     assert abs(bc.FLOOR_ZP - CAVITY_FLOOR_ZP) < 1e-9, bc.FLOOR_ZP
@@ -757,12 +833,13 @@ def main() -> None:
 
     text = args.board.read_text()
     footprints = parse_footprints(text)
-    meshes = load_case_meshes()
+    meshes = load_case_meshes(args.bottomcase_3mf_prefix, args.bottomcase_world_dir,
+                              args.bottomcase_world_prefix)
     frame_error = max(m["frame_error_mm"] for m in meshes)
 
     relocated = check_relocated(footprints, meshes, args.grid)
-    usb = check_usb(footprints, meshes)
-    stab = check_stabilizer(footprints)
+    usb = check_usb(footprints, meshes, selected=args.usb_notch)
+    stab = check_stabilizer(footprints, args.plate_dxf, args.stabilizer_min_clearance)
 
     all_clearances: list[tuple[float, str]] = []
     for r in relocated["parts"]:
@@ -770,14 +847,14 @@ def main() -> None:
             all_clearances.append((r["clearance_mm"], f"relocated:{r['ref']}"))
     for r in stab["npth"]:
         all_clearances.append((r["clearance_mm"], f"stabilizer_7u:{r['role']}@{r['plate_mm']}"))
-    all_clearances.append((usb["stock_notch_12p8"]["plug_12p35_min_side_clearance_mm"],
-                           "usb_c_j1:stock_notch_12p8_plug"))
+    all_clearances.append((usb["selected_notch_record"]["plug_12p35_min_side_clearance_mm"],
+                           f"usb_c_j1:{usb['selected_notch']}_plug"))
     overall_min = min(all_clearances, key=lambda x: x[0])
 
     missing = [
         "Actual J3, U13, U11, U12 and 0603 body heights (the values used are datasheet/package nominals, not caliper readings).",
         "USB-C plug overmold height above the board and its actual width/corner radius (12.35 mm is the spec maximum).",
-        "7U stabilizer type (PCB-mount vs plate-mount) and housing dimensions; the plate 3MF is not available, only the DXF.",
+        "7U stabilizer type (PCB-mount vs plate-mount) and housing dimensions; the plate 3MF is not available, only the DXF (the PCB-mount variant is a DXF/Gerber, not a 3MF).",
         "Printed case floor Z and flatness (the CAD floor is 18.20; print tolerance and gasket compression are not modelled).",
         "Solder/paste thickness and component placement tolerance (the clearance numbers are nominal CAD, not worst-case assembly).",
     ]
@@ -787,7 +864,8 @@ def main() -> None:
         "Measure the printed bottom-case cavity floor Z under the relocated block and the USB passage.",
         "Measure the 7U stabilizer housing and confirm whether the build uses PCB-mount or plate-mount stabilizers.",
         "Measure the actual gasket compression at full travel and the resulting board Z.",
-        "Measure the USB-C plug overmold and test insertion in the 12.8 mm stock notch and the 14.75 mm printed notch.",
+        "Measure the USB-C plug overmold and test insertion in the 12.8 mm stock notch, the 14.75 mm printed notch, and the J1-centred 14.75 mm variant.",
+        "Test-fit the PCB-mount plate variant (models/rule60-v3-hhkb-gas-plate-pcb-mount.dxf) and the J3 relief bottom case (models/maru60-hhkb-bottomcase-j3-relief-left.3mf).",
     ]
 
     data: dict[str, Any] = {
@@ -829,7 +907,9 @@ def main() -> None:
             "relocated_minimum_clearance_mm": relocated["minimum_clearance_mm"],
             "relocated_minimum_clearance_ref": relocated["minimum_clearance_ref"],
             "usb_c_status": usb["status"],
+            "usb_c_selected_notch": usb["selected_notch"],
             "stabilizer_7u_status": stab["status"],
+            "stabilizer_min_clearance_mm": args.stabilizer_min_clearance,
             "overall_minimum_clearance_mm": round(overall_min[0], 4),
             "overall_minimum_clearance_check": overall_min[1],
             "overall": "PASS_WITH_TIGHT_ITEMS" if "fail" not in (usb["status"], stab["status"]) else "ATTENTION",
@@ -838,13 +918,61 @@ def main() -> None:
         "physical_measurements": physical,
         "sources": {
             "board": str(args.board.relative_to(ROOT)),
-            "bottomcase_3mf": [str((MODELS / f"maru60-hhkb-bottomcase-{h}.3mf").relative_to(ROOT)) for h in ("left", "right")],
-            "bottomcase_world_stl": [str((BOTTOMCASE_DRAFT / f"bottom-{h}-world.stl").relative_to(ROOT)) for h in ("left", "right")],
-            "plate_dxf": str(PLATE_DXF.relative_to(ROOT)),
+            "bottomcase_3mf": [str((MODELS / f"{args.bottomcase_3mf_prefix}-{h}.3mf").relative_to(ROOT)) for h in ("left", "right")],
+            "bottomcase_world_stl": [str((args.bottomcase_world_dir / f"{args.bottomcase_world_prefix}-{h}-world.stl").relative_to(ROOT)) for h in ("left", "right")],
+            "plate_dxf": str(args.plate_dxf.relative_to(ROOT)),
             "spec": [str(OUTLINES.relative_to(ROOT)), str(BOARDS.relative_to(ROOT))],
             "prior_j3_height": ".omo/evidence/pcb-routing-20261109/manual/sim/SUMMARY.json",
         },
     }
+
+    if args.compare is not None:
+        baseline = json.loads(args.compare.read_text())
+        b_rel = baseline["checks"]["relocated_b_cu_block"]
+        b_usb = baseline["checks"]["usb_c_j1"]
+        b_stab = baseline["checks"]["stabilizer_7u"]
+        b_j3 = next(r for r in b_rel["parts"] if r["ref"] == "J3")
+        a_j3 = next(r for r in relocated["parts"] if r["ref"] == "J3")
+        b_wi = b_stab["worst_stabilizer_insert"]
+        a_wi = stab["worst_stabilizer_insert"]
+        b_plug = b_usb["stock_notch_12p8"]["plug_12p35_min_side_clearance_mm"]
+        a_plug = usb["selected_notch_record"]["plug_12p35_min_side_clearance_mm"]
+        data["comparison"] = {
+            "baseline_fit_json": str(args.compare.relative_to(ROOT)) if args.compare.is_relative_to(ROOT) else str(args.compare),
+            "stabilizer_7u": {
+                "before_worst_insert_clearance_mm": b_wi["clearance_mm"],
+                "after_worst_insert_clearance_mm": a_wi["clearance_mm"],
+                "delta_mm": round(a_wi["clearance_mm"] - b_wi["clearance_mm"], 4),
+                "before_status": b_stab["status"],
+                "after_status": stab["status"],
+                "before_plate_dxf": b_stab["plate_cutout"]["source"],
+                "after_plate_dxf": stab["plate_cutout"]["source"],
+                "after_min_clearance_mm": stab["min_clearance_mm"],
+            },
+            "usb_c_j1": {
+                "before_stock_12p8_plug_clearance_mm": b_plug,
+                "after_selected_plug_clearance_mm": a_plug,
+                "delta_mm": round(a_plug - b_plug, 4),
+                "before_status": b_usb["status"],
+                "after_status": usb["status"],
+                "after_selected_notch": usb["selected_notch"],
+                "after_notch_width_mm": usb["selected_notch_record"]["width_mm"],
+                "after_notch_centre_plate_x_mm": usb["selected_notch_record"]["centre_plate_x_mm"],
+            },
+            "j3": {
+                "before_clearance_mm": b_j3["clearance_mm"],
+                "after_clearance_mm": a_j3["clearance_mm"],
+                "delta_mm": round(a_j3["clearance_mm"] - b_j3["clearance_mm"], 4),
+                "before_status": b_j3["status"],
+                "after_status": a_j3["status"],
+            },
+            "overall_minimum": {
+                "before_mm": baseline["summary"]["overall_minimum_clearance_mm"],
+                "after_mm": data["summary"]["overall_minimum_clearance_mm"],
+                "before_check": baseline["summary"]["overall_minimum_clearance_check"],
+                "after_check": data["summary"]["overall_minimum_clearance_check"],
+            },
+        }
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     (args.output_dir / "fit.json").write_text(json.dumps(data, indent=2) + "\n")

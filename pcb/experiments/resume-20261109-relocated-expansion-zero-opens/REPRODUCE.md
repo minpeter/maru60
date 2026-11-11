@@ -219,11 +219,21 @@ with explicit limitations.
 
 # Fabrication draft (BOM/CPL + Gerbers/drill/IPC-D-356/STEP + provenance)
 .venv/bin/python pcb/tools/export_fabrication.py
+
+# Power transient simulation (eFuse, buck, UVLO/OVLO, LED rail, sequencing)
+.venv/bin/python pcb/tools/simulate_power.py
+
+# Thermal simulation (lumped network + 2D board spreading)
+.venv/bin/python pcb/tools/simulate_thermal.py
+
+# USB 2.0 SI (D+/D- impedance, PRBS-7 eye, length/ESD sweeps)
+.venv/bin/python pcb/tools/simulate_usb_si.py
 ```
 
-Outputs: `qa/strict-promotion/`, `qa/mechanical-fit/`, `qa/power-review/` and
-`pcb/fabrication/`. The first three are read-only analyses; the last writes the
-fabrication package and refuses to write outside `pcb/fabrication/`.
+Outputs: `qa/strict-promotion/`, `qa/mechanical-fit/`, `qa/power-review/`,
+`qa/power-sim/`, `qa/thermal-sim/`, `qa/usb-si-sim/` and `pcb/fabrication/`.
+The analyses are read-only; `export_fabrication.py` writes the fabrication
+package and refuses to write outside `pcb/fabrication/`.
 
 ## Archived vs fresh outputs
 
