@@ -1,0 +1,32 @@
+# macro dumps in via.log (one per dumped translation unit: maru_key_transport.c, maru_ug_transport.c, maru_rgb.c, matrix.c)
+1127: #define MARU60_LAYOUT_HHKB 0
+3085: #define CPU_CLOCK RP_CORE_CLK
+3252: #define GPIO_INPUT_PIN_DELAY 120
+5358: #define PRODUCT_ID 0x6060
+5484: #define VENDOR_ID 0xFEED
+5823: #define MARU60_LED_POWER_QUALIFIED 0
+7343: #define MARU60_LAYOUT_HHKB 0
+9313: #define CPU_CLOCK RP_CORE_CLK
+9482: #define GPIO_INPUT_PIN_DELAY 120
+11597: #define PRODUCT_ID 0x6060
+11722: #define VENDOR_ID 0xFEED
+12059: #define MARU60_LED_POWER_QUALIFIED 0
+13577: #define MARU60_LAYOUT_HHKB 0
+15546: #define CPU_CLOCK RP_CORE_CLK
+15715: #define GPIO_INPUT_PIN_DELAY 120
+17831: #define PRODUCT_ID 0x6060
+17955: #define VENDOR_ID 0xFEED
+18293: #define MARU60_LED_POWER_QUALIFIED 0
+21275: #define GPIO_INPUT_PIN_DELAY 120
+21474: #define MARU60_LAYOUT_HHKB 0
+22927: #define PRODUCT_ID 0x6060
+23025: #define VENDOR_ID 0xFEED
+23289: #define MARU60_LED_POWER_QUALIFIED 0
+
+# matrix_output_select_delay in the linked ELF (arm-none-eabi-objdump -d): nop count and call sites
+nop instructions: 120
+call sites: 1
+100031aa:	623d      	str	r5, [r7, #32]
+100031ac:	2500      	movs	r5, #0
+100031ae:	f385 8811 	msr	BASEPRI, r5
+100031b2:	f7ff ff31 	bl	10003018 <matrix_output_select_delay>

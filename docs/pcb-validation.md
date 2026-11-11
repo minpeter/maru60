@@ -19,11 +19,11 @@ uv run tools/check_pcb_portable.py --output /tmp/maru60-portable-new
 
 Requirements: `uv`, Python 3.11+ and a C11 compiler (`cc`, or set `CC`). No KiCad, ARM toolchain or third-party Python libraries are needed. The output must not exist. Use an external path or an ignored path under `build/` or `.omo/evidence/`; source directories are rejected.
 
-The wrapper fails on missing inputs, changed primary CAD hashes, mismatched active/candidate firmware, changed pinned checker/power inputs, a changed stored netlist hash, or any child check failure. The 22-file overlay identity is checked before and after execution; the host runner independently checks its recovery and baseline manifests and their preservation. The static checker consumes the active overlay and the selected development prototype's `qa/netlist.xml`. Its hash pin is intentionally fail-closed: a newly exported or changed netlist needs review before updating the pin. Hash equality alone does not prove that a stored export reflects every current CAD dependency.
+The wrapper fails on missing inputs, changed primary CAD hashes, mismatched active/candidate firmware, changed pinned checker/power inputs, a changed stored netlist hash, or any child check failure. The 22-file overlay identity is checked before and after execution: 21 files must equal the recovery candidate and `config.h`, which adds the matrix read delay, must equal its own pinned hash (`ACTIVE_DELTAS` in the wrapper); the host runner independently checks its recovery and baseline manifests and their preservation. The static checker consumes the active overlay and the selected development prototype's `qa/netlist.xml`. Its hash pin is intentionally fail-closed: a newly exported or changed netlist needs review before updating the pin. Hash equality alone does not prove that a stored export reflects every current CAD dependency.
 
 | Artifact under the output directory | Observable |
 | --- | --- |
-| `identity.json` | 22 matching active/candidate file hashes; selected manifest/netlist hashes; checker/power input hashes |
+| `identity.json` | 22 active file hashes (21 equal to the candidate, `config.h` a declared delta); selected manifest/netlist hashes; checker/power input hashes |
 | `host.log`, `host/results.json`, `host/guard/results.json` | Child invocation/exit code, fresh host test outcomes, qualification default zero; detailed logs/binaries under `host/` |
 | `static.log`, `static.json` | 24 GPIO bindings; rejected wrong GPIO, LED net and duplicate GPIO mutations; ideal matrix results |
 | `power.log`, `power/calculation-replay-result.json` | `PASS_ARITHMETIC_ONLY`, 519 checks, 48 feedback corners and eight soft-start corners; copied inputs retained under `power/` |

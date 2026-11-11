@@ -19,5 +19,7 @@
   ],
   "historical_verification": "Five full ARM builds PASS with exact VIA schema and opt-in report-sync patches; six native QMK matrix/action/report tests and protocol source-model pass; no physical hardware/USB validation.",
   "verification": "2026-11-09: fresh full WKL via and HHKB via_hhkb ARM/QMK builds PASS against this commit, exact recursive submodules and both hash-guarded patches. Current 22-file recovery overlay unchanged; all six LED translation-unit macro dumps confirm qualification 0. No flashing or hardware qualification.",
-  "verification_evidence": "pcb/experiments/resume-20261109-silk-height/qa/qmk-build/RESULT.json"
+  "verification_evidence": "pcb/experiments/resume-20261109-silk-height/qa/qmk-build/RESULT.json",
+  "verification_20261111": "Fresh full WKL via and HHKB via_hhkb builds PASS with config.h adding GPIO_INPUT_PIN_DELAY 120 (same commit, submodules, patches, compiler). Macro dumps: delay 120, qualification 0. No flashing or hardware qualification.",
+  "verification_20261111_evidence": "pcb/experiments/resume-20261111-order-candidate/qa/qmk-build/RESULT.json"
 }
