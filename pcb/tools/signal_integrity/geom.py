@@ -24,7 +24,8 @@ from shapely.ops import unary_union
 from shapely.strtree import STRtree
 
 ROOT = Path(__file__).resolve().parents[3]
-DEFAULT_GEOMETRY = ROOT / "build" / "order-review" / "final.json"
+# written by run_all.py from the board file (pcb/tools/dump_board_geometry.py in the KiCad container)
+DEFAULT_GEOMETRY = ROOT / "build" / "si" / "board.json"
 PLANE_FOR = {"F.Cu": "In1.Cu", "B.Cu": "In2.Cu"}
 Q = 1e-3  # snapping grid, mm
 

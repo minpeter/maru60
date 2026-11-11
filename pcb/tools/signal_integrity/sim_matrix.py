@@ -11,9 +11,12 @@ ngspice transient
               RON: 4 mA drive, VOL <= 0.5 V at 4 mA  -> <= 125 ohm (datasheet Table 1683);
                    40 ohm ASSUMED typical
               RPU: 32-86 kohm at 3.3 V (Table 1683)
-  nets      : LC ladders with the routed copper capacitance of the worst row/column
-              (geometry.json), + 5 pF per MCU pin (ASSUMED, not in the datasheet),
-              + the junction capacitance of the row's other diodes
+  nets      : LC ladders with the routed copper capacitance (geometry.json) of the
+              row with the most copper and of the columns of the closed keys: the
+              column that is watched is the one with the most copper, the other
+              closed keys take the next largest columns, each with its own
+              capacitance and length; + 5 pF per MCU pin (ASSUMED, not in the
+              datasheet), + the junction capacitance of the row's other diodes
   diode     : 1N4148 SPICE model, CJO 0.9 pF (Diodes Inc. Figure 4: 0.75 pF typ at 0 V)
   thresholds: VIL 0.8 V, VIH 2.0 V (RP2350 Table 1683)
 Leakage is a hand calculation from the Diodes Inc. 1N4148W reverse-current curve.
@@ -35,7 +38,8 @@ UNSELECT_DELAY_US = 30.0
 PIN_C = 5.0
 
 
-def build(row, col, n_keys, ron, rpu, temp=27, key_c=8.8):
+def build(row, cols, n_keys, ron, rpu, temp=27, key_c=8.8):
+    """cols: column nets, largest capacitance first; key k closes onto cols[k], key 0 is the one watched."""
     d = spice.Deck(f"matrix: {n_keys} key(s) of the same row closed, RON {ron} ohm, RPU {rpu / 1e3:.0f} k, {temp} C")
     d.add(f".options temp={temp} method=gear", "Vdd vdd 0 3.3",
           ".model D4148 D(IS=2.52n RS=0.568 N=1.752 CJO=0.9p M=0.4 VJ=0.7 TT=4n BV=100 IBV=1u)",
@@ -59,8 +63,8 @@ def build(row, col, n_keys, ron, rpu, temp=27, key_c=8.8):
         cpin = f"colpin{k}"
         d.add(f"D{k} key{k} {tap} D4148", f"Ckey{k} key{k} 0 {key_c}p", f"Rsw{k} key{k} colfar{k} 0.2",
               f"Rpuc{k} vdd {cpin} {rpu}", f"Cpinc{k} {cpin} 0 {PIN_C}p")
-        c_col = col["cap"]["C_copper_pF"]
-        lc = col["farthest_pad_mm"]
+        c_col = cols[k]["cap"]["C_copper_pF"]
+        lc = cols[k]["farthest_pad_mm"]
         prev = f"colfar{k}"
         for i in range(nsec):
             nxt = cpin if i == nsec - 1 else f"c{k}_{i}"
@@ -70,15 +74,17 @@ def build(row, col, n_keys, ron, rpu, temp=27, key_c=8.8):
     return d
 
 
-def run_case(name, row, col, n_keys, ron, rpu, temp=27):
-    d = build(row, col, n_keys, ron, rpu, temp)
+def run_case(name, row, cols, n_keys, ron, rpu, temp=27):
+    d = build(row, cols, n_keys, ron, rpu, temp)
     r = d.run(name, ["v(rowpin)", "v(rowfar)", "v(colpin0)", "v(sel)"], tran="0.2n 40u 0 20n")
     t, vc, vr = r["time"], r["v(colpin0)"], r["v(rowpin)"]
-    fall = [x for x in spice.crossings(t, vc, VIL, False) if x > 100e-9]
+    # last time the column falls through VIL while the row is selected (ringing can cross it more than once)
+    fall = [x for x in spice.crossings(t, vc, VIL, False) if 100e-9 < x < 2000e-9][-1:]
     rise = [x for x in spice.crossings(t, vc, VIH, True) if x > 2000e-9]
     low = float(vc[(t > 1.8e-6) & (t < 2.0e-6)].mean())
     return {
         "keys_closed_in_row": n_keys, "RON_ohm": ron, "RPU_ohm": rpu, "temp_C": temp,
+        "column_capacitance_total_pF": round(sum(c["cap"]["C_copper_pF"] + PIN_C for c in cols[:n_keys]), 1),
         "t_col_below_VIL_ns": round(float(fall[0] - 100e-9) * 1e9, 1) if fall else None,
         "select_delay_ns": round(SELECT_DELAY_NS, 1),
         "select_margin_x": round(float(SELECT_DELAY_NS / ((fall[0] - 100e-9) * 1e9)), 1) if fall else None,
@@ -115,21 +121,28 @@ def main():
     rows = {k: v for k, v in geo.items() if k.startswith("ROW")}
     cols = {k: v for k, v in geo.items() if k.startswith("COL")}
     wr = max(rows, key=lambda k: rows[k]["cap"]["C_copper_pF"])
-    wc = max(cols, key=lambda k: cols[k]["cap"]["C_copper_pF"])
+    order = sorted(cols, key=lambda k: -cols[k]["cap"]["C_copper_pF"])
+    wc = order[0]
+    by_size = [cols[k] for k in order]
+    n_row = rows[wr]["pads"] - 1          # pads on the row net: one MCU pin, the rest are diodes
     out = {"worst_row": wr, "worst_col": wc,
            "net_capacitance_pF": {k: v["cap"]["C_copper_pF"] for k, v in {**rows, **cols}.items()},
            "net_length_mm": {k: v["length_mm"] for k, v in {**rows, **cols}.items()},
-           "pin_capacitance_assumed_pF": PIN_C, "cases": {}}
+           "pin_capacitance_assumed_pF": PIN_C,
+           "keys_on_worst_row": n_row, "wait_cpuclock_max_cycles": 135, "cases": {}}
     waves = {}
     for label, (n, ron, rpu, temp) in {
         "typical: 1 key, RON 40, RPU 50k": (1, 40, 50e3, 27),
         "limit: 1 key, RON 125, RPU 86k": (1, 125, 86e3, 27),
         "limit: 6 keys in the row, RON 125, RPU 86k": (6, 125, 86e3, 27),
-        "limit: all 15 keys of the row, RON 125, RPU 86k": (15, 125, 86e3, 27),
-        "typical RON 40: all 15 keys of the row, RPU 86k": (15, 40, 86e3, 27),
+        "limit: all 15 keys of the row, RON 125, RPU 86k": (n_row, 125, 86e3, 27),
+        "typical RON 40: all 15 keys of the row, RPU 86k": (n_row, 40, 86e3, 27),
+        "RON 80: all 15 keys of the row, RPU 86k": (n_row, 80, 86e3, 27),
+        "limit, hot 60 C: all 15 keys of the row, RON 125, RPU 86k": (n_row, 125, 86e3, 60),
+        "limit, cold 0 C: all 15 keys of the row, RON 125, RPU 86k": (n_row, 125, 86e3, 0),
         "cold 0 C: 1 key, RON 125, RPU 32k (highest low level)": (1, 125, 32e3, 0),
     }.items():
-        m, r = run_case("matrix_" + label.split(":")[0].replace(" ", "_") + f"_{n}k_{ron}", rows[wr], cols[wc], n, ron, rpu, temp)
+        m, r = run_case("matrix_" + label.split(":")[0].replace(" ", "_").replace(",", "") + f"_{n}k_{ron}", rows[wr], by_size, n, ron, rpu, temp)
         out["cases"][label] = m
         waves[label] = r
         print(label, m)

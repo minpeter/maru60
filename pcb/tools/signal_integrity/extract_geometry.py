@@ -1,6 +1,6 @@
 """Pull every number the signal-integrity checks need out of the routed board.
 
-Input : build/order-review/final.json (pcb/tools/dump_board_geometry.py)
+Input : build/si/board.json (pcb/tools/dump_board_geometry.py, run by run_all.py)
 Output: build/si/out/geometry.json and build/si/out/lines.json
 
 Capacitance model per net (all COMPUTED from geometry, nothing measured):
@@ -134,7 +134,8 @@ def describe(board, caps, net, src, dst, pick=None, with_segments=False):
 
 
 def led_chains(board):
-    din, dout = {}, {}
+    """Each hop as (net at the receiver, source pad, DIN pad, series part at the source or None)."""
+    din, dout, series = {}, {}, {}
     for f in board.raw["fps"]:
         if f["ref"].startswith("LED"):
             for p in f["pads"]:
@@ -142,11 +143,25 @@ def led_chains(board):
                     din[p["net"]] = f["ref"]
                 if p["num"] == "3":
                     dout[f["ref"]] = p["net"]
+        elif f["ref"].startswith("R") and len(f["pads"]) == 2:
+            a, b = f["pads"]
+            for x, y in ((a, b), (b, a)):
+                series.setdefault(x["net"], []).append((f["ref"], x["num"], y["num"], y["net"], f["value"]))
     chains = {}
     for name, start, drv in (("key", "KEY_RGB_5V", ("R110", "2")), ("underglow", "UNDERGLOW_5V", ("R111", "2"))):
         hops, n, src = [], start, drv
-        while n in din:
-            hops.append((n, src, (din[n], "1")))
+        while True:
+            pre = None
+            if n not in din:
+                # a DOUT that reaches the next DIN through a series resistor (R115 on UG_LED_6)
+                for ref, p_in, p_out, n2, value in series.get(n, []):
+                    if n2 in din:
+                        pre = {"ref": ref, "ohm": float(value.split()[0]), "net": n, "from": src, "to": (ref, p_in)}
+                        src, n = (ref, p_out), n2
+                        break
+            if n not in din:
+                break
+            hops.append((n, src, (din[n], "1"), pre))
             src = (din[n], "3")
             n = dout[din[n]]
         chains[name] = hops
@@ -214,13 +229,17 @@ def main():
     (OUT / "lines.json").write_text(json.dumps(lines, indent=1))
     board = Board()
     caps = Caps(board, lines)
-    g = {"source": str(Path("build/order-review/final.json")), "led": {}, "nets": {}}
+    g = {"source": "build/si/board.json", "led": {}, "nets": {}}
 
     # ---- LED chains ----
     for name, hops in led_chains(board).items():
         rows = []
-        for net, src, dst in hops:
-            rows.append(describe(board, caps, net, src, dst))
+        for net, src, dst, pre in hops:
+            row = describe(board, caps, net, src, dst)
+            if pre:
+                row["series_at_source"] = {"ref": pre["ref"], "ohm": pre["ohm"],
+                                           "source_side": describe(board, caps, pre["net"], pre["from"], pre["to"])}
+            rows.append(row)
         g["led"][name] = rows
     # the two-site footprints: evaluate each fitted combination explicitly
     def site(ref, layer=None, near=None):

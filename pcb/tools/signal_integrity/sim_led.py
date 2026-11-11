@@ -158,11 +158,18 @@ def measure(t, v, t_bits, edge):
     return res
 
 
-def sim_hop(name, route, table, drv):
-    d = spice.Deck(f"{name}: SK6805 DOUT (assumed {drv['r']:.0f} ohm, {drv['edge'] * 1e9:.0f} ns) -> routed hop -> DIN {drv['cin'] * 1e12:.0f} pF")
+def sim_hop(name, route, table, drv, pre=None):
+    """pre = (route from DOUT to the series part, its resistance) when the hop has a resistor at its source."""
+    ser = f" -> {pre[1]:g} ohm in series" if pre else ""
+    d = spice.Deck(f"{name}: SK6805 DOUT (assumed {drv['r']:.0f} ohm, {drv['edge'] * 1e9:.0f} ns){ser} -> routed hop -> DIN {drv['cin'] * 1e12:.0f} pF")
     wave, tend = pwl(BITS, VDD, drv["edge"])
     d.add(f"Vsrc src 0 PWL({wave})", f"Rdrv src dout {drv['r']}", "Cdout dout 0 2p")
-    add_route(d, route, "dout", "din", table)
+    start = "dout"
+    if pre:
+        add_route(d, pre[0], "dout", "rs_a", table)
+        d.add(f"Rser rs_a rs_b {pre[1]:g}", "Cser rs_b 0 0.1p")
+        start = "rs_b"
+    add_route(d, route, start, "din", table)
     d.add(f"Cin din 0 {drv['cin'] * 1e12:.3g}p")
     r = d.run(name, ["v(dout)", "v(din)"], tran=f"0.1n {tend * 1e9 + 100:.0f}n 0 0.2n")
     m = measure(r["time"], r["v(din)"], 100e-9, drv["edge"])
@@ -231,9 +238,27 @@ def main():
 
     win, alt = (16.49, 42.22), (19.99, 38.22)
     both = lambda a, b: (lambda p: a(p) and b(p))
+    # Hops with a series resistor at their source (R115 on UG_LED_6, R116 on UG_LED_9), as
+    # extract_geometry.py found them. Each is simulated as built and with the part as 0 ohm.
+    pres, ser_hop = {}, {}
+
+    def series_hop(net):
+        h = next(x for x in geo["led"]["underglow"] + geo["led"]["key"] if x["net"] == net)
+        ser = h["series_at_source"]
+        side = ser["source_side"]
+        pre = board.route(side["net"], tuple(side["from"].split(".")), tuple(side["to"].split(".")))
+        built = f"{net} as built, {ser['ref']} {ser['ohm']:g} Ω in series ({h['length_mm']:.0f} mm, {h['vias']} vias)"
+        short = f"{net} with {ser['ref']} replaced by 0 Ω (the hop before the change)"
+        pres[built], pres[short] = (pre, ser["ohm"]), (pre, 0.001)
+        ser_hop[net] = {"hop": h, "ser": ser, "built": built, "short": short,
+                        "spec": (net, tuple(h["from"].split(".")), tuple(h["to"].split(".")), None)}
+        return ser_hop[net]
+
+    ug6, ug9 = series_hop("UG_LED_6"), series_hop("UG_LED_9")
+    UG6, UG6_SHORT, UG9, UG9_SHORT = ug6["built"], ug6["short"], ug9["built"], ug9["short"]
     hops = {
-        "UG_LED_6 (longest: 276 mm, 8 vias)": ("UG_LED_6", ("LED68", "3"), ("LED69", "1"), None),
-        "UNDERGLOW hop UG_LED_9 (105 mm)": ("UG_LED_9", ("LED71", "3"), ("LED72", "1"), None),
+        UG6: ug6["spec"],
+        UG9: ug9["spec"],
         "KEY_RGB_CHAIN_60 (longest key hop: 81 mm, 4 vias)": ("KEY_RGB_CHAIN_60", ("LED58", "3"), ("LED59", "1"), None),
         "KEY_RGB_CHAIN_52 (64 mm, 8 vias)": ("KEY_RGB_CHAIN_52", ("LED48", "3"), ("LED47", "1"), None),
         "KEY_RGB_CHAIN_29 default (stub to LED30 alt site)": ("KEY_RGB_CHAIN_29", ("LED16", "3"), ("LED30", "1"), both(site("LED30", near=win), site("LED75", layer="B.Cu"))),
@@ -244,14 +269,19 @@ def main():
         "KEY_RGB_CHAIN_31 default (LED75 bottom)": ("KEY_RGB_CHAIN_31", ("LED75", "3"), ("LED31", "1"), site("LED75", layer="B.Cu")),
         "KEY_RGB_CHAIN_31 LED75 on top pads (stub with via)": ("KEY_RGB_CHAIN_31", ("LED75", "3"), ("LED31", "1"), site("LED75", layer="F.Cu")),
         "KEY_RGB_CHAIN_3 (typical 18.8 mm hop)": ("KEY_RGB_CHAIN_3", ("LED3", "3"), ("LED4", "1"), None),
+        UG6_SHORT: ug6["spec"],
+        UG9_SHORT: ug9["spec"],
     }
     waves = {}
     for i, (label, (net, a, b, pick)) in enumerate(hops.items()):
         route = board.route(net, a, b, pick)
         entry = {"net": net, "length_mm": route["length_mm"], "vias": route["vias"],
                  "stubs_mm": [s["length_mm"] for s in route["stubs"] if s["length_mm"] > 0.3], "cases": {}}
+        if label in pres:
+            entry["series_at_source_ohm"] = round(pres[label][1], 3)
+            entry["source_side_mm"] = pres[label][0]["length_mm"]
         for dn, drv in DRIVERS.items():
-            m, r = sim_hop(f"led_hop{i:02d}_{dn.replace('+', 'p')}", route, table, drv)
+            m, r = sim_hop(f"led_hop{i:02d}_{dn.replace('+', 'p')}", route, table, drv, pres.get(label))
             entry["cases"][dn] = m
             waves[(label, dn)] = r
         out["hops"][label] = entry
@@ -259,16 +289,21 @@ def main():
 
     # ---- how strong/fast may DOUT be on the long underglow hops before ring-back eats the margin ----
     sweep = {}
-    for label, (net, a, b) in {"UG_LED_6 276 mm": ("UG_LED_6", ("LED68", "3"), ("LED69", "1")),
-                               "UG_LED_9 105 mm": ("UG_LED_9", ("LED71", "3"), ("LED72", "1")),
-                               "KEY_RGB_CHAIN_60 81 mm": ("KEY_RGB_CHAIN_60", ("LED58", "3"), ("LED59", "1"))}.items():
+    for label, (net, a, b, pre) in {
+            f"UG_LED_6 with {ug6['ser']['ref']} {ug6['ser']['ohm']:g} ohm": (*ug6["spec"][:3], pres[UG6]),
+            f"UG_LED_6 with {ug6['ser']['ref']} replaced by 0 ohm": (*ug6["spec"][:3], pres[UG6_SHORT]),
+            f"UG_LED_9 with {ug9['ser']['ref']} {ug9['ser']['ohm']:g} ohm": (*ug9["spec"][:3], pres[UG9]),
+            f"UG_LED_9 with {ug9['ser']['ref']} replaced by 0 ohm": (*ug9["spec"][:3], pres[UG9_SHORT]),
+            "KEY_RGB_CHAIN_52 64 mm, 8 vias": ("KEY_RGB_CHAIN_52", ("LED48", "3"), ("LED47", "1"), None),
+            "KEY_RGB_CHAIN_60 81 mm": ("KEY_RGB_CHAIN_60", ("LED58", "3"), ("LED59", "1"), None)}.items():
         route = board.route(net, a, b)
         rows = []
         for rr in (10.0, 20.0, 35.0, 50.0, 75.0, 100.0):
             for ee in (1e-9, 2e-9, 4e-9, 6e-9, 10e-9):
-                m, _ = sim_hop("led_sweep", route, table, {"r": rr, "edge": ee, "cin": 5e-12})
+                m, _ = sim_hop("led_sweep", route, table, {"r": rr, "edge": ee, "cin": 5e-12}, pre)
                 rows.append({"r_ohm": rr, "edge_ns": ee * 1e9, "NM_high_V": m.get("noise_margin_high_V"), "NM_low_V": m.get("noise_margin_low_V"),
-                             "overshoot_V": m["overshoot_V"], "undershoot_V": m["undershoot_V"]})
+                             "overshoot_V": m["overshoot_V"], "undershoot_V": m["undershoot_V"],
+                             "extra_threshold_crossings": m.get("extra_threshold_crossings")})
         sweep[label] = rows
     out["dout_strength_sweep"] = sweep
 
@@ -290,14 +325,17 @@ def main():
     # ---- crosstalk ----
     xt = {}
     for label, args in {
-        "UG_LED_6 beside COL10: 49 mm at 0.25 mm (routed)": (276.0, 49.0, 0.25, 0.2, 0.2),
+        "UG_LED_6 beside COL10: 49 mm at 0.25 mm (routed)": (ug6["hop"]["length_mm"], 49.0, 0.25, 0.2, 0.2),
         "UG_LED_3 beside COL13: 32 mm at 0.20 mm (routed)": (60.2, 31.8, 0.20, 0.2, 0.2),
-        "bound: 80 mm at 0.15 mm (minimum clearance, longer than any routed pair)": (276.0, 80.0, 0.15, 0.2, 0.2),
+        "bound: 80 mm at 0.15 mm (minimum clearance, longer than any routed pair)": (ug6["hop"]["length_mm"], 80.0, 0.15, 0.2, 0.2),
     }.items():
         xt[label] = {}
         for state, level, rdrv in (("victim low, weak driver 500R", 0.0, 500.0), ("victim high, weak driver 500R", VDD, 500.0),
                                    ("victim low, driver 1k", 0.0, 1000.0)):
-            m, r = sim_crosstalk(f"led_xtalk_{len(xt)}_{state.split(',')[0].replace(' ', '_')}_{int(rdrv)}", table, *args, rdrv, level)
+            # the UG_LED_6 victim is driven through R115 as well; the 60 mm UG_LED_3 victim is not
+            r_src = rdrv + (ug6["ser"]["ohm"] if args[0] == ug6["hop"]["length_mm"] else 0.0)
+            m, r = sim_crosstalk(f"led_xtalk_{len(xt)}_{state.split(',')[0].replace(' ', '_')}_{int(rdrv)}", table, *args, r_src, level)
+            m["victim_source_ohm"] = r_src
             xt[label][state] = {k: v for k, v in m.items() if k != "coupled"} | {"kC": round(m["coupled"]["kC"], 4), "kL": round(m["coupled"]["kL"], 4)}
             waves[("xt " + label, state)] = r
     out["crosstalk"]["matrix_to_led"] = xt
@@ -317,9 +355,9 @@ def main():
     (spice.OUT / "led.json").write_text(json.dumps(out, indent=1))
 
     # ---- plots ----
-    fig, axes = plt.subplots(2, 2, figsize=(11, 6.6), facecolor="#fcfcfb")
-    panels = ["UG_LED_6 (longest: 276 mm, 8 vias)", "KEY_RGB_CHAIN_60 (longest key hop: 81 mm, 4 vias)",
-              "KEY_RGB_CHAIN_30 default (LED30 window, LED75 bottom)", "KEY_RGB_CHAIN_30 LED75 on top pads (stub with via)"]
+    fig, axes = plt.subplots(3, 2, figsize=(11, 9.6), facecolor="#fcfcfb")
+    panels = [UG6, UG6_SHORT, UG9, UG9_SHORT, "KEY_RGB_CHAIN_60 (longest key hop: 81 mm, 4 vias)",
+              "KEY_RGB_CHAIN_30 LED75 on top pads (stub with via)"]
     t0 = 100e-9 + 2 * (T0H + T0L)
     for ax, label in zip(axes.ravel(), panels):
         for (dn, col) in zip(DRIVERS, spice.SERIES):
@@ -333,10 +371,10 @@ def main():
         ax.set_xlim(-60, 1540)
         spice.style(ax, label, "time from the start of a '0' bit, ns", "V at DIN")
     h, l = axes[0, 0].get_legend_handles_labels()
-    fig.legend(h, l, fontsize=8, frameon=False, loc="upper right", ncol=4, bbox_to_anchor=(0.995, 0.955), title="assumed SK6805 DOUT (not in the datasheet)", title_fontsize=8)
+    fig.legend(h, l, fontsize=8, frameon=False, loc="upper right", ncol=4, bbox_to_anchor=(0.995, 0.97), title="assumed SK6805 DOUT (not in the datasheet)", title_fontsize=8)
     fig.suptitle("SK6805 data hops, simulated at the receiving DIN ('0' then '1', 300/900 ns sent). No hardware measurement.",
                  fontsize=10, color="#0b0b0b", x=0.01, ha="left")
-    fig.tight_layout(rect=(0, 0, 1, 0.9))
+    fig.tight_layout(rect=(0, 0, 1, 0.93))
     fig.savefig(spice.QA / "led-hops.png", dpi=140)
     plt.close(fig)
 

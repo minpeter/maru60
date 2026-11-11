@@ -98,6 +98,8 @@ soldering.
   underglow data hops (274 mm from `LED68`, 105 mm from `LED71`). The LED data
   sheet does not give the output strength; with a strong, fast output an
   unterminated hop of this length rings back through the input threshold.
+  With the resistors both hops are clean for every output simulated
+  (10 Ω–1 kΩ, 1–30 ns).
 - 25 of the 39 via holes that sat inside SMD pads moved out of the pad (an
   open via in a pad draws solder away from the joint); each pad keeps a short
   track to its via.
@@ -142,9 +144,11 @@ and the USB-C connector needed a 1.3 mm centre shift.
   full-speed waveform limit passes with margin. Shortening the pair by 13 mm
   would meet the number.
 - **Key LED hops of 81 mm and 64 mm** (`KEY_RGB_CHAIN_60`, `_61`, `_52`) have no
-  series resistor. They are clean in simulation unless the LED output is both
-  stronger than 20 Ω and faster than 2 ns, which the data sheet neither states
-  nor excludes. Look at `LED59` DIN with a scope at bring-up.
+  series resistor. In simulation they keep 0.13 V and 0.19 V above the input
+  threshold with a 20 Ω, 2 ns LED output and ring back under it only with
+  20 Ω and 1 ns, or 10 Ω and 2 ns. The data sheet gives no output figure; an
+  output that strong and fast is unlikely. Look at `LED59` DIN with a scope at
+  bring-up.
 - **Buck phase margin** is 38–44° in the model and **VBUS rings on hot-plug**;
   both are for the first bring-up, see the power-simulation report.
 - **14 vias remain inside SMD pads** where no free position exists: the GND
