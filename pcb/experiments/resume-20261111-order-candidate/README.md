@@ -3,7 +3,7 @@
 Derived from [`resume-20261109-relocated-expansion-zero-opens`](../resume-20261109-relocated-expansion-zero-opens/README.md)
 (PCB `cb7b5b29`). This checkpoint fixes what stood between that board and an
 order, and records the analyses run on the result. PCB SHA256:
-`43d2a2585d50bb2846a96450b88d3b95adc11475505df1c3134213f52a2df2fc`. The order
+`abd978a43c723d4d7358becb6a7f15646fdec8d6cd6b16dbe50d1d8da96b35ee`. The order
 files exported from it are in [`pcb/order`](../../order/README.md).
 
 **It is an order candidate for a first prototype, not a qualified design.**
@@ -17,15 +17,15 @@ simulation. Nothing has been measured on hardware.
 | KiCad 9.0.2 DRC: opens / warnings / other errors | 0 / 0 / 0 | [`qa/native/RESULT.json`](qa/native/RESULT.json) |
 | ERC, schematic parity, net identity, cold refill | 0, 0, pass, 68 files identical | same |
 | Material (copper connectivity) graph | recomputed, pass | same |
-| Netlist against the 0/0 prototype | only the intended differences: U2's pins, C142 and R163 removed, R115 added, values and footprint names | `qa/netlist.xml` |
+| Netlist against the 0/0 prototype | only the intended differences: U2's pins, C142 and R163 removed, R115 and R116 added, values and footprint names | `qa/netlist.xml` |
 | Firmware GPIO and matrix bindings on this netlist | 24 bindings match, negative controls rejected | [`qa/firmware-static/static.json`](qa/firmware-static/static.json) |
 | Top-side parts under a switch housing (default build) | none | `pcb/tools/plan_topside_relocation.py` keep-out |
-| Bottom-case fit, including the new bottom-side parts (`U2`, `C200`, `R115`, `LED75`) | 23 pass, USB-C pass, 7U stabilizer pass | [`qa/mechanical-fit/REPORT.md`](qa/mechanical-fit/REPORT.md) |
+| Bottom-case fit, including the new bottom-side parts (`U2`, `C200`, `R115`, `R116`, `LED75`) | 24 pass, USB-C pass, 7U stabilizer pass | [`qa/mechanical-fit/REPORT.md`](qa/mechanical-fit/REPORT.md) |
 | Pin tables and land patterns against manufacturer data sheets | all pin tables match | [`qa/datasheet-review/`](qa/datasheet-review/) |
 | DRC with JLCPCB's limits as rules, 30 rules | every copper, hole, via and edge minimum met; silkscreen findings and the USB connector's own land pattern remain | [`qa/dfm-jlcpcb/REPORT.md`](qa/dfm-jlcpcb/REPORT.md) |
 | Power tree, ngspice | no change needed | [`qa/power-sim/REPORT.md`](qa/power-sim/REPORT.md) |
 | Power-net copper: drop, current, heating | no change needed | [`qa/pdn/REPORT.md`](qa/pdn/REPORT.md) |
-| Signal integrity | one change (R115) | [`qa/signal-integrity/REPORT.md`](qa/signal-integrity/REPORT.md) |
+| Signal integrity | two changes (R115, R116) | [`qa/signal-integrity/REPORT.md`](qa/signal-integrity/REPORT.md) |
 | Gerber and drill files read back with a second parser | 962 plated and 334 non-plated holes and every SMD pad match | [`qa/gerber-verify/result.json`](qa/gerber-verify/result.json) |
 
 ## Changes from the 0/0 prototype
@@ -94,7 +94,10 @@ soldering.
   board's own `maru60.kicad_dru`. Two vias moved away from switch holes.
 - Silkscreen reference text enlarged to 1.0 mm / 0.15 mm where it fitted; the
   other ten keep 0.8 mm height with a 0.15 mm stroke.
-- `R115`, 100 Ω, in series at the source of the 276 mm underglow data hop.
+- `R115` and `R116`, 100 Ω each, in series at the source of the two long
+  underglow data hops (274 mm from `LED68`, 105 mm from `LED71`). The LED data
+  sheet does not give the output strength; with a strong, fast output an
+  unterminated hop of this length rings back through the input threshold.
 - 25 of the 39 via holes that sat inside SMD pads moved out of the pad (an
   open via in a pad draws solder away from the joint); each pad keeps a short
   track to its via.
@@ -103,14 +106,14 @@ soldering.
 
 `fit_jlcpcb_placement.py` fetches the footprint JLCPCB places from for each
 LCSC part and solves the rotation and centre that put its pads on the board's
-pads. 307 of 308 placements are fitted (the remaining one is a non-polar
+pads. 308 of 309 placements are fitted (the remaining one is a non-polar
 resistor); SOIC, TSSOP and SOT-23 agree with the community correction tables,
 and the USB-C connector needed a 1.3 mm centre shift.
 
 ## Findings that needed no change
 
 - **USB:** the RP2350 PHY is full speed only; the high-speed eye of the earlier
-  USB report does not apply. The routed pair is 95 Ω differential with 1.6 ps
+  USB report does not apply. The routed pair is 95 Ω differential with 2 ps
   skew and passes the full-speed crossover and edge limits in simulation.
 - **LED supply at 4.0 V:** inside the SK6805-EC15-001's 3.7–5.5 V range; the
   furthest LED still has about 3.82 V at the limiter maximum.
@@ -125,10 +128,23 @@ and the USB-C connector needed a 1.3 mm centre shift.
 - **2U Backspace:** not supported; Backspace is split only.
 - **`F1`:** the Bourns land pattern does not fit between its neighbours; the
   standard 1206 land stays. The fuse terminals are fully on the pads.
-- **Matrix read delay:** with all 15 keys of one row held and a worst-case pin,
-  the last column settles 50 ns after QMK reads it. One line in the firmware
-  `config.h` removes it; the firmware overlay is hash-pinned to its build
-  evidence and was not touched. See the signal-integrity report.
+- **Matrix read delay (firmware):** QMK reads the columns 247 ns after it
+  drives a row. With all 15 keys of one row held and the row pin at its
+  data-sheet limit, the last column is valid after 228 ns at 27 °C and 250 ns
+  at 0 °C: no margin in that corner (76 ns with a typical pin, 13 ns for one
+  key). `#define GPIO_INPUT_PIN_DELAY 120` in the keyboard's `config.h` gives
+  3 × there. Do not use a value above 135: QMK's `wait_cpuclock()` then waits
+  only 6 cycles. The firmware overlay is hash-pinned to its build evidence
+  and was not changed here; it needs its own rebuild. The board is not
+  affected.
+- **USB delay:** connector to transceiver is 1.03–1.07 ns; USB 2.0 allows a
+  device 1 ns. The allowance is a share of the budget through five hubs; every
+  full-speed waveform limit passes with margin. Shortening the pair by 13 mm
+  would meet the number.
+- **Key LED hops of 81 mm and 64 mm** (`KEY_RGB_CHAIN_60`, `_61`, `_52`) have no
+  series resistor. They are clean in simulation unless the LED output is both
+  stronger than 20 Ω and faster than 2 ns, which the data sheet neither states
+  nor excludes. Look at `LED59` DIN with a scope at bring-up.
 - **Buck phase margin** is 38–44° in the model and **VBUS rings on hot-plug**;
   both are for the first bring-up, see the power-simulation report.
 - **14 vias remain inside SMD pads** where no free position exists: the GND

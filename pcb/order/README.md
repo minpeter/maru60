@@ -14,8 +14,8 @@ SHA256 in [`PROVENANCE.json`](PROVENANCE.json). Regenerate everything here with
 | File | Use |
 | --- | --- |
 | `maru60-gerbers.zip` | Upload as the PCB. 11 Gerber layers, PTH and NPTH drill files. |
-| `bom-jlcpcb.csv` | Upload as the assembly BOM (51 part numbers, 308 placements). |
-| `cpl-jlcpcb.csv` | Upload as the placement file (130 top, 178 bottom). Rotations and centres are fitted to JLCPCB's own footprints. |
+| `bom-jlcpcb.csv` | Upload as the assembly BOM (51 part numbers, 309 placements). |
+| `cpl-jlcpcb.csv` | Upload as the placement file (130 top, 179 bottom). Rotations and centres are fitted to JLCPCB's own footprints. |
 | `bom-full.csv` | Every footprint, including what is *not* assembled and why. |
 | `parts.json` | Part selection rules and the stock snapshot date. |
 | `jlcpcb-placement.json` | Per part: the rotation and centre fitted to the footprint JLCPCB places from, and how well the two land patterns agree. |
@@ -53,7 +53,7 @@ review, which is why the BOM names the constant-current `TPS2553DBVR`).
 - Turn on **Confirm Parts Placement** and look through the preview before
   paying. The placement file is not raw KiCad output: for each part the
   footprint JLCPCB uses was fetched and the rotation and centre that put its
-  pads on the board's pads were solved (307 of 308 placements; `R123`, a
+  pads on the board's pads were solved (308 of 309 placements; `R123`, a
   resistor, uses the plain convention because JLCPCB publishes no footprint for
   it). The preview should therefore already be right. Still check:
   - `L1`: polarised, and JLCPCB's footprint cannot tell which end has the dot.
@@ -83,6 +83,12 @@ review, which is why the BOM names the constant-current `TPS2553DBVR`).
 5. Per-key LEDs stay off: the firmware keeps `MARU60_LED_POWER_QUALIFIED` at 0
    until the LED rail has been measured. Full white (1.14 A) is far above the
    174–234 mA limiter; keep the brightness cap.
+6. When the LEDs are first enabled, look at the data input of `LED59` (81 mm
+   hop, no series resistor) with a scope: the high level must stay above
+   3.1 V after the edge.
+7. Firmware, at the next rebuild: `#define GPIO_INPUT_PIN_DELAY 120` in the
+   keyboard's `config.h`. With the default delay a row with all 15 keys held
+   has no timing margin at a worst-case pin. Do not use a value above 135.
 
 Use switches with an SMD-LED opening in the bottom housing. The spacebar
 stabilizer holes are reversed (wire at the back) so they clear the board edge.

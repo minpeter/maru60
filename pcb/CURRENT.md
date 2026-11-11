@@ -17,7 +17,7 @@ dependency. Diagnostic counts in the manifest are saved observations.
 
 ## Order candidate (2026-11-11)
 
-PCB `43d2a258`, derived from the development prototype. It is what
+PCB `abd978a4`, derived from the development prototype. It is what
 [`pcb/order`](order/README.md) (Gerbers, JLCPCB BOM and placement file) is
 exported from. Its [README](experiments/resume-20261111-order-candidate/README.md)
 lists every change, the evidence, and what was left as it is. In short:
@@ -40,15 +40,15 @@ lists every change, the evidence, and what was left as it is. In short:
   the LED data links, USB, crystal, flash and key matrix, and a read-back of
   the exported Gerbers with a second parser. They led to copper being kept
   0.2 mm from every non-plated hole (now a rule in the board's own rule file),
-  larger silkscreen text, `R115` (series damping
-  on the 276 mm underglow data hop) and 25 vias being moved out of SMD pads.
+  larger silkscreen text, `R115` and `R116` (series damping
+  on the 274 mm and 105 mm underglow data hops) and 25 vias being moved out of SMD pads.
 - **RP2350 USB is full speed only**, so the high-speed eye, the 90 Ω target and
   the skew in the USB SI report below do not apply. No impedance control is
   ordered.
-- **The placement file is fitted to JLCPCB's own footprints** (307 of 308
+- **The placement file is fitted to JLCPCB's own footprints** (308 of 309
   parts), not raw KiCad angles.
 - Native check: 0 opens, 0 warnings, ERC 0, parity 0, 68 cold-refill files
-  identical, material graph recomputed. Bottom-case fit: 23 pass.
+  identical, material graph recomputed. Bottom-case fit: 24 pass.
 
 Still open: a 2.75U right Shift with a PCB-mount stabilizer and a 2U Backspace
 are unsupported; one firmware delay should be lengthened at the next rebuild

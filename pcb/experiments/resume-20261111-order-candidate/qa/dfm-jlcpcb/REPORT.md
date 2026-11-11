@@ -1,7 +1,7 @@
 # JLCPCB manufacturability check
 
 Board: `pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb`,
-SHA256 `43d2a2585d50bb2846a96450b88d3b95adc11475505df1c3134213f52a2df2fc`.
+SHA256 `abd978a43c723d4d7358becb6a7f15646fdec8d6cd6b16dbe50d1d8da96b35ee`.
 
 **Result: nothing here stops the order.** Every JLCPCB minimum for copper,
 holes, vias and the board edge is met. Four kinds of finding remain; three are

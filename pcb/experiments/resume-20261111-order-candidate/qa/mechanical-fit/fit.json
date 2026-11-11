@@ -3,8 +3,8 @@
   "generated_by": "pcb/tools/check_mechanical_fit.py",
   "board": {
     "path": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb",
-    "sha256": "43d2a2585d50bb2846a96450b88d3b95adc11475505df1c3134213f52a2df2fc",
-    "footprints": 382
+    "sha256": "abd978a43c723d4d7358becb6a7f15646fdec8d6cd6b16dbe50d1d8da96b35ee",
+    "footprints": 383
   },
   "assumptions": {
     "board_top_z_p_mm": 12.5,
@@ -794,6 +794,39 @@
           "clearance_mm": 2.8,
           "nominal_clearance_mm": 2.8,
           "status": "pass"
+        },
+        {
+          "ref": "R116",
+          "footprint": "Resistor_SMD:R_0402_1005Metric",
+          "position_board_mm": [
+            100.375,
+            74.35,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            99.905,
+            73.42,
+            100.845,
+            75.28
+          ],
+          "courtyard_world_mm": [
+            41.6525,
+            110.8077,
+            42.5925,
+            112.6678
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
         }
       ],
       "j3_plug_corridor": {
@@ -810,7 +843,7 @@
         "note": "3.5 mm wide insertion corridor; the JST SH plug body height is not in CAD, so only the corridor free height is checked."
       },
       "counts": {
-        "pass": 23,
+        "pass": 24,
         "tight": 0,
         "fail": 0,
         "unknown": 0
@@ -1190,7 +1223,7 @@
   },
   "summary": {
     "relocated_block": {
-      "pass": 23,
+      "pass": 24,
       "tight": 0,
       "fail": 0,
       "unknown": 0

@@ -161,7 +161,7 @@
    "mpn": "0402WGF1000TCE",
    "jlc_footprint": "R0402",
    "kicad_footprint": "R_0402_1005Metric",
-   "count": 1,
+   "count": 2,
    "corrections_deg": [
     0.0
    ],
@@ -361,8 +361,8 @@
    "corrections_deg": [
     0.0
    ],
-   "max_rms_mm": 0.0001,
-   "max_origin_shift_mm": 0.0001,
+   "max_rms_mm": 0.0076,
+   "max_origin_shift_mm": 0.0075,
    "matched_by": "pad number",
    "pads": "4/4"
   },
@@ -1023,14 +1023,14 @@
    "pads_board": 4,
    "pads_lib": 4,
    "rotation": 0,
-   "x": 16.4913,
+   "x": 16.4988,
    "y": 42.2188,
    "side": "Top",
-   "rms_mm": 0.0001,
+   "rms_mm": 0.0076,
    "kicad_rotation": 0.0,
    "kicad_convention_rotation": 0.0,
    "correction_deg": 0.0,
-   "origin_shift_mm": 0.0001
+   "origin_shift_mm": 0.0075
   },
   "C250": {
    "lcsc": "C1525",
@@ -4251,6 +4251,23 @@
    "kicad_rotation": 180.0,
    "kicad_convention_rotation": 0.0,
    "correction_deg": 270.0,
+   "origin_shift_mm": 0.0
+  },
+  "R116": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 90,
+   "x": 100.375,
+   "y": 74.35,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 90.0,
+   "kicad_convention_rotation": 90.0,
+   "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
   "C120": {

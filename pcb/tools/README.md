@@ -73,7 +73,7 @@ of `set_component_values.py` need the KiCad 9 `pcbnew` bindings and run through
 | `apply_layout_ops.py` | Applies an operation list (tracks, vias, footprints, pads, drills, text, graphics) to a board. |
 | `plan_ldo_swap.py`, `edit_schematic_ldo_swap.py` | Board and schematic side of replacing the MAX38902A by an AP2112K-3.3. |
 | `plan_bottom_sites.py` | Bottom-side land sites fed through new vias (used for `C200`). |
-| `plan_series_resistor.py` | `R115` at the source of the long underglow data hop. |
+| `plan_series_resistor.py` | `R115` and `R116`: cuts a long underglow data hop at its source and places a series resistor at the cut. |
 | `fit_jlcpcb_placement.py` | Fetches JLCPCB's footprint for each part and solves the placement rotation and centre. Needs network. |
 | `export_order_package.py` | DRC, BOM, CPL (using the fitted placements), Gerbers, drill files and provenance into `../order/`. |
 | `verify_gerbers.py` | Reads the exported Gerber and drill files with gerbonara and compares holes, pads and outline with the board. |
