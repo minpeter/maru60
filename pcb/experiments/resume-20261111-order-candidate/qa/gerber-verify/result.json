@@ -5,52 +5,52 @@
   {
    "check": "F_Cu: parses and has objects",
    "pass": true,
-   "detail": 6242
+   "detail": 6266
   },
   {
    "check": "In1_Cu: parses and has objects",
    "pass": true,
-   "detail": 1061
+   "detail": 1068
   },
   {
    "check": "In2_Cu: parses and has objects",
    "pass": true,
-   "detail": 967
+   "detail": 974
   },
   {
    "check": "B_Cu: parses and has objects",
    "pass": true,
-   "detail": 6387
+   "detail": 6485
   },
   {
    "check": "F_Paste: parses and has objects",
    "pass": true,
-   "detail": 396
+   "detail": 414
   },
   {
    "check": "B_Paste: parses and has objects",
    "pass": true,
-   "detail": 757
+   "detail": 783
   },
   {
    "check": "F_Silkscreen: parses and has objects",
    "pass": true,
-   "detail": 1172
+   "detail": 1509
   },
   {
    "check": "B_Silkscreen: parses and has objects",
    "pass": true,
-   "detail": 3401
+   "detail": 4002
   },
   {
    "check": "F_Mask: parses and has objects",
    "pass": true,
-   "detail": 739
+   "detail": 757
   },
   {
    "check": "B_Mask: parses and has objects",
    "pass": true,
-   "detail": 1034
+   "detail": 1060
   },
   {
    "check": "Edge_Cuts: parses and has objects",
@@ -75,7 +75,7 @@
    "check": "PTH: every round drill hit is a board hole of the same size",
    "pass": true,
    "detail": {
-    "hits": 962,
+    "hits": 969,
     "slots": 4,
     "unmatched": [],
     "oval_board_holes": 4
@@ -85,11 +85,11 @@
    "check": "PTH: every round board hole is drilled",
    "pass": true,
    "detail": {
-    "board": 962,
-    "drilled": 962,
+    "board": 969,
+    "drilled": 969,
     "sizes": {
      "1.0": 3,
-     "0.25": 889,
+     "0.25": 896,
      "0.3": 70
     }
    }
@@ -123,7 +123,7 @@
    "check": "F_Cu: SMD pads present as flashes",
    "pass": true,
    "detail": {
-    "pads": 397,
+    "pads": 415,
     "not_flashed_at_centre": 0,
     "examples": []
    }
@@ -132,7 +132,7 @@
    "check": "F_Mask: SMD pads present as flashes",
    "pass": true,
    "detail": {
-    "pads": 397,
+    "pads": 415,
     "not_flashed_at_centre": 0,
     "examples": []
    }
@@ -141,7 +141,7 @@
    "check": "F_Paste: SMD pads present as flashes",
    "pass": true,
    "detail": {
-    "pads": 396,
+    "pads": 414,
     "not_flashed_at_centre": 0,
     "examples": []
    }
@@ -160,7 +160,7 @@
    "check": "B_Cu: SMD pads present as flashes",
    "pass": true,
    "detail": {
-    "pads": 685,
+    "pads": 711,
     "not_flashed_at_centre": 0,
     "examples": []
    }
@@ -169,7 +169,7 @@
    "check": "B_Mask: SMD pads present as flashes",
    "pass": true,
    "detail": {
-    "pads": 685,
+    "pads": 711,
     "not_flashed_at_centre": 1,
     "examples": [
      "U1.61"
@@ -180,7 +180,7 @@
    "check": "B_Paste: SMD pads present as flashes",
    "pass": true,
    "detail": {
-    "pads": 661,
+    "pads": 687,
     "not_flashed_at_centre": 0,
     "examples": []
    }

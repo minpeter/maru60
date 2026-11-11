@@ -2,6 +2,13 @@
 """Plan moving the remaining via holes out of SMD pads by rerouting, not by nudging.
 
 usage: plan_via_relocate.py BOARD.json OPS.json [--skip x:y,x:y] [--radius MM]
+                            [--step MM] [--pad-edge MM] [--clear MM] [--hole-clear MM] [--tries N]
+
+The defaults keep a new via 0.20 mm from other copper and 0.36 mm (centre) from
+every pad.  For the sites where that finds nothing, the search can be made
+finer and brought down to what the rules need: --step 0.05 --pad-edge 0.33
+--clear 0.16 --hole-clear 0.25 (0.33 leaves 0.2 mm between the hole and the
+pad, so the hole stays under solder mask).
 
 plan_via_out_of_pad.py moves a via up to 1.3 mm and drags the track ends with
 it; that fails where the neighbourhood is full.  This planner takes the via
@@ -38,7 +45,9 @@ def main():
     skip = set()
     if "--skip" in sys.argv:
         skip = {tuple(round(float(v), 3) for v in s.split(":")) for s in sys.argv[sys.argv.index("--skip") + 1].split(",") if s}
-    radius = float(sys.argv[sys.argv.index("--radius") + 1]) if "--radius" in sys.argv else 4.0
+    opt = lambda name, default: float(sys.argv[sys.argv.index(name) + 1]) if name in sys.argv else default
+    radius, step, pad_edge = opt("--radius", 4.0), opt("--step", 0.1), opt("--pad-edge", PAD_EDGE)
+    clear, hole_clear, tries = opt("--clear", 0.20), opt("--hole-clear", 0.35), int(opt("--tries", 40))
     L = LR.Layout(d)
     smd = [(Polygon(p["poly"][0]), f["ref"], p["num"], p["net"], "F.Cu" if "F.Cu" in p["layers"] else "B.Cu", p)
            for f in d["fps"] for p in f["pads"] if p["drill"][0] == 0 and p["poly"] and any(l in ("F.Cu", "B.Cu") for l in p["layers"])]
@@ -66,16 +75,16 @@ def main():
         L.via_holes = [h for h in L.via_holes if h.distance(pt) > 1e-6]
         mid = PB.snapshot(L)
         near_pads = [s[0] for s in smd if abs(s[5]["x"] - v["x"]) < radius + 2 and abs(s[5]["y"] - v["y"]) < radius + 2]
-        cands = sorted((math.hypot(ix * 0.1, iy * 0.1), round(v["x"] + ix * 0.1, 4), round(v["y"] + iy * 0.1, 4))
-                       for ix in range(-int(radius * 10), int(radius * 10) + 1) for iy in range(-int(radius * 10), int(radius * 10) + 1)
-                       if 0.4 <= math.hypot(ix * 0.1, iy * 0.1) <= radius)
+        n = int(radius / step)
+        cands = sorted((math.hypot(ix * step, iy * step), round(v["x"] + ix * step, 4), round(v["y"] + iy * step, 4))
+                       for ix in range(-n, n + 1) for iy in range(-n, n + 1) if 0.3 <= math.hypot(ix * step, iy * step) <= radius)
         done, tried = None, 0
         for dist, x, y in cands:
             q = Point(x, y)
-            if any(s.distance(q) < PAD_EDGE for s in near_pads) or not L.via_ok(x, y, net, own_ref=None):
+            if any(s.distance(q) < pad_edge for s in near_pads) or not L.via_ok(x, y, net, clear=clear, hole_clear=hole_clear, own_ref=None):
                 continue
             tried += 1
-            if tried > 40:
+            if tried > tries:
                 break
             L.add_via(x, y, net)
             w = 0.25 if net == "GND" else 0.2

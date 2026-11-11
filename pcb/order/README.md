@@ -14,8 +14,8 @@ SHA256 in [`PROVENANCE.json`](PROVENANCE.json). Regenerate everything here with
 | File | Use |
 | --- | --- |
 | `maru60-gerbers.zip` | Upload as the PCB. 11 Gerber layers, PTH and NPTH drill files. |
-| `bom-jlcpcb.csv` | Upload as the assembly BOM (52 part numbers, 313 placements). |
-| `cpl-jlcpcb.csv` | Upload as the placement file (131 top, 182 bottom). Rotations and centres are fitted to JLCPCB's own footprints. |
+| `bom-jlcpcb.csv` | Upload as the assembly BOM (54 part numbers, 333 placements). |
+| `cpl-jlcpcb.csv` | Upload as the placement file (138 top, 195 bottom). Rotations and centres are fitted to JLCPCB's own footprints. |
 | `bom-full.csv` | Every footprint, including what is *not* assembled and why. |
 | `parts.json` | Part selection rules and the stock snapshot date. |
 | `jlcpcb-placement.json` | Per part: the rotation and centre fitted to the footprint JLCPCB places from, and how well the two land patterns agree. |
@@ -49,11 +49,12 @@ review, which is why the BOM names the constant-current `TPS2553DBVR`).
 ## 3. Assembly options
 
 - **Assemble both sides** (Standard PCBA). Top: 63 LEDs, 63 capacitors, F1,
-  R100, R101, R118, R120. Bottom: everything else.
+  R100, R101, R118, R120, R177, R179, R180, R181, R183, R187, C144. Bottom:
+  everything else.
 - Turn on **Confirm Parts Placement** and look through the preview before
   paying. The placement file is not raw KiCad output: for each part the
   footprint JLCPCB uses was fetched and the rotation and centre that put its
-  pads on the board's pads were solved (312 of 313 placements; `R123`, a
+  pads on the board's pads were solved (332 of 333 placements; `R123`, a
   resistor, uses the plain convention because JLCPCB publishes no footprint for
   it). The preview should therefore already be right. Still check:
   - `L1`: polarised, and JLCPCB's footprint cannot tell which end has the dot.
@@ -63,9 +64,6 @@ review, which is why the BOM names the constant-current `TPS2553DBVR`).
     on the pads. Orientation is what matters.
   - `U1`: pin 1 at the silkscreen mark; stepping A4.
   - LEDs: every land site has a silkscreen dot at pin 1 (DIN).
-  - Six joints have a via inside the pad and will take less solder: `R140`,
-    `R143`, `R159`, `Y1` (pad 2), `U12` (pad 1), `LED71` (pad 1). Inspect them
-    when the boards arrive.
   - `J1`: centred on its pads (JLCPCB's origin for this connector is 1.3 mm
     from KiCad's; the file already accounts for it).
 
@@ -88,8 +86,8 @@ review, which is why the BOM names the constant-current `TPS2553DBVR`).
    174–234 mA limiter; keep the brightness cap.
 6. When the LEDs are first enabled, look at the data input of one LED after a
    long hop (`LED59`, `LED69`) with a scope: the high level must stay above
-   3.1 V after the edge. The five long hops each have a 100 Ω series resistor
-   (`R115`–`R119`).
+   3.1 V after the edge. 23 hops have a 100 Ω series resistor (`R115`–`R119`,
+   `R170`–`R186`, `R188`); the others are 27 mm or shorter.
 
 Use switches with an SMD-LED opening in the bottom housing. The spacebar
 stabilizer holes are reversed (wire at the back) so they clear the board edge.
@@ -102,8 +100,9 @@ Shift (1.75U + 1U)**.
 | Option | What it needs |
 | --- | --- |
 | Stepped Caps Lock | Move `LED75` from its bottom relay site to its top pads (in the stepped switch window) and `LED30` from its window to its second top site in the row gap above. Each LED has both sites on the board; fit exactly one. |
-| 2.75U right Shift | Expected to work with a plate-mount stabilizer (the stock plate), which hangs from the plate about 1.5 mm above the PCB by nominal dimensions; `LED54` is 0.65 mm tall. Not checked against a real part. With a PCB-mount stabilizer `LED54` lies under the left stabilizer housing and cannot be left out (the LEDs are in series); not supported in this revision. |
-| 2U Backspace | Not supported. Backspace is split only. |
+| 2.75U right Shift, plate-mount stabilizer | Nothing to change: the stabilizer hangs from the plate about 1.5 mm above the PCB by nominal dimensions and `LED54` is 0.65 mm tall. Not checked against a real part. |
+| 2.75U right Shift, PCB-mount stabilizer | Move `LED54` from its window to its second site in the row gap 9 mm to the left (pin-1 dot on the silkscreen); its window site lies under the left stabilizer housing. Fit exactly one site. Planned from nominal dimensions; `LED55` sits about 0.1 mm from the right stabilizer housing, so check the fit on the part. |
+| 2U Backspace | Not supported. Backspace is split only: a third switch position between two hot-swap sockets overlaps both, and would need solder-in receptacles instead. |
 
 ## 6. What was changed and checked
 

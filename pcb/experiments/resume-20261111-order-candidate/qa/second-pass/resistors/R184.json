@@ -1,0 +1,199 @@
+{
+ "note": "R184 100 ohm in series on the LED data hop KEY_RGB_CHAIN_46 (LED54 DOUT), on B.Cu 11 mm from LED54, west of the point where LED54's second site joins the hop.",
+ "symbol_uuid": "b049ad38-6980-57f4-bb3e-4084392f0627",
+ "ops": [
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 250.12875,
+     "y1": 70.95375,
+     "x2": 250.1,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_46"
+    },
+    {
+     "x1": 250.1,
+     "y1": 71.0,
+     "x2": 250.89999999999998,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_46"
+    },
+    {
+     "x1": 250.89999999999998,
+     "y1": 71.0,
+     "x2": 246.6,
+     "y2": 71.0,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46"
+    },
+    {
+     "x1": 246.6,
+     "y1": 71.0,
+     "x2": 246.29999999999998,
+     "y2": 71.3,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46"
+    },
+    {
+     "x1": 246.29999999999998,
+     "y1": 71.3,
+     "x2": 241.7,
+     "y2": 71.3,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46"
+    },
+    {
+     "x1": 241.7,
+     "y1": 71.3,
+     "x2": 240.6,
+     "y2": 72.39999999999999,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46"
+    },
+    {
+     "x1": 240.6,
+     "y1": 72.39999999999999,
+     "x2": 226.89999999999998,
+     "y2": 72.39999999999999,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46"
+    }
+   ]
+  },
+  {
+   "op": "remove_vias",
+   "vias": [
+    {
+     "x": 250.89999999999998,
+     "y": 71.0,
+     "net": "KEY_RGB_CHAIN_46"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED54",
+   "pad": "3",
+   "net": "KEY_RGB_CHAIN_46_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R184",
+   "lib_dir": "pcb/experiments/resume-20261111-order-candidate/pcb/Maru60.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Maru60:R_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 239.9,
+   "y": 72.4,
+   "rot": 180,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "KEY_RGB_CHAIN_46_SRC",
+    "2": "KEY_RGB_CHAIN_46"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/b049ad38-6980-57f4-bb3e-4084392f0627",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     240.41,
+     72.4
+    ],
+    "2": [
+     239.39,
+     72.4
+    ]
+   }
+  },
+  {
+   "op": "add_vias",
+   "vias": [
+    {
+     "x": 250.89999999999998,
+     "y": 71.0,
+     "net": "KEY_RGB_CHAIN_46_SRC"
+    }
+   ]
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 250.12875,
+     "y1": 70.95375,
+     "x2": 250.1,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_46_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 250.1,
+     "y1": 71.0,
+     "x2": 250.89999999999998,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_46_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 250.89999999999998,
+     "y1": 71.0,
+     "x2": 246.6,
+     "y2": 71.0,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 246.6,
+     "y1": 71.0,
+     "x2": 246.29999999999998,
+     "y2": 71.3,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 246.29999999999998,
+     "y1": 71.3,
+     "x2": 241.7,
+     "y2": 71.3,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 241.7,
+     "y1": 71.3,
+     "x2": 240.6,
+     "y2": 72.39999999999999,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 240.6,
+     "y1": 72.39999999999999,
+     "x2": 240.41,
+     "y2": 72.4,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46_SRC"
+    },
+    {
+     "x1": 239.39,
+     "y1": 72.4,
+     "x2": 226.89999999999998,
+     "y2": 72.39999999999999,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46"
+    }
+   ]
+  }
+ ]
+}

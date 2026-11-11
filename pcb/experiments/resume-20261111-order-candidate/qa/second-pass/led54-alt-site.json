@@ -1,0 +1,146 @@
+{
+ "note": "LED54: second F.Cu site in the row gap west of the right-Shift stabilizer, for a 2.75U right Shift on a PCB-mount stabilizer (the window site lies under the left stabilizer housing). Hand-planned: DIN crosses ROW3 (F.Cu) and KEY_RGB_CHAIN_46 (B.Cu) with two vias.",
+ "top_sites": [
+  {
+   "ref": "LED54",
+   "window_site": [
+    249.65,
+    71.43
+   ],
+   "alt_site": [
+    240.5,
+    75.1
+   ],
+   "alt_pads": {
+    "1": [
+     240.029,
+     75.574
+    ],
+    "2": [
+     240.979,
+     75.574
+    ],
+    "3": [
+     240.979,
+     74.624
+    ],
+    "4": [
+     240.029,
+     74.624
+    ]
+   },
+   "nets": {
+    "1": "KEY_RGB_CHAIN_45",
+    "2": "+4V_LED",
+    "3": "KEY_RGB_CHAIN_46_SRC",
+    "4": "GND"
+   },
+   "add_tracks": [
+    {
+     "x1": 240.979,
+     "y1": 75.574,
+     "x2": 240.979,
+     "y2": 76.75,
+     "w": 0.3,
+     "layer": "F.Cu",
+     "net": "+4V_LED"
+    },
+    {
+     "x1": 240.029,
+     "y1": 74.624,
+     "x2": 239.3,
+     "y2": 74.624,
+     "w": 0.25,
+     "layer": "F.Cu",
+     "net": "GND"
+    },
+    {
+     "x1": 240.979,
+     "y1": 74.624,
+     "x2": 241.8,
+     "y2": 74.624,
+     "w": 0.15,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_46_SRC"
+    },
+    {
+     "x1": 241.8,
+     "y1": 74.624,
+     "x2": 241.8,
+     "y2": 71.3,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_46_SRC"
+    },
+    {
+     "x1": 247.8,
+     "y1": 70.5,
+     "x2": 238.6,
+     "y2": 70.5,
+     "w": 0.15,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_45"
+    },
+    {
+     "x1": 238.6,
+     "y1": 70.5,
+     "x2": 238.6,
+     "y2": 73.05,
+     "w": 0.15,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_45"
+    },
+    {
+     "x1": 238.6,
+     "y1": 73.05,
+     "x2": 238.6,
+     "y2": 75.574,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_45"
+    },
+    {
+     "x1": 238.6,
+     "y1": 75.574,
+     "x2": 239.3,
+     "y2": 75.574,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_45"
+    },
+    {
+     "x1": 239.3,
+     "y1": 75.574,
+     "x2": 240.029,
+     "y2": 75.574,
+     "w": 0.15,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_45"
+    }
+   ],
+   "add_vias": [
+    {
+     "x": 239.3,
+     "y": 74.624,
+     "net": "GND"
+    },
+    {
+     "x": 241.8,
+     "y": 74.624,
+     "net": "KEY_RGB_CHAIN_46_SRC"
+    },
+    {
+     "x": 238.6,
+     "y": 73.05,
+     "net": "KEY_RGB_CHAIN_45"
+    },
+    {
+     "x": 239.3,
+     "y": 75.574,
+     "net": "KEY_RGB_CHAIN_45"
+    }
+   ]
+  }
+ ],
+ "bottom_relays": []
+}

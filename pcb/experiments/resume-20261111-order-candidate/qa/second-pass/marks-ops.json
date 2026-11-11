@@ -1,0 +1,9 @@
+{"note": "The two orientation marks that were closer than 0.15 mm to a hole or pad: LED30's pin-1 dot moved 0.11 mm away from the Caps Lock pin hole, U11's pin-1 triangle replaced by a dot beside pin 1.",
+ "ops": [
+  {"op": "remove_graphics", "refs": ["LED30"], "layer_re": "F.Silkscreen", "shapes": ["Circle"]},
+  {"op": "add_circles", "items": [
+    {"ref": "LED30", "x": 15.55, "y": 43.32, "r": 0.12, "layer": "F.Silkscreen", "fill": true, "w": 0},
+    {"ref": "LED30", "x": 18.9663, "y": 39.2438, "r": 0.12, "layer": "F.Silkscreen", "fill": true, "w": 0}]},
+  {"op": "remove_graphics", "refs": ["U11"], "layer_re": "B.Silkscreen", "shapes": ["Polygon"]},
+  {"op": "add_circles", "items": [{"ref": "U11", "x": 84.6, "y": 83.0, "r": 0.12, "layer": "B.Silkscreen", "fill": true, "w": 0}]}
+ ]}

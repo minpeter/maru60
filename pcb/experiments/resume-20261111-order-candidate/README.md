@@ -3,7 +3,7 @@
 Derived from [`resume-20261109-relocated-expansion-zero-opens`](../resume-20261109-relocated-expansion-zero-opens/README.md)
 (PCB `cb7b5b29`). This checkpoint fixes what stood between that board and an
 order, and records the analyses run on the result. PCB SHA256:
-`36700843ef6c11179ef8453efac2747133c23870c03e9ecf52e248d44c42779e`. The order
+`8057453f75871b4df187fc1adfe50b0b870c53e2fcc7e5202948398253904107`. The order
 files exported from it are in [`pcb/order`](../../order/README.md).
 
 **It is an order candidate for a first prototype, not a qualified design.**
@@ -15,19 +15,19 @@ simulation. Nothing has been measured on hardware.
 | Check | Result | Evidence |
 | --- | --- | --- |
 | KiCad 9.0.2 DRC: opens / warnings / other errors | 0 / 0 / 0 | [`qa/native/RESULT.json`](qa/native/RESULT.json) |
-| ERC, schematic parity, net identity, cold refill | 0, 0, pass, 72 files identical | same |
+| ERC, schematic parity, net identity, cold refill | 0, 0, pass, 74 files identical | same |
 | Material (copper connectivity) graph | recomputed, pass | same |
-| Netlist against the 0/0 prototype | only the intended differences: U2's pins, C142 and R163 removed, R115–R119 and C143 added, five LED DOUT pins on their own `_SRC` nets, values and footprint names | `qa/netlist.xml` |
+| Netlist against the 0/0 prototype | only the intended differences: U2's pins, C142 and R163 removed, R115–R119, R170–R188, C143 and C144 added, 23 LED DOUT pins on their own `_SRC` nets, `VBUS_SNUB`, values and footprint names | `qa/netlist.xml` |
 | Firmware GPIO and matrix bindings on this netlist | 24 bindings match, negative controls rejected | [`qa/firmware-static/static.json`](qa/firmware-static/static.json) |
 | Top-side parts under a switch housing (default build) | none | `pcb/tools/plan_topside_relocation.py` keep-out |
-| Bottom-case fit, including the new bottom-side parts (`U2`, `C200`, `R115`–`R117`, `R119`, `C143`, `LED75`) | 27 pass, USB-C pass, 7U stabilizer pass | [`qa/mechanical-fit/REPORT.md`](qa/mechanical-fit/REPORT.md) |
+| Bottom-case fit, including the new and moved bottom-side parts (`U2`, `C200`, `C143`, `LED75`, `R159` and 17 series resistors) | 41 pass, USB-C pass, 7U stabilizer pass | [`qa/mechanical-fit/REPORT.md`](qa/mechanical-fit/REPORT.md) |
 | Pin tables and land patterns against manufacturer data sheets | all pin tables match | [`qa/datasheet-review/`](qa/datasheet-review/) |
-| DRC with JLCPCB's limits as rules, 30 rules | every minimum met; two orientation marks are within 0.15 mm of a pad or hole | [`qa/dfm-jlcpcb/REPORT.md`](qa/dfm-jlcpcb/REPORT.md) |
-| Power tree, ngspice | one change (C143) | [`qa/power-sim/REPORT.md`](qa/power-sim/REPORT.md) |
+| DRC with JLCPCB's limits as rules, 30 rules | every minimum met; no silkscreen within 0.15 mm of a pad or hole; no via inside an SMD pad | [`qa/dfm-jlcpcb/REPORT.md`](qa/dfm-jlcpcb/REPORT.md) |
+| Power tree, ngspice | two changes (C143; snubber R187 + C144) | [`qa/power-sim/REPORT.md`](qa/power-sim/REPORT.md) |
 | Power-net copper: drop, current, heating | no change needed | [`qa/pdn/REPORT.md`](qa/pdn/REPORT.md) |
-| Signal integrity | R115–R119, and the matrix read delay in the firmware | [`qa/signal-integrity/REPORT.md`](qa/signal-integrity/REPORT.md) |
+| Signal integrity | USB pair laid again (0.955 ns, 1 ns allowed), 23 series resistors on LED data hops, and the matrix read delay in the firmware | [`qa/signal-integrity/REPORT.md`](qa/signal-integrity/REPORT.md) |
 | Firmware built with the matrix read delay, both layouts | exit 0; delay 120 cycles and LED qualification 0 in the macro dumps; 120 `nop` in the linked delay routine | [`qa/qmk-build/RESULT.json`](qa/qmk-build/RESULT.json) |
-| Gerber and drill files read back with a second parser | 962 plated and 334 non-plated holes and every SMD pad match | [`qa/gerber-verify/result.json`](qa/gerber-verify/result.json) |
+| Gerber and drill files read back with a second parser | 973 plated holes, every non-plated hole and every SMD pad match | [`qa/gerber-verify/result.json`](qa/gerber-verify/result.json) |
 
 ## Changes from the 0/0 prototype
 
@@ -123,47 +123,78 @@ pads. 312 of 313 placements are fitted (the remaining one is a non-polar
 resistor); SOIC, TSSOP and SOT-23 agree with the community correction tables,
 and the USB-C connector needed a 1.3 mm centre shift.
 
+### 8. Second pass: the items that had been left
+
+The operation lists are in [`qa/second-pass`](qa/second-pass/REPRODUCE.md).
+
+- **USB pair laid again.** Connector to transceiver was 1.03–1.07 ns against
+  the 1 ns USB 2.0 allows a device; it is now 0.915 ns to `R102`/`R103` and
+  0.955 ns to the pins. `plan_pair_route.py` searched both outer layers
+  for the shortest any-angle path of the pair as one ribbon with every other
+  piece of copper left where it is: 156 mm became 138 mm
+  in the same corridor (the staircase is gone), still with four vias per line.
+  A route on the bottom layer alone would save the vias but is 15 mm longer;
+  letting the pair cross other tracks would gain 3 mm at most. At the
+  connector D+ lost its length-matching detour and D− changes layer ahead of
+  `U10`, which now hangs on a 2 mm stub like D+'s. No other net moved.
+- **No via is left inside an SMD pad** (39 at the start, 6 after the first
+  pass). `R140` and `R143`: the GND via sits between the resistor's two pads.
+  `LED71`: 0.37 mm beside the pad. `U12`: the +4V_LED track beside it moved
+  0.6 mm and the via went between pad and track. `Y1`: the +3V3 track round
+  the crystal moved 0.4 mm outward and the via went below the pad. `R159`
+  (buck feedback): the resistor moved 0.6 mm and the via 0.15 mm, so that
+  0.2 mm of solder mask lies between hole and pad; the feedback node gains
+  0.7 mm of track.
+- **Orientation marks.** `LED30`'s pin-1 dot is 0.11 mm further from the Caps
+  Lock pin hole; `U11`'s pin-1 triangle is a dot beside pin 1
+  (`Maru60:Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm`).
+- **Series resistors on every LED data hop that needed one.** With an LED
+  output of 10 Ω and a 1 ns edge, the strongest in the sweep, 18 more hops
+  rang back through the input threshold: nine underglow hops of 28–62 mm and
+  nine key hops of 27–33 mm (39–52 mm with the stubs of second sites).
+  `R170`–`R186` and `R188`, 100 Ω each, are at their sources. 23 of the 74
+  LED-to-LED hops now have a series part; the longest of the other 51 is
+  26.6 mm (`KEY_RGB_CHAIN_15`) and keeps 0.08 V at that output. Fourteen
+  were placed by `plan_series_resistor.py`; `R181`, `R184`, `R186` and `R188`
+  were planned by hand because the hop runs under housings without a via or
+  because the LED has two sites and the resistor has to sit behind both.
+  `COL0` moved 0.8 mm for `R188` and passes between its pads.
+- **Snubber on the USB input.** `R187` (1 Ω, 0805) in series with `C144`
+  (4.7 µF 50 V, 0805) across `C125`, on the top side beside `R120`. Plug-in
+  overshoot at the eFuse input in the model: 7.5 V → 5.0 V from a 5 V source,
+  31.3 V → 20.1 V from a faulty 20 V source (the eFuse input is rated 28 V).
+- **`LED54` has a second site** in the row gap west of the right-Shift
+  stabilizer, for a 2.75U right Shift on a PCB-mount stabilizer: its window
+  site lies under the left stabilizer housing in that build. As with the Caps
+  Lock LEDs, fit exactly one site; the chain order and the firmware LED map
+  do not change. `R184` sits behind the point where the two sites join.
+
 ## Findings that needed no change
 
 - **USB:** the RP2350 PHY is full speed only; the high-speed eye of the earlier
-  USB report does not apply. The routed pair is 95 Ω differential with 2 ps
-  skew and passes the full-speed crossover and edge limits in simulation.
+  USB report does not apply. The routed pair is 95 Ω differential and passes
+  the full-speed crossover and edge limits in simulation.
 - **LED supply at 4.0 V:** inside the SK6805-EC15-001's 3.7–5.5 V range; the
   furthest LED still has about 3.82 V at the limiter maximum.
 
 ## Left as it is
 
-- **Right Shift, 2.75U with a PCB-mount stabilizer:** `LED54` lies under the
-  left stabilizer housing. No route to a second site was found on either
-  layer. A plate-mount stabilizer, which is what the stock plate takes, hangs
-  about 1.5 mm above the PCB by nominal dimensions and should clear the
-  0.65 mm LED; this was not checked against a real part.
-- **2U Backspace:** not supported; Backspace is split only.
+- **2U Backspace:** not supported; Backspace is split only. A 2U key needs a
+  third switch position between the two 1U ones, and a hot-swap socket there
+  overlaps both neighbours. The earlier study
+  (`engineering/candidates.pretty`, Mill-Max 3305 receptacles for the three
+  positions) changes the assembly to six solder-in receptacles; whether to do
+  that is the owner's decision.
+- **Right Shift, 2.75U:** with a plate-mount stabilizer nothing changes. With
+  a PCB-mount stabilizer move `LED54` to its second site (section 8); this
+  was planned from nominal stabilizer dimensions and not checked against a
+  real part. `LED55` is about 0.1 mm from the right stabilizer housing if
+  the housing is 7.75 mm wide (assumed); check that on the part.
 - **`F1`:** the Bourns land pattern does not fit between its neighbours; the
   standard 1206 land stays. The fuse terminals are fully on the pads.
-- **USB delay:** connector to transceiver is 1.03–1.07 ns; USB 2.0 allows a
-  device 1 ns. The allowance is a share of the budget through five hubs; every
-  full-speed waveform limit passes with margin. Meeting the number needs 13 mm
-  less route. The pair is a 156 mm staircase between the switch holes (the
-  shortest path with no obstacles would be 132 mm) and the excess is spread
-  over the whole run, so it means laying the pair again from the connector to
-  the MCU. Left as a recorded deviation.
-- **LED hops of 62 mm and less** have no series resistor. The longest keeps
-  0.40 V above the input threshold with a 20 Ω, 2 ns LED output and rings
-  back under it only with 20 Ω and 1 ns, or 10 Ω and 2 ns. Look at `LED74`
-  DIN with a scope at bring-up.
-- **VBUS rings on hot-plug** (about 1.5 × the source for microseconds, into a
-  50 V capacitor and a 28 V eFuse input): harmless from a 5 V port. There is
-  no TVS on VBUS. See the power-simulation report.
-- **Six vias remain inside SMD pads**: the GND pads of `R140`, `R143`, `Y1.2`
-  and `U12`, the DIN pad of `LED71` (no free position with a route within
-  6.5 mm) and the feedback pad of `R159` (kept on purpose: moving it adds
-  2.4 mm to the buck's feedback node beside the switch node). Expect less
-  solder on those joints; inspect them on the first boards.
-- **Two orientation marks** are closer than 0.15 mm to a pad or hole: the
-  pin-1 dot of `LED30`'s window site (0.088 mm from a switch pin hole) and the
-  pin-1 triangle of `U11` (0.115 mm from a pad of `R130`). Kept, because they
-  show orientation.
+- **No fiducials or tooling holes on the board:** 23 parts are within 2.5 mm
+  of an edge, so the order needs edge rails anyway, and JLCPCB puts both on
+  the rails.
 - Hardware qualification, license and USB ID are as in [`pcb/CURRENT.md`](../../CURRENT.md).
 
 ## Reproduce
@@ -178,5 +209,6 @@ tools/run_kicad9.sh python3 tools/check_pcb_native.py \
 
 The edits were made by the planners and appliers in `pcb/tools`, each step
 followed by KiCad DRC; the plans and operation lists that were applied are the
-`*-plan.json`, `*-spec.json` and `*-ops.json` files in `qa/`. See
+`*-plan.json`, `*-spec.json` and `*-ops.json` files in `qa/` and, for the
+second pass, in `qa/second-pass/`. See
 [`pcb/tools/README.md`](../../tools/README.md).

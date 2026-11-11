@@ -1,0 +1,105 @@
+{
+ "note": "R187 (1 ohm) in series with C144 (4.7 uF 50 V) from VBUS_FUSED to GND: a snubber across C125 that damps the plug-in ring of the cable inductance.",
+ "ops": [
+  {
+   "op": "add_footprint",
+   "ref": "R187",
+   "lib_dir": "/usr/share/kicad/footprints/Resistor_SMD.pretty",
+   "name": "R_0805_2012Metric",
+   "fpid": "Resistor_SMD:R_0805_2012Metric",
+   "side": "F.Cu",
+   "x": 23.4,
+   "y": 18.0,
+   "rot": 0,
+   "value": "1 1%",
+   "pad_nets": {
+    "1": "VBUS_FUSED",
+    "2": "VBUS_SNUB"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/b23fad96-b125-5e31-9e7a-96cb80147b05",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     22.4875,
+     18.0
+    ],
+    "2": [
+     24.3125,
+     18.0
+    ]
+   }
+  },
+  {
+   "op": "add_footprint",
+   "ref": "C144",
+   "lib_dir": "/usr/share/kicad/footprints/Capacitor_SMD.pretty",
+   "name": "C_0805_2012Metric",
+   "fpid": "Capacitor_SMD:C_0805_2012Metric",
+   "side": "F.Cu",
+   "x": 27.1,
+   "y": 18.0,
+   "rot": 0,
+   "value": "4.7uF 50V X5R",
+   "pad_nets": {
+    "1": "VBUS_SNUB",
+    "2": "GND"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/7850b214-cbc7-5541-b11b-636c7d82470e",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     26.15,
+     18.0
+    ],
+    "2": [
+     28.05,
+     18.0
+    ]
+   }
+  },
+  {
+   "op": "add_vias",
+   "vias": [
+    {
+     "x": 29.1,
+     "y": 18.0,
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 20.5,
+     "y1": 17.675,
+     "x2": 22.4875,
+     "y2": 18.0,
+     "w": 0.4,
+     "layer": "F.Cu",
+     "net": "VBUS_FUSED"
+    },
+    {
+     "x1": 24.3125,
+     "y1": 18.0,
+     "x2": 26.15,
+     "y2": 18.0,
+     "w": 0.4,
+     "layer": "F.Cu",
+     "net": "VBUS_SNUB"
+    },
+    {
+     "x1": 28.05,
+     "y1": 18.0,
+     "x2": 29.1,
+     "y2": 18.0,
+     "w": 0.4,
+     "layer": "F.Cu",
+     "net": "GND"
+    }
+   ]
+  }
+ ]
+}

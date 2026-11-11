@@ -1,11 +1,12 @@
 # JLCPCB manufacturability check
 
 Board: `pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb`,
-SHA256 `36700843ef6c11179ef8453efac2747133c23870c03e9ecf52e248d44c42779e`.
+SHA256 `8057453f75871b4df187fc1adfe50b0b870c53e2fcc7e5202948398253904107`.
 
-**Result: nothing here stops the order.** Every JLCPCB minimum is met. Two
-silkscreen marks sit closer than 0.15 mm to a pad or hole and six vias remain
-inside SMD pads; both are listed under "What remains".
+**Result: nothing here stops the order.** Every JLCPCB minimum is met, no
+silkscreen is closer than 0.15 mm to a pad or hole, and no via is inside an
+SMD pad. The one rule with findings is a recommendation that does not apply
+to the nine thermal vias it names.
 
 The limits are the figures on JLCPCB's capability pages as read on 2026-11-11;
 each is in [`results.json`](results.json) with the page it came from. Nothing
@@ -50,7 +51,7 @@ the order is placed.
 | Copper to routed edge, minimum / recommended | 0.20 / 0.30 mm | 0 | 0.5 mm |
 | Silkscreen text height | 1.0 mm | 0 | 1.0 mm |
 | Silkscreen text stroke | 0.15 mm | 0 | 0.15 mm |
-| **Silkscreen to pad** | 0.15 mm | **2** | 0.088 mm, see below |
+| Silkscreen to pad | 0.15 mm | 0 | |
 | Recommended plated component hole | 0.5 mm | 9 (not a defect) | 0.25 mm: the nine thermal vias under `U1` are drawn as pads; JLCPCB's via minimum applies to them |
 
 ## Geometry checks
@@ -60,7 +61,7 @@ the order is placed.
 | Solder-mask web between pads of fine-pitch parts | 0.10 mm | pass; smallest 0.17 mm (`U1`, 0.4 mm pitch) |
 | Stencil area ratio, 0.10 mm foil | 0.66 | pass; lowest 0.74 (`U13`, 0.2 × 0.5 mm) |
 | Stencil area ratio, 0.12 mm foil | 0.66 | `U13` 0.61, below the guideline; all others pass |
-| Open vias inside SMD pads | none wanted | 6 remain, listed below |
+| Open vias inside SMD pads | none wanted | none |
 | Assembled parts within 2.5 mm of the board edge | rails needed | 23 parts, `J1` at the edge |
 | Fiducials, 1.152 mm tooling holes | needed for assembly | none on the board |
 
@@ -85,7 +86,9 @@ Found on earlier revisions of this board and now clear:
 | Ten reference texts 0.8 mm high with 0.10 mm stroke | 0.8 / 0.10 mm | 1.0 / 0.15 mm | enlarged and moved to free positions |
 | Outline dashes of the stock 0402 capacitor and resistor footprints, test-point circles | 0.10–0.14 mm from their own pads (277 places) | removed | the footprints are now `Maru60:C_0402_1005Metric`, `Maru60:R_0402_1005Metric`, `Maru60:TestPoint_Pad_D1.0mm`; pads and courtyards are unchanged |
 | Reference texts 0.06–0.149 mm from a pad, 13 texts | < 0.15 mm | ≥ 0.15 mm | moved |
-| Open vias inside SMD pads | 14 | 6 | `plan_via_relocate.py`: eight vias taken out of the pad and rerouted |
+| Open vias inside SMD pads | 14 | 0 | `plan_via_relocate.py`: eight vias taken out of the pad and rerouted. The last six by hand: between the two pads of `R140` and `R143`; beside the pad of `LED71`; `U12` after moving the +4V_LED track beside it 0.6 mm; `Y1` after moving the +3V3 track round the crystal 0.4 mm; `R159` by moving the resistor 0.6 mm and the via 0.15 mm (0.2 mm of mask between hole and pad) |
+| Pin-1 dot of `LED30`'s window site beside a Caps Lock pin hole | 0.088 mm | ≥ 0.15 mm | dot moved 0.11 mm |
+| Pin-1 triangle of `U11` beside a pad of `R130` | 0.115 mm | ≥ 0.15 mm | replaced by a dot beside pin 1; the footprint is now `Maru60:Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm` |
 
 The first report of this board counted 199 silkscreen findings. That figure was
 KiCad's reporting cap, not the total; the resistor dashes and the texts were
@@ -94,22 +97,21 @@ found once the cap was switched off.
 Operation lists: [`../npth-clearance-ops.json`](../npth-clearance-ops.json),
 [`../silk-text-ops.json`](../silk-text-ops.json),
 [`../silk-clearance-ops.json`](../silk-clearance-ops.json),
-[`../via-relocate-ops.json`](../via-relocate-ops.json).
+[`../via-relocate-ops.json`](../via-relocate-ops.json),
+[`../second-pass/via-ops.json`](../second-pass/via-ops.json),
+[`../second-pass/marks-ops.json`](../second-pass/marks-ops.json).
 
 ## What remains
 
-1. **Two silkscreen marks closer than 0.15 mm to a pad or hole.** The pin-1 dot
-   of `LED30`'s window site is 0.088 mm from a Caps Lock switch pin hole, and
-   the pin-1 triangle of `U11` is 0.115 mm from a pad of `R130`. Neither
-   overlaps a mask opening. Both are orientation marks and were kept.
-2. **Six open vias inside SMD pads**: the GND pads of `R140`, `R143`, `Y1.2`
-   and `U12`, the DIN pad of `LED71`, and the feedback pad of `R159`. For the
-   first five no free via position with a route exists within 6.5 mm (and
-   removing the GND ones disconnects the pad). `R159`'s via is left on purpose:
-   it is the buck's feedback node, and moving it out adds 2.4 mm of track to a
-   high-impedance net beside the switch node. Solder can wick into the via and
-   leave a lean joint: inspect these six on the first boards, or order filled
-   and capped vias if JLCPCB offers it for this stack-up.
+Nothing from the rule check. Two things to do in the order form, both in
+[`pcb/order/README.md`](../../../../order/README.md): let JLCPCB add edge
+rails (they carry the fiducials and tooling holes), and look at `U13`'s
+joints on the first boards if a 0.12 mm stencil is used.
+
+The 26 parts added since the first report (`R115`–`R119`, `R170`–`R188`,
+`C143`, `C144`) were checked by the same runs: the stock 0805 footprints of
+`R187` and `C144` keep their silkscreen 0.15 mm from the pads, the 0402 parts
+use the project footprints without silkscreen.
 
 ## Reproduce
 

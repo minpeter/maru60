@@ -17,7 +17,7 @@ dependency. Diagnostic counts in the manifest are saved observations.
 
 ## Order candidate (2026-11-11)
 
-PCB `36700843`, derived from the development prototype. It is what
+PCB `8057453f`, derived from the development prototype. It is what
 [`pcb/order`](order/README.md) (Gerbers, JLCPCB BOM and placement file) is
 exported from. Its [README](experiments/resume-20261111-order-candidate/README.md)
 lists every change, the evidence, and what was left as it is. In short:
@@ -40,9 +40,13 @@ lists every change, the evidence, and what was left as it is. In short:
   the LED data links, USB, crystal, flash and key matrix, and a read-back of
   the exported Gerbers with a second parser. They led to copper being kept
   0.2 mm from every non-plated hole (now a rule in the board's own rule file),
-  silkscreen kept 0.15 mm from pads, `R115`–`R119` (series damping on the five
-  LED data hops longer than 60 mm), `C143` (feed-forward capacitor of the
-  buck, phase margin 38–44° → 46–51° in the model) and 33 vias being moved out of SMD pads (6 remain).
+  silkscreen kept 0.15 mm from pads, a 100 Ω series resistor on 23 LED data
+  hops (every hop that rang back with the strongest LED output in the sweep),
+  `C143` (feed-forward capacitor of the buck, phase margin 38–44° → 46–51° in
+  the model), a snubber on the USB input (`R187`, `C144`; plug-in overshoot
+  7.5 V → 5.0 V in the model), all 39 vias being moved out of SMD pads, and
+  the USB pair being laid again (connector to transceiver 1.07 ns →
+  0.955 ns; USB 2.0 allows 1 ns).
 - **RP2350 USB is full speed only**, so the high-speed eye, the 90 Ω target and
   the skew in the USB SI report below do not apply. No impedance control is
   ordered.
@@ -50,14 +54,16 @@ lists every change, the evidence, and what was left as it is. In short:
   120`; the 247 ns default had no margin with a full row held and a
   worst-case pin). Both layouts were rebuilt:
   [build packet](experiments/resume-20261111-order-candidate/qa/qmk-build/RESULT.json).
-- **The placement file is fitted to JLCPCB's own footprints** (312 of 313
+- **The placement file is fitted to JLCPCB's own footprints** (332 of 333
   parts), not raw KiCad angles.
-- Native check: 0 opens, 0 warnings, ERC 0, parity 0, 72 cold-refill files
-  identical, material graph recomputed. Bottom-case fit: 27 pass.
+- **A 2.75U right Shift on a PCB-mount stabilizer** is possible: `LED54` has
+  a second land site outside the stabilizer housing.
+- Native check: 0 opens, 0 warnings, ERC 0, parity 0, 74 cold-refill files
+  identical, material graph recomputed. Bottom-case fit: 41 pass.
 
-Still open: a 2.75U right Shift with a PCB-mount stabilizer and a 2U Backspace
-are unsupported; the USB pair is 3–7 % over the 1 ns connector-to-transceiver
-allowance (recorded, not rerouted); hardware qualification, license and USB ID are
+Still open: a 2U Backspace is unsupported (it needs solder-in receptacles in
+place of three hot-swap sockets, an owner decision); hardware qualification,
+license and USB ID are
 unchanged from the sections below. The power, thermal and USB reports listed
 further down describe the development prototype and are superseded for the
 order candidate by the reports in its `qa/` folder. The older

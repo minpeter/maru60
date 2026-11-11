@@ -1,0 +1,167 @@
+{
+ "note": "R182 100 ohm in series at the source of the LED data hop KEY_RGB_CHAIN_51 (LED49 DOUT), 0.7 mm of copper before it.",
+ "symbol_uuid": "3166a945-9e12-541a-b1e0-1e27ef533c0d",
+ "ops": [
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 148.4,
+     "y1": 71.0,
+     "x2": 149.2,
+     "y2": 71.3,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_51"
+    },
+    {
+     "x1": 147.73499999999999,
+     "y1": 70.95375,
+     "x2": 148.4,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_51"
+    },
+    {
+     "x1": 147.73499999999999,
+     "y1": 70.95375,
+     "x2": 147.7,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_51"
+    }
+   ]
+  },
+  {
+   "op": "remove_vias",
+   "vias": [
+    {
+     "x": 148.4,
+     "y": 71.0,
+     "net": "KEY_RGB_CHAIN_51"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED49",
+   "pad": "3",
+   "net": "KEY_RGB_CHAIN_51_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R182",
+   "lib_dir": "pcb/experiments/resume-20261111-order-candidate/pcb/Maru60.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Maru60:R_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 148.9,
+   "y": 71.875,
+   "rot": 0,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "KEY_RGB_CHAIN_51_SRC",
+    "2": "KEY_RGB_CHAIN_51"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/3166a945-9e12-541a-b1e0-1e27ef533c0d",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     148.39,
+     71.875
+    ],
+    "2": [
+     149.41,
+     71.875
+    ]
+   }
+  },
+  {
+   "op": "add_vias",
+   "vias": [
+    {
+     "x": 148.4,
+     "y": 71.0,
+     "net": "KEY_RGB_CHAIN_51_SRC"
+    }
+   ]
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 147.73499999999999,
+     "y1": 70.95375,
+     "x2": 148.4,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_51_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 147.73499999999999,
+     "y1": 70.95375,
+     "x2": 147.7,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_51_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 148.39,
+     "y1": 71.875,
+     "x2": 147.94,
+     "y2": 71.425,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_51_SRC"
+    },
+    {
+     "x1": 147.94,
+     "y1": 71.425,
+     "x2": 148.39,
+     "y2": 70.975,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_51_SRC"
+    },
+    {
+     "x1": 148.39,
+     "y1": 70.975,
+     "x2": 148.4,
+     "y2": 71.0,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_51_SRC"
+    },
+    {
+     "x1": 149.41,
+     "y1": 71.875,
+     "x2": 149.01,
+     "y2": 71.475,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_51"
+    },
+    {
+     "x1": 149.01,
+     "y1": 71.475,
+     "x2": 149.21,
+     "y2": 71.275,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_51"
+    },
+    {
+     "x1": 149.21,
+     "y1": 71.275,
+     "x2": 149.2,
+     "y2": 71.3,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_51"
+    }
+   ]
+  }
+ ]
+}

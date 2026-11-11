@@ -257,6 +257,18 @@ def main():
     ug6, ug9 = series_hop("UG_LED_6"), series_hop("UG_LED_9")
     UG6, UG6_SHORT, UG9, UG9_SHORT = ug6["built"], ug6["short"], ug9["built"], ug9["short"]
     k60, k61, k52 = series_hop("KEY_RGB_CHAIN_60"), series_hop("KEY_RGB_CHAIN_61"), series_hop("KEY_RGB_CHAIN_52")     # R117, R118, R119
+    # every other hop that has a series part (R170 and up): simulated as built
+    more = [series_hop(x["net"]) for x in geo["led"]["underglow"] + geo["led"]["key"]
+            if "series_at_source" in x and x["net"] not in ser_hop]
+    def variant(label, net, src, dst, pick):
+        """A hop of a two-site LED for one fitted combination; behind a series part if the hop has one."""
+        k = ser_hop.get(net)
+        if k is None:
+            return (net, src, dst, pick)
+        side = k["ser"]["source_side"]
+        pres[label] = (board.route(side["net"], tuple(side["from"].split(".")), tuple(side["to"].split(".")), pick), k["ser"]["ohm"])
+        return (net, tuple(k["hop"]["from"].split(".")), tuple(k["hop"]["to"].split(".")), pick)
+
     # the longest LED-to-LED hop that has no series part
     bare = max((x for x in geo["led"]["underglow"] + geo["led"]["key"] if "series_at_source" not in x and x["from"].startswith("LED")), key=lambda x: x["length_mm"])
     BARE = f"{bare['net']} (longest hop without a series part: {bare['length_mm']:.0f} mm, {bare['vias']} vias)"
@@ -268,14 +280,15 @@ def main():
         k60["built"]: k60["spec"],
         k61["built"]: k61["spec"],
         k52["built"]: k52["spec"],
+        **{k["built"]: k["spec"] for k in more},
         BARE: bare_spec,
-        "KEY_RGB_CHAIN_29 default (stub to LED30 alt site)": ("KEY_RGB_CHAIN_29", ("LED16", "3"), ("LED30", "1"), both(site("LED30", near=win), site("LED75", layer="B.Cu"))),
-        "KEY_RGB_CHAIN_29 stepped (LED30 on alt site)": ("KEY_RGB_CHAIN_29", ("LED16", "3"), ("LED30", "1"), both(site("LED30", near=alt), site("LED75", layer="B.Cu"))),
-        "KEY_RGB_CHAIN_30 default (LED30 window, LED75 bottom)": ("KEY_RGB_CHAIN_30", ("LED30", "3"), ("LED75", "1"), both(site("LED30", near=win), site("LED75", layer="B.Cu"))),
-        "KEY_RGB_CHAIN_30 stepped (LED30 alt, LED75 bottom)": ("KEY_RGB_CHAIN_30", ("LED30", "3"), ("LED75", "1"), both(site("LED30", near=alt), site("LED75", layer="B.Cu"))),
-        "KEY_RGB_CHAIN_30 LED75 on top pads (stub with via)": ("KEY_RGB_CHAIN_30", ("LED30", "3"), ("LED75", "1"), both(site("LED30", near=alt), site("LED75", layer="F.Cu"))),
-        "KEY_RGB_CHAIN_31 default (LED75 bottom)": ("KEY_RGB_CHAIN_31", ("LED75", "3"), ("LED31", "1"), site("LED75", layer="B.Cu")),
-        "KEY_RGB_CHAIN_31 LED75 on top pads (stub with via)": ("KEY_RGB_CHAIN_31", ("LED75", "3"), ("LED31", "1"), site("LED75", layer="F.Cu")),
+        "KEY_RGB_CHAIN_29 default (stub to LED30 alt site)": variant("KEY_RGB_CHAIN_29 default (stub to LED30 alt site)", "KEY_RGB_CHAIN_29", ("LED16", "3"), ("LED30", "1"), both(site("LED30", near=win), site("LED75", layer="B.Cu"))),
+        "KEY_RGB_CHAIN_29 stepped (LED30 on alt site)": variant("KEY_RGB_CHAIN_29 stepped (LED30 on alt site)", "KEY_RGB_CHAIN_29", ("LED16", "3"), ("LED30", "1"), both(site("LED30", near=alt), site("LED75", layer="B.Cu"))),
+        "KEY_RGB_CHAIN_30 default (LED30 window, LED75 bottom)": variant("KEY_RGB_CHAIN_30 default (LED30 window, LED75 bottom)", "KEY_RGB_CHAIN_30", ("LED30", "3"), ("LED75", "1"), both(site("LED30", near=win), site("LED75", layer="B.Cu"))),
+        "KEY_RGB_CHAIN_30 stepped (LED30 alt, LED75 bottom)": variant("KEY_RGB_CHAIN_30 stepped (LED30 alt, LED75 bottom)", "KEY_RGB_CHAIN_30", ("LED30", "3"), ("LED75", "1"), both(site("LED30", near=alt), site("LED75", layer="B.Cu"))),
+        "KEY_RGB_CHAIN_30 LED75 on top pads (stub with via)": variant("KEY_RGB_CHAIN_30 LED75 on top pads (stub with via)", "KEY_RGB_CHAIN_30", ("LED30", "3"), ("LED75", "1"), both(site("LED30", near=alt), site("LED75", layer="F.Cu"))),
+        "KEY_RGB_CHAIN_31 default (LED75 bottom)": variant("KEY_RGB_CHAIN_31 default (LED75 bottom)", "KEY_RGB_CHAIN_31", ("LED75", "3"), ("LED31", "1"), site("LED75", layer="B.Cu")),
+        "KEY_RGB_CHAIN_31 LED75 on top pads (stub with via)": variant("KEY_RGB_CHAIN_31 LED75 on top pads (stub with via)", "KEY_RGB_CHAIN_31", ("LED75", "3"), ("LED31", "1"), site("LED75", layer="F.Cu")),
         "KEY_RGB_CHAIN_3 (typical 18.8 mm hop)": ("KEY_RGB_CHAIN_3", ("LED3", "3"), ("LED4", "1"), None),
         UG6_SHORT: ug6["spec"],
         UG9_SHORT: ug9["spec"],
@@ -318,6 +331,37 @@ def main():
                              "extra_threshold_crossings": m.get("extra_threshold_crossings")})
         sweep[label] = rows
     out["dout_strength_sweep"] = sweep
+
+    # ---- every LED-to-LED hop at the four strongest outputs of the sweep ----
+    screen = []
+    for x in geo["led"]["underglow"] + geo["led"]["key"]:
+        if x["net"] in ("KEY_RGB_5V", "UNDERGLOW_5V"):       # the buffered first hops are simulated separately
+            continue
+        k = ser_hop.get(x["net"])
+        route = board.route(x["net"], tuple(x["from"].split(".")), tuple(x["to"].split(".")))
+        if route is None:
+            continue
+        cases = {}
+        for rr, ee in ((10.0, 1e-9), (10.0, 2e-9), (20.0, 1e-9), (20.0, 2e-9)):
+            m, _ = sim_hop("led_screen", route, table, {"r": rr, "edge": ee, "cin": 5e-12}, pres[k["built"]] if k else None)
+            cases[f"{rr:g} ohm / {ee * 1e9:g} ns"] = {"NM_high_V": m.get("noise_margin_high_V"), "NM_low_V": m.get("noise_margin_low_V")}
+        screen.append({"net": x["net"], "length_mm": x["length_mm"], "vias": x["vias"], "series_part": k["ser"]["ref"] if k else None,
+                       "worst_NM_V": min(v for c in cases.values() for v in c.values() if v is not None), "cases": cases})
+    # the two-site options (stepped Caps Lock): the same four outputs on each fitted combination
+    for label, (net, a, b, pick) in hops.items():
+        if pick is None:
+            continue
+        route = board.route(net, a, b, pick)
+        k = ser_hop.get(net)
+        cases = {}
+        for rr, ee in ((10.0, 1e-9), (10.0, 2e-9), (20.0, 1e-9), (20.0, 2e-9)):
+            m, _ = sim_hop("led_screen", route, table, {"r": rr, "edge": ee, "cin": 5e-12}, pres.get(label))
+            cases[f"{rr:g} ohm / {ee * 1e9:g} ns"] = {"NM_high_V": m.get("noise_margin_high_V"), "NM_low_V": m.get("noise_margin_low_V")}
+        screen.append({"net": net, "variant": label, "length_mm": route["length_mm"], "vias": route["vias"], "series_part": k["ser"]["ref"] if k else None,
+                       "worst_NM_V": min(v for c in cases.values() for v in c.values() if v is not None), "cases": cases})
+    screen.sort(key=lambda r: r["worst_NM_V"])
+    out["strong_driver_screen"] = screen
+    print("strong-driver screen, worst five:", [(r["net"], r["series_part"], r["worst_NM_V"]) for r in screen[:5]])
 
     # ---- first hops ----
     cases = {

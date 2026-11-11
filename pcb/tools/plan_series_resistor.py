@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Plan a series damping resistor at the source of a long LED data hop.
 
-usage: plan_series_resistor.py BOARD.json OPS.json REF LED NET [MAX_MM]
+usage: plan_series_resistor.py BOARD.json OPS.json REF LED NET [MAX_MM [MIN_MM]]
        e.g. R116 LED71 UG_LED_9, R117 LED58 KEY_RGB_CHAIN_60
 
 A hop runs from one LED's DOUT (pad 3) to the next LED's DIN.  If the SK6805
@@ -13,7 +13,11 @@ NET_SRC, the rest of the hop keeps NET.
 The route is followed from the DOUT pad through tracks and vias.  The resistor
 may start at the pad or at any via within MAX_MM (default 12) of it; from that
 point the next k track segments are removed and the part is placed beside the
-gap, on the layer the removed segments were on:
+gap, on the layer the removed segments were on.  With MIN_MM given, the end of
+every track segment between MIN_MM and MAX_MM from the pad is a start point
+too: that is for hops that run under switch housings without a via, where the
+first free place for a top-side part is the gap between two housings.  The
+part goes:
 
   B.Cu  clear of every bottom-side courtyard and copper (plan_bottom_sites);
   F.Cu  additionally outside every switch housing and stabilizer zone by
@@ -37,6 +41,7 @@ import plan_bottom_sites as PB  # noqa: E402
 import plan_topside_relocation as TR  # noqa: E402
 
 CORE_SHEET = "0940d797-79a6-569a-9535-d8f19961ba0b"
+LIB_DIR = "pcb/experiments/resume-20261111-order-candidate/pcb/Maru60.pretty"     # the stock 0402 land without its silkscreen
 OFFS = {0: {"1": (-0.51, 0.0), "2": (0.51, 0.0)}, 90: {"1": (0.0, 0.51), "2": (0.0, -0.51)},
         180: {"1": (0.51, 0.0), "2": (-0.51, 0.0)}, 270: {"1": (0.0, -0.51), "2": (0.0, 0.51)}}
 
@@ -89,6 +94,7 @@ def main():
     d = json.load(open(sys.argv[1]))
     REF, LED, NET = sys.argv[3:6]
     MAX_MM = float(sys.argv[6]) if len(sys.argv) > 6 else 12.0
+    MIN_MM = float(sys.argv[7]) if len(sys.argv) > 7 else None
     SRC = NET + "_SRC"
     SYMBOL_UUID = str(uuid.uuid5(uuid.NAMESPACE_URL, f"maru60/order-candidate/{REF}"))
     L = LR.Layout(d)
@@ -118,8 +124,12 @@ def main():
     for i, (kind, item, pt, layer) in enumerate(path):
         if kind == "track":
             run += math.hypot(item["x2"] - item["x1"], item["y2"] - item["y1"])
+            if MIN_MM is not None and MIN_MM <= run <= MAX_MM:
+                starts.append((i, run))
         elif run <= MAX_MM:
             starts.append((i, run))
+    if MIN_MM is not None:
+        starts = [q for q in starts if q[1] >= MIN_MM]
     entries = {lay: {id(c[3]): c for c in L.cu[lay] if c[2] in ("track", "via")} for lay in LR.OUTER}
     pad_entries = [c for lay in LR.OUTER for c in L.cu[lay] if c[2] == "pad" and c[3][0] == LED and c[3][1] == "3" and near((c[3][2], c[3][3]), (p3["x"], p3["y"]))]
 
@@ -185,8 +195,15 @@ def main():
                     nets = {"1": SRC, "2": NET}
                     for n, (px, py, a, b) in pads.items():
                         L.add_pad(layer, REF, n, nets[n], px, py, a, b)
-                    is_root = (lambda c: c[2] == "pad" and c[3][0] == LED) if s < 0 else (lambda c: c[2] == "via" and near((c[3]["x"], c[3]["y"]), root, 0.06))
+                    if s < 0:
+                        is_root = lambda c: c[2] == "pad" and c[3][0] == LED
+                    elif path[s][0] == "via":
+                        is_root = lambda c: c[2] == "via" and near((c[3]["x"], c[3]["y"]), root, 0.06)
+                    else:
+                        is_root = lambda c: c[2] == "track" and c[3] is path[s][1]
                     r1 = L.route(layer, pads["1"][:2], SRC, width=width, half=8.0, goal_filter=is_root)
+                    if r1 and s >= 0 and path[s][0] == "track" and not near((r1[-1]["x2"], r1[-1]["y2"]), root, 0.08):
+                        r1 = None                       # joined the upstream track away from its end: that would leave a stub
                     r2 = L.route(layer, pads["2"][:2], NET, width=width, half=8.0, goal_filter=lambda c: not (c[2] == "pad" and c[3][0] == REF)) if r1 is not None else None
                     if r1 is None or r2 is None:
                         PB.restore(L, mid)
@@ -210,8 +227,8 @@ def main():
                         {"op": "remove_tracks", "tracks": [plain(t, NET) for t in removed + up_tracks]},
                         {"op": "remove_vias", "vias": [{"x": v["x"], "y": v["y"], "net": NET} for v in up_vias]},
                         {"op": "set_pad_net", "ref": LED, "pad": "3", "net": SRC},
-                        {"op": "add_footprint", "ref": REF, "lib_dir": "/usr/share/kicad/footprints/Resistor_SMD.pretty", "name": "R_0402_1005Metric",
-                         "fpid": "Resistor_SMD:R_0402_1005Metric", "side": layer, "x": x, "y": y, "rot": rot, "value": "100 1%", "pad_nets": nets,
+                        {"op": "add_footprint", "ref": REF, "lib_dir": LIB_DIR, "name": "R_0402_1005Metric",
+                         "fpid": "Maru60:R_0402_1005Metric", "side": layer, "x": x, "y": y, "rot": rot, "value": "100 1%", "pad_nets": nets,
                          "path": f"/{CORE_SHEET}/{SYMBOL_UUID}", "sheetname": "/Core/", "sheetfile": "maru60-core.kicad_sch",
                          "expect_pads": {n: [v[0], v[1]] for n, v in pads.items()}},
                         {"op": "add_vias", "vias": [{"x": v["x"], "y": v["y"], "net": SRC} for v in up_vias]},

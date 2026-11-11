@@ -1,0 +1,64 @@
+{
+ "note": "Reference texts of the added parts: 1.0 mm high, 0.15 mm stroke, and moved until they are 0.15 mm from every pad and clear of other silkscreen (R120's and C100's texts had to make room).",
+ "ops": [
+  {
+   "op": "set_ref_text",
+   "min_height": 1.0,
+   "min_thickness": 0.15
+  },
+  {
+   "op": "move_ref_text",
+   "ref": "C100",
+   "x": 146.86,
+   "y": 75.7
+  },
+  {
+   "op": "move_ref_text",
+   "ref": "R182",
+   "x": 151.3,
+   "y": 73.155
+  },
+  {
+   "op": "move_ref_text",
+   "ref": "R185",
+   "x": 265.02,
+   "y": 62.85
+  },
+  {
+   "op": "move_ref_text",
+   "ref": "R175",
+   "x": 61.82,
+   "y": 17.79
+  },
+  {
+   "op": "move_ref_text",
+   "ref": "R174",
+   "x": 215.82,
+   "y": 17.89
+  },
+  {
+   "op": "move_ref_text",
+   "ref": "R171",
+   "x": 115.647,
+   "y": 15.632
+  },
+  {
+   "op": "move_ref_text",
+   "ref": "C144",
+   "x": 27.6,
+   "y": 19.75
+  },
+  {
+   "op": "move_ref_text",
+   "ref": "R120",
+   "x": 20.5,
+   "y": 15.1
+  },
+  {
+   "op": "move_ref_text",
+   "ref": "R187",
+   "x": 24.0,
+   "y": 19.75
+  }
+ ]
+}

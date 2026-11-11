@@ -1,0 +1,129 @@
+{
+ "note": "R175 100 ohm in series at the source of the LED data hop UG_LED_2 (LED64 DOUT), 0.0 mm of copper before it.",
+ "symbol_uuid": "ceb2b7dc-0336-53b5-ae31-39d644b92a26",
+ "ops": [
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 64.39999999999999,
+     "y1": 17.9,
+     "x2": 64.5,
+     "y2": 18.0,
+     "layer": "B.Cu",
+     "net": "UG_LED_2"
+    },
+    {
+     "x1": 64.52499999999999,
+     "y1": 18.025,
+     "x2": 64.5,
+     "y2": 18.0,
+     "layer": "B.Cu",
+     "net": "UG_LED_2"
+    },
+    {
+     "x1": 63.8,
+     "y1": 17.9,
+     "x2": 64.39999999999999,
+     "y2": 17.9,
+     "layer": "B.Cu",
+     "net": "UG_LED_2"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED64",
+   "pad": "3",
+   "net": "UG_LED_2_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R175",
+   "lib_dir": "pcb/experiments/resume-20261111-order-candidate/pcb/Maru60.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Maru60:R_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 63.05,
+   "y": 17.9,
+   "rot": 90,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "UG_LED_2_SRC",
+    "2": "UG_LED_2"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/ceb2b7dc-0336-53b5-ae31-39d644b92a26",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     63.05,
+     18.41
+    ],
+    "2": [
+     63.05,
+     17.39
+    ]
+   }
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 63.05,
+     "y1": 18.41,
+     "x2": 64.1,
+     "y2": 18.41,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_2_SRC"
+    },
+    {
+     "x1": 64.1,
+     "y1": 18.41,
+     "x2": 64.5,
+     "y2": 18.01,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_2_SRC"
+    },
+    {
+     "x1": 64.5,
+     "y1": 18.01,
+     "x2": 64.525,
+     "y2": 18.025,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_2_SRC"
+    },
+    {
+     "x1": 63.05,
+     "y1": 17.39,
+     "x2": 63.3,
+     "y2": 17.39,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_2"
+    },
+    {
+     "x1": 63.3,
+     "y1": 17.39,
+     "x2": 63.8,
+     "y2": 17.89,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_2"
+    },
+    {
+     "x1": 63.8,
+     "y1": 17.89,
+     "x2": 63.8,
+     "y2": 17.9,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_2"
+    }
+   ]
+  }
+ ]
+}

@@ -23,7 +23,8 @@ place (use a checkpoint copy) and every zone is refilled at the end.
   {"op": "add_pads", "ref", "pads": [{"num", "x", "y", "side", "sx", "sy", "like": pad number to copy net/function from}]}
   {"op": "set_pad_geometry", "ref", "pads": {"1": {"x", "y", "sx_local", "sy_local"}, ...}}   absolute position, size in the pad's own frame
   {"op": "reshape_pads", "ref", "pads": [{"at": [x, y], "to": [x, y], "sx_local", "sy_local"}]}   the pad(s) at a position
-  {"op": "remove_graphics", "fpid" | "refs", "layer_re"}             lines, arcs and circles of footprints on matching layers (texts stay)
+  {"op": "remove_graphics", "fpid" | "refs", "layer_re", "shapes": ["Polygon"]}   shapes of footprints on matching layers (texts stay);
+                                                                     "shapes" (optional) limits it to these kinds (Line, Arc, Circle, Polygon, Rect)
   {"op": "set_drill", "refs_re", "from", "to"}                       NPTH pads: drill and pad size
   {"op": "add_circles", "items": [{"ref", "x", "y", "r", "layer", "fill": true, "w": 0.1}]}   footprint graphics
   {"op": "set_fpid", "refs": [...], "fpid": "nick:name"}
@@ -64,7 +65,7 @@ def main():
         kind = op["op"]
         if kind == "remove_tracks":
             for r in op["tracks"]:
-                hit = [rec for rec in live if rec[1] == r["layer"] and rec[2] == r["net"] and rec not in doomed_tracks and (
+                hit = [rec for rec in live if rec[1] == r["layer"] and rec[2] == r["net"] and not any(rec is x for x in doomed_tracks) and (
                     max(abs(rec[3] - r["x1"]), abs(rec[4] - r["y1"]), abs(rec[5] - r["x2"]), abs(rec[6] - r["y2"])) < 1e-4 or
                     max(abs(rec[3] - r["x2"]), abs(rec[4] - r["y2"]), abs(rec[5] - r["x1"]), abs(rec[6] - r["y1"])) < 1e-4)]
                 if not hit:
@@ -241,7 +242,8 @@ def main():
                 if ("fpid" in op and fp.GetFPID().GetUniStringLibId() != op["fpid"]) or ("refs" in op and ref not in op["refs"]):
                     continue
                 for item in fp.GraphicalItems():
-                    if item.Type() == pcbnew.PCB_SHAPE_T and re.search(op["layer_re"], item.GetLayerName()):
+                    if item.Type() == pcbnew.PCB_SHAPE_T and re.search(op["layer_re"], item.GetLayerName()) \
+                            and ("shapes" not in op or item.ShowShape() in op["shapes"]):
                         doomed_graphics.append((fp, item))
                         n += 1
             log.append({"graphics_removed": n})

@@ -175,7 +175,7 @@
    "mpn": "0402WGF1000TCE",
    "jlc_footprint": "R0402",
    "kicad_footprint": "R_0402_1005Metric",
-   "count": 5,
+   "count": 23,
    "corrections_deg": [
     0.0
    ],
@@ -236,6 +236,20 @@
     0.0
    ],
    "max_rms_mm": 0.0772,
+   "max_origin_shift_mm": 0.0,
+   "matched_by": "pad number",
+   "pads": "2/2"
+  },
+  {
+   "lcsc": "C25271",
+   "mpn": "0805W8F100KT5E",
+   "jlc_footprint": "R0805",
+   "kicad_footprint": "R_0805_2012Metric",
+   "count": 1,
+   "corrections_deg": [
+    0.0
+   ],
+   "max_rms_mm": 0.0875,
    "max_origin_shift_mm": 0.0,
    "matched_by": "pad number",
    "pads": "2/2"
@@ -357,7 +371,7 @@
    "mpn": "SK6805-EC15",
    "jlc_footprint": "LED-SMD_4P-L1.5-W1.5-BL",
    "kicad_footprint": "LED_SK6805_EC15_001_Recommended_Candidate",
-   "count": 74,
+   "count": 73,
    "corrections_deg": [
     0.0
    ],
@@ -377,6 +391,20 @@
    ],
    "max_rms_mm": 0.0076,
    "max_origin_shift_mm": 0.0075,
+   "matched_by": "pad number",
+   "pads": "4/4"
+  },
+  {
+   "lcsc": "C2890035",
+   "mpn": "SK6805-EC15",
+   "jlc_footprint": "LED-SMD_4P-L1.5-W1.5-BL",
+   "kicad_footprint": "LED_SK6805_EC15_001_WindowPlusAltSite_LED54",
+   "count": 1,
+   "corrections_deg": [
+    0.0
+   ],
+   "max_rms_mm": 0.0001,
+   "max_origin_shift_mm": 0.0001,
    "matched_by": "pad number",
    "pads": "4/4"
   },
@@ -771,6 +799,20 @@
    "max_origin_shift_mm": 0.025,
    "matched_by": "pad number",
    "pads": "3/3"
+  },
+  {
+   "lcsc": "C98192",
+   "mpn": "CL21A475KBQNNNE",
+   "jlc_footprint": "C0805",
+   "kicad_footprint": "C_0805_2012Metric",
+   "count": 1,
+   "corrections_deg": [
+    0.0
+   ],
+   "max_rms_mm": 0.05,
+   "max_origin_shift_mm": 0.0,
+   "matched_by": "pad number",
+   "pads": "2/2"
   }
  ],
  "placements": {
@@ -890,6 +932,23 @@
    "rms_mm": 0.0599,
    "kicad_rotation": 0.0,
    "kicad_convention_rotation": 0.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
+  "R183": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 90,
+   "x": 20.025,
+   "y": 76.825,
+   "side": "Top",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 90.0,
+   "kicad_convention_rotation": 90.0,
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
@@ -1164,6 +1223,23 @@
    "kicad_convention_rotation": 0.0,
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0001
+  },
+  "C144": {
+   "lcsc": "C98192",
+   "jlc_footprint": "C0805",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 0,
+   "x": 27.1,
+   "y": 18.0,
+   "side": "Top",
+   "rms_mm": 0.05,
+   "kicad_rotation": 0.0,
+   "kicad_convention_rotation": 0.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
   },
   "LED25": {
    "lcsc": "C2890035",
@@ -1725,6 +1801,23 @@
    "kicad_convention_rotation": 0.0,
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0001
+  },
+  "R187": {
+   "lcsc": "C25271",
+   "jlc_footprint": "R0805",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 0,
+   "x": 23.4,
+   "y": 18.0,
+   "side": "Top",
+   "rms_mm": 0.0875,
+   "kicad_rotation": 0.0,
+   "kicad_convention_rotation": 0.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
   },
   "C245": {
    "lcsc": "C1525",
@@ -2457,6 +2550,23 @@
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
+  "R179": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 0,
+   "x": 39.3,
+   "y": 71.475,
+   "side": "Top",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 0.0,
+   "kicad_convention_rotation": 0.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
   "LED76": {
    "lcsc": "C2890035",
    "jlc_footprint": "LED-SMD_4P-L1.5-W1.5-BL",
@@ -2558,6 +2668,23 @@
    "kicad_convention_rotation": 0.0,
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0001
+  },
+  "R180": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 90,
+   "x": 240.925,
+   "y": 54.025,
+   "side": "Top",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 90.0,
+   "kicad_convention_rotation": 90.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
   },
   "LED37": {
    "lcsc": "C2890035",
@@ -2746,6 +2873,23 @@
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0001
   },
+  "R177": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 0,
+   "x": 63.9,
+   "y": 74.6,
+   "side": "Top",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 0.0,
+   "kicad_convention_rotation": 0.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
   "R118": {
    "lcsc": "C25076",
    "jlc_footprint": "R0402",
@@ -2847,6 +2991,23 @@
    "kicad_convention_rotation": 0.0,
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0001
+  },
+  "R181": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 180,
+   "x": 259.0,
+   "y": 34.5,
+   "side": "Top",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 180.0,
+   "kicad_convention_rotation": 180.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
   },
   "R120": {
    "lcsc": "C861479",
@@ -3290,6 +3451,23 @@
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
+  "R178": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 0,
+   "x": 40.65,
+   "y": 16.875,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 180.0,
+   "kicad_convention_rotation": 0.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
   "C110": {
    "lcsc": "C1525",
    "jlc_footprint": "C0402",
@@ -3341,6 +3519,23 @@
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
+  "R173": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 270,
+   "x": 16.3,
+   "y": 75.325,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 270.0,
+   "kicad_convention_rotation": 270.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
   "D18": {
    "lcsc": "C81598",
    "jlc_footprint": "SOD-123F_L2.7-W1.6-LS3.8-RD",
@@ -3375,6 +3570,23 @@
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
+  "R184": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 0,
+   "x": 239.9,
+   "y": 72.4,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 180.0,
+   "kicad_convention_rotation": 0.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
   "D35": {
    "lcsc": "C81598",
    "jlc_footprint": "SOD-123F_L2.7-W1.6-LS3.8-RD",
@@ -3389,6 +3601,23 @@
    "rms_mm": 0.0849,
    "kicad_rotation": 90.0,
    "kicad_convention_rotation": 90.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
+  "R186": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 180,
+   "x": 17.4,
+   "y": 55.0,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 0.0,
+   "kicad_convention_rotation": 180.0,
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
@@ -3902,6 +4131,23 @@
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
+  "R171": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 180,
+   "x": 115.5375,
+   "y": 16.8625,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 0.0,
+   "kicad_convention_rotation": 180.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
   "U12": {
    "lcsc": "C2864432",
    "jlc_footprint": "SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR",
@@ -4164,6 +4410,23 @@
    "kicad_convention_rotation": 0.0,
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0001
+  },
+  "R175": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 90,
+   "x": 63.05,
+   "y": 17.9,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 90.0,
+   "kicad_convention_rotation": 90.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
   },
   "R115": {
    "lcsc": "C25076",
@@ -4607,6 +4870,40 @@
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
+  "R170": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 0,
+   "x": 219.1625,
+   "y": 74.3625,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 180.0,
+   "kicad_convention_rotation": 0.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
+  "R182": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 180,
+   "x": 148.9,
+   "y": 71.875,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 0.0,
+   "kicad_convention_rotation": 180.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
   "D11": {
    "lcsc": "C81598",
    "jlc_footprint": "SOD-123F_L2.7-W1.6-LS3.8-RD",
@@ -4619,6 +4916,23 @@
    "y": 14.9987,
    "side": "Bottom",
    "rms_mm": 0.0849,
+   "kicad_rotation": 90.0,
+   "kicad_convention_rotation": 90.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
+  "R185": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 90,
+   "x": 266.25,
+   "y": 64.65,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
    "kicad_rotation": 90.0,
    "kicad_convention_rotation": 90.0,
    "correction_deg": 0.0,
@@ -4692,6 +5006,23 @@
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
+  "R172": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 270,
+   "x": 171.275,
+   "y": 78.65,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 270.0,
+   "kicad_convention_rotation": 270.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
   "D7": {
    "lcsc": "C81598",
    "jlc_footprint": "SOD-123F_L2.7-W1.6-LS3.8-RD",
@@ -4706,6 +5037,23 @@
    "rms_mm": 0.0849,
    "kicad_rotation": 90.0,
    "kicad_convention_rotation": 90.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
+  "R176": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 0,
+   "x": 172.75,
+   "y": 16.875,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 180.0,
+   "kicad_convention_rotation": 0.0,
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
@@ -5333,6 +5681,23 @@
    "y": 53.0987,
    "side": "Bottom",
    "rms_mm": 0.0849,
+   "kicad_rotation": 90.0,
+   "kicad_convention_rotation": 90.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
+  "R174": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 90,
+   "x": 217.05,
+   "y": 18.0,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
    "kicad_rotation": 90.0,
    "kicad_convention_rotation": 90.0,
    "correction_deg": 0.0,
@@ -6018,6 +6383,23 @@
    "correction_deg": 0.0,
    "origin_shift_mm": 0.0
   },
+  "R188": {
+   "lcsc": "C25076",
+   "jlc_footprint": "R0402",
+   "status": "fitted",
+   "matched_by": "pad number",
+   "pads_board": 2,
+   "pads_lib": 2,
+   "rotation": 270,
+   "x": 5.1,
+   "y": 48.6,
+   "side": "Bottom",
+   "rms_mm": 0.0772,
+   "kicad_rotation": 270.0,
+   "kicad_convention_rotation": 270.0,
+   "correction_deg": 0.0,
+   "origin_shift_mm": 0.0
+  },
   "D24": {
    "lcsc": "C81598",
    "jlc_footprint": "SOD-123F_L2.7-W1.6-LS3.8-RD",
@@ -6078,7 +6460,7 @@
    "pads_lib": 2,
    "rotation": 270,
    "x": 183.0,
-   "y": 85.0,
+   "y": 84.4,
    "side": "Bottom",
    "rms_mm": 0.0716,
    "kicad_rotation": 270.0,

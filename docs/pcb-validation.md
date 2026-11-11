@@ -86,6 +86,7 @@ and regenerate the JLCPCB files with `.venv/bin/python pcb/tools/export_order_pa
 which refuses to write a package unless DRC, unconnected items and schematic
 parity are zero and every footprint has a part rule. `tests/test_order_package.py`
 checks that the committed package still matches the pinned board. The portable
-wrapper continues to check the development prototype; the order candidate
-changes no net except through its value and footprint edits, and its exported
-netlist is stored as `qa/netlist.xml` in the checkpoint.
+wrapper continues to check the development prototype. The order candidate's
+net changes (the `_SRC` nets of the LED series resistors, `VBUS_SNUB` of the
+input snubber, `U2`'s pins) are in its exported netlist, stored as
+`qa/netlist.xml` in the checkpoint.

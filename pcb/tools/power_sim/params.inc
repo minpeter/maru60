@@ -13,6 +13,9 @@
 * C125, C126 1 uF 50 V X7R 0603 at 5 V [ASSUMED -10 %]
 .param c125=0.9u
 .param c126=0.9u
+* R187 / C144 snubber across C125: 1 Ohm, 4.7 uF 50 V X5R 0805 at 5 V [ASSUMED -10 %]
+.param rsn=1.0
+.param csn=4.2u
 * C136 + C137 10 uF 25 V 0603: 4.7 uF each at 5 V [Samsung data, qa/datasheet-review]
 .param cin=9.4u
 * C140 + C141 22 uF 10 V 0603: 8.7 uF each at 4 V [Samsung data]

@@ -1,0 +1,196 @@
+{
+ "note": "R181 100 ohm in series on the LED data hop KEY_RGB_CHAIN_16 (LED29 DOUT), in line on F.Cu in the gap between two switch housings, 18 mm from LED29.",
+ "symbol_uuid": "40e36fa4-bf53-5aad-99c5-5154b0830378",
+ "ops": [
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 271.56,
+     "y1": 32.853749,
+     "x2": 271.59999999999997,
+     "y2": 32.9,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16"
+    },
+    {
+     "x1": 271.59999999999997,
+     "y1": 32.9,
+     "x2": 272.09999999999997,
+     "y2": 32.9,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16"
+    },
+    {
+     "x1": 272.09999999999997,
+     "y1": 32.9,
+     "x2": 272.3,
+     "y2": 33.1,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16"
+    },
+    {
+     "x1": 272.3,
+     "y1": 33.1,
+     "x2": 273.0,
+     "y2": 33.1,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16"
+    },
+    {
+     "x1": 273.0,
+     "y1": 33.1,
+     "x2": 273.0,
+     "y2": 35.199999999999996,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16"
+    },
+    {
+     "x1": 270.7,
+     "y1": 35.199999999999996,
+     "x2": 273.0,
+     "y2": 35.199999999999996,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16"
+    },
+    {
+     "x1": 270.0,
+     "y1": 34.5,
+     "x2": 270.7,
+     "y2": 35.199999999999996,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16"
+    },
+    {
+     "x1": 270.0,
+     "y1": 34.5,
+     "x2": 247.0,
+     "y2": 34.5,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED29",
+   "pad": "3",
+   "net": "KEY_RGB_CHAIN_16_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R181",
+   "lib_dir": "pcb/experiments/resume-20261111-order-candidate/pcb/Maru60.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Maru60:R_0402_1005Metric",
+   "side": "F.Cu",
+   "x": 259.0,
+   "y": 34.5,
+   "rot": 180,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "KEY_RGB_CHAIN_16_SRC",
+    "2": "KEY_RGB_CHAIN_16"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/40e36fa4-bf53-5aad-99c5-5154b0830378",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     259.51,
+     34.5
+    ],
+    "2": [
+     258.49,
+     34.5
+    ]
+   }
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 271.56,
+     "y1": 32.853749,
+     "x2": 271.59999999999997,
+     "y2": 32.9,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 271.59999999999997,
+     "y1": 32.9,
+     "x2": 272.09999999999997,
+     "y2": 32.9,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 272.09999999999997,
+     "y1": 32.9,
+     "x2": 272.3,
+     "y2": 33.1,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 272.3,
+     "y1": 33.1,
+     "x2": 273.0,
+     "y2": 33.1,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 273.0,
+     "y1": 33.1,
+     "x2": 273.0,
+     "y2": 35.199999999999996,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 270.7,
+     "y1": 35.199999999999996,
+     "x2": 273.0,
+     "y2": 35.199999999999996,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 270.0,
+     "y1": 34.5,
+     "x2": 270.7,
+     "y2": 35.199999999999996,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 270.0,
+     "y1": 34.5,
+     "x2": 259.51,
+     "y2": 34.5,
+     "w": 0.2,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16_SRC"
+    },
+    {
+     "x1": 258.49,
+     "y1": 34.5,
+     "x2": 247.0,
+     "y2": 34.5,
+     "w": 0.2,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_16"
+    }
+   ]
+  }
+ ]
+}

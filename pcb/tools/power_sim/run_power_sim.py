@@ -202,9 +202,16 @@ def main():
     R["fault_3v3_short"] = {"4v_reg_min": round(float(window(w["v(v4)"], t, 8e-3, 14e-3).min()), 3), "input_current_peak_a": round(float(np.max(np.abs(window(w["i(vsrc)"], t, 8e-3, 14e-3)))), 3),
                             "input_current_during_short_a": round(float(np.mean(np.abs(window(w["i(vsrc)"], t, 12e-3, 14e-3)))), 3),
                             "3v3_after_release": round(at(w["v(v33)"], t, 21e-3), 3)}
-    for name, dp, p in (("6 V source", {"va": 6, "vb": 6}, {}), ("20 V source", {"va": 20, "vb": 20}, {"c125": "0.5u"})):
+    # C125 and C144 lose capacitance with bias: at 20 V both are taken at about half [ASSUMED]
+    for name, dp, p in (("5 V source", {"va": 5, "vb": 5}, {}), ("6 V source", {"va": 6, "vb": 6}, {}),
+                        ("20 V source", {"va": 20, "vb": 20}, {"c125": "0.5u", "csn": "2.4u"}),
+                        ("5 V source, R187/C144 not fitted", {"va": 5, "vb": 5}, {"rsn": "1meg"}),
+                        ("6 V source, R187/C144 not fitted", {"va": 6, "vb": 6}, {"rsn": "1meg"}),
+                        ("20 V source, R187/C144 not fitted", {"va": 20, "vb": 20}, {"c125": "0.5u", "rsn": "1meg"})):
         w = run("ovp", "overvoltage", p, dp)
-        R.setdefault("wrong_source", {})[name] = {"vbus_max": round(float(w["v(vbus)"].max()), 2), "vprot_max": round(float(w["v(vprot)"].max()), 3), "4v_reg_max": round(float(w["v(v4)"].max()), 3),
+        R.setdefault("wrong_source", {})[name] = {"vbus_max": round(float(w["v(vbus)"].max()), 2), "efuse_input_max": round(float(w["v(vfused)"].max()), 2),
+                                                  "inrush_peak_a": round(float(np.max(np.abs(w["i(vsrc)"]))), 2),
+                                                  "vprot_max": round(float(w["v(vprot)"].max()), 3), "4v_reg_max": round(float(w["v(v4)"].max()), 3),
                                                   "3v3_max": round(float(w["v(v33)"].max()), 3), "efuse_ever_enabled": bool((w["v(xu8.en)"] > 0.5).any())}
     try:
         w = run("ovp", "overvoltage", {}, {"va": 5, "vb": 6, "tb": "60m", "tc": "70m"})

@@ -34,6 +34,7 @@ C139,100nF 10% 16V - soft start,C_0603_1608Metric,Bottom,yes,,Samsung,CL10B104KB
 C140,22uF 10V X5R,C_0603_1608Metric,Bottom,yes,,Samsung,CL10A226MP8NUNE,C86295,extended,,"Buck output. Samsung DC-bias data: -60.4% at 4 V, 8.7 uF effective each. No 0603 part does better; C100 supplies the rest of the output capacitance."
 C141,22uF 10V X5R,C_0603_1608Metric,Bottom,yes,,Samsung,CL10A226MP8NUNE,C86295,extended,,"Buck output. Samsung DC-bias data: -60.4% at 4 V, 8.7 uF effective each. No 0603 part does better; C100 supplies the rest of the output capacitance."
 C143,22pF,C_0402_1005Metric,Bottom,yes,,FH (Fenghua),0402CG220J500NT,C1555,basic,,
+C144,4.7uF 50V X5R,C_0805_2012Metric,Top,yes,,Samsung,CL21A475KBQNNNE,C98192,extended,,
 C199,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
 C200,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
 C201,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
@@ -233,7 +234,7 @@ LED50,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,S
 LED51,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
 LED52,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
 LED53,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
-LED54,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED54,SK6805-EC15-001,LED_SK6805_EC15_001_WindowPlusAltSite_LED54,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
 LED55,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
 LED56,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
 LED57,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
@@ -299,6 +300,25 @@ R144,39.0k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF3902T5E,C23153,basi
 R145,39.0k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF3902T5E,C23153,basic,,
 R159,40.0k 0.1%,R_0603_1608Metric,Bottom,yes,,YAGEO,RT0603BRD0740KL,C861392,extended,,"Buck feedback, 4.00 V."
 R160,10.0k 0.1%,R_0603_1608Metric,Bottom,yes,,YAGEO,RT0603BRD0710KL,C95204,extended,,
+R170,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R171,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R172,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R173,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R174,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R175,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R176,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R177,100 1%,R_0402_1005Metric,Top,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R178,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R179,100 1%,R_0402_1005Metric,Top,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R180,100 1%,R_0402_1005Metric,Top,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R181,100 1%,R_0402_1005Metric,Top,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R182,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R183,100 1%,R_0402_1005Metric,Top,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R184,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R185,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R186,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R187,1 1%,R_0805_2012Metric,Top,yes,,UNI-ROYAL,0805W8F100KT5E,C25271,basic,,
+R188,100 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
 STAB_RS1,,,Top,no,board_only,,,,,,Silkscreen artwork / stabilizer holes; not a part.
 SW1,Esc,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
 SW2,1,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."

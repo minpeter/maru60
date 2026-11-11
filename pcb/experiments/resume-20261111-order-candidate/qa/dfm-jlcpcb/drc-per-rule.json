@@ -1,6 +1,6 @@
 {
  "board": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb",
- "board_sha256": "36700843ef6c11179ef8453efac2747133c23870c03e9ecf52e248d44c42779e",
+ "board_sha256": "8057453f75871b4df187fc1adfe50b0b870c53e2fcc7e5202948398253904107",
  "deck": "pcb/experiments/resume-20261111-order-candidate/qa/dfm-jlcpcb/maru60-jlcpcb.kicad_dru",
  "kicad_version": "9.0.2",
  "rules": [
@@ -175,53 +175,10 @@
   {
    "rule": "jlc_min_pad_to_silk_0.15",
    "constraint": "silk_clearance",
-   "violations": 2,
-   "min_actual_mm": 0.0881,
+   "violations": 0,
+   "min_actual_mm": null,
    "unconnected": 0,
-   "found": [
-    {
-     "type": "silk_overlap",
-     "severity": "error",
-     "actual_mm": 0.0881,
-     "items": [
-      {
-       "what": "Circle of LED30 on F.Silkscreen",
-       "at": [
-        15.46625,
-        43.24375
-       ]
-      },
-      {
-       "what": "NPTH pad of SWCAP1",
-       "at": [
-        14.06875,
-        42.21875
-       ]
-      }
-     ]
-    },
-    {
-     "type": "silk_overlap",
-     "severity": "error",
-     "actual_mm": 0.1152,
-     "items": [
-      {
-       "what": "Polygon of U11 on B.Silkscreen",
-       "at": [
-        84.51,
-        83.275
-       ]
-      },
-      {
-       "what": "Pad 2 [GPIO3_ISO] of R130 on B.Cu",
-       "at": [
-        85.275,
-        84.0
-       ]
-      }
-     ]
-    }
-   ]
+   "found": []
   },
   {
    "rule": "jlc_rec_via_hole_0.20",
