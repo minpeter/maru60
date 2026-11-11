@@ -1,0 +1,764 @@
+Maru60 fabrication export log
+generated_at_utc: 2026-11-10T23:26:18Z
+board: pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb
+board_sha256: cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d
+output: pcb/fabrication
+
+$ tools/run_kicad9.sh kicad-cli version
+9.0.2
+[exit 0 in 0.714s]
+
+$ tools/run_kicad9.sh kicad-cli pcb export gerbers --output pcb/fabrication/gerbers --board-plot-params pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb
+Plotted to 'pcb/fabrication/gerbers/maru60-F_Cu.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-In1_Cu.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-In2_Cu.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-B_Cu.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-F_Paste.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-B_Paste.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-F_Silkscreen.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-B_Silkscreen.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-F_Mask.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-B_Mask.gbr'.
+Plotted to 'pcb/fabrication/gerbers/maru60-Edge_Cuts.gbr'.
+[exit 0 in 1.59s]
+
+$ tools/run_kicad9.sh kicad-cli pcb export drill --output pcb/fabrication/gerbers --format excellon --drill-origin absolute --excellon-zeros-format decimal --excellon-oval-format alternate --excellon-units mm --generate-map --map-format gerberx2 pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb
+Created file 'pcb/fabrication/gerbers/maru60.drl'
+Created file 'pcb/fabrication/gerbers/maru60-drl_map.gbr'.
+Done.
+[exit 0 in 1.343s]
+
+$ tools/run_kicad9.sh kicad-cli pcb export ipcd356 --output pcb/fabrication/maru60.d356 pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb
+Successfully created IPC-D-356 file
+[exit 0 in 1.246s]
+
+$ tools/run_kicad9.sh kicad-cli pcb export step --output pcb/fabrication/maru60.step --force pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb
+Determining PCB data
+Build STEP data
+Could not add 3D model to C220.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to F1.
+File not found: ${KICAD9_3DMODEL_DIR}/Fuse.3dshapes/Fuse_1206_3216Metric.step
+Could not add 3D model to LED24.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED49.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED44.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED18.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C215.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED53.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED14.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C256.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C222.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C234.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C257.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED62.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C202.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED30.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C200.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C250.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C206.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C243.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED22.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED19.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED15.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED29.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED25.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C203.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED23.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C210.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED75.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED4.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C260.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C214.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED32.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED10.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C254.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED11.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C247.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C229.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C218.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C227.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED28.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED16.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED61.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED6.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C248.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED43.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED41.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C212.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C249.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED17.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C251.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C219.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C255.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED26.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED58.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C221.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED47.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED33.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C245.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED21.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C246.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED38.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C232.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C231.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C217.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C259.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to R101.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to C258.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C226.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C209.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED13.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C261.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C213.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C211.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C216.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to R100.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to LED42.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C241.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED56.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C235.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C242.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C207.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C252.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED35.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C237.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED59.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C244.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED5.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C204.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED48.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED50.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED9.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C274.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED51.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED1.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C275.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED46.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED34.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C205.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED2.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C233.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED76.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C201.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED36.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED57.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED7.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED54.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED37.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED39.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED60.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C228.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C238.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED52.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED31.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C240.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C236.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C253.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED20.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED12.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C225.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C230.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED8.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED55.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to R120.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to LED45.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED3.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C208.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C223.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C239.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C224.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED27.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to LED40.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to D53.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW38.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D47.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW53.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D33.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to U18.
+File not found: ${KICAD9_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-583-8.step
+Could not add 3D model to R122.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to C122.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED67.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to U3.
+File not found: ${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_5.3x5.3mm_P1.27mm.step
+Could not add 3D model to SW11.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D8.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D22.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R128.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to SW9.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D46.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D20.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D45.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R144.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to SW25.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW41.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW49.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to C110.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW58.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to C138.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to D2.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D18.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW3.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to C262.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW62.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D35.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW52.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R113.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to D4.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D56.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D14.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R143.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to C273.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW39.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R109.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to SW56.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to LED74.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to D19.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW17.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to J3.
+File not found: ${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_SH_SM10B-SRSS-TB_1x10-1MP_P1.00mm_Horizontal.step
+Could not add 3D model to C114.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C106.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to L2.
+File not found: ${KICAD9_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Coilcraft_XAL4030-XXX.step
+Could not add 3D model to D26.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D52.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to LED72.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to R160.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to SW21.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to C123.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW6.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D100.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/Nexperia_CFP3_SOD-123W.step
+Could not add 3D model to C118.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C104.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to D21.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R124.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to C107.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C117.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW61.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D6.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D48.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to U12.
+File not found: ${KICAD9_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.step
+Could not add 3D model to R123.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to D29.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW19.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to LED66.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to D62.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D58.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D60.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D27.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to C269.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C128.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to D25.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to LED65.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C264.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C270.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED73.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to SW26.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to C141.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to SW29.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW7.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R163.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to C112.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to LED71.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C113.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to R105.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to U11.
+File not found: ${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm.step
+Could not add 3D model to C120.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to D34.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW12.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to LED63.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to C105.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to D28.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to LED70.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to SW23.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to J1.
+File not found: ${KICAD9_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step
+Could not add 3D model to SW60.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R112.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to C137.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to C116.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW20.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to J2.
+File not found: ${KICAD9_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step
+Could not add 3D model to R108.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to R104.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to C126.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to R114.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to SW16.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D3.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D42.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to LED64.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to D41.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D11.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D57.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW101.
+File not found: ${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_TL3342.step
+Could not add 3D model to R141.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to SW28.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R102.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to D7.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R140.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to C139.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to C111.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C136.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to C199.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to D51.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW1.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D43.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW36.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D44.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to C115.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to D37.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to C125.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to U6.
+File not found: ${KICAD9_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step
+Could not add 3D model to D9.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW27.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to C267.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to C129.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to D10.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW14.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to LED69.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to SW2.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R126.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to D59.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R130.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to D49.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to C108.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to D30.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to C272.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW22.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to C266.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW33.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D17.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW100.
+File not found: ${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_TL3342.step
+Could not add 3D model to D12.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R110.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to D61.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D31.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D36.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW18.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D38.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW45.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to C265.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to R145.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to C121.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to U10.
+File not found: ${KICAD9_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/Texas_DRT-3.step
+Could not add 3D model to C140.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step
+Could not add 3D model to C263.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to R107.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to SW51.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R111.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to SW59.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R132.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to C271.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW31.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D32.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D50.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D55.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R133.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to C268.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to SW47.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW24.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R142.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to R131.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to D13.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D16.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW46.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D5.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW5.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW4.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW32.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D39.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R135.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to SW13.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D15.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to D1.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW10.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R106.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to SW50.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to U7.
+File not found: ${KICAD9_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step
+Could not add 3D model to SW15.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW8.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to C109.
+File not found: ${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step
+Could not add 3D model to D23.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R103.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step
+Could not add 3D model to SW42.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to Y1.
+File not found: ${KICAD9_3DMODEL_DIR}/Crystal.3dshapes/Crystal_SMD_3225-4Pin_3.2x2.5mm.step
+Could not add 3D model to D54.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to R134.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Could not add 3D model to SW40.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to U5.
+File not found: ${KICAD9_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step
+Could not add 3D model to D40.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to LED68.
+File not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step
+Could not add 3D model to SW35.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW57.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW43.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW48.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to D24.
+File not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step
+Could not add 3D model to SW37.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW34.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to SW44.
+File not found: ./MX-Hotswap-Socket.step
+Could not add 3D model to R159.
+File not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step
+Create PCB solid model
+Board outline: find 52 initial points
+Build board outlines (1 outlines) with 52 points.
+Build board cutouts and holes (1596 hole(s)).
+Subtracting holes for shapes
+Subtracting holes for pads
+Subtracting holes for vias
+
+Generate board full shape.
+Writing STEP file
+STEP file 'pcb/fabrication/maru60.step' created.
+
+Export time 1.560 s
+[exit 0 in 2.953s]
+

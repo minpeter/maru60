@@ -1,4 +1,56 @@
-# Current physical-material checker
+# PCB tools
+
+## Relocated-expansion zero-open audit
+
+`audit_relocated_zero_opens.py` is the promoted native audit for the
+`resume-20261109-relocated-expansion-zero-opens` checkpoint. It compares the
+candidate against the preserved header25/U13 seven-open checkpoint, checks the
+383-footprint identity, the material graph, the inner GND planes and the
+reference coverage, and writes `audit-summary.json`, `material-comparison.json`,
+`routing-scope.json` and `exact-native-plane-inputs.json`. It needs the KiCad
+9.0.2+dfsg-1 `pcbnew` bindings and must run through the pinned container:
+
+```sh
+tools/run_kicad9.sh python3 pcb/tools/audit_relocated_zero_opens.py \
+  --out-dir .omo/evidence/relocated0-audit-new
+```
+
+The source and candidate paths default to the tracked checkpoints; all paths
+are resolved from the repository root, not the current directory.
+
+`geos_witness_zero_opens.py` is the independent GEOS + exact-rational Q^2
+replay. It reads `exact-native-plane-inputs.json` from the audit output and
+writes `geos-audit.json` and `geos-rational-witnesses.json` there. It runs in
+the repository virtual environment (shapely 2.2.0 / GEOS 3.14.1), not `uv`:
+
+```sh
+.venv/bin/python pcb/tools/geos_witness_zero_opens.py \
+  --qa-dir .omo/evidence/relocated0-audit-new
+```
+
+See `../experiments/resume-20261109-relocated-expansion-zero-opens/REPRODUCE.md`
+for the full sequence and expected numbers.
+
+## Review and fabrication tools
+
+| Tool | Purpose | Output |
+| --- | --- | --- |
+| `analyze_strict_promotion.py` | Classifies the 1,837 exact-rational witnesses and writes the strict-promotion decision memo. | `qa/strict-promotion/{REPORT.md,witness-map.json,witness-map.svg}` |
+| `check_mechanical_fit.py` | Ray-casts the bottom-case 3MF for the relocated block, USB-C notch and 7U stabilizer. | `qa/mechanical-fit/{REPORT.md,fit.json}` |
+| `analyze_power.py` | Input capacitance, inrush, UVLO/OVLO, soft-start, LED limiter and sequencing arithmetic. | `qa/power-review/{REPORT.md,power-review.json}` |
+| `export_fabrication.py` | Parses the board, writes BOM/CPL, runs the KiCad CLI for Gerbers/drill/IPC-D-356/STEP, and records provenance. | `../fabrication/` |
+| `build_plate_pcb_mount.py` | Generates the PCB-mount 7U plate variant (enlarged cutout) from the INKC outline. | `models/rule60-v3-hhkb-gas-plate-pcb-mount.dxf` + FR4 zip |
+| `build_topcase_usb14p75.py` | Generates the right top-case half with the 14.75 mm USB-C notch centred on J1. | `models/maru60-hhkb-topcase-right-usb-14p75-j1centred.3mf` |
+| `build_bottomcase_j3_relief.py` | Generates the bottom-case halves with the local J3 relief pocket. | `models/maru60-hhkb-bottomcase-j3-relief-{left,right}.3mf` |
+| `simulate_power.py` | Deterministic transient model of the eFuse, buck, UVLO/OVLO, LED rail and sequencing. | `qa/power-sim/{REPORT.md,power-sim.json,*.png}` |
+| `simulate_thermal.py` | Lumped thermal network and 2D board spreading for U2/U18/U7/LEDs. | `qa/thermal-sim/{REPORT.md,thermal-sim.json,*.png}` |
+| `simulate_usb_si.py` | Extracts the D+/D- route, solves the microstrip impedance and runs a PRBS-7 eye at the MCU. | `qa/usb-si-sim/{REPORT.md,usb-si-sim.json,*.png}` |
+
+All run with the repository venv (`.venv/bin/python`), except
+`export_fabrication.py`, which also calls `tools/run_kicad9.sh`. They are
+analysis/export tools, not qualification: see each report's limitations.
+
+## Current physical-material checker
 
 `export_material_graph.py` is the exact reviewed R2 implementation, SHA256 57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9. It accepts an input PCB path and an output JSON path. It requires the checked KiCad 9.0.2+dfsg-1 Python bindings, exactly four copper layers and the asserted through-hole geometry. Unsupported cases fail closed. Do not use optimized Python.
 

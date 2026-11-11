@@ -1,0 +1,455 @@
+{
+  "schema_version": 1,
+  "package": "maru60-fabrication-draft",
+  "status": "draft_not_manufacturing_release",
+  "generated_at_utc": "2026-11-10T23:26:26Z",
+  "generator": {
+    "script": "pcb/tools/export_fabrication.py",
+    "python": "3.14.7",
+    "kicad_cli": "9.0.2",
+    "kicad_image": "maru60-kicad:9.0.2",
+    "board_generator": "pcbnew",
+    "board_generator_version": "9.0",
+    "board_format_version": "20241229"
+  },
+  "source": {
+    "board_path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb",
+    "board_sha256": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d",
+    "board_sha256_expected": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d",
+    "board_sha256_match": true,
+    "board_size_nominal_mm": {
+      "x": 285.0,
+      "y": 94.6
+    },
+    "board_size_edge_cuts_mm": {
+      "x": 285.0,
+      "y": 94.6
+    },
+    "board_size_gerber_job_mm": {
+      "x": 285.05,
+      "y": 94.65
+    },
+    "board_thickness_mm": 1.6,
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "copper_layer_count": 4,
+    "finish": "ENIG",
+    "impedance_controlled": true,
+    "impedance_source": "gerber job GeneralSpecs.ImpedanceControlled",
+    "footprint_count": 383,
+    "bom_rows": 382,
+    "cpl_rows": 370,
+    "dnp_count": 1,
+    "missing_mpn_count": 374,
+    "smd_count": 370,
+    "through_hole_count": 1,
+    "board_only_count": 2,
+    "exclude_from_bom_count": 12
+  },
+  "commands": [
+    {
+      "purpose": "kicad version",
+      "argv": [
+        "tools/run_kicad9.sh",
+        "kicad-cli",
+        "version"
+      ],
+      "shell": "tools/run_kicad9.sh kicad-cli version",
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_s": 0.714,
+      "stdout_tail": "9.0.2\n",
+      "stderr_tail": ""
+    },
+    {
+      "purpose": "gerbers (stored board plot settings)",
+      "argv": [
+        "tools/run_kicad9.sh",
+        "kicad-cli",
+        "pcb",
+        "export",
+        "gerbers",
+        "--output",
+        "pcb/fabrication/gerbers",
+        "--board-plot-params",
+        "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb"
+      ],
+      "shell": "tools/run_kicad9.sh kicad-cli pcb export gerbers --output pcb/fabrication/gerbers --board-plot-params pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb",
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_s": 1.59,
+      "stdout_tail": "Plotted to 'pcb/fabrication/gerbers/maru60-F_Cu.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-In1_Cu.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-In2_Cu.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-B_Cu.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-F_Paste.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-B_Paste.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-F_Silkscreen.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-B_Silkscreen.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-F_Mask.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-B_Mask.gbr'.\nPlotted to 'pcb/fabrication/gerbers/maru60-Edge_Cuts.gbr'.\n",
+      "stderr_tail": ""
+    },
+    {
+      "purpose": "drill (Excellon mm, absolute origin, GerberX2 map)",
+      "argv": [
+        "tools/run_kicad9.sh",
+        "kicad-cli",
+        "pcb",
+        "export",
+        "drill",
+        "--output",
+        "pcb/fabrication/gerbers",
+        "--format",
+        "excellon",
+        "--drill-origin",
+        "absolute",
+        "--excellon-zeros-format",
+        "decimal",
+        "--excellon-oval-format",
+        "alternate",
+        "--excellon-units",
+        "mm",
+        "--generate-map",
+        "--map-format",
+        "gerberx2",
+        "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb"
+      ],
+      "shell": "tools/run_kicad9.sh kicad-cli pcb export drill --output pcb/fabrication/gerbers --format excellon --drill-origin absolute --excellon-zeros-format decimal --excellon-oval-format alternate --excellon-units mm --generate-map --map-format gerberx2 pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb",
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_s": 1.343,
+      "stdout_tail": "Created file 'pcb/fabrication/gerbers/maru60.drl'\nCreated file 'pcb/fabrication/gerbers/maru60-drl_map.gbr'.\nDone.\n",
+      "stderr_tail": ""
+    },
+    {
+      "purpose": "IPC-D-356 netlist",
+      "argv": [
+        "tools/run_kicad9.sh",
+        "kicad-cli",
+        "pcb",
+        "export",
+        "ipcd356",
+        "--output",
+        "pcb/fabrication/maru60.d356",
+        "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb"
+      ],
+      "shell": "tools/run_kicad9.sh kicad-cli pcb export ipcd356 --output pcb/fabrication/maru60.d356 pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb",
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_s": 1.246,
+      "stdout_tail": "Successfully created IPC-D-356 file\n",
+      "stderr_tail": ""
+    },
+    {
+      "purpose": "STEP board assembly",
+      "argv": [
+        "tools/run_kicad9.sh",
+        "kicad-cli",
+        "pcb",
+        "export",
+        "step",
+        "--output",
+        "pcb/fabrication/maru60.step",
+        "--force",
+        "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb"
+      ],
+      "shell": "tools/run_kicad9.sh kicad-cli pcb export step --output pcb/fabrication/maru60.step --force pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb",
+      "cwd": ".",
+      "exit_code": 0,
+      "duration_s": 2.953,
+      "stdout_tail": "odel to R103.\nFile not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step\nCould not add 3D model to SW42.\nFile not found: ./MX-Hotswap-Socket.step\nCould not add 3D model to Y1.\nFile not found: ${KICAD9_3DMODEL_DIR}/Crystal.3dshapes/Crystal_SMD_3225-4Pin_3.2x2.5mm.step\nCould not add 3D model to D54.\nFile not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step\nCould not add 3D model to R134.\nFile not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step\nCould not add 3D model to SW40.\nFile not found: ./MX-Hotswap-Socket.step\nCould not add 3D model to U5.\nFile not found: ${KICAD9_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step\nCould not add 3D model to D40.\nFile not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step\nCould not add 3D model to LED68.\nFile not found: ${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_SK6812_EC15_1.5x1.5mm.step\nCould not add 3D model to SW35.\nFile not found: ./MX-Hotswap-Socket.step\nCould not add 3D model to SW57.\nFile not found: ./MX-Hotswap-Socket.step\nCould not add 3D model to SW43.\nFile not found: ./MX-Hotswap-Socket.step\nCould not add 3D model to SW48.\nFile not found: ./MX-Hotswap-Socket.step\nCould not add 3D model to D24.\nFile not found: ${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.step\nCould not add 3D model to SW37.\nFile not found: ./MX-Hotswap-Socket.step\nCould not add 3D model to SW34.\nFile not found: ./MX-Hotswap-Socket.step\nCould not add 3D model to SW44.\nFile not found: ./MX-Hotswap-Socket.step\nCould not add 3D model to R159.\nFile not found: ${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step\nCreate PCB solid model\nBoard outline: find 52 initial points\nBuild board outlines (1 outlines) with 52 points.\nBuild board cutouts and holes (1596 hole(s)).\nSubtracting holes for shapes\nSubtracting holes for pads\nSubtracting holes for vias\n\nGenerate board full shape.\nWriting STEP file\nSTEP file 'pcb/fabrication/maru60.step' created.\n\nExport time 1.560 s\n",
+      "stderr_tail": ""
+    }
+  ],
+  "outputs": {
+    "BOM.csv": {
+      "sha256": "efdd56e3d184e703ce2c8aa11a8b07295e573a42d0ca48586310f44ede358bba",
+      "bytes": 26322,
+      "rows": 382
+    },
+    "CPL.csv": {
+      "sha256": "d59cfbe81f6d20f61efa457602a19cdfabadcfdc63bac0404481310a995bcaa5",
+      "bytes": 24036,
+      "rows": 370
+    },
+    "export.log": {
+      "sha256": "d0210581ca629d73592a9bfeaedb18eeb39fbda1a620c606a53d7fcb4236816b",
+      "bytes": 40653
+    },
+    "maru60.d356": {
+      "sha256": "0141678a070fa103c1fb9fabcc4aad6a1a5abfd845dd2dee7c3e0705e9a9fde4",
+      "bytes": 171357
+    },
+    "maru60.step": {
+      "sha256": "323c9c5494668c7d614b51056574a63603516dbd7643e90482f96b1154264c2b",
+      "bytes": 617004
+    },
+    "README.md": {
+      "sha256": "d93e44ab0b0632996b2c660c8f3021ee78d3fa37e78fe14a61fc50c2432721d7",
+      "bytes": 6258
+    },
+    "gerbers/maru60-B_Cu.gbr": {
+      "sha256": "2260c7922267c5448b08d6adbdf56522f9d0ea5d4292dbb71adefd273c767bfb",
+      "bytes": 439373
+    },
+    "gerbers/maru60-B_Mask.gbr": {
+      "sha256": "73a74f6673b31327289c5c5e74ecc16eca39f30538bf034aefd071161b7655a6",
+      "bytes": 46149
+    },
+    "gerbers/maru60-B_Paste.gbr": {
+      "sha256": "3a7f352903693228206d4feb9ae06080692d4d10454004418928c3121768158f",
+      "bytes": 38078
+    },
+    "gerbers/maru60-B_Silkscreen.gbr": {
+      "sha256": "3c0e1141741efdb19c81fffeb577f4e80db33bb67ef314b4d02a7efc6ef47e70",
+      "bytes": 167834
+    },
+    "gerbers/maru60-Edge_Cuts.gbr": {
+      "sha256": "c1b8f5df31bb20888451add8f22553c8fbf8e17a0d8ad76171a3a4805dd26ea3",
+      "bytes": 10091
+    },
+    "gerbers/maru60-F_Cu.gbr": {
+      "sha256": "0ba61a437f61c979576f3e4b7044405e14dc472e067dd4696f855076ee912351",
+      "bytes": 369205
+    },
+    "gerbers/maru60-F_Mask.gbr": {
+      "sha256": "2c57056660b822421ec2d02fc984f878b430192d6b8625a58245c0c6e4f86550",
+      "bytes": 25744
+    },
+    "gerbers/maru60-F_Paste.gbr": {
+      "sha256": "5ba3ff210c97abead65d8de7280dde0280d376d3e339ff498acd5f4c19063bc5",
+      "bytes": 14082
+    },
+    "gerbers/maru60-F_Silkscreen.gbr": {
+      "sha256": "0f14f99cea3bf7af9ba351b51208bfa80c34bfb78ae0b0f40177bb1412c28091",
+      "bytes": 29659
+    },
+    "gerbers/maru60-In1_Cu.gbr": {
+      "sha256": "7e8797a8450622370826ec96886f7089fb17ae4feef837c3b9c6e639677b73eb",
+      "bytes": 1437936
+    },
+    "gerbers/maru60-In2_Cu.gbr": {
+      "sha256": "a363a69b4459ac0a0ba65fa4cfca4c51dd01070d0c7f372b84321da2cbb9cfc6",
+      "bytes": 1423103
+    },
+    "gerbers/maru60-drl_map.gbr": {
+      "sha256": "22ecb61f87ba59771c099ff7a595c945ac8a6de85683d259cc6cfabe1c3eb153",
+      "bytes": 318460
+    },
+    "gerbers/maru60-job.gbrjob": {
+      "sha256": "a5724e74eedee3abc158362781318f79dca6b4ecdf9b92a9cb6492d27ec8169d",
+      "bytes": 3905
+    },
+    "gerbers/maru60.drl": {
+      "sha256": "5a7d42d11d4168cbae8721236b00c85c8c5049b5ffee9e742a8745eac680d029",
+      "bytes": 19022
+    }
+  },
+  "gerber_job": {
+    "path": "pcb/fabrication/gerbers/maru60-job.gbrjob",
+    "layer_number": 4,
+    "size_mm": {
+      "x": 285.05,
+      "y": 94.65
+    },
+    "finish": "ENIG",
+    "impedance_controlled": true,
+    "board_thickness_mm": 1.6,
+    "files_attributes": [
+      {
+        "Path": "maru60-F_Cu.gbr",
+        "FileFunction": "Copper,L1,Top",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-In1_Cu.gbr",
+        "FileFunction": "Copper,L5,Inr",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-In2_Cu.gbr",
+        "FileFunction": "Copper,L7,Inr",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-B_Cu.gbr",
+        "FileFunction": "Copper,L4,Bot",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-F_Paste.gbr",
+        "FileFunction": "SolderPaste,Top",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-B_Paste.gbr",
+        "FileFunction": "SolderPaste,Bot",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-F_Silkscreen.gbr",
+        "FileFunction": "Legend,Top",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-B_Silkscreen.gbr",
+        "FileFunction": "Legend,Bot",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-F_Mask.gbr",
+        "FileFunction": "SolderMask,Top",
+        "FilePolarity": "Negative"
+      },
+      {
+        "Path": "maru60-B_Mask.gbr",
+        "FileFunction": "SolderMask,Bot",
+        "FilePolarity": "Negative"
+      },
+      {
+        "Path": "maru60-Edge_Cuts.gbr",
+        "FileFunction": "Profile",
+        "FilePolarity": "Positive"
+      }
+    ]
+  },
+  "verification": {
+    "all_checks_pass": true,
+    "checks": [
+      {
+        "check": "board_sha256_matches_expected",
+        "ok": true,
+        "detail": {
+          "actual": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d",
+          "expected": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d"
+        }
+      },
+      {
+        "check": "board_sha256_unchanged_after_export",
+        "ok": true,
+        "detail": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d"
+      },
+      {
+        "check": "gerber_layer_file_count",
+        "ok": true,
+        "detail": 11
+      },
+      {
+        "check": "gerber_copper_layer_count",
+        "ok": true,
+        "detail": [
+          "maru60-B_Cu.gbr",
+          "maru60-F_Cu.gbr",
+          "maru60-In1_Cu.gbr",
+          "maru60-In2_Cu.gbr"
+        ]
+      },
+      {
+        "check": "gerber_gbr_file_count_including_drill_map",
+        "ok": true,
+        "detail": 12
+      },
+      {
+        "check": "drill_file_count",
+        "ok": true,
+        "detail": [
+          "maru60.drl"
+        ]
+      },
+      {
+        "check": "gerber_job_file_count",
+        "ok": true,
+        "detail": [
+          "maru60-job.gbrjob"
+        ]
+      },
+      {
+        "check": "ipc_d356_exists",
+        "ok": true,
+        "detail": "maru60.d356"
+      },
+      {
+        "check": "step_exists",
+        "ok": true,
+        "detail": "maru60.step"
+      },
+      {
+        "check": "bom_row_count",
+        "ok": true,
+        "detail": 382
+      },
+      {
+        "check": "cpl_row_count",
+        "ok": true,
+        "detail": 370
+      },
+      {
+        "check": "bom_missing_mpn_count",
+        "ok": true,
+        "detail": 374
+      },
+      {
+        "check": "bom_dnp_count",
+        "ok": true,
+        "detail": 1
+      },
+      {
+        "check": "gerber_job_layer_number_4",
+        "ok": true,
+        "detail": 4
+      },
+      {
+        "check": "gerber_job_size_285_05_x_94_65",
+        "ok": true,
+        "detail": {
+          "x": 285.05,
+          "y": 94.65
+        }
+      },
+      {
+        "check": "gerber_job_finish_enig",
+        "ok": true,
+        "detail": "ENIG"
+      },
+      {
+        "check": "gerber_job_impedance_controlled",
+        "ok": true,
+        "detail": true
+      },
+      {
+        "check": "gerber_job_board_thickness_1_6",
+        "ok": true,
+        "detail": 1.6
+      },
+      {
+        "check": "gerber_job_copper_file_count_4",
+        "ok": true,
+        "detail": 4
+      },
+      {
+        "check": "edge_cuts_nominal_285_0_x_94_6",
+        "ok": true,
+        "detail": {
+          "x": 285.0,
+          "y": 94.6
+        }
+      },
+      {
+        "check": "board_thickness_1_6",
+        "ok": true,
+        "detail": 1.6
+      },
+      {
+        "check": "board_finish_enig",
+        "ok": true,
+        "detail": "ENIG"
+      },
+      {
+        "check": "board_copper_layer_count_4",
+        "ok": true,
+        "detail": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ]
+      }
+    ]
+  }
+}

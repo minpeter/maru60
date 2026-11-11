@@ -10,6 +10,7 @@ Rule 60 V3 wrist rest and an unfinished RP2350A PCB design.
 | [Standalone wrist rest](docs/wrist-rest.md) | Current tight-fit downloads, reproduction and print guidance |
 | [PCB current state](pcb/CURRENT.md) | Strict baseline, development prototype and unresolved qualification |
 | [PCB validation](docs/pcb-validation.md) | Reproduce native CAD, portable firmware and power checks |
+| [PCB fabrication draft](pcb/fabrication/README.md) | BOM, CPL, Gerbers and provenance for the 0/0 prototype; not an assembly approval |
 | [Detailed fabrication reference](docs/fabrication.md) | Complete design history, measurements, hardware and plate guidance |
 
 Install [uv](https://docs.astral.sh/uv/), then run from the repository root:

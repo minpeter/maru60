@@ -1,0 +1,228 @@
+{
+  "generated_at_utc": "2026-11-10T23:26:26Z",
+  "provenance_sha256": "6a3f21d7a121504bb187ea4f7bd7f352f91c36dcf52980394904a6ce31ff4237",
+  "all_checks_pass": true,
+  "counts": {
+    "footprints": 383,
+    "bom_rows": 382,
+    "cpl_rows": 370,
+    "missing_mpn": 374,
+    "dnp": 1,
+    "smd": 370,
+    "through_hole": 1,
+    "board_only": 2,
+    "exclude_from_bom": 12,
+    "gerber_layer_files": 11,
+    "gerber_copper_layers": 4,
+    "gerber_gbr_files": 12,
+    "drill_files": 1
+  },
+  "gerber_job": {
+    "path": "pcb/fabrication/gerbers/maru60-job.gbrjob",
+    "layer_number": 4,
+    "size_mm": {
+      "x": 285.05,
+      "y": 94.65
+    },
+    "finish": "ENIG",
+    "impedance_controlled": true,
+    "board_thickness_mm": 1.6,
+    "files_attributes": [
+      {
+        "Path": "maru60-F_Cu.gbr",
+        "FileFunction": "Copper,L1,Top",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-In1_Cu.gbr",
+        "FileFunction": "Copper,L5,Inr",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-In2_Cu.gbr",
+        "FileFunction": "Copper,L7,Inr",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-B_Cu.gbr",
+        "FileFunction": "Copper,L4,Bot",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-F_Paste.gbr",
+        "FileFunction": "SolderPaste,Top",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-B_Paste.gbr",
+        "FileFunction": "SolderPaste,Bot",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-F_Silkscreen.gbr",
+        "FileFunction": "Legend,Top",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-B_Silkscreen.gbr",
+        "FileFunction": "Legend,Bot",
+        "FilePolarity": "Positive"
+      },
+      {
+        "Path": "maru60-F_Mask.gbr",
+        "FileFunction": "SolderMask,Top",
+        "FilePolarity": "Negative"
+      },
+      {
+        "Path": "maru60-B_Mask.gbr",
+        "FileFunction": "SolderMask,Bot",
+        "FilePolarity": "Negative"
+      },
+      {
+        "Path": "maru60-Edge_Cuts.gbr",
+        "FileFunction": "Profile",
+        "FilePolarity": "Positive"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "check": "board_sha256_matches_expected",
+      "ok": true,
+      "detail": {
+        "actual": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d",
+        "expected": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d"
+      }
+    },
+    {
+      "check": "board_sha256_unchanged_after_export",
+      "ok": true,
+      "detail": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d"
+    },
+    {
+      "check": "gerber_layer_file_count",
+      "ok": true,
+      "detail": 11
+    },
+    {
+      "check": "gerber_copper_layer_count",
+      "ok": true,
+      "detail": [
+        "maru60-B_Cu.gbr",
+        "maru60-F_Cu.gbr",
+        "maru60-In1_Cu.gbr",
+        "maru60-In2_Cu.gbr"
+      ]
+    },
+    {
+      "check": "gerber_gbr_file_count_including_drill_map",
+      "ok": true,
+      "detail": 12
+    },
+    {
+      "check": "drill_file_count",
+      "ok": true,
+      "detail": [
+        "maru60.drl"
+      ]
+    },
+    {
+      "check": "gerber_job_file_count",
+      "ok": true,
+      "detail": [
+        "maru60-job.gbrjob"
+      ]
+    },
+    {
+      "check": "ipc_d356_exists",
+      "ok": true,
+      "detail": "maru60.d356"
+    },
+    {
+      "check": "step_exists",
+      "ok": true,
+      "detail": "maru60.step"
+    },
+    {
+      "check": "bom_row_count",
+      "ok": true,
+      "detail": 382
+    },
+    {
+      "check": "cpl_row_count",
+      "ok": true,
+      "detail": 370
+    },
+    {
+      "check": "bom_missing_mpn_count",
+      "ok": true,
+      "detail": 374
+    },
+    {
+      "check": "bom_dnp_count",
+      "ok": true,
+      "detail": 1
+    },
+    {
+      "check": "gerber_job_layer_number_4",
+      "ok": true,
+      "detail": 4
+    },
+    {
+      "check": "gerber_job_size_285_05_x_94_65",
+      "ok": true,
+      "detail": {
+        "x": 285.05,
+        "y": 94.65
+      }
+    },
+    {
+      "check": "gerber_job_finish_enig",
+      "ok": true,
+      "detail": "ENIG"
+    },
+    {
+      "check": "gerber_job_impedance_controlled",
+      "ok": true,
+      "detail": true
+    },
+    {
+      "check": "gerber_job_board_thickness_1_6",
+      "ok": true,
+      "detail": 1.6
+    },
+    {
+      "check": "gerber_job_copper_file_count_4",
+      "ok": true,
+      "detail": 4
+    },
+    {
+      "check": "edge_cuts_nominal_285_0_x_94_6",
+      "ok": true,
+      "detail": {
+        "x": 285.0,
+        "y": 94.6
+      }
+    },
+    {
+      "check": "board_thickness_1_6",
+      "ok": true,
+      "detail": 1.6
+    },
+    {
+      "check": "board_finish_enig",
+      "ok": true,
+      "detail": "ENIG"
+    },
+    {
+      "check": "board_copper_layer_count_4",
+      "ok": true,
+      "detail": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1153 @@
+{
+  "schema": "maru60-power-sim/v1",
+  "status": "SIMULATION_ONLY",
+  "qualification": "No stability, thermal, USB compliance, EMC, or hardware qualification. Behavioral average models with stated assumptions. No SPICE, no bench measurement, no effective-capacitance qualification.",
+  "sources": {
+    "netlist": {
+      "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/qa/native/netlist.xml",
+      "sha256": "dbc70642e2f24bbbad04e45196af2019fd3eed7efbb2e05320525ad4288fd7c0"
+    },
+    "schematic": {
+      "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60-core.kicad_sch",
+      "sha256": "f0183190e194e30ec8e5b07a34bfc277fb2f95558511bba3676c3ea58a10dbe9"
+    },
+    "power_review": {
+      "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-review/power-review.json",
+      "sha256": "153c7a98b7926bacc3bc3593b94d13316ff9e1ee1048f19d9d1eb2e28943c5db"
+    },
+    "power_review_report": {
+      "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-review/REPORT.md",
+      "sha256": "61f5802a053bf9ab5caec81f95bf311c76b7763a9dc02e0b0acd4a99cc7588b9"
+    }
+  },
+  "inputs": {
+    "components": {
+      "R120_ohm": 590000.0,
+      "R121_ohm": 156000.0,
+      "R122_ohm": 620000.0,
+      "R123_ohm": 267000.0,
+      "R124_ohm": 6650.0,
+      "R125_ohm": 100.0,
+      "C124_nf": 10.0,
+      "C125_uf": 1.0,
+      "C126_uf": 1.0,
+      "C136_nf": 100.0,
+      "C137_uf": 4.7,
+      "C139_nf": 100.0,
+      "R159_ohm": 40000.0,
+      "R160_ohm": 10000.0,
+      "L2_uh": 4.7,
+      "C100_uf": 4.7,
+      "C120_uf": 1.0,
+      "C140_uf": 22.0,
+      "C141_uf": 22.0,
+      "R112_ohm": 133000.0,
+      "R109_ohm": 100000.0,
+      "R113_ohm": 10000.0,
+      "C121_uf": 4.7,
+      "C122_nf": 100.0,
+      "C123_nf": 100.0,
+      "led_count": 76,
+      "led_channels": 3
+    },
+    "assumptions": {
+      "efuse_rds_on_mohm": 28.299999999999997,
+      "efuse_ilim_response_us": 400.0,
+      "efuse_fast_trip_ratio": 3.0,
+      "efuse_fast_trip_ns": 500.0,
+      "protected_caps_nominal_uf": 5.8,
+      "protected_caps_derating_at_5v": 0.92,
+      "protected_caps_effective_uf": 5.335999999999999,
+      "protected_caps_esr_mohm": 2.0,
+      "source_r_ohm": 0.1,
+      "fuse_candidate": "SF-1206F100-2 (1 A), not qualified",
+      "buck_cout_nominal_uf": 49.7,
+      "buck_cout_effective_uf": 29.7,
+      "buck_cout_esr_mohm": 20.0,
+      "buck_dcr_mohm": 20.0,
+      "buck_rhs_mohm": 76.0,
+      "buck_rls_mohm": 32.0,
+      "buck_fsw_khz": 500.0,
+      "buck_max_duty": 0.98,
+      "buck_vin_uvlo_rise_v": 3.8,
+      "buck_vin_uvlo_fall_v": 3.5,
+      "buck_loop": "behavioral peak-current-mode; PI outer loop; 20 kHz target crossover; not the TPS62932 internal compensation",
+      "buck_load_model": "application load ramps on above 0.5 V (behavioral; prevents negative output-cap voltage before startup)",
+      "buck_load_step_slew": "tanh transition, approximately 1 us 10-90% (0.2 A/us)",
+      "led_rds_on_mohm": 85.0,
+      "led_rds_on_max_mohm": 95.0,
+      "led_response_us": 2.0,
+      "led_latch_deglitch_ms": 7.5,
+      "led_rise_ms": 1.1,
+      "led_cout_nominal_uf": 12.499999999999998,
+      "led_cout_effective_uf": 11.734,
+      "led_cout_esr_mohm": 5.0,
+      "led_load_knee_v": 3.0,
+      "led_load_model": "constant-current sink above 3.0 V, linear to zero at 0 V; not a datasheet V-I curve",
+      "led_sequenced_load_delay_ms": 5.5,
+      "ldo_tau_ms": 0.5,
+      "ldo_vin_min_v": 3.4,
+      "ldo_dropout_at_500ma_mv": 100.0,
+      "ldo_load_a": 0.1,
+      "uvlo_ovlo_sweep_load_ohm": 1000.0,
+      "uvlo_ovlo_sweep_rate_v_per_s": 6.5,
+      "uvlo_ovlo_fall_slew_v_per_s": 10.0
+    }
+  },
+  "efuse": {
+    "model": "dV/dt reference ramp + Rds_on pass FET + ILIM clamp; R125 100 ohm included as 1 us RC",
+    "startup_nominal_no_load": {
+      "label": "nominal, no load",
+      "ilim_ma": 500.0,
+      "c_dvdt_nf": 10.0,
+      "slew_v_per_ms": 0.2,
+      "r125_tau_us": 1.0000000000000002,
+      "cprot_nominal_uf": 5.8,
+      "cprot_effective_uf": 5.335999999999999,
+      "cprot_esr_mohm": 2.0,
+      "iload_a": 0.0,
+      "t90_ms": 22.51,
+      "t99_ms": 24.76,
+      "t100_ms": 24.980000000000004,
+      "peak_current_ma": 1.0673634637669613,
+      "inrush_capacitor_ma": 1.0672,
+      "energy_mj": 0.06672588239009665,
+      "cap_energy_uj": 66.70000000001073,
+      "vfinal_v": 5.000000000000402,
+      "current_limited": false
+    },
+    "startup_nominal_0p3a": {
+      "label": "nominal, 0.3 A equivalent load",
+      "ilim_ma": 500.0,
+      "c_dvdt_nf": 10.0,
+      "slew_v_per_ms": 0.2,
+      "r125_tau_us": 1.0000000000000002,
+      "cprot_nominal_uf": 5.8,
+      "cprot_effective_uf": 5.335999999999999,
+      "cprot_esr_mohm": 2.0,
+      "iload_a": 0.3,
+      "t90_ms": 22.55,
+      "t99_ms": 24.800000000000004,
+      "t100_ms": null,
+      "peak_current_ma": 301.0673692403599,
+      "inrush_capacitor_ma": 1.0672,
+      "energy_mj": 41.21440553578537,
+      "cap_energy_uj": 66.4736791097068,
+      "vfinal_v": 4.99151,
+      "current_limited": false
+    },
+    "corners": [
+      {
+        "label": "ILIM=425mA C=9nF",
+        "ilim_ma": 425.0,
+        "c_dvdt_nf": 9.0,
+        "slew_v_per_ms": 0.2222222222222222,
+        "r125_tau_us": 0.9,
+        "cprot_nominal_uf": 5.8,
+        "cprot_effective_uf": 5.335999999999999,
+        "cprot_esr_mohm": 2.0,
+        "iload_a": 0.0,
+        "t90_ms": 20.26,
+        "t99_ms": 22.28,
+        "t100_ms": 22.480000000000004,
+        "peak_current_ma": 1.185849954909891,
+        "inrush_capacitor_ma": 1.1857777777777776,
+        "energy_mj": 0.06672875273876033,
+        "cap_energy_uj": 66.70000000341804,
+        "vfinal_v": 5.000000000128113,
+        "current_limited": false
+      },
+      {
+        "label": "ILIM=425mA C=10nF",
+        "ilim_ma": 425.0,
+        "c_dvdt_nf": 10.0,
+        "slew_v_per_ms": 0.2,
+        "r125_tau_us": 1.0000000000000002,
+        "cprot_nominal_uf": 5.8,
+        "cprot_effective_uf": 5.335999999999999,
+        "cprot_esr_mohm": 2.0,
+        "iload_a": 0.0,
+        "t90_ms": 22.51,
+        "t99_ms": 24.76,
+        "t100_ms": 24.980000000000004,
+        "peak_current_ma": 1.0673634637669613,
+        "inrush_capacitor_ma": 1.0672,
+        "energy_mj": 0.06672588239009665,
+        "cap_energy_uj": 66.70000000001073,
+        "vfinal_v": 5.000000000000402,
+        "current_limited": false
+      },
+      {
+        "label": "ILIM=425mA C=11nF",
+        "ilim_ma": 425.0,
+        "c_dvdt_nf": 11.0,
+        "slew_v_per_ms": 0.18181818181818182,
+        "r125_tau_us": 1.1,
+        "cprot_nominal_uf": 5.8,
+        "cprot_effective_uf": 5.335999999999999,
+        "cprot_esr_mohm": 2.0,
+        "iload_a": 0.0,
+        "t90_ms": 24.76,
+        "t99_ms": 27.23,
+        "t100_ms": 27.48,
+        "peak_current_ma": 0.9702403008042185,
+        "inrush_capacitor_ma": 0.970181818181818,
+        "energy_mj": 0.06672352493962411,
+        "cap_energy_uj": 66.70000000403766,
+        "vfinal_v": 5.000000000151337,
+        "current_limited": false
+      },
+      {
+        "label": "ILIM=500mA C=9nF",
+        "ilim_ma": 500.0,
+        "c_dvdt_nf": 9.0,
+        "slew_v_per_ms": 0.2222222222222222,
+        "r125_tau_us": 0.9,
+        "cprot_nominal_uf": 5.8,
+        "cprot_effective_uf": 5.335999999999999,
+        "cprot_esr_mohm": 2.0,
+        "iload_a": 0.0,
+        "t90_ms": 20.26,
+        "t99_ms": 22.28,
+        "t100_ms": 22.480000000000004,
+        "peak_current_ma": 1.185849954909891,
+        "inrush_capacitor_ma": 1.1857777777777776,
+        "energy_mj": 0.06672875273876033,
+        "cap_energy_uj": 66.70000000341804,
+        "vfinal_v": 5.000000000128113,
+        "current_limited": false
+      },
+      {
+        "label": "ILIM=500mA C=10nF",
+        "ilim_ma": 500.0,
+        "c_dvdt_nf": 10.0,
+        "slew_v_per_ms": 0.2,
+        "r125_tau_us": 1.0000000000000002,
+        "cprot_nominal_uf": 5.8,
+        "cprot_effective_uf": 5.335999999999999,
+        "cprot_esr_mohm": 2.0,
+        "iload_a": 0.0,
+        "t90_ms": 22.51,
+        "t99_ms": 24.76,
+        "t100_ms": 24.980000000000004,
+        "peak_current_ma": 1.0673634637669613,
+        "inrush_capacitor_ma": 1.0672,
+        "energy_mj": 0.06672588239009665,
+        "cap_energy_uj": 66.70000000001073,
+        "vfinal_v": 5.000000000000402,
+        "current_limited": false
+      },
+      {
+        "label": "ILIM=500mA C=11nF",
+        "ilim_ma": 500.0,
+        "c_dvdt_nf": 11.0,
+        "slew_v_per_ms": 0.18181818181818182,
+        "r125_tau_us": 1.1,
+        "cprot_nominal_uf": 5.8,
+        "cprot_effective_uf": 5.335999999999999,
+        "cprot_esr_mohm": 2.0,
+        "iload_a": 0.0,
+        "t90_ms": 24.76,
+        "t99_ms": 27.23,
+        "t100_ms": 27.48,
+        "peak_current_ma": 0.9702403008042185,
+        "inrush_capacitor_ma": 0.970181818181818,
+        "energy_mj": 0.06672352493962411,
+        "cap_energy_uj": 66.70000000403766,
+        "vfinal_v": 5.000000000151337,
+        "current_limited": false
+      },
+      {
+        "label": "ILIM=575mA C=9nF",
+        "ilim_ma": 575.0,
+        "c_dvdt_nf": 9.0,
+        "slew_v_per_ms": 0.2222222222222222,
+        "r125_tau_us": 0.9,
+        "cprot_nominal_uf": 5.8,
+        "cprot_effective_uf": 5.335999999999999,
+        "cprot_esr_mohm": 2.0,
+        "iload_a": 0.0,
+        "t90_ms": 20.26,
+        "t99_ms": 22.28,
+        "t100_ms": 22.480000000000004,
+        "peak_current_ma": 1.185849954909891,
+        "inrush_capacitor_ma": 1.1857777777777776,
+        "energy_mj": 0.06672875273876033,
+        "cap_energy_uj": 66.70000000341804,
+        "vfinal_v": 5.000000000128113,
+        "current_limited": false
+      },
+      {
+        "label": "ILIM=575mA C=10nF",
+        "ilim_ma": 575.0,
+        "c_dvdt_nf": 10.0,
+        "slew_v_per_ms": 0.2,
+        "r125_tau_us": 1.0000000000000002,
+        "cprot_nominal_uf": 5.8,
+        "cprot_effective_uf": 5.335999999999999,
+        "cprot_esr_mohm": 2.0,
+        "iload_a": 0.0,
+        "t90_ms": 22.51,
+        "t99_ms": 24.76,
+        "t100_ms": 24.980000000000004,
+        "peak_current_ma": 1.0673634637669613,
+        "inrush_capacitor_ma": 1.0672,
+        "energy_mj": 0.06672588239009665,
+        "cap_energy_uj": 66.70000000001073,
+        "vfinal_v": 5.000000000000402,
+        "current_limited": false
+      },
+      {
+        "label": "ILIM=575mA C=11nF",
+        "ilim_ma": 575.0,
+        "c_dvdt_nf": 11.0,
+        "slew_v_per_ms": 0.18181818181818182,
+        "r125_tau_us": 1.1,
+        "cprot_nominal_uf": 5.8,
+        "cprot_effective_uf": 5.335999999999999,
+        "cprot_esr_mohm": 2.0,
+        "iload_a": 0.0,
+        "t90_ms": 24.76,
+        "t99_ms": 27.23,
+        "t100_ms": 27.48,
+        "peak_current_ma": 0.9702403008042185,
+        "inrush_capacitor_ma": 0.970181818181818,
+        "energy_mj": 0.06672352493962411,
+        "cap_energy_uj": 66.70000000403766,
+        "vfinal_v": 5.000000000151337,
+        "current_limited": false
+      }
+    ],
+    "current_limit_tests": [
+      {
+        "ilim_ma": 425.0,
+        "r_load_ohm": 4.0,
+        "peak_current_ma": 424.99999999999943,
+        "steady_current_ma": 424.99999999999943,
+        "vout_min_v": 0.0,
+        "vout_final_v": 1.6999999999999977,
+        "fast_trip_threshold_ma": 1275.0,
+        "fast_trip_response_ns": 500.0
+      },
+      {
+        "ilim_ma": 500.0,
+        "r_load_ohm": 4.0,
+        "peak_current_ma": 499.9999999999989,
+        "steady_current_ma": 499.9999999999989,
+        "vout_min_v": 0.0,
+        "vout_final_v": 1.9999999999999956,
+        "fast_trip_threshold_ma": 1500.0,
+        "fast_trip_response_ns": 500.0
+      },
+      {
+        "ilim_ma": 575.0,
+        "r_load_ohm": 4.0,
+        "peak_current_ma": 574.9999999999592,
+        "steady_current_ma": 574.9999999999592,
+        "vout_min_v": 0.0,
+        "vout_final_v": 2.2999999999998275,
+        "fast_trip_threshold_ma": 1725.0,
+        "fast_trip_response_ns": 500.0
+      }
+    ],
+    "review_baseline": {
+      "slew_v_per_ms": 0.2,
+      "time_to_5v_ms": 25.0,
+      "capacitor_current_ma": 1.16,
+      "capacitor_energy_uj": 72.5,
+      "ilim_ma": {
+        "min": 425,
+        "typ": 500,
+        "max": 575
+      }
+    }
+  },
+  "buck": {
+    "model": "average peak-current-mode buck: L, Cout, ESR, DCR, Rds_on, 98% duty clamp, soft-start reference",
+    "loop": {
+      "target_crossover_hz": 20000.0,
+      "kp_a_per_v": 3.7322120724646743,
+      "ki_a_per_v_s": 93800.72022795326,
+      "zero_hz": 4000.0000000000005,
+      "inner_current_lag_us": 3.183098861837907,
+      "estimated_phase_margin_deg": 61.15754138363922,
+      "plant": "average peak-current-mode: 1/(s*Cout) with ESR zero and inner-loop lag",
+      "note": "Synthetic loop assumption, not the TPS62932 internal compensation; no stability claim."
+    },
+    "startup_nominal_0p1a": {
+      "label": "nominal 5 V, 0.1 A",
+      "vin_v": 5.0,
+      "iload_a": 0.1,
+      "t_ss_ms": 14.545454545454545,
+      "loop": {
+        "target_crossover_hz": 20000.0,
+        "kp_a_per_v": 3.7322120724646743,
+        "ki_a_per_v_s": 93800.72022795326,
+        "zero_hz": 4000.0000000000005,
+        "inner_current_lag_us": 3.183098861837907,
+        "estimated_phase_margin_deg": 61.15754138363922,
+        "plant": "average peak-current-mode: 1/(s*Cout) with ESR zero and inner-loop lag",
+        "note": "Synthetic loop assumption, not the TPS62932 internal compensation; no stability claim."
+      },
+      "t90_ms": 13.095,
+      "t99_ms": 14.405000000000001,
+      "vfinal_v": 4.0,
+      "overshoot_mv": 1.92647972270521,
+      "monotonic": {
+        "monotonic": true,
+        "max_dip_mv": 1.926479722705654,
+        "min_slope_v_per_ms": -0.045621964631694295,
+        "dip_tolerance_mv": 5.0
+      }
+    },
+    "startup_nominal_0p3a": {
+      "label": "nominal 5 V, 0.3 A",
+      "vin_v": 5.0,
+      "iload_a": 0.3,
+      "t_ss_ms": 14.545454545454545,
+      "loop": {
+        "target_crossover_hz": 20000.0,
+        "kp_a_per_v": 3.7322120724646743,
+        "ki_a_per_v_s": 93800.72022795326,
+        "zero_hz": 4000.0000000000005,
+        "inner_current_lag_us": 3.183098861837907,
+        "estimated_phase_margin_deg": 61.15754138363922,
+        "plant": "average peak-current-mode: 1/(s*Cout) with ESR zero and inner-loop lag",
+        "note": "Synthetic loop assumption, not the TPS62932 internal compensation; no stability claim."
+      },
+      "t90_ms": 13.095,
+      "t99_ms": 14.405000000000001,
+      "vfinal_v": 4.0,
+      "overshoot_mv": 1.9264801325373782,
+      "monotonic": {
+        "monotonic": true,
+        "max_dip_mv": 1.9264801424907496,
+        "min_slope_v_per_ms": -0.045622026974891566,
+        "dip_tolerance_mv": 5.0
+      }
+    },
+    "startup_corners": [
+      {
+        "label": "t_ss=min",
+        "vin_v": 5.0,
+        "iload_a": 0.1,
+        "t_ss_ms": 17.77777777777778,
+        "loop": {
+          "target_crossover_hz": 20000.0,
+          "kp_a_per_v": 3.7322120724646743,
+          "ki_a_per_v_s": 93800.72022795326,
+          "zero_hz": 4000.0000000000005,
+          "inner_current_lag_us": 3.183098861837907,
+          "estimated_phase_margin_deg": 61.15754138363922,
+          "plant": "average peak-current-mode: 1/(s*Cout) with ESR zero and inner-loop lag",
+          "note": "Synthetic loop assumption, not the TPS62932 internal compensation; no stability claim."
+        },
+        "t90_ms": 16.005000000000003,
+        "t99_ms": 17.605000000000004,
+        "vfinal_v": 4.0,
+        "overshoot_mv": 1.5534990799102033,
+        "monotonic": {
+          "monotonic": true,
+          "max_dip_mv": 1.5534990799106474,
+          "min_slope_v_per_ms": -0.036729674764745944,
+          "dip_tolerance_mv": 5.0
+        }
+      },
+      {
+        "label": "t_ss=typ",
+        "vin_v": 5.0,
+        "iload_a": 0.1,
+        "t_ss_ms": 14.545454545454545,
+        "loop": {
+          "target_crossover_hz": 20000.0,
+          "kp_a_per_v": 3.7322120724646743,
+          "ki_a_per_v_s": 93800.72022795326,
+          "zero_hz": 4000.0000000000005,
+          "inner_current_lag_us": 3.183098861837907,
+          "estimated_phase_margin_deg": 61.15754138363922,
+          "plant": "average peak-current-mode: 1/(s*Cout) with ESR zero and inner-loop lag",
+          "note": "Synthetic loop assumption, not the TPS62932 internal compensation; no stability claim."
+        },
+        "t90_ms": 13.095,
+        "t99_ms": 14.405000000000001,
+        "vfinal_v": 4.0,
+        "overshoot_mv": 1.92647972270521,
+        "monotonic": {
+          "monotonic": true,
+          "max_dip_mv": 1.926479722705654,
+          "min_slope_v_per_ms": -0.045621964631694295,
+          "dip_tolerance_mv": 5.0
+        }
+      },
+      {
+        "label": "t_ss=max",
+        "vin_v": 5.0,
+        "iload_a": 0.1,
+        "t_ss_ms": 12.30769230769231,
+        "loop": {
+          "target_crossover_hz": 20000.0,
+          "kp_a_per_v": 3.7322120724646743,
+          "ki_a_per_v_s": 93800.72022795326,
+          "zero_hz": 4000.0000000000005,
+          "inner_current_lag_us": 3.183098861837907,
+          "estimated_phase_margin_deg": 61.15754138363922,
+          "plant": "average peak-current-mode: 1/(s*Cout) with ESR zero and inner-loop lag",
+          "note": "Synthetic loop assumption, not the TPS62932 internal compensation; no stability claim."
+        },
+        "t90_ms": 11.080000000000002,
+        "t99_ms": 12.185000000000002,
+        "vfinal_v": 4.0,
+        "overshoot_mv": 2.2417839865580547,
+        "monotonic": {
+          "monotonic": true,
+          "max_dip_mv": 2.2417839865584988,
+          "min_slope_v_per_ms": -0.0531300095692821,
+          "dip_tolerance_mv": 5.0
+        }
+      }
+    ],
+    "load_step": {
+      "label": "0.1->0.3 A, 0.2 A unload",
+      "vin_v": 5.0,
+      "t_ss_ms": 14.545454545454545,
+      "loop": {
+        "target_crossover_hz": 20000.0,
+        "kp_a_per_v": 3.7322120724646743,
+        "ki_a_per_v_s": 93800.72022795326,
+        "zero_hz": 4000.0000000000005,
+        "inner_current_lag_us": 3.183098861837907,
+        "estimated_phase_margin_deg": 61.15754138363922,
+        "plant": "average peak-current-mode: 1/(s*Cout) with ESR zero and inner-loop lag",
+        "note": "Synthetic loop assumption, not the TPS62932 internal compensation; no stability claim."
+      },
+      "baseline_v": 3.9999999997012803,
+      "step_up_undershoot_mv": 13.70823374796748,
+      "step_up_peak_il_a": 0.33868433855906505,
+      "unload_overshoot_mv": 13.708229675543304,
+      "unload_min_il_a": 0.06131564972178631,
+      "settle_up_ms": 0.0,
+      "settle_down_ms": 0.0,
+      "recovery_up_0p2pct_ms": 0.010000000000003062,
+      "recovery_down_0p2pct_ms": 0.010000000000003062,
+      "final_up_v": 4.0,
+      "final_down_v": 4.0
+    },
+    "ripple_estimate": {
+      "inductor_ripple_ma": 340.4255319148936,
+      "output_ripple_esr_mv": 6.808510638297872,
+      "output_ripple_cap_mv": 2.8655347804283977,
+      "note": "average model does not simulate switching ripple; these are arithmetic estimates"
+    }
+  },
+  "uvlo_ovlo": {
+    "model": "TPS25947 comparator state machine with R120-R123 dividers; 0->6.5->0 V triangle",
+    "thresholds": {
+      "uvlo_rising_v": {
+        "min": 3.924553,
+        "typ": 3.986517,
+        "max": 4.068611
+      },
+      "uvlo_falling_v": {
+        "min": 3.569585,
+        "typ": 3.621086,
+        "max": 3.712649
+      },
+      "ovlo_rising_v": {
+        "min": 5.648227,
+        "typ": 5.738462,
+        "max": 5.857709
+      },
+      "ovlo_falling_v": {
+        "min": 5.137356,
+        "typ": 5.212436,
+        "max": 5.345219
+      },
+      "uvlo_leakage_shift_v": 0.062,
+      "ovlo_leakage_shift_v": 0.059
+    },
+    "nominal": {
+      "corner": "typ",
+      "thresholds": {
+        "uvlo_rising_v": 3.986517,
+        "uvlo_falling_v": 3.621086,
+        "uvlo_hysteresis_v": 0.36543100000000006,
+        "ovlo_rising_v": 5.738462,
+        "ovlo_falling_v": 5.212436,
+        "ovlo_hysteresis_v": 0.5260259999999999
+      },
+      "simulated_events": [
+        [
+          "uvlo_rise",
+          3.986534932674663,
+          0.6133130665653328
+        ],
+        [
+          "ovlo_rise",
+          5.738488692443462,
+          0.882844414222071
+        ],
+        [
+          "ovlo_fall",
+          5.21237606188031,
+          1.1980959904799524
+        ],
+        [
+          "uvlo_fall",
+          3.621038105190526,
+          1.442917214586073
+        ]
+      ],
+      "sim_uvlo_rise_v": [
+        3.986534932674663
+      ],
+      "sim_uvlo_fall_v": [
+        3.621038105190526
+      ],
+      "sim_ovlo_rise_v": [
+        5.738488692443462
+      ],
+      "sim_ovlo_fall_v": [
+        5.21237606188031
+      ]
+    },
+    "corners": {
+      "min": {
+        "corner": "min",
+        "thresholds": {
+          "uvlo_rising_v": 3.924553,
+          "uvlo_falling_v": 3.569585,
+          "uvlo_hysteresis_v": 0.35496799999999995,
+          "ovlo_rising_v": 5.648227,
+          "ovlo_falling_v": 5.137356,
+          "ovlo_hysteresis_v": 0.5108710000000007
+        },
+        "simulated_events": [
+          [
+            "uvlo_rise",
+            3.9245896229481145,
+            0.6037830189150946
+          ],
+          [
+            "ovlo_rise",
+            5.648268241341206,
+            0.8689643448217241
+          ],
+          [
+            "ovlo_fall",
+            5.1373006865034325,
+            1.2096460482302411
+          ],
+          [
+            "uvlo_fall",
+            3.5695578477892393,
+            1.4508372541862709
+          ]
+        ],
+        "sim_uvlo_rise_v": [
+          3.9245896229481145
+        ],
+        "sim_uvlo_fall_v": [
+          3.5695578477892393
+        ],
+        "sim_ovlo_rise_v": [
+          5.648268241341206
+        ],
+        "sim_ovlo_fall_v": [
+          5.1373006865034325
+        ]
+      },
+      "typ": {
+        "corner": "typ",
+        "thresholds": {
+          "uvlo_rising_v": 3.986517,
+          "uvlo_falling_v": 3.621086,
+          "uvlo_hysteresis_v": 0.36543100000000006,
+          "ovlo_rising_v": 5.738462,
+          "ovlo_falling_v": 5.212436,
+          "ovlo_hysteresis_v": 0.5260259999999999
+        },
+        "simulated_events": [
+          [
+            "uvlo_rise",
+            3.986534932674663,
+            0.6133130665653328
+          ],
+          [
+            "ovlo_rise",
+            5.738488692443462,
+            0.882844414222071
+          ],
+          [
+            "ovlo_fall",
+            5.21237606188031,
+            1.1980959904799524
+          ],
+          [
+            "uvlo_fall",
+            3.621038105190526,
+            1.442917214586073
+          ]
+        ],
+        "sim_uvlo_rise_v": [
+          3.986534932674663
+        ],
+        "sim_uvlo_fall_v": [
+          3.621038105190526
+        ],
+        "sim_ovlo_rise_v": [
+          5.738488692443462
+        ],
+        "sim_ovlo_fall_v": [
+          5.21237606188031
+        ]
+      },
+      "max": {
+        "corner": "max",
+        "thresholds": {
+          "uvlo_rising_v": 4.068611,
+          "uvlo_falling_v": 3.712649,
+          "uvlo_hysteresis_v": 0.3559619999999999,
+          "ovlo_rising_v": 5.857709,
+          "ovlo_falling_v": 5.345219,
+          "ovlo_hysteresis_v": 0.5124899999999997
+        },
+        "simulated_events": [
+          [
+            "uvlo_rise",
+            4.068630343151716,
+            0.6259431297156486
+          ],
+          [
+            "ovlo_rise",
+            5.857764288821444,
+            0.9011945059725298
+          ],
+          [
+            "ovlo_fall",
+            5.34517172585863,
+            1.1776658883294415
+          ],
+          [
+            "uvlo_fall",
+            3.7126235631178166,
+            1.4288271441357205
+          ]
+        ],
+        "sim_uvlo_rise_v": [
+          4.068630343151716
+        ],
+        "sim_uvlo_fall_v": [
+          3.7126235631178166
+        ],
+        "sim_ovlo_rise_v": [
+          5.857764288821444
+        ],
+        "sim_ovlo_fall_v": [
+          5.34517172585863
+        ]
+      }
+    },
+    "review_baseline": {
+      "resistors": {
+        "R120_ohm": 590000.0,
+        "R121_ohm": 156000.0,
+        "R122_ohm": 620000.0,
+        "R123_ohm": 267000.0,
+        "tolerance": 0.001
+      },
+      "uvlo_rising": {
+        "min": {
+          "v": 3.924553,
+          "with_leakage_min_v": 3.862553,
+          "with_leakage_max_v": 3.986553
+        },
+        "typ": {
+          "v": 3.986517,
+          "with_leakage_min_v": 3.924517,
+          "with_leakage_max_v": 4.048517
+        },
+        "max": {
+          "v": 4.068611,
+          "with_leakage_min_v": 4.006611,
+          "with_leakage_max_v": 4.130611
+        },
+        "leakage_shift_v": 0.062,
+        "r_parallel_ohm": 186629.086809
+      },
+      "uvlo_falling": {
+        "min": {
+          "v": 3.569585,
+          "with_leakage_min_v": 3.507585,
+          "with_leakage_max_v": 3.631585
+        },
+        "typ": {
+          "v": 3.621086,
+          "with_leakage_min_v": 3.559086,
+          "with_leakage_max_v": 3.683086
+        },
+        "max": {
+          "v": 3.712649,
+          "with_leakage_min_v": 3.650649,
+          "with_leakage_max_v": 3.774649
+        },
+        "leakage_shift_v": 0.062,
+        "r_parallel_ohm": 186629.086809
+      },
+      "ovlo_rising": {
+        "min": {
+          "v": 5.648227,
+          "with_leakage_min_v": 5.589227,
+          "with_leakage_max_v": 5.707227
+        },
+        "typ": {
+          "v": 5.738462,
+          "with_leakage_min_v": 5.679462,
+          "with_leakage_max_v": 5.797462
+        },
+        "max": {
+          "v": 5.857709,
+          "with_leakage_min_v": 5.798709,
+          "with_leakage_max_v": 5.916709
+        },
+        "leakage_shift_v": 0.059,
+        "r_parallel_ohm": 123378.016086
+      },
+      "ovlo_falling": {
+        "min": {
+          "v": 5.137356,
+          "with_leakage_min_v": 5.078356,
+          "with_leakage_max_v": 5.196356
+        },
+        "typ": {
+          "v": 5.212436,
+          "with_leakage_min_v": 5.153436,
+          "with_leakage_max_v": 5.271436
+        },
+        "max": {
+          "v": 5.345219,
+          "with_leakage_min_v": 5.286219,
+          "with_leakage_max_v": 5.404219
+        },
+        "leakage_shift_v": 0.059,
+        "r_parallel_ohm": 123378.016086
+      },
+      "margins": {
+        "uvlo_rising_vs_buck_4v_no_foldback_ideal": {
+          "reference_v": 4.301075,
+          "min_margin_v": -0.376523,
+          "typ_margin_v": -0.314558,
+          "max_margin_v": -0.232465,
+          "min_margin_with_leakage_v": -0.438523,
+          "max_margin_with_leakage_v": -0.170465
+        },
+        "uvlo_rising_vs_buck_4v_98pct_ideal": {
+          "reference_v": 4.081633,
+          "min_margin_v": -0.15708,
+          "typ_margin_v": -0.095116,
+          "max_margin_v": -0.013022,
+          "min_margin_with_leakage_v": -0.21908,
+          "max_margin_with_leakage_v": 0.048978
+        },
+        "uvlo_rising_vs_buck_recommended_min_3v8": {
+          "reference_v": 3.8,
+          "min_margin_v": 0.124553,
+          "typ_margin_v": 0.186517,
+          "max_margin_v": 0.268611,
+          "min_margin_with_leakage_v": 0.062553,
+          "max_margin_with_leakage_v": 0.330611
+        },
+        "uvlo_falling_vs_ldo_3v3_min_input_assumed": {
+          "reference_v": 3.4,
+          "min_margin_v": 0.169585,
+          "typ_margin_v": 0.221086,
+          "max_margin_v": 0.312649,
+          "min_margin_with_leakage_v": 0.107585,
+          "max_margin_with_leakage_v": 0.374649
+        },
+        "ovlo_rising_vs_usb_5v5_max": {
+          "reference_v": 5.5,
+          "min_margin_v": 0.148227,
+          "typ_margin_v": 0.238462,
+          "max_margin_v": 0.357709,
+          "min_margin_with_leakage_v": 0.089227,
+          "max_margin_with_leakage_v": 0.416709
+        }
+      },
+      "verdict": "UVLO rising is ~3.99 V nominal (3.86-4.13 V with resistor, reference and leakage sensitivity). That is above the buck's 3.8 V recommended minimum but below the 4.30 V no-foldback ideal and at/below the 4.08 V 98%-duty ideal at the nominal/min corners. The 4 V rail may rely on frequency foldback at UVLO release. OVLO rising is ~5.74 V nominal; the min corner with leakage is ~5.59 V, only ~89 mV above the 5.5 V USB maximum. Both are review flags, not measured failures."
+    }
+  },
+  "led": {
+    "model": "TPS2553-1 current source with 2 us response lag, Rds_on, ILIM clamp, 7.5 ms latch-off; behavioral SK6805 constant-current load with 3.0 V knee",
+    "full_white_min_ilim": {
+      "label": "full white, min ILIM",
+      "iset_a": 1.14,
+      "iset_ma_per_channel": 4.999999999999999,
+      "ilim_ma": 173.657469,
+      "rds_on_mohm": 85.0,
+      "cout_effective_uf": 11.734,
+      "load_at_enable": true,
+      "load_delay_ms": 0.0,
+      "latched": true,
+      "latch_time_ms": 7.604740154011874,
+      "fault_assert_ms": 7.604740154011874,
+      "vout_final_v": 6.6136096713909016e-276,
+      "vout_min_v": 0.0,
+      "vout_at_latch_v": 0.45336289501738825,
+      "u7_dissipation_w": 0.6159000231127676,
+      "peak_current_ma": 173.6574690719145,
+      "steady_current_ma": 0.0
+    },
+    "full_white_nom_ilim": {
+      "label": "full white, nom ILIM",
+      "iset_a": 1.14,
+      "iset_ma_per_channel": 4.999999999999999,
+      "ilim_ma": 201.51272,
+      "rds_on_mohm": 85.0,
+      "cout_effective_uf": 11.734,
+      "load_at_enable": true,
+      "load_delay_ms": 0.0,
+      "latched": true,
+      "latch_time_ms": 7.625252012678059,
+      "fault_assert_ms": 7.625252012678059,
+      "vout_final_v": 6.6724411175726504e-276,
+      "vout_min_v": 0.0,
+      "vout_at_latch_v": 0.5264872251916219,
+      "u7_dissipation_w": 0.6999570072063838,
+      "peak_current_ma": 201.51272003800227,
+      "steady_current_ma": 0.0
+    },
+    "full_white_max_ilim": {
+      "label": "full white, max ILIM",
+      "iset_a": 1.14,
+      "iset_ma_per_channel": 4.999999999999999,
+      "ilim_ma": 233.901173,
+      "rds_on_mohm": 85.0,
+      "cout_effective_uf": 11.734,
+      "load_at_enable": true,
+      "load_delay_ms": 0.0,
+      "latched": true,
+      "latch_time_ms": 7.649150135490487,
+      "fault_assert_ms": 7.649150135490487,
+      "vout_final_v": 2.7037904515780325e-275,
+      "vout_min_v": 0.0,
+      "vout_at_latch_v": 0.6016597241314873,
+      "u7_dissipation_w": 0.7948757767787887,
+      "peak_current_ma": 233.90117306343367,
+      "steady_current_ma": 0.0
+    },
+    "capped_0p76_min_ilim_load_at_enable": {
+      "label": "0.76 mA/ch, min ILIM",
+      "iset_a": 0.17328000000000002,
+      "iset_ma_per_channel": 0.76,
+      "ilim_ma": 173.657469,
+      "rds_on_mohm": 85.0,
+      "cout_effective_uf": 11.734,
+      "load_at_enable": true,
+      "load_delay_ms": 0.0,
+      "latched": true,
+      "latch_time_ms": 8.129851569205918,
+      "fault_assert_ms": 8.129851569205918,
+      "vout_final_v": 6.313492523652293e-46,
+      "vout_min_v": 0.0,
+      "vout_at_latch_v": 3.2083068776826362,
+      "u7_dissipation_w": 0.13748342384634082,
+      "peak_current_ma": 173.65746906838257,
+      "steady_current_ma": 0.0
+    },
+    "capped_0p76_min_ilim_sequenced": {
+      "label": "0.76 mA/ch, sequenced load",
+      "iset_a": 0.17328000000000002,
+      "iset_ma_per_channel": 0.76,
+      "ilim_ma": 173.657469,
+      "rds_on_mohm": 85.0,
+      "cout_effective_uf": 11.734,
+      "load_at_enable": false,
+      "load_delay_ms": 5.500000000000001,
+      "latched": false,
+      "latch_time_ms": null,
+      "fault_assert_ms": null,
+      "vout_final_v": 3.9852712,
+      "vout_min_v": 0.0,
+      "vout_at_latch_v": null,
+      "u7_dissipation_w": 0.002552206463999982,
+      "peak_current_ma": 173.65746903477765,
+      "steady_current_ma": 173.28000000000003
+    },
+    "capped_0p76_nom_ilim": {
+      "label": "0.76 mA/ch, nom ILIM",
+      "iset_a": 0.17328000000000002,
+      "iset_ma_per_channel": 0.76,
+      "ilim_ma": 201.51272,
+      "rds_on_mohm": 85.0,
+      "cout_effective_uf": 11.734,
+      "load_at_enable": true,
+      "load_delay_ms": 0.0,
+      "latched": false,
+      "latch_time_ms": null,
+      "fault_assert_ms": null,
+      "vout_final_v": 3.9852712,
+      "vout_min_v": 0.0,
+      "vout_at_latch_v": null,
+      "u7_dissipation_w": 0.0025522064639999726,
+      "peak_current_ma": 201.5127200942601,
+      "steady_current_ma": 173.28000000000006
+    },
+    "capped_0p76_max_ilim": {
+      "label": "0.76 mA/ch, max ILIM",
+      "iset_a": 0.17328000000000002,
+      "iset_ma_per_channel": 0.76,
+      "ilim_ma": 233.901173,
+      "rds_on_mohm": 85.0,
+      "cout_effective_uf": 11.734,
+      "load_at_enable": true,
+      "load_delay_ms": 0.0,
+      "latched": false,
+      "latch_time_ms": null,
+      "fault_assert_ms": null,
+      "vout_final_v": 3.9852712,
+      "vout_min_v": 0.0,
+      "vout_at_latch_v": null,
+      "u7_dissipation_w": 0.0025522064639999743,
+      "peak_current_ma": 215.9997646609462,
+      "steady_current_ma": 173.28000000000006
+    },
+    "margin_table": {
+      "load_ma": 173.28000000000003,
+      "min_ilim_ma": 173.657469,
+      "margin_ma": 0.3774689999999623,
+      "margin_pct": 0.21783760387810158,
+      "max_per_channel_for_min_ilim_ma": 0.7616555657894737,
+      "recommended_cap_0p70_ma": 159.6,
+      "recommended_cap_0p70_margin_ma": 14.057468999999998
+    }
+  },
+  "sequencing": {
+    "order": [
+      "VBUS",
+      "VBUS_FUSED",
+      "VBUS_PROTECTED_RAW",
+      "+4V_REG",
+      "+3V3",
+      "+4V_LED"
+    ],
+    "rails": {
+      "VBUS": {
+        "t_90_ms": 0.0,
+        "status": "step at t=0"
+      },
+      "VBUS_FUSED": {
+        "t_90_ms": 0.004999999999999999,
+        "t_90_rc_ms": 0.00023025850929940455,
+        "status": "simulated; source R=0.1 ohm + C125 1 uF assumption"
+      },
+      "VBUS_PROTECTED_RAW": {
+        "t_90_ms": 22.504999999999995,
+        "t_100_ms": null,
+        "t_3800mv_ms": 19.005,
+        "status": "simulated; eFuse dV/dt 0.2 V/ms, C124 10 nF"
+      },
+      "+4V_REG": {
+        "t_90_ms": 32.11,
+        "t_99_ms": 33.42,
+        "monotonic": true,
+        "max_dip_mv": 1.902168077832389,
+        "status": "simulated; behavioral peak-current-mode loop assumption"
+      },
+      "+3V3": {
+        "t_90_ms": 32.529999999999994,
+        "t_4v_cross_3v4_ms": 31.384999999999998,
+        "status": "UNKNOWN LDO startup; modeled with tau=0.5 ms assumption"
+      },
+      "+4V_LED": {
+        "t_90_ms": 51.1,
+        "status": "firmware-controlled; modeled enable at 50 ms, not a board time",
+        "modeled_enable_ms": 50.0,
+        "modeled_rise_ms": 1.1,
+        "modeled_latched": false,
+        "modeled_latch_time_ms": null
+      }
+    }
+  },
+  "coupled_startup_0p3a": {
+    "label": "coupled 0.3 A",
+    "iload_a": 0.3,
+    "t_ss_ms": 14.545454545454545,
+    "loop": {
+      "target_crossover_hz": 20000.0,
+      "kp_a_per_v": 3.7322120724646743,
+      "ki_a_per_v_s": 93800.72022795326,
+      "zero_hz": 4000.0000000000005,
+      "inner_current_lag_us": 3.183098861837907,
+      "estimated_phase_margin_deg": 61.15754138363922,
+      "plant": "average peak-current-mode: 1/(s*Cout) with ESR zero and inner-loop lag",
+      "note": "Synthetic loop assumption, not the TPS62932 internal compensation; no stability claim."
+    },
+    "t_fused_90_ms": 0.004999999999999999,
+    "t_prot_90_ms": 22.514999999999997,
+    "t_prot_3800_ms": 19.005,
+    "t_4v_90_ms": 32.11,
+    "t_4v_99_ms": 33.42,
+    "vout_final_v": 4.0,
+    "overshoot_mv": 1.9021687657421182,
+    "monotonic": {
+      "monotonic": true,
+      "max_dip_mv": 1.9021687658669073,
+      "min_slope_v_per_ms": -0.044755119123979926,
+      "dip_tolerance_mv": 5.0
+    },
+    "peak_efuse_ma": 249.75830182996657
+  },
+  "findings": [
+    {
+      "id": "SIM-01",
+      "severity": "closed-by-simulation",
+      "title": "eFuse dV/dt ramp is 25 ms and capacitor-only inrush is ~1.07 mA effective",
+      "detail": "At C124=10 nF, SR=0.2 V/ms, Cprot=5.336 uF effective, the ramp reaches 5 V at 24.98 ms; the capacitor current is 1.067 mA and the stored energy is 66.7 uJ. A 0.3 A equivalent load peaks at 301.1 mA, below the 425 mA minimum ILIM."
+    },
+    {
+      "id": "SIM-02",
+      "severity": "closed-by-simulation",
+      "title": "4 V rail startup is monotonic under the stated behavioral loop",
+      "detail": "The coupled eFuse+buck simulation gives 4 V 90% at 32.11 ms and 99% at 33.42 ms at 0.1 A, with a largest drop from running max of 1.90 mV. At 0.3 A the 90% time is 32.11 ms. Conditional on the synthetic loop and 29.7 uF effective output capacitance; not a stability result."
+    },
+    {
+      "id": "SIM-03",
+      "severity": "review-flag",
+      "title": "0.76 mA/channel is at the current-limit edge and can latch off at startup",
+      "detail": "76x3x0.76 mA = 173.28 mA vs 173.657 mA minimum ILIM: 0.377 mA (0.22%) margin. With the LED load present at enable, the simulation latches at 8.13 ms; with the load sequenced after the rail is up, it does not latch and the rail is 3.9853 V. Sequence the LED load after the rail is up, or cap at <=0.70 mA/channel."
+    },
+    {
+      "id": "SIM-04",
+      "severity": "review-flag",
+      "title": "Full white 1.14 A is 4.87-6.56x the LED limiter and latches off",
+      "detail": "The TPS2553-1 limits at 173.7 mA, the rail collapses to 0.453 V, and the 7.5 ms deglitch latches the switch off at 7.60 ms. The electrical dissipation in U7 is 0.616 W (not a thermal result). Full white is not supported by this power tree."
+    },
+    {
+      "id": "SIM-05",
+      "severity": "closed-by-simulation",
+      "title": "UVLO/OVLO trip points and hysteresis reproduce the analytical review",
+      "detail": "Nominal UVLO 3.987/3.621 V (365 mV hysteresis); OVLO 5.738/5.212 V (526 mV hysteresis). The OVLO min corner is 5.589 V, 89 mV above the 5.5 V USB maximum."
+    }
+  ],
+  "unknowns": [
+    "Actual C126/C136/C137 MPNs, dielectrics, DC-bias curves and ESR; the 0.92 derating and 2 mohm parallel ESR are assumptions.",
+    "Actual VBUS source/cable impedance and input ramp/dip waveform; 0.1 ohm source resistance is an assumption.",
+    "TPS62932 internal loop compensation, phase margin, frequency foldback, PFM/DCM and hiccup behavior; the PI loop is a behavioral proxy.",
+    "Actual C140/C141 effective capacitance (12 uF is a TBD target, not a measured value).",
+    "Actual SK6805 per-channel current, V-I knee and quiescent current; 5 mA/ch and 0.76 mA/ch are assumptions.",
+    "Actual TPS2553-1 Rds_on, current-limit corner, latch deglitch and thermal behavior at 4 V.",
+    "MAX38902 3V3 startup, dropout and thermal behavior; the 0.5 ms tau is an assumption.",
+    "Firmware LED enable timing and brightness cap; the 50 ms LED enable is illustrative.",
+    "Whether the 4 V rail is monotonic on the assembled board; the simulation is conditional on the loop and capacitor assumptions."
+  ],
+  "bench_measurements": [
+    "VBUS, VBUS_FUSED, VBUS_PROTECTED_RAW, +4V_REG, +3V3 and +4V_LED startup at 5.0 V and 5.5 V, hot and cold, with the actual cable.",
+    "Input ripple at U18 VIN at no load, MCU load and a full-white LED attempt.",
+    "UVLO/OVLO trip points by sweeping VBUS up and down on the assembled board.",
+    "LED rail current and U7 FAULT/latch behavior at full white and at the intended firmware brightness cap, including the enable sequence.",
+    "3V3 load step and LDO thermal at the actual load.",
+    "Buck load step and, if stability is to be claimed, loop gain/phase across the application corners.",
+    "eFuse current limit and thermal at 425/500/575 mA.",
+    "Soft-start time and monotonicity of the 4 V rail."
+  ]
+}

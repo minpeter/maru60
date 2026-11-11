@@ -4,7 +4,13 @@
 # dependencies = []
 # ///
 # Run: tools/run_kicad9.sh python3 tools/check_pcb_native.py --output <new-directory>
-"""Replay pinned native CAD checks into a fresh directory without editing a checkpoint."""
+#      [--checkpoint <dir>] [--expected-opens N] [--expected-warnings N] [--material]
+"""Replay pinned native CAD checks into a fresh directory without editing a checkpoint.
+
+``--expected-warnings`` defaults to 0 and is asserted alongside the open-pair count. A nonzero
+baseline must pass its recorded warning count explicitly; the zero-open development prototype
+uses the default.
+"""
 
 from __future__ import annotations
 
@@ -35,6 +41,12 @@ def main() -> None:
     _ = parser.add_argument("--output", type=Path, required=True)
     _ = parser.add_argument("--checkpoint", type=Path)
     _ = parser.add_argument("--expected-opens", type=int)
+    _ = parser.add_argument(
+        "--expected-warnings",
+        type=int,
+        default=0,
+        help="expected DRC warning count (default: 0; pass the recorded count for a nonzero baseline)",
+    )
     _ = parser.add_argument("--material", action="store_true")
     args = parser.parse_args()
     if not __debug__:
@@ -132,7 +144,11 @@ def main() -> None:
     )
     drc = json.loads((output / "drc.json").read_text())
     erc = json.loads((output / "erc.json").read_text())
+    warnings = sum(row["severity"] == "warning" for row in drc["violations"])
     assert len(drc["unconnected_items"]) == expected, drc["unconnected_items"]
+    assert warnings == args.expected_warnings, (
+        f"expected {args.expected_warnings} DRC warnings, found {warnings}"
+    )
     assert not drc["schematic_parity"], drc["schematic_parity"]
     assert not any(row["severity"] == "error" for row in drc["violations"]), drc[
         "violations"
@@ -171,10 +187,14 @@ def main() -> None:
     assert hashes(source) == before, "source CAD changed"
     result = {
         "pass": True,
+        "command": ["python3", *sys.argv],
+        "cwd": str(Path.cwd()),
         "board_sha256": before["maru60.kicad_pcb"],
         "kicad_version": pcbnew.GetBuildVersion(),
+        "expected_open_pairs": expected,
+        "expected_warnings": args.expected_warnings,
         "open_pairs": len(drc["unconnected_items"]),
-        "warnings": sum(row["severity"] == "warning" for row in drc["violations"]),
+        "warnings": warnings,
         "other_errors": 0,
         "ERC": 0,
         "schematic_parity": 0,

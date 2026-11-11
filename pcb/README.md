@@ -4,6 +4,32 @@
 [../recovery/README.md](../recovery/README.md). Everything below describes earlier stages (A21/A22 foundation) and is
 kept for history.
 
+## Current artifacts (2026-11-11)
+
+The relocated-expansion 0/0 prototype now has a reproducible evidence set and a
+draft fabrication package. None of it is a manufacturing release.
+
+| Artifact | What it is |
+| --- | --- |
+| [fabrication/](fabrication/README.md) | Draft BOM (382 rows), CPL (370 SMD), Gerbers/drill/IPC-D-356/STEP, `PROVENANCE.json`, `VERIFICATION.json`. 374/382 BOM rows still lack an MPN. |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/REPRODUCE.md](experiments/resume-20261109-relocated-expansion-zero-opens/REPRODUCE.md) | Full native/portable/material/audit/GEOS reproduction sequence with expected numbers. |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/qa/strict-promotion/REPORT.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/strict-promotion/REPORT.md) | Strict-baseline promotion decision: **PROMOTE_UNDER_AMENDED_POLICY**. The amended pair-capsule window covers the 26 designed fillet cusps (0.507 mm²); the residual is 9 single-antipad crescents (0.0426 mm²) + 1,802 Clipper2 keyhole slivers (0.00128 mm²) = 0.0439 mm². |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/REPORT.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/REPORT.md) | CAD fit after the variant fixes: relocated block 19 pass / 0 tight (J3 0.85 mm); USB-C J1-centred 14.75 mm notch passes (1.20 mm); 7U PCB-mount stabilizer passes the new plate variant (0.40 mm). See [FIXES.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/FIXES.md). |
+| [models/rule60-v3-hhkb-gas-plate-pcb-mount.dxf](models/rule60-v3-hhkb-gas-plate-pcb-mount.dxf) | PCB-mount 7U plate variant (enlarged cutout); the original plate-mount DXF is unchanged. |
+| [models/maru60-hhkb-topcase-right-usb-14p75-j1centred.3mf](models/maru60-hhkb-topcase-right-usb-14p75-j1centred.3mf) | Right top-case half with the 14.75 mm USB-C notch centred on J1. |
+| [models/maru60-hhkb-bottomcase-j3-relief-left.3mf](models/maru60-hhkb-bottomcase-j3-relief-left.3mf) | Left bottom-case half with the local J3 relief pocket (0.85 mm clearance). |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-review/REPORT.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-review/REPORT.md) | Power analysis: 5.8 µF vs TI 10 µF typical (5.336 µF effective at 5 V); inrush 1.16 mA; LED full-white 1.14 A vs 173.7–233.9 mA limiter — full white is not supported. |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-sim/REPORT.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-sim/REPORT.md) | Transient simulation: eFuse 25 ms ramp / 1.07 mA inrush; 4 V startup monotonic; UVLO/OVLO 3.987/3.621 V and 5.738/5.212 V; **0.76 mA/ch LED cap is at the limiter edge (0.22% margin) and latches if the load is present at enable — sequence the LED load after the rail is up, or cap at ≤0.70 mA/ch**. |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/qa/thermal-sim/REPORT.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/thermal-sim/REPORT.md) | Lumped thermal network: U2 is the limit (needs θJA ≤78.4 °C/W at 5 V input / 85 °C; as-built screening 120 °C/W); U18/U7 are not the limit; LED full-white 4.56 W. |
+| [experiments/resume-20261109-relocated-expansion-zero-opens/qa/usb-si-sim/REPORT.md](experiments/resume-20261109-relocated-expansion-zero-opens/qa/usb-si-sim/REPORT.md) | USB 2.0 SI: 167 mm D+/D- route, 5.28 mm intra-pair skew; 0.25 mm pair is **112.8 Ω** differential (not 90 Ω; ~0.40 mm needed); HS eye 299 mV / 0.53 UI at the template edge. |
+| [LICENSE-DECISION.md](LICENSE-DECISION.md) | PCB license options and recommendation (CERN-OHL-S-2.0); owner decides. |
+| [USB-ID-DECISION.md](USB-ID-DECISION.md) | VID/PID options and recommendation (pid.codes 0x1209); owner decides. |
+
+The promoted tools are `pcb/tools/audit_relocated_zero_opens.py`,
+`geos_witness_zero_opens.py`, `analyze_strict_promotion.py`,
+`check_mechanical_fit.py`, `analyze_power.py` and `export_fabrication.py`; see
+[pcb/tools/README.md](tools/README.md).
+
 ## Recovered native checkpoints (2026-11-03)
 
 The [A21 checkpoint](checkpoints/a21/README.md) now includes the actual native four-layer board, schematic, project, local libraries and evidence. Its A22 predecessor is retained at `checkpoints/a21/coordinator-evidence/source.kicad_pcb`. Fresh checks and publication limits are in [publication/a21-a22](publication/a21-a22/README.md). A21 still has 21 opens and A22 22; neither is fabrication-ready. The foundation notes below are historical and do not describe the current existence of native CAD.

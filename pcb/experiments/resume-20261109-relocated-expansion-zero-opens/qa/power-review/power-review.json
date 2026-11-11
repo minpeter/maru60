@@ -1,0 +1,742 @@
+{
+  "schema": "maru60-power-review/v1",
+  "analysis_date_utc": "2026-11-10",
+  "status": "ANALYSIS_ONLY",
+  "qualification": "No stability, thermal, USB compliance, EMC, or hardware qualification. No SPICE, no bench measurement, no effective-capacitance qualification. All numbers are conditional on the stated assumptions.",
+  "board": {
+    "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pcb",
+    "sha256": "cb7b5b2941bc0e1c4d0a1d10c6dd694f8cf35c4f35665c342dfb747492e10a5d"
+  },
+  "netlist": {
+    "path": "pcb/experiments/resume-20261109-relocated-expansion-zero-opens/qa/native/netlist.xml",
+    "sha256": "dbc70642e2f24bbbad04e45196af2019fd3eed7efbb2e05320525ad4288fd7c0"
+  },
+  "sources": {
+    "tps25947": {
+      "part": "TPS259470LRPW",
+      "source": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+      "revision": "SLVSFC9C (revised May 2026)",
+      "uvlo_rising_v": {
+        "min": 1.183,
+        "typ": 1.2,
+        "max": 1.223
+      },
+      "uvlo_falling_v": {
+        "min": 1.076,
+        "typ": 1.09,
+        "max": 1.116
+      },
+      "ovlo_rising_v": {
+        "min": 1.183,
+        "typ": 1.2,
+        "max": 1.223
+      },
+      "ovlo_falling_v": {
+        "min": 1.076,
+        "typ": 1.09,
+        "max": 1.116
+      },
+      "pin_leakage_ua": 0.1,
+      "ilim_table_ma": {
+        "6.65k": {
+          "min": 425,
+          "typ": 500,
+          "max": 575
+        },
+        "3.32k": {
+          "min": 850,
+          "typ": 1007,
+          "max": 1150
+        },
+        "1.65k": {
+          "min": 1800,
+          "typ": 2028,
+          "max": 2200
+        },
+        "750": {
+          "min": 3960,
+          "typ": 4452,
+          "max": 4840
+        },
+        "549": {
+          "min": 5400,
+          "typ": 6068,
+          "max": 6600
+        }
+      },
+      "current_limit_response_us": 400,
+      "fast_trip_ratio": 3.0,
+      "fast_trip_response_ns": 500,
+      "dvdt_equation": "SR[V/ms] = 2 / C_dVdt[nF]",
+      "dvdt_series_resistor_recommendation": "100 ohm in series with C_dVdt for C_dVdt > 10 nF"
+    },
+    "tps2553": {
+      "part": "TPS2553DBVR-1",
+      "source": "https://www.ti.com/lit/ds/symlink/tps2553.pdf",
+      "revision": "SLVS841G (revised October 2026)",
+      "equations_ma": {
+        "max": "22980 / R_ILIM[kohm]^0.94",
+        "nom": "23950 / R_ILIM[kohm]^0.977",
+        "min": "25230 / R_ILIM[kohm]^1.016"
+      },
+      "r_ilim_range_kohm": {
+        "min": 15,
+        "max": 232
+      },
+      "response_us": 2,
+      "latch_off": true
+    },
+    "tps62932": {
+      "part": "TPS62932DRLR",
+      "source": "https://www.ti.com/lit/ds/symlink/tps62932.pdf",
+      "revision": "SLUSEA4D (revised August 2022)",
+      "vin_recommended_min_v": 3.8,
+      "vin_abs_max_v": 30.0,
+      "vref_v": 0.8,
+      "iss_ua": {
+        "min": 4.5,
+        "typ": 5.5,
+        "max": 6.5
+      },
+      "ss_equation": "t_SS[s] = C_SS[F] * VREF[V] / ISS[A]",
+      "ss_min_cap_nf": 6.8,
+      "input_cap_typical_uf": 10.0,
+      "input_cap_additional_uf": 0.1,
+      "max_duty_98pct": 0.98,
+      "min_off_time_ns": 140,
+      "frequency_foldback": true
+    },
+    "max38902": {
+      "part": "MAX38902AATA+T",
+      "source": "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX38902A-MAX38902D.pdf",
+      "vin_range_v": {
+        "min": 1.7,
+        "max": 5.5
+      },
+      "vout_v": 3.3,
+      "iout_ma": 500,
+      "dropout_typ_mv_at_500ma": 100
+    },
+    "sk6805": {
+      "part": "SK6805-EC15-001",
+      "channels_per_led": 3,
+      "per_channel_current_ma_assumption": 5.0,
+      "note": "No SK6805 datasheet is present in this repository. 5 mA/channel is an explicit assumption used for the full-white estimate; the sensitivity table covers 0.5, 1, 2, 5 and 12 mA/channel. Replace the assumption with the exact LED datasheet before treating the full-white number as a specification."
+    }
+  },
+  "inputs": {
+    "components": {
+      "C124": {
+        "value": "10nF 10% 50V",
+        "footprint": "C124_Short_Study:C_YAGEO_CC0402_050x050_P100_B_Conditional"
+      },
+      "C126": {
+        "value": "1uF 50V",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric"
+      },
+      "C136": {
+        "value": "100nF 50V",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric"
+      },
+      "C137": {
+        "value": "4.7uF 50V effective>=2uF TBD",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric"
+      },
+      "C139": {
+        "value": "100nF 10% 16V - soft start",
+        "footprint": "Capacitor_SMD:C_0603_1608Metric"
+      },
+      "R112": {
+        "value": "133k 1%",
+        "footprint": "Resistor_SMD:R_0402_1005Metric"
+      },
+      "R120": {
+        "value": "590k 0.1%",
+        "footprint": "Resistor_SMD:R_0603_1608Metric"
+      },
+      "R121": {
+        "value": "156k 0.1%",
+        "footprint": "C124_Short_Study:R_KOA_RN73R1E_0402_Reflow_Vertical_B"
+      },
+      "R122": {
+        "value": "620k 0.1%",
+        "footprint": "Resistor_SMD:R_0603_1608Metric"
+      },
+      "R123": {
+        "value": "267k 0.1%",
+        "footprint": "Resistor_SMD:R_0603_1608Metric"
+      },
+      "R124": {
+        "value": "6.65k 0.1%",
+        "footprint": "Resistor_SMD:R_0603_1608Metric"
+      },
+      "U18": {
+        "value": "TPS62932DRLR",
+        "footprint": "Package_TO_SOT_SMD:SOT-583-8"
+      },
+      "U2": {
+        "value": "MAX38902AATA+T",
+        "footprint": "MaruStudy:MAX_T822-3C_90-0065_2x2_P0.5_EP0.8x1.38"
+      },
+      "U7": {
+        "value": "TPS2553DBVR-1",
+        "footprint": "Package_TO_SOT_SMD:SOT-23-6"
+      },
+      "U8": {
+        "value": "TPS259470LRPW",
+        "footprint": "Protection_Study:TI_RPW0010A_2x2mm_Official4225183A_DRAFT"
+      }
+    },
+    "led_count": 76,
+    "led_refs": [
+      "LED1",
+      "LED10",
+      "LED11",
+      "LED12",
+      "LED13",
+      "LED14",
+      "LED15",
+      "LED16",
+      "LED17",
+      "LED18",
+      "LED19",
+      "LED2",
+      "LED20",
+      "LED21",
+      "LED22",
+      "LED23",
+      "LED24",
+      "LED25",
+      "LED26",
+      "LED27",
+      "LED28",
+      "LED29",
+      "LED3",
+      "LED30",
+      "LED31",
+      "LED32",
+      "LED33",
+      "LED34",
+      "LED35",
+      "LED36",
+      "LED37",
+      "LED38",
+      "LED39",
+      "LED4",
+      "LED40",
+      "LED41",
+      "LED42",
+      "LED43",
+      "LED44",
+      "LED45",
+      "LED46",
+      "LED47",
+      "LED48",
+      "LED49",
+      "LED5",
+      "LED50",
+      "LED51",
+      "LED52",
+      "LED53",
+      "LED54",
+      "LED55",
+      "LED56",
+      "LED57",
+      "LED58",
+      "LED59",
+      "LED6",
+      "LED60",
+      "LED61",
+      "LED62",
+      "LED63",
+      "LED64",
+      "LED65",
+      "LED66",
+      "LED67",
+      "LED68",
+      "LED69",
+      "LED7",
+      "LED70",
+      "LED71",
+      "LED72",
+      "LED73",
+      "LED74",
+      "LED75",
+      "LED76",
+      "LED8",
+      "LED9"
+    ]
+  },
+  "input_capacitance": {
+    "nominal_uf": 5.8,
+    "nominal_breakdown_uf": {
+      "C126": 1.0,
+      "C136": 0.1,
+      "C137": 4.7
+    },
+    "ti_typical_uf": 10.0,
+    "ti_additional_uf": 0.1,
+    "derating_curve": [
+      {
+        "v": 0.0,
+        "c_over_c0": 1.0
+      },
+      {
+        "v": 5.0,
+        "c_over_c0": 0.92
+      },
+      {
+        "v": 10.0,
+        "c_over_c0": 0.85
+      },
+      {
+        "v": 16.0,
+        "c_over_c0": 0.75
+      },
+      {
+        "v": 25.0,
+        "c_over_c0": 0.6
+      },
+      {
+        "v": 50.0,
+        "c_over_c0": 0.35
+      }
+    ],
+    "derating_at_5v": 0.92,
+    "effective_uf_at_5v": 5.336,
+    "nominal_ratio_to_ti_typical": 0.58,
+    "effective_ratio_to_ti_typical": 0.5336,
+    "additional_cap": {
+      "required_effective_uf": 4.664,
+      "required_nominal_uf_at_assumed_derating": 5.069565,
+      "nearest_standard_uf": 5.6,
+      "standard_options": [
+        {
+          "nominal_uf": 4.7,
+          "assumed_derating_at_5v": 0.92,
+          "effective_uf": 4.324,
+          "total_effective_uf": 9.66,
+          "meets_10uf_effective": false
+        },
+        {
+          "nominal_uf": 5.6,
+          "assumed_derating_at_5v": 0.92,
+          "effective_uf": 5.152,
+          "total_effective_uf": 10.488,
+          "meets_10uf_effective": true
+        },
+        {
+          "nominal_uf": 6.8,
+          "assumed_derating_at_5v": 0.92,
+          "effective_uf": 6.256,
+          "total_effective_uf": 11.592,
+          "meets_10uf_effective": true
+        },
+        {
+          "nominal_uf": 10.0,
+          "assumed_derating_at_5v": 0.92,
+          "effective_uf": 9.2,
+          "total_effective_uf": 14.536,
+          "meets_10uf_effective": true
+        }
+      ]
+    },
+    "verdict": "BELOW_TI_TYPICAL_GUIDANCE_NOT_PROVEN_INSTABILITY. 5.8 uF nominal is 58% of TI's 10 uF typical recommendation; the assumed 0.92 derating gives 5.336 uF effective (53.4%). This is a review flag, not a measured failure and not a stability result."
+  },
+  "inrush": {
+    "c_dvdt_nf": 10.0,
+    "slew_v_per_ms": 0.2,
+    "slew_v_per_s": 200.0,
+    "time_to_5v_ms": 25.0,
+    "load_capacitance_uf": 5.8,
+    "capacitor_current_ma": 1.16,
+    "capacitor_energy_uj": 72.5,
+    "efuse_ilim_ma": {
+      "min": 425,
+      "typ": 500,
+      "max": 575
+    },
+    "usb_descriptor_ma": 500.0,
+    "ratio_to_efuse_min": 0.002729,
+    "ratio_to_usb_descriptor": 0.00232,
+    "efuse_response": "The dV/dt-controlled capacitor current is far below the 425 mA minimum ILIM, so the eFuse does not current-limit the capacitor alone. The 400 us current-limit response and 500 ns fast-trip are not expected to act on this ramp. Active buck/LED load current is additional and is not included.",
+    "with_added_5p6uf": {
+      "load_capacitance_uf": 11.4,
+      "capacitor_current_ma": 2.28,
+      "capacitor_energy_uj": 142.5
+    },
+    "verdict": "Capacitor-only inrush is ~1.16 mA at 5.8 uF and 0.2 V/ms, ~0.23% of the 500 mA USB descriptor and ~0.27% of the 425 mA eFuse minimum. Inrush is not the limiting compliance issue; steady-state LED load is."
+  },
+  "uvlo_ovlo": {
+    "resistors": {
+      "R120_ohm": 590000.0,
+      "R121_ohm": 156000.0,
+      "R122_ohm": 620000.0,
+      "R123_ohm": 267000.0,
+      "tolerance": 0.001
+    },
+    "uvlo_rising": {
+      "min": {
+        "v": 3.924553,
+        "with_leakage_min_v": 3.862553,
+        "with_leakage_max_v": 3.986553
+      },
+      "typ": {
+        "v": 3.986517,
+        "with_leakage_min_v": 3.924517,
+        "with_leakage_max_v": 4.048517
+      },
+      "max": {
+        "v": 4.068611,
+        "with_leakage_min_v": 4.006611,
+        "with_leakage_max_v": 4.130611
+      },
+      "leakage_shift_v": 0.062,
+      "r_parallel_ohm": 186629.086809
+    },
+    "uvlo_falling": {
+      "min": {
+        "v": 3.569585,
+        "with_leakage_min_v": 3.507585,
+        "with_leakage_max_v": 3.631585
+      },
+      "typ": {
+        "v": 3.621086,
+        "with_leakage_min_v": 3.559086,
+        "with_leakage_max_v": 3.683086
+      },
+      "max": {
+        "v": 3.712649,
+        "with_leakage_min_v": 3.650649,
+        "with_leakage_max_v": 3.774649
+      },
+      "leakage_shift_v": 0.062,
+      "r_parallel_ohm": 186629.086809
+    },
+    "ovlo_rising": {
+      "min": {
+        "v": 5.648227,
+        "with_leakage_min_v": 5.589227,
+        "with_leakage_max_v": 5.707227
+      },
+      "typ": {
+        "v": 5.738462,
+        "with_leakage_min_v": 5.679462,
+        "with_leakage_max_v": 5.797462
+      },
+      "max": {
+        "v": 5.857709,
+        "with_leakage_min_v": 5.798709,
+        "with_leakage_max_v": 5.916709
+      },
+      "leakage_shift_v": 0.059,
+      "r_parallel_ohm": 123378.016086
+    },
+    "ovlo_falling": {
+      "min": {
+        "v": 5.137356,
+        "with_leakage_min_v": 5.078356,
+        "with_leakage_max_v": 5.196356
+      },
+      "typ": {
+        "v": 5.212436,
+        "with_leakage_min_v": 5.153436,
+        "with_leakage_max_v": 5.271436
+      },
+      "max": {
+        "v": 5.345219,
+        "with_leakage_min_v": 5.286219,
+        "with_leakage_max_v": 5.404219
+      },
+      "leakage_shift_v": 0.059,
+      "r_parallel_ohm": 123378.016086
+    },
+    "margins": {
+      "uvlo_rising_vs_buck_4v_no_foldback_ideal": {
+        "reference_v": 4.301075,
+        "min_margin_v": -0.376523,
+        "typ_margin_v": -0.314558,
+        "max_margin_v": -0.232465,
+        "min_margin_with_leakage_v": -0.438523,
+        "max_margin_with_leakage_v": -0.170465
+      },
+      "uvlo_rising_vs_buck_4v_98pct_ideal": {
+        "reference_v": 4.081633,
+        "min_margin_v": -0.15708,
+        "typ_margin_v": -0.095116,
+        "max_margin_v": -0.013022,
+        "min_margin_with_leakage_v": -0.21908,
+        "max_margin_with_leakage_v": 0.048978
+      },
+      "uvlo_rising_vs_buck_recommended_min_3v8": {
+        "reference_v": 3.8,
+        "min_margin_v": 0.124553,
+        "typ_margin_v": 0.186517,
+        "max_margin_v": 0.268611,
+        "min_margin_with_leakage_v": 0.062553,
+        "max_margin_with_leakage_v": 0.330611
+      },
+      "uvlo_falling_vs_ldo_3v3_min_input_assumed": {
+        "reference_v": 3.4,
+        "min_margin_v": 0.169585,
+        "typ_margin_v": 0.221086,
+        "max_margin_v": 0.312649,
+        "min_margin_with_leakage_v": 0.107585,
+        "max_margin_with_leakage_v": 0.374649
+      },
+      "ovlo_rising_vs_usb_5v5_max": {
+        "reference_v": 5.5,
+        "min_margin_v": 0.148227,
+        "typ_margin_v": 0.238462,
+        "max_margin_v": 0.357709,
+        "min_margin_with_leakage_v": 0.089227,
+        "max_margin_with_leakage_v": 0.416709
+      }
+    },
+    "verdict": "UVLO rising is ~3.99 V nominal (3.86-4.13 V with resistor, reference and leakage sensitivity). That is above the buck's 3.8 V recommended minimum but below the 4.30 V no-foldback ideal and at/below the 4.08 V 98%-duty ideal at the nominal/min corners. The 4 V rail may rely on frequency foldback at UVLO release. OVLO rising is ~5.74 V nominal; the min corner with leakage is ~5.59 V, only ~89 mV above the 5.5 V USB maximum. Both are review flags, not measured failures."
+  },
+  "soft_start": {
+    "c_ss_nf": 100.0,
+    "c_tolerance": 0.1,
+    "vref_v": 0.8,
+    "iss_ua": {
+      "min": 4.5,
+      "typ": 5.5,
+      "max": 6.5
+    },
+    "equation": "t_SS[s] = C_SS[F] * VREF[V] / ISS[A]",
+    "nominal_ms": 14.545455,
+    "corners": [
+      {
+        "c_label": "min",
+        "c_nf": 90.0,
+        "iss_label": "min",
+        "iss_ua": 4.5,
+        "t_ms": 16.0
+      },
+      {
+        "c_label": "min",
+        "c_nf": 90.0,
+        "iss_label": "typ",
+        "iss_ua": 5.5,
+        "t_ms": 13.090909
+      },
+      {
+        "c_label": "min",
+        "c_nf": 90.0,
+        "iss_label": "max",
+        "iss_ua": 6.5,
+        "t_ms": 11.076923
+      },
+      {
+        "c_label": "nom",
+        "c_nf": 100.0,
+        "iss_label": "min",
+        "iss_ua": 4.5,
+        "t_ms": 17.777778
+      },
+      {
+        "c_label": "nom",
+        "c_nf": 100.0,
+        "iss_label": "max",
+        "iss_ua": 6.5,
+        "t_ms": 12.307692
+      },
+      {
+        "c_label": "max",
+        "c_nf": 110.0,
+        "iss_label": "min",
+        "iss_ua": 4.5,
+        "t_ms": 19.555556
+      },
+      {
+        "c_label": "max",
+        "c_nf": 110.0,
+        "iss_label": "typ",
+        "iss_ua": 5.5,
+        "t_ms": 16.0
+      },
+      {
+        "c_label": "max",
+        "c_nf": 110.0,
+        "iss_label": "max",
+        "iss_ua": 6.5,
+        "t_ms": 13.538462
+      }
+    ],
+    "min_ms": 11.076923,
+    "max_ms": 19.555556,
+    "existing_conservative_screen": {
+      "iss_ua": {
+        "min": 4.41,
+        "typ": 5.5,
+        "max": 6.63
+      },
+      "min_ms": 10.859729,
+      "max_ms": 19.954649,
+      "note": "The existing calculations.json used 4.41/6.63 uA, slightly wider than the datasheet 4.5/6.5 uA. Both are analysis screens, not measured startup times."
+    },
+    "verdict": "Nominal SS reference ramp is 14.545 ms; the datasheet-limit 8 corners span 11.077-19.556 ms. The existing conservative screen spans 10.855-19.947 ms. This is the SS reference ramp, not the observed board startup, and it excludes capacitor derating, the eFuse ramp and load dynamics."
+  },
+  "led_limiter": {
+    "r_ilim_kohm": 133.0,
+    "r_ilim_tolerance": 0.01,
+    "equations_ma": {
+      "max": "22980 / R_ILIM[kohm]^0.94",
+      "nom": "23950 / R_ILIM[kohm]^0.977",
+      "min": "25230 / R_ILIM[kohm]^1.016"
+    },
+    "currents_ma": {
+      "min": 173.657469,
+      "nom": 201.51272,
+      "max": 233.901173
+    },
+    "r_corners_kohm": {
+      "min": 131.67,
+      "nom": 133.0,
+      "max": 134.33
+    },
+    "led_count": 76,
+    "channels_per_led": 3,
+    "per_channel_current_assumption_ma": 5.0,
+    "full_white_current_a": 1.14,
+    "full_white_ratio_to_limits": {
+      "min": 6.564647,
+      "nom": 5.657211,
+      "max": 4.873853
+    },
+    "max_per_channel_current_for_min_limit_ma": 0.761656,
+    "max_per_channel_current_for_max_limit_ma": 1.025882,
+    "sensitivity": [
+      {
+        "per_channel_ma": 0.5,
+        "per_led_ma": 1.5,
+        "total_a": 0.114,
+        "ratio_to_min_limit": 0.656465,
+        "ratio_to_nom_limit": 0.565721,
+        "ratio_to_max_limit": 0.487385
+      },
+      {
+        "per_channel_ma": 1.0,
+        "per_led_ma": 3.0,
+        "total_a": 0.228,
+        "ratio_to_min_limit": 1.312929,
+        "ratio_to_nom_limit": 1.131442,
+        "ratio_to_max_limit": 0.974771
+      },
+      {
+        "per_channel_ma": 2.0,
+        "per_led_ma": 6.0,
+        "total_a": 0.456,
+        "ratio_to_min_limit": 2.625859,
+        "ratio_to_nom_limit": 2.262884,
+        "ratio_to_max_limit": 1.949541
+      },
+      {
+        "per_channel_ma": 5.0,
+        "per_led_ma": 15.0,
+        "total_a": 1.14,
+        "ratio_to_min_limit": 6.564647,
+        "ratio_to_nom_limit": 5.657211,
+        "ratio_to_max_limit": 4.873853
+      },
+      {
+        "per_channel_ma": 12.0,
+        "per_led_ma": 36.0,
+        "total_a": 2.736,
+        "ratio_to_min_limit": 15.755153,
+        "ratio_to_nom_limit": 13.577307,
+        "ratio_to_max_limit": 11.697248
+      }
+    ],
+    "latch_off": true,
+    "verdict": "R112 = 133 kohm 1% sets 173.657/201.513/233.901 mA (min/nom/max) using the TPS2553 datasheet equations and the resistor tolerance. At the stated 5 mA/channel assumption, 76 SK6805 LEDs at full white draw 1.14 A, 4.87-6.56x the limiter. The TPS2553-1 is a latch-off part, so a full-white attempt is expected to latch the LED rail off, not merely dim it. The eFuse 500 mA nominal is also below 1.14 A. Full-white capability is not supported by this power tree."
+  },
+  "sequencing": {
+    "order": [
+      "VBUS (USB-C J1)",
+      "F1 polyfuse -> VBUS_FUSED",
+      "U8 TPS259470 eFuse -> VBUS_PROTECTED_RAW",
+      "U18 TPS62932 buck -> +4V_REG",
+      "U2 MAX38902 LDO -> +3V3",
+      "U7 TPS2553-1 switch -> +4V_LED (enabled by GPIO22 through R109)"
+    ],
+    "timing": {
+      "efuse_slew_v_per_ms": 0.2,
+      "efuse_time_to_5v_ms": 25.0,
+      "efuse_uvlo_release_nominal_ms": 19.932584,
+      "buck_ss_nominal_ms": 14.545455,
+      "buck_4v_ready_after_efuse_release_nominal_ms": 14.545455,
+      "buck_4v_ready_after_vbus_nominal_ms": 34.478039,
+      "ldo_3v3_startup_ms": "unknown; MAX38902 BYP/soft-start not measured here",
+      "led_rail_enable": "firmware-controlled after boot; R109 100k pulls EN low at reset"
+    },
+    "verdict": "The netlist order is VBUS -> FUSED -> PROTECTED -> 4V -> 3V3 -> LED rail. The eFuse 25 ms ramp and the buck 14.5 ms SS overlap: the buck starts at the eFuse UVLO release (~20 ms) while the input is still ramping. The 4 V rail may not be monotonic. The LED rail is last and is held off by R109 until firmware drives GPIO22. Measure the actual rail order and monotonicity."
+  },
+  "findings": [
+    {
+      "id": "PWR-01",
+      "severity": "review-flag",
+      "title": "Input capacitance is below TI's 10 uF typical guidance",
+      "detail": "5.8 uF nominal (1 uF + 100 nF + 4.7 uF) and 5.336 uF effective at 5 V under the stated 0.92 derating. This is 58%/53% of the 10 uF typical recommendation. It is not a proven instability."
+    },
+    {
+      "id": "PWR-02",
+      "severity": "review-flag",
+      "title": "UVLO release is below the 4 V buck's no-foldback input",
+      "detail": "UVLO rising ~3.99 V nominal vs 4.30 V no-foldback ideal and 4.08 V 98%-duty ideal. The 4 V rail may rely on frequency foldback at startup."
+    },
+    {
+      "id": "PWR-03",
+      "severity": "review-flag",
+      "title": "OVLO min corner is close to the 5.5 V USB maximum",
+      "detail": "OVLO rising ~5.74 V nominal; ~5.59 V at the min corner with 0.1% resistors, reference tolerance and 0.1 uA leakage. That is ~89 mV above 5.5 V."
+    },
+    {
+      "id": "PWR-04",
+      "severity": "review-flag",
+      "title": "LED rail limiter cannot support 76 LEDs at full white",
+      "detail": "173.657/201.513/233.901 mA vs 1.14 A at 5 mA/channel. The TPS2553-1 latches off on overcurrent. The eFuse 500 mA nominal is also below 1.14 A."
+    },
+    {
+      "id": "PWR-05",
+      "severity": "review-flag",
+      "title": "eFuse ILIM min is below the 500 mA USB descriptor",
+      "detail": "R124 = 6.65 kohm gives 425/500/575 mA. The 425 mA minimum is 15% below the 500 mA descriptor, so the board cannot guarantee 500 mA. The LED rail plus MCU/load must stay below 425 mA."
+    },
+    {
+      "id": "PWR-06",
+      "severity": "review-flag",
+      "title": "eFuse ramp and buck soft-start overlap",
+      "detail": "The eFuse 0.2 V/ms ramp takes 25 ms to 5 V; the buck SS is 14.5 ms and starts at the ~20 ms UVLO release. The 4 V rail may not be monotonic."
+    }
+  ],
+  "unknowns": [
+    "Exact C126/C136/C137 MPNs, dielectrics and DC-bias curves; the 0.92 derating is an assumption.",
+    "Actual VBUS source/cable impedance and input ramp/dip waveform.",
+    "Actual SK6805 per-channel current; 5 mA is an assumption, not a datasheet fact in this repo.",
+    "Actual MCU, flash, logic and LED load currents and their simultaneity.",
+    "TPS62932 loop stability, phase margin, load-step response and frequency-foldback behavior on this board.",
+    "TPS259470 thermal/current-limit behavior and actual trip point on this board.",
+    "MAX38902 dropout, startup and thermal behavior at the actual 3V3 load.",
+    "Firmware LED brightness cap, fault handling and latch-off recovery.",
+    "Whether the 4 V rail is monotonic through the eFuse/buck overlap."
+  ],
+  "bench_measurements": [
+    "VBUS, VBUS_FUSED, VBUS_PROTECTED_RAW, +4V_REG, +3V3 and +4V_LED startup at 5.0 V and 5.5 V, hot and cold, with the actual cable.",
+    "Input ripple at U18 VIN at no load, MCU load and LED full-white attempt.",
+    "UVLO/OVLO trip points by sweeping VBUS up and down on the assembled board.",
+    "LED rail current and U7 FAULT/latch behavior at full white and at the intended firmware brightness cap.",
+    "3V3 load step and LDO thermal at the actual load.",
+    "Buck load step and, if stability is to be claimed, loop gain/phase across the application corners.",
+    "eFuse current limit and thermal at 425/500/575 mA.",
+    "Soft-start time and monotonicity of the 4 V rail."
+  ],
+  "recommendation": {
+    "primary": "ADD_CAP",
+    "detail": "Add a 5.6 uF/50 V X7R (or 6.8 uF) on VBUS_PROTECTED_RAW to reach >=10 uF effective at 5 V under the stated 0.92 derating. This is a margin improvement, not a stability proof. If board space is tight, measure the existing 5.8 uF first; the analysis does not show that 5.8 uF fails.",
+    "led": "Do not claim full-white LED capability. Either enforce a firmware brightness cap of <=0.76 mA/channel at the min limiter corner, or change the LED rail current limit and the USB power source. The current R112 = 133 kohm cannot pass 1.14 A.",
+    "uvlo": "If the 4 V rail must be regulated at startup, raise the UVLO rising threshold above ~4.3 V (e.g. 4.5 V) by changing R122/R123, and re-check the OVLO margin.",
+    "measure_first": "Measure the actual startup, input ripple, UVLO/OVLO trip points and LED rail current before changing the board. The analysis identifies margins; it does not prove a failure."
+  }
+}

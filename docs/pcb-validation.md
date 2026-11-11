@@ -49,6 +49,21 @@ In-repository output is restricted to `build/` or `.omo/evidence/` and must be n
 
 For every native result retain the exact command, tool version, input hashes, complete machine-readable report and stderr/stdout. Refill-dependent checks must record both source and filled-board identities. Report warnings and unconnected items alongside errors, and distinguish known baselines from acceptance. A container build or version check is not a native CAD PASS.
 
+`--expected-warnings` (default 0) is asserted alongside `--expected-opens`; a nonzero baseline must pass its recorded warning count explicitly (the strict baseline uses `--expected-opens 11 --expected-warnings 51`). `RESULT.json` records the command, cwd and both expected counts.
+
+## Reproducible 0/0 evidence and review artifacts (2026-11-11)
+
+The relocated-expansion 0/0 prototype now has a tracked reproduction path and dedicated review artifacts:
+
+- [REPRODUCE.md](../pcb/experiments/resume-20261109-relocated-expansion-zero-opens/REPRODUCE.md) — native, portable, material, audit and GEOS sequence with expected numbers.
+- `pcb/tools/audit_relocated_zero_opens.py` and `pcb/tools/geos_witness_zero_opens.py` — promoted from the gitignored `.omo/` workspace; the GEOS script now runs on the repository venv (shapely 2.2.0 / GEOS 3.14.1) instead of `uv run --script`.
+- [Strict-promotion decision](../pcb/experiments/resume-20261109-relocated-expansion-zero-opens/qa/strict-promotion/REPORT.md) — **CONDITIONAL**; the 0.551 mm² outside-window area is 92.0% designed fillet cusp, 7.7% single-antipad crescent and 0.23% Clipper2 keyhole-chord artifact.
+- [Mechanical fit](../pcb/experiments/resume-20261109-relocated-expansion-zero-opens/qa/mechanical-fit/REPORT.md) — relocated block 18 pass / 1 tight (J3 0.33 mm); stock 12.8 mm USB-C notch fails a 12.35 mm plug; 7U PCB-mount stabilizer fails the current plate cutout.
+- [Power review](../pcb/experiments/resume-20261109-relocated-expansion-zero-opens/qa/power-review/REPORT.md) — 5.8 µF vs TI 10 µF typical; inrush 1.16 mA; LED full-white 1.14 A vs 173.7–233.9 mA limiter.
+- [Fabrication draft](../pcb/fabrication/README.md) — BOM/CPL/Gerbers/provenance; not an assembly approval.
+
+These close the *arithmetic and CAD* gaps only. Physical clearance, active power, USB SI/EMI, thermal and hardware qualification remain open.
+
 ## Firmware and hardware acceptance still required
 
 The active source configures GP29 for ROW3, GP28 for COL5, 4 MiB flash, WKL/HHKB layouts and independent 64-key/12-underglow LED chains. Lighting qualification remains zero. See the [firmware overview](../pcb/firmware/README.md) and [full-build requirements](../pcb/experiments/led-startup-recovery/candidate/BUILDING.md).
