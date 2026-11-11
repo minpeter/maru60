@@ -104,7 +104,7 @@ gates have dedicated evidence:
   U18 and U7 are not the limit; LED full-white is 4.56 W.
 - [USB SI simulation](experiments/resume-20261109-relocated-expansion-zero-opens/qa/usb-si-sim/REPORT.md):
   the 167 mm D+/D- route has 5.28 mm intra-pair skew; the 0.25 mm pair is
-  **112.8 Ω** differential, not 90 Ω (about 0.36 mm is needed); the HS eye is
+  **112.8 Ω** differential, not 90 Ω (about 0.40 mm is needed); the HS eye is
   299 mV / 0.53 UI, at the 0.3 V template edge.
 - [Fabrication draft](fabrication/README.md): BOM 382 rows (374 missing MPN),
   CPL 370 SMD, Gerbers/drill/IPC-D-356/STEP, provenance and 23 verification
