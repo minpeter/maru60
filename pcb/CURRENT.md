@@ -2,7 +2,8 @@
 
 Machine-readable entrypoint: [`current.json`](current.json). It pins the primary
 KiCad project, board and root schematic for each selection with repository-relative
-paths and SHA256 hashes. Both selections are **not manufacturing-ready**.
+paths and SHA256 hashes. No selection is manufacturing-ready; the **order
+candidate** is the board to order for a first prototype run.
 Run `uv run tools/check_pcb_current.py` from the repository root to check file
 identity and path containment. This read-only check does not replay DRC, cold
 refill, electrical checks or qualification, and does not inventory every CAD
@@ -12,6 +13,39 @@ dependency. Diagnostic counts in the manifest are saved observations.
 | --- | --- | --- |
 | Strict geometry baseline | [Open project](experiments/resume-20261105-ext-gpio26/pcb/maru60.kicad_pro) | 11 / 51 |
 | Bounded development prototype | [Open project](experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pro) | 0 / 0 |
+| **Order candidate** | [Open project](experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pro) | 0 / 0 |
+
+## Order candidate (2026-11-11)
+
+PCB `5f7ff617`, derived from the development prototype. It is what
+[`pcb/order`](order/README.md) (Gerbers, JLCPCB BOM and placement file) is
+exported from. See its [README](experiments/resume-20261111-order-candidate/README.md)
+for evidence. Compared with the development prototype:
+
+- **64 top-side parts no longer sit under switch housings.** Each LED's 0402
+  bypass capacitor was 4.0 mm beside the LED, under the flush MX housing; they
+  are now in the gaps between housings. `C200` is DNP.
+- **The Caps Lock option LEDs have two land sites each**, so the LED of the
+  unused option is not under the used switch: `LED75` is placed on the bottom
+  as a data relay, `LED30` has a spare top site. The firmware LED map is
+  unchanged.
+- **Datasheet review of every non-passive part: all pin tables match.** Three
+  corrections applied (`U13` land pattern, copper under `L1`, `C102` position).
+- **RP2350 USB is full speed only**, so the high-speed eye, the 90 Ω target and
+  the skew in the USB SI report below do not apply. No impedance control is
+  ordered.
+- Buck input capacitor `C137` is 10 µF; `U8`, `U7`, `R121`, `R163` name parts
+  that are in stock.
+- Fresh native check: 0 opens, 0 warnings, ERC 0, parity 0, 61 cold-refill
+  files identical. Bottom-case fit: 20 pass.
+
+Still open: `U2` (MAX38902AATA+T) has no JLCPCB stock and must be sourced
+separately; the 2.75U right Shift and 2U Backspace options are unsupported;
+hardware qualification, license and USB ID are unchanged from the sections
+below. The older [`pcb/fabrication`](fabrication/README.md) draft is from the
+development prototype and is superseded by `pcb/order` for ordering.
+
+## Development prototype
 
 The strict baseline remains PCB `04be04e5`, commit `bbf61e6`.
 The latest development prototype is PCB `cb7b5b29`: following the selected `B.Cu`

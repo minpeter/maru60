@@ -1,0 +1,441 @@
+{
+ "status": "ORDER_CANDIDATE",
+ "generated_utc": "2026-11-11T03:11:15Z",
+ "board": {
+  "path": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb",
+  "sha256": "5f7ff617b316981689269df468170212b5168ae0b779bac2190b70e5a66cc149"
+ },
+ "parts_database": {
+  "path": "pcb/order/parts.json",
+  "sha256": "5b7e5e443652d29537fefe43efe5f532500532a9469b64e42a3ea7022eee9016",
+  "stock_snapshot_date": "2026-11-11"
+ },
+ "kicad_version": "9.0.2",
+ "fabrication": {
+  "layers": 4,
+  "thickness_mm": 1.6,
+  "outline_mm": [
+   285.0,
+   94.6
+  ],
+  "min_track_space_mm": [
+   0.15,
+   0.15
+  ],
+  "via_mm": {
+   "pad": 0.5,
+   "drill": 0.25
+  },
+  "vias_tented": true,
+  "controlled_impedance": false
+ },
+ "summary": {
+  "footprints": 383,
+  "assembled_parts": 308,
+  "assembled_top": 130,
+  "assembled_bottom": 178,
+  "unique_lcsc_parts": 52,
+  "basic_parts": 14,
+  "extended_parts": 38,
+  "out_of_stock_at_snapshot": [
+   "MAX38902AATA+T"
+  ],
+  "not_assembled": {
+   "board_only": [
+    "LOGO1",
+    "STAB_RS1"
+   ],
+   "dnp": [
+    "C200",
+    "J2"
+   ],
+   "hand_solder": [
+    "SW1",
+    "SW2",
+    "SW3",
+    "SW4",
+    "SW5",
+    "SW6",
+    "SW7",
+    "SW8",
+    "SW9",
+    "SW10",
+    "SW11",
+    "SW12",
+    "SW13",
+    "SW14",
+    "SW15",
+    "SW16",
+    "SW17",
+    "SW18",
+    "SW19",
+    "SW20",
+    "SW21",
+    "SW22",
+    "SW23",
+    "SW24",
+    "SW25",
+    "SW26",
+    "SW27",
+    "SW28",
+    "SW29",
+    "SW31",
+    "SW32",
+    "SW33",
+    "SW34",
+    "SW35",
+    "SW36",
+    "SW37",
+    "SW38",
+    "SW39",
+    "SW40",
+    "SW41",
+    "SW42",
+    "SW43",
+    "SW44",
+    "SW45",
+    "SW46",
+    "SW47",
+    "SW48",
+    "SW49",
+    "SW50",
+    "SW51",
+    "SW52",
+    "SW53",
+    "SW56",
+    "SW57",
+    "SW58",
+    "SW59",
+    "SW60",
+    "SW61",
+    "SW62",
+    "SWCAP1",
+    "SWRS1"
+   ],
+   "test_point": [
+    "TP1",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9",
+    "TP10"
+   ]
+  },
+  "polarised_refs_to_check_in_preview": [
+   "J1",
+   "J3",
+   "L1",
+   "U1",
+   "U2",
+   "U3",
+   "U5",
+   "U6",
+   "U7",
+   "U8",
+   "U10",
+   "U11",
+   "U12",
+   "U13",
+   "U18",
+   "Y1"
+  ]
+ },
+ "checks": [
+  {
+   "check": "KiCad DRC, unconnected items and schematic parity are all zero",
+   "pass": true,
+   "detail": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+   }
+  },
+  {
+   "check": "every footprint is covered by a part rule",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "check": "every assembled part has a KiCad placement row",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "check": "every assembled part has an LCSC number",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "check": "KiCad placement rows that are not assembled are all intentional exclusions",
+   "pass": true,
+   "detail": [
+    "J2",
+    "SW1",
+    "SW2",
+    "SW3",
+    "SW4",
+    "SW5",
+    "SW6",
+    "SW7",
+    "SW8",
+    "SW9",
+    "SW10",
+    "SW11",
+    "SW12",
+    "SW13",
+    "SW14",
+    "SW15",
+    "SW16",
+    "SW17",
+    "SW18",
+    "SW19",
+    "SW20",
+    "SW21",
+    "SW22",
+    "SW23",
+    "SW24",
+    "SW25",
+    "SW26",
+    "SW27",
+    "SW28",
+    "SW29",
+    "SW31",
+    "SW32",
+    "SW33",
+    "SW34",
+    "SW35",
+    "SW36",
+    "SW37",
+    "SW38",
+    "SW39",
+    "SW40",
+    "SW41",
+    "SW42",
+    "SW43",
+    "SW44",
+    "SW45",
+    "SW46",
+    "SW47",
+    "SW48",
+    "SW49",
+    "SW50",
+    "SW51",
+    "SW52",
+    "SW53",
+    "SW56",
+    "SW57",
+    "SW58",
+    "SW59",
+    "SW60",
+    "SW61",
+    "SW62",
+    "SWCAP1",
+    "SWRS1"
+   ]
+  },
+  {
+   "check": "BOM and CPL list exactly the same designators",
+   "pass": true,
+   "detail": {
+    "bom": 308,
+    "cpl": 308
+   }
+  },
+  {
+   "check": "gerber set contains F_Cu",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains In1_Cu",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains In2_Cu",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains B_Cu",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains F_Paste",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains B_Paste",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains F_Silkscreen",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains B_Silkscreen",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains F_Mask",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains B_Mask",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains Edge_Cuts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains -PTH.drl",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "gerber set contains -NPTH.drl",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "the board file was not modified by the export",
+   "pass": true,
+   "detail": "5f7ff617b316981689269df468170212b5168ae0b779bac2190b70e5a66cc149"
+  }
+ ],
+ "commands": [
+  {
+   "command": [
+    "tools/run_kicad9.sh",
+    "kicad-cli",
+    "version"
+   ],
+   "returncode": 0
+  },
+  {
+   "command": [
+    "tools/run_kicad9.sh",
+    "kicad-cli",
+    "pcb",
+    "drc",
+    "--schematic-parity",
+    "--severity-all",
+    "--format",
+    "json",
+    "--output",
+    "build/order-export/drc.json",
+    "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb"
+   ],
+   "returncode": 0
+  },
+  {
+   "command": [
+    "tools/run_kicad9.sh",
+    "python3",
+    "pcb/tools/dump_board_geometry.py",
+    "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb",
+    "build/order-export/board.json"
+   ],
+   "returncode": 0
+  },
+  {
+   "command": [
+    "tools/run_kicad9.sh",
+    "kicad-cli",
+    "pcb",
+    "export",
+    "pos",
+    "--format",
+    "csv",
+    "--units",
+    "mm",
+    "--side",
+    "both",
+    "--output",
+    "build/order-export/kicad-pos.csv",
+    "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb"
+   ],
+   "returncode": 0
+  },
+  {
+   "command": [
+    "tools/run_kicad9.sh",
+    "kicad-cli",
+    "pcb",
+    "export",
+    "gerbers",
+    "--output",
+    "pcb/order/gerbers/",
+    "--layers",
+    "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts",
+    "--subtract-soldermask",
+    "--no-netlist",
+    "--no-protel-ext",
+    "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb"
+   ],
+   "returncode": 0
+  },
+  {
+   "command": [
+    "tools/run_kicad9.sh",
+    "kicad-cli",
+    "pcb",
+    "export",
+    "drill",
+    "--output",
+    "pcb/order/gerbers/",
+    "--format",
+    "excellon",
+    "--drill-origin",
+    "absolute",
+    "--excellon-zeros-format",
+    "decimal",
+    "--excellon-oval-format",
+    "alternate",
+    "--excellon-units",
+    "mm",
+    "--excellon-separate-th",
+    "--generate-map",
+    "--map-format",
+    "gerberx2",
+    "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb"
+   ],
+   "returncode": 0
+  }
+ ],
+ "files": {
+  "bom-full.csv": "b73aed94aa4cf65e66019b0bb8e2561be64e386075cd346bc724cda67d8a7bbd",
+  "bom-jlcpcb.csv": "343d9f059f3dfa7b0c50a94f690eac79efd9dc64c14d367efa36179a37c93a01",
+  "cpl-jlcpcb.csv": "f7ce891feb06ecc979e6ff8bbba709f5222b2f2341b6b40505dcc3890da85c6c",
+  "gerbers/maru60-B_Cu.gbr": "4d143142bb78b34c20c93fe04c9ecc3f47b3e92863f7b4a304fe244d73221b5f",
+  "gerbers/maru60-B_Mask.gbr": "2d830210a3cd3fe5f5a53d1ca788cc898c160fc574e965d1ea93c484dc4402a9",
+  "gerbers/maru60-B_Paste.gbr": "6d32a7db327aaf97b31289d92cb2b50e70f46b89b78e2b9042acf99acc46d6c8",
+  "gerbers/maru60-B_Silkscreen.gbr": "9f91b30a6d09845d2506ed83200e57fb700834e49f04f9e60851e534cc300e65",
+  "gerbers/maru60-Edge_Cuts.gbr": "2920acb8ad2c1e540933a84813e459621c2e838ded666475f840e76ec23462fb",
+  "gerbers/maru60-F_Cu.gbr": "8937c43b8e5659e51e40277804ff16a9c745d2596183904e154bd051d2bac83e",
+  "gerbers/maru60-F_Mask.gbr": "ea3239f3b9e024b94e38ebd7677e314a4dd8dae63d33bb47250a1e84c305f164",
+  "gerbers/maru60-F_Paste.gbr": "14d52e15eaa3058c9197445369140130ca3956ac32fd6065b59712de2eb45bf0",
+  "gerbers/maru60-F_Silkscreen.gbr": "d1280d8023c735719079c9a9fffd443f42c84f36674c94b768d92955616d69d2",
+  "gerbers/maru60-In1_Cu.gbr": "416aabae5cd7156cff8ced7652e35ce9f6ffee36f25d89987ac8912da760bfaf",
+  "gerbers/maru60-In2_Cu.gbr": "5212677fe9e079122dd5df8c73f65e9d28591e4f86c5969f725d8b9815e36831",
+  "gerbers/maru60-NPTH-drl_map.gbr": "3a85b49d3f75365f1005a9587a7f8de75fcde8520c781c2f7215fd3b2bfb057d",
+  "gerbers/maru60-NPTH.drl": "91d59a8e03a9ffc207fe0a041df6d402509a0cb84a2ce98be777ea9e3fa9b2d1",
+  "gerbers/maru60-PTH-drl_map.gbr": "0e353383102ea1435893e939c17df9ff22703b426be8c23e953c62d5c6546822",
+  "gerbers/maru60-PTH.drl": "048bdaafa3549d23b3f8fdc8536ca7910818728daa64a0e8f4d48f8b98f9d9c0",
+  "gerbers/maru60-job.gbrjob": "02a3454f6ac255f7e292bf7acb534fe149f3e10532292e3a3452566ed81e9aac",
+  "maru60-gerbers.zip": "cd6a516696710a1ee0c734695d55d3a9e49996607fd639a39679556f009a2654"
+ }
+}

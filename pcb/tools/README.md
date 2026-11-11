@@ -50,6 +50,27 @@ All run with the repository venv (`.venv/bin/python`), except
 `export_fabrication.py`, which also calls `tools/run_kicad9.sh`. They are
 analysis/export tools, not qualification: see each report's limitations.
 
+## Order-candidate tools
+
+These produced `experiments/resume-20261111-order-candidate` from the 0/0
+prototype and export the JLCPCB package. The planners run in the repository
+venv; the `apply_*`, `prune_*`, `save_*`, `dump_*` tools and the `--board` mode
+of `set_component_values.py` need the KiCad 9 `pcbnew` bindings and run through
+`tools/run_kicad9.sh`. They edit the board in place: use a checkpoint copy.
+
+| Tool | Purpose |
+| --- | --- |
+| `dump_board_geometry.py` | Board geometry (pads, tracks, vias, zone fills, courtyards) as JSON for the planners. |
+| `plan_topside_relocation.py` | Finds two-pad top-side parts under a switch or stabilizer housing, picks a position in the gap between housings and routes both pads on F.Cu (new GND via where no top-side ground is in reach). Writes a plan. |
+| `apply_topside_relocation.py` | Applies that plan; `--dnp REF,...` marks parts with no possible position. |
+| `prune_dangling_tracks.py` | Trims or removes the stubs a KiCad DRC report calls dangling, never past a T-junction. |
+| `plan_led_alt_sites.py` | Plans a second top-side land site for an option-position LED. |
+| `apply_led_alt_sites.py` | Adds planned top sites and hand-specified bottom relay sites to LED footprints. |
+| `save_board_footprint_to_lib.py` | Renames an edited footprint and saves a normalised copy to a project library. |
+| `apply_review_fixes.py` | U13 land pattern, L1 pour keep-out, C102 position. |
+| `set_component_values.py` | Sets values in the schematic sheets and on the board from one change list. |
+| `export_order_package.py` | DRC, BOM, CPL, Gerbers, drill files and provenance into `../order/`. |
+
 ## Current physical-material checker
 
 `export_material_graph.py` is the exact reviewed R2 implementation, SHA256 57987368b095de525fc729a0d4b729b14cfc207afd07b4bd214ee5463a7719b9. It accepts an input PCB path and an output JSON path. It requires the checked KiCad 9.0.2+dfsg-1 Python bindings, exactly four copper layers and the asserted through-hole geometry. Unsupported cases fail closed. Do not use optimized Python.
