@@ -17,7 +17,7 @@ dependency. Diagnostic counts in the manifest are saved observations.
 
 ## Order candidate (2026-11-11)
 
-PCB `5f7ff617`, derived from the development prototype. It is what
+PCB `601b3b95`, derived from the development prototype. It is what
 [`pcb/order`](order/README.md) (Gerbers, JLCPCB BOM and placement file) is
 exported from. See its [README](experiments/resume-20261111-order-candidate/README.md)
 for evidence. Compared with the development prototype:
@@ -34,8 +34,9 @@ for evidence. Compared with the development prototype:
 - **RP2350 USB is full speed only**, so the high-speed eye, the 90 Ω target and
   the skew in the USB SI report below do not apply. No impedance control is
   ordered.
-- Buck input capacitor `C137` is 10 µF; `U8`, `U7`, `R121`, `R163` name parts
-  that are in stock.
+- Buck input capacitor `C137` is 10 µF and `C100` on the buck output rail is
+  22 µF (manufacturer DC-bias data puts the rail at about 33 µF effective);
+  `U8`, `U7`, `R121`, `R163` name parts that are in stock.
 - Fresh native check: 0 opens, 0 warnings, ERC 0, parity 0, 61 cold-refill
   files identical. Bottom-case fit: 20 pass.
 

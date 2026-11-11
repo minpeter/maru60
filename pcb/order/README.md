@@ -12,7 +12,7 @@ SHA256 in [`PROVENANCE.json`](PROVENANCE.json). Regenerate everything here with
 | File | Use |
 | --- | --- |
 | `maru60-gerbers.zip` | Upload as the PCB. 11 Gerber layers, PTH and NPTH drill files. |
-| `bom-jlcpcb.csv` | Upload as the assembly BOM (52 part numbers, 308 placements). |
+| `bom-jlcpcb.csv` | Upload as the assembly BOM (53 part numbers, 308 placements). |
 | `cpl-jlcpcb.csv` | Upload as the placement file (130 top, 178 bottom). |
 | `bom-full.csv` | Every footprint, including what is *not* assembled and why. |
 | `parts.json` | Part selection rules and the stock snapshot date. |
@@ -88,5 +88,5 @@ Shift (1.75U + 1U)**.
 See the [checkpoint README](../experiments/resume-20261111-order-candidate/README.md).
 In short: 64 top-side parts moved out from under switch housings, the Caps Lock
 LEDs got a second land site, three footprint/layout corrections from the
-datasheet review, the buck input capacitor went to 10 µF, and five values now
-name parts that can be bought.
+datasheet review, the buck input capacitor went to 10 µF and `C100` to 22 µF,
+and five values now name parts that can be bought.

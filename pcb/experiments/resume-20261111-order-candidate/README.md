@@ -2,7 +2,7 @@
 
 Derived from [`resume-20261109-relocated-expansion-zero-opens`](../resume-20261109-relocated-expansion-zero-opens/README.md)
 (PCB `cb7b5b29`). This checkpoint fixes what stood between that board and an
-order. PCB SHA256: `5f7ff617b316981689269df468170212b5168ae0b779bac2190b70e5a66cc149`.
+order. PCB SHA256: `601b3b95cd9d53a8b1151ae753cd7911649740808e7a16a5c493deb4f134d572`.
 The order files generated from it are in [`pcb/order`](../../order/README.md).
 
 **It is an order candidate for a first prototype, not a qualified design.**
@@ -71,7 +71,8 @@ route was found and that option is documented as unsupported.
 
 | Ref | Was | Now | Why |
 | --- | --- | --- | --- |
-| `C137` | 4.7 µF 50 V | 10 µF 25 V X5R | Only C137 and C136 sit at the buck input; TI asks for 10 µF typical. |
+| `C137` | 4.7 µF 50 V | 10 µF 25 V X5R | Only C137 and C136 sit at the buck input; TI asks for 10 µF typical. Effective 4.7 µF at 5 V. |
+| `C100` | 4.7 µF 50 V X7R | 22 µF 25 V X5R | Buck output rail. `C140`/`C141` alone are 17.4 µF effective at 4 V (13.9 µF at −20%), under TI's 15 µF minimum; C100 adds 15.8 µF. |
 | `U8` | TPS259470LRPW | TPS259470ARPWR | Latch-off part not stocked; auto-retry is pin-identical. |
 | `U7` | TPS2553DBVR-1 | TPS2553DBVR | Same pinout and limit; constant current instead of latch-off. FAULT is unchanged. |
 | `R121` | 156 k | 154 k 0.1% | 156 k is not stocked. OVLO rises from 5.74 V to 5.80 V nominal. |
@@ -85,6 +86,13 @@ route was found and that option is documented as unsupported.
   full-speed edge rates. No impedance control is ordered.
 - **LDO thermal:** U2 dissipates 0.21 W from the 4.0 V rail at 300 mA; the 5 V
   input case in the thermal report cannot occur while the buck regulates.
+
+### 6. Follow-up checks against manufacturer data
+
+[`qa/datasheet-review/followup-verification.md`](qa/datasheet-review/followup-verification.md)
+closes the four points the datasheet review left open: buck output capacitance
+under DC bias (led to the `C100` change above), the LED current version (5 mA),
+the Kailh socket land pattern, and the LED supply at 4.0 V.
 
 ## Not done
 

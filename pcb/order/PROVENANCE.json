@@ -1,13 +1,13 @@
 {
  "status": "ORDER_CANDIDATE",
- "generated_utc": "2026-11-11T03:11:15Z",
+ "generated_utc": "2026-11-11T03:29:54Z",
  "board": {
   "path": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb",
-  "sha256": "5f7ff617b316981689269df468170212b5168ae0b779bac2190b70e5a66cc149"
+  "sha256": "601b3b95cd9d53a8b1151ae753cd7911649740808e7a16a5c493deb4f134d572"
  },
  "parts_database": {
   "path": "pcb/order/parts.json",
-  "sha256": "5b7e5e443652d29537fefe43efe5f532500532a9469b64e42a3ea7022eee9016",
+  "sha256": "b3caf0be82349185b024ff97d64f32d7cda00393b79e8523a5077c1e25fbf6a0",
   "stock_snapshot_date": "2026-11-11"
  },
  "kicad_version": "9.0.2",
@@ -34,8 +34,8 @@
   "assembled_parts": 308,
   "assembled_top": 130,
   "assembled_bottom": 178,
-  "unique_lcsc_parts": 52,
-  "basic_parts": 14,
+  "unique_lcsc_parts": 53,
+  "basic_parts": 15,
   "extended_parts": 38,
   "out_of_stock_at_snapshot": [
    "MAX38902AATA+T"
@@ -313,7 +313,7 @@
   {
    "check": "the board file was not modified by the export",
    "pass": true,
-   "detail": "5f7ff617b316981689269df468170212b5168ae0b779bac2190b70e5a66cc149"
+   "detail": "601b3b95cd9d53a8b1151ae753cd7911649740808e7a16a5c493deb4f134d572"
   }
  ],
  "commands": [
@@ -417,25 +417,25 @@
   }
  ],
  "files": {
-  "bom-full.csv": "b73aed94aa4cf65e66019b0bb8e2561be64e386075cd346bc724cda67d8a7bbd",
-  "bom-jlcpcb.csv": "343d9f059f3dfa7b0c50a94f690eac79efd9dc64c14d367efa36179a37c93a01",
+  "bom-full.csv": "1bd80c6df720c257ff7fd3863ea61db6ff3d758c5a8d5443e71e29ac60c2dd86",
+  "bom-jlcpcb.csv": "77380b4e4f296b8525407c1615017fee0f2d6058c31df9be6a5b128efd6a94f7",
   "cpl-jlcpcb.csv": "f7ce891feb06ecc979e6ff8bbba709f5222b2f2341b6b40505dcc3890da85c6c",
-  "gerbers/maru60-B_Cu.gbr": "4d143142bb78b34c20c93fe04c9ecc3f47b3e92863f7b4a304fe244d73221b5f",
-  "gerbers/maru60-B_Mask.gbr": "2d830210a3cd3fe5f5a53d1ca788cc898c160fc574e965d1ea93c484dc4402a9",
-  "gerbers/maru60-B_Paste.gbr": "6d32a7db327aaf97b31289d92cb2b50e70f46b89b78e2b9042acf99acc46d6c8",
-  "gerbers/maru60-B_Silkscreen.gbr": "9f91b30a6d09845d2506ed83200e57fb700834e49f04f9e60851e534cc300e65",
-  "gerbers/maru60-Edge_Cuts.gbr": "2920acb8ad2c1e540933a84813e459621c2e838ded666475f840e76ec23462fb",
-  "gerbers/maru60-F_Cu.gbr": "8937c43b8e5659e51e40277804ff16a9c745d2596183904e154bd051d2bac83e",
-  "gerbers/maru60-F_Mask.gbr": "ea3239f3b9e024b94e38ebd7677e314a4dd8dae63d33bb47250a1e84c305f164",
-  "gerbers/maru60-F_Paste.gbr": "14d52e15eaa3058c9197445369140130ca3956ac32fd6065b59712de2eb45bf0",
-  "gerbers/maru60-F_Silkscreen.gbr": "d1280d8023c735719079c9a9fffd443f42c84f36674c94b768d92955616d69d2",
-  "gerbers/maru60-In1_Cu.gbr": "416aabae5cd7156cff8ced7652e35ce9f6ffee36f25d89987ac8912da760bfaf",
-  "gerbers/maru60-In2_Cu.gbr": "5212677fe9e079122dd5df8c73f65e9d28591e4f86c5969f725d8b9815e36831",
-  "gerbers/maru60-NPTH-drl_map.gbr": "3a85b49d3f75365f1005a9587a7f8de75fcde8520c781c2f7215fd3b2bfb057d",
-  "gerbers/maru60-NPTH.drl": "91d59a8e03a9ffc207fe0a041df6d402509a0cb84a2ce98be777ea9e3fa9b2d1",
-  "gerbers/maru60-PTH-drl_map.gbr": "0e353383102ea1435893e939c17df9ff22703b426be8c23e953c62d5c6546822",
-  "gerbers/maru60-PTH.drl": "048bdaafa3549d23b3f8fdc8536ca7910818728daa64a0e8f4d48f8b98f9d9c0",
-  "gerbers/maru60-job.gbrjob": "02a3454f6ac255f7e292bf7acb534fe149f3e10532292e3a3452566ed81e9aac",
-  "maru60-gerbers.zip": "cd6a516696710a1ee0c734695d55d3a9e49996607fd639a39679556f009a2654"
+  "gerbers/maru60-B_Cu.gbr": "6330b9f1c9213c4ec6051369a55b9130bede62afefac766864523301f3fbb234",
+  "gerbers/maru60-B_Mask.gbr": "e26f3f3e3848c62b59f81653896fd07889a48549a50d54f02a74be28b6c3036a",
+  "gerbers/maru60-B_Paste.gbr": "10f23bc8b7f5e0b51aadb6e1483ef3f0c5e90aa036cc35074b4c8302dbe7414e",
+  "gerbers/maru60-B_Silkscreen.gbr": "3af823c064018acf6dedfd69e244b38e125987dd63f00f006c403bf39f90e99c",
+  "gerbers/maru60-Edge_Cuts.gbr": "6ea4c41502feb03a57c16f844f80c0b560e84e1d3e9fcf51329c5f1cc3c62c7f",
+  "gerbers/maru60-F_Cu.gbr": "d8128a3c070f480c9afc4fca50521eaeeed2874ba3bd07cc603e97a4c18d3a02",
+  "gerbers/maru60-F_Mask.gbr": "04d31f1f872ebd85155a1a5fff4076cb206c0db2c7c94b01c2ab7d6365531c88",
+  "gerbers/maru60-F_Paste.gbr": "1ebd8a5b5e2f42cd97a7e8f1e6b17d17069e1194f29ae4022dc7e75627ba640a",
+  "gerbers/maru60-F_Silkscreen.gbr": "0a9b6c8e28b9a6cf1a8d0324645387296db84fda87022c9e088162e125a1c158",
+  "gerbers/maru60-In1_Cu.gbr": "3b334c9648c4699e9c0a0ac6baa1ee594783c6bbf129a3684e223f71208e10de",
+  "gerbers/maru60-In2_Cu.gbr": "12522b3b25a7676b44c38713a00ea87f7b2340887b85c26fc7b9c38d022448d6",
+  "gerbers/maru60-NPTH-drl_map.gbr": "c9225ccdda6f38ca471e0446433a4e9d1a9ceeaa440aa704fca49b36bf70a518",
+  "gerbers/maru60-NPTH.drl": "c53155555376fadad1c7de528bb80afb785a163952f59ef7495acddd6c20d398",
+  "gerbers/maru60-PTH-drl_map.gbr": "591f0264cf492641f6dc7930f41163b2ae8be336733a5458c2c03aa55bbf2c5b",
+  "gerbers/maru60-PTH.drl": "bcded9f5063ac3a2c13ec2a93264643936951989f469a6adbade8ab19f136489",
+  "gerbers/maru60-job.gbrjob": "30cc87fa336d38d9b04fcf630e2533bb3ae7e9bb43b8234f662909ceec0ec6da",
+  "maru60-gerbers.zip": "805aaf3f214611ae0f02c525cf3f9cadf6e26f7c54439ae00ba3c0be90ad4440"
  }
 }
