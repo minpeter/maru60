@@ -1,6 +1,7 @@
 {
   "status": "ALL_PASSED",
   "board": "ph60-rev3",
+  "inserts": false,
   "strike_inserts": false,
   "catch_hardware": "stock",
   "strike_insert_nominal_installation": [],
@@ -20,7 +21,7 @@
   },
   "six_dof_retention_mm3": {
     "pull_apart_x_1mm": 94.766,
-    "push_together_x_0p5mm": 765.217,
+    "push_together_x_0p5mm": 755.015,
     "shear_y_plus_0p5mm": 103.889,
     "shear_y_minus_0p5mm": 94.354,
     "overtravel_z_stop_0p3mm_past_clearance": 61.888,
@@ -107,7 +108,7 @@
     "BackSeamLeft": 0,
     "BackSeamRight": 0
   },
-  "wrist_mirror_asymmetry_mm3": 0.00017,
+  "wrist_mirror_asymmetry_mm3": 0.00012,
   "cap_pocket_wall_cover_skirt_side_and_ends": [
     1.0,
     1.0,
@@ -144,11 +145,9 @@
     "floor_cover": [
       1.0,
       1.0,
-      1.0,
       1.0
     ],
     "floor_1mm_cover": [
-      1.0,
       1.0,
       1.0,
       1.0
@@ -156,17 +155,14 @@
     "pocket_intrusion_mm2": [
       0.0,
       0.0,
-      0.0,
       0.0
     ],
     "wall_mm": [
       1.197,
       1.197,
-      1.197,
       1.197
     ],
     "proud_of_desk_mm2": [
-      0.0,
       0.0,
       0.0,
       0.0
@@ -192,27 +188,27 @@
   },
   "input_sha256": {
     "build/coupon-ballcatch-gasket-left.stl": "6b279c3f50e4eac5f0c26834ca964e80836e78d6432fa9de7551b319fb27343a",
-    "build/draft-report.json": "c5f2e24710956c893021858efb15f242c4c1dbfde1499ceaa63cf43ea56ae910",
-    "build/halves-world.3mf": "c3e25206696eba9a0170ce9d0dc59408e3f49a13754685fafdb3ded146a29ace",
-    "build/left-half-print.stl": "34e2d24d6b67e97db84993541a461d3a6dbc6624123d3d92443dd75834033987",
-    "build/maru60-fit-test-coupons.3mf": "1dcea26b6b6cf32fdf3008de56a4b8a142303f01e4ab2d79495f0d4ee1828115",
-    "build/maru60-hhkb-left-plate.3mf": "b7ab2c520ac5654cb4a168d48bf80f44d4e460ad5d926b78a1344e140711958e",
-    "build/maru60-hhkb-right-plate.3mf": "d1e81be27e9cffba47cf5578467168773bcfe37d3e8581aa3e343a8584d062ab",
-    "build/right-half-print.stl": "8bdb64199391f076ba40704fa9a102d4c4b45e3afee89b318c6a84b251e3c77d",
-    "build_bottomcase_draft.py": "d5b6ac691d7038b70b765cd375dfeac37c1d06468047c8a2b5a4bdbf316c5fbc",
-    "build_topcase_draft.py": "544da833b3751da8f8a939f9e1b0eb6a90c71457826b32b3218a37e13d02c793",
+    "build/draft-report.json": "41e3a3413e1109cd99f51ac26e60d52de43a1a8f7b1d4bc47bf4228e9e87a2f1",
+    "build/halves-world.3mf": "a4c979c59639f9bf079f2f6c38fb244d1b0c0eb0388a725074f8ed5798ba60e5",
+    "build/left-half-print.stl": "39cfe567d90a4c2be5c25e179f0abf82fb31bea26d822dc3a37e626f90460e58",
+    "build/maru60-fit-test-coupons.3mf": "fbe084dae976d6598ea55b06d3bcb3203aac6fff271d47b42aa5d2742d4128c0",
+    "build/maru60-hhkb-left-plate.3mf": "45d31190fad80c065fe50e006c3bf4740ae349b7ea7eaee3e4cfaa16721798dd",
+    "build/maru60-hhkb-right-plate.3mf": "7043cab7a44b6ddc71b64d0a3339fc624975678c84060117119dbe768b2ef9b7",
+    "build/right-half-print.stl": "7cd375e03c78fda6a8f399f7dff38e18e3a0b5900e120515cbfb0b60aa7fd24d",
+    "build_bottomcase_draft.py": "9452f1ed17346a38d2c01f80435477bbf90e2021b6523bd148e3a303976b2232",
+    "build_topcase_draft.py": "b57154265292ddab12e29f1958ee83e90277bc2bd274cd5684b01d2d986df12b",
     "maru60/__init__.py": "49ec24caa935fc5b5040d7c653ef5fe04b5356b3178780c479036ab8e9499c08",
     "maru60/exterior.py": "bc565e9bdf78ae6770b2874856703b07a93e5b9e012a9968bab4d557680170d8",
     "maru60/frames.py": "3906e5f54949fe00fa3b04d1f5fde7b3caa35405fd374a6d7a27cc5ef9b5b1d8",
     "maru60/mesh_io.py": "0375ad0531b7757974cf3b097364d56599244457fe9c24c8c33f14794841389e",
-    "maru60/paths.py": "713f1b9650d339f896fb66c21e3049cfd8373be8387d9d729c9128500354de68",
-    "maru60/pipeline.py": "f2b61e09227d679cbd6180c7a35ae72473ef5f97cfab0676cfcf9f2f2aac193e",
+    "maru60/paths.py": "21f5fc7b5247fff5d2ea2103959a032e1eec6a201edca2df7786dfd066883ead",
+    "maru60/pipeline.py": "a6977edb57cef02b7217e8a02eaec6c293c89d748879ec776fa8989b67a1ad61",
     "maru60/provenance.py": "7fca2fc54c50aaac5f464214c2a566d2af195299bad722ac711a29651d2aa25b",
     "rule60_spec.py": "327ca5c513663eaef8b643a7c4d003304a26a8778f8a6111623b3cbea866fc19",
     "spec/boards.json": "64f89606713cd0f621bc42168daf565c44f471544addb3b2d85b05a94af88a0e",
     "spec/rule60-v3-outlines.json": "acff832b570715bb261defe752e226e86c554d629dbe344b42f0eb93674bee97",
     "spec/rule60-v3.json": "bfc76674a8b4c35dbf459efb985728eec2053352906a5a7db8cb5e878098885a",
-    "verify_bottomcase.py": "496b3651da119c527af24bbfd501540086f253db6528b4f87dbf278181c9f3b4",
-    "verify_topcase.py": "cef8ae2a3b9990c2c78c47846ddcdd0b0114b979da78d645a039c6c6e0b17f71"
+    "verify_bottomcase.py": "6b297d6e6cfc601c3fa60d52ca0f93a6e0d07ce36d7d47b61e0157b061292482",
+    "verify_topcase.py": "4ffb6f4062bdcf491b6203f80c62fbc7699c1a2fe8416e94183efb15d0f246d6"
   }
 }

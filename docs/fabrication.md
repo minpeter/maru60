@@ -176,8 +176,9 @@ likely because the stock bottom-case feet hold the keyboard about 2 mm above
 the desk (estimated, not measured) while the model puts the wrist-rest
 underside level with the top-case lip. Bumpons under the wrist rest fill that
 gap. v7.6 adds bumpon pockets, v7.9 sets the USB-C notch from public PCB
-data, v7.10 keeps only the front pad row, v7.11 widens the notch to 14.75 mm and
-v7.12 moves it to the PH60 Rev.3 default board; none has been printed yet. Fixes
+data, v7.10 keeps only the front pad row, v7.11 widens the notch to 14.75 mm,
+v7.12 moves it to the PH60 Rev.3 default board and v7.13 swaps the two inner
+front pads for one on the centre seam; none has been printed yet. Fixes
 found by printing:
 
 - **v7.0:** v6.2 and earlier printed the mirror image: the DWG plate frame is a
@@ -214,6 +215,13 @@ found by printing:
   file puts the USB-C at plate X 18.65, 0.2 mm further from the Esc-side edge
   than the 6095 tri-mode kit PCB. The 6095 right half stays published as the
   cheaper option.
+- **v7.13 (not printed):** three front bumpon pads instead of four (owner).
+  The two inner pads (X ±30) give way to one on the centre seam, its pocket
+  cut half in each half, so one bumpon carries both halves across the glued
+  seam; the outer pads stay at X ±119. The seam pad is solid beside the centre
+  rib (no corbel). The front edge now spans 119 mm between pads instead of
+  89 mm; how much more it gives under a wrist is not established without a
+  print.
 
 [Fit photos](../evidence/topcase/README.md#photos) are in the evidence folder.
 
@@ -242,12 +250,13 @@ print ramp keep a 0.20 mm vertical glue line. Use epoxy or gel cyanoacrylate.
 Strike-plate screws must not exceed **5.0 mm under the head** (1.45 mm plate +
 3.55 mm pilot).
 
-**Bumpons:** four **3M™ Bumpon™ Protective Products SJ5012** under the wrist
+**Bumpons:** three **3M™ Bumpon™ Protective Products SJ5012** under the wrist
 rest (four more go under the bottom case's corners): cylindrical,
 flat top, Ø12.7 × 3.5 mm (±0.5 mm), black, white, grey or brown. The same
 shape is sold as **SJ5312** (transparent) and **SJ5412** (true white); any of
 the three fits ([3M datasheet](https://multimedia.3m.com/mws/media/117314O/3m-bumpon-protective-products-molded-shapes-colored-and-clear.pdf)).
-Press one into each pocket along the wrist rest's front edge. Each stands
+Press one into each pocket along the wrist rest's front edge; the centre
+pocket straddles the seam, so fit that one after the glue has set. Each stands
 2.0 mm proud of the pad, to fill
 the ~2 mm the stock feet lift the keyboard (estimated, not measured). The
 hemispherical **SJ5302** (Ø7.9 × 2.2 mm, transparent; SJ5302BL is its
@@ -432,7 +441,7 @@ glue lines, the back-seam strike screws, layer islands and flat overhangs, and
 virtual stock parts: the INKC plate through 0.25 mm upward flex, 12 caps,
 four strikes, 60 HHKB keycaps through full travel and the stock bottom-case
 pocket, the USB-C notch side, width and depth, and an Ø13.2 mm bumpon
-(3M Bumpon SJ5012 at its +0.5 mm tolerance) fitting each of the four wrist-rest pockets
+(3M Bumpon SJ5012 at its +0.5 mm tolerance) fitting each of the three wrist-rest pockets
 on a full floor with at least 1 mm of wall. The v7.4 halves, rebuilt at the printed
 layer heights, passed the same checks except one: the wedge-key tip's top
 0.10 mm layer reaches 0.05 mm into the notch layer below it, so the key tip
@@ -478,7 +487,7 @@ photos set the layout.
 | Open ends: no wall at either short end; the floor runs out between the rails | Stock bottom case (owner's photos IMG_0462, 0472, 0473); the top-case side skirts close the ends |
 | Two bodies: a ㄷ tray (both rails and the floor, rail outline, 10.32 mm from the rail tops at the back, tilted 0.2° so its front edge meets the desk plane) and a triangular base under it, inset so the tray bottom shows as a step all round: 5.2 mm at the back, 4.5 mm at the front and at each end, where the base ends in clean square cuts | Stock bottom case (owner's calipers, approximate). Only the rail tops bear, so the 9.69 seat alone sets the gasket stack. The steps print as cantilevers at 6° |
 | Base back face: one 14.59 mm straight slope from the back step to the desk face (15.3 mm in from the rail face) | Owner's caliper readings and an edge trace of IMG_0465 (5.0 / 14.5 mm, 47°). The owner's direct inset reading, 18.61 mm, does not fit those lengths at this case height |
-| Desk face on the wrist rest's 6° plane, four bumpon pockets at the corners (X ±130; 13.0 mm from the front rail face, 8.5 mm in from the back slope's desk-face edge) | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons, 8 in all with the wrist rest's front row. Rigid-body load share (self weight 9 N, wrists 15 N, typing 5 N; assumed): 3.7–5.6 N each with both wrists down, all 8 loaded |
+| Desk face on the wrist rest's 6° plane, four bumpon pockets at the corners (X ±130; 13.0 mm from the front rail face, 8.5 mm in from the back slope's desk-face edge) | Keyboard and wrist rest stand on the same 2.0 mm SJ5012 bumpons, 7 in all with the wrist rest's front row. Rigid-body load share on equal springs (self weight 9 N, wrists 15 N each; assumed): 3.4–7.3 N each with both wrists down, all 7 loaded (3.7–5.6 N on the 8 before top case v7.13) |
 | Six cap recesses, floor at Z 10.74 (1.05 mm below the rim) | Stock case: 1.2–1.5 mm below the rim (owner caliper, 2026-11-10). The first print's 0.51 mm design read 0.7–0.9 mm printed, so 1.05 should print about 1.3. 4.44 mm between the seats; the plate rests about 0.27 mm lower than the top-case model's, leaving the USB-C body about 0.57 mm above the floor at rest |
 | Four catch notches, floor at Z 15.30, M2 pilots 25.5 mm apart | Catch 31.8 × 6.7 × 7.7 mm ([analysis](../evidence/topcase/analysis/ball-catch-analysis.json)); 0.60 mm room at each catch end; pilots on the top-case strike-pocket lobe centres. Printed, a stock catch's crest stands 2.3–2.4 mm above the rail (design 2.09; owner, 2026-11-10): about 0.34 mm under the strike plate, engaging deeper than designed |
 | Cavity floor at Z 18.20 | MX stack: plate top 7.50 + 5.0 → 1.6 mm PCB at 12.50; bottom USB-C body ends 0.84 mm above the floor |
