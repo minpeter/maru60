@@ -10,6 +10,8 @@ place (use a checkpoint copy) and every zone is refilled at the end.
   {"op": "add_tracks", "tracks": [{x1,y1,x2,y2,w,layer,net}, ...]}
   {"op": "add_vias", "vias": [{x,y,net}, ...]}                      0.5 / 0.25 mm through vias
   {"op": "remove_vias", "vias": [{x,y,net}, ...]}
+  {"op": "move_vias", "moves": [{"net", "from": [x, y], "to": [x, y]}]}
+  {"op": "set_ref_text", "min_height": 1.0, "min_thickness": 0.15}       visible silkscreen reference fields
   {"op": "move_track_points", "moves": [{"layer", "net", "from": [x, y], "to": [x, y]}]}   every track end at `from`
   {"op": "remove_footprint", "ref": "C142"}
   {"op": "replace_footprint", "ref", "lib_dir", "name", "fpid", "side": "F.Cu"|"B.Cu",
@@ -91,6 +93,24 @@ def main():
                         rec[0].SetEnd(P(*m["to"]))
                         n += 1
             log.append({"moved_track_ends": n})
+        elif kind == "move_vias":
+            for m in op["moves"]:
+                hit = [rec for rec in vias if rec[1] == m["net"] and abs(rec[2] - m["from"][0]) < 1e-3 and abs(rec[3] - m["from"][1]) < 1e-3]
+                if len(hit) != 1:
+                    raise SystemExit(f"via to move not found: {m}")
+                hit[0][0].SetPosition(P(*m["to"]))
+        elif kind == "set_ref_text":
+            n = 0
+            for ref, fp in fps.items():
+                t = fp.Reference()
+                if not t.IsVisible() or "Silk" not in t.GetLayerName() or ref in op.get("exclude", []):
+                    continue
+                if pcbnew.ToMM(t.GetTextHeight()) < op["min_height"] - 1e-6 or pcbnew.ToMM(t.GetTextThickness()) < op["min_thickness"] - 1e-6:
+                    t.SetTextHeight(mm(max(op["min_height"], pcbnew.ToMM(t.GetTextHeight()))))
+                    t.SetTextWidth(mm(max(op["min_height"], pcbnew.ToMM(t.GetTextWidth()))))
+                    t.SetTextThickness(mm(max(op["min_thickness"], pcbnew.ToMM(t.GetTextThickness()))))
+                    n += 1
+            log.append({"ref_texts_enlarged": n})
         elif kind == "remove_vias":
             for v in op["vias"]:
                 hit = [rec for rec in vias if rec[1] == v["net"] and abs(rec[2] - v["x"]) < 1e-3 and abs(rec[3] - v["y"]) < 1e-3]
