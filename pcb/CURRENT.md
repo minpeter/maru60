@@ -17,14 +17,15 @@ dependency. Diagnostic counts in the manifest are saved observations.
 
 ## Order candidate (2026-11-11)
 
-PCB `601b3b95`, derived from the development prototype. It is what
+PCB `5b71591a`, derived from the development prototype. It is what
 [`pcb/order`](order/README.md) (Gerbers, JLCPCB BOM and placement file) is
 exported from. See its [README](experiments/resume-20261111-order-candidate/README.md)
 for evidence. Compared with the development prototype:
 
 - **64 top-side parts no longer sit under switch housings.** Each LED's 0402
   bypass capacitor was 4.0 mm beside the LED, under the flush MX housing; they
-  are now in the gaps between housings. `C200` is DNP.
+  are now in the gaps between housings. `C200` also left the top side and is
+  populated on B.Cu beside the +4V_LED via.
 - **The Caps Lock option LEDs have two land sites each**, so the LED of the
   unused option is not under the used switch: `LED75` is placed on the bottom
   as a data relay, `LED30` has a spare top site. The firmware LED map is
@@ -34,14 +35,17 @@ for evidence. Compared with the development prototype:
 - **RP2350 USB is full speed only**, so the high-speed eye, the 90 Ω target and
   the skew in the USB SI report below do not apply. No impedance control is
   ordered.
-- Buck input capacitor `C137` is 10 µF and `C100` on the buck output rail is
-  22 µF (manufacturer DC-bias data puts the rail at about 33 µF effective);
-  `U8`, `U7`, `R121`, `R163` name parts that are in stock.
-- Fresh native check: 0 opens, 0 warnings, ERC 0, parity 0, 61 cold-refill
+- **The out-of-stock MAX38902A LDO became an AP2112K-3.3 in SOT-23-5.** It needs
+  no BYP capacitor, output sense or minimum load, so `C142`, `R163` and the In2
+  sense jumper were removed; switch pin holes grew to Kailh's 3.05 mm and every
+  SK6805 site got a pin-1 dot.
+- Buck input capacitors `C136` and `C137` are 10 µF and `C100` on the buck
+  output rail is 22 µF (manufacturer DC-bias data puts the rail at about 33 µF
+  effective); `U8`, `U7`, `R121` name parts that are in stock.
+- Fresh native check: 0 opens, 0 warnings, ERC 0, parity 0, 67 cold-refill
   files identical. Bottom-case fit: 20 pass.
 
-Still open: `U2` (MAX38902AATA+T) has no JLCPCB stock and must be sourced
-separately; the 2.75U right Shift and 2U Backspace options are unsupported;
+Still open: the 2.75U right Shift and 2U Backspace options are unsupported;
 hardware qualification, license and USB ID are unchanged from the sections
 below. The older [`pcb/fabrication`](fabrication/README.md) draft is from the
 development prototype and is superseded by `pcb/order` for ordering.

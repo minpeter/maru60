@@ -46,6 +46,18 @@ class OrderPackage(unittest.TestCase):
             self.assertIn(row["Layer"], ("Top", "Bottom"))
             float(row["Mid X"]), float(row["Mid Y"]), float(row["Rotation"])
 
+    def test_polarised_parts_use_rotations_fitted_to_jlcpcb_footprints(self):
+        fit = json.loads((ORDER / "jlcpcb-placement.json").read_text())["placements"]
+        cpl = {row["Designator"]: row for row in csv.DictReader((ORDER / "cpl-jlcpcb.csv").open())}
+        full = {row["Reference"]: row for row in csv.DictReader((ORDER / "bom-full.csv").open())}
+        polarised = [r for r, row in full.items() if row["Polarised"] == "yes" and row["Assembled by JLCPCB"] == "yes"]
+        self.assertGreater(len(polarised), 150)
+        for ref in polarised:
+            self.assertEqual(fit[ref]["status"], "fitted", ref)
+            self.assertAlmostEqual(float(cpl[ref]["Rotation"]), fit[ref]["rotation"], places=2, msg=ref)
+            self.assertAlmostEqual(float(cpl[ref]["Mid X"]), fit[ref]["x"], places=3, msg=ref)
+            self.assertAlmostEqual(float(cpl[ref]["Mid Y"]), -fit[ref]["y"], places=3, msg=ref)
+
     def test_relocated_parts_are_on_the_bottom(self):
         full = {row["Reference"]: row for row in csv.DictReader((ORDER / "bom-full.csv").open())}
         # C200 left its under-switch site for B.Cu beside the +4V_LED via, and
