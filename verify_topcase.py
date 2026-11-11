@@ -483,6 +483,7 @@ def main() -> None:
     verification = {
         "status": "ALL_PASSED",
         "board": GEOM["usb_notch"]["board"],
+        "inserts": bool(REPORT.get("inserts", REPORT.get("strike_inserts", False))),
         "strike_inserts": REPORT.get("strike_inserts", False),
         "catch_hardware": REPORT.get("catch_hardware", "stock"),
         "strike_insert_nominal_installation": insert_checks,

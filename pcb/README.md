@@ -4,6 +4,15 @@
 [../recovery/README.md](../recovery/README.md). Everything below describes earlier stages (A21/A22 foundation) and is
 kept for history.
 
+## Order candidate (2026-11-11)
+
+[`order/`](order/README.md) holds the files to upload to JLCPCB (Gerbers, BOM,
+placement) and the ordering steps. They are exported from
+[`experiments/resume-20261111-order-candidate`](experiments/resume-20261111-order-candidate/README.md):
+DRC/ERC/parity clean, top-side parts cleared from under the switch housings,
+parts checked against datasheets and JLCPCB stock. It is a first-prototype
+order, not a hardware-qualified design.
+
 ## Current artifacts (2026-11-11)
 
 The relocated-expansion 0/0 prototype now has a reproducible evidence set and a

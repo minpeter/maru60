@@ -1,0 +1,382 @@
+Reference,Value,Footprint,Side,Assembled by JLCPCB,Reason if not,Manufacturer,MPN,LCSC,Library class,Polarised,Notes
+C100,22uF 25V X5R,Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9,Bottom,yes,,Samsung,CL31A226KAHNNNE,C12891,basic,,"C100, on the buck output rail at the LDO input (was 4.7 uF). Samsung DC-bias data: -28.1% at 4 V, 15.8 uF effective. With C140/C141 the rail has about 33 uF effective; the 0603 pair alone is 17.4 uF nominal and 13.9 uF at -20% tolerance, under TI's 15 uF minimum."
+C101,4.7uF 50V X7R 10%,Murata_GRM31_1206_Reflow_1.0x1.6_Gap1.9,Bottom,yes,,Murata,GRM31CR71H475KA12L,C77096,extended,,
+C102,4.7u 6.3V,C_0402_Official_R4_Wide,Bottom,yes,,Murata,GRM155R60J475ME47D,C82453,extended,,Raspberry Pi RP2350 reference part for the core regulator.
+C103,4.7u 6.3V,C_0402_Official_R4_Wide,Bottom,yes,,Murata,GRM155R60J475ME47D,C82453,extended,,Raspberry Pi RP2350 reference part for the core regulator.
+C104,4.7u 6.3V,C_0402_1005Metric,Bottom,yes,,Murata,GRM155R60J475ME47D,C82453,extended,,Raspberry Pi RP2350 reference part for the core regulator.
+C105,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C106,15p C0G,C_0402_1005Metric,Bottom,yes,,Samsung,CL05C150JB5NNNC,C86285,extended,,
+C107,15p C0G,C_0402_1005Metric,Bottom,yes,,Samsung,CL05C150JB5NNNC,C86285,extended,,
+C108,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C109,4.7u 6.3V X5R,C_0402_1005Metric,Bottom,yes,,Murata,GRM155R60J475ME47D,C82453,extended,,Raspberry Pi RP2350 reference part for the core regulator.
+C110,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C111,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C112,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C113,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C114,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C115,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C116,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C117,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C118,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C120,1u,C_0402_1005Metric,Bottom,yes,,Samsung,CL05A105KA5NQNC,C52923,basic,,
+C121,4.7u,C_0402_1005Metric,Bottom,yes,,Murata,GRM155R60J475ME47D,C82453,extended,,Raspberry Pi RP2350 reference part for the core regulator.
+C122,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C123,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C124,10nF 10% 50V,C_YAGEO_CC0402_050x050_P100_B_Conditional,Bottom,yes,,YAGEO,CC0402KRX7R9BB103,C60133,extended,,
+C125,1uF 50V X7R,C_0603_1608Metric,Bottom,yes,,YAGEO,CC0603KRX7R9BB105,C559769,extended,,
+C126,1uF 50V X7R,C_0603_1608Metric,Bottom,yes,,YAGEO,CC0603KRX7R9BB105,C559769,extended,,
+C128,100nF 16V,C_0603_1608Metric,Bottom,yes,,Samsung,CL10B104KB8NNNC,C1591,extended,,
+C129,100nF 16V,C_0603_1608Metric,Bottom,yes,,Samsung,CL10B104KB8NNNC,C1591,extended,,
+C136,10uF 25V X5R,C_0603_1608Metric,Bottom,yes,,Samsung,CL10A106MA8NRNC,C96446,basic,,"Buck input, C137 and C136 at the VIN pin. Samsung DC-bias data: -52.8% at 5 V, 4.7 uF effective each, 9.4 uF together against TI's 10 uF typical."
+C137,10uF 25V X5R,C_0603_1608Metric,Bottom,yes,,Samsung,CL10A106MA8NRNC,C96446,basic,,"Buck input, C137 and C136 at the VIN pin. Samsung DC-bias data: -52.8% at 5 V, 4.7 uF effective each, 9.4 uF together against TI's 10 uF typical."
+C138,100nF 16V BST-SW,C_0603_1608Metric,Bottom,yes,,Samsung,CL10B104KB8NNNC,C1591,extended,,
+C139,100nF 10% 16V - soft start,C_0603_1608Metric,Bottom,yes,,Samsung,CL10B104KB8NNNC,C1591,extended,,
+C140,22uF 10V X5R,C_0603_1608Metric,Bottom,yes,,Samsung,CL10A226MP8NUNE,C86295,extended,,"Buck output. Samsung DC-bias data: -60.4% at 4 V, 8.7 uF effective each. No 0603 part does better; C100 supplies the rest of the output capacitance."
+C141,22uF 10V X5R,C_0603_1608Metric,Bottom,yes,,Samsung,CL10A226MP8NUNE,C86295,extended,,"Buck output. Samsung DC-bias data: -60.4% at 4 V, 8.7 uF effective each. No 0603 part does better; C100 supplies the rest of the output capacitance."
+C199,100n,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C200,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C201,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C202,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C203,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C204,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C205,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C206,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C207,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C208,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C209,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C210,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C211,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C212,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C213,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C214,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C215,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C216,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C217,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C218,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C219,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C220,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C221,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C222,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C223,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C224,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C225,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C226,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C227,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C228,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C229,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C230,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C231,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C232,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C233,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C234,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C235,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C236,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C237,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C238,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C239,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C240,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C241,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C242,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C243,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C244,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C245,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C246,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C247,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C248,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C249,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C250,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C251,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C252,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C253,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C254,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C255,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C256,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C257,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C258,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C259,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C260,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C261,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C262,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C263,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C264,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C265,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C266,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C267,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C268,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C269,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C270,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C271,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C272,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C273,100nF,C_0402_1005Metric,Bottom,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C274,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+C275,100nF,C_0402_1005Metric,Top,yes,,Samsung,CL05B104KO5NNNC,C1525,basic,,
+D1,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D2,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D3,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D4,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D5,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D6,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D7,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D8,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D9,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D10,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D11,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D12,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D13,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D14,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D15,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D16,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D17,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D18,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D19,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D20,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D21,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D22,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D23,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D24,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D25,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D26,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D27,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D28,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D29,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D30,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D31,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D32,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D33,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D34,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D35,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D36,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D37,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D38,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D39,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D40,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D41,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D42,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D43,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D44,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D45,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D46,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D47,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D48,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D49,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D50,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D51,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D52,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D53,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D54,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D55,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D56,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D57,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D58,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D59,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D60,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D61,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D62,1N4148W,D_SOD-123,Bottom,yes,,Changjiang (CJ),1N4148W,C81598,basic,yes,
+D100,PMEG4030ER - reverse discharge bypass,Nexperia_CFP3_SOD-123W,Bottom,yes,,Nexperia,"PMEG4030ER,115",C389355,extended,yes,
+F1,SF-1206F100-2,Fuse_1206_3216Metric,Top,yes,,Bourns,SF-1206F100-2,C3164649,extended,,
+J1,USB4105-GF-A,USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,Bottom,yes,,GCT,USB4105-GF-A,C3020560,extended,yes,
+J2,SWD / GND / SWCLK,PinHeader_1x03_P2.54mm_Vertical,Bottom,no,dnp,any,1x3 2.54 mm pin header,,,,"SWD header, hand-fit only if a debug probe is needed (SWDIO / GND / SWCLK). TP7/TP8 carry the same nets."
+J3,SM10B-SRSS-TB,JST_SH_SM10B-SRSS-TB_1x10-1MP_P1.00mm_Horizontal,Bottom,yes,,JST,SM10B-SRSS-TB(LF)(SN),C160409,extended,yes,
+L1,3.3uH AOTA-B201610S3R3-101-T,Abracon_AOTA_B201610S3R3_Official_R4,Bottom,yes,,Abracon,AOTA-B201610S3R3-101-T,C42411119,extended,yes,"POLARISED: the dot on the part must sit at the silkscreen dot (pad 1, +1V1 side)."
+L2,XAL4030-472MEC 4.7uH 20%,L_Coilcraft_XAL4030-XXX,Bottom,yes,,Coilcraft,XAL4030-472MEC,C19191688,extended,,"About USD 8 at JLCPCB. Any 4.7 uH, Isat >= 3.4 A, DCR <= 45 mOhm inductor on the same 4.0 x 4.0 mm land (pads 0.98 x 3.4, 2.37 apart) can replace it."
+LED1,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED2,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED3,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED4,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED5,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED6,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED7,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED8,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED9,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED10,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED11,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED12,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED13,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED14,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED15,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED16,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED17,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED18,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED19,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED20,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED21,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED22,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED23,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED24,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED25,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED26,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED27,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED28,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED29,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED30,SK6805-EC15-001,LED_SK6805_EC15_001_WindowPlusAltSite_LED30,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED31,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED32,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED33,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED34,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED35,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED36,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED37,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED38,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED39,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED40,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED41,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED42,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED43,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED44,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED45,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED46,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED47,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED48,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED49,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED50,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED51,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED52,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED53,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED54,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED55,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED56,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED57,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED58,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED59,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED60,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED61,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED62,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED63,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED64,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED65,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED66,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED67,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED68,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED69,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED70,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED71,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED72,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED73,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED74,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED75,SK6805-EC15-001,LED_SK6805_EC15_001_BottomRelayPlusWindow_LED75,Bottom,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LED76,SK6805-EC15-001,LED_SK6805_EC15_001_Recommended_Candidate,Top,yes,,OPSCO,SK6805-EC15,C2890035,extended,yes,"5 mA per channel version (4.7 / 5 / 6.3 mA), 0.5 mA static each, VDD 3.7-5.5 V (OPSCO SK6805-EC15-001 Rev A/1). No silkscreen orientation mark: check pin 1 (DIN) in the placement preview."
+LOGO1,OSHW + minpeter character — DRAFT,OSHW_then_Minpeter_H6_Gap1p5_Silk_DRAFT,Bottom,no,board_only,,,,,,Silkscreen artwork / stabilizer holes; not a part.
+R100,5.1k 1%,R_0402_1005Metric,Top,yes,,UNI-ROYAL,0402WGF5101TCE,C25905,basic,,
+R101,5.1k 1%,R_0402_1005Metric,Top,yes,,UNI-ROYAL,0402WGF5101TCE,C25905,basic,,
+R102,27,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF270JTCE,C25100,extended,,
+R103,27,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF270JTCE,C25100,extended,,
+R104,33,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF330JTCE,C25105,basic,,
+R105,10k,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1002TCE,C25744,basic,,
+R106,1k,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1001TCE,C11702,basic,,
+R107,1k,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1001TCE,C11702,basic,,
+R108,1k,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1001TCE,C11702,basic,,
+R109,100k,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1003TCE,C25741,basic,,
+R110,330,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF3300TCE,C25104,basic,,
+R111,330,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF3300TCE,C25104,basic,,
+R112,133k 1%,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1333TCE,C25753,extended,,LED rail current limit: 174 / 202 / 234 mA (min / nom / max).
+R113,10k,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1002TCE,C25744,basic,,
+R114,10k,R_0402_1005Metric,Bottom,yes,,UNI-ROYAL,0402WGF1002TCE,C25744,basic,,
+R120,590k 0.1%,R_0603_1608Metric,Top,yes,,YAGEO,RT0603BRD07590KL,C861479,extended,,
+R121,154k 0.1%,R_KOA_RN73R1E_0402_Reflow_Vertical_B,Bottom,yes,,YAGEO,RT0402BRD07154KL,C852540,extended,,"OVLO divider bottom resistor. 156 k (E192) is not stocked; 154 k moves the OVLO rising threshold from 5.74 V to 5.80 V nominal, further from the 5.5 V USB maximum."
+R122,620k 0.1%,R_0603_1608Metric,Bottom,yes,,YAGEO,RT0603BRD07620KL,C861500,extended,,
+R123,267k 0.1%,R_0603_1608Metric,Bottom,yes,,YAGEO,RT0603BRE07267KL,C861785,extended,,
+R124,6.65k 0.1%,R_0603_1608Metric,Bottom,yes,,YAGEO,RT0603BRD076K65L,C861536,extended,,eFuse current limit 425 / 500 / 575 mA.
+R125,100 1%,R_KOA_RK73H1E_0402_Reflow_B,Bottom,yes,,UNI-ROYAL,0402WGF1000TCE,C25076,basic,,
+R126,100k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF1003T5E,C25803,basic,,
+R128,100k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF1003T5E,C25803,basic,,
+R130,1.00k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF1001T5E,C21190,basic,,
+R131,1.00k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF1001T5E,C21190,basic,,
+R132,1.00k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF1001T5E,C21190,basic,,
+R133,1.00k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF1001T5E,C21190,basic,,
+R134,1.00k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF1001T5E,C21190,basic,,
+R135,1.00k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF1001T5E,C21190,basic,,
+R140,39.0k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF3902T5E,C23153,basic,,
+R141,39.0k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF3902T5E,C23153,basic,,
+R142,39.0k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF3902T5E,C23153,basic,,
+R143,39.0k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF3902T5E,C23153,basic,,
+R144,39.0k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF3902T5E,C23153,basic,,
+R145,39.0k 1%,R_0603_1608Metric,Bottom,yes,,UNI-ROYAL,0603WAF3902T5E,C23153,basic,,
+R159,40.0k 0.1%,R_0603_1608Metric,Bottom,yes,,YAGEO,RT0603BRD0740KL,C861392,extended,,"Buck feedback, 4.00 V."
+R160,10.0k 0.1%,R_0603_1608Metric,Bottom,yes,,YAGEO,RT0603BRD0710KL,C95204,extended,,
+STAB_RS1,,,Top,no,board_only,,,,,,Silkscreen artwork / stabilizer holes; not a part.
+SW1,Esc,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW2,1,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW3,2,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW4,3,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW5,4,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW6,5,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW7,6,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW8,7,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW9,8,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW10,9,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW11,0,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW12,Minus,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW13,Equal,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW14,Backspace_L,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW15,Backspace_R,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW16,Tab,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW17,Q,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW18,W,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW19,E,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW20,R,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW21,T,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW22,Y,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW23,U,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW24,I,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW25,O,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW26,P,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW27,LeftBracket,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW28,RightBracket,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW29,Backslash,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW31,A,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW32,S,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW33,D,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW34,F,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW35,G,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW36,H,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW37,J,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW38,K,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW39,L,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW40,Semicolon,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW41,Quote,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW42,Enter,MX-Hotswap-2.25U-4L-NPTH_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW43,LeftShift,MX-Hotswap-2.25U-4L-NPTH_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW44,Z,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW45,X,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW46,C,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW47,V,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW48,B,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW49,N,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW50,M,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW51,Comma,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW52,Period,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW53,Slash,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW56,LCtrl,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW57,LMeta,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW58,LAlt,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW59,Space,MX-Hotswap-7U-4L-NPTH-StabRot180_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW60,RAlt,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW61,RMeta,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW62,RCtrl,MX-Hotswap-1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SW100,BOOTSEL,SW_SPST_TL3342,Bottom,yes,,E-Switch,TL3342F450QG,C2886897,extended,,"TL3342F260QG (C2886894, 2.6 N) fits the same land."
+SW101,RESET,SW_SPST_TL3342,Bottom,yes,,E-Switch,TL3342F450QG,C2886897,extended,,"TL3342F260QG (C2886894, 2.6 N) fits the same land."
+SWCAP1,Caps_Options,MX_Study_Caps_Normal_or_Stepped_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+SWRS1,RShift_Options,MX_Study_RShift_2.75U_or_1.75U_1U_H305,Bottom,no,hand_solder,Kailh,CPG151101S11,C2803348,,,"MX hot-swap socket, one per switch position that is used (bottom side). Out of stock at JLCPCB on the snapshot date: hand-solder, or pre-order the part and add these rows to the JLCPCB BOM. Kailh drawing KH-PS1607-10: holes 3.05 +/-0.05 mm, 6.35 x 2.54 mm apart, pads 2.55 x 2.5 mm; the board uses 3.00 mm holes (the common ai03 pattern)."
+TP1,GND TEST,TestPoint_Pad_D1.0mm,Bottom,no,test_point,,,,,,Bare copper test pad.
+TP2,VBUS TEST,TestPoint_Pad_D1.0mm,Bottom,no,test_point,,,,,,Bare copper test pad.
+TP3,+4V TEST,TestPoint_Pad_D1.0mm,Bottom,no,test_point,,,,,,Bare copper test pad.
+TP4,+3V3 TEST,TestPoint_Pad_D1.0mm,Bottom,no,test_point,,,,,,Bare copper test pad.
+TP5,+1V1 TEST,TestPoint_Pad_D1.0mm,Top,no,test_point,,,,,,Bare copper test pad.
+TP6,RUN TEST,TestPoint_Pad_D1.0mm,Bottom,no,test_point,,,,,,Bare copper test pad.
+TP7,SWDIO TEST,TestPoint_Pad_D1.0mm,Bottom,no,test_point,,,,,,Bare copper test pad.
+TP8,SWCLK TEST,TestPoint_Pad_D1.0mm,Bottom,no,test_point,,,,,,Bare copper test pad.
+TP9,LED_FAULT_N TEST,TestPoint_Pad_D1.0mm,Bottom,no,test_point,,,,,,Bare copper test pad.
+TP10,+4V_LED TEST,TestPoint_Pad_D1.0mm,Bottom,no,test_point,,,,,,Bare copper test pad.
+U1,RP2350A (A4 required),RP2350A_QFN60_Official_R4,Bottom,yes,,Raspberry Pi,RP2350A,C42411118,extended,yes,Stepping A4 is required (A2 has the GPIO pull-down erratum E9). Ask the assembler to confirm the marking before placement.
+U2,AP2112K-3.3TRG1,SOT-23-5_TightCourtyard,Bottom,yes,,Diodes Incorporated,AP2112K-3.3TRG1,C51118,extended,yes,"Replaces MAX38902AATA+T, which JLCPCB does not stock. EN is tied to VIN; pin 4 is not connected."
+U3,W25Q32JVSSIQ (4MiB),SOIC-8_5.3x5.3mm_P1.27mm,Bottom,yes,,Winbond,W25Q32JVSSIQ,C179173,extended,yes,
+U5,SN74LV1T125DBVR,SOT-23-5,Bottom,yes,,Texas Instruments,SN74LV1T125DBVR,C473338,extended,yes,
+U6,SN74LV1T125DBVR,SOT-23-5,Bottom,yes,,Texas Instruments,SN74LV1T125DBVR,C473338,extended,yes,
+U7,TPS2553DBVR,SOT-23-6,Bottom,yes,,Texas Instruments,TPS2553DBVR,C55266,extended,yes,Constant-current variant. The latch-off TPS2553DBVR-1 (C111738) is a drop-in but had 6 in stock; FAULT behaves the same and the firmware latches the fault itself.
+U8,TPS259470ARPWR,TI_RPW0010A_2x2mm_Official4225183A_DRAFT,Bottom,yes,,Texas Instruments,TPS259470ARPWR,C3662799,extended,yes,Auto-retry variant; the latch-off TPS259470LRPWR is pin-identical but had 1 in stock.
+U10,TPD2EUSB30DRTR,Texas_DRT-3,Bottom,yes,,Texas Instruments,TPD2EUSB30DRTR,C97502,extended,yes,
+U11,SN74CB3T3245PWR,Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm,Bottom,yes,,Texas Instruments,SN74CB3T3245PWR,C15298,extended,yes,
+U12,TLV810EA29DBZR,SOT-23,Bottom,yes,,Texas Instruments,TLV810EA29DBZR,C2864432,extended,yes,
+U13,TPD6E05U06RVZR,TI_RVZ14_1p35x3p5mm_P0p5_TI4221500A,Bottom,yes,,Texas Instruments,TPD6E05U06RVZR,C962978,extended,yes,51 in stock on the snapshot date.
+U18,TPS62932DRLR,SOT-583-8,Bottom,yes,,Texas Instruments,TPS62932DRLR,C3032935,extended,yes,
+Y1,12MHz ABM8-272-T3,Crystal_SMD_3225-4Pin_3.2x2.5mm,Bottom,yes,,Abracon,ABM8-272-T3,C20625731,extended,yes,

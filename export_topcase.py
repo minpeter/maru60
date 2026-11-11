@@ -21,11 +21,12 @@ verification = json.loads((source / 'verification.json').read_text())
 assert verification['status'] == 'ALL_PASSED', verification['status']
 report = json.loads((source / 'draft-report.json').read_text())
 board = report['geometry_mm']['usb_notch']['board']
-inserts = report['strike_inserts']
+inserts = bool(report.get('inserts', report.get('strike_inserts', False)))
+ver_inserts = bool(verification.get('inserts', verification.get('strike_inserts', False)))
 luban = report.get('catch_hardware', 'stock') == 'luban32'
-assert verification['board'] == board and verification['strike_inserts'] == inserts, 'Verify the current board/insert variant before export'
+assert verification['board'] == board and ver_inserts == inserts, 'Verify the current board/insert variant before export'
 assert verification.get('catch_hardware', 'stock') == report.get('catch_hardware', 'stock'), 'Verify the current catch variant before export'
-suffix = '-luban32' if luban else '-canot-inserts' if inserts else ''
+suffix = ('-luban32' if luban else '') + ('-canot-inserts' if inserts else '')
 if (inserts or luban) and board != spec.default_board():
     suffix += f'-usb-{board}'
 

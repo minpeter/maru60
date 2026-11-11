@@ -1,0 +1,29 @@
+{
+  "pass": true,
+  "command": [
+    "python3",
+    "tools/check_pcb_native.py",
+    "--checkpoint",
+    "pcb/experiments/resume-20261111-order-candidate",
+    "--expected-opens",
+    "0",
+    "--output",
+    "build/order-native4",
+    "--material"
+  ],
+  "cwd": "/workspace",
+  "board_sha256": "5b71591a4a068c7e51b45e12f7938a0b41a9ce99a85ec2fc03e842c7d056575f",
+  "kicad_version": "9.0.2+dfsg-1",
+  "expected_open_pairs": 0,
+  "expected_warnings": 0,
+  "open_pairs": 0,
+  "warnings": 0,
+  "other_errors": 0,
+  "ERC": 0,
+  "schematic_parity": 0,
+  "cold_refill_files_identical": 67,
+  "source_unchanged": true,
+  "material_recomputed": true,
+  "manufacturing_ready": false,
+  "scope": "Native CAD replay against the expected open count; physical, SI and active-power qualification remain separate."
+}

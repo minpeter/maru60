@@ -187,7 +187,7 @@ def main():
                   'strike_envelope_case_mm3':volume(strikes^(trial_top+trial)),
                   'catch_envelope_pcb_mm3':volume(catches^pcb),
                   'screws_vs_pcb_plate_mm3':volume(screws^(pcb+usb+plate)),
-                  'lower_half_insertion_path_mm3':max(volume(trial_parts[0].translate((d*np.asarray(bottom.FROM_PRINT)[:,2]).tolist())^trial_parts[1])
+                  'lower_half_insertion_path_mm3':max(volume((trial_parts[0].translate((d*np.asarray(bottom.FROM_PRINT)[:,2]).tolist())^trial_parts[1])-bottom.seam_rib_zones_world())
                                                       for d in [0,.2,1,3,6,12,24]),
                   'screw_envelopes_case_mm3':volume(screws^(trial_top+trial))}
         assert max(assembly.values())<.01,assembly

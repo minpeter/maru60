@@ -5,8 +5,8 @@ both experimental:
 
 | Line | Parts printed | Mates with | Options |
 | --- | --- | --- | --- |
-| [Stock-compatible](#stock-compatible-top-case) | Top case only | Stock Rule 60 V3 bottom case, ball catches and strikes, gasket plate, caps and PCB | `--board`, `--strike-inserts` |
-| [Maru set](#maru-set) | Top and bottom case | Each other, with chosen hardware: purchased catches and inserts, weight plate, battery or wired, later the Maru60 PCB | `--board`, `--no-battery-bay`, `--catches luban32` |
+| [Stock-compatible](#stock-compatible-top-case) | Top case only | Stock Rule 60 V3 bottom case, ball catches and strikes, gasket plate, caps and PCB | `--board`, `--inserts` |
+| [Maru set](#maru-set) | Top and bottom case | Each other, with stock or compatible LUBAN 32 mm catches, self-tapping pilots or CANOT inserts, weight plate, battery or wired | `--board`, `--no-battery-bay`, `--catches {stock,luban32}`, `--inserts` |
 
 Start with the
 [top-case printing and downloads](fabrication.md#maru60-hhkb-top-case-with-integrated-wrist-rest-experimental)
@@ -21,14 +21,15 @@ The default top case keeps every stock interface: the bottom-case pocket copies
 the caliper-measured stock top case, the strike pockets take the stock strikes
 on their 13 mm M2 pilots, and the gasket pockets take the stock plate and caps.
 Print only the top case and reuse the stock bottom case. `--board` moves the
-USB-C notch in the right half; `--strike-inserts` adds CANOT insert bores in
-the upper only and keeps the stock strikes. For a 6095 tri-mode PCB, print
+USB-C notch in the right half; `--inserts` (alias `--strike-inserts`) switches
+the 8 M2 self-tapping pilots per case to CANOT M2 OD3.5 x L3 heat-set insert
+bores while keeping the stock contour and strike layout. For a 6095 tri-mode PCB, print
 `models/maru60-hhkb-topcase-left.3mf` and
 `models/maru60-hhkb-topcase-right-usb-6095-trimode.3mf`.
 
 ```sh
 uv run python -m maru60.pipeline --board 6095-trimode
-uv run python -m maru60.pipeline --board 6095-trimode --strike-inserts
+uv run python -m maru60.pipeline --board 6095-trimode --inserts
 ```
 
 The pipeline also builds the matching Maru bottom case; the top case it
@@ -42,17 +43,20 @@ The wired case (`--no-battery-bay`) is the current one. The battery-bay case is
 on hold and not reviewed for printing: building it prints a warning.
 
 ```sh
-uv run python -m maru60.pipeline --board ph60-rev3
 uv run python -m maru60.pipeline --board ph60-rev3 --no-battery-bay
-uv run python -m maru60.pipeline --board ph60-rev3 --catches luban32
+uv run python -m maru60.pipeline --board ph60-rev3 --no-battery-bay --inserts
+uv run python -m maru60.pipeline --board ph60-rev3 --no-battery-bay --catches luban32
+uv run python -m maru60.pipeline --board ph60-rev3 --no-battery-bay --catches luban32 --inserts
 ```
 
-`--catches luban32` fits the purchased LUBAN 32 mm double ball catches (25 mm
-body / 11 mm strike pitch, 11 mm engaged height) with CANOT M2 OD3.5 x L3 inserts
-in both cases: Ø3.2 x 3.2 mm bores, the strike seat 0.55 mm deeper (Zp 5.00), the
-catch seat at Zp 16.00, the original strike pockets widened inward to the skirt
-wall and the back-seam key 0.8 mm shorter. It replaces `--strike-inserts` and
-combines with `--no-battery-bay`. Its top case no longer fits the stock bottom
+Both `--catches stock` and `--catches luban32` default to M2 self-tapping screw
+pilots (`Ø1.8 mm` in the top case, `Ø1.7 mm` in the bottom case), and both accept
+`--inserts` (`CANOT M2 OD3.5 x L3` heat-set insert bores, `Ø3.2 x 3.55 mm` on
+`stock` and `Ø3.2 x 3.20 mm` on `luban32`, in both cases). `--catches luban32`
+fits the compatible LUBAN 32 mm double ball catches (25 mm body / 11 mm strike
+pitch, 11 mm engaged height): the strike seat sits 0.55 mm deeper (Zp 5.00), the
+catch seat sits at Zp 16.00, the original strike pockets widen inward to the skirt
+wall and the back-seam key is 0.8 mm shorter. Its top case no longer fits the stock bottom
 case or stock catches: print it only as a Maru set. Only faces hidden inside the assembled housing
 change: the bottom-case verifier rebuilds the stock-catch pair and proves that no
 changed face looks out of the assembly. **The catch and strike widths (7.2 mm) are

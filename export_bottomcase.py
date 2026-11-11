@@ -21,13 +21,15 @@ assert verification['status'] == 'ALL_PASSED', verification['status']
 board = verification['board']
 report = json.loads((source / 'draft-report.json').read_text())
 assert verification['board'] == report['board'] and verification['battery_bay'] == report['battery_bay'], 'verify the current board/battery-bay variant before export'
+inserts = bool(report.get('inserts', False))
+assert bool(verification.get('inserts', False)) == inserts, 'verify the current insert variant before export'
 luban = report.get('catch_hardware', 'stock') == 'luban32'
 assert verification.get('catch_hardware', 'stock') == report.get('catch_hardware', 'stock'), 'verify the current catch variant before export'
-suffix = ('-luban32' if luban else '') + ('' if verification['battery_bay'] else '-no-battery-bay')
-if luban and board != spec.default_board():
+suffix = ('-luban32' if luban else '') + ('-canot-inserts' if inserts else '') + ('' if verification['battery_bay'] else '-no-battery-bay')
+if (luban or inserts) and board != spec.default_board():
     suffix += f'-usb-{board}'
 
-if board != spec.default_board() and not luban:
+if board != spec.default_board() and not luban and not inserts:
     shutil.copyfile(source / 'maru60-hhkb-bottomcase-left.3mf',
                     ROOT / 'models' / f'maru60-hhkb-bottomcase-left{suffix}-usb-{board}.3mf')
     shutil.copyfile(source / 'verification.json', ROOT / 'evidence' / f'bottomcase-verification{suffix}-usb-{board}.json')

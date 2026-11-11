@@ -10,7 +10,8 @@ Rule 60 V3 wrist rest and an unfinished RP2350A PCB design.
 | [Standalone wrist rest](docs/wrist-rest.md) | Current tight-fit downloads, reproduction and print guidance |
 | [PCB current state](pcb/CURRENT.md) | Strict baseline, development prototype and unresolved qualification |
 | [PCB validation](docs/pcb-validation.md) | Reproduce native CAD, portable firmware and power checks |
-| [PCB fabrication draft](pcb/fabrication/README.md) | BOM, CPL, Gerbers and provenance for the 0/0 prototype; not an assembly approval |
+| [PCB order package](pcb/order/README.md) | Gerbers, JLCPCB BOM and placement file for the order candidate, with ordering steps |
+| [PCB fabrication draft](pcb/fabrication/README.md) | Earlier BOM, CPL and Gerbers for the 0/0 prototype; superseded by the order package |
 | [Detailed fabrication reference](docs/fabrication.md) | Complete design history, measurements, hardware and plate guidance |
 
 Install [uv](https://docs.astral.sh/uv/), then run from the repository root:
@@ -23,12 +24,15 @@ uv run tools/check_pcb_current.py
 ```
 
 The housing pipeline builds and verifies both cases in a variant-specific
-folder under `build/`. Add `--strike-inserts` for the upper insert trial,
-`--catches luban32` for the purchased LUBAN 32 mm catches with inserts (assumed
-widths, caliper first) or `--no-battery-bay` for the wired lower case. Published `models/` and `evidence/`
+folder under `build/`. Both cases default to `--catches stock` with M2
+self-tapping screw pilots (`--no-inserts`). Add `--catches luban32` for the
+compatible LUBAN 32 mm ball catches (assumed widths, caliper first), `--inserts`
+for CANOT M2 OD3.5 x L3 heat-set insert bores in both cases, or
+`--no-battery-bay` for the wired lower case. Published `models/` and `evidence/`
 change only with `--publish`; review [housing guidance](docs/housing.md) first.
-CAD checks do not establish physical fit or strength. The custom PCB is **not
-manufacturing-ready**.
+CAD checks do not establish physical fit or strength. The custom PCB has an
+[order candidate](pcb/order/README.md) for a first prototype run; it has **not
+been built or qualified on hardware**.
 
 The standalone wrist rest uses [CC BY 4.0](LICENSE); the Maru60 cases use
 [CC BY-NC 4.0](LICENSE-topcase). See the [full license and design history](docs/fabrication.md#license-and-design-history)

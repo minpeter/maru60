@@ -46,5 +46,30 @@
         "sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51"
       }
     ]
+  },
+  "order_candidate": {
+    "status": "order_candidate_for_first_prototype_not_hardware_qualified",
+    "manufacturing_ready": false,
+    "reported_diagnostics": {
+      "open_pairs": 0,
+      "warnings": 0,
+      "erc": 0,
+      "schematic_parity": 0
+    },
+    "order_package": "pcb/order/README.md",
+    "files": [
+      {
+        "path": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pro",
+        "sha256": "1f70f36c2369c872ae16e7e338f506adb1ee1ff06dd2224b69aa3b4c8a015073"
+      },
+      {
+        "path": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb",
+        "sha256": "5b71591a4a068c7e51b45e12f7938a0b41a9ce99a85ec2fc03e842c7d056575f"
+      },
+      {
+        "path": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_sch",
+        "sha256": "c3862215d52d8cc732a92f2c177860c13b288c082a48811e530e4f76ca0b1c51"
+      }
+    ]
   }
 }

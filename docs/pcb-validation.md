@@ -71,3 +71,21 @@ The active source configures GP29 for ROW3, GP28 for COL5, 4 MiB flash, WKL/HHKB
 Fresh full WKL and HHKB builds must use the pinned QMK commit, exact submodules and both hash-guarded patches, with qualification OFF, compiler logs and ELF/UF2 hashes. Historical builds and portable mock compilation do not substitute for this. Official VIA behavior and physical USB, matrix, flash/bootloader, DMA/PIO signals, rail settling/current/inrush, fault response and suspend behavior require their own reproducible evidence. No portable or native check in this workflow authorizes LED enablement or manufacturing.
 
 The [2026-11-09 build packet](../pcb/experiments/resume-20261109-silk-height/qa/qmk-build/RESULT.json) records fresh full WKL `via` and HHKB `via_hhkb` builds of the current 22-file overlay: both compile/link and UF2 generation pass, all six LED translation-unit macro dumps show qualification zero, and ELF/UF2 hashes and complete logs are retained. This supplies the default-OFF full-build evidence required above. See the [checkpoint README](../pcb/experiments/resume-20261109-silk-height/README.md) for replay setup; hardware acceptance remains open.
+
+## Order candidate (2026-11-11)
+
+`pcb/current.json` now also pins the order candidate. Replay its native check with
+
+```sh
+tools/run_kicad9.sh python3 tools/check_pcb_native.py \
+  --checkpoint pcb/experiments/resume-20261111-order-candidate \
+  --expected-opens 0 --output build/order-native-new
+```
+
+and regenerate the JLCPCB files with `.venv/bin/python pcb/tools/export_order_package.py`,
+which refuses to write a package unless DRC, unconnected items and schematic
+parity are zero and every footprint has a part rule. `tests/test_order_package.py`
+checks that the committed package still matches the pinned board. The portable
+wrapper continues to check the development prototype; the order candidate
+changes no net except through its value and footprint edits, and its exported
+netlist is stored as `qa/netlist.xml` in the checkpoint.

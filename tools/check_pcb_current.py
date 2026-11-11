@@ -23,7 +23,7 @@ JsonValue: TypeAlias = (
     str | int | float | bool | None | list["JsonValue"] | dict[str, "JsonValue"]
 )
 ROOT: Final = Path(__file__).resolve().parents[1]
-ROLES: Final = ("strict_baseline", "development_prototype")
+ROLES: Final = ("strict_baseline", "development_prototype", "order_candidate")
 
 
 @dataclass
@@ -89,7 +89,7 @@ def main() -> int:
         print(f"PCB manifest check failed: {error}", file=sys.stderr)
         return 1
     print(
-        f"PASS: {len(pins)} primary CAD files match; neither selection is manufacturing-ready."
+        f"PASS: {len(pins)} primary CAD files match; no selection is manufacturing-ready."
     )
     return 0
 
