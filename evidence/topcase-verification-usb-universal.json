@@ -1,7 +1,9 @@
 {
   "status": "ALL_PASSED",
   "board": "universal",
+  "inserts": false,
   "strike_inserts": false,
+  "catch_hardware": "stock",
   "strike_insert_nominal_installation": [],
   "closed_single_shell_exports": [
     "left-half-print.stl",
@@ -13,21 +15,21 @@
   ],
   "dovetail_insertion_path": {
     "steps_checked": 91,
-    "free_slide_drag_dz_ge_3p2mm_mm3": 3e-06,
-    "max_overlap_outside_compression_ribs_mm3": 3e-06,
+    "free_slide_drag_dz_ge_3p2mm_mm3": 1.2e-05,
+    "max_overlap_outside_compression_ribs_mm3": 1.3e-05,
     "seated_compression_rib_bite_mm3": 0.5115
   },
   "six_dof_retention_mm3": {
-    "pull_apart_x_1mm": 79.869,
-    "push_together_x_0p5mm": 728.801,
-    "shear_y_plus_0p5mm": 86.205,
-    "shear_y_minus_0p5mm": 84.471,
+    "pull_apart_x_1mm": 94.766,
+    "push_together_x_0p5mm": 755.015,
+    "shear_y_plus_0p5mm": 103.889,
+    "shear_y_minus_0p5mm": 94.354,
     "overtravel_z_stop_0p3mm_past_clearance": 61.888,
     "clean_release_dz_18mm": 0.0
   },
   "dovetail_z_stop_clearance": {
     "design_mm": 0.2,
-    "overlap_at_0p18mm_mm3": 3e-06,
+    "overlap_at_0p18mm_mm3": 1.2e-05,
     "landing_overlap_at_0p25mm_mm3": 2.408
   },
   "back_seam": {
@@ -80,7 +82,7 @@
       0.315,
       0.315
     ],
-    "end_face_push_0p05mm_overlap_mm3": 4.634
+    "end_face_push_0p05mm_overlap_mm3": 4.731
   },
   "joint_glue_line_max_gap_mm": {
     "WristFrontJoint": 0.199,
@@ -106,7 +108,7 @@
     "BackSeamLeft": 0,
     "BackSeamRight": 0
   },
-  "wrist_mirror_asymmetry_mm3": 8e-05,
+  "wrist_mirror_asymmetry_mm3": 0.00012,
   "cap_pocket_wall_cover_skirt_side_and_ends": [
     1.0,
     1.0,
@@ -143,11 +145,9 @@
     "floor_cover": [
       1.0,
       1.0,
-      1.0,
       1.0
     ],
     "floor_1mm_cover": [
-      1.0,
       1.0,
       1.0,
       1.0
@@ -155,17 +155,14 @@
     "pocket_intrusion_mm2": [
       0.0,
       0.0,
-      0.0,
       0.0
     ],
     "wall_mm": [
-      1.2,
-      1.2,
-      1.2,
-      1.2
+      1.197,
+      1.197,
+      1.197
     ],
     "proud_of_desk_mm2": [
-      0.0,
       0.0,
       0.0,
       0.0
@@ -188,5 +185,30 @@
     "four_metal_ballcatch_strikes": 0.0,
     "sixty_hhkb_keycaps_full_travel": 0.0,
     "stock_base_pocket_past_floor": 0.0
+  },
+  "input_sha256": {
+    "build/coupon-ballcatch-gasket-left.stl": "6b279c3f50e4eac5f0c26834ca964e80836e78d6432fa9de7551b319fb27343a",
+    "build/draft-report.json": "adc74178d64947e3ef815af0efcf7e4ef89011b1dd5bdd34a160214f5231a896",
+    "build/halves-world.3mf": "3106647bb8e4ea0638d25b05b6d9eb3d3e9e9efa7fec83bd1d76e310c0395308",
+    "build/left-half-print.stl": "39cfe567d90a4c2be5c25e179f0abf82fb31bea26d822dc3a37e626f90460e58",
+    "build/maru60-fit-test-coupons.3mf": "5e80896decc32be1bbcd0776b8a12cfb3c64c4ba5b28278d4530762e0a87e739",
+    "build/maru60-hhkb-left-plate.3mf": "8f6aacf30c435de6512312d8def42fe026ee2925d9cbca1a79230bbbb8c54ca1",
+    "build/maru60-hhkb-right-plate.3mf": "acb495cf72194d4f24244c3ca4c67906f3b7c1ee4332ab9db60553a899c85624",
+    "build/right-half-print.stl": "d2b432b396b727d5991412edf13daa8ec3c1474db86f3517cf647da452c23604",
+    "build_bottomcase_draft.py": "9452f1ed17346a38d2c01f80435477bbf90e2021b6523bd148e3a303976b2232",
+    "build_topcase_draft.py": "b57154265292ddab12e29f1958ee83e90277bc2bd274cd5684b01d2d986df12b",
+    "maru60/__init__.py": "49ec24caa935fc5b5040d7c653ef5fe04b5356b3178780c479036ab8e9499c08",
+    "maru60/exterior.py": "bc565e9bdf78ae6770b2874856703b07a93e5b9e012a9968bab4d557680170d8",
+    "maru60/frames.py": "3906e5f54949fe00fa3b04d1f5fde7b3caa35405fd374a6d7a27cc5ef9b5b1d8",
+    "maru60/mesh_io.py": "0375ad0531b7757974cf3b097364d56599244457fe9c24c8c33f14794841389e",
+    "maru60/paths.py": "21f5fc7b5247fff5d2ea2103959a032e1eec6a201edca2df7786dfd066883ead",
+    "maru60/pipeline.py": "a6977edb57cef02b7217e8a02eaec6c293c89d748879ec776fa8989b67a1ad61",
+    "maru60/provenance.py": "7fca2fc54c50aaac5f464214c2a566d2af195299bad722ac711a29651d2aa25b",
+    "rule60_spec.py": "327ca5c513663eaef8b643a7c4d003304a26a8778f8a6111623b3cbea866fc19",
+    "spec/boards.json": "64f89606713cd0f621bc42168daf565c44f471544addb3b2d85b05a94af88a0e",
+    "spec/rule60-v3-outlines.json": "acff832b570715bb261defe752e226e86c554d629dbe344b42f0eb93674bee97",
+    "spec/rule60-v3.json": "bfc76674a8b4c35dbf459efb985728eec2053352906a5a7db8cb5e878098885a",
+    "verify_bottomcase.py": "6b297d6e6cfc601c3fa60d52ca0f93a6e0d07ce36d7d47b61e0157b061292482",
+    "verify_topcase.py": "4ffb6f4062bdcf491b6203f80c62fbc7699c1a2fe8416e94183efb15d0f246d6"
   }
 }
