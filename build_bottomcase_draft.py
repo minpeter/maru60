@@ -181,8 +181,9 @@ BACK_BEVEL_INSET = _back_slope_inset()
 BUMPON_SITES = [(130.0, "front", round(FRONT_STEP_W + 8.5, 2)), (-130.0, "front", round(FRONT_STEP_W + 8.5, 2)),
                 (130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2)), (-130.0, "back", round(BACK_BEVEL_INSET + 8.5, 2))]
 # ^ world X, edge, centre distance from that rail face; each row clears the base edge by a 1.2 mm wall + 0.5 mm. Four
-#   corners only (owner): with the wrist rest's front row they make 8; the v0.8 centre pair at X +-15 carried nothing
-#   in a rigid-body load share (self weight, two wrists, typing at the centre and the Esc corner).
+#   corners only (owner): with the wrist rest's front row they make 7 (8 before top case v7.13); the v0.8 centre pair
+#   at X +-15 carried nothing in a rigid-body load share (self weight, two wrists, typing at the centre and the Esc
+#   corner).
 
 
 def back_bevel() -> tuple[list[float], float]:

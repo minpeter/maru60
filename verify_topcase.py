@@ -22,7 +22,7 @@ Verifies exported CAD files (not in-memory construction) across 6 independent su
        - Stock base pocket: empty from the 9.69 mm floor to the skirt lip inside the skirt (bottom-case seat); the frame
          at the 9.69 mm floor (IMG_0334) outside the declared cuts
        - Chirality: USB-C notch at print +X (keyboard left in the underside view) with the inward back-left gasket pocket
-       - 8 bumpon pockets: a max-size 3M SJ5012 (`Ø13.2 mm`) fits each, sits wholly on a floor `pocket_depth` below the
+       - 3 bumpon pockets: a max-size 3M SJ5012 (`Ø13.2 mm`) fits each, sits wholly on a floor `pocket_depth` below the
          desk-plane pad face with >= 1 mm of floor under it, and keeps >= 1 mm of wall to every pad edge
   Z levels come from `draft-report.json` (`calibrated_z_stack_mm`), written by the build.
 
@@ -448,7 +448,7 @@ def main() -> None:
         lip_corner_checks[str(side)] = bool(cut and shoulder)
     assert all(lip_corner_checks.values()), ("USB lower lip is not rounded", lip_corner_checks)
     assert not material_at(z_lip - 0.05).contains(usb_probe), "USB notch closed at the lip"
-    # 6i. Bumpon pockets (3M SJ5012): turned so the desk plane is level (the pocket axis vertical), on each of the 8 pads
+    # 6i. Bumpon pockets (3M SJ5012): turned so the desk plane is level (the pocket axis vertical), on each of the 3 pads
     #     a max-size bumpon disk fits the empty pocket, sits wholly on its floor at `pocket_depth` with >= 1 mm of floor
     #     under it, the pocket keeps >= 1 mm of wall to every pad edge at the pad face, and nothing stands proud of the
     #     desk plane over the pad.

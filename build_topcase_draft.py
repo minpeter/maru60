@@ -237,21 +237,23 @@ INNER_SKIRT_R = spec.value("top.inner_corner_r")  # Inner skirt (bottom-case poc
                         # v6.2 held the stock bottom case ~2.3 mm off its seat at the corners (owner, printed part): its
                         # corners are about R2.7, so the pocket takes R2.0 to clear them with the straight walls line-to-line.
 RIB = 2.40              # Honeycomb rib width (matches v9)
-# Bumpon pads: 4 sites along the wrist-rest front edge, each with a pocket for a 3M Bumpon Protective Products SJ5012
+# Bumpon pads: 3 sites along the wrist-rest front edge, each with a pocket for a 3M Bumpon Protective Products SJ5012
 # (cylindrical, flat top, Ø12.7 x 3.5 mm, +-0.5 mm; same shape as SJ5312 transparent and SJ5412 true white). The bumpons
 # fill the gap the stock bottom-case feet leave under the wrist rest; the pocket sets how far they stand proud of the pad
 # face (`DESK_GAP`) and holds them against sideways shear. Each pad runs `PAD_D` in from the front face: full height
 # near the wall, then a 45-deg corbel that prints without support. v7.4 had 6 mm deep flat pads, v7.5 11 mm deep flat
 # pads for the hemispherical Ø7.9 x 2.2 mm SJ5302. v7.10 drops the back row along the junction (owner): the printed
 # bottom case's front bumpons stand 24 mm behind it, so with it the assembly stood on 14 bumpons where 8 carry every
-# load case.
+# load case. v7.13 swaps the two inner pads (X +-30) for one on the X = 0 seam (owner): its pocket is cut half in each
+# half, so one bumpon carries both halves and bridges the glued seam. Its wings beside the centre rib stay solid from
+# the skin down: no honeycomb cell lies over them, and a corbel cut there would open the seam faces.
 BUMPON_D = spec.value("bumpon.sj5012")["diameter"]  # 3M SJ5012 diameter (datasheet nominal)
 BUMPON_D_MAX = BUMPON_D + spec.value("bumpon.sj5012")["tolerance"]  # Diameter at the +0.5 mm datasheet tolerance
 BUMPON_H = spec.value("bumpon.sj5012")["height"]  # 3M SJ5012 height (datasheet nominal)
 DESK_GAP = spec.value("desk.gap")  # Pad face to desk with the keyboard on its stock feet: estimated, not measured
 POCKET_DEPTH = round(BUMPON_H - DESK_GAP, 3)  # Pocket depth along the desk-plane normal (1.50 mm)
 POCKET_D = round(BUMPON_D_MAX + 0.4, 3)       # Pocket diameter (13.60 mm): 0.2 mm per side at the largest bumpon
-PAD_X = (30.0, 119.0)   # Pad centres, |X| (print frame)
+PAD_X = (-119.0, 0.0, 119.0)  # Pad centres, X (print frame); the centre pad straddles the X = 0 split
 PAD_W = 16.0            # Pad width (X): 1.2 mm wall each side of the pocket
 PAD_D = 16.0            # Pad depth (Y) from the outer face: 1.2 mm wall each side of the pocket
 PAD_COLUMN_D = 6.0      # Full-height part of the pad at least, wall included
@@ -261,8 +263,8 @@ PAD_TIP_T = round(POCKET_DEPTH + 1.0, 3)      # Vertical land at the pad's inner
 
 
 def pad_centres() -> list[tuple[float, float]]:
-    """Print-frame X, Y of the 4 bumpon pad centres along the front edge."""
-    return [(s * c, PAD_D / 2) for c in PAD_X for s in (-1.0, 1.0)]
+    """Print-frame X, Y of the 3 bumpon pad centres along the front edge."""
+    return [(x, PAD_D / 2) for x in PAD_X]
 
 
 def usb_notch_print(board_id: str) -> tuple[float, float]:
@@ -540,14 +542,14 @@ def build_halves(board_id: str, *, inserts: bool = False, strike_inserts: bool =
     back_inner_y = WRIST_D + CASE_D - SKIRT_WALL
     body -= prism_xz(usb_xz, back_inner_y - 1.0, back_inner_y + SKIRT_WALL + 1.0)
 
-    # 8. Wrist rest: the two interior hollows under the skin (contoured around the 4 front bumpon pads), the
+    # 8. Wrist rest: the two interior hollows under the skin (contoured around the 3 front bumpon pads), the
     #    right-side socket boss strip (X 3.5..9.8, standing 0.2 mm into the skin: a flat overhang otherwise, and down to
     #    the desk plane, flush with the centre rib and the dovetail tongues), the
     #    45-deg pad undercuts and the bumpon pockets.
     assert (PAD_D - BUMPON_D_MAX) / 2 >= 1.0 and PAD_W >= BUMPON_D_MAX + 2.0, "bumpon pad too small"
     w_in_x = round(CASE_W / 2 - WRIST_WALL, 3)
-    left_pads = [sg.box(-(c + PAD_W / 2), -10.0, -(c - PAD_W / 2), PAD_D / 2).union(
-        sg.Point(-c, PAD_D / 2).buffer(PAD_W / 2, quad_segs=32)) for c in PAD_X]
+    left_pads = [sg.box(x - PAD_W / 2, -10.0, x + PAD_W / 2, PAD_D / 2).union(
+        sg.Point(x, PAD_D / 2).buffer(PAD_W / 2, quad_segs=32)) for x in PAD_X if x <= 0.0]
     left_hollow = sg.Polygon([(-w_in_x + 5.5, 2.2), (-4.0, 2.2), (-4.0, 77.8), (-w_in_x, 77.8), (-w_in_x, 7.7)]).difference(
         unary_union(left_pads))
     assert left_hollow.geom_type == "Polygon", left_hollow.geom_type
@@ -560,14 +562,16 @@ def build_halves(board_id: str, *, inserts: bool = False, strike_inserts: bool =
     # Pad undercuts: each pad's underside rises at 45 deg to a `PAD_TIP_T` vertical land at its inner edge, so it prints
     # without support; the pad stays full height where that slope meets the skin, at least `PAD_COLUMN_D` from the wall.
     # Only cuts: the pad face stays the desk plane and the pad sides the hollow notch, and the cut reaches 1 mm into the
-    # empty bay past the pad's sides and inner edge (no coincident faces).
+    # empty bay past the pad's sides and inner edge (no coincident faces). The seam pad has no undercut: its wings are
+    # 4 mm columns against the centre rib.
     z_tip = z_desk_in_print_frame(PAD_D) - PAD_TIP_T  # underside at the pad's inner edge
     y_out = PAD_D + 1.0
     below_slope = sg.Polygon([(y_out, z_tip + 1.0), (PAD_D - 100.0, z_tip - 100.0), (y_out, z_tip - 100.0)])
     undercut = sg.box(PAD_COLUMN_D, SKIN_T, y_out, z_tip + 1.0).intersection(below_slope)
     assert undercut.geom_type == "Polygon" and undercut.area > 1.0, undercut
-    for x0 in sorted(s * c - PAD_W / 2 for c in PAD_X for s in (-1.0, 1.0)):
-        body -= prism_yz(undercut, x0 - 1.0, x0 + PAD_W + 1.0)
+    for x in PAD_X:
+        if x != 0.0:
+            body -= prism_yz(undercut, x - PAD_W / 2 - 1.0, x + PAD_W / 2 + 1.0)
 
     # Bumpon pockets: on the desk plane (x along X, v up the 6-deg slope, normal out of the pad faces), a 72-gon
     # circumscribing `POCKET_D` centred on each pad, `POCKET_DEPTH` into the pad and 1 mm out past its face. Flat facets
@@ -786,7 +790,7 @@ def main() -> None:
     )
 
     report = {
-        "version": "v7.12-ph60-rev3-default",
+        "version": "v7.13-seam-bumpon",
         "generator": "manifold3d mesh CSG (build_topcase_draft.py) + 28px/mm gasket metrology",
         "inserts": use_inserts,
         "strike_inserts": use_inserts,
