@@ -12,8 +12,8 @@ SHA256 in [`PROVENANCE.json`](PROVENANCE.json). Regenerate everything here with
 | File | Use |
 | --- | --- |
 | `maru60-gerbers.zip` | Upload as the PCB. 11 Gerber layers, PTH and NPTH drill files. |
-| `bom-jlcpcb.csv` | Upload as the assembly BOM (53 part numbers, 308 placements). |
-| `cpl-jlcpcb.csv` | Upload as the placement file (130 top, 178 bottom). |
+| `bom-jlcpcb.csv` | Upload as the assembly BOM (51 part numbers, 307 placements). |
+| `cpl-jlcpcb.csv` | Upload as the placement file (130 top, 177 bottom). |
 | `bom-full.csv` | Every footprint, including what is *not* assembled and why. |
 | `parts.json` | Part selection rules and the stock snapshot date. |
 
@@ -21,7 +21,7 @@ SHA256 in [`PROVENANCE.json`](PROVENANCE.json). Regenerate everything here with
 
 | Part | Situation on 2026-11-11 | What to do |
 | --- | --- | --- |
-| `U2` MAX38902AATA+T (C3747581) | **0 in stock** | Buy through JLCPCB *Global Sourcing* (or consign it) and wait for it to arrive in your parts library before placing the assembly order. Without U2 the board has no 3.3 V. |
+| `U2` AP2112K-3.3TRG1 (C51118) | in stock | Replaces the out-of-stock MAX38902AATA+T. 3.3 V 600 mA in SOT-23-5; no BYP capacitor, output sense or minimum load. |
 | Hot-swap sockets, Kailh CPG151101S11 (C2803348) | 0 in stock | Not in the BOM. Hand-solder one per switch (62 for HHKB/WKL), or pre-order and add the `SW*` rows from `bom-full.csv`. |
 | `U13` TPD6E05U06RVZR | 51 in stock | Check stock on the day. |
 | `U1` RP2350A | in stock | Stepping **A4** is required. Ask in the order remark that the marking is confirmed. |
@@ -86,7 +86,11 @@ Shift (1.75U + 1U)**.
 ## 6. What changed since the 0/0 prototype
 
 See the [checkpoint README](../experiments/resume-20261111-order-candidate/README.md).
-In short: 64 top-side parts moved out from under switch housings, the Caps Lock
-LEDs got a second land site, three footprint/layout corrections from the
-datasheet review, the buck input capacitor went to 10 µF and `C100` to 22 µF,
-and five values now name parts that can be bought.
+In short: 64 top-side parts moved out from under switch housings, `C200` moved
+to the bottom beside the LED rail via and is populated again, the Caps Lock LEDs
+got a second land site, three footprint/layout corrections from the datasheet
+review, the out-of-stock MAX38902A LDO became an AP2112K-3.3 in SOT-23-5 (so
+`C142`, `R163` and the In2 sense jumper went away), switch pin holes grew to
+Kailh's 3.05 mm, every SK6805 land site got a pin-1 dot, the buck input
+capacitor went to 10 µF on both C136 and C137 and `C100` to 22 µF, and five
+values now name parts that can be bought.

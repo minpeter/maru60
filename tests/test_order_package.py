@@ -46,9 +46,13 @@ class OrderPackage(unittest.TestCase):
             self.assertIn(row["Layer"], ("Top", "Bottom"))
             float(row["Mid X"]), float(row["Mid Y"]), float(row["Rotation"])
 
-    def test_parts_under_switch_housings_are_not_assembled(self):
+    def test_relocated_parts_are_on_the_bottom(self):
         full = {row["Reference"]: row for row in csv.DictReader((ORDER / "bom-full.csv").open())}
-        self.assertEqual(full["C200"]["Assembled by JLCPCB"], "no")
+        # C200 left its under-switch site for B.Cu beside the +4V_LED via, and
+        # LED75 relays the Caps chain from the bottom; neither sits under an MX
+        # housing any more.
+        self.assertEqual(full["C200"]["Side"], "Bottom")
+        self.assertEqual(full["C200"]["Assembled by JLCPCB"], "yes")
         self.assertEqual(full["LED75"]["Side"], "Bottom")
         self.assertEqual(len(full), self.prov["summary"]["footprints"])
 

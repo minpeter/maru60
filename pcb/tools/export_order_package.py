@@ -12,7 +12,8 @@ into pcb/order/:
     gerbers/               11 layer Gerbers, PTH and NPTH drill files, drill maps
     maru60-gerbers.zip     the same files, ready to upload
     bom-jlcpcb.csv         Comment, Designator, Footprint, LCSC Part # (assembled parts only)
-    cpl-jlcpcb.csv         Designator, Mid X, Mid Y, Layer, Rotation (same designators)
+    cpl-jlcpcb.csv         Designator, Mid X, Mid Y, Layer, Rotation (same designators); rotations and
+                           centres come from jlcpcb-placement.json, fitted to JLCPCB's own footprints
     bom-full.csv           every footprint with MPN, LCSC number and why it is or is not assembled
     PROVENANCE.json        board hash, commands, counts, checks, file hashes
 
@@ -111,6 +112,8 @@ def main() -> int:
     fps = json.loads((scratch / "board.json").read_text())["fps"]
     pos = {r["Ref"]: r for r in csv.DictReader((scratch / "kicad-pos.csv").open())}
     parts = json.loads(args.parts.read_text())
+    fit_path = out / "jlcpcb-placement.json"
+    fitted = json.loads(fit_path.read_text())["placements"] if fit_path.exists() else {}
 
     rows, unmatched = [], []
     for fp in sorted(fps, key=lambda f: natural(f["ref"])):
@@ -157,7 +160,19 @@ def main() -> int:
         w.writerow(["Designator", "Mid X", "Mid Y", "Layer", "Rotation"])
         for r in asm:
             p = pos[r["ref"]]
-            w.writerow([r["ref"], f"{float(p['PosX']):.4f}", f"{float(p['PosY']):.4f}", "Top" if p["Side"] == "top" else "Bottom", f"{float(p['Rot']):.2f}"])
+            side = "Top" if p["Side"] == "top" else "Bottom"
+            f_ = fitted.get(r["ref"])
+            if f_ and f_.get("status") == "fitted" and f_["side"] == side and f_["lcsc"] == r["lcsc"]:
+                # rotation and centre fitted to the footprint JLCPCB places from (fit_jlcpcb_placement.py)
+                x, y, a = f_["x"], -f_["y"], f_["rotation"]
+                r["placement"] = "fitted"
+                r["fit_rms"] = f_["rms_mm"]
+            else:
+                # KiCad position; rotation by the usual convention (bottom side: 180 - angle), no per-part correction
+                x, y = float(p["PosX"]), float(p["PosY"])
+                a = float(p["Rot"]) % 360 if side == "Top" else (180 - float(p["Rot"])) % 360
+                r["placement"] = "convention"
+            w.writerow([r["ref"], f"{x:.4f}", f"{y:.4f}", side, f"{a:.2f}"])
     with (out / "bom-full.csv").open("w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["Reference", "Value", "Footprint", "Side", "Assembled by JLCPCB", "Reason if not", "Manufacturer", "MPN", "LCSC", "Library class", "Polarised", "Notes"])
@@ -166,6 +181,8 @@ def main() -> int:
                         "" if r["assemble"] else r["reason"], r["mfr"], r["mpn"], r["lcsc"], r["class"], "yes" if r["polarised"] else "", r["notes"]])
     bom_refs = {d for row in csv.DictReader((out / "bom-jlcpcb.csv").open()) for d in row["Designator"].split(",")}
     cpl_refs = {row["Designator"] for row in csv.DictReader((out / "cpl-jlcpcb.csv").open())}
+    polar_unfitted = sorted(r["ref"] for r in asm if r["polarised"] and r.get("placement") != "fitted")
+    check("every polarised part has a rotation fitted to JLCPCB's own footprint", not polar_unfitted, polar_unfitted)
     check("BOM and CPL list exactly the same designators", bom_refs == cpl_refs, {"bom": len(bom_refs), "cpl": len(cpl_refs)})
 
     # 4. Gerbers and drill files
@@ -202,6 +219,9 @@ def main() -> int:
         "out_of_stock_at_snapshot": sorted({r["mpn"] for r in asm if r["stock"] == 0}),
         "not_assembled": {k: sorted((r["ref"] for r in rows if not r["assemble"] and r["reason"] == k), key=natural)
                           for k in sorted({r["reason"] for r in rows if not r["assemble"]})},
+        "placements_fitted_to_jlcpcb_footprints": sum(1 for r in asm if r.get("placement") == "fitted"),
+        "placements_by_convention_only": sorted((r["ref"] for r in asm if r.get("placement") != "fitted"), key=natural),
+        "fitted_with_land_pattern_difference_over_0.15mm": sorted((r["ref"] for r in asm if r.get("fit_rms", 0) > 0.15), key=natural),
         "polarised_refs_to_check_in_preview": sorted((r["ref"] for r in asm if r["polarised"] and not r["ref"].startswith(("D", "LED"))), key=natural),
     }
     prov = {
@@ -215,7 +235,7 @@ def main() -> int:
         "summary": summary,
         "checks": checks,
         "commands": log,
-        "files": {str(p.relative_to(out)): sha256(p) for p in sorted(out.rglob("*")) if p.is_file() and p.name not in ("PROVENANCE.json", "README.md", "parts.json")},
+        "files": {str(p.relative_to(out)): sha256(p) for p in sorted(out.rglob("*")) if p.is_file() and p.name not in ("PROVENANCE.json", "README.md", "parts.json", "jlcpcb-placement.json")},
     }
     (out / "PROVENANCE.json").write_text(json.dumps(prov, indent=1) + "\n")
     print(json.dumps(summary, indent=1))

@@ -40,14 +40,6 @@
    "notes": "SWD header, hand-fit only if a debug probe is needed (SWDIO / GND / SWCLK). TP7/TP8 carry the same nets."
   },
   {
-   "refs": [
-    "C200"
-   ],
-   "assemble": false,
-   "kind": "dnp",
-   "notes": "Bypass capacitor of LED1. Its only possible position is under the Esc switch housing; LED1 shares C201 and the rail bulk capacitance."
-  },
-  {
    "footprint_re": "^MX[-_]",
    "assemble": false,
    "kind": "hand_solder",
@@ -92,7 +84,7 @@
    "lcsc": "C96446",
    "class": "basic",
    "desc": "10 uF 25 V X5R 0603",
-   "notes": "Buck input capacitor (was 4.7 uF). Samsung DC-bias data: -52.8% at 5 V, 4.7 uF effective, against TI's 10 uF typical. Input ripple at 0.3 A is about 20 mV."
+   "notes": "Buck input, C137 and C136 at the VIN pin. Samsung DC-bias data: -52.8% at 5 V, 4.7 uF effective each, 9.4 uF together against TI's 10 uF typical."
   },
   {
    "value_re": "^22uF 10V X5R$",
@@ -150,14 +142,6 @@
    "lcsc": "C86285",
    "class": "extended",
    "desc": "15 pF 50 V C0G 0402"
-  },
-  {
-   "value_re": "^10nF 50V C0G",
-   "mfr": "Murata",
-   "mpn": "GRM1885C1H103JA01D",
-   "lcsc": "C85973",
-   "class": "extended",
-   "desc": "10 nF 50 V C0G 0603"
   },
   {
    "value_re": "^10nF 10% 50V",
@@ -335,15 +319,6 @@
    "desc": "10.0 k 0.1% 25 ppm 0603"
   },
   {
-   "value_re": "^31.6k 0.1%",
-   "mfr": "YAGEO",
-   "mpn": "RT0603BRD0731K6L",
-   "lcsc": "C705766",
-   "class": "extended",
-   "desc": "31.6 k 0.1% 25 ppm 0603",
-   "notes": "LDO minimum-load resistor. The earlier 10 ppm/K Vishay part is not stocked; 25 ppm/K changes the worst-case load by under 0.3%."
-  },
-  {
    "value_re": "^1N4148W",
    "mfr": "Changjiang (CJ)",
    "mpn": "1N4148W",
@@ -436,15 +411,14 @@
    "notes": "Stepping A4 is required (A2 has the GPIO pull-down erratum E9). Ask the assembler to confirm the marking before placement."
   },
   {
-   "value_re": "^MAX38902AATA",
-   "mfr": "Analog Devices",
-   "mpn": "MAX38902AATA+T",
-   "lcsc": "C3747581",
+   "value_re": "^AP2112K-3.3",
+   "mfr": "Diodes Incorporated",
+   "mpn": "AP2112K-3.3TRG1",
+   "lcsc": "C51118",
    "class": "extended",
-   "stock": 0,
-   "desc": "3.3 V 500 mA LDO TDFN-8 2x2",
+   "desc": "3.3 V 600 mA LDO SOT-23-5",
    "polarised": true,
-   "notes": "OUT OF STOCK at JLCPCB on the snapshot date. Order it through JLCPCB Global Sourcing (or consign it) before placing the assembly order."
+   "notes": "Replaces MAX38902AATA+T, which JLCPCB does not stock. EN is tied to VIN; pin 4 is not connected."
   },
   {
    "value_re": "^W25Q32JVSSIQ",
