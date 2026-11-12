@@ -22,8 +22,9 @@ Board SHA256: `c371018deed3ed99cf36f0ce974fb4153ebf05a1c8f8d35df3d4e4224f936129`
   holes. The DFM deck now checks them separately: nine GND barrels inside the
   exposed pad, all copper layers, 0.20–0.30 mm drills and minimum annulus.
   Existing 0.60 mm lands give 0.175 mm annuli; no hole enlargement is needed.
-- The [dedicated 2U HHKB plate](../../../models/maru60-hhkb-plate-pcb-mount-2u-backspace.dxf)
-  has center-switch retention edges and PCB-mount stabilizer relief. It is
+- The [dedicated 2U HHKB plate](../../../models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.dxf)
+  preserves the original plate-mount 7U cutout and adds center-switch retention
+  edges and PCB-mount **2U Backspace** stabilizer relief. It is
   **not** a universal split/2U plate. Use the split plate with split switches.
 
 ## Saved checks
@@ -54,11 +55,20 @@ sensitivity study, not guaranteed supplier corners or an increase in USB speed.
 ## Fit gates before fabrication
 
 **Selected spacebar hardware:** Design Studio 7U **plate-mount** stabilizer
-(user selection). The generated plate currently includes extra relief for a
-PCB-mount 7U stabilizer. It has **not** been revised or validated for the selected
-product's retaining clips; do not fabricate that plate as the selected final
-configuration. Confirm the product drawing and revise the 7U cutout first.
-This 7U selection does not specify the separate 2U Backspace stabilizer.
+(user selection). The selected plate now restores the original INKC plate-mount
+7U cutout, including its exact arc vertices, and removes the additional
+PCB-mount clearance holes from this variant. PCB NPTH stabilizer holes remain
+unused; they do not need to pass through the plate. The prior
+`maru60-hhkb-plate-pcb-mount-2u-backspace` files are an **unselected PCB-mount
+alternative**, not the selected product's plate.
+
+The exact Design Studio model/drawing has not yet been supplied. Original-cutout
+preservation is verified, but product-specific clip retention, wire/housing
+clearance to PCB components, case fit and supported plate thickness are **not**.
+Use the nominal case-stack plate thickness of 1.5 mm only after confirming the
+product's clip range; a 1.6 mm FR4 option is not automatically equivalent.
+Do not fabricate the selected variant until these checks are resolved. This
+7U selection does not specify the separate 2U Backspace stabilizer.
 
 1. Select an exact Mill-Max 3305 receptacle variant and verify its manufacturer
    drawing against the **1.70 mm finished holes / 2.50 mm lands**. Test a coupon
@@ -88,3 +98,18 @@ tools/run_kicad9.sh python3 pcb/tools/dump_board_geometry.py pcb/experiments/res
 .venv/bin/python pcb/tools/signal_integrity/check_backspace_leds.py build/backspace-geometry.json pcb/experiments/resume-20261112-backspace-2u/pcb/maru60.kicad_pcb build/backspace-led/results.json --lines pcb/experiments/resume-20261112-backspace-2u/qa/lines.json
 .venv/bin/python pcb/tools/analyze_pdn.py build/backspace-geometry.json build/backspace-pdn
 ```
+
+## Plate-mount 7U update
+
+Generate the selected plate with `.venv/bin/python pcb/tools/build_plate_backspace_2u.py`.
+Use `--seven-u-mount pcb` only for the unselected PCB-mount alternative.
+The new [DXF](../../../models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.dxf),
+[Gerbers](../../../models/maru60-hhkb-plate-7u-plate-mount-2u-backspace-gerbers.zip)
+and [report](../../../models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.json)
+are separately named to avoid confusing mount types. The report deliberately
+keeps `product_fit_verified: false` until supplier dimensions are available.
+
+Three regression tests confirm that only the split Backspace openings change,
+that PCB-mount 7U relief is absent from the selected variant, and that the
+exported DXF retains the original 7U arc vertices. PCB copper, the 2U Backspace
+opening, outer case outline and previous electrical checks are unchanged.

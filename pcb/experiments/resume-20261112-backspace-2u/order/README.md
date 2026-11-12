@@ -35,8 +35,11 @@ two SK6805 LEDs total, choosing the following **board-coordinate** sites:
 
 Match the pin-1 dots; leave the alternate site of each reference empty.
 Both LEDs are required to preserve the daisy chain. Do not populate all four
-sites: duplicated outputs would drive one another. Use the dedicated 2U plate
-for center population and the split plate for split population. Never fit the
+sites: duplicated outputs would drive one another. Use the selected [7U plate-mount / 2U Backspace plate](../../../../models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.dxf)
+for center population and the original plate-mount split plate for split population.
+The Design Studio 7U product's exact clip dimensions and supported plate
+thickness still need verification; restored stock geometry is not product
+qualification. The former `plate-pcb-mount-2u-backspace` plate is unselected. Never fit the
 center and split switches simultaneously.
 
 The center switch is electrically SW14, matrix row 0 / column 13 (zero based).
