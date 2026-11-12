@@ -15,6 +15,21 @@ dependency. Diagnostic counts in the manifest are saved observations.
 | Bounded development prototype | [Open project](experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pro) | 0 / 0 |
 | **Order candidate** | [Open project](experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pro) | 0 / 0 |
 
+## Backspace 2U alternative (2026-11-12)
+
+The [new alternative](experiments/resume-20261112-backspace-2u/README.md) includes
+2U/split Backspace lands, a dedicated 2U plate and three additional LED damping
+resistors. Native CAD checks, 32 DFM rules, 54 changed-hop LED cases and Gerber
+readback pass. Its separate fabrication/assembly package is complete; **do not
+order it until the receptacle variant and stabilizer/plate fit are confirmed**.
+The selected order candidate below remains unchanged. The new candidate's own
+`MANIFEST.json` binds its CAD and evidence; the primary-selection checker does
+not check this experimental manifest.
+
+The original candidate's thermal-hole recommendation warnings have also been
+resolved by classifying U1.61's nine thermal barrels separately and validating
+their dimensions. Copper and hole sizes remain unchanged.
+
 ## Order candidate (2026-11-11)
 
 PCB `8057453f`, derived from the development prototype. It is what

@@ -95,9 +95,36 @@ L = {k: v[0] for k, v in LIMITS.items()}
 FINE = ("U1", "U13", "U8", "U18", "U2", "U11", "J1", "J3", "U10")
 
 
+def thermal_barrels(d):
+    """Guard the specific thermal-pad classification used by the DRC deck.
+
+    Only the nine ground barrels within U1's exposed pad qualify. Component
+    lead holes retain the PTH recommendations, including other pads of U1.
+    """
+    fp = next(f for f in d["fps"] if f["ref"] == "U1")
+    pads = [p for p in fp["pads"] if p["num"] == "61"]
+    ep = unary_union([Polygon(poly) for p in pads if not p["drill"][0]
+                      for poly in p["poly"] if len(poly) >= 3])
+    barrels = [p for p in pads if p["drill"][0]]
+    rows = []
+    for p in barrels:
+        drill = max(p["drill"])
+        ring = (min(p["sx"], p["sy"]) - drill) / 2
+        inside = ep.covers(Point(p["x"], p["y"]).buffer(drill / 2))
+        ok = (p["net"] == "GND" and abs(p["drill"][0] - p["drill"][1]) < 1e-6
+              and 0.20 <= drill <= 0.30 and ring >= L["via_annular_pref"]
+              and inside and all(layer in p["layers"] for layer in ("F.Cu", "In1.Cu", "In2.Cu", "B.Cu")))
+        rows.append({"at_mm": [p["x"], p["y"]], "drill_mm": drill,
+                     "annular_mm": round(ring, 4), "inside_exposed_pad": inside, "pass": ok})
+    return {"classification": "U1.61 plated thermal barrels; no inserted component leads",
+            "expected_count": 9, "count": len(rows), "barrels": rows,
+            "pass": len(rows) == 9 and all(r["pass"] for r in rows)}
+
+
 def main():
     d = json.loads(Path(sys.argv[1]).read_text())
     res = {"limits": {k: {"value": v[0], "source": v[1]} for k, v in LIMITS.items()}}
+    res["thermal_barrels"] = thermal_barrels(d)
     xs = [e["x1"] for e in d["edges"]] + [e["x2"] for e in d["edges"]]
     ys = [e["y1"] for e in d["edges"]] + [e["y2"] for e in d["edges"]]
     outline = box(min(xs), min(ys), max(xs), max(ys))
@@ -155,6 +182,8 @@ def main():
     res["fiducials_on_board"] = [f["ref"] for f in d["fps"] if "fiducial" in f["fpid"].lower() or f["ref"].startswith("FID")]
     res["tooling_holes_1p152mm"] = sum(1 for f in d["fps"] for p in f["pads"] if abs(p["drill"][0] - 1.152) < 0.01)
     Path(sys.argv[2]).write_text(json.dumps(res, indent=1) + "\n")
+    if not res["thermal_barrels"]["pass"]:
+        raise SystemExit("U1 thermal-barrel classification/geometry failed; inspect before using the thermal DRC rules")
     print("via holes in SMD pads:", len(vip), [v["pad"] for v in vip][:12])
     for k, v in web.items():
         print("mask web", k, v["min_mask_web_mm"], "PASS" if v["pass"] else "FAIL")

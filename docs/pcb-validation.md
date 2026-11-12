@@ -90,3 +90,20 @@ wrapper continues to check the development prototype. The order candidate's
 net changes (the `_SRC` nets of the LED series resistors, `VBUS_SNUB` of the
 input snubber, `U2`'s pins) are in its exported netlist, stored as
 `qa/netlist.xml` in the checkpoint.
+
+## 2026-11-12 Backspace alternative
+
+[Candidate and replay commands](../pcb/experiments/resume-20261112-backspace-2u/README.md).
+This separate CAD snapshot has a new board hash and its own reports/package.
+Do not reuse the original candidate's global SI pass for it. Its LED report
+covers four changed hops and 54 assumed driver/population cases; exact
+track/via/pad equality on other nets does not establish unchanged return paths.
+The mechanical report includes a swept-solid case intersection with 0.5 mm
+margin, so a missing downward ray through an opening is no longer automatically
+classified as a collision. The 2 mm hardware protrusion and stabilizer envelope
+are assumptions awaiting supplier dimensions and physical fit tests.
+
+`python -m unittest discover -s tests -p 'test_backspace_candidate.py'` verifies
+the new candidate's archived file hashes, board/report binding, exported
+package consistency and mutually exclusive hand-assembly exclusions. It does
+not rerun CAD, ngspice, mechanical booleans or establish hardware qualification.

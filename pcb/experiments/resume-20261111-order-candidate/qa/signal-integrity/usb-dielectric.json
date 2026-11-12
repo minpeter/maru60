@@ -1,0 +1,62 @@
+{
+  "scope": "Assumed dielectric sensitivity only; no measured or supplier-guaranteed corners",
+  "inputs": [
+    {
+      "path": "build/improve-20261112/board.json",
+      "sha256": "2fcf7076f3d607b6cf22ccb1fe79db861bf8c95dde0fe746b4e0ab4ec316ff64"
+    },
+    {
+      "path": "build/si/out/lines.json",
+      "sha256": "ab2a22ef1def1e75befd6710438f97176f9b7c26f6dad39f7c9e657f832d21c4"
+    }
+  ],
+  "held_constant": "Geometry, copper thickness, mask, plane spacing, via L/C, ESD and connector capacitance",
+  "cases": [
+    {
+      "J1_to_RP2350_pins_ns": 0.9235,
+      "J1_to_27R_ns": 0.8831,
+      "skew_DP_minus_DM_ps": 9.89,
+      "limit_ns": 1.0,
+      "assumed_er": 3.8,
+      "Zdiff_ohm": 100.308,
+      "pass": true
+    },
+    {
+      "J1_to_RP2350_pins_ns": 0.9395,
+      "J1_to_27R_ns": 0.899,
+      "skew_DP_minus_DM_ps": 10.24,
+      "limit_ns": 1.0,
+      "assumed_er": 4.1,
+      "Zdiff_ohm": 97.609,
+      "pass": true
+    },
+    {
+      "J1_to_RP2350_pins_ns": 0.9553,
+      "J1_to_27R_ns": 0.9146,
+      "skew_DP_minus_DM_ps": 10.53,
+      "limit_ns": 1.0,
+      "assumed_er": 4.4,
+      "Zdiff_ohm": 95.123,
+      "pass": true
+    },
+    {
+      "J1_to_RP2350_pins_ns": 0.9709,
+      "J1_to_27R_ns": 0.93,
+      "skew_DP_minus_DM_ps": 10.84,
+      "limit_ns": 1.0,
+      "assumed_er": 4.7,
+      "Zdiff_ohm": 92.821,
+      "pass": true
+    },
+    {
+      "J1_to_RP2350_pins_ns": 0.9863,
+      "J1_to_27R_ns": 0.9453,
+      "skew_DP_minus_DM_ps": 11.15,
+      "limit_ns": 1.0,
+      "assumed_er": 5.0,
+      "Zdiff_ohm": 90.682,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

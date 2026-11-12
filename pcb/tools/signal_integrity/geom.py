@@ -141,6 +141,20 @@ class Board:
             layers = ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"]
             for l0, l1 in zip(layers, layers[1:]):
                 link((l0,) + k, (l1,) + k, 0.0, "via", v["d"], "via")
+        # A trace may terminate inside a via land without ending exactly at
+        # its drill center. Native copper connectivity accepts this contact;
+        # omitting it here incorrectly splits otherwise connected SI routes.
+        # Stay conservative: the endpoint itself must lie inside the land,
+        # not merely within a trace-width tolerance of it.
+        nodes = list(adj)
+        for v in self.vias_by_net[net]:
+            k = _k(v["x"], v["y"])
+            for n in nodes:
+                if n[0] not in PLANE_FOR:
+                    continue
+                distance = math.hypot(n[1] * Q - v["x"], n[2] * Q - v["y"])
+                if 2 * Q < distance < v["d"] / 2 - Q:
+                    link((n[0],) + k, n, distance, n[0], 0.15)
         # pads: connect every track node that lies inside the pad polygon
         nodes = list(adj.keys())
         for i, p in enumerate(self.pads_by_net[net]):

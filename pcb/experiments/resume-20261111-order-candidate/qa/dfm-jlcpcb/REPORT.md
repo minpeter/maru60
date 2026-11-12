@@ -5,8 +5,12 @@ SHA256 `8057453f75871b4df187fc1adfe50b0b870c53e2fcc7e5202948398253904107`.
 
 **Result: nothing here stops the order.** Every JLCPCB minimum is met, no
 silkscreen is closer than 0.15 mm to a pad or hole, and no via is inside an
-SMD pad. The one rule with findings is a recommendation that does not apply
-to the nine thermal vias it names.
+SMD pad. All 32 rules pass, including separate thermal-barrel recommendations
+for the nine U1.61 holes. The geometry check also requires nine GND barrels
+inside the exposed pad, connected through all four copper layers. This is a
+classification correction; the board and its 0.25 mm drills are unchanged.
+Enlarging these holes to a component-lead recommendation would increase solder
+loss through the exposed pad without a demonstrated benefit.
 
 The limits are the figures on JLCPCB's capability pages as read on 2026-11-11;
 each is in [`results.json`](results.json) with the page it came from. Nothing
@@ -40,7 +44,7 @@ the order is placed.
 | Via diameter / drill | 0.25 / 0.15 mm | 0 | 0.5 / 0.25 mm |
 | Via diameter with no surcharge | 0.45 mm | 0 | 0.5 mm |
 | Via annular ring, minimum / preferred | 0.05 / 0.075 mm | 0 | 0.125 mm |
-| Plated-hole annular ring, minimum / recommended | 0.15 / 0.20 mm | 0 | 0.20 mm (`J1` shell slots); the `U1` thermal vias have 0.175 mm |
+| Plated-hole annular ring, minimum / recommended | 0.15 / 0.20 mm | 0 | 0.20 mm (`J1` shell slots); the `U1` thermal vias have 0.175 mm and are checked as thermal barrels |
 | Non-plated hole size, slot width | 0.5 mm, 1.0 mm | 0 | |
 | Plated slot width, minimum / recommended | 0.35 / 0.5 mm | 0 | |
 | Via hole to other copper | 0.20 mm | 0 | |
@@ -52,7 +56,8 @@ the order is placed.
 | Silkscreen text height | 1.0 mm | 0 | 1.0 mm |
 | Silkscreen text stroke | 0.15 mm | 0 | 0.15 mm |
 | Silkscreen to pad | 0.15 mm | 0 | |
-| Recommended plated component hole | 0.5 mm | 9 (not a defect) | 0.25 mm: the nine thermal vias under `U1` are drawn as pads; JLCPCB's via minimum applies to them |
+| Recommended plated component hole | 0.5 mm | 0 | Component lead holes only; U1.61 thermal barrels checked separately |
+| Thermal barrels at U1.61 | hole 0.20–0.30 mm; annular ring ≥0.075 mm | 0 | Nine holes, 0.25 mm drill, 0.175 mm annular ring; unchanged copper |
 
 ## Geometry checks
 

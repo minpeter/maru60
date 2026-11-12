@@ -60,6 +60,8 @@ class Maps:
         self.w, self.h = int(round((x1 - self.x0) / G)) + 1, int(round((y1 - self.y0) / G)) + 1
         hard = {L: Image.new("1", (self.w, self.h), 0) for L in LAYERS}
         soft = {L: Image.new("1", (self.w, self.h), 0) for L in LAYERS}
+        smd = Image.new("1", (self.w, self.h), 0)
+        holes = Image.new("1", (self.w, self.h), 0)
         self.soft_items = {L: [] for L in LAYERS}
         px = lambda x, y: ((x - self.x0) / G, (y - self.y0) / G)
 
@@ -77,7 +79,12 @@ class Maps:
 
         for f in d["fps"]:
             for p in f["pads"]:
+                if not p["drill"][0]:
+                    for pl in p["poly"]:
+                        if len(pl) >= 3:
+                            ImageDraw.Draw(smd).polygon([px(*q) for q in pl], fill=1)
                 if p["drill"][0] > 0:
+                    disc(holes, p["x"], p["y"], max(p["drill"]) / 2)
                     for L in LAYERS:       # the hole itself, grown; slots as a disc of the longer side
                         disc(hard[L], p["x"], p["y"], max(p["drill"]) / 2 + HOLE_EXTRA)
                 if p["net"] in own and not (f["ref"], p["num"]) in keep:
@@ -115,6 +122,12 @@ class Maps:
             self.soft_items[t["layer"]].append(t)
         xs = [e["x1"] for e in d["edges"]] + [e["x2"] for e in d["edges"]]
         ys = [e["y1"] for e in d["edges"]] + [e["y2"] for e in d["edges"]]
+        # Own-net copper is traversable by a track, but an ordinary drilled
+        # via must not be placed in an SMD land. Reserve 0.10 mm of mask
+        # beyond the 0.125 mm drill radius, including the route endpoints.
+        self.dist_smd = ndimage.distance_transform_edt(~np.array(smd, dtype=bool)) * G
+        self.dist_holes = ndimage.distance_transform_edt(~np.array(holes, dtype=bool)) * G
+        self.reuse_vias = [(v["x"], v["y"]) for v in d["vias"] if v["net"] in own]
         self.dist_hard, self.dist_all = {}, {}
         for L in LAYERS:
             h = np.array(hard[L], dtype=bool)
@@ -168,6 +181,15 @@ def search(m, start, goal, soft_cost, via_cost, need=HALF + CLEAR, via_room=VIA_
             cols.append(idx[yb, xb][ok] + li * n)
             costs.append(c[ok])
     room = np.minimum(m.dist_all["F.Cu"][::STEP, ::STEP], m.dist_all["B.Cu"][::STEP, ::STEP]) >= via_room
+    room &= m.dist_smd[::STEP, ::STEP] >= 0.25  # drill radius + mask web + half a raster cell
+    room &= m.dist_holes[::STEP, ::STEP] >= 0.60  # 0.45 mm pad-hole gap + via drill radius + raster margin
+    # An existing own-net barrel is already a physical layer transition.
+    # Its grid point may fall inside the conservative mask exclusion above.
+    for x, y in (m.reuse_vias if via_room < 0.7 else []):
+        cy, cx = m.cell(x, y)
+        cy, cx = cy // STEP, cx // STEP
+        if 0 <= cy < H and 0 <= cx < W and free["F.Cu"][cy, cx] and free["B.Cu"][cy, cx]:
+            room[cy, cx] = True
     rows.append(idx[room])
     cols.append(idx[room] + n)
     costs.append(np.full(int(room.sum()), via_cost))
@@ -280,7 +302,7 @@ def main():
     avoid = [tuple(float(v) for v in q.split(":")) for q in arg("--avoid", "").split(",") if q]
     m = Maps(d, own, win, avoid=avoid)
     need = half + clear
-    res = search(m, start, goal, soft_cost, via_cost, need, VIA_ROOM + (clear - CLEAR) if half == HALF else half + 0.25 + clear)
+    res = search(m, start, goal, soft_cost, via_cost, need, VIA_ROOM + (clear - CLEAR) if half == HALF else 0.25 + clear)
     if res is None:
         raise SystemExit("no route")
     path, cost = res

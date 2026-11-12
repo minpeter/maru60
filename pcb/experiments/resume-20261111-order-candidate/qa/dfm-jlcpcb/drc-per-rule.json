@@ -191,137 +191,10 @@
   {
    "rule": "jlc_rec_pth_hole_0.50",
    "constraint": "hole_size",
-   "violations": 9,
-   "min_actual_mm": 0.25,
+   "violations": 0,
+   "min_actual_mm": null,
    "unconnected": 0,
-   "found": [
-    {
-     "type": "drill_out_of_range",
-     "severity": "warning",
-     "actual_mm": 0.25,
-     "items": [
-      {
-       "what": "PTH pad 61 [GND] of U1",
-       "at": [
-        109.8,
-        82.7
-       ]
-      }
-     ]
-    },
-    {
-     "type": "drill_out_of_range",
-     "severity": "warning",
-     "actual_mm": 0.25,
-     "items": [
-      {
-       "what": "PTH pad 61 [GND] of U1",
-       "at": [
-        111.0,
-        82.7
-       ]
-      }
-     ]
-    },
-    {
-     "type": "drill_out_of_range",
-     "severity": "warning",
-     "actual_mm": 0.25,
-     "items": [
-      {
-       "what": "PTH pad 61 [GND] of U1",
-       "at": [
-        112.2,
-        82.7
-       ]
-      }
-     ]
-    },
-    {
-     "type": "drill_out_of_range",
-     "severity": "warning",
-     "actual_mm": 0.25,
-     "items": [
-      {
-       "what": "PTH pad 61 [GND] of U1",
-       "at": [
-        109.8,
-        81.5
-       ]
-      }
-     ]
-    },
-    {
-     "type": "drill_out_of_range",
-     "severity": "warning",
-     "actual_mm": 0.25,
-     "items": [
-      {
-       "what": "PTH pad 61 [GND] of U1",
-       "at": [
-        111.0,
-        81.5
-       ]
-      }
-     ]
-    },
-    {
-     "type": "drill_out_of_range",
-     "severity": "warning",
-     "actual_mm": 0.25,
-     "items": [
-      {
-       "what": "PTH pad 61 [GND] of U1",
-       "at": [
-        112.2,
-        81.5
-       ]
-      }
-     ]
-    },
-    {
-     "type": "drill_out_of_range",
-     "severity": "warning",
-     "actual_mm": 0.25,
-     "items": [
-      {
-       "what": "PTH pad 61 [GND] of U1",
-       "at": [
-        109.8,
-        80.3
-       ]
-      }
-     ]
-    },
-    {
-     "type": "drill_out_of_range",
-     "severity": "warning",
-     "actual_mm": 0.25,
-     "items": [
-      {
-       "what": "PTH pad 61 [GND] of U1",
-       "at": [
-        111.0,
-        80.3
-       ]
-      }
-     ]
-    },
-    {
-     "type": "drill_out_of_range",
-     "severity": "warning",
-     "actual_mm": 0.25,
-     "items": [
-      {
-       "what": "PTH pad 61 [GND] of U1",
-       "at": [
-        112.2,
-        80.3
-       ]
-      }
-     ]
-    }
-   ]
+   "found": []
   },
   {
    "rule": "jlc_rec_plated_slot_width_0.50",
@@ -366,6 +239,22 @@
   {
    "rule": "jlc_rec_copper_to_routed_edge_0.30",
    "constraint": "edge_clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_u1_thermal_hole_0.20",
+   "constraint": "hole_size",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_u1_thermal_annular_0.075",
+   "constraint": "annular_width",
    "violations": 0,
    "min_actual_mm": null,
    "unconnected": 0,

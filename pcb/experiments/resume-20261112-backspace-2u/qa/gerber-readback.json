@@ -1,0 +1,200 @@
+{
+ "pass": true,
+ "parser": "gerbonara",
+ "checks": [
+  {
+   "check": "F_Cu: parses and has objects",
+   "pass": true,
+   "detail": 6455
+  },
+  {
+   "check": "In1_Cu: parses and has objects",
+   "pass": true,
+   "detail": 1103
+  },
+  {
+   "check": "In2_Cu: parses and has objects",
+   "pass": true,
+   "detail": 1009
+  },
+  {
+   "check": "B_Cu: parses and has objects",
+   "pass": true,
+   "detail": 6688
+  },
+  {
+   "check": "F_Paste: parses and has objects",
+   "pass": true,
+   "detail": 422
+  },
+  {
+   "check": "B_Paste: parses and has objects",
+   "pass": true,
+   "detail": 785
+  },
+  {
+   "check": "F_Silkscreen: parses and has objects",
+   "pass": true,
+   "detail": 1534
+  },
+  {
+   "check": "B_Silkscreen: parses and has objects",
+   "pass": true,
+   "detail": 4253
+  },
+  {
+   "check": "F_Mask: parses and has objects",
+   "pass": true,
+   "detail": 774
+  },
+  {
+   "check": "B_Mask: parses and has objects",
+   "pass": true,
+   "detail": 1071
+  },
+  {
+   "check": "Edge_Cuts: parses and has objects",
+   "pass": true,
+   "detail": 8
+  },
+  {
+   "check": "Edge.Cuts extent equals the board outline (+ stroke)",
+   "pass": true,
+   "detail": {
+    "gerber_mm": [
+     285.05,
+     94.65
+    ],
+    "board_mm": [
+     285.0,
+     94.6
+    ]
+   }
+  },
+  {
+   "check": "PTH: every round drill hit is a board hole of the same size",
+   "pass": true,
+   "detail": {
+    "hits": 1004,
+    "slots": 4,
+    "unmatched": [],
+    "oval_board_holes": 4
+   }
+  },
+  {
+   "check": "PTH: every round board hole is drilled",
+   "pass": true,
+   "detail": {
+    "board": 1004,
+    "drilled": 1004,
+    "sizes": {
+     "1.7": 6,
+     "1.0": 3,
+     "0.25": 926,
+     "0.3": 69
+    }
+   }
+  },
+  {
+   "check": "NPTH: every round drill hit is a board hole of the same size",
+   "pass": true,
+   "detail": {
+    "hits": 337,
+    "slots": 1,
+    "unmatched": [],
+    "oval_board_holes": 1
+   }
+  },
+  {
+   "check": "NPTH: every round board hole is drilled",
+   "pass": true,
+   "detail": {
+    "board": 337,
+    "drilled": 337,
+    "sizes": {
+     "3.048": 10,
+     "3.988": 75,
+     "1.702": 126,
+     "3.05": 124,
+     "0.65": 2
+    }
+   }
+  },
+  {
+   "check": "F_Cu: SMD pads present as flashes",
+   "pass": true,
+   "detail": {
+    "pads": 423,
+    "not_flashed_at_centre": 0,
+    "examples": []
+   }
+  },
+  {
+   "check": "F_Mask: SMD pads present as flashes",
+   "pass": true,
+   "detail": {
+    "pads": 423,
+    "not_flashed_at_centre": 0,
+    "examples": []
+   }
+  },
+  {
+   "check": "F_Paste: SMD pads present as flashes",
+   "pass": true,
+   "detail": {
+    "pads": 422,
+    "not_flashed_at_centre": 0,
+    "examples": []
+   }
+  },
+  {
+   "check": "F_Cu stays inside the outline",
+   "pass": true,
+   "detail": [
+    0.73,
+    1.059,
+    284.352,
+    94.0
+   ]
+  },
+  {
+   "check": "B_Cu: SMD pads present as flashes",
+   "pass": true,
+   "detail": {
+    "pads": 713,
+    "not_flashed_at_centre": 0,
+    "examples": []
+   }
+  },
+  {
+   "check": "B_Mask: SMD pads present as flashes",
+   "pass": true,
+   "detail": {
+    "pads": 713,
+    "not_flashed_at_centre": 1,
+    "examples": [
+     "U1.61"
+    ]
+   }
+  },
+  {
+   "check": "B_Paste: SMD pads present as flashes",
+   "pass": true,
+   "detail": {
+    "pads": 689,
+    "not_flashed_at_centre": 0,
+    "examples": []
+   }
+  },
+  {
+   "check": "B_Cu stays inside the outline",
+   "pass": true,
+   "detail": [
+    1.4,
+    1.119,
+    284.23,
+    94.05
+   ]
+  }
+ ]
+}

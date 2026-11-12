@@ -1,0 +1,45 @@
+{
+ "parts": [
+  {
+   "ref": "R189",
+   "kind": "R",
+   "value": "100 1%",
+   "footprint": "Maru60:R_0402_1005Metric",
+   "net1": "KEY_RGB_CHAIN_13_SRC",
+   "net2": "KEY_RGB_CHAIN_13",
+   "note": "Backspace option-site data damping, exactly one LED at each reference fitted."
+  },
+  {
+   "ref": "R190",
+   "kind": "R",
+   "value": "100 1%",
+   "footprint": "Maru60:R_0402_1005Metric",
+   "net1": "KEY_RGB_CHAIN_14_SRC",
+   "net2": "KEY_RGB_CHAIN_14",
+   "note": "Backspace option-site data damping, exactly one LED at each reference fitted."
+  },
+  {
+   "ref": "R191",
+   "kind": "R",
+   "value": "100 1%",
+   "footprint": "Maru60:R_0402_1005Metric",
+   "net1": "KEY_RGB_CHAIN_15_SRC",
+   "net2": "KEY_RGB_CHAIN_15",
+   "note": "Backspace option-site data damping, exactly one LED at each reference fitted."
+  }
+ ],
+ "relabel": [
+  {
+   "net": "KEY_RGB_CHAIN_13",
+   "to": "KEY_RGB_CHAIN_13_SRC"
+  },
+  {
+   "net": "KEY_RGB_CHAIN_14",
+   "to": "KEY_RGB_CHAIN_14_SRC"
+  },
+  {
+   "net": "KEY_RGB_CHAIN_15",
+   "to": "KEY_RGB_CHAIN_15_SRC"
+  }
+ ]
+}
