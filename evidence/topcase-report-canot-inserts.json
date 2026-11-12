@@ -1,6 +1,7 @@
 {
-  "version": "v7.12-ph60-rev3-default",
+  "version": "v7.13-seam-bumpon",
   "generator": "manifold3d mesh CSG (build_topcase_draft.py) + 28px/mm gasket metrology",
+  "inserts": true,
   "strike_inserts": true,
   "catch_hardware": "stock",
   "luban32": null,
@@ -4155,15 +4156,11 @@
       "tip_land": 2.5,
       "centres_world": [
         [
-          -30.0,
-          8.0
-        ],
-        [
-          30.0,
-          8.0
-        ],
-        [
           -119.0,
+          8.0
+        ],
+        [
+          0.0,
           8.0
         ],
         [
@@ -4178,9 +4175,9 @@
   "bodies": [
     {
       "name": "LeftHalf",
-      "volume_mm3": 91449.31,
-      "mass_petg_g": 116.1,
-      "triangles": 11524,
+      "volume_mm3": 90409.31,
+      "mass_petg_g": 114.8,
+      "triangles": 11028,
       "print_plate_bounds_mm": [
         [
           25.05,
@@ -4196,9 +4193,9 @@
     },
     {
       "name": "RightHalf",
-      "volume_mm3": 79571.5,
-      "mass_petg_g": 101.1,
-      "triangles": 10288,
+      "volume_mm3": 78524.46,
+      "mass_petg_g": 99.7,
+      "triangles": 9788,
       "print_plate_bounds_mm": [
         [
           53.38,
