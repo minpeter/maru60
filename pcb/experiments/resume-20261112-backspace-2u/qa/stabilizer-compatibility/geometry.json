@@ -1,0 +1,54 @@
+{
+  "status": "nominal_dimensions_match_shape_and_physical_fit_unqualified",
+  "source": "https://cdn.sparkfun.com/datasheets/Components/Switches/MX%20Series.pdf",
+  "source_page": "PDF page 3 / printed 10-4, metal-frame cutout and G99-0379 7U kit",
+  "plate": "models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.dxf",
+  "plate_sha256": "0681d8989179ff06b2894a80f8ed39d13af87db2c60e2273883fa4460b28b32c",
+  "original_inkc_cutout_preserved": true,
+  "dimension_checks": [
+    {
+      "dimension": "housing_width",
+      "actual_mm": [
+        6.65,
+        6.65
+      ],
+      "cherry_nominal_mm": 6.6548,
+      "cherry_tolerance_mm": 0.1016,
+      "pass": true
+    },
+    {
+      "dimension": "housing_center_pitch",
+      "actual_mm": [
+        114.3
+      ],
+      "cherry_nominal_mm": 114.3,
+      "cherry_tolerance_mm": 0.1016,
+      "pass": true
+    }
+  ],
+  "corner_aperture_probes": [
+    {
+      "center_x_mm": 85.8801,
+      "probe_height_mm": 12.299999999999999,
+      "cherry_main_height_mm": 12.2936,
+      "cherry_main_height_tolerance_mm": 0.1016,
+      "probe_corner_radius_mm": 0.3048,
+      "probe_area_outside_cutout_mm2": 0.106228
+    },
+    {
+      "center_x_mm": 200.1801,
+      "probe_height_mm": 12.299999999999999,
+      "cherry_main_height_mm": 12.2936,
+      "cherry_main_height_tolerance_mm": 0.1016,
+      "probe_corner_radius_mm": 0.3048,
+      "probe_area_outside_cutout_mm2": 0.106228
+    }
+  ],
+  "cherry_metal_frame_thickness_mm": {
+    "nominal": 1.5239999999999998,
+    "tolerance": 0.1016,
+    "scope": "MX metal-frame drawing; not a supplier thickness guarantee for DUROCK/Gateron/Designer Studio"
+  },
+  "all_products_qualified": false,
+  "limitations": "The positive aperture-probe residual flags different corner geometry, not a measured plastic-body collision. No full Cherry-profile tolerance check, clip force, product-specific body, wire sweep, PCB component or case clearance is established."
+}

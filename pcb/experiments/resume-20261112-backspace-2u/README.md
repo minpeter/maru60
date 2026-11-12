@@ -120,3 +120,12 @@ Three regression tests confirm that only the split Backspace openings change,
 that PCB-mount 7U relief is absent from the selected variant, and that the
 exported DXF retains the original 7U arc vertices. PCB copper, the 2U Backspace
 opening, outer case outline and previous electrical checks are unchanged.
+
+## Other 7U plate-mount stabilizers
+
+[Cherry / DUROCK / Gateron comparison](qa/stabilizer-compatibility/README.md)
+confirms the mounting categories and 7U options, and checks the delivered
+plate's width and pitch against Cherry's original drawing. Both dimensions
+pass. The INKC corner profile differs from the Cherry aperture probe, so this
+is not full-profile conformity or a claim that every product fits. No PCB or
+plate geometry was altered by this research.
