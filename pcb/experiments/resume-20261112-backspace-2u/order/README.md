@@ -37,8 +37,10 @@ Match the pin-1 dots; leave the alternate site of each reference empty.
 Both LEDs are required to preserve the daisy chain. Do not populate all four
 sites: duplicated outputs would drive one another. Use the selected [7U plate-mount / 2U Backspace plate](../../../../models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.dxf)
 for center population and the original plate-mount split plate for split population.
-The Design Studio 7U product's exact clip dimensions and supported plate
-thickness still need verification; restored stock geometry is not product
+The [Designer Studio Stabilizer (For Plate) guide](https://geonworks.kr/article/assemble-guild/5/2140/)
+confirms inserting the wire below the plate at an angle before pressing the
+housings into place. Select the 7U wire. Clip dimensions, supported plate
+thickness and clearance to PCB parts still need verification; restored stock geometry is not product
 qualification. The former `plate-pcb-mount-2u-backspace` plate is unselected. Never fit the
 center and split switches simultaneously.
 

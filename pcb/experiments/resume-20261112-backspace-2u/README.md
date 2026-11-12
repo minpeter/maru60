@@ -54,7 +54,7 @@ sensitivity study, not guaranteed supplier corners or an increase in USB speed.
 
 ## Fit gates before fabrication
 
-**Selected spacebar hardware:** Design Studio 7U **plate-mount** stabilizer
+**Selected spacebar hardware:** [Designer Studio Stabilizer (For Plate)](https://geonworks.kr/article/assemble-guild/5/2140/), **7U** wire
 (user selection). The selected plate now restores the original INKC plate-mount
 7U cutout, including its exact arc vertices, and removes the additional
 PCB-mount clearance holes from this variant. PCB NPTH stabilizer holes remain
@@ -62,8 +62,11 @@ unused; they do not need to pass through the plate. The prior
 `maru60-hhkb-plate-pcb-mount-2u-backspace` files are an **unselected PCB-mount
 alternative**, not the selected product's plate.
 
-The exact Design Studio model/drawing has not yet been supplied. Original-cutout
-preservation is verified, but product-specific clip retention, wire/housing
+The supplied GEONWORKS guide confirms the product and plate-mount assembly
+method, but contains no dimensioned mechanical drawing. Its component image
+confirms the 6.25U/7U wire selection. [Source evidence](qa/designer-studio/source.json)
+records the checked instructions and images. Original-cutout preservation is
+verified, but product-specific clip retention, wire/housing
 clearance to PCB components, case fit and supported plate thickness are **not**.
 Use the nominal case-stack plate thickness of 1.5 mm only after confirming the
 product's clip range; a 1.6 mm FR4 option is not automatically equivalent.
@@ -107,7 +110,11 @@ The new [DXF](../../../models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.dxf)
 [Gerbers](../../../models/maru60-hhkb-plate-7u-plate-mount-2u-backspace-gerbers.zip)
 and [report](../../../models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.json)
 are separately named to avoid confusing mount types. The report deliberately
-keeps `product_fit_verified: false` until supplier dimensions are available.
+keeps `product_fit_verified: false` until supplier dimensions or an actual
+fit check establish retention and clearance. Assemble as the guide specifies:
+insert the wire below the plate at an angle first, then press the housing into
+place; inspect the housing-to-PCB gap and free wire travel. No PCB screw or
+insert should be fitted to the unused 7U stabilizer holes.
 
 Three regression tests confirm that only the split Backspace openings change,
 that PCB-mount 7U relief is absent from the selected variant, and that the

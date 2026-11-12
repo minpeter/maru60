@@ -2,7 +2,7 @@
 """Build a 2U Backspace HHKB plate, with plate-mount 7U by default.
 
 The 2U Backspace stabilizer remains PCB-mounted. The 7U plate-mount cutout
-is inherited from INKC, not a manufacturer-qualified Design Studio footprint.
+is inherited from INKC, not a manufacturer-qualified Designer Studio footprint.
 
 The split Backspace plate remains separate: its switches rotate 90 degrees
 in the Mill-Max candidate and need their own retention edges. This file is a
@@ -94,9 +94,11 @@ def main():
               "source": "spec/rule60-v3-outlines.json:plate_gas_hhkb",
               "changed": "Dedicated PCB-mount 2U Backspace; " + ("original plate-mount 7U cutout preserved" if args.seven_u_mount == "plate" else "PCB-mount 7U relief"),
               "seven_u_mount": args.seven_u_mount,
-              "selected_product": "Design Studio 7U plate-mount (exact model/drawing pending)",
+              "selected_product": "Designer Studio Stabilizer (For Plate), 7U wire",
               "seven_u_original_vertices_preserved": loops[SEVEN_U_INDEX+1] == rec["cutouts"][SEVEN_U_INDEX],
               "product_fit_verified": False,
+              "product_guide": "https://geonworks.kr/article/assemble-guild/5/2140/",
+              "guide_contains_dimensioned_drawing": False,
               "plate_thickness_mm": {"nominal_case_stack": 1.5, "supplier_clip_range": None},
               "removed_split_cutout_indices": indices,
               "backspace_to_outer_edge_mm": round(backspace.distance(outer.boundary), 4),

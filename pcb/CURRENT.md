@@ -23,7 +23,7 @@ resistors. Native CAD checks, 32 DFM rules, 54 changed-hop LED cases and Gerber
 readback pass. Its separate fabrication/assembly package is complete; **do not
 order it until the receptacle variant and stabilizer/plate fit are confirmed**.
 The selected order candidate below remains unchanged. The new plate defaults to
-the original 7U plate-mount cutout for the selected Design Studio product; its
+the original 7U plate-mount cutout for the selected Designer Studio Stabilizer (For Plate) product; its
 exact clip dimensions and allowed plate thickness remain unverified. The new candidate's own
 `MANIFEST.json` binds its CAD and evidence; the primary-selection checker does
 not check this experimental manifest.
