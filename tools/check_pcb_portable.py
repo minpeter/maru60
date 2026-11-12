@@ -33,6 +33,12 @@ CANDIDATE: Final = RECOVERY / "candidate"
 OVERLAY: Final = Path("firmware/qmk/keyboards/maru60/rp2350")
 POWER: Final = ROOT / "pcb/experiments/resume-20261106-usb-pendant-prototype/evidence/power-audit"
 NETLIST_SHA256: Final = "2258e9920ce2b6c72daa6c1198c2325a8bb7ab7eea3384ba6b8af1fa57057306"
+# Files of the active overlay that deliberately differ from the archived recovery candidate, with
+# the hash of the active file. The candidate packet itself stays as it was reviewed.
+#   config.h: GPIO_INPUT_PIN_DELAY 120 (matrix read delay; order-candidate signal-integrity report)
+ACTIVE_DELTAS: Final = {
+    "config.h": "6f6a98aef67d23758078954e9e8a892d2c0454f3f986199c1d8ae47e9b356033",
+}
 ARCHIVE_PINS: Final = (
     (CANDIDATE / "run_host_checks.py", "83db97c804ba1a83afd5172e5ead9b6684a989527537ac42857b4b97ac5e2377"),
     (RECOVERY / "evidence/static-v7/check.py", "cd213acf8055464b388c133fbfe75163f3fce3c52930e3984beecf831756df66"),
@@ -62,16 +68,21 @@ def check_pin(path: Path, expected: str) -> None:
 
 
 def overlay_identity() -> tuple[tuple[str, str], ...]:
-    """Require the exact 22-file active and recovery-candidate overlay identity."""
+    """Require the 22-file active overlay to equal the recovery candidate except for ACTIVE_DELTAS."""
     manifests: list[tuple[tuple[str, str], ...]] = []
     for base in (ROOT / "pcb" / OVERLAY, CANDIDATE / OVERLAY):
         manifests.append(tuple(
             (str(path.relative_to(base)), digest(path))
             for path in sorted(base.rglob("*")) if path.is_file()
         ))
-    if len(manifests[0]) != 22 or manifests[0] != manifests[1]:
-        raise CheckFailure("Active firmware must match all 22 recovery-candidate files")
-    return manifests[0]
+    active, candidate = manifests
+    if len(active) != 22 or [name for name, _ in active] != [name for name, _ in candidate]:
+        raise CheckFailure("Active firmware must have the 22 recovery-candidate files")
+    for (name, actual), (_, archived) in zip(active, candidate, strict=True):
+        expected = ACTIVE_DELTAS.get(name, archived)
+        if actual != expected:
+            raise CheckFailure(f"Active firmware file differs from its pin: {name}")
+    return active
 
 
 def selected_netlist() -> Path:
@@ -136,7 +147,8 @@ def main() -> int:
         for path, expected in ARCHIVE_PINS:
             check_pin(path, expected)
         _ = (output / "identity.json").write_text(json.dumps({
-            "active_equals_candidate": True, "file_count": len(before),
+            "active_equals_candidate": not ACTIVE_DELTAS, "declared_active_deltas": sorted(ACTIVE_DELTAS),
+            "file_count": len(before),
             "source_hashes": dict(before), "current_manifest_sha256": manifest_before,
             "netlist": str(netlist.relative_to(ROOT)), "netlist_sha256": NETLIST_SHA256,
             "archive_hashes": {str(p.relative_to(ROOT)): h for p, h in ARCHIVE_PINS},

@@ -3,8 +3,8 @@
   "generated_by": "pcb/tools/check_mechanical_fit.py",
   "board": {
     "path": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb",
-    "sha256": "5f7ff617b316981689269df468170212b5168ae0b779bac2190b70e5a66cc149",
-    "footprints": 383
+    "sha256": "8057453f75871b4df187fc1adfe50b0b870c53e2fcc7e5202948398253904107",
+    "footprints": 407
   },
   "assumptions": {
     "board_top_z_p_mm": 12.5,
@@ -104,7 +104,7 @@
         },
         {
           "ref": "U11",
-          "footprint": "Package_SO:Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm",
+          "footprint": "Maru60:Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm",
           "position_board_mm": [
             80.6,
             86.2,
@@ -695,6 +695,699 @@
           "clearance_mm": 2.8,
           "nominal_clearance_mm": 2.8,
           "status": "pass"
+        },
+        {
+          "ref": "U2",
+          "footprint": "Maru60:SOT-23-5_TightCourtyard",
+          "position_board_mm": [
+            142.0,
+            74.7,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            140.16,
+            73.0,
+            143.84,
+            76.4
+          ],
+          "courtyard_world_mm": [
+            -1.3425,
+            109.6877,
+            2.3375,
+            113.0877
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "C200",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            11.4,
+            3.71,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            10.49,
+            3.25,
+            12.31,
+            4.17
+          ],
+          "courtyard_world_mm": [
+            130.1875,
+            181.9178,
+            132.0075,
+            182.8377
+          ],
+          "case_surface_z_p_mm": 20.64,
+          "case_surface_z_p_max_mm": 20.64,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 5.74,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 5.24,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R115",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            265.9625,
+            19.8625,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            265.0325,
+            19.3925,
+            266.8925,
+            20.3325
+          ],
+          "courtyard_world_mm": [
+            -124.395,
+            165.7552,
+            -122.535,
+            166.6952
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R116",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            100.375,
+            74.35,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            99.905,
+            73.42,
+            100.845,
+            75.28
+          ],
+          "courtyard_world_mm": [
+            41.6525,
+            110.8077,
+            42.5925,
+            112.6678
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R117",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            64.8,
+            90.0,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            64.33,
+            89.07,
+            65.27,
+            90.93
+          ],
+          "courtyard_world_mm": [
+            77.2275,
+            95.1577,
+            78.1675,
+            97.0178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R119",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            129.25,
+            71.65,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            128.32,
+            71.18,
+            130.18,
+            72.12
+          ],
+          "courtyard_world_mm": [
+            12.3175,
+            113.9677,
+            14.1775,
+            114.9077
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "C143",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            185.875,
+            85.0,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            185.415,
+            84.09,
+            186.335,
+            85.91
+          ],
+          "courtyard_world_mm": [
+            -43.8375,
+            100.1778,
+            -42.9175,
+            101.9977
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R170",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            219.1625,
+            74.3625,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            218.2325,
+            73.8925,
+            220.0925,
+            74.8325
+          ],
+          "courtyard_world_mm": [
+            -77.595,
+            111.2553,
+            -75.735,
+            112.1953
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R171",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            115.5375,
+            16.8625,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            114.6075,
+            16.3925,
+            116.4675,
+            17.3325
+          ],
+          "courtyard_world_mm": [
+            26.03,
+            168.7552,
+            27.89,
+            169.6952
+          ],
+          "case_surface_z_p_mm": 22.89,
+          "case_surface_z_p_max_mm": 22.89,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 7.99,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 7.49,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R172",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            171.275,
+            78.65,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            170.805,
+            77.72,
+            171.745,
+            79.58
+          ],
+          "courtyard_world_mm": [
+            -29.2475,
+            106.5077,
+            -28.3075,
+            108.3678
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R173",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            16.3,
+            75.325,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            15.83,
+            74.395,
+            16.77,
+            76.255
+          ],
+          "courtyard_world_mm": [
+            125.7275,
+            109.8327,
+            126.6675,
+            111.6928
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R174",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            217.05,
+            18.0,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            216.58,
+            17.07,
+            217.52,
+            18.93
+          ],
+          "courtyard_world_mm": [
+            -75.0225,
+            167.1578,
+            -74.0825,
+            169.0177
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R175",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            63.05,
+            17.9,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            62.58,
+            16.97,
+            63.52,
+            18.83
+          ],
+          "courtyard_world_mm": [
+            78.9775,
+            167.2577,
+            79.9175,
+            169.1178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R176",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            172.75,
+            16.875,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            171.82,
+            16.405,
+            173.68,
+            17.345
+          ],
+          "courtyard_world_mm": [
+            -31.1825,
+            168.7428,
+            -29.3225,
+            169.6827
+          ],
+          "case_surface_z_p_mm": 22.89,
+          "case_surface_z_p_max_mm": 22.89,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 7.99,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 7.49,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R178",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            40.65,
+            16.875,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            39.72,
+            16.405,
+            41.58,
+            17.345
+          ],
+          "courtyard_world_mm": [
+            100.9175,
+            168.7428,
+            102.7775,
+            169.6827
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R182",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            148.9,
+            71.875,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            147.97,
+            71.405,
+            149.83,
+            72.345
+          ],
+          "courtyard_world_mm": [
+            -7.3325,
+            113.7428,
+            -5.4725,
+            114.6827
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R184",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            239.9,
+            72.4,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            238.97,
+            71.93,
+            240.83,
+            72.87
+          ],
+          "courtyard_world_mm": [
+            -98.3325,
+            113.2177,
+            -96.4725,
+            114.1577
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R185",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            266.25,
+            64.65,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            265.78,
+            63.72,
+            266.72,
+            65.58
+          ],
+          "courtyard_world_mm": [
+            -124.2225,
+            120.5077,
+            -123.2825,
+            122.3678
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R186",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            17.4,
+            55.0,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            16.47,
+            54.53,
+            18.33,
+            55.47
+          ],
+          "courtyard_world_mm": [
+            124.1675,
+            130.6178,
+            126.0275,
+            131.5577
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R159",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            183.0,
+            84.4,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            182.27,
+            82.92,
+            183.73,
+            85.88
+          ],
+          "courtyard_world_mm": [
+            -41.2325,
+            100.2077,
+            -39.7725,
+            103.1677
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R188",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            5.1,
+            48.6,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            4.63,
+            47.67,
+            5.57,
+            49.53
+          ],
+          "courtyard_world_mm": [
+            136.9275,
+            136.5577,
+            137.8675,
+            138.4178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
         }
       ],
       "j3_plug_corridor": {
@@ -711,7 +1404,7 @@
         "note": "3.5 mm wide insertion corridor; the JST SH plug body height is not in CAD, so only the corridor free height is checked."
       },
       "counts": {
-        "pass": 20,
+        "pass": 41,
         "tight": 0,
         "fail": 0,
         "unknown": 0
@@ -860,7 +1553,7 @@
       ]
     },
     "stabilizer_7u": {
-      "footprint": "Maru60_Candidates:MX-Hotswap-7U-4L-NPTH-StabRot180",
+      "footprint": "Maru60_Candidates:MX-Hotswap-7U-4L-NPTH-StabRot180_H305",
       "position_board_mm": [
         142.4975,
         85.39875,
@@ -955,9 +1648,9 @@
             145.49,
             20.749
           ],
-          "diameter_mm": 3.0,
+          "diameter_mm": 3.05,
           "distance_to_cutout_boundary_mm": 1.92,
-          "clearance_mm": 0.42,
+          "clearance_mm": 0.395,
           "status": "pass"
         },
         {
@@ -985,9 +1678,9 @@
             139.14,
             18.209
           ],
-          "diameter_mm": 3.0,
+          "diameter_mm": 3.05,
           "distance_to_cutout_boundary_mm": 3.2034,
-          "clearance_mm": 1.7034,
+          "clearance_mm": 1.6784,
           "status": "pass"
         },
         {
@@ -1076,9 +1769,9 @@
           145.49,
           20.749
         ],
-        "diameter_mm": 3.0,
+        "diameter_mm": 3.05,
         "distance_to_cutout_boundary_mm": 1.92,
-        "clearance_mm": 0.42,
+        "clearance_mm": 0.395,
         "status": "pass"
       },
       "status": "pass",
@@ -1091,7 +1784,7 @@
   },
   "summary": {
     "relocated_block": {
-      "pass": 20,
+      "pass": 41,
       "tight": 0,
       "fail": 0,
       "unknown": 0
@@ -1102,8 +1795,8 @@
     "usb_c_selected_notch": "j1centred",
     "stabilizer_7u_status": "pass",
     "stabilizer_min_clearance_mm": 0.3,
-    "overall_minimum_clearance_mm": 0.3998,
-    "overall_minimum_clearance_check": "stabilizer_7u:stabilizer_screw@[200.1, 8.684]",
+    "overall_minimum_clearance_mm": 0.395,
+    "overall_minimum_clearance_check": "stabilizer_7u:switch@[145.49, 20.749]",
     "overall": "PASS_WITH_TIGHT_ITEMS"
   },
   "missing_inputs": [

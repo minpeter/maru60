@@ -1,0 +1,23 @@
+{
+  "status": "nominal_geometry_study_not_hardware_qualified",
+  "source": "spec/rule60-v3-outlines.json:plate_gas_hhkb",
+  "changed": "Dedicated PCB-mount 2U Backspace; original plate-mount 7U cutout preserved",
+  "seven_u_mount": "plate",
+  "selected_product": "Designer Studio Stabilizer (For Plate), 7U wire",
+  "seven_u_original_vertices_preserved": true,
+  "product_fit_verified": false,
+  "product_guide": "https://geonworks.kr/article/assemble-guild/5/2140/",
+  "guide_contains_dimensioned_drawing": false,
+  "plate_thickness_mm": {
+    "nominal_case_stack": 1.5,
+    "supplier_clip_range": null
+  },
+  "removed_split_cutout_indices": [
+    60,
+    61
+  ],
+  "backspace_to_outer_edge_mm": 1.1378,
+  "backspace_to_other_cutout_mm": 1.445,
+  "center_switch_retention_edges": "present north and south",
+  "limitations": "Assumed 7.75 x 14 mm housing with 0.25 mm allowance; mounting-hole allowance 0.40 mm. 7U clip dimensions and supported plate thickness require supplier drawing. Requires selected-parts fit test and milling review"
+}

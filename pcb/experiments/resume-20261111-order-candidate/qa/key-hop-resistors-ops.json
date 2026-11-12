@@ -1,0 +1,526 @@
+{
+ "note": "R117 100 ohm in series at the source of the LED data hop KEY_RGB_CHAIN_60 (LED58 DOUT), 2.1 mm of copper before it. R118 100 ohm in series at the source of the LED data hop KEY_RGB_CHAIN_61 (LED59 DOUT), 0.0 mm of copper before it. R119 100 ohm in series at the source of the LED data hop KEY_RGB_CHAIN_52 (LED48 DOUT), 0.8 mm of copper before it.",
+ "ops": [
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 64.1,
+     "y1": 90.0,
+     "x2": 66.0,
+     "y2": 90.0,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_60"
+    },
+    {
+     "x1": 62.0,
+     "y1": 90.0,
+     "x2": 64.1,
+     "y2": 90.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_60"
+    },
+    {
+     "x1": 62.01,
+     "y1": 90.00375,
+     "x2": 62.0,
+     "y2": 90.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_60"
+    }
+   ]
+  },
+  {
+   "op": "remove_vias",
+   "vias": [
+    {
+     "x": 64.1,
+     "y": 90.0,
+     "net": "KEY_RGB_CHAIN_60"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED58",
+   "pad": "3",
+   "net": "KEY_RGB_CHAIN_60_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R117",
+   "lib_dir": "/usr/share/kicad/footprints/Resistor_SMD.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Resistor_SMD:R_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 64.8,
+   "y": 90.0,
+   "rot": 90,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "KEY_RGB_CHAIN_60_SRC",
+    "2": "KEY_RGB_CHAIN_60"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/9c6fcb82-dffc-5caf-b503-04a41ee0d720",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     64.8,
+     90.51
+    ],
+    "2": [
+     64.8,
+     89.49
+    ]
+   }
+  },
+  {
+   "op": "add_vias",
+   "vias": [
+    {
+     "x": 64.1,
+     "y": 90.0,
+     "net": "KEY_RGB_CHAIN_60_SRC"
+    }
+   ]
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 62.0,
+     "y1": 90.0,
+     "x2": 64.1,
+     "y2": 90.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_60_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 62.01,
+     "y1": 90.00375,
+     "x2": 62.0,
+     "y2": 90.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_60_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 64.8,
+     "y1": 90.51,
+     "x2": 64.7,
+     "y2": 90.61,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_60_SRC"
+    },
+    {
+     "x1": 64.7,
+     "y1": 90.61,
+     "x2": 64.1,
+     "y2": 90.01,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_60_SRC"
+    },
+    {
+     "x1": 64.1,
+     "y1": 90.01,
+     "x2": 64.1,
+     "y2": 90.0,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_60_SRC"
+    },
+    {
+     "x1": 64.8,
+     "y1": 89.49,
+     "x2": 65.5,
+     "y2": 89.49,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_60"
+    },
+    {
+     "x1": 65.5,
+     "y1": 89.49,
+     "x2": 66.0,
+     "y2": 89.99,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_60"
+    },
+    {
+     "x1": 66.0,
+     "y1": 89.99,
+     "x2": 66.0,
+     "y2": 90.0,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_60"
+    }
+   ]
+  },
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 142.9725,
+     "y1": 90.00375,
+     "x2": 143.0,
+     "y2": 90.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61"
+    },
+    {
+     "x1": 143.0,
+     "y1": 90.0,
+     "x2": 145.0,
+     "y2": 90.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61"
+    },
+    {
+     "x1": 145.0,
+     "y1": 90.0,
+     "x2": 145.29999999999998,
+     "y2": 89.7,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61"
+    },
+    {
+     "x1": 145.29999999999998,
+     "y1": 89.7,
+     "x2": 149.29999999999998,
+     "y2": 89.7,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61"
+    },
+    {
+     "x1": 149.29999999999998,
+     "y1": 89.7,
+     "x2": 149.5,
+     "y2": 89.89999999999999,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61"
+    },
+    {
+     "x1": 149.5,
+     "y1": 89.89999999999999,
+     "x2": 153.0,
+     "y2": 89.89999999999999,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED59",
+   "pad": "3",
+   "net": "KEY_RGB_CHAIN_61_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R118",
+   "lib_dir": "/usr/share/kicad/footprints/Resistor_SMD.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Resistor_SMD:R_0402_1005Metric",
+   "side": "F.Cu",
+   "x": 150.875,
+   "y": 89.65,
+   "rot": 0,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "KEY_RGB_CHAIN_61_SRC",
+    "2": "KEY_RGB_CHAIN_61"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/f4391211-8da7-58e2-b262-80f18ba531c7",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     150.365,
+     89.65
+    ],
+    "2": [
+     151.385,
+     89.65
+    ]
+   }
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 150.365,
+     "y1": 89.65,
+     "x2": 149.765,
+     "y2": 90.25,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61_SRC"
+    },
+    {
+     "x1": 149.765,
+     "y1": 90.25,
+     "x2": 149.715,
+     "y2": 90.25,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61_SRC"
+    },
+    {
+     "x1": 149.715,
+     "y1": 90.25,
+     "x2": 147.265,
+     "y2": 87.8,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61_SRC"
+    },
+    {
+     "x1": 147.265,
+     "y1": 87.8,
+     "x2": 145.115,
+     "y2": 89.95,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61_SRC"
+    },
+    {
+     "x1": 145.115,
+     "y1": 89.95,
+     "x2": 143.015,
+     "y2": 89.95,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61_SRC"
+    },
+    {
+     "x1": 143.015,
+     "y1": 89.95,
+     "x2": 142.965,
+     "y2": 90.0,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61_SRC"
+    },
+    {
+     "x1": 142.965,
+     "y1": 90.0,
+     "x2": 142.9725,
+     "y2": 90.00375,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61_SRC"
+    },
+    {
+     "x1": 151.385,
+     "y1": 89.65,
+     "x2": 152.735,
+     "y2": 89.65,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61"
+    },
+    {
+     "x1": 152.735,
+     "y1": 89.65,
+     "x2": 152.985,
+     "y2": 89.9,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61"
+    },
+    {
+     "x1": 152.985,
+     "y1": 89.9,
+     "x2": 153.0,
+     "y2": 89.9,
+     "w": 0.19999999999999998,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_61"
+    }
+   ]
+  },
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 129.25,
+     "y1": 70.64999999999999,
+     "x2": 129.5,
+     "y2": 70.89999999999999,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_52"
+    },
+    {
+     "x1": 127.75,
+     "y1": 70.64999999999999,
+     "x2": 129.25,
+     "y2": 70.64999999999999,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_52"
+    },
+    {
+     "x1": 129.5,
+     "y1": 70.89999999999999,
+     "x2": 128.75,
+     "y2": 70.89999999999999,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_52"
+    },
+    {
+     "x1": 128.75,
+     "y1": 70.89999999999999,
+     "x2": 128.7,
+     "y2": 70.95,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_52"
+    },
+    {
+     "x1": 128.685,
+     "y1": 70.95375,
+     "x2": 128.7,
+     "y2": 70.95,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_52"
+    }
+   ]
+  },
+  {
+   "op": "remove_vias",
+   "vias": [
+    {
+     "x": 129.5,
+     "y": 70.89999999999999,
+     "net": "KEY_RGB_CHAIN_52"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED48",
+   "pad": "3",
+   "net": "KEY_RGB_CHAIN_52_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R119",
+   "lib_dir": "/usr/share/kicad/footprints/Resistor_SMD.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Resistor_SMD:R_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 129.25,
+   "y": 71.65,
+   "rot": 180,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "KEY_RGB_CHAIN_52_SRC",
+    "2": "KEY_RGB_CHAIN_52"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/fc800ea0-a142-5ea2-8044-4de67c9b93d6",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     129.76,
+     71.65
+    ],
+    "2": [
+     128.74,
+     71.65
+    ]
+   }
+  },
+  {
+   "op": "add_vias",
+   "vias": [
+    {
+     "x": 129.5,
+     "y": 70.89999999999999,
+     "net": "KEY_RGB_CHAIN_52_SRC"
+    }
+   ]
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 129.5,
+     "y1": 70.89999999999999,
+     "x2": 128.75,
+     "y2": 70.89999999999999,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_52_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 128.75,
+     "y1": 70.89999999999999,
+     "x2": 128.7,
+     "y2": 70.95,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_52_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 128.685,
+     "y1": 70.95375,
+     "x2": 128.7,
+     "y2": 70.95,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_52_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 129.76,
+     "y1": 71.65,
+     "x2": 129.26,
+     "y2": 71.15,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_52_SRC"
+    },
+    {
+     "x1": 129.26,
+     "y1": 71.15,
+     "x2": 129.51,
+     "y2": 70.9,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_52_SRC"
+    },
+    {
+     "x1": 129.51,
+     "y1": 70.9,
+     "x2": 129.5,
+     "y2": 70.9,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_52_SRC"
+    },
+    {
+     "x1": 128.74,
+     "y1": 71.65,
+     "x2": 127.74,
+     "y2": 70.65,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_52"
+    },
+    {
+     "x1": 127.74,
+     "y1": 70.65,
+     "x2": 127.75,
+     "y2": 70.65,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_52"
+    }
+   ]
+  }
+ ]
+}

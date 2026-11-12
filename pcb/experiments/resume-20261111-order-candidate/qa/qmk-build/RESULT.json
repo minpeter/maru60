@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "scope": "Fresh complete ARM QMK WKL via and HHKB via_hhkb builds of the active overlay with GPIO_INPUT_PIN_DELAY 120, qualification OFF",
+  "date": "2026-11-11",
+  "upstream": "https://github.com/emolitor/qmk_firmware",
+  "commit": "431ed9ade0684e98a66eabc949563c3be8f446e8",
+  "overlay_files": 22,
+  "overlay_delta_from_recovery_candidate": {
+    "config.h": "appends #define GPIO_INPUT_PIN_DELAY 120 with a 1..135 range check; the other 21 files are byte-identical"
+  },
+  "config_h_sha256": "6f6a98aef67d23758078954e9e8a892d2c0454f3f986199c1d8ae47e9b356033",
+  "qualification": 0,
+  "compiler": "arm-none-eabi-gcc (15:14.2.rel1-1) 14.2.1 20241119",
+  "qmk_cli": "1.2.0",
+  "python": "3.13.5",
+  "docker_image": "sha256:d9e2c7f34f88f61cff5793ddad8b19dd5dfa737387d6169935173bf9ed60d4ca",
+  "scenarios": [
+    {
+      "layout": "WKL",
+      "keymap": "via",
+      "invocation": "make maru60/rp2350:via -j4 VERBOSE=true DUMP_C_MACROS='maru_key_transport.c maru_ug_transport.c maru_rgb.c matrix.c'",
+      "exit": 0,
+      "log": "via.log",
+      "macro_evidence": "via-macro-check.txt",
+      "elf": "maru60_rp2350_via.elf",
+      "elf_sha256": "55e44ce12ceb2a8b120a0fc09eb5817f86f9e88a538185a9e18775bf1b4a4b00",
+      "uf2": "maru60_rp2350_via.uf2",
+      "uf2_sha256": "0e07106bf0bdc3531d687c69dc76f7c8c1a7d9e8c81c49e7a11769fb280e0de2"
+    },
+    {
+      "layout": "HHKB",
+      "keymap": "via_hhkb",
+      "invocation": "make maru60/rp2350:via_hhkb -j4 VERBOSE=true DUMP_C_MACROS='maru_key_transport.c maru_ug_transport.c maru_rgb.c matrix.c'",
+      "exit": 0,
+      "log": "via_hhkb.log",
+      "macro_evidence": "via_hhkb-macro-check.txt",
+      "elf": "maru60_rp2350_via_hhkb.elf",
+      "elf_sha256": "23eef77d1cc8d4b91540003c361ae63216a231b349e35ea1984f1ea8f5627f0a",
+      "uf2": "maru60_rp2350_via_hhkb.uf2",
+      "uf2_sha256": "d26a8612bb0d0f593e6c87c7ae6b5af30beb5c769880f91ed3b1287ee2b40d3d"
+    }
+  ],
+  "matrix_delay": {
+    "macro": "GPIO_INPUT_PIN_DELAY 120 in all four dumped translation units of both builds, matrix.c included",
+    "linked_code": "matrix_output_select_delay contains exactly 120 nop instructions and has one call site, in both ELF files",
+    "system_clock_hz": 150000000,
+    "clock_basis": "RP_PLL_SYS_VCO_FREQ 1500000000 / (POSTDIV1 5 * POSTDIV2 2), from the macro dumps",
+    "delay_ns": 800,
+    "previous_default": "CPU_CLOCK / 1000000 / 4 = 37 cycles, 247 ns"
+  },
+  "observables": [
+    "Both make exit codes zero",
+    "Both linked ELF and generated UF2 are nonempty and SHA256 verified (artifact-hash-check.txt)",
+    "All LED translation-unit macro dumps define MARU60_LED_POWER_QUALIFIED 0; no dump defines it 1",
+    "WKL layout 0 and HHKB layout 1; prototype FEED:6060; private-test IDs and suspend experiment absent",
+    "Submodule commits identical to the 2026-11-09 build packet",
+    "The overlay in the build tree is byte-identical to pcb/firmware after the build"
+  ],
+  "source_evidence": [
+    "upstream-commit.txt",
+    "submodule-identities.txt",
+    "overlay-source.sha256",
+    "overlay-postbuild-diff.txt"
+  ],
+  "validation_evidence": [
+    "artifact-hash-check.txt",
+    "via-macro-check.txt",
+    "via_hhkb-macro-check.txt"
+  ],
+  "hardware_validated": false,
+  "flashed": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "nominal_geometry_study_not_hardware_qualified",
+  "source": "spec/rule60-v3-outlines.json:plate_gas_hhkb",
+  "changed": "PCB-mount 7U relief and dedicated 2U Backspace; stock plate unchanged",
+  "removed_split_cutout_indices": [
+    60,
+    61
+  ],
+  "backspace_to_outer_edge_mm": 1.1378,
+  "backspace_to_other_cutout_mm": 1.445,
+  "center_switch_retention_edges": "present north and south",
+  "limitations": "Assumed 7.75 x 14 mm housing with 0.25 mm allowance; mounting-hole allowance 0.40 mm. Requires selected-parts fit test and milling review"
+}

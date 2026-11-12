@@ -24,6 +24,11 @@ Rf1   vbf  vfused {rfuse}
 * --- U8 eFuse ---
 Cc125 vfused c125e {c125}
 Rc125 c125e 0 10m
+* snubber across C125: R187 1 Ohm 0805 in series with C144 4.7 uF 50 V X5R 0805.
+* It damps the ring of the cable inductance with C125 at plug-in. rsn=1meg: not fitted.
+R187  vfused snb {rsn}
+Cc144 snb c144e {csn}
+Rc144 c144e 0 10m
 R120  vfused ovlo 590k
 R121  ovlo 0 {r121}
 Covlo ovlo 0 3p
@@ -49,6 +54,7 @@ L2    sw l2x {l2}
 Rl2   l2x v4 {dcr}
 C139  ss 0 {cssx}
 R159  v4 fb 40.0k
+C143  v4 fb {cff}
 R160  fb 0 10.0k
 Cfb   fb 0 5p
 * C140 + C141 next to the inductor (5.6 / 14 mOhm of track [CALC])

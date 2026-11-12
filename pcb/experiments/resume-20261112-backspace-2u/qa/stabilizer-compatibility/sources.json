@@ -1,0 +1,42 @@
+{
+  "checked_date": "2026-11-12",
+  "scope": "7U spacebar plate-mount alternatives only; does not qualify PCB-mount 2U Backspace",
+  "products": [
+    {
+      "product": "Cherry MX metal-frame 7U / G99-0379",
+      "url": "https://cdn.sparkfun.com/datasheets/Components/Switches/MX%20Series.pdf",
+      "source_type": "Manufacturer MX-series drawing archived by SparkFun, PDF page 3 / printed 10-4",
+      "seven_u_evidence": "Leveling Mechanism Kits: 1 x 7, A=4.5 inches, P/N w/frame G99-0379",
+      "dimension_evidence": "Width .262 +/- .004 in; main opening height .484 +/- .004 in; frame thickness .06 +/- .004 in; R .012 in max.",
+      "limits": "Historical Cherry reference, not a certificate for a current supplier batch or other manufacturers.",
+      "retrieved_content_sha256": "e1efd1dc784f1bd5ec34260a2575e7ac065b911dfc85eefbba1f836cfcbd3376"
+    },
+    {
+      "product": "DUROCK Plate Mount Stabilizers",
+      "url": "https://kineticlabs.com/misc/durock/durock-plate-mount-stabilizers",
+      "source_type": "Retailer product description",
+      "seven_u_evidence": "4 x 2u, and your choice of 6.25u or 7u wire for spacebar",
+      "dimension_evidence": null,
+      "limits": "Mount type and 7U option confirmed. No drawing or supported plate thickness stated in retrieved description.",
+      "retrieved_content_sha256": "0672b71e24d8e613398fcf59f8407ae0a7076ea53c3d3c271b57d7a8f3914a8a"
+    },
+    {
+      "product": "Gateron Plate Mount V2 Stabilizers",
+      "url": "https://kineticlabs.com/misc/gateron/gateron-plate-mount-stabilizers",
+      "source_type": "Retailer product description",
+      "seven_u_evidence": "Includes 12 x housings, 12 x stems, 1 x 6.25u wire, 1x 7u wire, 4x 2u wire",
+      "dimension_evidence": null,
+      "limits": "Retailer says clips into any plate; this broad marketing statement is not dimensional evidence or universal compatibility.",
+      "retrieved_content_sha256": "a873f9791d1b51b66c4290e23e806187e456164cc32fa4bb3e389b2f5bd3a26b"
+    },
+    {
+      "product": "Designer Studio Stabilizer (For Plate)",
+      "url": "https://geonworks.kr/article/assemble-guild/5/2140/",
+      "source_type": "GEONWORKS assembly guide and component image",
+      "seven_u_evidence": "Component image lists choice of 6.25U/7U wire; user selected 7U.",
+      "dimension_evidence": null,
+      "limits": "Wire goes below plate, then housing is pressed into place. No dimensioned cutout or plate-thickness range."
+    }
+  ],
+  "unavailable": "Other retailer requests returned HTTP 429, Gateron manufacturer page 403, and Naver service error. Those pages are not used as evidence."
+}

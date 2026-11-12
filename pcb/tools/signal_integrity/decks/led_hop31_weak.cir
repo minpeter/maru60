@@ -1,0 +1,45 @@
+* led_hop31_weak: SK6805 DOUT (assumed 500 ohm, 30 ns) -> routed hop -> DIN 5 pF
+Vsrc src 0 PWL(0.0000n 0 100.0000n 0 130.0000n 4 400.0000n 4 430.0000n 0 1300.0000n 0 1330.0000n 4 2200.0000n 4 2230.0000n 0 2500.0000n 0 2530.0000n 4 2800.0000n 4 2830.0000n 0 3700.0000n 0 3730.0000n 4 4600.0000n 4 4630.0000n 0)
+Rdrv src dout 500.0
+Cdout dout 0 2p
+Rt3 dout tm1 0.00460475
+Lt3 tm1 t2 0.731809n
+Ct3 t2 0 0.174331p
+Rt6 t2 tm4 0.00460475
+Lt6 tm4 t5 0.731809n
+Ct6 t5 0 0.174331p
+Rt9 t5 tm7 0.00460475
+Lt9 tm7 t8 0.731809n
+Ct9 t8 0 0.174331p
+Rt12 t8 tm10 0.00460475
+Lt12 tm10 t11 0.731809n
+Ct12 t11 0 0.174331p
+Rt15 t11 tm13 0.00460475
+Lt15 tm13 t14 0.731809n
+Ct15 t14 0 0.174331p
+Rt18 t14 tm16 0.00460475
+Lt18 tm16 t17 0.731809n
+Ct18 t17 0 0.174331p
+Rt21 t17 tm19 0.00460475
+Lt21 tm19 t20 0.731809n
+Ct21 t20 0 0.174331p
+Rt24 t20 tm22 0.00460475
+Lt24 tm22 t23 0.731809n
+Ct24 t23 0 0.174331p
+Rt27 t23 tm25 0.00460475
+Lt27 tm25 t26 0.731809n
+Ct27 t26 0 0.174331p
+Rt29 t26 tm28 0.00460475
+Lt29 tm28 din 0.731809n
+Ct29 din 0 0.174331p
+Cin din 0 5p
+.tran 0.1n 5000n 0 0.2n
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=7
+run
+
+wrdata /out/led_hop31_weak.txt v(dout) v(din)
+.endc
+.end

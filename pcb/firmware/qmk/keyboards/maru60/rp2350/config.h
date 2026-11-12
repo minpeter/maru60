@@ -52,3 +52,14 @@
 
 // Fresh/reset EEPROM only. Preserve an existing user-selected 6KRO setting.
 #define NKRO_DEFAULT_ON true
+
+// Matrix read delay, in CPU cycles after a row is driven low. QMK's default is
+// CPU_CLOCK / 4 MHz = 37 cycles (247 ns at 150 MHz). With all 15 keys of one
+// row held and the row pin at its data-sheet limit, the last column of the
+// order-candidate board is valid after 228 ns at 27 C and 250 ns at 0 C
+// (qa/signal-integrity/REPORT.md of the order candidate). 120 cycles is
+// 0.8 us. wait_cpuclock() handles 1..135 only: a larger value waits 6 cycles.
+#define GPIO_INPUT_PIN_DELAY 120
+#if GPIO_INPUT_PIN_DELAY < 1 || GPIO_INPUT_PIN_DELAY > 135
+#    error GPIO_INPUT_PIN_DELAY must be 1..135 for wait_cpuclock()
+#endif

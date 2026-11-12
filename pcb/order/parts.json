@@ -135,6 +135,15 @@
    "desc": "1 uF 25 V X5R 0402"
   },
   {
+   "value_re": "^22p",
+   "footprint": "C_0402_1005Metric",
+   "mfr": "FH (Fenghua)",
+   "mpn": "0402CG220J500NT",
+   "lcsc": "C1555",
+   "class": "basic",
+   "desc": "22 pF 50 V C0G 0402"
+  },
+  {
    "value_re": "^15p",
    "footprint": "C_0402_1005Metric",
    "mfr": "Samsung",
@@ -231,6 +240,24 @@
    "lcsc": "C25076",
    "class": "basic",
    "desc": "100 R 1% 0402"
+  },
+  {
+   "value_re": "^1 1%$",
+   "footprint": "R_0805_2012Metric",
+   "mfr": "UNI-ROYAL",
+   "mpn": "0805W8F100KT5E",
+   "lcsc": "C25271",
+   "class": "basic",
+   "desc": "1 R 1% 0805 (snubber resistor R187)"
+  },
+  {
+   "value_re": "^4\\.7uF 50V X5R$",
+   "footprint": "C_0805_2012Metric",
+   "mfr": "Samsung",
+   "mpn": "CL21A475KBQNNNE",
+   "lcsc": "C98192",
+   "class": "extended",
+   "desc": "4.7 uF 50 V X5R 0805 (snubber capacitor C144)"
   },
   {
    "value_re": "^154k 0.1%",

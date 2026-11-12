@@ -1,0 +1,164 @@
+{
+ "note": "USB pair laid again on the shortest any-angle route; connector break-out without the length-matching detour.",
+ "nets": {
+  "left": "USB_DP_CONN",
+  "right": "USB_DM_CONN"
+ },
+ "keep": [
+  [
+   16.0,
+   6.5,
+   19.3,
+   11.6
+  ],
+  [
+   113.2,
+   71.0,
+   116.6,
+   74.0
+  ]
+ ],
+ "drop": [
+  [
+   16.863,
+   9.287
+  ]
+ ],
+ "sections": [
+  {
+   "track": {
+    "net": "USB_DP_CONN",
+    "layer": "F.Cu",
+    "w": 0.15,
+    "points": [
+     [
+      18.75,
+      8.4
+     ],
+     [
+      20.615,
+      9.659
+     ],
+     [
+      21.432,
+      10.036
+     ],
+     [
+      22.369,
+      10.392
+     ]
+    ]
+   }
+  },
+  {
+   "track": {
+    "net": "USB_DM_CONN",
+    "layer": "B.Cu",
+    "w": 0.15,
+    "points": [
+     [
+      18.25,
+      9.1
+     ],
+     [
+      18.2,
+      9.25
+     ]
+    ]
+   }
+  },
+  {
+   "via": {
+    "net": "USB_DM_CONN",
+    "x": 18.2,
+    "y": 9.25
+   }
+  },
+  {
+   "track": {
+    "net": "USB_DM_CONN",
+    "layer": "F.Cu",
+    "w": 0.15,
+    "points": [
+     [
+      18.2,
+      9.25
+     ],
+     [
+      20.485,
+      9.941
+     ],
+     [
+      21.302,
+      10.318
+     ],
+     [
+      22.181,
+      10.8
+     ]
+    ]
+   }
+  },
+  {
+   "track": {
+    "net": "USB_DM_CONN",
+    "layer": "B.Cu",
+    "w": 0.15,
+    "points": [
+     [
+      18.0,
+      11.025
+     ],
+     [
+      18.15,
+      11.175
+     ]
+    ]
+   }
+  },
+  {
+   "route": "usb-pair-route-main.json",
+   "lead_in": [
+    22.275,
+    10.596
+   ],
+   "end": {
+    "left": [
+     113.493,
+     71.175
+    ],
+    "right": [
+     113.307,
+     71.625
+    ]
+   },
+   "start": {
+    "left": [
+     22.369,
+     10.392
+    ],
+    "right": [
+     22.181,
+     10.8
+    ]
+   }
+  },
+  {
+   "route": "usb-pair-route-end.json",
+   "start": {
+    "left": [
+     116.493,
+     73.375
+    ],
+    "right": [
+     116.307,
+     73.825
+    ]
+   },
+   "lead_out": [
+    118.91,
+    82.1
+   ]
+  }
+ ]
+}

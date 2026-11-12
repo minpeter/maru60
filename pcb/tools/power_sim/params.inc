@@ -13,6 +13,9 @@
 * C125, C126 1 uF 50 V X7R 0603 at 5 V [ASSUMED -10 %]
 .param c125=0.9u
 .param c126=0.9u
+* R187 / C144 snubber across C125: 1 Ohm, 4.7 uF 50 V X5R 0805 at 5 V [ASSUMED -10 %]
+.param rsn=1.0
+.param csn=4.2u
 * C136 + C137 10 uF 25 V 0603: 4.7 uF each at 5 V [Samsung data, qa/datasheet-review]
 .param cin=9.4u
 * C140 + C141 22 uF 10 V 0603: 8.7 uF each at 4 V [Samsung data]
@@ -40,6 +43,8 @@
 .param rdo=0.417
 .param fugb=100k
 .param ios=0.2015
+* C143, feed-forward capacitor across R159 (TPS6293x data sheet 10.2.2.10). 1f = not fitted.
+.param cff=22p
 .param kea=1
 .param vref=0.8
 .param iss=5.5u

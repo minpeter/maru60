@@ -69,7 +69,26 @@ of `set_component_values.py` need the KiCad 9 `pcbnew` bindings and run through
 | `save_board_footprint_to_lib.py` | Renames an edited footprint and saves a normalised copy to a project library. |
 | `apply_review_fixes.py` | U13 land pattern, L1 pour keep-out, C102 position. |
 | `set_component_values.py` | Sets values in the schematic sheets and on the board from one change list. |
-| `export_order_package.py` | DRC, BOM, CPL, Gerbers, drill files and provenance into `../order/`. |
+| `local_router.py` | Library: one-pad single-layer router with exact clearance check, and via placement checked on all layers. |
+| `apply_layout_ops.py` | Applies an operation list (tracks, vias, footprints, pads, drills, text, graphics) to a board. |
+| `plan_ldo_swap.py`, `edit_schematic_ldo_swap.py` | Board and schematic side of replacing the MAX38902A by an AP2112K-3.3. |
+| `plan_bottom_sites.py` | Bottom-side land sites fed through new vias (used for `C200`). |
+| `plan_series_resistor.py` | `R115`–`R119`, `R170`–`R186`: follows an LED data hop from DOUT through tracks and vias, cuts it near the source and places a series resistor at the cut, on B.Cu or (outside the switch keep-out) F.Cu. With `MIN_MM` it may also start at a track end, for hops that run under housings without a via. `R181`, `R184`–`R186` were planned by hand (their operation lists say why). |
+| `plan_two_pad_part.py` | A new 0402 two-pad part beside an existing one, routed to its two nets (`C143`, the buck feed-forward capacitor). |
+| `fit_jlcpcb_placement.py` | Fetches JLCPCB's footprint for each part and solves the placement rotation and centre. Needs network. |
+| `export_order_package.py` | DRC, BOM, CPL (using the fitted placements), Gerbers, drill files and provenance into `../order/`. |
+| `verify_gerbers.py` | Reads the exported Gerber and drill files with gerbonara and compares holes, pads and outline with the board. |
+| `analyze_pdn.py` | Resistance network of the power nets from the routed copper: drops, track loading, LED rail voltage. |
+| `power_sim/` | ngspice decks and behavioural models of the power tree; `run_power_sim.py` runs every case. |
+| `signal_integrity/` | Field solver, line models and ngspice decks for LED data, USB, crystal, matrix and flash. |
+| `check_dfm_jlcpcb.py` | JLCPCB checks a rule deck cannot express: via holes in SMD pads, mask web on fine-pitch parts, stencil area ratio, parts near the edge, fiducials. Holds the JLCPCB limits with their sources; the rule deck itself is in the checkpoint's `qa/dfm-jlcpcb/`. |
+| `run_dfm_jlcpcb_drc.py` | Runs KiCad DRC once per rule of the JLCPCB rule deck on scratch copies of the project and collects every finding (`qa/dfm-jlcpcb/drc-per-rule.json`). |
+| `plan_npth_clearance.py` | Plans the track detours that keep copper 0.2 mm from non-plated holes: tangent polygons round the hole, neighbours pushed outward where needed. Output is an operation list for `apply_layout_ops.py`. |
+| `plan_via_out_of_pad.py` | Moves via holes out of SMD pads where a free position exists. |
+| `plan_via_relocate.py` | For the vias that could not simply be nudged: takes the via out of the pad, finds a free position up to a few millimetres away and routes both layers to it. |
+| `plan_pair_route.py` | Shortest any-angle route for a differential pair over both outer layers: Dijkstra on a 0.1 mm grid with 16 directions, then string pulling on a 0.05 mm clearance map. Used to lay the USB pair again (156 mm → 138 mm). `--soft` lists the tracks a still shorter route would have to cross. |
+| `plan_pair_tracks.py` | Turns that centre line into the two tracks and the via pairs, removes the old pair, and checks every new piece of copper on the exact geometry before it writes the operation list. |
+| `edit_schematic_added_parts.py` | Writes the symbols of parts added by the layout tools (two-pin part with a global label on each pin, Core sheet) and renames the label on the driving LED's DOUT pin. |
 
 ## Current physical-material checker
 

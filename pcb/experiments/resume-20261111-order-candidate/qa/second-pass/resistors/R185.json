@@ -1,0 +1,302 @@
+{
+ "note": "R185 100 ohm in series at the source of the LED data hop KEY_RGB_CHAIN_44 (LED55 DOUT), 18.2 mm of copper before it. Turned by hand so that pad 1 faces the via: the planner's source-side track ran 31 mm round the part.",
+ "symbol_uuid": "4523bd9c-8e87-54ad-889d-239a55831836",
+ "ops": [
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 265.59999999999997,
+     "y1": 65.0,
+     "x2": 266.5,
+     "y2": 65.89999999999999,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 276.3,
+     "y1": 71.0,
+     "x2": 277.8,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 277.8,
+     "y1": 71.0,
+     "x2": 277.8,
+     "y2": 73.3,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 277.8,
+     "y1": 73.3,
+     "x2": 275.299999,
+     "y2": 73.3,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 275.299999,
+     "y1": 73.3,
+     "x2": 274.2,
+     "y2": 72.2,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 274.2,
+     "y1": 72.2,
+     "x2": 273.7,
+     "y2": 72.2,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 273.7,
+     "y1": 72.2,
+     "x2": 273.59999999999997,
+     "y2": 72.1,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 273.59999999999997,
+     "y1": 72.1,
+     "x2": 272.9,
+     "y2": 72.1,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 272.9,
+     "y1": 72.1,
+     "x2": 268.59999999999997,
+     "y2": 67.8,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 268.59999999999997,
+     "y1": 67.8,
+     "x2": 268.4,
+     "y2": 67.8,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 266.5,
+     "y1": 65.89999999999999,
+     "x2": 268.399999,
+     "y2": 67.8,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 276.3225,
+     "y1": 70.95375,
+     "x2": 276.3,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    }
+   ]
+  },
+  {
+   "op": "remove_vias",
+   "vias": [
+    {
+     "x": 266.5,
+     "y": 65.89999999999999,
+     "net": "KEY_RGB_CHAIN_44"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED55",
+   "pad": "3",
+   "net": "KEY_RGB_CHAIN_44_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R185",
+   "lib_dir": "pcb/experiments/resume-20261111-order-candidate/pcb/Maru60.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Maru60:R_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 266.25,
+   "y": 64.65,
+   "rot": 90,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "KEY_RGB_CHAIN_44_SRC",
+    "2": "KEY_RGB_CHAIN_44"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/4523bd9c-8e87-54ad-889d-239a55831836",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     266.25,
+     65.16
+    ],
+    "2": [
+     266.25,
+     64.14
+    ]
+   }
+  },
+  {
+   "op": "add_vias",
+   "vias": [
+    {
+     "x": 266.5,
+     "y": 65.89999999999999,
+     "net": "KEY_RGB_CHAIN_44_SRC"
+    }
+   ]
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 276.3,
+     "y1": 71.0,
+     "x2": 277.8,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 277.8,
+     "y1": 71.0,
+     "x2": 277.8,
+     "y2": 73.3,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 277.8,
+     "y1": 73.3,
+     "x2": 275.299999,
+     "y2": 73.3,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 275.299999,
+     "y1": 73.3,
+     "x2": 274.2,
+     "y2": 72.2,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.15
+    },
+    {
+     "x1": 274.2,
+     "y1": 72.2,
+     "x2": 273.7,
+     "y2": 72.2,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 273.7,
+     "y1": 72.2,
+     "x2": 273.59999999999997,
+     "y2": 72.1,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 273.59999999999997,
+     "y1": 72.1,
+     "x2": 272.9,
+     "y2": 72.1,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 272.9,
+     "y1": 72.1,
+     "x2": 268.59999999999997,
+     "y2": 67.8,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 268.59999999999997,
+     "y1": 67.8,
+     "x2": 268.4,
+     "y2": 67.8,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 266.5,
+     "y1": 65.89999999999999,
+     "x2": 268.399999,
+     "y2": 67.8,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 276.3225,
+     "y1": 70.95375,
+     "x2": 276.3,
+     "y2": 71.0,
+     "layer": "F.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC",
+     "w": 0.19999999999999998
+    },
+    {
+     "x1": 266.25,
+     "y1": 65.16,
+     "x2": 266.5,
+     "y2": 65.9,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_44_SRC"
+    },
+    {
+     "x1": 266.25,
+     "y1": 64.14,
+     "x2": 265.85,
+     "y2": 64.14,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 265.85,
+     "y1": 64.14,
+     "x2": 265.6,
+     "y2": 64.39,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    },
+    {
+     "x1": 265.6,
+     "y1": 64.39,
+     "x2": 265.6,
+     "y2": 65.0,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "KEY_RGB_CHAIN_44"
+    }
+   ]
+  }
+ ]
+}

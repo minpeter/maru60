@@ -1,0 +1,264 @@
+{
+ "board": "pcb/experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pcb",
+ "board_sha256": "8057453f75871b4df187fc1adfe50b0b870c53e2fcc7e5202948398253904107",
+ "deck": "pcb/experiments/resume-20261111-order-candidate/qa/dfm-jlcpcb/maru60-jlcpcb.kicad_dru",
+ "kicad_version": "9.0.2",
+ "rules": [
+  {
+   "rule": "jlc_min_track_width_0.09",
+   "constraint": "track_width",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_copper_clearance_0.09",
+   "constraint": "clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_pad_to_track_0.10",
+   "constraint": "clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_smd_pad_to_pad_0.15",
+   "constraint": "clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_neck_0.09",
+   "constraint": "connection_width",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_via_diameter_0.25",
+   "constraint": "via_diameter",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_drill_0.15_max_6.3",
+   "constraint": "hole_size",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_npth_0.50",
+   "constraint": "hole_size",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_plated_slot_width_0.35",
+   "constraint": "hole_size",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_nonplated_slot_width_1.0",
+   "constraint": "hole_size",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_via_annular_0.05",
+   "constraint": "annular_width",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_pth_annular_0.15",
+   "constraint": "annular_width",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_via_hole_to_copper_0.20",
+   "constraint": "hole_clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_npth_to_copper_0.20",
+   "constraint": "hole_clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_pth_hole_to_copper_0.28",
+   "constraint": "hole_clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_pth_hole_to_inner_copper_0.30",
+   "constraint": "hole_clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_via_hole_to_hole_0.20",
+   "constraint": "hole_to_hole",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_pad_hole_to_hole_0.45",
+   "constraint": "hole_to_hole",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_copper_to_routed_edge_0.20",
+   "constraint": "edge_clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_silk_text_height_1.0",
+   "constraint": "text_height",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_silk_text_stroke_0.15",
+   "constraint": "text_thickness",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_min_pad_to_silk_0.15",
+   "constraint": "silk_clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_via_hole_0.20",
+   "constraint": "hole_size",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_pth_hole_0.50",
+   "constraint": "hole_size",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_plated_slot_width_0.50",
+   "constraint": "hole_size",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_via_no_surcharge_diameter_0.45",
+   "constraint": "via_diameter",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_via_annular_0.075",
+   "constraint": "annular_width",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_pth_annular_0.20",
+   "constraint": "annular_width",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_pth_hole_to_copper_0.35",
+   "constraint": "hole_clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_copper_to_routed_edge_0.30",
+   "constraint": "edge_clearance",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_u1_thermal_hole_0.20",
+   "constraint": "hole_size",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  },
+  {
+   "rule": "jlc_rec_u1_thermal_annular_0.075",
+   "constraint": "annular_width",
+   "violations": 0,
+   "min_actual_mm": null,
+   "unconnected": 0,
+   "found": []
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "note": "R115 100 ohm in series at the source of the 276 mm underglow data hop (LED68 DOUT -> LED69 DIN).",
+ "symbol_uuid": "d19d449b-7e77-5f59-9bb6-1c41ab528aec",
+ "ops": [
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 268.024999,
+     "y1": 18.025,
+     "x2": 268.0,
+     "y2": 18.0,
+     "layer": "B.Cu",
+     "net": "UG_LED_6"
+    },
+    {
+     "x1": 267.7,
+     "y1": 18.3,
+     "x2": 268.0,
+     "y2": 18.0,
+     "layer": "B.Cu",
+     "net": "UG_LED_6"
+    },
+    {
+     "x1": 267.3,
+     "y1": 18.3,
+     "x2": 267.7,
+     "y2": 18.3,
+     "layer": "B.Cu",
+     "net": "UG_LED_6"
+    },
+    {
+     "x1": 263.9,
+     "y1": 21.7,
+     "x2": 267.3,
+     "y2": 18.3,
+     "layer": "B.Cu",
+     "net": "UG_LED_6"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED68",
+   "pad": "3",
+   "net": "UG_LED_6_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R115",
+   "lib_dir": "/usr/share/kicad/footprints/Resistor_SMD.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Resistor_SMD:R_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 265.9625,
+   "y": 19.8625,
+   "rot": 0,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "UG_LED_6_SRC",
+    "2": "UG_LED_6"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/d19d449b-7e77-5f59-9bb6-1c41ab528aec",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     265.4525,
+     19.8625
+    ],
+    "2": [
+     266.4725,
+     19.8625
+    ]
+   }
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 265.4525,
+     "y1": 19.8625,
+     "x2": 265.4025,
+     "y2": 19.8125,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "UG_LED_6_SRC"
+    },
+    {
+     "x1": 265.4025,
+     "y1": 19.8125,
+     "x2": 267.6025,
+     "y2": 17.6125,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "UG_LED_6_SRC"
+    },
+    {
+     "x1": 267.6025,
+     "y1": 17.6125,
+     "x2": 268.0025,
+     "y2": 18.0125,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "UG_LED_6_SRC"
+    },
+    {
+     "x1": 268.0025,
+     "y1": 18.0125,
+     "x2": 268.025,
+     "y2": 18.025,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "UG_LED_6_SRC"
+    },
+    {
+     "x1": 266.4725,
+     "y1": 19.8625,
+     "x2": 264.2725,
+     "y2": 22.0625,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "UG_LED_6"
+    },
+    {
+     "x1": 264.2725,
+     "y1": 22.0625,
+     "x2": 263.9225,
+     "y2": 21.7125,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "UG_LED_6"
+    },
+    {
+     "x1": 263.9225,
+     "y1": 21.7125,
+     "x2": 263.9,
+     "y2": 21.7,
+     "w": 0.2,
+     "layer": "B.Cu",
+     "net": "UG_LED_6"
+    }
+   ]
+  }
+ ]
+}

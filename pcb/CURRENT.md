@@ -15,40 +15,77 @@ dependency. Diagnostic counts in the manifest are saved observations.
 | Bounded development prototype | [Open project](experiments/resume-20261109-relocated-expansion-zero-opens/pcb/maru60.kicad_pro) | 0 / 0 |
 | **Order candidate** | [Open project](experiments/resume-20261111-order-candidate/pcb/maru60.kicad_pro) | 0 / 0 |
 
+## Backspace 2U alternative (2026-11-12)
+
+The [new alternative](experiments/resume-20261112-backspace-2u/README.md) includes
+2U/split Backspace lands, a dedicated 2U plate and three additional LED damping
+resistors. Native CAD checks, 32 DFM rules, 54 changed-hop LED cases and Gerber
+readback pass. Its separate fabrication/assembly package is complete; **do not
+order it until the receptacle variant and stabilizer/plate fit are confirmed**.
+The selected order candidate below remains unchanged. The new plate defaults to
+the original 7U plate-mount cutout for the selected Designer Studio Stabilizer (For Plate) product; its
+exact clip dimensions and allowed plate thickness remain unverified. The new candidate's own
+`MANIFEST.json` binds its CAD and evidence; the primary-selection checker does
+not check this experimental manifest.
+
+The original candidate's thermal-hole recommendation warnings have also been
+resolved by classifying U1.61's nine thermal barrels separately and validating
+their dimensions. Copper and hole sizes remain unchanged.
+
 ## Order candidate (2026-11-11)
 
-PCB `5b71591a`, derived from the development prototype. It is what
+PCB `8057453f`, derived from the development prototype. It is what
 [`pcb/order`](order/README.md) (Gerbers, JLCPCB BOM and placement file) is
-exported from. See its [README](experiments/resume-20261111-order-candidate/README.md)
-for evidence. Compared with the development prototype:
+exported from. Its [README](experiments/resume-20261111-order-candidate/README.md)
+lists every change, the evidence, and what was left as it is. In short:
 
-- **64 top-side parts no longer sit under switch housings.** Each LED's 0402
-  bypass capacitor was 4.0 mm beside the LED, under the flush MX housing; they
-  are now in the gaps between housings. `C200` also left the top side and is
-  populated on B.Cu beside the +4V_LED via.
-- **The Caps Lock option LEDs have two land sites each**, so the LED of the
-  unused option is not under the used switch: `LED75` is placed on the bottom
-  as a data relay, `LED30` has a spare top site. The firmware LED map is
-  unchanged.
-- **Datasheet review of every non-passive part: all pin tables match.** Three
-  corrections applied (`U13` land pattern, copper under `L1`, `C102` position).
+- **Switches can seat.** 64 top-side parts moved out from under the switch
+  housings; `C200` moved to the bottom side. The Caps Lock option LEDs have two
+  land sites each, so the LED of the unused option is not under the used switch;
+  the firmware LED map is unchanged.
+- **Every assembled part is in stock at JLCPCB.** The MAX38902A LDO became an
+  AP2112K-3.3 in SOT-23-5 (`C142`, `R163` and the sense jumper went with it);
+  `U8`, `U7`, `R121` name stocked parts. The hot-swap sockets are not stocked
+  and are hand-soldered.
+- **Data sheets:** every pin table matches; `U13` land pattern, copper under
+  `L1` and the `C102` position were corrected; switch pin holes are Kailh's
+  3.05 mm; capacitor values follow manufacturer DC-bias data (buck output about
+  33 µF effective, input 9.4 µF).
+- **Analyses on the final board**, all computed or simulated, none measured:
+  a DRC with JLCPCB's limits as rules, an ngspice model of the power tree, the
+  resistance of every power path from the routed copper, signal integrity of
+  the LED data links, USB, crystal, flash and key matrix, and a read-back of
+  the exported Gerbers with a second parser. They led to copper being kept
+  0.2 mm from every non-plated hole (now a rule in the board's own rule file),
+  silkscreen kept 0.15 mm from pads, a 100 Ω series resistor on 23 LED data
+  hops (every hop that rang back with the strongest LED output in the sweep),
+  `C143` (feed-forward capacitor of the buck, phase margin 38–44° → 46–51° in
+  the model), a snubber on the USB input (`R187`, `C144`; plug-in overshoot
+  7.5 V → 5.0 V in the model), all 39 vias being moved out of SMD pads, and
+  the USB pair being laid again (connector to transceiver 1.07 ns →
+  0.955 ns; USB 2.0 allows 1 ns).
 - **RP2350 USB is full speed only**, so the high-speed eye, the 90 Ω target and
   the skew in the USB SI report below do not apply. No impedance control is
   ordered.
-- **The out-of-stock MAX38902A LDO became an AP2112K-3.3 in SOT-23-5.** It needs
-  no BYP capacitor, output sense or minimum load, so `C142`, `R163` and the In2
-  sense jumper were removed; switch pin holes grew to Kailh's 3.05 mm and every
-  SK6805 site got a pin-1 dot.
-- Buck input capacitors `C136` and `C137` are 10 µF and `C100` on the buck
-  output rail is 22 µF (manufacturer DC-bias data puts the rail at about 33 µF
-  effective); `U8`, `U7`, `R121` name parts that are in stock.
-- Fresh native check: 0 opens, 0 warnings, ERC 0, parity 0, 67 cold-refill
-  files identical. Bottom-case fit: 20 pass.
+- **Firmware reads the matrix 0.8 µs after driving a row** (`GPIO_INPUT_PIN_DELAY
+  120`; the 247 ns default had no margin with a full row held and a
+  worst-case pin). Both layouts were rebuilt:
+  [build packet](experiments/resume-20261111-order-candidate/qa/qmk-build/RESULT.json).
+- **The placement file is fitted to JLCPCB's own footprints** (332 of 333
+  parts), not raw KiCad angles.
+- **A 2.75U right Shift on a PCB-mount stabilizer** is possible: `LED54` has
+  a second land site outside the stabilizer housing.
+- Native check: 0 opens, 0 warnings, ERC 0, parity 0, 74 cold-refill files
+  identical, material graph recomputed. Bottom-case fit: 41 pass.
 
-Still open: the 2.75U right Shift and 2U Backspace options are unsupported;
-hardware qualification, license and USB ID are unchanged from the sections
-below. The older [`pcb/fabrication`](fabrication/README.md) draft is from the
-development prototype and is superseded by `pcb/order` for ordering.
+Still open: a 2U Backspace is unsupported (it needs solder-in receptacles in
+place of three hot-swap sockets, an owner decision); hardware qualification,
+license and USB ID are
+unchanged from the sections below. The power, thermal and USB reports listed
+further down describe the development prototype and are superseded for the
+order candidate by the reports in its `qa/` folder. The older
+[`pcb/fabrication`](fabrication/README.md) draft is likewise superseded by
+`pcb/order`.
 
 ## Development prototype
 

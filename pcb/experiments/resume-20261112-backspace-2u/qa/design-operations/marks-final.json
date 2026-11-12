@@ -1,0 +1,55 @@
+{
+ "ops": [
+  {
+   "op": "remove_vias",
+   "vias": [
+    {
+     "net": "KEY_RGB_CHAIN_15",
+     "x": 270.11,
+     "y": 33.60375
+    }
+   ]
+  },
+  {
+   "op": "add_circles",
+   "items": [
+    {
+     "ref": "LED14",
+     "x": 250.3425,
+     "y": 9.97375,
+     "r": 0.15,
+     "layer": "F.Silkscreen",
+     "fill": true,
+     "w": 0.15
+    },
+    {
+     "ref": "LED14",
+     "x": 264.9475,
+     "y": 4.89375,
+     "r": 0.15,
+     "layer": "F.Silkscreen",
+     "fill": true,
+     "w": 0.15
+    },
+    {
+     "ref": "LED15",
+     "x": 279.5525,
+     "y": 9.97375,
+     "r": 0.15,
+     "layer": "F.Silkscreen",
+     "fill": true,
+     "w": 0.15
+    },
+    {
+     "ref": "LED15",
+     "x": 267.625,
+     "y": 20.575,
+     "r": 0.15,
+     "layer": "F.Silkscreen",
+     "fill": true,
+     "w": 0.15
+    }
+   ]
+  }
+ ]
+}

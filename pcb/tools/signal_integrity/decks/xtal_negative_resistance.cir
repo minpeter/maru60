@@ -1,0 +1,186 @@
+* crystal: resistance seen by the motional arm vs amplifier gm (AC, 12 MHz)
+I0 xb0 xin0 AC 1
+Ca0 xin0 0 20.57p
+Cb0 xb0 0 16.16p
+C00 xin0 xb0 3.0p
+R108_0 xb0 xo0 1k
+Cx0 xo0 0 4.46p
+G0 xo0 0 xin0 0 0.0001
+Ro0 xo0 0 20000.0
+Rf0 xin0 xo0 1meg
+I1 xb1 xin1 AC 1
+Ca1 xin1 0 20.57p
+Cb1 xb1 0 16.16p
+C01 xin1 xb1 3.0p
+R108_1 xb1 xo1 1k
+Cx1 xo1 0 4.46p
+G1 xo1 0 xin1 0 0.0002
+Ro1 xo1 0 20000.0
+Rf1 xin1 xo1 1meg
+I2 xb2 xin2 AC 1
+Ca2 xin2 0 20.57p
+Cb2 xb2 0 16.16p
+C02 xin2 xb2 3.0p
+R108_2 xb2 xo2 1k
+Cx2 xo2 0 4.46p
+G2 xo2 0 xin2 0 0.0003
+Ro2 xo2 0 20000.0
+Rf2 xin2 xo2 1meg
+I3 xb3 xin3 AC 1
+Ca3 xin3 0 20.57p
+Cb3 xb3 0 16.16p
+C03 xin3 xb3 3.0p
+R108_3 xb3 xo3 1k
+Cx3 xo3 0 4.46p
+G3 xo3 0 xin3 0 0.0005
+Ro3 xo3 0 20000.0
+Rf3 xin3 xo3 1meg
+I4 xb4 xin4 AC 1
+Ca4 xin4 0 20.57p
+Cb4 xb4 0 16.16p
+C04 xin4 xb4 3.0p
+R108_4 xb4 xo4 1k
+Cx4 xo4 0 4.46p
+G4 xo4 0 xin4 0 0.00075
+Ro4 xo4 0 20000.0
+Rf4 xin4 xo4 1meg
+I5 xb5 xin5 AC 1
+Ca5 xin5 0 20.57p
+Cb5 xb5 0 16.16p
+C05 xin5 xb5 3.0p
+R108_5 xb5 xo5 1k
+Cx5 xo5 0 4.46p
+G5 xo5 0 xin5 0 0.001
+Ro5 xo5 0 20000.0
+Rf5 xin5 xo5 1meg
+I6 xb6 xin6 AC 1
+Ca6 xin6 0 20.57p
+Cb6 xb6 0 16.16p
+C06 xin6 xb6 3.0p
+R108_6 xb6 xo6 1k
+Cx6 xo6 0 4.46p
+G6 xo6 0 xin6 0 0.0015
+Ro6 xo6 0 20000.0
+Rf6 xin6 xo6 1meg
+I7 xb7 xin7 AC 1
+Ca7 xin7 0 20.57p
+Cb7 xb7 0 16.16p
+C07 xin7 xb7 3.0p
+R108_7 xb7 xo7 1k
+Cx7 xo7 0 4.46p
+G7 xo7 0 xin7 0 0.002
+Ro7 xo7 0 20000.0
+Rf7 xin7 xo7 1meg
+I8 xb8 xin8 AC 1
+Ca8 xin8 0 20.57p
+Cb8 xb8 0 16.16p
+C08 xin8 xb8 3.0p
+R108_8 xb8 xo8 1k
+Cx8 xo8 0 4.46p
+G8 xo8 0 xin8 0 0.003
+Ro8 xo8 0 20000.0
+Rf8 xin8 xo8 1meg
+I9 xb9 xin9 AC 1
+Ca9 xin9 0 20.57p
+Cb9 xb9 0 16.16p
+C09 xin9 xb9 3.0p
+R108_9 xb9 xo9 1k
+Cx9 xo9 0 4.46p
+G9 xo9 0 xin9 0 0.004
+Ro9 xo9 0 20000.0
+Rf9 xin9 xo9 1meg
+I10 xb10 xin10 AC 1
+Ca10 xin10 0 20.57p
+Cb10 xb10 0 16.16p
+C010 xin10 xb10 3.0p
+R108_10 xb10 xo10 1k
+Cx10 xo10 0 4.46p
+G10 xo10 0 xin10 0 0.006
+Ro10 xo10 0 20000.0
+Rf10 xin10 xo10 1meg
+I11 xb11 xin11 AC 1
+Ca11 xin11 0 20.57p
+Cb11 xb11 0 16.16p
+C011 xin11 xb11 3.0p
+R108_11 xb11 xo11 1k
+Cx11 xo11 0 4.46p
+G11 xo11 0 xin11 0 0.008
+Ro11 xo11 0 20000.0
+Rf11 xin11 xo11 1meg
+I12 xb12 xin12 AC 1
+Ca12 xin12 0 20.57p
+Cb12 xb12 0 16.16p
+C012 xin12 xb12 3.0p
+R108_12 xb12 xo12 1k
+Cx12 xo12 0 4.46p
+G12 xo12 0 xin12 0 0.012
+Ro12 xo12 0 20000.0
+Rf12 xin12 xo12 1meg
+I13 xb13 xin13 AC 1
+Ca13 xin13 0 20.57p
+Cb13 xb13 0 16.16p
+C013 xin13 xb13 3.0p
+R108_13 xb13 xo13 1k
+Cx13 xo13 0 4.46p
+G13 xo13 0 xin13 0 0.016
+Ro13 xo13 0 20000.0
+Rf13 xin13 xo13 1meg
+I14 xb14 xin14 AC 1
+Ca14 xin14 0 20.57p
+Cb14 xb14 0 16.16p
+C014 xin14 xb14 3.0p
+R108_14 xb14 xo14 1k
+Cx14 xo14 0 4.46p
+G14 xo14 0 xin14 0 0.024
+Ro14 xo14 0 20000.0
+Rf14 xin14 xo14 1meg
+I15 xb15 xin15 AC 1
+Ca15 xin15 0 20.57p
+Cb15 xb15 0 16.16p
+C015 xin15 xb15 3.0p
+R108_15 xb15 xo15 1k
+Cx15 xo15 0 4.46p
+G15 xo15 0 xin15 0 0.032
+Ro15 xo15 0 20000.0
+Rf15 xin15 xo15 1meg
+.ac lin 1 12meg 12meg
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=7
+run
+let zr0 = real(v(xin0)-v(xb0))
+let zi0 = imag(v(xin0)-v(xb0))
+let zr1 = real(v(xin1)-v(xb1))
+let zi1 = imag(v(xin1)-v(xb1))
+let zr2 = real(v(xin2)-v(xb2))
+let zi2 = imag(v(xin2)-v(xb2))
+let zr3 = real(v(xin3)-v(xb3))
+let zi3 = imag(v(xin3)-v(xb3))
+let zr4 = real(v(xin4)-v(xb4))
+let zi4 = imag(v(xin4)-v(xb4))
+let zr5 = real(v(xin5)-v(xb5))
+let zi5 = imag(v(xin5)-v(xb5))
+let zr6 = real(v(xin6)-v(xb6))
+let zi6 = imag(v(xin6)-v(xb6))
+let zr7 = real(v(xin7)-v(xb7))
+let zi7 = imag(v(xin7)-v(xb7))
+let zr8 = real(v(xin8)-v(xb8))
+let zi8 = imag(v(xin8)-v(xb8))
+let zr9 = real(v(xin9)-v(xb9))
+let zi9 = imag(v(xin9)-v(xb9))
+let zr10 = real(v(xin10)-v(xb10))
+let zi10 = imag(v(xin10)-v(xb10))
+let zr11 = real(v(xin11)-v(xb11))
+let zi11 = imag(v(xin11)-v(xb11))
+let zr12 = real(v(xin12)-v(xb12))
+let zi12 = imag(v(xin12)-v(xb12))
+let zr13 = real(v(xin13)-v(xb13))
+let zi13 = imag(v(xin13)-v(xb13))
+let zr14 = real(v(xin14)-v(xb14))
+let zi14 = imag(v(xin14)-v(xb14))
+let zr15 = real(v(xin15)-v(xb15))
+let zi15 = imag(v(xin15)-v(xb15))
+wrdata /out/xtal_negative_resistance.txt zr0 zr1 zr2 zr3 zr4 zr5 zr6 zr7 zr8 zr9 zr10 zr11 zr12 zr13 zr14 zr15 zi0 zi1 zi2 zi3 zi4 zi5 zi6 zi7 zi8 zi9 zi10 zi11 zi12 zi13 zi14 zi15
+.endc
+.end

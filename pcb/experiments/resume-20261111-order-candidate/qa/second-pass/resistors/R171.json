@@ -1,0 +1,147 @@
+{
+ "note": "R171 100 ohm in series at the source of the LED data hop UG_LED_3 (LED65 DOUT), 0.0 mm of copper before it.",
+ "symbol_uuid": "394cc951-81f5-5c4c-a3b0-5e22e6c1f60f",
+ "ops": [
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 115.52499999999999,
+     "y1": 18.025,
+     "x2": 115.5,
+     "y2": 18.0,
+     "layer": "B.Cu",
+     "net": "UG_LED_3"
+    },
+    {
+     "x1": 115.8,
+     "y1": 17.7,
+     "x2": 115.5,
+     "y2": 18.0,
+     "layer": "B.Cu",
+     "net": "UG_LED_3"
+    },
+    {
+     "x1": 115.8,
+     "y1": 17.7,
+     "x2": 116.0,
+     "y2": 17.5,
+     "layer": "B.Cu",
+     "net": "UG_LED_3"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED65",
+   "pad": "3",
+   "net": "UG_LED_3_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R171",
+   "lib_dir": "pcb/experiments/resume-20261111-order-candidate/pcb/Maru60.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Maru60:R_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 115.5375,
+   "y": 16.8625,
+   "rot": 0,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "UG_LED_3_SRC",
+    "2": "UG_LED_3"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/394cc951-81f5-5c4c-a3b0-5e22e6c1f60f",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     115.0275,
+     16.8625
+    ],
+    "2": [
+     116.0475,
+     16.8625
+    ]
+   }
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 115.0275,
+     "y1": 16.8625,
+     "x2": 115.5275,
+     "y2": 17.3625,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_3_SRC"
+    },
+    {
+     "x1": 115.5275,
+     "y1": 17.3625,
+     "x2": 115.2275,
+     "y2": 17.6625,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_3_SRC"
+    },
+    {
+     "x1": 115.2275,
+     "y1": 17.6625,
+     "x2": 115.5275,
+     "y2": 17.9625,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_3_SRC"
+    },
+    {
+     "x1": 115.5275,
+     "y1": 17.9625,
+     "x2": 115.5275,
+     "y2": 18.0125,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_3_SRC"
+    },
+    {
+     "x1": 115.5275,
+     "y1": 18.0125,
+     "x2": 115.525,
+     "y2": 18.025,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_3_SRC"
+    },
+    {
+     "x1": 116.0475,
+     "y1": 16.8625,
+     "x2": 116.3475,
+     "y2": 17.1625,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_3"
+    },
+    {
+     "x1": 116.3475,
+     "y1": 17.1625,
+     "x2": 115.9975,
+     "y2": 17.5125,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_3"
+    },
+    {
+     "x1": 115.9975,
+     "y1": 17.5125,
+     "x2": 116.0,
+     "y2": 17.5,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_3"
+    }
+   ]
+  }
+ ]
+}

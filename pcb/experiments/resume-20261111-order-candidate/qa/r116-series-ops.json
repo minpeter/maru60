@@ -1,0 +1,154 @@
+{
+ "note": "R116 100 ohm in series at the source of the underglow data hop UG_LED_9 (LED71 DOUT).",
+ "symbol_uuid": "427e5ea2-8164-5b15-8f0d-b59faa096690",
+ "ops": [
+  {
+   "op": "remove_tracks",
+   "tracks": [
+    {
+     "x1": 99.5,
+     "y1": 76.3,
+     "x2": 99.51987799999999,
+     "y2": 76.478899,
+     "layer": "B.Cu",
+     "net": "UG_LED_9"
+    },
+    {
+     "x1": 99.5,
+     "y1": 76.3,
+     "x2": 100.35,
+     "y2": 75.45,
+     "layer": "B.Cu",
+     "net": "UG_LED_9"
+    },
+    {
+     "x1": 100.35,
+     "y1": 75.45,
+     "x2": 100.35,
+     "y2": 75.0,
+     "layer": "B.Cu",
+     "net": "UG_LED_9"
+    },
+    {
+     "x1": 100.35,
+     "y1": 75.0,
+     "x2": 101.0,
+     "y2": 74.35,
+     "layer": "B.Cu",
+     "net": "UG_LED_9"
+    },
+    {
+     "x1": 101.0,
+     "y1": 74.35,
+     "x2": 101.0,
+     "y2": 73.4,
+     "layer": "B.Cu",
+     "net": "UG_LED_9"
+    }
+   ]
+  },
+  {
+   "op": "set_pad_net",
+   "ref": "LED71",
+   "pad": "3",
+   "net": "UG_LED_9_SRC"
+  },
+  {
+   "op": "add_footprint",
+   "ref": "R116",
+   "lib_dir": "/usr/share/kicad/footprints/Resistor_SMD.pretty",
+   "name": "R_0402_1005Metric",
+   "fpid": "Resistor_SMD:R_0402_1005Metric",
+   "side": "B.Cu",
+   "x": 100.375,
+   "y": 74.35,
+   "rot": 90,
+   "value": "100 1%",
+   "pad_nets": {
+    "1": "UG_LED_9_SRC",
+    "2": "UG_LED_9"
+   },
+   "path": "/0940d797-79a6-569a-9535-d8f19961ba0b/427e5ea2-8164-5b15-8f0d-b59faa096690",
+   "sheetname": "/Core/",
+   "sheetfile": "maru60-core.kicad_sch",
+   "expect_pads": {
+    "1": [
+     100.375,
+     74.86
+    ],
+    "2": [
+     100.375,
+     73.84
+    ]
+   }
+  },
+  {
+   "op": "add_tracks",
+   "tracks": [
+    {
+     "x1": 100.375,
+     "y1": 74.86,
+     "x2": 100.775,
+     "y2": 75.26,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_9_SRC"
+    },
+    {
+     "x1": 100.775,
+     "y1": 75.26,
+     "x2": 99.525,
+     "y2": 76.51,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_9_SRC"
+    },
+    {
+     "x1": 99.525,
+     "y1": 76.51,
+     "x2": 99.525,
+     "y2": 76.525,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_9_SRC"
+    },
+    {
+     "x1": 100.375,
+     "y1": 73.84,
+     "x2": 100.475,
+     "y2": 73.84,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_9"
+    },
+    {
+     "x1": 100.475,
+     "y1": 73.84,
+     "x2": 100.925,
+     "y2": 73.39,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_9"
+    },
+    {
+     "x1": 100.925,
+     "y1": 73.39,
+     "x2": 100.975,
+     "y2": 73.39,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_9"
+    },
+    {
+     "x1": 100.975,
+     "y1": 73.39,
+     "x2": 101.0,
+     "y2": 73.4,
+     "w": 0.15,
+     "layer": "B.Cu",
+     "net": "UG_LED_9"
+    }
+   ]
+  }
+ ]
+}

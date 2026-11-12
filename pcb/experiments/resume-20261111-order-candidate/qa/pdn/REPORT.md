@@ -15,13 +15,13 @@ islands are equipotential. The solver reproduces a hand-calculated 100 mm ×
 | --- | --- | --- | --- | --- |
 | VBUS J1 -> F1 | 39.48 mΩ | 0.5 A | 19.74 mV | 1 |
 | VBUS_FUSED F1 -> U8 | 9.9 mΩ | 0.5 A | 4.95 mV | 1 |
-| VBUS_PROTECTED_RAW U8 -> U18 | 270.29 mΩ | 0.5 A | 135.15 mV | 14 |
+| VBUS_PROTECTED_RAW U8 -> U18 | 271.56 mΩ | 0.5 A | 135.78 mV | 14 |
 | +4V_REG L2 -> U2 | 74.49 mΩ | 0.15 A | 11.17 mV | 2 |
 | +4V_REG L2 -> U7 | 103.63 mΩ | 0.234 A | 24.25 mV | 6 |
 | +3V3 U2 -> U1 pin 49 (VREG_VIN) | 88.26 mΩ | 0.15 A | 13.24 mV | 8 |
 | +3V3 U2 -> U3 | 88.26 mΩ | 0.05 A | 4.41 mV | 8 |
 
-Connector to buck input at 0.5 A: 19.74 + 4.95 + 135.15 mV of copper,
+Connector to buck input at 0.5 A: 19.74 + 4.95 + 135.78 mV of copper,
 plus the fuse (0.132 Ω typical, 66 mV) and the eFuse (28 mΩ typical, 14 mV):
 about 240 mV. At the 295 mA worst steady input current from the power
 simulation it is about 140 mV.
