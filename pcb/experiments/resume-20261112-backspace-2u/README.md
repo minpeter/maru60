@@ -129,3 +129,11 @@ plate's width and pitch against Cherry's original drawing. Both dimensions
 pass. The INKC corner profile differs from the Cherry aperture probe, so this
 is not full-profile conformity or a claim that every product fits. No PCB or
 plate geometry was altered by this research.
+
+## Snapshot at PR merge
+
+[Rendered views](qa/render/README.md) preserve the current bare-PCB and plate
+visualization. [Automated-review follow-ups](REVIEW-FOLLOWUPS.md) record
+unresolved comments for subsequent triage; merging this development snapshot
+does not clear those findings or approve fabrication. MCU relocation near
+USB-C has not been implemented.
