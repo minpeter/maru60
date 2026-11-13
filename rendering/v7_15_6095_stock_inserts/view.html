@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{margin:0}button,summary{font:inherit}.controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+button{border:1px solid var(--border);background:var(--secondary);color:var(--foreground);border-radius:var(--radius);padding:8px 12px;cursor:pointer}
+button[aria-pressed="true"]{background:var(--primary);color:var(--primary-foreground);border-color:var(--primary)}
+img{display:block;width:100%;height:auto;border-radius:var(--radius)}[hidden]{display:none!important}
+details{margin-top:12px}summary{cursor:pointer;color:var(--muted-foreground);padding:6px 0}details img{margin-top:8px}
+</style>
+<div class="controls" role="group" aria-label="중앙부 설계 비교">
+<button id="b15" aria-pressed="true" onclick="selectVersion('15')">이번 수정 · v7.15</button>
+<button id="b13" aria-pressed="false" onclick="selectVersion('13')">최초 · v7.13</button>
+<button id="b14" aria-pressed="false" onclick="selectVersion('14')">두꺼운 안 · v7.14</button>
+</div>
+<img id="v15" src="detail-after.png" width="940" height="870" alt="짜맞춤축을 옮겨 원래 폭을 유지하고 범폰과 정렬한 v7.15">
+<img id="v13" src="../v7_14_6095_stock_inserts/detail-before.png" width="940" height="870" alt="중앙부가 비대칭이던 최초 v7.13" hidden>
+<img id="v14" src="../v7_14_6095_stock_inserts/detail-after.png" width="940" height="870" alt="리브를 넓혀 대칭으로 만들었던 v7.14" hidden>
+<details><summary>전체 하우징 보기</summary><img src="maru60-v7.15-6095-stock-inserts.png" width="2800" height="2100" alt="v7.15 상단 하우징 전체"></details>
+<script>function selectVersion(v){for(const id of ['13','14','15']){document.getElementById('v'+id).hidden=id!==v;document.getElementById('b'+id).setAttribute('aria-pressed',id===v)}}</script></html>

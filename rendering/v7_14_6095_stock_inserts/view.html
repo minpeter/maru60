@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{margin:0}button,summary{font:inherit} .controls{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+button{border:1px solid var(--border);background:var(--secondary);color:var(--foreground);border-radius:var(--radius);padding:8px 14px;cursor:pointer}
+button[aria-pressed="true"]{background:var(--primary);color:var(--primary-foreground);border-color:var(--primary)}
+.hint{margin-left:auto;color:var(--muted-foreground);font-size:13px}.stage{position:relative}img{display:block;width:100%;height:auto;border-radius:var(--radius)}
+[hidden]{display:none!important}details{margin-top:12px}summary{cursor:pointer;color:var(--muted-foreground);padding:6px 0}details img{margin-top:8px}
+</style>
+<div class="controls" role="group" aria-label="수정 전후 전환">
+<button id="afterButton" aria-pressed="true" onclick="showAfter(true)">수정 후 · v7.14</button>
+<button id="beforeButton" aria-pressed="false" onclick="showAfter(false)">수정 전 · v7.13</button><span class="hint">중앙부 확대</span>
+</div>
+<div class="stage">
+<img id="after" src="detail-after.png" width="940" height="870" alt="수정 후: 양쪽 리브 폭과 벌집 여백이 대칭이며 범폰 구멍이 중앙에 정렬됨">
+<img id="before" src="detail-before.png" width="940" height="870" alt="수정 전: 한쪽으로 치우친 중앙 리브와 비대칭 벌집 여백" hidden>
+</div>
+<details><summary>전체 하우징 보기</summary><img src="maru60-v7.14-6095-stock-inserts.png" width="2800" height="2100" alt="수정한 v7.14 상단 하우징 전체"></details>
+<script>function showAfter(value){document.getElementById('after').hidden=!value;document.getElementById('before').hidden=value;document.getElementById('afterButton').setAttribute('aria-pressed',value);document.getElementById('beforeButton').setAttribute('aria-pressed',!value)}</script></html>

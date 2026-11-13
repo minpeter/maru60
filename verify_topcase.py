@@ -4,7 +4,7 @@ Verifies exported CAD files (not in-memory construction) across 6 independent su
   1. Mesh Integrity & X2D Bed Bounds: watertight, winding-consistent, 1-shell STLs & 3MFs.
   2. 91-Step Rigid-Body Dovetail Insertion Path: zero drag during upper entry (`dz >= 3.2 mm`),
      intentional compression-rib engagement ONLY in final `3.0 mm` (`dz < 3.1 mm`), and
-     strictly confined inside the compression-rib bands of the 3 X = 0 dovetails.
+     strictly confined inside the compression-rib bands of the 3 shifted dovetails.
   3. 6-DOF Retention & Stop Stiffness: X-separation, Y-shear, and -Z overtravel past the `0.20 mm` vertical stop
      clearance all blocked; the vertical free play itself is measured (clear at 0.18 mm, contact by 0.25 mm).
   4. Staggered Back Seam: both seam faces at `seam strike centre -/+ gap/2` (line-to-line), one full-depth strike pilot
@@ -104,12 +104,24 @@ def main() -> None:
     left_mf, right_mf = to_manifold(left_tm), to_manifold(right_tm)
     full_case_mf = left_mf + right_mf
 
-    # Wrist-rest mirror symmetry: away from the joints (X < 10) the two wrist halves are exact mirrors, including the
-    # 0.70 mm front top chamfer. A boolean fault that drops material or chamfers on one half shows up here.
-    wrist_box = md.Manifold.cube([135.0, 82.0, 30.0]).translate([10.0, -1.0, -5.0])
+    # Beyond the shifted dovetail tips (X=3.1), the visible web, middle pad and honeycomb are mirror images about X=0.
+    wrist_box = md.Manifold.cube([141.5, 82.0, 30.0]).translate([3.5, -1.0, -5.0])
     right_wrist, mirrored_left_wrist = right_mf ^ wrist_box, left_mf.mirror([1.0, 0.0, 0.0]) ^ wrist_box
     wrist_asymmetry = float((right_wrist - mirrored_left_wrist).volume() + (mirrored_left_wrist - right_wrist).volume())
     assert wrist_asymmetry < 0.05, f"Wrist halves are not mirror images: {wrist_asymmetry} mm^3 differ"
+
+    # The 13.8 mm rib has centred edges; only the rounded 16 mm pad widens it locally at the front.
+    # Measure the exported solid at two heights; the lower slice misses the hidden dovetail voids.
+    centre_rib_edges = {}
+    for z in (3.0, 8.0):
+        wrist_section = unary_union([slice_material(m, z) for m in (left_mf, right_mf)])
+        for y in (4.0, 8.0, 10.0, 12.0, 14.0, 18.0, 30.0, 40.0, 60.0, 76.0):
+            span = wrist_section.intersection(sg.LineString([(-15.0, y), (15.0, y)]))
+            lo, _, hi, _ = span.bounds
+            half_width = 8.0 if y <= 8.0 else max(6.9, math.sqrt(max(0.0, 8.0**2 - (y - 8.0)**2)))
+            assert abs(lo + half_width) < 0.015 and abs(hi - half_width) < 0.015, ("Centre rib edge", z, y, span)
+            centre_rib_edges[f"z{z:g}-y{y:g}"] = [round(lo, 4), round(hi, 4)]
+    assert [0.0, 8.0] in GEOM["bumpon_pads"]["centres_world"], "Centre bumpon must stay on the housing axis"
 
     # -----------------------------------------------------------------------
     # 2. 91-Step Rigid-Body Dovetail Insertion Path & Rib-Confinement Proof
@@ -117,13 +129,15 @@ def main() -> None:
     # Allowed compression-rib zones: ONLY the socket rib bands `[z_stop, z_stop + z_h + JOINT_Z_CLEAR]` of the 3 joints!
     allowed_ribs = md.Manifold()
     joint_yc = GEOM["joint_yc_world"]
+    joint_seam_x = GEOM["joint_seam_x_world"]
+    assert abs(joint_seam_x + 2.9) < 1e-6, "The 13.8 mm support envelope requires the shifted joint axis"
     joint_rib_zones = [
         ("WristFrontJoint",     joint_yc["WristFrontJoint"], 7.0, 6.2, 4.0, 5.0),
         ("WristMidJoint",       joint_yc["WristMidJoint"], 7.0, 6.2, 4.0, 5.0),
         ("FrontBezelWallJoint", joint_yc["FrontBezelWallJoint"], 6.8, 6.2, 4.0, 5.0),
     ]
     for _, yc, hh_box, proj_box, z_stop, z_h in joint_rib_zones:
-        allowed_ribs += md.Manifold.cube([proj_box, 2.0 * hh_box, z_h + JOINT_Z_CLEAR]).translate([0.5, yc - hh_box, z_stop])
+        allowed_ribs += md.Manifold.cube([proj_box, 2.0 * hh_box, z_h + JOINT_Z_CLEAR]).translate([joint_seam_x + 0.5, yc - hh_box, z_stop])
 
     dz_steps = np.linspace(0.0, 18.0, 91)
     path_overlaps = []
@@ -252,7 +266,7 @@ def main() -> None:
 
     glue_gap: dict[str, float] = {}
     for d in GEOM["dovetails"]:
-        glue_gap[d["name"]] = round(max(widest_gap(d["yc"] + dy, 0.05, d["proj"] - 0.05, d["z_stop"], d["z_top"] - 0.05)
+        glue_gap[d["name"]] = round(max(widest_gap(d["yc"] + dy, d["seam_x"] + 0.05, d["seam_x"] + d["proj"] - 0.05, d["z_stop"], d["z_top"] - 0.05)
                                         for dy in (-3.0, 0.0, 3.0)), 3)
     glue_gap["BackSeamKey"] = round(widest_gap(seam["key_y"], seam["key_x0"] + 0.15, seam["key_tip_x"] + 0.25,
                                                seam["key_underside_z_at_seam"] - 0.3, z_strike - 0.02), 3)
@@ -521,6 +535,7 @@ def main() -> None:
         "floating_layer_islands_0p20mm": {k: len(v) for k, v in floating_islands.items()},
         "flat_overhangs_over_2mm": {k: len(v) for k, v in flat_overhangs.items()},
         "wrist_mirror_asymmetry_mm3": round(wrist_asymmetry, 5),
+        "wrist_centre_rib_edges_mm": centre_rib_edges,
         "cap_pocket_wall_cover_skirt_side_and_ends": pocket_wall_cover,
         "cap_pocket_and_relief_overlap_above_6p30_mm3": round(orange_overlap, 5),
         "floor_cover_outside_declared_cuts": floor_cover,

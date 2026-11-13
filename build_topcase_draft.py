@@ -23,7 +23,7 @@ photo metrology of the silicone gasket caps and ball-catch pockets (IMG_0201..IM
          `3.55 mm` deep M2 strike screw pilots; each keeps its fitted distance to the inner skirt wall it faces
       6. USB-C notch (14.75 wide for cable plugs, stock 12.8 selectable in spec/, 8.7 deep from the lip, R1.5 closed-end
          corners and convex R0.5 rounds at the open lip ends). Gasket mount only: no top-mount screws.
-  - Staggered split into two X2D halves: X = 0 through the wrist rest and front bezel (3 dovetails); the back bezel runs
+  - Staggered split into two X2D halves: X = -2.9 through the wrist rest and front bezel (3 dovetails); the back bezel runs
     on in the LeftHalf to the back-left (BL) strike centre, where the stock strike plate (one M2 per half) and a wedge key
     join the back seam. Each male part keeps its 45-deg print ramp and the female side fills under it, so every joint
     closes over all faces with a 0.20 mm glue line and nothing needs support.
@@ -95,7 +95,8 @@ Z_RELIEF = Z_GASKET     # Plate-body travel relief: same level as the cap pocket
 # the band between the inner wall and the gasket-plate edge to 7.6 mm, so they sit centred in it (0.63 mm pocket-to-wall
 # and tongue-to-plate); the fitted 4.65 mm would leave the tongue 0.24 mm from the plate.
 STRIKE_SITES = [tuple(s) for s in spec.value("ball_catch.strike_sites")]
-JOINT_YC = {  # Dovetail centers (world Y): wrist / front wall joints across X = 0
+MAIN_SEAM_X = -2.90     # Re-centre the original 4.0 / 9.8 mm support envelope without widening it
+JOINT_YC = {  # Dovetail centers (world Y): wrist / front wall joints across MAIN_SEAM_X
     "WristFrontJoint": 23.50,
     "WristMidJoint": 50.00,
     "FrontBezelWallJoint": 75.50,
@@ -109,14 +110,14 @@ JOINTS_SPEC = [
     ("WristMidJoint",        JOINT_YC["WristMidJoint"], 5.20, 6.60, 6.0, 4.0, 22.0, 4.8, 0.55),
     ("FrontBezelWallJoint",  JOINT_YC["FrontBezelWallJoint"], 5.00, 6.40, 6.0, 4.0, 22.0, 4.8, 0.55),
 ]
-# Staggered split: the wrist rest, front bezel and keycap opening split at X = 0 (the 3 dovetails above); the back bezel
+# Staggered split: wrist rest, front bezel and keycap opening split at MAIN_SEAM_X; the back bezel
 # runs on in the LeftHalf to the centre of the back strike on the +X side (the stock back-left, BL, in the underside
 # view), so the stock strike plate (2 x M2 at 13.0 mm pitch) bridges the back seam with one screw in each half, and the
-# back-centre cap pocket stays in one piece. The step from X = 0 to the back seam runs at `SPLIT_STEP_Y` through the
+# back-centre cap pocket stays in one piece. The step from MAIN_SEAM_X to the back seam runs at `SPLIT_STEP_Y` through the
 # keycap opening, where there is no material.
 BACK_SEAM_STRIKE = next(n for n, x, wall, _ in STRIKE_SITES if wall == "back" and pw(x, 0.0)[0] > 0.0)
 BACK_SEAM_X = round(pw(next(x for n, x, *_ in STRIKE_SITES if n == BACK_SEAM_STRIKE), 0.0)[0], 3)  # world X (53.10)
-BACK_SEAM_GAP = 0.0     # End gap across the back seam: line-to-line, like every side face of the X = 0 dovetails (owner)
+BACK_SEAM_GAP = 0.0     # End gap across the back seam: line-to-line, like every dovetail side face (owner)
 SPLIT_STEP_Y = round((OPENING_P[1] + OPENING_P[3]) / 2 + DY_PW, 3)  # Mid keycap opening, world Y
 BACK_KEY_HW = 1.50      # Back-seam key half width (Y): a 45-deg wedge on the LeftHalf below the seam strike pocket floor
 BACK_KEY_Z0 = 2.00      # Key underside at the seam face (Z_p); it rises at 45 deg to the strike pocket floor
@@ -237,6 +238,7 @@ INNER_SKIRT_R = spec.value("top.inner_corner_r")  # Inner skirt (bottom-case poc
                         # v6.2 held the stock bottom case ~2.3 mm off its seat at the corners (owner, printed part): its
                         # corners are about R2.7, so the pocket takes R2.0 to clear them with the straight walls line-to-line.
 RIB = 2.40              # Honeycomb rib width (matches v9)
+CENTRE_RIB_HALF_W = 6.90  # Original 13.8 mm support width, re-centred by moving the seam and joints -2.9 mm
 # Bumpon pads: 3 sites along the wrist-rest front edge, each with a pocket for a 3M Bumpon Protective Products SJ5012
 # (cylindrical, flat top, Ø12.7 x 3.5 mm, +-0.5 mm; same shape as SJ5312 transparent and SJ5412 true white). The bumpons
 # fill the gap the stock bottom-case feet leave under the wrist rest; the pocket sets how far they stand proud of the pad
@@ -253,7 +255,7 @@ BUMPON_H = spec.value("bumpon.sj5012")["height"]  # 3M SJ5012 height (datasheet 
 DESK_GAP = spec.value("desk.gap")  # Pad face to desk with the keyboard on its stock feet: estimated, not measured
 POCKET_DEPTH = round(BUMPON_H - DESK_GAP, 3)  # Pocket depth along the desk-plane normal (1.50 mm)
 POCKET_D = round(BUMPON_D_MAX + 0.4, 3)       # Pocket diameter (13.60 mm): 0.2 mm per side at the largest bumpon
-PAD_X = (-119.0, 0.0, 119.0)  # Pad centres, X (print frame); the centre pad straddles the X = 0 split
+PAD_X = (-119.0, 0.0, 119.0)  # Pad centres; middle pad remains on the housing axis, crossing the shifted seam
 PAD_W = 16.0            # Pad width (X): 1.2 mm wall each side of the pocket
 PAD_D = 16.0            # Pad depth (Y) from the outer face: 1.2 mm wall each side of the pocket
 PAD_COLUMN_D = 6.0      # Full-height part of the pad at least, wall included
@@ -464,7 +466,7 @@ def build_halves(board_id: str, *, inserts: bool = False, strike_inserts: bool =
                  catch_inserts: bool = False, purchased_catches: bool = False,
                  insert_hole_d: float = 3.2, sculpted_catches: bool = False,
                  luban_catches: bool = False) -> tuple[md.Manifold, md.Manifold]:
-    """LeftHalf (X <= 0 plus the back strip) and RightHalf in the print frame, in the CNC order of the docstring."""
+    """Halves divided at MAIN_SEAM_X (with a staggered back strip), in the print frame."""
     use_inserts = inserts or strike_inserts
     if (use_inserts or luban_catches) and (catch_inserts or purchased_catches or sculpted_catches):
         raise ValueError("Published catch/insert options cannot be combined with the separate local catch studies")
@@ -542,28 +544,25 @@ def build_halves(board_id: str, *, inserts: bool = False, strike_inserts: bool =
     back_inner_y = WRIST_D + CASE_D - SKIRT_WALL
     body -= prism_xz(usb_xz, back_inner_y - 1.0, back_inner_y + SKIRT_WALL + 1.0)
 
-    # 8. Wrist rest: the two interior hollows under the skin (contoured around the 3 front bumpon pads), the
-    #    right-side socket boss strip (X 3.5..9.8, standing 0.2 mm into the skin: a flat overhang otherwise, and down to
-    #    the desk plane, flush with the centre rib and the dovetail tongues), the
-    #    45-deg pad undercuts and the bumpon pockets.
+    # 8. Wrist rest: the original 13.8 mm support envelope is centred at X=0 by moving the seam/joints to X=-2.9.
+    #    The tongue root still has 4.0 mm and the socket side still has 9.8 mm from that seam, with unchanged joint
+    #    profiles. Only the rounded 16 mm middle pad widens the rib locally at the front; its pocket stays at X=0.
     assert (PAD_D - BUMPON_D_MAX) / 2 >= 1.0 and PAD_W >= BUMPON_D_MAX + 2.0, "bumpon pad too small"
     w_in_x = round(CASE_W / 2 - WRIST_WALL, 3)
     left_pads = [sg.box(x - PAD_W / 2, -10.0, x + PAD_W / 2, PAD_D / 2).union(
         sg.Point(x, PAD_D / 2).buffer(PAD_W / 2, quad_segs=32)) for x in PAD_X if x <= 0.0]
-    left_hollow = sg.Polygon([(-w_in_x + 5.5, 2.2), (-4.0, 2.2), (-4.0, 77.8), (-w_in_x, 77.8), (-w_in_x, 7.7)]).difference(
+    left_hollow = sg.Polygon([(-w_in_x + 5.5, 2.2), (-CENTRE_RIB_HALF_W, 2.2),
+                             (-CENTRE_RIB_HALF_W, 77.8), (-w_in_x, 77.8), (-w_in_x, 7.7)]).difference(
         unary_union(left_pads))
     assert left_hollow.geom_type == "Polygon", left_hollow.geom_type
     right_hollow = sa.scale(left_hollow, xfact=-1.0, origin=(0.0, 0.0))
     body -= prism_xy(sg.MultiPolygon([left_hollow, right_hollow]), SKIN_T, SKIN_T + 24.0)
-    boss = sg.Polygon([(14.0, SKIN_T - 0.2), (79.0, SKIN_T - 0.2), (79.0, z_desk_in_print_frame(79.0)),
-                       (14.0, z_desk_in_print_frame(14.0))])
-    body += prism_yz(boss, 3.5, 9.8)
 
     # Pad undercuts: each pad's underside rises at 45 deg to a `PAD_TIP_T` vertical land at its inner edge, so it prints
     # without support; the pad stays full height where that slope meets the skin, at least `PAD_COLUMN_D` from the wall.
     # Only cuts: the pad face stays the desk plane and the pad sides the hollow notch, and the cut reaches 1 mm into the
-    # empty bay past the pad's sides and inner edge (no coincident faces). The seam pad has no undercut: its wings are
-    # 4 mm columns against the centre rib.
+    # empty bay past the pad's sides and inner edge (no coincident faces). The middle pad has no undercut: its small
+    # wings stand beside the rib, supporting the pocket where it crosses the shifted seam.
     z_tip = z_desk_in_print_frame(PAD_D) - PAD_TIP_T  # underside at the pad's inner edge
     y_out = PAD_D + 1.0
     below_slope = sg.Polygon([(y_out, z_tip + 1.0), (PAD_D - 100.0, z_tip - 100.0), (y_out, z_tip - 100.0)])
@@ -583,8 +582,8 @@ def build_halves(board_id: str, *, inserts: bool = False, strike_inserts: bool =
     to_desk_plane = np.array([[1.0, 0.0, 0.0, 0.0], [0.0, cos_t, -sin_t, 0.0], [0.0, sin_t, cos_t, z_desk_in_print_frame(0.0)]])
     body -= xsec(sg.MultiPolygon(rings)).extrude(POCKET_DEPTH + 1.0).translate([0.0, 0.0, -POCKET_DEPTH]).transform(to_desk_plane)
 
-    # 9. Honeycomb through the wrist-rest skin (`Z_p -0.5 .. skin_t + 0.5`): hexagons with a vertex at 90 deg, each
-    #    circumcircle 1 mm inside a bay.
+    # 9. Honeycomb through the wrist-rest skin (`Z_p -0.5 .. skin_t + 0.5`): retain the established lattice and
+    #    its original bay masks. Its nearest hex edges are X=+-10.80285, leaving 3.90285 mm beside the centred rib.
     hex_r = round(4.5 - RIB / math.sqrt(3), 4)
     left_bay = sg.Polygon([(-w_in_x + 5.5, 2.2), (-4.0, 2.2), (-4.0, 77.8), (-w_in_x, 77.8), (-w_in_x, 7.7)]).buffer(-1.0)
     right_bay = sg.Polygon([(4.0, 2.2), (w_in_x - 5.5, 2.2), (w_in_x, 7.7), (w_in_x, 77.8), (4.0, 77.8)]).buffer(-1.0)
@@ -596,12 +595,14 @@ def build_halves(board_id: str, *, inserts: bool = False, strike_inserts: bool =
             if left_bay.contains(sg.Point(hx, hy).buffer(hex_r)) or right_bay.contains(sg.Point(hx, hy).buffer(hex_r)):
                 cells.append(sg.Polygon([(hx + hex_r * math.cos(math.pi / 6 + math.pi * k / 3),
                                           hy + hex_r * math.sin(math.pi / 6 + math.pi * k / 3)) for k in range(6)]))
+    assert min(min(abs(cell.bounds[0]), abs(cell.bounds[2])) for cell in cells) - CENTRE_RIB_HALF_W >= 1.0
     body -= prism_xy(sg.MultiPolygon(cells), -0.5, SKIN_T + 0.5)
 
-    # 10. Split at X = 0: LeftHalf X <= 0, RightHalf X >= 0 (the back strip moves over in 12).
-    left, right = body.trim_by_plane([-1.0, 0.0, 0.0], 0.0), body.trim_by_plane([1.0, 0.0, 0.0], 0.0)
+    # 10. Split at MAIN_SEAM_X (the back strip moves over in 12).
+    left = body.trim_by_plane([-1.0, 0.0, 0.0], -MAIN_SEAM_X)
+    right = body.trim_by_plane([1.0, 0.0, 0.0], MAIN_SEAM_X)
 
-    # 11. Three dovetails across X = 0 (with planar chevron compression ribs):
+    # 11. Three dovetails across MAIN_SEAM_X (with planar chevron compression ribs):
     #     - Plain tongue meets the plain socket line-to-line (0 mm) in plan; each tongue starts `JOINT_Z_CLEAR` below the
     #       socket roof (`z_tongue = z_stop + 0.20`), the only vertical contact between the halves.
     #     - Chevron ribs stand in the socket band `[z_tongue + 0.3, z_tongue + rib_top]` (fixed in the RightHalf),
@@ -616,19 +617,19 @@ def build_halves(board_id: str, *, inserts: bool = False, strike_inserts: bool =
     #       leaves zero-volume slivers.
     y_lip = (SKIRT_H - z_desk_in_print_frame(0.0)) / (z_desk_in_print_frame(1.0) - z_desk_in_print_frame(0.0))
     underside_keep = prism_yz(sg.Polygon([(-5.0, -5.0), (95.0, -5.0), (95.0, SKIRT_H), (y_lip, SKIRT_H),
-                                          (-5.0, z_desk_in_print_frame(-5.0))]), -5.0, 15.0).translate([0.0, 0.0, -0.02])
+                                          (-5.0, z_desk_in_print_frame(-5.0))]), MAIN_SEAM_X - 5.0, MAIN_SEAM_X + 15.0).translate([0.0, 0.0, -0.02])
     for jname, yc, nh, hh, proj, z_stop, z_sock_top, rib_top, taper in JOINTS_SPEC:
         z_tongue = round(z_stop + JOINT_Z_CLEAR, 3)
         assert nh - taper > 0.0, f"{jname}: neck half-width at X=1.4 must stay positive"
         assert z_sock_top > SKIRT_H, f"{jname}: socket must open through the underside"
-        sock_poly = dovetail_poly(yc, nh, hh, proj, clear=JOINT_CLEAR, neck_taper=taper)
-        male_poly = dovetail_poly(yc, nh, hh, proj, neck_taper=taper)
-        rib_polys = socket_rib_polys(yc, nh, hh, proj, taper)
+        sock_poly = sa.translate(dovetail_poly(yc, nh, hh, proj, clear=JOINT_CLEAR, neck_taper=taper), xoff=MAIN_SEAM_X)
+        male_poly = sa.translate(dovetail_poly(yc, nh, hh, proj, neck_taper=taper), xoff=MAIN_SEAM_X)
+        rib_polys = [sa.translate(p, xoff=MAIN_SEAM_X) for p in socket_rib_polys(yc, nh, hh, proj, taper)]
         assert sock_poly.is_valid and male_poly.is_valid and all(p.is_valid for p in rib_polys), jname
         z_base, x_end = round(z_stop - 0.3, 3), round(proj + 0.5, 3)
         x_start = 0.8 + (z_base + JOINT_Z_CLEAR - tongue_ramp_z(0.8, z_tongue, proj)) / ((proj + 0.3) / (proj - 0.2))
         z_end = tongue_ramp_z(x_end, z_tongue, proj) - JOINT_Z_CLEAR
-        fill = prism_xz(sg.Polygon([(x_start, z_base), (x_end, z_base), (x_end, z_end)]), yc - hh - 1.0, yc + hh + 1.0)
+        fill = prism_xz(sg.Polygon([(x_start, z_base), (x_end, z_base), (x_end, z_end)]), yc - hh - 1.0, yc + hh + 1.0).translate([MAIN_SEAM_X, 0.0, 0.0])
         socket = prism_xy(sock_poly, z_stop, z_sock_top)
         assert ((socket ^ fill) - right).volume() < 1e-6, f"{jname}: fill outside the RightHalf"
         right -= socket - fill
@@ -636,13 +637,15 @@ def build_halves(board_id: str, *, inserts: bool = False, strike_inserts: bool =
         left += prism_xy(male_poly, z_tongue, z_sock_top) ^ underside_keep
         ramp = sg.Polygon([(0.8, tongue_ramp_z(0.8, z_tongue, proj)), (proj + 0.6, tongue_ramp_z(0.8, z_tongue, proj)),
                            (proj + 0.6, tongue_ramp_z(proj + 0.6, z_tongue, proj))])
-        left -= prism_xz(ramp, yc - hh - 1.2, yc + hh + 1.2)  # 45-deg self-supporting print ramp under the tongue
+        left -= prism_xz(ramp, yc - hh - 1.2, yc + hh + 1.2).translate([MAIN_SEAM_X, 0.0, 0.0])
 
-    # 12. Stagger: the back strip of the RightHalf from X = 0 to `BACK_SEAM_X - gap/2` (above `SPLIT_STEP_Y`, so only
+    # 12. Stagger: the back strip of the RightHalf from MAIN_SEAM_X to `BACK_SEAM_X - gap/2` (above `SPLIT_STEP_Y`, so only
     #     back bezel and skirt) joins the LeftHalf; the RightHalf loses it up to `BACK_SEAM_X + gap/2` (gap 0: one plane).
     half_gap = BACK_SEAM_GAP / 2
-    strip = right ^ prism_xy(sg.box(0.0, SPLIT_STEP_Y, BACK_SEAM_X - half_gap, 205.0), -5.0, 35.0)
-    right -= prism_xy(sg.box(-1.0, SPLIT_STEP_Y, BACK_SEAM_X + half_gap, 205.0), -5.0, 35.0)
+    # Extend into the existing left body: a non-integer split must not leave a numerically disconnected strip
+    # when the cross-section kernel and the trimming plane round the shared face differently.
+    strip = body ^ prism_xy(sg.box(MAIN_SEAM_X - 0.01, SPLIT_STEP_Y, BACK_SEAM_X - half_gap, 205.0), -5.0, 35.0)
+    right -= prism_xy(sg.box(MAIN_SEAM_X - 1.0, SPLIT_STEP_Y, BACK_SEAM_X + half_gap, 205.0), -5.0, 35.0)
     left += strip
 
     # 13. Back seam: Y alignment from a 45-deg wedge key on the LeftHalf under the seam strike pocket floor, sliding down
@@ -790,7 +793,7 @@ def main() -> None:
     )
 
     report = {
-        "version": "v7.13-seam-bumpon",
+        "version": "v7.15-centred-joint-axis",
         "generator": "manifold3d mesh CSG (build_topcase_draft.py) + 28px/mm gasket metrology",
         "inserts": use_inserts,
         "strike_inserts": use_inserts,
@@ -883,6 +886,7 @@ def main() -> None:
             "strike_pocket_half_w": LUBAN_POCKET_HALF_W if luban else STRIKE_POCKET_HALF_W,
             "strike_plate_mm": {k: strike_hw[k] for k in ("length", "width", "thickness")},
             "joint_yc_world": JOINT_YC,
+            "joint_seam_x_world": MAIN_SEAM_X,
             "back_seam": {
                 "x_world": BACK_SEAM_X,
                 "gap": BACK_SEAM_GAP,
@@ -896,9 +900,12 @@ def main() -> None:
             "strike_pilot_diameter": CANOT_INSERT["hole_d"] if use_inserts else 1.8,
             "strike_pilot_depth": LUBAN_BORE_DEPTH if luban else STRIKE_PILOT_DEPTH,
             "strike_pilot_half_pitch": strike_hw["screw_pitch"] / 2,
-            "dovetails": [{"name": n, "yc": yc, "proj": proj, "z_stop": z_stop,
+            "dovetails": [{"name": n, "yc": yc, "seam_x": MAIN_SEAM_X, "proj": proj, "z_stop": z_stop,
                            "z_top": round(min(z_desk_in_print_frame(yc - hh), SKIRT_H) - 0.02, 3)}  # tongue end, flush
                           for n, yc, _, hh, proj, z_stop, *_ in JOINTS_SPEC],
+            "wrist_centre_rib": {"half_width": CENTRE_RIB_HALF_W, "width": 2 * CENTRE_RIB_HALF_W,
+                                 "centre_x": 0.0, "joint_seam_x": MAIN_SEAM_X,
+                                 "straight_y_span": [round(PAD_D / 2 + math.sqrt((PAD_W / 2)**2 - CENTRE_RIB_HALF_W**2), 4), 77.8]},
             "bumpon_pads": {
                 "bumpon": "3M Bumpon Protective Products SJ5012 (same shape: SJ5312 transparent, SJ5412 true white)",
                 "bumpon_diameter": BUMPON_D,

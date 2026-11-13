@@ -1,0 +1,15 @@
+{
+  "status": "ALL_PASSED",
+  "date": "2026-11-13",
+  "test_command": "uv run python -m unittest tests.test_strike_inserts tests.test_luban_catches tests.test_housing_workflow tests.test_export_provenance",
+  "test_count": 11,
+  "test_result": "OK",
+  "geometry_verification": "ALL_PASSED; require_verified matched current source and every build input",
+  "delivered_files": "3MF and ZIP SHA256 values match manifest.json and the delivery snapshot",
+  "geometry_audit": "v7.13 joint/PCB interface/top skin comparison reproduced",
+  "artifact_links": "print-history, release README and archived render HTML image paths resolved",
+  "source_sha256": {
+    "build_topcase_draft.py": "a74087be549446a4e5b974de8f3248aee910bf8fa2f02a767521b679fd9cd38b",
+    "verify_topcase.py": "54f9cf9162a9d5cbc23c2c923221639e9c82ab7b425df4733239096a77fe924c"
+  }
+}

@@ -7,6 +7,7 @@ Rule 60 V3 wrist rest and an unfinished RP2350A PCB design.
 | Start here | Contents |
 | --- | --- |
 | [Housing](docs/housing.md) | Build and verify matching top/bottom variants; print files, fit and assembly |
+| [Physical build 02 — v7.15](docs/print-history.md) | Owner-designated second physical build: 6095, stock catches, inserts; final print pair and change record |
 | [Standalone wrist rest](docs/wrist-rest.md) | Current tight-fit downloads, reproduction and print guidance |
 | [PCB current state](pcb/CURRENT.md) | Strict baseline, development prototype and unresolved qualification |
 | [PCB validation](docs/pcb-validation.md) | Reproduce native CAD, portable firmware and power checks |

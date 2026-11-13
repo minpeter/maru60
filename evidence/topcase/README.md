@@ -8,6 +8,13 @@ on the stock Rule 60 V3 HHKB top case with a digital vernier caliper
 `Z_p` is the print-frame height: 0 at the top face (on the build plate),
 increasing toward the skirt lip.
 
+## Physical build 02 (2026-11-13)
+
+The owner designated v7.15 with the 6095 tri-mode PCB, stock catches and CANOT
+inserts as the second physical build. The [build record](../../docs/print-history.md)
+links the exact print pair, its hashes, CAD checks and final render. Printing
+and assembly observations for this build have not yet been recorded.
+
 ## Caliper measurements
 
 | Quantity | Value (mm) | Source | Used as |

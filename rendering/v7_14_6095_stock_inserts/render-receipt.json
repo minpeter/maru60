@@ -1,0 +1,35 @@
+{
+  "version": "v7.14-symmetric-centre-rib",
+  "board": "6095-trimode",
+  "catches": "stock",
+  "inserts": "CANOT M2 OD3.5 x L3; eight nominal sleeves",
+  "geometry": "Unmodified exported upper shell; no lower case, PCB or catch hardware shown",
+  "device": "GPU",
+  "backend": "HIP",
+  "devices": [
+    {
+      "name": "AMD Ryzen Threadripper PRO 3945WX 12-Cores",
+      "type": "CPU",
+      "enabled": false
+    },
+    {
+      "name": "AMD Radeon RX 570 Series",
+      "type": "HIP",
+      "enabled": true
+    }
+  ],
+  "blender": "5.2.2 LTS",
+  "samples": 256,
+  "resolution": [
+    2800,
+    2100
+  ],
+  "elapsed_seconds": 108.7,
+  "image": "maru60-v7.14-6095-stock-inserts.png",
+  "sha256": "3ff7cc3b44267e71bf9d4a9776519778b731229997e40980243afc60c337bdfa",
+  "input_hashes": {
+    "render.py": "69faaf8aa7e5d743af787e80ef43a426aa10f4f29e06ea2b25af73b83da0ea60",
+    "shell-meshes.json": "bfca6200b5e7c0674a5e42668350b202cc6ef946efd15ebae3c47f950038fb70",
+    "insert-sites.json": "a5df95f3a60dc9b385e98f5cf5ef0ad660e28572b1e547e96618c90019001fa9"
+  }
+}

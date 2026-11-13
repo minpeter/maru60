@@ -1,0 +1,40 @@
+{
+  "version": "v7.15-centred-joint-axis",
+  "change": "Materials only; saved geometry, camera, lights and inserts retained",
+  "colors_linear_rgb": {
+    "LeftHalf": [
+      0.045,
+      0.25,
+      0.55
+    ],
+    "RightHalf": [
+      0.64,
+      0.2,
+      0.055
+    ]
+  },
+  "device": "GPU",
+  "backend": "HIP",
+  "devices": [
+    {
+      "name": "AMD Ryzen Threadripper PRO 3945WX 12-Cores",
+      "type": "CPU",
+      "enabled": false
+    },
+    {
+      "name": "AMD Radeon RX 570 Series",
+      "type": "HIP",
+      "enabled": true
+    }
+  ],
+  "blender": "5.2.2 LTS",
+  "samples": 256,
+  "resolution": [
+    2800,
+    2100
+  ],
+  "elapsed_seconds": 123.53,
+  "source_scene_sha256": "5efc64e0dba06fbd83bbd950c521455e5db87af42940b8deb02c3cf70cafded7",
+  "script_sha256": "71e0a660a57672cae8800c8dd92c2de9c5af290a9a70ae3dde87833c08c14d05",
+  "image_sha256": "5d6be59e3a1ef9cf0bf5ac107fe3cf3e1d515e6eb897e37a37e8128e04cddb7e"
+}

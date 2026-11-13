@@ -1,7 +1,13 @@
 # Maru60 housing
 
-The HHKB top case includes the wrist rest. The code serves two product lines,
-both experimental:
+The HHKB top case includes the wrist rest.
+
+The owner designated **v7.15 / 6095-trimode / stock catches / inserts** as
+**physical build 02** on 2026-11-13. Its frozen print pair, changes and validation
+are in the [physical build record](print-history.md). Use both v7.15 halves:
+the main split and its three joints moved 2.9 mm, so older halves do not mate.
+
+The code serves two product lines, both experimental:
 
 | Line | Parts printed | Mates with | Options |
 | --- | --- | --- | --- |

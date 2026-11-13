@@ -1,0 +1,32 @@
+{
+  "physical_build_number": 2,
+  "designation_date": "2026-11-13",
+  "designation_source": "Owner explicitly identified this as the second physical build in the design session",
+  "cad_version": "v7.15-centred-joint-axis",
+  "board": "6095-trimode",
+  "catch_hardware": "stock",
+  "inserts": true,
+  "insert_spec": "CANOT M2 OD3.5 x L3",
+  "status": "released_for_second_physical_build",
+  "print_result": "not_recorded",
+  "assembly_result": "not_recorded",
+  "files": {
+    "maru60-v7.15-6095-stock-inserts-left.3mf": {
+      "sha256": "48821d9ec61644a84aa5a12df01204be010136d8285f54a01e571e198349705c",
+      "bytes": 104733,
+      "role": "left"
+    },
+    "maru60-v7.15-6095-stock-inserts-right.3mf": {
+      "sha256": "41c41200673d0ef192da051dbfb68d6f471f9270554bc6a0716b65fdee0776d8",
+      "bytes": 92138,
+      "role": "right"
+    },
+    "maru60-v7.15-6095-stock-inserts-print.zip": {
+      "sha256": "76eeef6d8aa7d9b2464b5ac7aef8510871bd628a192094e658130bd69d1d0299",
+      "bytes": 193461,
+      "role": "delivered-pair-archive"
+    }
+  },
+  "verification_receipt": "../../rendering/v7_15_6095_stock_inserts/geometry/verification.json",
+  "verification_sha256": "3d57609d77ef722ed9637ef85b959cb480f62b95fafa0de0c53e53c119b84106"
+}

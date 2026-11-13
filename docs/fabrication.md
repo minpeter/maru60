@@ -178,8 +178,10 @@ underside level with the top-case lip. Bumpons under the wrist rest fill that
 gap. v7.6 adds bumpon pockets, v7.9 sets the USB-C notch from public PCB
 data, v7.10 keeps only the front pad row, v7.11 widens the notch to 14.75 mm,
 v7.12 moves it to the PH60 Rev.3 default board and v7.13 swaps the two inner
-front pads for one on the centre seam; none has been printed yet. Fixes
-found by printing:
+front pads for one on the centre seam. v7.15 shifts the joint axis to centre
+the original-width rib around that pad. On 2026-11-13 the owner designated
+v7.15 as [physical build 02](print-history.md); its print/assembly results
+have not yet been recorded. Fixes found by printing and later revisions:
 
 - **v7.0:** v6.2 and earlier printed the mirror image: the DWG plate frame is a
   top view, the print frame the underside. The USB-C notch came out on the
@@ -222,6 +224,25 @@ found by printing:
   rib (no corbel). The front edge now spans 119 mm between pads instead of
   89 mm; how much more it gives under a wrist is not established without a
   print.
+- **v7.14 (superseded local trial, not printed):** the wrist-rest centre rib is 19.6 mm wide, centred
+  on X=0 from the front wall to the keyboard bezel. Both edges now sit 9.8 mm
+  from the split, replacing the 4.0 mm left web / 9.8 mm right socket support.
+  The middle bumpon remains on X=0; the unchanged honeycomb lattice leaves
+  1.003 mm to each rib edge. Dovetail profiles, catch interfaces and USB
+  positions are unchanged. The new render and verified 6095/stock/insert
+  meshes are under `rendering/v7_14_6095_stock_inserts/`; published downloads
+  below still contain the earlier geometry.
+- **v7.15 (physical build 02):** the three wrist/front-bezel joints and their split
+  move 2.9 mm toward -X. This centres the original 13.8 mm support envelope
+  at X=0, with the same 4.0 mm root-side and 9.8 mm socket-side support measured
+  from the new split. The middle bumpon stays at X=0; only its rounded 16 mm
+  pad widens the rib locally. Both honeycomb margins are 3.903 mm. The joint
+  profiles, insertion direction, rear strike seam and PCB interfaces stay
+  fixed in shape. Use the v7.15 left and right print files as a pair: the moved
+  joints do not align with earlier halves. Verified 6095/stock/insert files
+  and renders are under `rendering/v7_15_6095_stock_inserts/`. The frozen
+  [second-build print pair](../models/print-02-v7.15-6095-stock-inserts/) is
+  the selected release; the generic downloads below retain earlier variants.
 
 [Fit photos](../evidence/topcase/README.md#photos) are in the evidence folder.
 

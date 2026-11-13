@@ -1,0 +1,20 @@
+{
+  "git_head": "12bc13e312ae53300fa8c70045569e4db1e13f69",
+  "working_tree_changes": [
+    "build_topcase_draft.py",
+    "verify_topcase.py",
+    "docs/fabrication.md"
+  ],
+  "command": "uv run python build_topcase_draft.py --board 6095-trimode --catches stock --inserts",
+  "source_sha256": {
+    "build_topcase_draft.py": "a74087be549446a4e5b974de8f3248aee910bf8fa2f02a767521b679fd9cd38b",
+    "verify_topcase.py": "54f9cf9162a9d5cbc23c2c923221639e9c82ab7b425df4733239096a77fe924c",
+    "rule60_spec.py": "327ca5c513663eaef8b643a7c4d003304a26a8778f8a6111623b3cbea866fc19",
+    "maru60/frames.py": "3906e5f54949fe00fa3b04d1f5fde7b3caa35405fd374a6d7a27cc5ef9b5b1d8",
+    "spec/rule60-v3.json": "bfc76674a8b4c35dbf459efb985728eec2053352906a5a7db8cb5e878098885a",
+    "spec/boards.json": "64f89606713cd0f621bc42168daf565c44f471544addb3b2d85b05a94af88a0e",
+    "spec/rule60-v3-outlines.json": "acff832b570715bb261defe752e226e86c554d629dbe344b42f0eb93674bee97"
+  },
+  "geometry_sha256": "a1fd164e94a318359110cd95920e07c2c270edebd8552a7aa172b1bcbcd8f6e3",
+  "verification_sha256": "3d57609d77ef722ed9637ef85b959cb480f62b95fafa0de0c53e53c119b84106"
+}
