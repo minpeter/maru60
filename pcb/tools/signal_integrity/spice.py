@@ -12,6 +12,7 @@ import json
 import math
 import os
 import subprocess
+import uuid
 from pathlib import Path
 
 import numpy as np
@@ -22,6 +23,11 @@ DECKS = HERE / "decks"
 OUT = ROOT / "build" / "si" / "out"
 QA = ROOT / "pcb" / "experiments" / "resume-20261111-order-candidate" / "qa" / "signal-integrity"
 IMAGE = os.environ.get("MARU60_NGSPICE_IMAGE", "maru60-ngspice:bookworm")
+
+
+class SimulationAborted(RuntimeError):
+    """ngspice can return exit zero and write partial data after an abort."""
+
 
 RHO_CU = 1.72e-8  # ohm m
 T_CU = 35e-6
@@ -63,7 +69,10 @@ class Deck:
 
     def ladder(self, a, b, length_mm, w_mm, table=None, max_section_mm=2.0, tag="t"):
         """Lossy LC ladder between nodes a and b for a single track over the plane."""
-        if length_mm <= 0:
+        # Splitting a route at a stub can leave a ~1e-15 mm floating-point
+        # remainder. An LC ladder for that numerical zero makes ngspice's
+        # matrix ill-conditioned. 1e-9 mm is 1000x below KiCad's 1 nm grid.
+        if length_mm <= 1e-9:
             self.add(f"R{self.uid('j')} {a} {b} 1m")
             return
         p = line_params(w_mm, table)
@@ -117,7 +126,7 @@ class Deck:
         if tran:
             text.append(f".tran {tran}")
         text += [".control", "set wr_singlescale", "set wr_vecnames", "set numdgt=7", "run", control_extra,
-                 f"wrdata /out/{name}.txt " + " ".join(vectors), ".endc", ".end", ""]
+                 f"wrdata /out/{name}.txt " + " ".join(vectors), "quit 0", ".endc", ".end", ""]
         (DECKS / f"{name}.cir").write_text("\n".join(t for t in text if t is not None))
         return run_deck(name)
 
@@ -126,19 +135,26 @@ def run_deck(name):
     out = OUT / f"{name}.txt"
     if out.exists():
         out.unlink()
-    cmd = ["docker", "run", "--rm", "-u", f"{os.getuid()}:{os.getgid()}", "-v", f"{DECKS}:/decks:ro", "-v", f"{OUT}:/out",
+    container = f"maru60-si-{uuid.uuid4().hex}"
+    cmd = ["docker", "run", "--rm", "--name", container, "-u", f"{os.getuid()}:{os.getgid()}", "-v", f"{DECKS}:/decks:ro", "-v", f"{OUT}:/out",
            "-w", "/out", IMAGE, "-b", f"/decks/{name}.cir"]
     try:
         r = subprocess.run(cmd + [], capture_output=True, text=True, timeout=float(os.environ.get("MARU60_NGSPICE_TIMEOUT", "240")))
     except subprocess.TimeoutExpired:
-        subprocess.run("docker ps -q --filter ancestor=%s | xargs -r docker kill" % IMAGE, shell=True, capture_output=True)
+        subprocess.run(["docker", "rm", "-f", container], capture_output=True)
         raise RuntimeError(f"ngspice timed out for {name}")
     (OUT / f"{name}.log").write_text(r.stdout + "\n--- stderr ---\n" + r.stderr)
+    if "simulation(s) aborted" in (r.stdout + r.stderr).lower():
+        raise SimulationAborted(f"ngspice aborted {name}; partial waveforms are invalid")
+    if r.returncode != 0:
+        raise RuntimeError(f"ngspice exited {r.returncode} for {name}:\n{r.stderr[-2000:]}")
     if not out.exists():
         raise RuntimeError(f"ngspice failed for {name}:\n{r.stdout[-2000:]}\n{r.stderr[-2000:]}")
     with out.open() as f:
         names = f.readline().split()
         data = np.loadtxt(f, ndmin=2)
+    if not data.size or not np.isfinite(data).all():
+        raise RuntimeError(f"ngspice wrote empty or nonfinite data for {name}")
     return {n: data[:, i] for i, n in enumerate(names)}
 
 

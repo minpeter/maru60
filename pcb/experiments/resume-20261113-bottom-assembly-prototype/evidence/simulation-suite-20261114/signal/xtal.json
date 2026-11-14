@@ -1,0 +1,360 @@
+{
+ "spec": {
+  "CL_pF": 10.0,
+  "ESR_max_ohm": 50.0,
+  "C0_max_pF": 3.0,
+  "drive_typ_uW": 10.0,
+  "drive_max_uW": 200.0,
+  "tolerance_ppm": 30,
+  "stability_ppm": 30,
+  "usb_fs_data_rate_tolerance_ppm": 2500
+ },
+ "copper": {
+  "XIN": {
+   "length_mm": 11.025,
+   "C_track_pF": 0.9,
+   "C_pads_pF": 0.68,
+   "C_vias_pF": 0.0,
+   "C_copper_pF": 1.58,
+   "pad_area_mm2": 2.11
+  },
+  "XTAL_OUT": {
+   "length_mm": 5.622,
+   "C_track_pF": 0.46,
+   "C_pads_pF": 0.72,
+   "C_vias_pF": 0.0,
+   "C_copper_pF": 1.18,
+   "pad_area_mm2": 2.28
+  },
+  "XOUT": {
+   "length_mm": 2.962,
+   "C_track_pF": 0.24,
+   "C_pads_pF": 0.22,
+   "C_vias_pF": 0.0,
+   "C_copper_pF": 0.46,
+   "pad_area_mm2": 0.49
+  }
+ },
+ "neighbours": {
+  "XIN": {
+   "XOUT": {
+    "min_gap": 0.25,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 2.057,
+    "len_le_0p6": 3.453
+   },
+   "XTAL_OUT": {
+    "min_gap": 0.35,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 1.19,
+    "len_le_0p6": 3.183
+   },
+   "COL10": {
+    "min_gap": 0.5,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 0.0,
+    "len_le_0p6": 1.177
+   },
+   "+3V3": {
+    "min_gap": 0.227,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 0.392,
+    "len_le_0p6": 0.687
+   }
+  },
+  "XTAL_OUT": {
+   "XIN": {
+    "min_gap": 0.35,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 1.23,
+    "len_le_0p6": 2.371
+   }
+  },
+  "XOUT": {
+   "XIN": {
+    "min_gap": 0.25,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 2.271,
+    "len_le_0p6": 2.962
+   },
+   "+1V1": {
+    "min_gap": 0.225,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 1.975,
+    "len_le_0p6": 2.864
+   }
+  }
+ },
+ "load_capacitance": {
+  "pin_1pF": {
+   "C_XIN_node_pF": 17.58,
+   "C_XTAL_OUT_node_pF": 16.18,
+   "C_behind_R108_pF": 1.46,
+   "CL_amplifier_driving_pF": 8.48,
+   "CL_xout_branch_counted_pF": 8.85
+  },
+  "pin_2pF": {
+   "C_XIN_node_pF": 18.58,
+   "C_XTAL_OUT_node_pF": 16.18,
+   "C_behind_R108_pF": 2.46,
+   "CL_amplifier_driving_pF": 8.7,
+   "CL_xout_branch_counted_pF": 9.33
+  },
+  "pin_4pF": {
+   "C_XIN_node_pF": 20.58,
+   "C_XTAL_OUT_node_pF": 16.18,
+   "C_behind_R108_pF": 4.46,
+   "CL_amplifier_driving_pF": 9.11,
+   "CL_xout_branch_counted_pF": 10.24
+  }
+ },
+ "frequency_offset_ppm": {
+  "pin_1pF_C1_2fF": [
+   8.8,
+   12.1
+  ],
+  "pin_1pF_C1_4fF": [
+   17.7,
+   24.2
+  ],
+  "pin_1pF_C1_6fF": [
+   26.5,
+   36.3
+  ],
+  "pin_2pF_C1_2fF": [
+   4.9,
+   10.1
+  ],
+  "pin_2pF_C1_4fF": [
+   9.9,
+   20.2
+  ],
+  "pin_2pF_C1_6fF": [
+   14.8,
+   30.4
+  ],
+  "pin_4pF_C1_2fF": [
+   -1.6,
+   6.7
+  ],
+  "pin_4pF_C1_4fF": [
+   -3.3,
+   13.4
+  ],
+  "pin_4pF_C1_6fF": [
+   -4.9,
+   20.0
+  ]
+ },
+ "frequency_offset_ppm_range": [
+  -4.9,
+  36.3
+ ],
+ "reference_design_CL_pF_as_stated_by_raspberry_pi": 10.5,
+ "negative_resistance": {
+  "nominal (pin 2 pF, C0 2 pF)": {
+   "rows": [
+    {
+     "gm_mS": 0.1,
+     "R_ohm": -4.183,
+     "X_ohm": -1175.83
+    },
+    {
+     "gm_mS": 0.2,
+     "R_ohm": -36.677,
+     "X_ohm": -1172.27
+    },
+    {
+     "gm_mS": 0.3,
+     "R_ohm": -69.257,
+     "X_ohm": -1169.096
+    },
+    {
+     "gm_mS": 0.5,
+     "R_ohm": -134.651,
+     "X_ohm": -1163.917
+    },
+    {
+     "gm_mS": 0.75,
+     "R_ohm": -216.759,
+     "X_ohm": -1159.652
+    },
+    {
+     "gm_mS": 1.0,
+     "R_ohm": -299.17,
+     "X_ohm": -1157.868
+    },
+    {
+     "gm_mS": 1.5,
+     "R_ohm": -464.449,
+     "X_ohm": -1161.814
+    },
+    {
+     "gm_mS": 2.0,
+     "R_ohm": -629.575,
+     "X_ohm": -1175.832
+    },
+    {
+     "gm_mS": 3.0,
+     "R_ohm": -955.704,
+     "X_ohm": -1233.835
+    },
+    {
+     "gm_mS": 4.0,
+     "R_ohm": -1270.416,
+     "X_ohm": -1330.29
+    },
+    {
+     "gm_mS": 6.0,
+     "R_ohm": -1840.806,
+     "X_ohm": -1624.381
+    },
+    {
+     "gm_mS": 8.0,
+     "R_ohm": -2303.615,
+     "X_ohm": -2019.102
+    },
+    {
+     "gm_mS": 12.0,
+     "R_ohm": -2867.772,
+     "X_ohm": -2929.865
+    },
+    {
+     "gm_mS": 16.0,
+     "R_ohm": -3037.183,
+     "X_ohm": -3782.357
+    },
+    {
+     "gm_mS": 24.0,
+     "R_ohm": -2807.56,
+     "X_ohm": -4978.085
+    },
+    {
+     "gm_mS": 32.0,
+     "R_ohm": -2401.926,
+     "X_ohm": -5629.772
+    }
+   ],
+   "gm_mS_for_minus_ESRmax": 0.3,
+   "gm_mS_for_minus_5x_ESRmax": 1.0,
+   "most_negative_R_ohm": -3037.2,
+   "at_gm_mS": 16.0,
+   "safety_factor_at_best_gm": 60.7
+  },
+  "worst (pin 4 pF, C0 3 pF)": {
+   "rows": [
+    {
+     "gm_mS": 0.1,
+     "R_ohm": 14.264,
+     "X_ohm": -1004.136
+    },
+    {
+     "gm_mS": 0.2,
+     "R_ohm": -8.428,
+     "X_ohm": -999.106
+    },
+    {
+     "gm_mS": 0.3,
+     "R_ohm": -31.253,
+     "X_ohm": -994.366
+    },
+    {
+     "gm_mS": 0.5,
+     "R_ohm": -77.282,
+     "X_ohm": -985.77
+    },
+    {
+     "gm_mS": 0.75,
+     "R_ohm": -135.471,
+     "X_ohm": -976.721
+    },
+    {
+     "gm_mS": 1.0,
+     "R_ohm": -194.301,
+     "X_ohm": -969.607
+    },
+    {
+     "gm_mS": 1.5,
+     "R_ohm": -313.5,
+     "X_ohm": -961.371
+    },
+    {
+     "gm_mS": 2.0,
+     "R_ohm": -434.075,
+     "X_ohm": -961.367
+    },
+    {
+     "gm_mS": 3.0,
+     "R_ohm": -675.903,
+     "X_ohm": -986.729
+    },
+    {
+     "gm_mS": 4.0,
+     "R_ohm": -912.704,
+     "X_ohm": -1045.82
+    },
+    {
+     "gm_mS": 6.0,
+     "R_ohm": -1344.502,
+     "X_ohm": -1256.037
+    },
+    {
+     "gm_mS": 8.0,
+     "R_ohm": -1687.33,
+     "X_ohm": -1558.635
+    },
+    {
+     "gm_mS": 12.0,
+     "R_ohm": -2058.53,
+     "X_ohm": -2262.338
+    },
+    {
+     "gm_mS": 16.0,
+     "R_ohm": -2104.857,
+     "X_ohm": -2886.723
+    },
+    {
+     "gm_mS": 24.0,
+     "R_ohm": -1821.124,
+     "X_ohm": -3668.816
+    },
+    {
+     "gm_mS": 32.0,
+     "R_ohm": -1490.072,
+     "X_ohm": -4037.227
+    }
+   ],
+   "gm_mS_for_minus_ESRmax": 0.5,
+   "gm_mS_for_minus_5x_ESRmax": 1.5,
+   "most_negative_R_ohm": -2104.9,
+   "at_gm_mS": 16.0,
+   "safety_factor_at_best_gm": 42.1
+  }
+ },
+ "drive_level_bound": {
+  "ESR_50": {
+   "ESR_ohm": 50.0,
+   "f_osc_offset_ppm_from_series": 194.1,
+   "I_crystal_mA_peak_unclamped": 2.67,
+   "V_XIN_peak_unclamped": 1.536,
+   "drive_uW_unclamped": 178.2,
+   "drive_uW_with_XIN_limited_to_rails": 178.2
+  },
+  "ESR_30": {
+   "ESR_ohm": 30.0,
+   "f_osc_offset_ppm_from_series": 191.5,
+   "I_crystal_mA_peak_unclamped": 2.846,
+   "V_XIN_peak_unclamped": 1.642,
+   "drive_uW_unclamped": 121.5,
+   "drive_uW_with_XIN_limited_to_rails": 121.5
+  },
+  "ESR_15": {
+   "ESR_ohm": 15.0,
+   "f_osc_offset_ppm_from_series": 189.7,
+   "I_crystal_mA_peak_unclamped": 2.994,
+   "V_XIN_peak_unclamped": 1.732,
+   "drive_uW_unclamped": 67.3,
+   "drive_uW_with_XIN_limited_to_rails": 61.0
+  }
+ }
+}

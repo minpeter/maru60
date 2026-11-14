@@ -1,0 +1,241 @@
+{
+  "board": "build/mcu-near-usb/resume79-final/pcb/maru60.kicad_pcb",
+  "board_sha256": "2cc544c8e6eb00bd3f53fa480a0167dcb8e14dac687f7eb2af0c85946bda5584",
+  "scope": "Nominal swept-solid clearance over 0.8 mm gasket travel, with 0.5 mm side/bottom margin; no hardware measurements",
+  "case": "models/maru60-hhkb-bottomcase-j3-relief-{left,right}.3mf",
+  "resistors": [
+    {
+      "ref": "R189",
+      "footprint": "Maru60:R_0402_1005Metric",
+      "position_board_mm": [
+        245.5,
+        18.05,
+        0.0
+      ],
+      "layer": "B.Cu",
+      "courtyard_board_mm": [
+        244.57,
+        17.58,
+        246.43,
+        18.52
+      ],
+      "courtyard_world_mm": [
+        -103.9325,
+        167.5677,
+        -102.0725,
+        168.5077
+      ],
+      "case_surface_z_p_mm": 18.2,
+      "case_surface_z_p_max_mm": 18.2,
+      "nominal_cavity_floor_z_p_mm": 18.2,
+      "hit_fraction": 1.0,
+      "free_height_full_travel_mm": 3.3,
+      "nominal_free_height_full_travel_mm": 3.3,
+      "part_height_mm": 0.5,
+      "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+      "clearance_mm": 2.8,
+      "nominal_clearance_mm": 2.8,
+      "status": "pass"
+    },
+    {
+      "ref": "R190",
+      "footprint": "Maru60:R_0402_1005Metric",
+      "position_board_mm": [
+        261.0,
+        19.25,
+        90.0
+      ],
+      "layer": "B.Cu",
+      "courtyard_board_mm": [
+        260.53,
+        18.32,
+        261.47,
+        20.18
+      ],
+      "courtyard_world_mm": [
+        -118.9725,
+        165.9078,
+        -118.0325,
+        167.7677
+      ],
+      "case_surface_z_p_mm": 18.2,
+      "case_surface_z_p_max_mm": 18.2,
+      "nominal_cavity_floor_z_p_mm": 18.2,
+      "hit_fraction": 1.0,
+      "free_height_full_travel_mm": 3.3,
+      "nominal_free_height_full_travel_mm": 3.3,
+      "part_height_mm": 0.5,
+      "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+      "clearance_mm": 2.8,
+      "nominal_clearance_mm": 2.8,
+      "status": "pass"
+    },
+    {
+      "ref": "R191",
+      "footprint": "Maru60:R_0402_1005Metric",
+      "position_board_mm": [
+        279.0,
+        22.25,
+        90.0
+      ],
+      "layer": "B.Cu",
+      "courtyard_board_mm": [
+        278.53,
+        21.32,
+        279.47,
+        23.18
+      ],
+      "courtyard_world_mm": [
+        -136.9725,
+        162.9078,
+        -136.0325,
+        164.7677
+      ],
+      "case_surface_z_p_mm": 18.2,
+      "case_surface_z_p_max_mm": 18.2,
+      "nominal_cavity_floor_z_p_mm": 18.2,
+      "hit_fraction": 1.0,
+      "free_height_full_travel_mm": 3.3,
+      "nominal_free_height_full_travel_mm": 3.3,
+      "part_height_mm": 0.5,
+      "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+      "clearance_mm": 2.8,
+      "nominal_clearance_mm": 2.8,
+      "status": "pass"
+    }
+  ],
+  "hardware_envelopes": [
+    {
+      "item": "SW14 receptacle",
+      "board_mm": [
+        259.3375,
+        5.38875
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 1.25,
+      "hit_fraction": 1.0,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "item": "SW14 receptacle",
+      "board_mm": [
+        270.1325,
+        11.73875
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 1.25,
+      "hit_fraction": 1.0,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "item": "SW14 receptacle",
+      "board_mm": [
+        261.8775,
+        11.73875
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 1.25,
+      "hit_fraction": 1.0,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "item": "SW14 receptacle",
+      "board_mm": [
+        263.78249999999997,
+        14.27875
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 1.25,
+      "hit_fraction": 1.0,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "item": "SW15 receptacle",
+      "board_mm": [
+        273.307499,
+        13.008750000000001
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 1.25,
+      "hit_fraction": 1.0,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "item": "SW15 receptacle",
+      "board_mm": [
+        270.76749900000004,
+        6.65875
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 1.25,
+      "hit_fraction": 1.0,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "item": "stabilizer fastener envelope",
+      "board_mm": [
+        254.3845,
+        2.21375
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 2.5,
+      "hit_fraction": 1.0,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "item": "stabilizer fastener envelope",
+      "board_mm": [
+        254.3845,
+        17.45375
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 2.5,
+      "hit_fraction": 0.8271604938271605,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "item": "stabilizer fastener envelope",
+      "board_mm": [
+        278.2605,
+        2.21375
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 2.5,
+      "hit_fraction": 1.0,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "item": "stabilizer fastener envelope",
+      "board_mm": [
+        278.2605,
+        17.45375
+      ],
+      "assumed_below_board_mm": 2.0,
+      "sample_box_half_size_mm": 2.5,
+      "hit_fraction": 1.0,
+      "clearance_mm": 1.3,
+      "clearance_envelope_intersection_mm3": 0.0,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "limitations": "Receptacle fit, switch seating and actual stabilizer/fastener dimensions require a physical coupon. The 2 mm protrusion envelope is an assumption, not a Mill-Max specification."
+}

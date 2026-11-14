@@ -1,0 +1,50 @@
+{
+  "variant": "no-expansion",
+  "status": "Selected default engineering assembly variant; not manufacturing release",
+  "user_decision": "확장 포트는 없어도 됨",
+  "authorization_date": "2026-11-14",
+  "exclude_from_assembly": [
+    "C128",
+    "C129",
+    "J3",
+    "R128",
+    "R130",
+    "R131",
+    "R132",
+    "R133",
+    "R134",
+    "R135",
+    "R140",
+    "R141",
+    "R142",
+    "R143",
+    "R144",
+    "R145",
+    "U11",
+    "U12",
+    "U13"
+  ],
+  "unused_mcu_gpio": [
+    3,
+    10,
+    24,
+    25,
+    26,
+    27
+  ],
+  "default_backspace_population": "split",
+  "other_supported_backspace_population": "2u",
+  "keep_all_layout_options": true,
+  "preserve_led_counts": {
+    "key": 64,
+    "underglow": 12
+  },
+  "copper_change": false,
+  "firmware": "../assembly/no-expansion/firmware",
+  "review_package": "../assembly/no-expansion/README.md",
+  "source_inputs": {
+    "pcb/maru60.kicad_pcb": "875ee106148f266e6fc24f938eddfaef901e4a263cc295df41cfb3e270a8301d",
+    "evidence/final-geometry.json": "9359f5505ebaee21363d35e8ebf7cbcf4857b7103d6ddb86cdc66652954e21d7",
+    "evidence/simulation-suite-20261114/inputs/netlist.xml": "3c7ef4f3d6651cfe8e5cbc5594be1d8c4a1d565d2c04ae9b03dbaa6e79154392"
+  }
+}

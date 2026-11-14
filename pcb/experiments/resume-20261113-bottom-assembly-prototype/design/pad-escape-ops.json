@@ -1,0 +1,391 @@
+{
+  "status": "escape plan; rerouting and native DRC required",
+  "ops": [
+    {
+      "op": "remove_tracks",
+      "tracks": [
+        {
+          "x1": 250.957,
+          "y1": 68.9644,
+          "x2": 250.75699999999998,
+          "y2": 72.06439999999999,
+          "w": 0.25,
+          "layer": "B.Cu",
+          "net": "GND"
+        },
+        {
+          "x1": 232.172,
+          "y1": 31.699099999999998,
+          "x2": 229.87199999999999,
+          "y2": 30.7991,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "ROW1"
+        },
+        {
+          "x1": 250.10969999999998,
+          "y1": 31.5991,
+          "x2": 251.50969999999998,
+          "y2": 31.699099999999998,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "ROW1"
+        }
+      ]
+    },
+    {
+      "op": "add_tracks",
+      "tracks": [
+        {
+          "x1": 43.2225,
+          "y1": 36.778749999999995,
+          "x2": 44.5225,
+          "y2": 36.57875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_28_SRC"
+        },
+        {
+          "x1": 220.26,
+          "y1": 91.22874999999999,
+          "x2": 220.46,
+          "y2": 91.92875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_61"
+        },
+        {
+          "x1": 249.60375,
+          "y1": 69.42875,
+          "x2": 251.10375,
+          "y2": 70.62875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_46_SRC"
+        },
+        {
+          "x1": 149.26,
+          "y1": 75.87875,
+          "x2": 148.66,
+          "y2": 76.87875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        },
+        {
+          "x1": 231.42249999999999,
+          "y1": 32.57875,
+          "x2": 231.7225,
+          "y2": 31.37875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_18"
+        },
+        {
+          "x1": 23.04875,
+          "y1": 45.96875,
+          "x2": 24.04875,
+          "y2": 48.06875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_29"
+        },
+        {
+          "x1": 117.12249999999999,
+          "y1": 32.57875,
+          "x2": 116.8225,
+          "y2": 31.87875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_24"
+        },
+        {
+          "x1": 10.709999999999999,
+          "y1": 91.22874999999999,
+          "x2": 10.71,
+          "y2": 91.92875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_57"
+        },
+        {
+          "x1": 250.4725,
+          "y1": 32.57875,
+          "x2": 250.7725,
+          "y2": 31.87875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_17"
+        },
+        {
+          "x1": 279.0475,
+          "y1": 70.42875,
+          "x2": 278.7475,
+          "y2": 69.72875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_44_SRC"
+        },
+        {
+          "x1": 136.17249999999999,
+          "y1": 32.57875,
+          "x2": 135.7725,
+          "y2": 31.87875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_23"
+        },
+        {
+          "x1": 112.36,
+          "y1": 70.67875,
+          "x2": 112.16,
+          "y2": 69.97875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_53"
+        }
+      ]
+    },
+    {
+      "op": "add_vias",
+      "vias": [
+        {
+          "x": 44.5225,
+          "y": 36.57875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_28_SRC"
+        },
+        {
+          "x": 220.46,
+          "y": 91.92875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_61"
+        },
+        {
+          "x": 251.10375,
+          "y": 70.62875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_46_SRC"
+        },
+        {
+          "x": 148.66,
+          "y": 76.87875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        },
+        {
+          "x": 231.7225,
+          "y": 31.37875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_18"
+        },
+        {
+          "x": 24.04875,
+          "y": 48.06875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_29"
+        },
+        {
+          "x": 116.8225,
+          "y": 31.87875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_24"
+        },
+        {
+          "x": 10.71,
+          "y": 91.92875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_57"
+        },
+        {
+          "x": 250.7725,
+          "y": 31.87875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_17"
+        },
+        {
+          "x": 278.7475,
+          "y": 69.72875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_44_SRC"
+        },
+        {
+          "x": 135.7725,
+          "y": 31.87875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_23"
+        },
+        {
+          "x": 112.16,
+          "y": 69.97875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_53"
+        }
+      ]
+    }
+  ],
+  "report": [
+    {
+      "ref": "LED17",
+      "pad": "4",
+      "net": "KEY_RGB_CHAIN_28_SRC",
+      "status": "planned",
+      "via": [
+        44.5225,
+        36.57875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "LED60",
+      "pad": "2",
+      "net": "KEY_RGB_CHAIN_61",
+      "status": "planned",
+      "via": [
+        220.46,
+        91.92875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "LED54",
+      "pad": "4",
+      "net": "KEY_RGB_CHAIN_46_SRC",
+      "status": "planned",
+      "via": [
+        251.10375,
+        70.62875
+      ],
+      "removed_tracks": 1,
+      "removed_nets": [
+        "GND"
+      ]
+    },
+    {
+      "ref": "LED49",
+      "pad": "4",
+      "net": "KEY_RGB_CHAIN_51_SRC",
+      "status": "planned",
+      "via": [
+        148.66,
+        76.87875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "LED27",
+      "pad": "4",
+      "net": "KEY_RGB_CHAIN_18",
+      "status": "planned",
+      "via": [
+        231.7225,
+        31.37875
+      ],
+      "removed_tracks": 1,
+      "removed_nets": [
+        "ROW1"
+      ]
+    },
+    {
+      "ref": "LED30",
+      "pad": "2",
+      "net": "KEY_RGB_CHAIN_29",
+      "status": "planned",
+      "via": [
+        24.04875,
+        48.06875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "LED21",
+      "pad": "4",
+      "net": "KEY_RGB_CHAIN_24",
+      "status": "planned",
+      "via": [
+        116.8225,
+        31.87875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "LED56",
+      "pad": "2",
+      "net": "KEY_RGB_CHAIN_57",
+      "status": "planned",
+      "via": [
+        10.71,
+        91.92875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "LED28",
+      "pad": "4",
+      "net": "KEY_RGB_CHAIN_17",
+      "status": "planned",
+      "via": [
+        250.7725,
+        31.87875
+      ],
+      "removed_tracks": 1,
+      "removed_nets": [
+        "ROW1"
+      ]
+    },
+    {
+      "ref": "LED55",
+      "pad": "4",
+      "net": "KEY_RGB_CHAIN_44_SRC",
+      "status": "planned",
+      "via": [
+        278.7475,
+        69.72875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "LED22",
+      "pad": "4",
+      "net": "KEY_RGB_CHAIN_23",
+      "status": "planned",
+      "via": [
+        135.7725,
+        31.87875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "LED47",
+      "pad": "4",
+      "net": "KEY_RGB_CHAIN_53",
+      "status": "planned",
+      "via": [
+        112.16,
+        69.97875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    }
+  ]
+}

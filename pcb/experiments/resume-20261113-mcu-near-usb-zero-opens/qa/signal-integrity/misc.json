@@ -1,0 +1,515 @@
+{
+ "qspi": {
+  "nets": {
+   "QSPI_SCLK": {
+    "length_mm": 25.937,
+    "vias": 2,
+    "delay_ps": 207.0,
+    "stubs_mm": [],
+    "C_copper_pF": 3.44,
+    "C_load_pF": 9.44
+   },
+   "QSPI_SD0": {
+    "length_mm": 17.208,
+    "vias": 2,
+    "delay_ps": 154.7,
+    "stubs_mm": [],
+    "C_copper_pF": 2.8,
+    "C_load_pF": 8.8
+   },
+   "QSPI_SD1": {
+    "length_mm": 17.804,
+    "vias": 2,
+    "delay_ps": 158.2,
+    "stubs_mm": [],
+    "C_copper_pF": 2.82,
+    "C_load_pF": 8.82
+   },
+   "QSPI_SD2": {
+    "length_mm": 15.748,
+    "vias": 2,
+    "delay_ps": 145.9,
+    "stubs_mm": [],
+    "C_copper_pF": 2.68,
+    "C_load_pF": 8.68
+   },
+   "QSPI_SD3": {
+    "length_mm": 14.463,
+    "vias": 2,
+    "delay_ps": 138.2,
+    "stubs_mm": [],
+    "C_copper_pF": 2.5,
+    "C_load_pF": 8.5
+   },
+   "QSPI_SS": {
+    "length_mm": 23.016,
+    "vias": 2,
+    "delay_ps": 189.5,
+    "stubs_mm": [
+     [
+      2.669,
+      [
+       "R106.1"
+      ]
+     ]
+    ],
+    "C_copper_pF": 3.78,
+    "C_load_pF": 9.78
+   }
+  },
+  "data_vs_clock_mismatch_mm_max": 11.47,
+  "mismatch_ps_max": 68.8,
+  "data_to_data_mismatch_mm": 3.34,
+  "rates": {
+   "boot ROM and this firmware: clk_sys / 6, 03h read (25 MHz at 150 MHz)": {
+    "half_period_ns": 20.0,
+    "flash_tCLQV_max_ns": 6.0,
+    "board_round_trip_ns": 0.365,
+    "slack_to_next_rising_edge_ns": 13.63,
+    "board_share_of_half_period_pct": 1.83
+   },
+   "fastest the QMI allows: clk_sys / 2 (75 MHz), not configured by this firmware": {
+    "half_period_ns": 6.67,
+    "flash_tCLQV_max_ns": 6.0,
+    "board_round_trip_ns": 0.365,
+    "slack_to_next_rising_edge_ns": 0.3,
+    "board_share_of_half_period_pct": 5.48
+   }
+  },
+  "flash_limits": {
+   "FR_MHz": 133,
+   "fR_03h_MHz": 50,
+   "tCLQV_ns": 6,
+   "CIN_pF": 6,
+   "COUT_pF": 8
+  },
+  "electrical_length_note": "Longest route 25.937 mm; maximum one-way delay 0.207 ns including full-barrel lumped via delays. Inner traces use the same approximate per-mm line model; this is not a field-solved inner-layer qualification."
+ },
+ "bootsel": {
+  "QSPI_SS_branches_mm": [
+   [
+    2.669,
+    [
+     "R106.1"
+    ]
+   ]
+  ],
+  "BOOT_BUTTON_net_mm": 235.292,
+  "BOOT_BUTTON_C_pF": 24.23,
+  "isolation": "R106 1 k between QSPI_SS and the 235.29 mm BOOT_BUTTON net: copper RC = 24.23 ns; load on /CS is 1 k in series",
+  "level_with_button_pressed_V": 0.3,
+  "VIL_V": 0.8,
+  "esd_note": "IEC 61000-4-2 source is 330 ohm / 150 pF; through R106 the peak current is V / 1.33 k. 2 kV gives 1.5 A, about the 1.33 A of the 2 kV HBM rating (RP2350 Table 1681). The pad is not protected beyond that.",
+  "neighbours": {
+   "ROW4": {
+    "min_gap": 0.327,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 0.633,
+    "len_le_0p6": 44.95
+   },
+   "EXT_GPIO27": {
+    "min_gap": 0.345,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 0.2,
+    "len_le_0p6": 20.899
+   },
+   "+4V_LED": {
+    "min_gap": 0.25,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 3.621,
+    "len_le_0p6": 7.968
+   },
+   "GPIO27_ISO": {
+    "min_gap": 0.204,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 2.389,
+    "len_le_0p6": 5.976
+   },
+   "LED_FAULT_N": {
+    "min_gap": 0.21,
+    "len_le_0p2": 0.0,
+    "len_le_0p35": 3.496,
+    "len_le_0p6": 4.293
+   }
+  }
+ },
+ "swd": {
+  "SWCLK": {
+   "length_mm": 127.081,
+   "vias": 4,
+   "C_copper_pF": 13.33,
+   "delay_ps": 761.8,
+   "plane_openings_mm": 15.4,
+   "crosstalk_if_idle_high_Z": {
+    "victim_C_pF": 18.33,
+    "aggressors": [
+     {
+      "aggressor": "SWDIO",
+      "min_gap_mm": 0.152,
+      "len_le_0p35_mm": 16.808,
+      "Cm_pF": 0.3306,
+      "step_mV": 58.5
+     },
+     {
+      "aggressor": "LED_ENABLE",
+      "min_gap_mm": 0.224,
+      "len_le_0p35_mm": 8.632,
+      "Cm_pF": 0.1205,
+      "step_mV": 21.6
+     },
+     {
+      "aggressor": "ROW2",
+      "min_gap_mm": 0.226,
+      "len_le_0p35_mm": 3.596,
+      "Cm_pF": 0.0528,
+      "step_mV": 9.5
+     },
+     {
+      "aggressor": "COL4",
+      "min_gap_mm": 0.251,
+      "len_le_0p35_mm": 1.304,
+      "Cm_pF": 0.0227,
+      "step_mV": 4.1
+     },
+     {
+      "aggressor": "COL3",
+      "min_gap_mm": 0.439,
+      "len_le_0p35_mm": 0.0,
+      "Cm_pF": 0.0068,
+      "step_mV": 1.2
+     }
+    ],
+    "Cm_total_pF": 0.5335,
+    "step_all_at_once_mV": 93.3
+   }
+  },
+  "SWDIO": {
+   "length_mm": 119.913,
+   "vias": 4,
+   "C_copper_pF": 12.08,
+   "delay_ps": 718.8,
+   "plane_openings_mm": 15.91,
+   "crosstalk_if_idle_high_Z": {
+    "victim_C_pF": 17.08,
+    "aggressors": [
+     {
+      "aggressor": "SWCLK",
+      "min_gap_mm": 0.152,
+      "len_le_0p35_mm": 16.811,
+      "Cm_pF": 0.3327,
+      "step_mV": 63.1
+     },
+     {
+      "aggressor": "LED_ENABLE",
+      "min_gap_mm": 0.221,
+      "len_le_0p35_mm": 14.816,
+      "Cm_pF": 0.1904,
+      "step_mV": 36.4
+     },
+     {
+      "aggressor": "KEY_RGB_CHAIN_53",
+      "min_gap_mm": 0.214,
+      "len_le_0p35_mm": 6.505,
+      "Cm_pF": 0.0874,
+      "step_mV": 16.8
+     },
+     {
+      "aggressor": "RUN",
+      "min_gap_mm": 0.152,
+      "len_le_0p35_mm": 4.523,
+      "Cm_pF": 0.0899,
+      "step_mV": 17.3
+     },
+     {
+      "aggressor": "UNDERGLOW",
+      "min_gap_mm": 0.263,
+      "len_le_0p35_mm": 1.296,
+      "Cm_pF": 0.023,
+      "step_mV": 4.4
+     }
+    ],
+    "Cm_total_pF": 0.7234,
+    "step_all_at_once_mV": 134.1
+   }
+  },
+  "limit": "RP2350 Table 1687: SWCLK 10 MHz typ, 50 MHz max. Per-net lengths and approximate track delays are listed above."
+ },
+ "run": {
+  "length_mm": 156.881,
+  "vias": 4,
+  "C_copper_pF": 16.07,
+  "pull_up_ohm": [
+   32000.0,
+   86000.0
+  ],
+  "RC_us": [
+   0.67,
+   1.81
+  ],
+  "crosstalk": {
+   "victim_C_pF": 21.07,
+   "aggressors": [
+    {
+     "aggressor": "COL12",
+     "min_gap_mm": 0.185,
+     "len_le_0p35_mm": 10.101,
+     "Cm_pF": 0.1643,
+     "step_mV": 25.5
+    },
+    {
+     "aggressor": "COL11",
+     "min_gap_mm": 0.168,
+     "len_le_0p35_mm": 7.561,
+     "Cm_pF": 0.1319,
+     "step_mV": 20.5
+    },
+    {
+     "aggressor": "SWDIO",
+     "min_gap_mm": 0.152,
+     "len_le_0p35_mm": 4.37,
+     "Cm_pF": 0.0851,
+     "step_mV": 13.3
+    },
+    {
+     "aggressor": "SWCLK",
+     "min_gap_mm": 0.352,
+     "len_le_0p35_mm": 0.0,
+     "Cm_pF": 0.0019,
+     "step_mV": 0.3
+    },
+    {
+     "aggressor": "COL5",
+     "min_gap_mm": 0.545,
+     "len_le_0p35_mm": 0.0,
+     "Cm_pF": 0.0006,
+     "step_mV": 0.1
+    }
+   ],
+   "Cm_total_pF": 0.3838,
+   "step_all_at_once_mV": 59.0
+  },
+  "drop_needed_for_reset_V": 2.5,
+  "crosstalk_margin_x": 42.4,
+  "buck_switch_node": {
+   "distance_mm": 1.97,
+   "Cm_fF_over_6mm": 2.196,
+   "step_mV_for_5V_edge": 0.521
+  },
+  "reset_button_low_level_V": 0.1,
+  "note": "RUN has only the internal pull-up, no capacitor, TP6 and 156.88 mm of track. The datasheet states no glitch filter, so none is assumed."
+ },
+ "expansion": {
+  "per_line": {
+   "GPIO3": {
+    "mcu_side_mm": 84.861,
+    "ext_side_mm": 62.455,
+    "C_mcu_side_pF": 14.37,
+    "C_connector_side_pF": 13.49,
+    "tau_in_ns_ext_drives_mcu": 14.4,
+    "tau_out_ns_mcu_drives_20pF_cable": 33.5,
+    "neighbours_mcu_side": {
+     "MCU_GPIO27": {
+      "min_gap": 0.23,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 5.513,
+      "len_le_0p6": 12.313
+     },
+     "COL9": {
+      "min_gap": 0.417,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.0,
+      "len_le_0p6": 1.804
+     },
+     "+1V1": {
+      "min_gap": 0.227,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.806,
+      "len_le_0p6": 1.627
+     }
+    }
+   },
+   "GPIO10": {
+    "mcu_side_mm": 90.222,
+    "ext_side_mm": 54.343,
+    "C_mcu_side_pF": 14.56,
+    "C_connector_side_pF": 12.89,
+    "tau_in_ns_ext_drives_mcu": 14.6,
+    "tau_out_ns_mcu_drives_20pF_cable": 32.9,
+    "neighbours_mcu_side": {
+     "COL6": {
+      "min_gap": 0.253,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.803,
+      "len_le_0p6": 3.88
+     },
+     "COL12": {
+      "min_gap": 0.248,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 1.003,
+      "len_le_0p6": 3.405
+     },
+     "+3V3": {
+      "min_gap": 0.338,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.294,
+      "len_le_0p6": 2.445
+     }
+    }
+   },
+   "GPIO24": {
+    "mcu_side_mm": 88.261,
+    "ext_side_mm": 47.896,
+    "C_mcu_side_pF": 13.77,
+    "C_connector_side_pF": 12.69,
+    "tau_in_ns_ext_drives_mcu": 13.8,
+    "tau_out_ns_mcu_drives_20pF_cable": 32.7,
+    "neighbours_mcu_side": {
+     "LED_FAULT_N": {
+      "min_gap": 0.253,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.291,
+      "len_le_0p6": 11.969
+     },
+     "MCU_GPIO26": {
+      "min_gap": 0.364,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.0,
+      "len_le_0p6": 1.203
+     },
+     "MCU_GPIO25": {
+      "min_gap": 0.25,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.769,
+      "len_le_0p6": 1.144
+     }
+    }
+   },
+   "GPIO25": {
+    "mcu_side_mm": 92.661,
+    "ext_side_mm": 49.92,
+    "C_mcu_side_pF": 17.18,
+    "C_connector_side_pF": 12.28,
+    "tau_in_ns_ext_drives_mcu": 17.2,
+    "tau_out_ns_mcu_drives_20pF_cable": 32.3,
+    "neighbours_mcu_side": {
+     "SWDIO": {
+      "min_gap": 0.278,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 1.309,
+      "len_le_0p6": 6.677
+     },
+     "KEY_RGB_5V": {
+      "min_gap": 0.254,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 3.736,
+      "len_le_0p6": 6.431
+     },
+     "UNDERGLOW": {
+      "min_gap": 0.485,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.0,
+      "len_le_0p6": 4.393
+     }
+    }
+   },
+   "GPIO26": {
+    "mcu_side_mm": 84.972,
+    "ext_side_mm": 47.409,
+    "C_mcu_side_pF": 13.48,
+    "C_connector_side_pF": 10.95,
+    "tau_in_ns_ext_drives_mcu": 13.5,
+    "tau_out_ns_mcu_drives_20pF_cable": 31.0,
+    "neighbours_mcu_side": {
+     "ROW3": {
+      "min_gap": 0.158,
+      "len_le_0p2": 1.143,
+      "len_le_0p35": 4.645,
+      "len_le_0p6": 7.249
+     },
+     "ROW2": {
+      "min_gap": 0.338,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.201,
+      "len_le_0p6": 3.709
+     },
+     "+1V1": {
+      "min_gap": 0.231,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.991,
+      "len_le_0p6": 3.657
+     }
+    }
+   },
+   "GPIO27": {
+    "mcu_side_mm": 91.458,
+    "ext_side_mm": 45.887,
+    "C_mcu_side_pF": 15.41,
+    "C_connector_side_pF": 14.36,
+    "tau_in_ns_ext_drives_mcu": 15.4,
+    "tau_out_ns_mcu_drives_20pF_cable": 34.4,
+    "neighbours_mcu_side": {
+     "MCU_GPIO3": {
+      "min_gap": 0.231,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 5.499,
+      "len_le_0p6": 12.301
+     },
+     "+3V3": {
+      "min_gap": 0.5,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.0,
+      "len_le_0p6": 2.153
+     },
+     "COL5": {
+      "min_gap": 0.254,
+      "len_le_0p2": 0.0,
+      "len_le_0p35": 0.325,
+      "len_le_0p6": 2.071
+     }
+    }
+   }
+  },
+  "switch_off_or_board_unpowered": {
+   "SN74CB3T3245 IOZ_uA_max": 10,
+   "Ioff_uA_max_VCC_0": 10,
+   "TPD6E05U06_leak_nA_max_at_2V5": 10,
+   "MCU_pin_offset_from_IOZ_V_max": 0.39,
+   "VIL_V": 0.8,
+   "back_power_path": "none: the switch isolates with Ioff, and U13 has clamp diodes to GND only (no supply pin)",
+   "load_on_external_driver_pF": "about 12-13 (5 pF switch + 0.47 pF U13 + 6-7.5 pF track)"
+  },
+  "switch_on": {
+   "pass_voltage_note": "SN74CB3T3245 Figure 8-3 (VCC 3.0 V, 1 uA): output 2.8 V for inputs 2-3.9 V, 3.15 V for inputs above 4.5 V; Figure 5-2 (25 C, VI 5.5 V, 100 uA): 3.15-3.2 V at VCC 3.3 V. Scaled to VCC 3.3 V below.",
+   "ext_3V3": {
+    "switch_out_V": [
+     2.9,
+     3.1
+    ],
+    "at_MCU_pin_V": [
+     2.83,
+     3.02
+    ],
+    "margin_to_VIH_V": 0.83
+   },
+   "ext_5V0": {
+    "switch_out_V": [
+     3.1,
+     3.45
+    ],
+    "at_MCU_pin_V": [
+     3.02,
+     3.36
+    ],
+    "IOVDD_plus_0V3_limit_V": 3.6,
+    "current_from_5V_source_uA": 102.0
+   },
+   "ext_0V": {
+    "at_MCU_pin_V": 0.0
+   },
+   "mcu_drives_out": "3.3 V through 1 k + about 5 ohm; a 5 V CMOS input (VIH 3.5 V) is not met, 5 V TTL (2.0 V) is",
+   "adc_pins": "GPIO26/27 are standard (not fault-tolerant) pads, abs. max IOVDD + 0.5 V: the switch keeps them below 3.45 V x 39/40"
+  },
+  "pull_downs": "R140-R145 39 k: with stepping A2 erratum RP2350-E9 needs 8.2 k or less; on A4 (required by the BOM) 39 k holds a floating line at 0 V (1 uA leakage -> 39 mV)",
+  "enable": "U11 /OE is driven by U12 TLV810E (active-high reset, 2.93 V) with R128 100 k to +3V3: the switch is off below 2.93 V and on whenever the rail is up; firmware cannot turn it off"
+ }
+}

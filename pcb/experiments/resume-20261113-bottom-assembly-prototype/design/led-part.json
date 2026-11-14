@@ -1,0 +1,89 @@
+{
+  "mpn": "SK6812MINI-E-012",
+  "supplier_listing": "SK6812MINI-E",
+  "lcsc": "C5149201",
+  "status": "engineering selection; not order qualified",
+  "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/0907a34a701b4aef568078003f6e9eae.pdf",
+  "datasheet_sha256": "d78c60d7a163c7fdb69db78a2fccf0faa8104532fdee0b0472736aaeac427cc7",
+  "datasheet_revision_note": "Cover B/2, headers B/1; dated 2025-11-22. Procurement must match functions and dimensions, not just the legacy MINI-E title.",
+  "pin_functions": {
+    "1": "GND",
+    "2": "DIN",
+    "3": "VDD",
+    "4": "DOUT"
+  },
+  "old_ec15_to_new_pin": {
+    "1": "2",
+    "2": "3",
+    "3": "4",
+    "4": "1"
+  },
+  "supply_V": [
+    3.7,
+    5.0,
+    5.5
+  ],
+  "current_per_channel_mA": [
+    10,
+    12,
+    14.5
+  ],
+  "idle_typical_mA": 0.6,
+  "idle_test_voltage_V": 4.5,
+  "VIH_min_ratio": 0.65,
+  "VIL_max_ratio": 0.3,
+  "logic_test_voltage_V": 5.0,
+  "timing_ns": {
+    "T0H": [
+      250,
+      300,
+      400
+    ],
+    "T0L_min": 800,
+    "T1H": [
+      700,
+      900,
+      1000
+    ],
+    "T1L_min": 200,
+    "period_min": 1200,
+    "reset_us_min_exclusive": 200
+  },
+  "sourcing_decision": "No orderable 5 mA reverse-mount part was verified. Use the documented 12 mA package in the engineering candidate, with explicit power analysis; do not call it a 5 mA part.",
+  "firmware_timing_existing_ns": {
+    "T0H": 300,
+    "T0L": 900,
+    "T1H": 900,
+    "T1L": 300,
+    "reset_us": 250
+  },
+  "design_screens": {
+    "channel_upper_current_with_PWM_sum_1020_mA": 58.0,
+    "average_estimate_combined_mA": 102.4,
+    "conservative_assumed_1mA_key_idle_average_mA": 128.0,
+    "limiter_min_nom_max_mA": [
+      174,
+      202,
+      234
+    ],
+    "limitations": "Typical idle lacks a maximum; synchronized PWM peaks, 4 V logic/optical behavior, inrush and thermal behavior are not qualified by this arithmetic. Existing unqualified-firmware LED interlock remains.",
+    "key_led_idle_typical_mA": 38.4,
+    "underglow_idle_typical_mA": 6.0,
+    "combined_idle_typical_mA": 44.4
+  },
+  "jlc_assembly": "SMT, Standard Only, High assembly difficulty, MSL5a per fetched listing; reverse orientation and revised land geometry need assembly review",
+  "pwm_frequency_kHz": {
+    "typical": 1.0,
+    "minimum": null,
+    "maximum": null,
+    "qualification": "No guaranteed PWM period or relative phase is provided."
+  },
+  "power_transient_screen": {
+    "case": "64 key LEDs, RGB code 5 each, underglow dark: PWM sum 960, within existing 1020 limit",
+    "synchronized_key_channel_peak_mA": 2784.0,
+    "pulse_duration_us_at_typical_1kHz": 19.607843137254903,
+    "ideal_charge_deficit_uC_at_174mA_limit": 51.1764705882353,
+    "capacitance_uF_for_0p2V_ideal_droop": 255.88235294117646,
+    "limitations": "Sensitivity screen assuming aligned phases and channel current held at datasheet maximum; not a guaranteed 4 V waveform. Real current collapses out of compliance. Existing nominal C121 4.7uF plus bypass caps do not establish power integrity. DC bias, ESR, trace impedance, limit dynamics and inrush must be qualified; do not enable unqualified LED power."
+  }
+}

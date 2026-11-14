@@ -1,0 +1,204 @@
+{
+ "plugin_5.0V": {
+  "inrush_peak_a": 4.0574,
+  "t_vprot_4v_ms": 23.82,
+  "t_4v_rail_3p9_ms": 36.0,
+  "t_3v3_3p135_ms": 33.26,
+  "v4_max": 4.0006,
+  "v33_max": 3.3319,
+  "v33_largest_dip_after_2v_mv": 31.99,
+  "v33_slew_at_1v8_v_per_ms": 0.272
+ },
+ "plugin_5.5V": {
+  "inrush_peak_a": 4.4603,
+  "t_vprot_4v_ms": 23.81,
+  "t_4v_rail_3p9_ms": 36.01,
+  "t_3v3_3p135_ms": 33.26,
+  "v4_max": 4.0006,
+  "v33_max": 3.3295,
+  "v33_largest_dip_after_2v_mv": 29.58,
+  "v33_slew_at_1v8_v_per_ms": 0.272
+ },
+ "steady_input_current_ma": {
+  "idle 20 mA on 3V3, LEDs off": 18.3,
+  "typing 60 mA on 3V3, LEDs off": 54.0,
+  "60 mA on 3V3, LEDs at the firmware cap (44.4 mA static + 58 mA)": 147.5,
+  "120 mA on 3V3, LED rail at the 234 mA limiter maximum": 294.9
+ },
+ "loadstep_avg": {
+  "3v3_step_20_to_120mA:3v3_droop_mv": 14.1,
+  "3v3_step_20_to_120mA:4v_reg_droop_mv": 10.5,
+  "3v3_step_20_to_120mA:vprot_droop_mv": 47.0,
+  "led_rail_enable:3v3_droop_mv": 0.0,
+  "led_rail_enable:4v_reg_droop_mv": 2.9,
+  "led_rail_enable:vprot_droop_mv": 29.8,
+  "led_step_0_to_150mA:3v3_droop_mv": 0.0,
+  "led_step_0_to_150mA:4v_reg_droop_mv": 5.7,
+  "led_step_0_to_150mA:vprot_droop_mv": 27.5,
+  "led_step_0_to_150mA:4v_led_droop_mv": 15.5,
+  "led_enable_inrush_peak_ma": 77.3
+ },
+ "loadstep_sw": {
+  "3v3_step_20_to_120mA:3v3_droop_mv": 13.8,
+  "3v3_step_20_to_120mA:4v_reg_droop_mv": 7.1,
+  "3v3_step_20_to_120mA:vprot_droop_mv": 74.9,
+  "led_rail_enable:3v3_droop_mv": 0.0,
+  "led_rail_enable:4v_reg_droop_mv": 19.9,
+  "led_rail_enable:vprot_droop_mv": 56.9,
+  "led_step_0_to_150mA:3v3_droop_mv": 0.0,
+  "led_step_0_to_150mA:4v_reg_droop_mv": 14.9,
+  "led_step_0_to_150mA:vprot_droop_mv": 41.1,
+  "led_step_0_to_150mA:4v_led_droop_mv": 24.0,
+  "led_enable_inrush_peak_ma": 93.0
+ },
+ "buck_loop": {
+  "0.1 A, nominal capacitors, kea 1": {
+   "crossover_khz": 36.8,
+   "phase_margin_deg": 51.8,
+   "gain_margin_db": 38.7
+  },
+  "0.3 A, nominal capacitors, kea 1": {
+   "crossover_khz": 36.7,
+   "phase_margin_deg": 52.0,
+   "gain_margin_db": 38.8
+  },
+  "0.3 A, capacitors at -20 % / -10 %, kea 1": {
+   "crossover_khz": 41.4,
+   "phase_margin_deg": 50.9,
+   "gain_margin_db": 35.7
+  },
+  "0.3 A, nominal capacitors, kea 0.68": {
+   "crossover_khz": 27.3,
+   "phase_margin_deg": 53.2,
+   "gain_margin_db": 42.1
+  },
+  "0.02 A, nominal capacitors, kea 1": {
+   "crossover_khz": 36.6,
+   "phase_margin_deg": 52.1,
+   "gain_margin_db": 38.7
+  },
+  "0.3 A, capacitors at -20 % / -10 %, kea 1.3": {
+   "crossover_khz": 50.0,
+   "phase_margin_deg": 49.1,
+   "gain_margin_db": 33.4
+  },
+  "0.3 A, nominal capacitors, kea 1, C143 not fitted": {
+   "crossover_khz": 36.2,
+   "phase_margin_deg": 43.0,
+   "gain_margin_db": 24.6
+  },
+  "0.3 A, capacitors at -20 % / -10 %, kea 1, C143 not fitted": {
+   "crossover_khz": 40.7,
+   "phase_margin_deg": 40.9,
+   "gain_margin_db": 23.7
+  },
+  "0.3 A, nominal capacitors, kea 0.68, C143 not fitted": {
+   "crossover_khz": 27.1,
+   "phase_margin_deg": 46.4,
+   "gain_margin_db": 28.0
+  },
+  "0.3 A, nominal capacitors, kea 1, C143 47 pF": {
+   "crossover_khz": 38.7,
+   "phase_margin_deg": 61.3,
+   "gain_margin_db": 30.6
+  },
+  "0.3 A, capacitors at -20 % / -10 %, kea 1.3, C143 47 pF": {
+   "crossover_khz": 54.5,
+   "phase_margin_deg": 60.3,
+   "gain_margin_db": 26.1
+  }
+ },
+ "brownout": {
+  "at_4p2v_source: 3v3_min": 3.3,
+  "at_4p2v_source: 4v_reg_min": 3.376,
+  "at_3p9v_source: 3v3_min": 3.047,
+  "at_3p9v_source: 4v_reg_min": 3.106,
+  "at_3p3v_source: 3v3_min": 0.85,
+  "efuse_enable_transitions": 3,
+  "3v3_after_recovery": 3.3
+ },
+ "fault_led_rail": {
+  "short applied to the running LED rail": {
+   "short_current_peak_a": 40.221,
+   "short_current_settled_a": 0.201,
+   "4v_reg_min": 3.489,
+   "3v3_min": 3.3,
+   "input_current_peak_a": 0.369
+  },
+  "LED rail enabled into a short": {
+   "short_current_peak_a": 0.211,
+   "short_current_settled_a": 0.201,
+   "4v_reg_min": 3.979,
+   "3v3_min": 3.3,
+   "input_current_peak_a": 0.213
+  }
+ },
+ "fault_3v3_short": {
+  "4v_reg_min": 3.995,
+  "input_current_peak_a": 0.118,
+  "input_current_during_short_a": 0.064,
+  "3v3_after_release": 3.3
+ },
+ "wrong_source": {
+  "5 V source": {
+   "vbus_max": 5.1,
+   "efuse_input_max": 5.0,
+   "inrush_peak_a": 4.06,
+   "vprot_max": 4.996,
+   "4v_reg_max": 4.001,
+   "3v3_max": 3.332,
+   "efuse_ever_enabled": true
+  },
+  "6 V source": {
+   "vbus_max": 6.1,
+   "efuse_input_max": 6.0,
+   "inrush_peak_a": 4.84,
+   "vprot_max": -0.0,
+   "4v_reg_max": -0.0,
+   "3v3_max": -0.0,
+   "efuse_ever_enabled": true
+  },
+  "20 V source": {
+   "vbus_max": 21.22,
+   "efuse_input_max": 20.0,
+   "inrush_peak_a": 13.78,
+   "vprot_max": -0.0,
+   "4v_reg_max": -0.0,
+   "3v3_max": -0.0,
+   "efuse_ever_enabled": true
+  },
+  "5 V source, R187/C144 not fitted": {
+   "vbus_max": 7.39,
+   "efuse_input_max": 7.34,
+   "inrush_peak_a": 3.32,
+   "vprot_max": 4.996,
+   "4v_reg_max": 4.001,
+   "3v3_max": 3.333,
+   "efuse_ever_enabled": true
+  },
+  "6 V source, R187/C144 not fitted": {
+   "vbus_max": 8.87,
+   "efuse_input_max": 8.82,
+   "inrush_peak_a": 3.98,
+   "vprot_max": -0.0,
+   "4v_reg_max": -0.0,
+   "3v3_max": -0.0,
+   "efuse_ever_enabled": true
+  },
+  "20 V source, R187/C144 not fitted": {
+   "vbus_max": 30.97,
+   "efuse_input_max": 30.85,
+   "inrush_peak_a": 10.23,
+   "vprot_max": -0.0,
+   "4v_reg_max": -0.0,
+   "3v3_max": -0.0,
+   "efuse_ever_enabled": true
+  },
+  "6 V surge for 10 ms while running": {
+   "vprot_max": 5.759,
+   "4v_reg_max": 4.019,
+   "3v3_min_during_and_after": 1.5,
+   "3v3_at_end": 3.3
+  }
+ }
+}

@@ -1,0 +1,56 @@
+100014e8 <keyboard_pre_init_kb>:
+100014e8:	b510      	push	{r4, lr}
+100014ea:	f44f 0180 	mov.w	r1, #4194304	@ 0x400000
+100014ee:	2000      	movs	r0, #0
+100014f0:	4a23      	ldr	r2, [pc, #140]	@ (10001580 <keyboard_pre_init_kb+0x98>)
+100014f2:	f04f 4450 	mov.w	r4, #3489660928	@ 0xd0000000
+100014f6:	f007 f93d 	bl	10008774 <_pal_lld_setgroupmode>
+100014fa:	f44f 0380 	mov.w	r3, #4194304	@ 0x400000
+100014fe:	f44f 1180 	mov.w	r1, #1048576	@ 0x100000
+10001502:	6223      	str	r3, [r4, #32]
+10001504:	2000      	movs	r0, #0
+10001506:	4a1e      	ldr	r2, [pc, #120]	@ (10001580 <keyboard_pre_init_kb+0x98>)
+10001508:	f007 f934 	bl	10008774 <_pal_lld_setgroupmode>
+1000150c:	f44f 1380 	mov.w	r3, #1048576	@ 0x100000
+10001510:	f44f 1100 	mov.w	r1, #2097152	@ 0x200000
+10001514:	6223      	str	r3, [r4, #32]
+10001516:	2000      	movs	r0, #0
+10001518:	4a19      	ldr	r2, [pc, #100]	@ (10001580 <keyboard_pre_init_kb+0x98>)
+1000151a:	f007 f92b 	bl	10008774 <_pal_lld_setgroupmode>
+1000151e:	f44f 1300 	mov.w	r3, #2097152	@ 0x200000
+10001522:	2108      	movs	r1, #8
+10001524:	6223      	str	r3, [r4, #32]
+10001526:	2000      	movs	r0, #0
+10001528:	6221      	str	r1, [r4, #32]
+1000152a:	4a15      	ldr	r2, [pc, #84]	@ (10001580 <keyboard_pre_init_kb+0x98>)
+1000152c:	f007 f922 	bl	10008774 <_pal_lld_setgroupmode>
+10001530:	f44f 6180 	mov.w	r1, #1024	@ 0x400
+10001534:	2000      	movs	r0, #0
+10001536:	6221      	str	r1, [r4, #32]
+10001538:	4a11      	ldr	r2, [pc, #68]	@ (10001580 <keyboard_pre_init_kb+0x98>)
+1000153a:	f007 f91b 	bl	10008774 <_pal_lld_setgroupmode>
+1000153e:	f04f 7180 	mov.w	r1, #16777216	@ 0x1000000
+10001542:	2000      	movs	r0, #0
+10001544:	6221      	str	r1, [r4, #32]
+10001546:	4a0e      	ldr	r2, [pc, #56]	@ (10001580 <keyboard_pre_init_kb+0x98>)
+10001548:	f007 f914 	bl	10008774 <_pal_lld_setgroupmode>
+1000154c:	f04f 7100 	mov.w	r1, #33554432	@ 0x2000000
+10001550:	2000      	movs	r0, #0
+10001552:	6221      	str	r1, [r4, #32]
+10001554:	4a0a      	ldr	r2, [pc, #40]	@ (10001580 <keyboard_pre_init_kb+0x98>)
+10001556:	f007 f90d 	bl	10008774 <_pal_lld_setgroupmode>
+1000155a:	f04f 6180 	mov.w	r1, #67108864	@ 0x4000000
+1000155e:	2000      	movs	r0, #0
+10001560:	6221      	str	r1, [r4, #32]
+10001562:	4a07      	ldr	r2, [pc, #28]	@ (10001580 <keyboard_pre_init_kb+0x98>)
+10001564:	f007 f906 	bl	10008774 <_pal_lld_setgroupmode>
+10001568:	f04f 6100 	mov.w	r1, #134217728	@ 0x8000000
+1000156c:	2000      	movs	r0, #0
+1000156e:	6221      	str	r1, [r4, #32]
+10001570:	4a03      	ldr	r2, [pc, #12]	@ (10001580 <keyboard_pre_init_kb+0x98>)
+10001572:	f007 f8ff 	bl	10008774 <_pal_lld_setgroupmode>
+10001576:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+1000157a:	f001 ba06 	b.w	1000298a <keyboard_pre_init_user>
+1000157e:	bf00      	nop
+10001580:	40800005 	.word	0x40800005
+

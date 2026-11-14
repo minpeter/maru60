@@ -1,0 +1,28 @@
+Maru60 power tree (3) input current in a steady operating state
+* Averaged buck model, shortened start-up. 3V3 load i33a from the start,
+* LED rail enabled at 4 ms if ledon=1, LED drive current iled from 6 ms.
+* Read the last 2 ms.
+.param ledon=0
+.include models.lib
+.include params.inc
+.param cssx=10n
+.param kdvdtx=50
+.include board.inc
+Vsrc src 0 pwl(0 0 10u 0 11u {vsrc})
+XU18 vbk sw fb ss v4 0 tps62932_avg lnom={l2} kea={kea} vref={vref} iss={iss}
+Vlen len 0 pwl(0 0 4m 0 4.001m {3.3*ledon})
+Vi33 i33cmd 0 {i33a}
+Vled ledcmd 0 pwl(0 0 6m 0 6.001m {iled})
+Vsh33 sh33 0 0
+Vshl shled 0 0
+.options method=gear reltol=1e-3 abstol=1e-9 vntol=1e-6 chgtol=1e-15 itl4=200
+.ic v(v4)=0 v(v33)=0 v(vprot)=0
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 1u 16m 0 5u uic
+wrdata out.txt v(src) v(vbus) v(vfused) v(vprot) v(vbk) v(v4) v(v4b) v(v4c) v(v33) v(v33m) v(vled) i(Vsrc) i(L2) v(uvlo) v(ovlo) v(xu18.comp) v(xu8.en) v(dvdt) v(ss) i(Rtr1) v(xu18.d)
+quit
+.endc
+.end

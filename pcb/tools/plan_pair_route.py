@@ -3,13 +3,15 @@
 
 usage: plan_pair_route.py BOARD.json OUT.json --from L:x:y --to L:x:y --nets P,N
                           [--soft COST] [--via-cost MM] [--window x0:y0:x1:y1]
-                          [--half MM] [--clear MM] [--drop x:y,x:y] [--avoid x:y:r,...]
+                          [--half MM] [--clear MM] [--edge-clear MM]
+                          [--drop x:y,x:y] [--avoid x:y:r,...]
 
 --half is half the width of what is routed (0.35 for the 0.25/0.20 mm pair,
 0.075 for one 0.15 mm track), --clear its distance to other copper, --drop
 lists vias of other nets that are to be ignored (they are moved afterwards),
 --avoid adds discs the route must stay clear of (used where the exact check
-of plan_pair_tracks.py finds the raster 0.01 mm too generous).
+of plan_pair_tracks.py finds the raster 0.01 mm too generous). --edge-clear
+sets the centre-line exclusion from the board outline (default 0.32 mm).
 
 The pair is searched as one ribbon: its centre line must stay RIBBON/2 +
 CLEARANCE away from all copper of other nets on its layer and from drilled
@@ -55,7 +57,7 @@ def arg(name, default=None):
 
 
 class Maps:
-    def __init__(self, d, own, window, keep=(), avoid=()):
+    def __init__(self, d, own, window, keep=(), avoid=(), edge=0.32):
         self.x0, self.y0, x1, y1 = window
         self.w, self.h = int(round((x1 - self.x0) / G)) + 1, int(round((y1 - self.y0) / G)) + 1
         hard = {L: Image.new("1", (self.w, self.h), 0) for L in LAYERS}
@@ -108,7 +110,7 @@ class Maps:
                 if L not in LAYERS:
                     continue
                 for isl in isls:
-                    if isl and len(isl[0]) >= 3 and z["net"] not in ("GND", "+3V3"):
+                    if isl and len(isl[0]) >= 3 and z["net"] not in own and z["net"] not in ("GND", "+3V3"):
                         ImageDraw.Draw(hard[L]).polygon([px(*q) for q in isl[0]], fill=1)
             if z.get("keepout"):
                 for L in z["layers"]:
@@ -133,7 +135,7 @@ class Maps:
             h = np.array(hard[L], dtype=bool)
             yy, xx = np.mgrid[0:self.h, 0:self.w]
             gx, gy = self.x0 + xx * G, self.y0 + yy * G
-            h |= (gx < min(xs) + 0.32) | (gx > max(xs) - 0.32) | (gy < min(ys) + 0.32) | (gy > max(ys) - 0.32)   # 0.5 mm to the edge
+            h |= (gx < min(xs) + edge) | (gx > max(xs) - edge) | (gy < min(ys) + edge) | (gy > max(ys) - edge)
             s = np.array(soft[L], dtype=bool)
             self.dist_hard[L] = ndimage.distance_transform_edt(~h) * G
             self.dist_all[L] = ndimage.distance_transform_edt(~(h | s)) * G
@@ -180,7 +182,7 @@ def search(m, start, goal, soft_cost, via_cost, need=HALF + CLEAR, via_room=VIA_
             rows.append(idx[ya, xa][ok] + li * n)
             cols.append(idx[yb, xb][ok] + li * n)
             costs.append(c[ok])
-    room = np.minimum(m.dist_all["F.Cu"][::STEP, ::STEP], m.dist_all["B.Cu"][::STEP, ::STEP]) >= via_room
+    room = np.minimum.reduce([m.dist_all[L][::STEP, ::STEP] for L in LAYERS]) >= via_room
     room &= m.dist_smd[::STEP, ::STEP] >= 0.25  # drill radius + mask web + half a raster cell
     room &= m.dist_holes[::STEP, ::STEP] >= 0.60  # 0.45 mm pad-hole gap + via drill radius + raster margin
     # An existing own-net barrel is already a physical layer transition.
@@ -190,22 +192,23 @@ def search(m, start, goal, soft_cost, via_cost, need=HALF + CLEAR, via_room=VIA_
         cy, cx = cy // STEP, cx // STEP
         if 0 <= cy < H and 0 <= cx < W and free["F.Cu"][cy, cx] and free["B.Cu"][cy, cx]:
             room[cy, cx] = True
-    rows.append(idx[room])
-    cols.append(idx[room] + n)
-    costs.append(np.full(int(room.sum()), via_cost))
+    for li in range(len(LAYERS) - 1):
+        rows.append(idx[room] + li * n)
+        cols.append(idx[room] + (li + 1) * n)
+        costs.append(np.full(int(room.sum()), via_cost))
     r, c, w = np.concatenate(rows), np.concatenate(cols), np.concatenate(costs)
-    g = coo_matrix((w, (r, c)), shape=(2 * n, 2 * n)).tocsr()
+    g = coo_matrix((w, (r, c)), shape=(len(LAYERS) * n, len(LAYERS) * n)).tocsr()
 
     def node(p):
         L, x, y = p
         cy, cx = m.cell(x, y)
         cy, cx = cy // STEP, cx // STEP
         if not free[L][cy, cx]:          # snap to the nearest free cell within 1 mm
-            ys, xs = np.nonzero(free[L][max(0, cy - 10):cy + 11, max(0, cx - 10):cx + 11])
+            ys, xs = np.nonzero(free[L][max(0, cy - 20):cy + 21, max(0, cx - 20):cx + 21])
             if not len(ys):
                 raise SystemExit(f"no free cell near {p}")
-            k = np.argmin((ys - min(cy, 10)) ** 2 + (xs - min(cx, 10)) ** 2)
-            cy, cx = max(0, cy - 10) + ys[k], max(0, cx - 10) + xs[k]
+            k = np.argmin((ys - min(cy, 20)) ** 2 + (xs - min(cx, 20)) ** 2)
+            cy, cx = max(0, cy - 20) + ys[k], max(0, cx - 20) + xs[k]
         return LAYERS.index(L) * n + cy * W + cx
 
     s, t = node(start), node(goal)
@@ -300,9 +303,9 @@ def main():
     drop = [tuple(float(v) for v in q.split(":")) for q in arg("--drop", "").split(",") if q]
     d["vias"] = [v for v in d["vias"] if not any(abs(v["x"] - x) < 1e-3 and abs(v["y"] - y) < 1e-3 for x, y in drop)]
     avoid = [tuple(float(v) for v in q.split(":")) for q in arg("--avoid", "").split(",") if q]
-    m = Maps(d, own, win, avoid=avoid)
+    m = Maps(d, own, win, avoid=avoid, edge=float(arg("--edge-clear", "0.32")))
     need = half + clear
-    res = search(m, start, goal, soft_cost, via_cost, need, VIA_ROOM + (clear - CLEAR) if half == HALF else 0.25 + clear)
+    res = search(m, start, goal, soft_cost, via_cost, need, VIA_ROOM + (clear - CLEAR) if half == HALF else 0.25 + half + clear)
     if res is None:
         raise SystemExit("no route")
     path, cost = res

@@ -1,0 +1,24 @@
+{
+  "board_sha256": "2cc544c8e6eb00bd3f53fa480a0167dcb8e14dac687f7eb2af0c85946bda5584",
+  "selected_7u_hardware": "Designer Studio Stabilizer (For Plate), 7U wire",
+  "selected_plate": "models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.dxf",
+  "relocated_component_envelopes": {
+    "pass": 50,
+    "tight": 0,
+    "fail": 0,
+    "unknown": 0,
+    "minimum_clearance_mm": 0.85,
+    "minimum_ref": "J3"
+  },
+  "raw_mechanical_report_overall": "ATTENTION",
+  "raw_7u_probe": "fail",
+  "raw_7u_probe_applicable_to_selected_assembly": false,
+  "reason": "The raw checker probes PCB-mount 7U stabilizer holes against a plate-mount plate. The selected 7U stabilizer clips to the plate and leaves those PCB holes unused. The raw failure is preserved, not waived as proof of product fit.",
+  "product_fit_verified": false,
+  "remaining_fit_gates": [
+    "Exact Mill-Max 3305 variant versus 1.70 mm finished holes and 2.50 mm lands; actual switch/solder coupon.",
+    "Designer Studio 7U clip retention, 1.5 mm nominal plate thickness compatibility, wire/housing/component and case clearance.",
+    "Separate PCB-mount 2U Backspace stabilizer dimensions, fasteners, keycap, switch, LED sites and full gasket travel."
+  ],
+  "no_physical_measurements": true
+}

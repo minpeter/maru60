@@ -1,0 +1,1311 @@
+{
+  "package": "SK6812MINI-E-012 / C5149201; procurement revision must match pinned datasheet",
+  "cutout_mm": [
+    4.0,
+    3.6
+  ],
+  "corner_radius_mm": 0.5,
+  "pads_mm": {
+    "center_x": 3.2,
+    "center_y": 0.75,
+    "width": 1.8,
+    "height": 0.9
+  },
+  "limitations": [
+    "Mechanical screening only, not a routed PCB or optical qualification.",
+    "Pad lands intentionally move outwards for 0.3 mm cutout clearance; assembly approval remains necessary.",
+    "Cutout machining profile tolerance and lead overlap need fabrication review.",
+    "Switch centers, drilled patterns, connectors and ICs are treated as fixed.",
+    "Only +/-1.0 mm center offsets are searched; nonzero offsets require optical verification."
+  ],
+  "sites": [
+    {
+      "ref": "LED1",
+      "site_index": 0,
+      "original": {
+        "x": 9.147499999999999,
+        "y": 4.11875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        8.147499999999999,
+        4.11875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 1.0,
+      "fixed_conflicts": [],
+      "relocate_passives": [
+        "C200"
+      ]
+    },
+    {
+      "ref": "LED2",
+      "site_index": 0,
+      "original": {
+        "x": 28.197499999999998,
+        "y": 4.11875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        28.197499999999998,
+        4.11875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED3",
+      "site_index": 0,
+      "original": {
+        "x": 47.2475,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        47.2475,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED4",
+      "site_index": 0,
+      "original": {
+        "x": 66.29749999999999,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        66.29749999999999,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED5",
+      "site_index": 0,
+      "original": {
+        "x": 85.3475,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        85.3475,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED6",
+      "site_index": 0,
+      "original": {
+        "x": 104.39750000000001,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        104.39750000000001,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED7",
+      "site_index": 0,
+      "original": {
+        "x": 123.44749999999999,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        123.44749999999999,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED8",
+      "site_index": 0,
+      "original": {
+        "x": 142.4975,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        142.4975,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED9",
+      "site_index": 0,
+      "original": {
+        "x": 161.54749999999999,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        161.54749999999999,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED10",
+      "site_index": 0,
+      "original": {
+        "x": 180.5975,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        180.5975,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED11",
+      "site_index": 0,
+      "original": {
+        "x": 199.64749999999998,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        199.64749999999998,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED12",
+      "site_index": 0,
+      "original": {
+        "x": 218.6975,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        218.6975,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED13",
+      "site_index": 0,
+      "original": {
+        "x": 237.7475,
+        "y": 14.278749999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        237.7475,
+        14.278749999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED14",
+      "site_index": 0,
+      "original": {
+        "x": 251.71749999999997,
+        "y": 9.19875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        251.71749999999997,
+        9.19875
+      ],
+      "axis_degrees": 45,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED14",
+      "site_index": 1,
+      "original": {
+        "x": 266.3225,
+        "y": 4.11875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        266.0725,
+        4.11875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.25,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED15",
+      "site_index": 0,
+      "original": {
+        "x": 280.9275,
+        "y": 9.19875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        280.9275,
+        9.19875
+      ],
+      "axis_degrees": 90,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": [
+        "D15"
+      ]
+    },
+    {
+      "ref": "LED15",
+      "site_index": 1,
+      "original": {
+        "x": 269.0,
+        "y": 19.799999999999997,
+        "side": "F.Cu"
+      },
+      "status": "mechanically-blocked",
+      "center_mm": [
+        269.0,
+        19.049999999999997
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.75,
+      "fixed_conflicts": [
+        "LED68"
+      ],
+      "relocate_passives": [
+        "C267",
+        "D14",
+        "R115"
+      ]
+    },
+    {
+      "ref": "LED16",
+      "site_index": 0,
+      "original": {
+        "x": 13.91,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "mechanically-blocked",
+      "center_mm": [
+        13.91,
+        33.32875
+      ],
+      "axis_degrees": 135,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [
+        "U3"
+      ],
+      "relocate_passives": [
+        "C105",
+        "C111",
+        "R105",
+        "R193"
+      ]
+    },
+    {
+      "ref": "LED17",
+      "site_index": 0,
+      "original": {
+        "x": 37.7225,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "mechanically-blocked",
+      "center_mm": [
+        37.7225,
+        33.32875
+      ],
+      "axis_degrees": 45,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [
+        "Y1"
+      ],
+      "relocate_passives": [
+        "C106"
+      ]
+    },
+    {
+      "ref": "LED18",
+      "site_index": 0,
+      "original": {
+        "x": 56.772499999999994,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        56.772499999999994,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED19",
+      "site_index": 0,
+      "original": {
+        "x": 75.82249999999999,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        75.82249999999999,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED20",
+      "site_index": 0,
+      "original": {
+        "x": 94.8725,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        94.8725,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED21",
+      "site_index": 0,
+      "original": {
+        "x": 113.92249999999999,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        113.92249999999999,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED22",
+      "site_index": 0,
+      "original": {
+        "x": 132.9725,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        132.9725,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED23",
+      "site_index": 0,
+      "original": {
+        "x": 152.02249999999998,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        152.02249999999998,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED24",
+      "site_index": 0,
+      "original": {
+        "x": 171.0725,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        171.0725,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED25",
+      "site_index": 0,
+      "original": {
+        "x": 190.1225,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        190.1225,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED26",
+      "site_index": 0,
+      "original": {
+        "x": 209.17249999999999,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        209.17249999999999,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED27",
+      "site_index": 0,
+      "original": {
+        "x": 228.2225,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        228.2225,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED28",
+      "site_index": 0,
+      "original": {
+        "x": 247.27249999999998,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        247.27249999999998,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED29",
+      "site_index": 0,
+      "original": {
+        "x": 271.08500000000004,
+        "y": 33.32875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        271.08500000000004,
+        33.32875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED30",
+      "site_index": 0,
+      "original": {
+        "x": 16.49875,
+        "y": 42.21875,
+        "side": "F.Cu"
+      },
+      "status": "mechanically-blocked",
+      "center_mm": [
+        16.49875,
+        42.21875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [
+        "SWCAP1"
+      ],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED30",
+      "site_index": 1,
+      "original": {
+        "x": 19.9913,
+        "y": 38.2188,
+        "side": "F.Cu"
+      },
+      "status": "mechanically-blocked",
+      "center_mm": [
+        19.9913,
+        38.2188
+      ],
+      "axis_degrees": 45,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [
+        "L1",
+        "U1"
+      ],
+      "relocate_passives": [
+        "C102",
+        "C103",
+        "C104",
+        "C116",
+        "C118",
+        "C199",
+        "R102",
+        "R103",
+        "R104",
+        "R106"
+      ]
+    },
+    {
+      "ref": "LED31",
+      "site_index": 0,
+      "original": {
+        "x": 42.485,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        42.485,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED32",
+      "site_index": 0,
+      "original": {
+        "x": 61.535,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        61.535,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED33",
+      "site_index": 0,
+      "original": {
+        "x": 80.58500000000001,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        80.58500000000001,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED34",
+      "site_index": 0,
+      "original": {
+        "x": 99.63499999999999,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        99.63499999999999,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED35",
+      "site_index": 0,
+      "original": {
+        "x": 118.685,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        118.685,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED36",
+      "site_index": 0,
+      "original": {
+        "x": 137.73499999999999,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        137.73499999999999,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED37",
+      "site_index": 0,
+      "original": {
+        "x": 156.785,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        156.785,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED38",
+      "site_index": 0,
+      "original": {
+        "x": 175.83499999999998,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        175.83499999999998,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED39",
+      "site_index": 0,
+      "original": {
+        "x": 194.885,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        194.885,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED40",
+      "site_index": 0,
+      "original": {
+        "x": 213.935,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        213.935,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED41",
+      "site_index": 0,
+      "original": {
+        "x": 232.98499999999999,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        232.98499999999999,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED42",
+      "site_index": 0,
+      "original": {
+        "x": 263.94124999999997,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        263.94124999999997,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED43",
+      "site_index": 0,
+      "original": {
+        "x": 21.05375,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        21.05375,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED44",
+      "site_index": 0,
+      "original": {
+        "x": 52.01,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "mechanically-blocked",
+      "center_mm": [
+        52.01,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [
+        "J3"
+      ],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED45",
+      "site_index": 0,
+      "original": {
+        "x": 71.06,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        71.06,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED46",
+      "site_index": 0,
+      "original": {
+        "x": 90.10999999999999,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        90.10999999999999,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED47",
+      "site_index": 0,
+      "original": {
+        "x": 109.16,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        109.16,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED48",
+      "site_index": 0,
+      "original": {
+        "x": 128.21,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        128.21,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": [
+        "R119"
+      ]
+    },
+    {
+      "ref": "LED49",
+      "site_index": 0,
+      "original": {
+        "x": 147.26,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        147.26,
+        71.42875000000001
+      ],
+      "axis_degrees": 45,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": [
+        "C100",
+        "R182"
+      ]
+    },
+    {
+      "ref": "LED50",
+      "site_index": 0,
+      "original": {
+        "x": 166.31,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        166.31,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED51",
+      "site_index": 0,
+      "original": {
+        "x": 185.35999999999999,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        185.35999999999999,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED52",
+      "site_index": 0,
+      "original": {
+        "x": 204.41,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        204.41,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED53",
+      "site_index": 0,
+      "original": {
+        "x": 223.45999999999998,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        223.45999999999998,
+        71.42875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED54",
+      "site_index": 0,
+      "original": {
+        "x": 249.65375,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "mechanically-blocked",
+      "center_mm": [
+        249.90375,
+        71.17875000000001
+      ],
+      "axis_degrees": 45,
+      "center_shift_mm": 0.3535533905932738,
+      "fixed_conflicts": [
+        "SWRS1"
+      ],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED54",
+      "site_index": 1,
+      "original": {
+        "x": 240.504,
+        "y": 75.09899999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        240.504,
+        75.09899999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED55",
+      "site_index": 0,
+      "original": {
+        "x": 275.84749999999997,
+        "y": 71.42875000000001,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        275.84749999999997,
+        71.17875000000001
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.25,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED56",
+      "site_index": 0,
+      "original": {
+        "x": 13.91,
+        "y": 90.47874999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        13.91,
+        90.47874999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED57",
+      "site_index": 0,
+      "original": {
+        "x": 37.7225,
+        "y": 90.47874999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        37.7225,
+        90.47874999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED58",
+      "site_index": 0,
+      "original": {
+        "x": 61.535,
+        "y": 90.47874999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        61.535,
+        90.47874999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": [
+        "R117"
+      ]
+    },
+    {
+      "ref": "LED59",
+      "site_index": 0,
+      "original": {
+        "x": 142.4975,
+        "y": 90.47874999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        142.4975,
+        89.97874999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.5,
+      "fixed_conflicts": [],
+      "relocate_passives": [
+        "R109"
+      ]
+    },
+    {
+      "ref": "LED60",
+      "site_index": 0,
+      "original": {
+        "x": 223.45999999999998,
+        "y": 90.47874999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        223.45999999999998,
+        90.47874999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED61",
+      "site_index": 0,
+      "original": {
+        "x": 247.27249999999998,
+        "y": 90.47874999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        247.27249999999998,
+        90.47874999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED62",
+      "site_index": 0,
+      "original": {
+        "x": 271.08500000000004,
+        "y": 90.47874999999999,
+        "side": "F.Cu"
+      },
+      "status": "placement-candidate",
+      "center_mm": [
+        271.08500000000004,
+        90.47874999999999
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED75",
+      "site_index": 0,
+      "original": {
+        "x": 12.0,
+        "y": 56.0,
+        "side": "B.Cu"
+      },
+      "status": "existing-bottom-relay"
+    },
+    {
+      "ref": "LED75",
+      "site_index": 1,
+      "original": {
+        "x": 11.32125,
+        "y": 52.37875,
+        "side": "F.Cu"
+      },
+      "status": "mechanically-blocked",
+      "center_mm": [
+        11.32125,
+        52.37875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [
+        "SWCAP1"
+      ],
+      "relocate_passives": []
+    },
+    {
+      "ref": "LED76",
+      "site_index": 0,
+      "original": {
+        "x": 259.17874900000004,
+        "y": 61.26875,
+        "side": "F.Cu"
+      },
+      "status": "mechanically-blocked",
+      "center_mm": [
+        259.17874900000004,
+        61.26875
+      ],
+      "axis_degrees": 0,
+      "center_shift_mm": 0.0,
+      "fixed_conflicts": [
+        "SWRS1"
+      ],
+      "relocate_passives": []
+    }
+  ]
+}

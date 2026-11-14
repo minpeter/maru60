@@ -1,0 +1,44 @@
+{
+  "status": "User-requested cost target; not a manufacturing approval",
+  "user_target": {
+    "quantity_pcb": 5,
+    "quantity_fully_assembled": 5,
+    "target_total_KRW": 250000,
+    "target_per_assembled_board_KRW": 50000,
+    "includes": [
+      "PCB fabrication",
+      "all selected component procurement and assembly",
+      "Korea shipping",
+      "taxes"
+    ],
+    "excludes": [
+      "socket/Mill-Max receptacles",
+      "switches",
+      "keycaps",
+      "stabilizers",
+      "case",
+      "plate"
+    ]
+  },
+  "preserve": [
+    "all Caps Lock, Right Shift and Backspace layout options",
+    "bottom-only SMT and reverse illumination as currently requested",
+    "both per-key RGB and outward underglow",
+    "functional USB keyboard and firmware compatibility",
+    "required power/USB protections"
+  ],
+  "evaluation_rules": [
+    "Calculate complete small-run landed cost before accepting component or architecture changes.",
+    "Use actual assembler eligibility; current C5149201 reverse LEDs and C2890035 underglow are listed Standard Only.",
+    "Do not count unverified part swaps or waived fees as achieved savings.",
+    "No removal of RGB, required protections or layout options to meet the target. Expansion omission is explicitly authorized.",
+    "Compare high-impact architecture/assembly alternatives before penny-saving footprint changes."
+  ],
+  "quote_state": "No manufacturer fabrication/assembly quote; prior price range was a planning estimate.",
+  "review": "../evidence/cost-review-20261114/REPORT.md",
+  "cost_reduction_implemented": true,
+  "expansion_omission": "Authorized by user 2026-11-14; omit J3 and 18 dedicated components in the no-expansion default assembly variant.",
+  "current_board_sha256": "875ee106148f266e6fc24f938eddfaef901e4a263cc295df41cfb3e270a8301d",
+  "assembly_policy": "assembly-policy.json",
+  "implementation_scope": "Engineering assembly population and firmware variant only; no fabrication order or realized purchase savings."
+}

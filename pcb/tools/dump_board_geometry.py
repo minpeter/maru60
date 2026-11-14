@@ -48,11 +48,22 @@ for z in b.Zones():
         except Exception as e:
             zz["fill"][b.GetLayerName(l)] = []
     d["zones"].append(zz)
-for dr in b.GetDrawings():
+edge_items = list(b.GetDrawings()) + [item for fp in b.GetFootprints() for item in fp.GraphicalItems() if item.GetLayerName() == "Edge.Cuts"]
+for dr in edge_items:
     if dr.GetLayerName() == "Edge.Cuts" and dr.Type() == pcbnew.PCB_SHAPE_T:
         d["edges"].append({"shape": dr.GetShape(), "x1": dr.GetStart().x*mm, "y1": dr.GetStart().y*mm, "x2": dr.GetEnd().x*mm, "y2": dr.GetEnd().y*mm, "w": dr.GetWidth()*mm,
-                           "c": [dr.GetCenter().x*mm, dr.GetCenter().y*mm] if dr.GetShape() in (pcbnew.SHAPE_T_ARC, pcbnew.SHAPE_T_CIRCLE) else None, "r": dr.GetRadius()*mm if dr.GetShape() in (pcbnew.SHAPE_T_ARC, pcbnew.SHAPE_T_CIRCLE) else None})
+                           "c": [dr.GetCenter().x*mm, dr.GetCenter().y*mm] if dr.GetShape() in (pcbnew.SHAPE_T_ARC, pcbnew.SHAPE_T_CIRCLE) else None, "r": dr.GetRadius()*mm if dr.GetShape() in (pcbnew.SHAPE_T_ARC, pcbnew.SHAPE_T_CIRCLE) else None,
+                           "mid": [dr.GetArcMid().x*mm, dr.GetArcMid().y*mm] if dr.GetShape() == pcbnew.SHAPE_T_ARC else None})
     elif dr.Type() in (pcbnew.PCB_TEXT_T,):
         d["drawings"].append({"text": dr.GetText(), "layer": dr.GetLayerName(), "x": dr.GetPosition().x*mm, "y": dr.GetPosition().y*mm})
+# Native board material, including rounded outside corners and every internal
+# Edge.Cuts aperture. Consumers must retain the holes instead of using a bbox.
+outline = pcbnew.SHAPE_POLY_SET()
+if not b.GetBoardPolygonOutlines(outline):
+    raise RuntimeError("Invalid board outline; cannot safely export routing geometry")
+d["board_material"] = [
+    [[[o.CPoint(j).x*mm, o.CPoint(j).y*mm] for j in range(o.PointCount())]
+     for o in [outline.Outline(i)] + [outline.Hole(i, h) for h in range(outline.HoleCount(i))]]
+    for i in range(outline.OutlineCount())]
 json.dump(d, open(sys.argv[2], "w"))
 print(len(d["fps"]), len(d["tracks"]), len(d["vias"]), len(d["zones"]), len(d["edges"]))

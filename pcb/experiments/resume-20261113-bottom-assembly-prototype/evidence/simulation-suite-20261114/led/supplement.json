@@ -1,0 +1,4593 @@
+{
+  "scope": "Candidate-specific buffer, matrix crosstalk and LED numerical sensitivity.\n\nAll output stages and uniform return planes are assumptions. No IBIS, clamp,\n3-D return-path, EMC certification or physical LED qualification is implied.\n",
+  "inputs": {
+    "build/bottom-sim-20261114/geometry.json": "9359f5505ebaee21363d35e8ebf7cbcf4857b7103d6ddb86cdc66652954e21d7",
+    "build/bottom-sim-20261114/si-final/out/geometry.json": "a6bf99734b0b991c48adcc7afc38246fc0052b07915cf9b849a721fafd8a3a78",
+    "build/bottom-sim-20261114/si-final/out/lines.json": "ab2a22ef1def1e75befd6710438f97176f9b7c26f6dad39f7c9e657f832d21c4",
+    "/home/minpeter/github.com/minpeter/maru60/pcb/tools/signal_integrity/sim_bottom_supplement.py": "976a5b8a33bbb44092e92c04c6a72ab331c912702570ff798394962b868ccbea"
+  },
+  "first_hop": [
+    {
+      "case": "first_key_near_typical_assumed",
+      "chain": "key",
+      "line_assumption": "near_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 40,
+        "cbuf": 2,
+        "vth": 1.3,
+        "tpd": 3.5,
+        "edge": 1.5,
+        "rbuf": 25,
+        "cin": 5
+      },
+      "receiver": [
+        "LED1",
+        "2"
+      ],
+      "route_lengths_mm": [
+        114.655,
+        11.701,
+        164.624
+      ],
+      "measurement": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 295.86903304041107,
+            "width_max_ns": 307.81540555541096,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999946999999997,
+            "low_margin_V": 1.19999984319758,
+            "timing_margins": {
+              "high_above_min_ns": 45.86903304041107,
+              "low_above_min_ns": 92.18459444458904,
+              "high_below_max_ns": 92.18459444458904
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 895.8685797285666,
+            "width_max_ns": 907.8135927844392,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999999,
+            "low_margin_V": 1.1999945809532,
+            "timing_margins": {
+              "high_above_min_ns": 195.8685797285666,
+              "low_above_min_ns": 92.18640721556085,
+              "high_below_max_ns": 92.18640721556085
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 45.86903304041107,
+        "unclamped_overshoot_V": 2.9999999995311555e-07,
+        "unclamped_undershoot_V": 2.9965593e-07
+      }
+    },
+    {
+      "case": "first_key_near_slow_assumed",
+      "chain": "key",
+      "line_assumption": "near_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 125,
+        "cbuf": 10,
+        "vth": 1.75,
+        "tpd": 6.5,
+        "edge": 3.0,
+        "rbuf": 100,
+        "cin": 15
+      },
+      "receiver": [
+        "LED1",
+        "2"
+      ],
+      "route_lengths_mm": [
+        114.655,
+        11.701,
+        164.624
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 290.44644879925136,
+            "width_max_ns": 312.036434056341,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3977756000000001,
+            "low_margin_V": 1.1999999945200275,
+            "timing_margins": {
+              "high_above_min_ns": 40.44644879925136,
+              "low_above_min_ns": 87.96356594365898,
+              "high_below_max_ns": 87.96356594365898
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 890.4454426169359,
+            "width_max_ns": 912.0355695732583,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.4,
+            "low_margin_V": 1.1978041411,
+            "timing_margins": {
+              "high_above_min_ns": 190.4454426169359,
+              "low_above_min_ns": 87.96443042674173,
+              "high_below_max_ns": 87.96443042674173
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 40.44644879925136,
+        "unclamped_overshoot_V": 0.0,
+        "unclamped_undershoot_V": 6.3964711e-09
+      }
+    },
+    {
+      "case": "first_key_near_fast_low_threshold_assumed",
+      "chain": "key",
+      "line_assumption": "near_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 40,
+        "cbuf": 2,
+        "vth": 0.8,
+        "tpd": 2.5,
+        "edge": 1.0,
+        "rbuf": 15,
+        "cin": 5
+      },
+      "receiver": [
+        "LED1",
+        "2"
+      ],
+      "route_lengths_mm": [
+        114.655,
+        11.701,
+        164.624
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 296.5749911226144,
+            "width_max_ns": 308.5804337931854,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999964999999999,
+            "low_margin_V": 1.19999969730093,
+            "timing_margins": {
+              "high_above_min_ns": 46.57499112261439,
+              "low_above_min_ns": 91.41956620681458,
+              "high_below_max_ns": 91.41956620681458
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 896.5684470674842,
+            "width_max_ns": 908.5776606923,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999996000000001,
+            "low_margin_V": 1.1999962149701,
+            "timing_margins": {
+              "high_above_min_ns": 196.56844706748416,
+              "low_above_min_ns": 91.42233930769999,
+              "high_below_max_ns": 91.42233930769999
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 46.57499112261439,
+        "unclamped_overshoot_V": 7.000000001866624e-07,
+        "unclamped_undershoot_V": 5.6408289e-07
+      }
+    },
+    {
+      "case": "first_key_far__typical_assumed",
+      "chain": "key",
+      "line_assumption": "far_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 40,
+        "cbuf": 2,
+        "vth": 1.3,
+        "tpd": 3.5,
+        "edge": 1.5,
+        "rbuf": 25,
+        "cin": 5
+      },
+      "receiver": [
+        "LED1",
+        "2"
+      ],
+      "route_lengths_mm": [
+        114.655,
+        11.701,
+        164.624
+      ],
+      "measurement": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 295.87726382215396,
+            "width_max_ns": 307.8139135535407,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.399995,
+            "low_margin_V": 1.199999925787379,
+            "timing_margins": {
+              "high_above_min_ns": 45.877263822153964,
+              "low_above_min_ns": 92.18608644645929,
+              "high_below_max_ns": 92.18608644645929
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 895.8829543438483,
+            "width_max_ns": 907.8160466518461,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.4,
+            "low_margin_V": 1.1999939686817,
+            "timing_margins": {
+              "high_above_min_ns": 195.88295434384827,
+              "low_above_min_ns": 92.18395334815386,
+              "high_below_max_ns": 92.18395334815386
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 45.877263822153964,
+        "unclamped_overshoot_V": 1.9999999967268423e-07,
+        "unclamped_undershoot_V": 2.2430334e-07
+      }
+    },
+    {
+      "case": "first_key_far__slow_assumed",
+      "chain": "key",
+      "line_assumption": "far_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 125,
+        "cbuf": 10,
+        "vth": 1.75,
+        "tpd": 6.5,
+        "edge": 3.0,
+        "rbuf": 100,
+        "cin": 15
+      },
+      "receiver": [
+        "LED1",
+        "2"
+      ],
+      "route_lengths_mm": [
+        114.655,
+        11.701,
+        164.624
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 290.44509386287064,
+            "width_max_ns": 312.0219465893533,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3977969999999997,
+            "low_margin_V": 1.1999999964049828,
+            "timing_margins": {
+              "high_above_min_ns": 40.445093862870635,
+              "low_above_min_ns": 87.97805341064668,
+              "high_below_max_ns": 87.97805341064668
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 890.4433533218539,
+            "width_max_ns": 912.0204217639389,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.4,
+            "low_margin_V": 1.1978192492,
+            "timing_margins": {
+              "high_above_min_ns": 190.44335332185392,
+              "low_above_min_ns": 87.97957823606112,
+              "high_below_max_ns": 87.97957823606112
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 40.445093862870635,
+        "unclamped_overshoot_V": 0.0,
+        "unclamped_undershoot_V": 4.2136888e-09
+      }
+    },
+    {
+      "case": "first_key_far__fast_low_threshold_assumed",
+      "chain": "key",
+      "line_assumption": "far_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 40,
+        "cbuf": 2,
+        "vth": 0.8,
+        "tpd": 2.5,
+        "edge": 1.0,
+        "rbuf": 15,
+        "cin": 5
+      },
+      "receiver": [
+        "LED1",
+        "2"
+      ],
+      "route_lengths_mm": [
+        114.655,
+        11.701,
+        164.624
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 296.558966343046,
+            "width_max_ns": 308.58426758500536,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999896,
+            "low_margin_V": 1.199999902268398,
+            "timing_margins": {
+              "high_above_min_ns": 46.558966343045995,
+              "low_above_min_ns": 91.41573241499464,
+              "high_below_max_ns": 91.41573241499464
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 896.5583536939275,
+            "width_max_ns": 908.5871751937716,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999997999999998,
+            "low_margin_V": 1.199988748542,
+            "timing_margins": {
+              "high_above_min_ns": 196.55835369392753,
+              "low_above_min_ns": 91.4128248062284,
+              "high_below_max_ns": 91.4128248062284
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 46.558966343045995,
+        "unclamped_overshoot_V": 7.100000000370699e-06,
+        "unclamped_undershoot_V": 7.6852163e-06
+      }
+    },
+    {
+      "case": "first_underglow_near_typical_assumed",
+      "chain": "underglow",
+      "line_assumption": "near_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 40,
+        "cbuf": 2,
+        "vth": 1.3,
+        "tpd": 3.5,
+        "edge": 1.5,
+        "rbuf": 25,
+        "cin": 5
+      },
+      "receiver": [
+        "LED63",
+        "1"
+      ],
+      "route_lengths_mm": [
+        95.302,
+        5.979,
+        116.42
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 291.471373263445,
+            "width_max_ns": 304.0412253397467,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799983,
+            "low_margin_V": 1.39999988567482,
+            "timing_margins": {
+              "high_above_min_ns": 91.471373263445,
+              "low_above_min_ns": 195.9587746602533,
+              "high_below_max_ns": 95.95877466025331
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 891.4691923612695,
+            "width_max_ns": 904.0389581625564,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799999000000001,
+            "low_margin_V": 1.3999986490838,
+            "timing_margins": {
+              "high_above_min_ns": 191.4691923612695,
+              "low_above_min_ns": 95.96104183744364
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 91.471373263445,
+        "unclamped_overshoot_V": 1.7999999997186933e-06,
+        "unclamped_undershoot_V": 1.3850676e-06
+      }
+    },
+    {
+      "case": "first_underglow_near_slow_assumed",
+      "chain": "underglow",
+      "line_assumption": "near_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 125,
+        "cbuf": 10,
+        "vth": 1.75,
+        "tpd": 6.5,
+        "edge": 3.0,
+        "rbuf": 100,
+        "cin": 15
+      },
+      "receiver": [
+        "LED63",
+        "1"
+      ],
+      "route_lengths_mm": [
+        95.302,
+        5.979,
+        116.42
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 284.27695538902844,
+            "width_max_ns": 307.31921310018606,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8794227000000001,
+            "low_margin_V": 1.399999984184388,
+            "timing_margins": {
+              "high_above_min_ns": 84.27695538902844,
+              "low_above_min_ns": 192.68078689981394,
+              "high_below_max_ns": 92.68078689981394
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 884.2762056694742,
+            "width_max_ns": 907.3189938203923,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799999999999999,
+            "low_margin_V": 1.3994319656199998,
+            "timing_margins": {
+              "high_above_min_ns": 184.27620566947417,
+              "low_above_min_ns": 92.68100617960772
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 84.27695538902844,
+        "unclamped_overshoot_V": 0.0,
+        "unclamped_undershoot_V": 4.2086879e-08
+      }
+    },
+    {
+      "case": "first_underglow_near_fast_low_threshold_assumed",
+      "chain": "underglow",
+      "line_assumption": "near_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 40,
+        "cbuf": 2,
+        "vth": 0.8,
+        "tpd": 2.5,
+        "edge": 1.0,
+        "rbuf": 15,
+        "cin": 5
+      },
+      "receiver": [
+        "LED63",
+        "1"
+      ],
+      "route_lengths_mm": [
+        95.302,
+        5.979,
+        116.42
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 292.39849025726517,
+            "width_max_ns": 303.93805146345676,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799986,
+            "low_margin_V": 1.39999958186194,
+            "timing_margins": {
+              "high_above_min_ns": 92.39849025726517,
+              "low_above_min_ns": 196.06194853654324,
+              "high_below_max_ns": 96.06194853654324
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 892.4179311912121,
+            "width_max_ns": 903.9589877961039,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799996999999999,
+            "low_margin_V": 1.3999983504706999,
+            "timing_margins": {
+              "high_above_min_ns": 192.41793119121212,
+              "low_above_min_ns": 96.04101220389612
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 92.39849025726517,
+        "unclamped_overshoot_V": 3.699999999717818e-06,
+        "unclamped_undershoot_V": 3.2172553e-06
+      }
+    },
+    {
+      "case": "first_underglow_far__typical_assumed",
+      "chain": "underglow",
+      "line_assumption": "far_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 40,
+        "cbuf": 2,
+        "vth": 1.3,
+        "tpd": 3.5,
+        "edge": 1.5,
+        "rbuf": 25,
+        "cin": 5
+      },
+      "receiver": [
+        "LED63",
+        "1"
+      ],
+      "route_lengths_mm": [
+        95.302,
+        5.979,
+        116.42
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 291.471373263445,
+            "width_max_ns": 304.0412253397467,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799983,
+            "low_margin_V": 1.39999988567482,
+            "timing_margins": {
+              "high_above_min_ns": 91.471373263445,
+              "low_above_min_ns": 195.9587746602533,
+              "high_below_max_ns": 95.95877466025331
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 891.4691923612695,
+            "width_max_ns": 904.0389581625564,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799999000000001,
+            "low_margin_V": 1.3999986490838,
+            "timing_margins": {
+              "high_above_min_ns": 191.4691923612695,
+              "low_above_min_ns": 95.96104183744364
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 91.471373263445,
+        "unclamped_overshoot_V": 1.7999999997186933e-06,
+        "unclamped_undershoot_V": 1.3850676e-06
+      }
+    },
+    {
+      "case": "first_underglow_far__slow_assumed",
+      "chain": "underglow",
+      "line_assumption": "far_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 125,
+        "cbuf": 10,
+        "vth": 1.75,
+        "tpd": 6.5,
+        "edge": 3.0,
+        "rbuf": 100,
+        "cin": 15
+      },
+      "receiver": [
+        "LED63",
+        "1"
+      ],
+      "route_lengths_mm": [
+        95.302,
+        5.979,
+        116.42
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 284.27695538902844,
+            "width_max_ns": 307.31921310018606,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8794227000000001,
+            "low_margin_V": 1.399999984184388,
+            "timing_margins": {
+              "high_above_min_ns": 84.27695538902844,
+              "low_above_min_ns": 192.68078689981394,
+              "high_below_max_ns": 92.68078689981394
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 884.2762056694742,
+            "width_max_ns": 907.3189938203923,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799999999999999,
+            "low_margin_V": 1.3994319656199998,
+            "timing_margins": {
+              "high_above_min_ns": 184.27620566947417,
+              "low_above_min_ns": 92.68100617960772
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 84.27695538902844,
+        "unclamped_overshoot_V": 0.0,
+        "unclamped_undershoot_V": 4.2086879e-08
+      }
+    },
+    {
+      "case": "first_underglow_far__fast_low_threshold_assumed",
+      "chain": "underglow",
+      "line_assumption": "far_reference_assumed",
+      "driver_assumptions": {
+        "rgpio": 40,
+        "cbuf": 2,
+        "vth": 0.8,
+        "tpd": 2.5,
+        "edge": 1.0,
+        "rbuf": 15,
+        "cin": 5
+      },
+      "receiver": [
+        "LED63",
+        "1"
+      ],
+      "route_lengths_mm": [
+        95.302,
+        5.979,
+        116.42
+      ],
+      "measurement": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 292.39849025726517,
+            "width_max_ns": 303.93805146345676,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799986,
+            "low_margin_V": 1.39999958186194,
+            "timing_margins": {
+              "high_above_min_ns": 92.39849025726517,
+              "low_above_min_ns": 196.06194853654324,
+              "high_below_max_ns": 96.06194853654324
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 892.4179311912121,
+            "width_max_ns": 903.9589877961039,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 0.8799996999999999,
+            "low_margin_V": 1.3999983504706999,
+            "timing_margins": {
+              "high_above_min_ns": 192.41793119121212,
+              "low_above_min_ns": 96.04101220389612
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 92.39849025726517,
+        "unclamped_overshoot_V": 3.699999999717818e-06,
+        "unclamped_undershoot_V": 3.2172553e-06
+      }
+    }
+  ],
+  "crosstalk": [
+    {
+      "case": "xtalk_0_20_0",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_33",
+        "aggressor": "ROW2",
+        "route_length_mm": 17.595,
+        "min_gap": 0.255,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 0.818,
+        "len_le_0p6": 15.044
+      },
+      "assumed_uniform_coupled_mm": 15.044,
+      "assumed_uniform_gap_mm": 0.255,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 20.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.103,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.255,
+        "C11_pF_per_mm": 0.09470198341117173,
+        "C22_pF_per_mm": 0.08428581853173804,
+        "Cm_pF_per_mm": 0.010614762206723036,
+        "L11_nH_per_mm": 0.38875785951648006,
+        "L22_nH_per_mm": 0.4312263490062301,
+        "Lm_nH_per_mm": 0.07856196916673122,
+        "kC": 0.11881013180740577,
+        "kL": 0.19187576516343918
+      },
+      "peak_pos_V": 0.097,
+      "peak_neg_V": -0.097
+    },
+    {
+      "case": "xtalk_0_20_4",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_33",
+        "aggressor": "ROW2",
+        "route_length_mm": 17.595,
+        "min_gap": 0.255,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 0.818,
+        "len_le_0p6": 15.044
+      },
+      "assumed_uniform_coupled_mm": 15.044,
+      "assumed_uniform_gap_mm": 0.255,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 20.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 1.303,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.255,
+        "C11_pF_per_mm": 0.09470198341117173,
+        "C22_pF_per_mm": 0.08428581853173804,
+        "Cm_pF_per_mm": 0.010614762206723036,
+        "L11_nH_per_mm": 0.38875785951648006,
+        "L22_nH_per_mm": 0.4312263490062301,
+        "Lm_nH_per_mm": 0.07856196916673122,
+        "kC": 0.11881013180740577,
+        "kL": 0.19187576516343918
+      },
+      "peak_pos_V": 0.097,
+      "peak_neg_V": -0.097
+    },
+    {
+      "case": "xtalk_0_500_0",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_33",
+        "aggressor": "ROW2",
+        "route_length_mm": 17.595,
+        "min_gap": 0.255,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 0.818,
+        "len_le_0p6": 15.044
+      },
+      "assumed_uniform_coupled_mm": 15.044,
+      "assumed_uniform_gap_mm": 0.255,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 500.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.1526,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.255,
+        "C11_pF_per_mm": 0.09470198341117173,
+        "C22_pF_per_mm": 0.08428581853173804,
+        "Cm_pF_per_mm": 0.010614762206723036,
+        "L11_nH_per_mm": 0.38875785951648006,
+        "L22_nH_per_mm": 0.4312263490062301,
+        "Lm_nH_per_mm": 0.07856196916673122,
+        "kC": 0.11881013180740577,
+        "kL": 0.19187576516343918
+      },
+      "peak_pos_V": 0.0474,
+      "peak_neg_V": -0.0474
+    },
+    {
+      "case": "xtalk_0_500_4",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_33",
+        "aggressor": "ROW2",
+        "route_length_mm": 17.595,
+        "min_gap": 0.255,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 0.818,
+        "len_le_0p6": 15.044
+      },
+      "assumed_uniform_coupled_mm": 15.044,
+      "assumed_uniform_gap_mm": 0.255,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 500.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 1.3525999999999998,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.255,
+        "C11_pF_per_mm": 0.09470198341117173,
+        "C22_pF_per_mm": 0.08428581853173804,
+        "Cm_pF_per_mm": 0.010614762206723036,
+        "L11_nH_per_mm": 0.38875785951648006,
+        "L22_nH_per_mm": 0.4312263490062301,
+        "Lm_nH_per_mm": 0.07856196916673122,
+        "kC": 0.11881013180740577,
+        "kL": 0.19187576516343918
+      },
+      "peak_pos_V": 0.0474,
+      "peak_neg_V": -0.0474
+    },
+    {
+      "case": "xtalk_0_1000_0",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_33",
+        "aggressor": "ROW2",
+        "route_length_mm": 17.595,
+        "min_gap": 0.255,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 0.818,
+        "len_le_0p6": 15.044
+      },
+      "assumed_uniform_coupled_mm": 15.044,
+      "assumed_uniform_gap_mm": 0.255,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 1000.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.1435,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.255,
+        "C11_pF_per_mm": 0.09470198341117173,
+        "C22_pF_per_mm": 0.08428581853173804,
+        "Cm_pF_per_mm": 0.010614762206723036,
+        "L11_nH_per_mm": 0.38875785951648006,
+        "L22_nH_per_mm": 0.4312263490062301,
+        "Lm_nH_per_mm": 0.07856196916673122,
+        "kC": 0.11881013180740577,
+        "kL": 0.19187576516343918
+      },
+      "peak_pos_V": 0.0565,
+      "peak_neg_V": -0.0564
+    },
+    {
+      "case": "xtalk_0_1000_4",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_33",
+        "aggressor": "ROW2",
+        "route_length_mm": 17.595,
+        "min_gap": 0.255,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 0.818,
+        "len_le_0p6": 15.044
+      },
+      "assumed_uniform_coupled_mm": 15.044,
+      "assumed_uniform_gap_mm": 0.255,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 1000.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 1.3435,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.255,
+        "C11_pF_per_mm": 0.09470198341117173,
+        "C22_pF_per_mm": 0.08428581853173804,
+        "Cm_pF_per_mm": 0.010614762206723036,
+        "L11_nH_per_mm": 0.38875785951648006,
+        "L22_nH_per_mm": 0.4312263490062301,
+        "Lm_nH_per_mm": 0.07856196916673122,
+        "kC": 0.11881013180740577,
+        "kL": 0.19187576516343918
+      },
+      "peak_pos_V": 0.0564,
+      "peak_neg_V": -0.0565
+    },
+    {
+      "case": "xtalk_1_20_0",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_60",
+        "aggressor": "ROW4",
+        "route_length_mm": 77.94,
+        "min_gap": 0.299,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 5.069,
+        "len_le_0p6": 11.566
+      },
+      "assumed_uniform_coupled_mm": 11.566,
+      "assumed_uniform_gap_mm": 0.299,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.19999999999999998,
+      "driver_ohm": 20.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.1442999999999999,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.19999999999999998,
+        "gap_mm": 0.299,
+        "C11_pF_per_mm": 0.0940760694757844,
+        "C22_pF_per_mm": 0.09407606947578402,
+        "Cm_pF_per_mm": 0.008609867283560516,
+        "L11_nH_per_mm": 0.3888772173347005,
+        "L22_nH_per_mm": 0.38887721733469,
+        "Lm_nH_per_mm": 0.06341411101730253,
+        "kC": 0.0915202700488752,
+        "kL": 0.16306975104361504
+      },
+      "peak_pos_V": 0.0557,
+      "peak_neg_V": -0.0557
+    },
+    {
+      "case": "xtalk_1_20_4",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_60",
+        "aggressor": "ROW4",
+        "route_length_mm": 77.94,
+        "min_gap": 0.299,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 5.069,
+        "len_le_0p6": 11.566
+      },
+      "assumed_uniform_coupled_mm": 11.566,
+      "assumed_uniform_gap_mm": 0.299,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.19999999999999998,
+      "driver_ohm": 20.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 1.3442999999999998,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.19999999999999998,
+        "gap_mm": 0.299,
+        "C11_pF_per_mm": 0.0940760694757844,
+        "C22_pF_per_mm": 0.09407606947578402,
+        "Cm_pF_per_mm": 0.008609867283560516,
+        "L11_nH_per_mm": 0.3888772173347005,
+        "L22_nH_per_mm": 0.38887721733469,
+        "Lm_nH_per_mm": 0.06341411101730253,
+        "kC": 0.0915202700488752,
+        "kL": 0.16306975104361504
+      },
+      "peak_pos_V": 0.0557,
+      "peak_neg_V": -0.0557
+    },
+    {
+      "case": "xtalk_1_500_0",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_60",
+        "aggressor": "ROW4",
+        "route_length_mm": 77.94,
+        "min_gap": 0.299,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 5.069,
+        "len_le_0p6": 11.566
+      },
+      "assumed_uniform_coupled_mm": 11.566,
+      "assumed_uniform_gap_mm": 0.299,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.19999999999999998,
+      "driver_ohm": 500.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.1531,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.19999999999999998,
+        "gap_mm": 0.299,
+        "C11_pF_per_mm": 0.0940760694757844,
+        "C22_pF_per_mm": 0.09407606947578402,
+        "Cm_pF_per_mm": 0.008609867283560516,
+        "L11_nH_per_mm": 0.3888772173347005,
+        "L22_nH_per_mm": 0.38887721733469,
+        "Lm_nH_per_mm": 0.06341411101730253,
+        "kC": 0.0915202700488752,
+        "kL": 0.16306975104361504
+      },
+      "peak_pos_V": 0.0469,
+      "peak_neg_V": -0.0469
+    },
+    {
+      "case": "xtalk_1_500_4",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_60",
+        "aggressor": "ROW4",
+        "route_length_mm": 77.94,
+        "min_gap": 0.299,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 5.069,
+        "len_le_0p6": 11.566
+      },
+      "assumed_uniform_coupled_mm": 11.566,
+      "assumed_uniform_gap_mm": 0.299,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.19999999999999998,
+      "driver_ohm": 500.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 1.353,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.19999999999999998,
+        "gap_mm": 0.299,
+        "C11_pF_per_mm": 0.0940760694757844,
+        "C22_pF_per_mm": 0.09407606947578402,
+        "Cm_pF_per_mm": 0.008609867283560516,
+        "L11_nH_per_mm": 0.3888772173347005,
+        "L22_nH_per_mm": 0.38887721733469,
+        "Lm_nH_per_mm": 0.06341411101730253,
+        "kC": 0.0915202700488752,
+        "kL": 0.16306975104361504
+      },
+      "peak_pos_V": 0.047,
+      "peak_neg_V": -0.047
+    },
+    {
+      "case": "xtalk_1_1000_0",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_60",
+        "aggressor": "ROW4",
+        "route_length_mm": 77.94,
+        "min_gap": 0.299,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 5.069,
+        "len_le_0p6": 11.566
+      },
+      "assumed_uniform_coupled_mm": 11.566,
+      "assumed_uniform_gap_mm": 0.299,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.19999999999999998,
+      "driver_ohm": 1000.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.1486,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.19999999999999998,
+        "gap_mm": 0.299,
+        "C11_pF_per_mm": 0.0940760694757844,
+        "C22_pF_per_mm": 0.09407606947578402,
+        "Cm_pF_per_mm": 0.008609867283560516,
+        "L11_nH_per_mm": 0.3888772173347005,
+        "L22_nH_per_mm": 0.38887721733469,
+        "Lm_nH_per_mm": 0.06341411101730253,
+        "kC": 0.0915202700488752,
+        "kL": 0.16306975104361504
+      },
+      "peak_pos_V": 0.0514,
+      "peak_neg_V": -0.0514
+    },
+    {
+      "case": "xtalk_1_1000_4",
+      "geometry": {
+        "chain": "key",
+        "victim": "KEY_RGB_CHAIN_60",
+        "aggressor": "ROW4",
+        "route_length_mm": 77.94,
+        "min_gap": 0.299,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 5.069,
+        "len_le_0p6": 11.566
+      },
+      "assumed_uniform_coupled_mm": 11.566,
+      "assumed_uniform_gap_mm": 0.299,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.19999999999999998,
+      "driver_ohm": 1000.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 1.3485999999999998,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.19999999999999998,
+        "gap_mm": 0.299,
+        "C11_pF_per_mm": 0.0940760694757844,
+        "C22_pF_per_mm": 0.09407606947578402,
+        "Cm_pF_per_mm": 0.008609867283560516,
+        "L11_nH_per_mm": 0.3888772173347005,
+        "L22_nH_per_mm": 0.38887721733469,
+        "Lm_nH_per_mm": 0.06341411101730253,
+        "kC": 0.0915202700488752,
+        "kL": 0.16306975104361504
+      },
+      "peak_pos_V": 0.0514,
+      "peak_neg_V": -0.0514
+    },
+    {
+      "case": "xtalk_2_20_0",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_9",
+        "aggressor": "ROW3",
+        "route_length_mm": 103.771,
+        "min_gap": 0.196,
+        "len_le_0p2": 0.101,
+        "len_le_0p35": 7.856,
+        "len_le_0p6": 10.334
+      },
+      "assumed_uniform_coupled_mm": 10.334,
+      "assumed_uniform_gap_mm": 0.196,
+      "victim_width_mm": 0.32,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 20.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.3477999999999999,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.32,
+        "w_aggr": 0.15,
+        "gap_mm": 0.196,
+        "C11_pF_per_mm": 0.12014384993801558,
+        "C22_pF_per_mm": 0.0847497969571981,
+        "Cm_pF_per_mm": 0.015068452459858063,
+        "L11_nH_per_mm": 0.3173666211926461,
+        "L22_nH_per_mm": 0.4324430235148155,
+        "Lm_nH_per_mm": 0.08336591679083001,
+        "kC": 0.1493305094775597,
+        "kL": 0.22503157450632152
+      },
+      "peak_pos_V": 0.0522,
+      "peak_neg_V": -0.0522
+    },
+    {
+      "case": "xtalk_2_20_4",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_9",
+        "aggressor": "ROW3",
+        "route_length_mm": 103.771,
+        "min_gap": 0.196,
+        "len_le_0p2": 0.101,
+        "len_le_0p35": 7.856,
+        "len_le_0p6": 10.334
+      },
+      "assumed_uniform_coupled_mm": 10.334,
+      "assumed_uniform_gap_mm": 0.196,
+      "victim_width_mm": 0.32,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 20.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 0.8277999999999999,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.32,
+        "w_aggr": 0.15,
+        "gap_mm": 0.196,
+        "C11_pF_per_mm": 0.12014384993801558,
+        "C22_pF_per_mm": 0.0847497969571981,
+        "Cm_pF_per_mm": 0.015068452459858063,
+        "L11_nH_per_mm": 0.3173666211926461,
+        "L22_nH_per_mm": 0.4324430235148155,
+        "Lm_nH_per_mm": 0.08336591679083001,
+        "kC": 0.1493305094775597,
+        "kL": 0.22503157450632152
+      },
+      "peak_pos_V": 0.0522,
+      "peak_neg_V": -0.0522
+    },
+    {
+      "case": "xtalk_2_500_0",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_9",
+        "aggressor": "ROW3",
+        "route_length_mm": 103.771,
+        "min_gap": 0.196,
+        "len_le_0p2": 0.101,
+        "len_le_0p35": 7.856,
+        "len_le_0p6": 10.334
+      },
+      "assumed_uniform_coupled_mm": 10.334,
+      "assumed_uniform_gap_mm": 0.196,
+      "victim_width_mm": 0.32,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 500.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.3209,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.32,
+        "w_aggr": 0.15,
+        "gap_mm": 0.196,
+        "C11_pF_per_mm": 0.12014384993801558,
+        "C22_pF_per_mm": 0.0847497969571981,
+        "Cm_pF_per_mm": 0.015068452459858063,
+        "L11_nH_per_mm": 0.3173666211926461,
+        "L22_nH_per_mm": 0.4324430235148155,
+        "Lm_nH_per_mm": 0.08336591679083001,
+        "kC": 0.1493305094775597,
+        "kL": 0.22503157450632152
+      },
+      "peak_pos_V": 0.0791,
+      "peak_neg_V": -0.0792
+    },
+    {
+      "case": "xtalk_2_500_4",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_9",
+        "aggressor": "ROW3",
+        "route_length_mm": 103.771,
+        "min_gap": 0.196,
+        "len_le_0p2": 0.101,
+        "len_le_0p35": 7.856,
+        "len_le_0p6": 10.334
+      },
+      "assumed_uniform_coupled_mm": 10.334,
+      "assumed_uniform_gap_mm": 0.196,
+      "victim_width_mm": 0.32,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 500.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 0.8009,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.32,
+        "w_aggr": 0.15,
+        "gap_mm": 0.196,
+        "C11_pF_per_mm": 0.12014384993801558,
+        "C22_pF_per_mm": 0.0847497969571981,
+        "Cm_pF_per_mm": 0.015068452459858063,
+        "L11_nH_per_mm": 0.3173666211926461,
+        "L22_nH_per_mm": 0.4324430235148155,
+        "Lm_nH_per_mm": 0.08336591679083001,
+        "kC": 0.1493305094775597,
+        "kL": 0.22503157450632152
+      },
+      "peak_pos_V": 0.0791,
+      "peak_neg_V": -0.0791
+    },
+    {
+      "case": "xtalk_2_1000_0",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_9",
+        "aggressor": "ROW3",
+        "route_length_mm": 103.771,
+        "min_gap": 0.196,
+        "len_le_0p2": 0.101,
+        "len_le_0p35": 7.856,
+        "len_le_0p6": 10.334
+      },
+      "assumed_uniform_coupled_mm": 10.334,
+      "assumed_uniform_gap_mm": 0.196,
+      "victim_width_mm": 0.32,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 1000.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.3154,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.32,
+        "w_aggr": 0.15,
+        "gap_mm": 0.196,
+        "C11_pF_per_mm": 0.12014384993801558,
+        "C22_pF_per_mm": 0.0847497969571981,
+        "Cm_pF_per_mm": 0.015068452459858063,
+        "L11_nH_per_mm": 0.3173666211926461,
+        "L22_nH_per_mm": 0.4324430235148155,
+        "Lm_nH_per_mm": 0.08336591679083001,
+        "kC": 0.1493305094775597,
+        "kL": 0.22503157450632152
+      },
+      "peak_pos_V": 0.0846,
+      "peak_neg_V": -0.0846
+    },
+    {
+      "case": "xtalk_2_1000_4",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_9",
+        "aggressor": "ROW3",
+        "route_length_mm": 103.771,
+        "min_gap": 0.196,
+        "len_le_0p2": 0.101,
+        "len_le_0p35": 7.856,
+        "len_le_0p6": 10.334
+      },
+      "assumed_uniform_coupled_mm": 10.334,
+      "assumed_uniform_gap_mm": 0.196,
+      "victim_width_mm": 0.32,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 1000.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 0.7955999999999999,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.32,
+        "w_aggr": 0.15,
+        "gap_mm": 0.196,
+        "C11_pF_per_mm": 0.12014384993801558,
+        "C22_pF_per_mm": 0.0847497969571981,
+        "Cm_pF_per_mm": 0.015068452459858063,
+        "L11_nH_per_mm": 0.3173666211926461,
+        "L22_nH_per_mm": 0.4324430235148155,
+        "Lm_nH_per_mm": 0.08336591679083001,
+        "kC": 0.1493305094775597,
+        "kL": 0.22503157450632152
+      },
+      "peak_pos_V": 0.0844,
+      "peak_neg_V": -0.0844
+    },
+    {
+      "case": "xtalk_3_20_0",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_6",
+        "aggressor": "ROW3",
+        "route_length_mm": 284.153,
+        "min_gap": 0.242,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 1.4,
+        "len_le_0p6": 9.3
+      },
+      "assumed_uniform_coupled_mm": 9.3,
+      "assumed_uniform_gap_mm": 0.242,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 20.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.3644999999999998,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.242,
+        "C11_pF_per_mm": 0.09491829213366387,
+        "C22_pF_per_mm": 0.08344694681188418,
+        "Cm_pF_per_mm": 0.011237483732302439,
+        "L11_nH_per_mm": 0.38867349760957537,
+        "L22_nH_per_mm": 0.43703294562444317,
+        "Lm_nH_per_mm": 0.0820751269504401,
+        "kC": 0.12626671817725263,
+        "kL": 0.19914160828389194
+      },
+      "peak_pos_V": 0.0355,
+      "peak_neg_V": -0.0355
+    },
+    {
+      "case": "xtalk_3_20_4",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_6",
+        "aggressor": "ROW3",
+        "route_length_mm": 284.153,
+        "min_gap": 0.242,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 1.4,
+        "len_le_0p6": 9.3
+      },
+      "assumed_uniform_coupled_mm": 9.3,
+      "assumed_uniform_gap_mm": 0.242,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 20.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 0.8444999999999999,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.242,
+        "C11_pF_per_mm": 0.09491829213366387,
+        "C22_pF_per_mm": 0.08344694681188418,
+        "Cm_pF_per_mm": 0.011237483732302439,
+        "L11_nH_per_mm": 0.38867349760957537,
+        "L22_nH_per_mm": 0.43703294562444317,
+        "Lm_nH_per_mm": 0.0820751269504401,
+        "kC": 0.12626671817725263,
+        "kL": 0.19914160828389194
+      },
+      "peak_pos_V": 0.0355,
+      "peak_neg_V": -0.0355
+    },
+    {
+      "case": "xtalk_3_500_0",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_6",
+        "aggressor": "ROW3",
+        "route_length_mm": 284.153,
+        "min_gap": 0.242,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 1.4,
+        "len_le_0p6": 9.3
+      },
+      "assumed_uniform_coupled_mm": 9.3,
+      "assumed_uniform_gap_mm": 0.242,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 500.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.3415,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.242,
+        "C11_pF_per_mm": 0.09491829213366387,
+        "C22_pF_per_mm": 0.08344694681188418,
+        "Cm_pF_per_mm": 0.011237483732302439,
+        "L11_nH_per_mm": 0.38867349760957537,
+        "L22_nH_per_mm": 0.43703294562444317,
+        "Lm_nH_per_mm": 0.0820751269504401,
+        "kC": 0.12626671817725263,
+        "kL": 0.19914160828389194
+      },
+      "peak_pos_V": 0.0585,
+      "peak_neg_V": -0.0585
+    },
+    {
+      "case": "xtalk_3_500_4",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_6",
+        "aggressor": "ROW3",
+        "route_length_mm": 284.153,
+        "min_gap": 0.242,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 1.4,
+        "len_le_0p6": 9.3
+      },
+      "assumed_uniform_coupled_mm": 9.3,
+      "assumed_uniform_gap_mm": 0.242,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 500.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 0.8214999999999999,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.242,
+        "C11_pF_per_mm": 0.09491829213366387,
+        "C22_pF_per_mm": 0.08344694681188418,
+        "Cm_pF_per_mm": 0.011237483732302439,
+        "L11_nH_per_mm": 0.38867349760957537,
+        "L22_nH_per_mm": 0.43703294562444317,
+        "Lm_nH_per_mm": 0.0820751269504401,
+        "kC": 0.12626671817725263,
+        "kL": 0.19914160828389194
+      },
+      "peak_pos_V": 0.0583,
+      "peak_neg_V": -0.0585
+    },
+    {
+      "case": "xtalk_3_1000_0",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_6",
+        "aggressor": "ROW3",
+        "route_length_mm": 284.153,
+        "min_gap": 0.242,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 1.4,
+        "len_le_0p6": 9.3
+      },
+      "assumed_uniform_coupled_mm": 9.3,
+      "assumed_uniform_gap_mm": 0.242,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 1000.0,
+      "quiet_V": 0.0,
+      "threshold_margin_V": 1.3366,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.242,
+        "C11_pF_per_mm": 0.09491829213366387,
+        "C22_pF_per_mm": 0.08344694681188418,
+        "Cm_pF_per_mm": 0.011237483732302439,
+        "L11_nH_per_mm": 0.38867349760957537,
+        "L22_nH_per_mm": 0.43703294562444317,
+        "Lm_nH_per_mm": 0.0820751269504401,
+        "kC": 0.12626671817725263,
+        "kL": 0.19914160828389194
+      },
+      "peak_pos_V": 0.0634,
+      "peak_neg_V": -0.0637
+    },
+    {
+      "case": "xtalk_3_1000_4",
+      "geometry": {
+        "chain": "underglow",
+        "victim": "UG_LED_6",
+        "aggressor": "ROW3",
+        "route_length_mm": 284.153,
+        "min_gap": 0.242,
+        "len_le_0p2": 0.0,
+        "len_le_0p35": 1.4,
+        "len_le_0p6": 9.3
+      },
+      "assumed_uniform_coupled_mm": 9.3,
+      "assumed_uniform_gap_mm": 0.242,
+      "victim_width_mm": 0.19999999999999998,
+      "aggressor_width_mm": 0.15,
+      "driver_ohm": 1000.0,
+      "quiet_V": 4.0,
+      "threshold_margin_V": 0.8161999999999999,
+      "meets_assumed_corner": true,
+      "coupled": {
+        "w_victim": 0.19999999999999998,
+        "w_aggr": 0.15,
+        "gap_mm": 0.242,
+        "C11_pF_per_mm": 0.09491829213366387,
+        "C22_pF_per_mm": 0.08344694681188418,
+        "Cm_pF_per_mm": 0.011237483732302439,
+        "L11_nH_per_mm": 0.38867349760957537,
+        "L22_nH_per_mm": 0.43703294562444317,
+        "Lm_nH_per_mm": 0.0820751269504401,
+        "kC": 0.12626671817725263,
+        "kL": 0.19914160828389194
+      },
+      "peak_pos_V": 0.0634,
+      "peak_neg_V": -0.0638
+    }
+  ],
+  "numerical_sensitivity": [
+    {
+      "case": "led_000_near_strong_assumed_dt025",
+      "original_case": "led_000_near_strong_assumed",
+      "net": "KEY_RGB_5V",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 296.1338792681463,
+            "width_max_ns": 308.2078272353542,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999948999999998,
+            "low_margin_V": 1.1999969687991,
+            "timing_margins": {
+              "high_above_min_ns": 46.1338792681463,
+              "low_above_min_ns": 91.79217276464578,
+              "high_below_max_ns": 91.79217276464578
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 896.1339438962855,
+            "width_max_ns": 908.2092666075091,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999973999999997,
+            "low_margin_V": 1.1999959012838999,
+            "timing_margins": {
+              "high_above_min_ns": 196.13394389628547,
+              "low_above_min_ns": 91.79073339249089,
+              "high_below_max_ns": 91.79073339249089
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 46.1338792681463,
+        "unclamped_overshoot_V": 4.099999999951365e-06,
+        "unclamped_undershoot_V": 3.982446e-06
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 296.1358043883097,
+            "width_max_ns": 308.1814417939577,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999959999999998,
+            "low_margin_V": 1.1999987765578,
+            "timing_margins": {
+              "high_above_min_ns": 46.13580438830968,
+              "low_above_min_ns": 91.81855820604233,
+              "high_below_max_ns": 91.81855820604233
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 896.1358245506572,
+            "width_max_ns": 908.1814667190702,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999986999999998,
+            "low_margin_V": 1.1999957404968,
+            "timing_margins": {
+              "high_above_min_ns": 196.13582455065716,
+              "low_above_min_ns": 91.81853328092984,
+              "high_below_max_ns": 91.81853328092984
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 46.13580438830968,
+        "unclamped_overshoot_V": 3.000000000419334e-06,
+        "unclamped_undershoot_V": 2.9873035e-06
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_000_far__strong_assumed_dt025",
+      "original_case": "led_000_far__strong_assumed",
+      "net": "KEY_RGB_5V",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 296.1271784504961,
+            "width_max_ns": 308.19713033753214,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999736,
+            "low_margin_V": 1.1999984798015,
+            "timing_margins": {
+              "high_above_min_ns": 46.1271784504961,
+              "low_above_min_ns": 91.80286966246786,
+              "high_below_max_ns": 91.80286966246786
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 896.1285510381508,
+            "width_max_ns": 908.1958461766744,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999986,
+            "low_margin_V": 1.199973168289,
+            "timing_margins": {
+              "high_above_min_ns": 196.12855103815082,
+              "low_above_min_ns": 91.80415382332558,
+              "high_below_max_ns": 91.80415382332558
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 46.1271784504961,
+        "unclamped_overshoot_V": 5.759999999987997e-05,
+        "unclamped_undershoot_V": 5.7667003e-05
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 296.14178205213693,
+            "width_max_ns": 308.18386891485034,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999826999999998,
+            "low_margin_V": 1.1999994754483299,
+            "timing_margins": {
+              "high_above_min_ns": 46.14178205213693,
+              "low_above_min_ns": 91.81613108514966,
+              "high_below_max_ns": 91.81613108514966
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 896.1417809821173,
+            "width_max_ns": 908.1838446636766,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999994,
+            "low_margin_V": 1.199983313867,
+            "timing_margins": {
+              "high_above_min_ns": 196.14178098211733,
+              "low_above_min_ns": 91.81615533632339,
+              "high_below_max_ns": 91.81615533632339
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 46.14178205213693,
+        "unclamped_overshoot_V": 2.7199999999893976e-05,
+        "unclamped_undershoot_V": 2.6962234e-05
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_006_near_strong_assumed_dt025",
+      "original_case": "led_006_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_6",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79399774616286,
+            "width_max_ns": 302.25647740590694,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999869999999999,
+            "low_margin_V": 1.1999959968629998,
+            "timing_margins": {
+              "high_above_min_ns": 49.79399774616286,
+              "low_above_min_ns": 97.74352259409306,
+              "high_below_max_ns": 97.74352259409306
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7930309297171,
+            "width_max_ns": 902.2502290551702,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999954,
+            "low_margin_V": 1.199989118147,
+            "timing_margins": {
+              "high_above_min_ns": 199.79303092971713,
+              "low_above_min_ns": 97.74977094482983,
+              "high_below_max_ns": 97.74977094482983
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79399774616286,
+        "unclamped_overshoot_V": 2.0758588,
+        "unclamped_undershoot_V": 2.0385988
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79207781169134,
+            "width_max_ns": 302.23559994160314,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999821,
+            "low_margin_V": 1.1999950848775,
+            "timing_margins": {
+              "high_above_min_ns": 49.79207781169134,
+              "low_above_min_ns": 97.76440005839686,
+              "high_below_max_ns": 97.76440005839686
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7921385680747,
+            "width_max_ns": 902.2358848073745,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999951,
+            "low_margin_V": 1.199985934061,
+            "timing_margins": {
+              "high_above_min_ns": 199.79213856807473,
+              "low_above_min_ns": 97.76411519262547,
+              "high_below_max_ns": 97.76411519262547
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79207781169134,
+        "unclamped_overshoot_V": 2.0574012,
+        "unclamped_undershoot_V": 2.0584536
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_006_far__strong_assumed_dt025",
+      "original_case": "led_006_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_6",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79399774616286,
+            "width_max_ns": 302.25647740590694,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999869999999999,
+            "low_margin_V": 1.1999959968629998,
+            "timing_margins": {
+              "high_above_min_ns": 49.79399774616286,
+              "low_above_min_ns": 97.74352259409306,
+              "high_below_max_ns": 97.74352259409306
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7930309297171,
+            "width_max_ns": 902.2502290551702,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999954,
+            "low_margin_V": 1.199989118147,
+            "timing_margins": {
+              "high_above_min_ns": 199.79303092971713,
+              "low_above_min_ns": 97.74977094482983,
+              "high_below_max_ns": 97.74977094482983
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79399774616286,
+        "unclamped_overshoot_V": 2.0758588,
+        "unclamped_undershoot_V": 2.0385988
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79207781169134,
+            "width_max_ns": 302.23559994160314,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999821,
+            "low_margin_V": 1.1999950848775,
+            "timing_margins": {
+              "high_above_min_ns": 49.79207781169134,
+              "low_above_min_ns": 97.76440005839686,
+              "high_below_max_ns": 97.76440005839686
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7921385680747,
+            "width_max_ns": 902.2358848073745,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999951,
+            "low_margin_V": 1.199985934061,
+            "timing_margins": {
+              "high_above_min_ns": 199.79213856807473,
+              "low_above_min_ns": 97.76411519262547,
+              "high_below_max_ns": 97.76411519262547
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79207781169134,
+        "unclamped_overshoot_V": 2.0574012,
+        "unclamped_undershoot_V": 2.0584536
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_022_near_strong_assumed_dt025",
+      "original_case": "led_022_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_17",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80180235951593,
+            "width_max_ns": 302.02421751851443,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999766,
+            "low_margin_V": 1.1999960122095,
+            "timing_margins": {
+              "high_above_min_ns": 49.80180235951593,
+              "low_above_min_ns": 97.97578248148557,
+              "high_below_max_ns": 97.97578248148557
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8018316302573,
+            "width_max_ns": 902.0254992937566,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999943999999998,
+            "low_margin_V": 1.199978863425,
+            "timing_margins": {
+              "high_above_min_ns": 199.8018316302573,
+              "low_above_min_ns": 97.97450070624336,
+              "high_below_max_ns": 97.97450070624336
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80180235951593,
+        "unclamped_overshoot_V": 1.8914434,
+        "unclamped_undershoot_V": 1.864696
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.8102478762785,
+            "width_max_ns": 302.02007864858206,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999888999999999,
+            "low_margin_V": 1.1999986001412999,
+            "timing_margins": {
+              "high_above_min_ns": 49.81024787627848,
+              "low_above_min_ns": 97.97992135141794,
+              "high_below_max_ns": 97.97992135141794
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8100949908917,
+            "width_max_ns": 902.0199430122311,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999991999999999,
+            "low_margin_V": 1.199982452017,
+            "timing_margins": {
+              "high_above_min_ns": 199.81009499089168,
+              "low_above_min_ns": 97.98005698776888,
+              "high_below_max_ns": 97.98005698776888
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.81024787627848,
+        "unclamped_overshoot_V": 1.8570571999999999,
+        "unclamped_undershoot_V": 1.8587371
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_022_far__strong_assumed_dt025",
+      "original_case": "led_022_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_17",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79109253835804,
+            "width_max_ns": 302.54487007777107,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.399953,
+            "low_margin_V": 1.1999951406557,
+            "timing_margins": {
+              "high_above_min_ns": 49.79109253835804,
+              "low_above_min_ns": 97.45512992222893,
+              "high_below_max_ns": 97.45512992222893
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7924272710961,
+            "width_max_ns": 902.5446525662428,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999926,
+            "low_margin_V": 1.199960432884,
+            "timing_margins": {
+              "high_above_min_ns": 199.79242727109613,
+              "low_above_min_ns": 97.4553474337572,
+              "high_below_max_ns": 97.4553474337572
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79109253835804,
+        "unclamped_overshoot_V": 2.3324328999999997,
+        "unclamped_undershoot_V": 2.342732
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79213214924994,
+            "width_max_ns": 302.54025469940007,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999826,
+            "low_margin_V": 1.1999972159091,
+            "timing_margins": {
+              "high_above_min_ns": 49.79213214924994,
+              "low_above_min_ns": 97.45974530059993,
+              "high_below_max_ns": 97.45974530059993
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.792153572027,
+            "width_max_ns": 902.5402537818854,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999973999999997,
+            "low_margin_V": 1.199972671224,
+            "timing_margins": {
+              "high_above_min_ns": 199.79215357202702,
+              "low_above_min_ns": 97.45974621811456,
+              "high_below_max_ns": 97.45974621811456
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79213214924994,
+        "unclamped_overshoot_V": 2.3293085,
+        "unclamped_undershoot_V": 2.3296545
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_023_near_strong_assumed_dt025",
+      "original_case": "led_023_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_18",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7923876787436,
+            "width_max_ns": 302.29552475580704,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999910999999998,
+            "low_margin_V": 1.1999978524319,
+            "timing_margins": {
+              "high_above_min_ns": 49.79238767874358,
+              "low_above_min_ns": 97.70447524419296,
+              "high_below_max_ns": 97.70447524419296
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.795508775675,
+            "width_max_ns": 902.291855963826,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999967999999998,
+            "low_margin_V": 1.1999923016247,
+            "timing_margins": {
+              "high_above_min_ns": 199.795508775675,
+              "low_above_min_ns": 97.70814403617396,
+              "high_below_max_ns": 97.70814403617396
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79238767874358,
+        "unclamped_overshoot_V": 2.1213629000000003,
+        "unclamped_undershoot_V": 2.1111142
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79694429247684,
+            "width_max_ns": 302.28245477942346,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999891999999998,
+            "low_margin_V": 1.1999973942081,
+            "timing_margins": {
+              "high_above_min_ns": 49.79694429247684,
+              "low_above_min_ns": 97.71754522057654,
+              "high_below_max_ns": 97.71754522057654
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7969488679864,
+            "width_max_ns": 902.2824735618365,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999973999999997,
+            "low_margin_V": 1.199988609304,
+            "timing_margins": {
+              "high_above_min_ns": 199.79694886798643,
+              "low_above_min_ns": 97.71752643816353,
+              "high_below_max_ns": 97.71752643816353
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79694429247684,
+        "unclamped_overshoot_V": 2.1177503,
+        "unclamped_undershoot_V": 2.1166555
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_023_far__strong_assumed_dt025",
+      "original_case": "led_023_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_18",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7923876787436,
+            "width_max_ns": 302.29552475580704,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999910999999998,
+            "low_margin_V": 1.1999978524319,
+            "timing_margins": {
+              "high_above_min_ns": 49.79238767874358,
+              "low_above_min_ns": 97.70447524419296,
+              "high_below_max_ns": 97.70447524419296
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.795508775675,
+            "width_max_ns": 902.291855963826,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999967999999998,
+            "low_margin_V": 1.1999923016247,
+            "timing_margins": {
+              "high_above_min_ns": 199.795508775675,
+              "low_above_min_ns": 97.70814403617396,
+              "high_below_max_ns": 97.70814403617396
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79238767874358,
+        "unclamped_overshoot_V": 2.1213629000000003,
+        "unclamped_undershoot_V": 2.1111142
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79694429247684,
+            "width_max_ns": 302.28245477942346,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999891999999998,
+            "low_margin_V": 1.1999973942081,
+            "timing_margins": {
+              "high_above_min_ns": 49.79694429247684,
+              "low_above_min_ns": 97.71754522057654,
+              "high_below_max_ns": 97.71754522057654
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7969488679864,
+            "width_max_ns": 902.2824735618365,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999973999999997,
+            "low_margin_V": 1.199988609304,
+            "timing_margins": {
+              "high_above_min_ns": 199.79694886798643,
+              "low_above_min_ns": 97.71752643816353,
+              "high_below_max_ns": 97.71752643816353
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79694429247684,
+        "unclamped_overshoot_V": 2.1177503,
+        "unclamped_undershoot_V": 2.1166555
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_024_near_strong_assumed_dt025",
+      "original_case": "led_024_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_19",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79195053685953,
+            "width_max_ns": 302.19138478767536,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999818999999998,
+            "low_margin_V": 1.199987140825,
+            "timing_margins": {
+              "high_above_min_ns": 49.79195053685953,
+              "low_above_min_ns": 97.80861521232464,
+              "high_below_max_ns": 97.80861521232464
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7925046326372,
+            "width_max_ns": 902.1894218891089,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999888999999999,
+            "low_margin_V": 1.19997607904,
+            "timing_margins": {
+              "high_above_min_ns": 199.79250463263725,
+              "low_above_min_ns": 97.81057811089113,
+              "high_below_max_ns": 97.81057811089113
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79195053685953,
+        "unclamped_overshoot_V": 2.0132016000000004,
+        "unclamped_undershoot_V": 1.9994728
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79710308949325,
+            "width_max_ns": 302.17252690408577,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999576999999999,
+            "low_margin_V": 1.199985917941,
+            "timing_margins": {
+              "high_above_min_ns": 49.79710308949325,
+              "low_above_min_ns": 97.82747309591423,
+              "high_below_max_ns": 97.82747309591423
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7970893319184,
+            "width_max_ns": 902.1724661109365,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999861,
+            "low_margin_V": 1.199956740762,
+            "timing_margins": {
+              "high_above_min_ns": 199.79708933191841,
+              "low_above_min_ns": 97.82753388906349,
+              "high_below_max_ns": 97.82753388906349
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79710308949325,
+        "unclamped_overshoot_V": 2.0184932,
+        "unclamped_undershoot_V": 2.0202543
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_024_far__strong_assumed_dt025",
+      "original_case": "led_024_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_19",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79195053685953,
+            "width_max_ns": 302.19138478767536,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999818999999998,
+            "low_margin_V": 1.199987140825,
+            "timing_margins": {
+              "high_above_min_ns": 49.79195053685953,
+              "low_above_min_ns": 97.80861521232464,
+              "high_below_max_ns": 97.80861521232464
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7925046326372,
+            "width_max_ns": 902.1894218891089,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999888999999999,
+            "low_margin_V": 1.19997607904,
+            "timing_margins": {
+              "high_above_min_ns": 199.79250463263725,
+              "low_above_min_ns": 97.81057811089113,
+              "high_below_max_ns": 97.81057811089113
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79195053685953,
+        "unclamped_overshoot_V": 2.0132016000000004,
+        "unclamped_undershoot_V": 1.9994728
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79710308949325,
+            "width_max_ns": 302.17252690408577,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999576999999999,
+            "low_margin_V": 1.199985917941,
+            "timing_margins": {
+              "high_above_min_ns": 49.79710308949325,
+              "low_above_min_ns": 97.82747309591423,
+              "high_below_max_ns": 97.82747309591423
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7970893319184,
+            "width_max_ns": 902.1724661109365,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999861,
+            "low_margin_V": 1.199956740762,
+            "timing_margins": {
+              "high_above_min_ns": 199.79708933191841,
+              "low_above_min_ns": 97.82753388906349,
+              "high_below_max_ns": 97.82753388906349
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79710308949325,
+        "unclamped_overshoot_V": 2.0184932,
+        "unclamped_undershoot_V": 2.0202543
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_025_near_strong_assumed_dt025",
+      "original_case": "led_025_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_20",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.77929070615164,
+            "width_max_ns": 302.78133497289264,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999991999999999,
+            "low_margin_V": 1.19999967153577,
+            "timing_margins": {
+              "high_above_min_ns": 49.77929070615164,
+              "low_above_min_ns": 97.21866502710736,
+              "high_below_max_ns": 97.21866502710736
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7794748648598,
+            "width_max_ns": 902.7784879086471,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999996000000001,
+            "low_margin_V": 1.1999962267399,
+            "timing_margins": {
+              "high_above_min_ns": 199.77947486485982,
+              "low_above_min_ns": 97.2215120913529,
+              "high_below_max_ns": 97.2215120913529
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.77929070615164,
+        "unclamped_overshoot_V": 2.489574,
+        "unclamped_undershoot_V": 2.4033416
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.78178813898467,
+            "width_max_ns": 302.7596815246602,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999965999999997,
+            "low_margin_V": 1.19999968246356,
+            "timing_margins": {
+              "high_above_min_ns": 49.781788138984666,
+              "low_above_min_ns": 97.24031847533979,
+              "high_below_max_ns": 97.24031847533979
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7817886548005,
+            "width_max_ns": 902.7597899942261,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999997999999998,
+            "low_margin_V": 1.1999961662551,
+            "timing_margins": {
+              "high_above_min_ns": 199.7817886548005,
+              "low_above_min_ns": 97.24021000577386,
+              "high_below_max_ns": 97.24021000577386
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.781788138984666,
+        "unclamped_overshoot_V": 2.4115215,
+        "unclamped_undershoot_V": 2.4110738
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_025_far__strong_assumed_dt025",
+      "original_case": "led_025_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_20",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.77929070615164,
+            "width_max_ns": 302.78133497289264,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999991999999999,
+            "low_margin_V": 1.19999967153577,
+            "timing_margins": {
+              "high_above_min_ns": 49.77929070615164,
+              "low_above_min_ns": 97.21866502710736,
+              "high_below_max_ns": 97.21866502710736
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7794748648598,
+            "width_max_ns": 902.7784879086471,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999996000000001,
+            "low_margin_V": 1.1999962267399,
+            "timing_margins": {
+              "high_above_min_ns": 199.77947486485982,
+              "low_above_min_ns": 97.2215120913529,
+              "high_below_max_ns": 97.2215120913529
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.77929070615164,
+        "unclamped_overshoot_V": 2.489574,
+        "unclamped_undershoot_V": 2.4033416
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.78178813898467,
+            "width_max_ns": 302.7596815246602,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999965999999997,
+            "low_margin_V": 1.19999968246356,
+            "timing_margins": {
+              "high_above_min_ns": 49.781788138984666,
+              "low_above_min_ns": 97.24031847533979,
+              "high_below_max_ns": 97.24031847533979
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7817886548005,
+            "width_max_ns": 902.7597899942261,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999997999999998,
+            "low_margin_V": 1.1999961662551,
+            "timing_margins": {
+              "high_above_min_ns": 199.7817886548005,
+              "low_above_min_ns": 97.24021000577386,
+              "high_below_max_ns": 97.24021000577386
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.781788138984666,
+        "unclamped_overshoot_V": 2.4115215,
+        "unclamped_undershoot_V": 2.4110738
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_026_near_strong_assumed_dt025",
+      "original_case": "led_026_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_21",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80354105545166,
+            "width_max_ns": 301.9717059857803,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999969,
+            "low_margin_V": 1.1999981697325999,
+            "timing_margins": {
+              "high_above_min_ns": 49.80354105545166,
+              "low_above_min_ns": 98.02829401421968,
+              "high_below_max_ns": 98.02829401421968
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8008779936049,
+            "width_max_ns": 901.9643735142367,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999983999999999,
+            "low_margin_V": 1.1999967663842999,
+            "timing_margins": {
+              "high_above_min_ns": 199.8008779936049,
+              "low_above_min_ns": 98.03562648576326,
+              "high_below_max_ns": 98.03562648576326
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80354105545166,
+        "unclamped_overshoot_V": 1.8257218999999996,
+        "unclamped_undershoot_V": 1.8100633
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.81130019927286,
+            "width_max_ns": 301.92387080746494,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999945,
+            "low_margin_V": 1.1999989031732,
+            "timing_margins": {
+              "high_above_min_ns": 49.811300199272864,
+              "low_above_min_ns": 98.07612919253506,
+              "high_below_max_ns": 98.07612919253506
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8114292467812,
+            "width_max_ns": 901.9237511410988,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999983,
+            "low_margin_V": 1.1999952693781,
+            "timing_margins": {
+              "high_above_min_ns": 199.81142924678124,
+              "low_above_min_ns": 98.07624885890118,
+              "high_below_max_ns": 98.07624885890118
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.811300199272864,
+        "unclamped_overshoot_V": 1.7919349000000002,
+        "unclamped_undershoot_V": 1.7926425
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_026_far__strong_assumed_dt025",
+      "original_case": "led_026_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_21",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80354105545166,
+            "width_max_ns": 301.9717059857803,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999969,
+            "low_margin_V": 1.1999981697325999,
+            "timing_margins": {
+              "high_above_min_ns": 49.80354105545166,
+              "low_above_min_ns": 98.02829401421968,
+              "high_below_max_ns": 98.02829401421968
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8008779936049,
+            "width_max_ns": 901.9643735142367,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999983999999999,
+            "low_margin_V": 1.1999967663842999,
+            "timing_margins": {
+              "high_above_min_ns": 199.8008779936049,
+              "low_above_min_ns": 98.03562648576326,
+              "high_below_max_ns": 98.03562648576326
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80354105545166,
+        "unclamped_overshoot_V": 1.8257218999999996,
+        "unclamped_undershoot_V": 1.8100633
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.81130019927286,
+            "width_max_ns": 301.92387080746494,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999945,
+            "low_margin_V": 1.1999989031732,
+            "timing_margins": {
+              "high_above_min_ns": 49.811300199272864,
+              "low_above_min_ns": 98.07612919253506,
+              "high_below_max_ns": 98.07612919253506
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8114292467812,
+            "width_max_ns": 901.9237511410988,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999983,
+            "low_margin_V": 1.1999952693781,
+            "timing_margins": {
+              "high_above_min_ns": 199.81142924678124,
+              "low_above_min_ns": 98.07624885890118,
+              "high_below_max_ns": 98.07624885890118
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.811300199272864,
+        "unclamped_overshoot_V": 1.7919349000000002,
+        "unclamped_undershoot_V": 1.7926425
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_027_near_strong_assumed_dt025",
+      "original_case": "led_027_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_22",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7997661786344,
+            "width_max_ns": 301.9388891982162,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999736,
+            "low_margin_V": 1.1999950654870999,
+            "timing_margins": {
+              "high_above_min_ns": 49.7997661786344,
+              "low_above_min_ns": 98.0611108017838,
+              "high_below_max_ns": 98.0611108017838
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7970555375155,
+            "width_max_ns": 901.9412508624268,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999940999999998,
+            "low_margin_V": 1.199980975365,
+            "timing_margins": {
+              "high_above_min_ns": 199.79705553751546,
+              "low_above_min_ns": 98.05874913757316,
+              "high_below_max_ns": 98.05874913757316
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.7997661786344,
+        "unclamped_overshoot_V": 1.7898113000000002,
+        "unclamped_undershoot_V": 1.786965
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80934423010103,
+            "width_max_ns": 301.8898901107068,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999870999999997,
+            "low_margin_V": 1.1999992101044699,
+            "timing_margins": {
+              "high_above_min_ns": 49.80934423010103,
+              "low_above_min_ns": 98.1101098892932,
+              "high_below_max_ns": 98.1101098892932
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8092852116156,
+            "width_max_ns": 901.8904170351598,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999986,
+            "low_margin_V": 1.1999905372327,
+            "timing_margins": {
+              "high_above_min_ns": 199.8092852116156,
+              "low_above_min_ns": 98.10958296484023,
+              "high_below_max_ns": 98.10958296484023
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80934423010103,
+        "unclamped_overshoot_V": 1.7797503,
+        "unclamped_undershoot_V": 1.7786024
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_027_far__strong_assumed_dt025",
+      "original_case": "led_027_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_22",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7997661786344,
+            "width_max_ns": 301.9388891982162,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999736,
+            "low_margin_V": 1.1999950654870999,
+            "timing_margins": {
+              "high_above_min_ns": 49.7997661786344,
+              "low_above_min_ns": 98.0611108017838,
+              "high_below_max_ns": 98.0611108017838
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7970555375155,
+            "width_max_ns": 901.9412508624268,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999940999999998,
+            "low_margin_V": 1.199980975365,
+            "timing_margins": {
+              "high_above_min_ns": 199.79705553751546,
+              "low_above_min_ns": 98.05874913757316,
+              "high_below_max_ns": 98.05874913757316
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.7997661786344,
+        "unclamped_overshoot_V": 1.7898113000000002,
+        "unclamped_undershoot_V": 1.786965
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80934423010103,
+            "width_max_ns": 301.8898901107068,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999870999999997,
+            "low_margin_V": 1.1999992101044699,
+            "timing_margins": {
+              "high_above_min_ns": 49.80934423010103,
+              "low_above_min_ns": 98.1101098892932,
+              "high_below_max_ns": 98.1101098892932
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8092852116156,
+            "width_max_ns": 901.8904170351598,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999986,
+            "low_margin_V": 1.1999905372327,
+            "timing_margins": {
+              "high_above_min_ns": 199.8092852116156,
+              "low_above_min_ns": 98.10958296484023,
+              "high_below_max_ns": 98.10958296484023
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80934423010103,
+        "unclamped_overshoot_V": 1.7797503,
+        "unclamped_undershoot_V": 1.7786024
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_028_near_strong_assumed_dt025",
+      "original_case": "led_028_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_23",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80453551536584,
+            "width_max_ns": 301.8963704987018,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999943999999998,
+            "low_margin_V": 1.1999959377708,
+            "timing_margins": {
+              "high_above_min_ns": 49.80453551536584,
+              "low_above_min_ns": 98.1036295012982,
+              "high_below_max_ns": 98.1036295012982
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.805728573639,
+            "width_max_ns": 901.8902477941283,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999983999999999,
+            "low_margin_V": 1.1999914724345,
+            "timing_margins": {
+              "high_above_min_ns": 199.80572857363904,
+              "low_above_min_ns": 98.1097522058717,
+              "high_below_max_ns": 98.1097522058717
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80453551536584,
+        "unclamped_overshoot_V": 1.7743984,
+        "unclamped_undershoot_V": 1.7670946
+      },
+      "refined": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.8132526045083,
+            "width_max_ns": 300.2544398637401,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999883,
+            "low_margin_V": 1.1999972009836,
+            "timing_margins": {
+              "high_above_min_ns": 49.81325260450831,
+              "low_above_min_ns": 99.74556013625988,
+              "high_below_max_ns": 99.74556013625988
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8131374138775,
+            "width_max_ns": 900.254505522079,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999973,
+            "low_margin_V": 1.199988459466,
+            "timing_margins": {
+              "high_above_min_ns": 199.81313741387748,
+              "low_above_min_ns": 99.74549447792106,
+              "high_below_max_ns": 99.74549447792106
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.81325260450831,
+        "unclamped_overshoot_V": 1.7454745000000003,
+        "unclamped_undershoot_V": 1.7465499
+      },
+      "same_decision": false
+    },
+    {
+      "case": "led_028_far__strong_assumed_dt025",
+      "original_case": "led_028_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_23",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80453551536584,
+            "width_max_ns": 301.8963704987018,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999943999999998,
+            "low_margin_V": 1.1999959377708,
+            "timing_margins": {
+              "high_above_min_ns": 49.80453551536584,
+              "low_above_min_ns": 98.1036295012982,
+              "high_below_max_ns": 98.1036295012982
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.805728573639,
+            "width_max_ns": 901.8902477941283,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999983999999999,
+            "low_margin_V": 1.1999914724345,
+            "timing_margins": {
+              "high_above_min_ns": 199.80572857363904,
+              "low_above_min_ns": 98.1097522058717,
+              "high_below_max_ns": 98.1097522058717
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80453551536584,
+        "unclamped_overshoot_V": 1.7743984,
+        "unclamped_undershoot_V": 1.7670946
+      },
+      "refined": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.8132526045083,
+            "width_max_ns": 300.2544398637401,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999883,
+            "low_margin_V": 1.1999972009836,
+            "timing_margins": {
+              "high_above_min_ns": 49.81325260450831,
+              "low_above_min_ns": 99.74556013625988,
+              "high_below_max_ns": 99.74556013625988
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8131374138775,
+            "width_max_ns": 900.254505522079,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999973,
+            "low_margin_V": 1.199988459466,
+            "timing_margins": {
+              "high_above_min_ns": 199.81313741387748,
+              "low_above_min_ns": 99.74549447792106,
+              "high_below_max_ns": 99.74549447792106
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.81325260450831,
+        "unclamped_overshoot_V": 1.7454745000000003,
+        "unclamped_undershoot_V": 1.7465499
+      },
+      "same_decision": false
+    },
+    {
+      "case": "led_029_near_strong_assumed_dt025",
+      "original_case": "led_029_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_24",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.791302082363,
+            "width_max_ns": 302.29408460924014,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999785,
+            "low_margin_V": 1.199988020268,
+            "timing_margins": {
+              "high_above_min_ns": 49.79130208236302,
+              "low_above_min_ns": 97.70591539075986,
+              "high_below_max_ns": 97.70591539075986
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7888041084889,
+            "width_max_ns": 902.2991134931121,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999905,
+            "low_margin_V": 1.199977316082,
+            "timing_margins": {
+              "high_above_min_ns": 199.78880410848888,
+              "low_above_min_ns": 97.70088650688785,
+              "high_below_max_ns": 97.70088650688785
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79130208236302,
+        "unclamped_overshoot_V": 2.0905834,
+        "unclamped_undershoot_V": 2.0950792
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79430933442745,
+            "width_max_ns": 302.2927394254175,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999652999999999,
+            "low_margin_V": 1.1999936558197999,
+            "timing_margins": {
+              "high_above_min_ns": 49.79430933442745,
+              "low_above_min_ns": 97.7072605745825,
+              "high_below_max_ns": 97.7072605745825
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7943100480138,
+            "width_max_ns": 902.2927307495447,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999907999999999,
+            "low_margin_V": 1.19996406187,
+            "timing_margins": {
+              "high_above_min_ns": 199.7943100480138,
+              "low_above_min_ns": 97.70726925045528,
+              "high_below_max_ns": 97.70726925045528
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79430933442745,
+        "unclamped_overshoot_V": 2.1088965,
+        "unclamped_undershoot_V": 2.1087359
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_029_far__strong_assumed_dt025",
+      "original_case": "led_029_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_24",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.791302082363,
+            "width_max_ns": 302.29408460924014,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999785,
+            "low_margin_V": 1.199988020268,
+            "timing_margins": {
+              "high_above_min_ns": 49.79130208236302,
+              "low_above_min_ns": 97.70591539075986,
+              "high_below_max_ns": 97.70591539075986
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7888041084889,
+            "width_max_ns": 902.2991134931121,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999905,
+            "low_margin_V": 1.199977316082,
+            "timing_margins": {
+              "high_above_min_ns": 199.78880410848888,
+              "low_above_min_ns": 97.70088650688785,
+              "high_below_max_ns": 97.70088650688785
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79130208236302,
+        "unclamped_overshoot_V": 2.0905834,
+        "unclamped_undershoot_V": 2.0950792
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79430933442745,
+            "width_max_ns": 302.2927394254175,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999652999999999,
+            "low_margin_V": 1.1999936558197999,
+            "timing_margins": {
+              "high_above_min_ns": 49.79430933442745,
+              "low_above_min_ns": 97.7072605745825,
+              "high_below_max_ns": 97.7072605745825
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7943100480138,
+            "width_max_ns": 902.2927307495447,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999907999999999,
+            "low_margin_V": 1.19996406187,
+            "timing_margins": {
+              "high_above_min_ns": 199.7943100480138,
+              "low_above_min_ns": 97.70726925045528,
+              "high_below_max_ns": 97.70726925045528
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79430933442745,
+        "unclamped_overshoot_V": 2.1088965,
+        "unclamped_undershoot_V": 2.1087359
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_030_near_strong_assumed_dt025",
+      "original_case": "led_030_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_25",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.8007483995666,
+            "width_max_ns": 302.01680512969824,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999856999999998,
+            "low_margin_V": 1.1999954447041,
+            "timing_margins": {
+              "high_above_min_ns": 49.8007483995666,
+              "low_above_min_ns": 97.98319487030176,
+              "high_below_max_ns": 97.98319487030176
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8012481840301,
+            "width_max_ns": 902.0157936916166,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999951,
+            "low_margin_V": 1.199988501746,
+            "timing_margins": {
+              "high_above_min_ns": 199.8012481840301,
+              "low_above_min_ns": 97.98420630838336,
+              "high_below_max_ns": 97.98420630838336
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.8007483995666,
+        "unclamped_overshoot_V": 1.8494839,
+        "unclamped_undershoot_V": 1.863862
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.8099813585777,
+            "width_max_ns": 301.98835904012685,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.399979,
+            "low_margin_V": 1.1999959490718,
+            "timing_margins": {
+              "high_above_min_ns": 49.809981358577716,
+              "low_above_min_ns": 98.01164095987315,
+              "high_below_max_ns": 98.01164095987315
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8100480770208,
+            "width_max_ns": 901.988492962621,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999956999999998,
+            "low_margin_V": 1.19997923983,
+            "timing_margins": {
+              "high_above_min_ns": 199.81004807702084,
+              "low_above_min_ns": 98.01150703737903,
+              "high_below_max_ns": 98.01150703737903
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.809981358577716,
+        "unclamped_overshoot_V": 1.8425447000000004,
+        "unclamped_undershoot_V": 1.8422876
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_030_far__strong_assumed_dt025",
+      "original_case": "led_030_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_25",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.8007483995666,
+            "width_max_ns": 302.01680512969824,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999856999999998,
+            "low_margin_V": 1.1999954447041,
+            "timing_margins": {
+              "high_above_min_ns": 49.8007483995666,
+              "low_above_min_ns": 97.98319487030176,
+              "high_below_max_ns": 97.98319487030176
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8012481840301,
+            "width_max_ns": 902.0157936916166,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999951,
+            "low_margin_V": 1.199988501746,
+            "timing_margins": {
+              "high_above_min_ns": 199.8012481840301,
+              "low_above_min_ns": 97.98420630838336,
+              "high_below_max_ns": 97.98420630838336
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.8007483995666,
+        "unclamped_overshoot_V": 1.8494839,
+        "unclamped_undershoot_V": 1.863862
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.8099813585777,
+            "width_max_ns": 301.98835904012685,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.399979,
+            "low_margin_V": 1.1999959490718,
+            "timing_margins": {
+              "high_above_min_ns": 49.809981358577716,
+              "low_above_min_ns": 98.01164095987315,
+              "high_below_max_ns": 98.01164095987315
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8100480770208,
+            "width_max_ns": 901.988492962621,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999956999999998,
+            "low_margin_V": 1.19997923983,
+            "timing_margins": {
+              "high_above_min_ns": 199.81004807702084,
+              "low_above_min_ns": 98.01150703737903,
+              "high_below_max_ns": 98.01150703737903
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.809981358577716,
+        "unclamped_overshoot_V": 1.8425447000000004,
+        "unclamped_undershoot_V": 1.8422876
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_031_near_strong_assumed_dt025",
+      "original_case": "led_031_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_26",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7853572734475,
+            "width_max_ns": 303.0577026043734,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999747,
+            "low_margin_V": 1.1999946475891,
+            "timing_margins": {
+              "high_above_min_ns": 49.78535727344752,
+              "low_above_min_ns": 96.94229739562661,
+              "high_below_max_ns": 96.94229739562661
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7852658499933,
+            "width_max_ns": 903.0522434814461,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999970999999998,
+            "low_margin_V": 1.199977047489,
+            "timing_margins": {
+              "high_above_min_ns": 199.78526584999327,
+              "low_above_min_ns": 96.94775651855389,
+              "high_below_max_ns": 96.94775651855389
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78535727344752,
+        "unclamped_overshoot_V": 2.6544163999999997,
+        "unclamped_undershoot_V": 2.5886523
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7860696194007,
+            "width_max_ns": 303.0292771163372,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999736,
+            "low_margin_V": 1.1999907288658,
+            "timing_margins": {
+              "high_above_min_ns": 49.78606961940068,
+              "low_above_min_ns": 96.9707228836628,
+              "high_below_max_ns": 96.9707228836628
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7860534837273,
+            "width_max_ns": 903.0293590952801,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999945999999999,
+            "low_margin_V": 1.1999721442859999,
+            "timing_margins": {
+              "high_above_min_ns": 199.7860534837273,
+              "low_above_min_ns": 96.97064090471986,
+              "high_below_max_ns": 96.97064090471986
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78606961940068,
+        "unclamped_overshoot_V": 2.5782935,
+        "unclamped_undershoot_V": 2.5784783
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_031_far__strong_assumed_dt025",
+      "original_case": "led_031_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_26",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7853572734475,
+            "width_max_ns": 303.0577026043734,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999747,
+            "low_margin_V": 1.1999946475891,
+            "timing_margins": {
+              "high_above_min_ns": 49.78535727344752,
+              "low_above_min_ns": 96.94229739562661,
+              "high_below_max_ns": 96.94229739562661
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7852658499933,
+            "width_max_ns": 903.0522434814461,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999970999999998,
+            "low_margin_V": 1.199977047489,
+            "timing_margins": {
+              "high_above_min_ns": 199.78526584999327,
+              "low_above_min_ns": 96.94775651855389,
+              "high_below_max_ns": 96.94775651855389
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78535727344752,
+        "unclamped_overshoot_V": 2.6544163999999997,
+        "unclamped_undershoot_V": 2.5886523
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7860696194007,
+            "width_max_ns": 303.0292771163372,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999736,
+            "low_margin_V": 1.1999907288658,
+            "timing_margins": {
+              "high_above_min_ns": 49.78606961940068,
+              "low_above_min_ns": 96.9707228836628,
+              "high_below_max_ns": 96.9707228836628
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7860534837273,
+            "width_max_ns": 903.0293590952801,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999945999999999,
+            "low_margin_V": 1.1999721442859999,
+            "timing_margins": {
+              "high_above_min_ns": 199.7860534837273,
+              "low_above_min_ns": 96.97064090471986,
+              "high_below_max_ns": 96.97064090471986
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78606961940068,
+        "unclamped_overshoot_V": 2.5782935,
+        "unclamped_undershoot_V": 2.5784783
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_032_far__strong_assumed_dt025",
+      "original_case": "led_032_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_27",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79694374038036,
+            "width_max_ns": 302.30883570168726,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3998361999999998,
+            "low_margin_V": 1.1999912759016,
+            "timing_margins": {
+              "high_above_min_ns": 49.79694374038036,
+              "low_above_min_ns": 97.69116429831274,
+              "high_below_max_ns": 97.69116429831274
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7977195695498,
+            "width_max_ns": 902.3068020098344,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999908999999997,
+            "low_margin_V": 1.1998367707,
+            "timing_margins": {
+              "high_above_min_ns": 199.79771956954983,
+              "low_above_min_ns": 97.69319799016557,
+              "high_below_max_ns": 97.69319799016557
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79694374038036,
+        "unclamped_overshoot_V": 2.0617276999999996,
+        "unclamped_undershoot_V": 2.0649385
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7965921832165,
+            "width_max_ns": 302.3013312898174,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.399861,
+            "low_margin_V": 1.1999945424012,
+            "timing_margins": {
+              "high_above_min_ns": 49.79659218321649,
+              "low_above_min_ns": 97.69866871018257,
+              "high_below_max_ns": 97.69866871018257
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.796491337901,
+            "width_max_ns": 902.301229972099,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.399991,
+            "low_margin_V": 1.19986403848,
+            "timing_margins": {
+              "high_above_min_ns": 199.796491337901,
+              "low_above_min_ns": 97.69877002790099,
+              "high_below_max_ns": 97.69877002790099
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79659218321649,
+        "unclamped_overshoot_V": 2.064349,
+        "unclamped_undershoot_V": 2.0639326
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_050_near_strong_assumed_dt025",
+      "original_case": "led_050_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_45",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.77828308557946,
+            "width_max_ns": 302.6432245319047,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3997178999999997,
+            "low_margin_V": 1.19990370844,
+            "timing_margins": {
+              "high_above_min_ns": 49.77828308557946,
+              "low_above_min_ns": 97.3567754680953,
+              "high_below_max_ns": 97.3567754680953
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7785049290328,
+            "width_max_ns": 902.6407078299812,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3998572,
+            "low_margin_V": 1.19971291377,
+            "timing_margins": {
+              "high_above_min_ns": 199.7785049290328,
+              "low_above_min_ns": 97.35929217001876,
+              "high_below_max_ns": 97.35929217001876
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.77828308557946,
+        "unclamped_overshoot_V": 2.2266446999999996,
+        "unclamped_undershoot_V": 2.2507178
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7808228898584,
+            "width_max_ns": 302.6299845831172,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3992502999999998,
+            "low_margin_V": 1.19964287387,
+            "timing_margins": {
+              "high_above_min_ns": 49.78082288985843,
+              "low_above_min_ns": 97.37001541688278,
+              "high_below_max_ns": 97.37001541688278
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7806856008474,
+            "width_max_ns": 902.6301408568147,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3997199999999999,
+            "low_margin_V": 1.19938132179,
+            "timing_margins": {
+              "high_above_min_ns": 199.7806856008474,
+              "low_above_min_ns": 97.3698591431853,
+              "high_below_max_ns": 97.3698591431853
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78082288985843,
+        "unclamped_overshoot_V": 2.2538234,
+        "unclamped_undershoot_V": 2.2533996
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_050_far__strong_assumed_dt025",
+      "original_case": "led_050_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_45",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.77828308557946,
+            "width_max_ns": 302.6432245319047,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3997178999999997,
+            "low_margin_V": 1.19990370844,
+            "timing_margins": {
+              "high_above_min_ns": 49.77828308557946,
+              "low_above_min_ns": 97.3567754680953,
+              "high_below_max_ns": 97.3567754680953
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7785049290328,
+            "width_max_ns": 902.6407078299812,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3998572,
+            "low_margin_V": 1.19971291377,
+            "timing_margins": {
+              "high_above_min_ns": 199.7785049290328,
+              "low_above_min_ns": 97.35929217001876,
+              "high_below_max_ns": 97.35929217001876
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.77828308557946,
+        "unclamped_overshoot_V": 2.2266446999999996,
+        "unclamped_undershoot_V": 2.2507178
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7808228898584,
+            "width_max_ns": 302.6299845831172,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3992502999999998,
+            "low_margin_V": 1.19964287387,
+            "timing_margins": {
+              "high_above_min_ns": 49.78082288985843,
+              "low_above_min_ns": 97.37001541688278,
+              "high_below_max_ns": 97.37001541688278
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7806856008474,
+            "width_max_ns": 902.6301408568147,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3997199999999999,
+            "low_margin_V": 1.19938132179,
+            "timing_margins": {
+              "high_above_min_ns": 199.7806856008474,
+              "low_above_min_ns": 97.3698591431853,
+              "high_below_max_ns": 97.3698591431853
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78082288985843,
+        "unclamped_overshoot_V": 2.2538234,
+        "unclamped_undershoot_V": 2.2533996
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_052_near_strong_assumed_dt025",
+      "original_case": "led_052_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_47",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.78825130797986,
+            "width_max_ns": 302.3151338101429,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999954,
+            "low_margin_V": 1.1999959259938,
+            "timing_margins": {
+              "high_above_min_ns": 49.78825130797986,
+              "low_above_min_ns": 97.68486618985708,
+              "high_below_max_ns": 97.68486618985708
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7883876466949,
+            "width_max_ns": 902.3109362877963,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999967999999998,
+            "low_margin_V": 1.1999946620900999,
+            "timing_margins": {
+              "high_above_min_ns": 199.7883876466949,
+              "low_above_min_ns": 97.68906371220373,
+              "high_below_max_ns": 97.68906371220373
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78825130797986,
+        "unclamped_overshoot_V": 2.1192786000000003,
+        "unclamped_undershoot_V": 2.082527
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79082405497684,
+            "width_max_ns": 302.29087545552557,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999932,
+            "low_margin_V": 1.1999984946492,
+            "timing_margins": {
+              "high_above_min_ns": 49.79082405497684,
+              "low_above_min_ns": 97.70912454447443,
+              "high_below_max_ns": 97.70912454447443
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7908019638103,
+            "width_max_ns": 902.2909885850972,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999973999999997,
+            "low_margin_V": 1.1999959049862,
+            "timing_margins": {
+              "high_above_min_ns": 199.79080196381028,
+              "low_above_min_ns": 97.70901141490276,
+              "high_below_max_ns": 97.70901141490276
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79082405497684,
+        "unclamped_overshoot_V": 2.1044828000000004,
+        "unclamped_undershoot_V": 2.1070371
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_052_far__strong_assumed_dt025",
+      "original_case": "led_052_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_47",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.78825130797986,
+            "width_max_ns": 302.3151338101429,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999954,
+            "low_margin_V": 1.1999959259938,
+            "timing_margins": {
+              "high_above_min_ns": 49.78825130797986,
+              "low_above_min_ns": 97.68486618985708,
+              "high_below_max_ns": 97.68486618985708
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7883876466949,
+            "width_max_ns": 902.3109362877963,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999967999999998,
+            "low_margin_V": 1.1999946620900999,
+            "timing_margins": {
+              "high_above_min_ns": 199.7883876466949,
+              "low_above_min_ns": 97.68906371220373,
+              "high_below_max_ns": 97.68906371220373
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78825130797986,
+        "unclamped_overshoot_V": 2.1192786000000003,
+        "unclamped_undershoot_V": 2.082527
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79082405497684,
+            "width_max_ns": 302.29087545552557,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999932,
+            "low_margin_V": 1.1999984946492,
+            "timing_margins": {
+              "high_above_min_ns": 49.79082405497684,
+              "low_above_min_ns": 97.70912454447443,
+              "high_below_max_ns": 97.70912454447443
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7908019638103,
+            "width_max_ns": 902.2909885850972,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999973999999997,
+            "low_margin_V": 1.1999959049862,
+            "timing_margins": {
+              "high_above_min_ns": 199.79080196381028,
+              "low_above_min_ns": 97.70901141490276,
+              "high_below_max_ns": 97.70901141490276
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79082405497684,
+        "unclamped_overshoot_V": 2.1044828000000004,
+        "unclamped_undershoot_V": 2.1070371
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_053_near_strong_assumed_dt025",
+      "original_case": "led_053_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_48",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7836266082463,
+            "width_max_ns": 302.54907468391275,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999923,
+            "low_margin_V": 1.1999975150289,
+            "timing_margins": {
+              "high_above_min_ns": 49.78362660824632,
+              "low_above_min_ns": 97.45092531608725,
+              "high_below_max_ns": 97.45092531608725
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7836893607878,
+            "width_max_ns": 902.5469198433439,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999958000000001,
+            "low_margin_V": 1.1999958743456,
+            "timing_margins": {
+              "high_above_min_ns": 199.78368936078778,
+              "low_above_min_ns": 97.45308015665614,
+              "high_below_max_ns": 97.45308015665614
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78362660824632,
+        "unclamped_overshoot_V": 2.2403272999999997,
+        "unclamped_undershoot_V": 2.2691895
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7849805709543,
+            "width_max_ns": 302.54861141710626,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999837999999998,
+            "low_margin_V": 1.19999324849,
+            "timing_margins": {
+              "high_above_min_ns": 49.7849805709543,
+              "low_above_min_ns": 97.45138858289374,
+              "high_below_max_ns": 97.45138858289374
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7850032110787,
+            "width_max_ns": 902.5486674516401,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999945999999999,
+            "low_margin_V": 1.19998550064,
+            "timing_margins": {
+              "high_above_min_ns": 199.78500321107867,
+              "low_above_min_ns": 97.45133254835991,
+              "high_below_max_ns": 97.45133254835991
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.7849805709543,
+        "unclamped_overshoot_V": 2.2882661000000004,
+        "unclamped_undershoot_V": 2.2900443
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_053_far__strong_assumed_dt025",
+      "original_case": "led_053_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_48",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7836266082463,
+            "width_max_ns": 302.54907468391275,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999923,
+            "low_margin_V": 1.1999975150289,
+            "timing_margins": {
+              "high_above_min_ns": 49.78362660824632,
+              "low_above_min_ns": 97.45092531608725,
+              "high_below_max_ns": 97.45092531608725
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7836893607878,
+            "width_max_ns": 902.5469198433439,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999958000000001,
+            "low_margin_V": 1.1999958743456,
+            "timing_margins": {
+              "high_above_min_ns": 199.78368936078778,
+              "low_above_min_ns": 97.45308015665614,
+              "high_below_max_ns": 97.45308015665614
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78362660824632,
+        "unclamped_overshoot_V": 2.2403272999999997,
+        "unclamped_undershoot_V": 2.2691895
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7849805709543,
+            "width_max_ns": 302.54861141710626,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999837999999998,
+            "low_margin_V": 1.19999324849,
+            "timing_margins": {
+              "high_above_min_ns": 49.7849805709543,
+              "low_above_min_ns": 97.45138858289374,
+              "high_below_max_ns": 97.45138858289374
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7850032110787,
+            "width_max_ns": 902.5486674516401,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999945999999999,
+            "low_margin_V": 1.19998550064,
+            "timing_margins": {
+              "high_above_min_ns": 199.78500321107867,
+              "low_above_min_ns": 97.45133254835991,
+              "high_below_max_ns": 97.45133254835991
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.7849805709543,
+        "unclamped_overshoot_V": 2.2882661000000004,
+        "unclamped_undershoot_V": 2.2900443
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_054_near_strong_assumed_dt025",
+      "original_case": "led_054_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_49",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7857946053232,
+            "width_max_ns": 302.4260432099395,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999848999999998,
+            "low_margin_V": 1.199989791733,
+            "timing_margins": {
+              "high_above_min_ns": 49.78579460532319,
+              "low_above_min_ns": 97.57395679006049,
+              "high_below_max_ns": 97.57395679006049
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7840996063314,
+            "width_max_ns": 902.4260393615332,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999924,
+            "low_margin_V": 1.19997164535,
+            "timing_margins": {
+              "high_above_min_ns": 199.78409960633144,
+              "low_above_min_ns": 97.57396063846681,
+              "high_below_max_ns": 97.57396063846681
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78579460532319,
+        "unclamped_overshoot_V": 2.1948463,
+        "unclamped_undershoot_V": 2.1774892
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.788662660093,
+            "width_max_ns": 302.42225391912825,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999538,
+            "low_margin_V": 1.199988375696,
+            "timing_margins": {
+              "high_above_min_ns": 49.788662660092996,
+              "low_above_min_ns": 97.57774608087175,
+              "high_below_max_ns": 97.57774608087175
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7886291204418,
+            "width_max_ns": 902.4222873874974,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999878,
+            "low_margin_V": 1.1999640526289999,
+            "timing_margins": {
+              "high_above_min_ns": 199.78862912044178,
+              "low_above_min_ns": 97.57771261250264,
+              "high_below_max_ns": 97.57771261250264
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.788662660092996,
+        "unclamped_overshoot_V": 2.2009445999999997,
+        "unclamped_undershoot_V": 2.203495
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_054_far__strong_assumed_dt025",
+      "original_case": "led_054_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_49",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7857946053232,
+            "width_max_ns": 302.4260432099395,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999848999999998,
+            "low_margin_V": 1.199989791733,
+            "timing_margins": {
+              "high_above_min_ns": 49.78579460532319,
+              "low_above_min_ns": 97.57395679006049,
+              "high_below_max_ns": 97.57395679006049
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7840996063314,
+            "width_max_ns": 902.4260393615332,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999924,
+            "low_margin_V": 1.19997164535,
+            "timing_margins": {
+              "high_above_min_ns": 199.78409960633144,
+              "low_above_min_ns": 97.57396063846681,
+              "high_below_max_ns": 97.57396063846681
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.78579460532319,
+        "unclamped_overshoot_V": 2.1948463,
+        "unclamped_undershoot_V": 2.1774892
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.788662660093,
+            "width_max_ns": 302.42225391912825,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999538,
+            "low_margin_V": 1.199988375696,
+            "timing_margins": {
+              "high_above_min_ns": 49.788662660092996,
+              "low_above_min_ns": 97.57774608087175,
+              "high_below_max_ns": 97.57774608087175
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7886291204418,
+            "width_max_ns": 902.4222873874974,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999878,
+            "low_margin_V": 1.1999640526289999,
+            "timing_margins": {
+              "high_above_min_ns": 199.78862912044178,
+              "low_above_min_ns": 97.57771261250264,
+              "high_below_max_ns": 97.57771261250264
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.788662660092996,
+        "unclamped_overshoot_V": 2.2009445999999997,
+        "unclamped_undershoot_V": 2.203495
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_058_near_strong_assumed_dt025",
+      "original_case": "led_058_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_53",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80159951026053,
+            "width_max_ns": 301.9812949671468,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999736,
+            "low_margin_V": 1.1999931389779,
+            "timing_margins": {
+              "high_above_min_ns": 49.80159951026053,
+              "low_above_min_ns": 98.01870503285318,
+              "high_below_max_ns": 98.01870503285318
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8009548488071,
+            "width_max_ns": 901.9912235636921,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999920000000001,
+            "low_margin_V": 1.199982745651,
+            "timing_margins": {
+              "high_above_min_ns": 199.80095484880712,
+              "low_above_min_ns": 98.00877643630793,
+              "high_below_max_ns": 98.00877643630793
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80159951026053,
+        "unclamped_overshoot_V": 1.8629087999999996,
+        "unclamped_undershoot_V": 1.8341047
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.81042288617846,
+            "width_max_ns": 301.9807126432561,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999627000000001,
+            "low_margin_V": 1.1999964098219,
+            "timing_margins": {
+              "high_above_min_ns": 49.81042288617846,
+              "low_above_min_ns": 98.01928735674392,
+              "high_below_max_ns": 98.01928735674392
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8104291967625,
+            "width_max_ns": 901.9806473887561,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999958000000001,
+            "low_margin_V": 1.199969486646,
+            "timing_margins": {
+              "high_above_min_ns": 199.81042919676247,
+              "low_above_min_ns": 98.0193526112439,
+              "high_below_max_ns": 98.0193526112439
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.81042288617846,
+        "unclamped_overshoot_V": 1.8261982999999997,
+        "unclamped_undershoot_V": 1.8273612
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_058_far__strong_assumed_dt025",
+      "original_case": "led_058_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_53",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.79259330648483,
+            "width_max_ns": 302.5128348489011,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999693,
+            "low_margin_V": 1.1999910990951,
+            "timing_margins": {
+              "high_above_min_ns": 49.79259330648483,
+              "low_above_min_ns": 97.4871651510989,
+              "high_below_max_ns": 97.4871651510989
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7958486815305,
+            "width_max_ns": 902.5104447417807,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999877,
+            "low_margin_V": 1.199967415795,
+            "timing_margins": {
+              "high_above_min_ns": 199.79584868153052,
+              "low_above_min_ns": 97.4895552582193,
+              "high_below_max_ns": 97.4895552582193
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79259330648483,
+        "unclamped_overshoot_V": 2.2988036000000003,
+        "unclamped_undershoot_V": 2.3142272
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.7928207028008,
+            "width_max_ns": 302.50514171420673,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999411999999998,
+            "low_margin_V": 1.19998915538,
+            "timing_margins": {
+              "high_above_min_ns": 49.79282070280078,
+              "low_above_min_ns": 97.49485828579327,
+              "high_below_max_ns": 97.49485828579327
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.7928040383467,
+            "width_max_ns": 902.5051670948692,
+            "extra_threshold_crossings": 4,
+            "high_margin_V": 1.3999897,
+            "low_margin_V": 1.199946429567,
+            "timing_margins": {
+              "high_above_min_ns": 199.79280403834673,
+              "low_above_min_ns": 97.4948329051308,
+              "high_below_max_ns": 97.4948329051308
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.79282070280078,
+        "unclamped_overshoot_V": 2.3030245000000003,
+        "unclamped_undershoot_V": 2.3028796
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_059_near_strong_assumed_dt025",
+      "original_case": "led_059_near_strong_assumed",
+      "net": "KEY_RGB_CHAIN_54",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80432548707404,
+            "width_max_ns": 301.951662481315,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999989,
+            "low_margin_V": 1.19999926105187,
+            "timing_margins": {
+              "high_above_min_ns": 49.80432548707404,
+              "low_above_min_ns": 98.048337518685,
+              "high_below_max_ns": 98.048337518685
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8049706246015,
+            "width_max_ns": 901.9582708720832,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999996000000001,
+            "low_margin_V": 1.1999982591659,
+            "timing_margins": {
+              "high_above_min_ns": 199.80497062460154,
+              "low_above_min_ns": 98.04172912791682,
+              "high_below_max_ns": 98.04172912791682
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80432548707404,
+        "unclamped_overshoot_V": 1.8079375000000004,
+        "unclamped_undershoot_V": 1.8137566
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.8092922502192,
+            "width_max_ns": 301.908479657046,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999975999999998,
+            "low_margin_V": 1.19999963710739,
+            "timing_margins": {
+              "high_above_min_ns": 49.80929225021919,
+              "low_above_min_ns": 98.09152034295403,
+              "high_below_max_ns": 98.09152034295403
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8091762116837,
+            "width_max_ns": 901.9084447255582,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999994999999998,
+            "low_margin_V": 1.199998268576,
+            "timing_margins": {
+              "high_above_min_ns": 199.80917621168373,
+              "low_above_min_ns": 98.09155527444182,
+              "high_below_max_ns": 98.09155527444182
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80929225021919,
+        "unclamped_overshoot_V": 1.7922858000000002,
+        "unclamped_undershoot_V": 1.7922373
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_059_far__strong_assumed_dt025",
+      "original_case": "led_059_far__strong_assumed",
+      "net": "KEY_RGB_CHAIN_54",
+      "original": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.80432548707404,
+            "width_max_ns": 301.951662481315,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999989,
+            "low_margin_V": 1.19999926105187,
+            "timing_margins": {
+              "high_above_min_ns": 49.80432548707404,
+              "low_above_min_ns": 98.048337518685,
+              "high_below_max_ns": 98.048337518685
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8049706246015,
+            "width_max_ns": 901.9582708720832,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999996000000001,
+            "low_margin_V": 1.1999982591659,
+            "timing_margins": {
+              "high_above_min_ns": 199.80497062460154,
+              "low_above_min_ns": 98.04172912791682,
+              "high_below_max_ns": 98.04172912791682
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80432548707404,
+        "unclamped_overshoot_V": 1.8079375000000004,
+        "unclamped_undershoot_V": 1.8137566
+      },
+      "refined": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.8092922502192,
+            "width_max_ns": 301.908479657046,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999975999999998,
+            "low_margin_V": 1.19999963710739,
+            "timing_margins": {
+              "high_above_min_ns": 49.80929225021919,
+              "low_above_min_ns": 98.09152034295403,
+              "high_below_max_ns": 98.09152034295403
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.8091762116837,
+            "width_max_ns": 901.9084447255582,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999994999999998,
+            "low_margin_V": 1.199998268576,
+            "timing_margins": {
+              "high_above_min_ns": 199.80917621168373,
+              "low_above_min_ns": 98.09155527444182,
+              "high_below_max_ns": 98.09155527444182
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.80929225021919,
+        "unclamped_overshoot_V": 1.7922858000000002,
+        "unclamped_undershoot_V": 1.7922373
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_000_near_fast_assumed_dt025",
+      "original_case": "led_000_near_fast_assumed",
+      "net": "KEY_RGB_5V",
+      "original": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 295.57488988104797,
+            "width_max_ns": 307.7478358236476,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999940999999998,
+            "low_margin_V": 1.1999975601828,
+            "timing_margins": {
+              "high_above_min_ns": 45.574889881047966,
+              "low_above_min_ns": 92.25216417635238,
+              "high_below_max_ns": 92.25216417635238
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 895.5783629602347,
+            "width_max_ns": 907.7499951796767,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999983999999999,
+            "low_margin_V": 1.1999955342841,
+            "timing_margins": {
+              "high_above_min_ns": 195.5783629602347,
+              "low_above_min_ns": 92.25000482032328,
+              "high_below_max_ns": 92.25000482032328
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 45.574889881047966,
+        "unclamped_overshoot_V": 4.200000000231796e-06,
+        "unclamped_undershoot_V": 3.6182316e-06
+      },
+      "refined": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 295.58147192853994,
+            "width_max_ns": 307.74634150346265,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999973,
+            "low_margin_V": 1.1999997834702198,
+            "timing_margins": {
+              "high_above_min_ns": 45.58147192853994,
+              "low_above_min_ns": 92.25365849653735,
+              "high_below_max_ns": 92.25365849653735
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 895.581548659532,
+            "width_max_ns": 907.7464863295227,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999997999999998,
+            "low_margin_V": 1.1999974380456,
+            "timing_margins": {
+              "high_above_min_ns": 195.58154865953202,
+              "low_above_min_ns": 92.25351367047733,
+              "high_below_max_ns": 92.25351367047733
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 45.58147192853994,
+        "unclamped_overshoot_V": 7.999999995789153e-07,
+        "unclamped_undershoot_V": 6.6642271e-07
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_000_far__fast_assumed_dt025",
+      "original_case": "led_000_far__fast_assumed",
+      "net": "KEY_RGB_5V",
+      "original": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 295.586530027912,
+            "width_max_ns": 307.7530355857466,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999896,
+            "low_margin_V": 1.19999901613232,
+            "timing_margins": {
+              "high_above_min_ns": 45.58653002791198,
+              "low_above_min_ns": 92.2469644142534,
+              "high_below_max_ns": 92.2469644142534
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 895.5876509395898,
+            "width_max_ns": 907.7534794231738,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999991,
+            "low_margin_V": 1.199990277211,
+            "timing_margins": {
+              "high_above_min_ns": 195.58765093958982,
+              "low_above_min_ns": 92.24652057682624,
+              "high_below_max_ns": 92.24652057682624
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 45.58653002791198,
+        "unclamped_overshoot_V": 7.499999999716067e-06,
+        "unclamped_undershoot_V": 7.5004681e-06
+      },
+      "refined": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 295.58442568302144,
+            "width_max_ns": 307.7500590181421,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999972,
+            "low_margin_V": 1.19999978369737,
+            "timing_margins": {
+              "high_above_min_ns": 45.584425683021436,
+              "low_above_min_ns": 92.24994098185789,
+              "high_below_max_ns": 92.24994098185789
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 895.5845128355027,
+            "width_max_ns": 907.7501315851641,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999997999999998,
+            "low_margin_V": 1.1999971954944,
+            "timing_margins": {
+              "high_above_min_ns": 195.58451283550266,
+              "low_above_min_ns": 92.24986841483587,
+              "high_below_max_ns": 92.24986841483587
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 45.584425683021436,
+        "unclamped_overshoot_V": 5.999999999062311e-07,
+        "unclamped_undershoot_V": 6.5803545e-07
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_001_near_fast_assumed_dt025",
+      "original_case": "led_001_near_fast_assumed",
+      "net": "KEY_RGB_CHAIN_1",
+      "original": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.4590952579347,
+            "width_max_ns": 300.7362933241525,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999962,
+            "low_margin_V": 1.1999973431711999,
+            "timing_margins": {
+              "high_above_min_ns": 49.45909525793468,
+              "low_above_min_ns": 99.26370667584752,
+              "high_below_max_ns": 99.26370667584752
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.4554605638755,
+            "width_max_ns": 900.7348795282619,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999972,
+            "low_margin_V": 1.1999931254212999,
+            "timing_margins": {
+              "high_above_min_ns": 199.45546056387548,
+              "low_above_min_ns": 99.2651204717381,
+              "high_below_max_ns": 99.2651204717381
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.45909525793468,
+        "unclamped_overshoot_V": 0.26876999999999995,
+        "unclamped_undershoot_V": 0.26624006
+      },
+      "refined": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.439086193167,
+            "width_max_ns": 300.7501476560178,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999954,
+            "low_margin_V": 1.19999930213023,
+            "timing_margins": {
+              "high_above_min_ns": 49.439086193166986,
+              "low_above_min_ns": 99.24985234398218,
+              "high_below_max_ns": 99.24985234398218
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.4389866512352,
+            "width_max_ns": 900.7500385685394,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999994999999998,
+            "low_margin_V": 1.199994618494,
+            "timing_margins": {
+              "high_above_min_ns": 199.43898665123515,
+              "low_above_min_ns": 99.24996143146063,
+              "high_below_max_ns": 99.24996143146063
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.439086193166986,
+        "unclamped_overshoot_V": 0.2749134,
+        "unclamped_undershoot_V": 0.27485009
+      },
+      "same_decision": true
+    },
+    {
+      "case": "led_001_far__fast_assumed_dt025",
+      "original_case": "led_001_far__fast_assumed",
+      "net": "KEY_RGB_CHAIN_1",
+      "original": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.4590952579347,
+            "width_max_ns": 300.7362933241525,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999962,
+            "low_margin_V": 1.1999973431711999,
+            "timing_margins": {
+              "high_above_min_ns": 49.45909525793468,
+              "low_above_min_ns": 99.26370667584752,
+              "high_below_max_ns": 99.26370667584752
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.4554605638755,
+            "width_max_ns": 900.7348795282619,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999972,
+            "low_margin_V": 1.1999931254212999,
+            "timing_margins": {
+              "high_above_min_ns": 199.45546056387548,
+              "low_above_min_ns": 99.2651204717381,
+              "high_below_max_ns": 99.2651204717381
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.45909525793468,
+        "unclamped_overshoot_V": 0.26876999999999995,
+        "unclamped_undershoot_V": 0.26624006
+      },
+      "refined": {
+        "meets_assumed_corner": true,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 299.439086193167,
+            "width_max_ns": 300.7501476560178,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999954,
+            "low_margin_V": 1.19999930213023,
+            "timing_margins": {
+              "high_above_min_ns": 49.439086193166986,
+              "low_above_min_ns": 99.24985234398218,
+              "high_below_max_ns": 99.24985234398218
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 899.4389866512352,
+            "width_max_ns": 900.7500385685394,
+            "extra_threshold_crossings": 0,
+            "high_margin_V": 1.3999994999999998,
+            "low_margin_V": 1.199994618494,
+            "timing_margins": {
+              "high_above_min_ns": 199.43898665123515,
+              "low_above_min_ns": 99.24996143146063,
+              "high_below_max_ns": 99.24996143146063
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 49.439086193166986,
+        "unclamped_overshoot_V": 0.2749134,
+        "unclamped_undershoot_V": 0.27485009
+      },
+      "same_decision": true
+    }
+  ],
+  "crosstalk_scope": "Four extracted neighbour envelopes, uniform outer-microstrip approximation, all coupled length placed at minimum gap; one matrix aggressor at a time. Width=max actual net width. Not a strict bound or exhaustive 3D coupling analysis.",
+  "numerical_scope": "All 37 flagged LED cases plus four fast-driver controls: 0.025 ns vs 0.2 ns max step, reltol 1e-4. Spatial ladder unchanged."
+}

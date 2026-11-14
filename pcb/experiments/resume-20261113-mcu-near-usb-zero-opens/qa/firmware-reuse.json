@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "netlist_names_and_pins_identical": false,
+  "baseline_nets": 272,
+  "candidate_nets": 274,
+  "mcu_pin_bindings_identical": true,
+  "all_original_pin_bindings_identical_after_contracting_added_resistors": true,
+  "allowed_topology_changes": {
+    "R192": "LED17.3 -> KEY_RGB_CHAIN_28_SRC -> R192.1 / R192.2 -> KEY_RGB_CHAIN_28 -> LED16.1",
+    "R193": "LED16.3 -> KEY_RGB_CHAIN_29_SRC -> R193.1 / R193.2 -> KEY_RGB_CHAIN_29 -> LED30.1 (both sites)"
+  },
+  "allowed_value_changes": {
+    "R115": {
+      "from": "100 1%",
+      "to": "150 1%"
+    }
+  },
+  "baseline_netlist": "build/final22-native/netlist.xml",
+  "baseline_netlist_sha256": "18347d8f84af231f3733a14b073226edd12af33c64a28b67d1641c6822913fdf",
+  "candidate_netlist_sha256": "eeb5d86cfa51797336755e5d580d3ef2742a753b34408570ffc138293b367270",
+  "board_sha256": "2cc544c8e6eb00bd3f53fa480a0167dcb8e14dac687f7eb2af0c85946bda5584",
+  "firmware_images": {
+    "maru60_rp2350_via.uf2": "0e07106bf0bdc3531d687c69dc76f7c8c1a7d9e8c81c49e7a11769fb280e0de2",
+    "maru60_rp2350_via_hhkb.uf2": "d26a8612bb0d0f593e6c87c7ae6b5af30beb5c769880f91ed3b1287ee2b40d3d"
+  },
+  "note": "Existing firmware bytes reused: MCU pins and original connectivity match after explicitly contracting only R192/R193. LED order preserved; firmware timing unchanged. No new build, flash or hardware test."
+}

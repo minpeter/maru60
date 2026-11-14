@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "source_board_sha256": "86c4243dc112f308ab22614bf576716b77d9c33a38fea3776249dace63da6a5e",
+  "final_board_sha256": "2cc544c8e6eb00bd3f53fa480a0167dcb8e14dac687f7eb2af0c85946bda5584",
+  "source_geometry_sha256": "0acf3f3fc2f9c23586dd4a5fd2564de0046186003b1cefd2903fd14e3ee7135e",
+  "final_geometry_sha256": "0acf3f3fc2f9c23586dd4a5fd2564de0046186003b1cefd2903fd14e3ee7135e",
+  "only_edit": "Move R193 reference on B.SilkS from board XY (15.6,31.0) to (15.6,31.2) mm; silk clearance 0.1372 mm was below the 0.15 mm DFM limit.",
+  "literal_replacement": {
+    "before": "(property \"Reference\" \"R193\"\n\t\t\t(at -2.6 -2.05 0)",
+    "after": "(property \"Reference\" \"R193\"\n\t\t\t(at -2.4 -2.05 0)"
+  },
+  "source_board_archive": "qa/geometry-equivalence-input.kicad_pcb.gz",
+  "scope": "All native copper, pads, holes, footprint positions and physical geometry dumps are byte-identical. Existing SI/PDN/placement/mechanical geometry results apply to final CAD without rerunning unchanged electrical models. Original simulation board hashes are preserved. Final native/DFM/Backspace/Gerber checks rerun after the silk edit.",
+  "reused_reports": [
+    "signal-integrity",
+    "pdn",
+    "dfm-geometry",
+    "mechanical-fit",
+    "order/jlcpcb-placement.json"
+  ],
+  "hardware_measurements": false
+}

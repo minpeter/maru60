@@ -49,14 +49,17 @@ def main():
 
     # ---- QSPI ----
     q = {}
+    via_ps = (table["via_L_nH"] * table["via_C_pF"] * 1e3) ** 0.5
     for k in ("QSPI_SCLK", "QSPI_SD0", "QSPI_SD1", "QSPI_SD2", "QSPI_SD3", "QSPI_SS"):
-        q[k] = {"length_mm": n[k]["length_mm"], "vias": n[k]["vias"], "delay_ps": round(n[k]["length_mm"] * ps, 1),
+        q[k] = {"length_mm": n[k]["length_mm"], "vias": n[k]["vias"],
+                "delay_ps": round(n[k]["length_mm"] * ps + n[k]["vias"] * via_ps, 1),
                 "stubs_mm": [(s["length_mm"], s["pads"]) for s in n[k]["stubs"] if s["length_mm"] > 0.3],
                 "C_copper_pF": n[k]["cap"]["C_copper_pF"], "C_load_pF": round(n[k]["cap"]["C_copper_pF"] + 6.0, 2)}
     data = [q[k]["length_mm"] for k in ("QSPI_SD0", "QSPI_SD1", "QSPI_SD2", "QSPI_SD3")]
     sclk = q["QSPI_SCLK"]["length_mm"]
     worst = max(abs(x - sclk) for x in data)
-    rt = (sclk + max(data)) * ps * 1e-3   # ns, clock out + data back
+    data_delays = [q[k]["delay_ps"] for k in ("QSPI_SD0", "QSPI_SD1", "QSPI_SD2", "QSPI_SD3")]
+    rt = (q["QSPI_SCLK"]["delay_ps"] + max(data_delays)) * 1e-3
     rates = {}
     for name, f in (("boot ROM and this firmware: clk_sys / 6, 03h read (25 MHz at 150 MHz)", 25e6),
                     ("fastest the QMI allows: clk_sys / 2 (75 MHz), not configured by this firmware", 75e6)):
@@ -64,16 +67,17 @@ def main():
         rates[name] = {"half_period_ns": round(half, 2), "flash_tCLQV_max_ns": 6.0, "board_round_trip_ns": round(rt, 3),
                        "slack_to_next_rising_edge_ns": round(half - 6.0 - rt, 2),
                        "board_share_of_half_period_pct": round(100 * rt / half, 2)}
-    out["qspi"] = {"nets": q, "data_vs_clock_mismatch_mm_max": round(worst, 2), "mismatch_ps_max": round(worst * ps, 1),
+    out["qspi"] = {"nets": q, "data_vs_clock_mismatch_mm_max": round(worst, 2),
+                   "mismatch_ps_max": round(max(abs(v - q["QSPI_SCLK"]["delay_ps"]) for v in data_delays), 1),
                    "data_to_data_mismatch_mm": round(max(data) - min(data), 2), "rates": rates,
                    "flash_limits": {"FR_MHz": 133, "fR_03h_MHz": 50, "tCLQV_ns": 6, "CIN_pF": 6, "COUT_pF": 8},
-                   "electrical_length_note": "longest net 23.5 mm = 0.14 ns; a 1 ns edge is 7 times longer, so the nets are lumped"}
+                   "electrical_length_note": f"Longest route {max(v['length_mm'] for v in q.values()):.3f} mm; maximum one-way delay {max(v['delay_ps'] for v in q.values()) / 1000:.3f} ns including full-barrel lumped via delays. Inner traces use the same approximate per-mm line model; this is not a field-solved inner-layer qualification."}
 
     # ---- BOOTSEL / QSPI_SS ----
     out["bootsel"] = {
         "QSPI_SS_branches_mm": q["QSPI_SS"]["stubs_mm"], "BOOT_BUTTON_net_mm": n["BOOT_BUTTON"]["net_total"]["length_mm"],
         "BOOT_BUTTON_C_pF": n["BOOT_BUTTON"]["cap"]["C_copper_pF"],
-        "isolation": "R106 1 k between QSPI_SS and the 39 mm BOOT_BUTTON net: tau = 1 k x 5.3 pF = 5 ns, load on /CS is 1 k in series",
+        "isolation": f"R106 1 k between QSPI_SS and the {n['BOOT_BUTTON']['net_total']['length_mm']:.2f} mm BOOT_BUTTON net: copper RC = {n['BOOT_BUTTON']['cap']['C_copper_pF']:.2f} ns; load on /CS is 1 k in series",
         "level_with_button_pressed_V": round(3.3 * 1.0 / (10.0 + 1.0), 2), "VIL_V": VIL,
         "esd_note": "IEC 61000-4-2 source is 330 ohm / 150 pF; through R106 the peak current is V / 1.33 k. 2 kV gives 1.5 A, about the 1.33 A of the 2 kV HBM rating (RP2350 Table 1681). The pad is not protected beyond that.",
         "neighbours": n["BOOT_BUTTON"]["neighbours"],
@@ -83,7 +87,7 @@ def main():
     out["swd"] = {k: {"length_mm": n[k]["length_mm"], "vias": n[k]["vias"], "C_copper_pF": n[k]["cap"]["C_copper_pF"],
                       "delay_ps": round(n[k]["length_mm"] * ps, 1), "plane_openings_mm": n[k]["plane_openings_not_own_via_mm"],
                       "crosstalk_if_idle_high_Z": crosstalk(k, n, 3.3)} for k in ("SWCLK", "SWDIO")}
-    out["swd"]["limit"] = "RP2350 Table 1687: SWCLK 10 MHz typ, 50 MHz max. 67 mm = 0.4 ns one way, 2.5 % of a 16 ns half period at 30 MHz."
+    out["swd"]["limit"] = "RP2350 Table 1687: SWCLK 10 MHz typ, 50 MHz max. Per-net lengths and approximate track delays are listed above."
 
     # ---- RUN ----
     run = crosstalk("RUN", n, 3.3)
@@ -99,7 +103,7 @@ def main():
         "buck_switch_node": {"distance_mm": buck.get("min_distance_mm_B.Cu"), "Cm_fF_over_6mm": round(cm_buck * 1e3, 3),
                              "step_mV_for_5V_edge": round(5.0 * cm_buck / (run["victim_C_pF"] + cm_buck) * 1e3, 3)},
         "reset_button_low_level_V": round(3.3 * 1e3 / (1e3 + RPU[0]), 3),
-        "note": "RUN has only the internal pull-up, no capacitor, an exposed 1 mm test pad (TP6) and 87 mm of track. The datasheet states no glitch filter, so none is assumed.",
+        "note": f"RUN has only the internal pull-up, no capacitor, TP6 and {n['RUN']['net_total']['length_mm']:.2f} mm of track. The datasheet states no glitch filter, so none is assumed.",
     }
 
     # ---- expansion port ----

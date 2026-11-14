@@ -1,0 +1,590 @@
+{
+ "limits": {
+  "track_width_min": {
+   "value": 0.09,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Min track/space, 1 oz, multilayer)"
+  },
+  "copper_space_min": {
+   "value": 0.09,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (same row)"
+  },
+  "pad_to_track_min": {
+   "value": 0.1,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Pad to track clearance, 1 oz)"
+  },
+  "smd_pad_to_pad_min": {
+   "value": 0.15,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (SMD pad to pad, different nets)"
+  },
+  "smd_pad_min": {
+   "value": 0.25,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Min SMD pad 0.25 x 0.25 mm)"
+  },
+  "same_net_gap": {
+   "value": 0.25,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Same-net track spacing)"
+  },
+  "via_hole_min": {
+   "value": 0.15,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Min via, multilayer)"
+  },
+  "via_hole_pref": {
+   "value": 0.2,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Preferred min via hole)"
+  },
+  "via_dia_min": {
+   "value": 0.25,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Min via diameter)"
+  },
+  "via_dia_no_surcharge": {
+   "value": 0.45,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (0.2/0.25 mm hole with via diameter < 0.45 mm costs more)"
+  },
+  "via_annular_min": {
+   "value": 0.05,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Via diameter 0.1 mm larger than hole)"
+  },
+  "via_annular_pref": {
+   "value": 0.075,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (0.15 mm preferred)"
+  },
+  "pth_annular_min": {
+   "value": 0.15,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (PTH annular ring, multilayer 1 oz, absolute min)"
+  },
+  "pth_annular_rec": {
+   "value": 0.2,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (same row, recommended)"
+  },
+  "pth_hole_rec": {
+   "value": 0.5,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Recommended min PTH size)"
+  },
+  "pth_tol": {
+   "value": "+0.13/-0.08",
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (PTH hole tolerance)"
+  },
+  "npth_min": {
+   "value": 0.5,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Min non-plated holes)"
+  },
+  "npth_tol": {
+   "value": "+/-0.05 UNVERIFIED",
+   "source": "not stated on https://jlcpcb.com/capabilities/pcb-capabilities on 2026-11-11; value is the long-standing JLC figure"
+  },
+  "plated_slot_min": {
+   "value": 0.35,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Min plated slot width, multilayer; remark on the page says 0.5)"
+  },
+  "plated_slot_rec": {
+   "value": 0.5,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (remark of the same row)"
+  },
+  "plated_slot_len_ratio": {
+   "value": 2.0,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (slot length >= 2 x width)"
+  },
+  "npth_slot_min": {
+   "value": 1.0,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Min non-plated slot width)"
+  },
+  "via_hole_to_copper": {
+   "value": 0.2,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Via hole to track)"
+  },
+  "pth_hole_to_copper_min": {
+   "value": 0.28,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (PTH to track, minimum)"
+  },
+  "pth_hole_to_copper_rec": {
+   "value": 0.35,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (PTH to track, recommended)"
+  },
+  "npth_to_copper": {
+   "value": 0.2,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (NPTH to track)"
+  },
+  "inner_via_hole_to_copper": {
+   "value": 0.2,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Inner layer via hole to copper)"
+  },
+  "inner_pth_hole_to_copper": {
+   "value": 0.3,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Inner layer PTH pad hole to copper)"
+  },
+  "via_hole_to_hole": {
+   "value": 0.2,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Via hole-to-hole spacing)"
+  },
+  "pad_hole_to_hole": {
+   "value": 0.45,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Pad hole-to-hole spacing)"
+  },
+  "copper_to_edge_min": {
+   "value": 0.2,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Routed: copper clearance from edge / slots)"
+  },
+  "copper_to_edge_rec": {
+   "value": 0.3,
+   "source": "https://jlcpcb.com/help/article/pcb-assembly-faqs-part-2 (traces and components > 0.3 mm from the edge; routing tolerance 0.2 mm)"
+  },
+  "outline_tol": {
+   "value": 0.2,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Routed edge tolerance, regular)"
+  },
+  "mask_dam_min": {
+   "value": 0.1,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Soldermask bridge, 1 oz, green/red/yellow/blue/purple: min pad spacing)"
+  },
+  "mask_dam_min_black_white": {
+   "value": 0.13,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (same row, black/white)"
+  },
+  "mask_opening_to_trace": {
+   "value": 0.09,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Soldermask expansion remark)"
+  },
+  "plugged_via_to_opening": {
+   "value": 0.35,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Plugged vias: clearance from other mask openings)"
+  },
+  "silk_line_min": {
+   "value": 0.15,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Legend minimum line width)"
+  },
+  "silk_text_height_min": {
+   "value": 1.0,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Legend minimum text height 40 mil)"
+  },
+  "silk_to_pad": {
+   "value": 0.15,
+   "source": "https://jlcpcb.com/capabilities/pcb-capabilities (Pad to silkscreen)"
+  },
+  "asm_body_to_edge": {
+   "value": 2.5,
+   "source": "https://jlcpcb.com/help/article/terms-and-conditions-of-jlcpcb-assembly-service (component body to board edge >= 2.5 mm; otherwise edge rails)"
+  },
+  "asm_rail_width": {
+   "value": 5.0,
+   "source": "https://jlcpcb.com/help/article/how-to-add-edge-rails-fiducials-for-pcb-assembly-order (edge rails at least 5 mm)"
+  },
+  "asm_body_to_body": {
+   "value": 0.3,
+   "source": "UNVERIFIED as a rule: JLCPCB blog figure only; https://jlcpcb.com/help/article/terms-and-conditions-of-jlcpcb-assembly-service says only 'IPC-7351B medium/low density, no overlap or very small gap'"
+  },
+  "asm_min_pitch_standard": {
+   "value": 0.35,
+   "source": "https://jlcpcb.com/capabilities/pcb-assembly-capabilities (Standard PCBA minimum IC pin spacing)"
+  },
+  "asm_min_package_standard": {
+   "value": "01005",
+   "source": "https://jlcpcb.com/capabilities/pcb-assembly-capabilities"
+  },
+  "asm_board_min": {
+   "value": "70 x 70",
+   "source": "https://jlcpcb.com/capabilities/pcb-assembly-capabilities (Standard PCBA single PCB 70x70 - 460x500 mm)"
+  },
+  "asm_board_max": {
+   "value": "460 x 500",
+   "source": "https://jlcpcb.com/capabilities/pcb-assembly-capabilities"
+  },
+  "tooling_hole": {
+   "value": 1.152,
+   "source": "https://jlcpcb.com/help/article/how-to-add-tooling-holes-for-pcb-assembly-order (2-3 NPTH 1.152 mm, mask expansion 0.148 mm, opposite corners)"
+  },
+  "fiducial": {
+   "value": 1.0,
+   "source": "https://jlcpcb.com/help/article/how-to-add-edge-rails-fiducials-for-pcb-assembly-order (1 mm copper, 2 mm mask opening, >= 3.35 mm from edge incl. keep-out, 3-4 pcs)"
+  },
+  "fiducial_edge": {
+   "value": 3.35,
+   "source": "https://jlcpcb.com/help/article/how-to-add-edge-rails-fiducials-for-pcb-assembly-order"
+  },
+  "stencil_thickness": {
+   "value": "0.10 / 0.12",
+   "source": "UNVERIFIED: JLCPCB does not publish the foil thickness used for PCBA; both evaluated"
+  },
+  "area_ratio_min": {
+   "value": 0.66,
+   "source": "IPC-7525 guideline (not a JLCPCB number); 0.60 is commonly quoted for electroformed/nano-coated foils"
+  },
+  "aspect_ratio_min": {
+   "value": 1.5,
+   "source": "IPC-7525 guideline (not a JLCPCB number)"
+  }
+ },
+ "thermal_barrels": {
+  "classification": "U1.61 plated thermal barrels; no inserted component leads",
+  "expected_count": 9,
+  "count": 9,
+  "barrels": [
+   {
+    "at_mm": [
+     27.2,
+     33.8
+    ],
+    "drill_mm": 0.25,
+    "annular_mm": 0.175,
+    "inside_exposed_pad": true,
+    "pass": true
+   },
+   {
+    "at_mm": [
+     26.0,
+     33.8
+    ],
+    "drill_mm": 0.25,
+    "annular_mm": 0.175,
+    "inside_exposed_pad": true,
+    "pass": true
+   },
+   {
+    "at_mm": [
+     24.799999999999997,
+     33.8
+    ],
+    "drill_mm": 0.25,
+    "annular_mm": 0.175,
+    "inside_exposed_pad": true,
+    "pass": true
+   },
+   {
+    "at_mm": [
+     27.2,
+     35.0
+    ],
+    "drill_mm": 0.25,
+    "annular_mm": 0.175,
+    "inside_exposed_pad": true,
+    "pass": true
+   },
+   {
+    "at_mm": [
+     26.0,
+     35.0
+    ],
+    "drill_mm": 0.25,
+    "annular_mm": 0.175,
+    "inside_exposed_pad": true,
+    "pass": true
+   },
+   {
+    "at_mm": [
+     24.799999999999997,
+     35.0
+    ],
+    "drill_mm": 0.25,
+    "annular_mm": 0.175,
+    "inside_exposed_pad": true,
+    "pass": true
+   },
+   {
+    "at_mm": [
+     27.2,
+     36.199999999999996
+    ],
+    "drill_mm": 0.25,
+    "annular_mm": 0.175,
+    "inside_exposed_pad": true,
+    "pass": true
+   },
+   {
+    "at_mm": [
+     26.0,
+     36.199999999999996
+    ],
+    "drill_mm": 0.25,
+    "annular_mm": 0.175,
+    "inside_exposed_pad": true,
+    "pass": true
+   },
+   {
+    "at_mm": [
+     24.799999999999997,
+     36.199999999999996
+    ],
+    "drill_mm": 0.25,
+    "annular_mm": 0.175,
+    "inside_exposed_pad": true,
+    "pass": true
+   }
+  ],
+  "pass": true
+ },
+ "via_holes_in_smd_pads": [],
+ "mask_web_fine_pitch": {
+  "U1": {
+   "min_mask_web_mm": 0.17,
+   "between": [
+    "57",
+    "58"
+   ],
+   "limit_mm": 0.1,
+   "pass": true
+  },
+  "U13": {
+   "min_mask_web_mm": 0.3,
+   "between": [
+    "1",
+    "2"
+   ],
+   "limit_mm": 0.1,
+   "pass": true
+  },
+  "U8": {
+   "min_mask_web_mm": 0.2,
+   "between": [
+    "9",
+    "10"
+   ],
+   "limit_mm": 0.1,
+   "pass": true
+  },
+  "U18": {
+   "min_mask_web_mm": 0.2,
+   "between": [
+    "7",
+    "8"
+   ],
+   "limit_mm": 0.1,
+   "pass": true
+  },
+  "U2": {
+   "min_mask_web_mm": 0.35,
+   "between": [
+    "2",
+    "3"
+   ],
+   "limit_mm": 0.1,
+   "pass": true
+  },
+  "U11": {
+   "min_mask_web_mm": 0.2,
+   "between": [
+    "16",
+    "17"
+   ],
+   "limit_mm": 0.1,
+   "pass": true
+  },
+  "J1": {
+   "min_mask_web_mm": 0.2,
+   "between": [
+    "B9",
+    "B12"
+   ],
+   "limit_mm": 0.1,
+   "pass": true
+  },
+  "J3": {
+   "min_mask_web_mm": 0.4,
+   "between": [
+    "9",
+    "10"
+   ],
+   "limit_mm": 0.1,
+   "pass": true
+  },
+  "U10": {
+   "min_mask_web_mm": 0.4,
+   "between": [
+    "1",
+    "2"
+   ],
+   "limit_mm": 0.1,
+   "pass": true
+  }
+ },
+ "stencil_area_ratio_lowest": [
+  {
+   "example": "U13.1",
+   "aperture_mm": [
+    0.2,
+    0.5
+   ],
+   "area_ratio_0.10": 0.74,
+   "area_ratio_0.12": 0.61,
+   "count": 14
+  },
+  {
+   "example": "U10.1",
+   "aperture_mm": [
+    0.3,
+    0.3
+   ],
+   "area_ratio_0.10": 0.79,
+   "area_ratio_0.12": 0.66,
+   "count": 3
+  },
+  {
+   "example": "R121.2",
+   "aperture_mm": [
+    0.3,
+    0.4
+   ],
+   "area_ratio_0.10": 0.86,
+   "area_ratio_0.12": 0.71,
+   "count": 4
+  },
+  {
+   "example": "U1.32",
+   "aperture_mm": [
+    0.23,
+    0.7
+   ],
+   "area_ratio_0.10": 0.87,
+   "area_ratio_0.12": 0.72,
+   "count": 60
+  },
+  {
+   "example": "U18.5",
+   "aperture_mm": [
+    0.3,
+    0.67
+   ],
+   "area_ratio_0.10": 1.07,
+   "area_ratio_0.12": 0.89,
+   "count": 8
+  },
+  {
+   "example": "J1.A8",
+   "aperture_mm": [
+    0.3,
+    1.15
+   ],
+   "area_ratio_0.10": 1.23,
+   "area_ratio_0.12": 1.02,
+   "count": 8
+  },
+  {
+   "example": "C124.1",
+   "aperture_mm": [
+    0.5,
+    0.5
+   ],
+   "area_ratio_0.10": 1.25,
+   "area_ratio_0.12": 1.04,
+   "count": 2
+  },
+  {
+   "example": "C103.1",
+   "aperture_mm": [
+    0.47,
+    0.55
+   ],
+   "area_ratio_0.10": 1.27,
+   "area_ratio_0.12": 1.06,
+   "count": 4
+  }
+ ],
+ "stencil_area_ratio_guideline": 0.66,
+ "assembled_parts_within_2p5mm_of_edge": [
+  {
+   "ref": "J1",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 0.0
+  },
+  {
+   "ref": "U5",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 0.41
+  },
+  {
+   "ref": "C260",
+   "side": "F.Cu",
+   "courtyard_to_edge_mm": 0.67
+  },
+  {
+   "ref": "D1",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 0.86
+  },
+  {
+   "ref": "C201",
+   "side": "F.Cu",
+   "courtyard_to_edge_mm": 0.91
+  },
+  {
+   "ref": "C259",
+   "side": "F.Cu",
+   "courtyard_to_edge_mm": 0.92
+  },
+  {
+   "ref": "C257",
+   "side": "F.Cu",
+   "courtyard_to_edge_mm": 0.97
+  },
+  {
+   "ref": "D55",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.01
+  },
+  {
+   "ref": "D15",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.01
+  },
+  {
+   "ref": "D56",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.06
+  },
+  {
+   "ref": "D62",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.06
+  },
+  {
+   "ref": "D58",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.06
+  },
+  {
+   "ref": "D60",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.06
+  },
+  {
+   "ref": "D57",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.06
+  },
+  {
+   "ref": "D59",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.06
+  },
+  {
+   "ref": "D61",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.06
+  },
+  {
+   "ref": "C122",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.14
+  },
+  {
+   "ref": "C256",
+   "side": "F.Cu",
+   "courtyard_to_edge_mm": 1.22
+  },
+  {
+   "ref": "C273",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.3
+  },
+  {
+   "ref": "R113",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.64
+  },
+  {
+   "ref": "R112",
+   "side": "B.Cu",
+   "courtyard_to_edge_mm": 1.64
+  }
+ ],
+ "fiducials_on_board": [],
+ "tooling_holes_1p152mm": 0
+}

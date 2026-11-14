@@ -30,6 +30,7 @@ place (use a checkpoint copy) and every zone is refilled at the end.
   {"op": "set_fpid", "refs": [...], "fpid": "nick:name"}
   {"op": "set_field", "ref", "name", "value"}
   {"op": "set_dnp", "ref", "dnp": true|false}
+  {"op": "set_zone_min_thickness", "uuid", "mm"}
 """
 import json
 import math
@@ -63,13 +64,24 @@ def main():
     doomed_tracks, doomed_items, doomed_graphics = [], [], []
     for op in ops:
         kind = op["op"]
-        if kind == "remove_tracks":
+        if kind == "set_zone_min_thickness":
+            matched = [z for z in b.Zones() if z.m_Uuid.AsString() == op["uuid"]]
+            if len(matched) != 1 or op["mm"] <= 0:
+                raise SystemExit(f"invalid zone minimum-thickness operation: {op}")
+            matched[0].SetMinThickness(mm(op["mm"]))
+        elif kind == "remove_tracks":
             for r in op["tracks"]:
                 hit = [rec for rec in live if rec[1] == r["layer"] and rec[2] == r["net"] and not any(rec is x for x in doomed_tracks) and (
                     max(abs(rec[3] - r["x1"]), abs(rec[4] - r["y1"]), abs(rec[5] - r["x2"]), abs(rec[6] - r["y2"])) < 1e-4 or
                     max(abs(rec[3] - r["x2"]), abs(rec[4] - r["y2"]), abs(rec[5] - r["x1"]), abs(rec[6] - r["y1"])) < 1e-4)]
                 if not hit:
                     raise SystemExit(f"track to remove not found: {r}")
+                doomed_tracks.append(hit[0])
+        elif kind == "remove_track_uuids":
+            for uuid in op["uuids"]:
+                hit = [rec for rec in live if rec[0].m_Uuid.AsString() == uuid]
+                if len(hit) != 1:
+                    raise SystemExit(f"track UUID to remove not found: {uuid}")
                 doomed_tracks.append(hit[0])
         elif kind == "add_tracks":
             for a in op["tracks"]:
@@ -194,6 +206,9 @@ def main():
                     p.SetNet(nets[net])
         elif kind == "move_footprint":
             fp = fps[op["ref"]]
+            if "side" in op and fp.GetLayerName() != op["side"]:
+                assert op["side"] in ("F.Cu", "B.Cu")
+                fp.Flip(fp.GetPosition(), pcbnew.FLIP_DIRECTION_TOP_BOTTOM)
             fp.SetPosition(P(op["x"], op["y"]))
             if "rot" in op:
                 fp.SetOrientationDegrees(op["rot"])

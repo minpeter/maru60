@@ -32,9 +32,11 @@ class Layout:
         self.fps = {f["ref"]: f for f in d["fps"]}
         xs = [e["x1"] for e in d["edges"]] + [e["x2"] for e in d["edges"]]
         ys = [e["y1"] for e in d["edges"]] + [e["y2"] for e in d["edges"]]
-        self.outline = box(min(xs), min(ys), max(xs), max(ys))
+        self.outline = (unary_union([Polygon(o[0], o[1:]) for o in d["board_material"]])
+                        if d.get("board_material") else box(min(xs), min(ys), max(xs), max(ys)))
         self.cu = {L: [] for L in OUTER}          # [geom, net, kind, payload]
         self.pad_holes, self.via_holes = [], []
+        self.pad_hole_nets = []
         self.inner = []                            # (geom, net) on inner layers / all-layer items other than vias and tht pads
         self.smd = []                              # (geom, ref)
         self.courts = {L: {} for L in OUTER}
@@ -43,6 +45,7 @@ class Layout:
                 polys = [Polygon(pl) for pl in p["poly"] if len(pl) >= 3]
                 if p["drill"][0] > 0:
                     self.pad_holes.append(Point(p["x"], p["y"]).buffer(max(p["drill"]) / 2, 24))
+                    self.pad_hole_nets.append(p["net"] if p.get("attr") == 0 else None)
                 else:
                     self.smd.extend((g, f["ref"]) for g in polys)
                 for L in OUTER:
@@ -72,10 +75,12 @@ class Layout:
                     if not isl or len(isl[0]) < 3:
                         continue
                     g = Polygon(isl[0], [h for h in isl[1:] if len(h) >= 3])
+                    if z["net"] == "GND" and layer in self.gnd_planes:
+                        self.gnd_planes[layer].append(g)
                     if layer in OUTER:
                         self.cu[layer].append([g, z["net"], "zone", None])
                     elif z["net"] == "GND" and layer in self.gnd_planes:
-                        self.gnd_planes[layer].append(g)
+                        pass
                     else:
                         self.inner.append((g, z["net"]))
             if z.get("keepout") or not z["net"]:
@@ -154,8 +159,11 @@ class Layout:
         x0, y0 = sx - half, sy - half
         n = int(2 * half / grid) + 1
         win = box(x0, y0, x0 + 2 * half, y0 + 2 * half)
-        local = [c for c in self.cu[layer] if c[0].intersects(win)]
-        holes = [h for h in self.pad_holes if h.intersects(win)]
+        # The route centerline may reach the search boundary. Copper just
+        # outside it still constrains the track width and clearance envelope.
+        probe = win.buffer(max(CLEARANCE, HOLE_CLEARANCE) + width / 2 + 2 * grid)
+        local = [c for c in self.cu[layer] if c[0].intersects(probe)]
+        holes = [h for h in self.pad_holes if h.intersects(probe)]
         infl = CLEARANCE + width / 2
         old_grid = R.GRID
         R.GRID = grid
@@ -167,6 +175,8 @@ class Layout:
             gx, gy = x0 + xx * grid, y0 + yy * grid
             bx0, by0, bx1, by1 = ex.bounds
             blocked |= (gx < bx0) | (gx > bx1) | (gy < by0) | (gy > by1)
+            if self.d.get("board_material"):
+                blocked |= R.raster([win.difference(ex)], x0, y0, n)
             inside = R.raster([g for g in (c[0].buffer(-(width / 2 + 0.01), 4) for c in local if c[1] == net and c[2] != "zone") if not g.is_empty], x0, y0, n)
             blocked &= ~inside
             anchors = {}
@@ -214,6 +224,8 @@ class Layout:
         if len(cc) < 2:
             return []
         g = LineString(cc).buffer(width / 2, 8)
+        if not self.outline.buffer(-0.50).contains(g):
+            return None
         if any(c[1] != net and c[0].distance(g) < MIN_CLEARANCE for c in local) or any(h.distance(g) < HOLE_CLEARANCE - 0.03 for h in holes) \
                 or any(a.distance(g) < MIN_CLEARANCE for a in avoid):
             return None

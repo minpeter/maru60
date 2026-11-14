@@ -133,16 +133,33 @@ def describe(board, caps, net, src, dst, pick=None, with_segments=False):
     return r
 
 
+def led_pins(footprint):
+    """Pin functions of the exact fitted part revisions, not legacy MINI-E."""
+    value = footprint.get("value", "")
+    if value == "SK6812MINI-E-012":
+        pins = {"GND": "1", "DIN": "2", "VDD": "3", "DOUT": "4"}
+    elif value == "SK6805-EC15-001":
+        pins = {"DIN": "1", "VDD": "2", "DOUT": "3", "GND": "4"}
+    else:
+        raise ValueError(f"Unsupported LED pinout: {footprint['ref']} {value}")
+    for pad in footprint["pads"]:
+        fn = pad.get("pinfn", "")
+        if fn in pins and pad["num"] != pins[fn]:
+            raise ValueError(f"LED pin function mismatch: {footprint['ref']} {fn}")
+    return pins
+
+
 def led_chains(board):
     """Each hop as (net at the receiver, source pad, DIN pad, series part at the source or None)."""
     din, dout, series = {}, {}, {}
     for f in board.raw["fps"]:
         if f["ref"].startswith("LED"):
+            pins = led_pins(f)
             for p in f["pads"]:
-                if p["num"] == "1":
-                    din[p["net"]] = f["ref"]
-                if p["num"] == "3":
-                    dout[f["ref"]] = p["net"]
+                if p["num"] == pins["DIN"]:
+                    din[p["net"]] = (f["ref"], p["num"])
+                if p["num"] == pins["DOUT"]:
+                    dout[f["ref"]] = (p["net"], p["num"])
         elif f["ref"].startswith("R") and len(f["pads"]) == 2:
             a, b = f["pads"]
             for x, y in ((a, b), (b, a)):
@@ -150,6 +167,7 @@ def led_chains(board):
     chains = {}
     for name, start, drv in (("key", "KEY_RGB_5V", ("R110", "2")), ("underglow", "UNDERGLOW_5V", ("R111", "2"))):
         hops, n, src = [], start, drv
+        visited = set()
         while True:
             pre = None
             if n not in din:
@@ -161,9 +179,13 @@ def led_chains(board):
                         break
             if n not in din:
                 break
-            hops.append((n, src, (din[n], "1"), pre))
-            src = (din[n], "3")
-            n = dout[din[n]]
+            dst = din[n]
+            if dst in visited:
+                raise ValueError(f"LED chain cycle at {dst}")
+            visited.add(dst)
+            hops.append((n, src, dst, pre))
+            next_net, output_pin = dout[dst[0]]
+            src, n = (dst[0], output_pin), next_net
         chains[name] = hops
     return chains
 
@@ -252,21 +274,50 @@ def main():
                 return False
             return True
         return pick
-    L30_WIN, L30_ALT, L75_TOP = (16.49, 42.22), (19.99, 38.22), (11.33, 52.38)
-    variants = {}
-    for label, p30, p75 in (
-        ("default: LED30 window site, LED75 on B.Cu", site("LED30", near=L30_WIN), site("LED75", layer="B.Cu")),
-        ("stepped Caps: LED30 alt site, LED75 on B.Cu", site("LED30", near=L30_ALT), site("LED75", layer="B.Cu")),
-        ("LED75 on its F.Cu window pads, LED30 window site", site("LED30", near=L30_WIN), site("LED75", layer="F.Cu")),
-        ("LED75 on its F.Cu window pads, LED30 alt site", site("LED30", near=L30_ALT), site("LED75", layer="F.Cu")),
-    ):
-        both = lambda p, a=p30, b=p75: a(p) and b(p)
-        variants[label] = [
-            describe(board, caps, "KEY_RGB_CHAIN_29", ("LED16", "3"), ("LED30", "1"), both),
-            describe(board, caps, "KEY_RGB_CHAIN_30", ("LED30", "3"), ("LED75", "1"), both),
-            describe(board, caps, "KEY_RGB_CHAIN_31", ("LED75", "3"), ("LED31", "1"), both),
-        ]
-    g["led"]["caps_variants"] = variants
+    mixed_reverse = any(f.get("value") == "SK6812MINI-E-012" for f in board.raw["fps"])
+    if mixed_reverse:
+        # Caps/Shift retain both switch choices with one peripheral LED site.
+        # Enumerate every source/receiver land combination of the remaining
+        # exclusive Backspace LED sites. Unfitted branch copper remains a stub.
+        g["led"]["caps_variants"] = {}
+        g["led"]["population_variants"] = {}
+        from itertools import product
+        for chain, hops in led_chains(board).items():
+            for net, src, dst, pre in hops:
+                source = pre["from"] if pre else src
+                options = []
+                for ref, pin in (source, dst):
+                    sites = [p for p in board.fps[ref]["pads"] if p["num"] == pin]
+                    options.append(sites)
+                if max(map(len, options)) < 2:
+                    continue
+                for index, (sp, dp) in enumerate(product(*options)):
+                    choices = {(source[0], source[1]): (sp["x"], sp["y"]), (dst[0], dst[1]): (dp["x"], dp["y"])}
+                    def pick(p, choices=choices):
+                        xy = choices.get((p["ref"], p["num"]))
+                        return xy is None or math.hypot(p["x"]-xy[0], p["y"]-xy[1]) < 1e-5
+                    row = describe(board, caps, net, src, dst, pick)
+                    if pre:
+                        row["series_at_source"] = {"ref": pre["ref"], "ohm": pre["ohm"], "source_side": describe(board, caps, pre["net"], pre["from"], pre["to"], pick)}
+                    row["population_scope"] = "one LED per reference; source/receiver land pair; optical fit not qualified"
+                    g["led"]["population_variants"][f"{chain}/{net}/lands-{index}"] = row
+        g["led"]["model_status"] = "Geometry only: mixed LED analog and inner-layer transmission-line models are not qualified."
+    else:
+        L30_WIN, L30_ALT, L75_TOP = (16.49, 42.22), (19.99, 38.22), (11.33, 52.38)
+        variants = {}
+        for label, p30, p75 in (
+            ("default: LED30 window site, LED75 on B.Cu", site("LED30", near=L30_WIN), site("LED75", layer="B.Cu")),
+            ("stepped Caps: LED30 alt site, LED75 on B.Cu", site("LED30", near=L30_ALT), site("LED75", layer="B.Cu")),
+            ("LED75 on its F.Cu window pads, LED30 window site", site("LED30", near=L30_WIN), site("LED75", layer="F.Cu")),
+            ("LED75 on its F.Cu window pads, LED30 alt site", site("LED30", near=L30_ALT), site("LED75", layer="F.Cu")),
+        ):
+            both = lambda p, a=p30, b=p75: a(p) and b(p)
+            variants[label] = [
+                describe(board, caps, "KEY_RGB_CHAIN_29", ("LED16", "3"), ("LED30", "1"), both),
+                describe(board, caps, "KEY_RGB_CHAIN_30", ("LED30", "3"), ("LED75", "1"), both),
+                describe(board, caps, "KEY_RGB_CHAIN_31", ("LED75", "3"), ("LED31", "1"), both),
+            ]
+        g["led"]["caps_variants"] = variants
     g["led"]["buffers"] = {
         "KEY_RGB": describe(board, caps, "KEY_RGB", ("U1", "32"), ("U5", "2")),
         "KEY_RGB_5V_BUF": describe(board, caps, "KEY_RGB_5V_BUF", ("U5", "4"), ("R110", "1")),
@@ -332,7 +383,7 @@ def main():
                              "layers": sorted({t["layer"] for t in board.by_net["BUCK_SW"]} | {l for p in board.pads_by_net["BUCK_SW"] for l in p["layers"] if l.endswith(".Cu")})}
     prox = {}
     for net, ts in board.by_net.items():
-        if net in ("GND", "BUCK_SW", "BUCK_BST", "+4V_REG", "VBUS_PROTECTED_RAW", ""):
+        if net in ("GND", "BUCK_SW", "BUCK_BST", "+4V_REG", "VBUS_PROTECTED_RAW", "") or not ts:
             continue
         d = min(LineString([(t["x1"], t["y1"]), (t["x2"], t["y2"])]).distance(sw) - t["w"] / 2 for t in ts)
         if d < 6.0:

@@ -1,0 +1,60 @@
+{
+  "board_sha256": "875ee106148f266e6fc24f938eddfaef901e4a263cc295df41cfb3e270a8301d",
+  "geometry_sha256": "9359f5505ebaee21363d35e8ebf7cbcf4857b7103d6ddb86cdc66652954e21d7",
+  "pdn_cases": [
+    {
+      "population": "LED14-0_LED15-1",
+      "selected_sites": {
+        "LED14": 0,
+        "LED15": 1
+      },
+      "max_LED_DC_drop_mV": 66.55,
+      "segments_exceeding_empirical_10C_screen": 0
+    },
+    {
+      "population": "LED14-1_LED15-0",
+      "selected_sites": {
+        "LED14": 1,
+        "LED15": 0
+      },
+      "max_LED_DC_drop_mV": 64.21,
+      "segments_exceeding_empirical_10C_screen": 0
+    },
+    {
+      "population": "LED14-1_LED15-1",
+      "selected_sites": {
+        "LED14": 1,
+        "LED15": 1
+      },
+      "max_LED_DC_drop_mV": 65.32,
+      "segments_exceeding_empirical_10C_screen": 0
+    },
+    {
+      "population": "primary",
+      "selected_sites": {
+        "LED14": 0,
+        "LED15": 0
+      },
+      "max_LED_DC_drop_mV": 65.44,
+      "segments_exceeding_empirical_10C_screen": 0
+    }
+  ],
+  "usb_delay": {
+    "J1_to_RP2350_pins_ns": 0.427,
+    "J1_to_27R_ns": 0.337,
+    "skew_DP_minus_DM_ps": -46.75,
+    "limit_ns": 1.0
+  },
+  "usb_limitations": "Assumed drivers/loads; host 4 ns corner rings, and automated edge metrics need review. Device 50 pF cases and propagation are screens, not USB certification.",
+  "crystal_frequency_offset_ppm_range": [
+    -4.9,
+    36.3
+  ],
+  "crystal_limitations": "Amplifier gain and pin capacitance assumed; startup and measured drive remain unqualified",
+  "led_model_status": "Geometry only: mixed LED analog and inner-layer transmission-line models are not qualified.",
+  "LED_chain_counts": {
+    "key": 64,
+    "underglow": 12,
+    "alternate_hops": 8
+  }
+}

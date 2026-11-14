@@ -1,0 +1,81 @@
+{
+  "scope": "GND geometry comparison only; not an electromagnetic measurement or proof of transient behavior",
+  "baseline_geometry_sha256": "b0bab5a230ec272afbc1d5a4b94a751fce7024f2ba2fc58a1199f8d72254b76c",
+  "candidate_geometry_sha256": "9359f5505ebaee21363d35e8ebf7cbcf4857b7103d6ddb86cdc66652954e21d7",
+  "nets": {
+    "XIN": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 5.163104299994737e-05,
+      "segments_with_new_gap": []
+    },
+    "XOUT": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 4.996884413674008e-09,
+      "segments_with_new_gap": []
+    },
+    "VREG_AVDD": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 0.0,
+      "segments_with_new_gap": []
+    },
+    "USB_DM": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 3.461993708383875e-08,
+      "segments_with_new_gap": []
+    },
+    "USB_DP": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 0.0,
+      "segments_with_new_gap": []
+    },
+    "QSPI_SD3": {
+      "new_uncovered_centerline_mm": 1.9548156325403914e-08,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 4.5841076593253874e-08,
+      "segments_with_new_gap": []
+    },
+    "QSPI_SCLK": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 1.6470743122546141e-06,
+      "segments_with_new_gap": []
+    },
+    "QSPI_SD0": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 4.043117827466668e-08,
+      "segments_with_new_gap": []
+    },
+    "QSPI_SD2": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 1.85940672581264e-17,
+      "segments_with_new_gap": []
+    },
+    "QSPI_SD1": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 0.0,
+      "segments_with_new_gap": []
+    },
+    "QSPI_SS": {
+      "new_uncovered_centerline_mm": 7.105427357601002e-15,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 1.200317500806181e-07,
+      "segments_with_new_gap": []
+    },
+    "USB_DP_CONN": {
+      "new_uncovered_centerline_mm": 1.3908122113577198e-09,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 0.07845369380374657,
+      "segments_with_new_gap": []
+    },
+    "USB_DM_CONN": {
+      "new_uncovered_centerline_mm": 1.5268689608483394e-07,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 0.0035477483843327547,
+      "segments_with_new_gap": []
+    },
+    "XTAL_OUT": {
+      "new_uncovered_centerline_mm": 0.0,
+      "lost_ground_in_trace_plus_0p15mm_corridor_mm2": 0.0,
+      "segments_with_new_gap": []
+    }
+  },
+  "maximum_new_centerline_gap_total_mm": 1.5268689608483394e-07,
+  "comparison_resolution_mm": 1e-06,
+  "resolution_note": "One native KiCad coordinate unit (1 nm); raw floating point intersection differences are retained above.",
+  "no_new_centerline_loss_at_native_resolution": true
+}

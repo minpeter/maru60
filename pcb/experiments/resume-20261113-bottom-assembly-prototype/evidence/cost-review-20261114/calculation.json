@@ -1,0 +1,113 @@
+{
+  "status": "Cost screen only; no CAD/BOM substitutions; no supplier quote or manufacturing release",
+  "basis": "5 fully assembled boards; catalog tiers plus published fixed attrition quantities; USD/KRW 1400 and 10% tax reserve are assumptions",
+  "target_krw": 250000,
+  "pretax_usd_ceiling": 162.3377,
+  "current": {
+    "parts_usd": 153.1206,
+    "parts_with_tax_reserve_krw": 235806,
+    "placements_per_board": 338,
+    "unique_parts": 56,
+    "library_types": {
+      "basic": 17,
+      "extended": 39
+    },
+    "standard_setup_stencil_feeders_usd": 119.45,
+    "economic_setup_stencil_extended_usd_hypothetical": 129.44,
+    "economic_eligible_as_is": false,
+    "numbered_pad_proxy_per_board": 978,
+    "smt_pad_proxy_usd": 7.824,
+    "parts_plus_standard_fixed_only_krw": 419759,
+    "floor_if_L2_free_krw": 356352,
+    "stock_shortages": [
+      {
+        "code": "C962978",
+        "required": 7,
+        "stock": 2
+      }
+    ]
+  },
+  "expansion_omission_option": {
+    "applied": false,
+    "requires_user_feature_choice": true,
+    "excluded_refs": [
+      "C128",
+      "C129",
+      "J3",
+      "R128",
+      "R130",
+      "R131",
+      "R132",
+      "R133",
+      "R134",
+      "R135",
+      "R140",
+      "R141",
+      "R142",
+      "R143",
+      "R144",
+      "R145",
+      "U11",
+      "U12",
+      "U13"
+    ],
+    "eliminated_part_codes": [
+      "C15298",
+      "C160409",
+      "C21190",
+      "C23153",
+      "C2864432",
+      "C962978"
+    ],
+    "scenario": {
+      "parts_usd": 132.327,
+      "parts_with_tax_reserve_krw": 203784,
+      "placements_per_board": 319,
+      "unique_parts": 50,
+      "library_types": {
+        "basic": 15,
+        "extended": 35
+      },
+      "standard_setup_stencil_feeders_usd": 110.27,
+      "economic_setup_stencil_extended_usd_hypothetical": 117.16,
+      "economic_eligible_as_is": false,
+      "numbered_pad_proxy_per_board": 900,
+      "smt_pad_proxy_usd": 7.2,
+      "parts_plus_standard_fixed_only_krw": 373599,
+      "floor_if_L2_free_krw": 310193,
+      "stock_shortages": []
+    },
+    "parts_savings_usd": 20.7936,
+    "standard_fixed_savings_usd": 9.18,
+    "parts_and_fixed_savings_krw": 46159,
+    "shared_parts_remaining": [
+      {
+        "code": "C1591",
+        "refs_remaining": [
+          "C138",
+          "C139"
+        ]
+      },
+      {
+        "code": "C25803",
+        "refs_remaining": [
+          "R126"
+        ]
+      }
+    ]
+  },
+  "budget_allocation_krw_targets_not_quotes": {
+    "pcb_fabrication": 50000,
+    "parts": 70000,
+    "assembly_all_fees": 80000,
+    "shipping": 40000,
+    "contingency": 10000
+  },
+  "limitations": [
+    "Cost floors omit fabrication, shipping, SMT labor, X-ray, fixtures, handling, storage and special reverse-mount operations; they are not landed quotes.",
+    "Free-L2 cases are deliberately optimistic impossibility screens for this supplier/fee structure, not viable designs or market-wide lower bounds.",
+    "Economic fixed fees are hypothetical because both installed LED codes are Standard Only.",
+    "Stock and prices are snapshots; price publication does not make insufficient-stock parts orderable.",
+    "Numbered pad count is a billing proxy, not a supplier joint-count quote; repeated USB shell pads may be billed differently."
+  ]
+}

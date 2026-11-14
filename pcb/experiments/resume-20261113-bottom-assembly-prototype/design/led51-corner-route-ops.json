@@ -1,0 +1,82 @@
+{
+  "reason": "Move two inner-layer corners 0.025 mm in X and Y away from a +4V_LED via; exact 0.155 mm clearance screen passed; native DRC required",
+  "ops": [
+    {
+      "op": "add_tracks",
+      "tracks": [
+        {
+          "x1": 148.66,
+          "y1": 76.865,
+          "x2": 150.985,
+          "y2": 75.79,
+          "w": 0.15,
+          "layer": "In2.Cu",
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        },
+        {
+          "x1": 150.985,
+          "y1": 75.79,
+          "x2": 151.38500000000002,
+          "y2": 75.39,
+          "w": 0.15,
+          "layer": "In2.Cu",
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        },
+        {
+          "x1": 151.38500000000002,
+          "y1": 75.39,
+          "x2": 152.06,
+          "y2": 72.865,
+          "w": 0.15,
+          "layer": "In2.Cu",
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        },
+        {
+          "x1": 152.06,
+          "y1": 72.865,
+          "x2": 150.86,
+          "y2": 70.465,
+          "w": 0.15,
+          "layer": "In2.Cu",
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        },
+        {
+          "x1": 148.66,
+          "y1": 76.865,
+          "x2": 148.66,
+          "y2": 76.87875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        },
+        {
+          "x1": 150.86,
+          "y1": 70.465,
+          "x2": 150.9,
+          "y2": 70.465,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        },
+        {
+          "x1": 148.66,
+          "y1": 76.865,
+          "x2": 148.66,
+          "y2": 76.87875,
+          "w": 0.15,
+          "layer": "In2.Cu",
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        },
+        {
+          "x1": 150.86,
+          "y1": 70.465,
+          "x2": 150.9,
+          "y2": 70.465,
+          "w": 0.15,
+          "layer": "In2.Cu",
+          "net": "KEY_RGB_CHAIN_51_SRC"
+        }
+      ]
+    }
+  ]
+}

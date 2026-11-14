@@ -1,0 +1,561 @@
+{
+ "spec": {
+  "VCRS": [
+   1.3,
+   2.0
+  ],
+  "TFR_ns": [
+   4,
+   20
+  ],
+  "TFF_ns": [
+   4,
+   20
+  ],
+  "TFRFM_pct": [
+   90,
+   111.11
+  ],
+  "ZDRV_ohm": [
+   28,
+   44
+  ],
+  "TDJ1_ns": 3.5,
+  "TDJ2_ns": 4.0,
+  "TJR1_ns": 18.5,
+  "TJR2_ns": 9.0,
+  "VDI_V": 0.2,
+  "VCM_V": [
+   0.8,
+   2.5
+  ],
+  "device_trace_delay_ns": 1.0
+ },
+ "impedance": {
+  "w0.25_gap0.20": {
+   "w_mm": 0.25,
+   "gap_mm": 0.2,
+   "Z_odd": 47.5613,
+   "Z_even": 68.8749,
+   "Z_diff": 95.1226,
+   "Z_common": 34.4374,
+   "er_eff_odd": 2.9939,
+   "er_eff_even": 3.5215,
+   "delay_odd_ps_per_mm": 5.7717,
+   "delay_even_ps_per_mm": 6.2595,
+   "C11_pF_per_mm": 0.1061,
+   "Cm_pF_per_mm": 0.0152,
+   "L11_nH_per_mm": 0.3528,
+   "Lm_nH_per_mm": 0.0783,
+   "kC": 0.1436,
+   "kL": 0.222
+  },
+  "w0.25_gap0.16": {
+   "w_mm": 0.25,
+   "gap_mm": 0.16,
+   "Z_odd": 45.0952,
+   "Z_even": 70.5959,
+   "Z_diff": 90.1904,
+   "Z_common": 35.298,
+   "er_eff_odd": 2.9811,
+   "er_eff_even": 3.5175,
+   "delay_odd_ps_per_mm": 5.7592,
+   "delay_even_ps_per_mm": 6.256,
+   "C11_pF_per_mm": 0.1082,
+   "Cm_pF_per_mm": 0.0195,
+   "L11_nH_per_mm": 0.3507,
+   "Lm_nH_per_mm": 0.091,
+   "kC": 0.1807,
+   "kL": 0.2594
+  },
+  "w0.25_gap0.25": {
+   "w_mm": 0.25,
+   "gap_mm": 0.25,
+   "Z_odd": 49.8401,
+   "Z_even": 67.1403,
+   "Z_diff": 99.6802,
+   "Z_common": 33.5701,
+   "er_eff_odd": 3.014,
+   "er_eff_even": 3.5211,
+   "delay_odd_ps_per_mm": 5.791,
+   "delay_even_ps_per_mm": 6.2592,
+   "C11_pF_per_mm": 0.1047,
+   "Cm_pF_per_mm": 0.0115,
+   "L11_nH_per_mm": 0.3544,
+   "Lm_nH_per_mm": 0.0658,
+   "kC": 0.1097,
+   "kL": 0.1857
+  },
+  "w0.15_gap0.20": {
+   "w_mm": 0.15,
+   "gap_mm": 0.2,
+   "Z_odd": 58.3115,
+   "Z_even": 87.3849,
+   "Z_diff": 116.6231,
+   "Z_common": 43.6925,
+   "er_eff_odd": 2.9544,
+   "er_eff_even": 3.4271,
+   "delay_odd_ps_per_mm": 5.7335,
+   "delay_even_ps_per_mm": 6.1751,
+   "C11_pF_per_mm": 0.0845,
+   "Cm_pF_per_mm": 0.0138,
+   "L11_nH_per_mm": 0.437,
+   "Lm_nH_per_mm": 0.1026,
+   "kC": 0.1637,
+   "kL": 0.2349
+  },
+  "w0.15_gap0.50": {
+   "w_mm": 0.15,
+   "gap_mm": 0.5,
+   "Z_odd": 68.6852,
+   "Z_even": 78.098,
+   "Z_diff": 137.3703,
+   "Z_common": 39.049,
+   "er_eff_odd": 3.0527,
+   "er_eff_even": 3.3922,
+   "delay_odd_ps_per_mm": 5.828,
+   "delay_even_ps_per_mm": 6.1436,
+   "C11_pF_per_mm": 0.0818,
+   "Cm_pF_per_mm": 0.0031,
+   "L11_nH_per_mm": 0.44,
+   "Lm_nH_per_mm": 0.0398,
+   "kC": 0.0378,
+   "kL": 0.0903
+  },
+  "single_0.15": {
+   "w_mm": 0.15,
+   "C_pF_per_mm": 0.08162885104620435,
+   "L_nH_per_mm": 0.44023753570336727,
+   "Z0_ohm": 73.43814402022585,
+   "er_eff": 3.2297741820012793,
+   "delay_ps_per_mm": 5.994671319336718
+  },
+  "single_0.25": {
+   "w_mm": 0.25,
+   "C_pF_per_mm": 0.10287633495444258,
+   "L_nH_per_mm": 0.3571564156313298,
+   "Z0_ohm": 58.921186815637135,
+   "er_eff": 3.3022910362258346,
+   "delay_ps_per_mm": 6.061595750758772
+  }
+ },
+ "cases": {
+  "device TX, test load 50 pF at J1 (Figure 7-9), ramp 4 ns": {
+   "VCRS_min_V": 1.63,
+   "VCRS_max_V": 1.672,
+   "TFR_ns": 4.72,
+   "TFF_ns": 4.73,
+   "TFRFM_pct": 99.8,
+   "DP_rise_fall_ns": [
+    4.8,
+    4.83
+   ],
+   "DM_rise_fall_ns": [
+    4.64,
+    4.63
+   ],
+   "levels_V": {
+    "DP": [
+     0.0,
+     3.3
+    ],
+    "DM": [
+     0.0,
+     3.3
+    ]
+   },
+   "jitter_pkpk_ns": 0.013,
+   "jitter_next_transition_ns": [
+    -0.013,
+    0.013
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 83.12,
+   "eye_width_UI": 0.997,
+   "overshoot_V": -0.008,
+   "undershoot_V": 0.0
+  },
+  "device TX, test load 50 pF at J1 (Figure 7-9), ramp 8 ns": {
+   "VCRS_min_V": 1.645,
+   "VCRS_max_V": 1.657,
+   "TFR_ns": 7.17,
+   "TFF_ns": 7.17,
+   "TFRFM_pct": 99.9,
+   "DP_rise_fall_ns": [
+    7.24,
+    7.25
+   ],
+   "DM_rise_fall_ns": [
+    7.1,
+    7.09
+   ],
+   "levels_V": {
+    "DP": [
+     0.0,
+     3.3
+    ],
+    "DM": [
+     0.0,
+     3.3
+    ]
+   },
+   "jitter_pkpk_ns": 0.025,
+   "jitter_next_transition_ns": [
+    -0.025,
+    0.025
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 82.85,
+   "eye_width_UI": 0.994,
+   "overshoot_V": -0.008,
+   "undershoot_V": 0.0
+  },
+  "device TX, test load 50 pF at J1 (Figure 7-9), ramp 16 ns": {
+   "VCRS_min_V": 1.65,
+   "VCRS_max_V": 1.652,
+   "TFR_ns": 13.08,
+   "TFF_ns": 13.08,
+   "TFRFM_pct": 100.0,
+   "DP_rise_fall_ns": [
+    13.16,
+    13.15
+   ],
+   "DM_rise_fall_ns": [
+    13.01,
+    13.02
+   ],
+   "levels_V": {
+    "DP": [
+     0.0,
+     3.3
+    ],
+    "DM": [
+     0.0,
+     3.3
+    ]
+   },
+   "jitter_pkpk_ns": 0.048,
+   "jitter_next_transition_ns": [
+    -0.048,
+    0.048
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 82.44,
+   "eye_width_UI": 0.989,
+   "overshoot_V": -0.008,
+   "undershoot_V": 0.0
+  },
+  "device TX, 1 m cable, eye at host, ramp 4 ns": {
+   "VCRS_min_V": 1.63,
+   "VCRS_max_V": 1.672,
+   "TFR_ns": 3.3,
+   "TFF_ns": 3.3,
+   "TFRFM_pct": 100.0,
+   "DP_rise_fall_ns": [
+    3.31,
+    3.31
+   ],
+   "DM_rise_fall_ns": [
+    3.29,
+    3.29
+   ],
+   "levels_V": {
+    "DP": [
+     0.0,
+     3.3
+    ],
+    "DM": [
+     0.0,
+     3.3
+    ]
+   },
+   "jitter_pkpk_ns": 0.011,
+   "jitter_next_transition_ns": [
+    -0.011,
+    0.011
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 83.11,
+   "eye_width_UI": 0.997,
+   "overshoot_V": 0.367,
+   "undershoot_V": 0.374
+  },
+  "device TX, 1 m cable, eye at host, ramp 8 ns": {
+   "VCRS_min_V": 1.64,
+   "VCRS_max_V": 1.662,
+   "TFR_ns": 5.99,
+   "TFF_ns": 5.99,
+   "TFRFM_pct": 100.0,
+   "DP_rise_fall_ns": [
+    6.0,
+    6.0
+   ],
+   "DM_rise_fall_ns": [
+    5.97,
+    5.97
+   ],
+   "levels_V": {
+    "DP": [
+     0.0,
+     3.3
+    ],
+    "DM": [
+     0.0,
+     3.3
+    ]
+   },
+   "jitter_pkpk_ns": 0.022,
+   "jitter_next_transition_ns": [
+    -0.022,
+    0.022
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 82.97,
+   "eye_width_UI": 0.996,
+   "overshoot_V": 0.355,
+   "undershoot_V": 0.362
+  },
+  "device TX, 1 m cable, eye at host 150 pF, ramp 8 ns": {
+   "VCRS_min_V": 1.643,
+   "VCRS_max_V": 1.659,
+   "TFR_ns": 12.2,
+   "TFF_ns": 12.21,
+   "TFRFM_pct": 100.0,
+   "DP_rise_fall_ns": [
+    12.21,
+    12.25
+   ],
+   "DM_rise_fall_ns": [
+    12.19,
+    12.16
+   ],
+   "levels_V": {
+    "DP": [
+     0.0,
+     3.3
+    ],
+    "DM": [
+     0.0,
+     3.3
+    ]
+   },
+   "jitter_pkpk_ns": 0.034,
+   "jitter_next_transition_ns": [
+    -0.033,
+    0.033
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.258,
+   "eye_width_above_VDI_ns": 82.73,
+   "eye_width_UI": 0.993,
+   "overshoot_V": 0.157,
+   "undershoot_V": 0.165
+  },
+  "host TX, 1 m cable, eye at RP2350 pins, ramp 4 ns": {
+   "VCRS_min_V": 1.642,
+   "VCRS_max_V": 1.719,
+   "TFR_ns": 16.18,
+   "TFF_ns": 3.12,
+   "TFRFM_pct": 519.3,
+   "DP_rise_fall_ns": [
+    29.32,
+    3.19
+   ],
+   "DM_rise_fall_ns": [
+    3.04,
+    3.05
+   ],
+   "levels_V": {
+    "DP": [
+     0.0,
+     3.3
+    ],
+    "DM": [
+     0.0,
+     3.3
+    ]
+   },
+   "jitter_pkpk_ns": 0.075,
+   "jitter_next_transition_ns": [
+    -0.075,
+    0.075
+   ],
+   "jitter_paired_ns": [
+    -0.001,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.145,
+   "eye_width_above_VDI_ns": 83.05,
+   "eye_width_UI": 0.997,
+   "overshoot_V": 0.386,
+   "undershoot_V": 0.394
+  },
+  "host TX, 1 m cable, eye at RP2350 pins, ramp 8 ns": {
+   "VCRS_min_V": 1.665,
+   "VCRS_max_V": 1.696,
+   "TFR_ns": 5.95,
+   "TFF_ns": 5.92,
+   "TFRFM_pct": 100.5,
+   "DP_rise_fall_ns": [
+    6.11,
+    6.06
+   ],
+   "DM_rise_fall_ns": [
+    5.78,
+    5.78
+   ],
+   "levels_V": {
+    "DP": [
+     0.0,
+     3.3
+    ],
+    "DM": [
+     0.0,
+     3.3
+    ]
+   },
+   "jitter_pkpk_ns": 0.15,
+   "jitter_next_transition_ns": [
+    -0.15,
+    0.15
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.157,
+   "eye_width_above_VDI_ns": 82.93,
+   "eye_width_UI": 0.995,
+   "overshoot_V": 0.371,
+   "undershoot_V": 0.379
+  },
+  "host TX, 1 m cable, eye at RP2350 pins, ramp 16 ns": {
+   "VCRS_min_V": 1.675,
+   "VCRS_max_V": 1.686,
+   "TFR_ns": 12.38,
+   "TFF_ns": 12.43,
+   "TFRFM_pct": 99.6,
+   "DP_rise_fall_ns": [
+    12.65,
+    12.76
+   ],
+   "DM_rise_fall_ns": [
+    12.11,
+    12.1
+   ],
+   "levels_V": {
+    "DP": [
+     0.0,
+     3.3
+    ],
+    "DM": [
+     0.0,
+     3.3
+    ]
+   },
+   "jitter_pkpk_ns": 0.3,
+   "jitter_next_transition_ns": [
+    -0.3,
+    0.3
+   ],
+   "jitter_paired_ns": [
+    -0.001,
+    0.001
+   ],
+   "eye_height_at_centre_V": 3.155,
+   "eye_width_above_VDI_ns": 82.22,
+   "eye_width_UI": 0.987,
+   "overshoot_V": 0.147,
+   "undershoot_V": 0.155
+  }
+ },
+ "delay": {
+  "USB_DP_CONN": {
+   "coupled_mm": 39.62,
+   "breakout_mm": 7.82,
+   "vias": 4,
+   "phy_vias": 0,
+   "delay_ps_odd_mode": 378.6,
+   "delay_ps_single_ended_upper": 390.1
+  },
+  "USB_DM_CONN": {
+   "coupled_mm": 39.3,
+   "breakout_mm": 9.38,
+   "vias": 4,
+   "phy_vias": 2,
+   "delay_ps_odd_mode": 437.6,
+   "delay_ps_single_ended_upper": 448.9
+  },
+  "skew_ps": -59.0,
+  "simulated": {
+   "J1_to_RP2350_pins_ns": 0.427,
+   "J1_to_27R_ns": 0.337,
+   "skew_DP_minus_DM_ps": -46.75,
+   "limit_ns": 1.0
+  }
+ },
+ "pair_model_sections": [
+  {
+   "breakout_dp_mm": 3.07,
+   "breakout_dm_mm": 1.78,
+   "vias_dp": 1,
+   "vias_dm": 1
+  },
+  {
+   "coupled_mm": 12.68,
+   "extra_dp_mm": 0.28,
+   "extra_dm_mm": 0.0
+  },
+  {
+   "breakout_dp_mm": 0,
+   "breakout_dm_mm": 0,
+   "vias_dp": 1,
+   "vias_dm": 1
+  },
+  {
+   "coupled_mm": 7.02,
+   "extra_dp_mm": 0.0,
+   "extra_dm_mm": 0.28
+  },
+  {
+   "breakout_dp_mm": 0,
+   "breakout_dm_mm": 0,
+   "vias_dp": 1,
+   "vias_dm": 1
+  },
+  {
+   "coupled_mm": 19.32,
+   "extra_dp_mm": 0.32,
+   "extra_dm_mm": 0.0
+  },
+  {
+   "breakout_dp_mm": 0.74,
+   "breakout_dm_mm": 0.86,
+   "vias_dp": 1,
+   "vias_dm": 1
+  }
+ ]
+}

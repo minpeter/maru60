@@ -40,6 +40,35 @@ docker run --rm -v "$PWD/pcb/tools/signal_integrity/decks:/decks:ro" -v "$PWD/bu
 
 ## Files
 
+### Explicit candidate inputs
+
+`run_candidate.py GEOMETRY BOARD WORKDIR STEP` binds each module to the supplied
+geometry and writes decks, waveforms, plots and provenance under `WORKDIR`.
+Run `extract_geometry` first, then `sim_usb`, `sim_xtal`, `sim_matrix`,
+`check_misc` and `sim_led`. This avoids overwriting the historical order
+candidate's report. The runner records board, geometry and source-code hashes;
+it does not label the whole board qualified. See the
+[routed MCU candidate reproduction commands](../../experiments/resume-20261113-mcu-near-usb-zero-opens/REPRODUCE.md).
+
+The route extractor counts every used physical via barrel once, including
+outer-to-inner excursions. It uses a conservative full-barrel lumped model
+for partially used barrels. Inner-layer trace parameters remain approximations
+using the outer-layer per-mm model, not a field-solved inner-layer qualification.
+
+The ngspice runner rejects aborted analyses (including exit-zero partial data),
+nonzero exit status, and empty or nonfinite waveforms. The deck explicitly exits
+after writing its output. Numerical-zero route lengths (≤1e-9 mm, 1000× below
+KiCad's grid) become junctions instead of near-singular LC ladders. No automatic
+solver retry is used. The MCU candidate preserves the failed decks/logs and a
+timestep-halving check of the corrected case; electrical thresholds are unchanged.
+
+The inherited LED matrix-crosstalk scenarios use historical length/gap envelopes.
+On a relocated candidate, they are sensitivity probes, not fresh neighbor extraction; consult that
+candidate's report. Stub branches are assigned in source-to-destination order,
+so their lengths do not depend on Python's hash seed. Set `MARU60_SI_WORKERS=4`
+to run independent LED sweep/screen corners concurrently. Each corner has its
+own deck and log; a timeout removes only that run's container.
+
 | File | What it does |
 | --- | --- |
 | `Dockerfile` | Debian bookworm + ngspice 39 |

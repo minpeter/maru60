@@ -1,0 +1,1900 @@
+{
+ "constants": {
+  "rho20_ohm_mm": 1.72e-05,
+  "outer_um": 35,
+  "inner_um": 15.2,
+  "via_plating_um_assumed": 20,
+  "via_resistance_mohm": 1.622
+ },
+ "self_check": {
+  "computed_ohm": 0.098286,
+  "hand_ohm": 0.098286
+ },
+ "provenance": {
+  "geometry": "pcb/experiments/resume-20261113-bottom-assembly-prototype/evidence/final-geometry.json",
+  "geometry_sha256": "9359f5505ebaee21363d35e8ebf7cbcf4857b7103d6ddb86cdc66652954e21d7",
+  "tool_sha256": "5dce6790cc97020f3fc18398263e8660048856ee8830922d626ffead48c53a8b",
+  "selected_led_sites": {
+   "LED14": 0,
+   "LED15": 1
+  }
+ },
+ "limitations": [
+  "Supply-path DC approximation; not PWM, inrush, thermal, or fabrication qualification",
+  "Ground-return impedance omitted; pads and individual zone islands equipotential",
+  "Via barrel model lumps inner-layer connections at the top node; internal span resistance approximated",
+  "Run every mutually exclusive LED population separately; default site is nearest footprint origin"
+ ],
+ "led_population": {
+  "LED17": {
+   "num": "3",
+   "x": 41.7225,
+   "y": 36.778749999999995
+  },
+  "LED67": {
+   "num": "2",
+   "x": 218.52499999999998,
+   "y": 18.974999999999998
+  },
+  "LED34": {
+   "num": "3",
+   "x": 102.835,
+   "y": 53.12875
+  },
+  "LED76": {
+   "num": "3",
+   "x": 258.428749,
+   "y": 63.21875
+  },
+  "LED57": {
+   "num": "3",
+   "x": 40.9225,
+   "y": 91.22874999999999
+  },
+  "LED29": {
+   "num": "3",
+   "x": 274.28499999999997,
+   "y": 34.07875
+  },
+  "LED39": {
+   "num": "3",
+   "x": 198.08499999999998,
+   "y": 53.12875
+  },
+  "LED6": {
+   "num": "3",
+   "x": 107.5975,
+   "y": 15.028749999999999
+  },
+  "LED74": {
+   "num": "2",
+   "x": 278.97499999999997,
+   "y": 75.02499999999999
+  },
+  "LED38": {
+   "num": "3",
+   "x": 179.035,
+   "y": 53.12875
+  },
+  "LED72": {
+   "num": "2",
+   "x": 172.525,
+   "y": 77.475
+  },
+  "LED60": {
+   "num": "3",
+   "x": 226.66,
+   "y": 91.22874999999999
+  },
+  "LED54": {
+   "num": "3",
+   "x": 249.60375,
+   "y": 70.92875
+  },
+  "LED51": {
+   "num": "3",
+   "x": 188.56,
+   "y": 72.17875
+  },
+  "LED5": {
+   "num": "3",
+   "x": 88.5475,
+   "y": 15.028749999999999
+  },
+  "LED66": {
+   "num": "2",
+   "x": 172.525,
+   "y": 18.974999999999998
+  },
+  "LED65": {
+   "num": "2",
+   "x": 115.52499999999999,
+   "y": 18.974999999999998
+  },
+  "LED49": {
+   "num": "3",
+   "x": 147.76,
+   "y": 75.87875
+  },
+  "LED73": {
+   "num": "2",
+   "x": 219.52499999999998,
+   "y": 76.475
+  },
+  "LED27": {
+   "num": "3",
+   "x": 231.42249999999999,
+   "y": 34.07875
+  },
+  "LED30": {
+   "num": "3",
+   "x": 29.44875,
+   "y": 45.96875
+  },
+  "LED71": {
+   "num": "2",
+   "x": 99.52499999999999,
+   "y": 77.475
+  },
+  "LED63": {
+   "num": "2",
+   "x": 39.525,
+   "y": 18.974999999999998
+  },
+  "LED53": {
+   "num": "3",
+   "x": 226.66,
+   "y": 72.17875
+  },
+  "LED62": {
+   "num": "3",
+   "x": 274.28499999999997,
+   "y": 91.22874999999999
+  },
+  "LED41": {
+   "num": "3",
+   "x": 236.185,
+   "y": 53.12875
+  },
+  "LED70": {
+   "num": "2",
+   "x": 64.52499999999999,
+   "y": 76.475
+  },
+  "LED18": {
+   "num": "3",
+   "x": 59.9725,
+   "y": 34.07875
+  },
+  "LED52": {
+   "num": "3",
+   "x": 207.60999999999999,
+   "y": 72.17875
+  },
+  "LED12": {
+   "num": "3",
+   "x": 221.89749999999998,
+   "y": 15.028749999999999
+  },
+  "LED50": {
+   "num": "3",
+   "x": 169.51,
+   "y": 72.17875
+  },
+  "LED21": {
+   "num": "3",
+   "x": 117.12249999999999,
+   "y": 34.07875
+  },
+  "LED20": {
+   "num": "3",
+   "x": 98.07249999999999,
+   "y": 34.07875
+  },
+  "LED11": {
+   "num": "3",
+   "x": 202.8475,
+   "y": 15.028749999999999
+  },
+  "LED64": {
+   "num": "2",
+   "x": 64.52499999999999,
+   "y": 18.974999999999998
+  },
+  "LED35": {
+   "num": "3",
+   "x": 121.88499999999999,
+   "y": 53.12875
+  },
+  "LED23": {
+   "num": "3",
+   "x": 155.2225,
+   "y": 34.07875
+  },
+  "LED1": {
+   "num": "3",
+   "x": 11.3475,
+   "y": 4.8687499999999995
+  },
+  "LED58": {
+   "num": "3",
+   "x": 64.735,
+   "y": 91.22874999999999
+  },
+  "LED56": {
+   "num": "3",
+   "x": 17.11,
+   "y": 91.22874999999999
+  },
+  "LED14": {
+   "num": "3",
+   "x": 253.44991199999998,
+   "y": 11.991821999999999
+  },
+  "LED16": {
+   "num": "3",
+   "x": 3.9099999999999997,
+   "y": 36.528749999999995
+  },
+  "LED4": {
+   "num": "3",
+   "x": 69.4975,
+   "y": 15.028749999999999
+  },
+  "LED75": {
+   "num": "3",
+   "x": 16.95,
+   "y": 57.25
+  },
+  "LED28": {
+   "num": "3",
+   "x": 250.4725,
+   "y": 34.07875
+  },
+  "LED55": {
+   "num": "3",
+   "x": 279.0475,
+   "y": 71.92875
+  },
+  "LED22": {
+   "num": "3",
+   "x": 136.17249999999999,
+   "y": 34.07875
+  },
+  "LED61": {
+   "num": "3",
+   "x": 250.4725,
+   "y": 91.22874999999999
+  },
+  "LED42": {
+   "num": "3",
+   "x": 267.14125,
+   "y": 53.12875
+  },
+  "LED69": {
+   "num": "2",
+   "x": 17.525,
+   "y": 76.475
+  },
+  "LED37": {
+   "num": "3",
+   "x": 159.98499999999999,
+   "y": 53.12875
+  },
+  "LED26": {
+   "num": "3",
+   "x": 212.3725,
+   "y": 34.07875
+  },
+  "LED7": {
+   "num": "3",
+   "x": 126.6475,
+   "y": 15.028749999999999
+  },
+  "LED8": {
+   "num": "3",
+   "x": 145.6975,
+   "y": 15.028749999999999
+  },
+  "LED46": {
+   "num": "3",
+   "x": 93.31,
+   "y": 72.17875
+  },
+  "LED13": {
+   "num": "3",
+   "x": 240.9475,
+   "y": 15.028749999999999
+  },
+  "LED9": {
+   "num": "3",
+   "x": 164.7475,
+   "y": 15.028749999999999
+  },
+  "LED36": {
+   "num": "3",
+   "x": 140.935,
+   "y": 53.12875
+  },
+  "LED59": {
+   "num": "3",
+   "x": 148.6975,
+   "y": 90.72874999999999
+  },
+  "LED25": {
+   "num": "3",
+   "x": 193.3225,
+   "y": 34.07875
+  },
+  "LED31": {
+   "num": "3",
+   "x": 45.684999999999995,
+   "y": 53.12875
+  },
+  "LED47": {
+   "num": "3",
+   "x": 112.36,
+   "y": 72.17875
+  },
+  "LED44": {
+   "num": "3",
+   "x": 52.76,
+   "y": 75.87875
+  },
+  "LED33": {
+   "num": "3",
+   "x": 83.785,
+   "y": 53.12875
+  },
+  "LED32": {
+   "num": "3",
+   "x": 64.735,
+   "y": 53.12875
+  },
+  "LED10": {
+   "num": "3",
+   "x": 183.79749999999999,
+   "y": 15.028749999999999
+  },
+  "LED19": {
+   "num": "3",
+   "x": 79.0225,
+   "y": 34.07875
+  },
+  "LED2": {
+   "num": "3",
+   "x": 31.397499999999997,
+   "y": 4.8687499999999995
+  },
+  "LED45": {
+   "num": "3",
+   "x": 74.25999999999999,
+   "y": 72.17875
+  },
+  "LED43": {
+   "num": "3",
+   "x": 24.25375,
+   "y": 72.17875
+  },
+  "LED15": {
+   "num": "3",
+   "x": 260.456928,
+   "y": 20.282412
+  },
+  "LED68": {
+   "num": "2",
+   "x": 268.025,
+   "y": 18.974999999999998
+  },
+  "LED3": {
+   "num": "3",
+   "x": 50.4475,
+   "y": 15.028749999999999
+  },
+  "LED24": {
+   "num": "3",
+   "x": 174.27249999999998,
+   "y": 34.07875
+  },
+  "LED40": {
+   "num": "3",
+   "x": 217.135,
+   "y": 53.12875
+  },
+  "LED48": {
+   "num": "3",
+   "x": 131.41,
+   "y": 72.17875
+  }
+ },
+ "paths": {
+  "VBUS J1 -> F1 @20C": {
+   "net": "VBUS",
+   "from": "J1.A4",
+   "to": "F1.1",
+   "resistance_mohm": 51.03,
+   "amps": 0.5,
+   "drop_mv": 25.52,
+   "loss_mw": 12.76,
+   "temp_c": 20.0,
+   "vias_carrying_over_30pct": 0
+  },
+  "VBUS_FUSED F1 -> U8 @20C": {
+   "net": "VBUS_FUSED",
+   "from": "F1.2",
+   "to": "U8.5",
+   "resistance_mohm": 13.9,
+   "amps": 0.5,
+   "drop_mv": 6.95,
+   "loss_mw": 3.48,
+   "temp_c": 20.0,
+   "vias_carrying_over_30pct": 2
+  },
+  "VBUS_PROTECTED_RAW U8 -> U18 @20C": {
+   "net": "VBUS_PROTECTED_RAW",
+   "from": "U8.6",
+   "to": "U18.3",
+   "resistance_mohm": 226.88,
+   "amps": 0.5,
+   "drop_mv": 113.44,
+   "loss_mw": 56.72,
+   "temp_c": 20.0,
+   "vias_carrying_over_30pct": 12
+  },
+  "+4V_REG L2 -> U2 @20C": {
+   "net": "+4V_REG",
+   "from": "L2.2",
+   "to": "U2.1",
+   "resistance_mohm": 80.48,
+   "amps": 0.15,
+   "drop_mv": 12.07,
+   "loss_mw": 1.81,
+   "temp_c": 20.0,
+   "vias_carrying_over_30pct": 4
+  },
+  "+4V_REG L2 -> U7 @20C": {
+   "net": "+4V_REG",
+   "from": "L2.2",
+   "to": "U7.1",
+   "resistance_mohm": 84.36,
+   "amps": 0.234,
+   "drop_mv": 19.74,
+   "loss_mw": 4.62,
+   "temp_c": 20.0,
+   "vias_carrying_over_30pct": 4
+  },
+  "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C": {
+   "net": "+3V3",
+   "from": "U2.5",
+   "to": "U1.49",
+   "resistance_mohm": 423.18,
+   "amps": 0.15,
+   "drop_mv": 63.48,
+   "loss_mw": 9.52,
+   "temp_c": 20.0,
+   "vias_carrying_over_30pct": 20
+  },
+  "+3V3 U2 -> U3 @20C": {
+   "net": "+3V3",
+   "from": "U2.5",
+   "to": "U3.8",
+   "resistance_mohm": 409.48,
+   "amps": 0.05,
+   "drop_mv": 20.47,
+   "loss_mw": 1.02,
+   "temp_c": 20.0,
+   "vias_carrying_over_30pct": 18
+  },
+  "VBUS J1 -> F1 @60C": {
+   "net": "VBUS",
+   "from": "J1.A4",
+   "to": "F1.1",
+   "resistance_mohm": 59.06,
+   "amps": 0.5,
+   "drop_mv": 29.53,
+   "loss_mw": 14.76,
+   "temp_c": 60.0,
+   "vias_carrying_over_30pct": 0
+  },
+  "VBUS_FUSED F1 -> U8 @60C": {
+   "net": "VBUS_FUSED",
+   "from": "F1.2",
+   "to": "U8.5",
+   "resistance_mohm": 16.09,
+   "amps": 0.5,
+   "drop_mv": 8.04,
+   "loss_mw": 4.02,
+   "temp_c": 60.0,
+   "vias_carrying_over_30pct": 2
+  },
+  "VBUS_PROTECTED_RAW U8 -> U18 @60C": {
+   "net": "VBUS_PROTECTED_RAW",
+   "from": "U8.6",
+   "to": "U18.3",
+   "resistance_mohm": 262.54,
+   "amps": 0.5,
+   "drop_mv": 131.27,
+   "loss_mw": 65.64,
+   "temp_c": 60.0,
+   "vias_carrying_over_30pct": 12
+  },
+  "+4V_REG L2 -> U2 @60C": {
+   "net": "+4V_REG",
+   "from": "L2.2",
+   "to": "U2.1",
+   "resistance_mohm": 93.14,
+   "amps": 0.15,
+   "drop_mv": 13.97,
+   "loss_mw": 2.1,
+   "temp_c": 60.0,
+   "vias_carrying_over_30pct": 4
+  },
+  "+4V_REG L2 -> U7 @60C": {
+   "net": "+4V_REG",
+   "from": "L2.2",
+   "to": "U7.1",
+   "resistance_mohm": 97.63,
+   "amps": 0.234,
+   "drop_mv": 22.84,
+   "loss_mw": 5.35,
+   "temp_c": 60.0,
+   "vias_carrying_over_30pct": 4
+  },
+  "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C": {
+   "net": "+3V3",
+   "from": "U2.5",
+   "to": "U1.49",
+   "resistance_mohm": 489.71,
+   "amps": 0.15,
+   "drop_mv": 73.46,
+   "loss_mw": 11.02,
+   "temp_c": 60.0,
+   "vias_carrying_over_30pct": 20
+  },
+  "+3V3 U2 -> U3 @60C": {
+   "net": "+3V3",
+   "from": "U2.5",
+   "to": "U3.8",
+   "resistance_mohm": 473.85,
+   "amps": 0.05,
+   "drop_mv": 23.69,
+   "loss_mw": 1.18,
+   "temp_c": 60.0,
+   "vias_carrying_over_30pct": 18
+  }
+ },
+ "tracks_over_half_ipc2221": [
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 26.6,
+   "y": 17.0
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 23.4,
+   "y": 10.9
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 27.4,
+   "y": 15.4
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 20.1,
+   "y": 10.7
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 20.1,
+   "y": 9.6
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 18.0,
+   "y": 6.6
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 20.2,
+   "y": 7.0
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 15.8,
+   "y": 6.8
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 21.0,
+   "y": 11.2
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 20.1,
+   "y": 11.2
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 26.5,
+   "y": 12.1
+  },
+  {
+   "path": "VBUS J1 -> F1 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 22.1,
+   "y": 11.5
+  },
+  {
+   "path": "VBUS_FUSED F1 -> U8 @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.8999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.605,
+   "x": 25.2,
+   "y": 20.0
+  },
+  {
+   "path": "VBUS_FUSED F1 -> U8 @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.8999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.605,
+   "x": 19.5,
+   "y": 15.7
+  },
+  {
+   "path": "VBUS_FUSED F1 -> U8 @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.8999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.605,
+   "x": 22.2,
+   "y": 17.6
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "F.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 181.5,
+   "y": 88.0
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "F.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 180.0,
+   "y": 88.3
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "F.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.3,
+   "y": 88.7
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.4,
+   "y": 86.6
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 17.8,
+   "y": 17.2
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 17.1,
+   "y": 16.9
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.6,
+   "y": 86.2
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 178.6,
+   "y": 88.7
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.3,
+   "y": 85.8
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.0,
+   "y": 85.2
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 44.9,
+   "y": 25.6
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 17.4,
+   "y": 16.9
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 36.7,
+   "y": 23.2
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 20.5,
+   "y": 16.1
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 33.9,
+   "y": 21.0
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 18.8,
+   "y": 16.5
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 38.5,
+   "y": 24.5
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 28.1,
+   "y": 18.8
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 23.1,
+   "y": 17.4
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 41.7,
+   "y": 25.8
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 39.6,
+   "y": 29.9
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 42.1,
+   "y": 27.1
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 59.6,
+   "y": 36.1
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 38.1,
+   "y": 31.3
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 42.7,
+   "y": 27.0
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 56.7,
+   "y": 35.8
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 60.8,
+   "y": 36.4
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.203,
+   "x": 29.2,
+   "y": 36.0
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 41.4,
+   "y": 27.9
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.203,
+   "x": 30.3,
+   "y": 39.5
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 62.1,
+   "y": 36.6
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 43.2,
+   "y": 27.0
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 49.1,
+   "y": 31.4
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.15,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.165,
+   "x": 27.2,
+   "y": 41.4
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @20C",
+   "layer": "In2.Cu",
+   "width_mm": 0.15,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.165,
+   "x": 23.9,
+   "y": 41.2
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 26.6,
+   "y": 17.0
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 23.4,
+   "y": 10.9
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 27.4,
+   "y": 15.4
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 20.1,
+   "y": 10.7
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 20.1,
+   "y": 9.6
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 18.0,
+   "y": 6.6
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 20.2,
+   "y": 7.0
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.745,
+   "x": 15.8,
+   "y": 6.8
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 21.0,
+   "y": 11.2
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 20.1,
+   "y": 11.2
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 26.5,
+   "y": 12.1
+  },
+  {
+   "path": "VBUS J1 -> F1 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.25,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.875,
+   "x": 22.1,
+   "y": 11.5
+  },
+  {
+   "path": "VBUS_FUSED F1 -> U8 @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.8999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.605,
+   "x": 25.2,
+   "y": 20.0
+  },
+  {
+   "path": "VBUS_FUSED F1 -> U8 @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.8999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.605,
+   "x": 19.5,
+   "y": 15.7
+  },
+  {
+   "path": "VBUS_FUSED F1 -> U8 @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.8999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.605,
+   "x": 22.2,
+   "y": 17.6
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "F.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 181.5,
+   "y": 88.0
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "F.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 180.0,
+   "y": 88.3
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "F.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.3,
+   "y": 88.7
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.4,
+   "y": 86.6
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 17.8,
+   "y": 17.2
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 17.1,
+   "y": 16.9
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.6,
+   "y": 86.2
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 178.6,
+   "y": 88.7
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.3,
+   "y": 85.8
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "B.Cu",
+   "width_mm": 0.3,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.999,
+   "x": 179.0,
+   "y": 85.2
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 44.9,
+   "y": 25.6
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 17.4,
+   "y": 16.9
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 36.7,
+   "y": 23.2
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 20.5,
+   "y": 16.1
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 33.9,
+   "y": 21.0
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 18.8,
+   "y": 16.5
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 38.5,
+   "y": 24.5
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 28.1,
+   "y": 18.8
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 23.1,
+   "y": 17.4
+  },
+  {
+   "path": "VBUS_PROTECTED_RAW U8 -> U18 @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.7999999999999999,
+   "amps": 0.5,
+   "ipc2221_10C_limit_a": 0.556,
+   "x": 41.7,
+   "y": 25.8
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 39.6,
+   "y": 29.9
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 42.1,
+   "y": 27.1
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 59.6,
+   "y": 36.1
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 38.1,
+   "y": 31.3
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 42.7,
+   "y": 27.0
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 56.7,
+   "y": 35.8
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 60.8,
+   "y": 36.4
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.203,
+   "x": 29.2,
+   "y": 36.0
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 41.4,
+   "y": 27.9
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.19999999999999998,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.203,
+   "x": 30.3,
+   "y": 39.5
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 62.1,
+   "y": 36.6
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 43.2,
+   "y": 27.0
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In1.Cu",
+   "width_mm": 0.3,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.273,
+   "x": 49.1,
+   "y": 31.4
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.15,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.165,
+   "x": 27.2,
+   "y": 41.4
+  },
+  {
+   "path": "+3V3 U2 -> U1 pin 49 (VREG_VIN) @60C",
+   "layer": "In2.Cu",
+   "width_mm": 0.15,
+   "amps": 0.15,
+   "ipc2221_10C_limit_a": 0.165,
+   "x": 23.9,
+   "y": 41.2
+  }
+ ],
+ "led_drop_map_mv": {
+  "LED17": [
+   41.72,
+   36.78,
+   52.15
+  ],
+  "LED67": [
+   218.52,
+   18.97,
+   43.83
+  ],
+  "LED34": [
+   102.83,
+   53.13,
+   29.81
+  ],
+  "LED76": [
+   258.43,
+   63.22,
+   25.45
+  ],
+  "LED57": [
+   40.92,
+   91.23,
+   5.59
+  ],
+  "LED29": [
+   274.28,
+   34.08,
+   30.45
+  ],
+  "LED39": [
+   198.08,
+   53.13,
+   27.59
+  ],
+  "LED6": [
+   107.6,
+   15.03,
+   50.41
+  ],
+  "LED74": [
+   278.97,
+   75.02,
+   28.12
+  ],
+  "LED38": [
+   179.03,
+   53.13,
+   28.16
+  ],
+  "LED72": [
+   172.53,
+   77.47,
+   12.7
+  ],
+  "LED60": [
+   226.66,
+   91.23,
+   28.4
+  ],
+  "LED54": [
+   249.6,
+   70.93,
+   24.8
+  ],
+  "LED51": [
+   188.56,
+   72.18,
+   14.72
+  ],
+  "LED5": [
+   88.55,
+   15.03,
+   51.01
+  ],
+  "LED66": [
+   172.53,
+   18.97,
+   47.01
+  ],
+  "LED65": [
+   115.52,
+   18.97,
+   49.87
+  ],
+  "LED49": [
+   147.76,
+   75.88,
+   5.96
+  ],
+  "LED73": [
+   219.52,
+   76.47,
+   20.86
+  ],
+  "LED27": [
+   231.42,
+   34.08,
+   43.83
+  ],
+  "LED30": [
+   29.45,
+   45.97,
+   30.58
+  ],
+  "LED71": [
+   99.52,
+   77.47,
+   2.9
+  ],
+  "LED63": [
+   39.52,
+   18.97,
+   51.98
+  ],
+  "LED53": [
+   226.66,
+   72.18,
+   21.26
+  ],
+  "LED62": [
+   274.28,
+   91.23,
+   28.15
+  ],
+  "LED41": [
+   236.19,
+   53.13,
+   26.27
+  ],
+  "LED70": [
+   64.52,
+   76.47,
+   4.02
+  ],
+  "LED18": [
+   59.97,
+   34.08,
+   52.15
+  ],
+  "LED52": [
+   207.61,
+   72.18,
+   18.07
+  ],
+  "LED12": [
+   221.9,
+   15.03,
+   43.91
+  ],
+  "LED50": [
+   169.51,
+   72.18,
+   11.31
+  ],
+  "LED21": [
+   117.12,
+   34.08,
+   51.48
+  ],
+  "LED20": [
+   98.07,
+   34.08,
+   51.42
+  ],
+  "LED11": [
+   202.85,
+   15.03,
+   45.57
+  ],
+  "LED64": [
+   64.52,
+   18.97,
+   51.54
+  ],
+  "LED35": [
+   121.88,
+   53.13,
+   29.5
+  ],
+  "LED23": [
+   155.22,
+   34.08,
+   47.93
+  ],
+  "LED1": [
+   11.35,
+   4.87,
+   52.31
+  ],
+  "LED58": [
+   64.73,
+   91.23,
+   5.66
+  ],
+  "LED56": [
+   17.11,
+   91.23,
+   5.44
+  ],
+  "LED14": [
+   253.45,
+   11.99,
+   40.43
+  ],
+  "LED16": [
+   3.91,
+   36.53,
+   5.31
+  ],
+  "LED4": [
+   69.5,
+   15.03,
+   51.55
+  ],
+  "LED75": [
+   16.95,
+   57.25,
+   30.62
+  ],
+  "LED28": [
+   250.47,
+   34.08,
+   30.53
+  ],
+  "LED55": [
+   279.05,
+   71.93,
+   28.14
+  ],
+  "LED22": [
+   136.17,
+   34.08,
+   49.05
+  ],
+  "LED61": [
+   250.47,
+   91.23,
+   28.38
+  ],
+  "LED42": [
+   267.14,
+   53.13,
+   29.24
+  ],
+  "LED69": [
+   17.52,
+   76.47,
+   5.1
+  ],
+  "LED37": [
+   159.98,
+   53.13,
+   28.68
+  ],
+  "LED26": [
+   212.37,
+   34.08,
+   44.2
+  ],
+  "LED7": [
+   126.65,
+   15.03,
+   49.61
+  ],
+  "LED8": [
+   145.7,
+   15.03,
+   48.71
+  ],
+  "LED46": [
+   93.31,
+   72.18,
+   3.2
+  ],
+  "LED13": [
+   240.95,
+   15.03,
+   42.63
+  ],
+  "LED9": [
+   164.75,
+   15.03,
+   47.72
+  ],
+  "LED36": [
+   140.94,
+   53.13,
+   29.14
+  ],
+  "LED59": [
+   148.7,
+   90.73,
+   3.87
+  ],
+  "LED25": [
+   193.32,
+   34.08,
+   45.59
+  ],
+  "LED31": [
+   45.68,
+   53.13,
+   30.47
+  ],
+  "LED47": [
+   112.36,
+   72.18,
+   2.1
+  ],
+  "LED44": [
+   52.76,
+   75.88,
+   4.3
+  ],
+  "LED33": [
+   83.78,
+   53.13,
+   30.1
+  ],
+  "LED32": [
+   64.73,
+   53.13,
+   30.33
+  ],
+  "LED10": [
+   183.8,
+   15.03,
+   46.6
+  ],
+  "LED19": [
+   79.02,
+   34.08,
+   51.31
+  ],
+  "LED2": [
+   31.4,
+   4.87,
+   52.23
+  ],
+  "LED45": [
+   74.26,
+   72.18,
+   3.89
+  ],
+  "LED43": [
+   24.25,
+   72.18,
+   4.89
+  ],
+  "LED15": [
+   260.46,
+   20.28,
+   38.91
+  ],
+  "LED68": [
+   268.02,
+   18.97,
+   32.57
+  ],
+  "LED3": [
+   50.45,
+   15.03,
+   51.92
+  ],
+  "LED24": [
+   174.27,
+   34.08,
+   47.03
+  ],
+  "LED40": [
+   217.13,
+   53.13,
+   26.96
+  ],
+  "LED48": [
+   131.41,
+   72.18,
+   1.0
+  ]
+ },
+ "led_rail": {
+  "limiter maximum 234 mA, even @20C": {
+   "max_drop_mv": 52.31,
+   "at": "LED1",
+   "median_drop_mv": 30.33,
+   "max_track_current_a": 0.234
+  },
+  "DC screen: typical idle plus 58 mA PWM average; NOT peak qualification @20C": {
+   "max_drop_mv": 22.89,
+   "at": "LED1",
+   "median_drop_mv": 13.27,
+   "max_track_current_a": 0.102
+  },
+  "DC screen: assumed 1 mA/reverse LED idle plus 58 mA average; NOT guaranteed @20C": {
+   "max_drop_mv": 28.61,
+   "at": "LED1",
+   "median_drop_mv": 16.59,
+   "max_track_current_a": 0.128
+  },
+  "DC stress allocation: 38 mA even + 196 mA in 16 remote LEDs; not an idle-current model @20C": {
+   "max_drop_mv": 57.51,
+   "at": "LED1",
+   "median_drop_mv": 33.95,
+   "max_track_current_a": 0.234
+  },
+  "limiter maximum 234 mA, even @60C": {
+   "max_drop_mv": 60.53,
+   "at": "LED1",
+   "median_drop_mv": 35.1,
+   "max_track_current_a": 0.234
+  },
+  "DC screen: typical idle plus 58 mA PWM average; NOT peak qualification @60C": {
+   "max_drop_mv": 26.49,
+   "at": "LED1",
+   "median_drop_mv": 15.36,
+   "max_track_current_a": 0.102
+  },
+  "DC screen: assumed 1 mA/reverse LED idle plus 58 mA average; NOT guaranteed @60C": {
+   "max_drop_mv": 33.11,
+   "at": "LED1",
+   "median_drop_mv": 19.2,
+   "max_track_current_a": 0.128
+  },
+  "DC stress allocation: 38 mA even + 196 mA in 16 remote LEDs; not an idle-current model @60C": {
+   "max_drop_mv": 66.55,
+   "at": "LED1",
+   "median_drop_mv": 39.29,
+   "max_track_current_a": 0.234
+  }
+ }
+}

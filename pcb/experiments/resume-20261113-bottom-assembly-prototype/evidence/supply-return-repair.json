@@ -1,0 +1,14 @@
+{
+  "before_sha256": "5bf3be76a74857a42c80a9d8af9c1b5346f0e807bb625bc82d6d18cc16f8692c",
+  "accepted_trial_sha256": "e40c0346bb68cfc7c8a66c1da9707fc9085deb4783e862340cff3d9c97c3beb7",
+  "sequence": [
+    "design/restore-critical-planes.py BOARD",
+    "apply_layout_ops.py BOARD design/supply-track-repair-ops.json"
+  ],
+  "native_drc_violations": 0,
+  "native_unconnected": 0,
+  "invariants_pass": true,
+  "critical_return_centerline_preserved_at_1nm": true,
+  "dc_paths_exceeding_empirical_10C_screen": 0,
+  "scope": "Engineering candidate repair; not promotion to pcb/current.json or fabrication qualification"
+}

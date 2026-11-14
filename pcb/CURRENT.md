@@ -1,5 +1,29 @@
 # Current baseline and development prototype
 
+## Universal-layout bottom-assembly experiment (2026-11-14)
+
+The [bottom-assembly candidate](experiments/resume-20261113-bottom-assembly-prototype/README.md)
+retains all Caps Lock, Right Shift and Backspace choices and moves all SMT to the
+bottom, with 64 reverse-mounted key LEDs. Cold-refilled DRC, unconnected items and
+schematic parity are all zero. Reverse-LED PWM supply behavior and assembly/fit
+qualification remain unresolved. It is **not for fabrication**, is not selected
+in `current.json`, and has no order package. The MCU candidate below is its pinned
+unchanged source; its old LED simulation and assembly package do not apply here.
+
+## Routed MCU-near-USB candidate (2026-11-13)
+
+The [completed routing candidate](experiments/resume-20261113-mcu-near-usb-zero-opens/README.md)
+is the latest MCU-near-USB / 2U Backspace development board: **0 opens, 0 DRC
+errors, 0 warnings**, ERC/parity clean, all 32 manufacturing rules and 24 Gerber
+readback checks pass. Its [separate assembly package](experiments/resume-20261113-mcu-near-usb-zero-opens/order/README.md)
+has 336 automated placements with the Backspace LEDs and receptacles hand-fitted.
+R192/R193 = 100Ω and R115 = 150Ω address the strongest modeled LED corners.
+The exact receptacle, selected 7U plate-mount stabilizer and separate 2U stabilizer
+still require physical-fit verification before fabrication. This completes the
+earlier 22-open MCU prototype; the historical primary selections below remain pinned.
+
+## Pinned primary selections
+
 Machine-readable entrypoint: [`current.json`](current.json). It pins the primary
 KiCad project, board and root schematic for each selection with repository-relative
 paths and SHA256 hashes. No selection is manufacturing-ready; the **order

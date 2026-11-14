@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{box-sizing:border-box}body{margin:0;color:var(--foreground);font-family:var(--font-sans);font-size:14px;line-height:1.55}p{margin:8px 0}a{color:var(--primary)}.photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}figure{margin:0}img{display:block;width:100%;height:240px;object-fit:cover;border-radius:var(--radius)}figcaption{margin-top:6px;font-size:13px}.muted{color:var(--muted-foreground)}.panel{margin-top:18px;padding:16px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}svg{display:block;width:100%;height:auto}svg text{fill:var(--foreground);font:14px var(--font-sans)}.pcb{fill:var(--chart-6);fill-opacity:.28;stroke:var(--chart-6)}.led{fill:var(--chart-2)}.lead{stroke:var(--chart-4);stroke-width:5}.ray{stroke:var(--chart-2);stroke-width:3;fill:none}.controls{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}button{font:inherit;border:1px solid var(--border);border-radius:var(--radius);background:var(--secondary);color:var(--foreground);padding:7px 10px;cursor:pointer}button[aria-pressed=true]{border-color:var(--primary);background:var(--primary);color:var(--primary-foreground)}.bar{height:34px;display:flex;border-radius:6px;overflow:hidden;background:var(--secondary)}.bar>span{height:34px;display:block;transition:width .25s}.top{background:var(--chart-1)}.bottom{background:var(--chart-2)}.legend{display:flex;gap:24px;margin:9px 0}.dot{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:2px}.note{min-height:48px}.small{font-size:12px}@media(max-width:480px){img{height:155px}.photos{gap:8px}.panel{padding:12px}svg text{font-size:15px}}
+</style></head><body>
+<div class="photos">
+<figure><img src="/home/minpeter/github.com/minpeter/maru60/rendering/led-reverse-mount-study-20261113/oni-top.jpg" alt="YMDK Oni 스위치면: PCB 창 안쪽에 보이는 LED 발광부"><figcaption><b>Oni 스위치면</b> · 창을 통해 LED 발광면이 보임</figcaption></figure>
+<figure><img src="/home/minpeter/github.com/minpeter/maru60/rendering/led-reverse-mount-study-20261113/oni-bottom.jpg" alt="YMDK Oni 부품면: 역실장 키 LED와 바깥을 향한 하부 LED"><figcaption><b>Oni 부품면</b> · 키 LED와 하부 LED를 함께 배치</figcaption></figure>
+</div>
+<p class="muted small">사진: <a href="https://ymdkey.com/products/ymdk-gh60-hhkb-style-tsangan-oni-hot-swappable-both-underglow-switch-rgb-via-programmable-pcb-compatible-with-tokyo-60" target="_blank" rel="noreferrer">YMDK 공식 판매 자료</a>. 정확한 LED 모델·창 치수는 미공개.</p>
+<div class="panel">
+<b>Maru60에 검토하는 구조</b>
+<svg viewBox="0 0 660 218" role="img" aria-label="키 LED는 PCB 창으로 위를 비추고, 같은 아래쪽 면의 하부 LED는 아래를 비추는 개념 단면도">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" class="led"/></marker></defs>
+<text x="132" y="25">스위치·키캡 쪽 ↑</text><text x="465" y="25">4층 PCB 유지</text>
+<path class="pcb" d="M15 85H150V128H15Z M228 85H645V128H228Z"/>
+<path d="M15 96H150 M228 96H645 M15 117H150 M228 117H645" stroke="var(--border)" stroke-width="2"/>
+<path class="lead" d="M125 131H166 M212 131H254"/>
+<rect x="166" y="99" width="46" height="50" rx="3" class="led"/>
+<path class="ray" marker-end="url(#arrow)" d="M189 92V44"/>
+<text x="90" y="174">역실장 키 LED</text><text x="80" y="197" class="muted">창을 통해 위로 발광</text>
+<path class="lead" d="M455 131H535"/><rect x="471" y="134" width="48" height="22" rx="3" class="led"/>
+<path class="ray" marker-end="url(#arrow)" d="M495 162V199"/>
+<text x="360" y="176">하부 LED</text>
+<text x="278" y="150" style="font-size:12px">같은 아래쪽 면에 납땜</text>
+</svg>
+<p class="muted small">구조 설명용 개념도 · 부품/창 크기는 실제 축척이 아님 · 전기적 극성은 정상 연결</p>
+</div>
+<div class="panel">
+<b>자동 실장 부품 336개의 배치 비교</b>
+<div class="controls"><button aria-pressed="true" data-stage="0">현재</button><button aria-pressed="false" data-stage="1">LED·콘덴서 이동 가정</button><button aria-pressed="false" data-stage="2">전체 이동 목표</button></div>
+<div class="bar" role="img" aria-label="현재 앞면 136개, 뒷면 200개"><span id="front" class="top" style="width:40.47619%"></span><span id="back" class="bottom" style="width:59.52381%"></span></div>
+<div class="legend"><span><i class="dot top"></i>앞면 <b id="fc">136</b>개</span><span><i class="dot bottom"></i>뒷면 <b id="bc">200</b>개</span></div>
+<p id="status" class="note">현재 제작 후보의 BOM/CPL에서 확인한 수량입니다.</p>
+<p class="muted small">이동 가정과 목표는 수량 계산이며, 배치·배선 완료를 의미하지 않습니다. 수작업 LED14·LED15는 이 집계에서 제외됩니다.</p>
+</div>
+<script>
+const stages=[{f:136,b:200,t:'현재 제작 후보의 BOM/CPL에서 확인한 수량입니다.'},{f:12,b:324,t:'키 LED 61개와 LED용 100 nF 콘덴서 63개를 모두 옮긴다는 가정입니다. 남은 12개도 옮겨야 한 면 실장이 됩니다.'},{f:0,b:336,t:'전체 자동 실장 부품을 아래쪽으로 모으는 목표입니다. 역실장 LED 선정, 간섭 해소와 재배선이 필요합니다.'}];
+document.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{const s=stages[Number(btn.dataset.stage)];document.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));document.getElementById('front').style.width=(s.f/336*100)+'%';document.getElementById('back').style.width=(s.b/336*100)+'%';document.getElementById('fc').textContent=s.f;document.getElementById('bc').textContent=s.b;document.getElementById('status').textContent=s.t;document.querySelector('.bar').setAttribute('aria-label',`앞면 ${s.f}개, 뒷면 ${s.b}개`);}));
+</script></body></html>

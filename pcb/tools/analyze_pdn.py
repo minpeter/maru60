@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """DC resistance network of the power nets, solved from the routed copper.
 
-usage: .venv/bin/python pcb/tools/analyze_pdn.py BOARD.json OUT_DIR
+usage: .venv/bin/python pcb/tools/analyze_pdn.py BOARD.json OUT_DIR [--led-site LED14=1]
 
 BOARD.json is the geometry dump (dump_board_geometry.py).  For each power net the
 tracks are cut wherever another track end, via or pad of the same net lands on
 them, every piece becomes a resistor R = rho * L / (w * t), vias become barrel
 resistors, pads and zone-fill islands are treated as equipotential nodes, and
 the node voltages are solved for given source and sink currents.  The two inner
-GND planes are not solved: their sheet resistance (1.13 mOhm/square at 15.2 um)
-puts the whole return path under a millivolt at these currents.
+GND planes are not solved. Ground-return resistance, plane necks, and transient
+droop require separate analysis; this is a supply-path DC screen.
 
 Everything here is computed from geometry and the stated constants; nothing is
 measured.  Track heating uses IPC-2221 external-layer curves for a 10 C rise.
@@ -17,19 +17,37 @@ measured.  Track heating uses IPC-2221 external-layer curves for a 10 C rise.
 from __future__ import annotations
 
 import json
+import argparse
+import hashlib
 import math
 import sys
 from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
-from shapely.geometry import Point, Polygon
+from shapely.geometry import Point, Polygon, LineString
+from shapely.ops import nearest_points
 
 RHO20 = 1.72e-5            # ohm*mm, annealed copper at 20 C
 TEMPCO = 0.00393
 T_OUTER, T_INNER = 0.035, 0.0152
 VIA_DRILL, VIA_PLATING, BOARD_T = 0.25, 0.020, 1.6     # plating thickness assumed (JLCPCB states 18 um minimum average)
 SNAP = 0.02
+
+
+def led_supply_pad(footprint, net="+4V_LED", site=0):
+    """Select the primary fitted supply land by net, independent of LED pinout.
+
+    Site zero is nearest the footprint origin. Specify a different site for
+    an alternate-population load case; only one site per reference is fitted.
+    """
+    sites = [p for p in footprint["pads"] if p["net"] == net]
+    if not sites:
+        raise ValueError(f"{footprint['ref']} has no {net} supply land")
+    sites.sort(key=lambda p: (math.hypot(p["x"]-footprint["x"], p["y"]-footprint["y"]), p["x"], p["y"]))
+    if not 0 <= site < len(sites):
+        raise ValueError(f"{footprint['ref']}: invalid supply site {site}; {len(sites)} available")
+    return sites[site]
 
 
 def rho(temp_c):
@@ -41,6 +59,14 @@ def ipc2221_limit(width_mm, thick_mm, rise_c=10.0, external=True):
     return (0.048 if external else 0.024) * rise_c ** 0.44 * area_mil2 ** 0.725
 
 
+def distribute_current(nodes, amps):
+    """Every physical load contributes, including loads sharing a copper node."""
+    result = defaultdict(float)
+    for node in nodes:
+        result[node] += amps / len(nodes)
+    return dict(result)
+
+
 class Net:
     def __init__(self, board, net, temp_c=20.0):
         self.net = net
@@ -49,6 +75,7 @@ class Net:
         self.parent = []
         self.edges = []                    # (a, b, R, meta)
         self.pad_node = {}                 # (ref, num, layer) -> node
+        self.pad_sites = []                # retain alternative lands of one pin
         layers = ("F.Cu", "In1.Cu", "In2.Cu", "B.Cu")
         tracks = [t for t in board["tracks"] if t["net"] == net]
         vias = [v for v in board["vias"] if v["net"] == net]
@@ -65,14 +92,20 @@ class Net:
                 for layer, isls in z["fill"].items():
                     for isl in isls:
                         if isl and len(isl[0]) >= 3:
-                            zones.append((layer, Polygon(isl[0])))
+                            zones.append((layer, Polygon(isl[0], isl[1:])))
         # anchors per layer
         anchors = defaultdict(list)
+        anchor_radius = defaultdict(dict)
         for t in tracks:
             anchors[t["layer"]] += [(t["x1"], t["y1"]), (t["x2"], t["y2"])]
+            for xy in [(t["x1"], t["y1"]), (t["x2"], t["y2"])]:
+                radii = anchor_radius[t["layer"]]
+                radii[xy] = max(radii.get(xy, 0), t["w"] / 2)
         for v in vias:
             for layer in layers:
                 anchors[layer].append((v["x"], v["y"]))
+                anchor_radius[layer][(v["x"], v["y"])] = max(
+                    anchor_radius[layer].get((v["x"], v["y"]), 0), v["d"] / 2)
         for ref, num, layer, x, y, g in pads:
             anchors[layer].append((x, y))
         index = {}
@@ -103,10 +136,23 @@ class Net:
             thick = T_OUTER if t["layer"] in ("F.Cu", "B.Cu") else T_INNER
             cuts = {0.0, 1.0}
             if L > 1e-9:
+                # A pad can land on the middle or edge of a trace without its
+                # centre reaching the trace. Preserve that copper contact.
+                segment = LineString([(ax, ay), (bx, by)])
+                for ref, num, layer, px, py, shape in pads:
+                    if layer != t["layer"] or segment.distance(shape) >= t["w"] / 2 - 1e-6:
+                        continue
+                    contact_point = nearest_points(segment, shape)[0]
+                    u = round(segment.project(contact_point) / L, 6)
+                    cuts.add(u)
+                    union(node(layer, px, py), node(layer, ax + u * (bx-ax), ay + u * (by-ay)))
                 for qx, qy in anchors[t["layer"]]:
-                    if min(ax, bx) - t["w"] <= qx <= max(ax, bx) + t["w"] and min(ay, by) - t["w"] <= qy <= max(ay, by) + t["w"]:
-                        u = ((qx - ax) * (bx - ax) + (qy - ay) * (by - ay)) / (L * L)
-                        if 0 < u < 1 and math.hypot(qx - (ax + u * (bx - ax)), qy - (ay + u * (by - ay))) <= t["w"] / 2 + 1e-6:
+                    contact = t["w"] / 2 + anchor_radius[t["layer"]].get((qx, qy), 0)
+                    if min(ax, bx) - contact <= qx <= max(ax, bx) + contact and min(ay, by) - contact <= qy <= max(ay, by) + contact:
+                        u = max(0.0, min(1.0, ((qx - ax) * (bx - ax) + (qy - ay) * (by - ay)) / (L * L)))
+                        # Positive copper overlap includes both tracks' round
+                        # caps, even when neither center lies in the other.
+                        if math.hypot(qx - (ax + u * (bx - ax)), qy - (ay + u * (by - ay))) < contact - 1e-6:
                             cuts.add(round(u, 6))
                             union(node(t["layer"], qx, qy), node(t["layer"], ax + u * (bx - ax), ay + u * (by - ay)))
             cs = sorted(cuts)
@@ -119,6 +165,12 @@ class Net:
                                                                                "x": ax + (u0 + u1) / 2 * (bx - ax), "y": ay + (u0 + u1) / 2 * (by - ay)}))
         rvia = self.r * BOARD_T / (math.pi * (VIA_DRILL + VIA_PLATING) * VIA_PLATING)
         for v in vias:
+            # A routed endpoint can touch the land without reaching its drill
+            # center. The via land is equipotential copper on every layer.
+            for layer in layers:
+                for qx, qy in anchors[layer]:
+                    if math.hypot(qx - v["x"], qy - v["y"]) < v["d"] / 2 - 1e-6:
+                        union(node(layer, v["x"], v["y"]), node(layer, qx, qy))
             self.edges.append((node("F.Cu", v["x"], v["y"]), node("B.Cu", v["x"], v["y"]), rvia, {"kind": "via", "x": v["x"], "y": v["y"]}))
             for layer in ("In1.Cu", "In2.Cu"):
                 union(node(layer, v["x"], v["y"]), node("F.Cu", v["x"], v["y"]))
@@ -126,6 +178,7 @@ class Net:
         for ref, num, layer, x, y, g in pads:
             n0 = node(layer, x, y)
             self.pad_node[(ref, num, layer)] = n0
+            self.pad_sites.append((ref, num, layer, x, y, n0))
             for qx, qy in anchors[layer]:
                 if abs(qx - x) < 4 and abs(qy - y) < 4 and g.distance(Point(qx, qy)) < 1e-3:
                     union(n0, node(layer, qx, qy))
@@ -146,13 +199,42 @@ class Net:
                 return self.find(node)
         raise KeyError((ref, num))
 
+    def pad_at(self, ref, num, layer, x, y):
+        sites = [(math.hypot(px - x, py - y), node)
+                 for r, n, lay, px, py, node in self.pad_sites
+                 if r == ref and n == num and lay == layer]
+        if not sites:
+            raise KeyError((ref, num, layer))
+        return self.find(min(sites)[1])
+
     def solve(self, sources, sinks):
         """sources: {node: None} held at 0 V drop; sinks: {node: amps}. Returns (drop per node dict, edge currents)."""
-        roots = sorted({self.find(i) for i in range(len(self.pts))})
+        adjacent = defaultdict(set)
+        for a, b, resistance, _ in self.edges:
+            a, b = self.find(a), self.find(b)
+            if a != b:
+                adjacent[a].add(b)
+                adjacent[b].add(a)
+        reachable = {self.find(s) for s in sources}
+        pending = list(reachable)
+        while pending:
+            for node in adjacent[pending.pop()]:
+                if node not in reachable:
+                    reachable.add(node)
+                    pending.append(node)
+        disconnected = [node for node, amps in sinks.items()
+                        if amps and self.find(node) not in reachable]
+        if disconnected:
+            raise ValueError(f"{self.net}: loaded nodes disconnected from source: {disconnected}")
+        # Unloaded floating copper is excluded, never weakly grounded. A weak
+        # diagonal tie masks missing source paths as enormous finite voltages.
+        roots = sorted(reachable)
         idx = {r: i for i, r in enumerate(roots)}
         n = len(roots)
         G = np.zeros((n, n))
         for a, b, R, meta in self.edges:
+            if self.find(a) not in idx or self.find(b) not in idx:
+                continue
             ia, ib = idx[self.find(a)], idx[self.find(b)]
             if ia == ib:
                 continue
@@ -163,15 +245,19 @@ class Net:
             G[ib, ia] -= g
         I = np.zeros(n)
         for node, amps in sinks.items():
-            I[idx[self.find(node)]] -= amps
+            if amps:
+                I[idx[self.find(node)]] -= amps
         fixed = sorted({idx[self.find(s)] for s in sources})
         free = [i for i in range(n) if i not in set(fixed)]
-        # drop components not connected to a source (floating copper): give them a weak tie so the solve is defined
-        A = G[np.ix_(free, free)] + np.eye(len(free)) * 1e-12
+        A = G[np.ix_(free, free)]
         v = np.zeros(n)
         v[free] = np.linalg.solve(A, I[free])
+        if not np.isfinite(v).all() or not np.allclose(A @ v[free], I[free], atol=1e-8, rtol=1e-7):
+            raise ValueError(f"{self.net}: invalid resistance-network solution")
         cur = []
         for a, b, R, meta in self.edges:
+            if self.find(a) not in idx or self.find(b) not in idx:
+                continue
             ia, ib = idx[self.find(a)], idx[self.find(b)]
             if ia != ib:
                 cur.append((abs(v[ia] - v[ib]) / R, R, meta))
@@ -184,8 +270,19 @@ def resistance(netobj, a, b):
 
 
 def main():
-    board = json.loads(Path(sys.argv[1]).read_text())
-    out = Path(sys.argv[2])
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("geometry", type=Path)
+    parser.add_argument("output", type=Path)
+    parser.add_argument("--led-site", action="append", default=[], metavar="REF=INDEX")
+    args = parser.parse_args()
+    selected_sites = {}
+    for setting in args.led_site:
+        ref, index = setting.split("=", 1)
+        if ref in selected_sites:
+            raise ValueError(f"Duplicate population selection: {ref}")
+        selected_sites[ref] = int(index)
+    board = json.loads(args.geometry.read_text())
+    out = args.output
     out.mkdir(parents=True, exist_ok=True)
     res = {"constants": {"rho20_ohm_mm": RHO20, "outer_um": 35, "inner_um": 15.2, "via_plating_um_assumed": 20,
                          "via_resistance_mohm": round(RHO20 * BOARD_T / (math.pi * (VIA_DRILL + VIA_PLATING) * VIA_PLATING) * 1e3, 3)}}
@@ -197,6 +294,18 @@ def main():
     assert abs(r - RHO20 * 100 / (0.5 * 0.035)) < 1e-9
 
     fps = {f["ref"]: f for f in board["fps"]}
+    for ref, site in selected_sites.items():
+        if ref not in fps or not ref.startswith("LED"):
+            raise ValueError(f"Unknown LED reference: {ref}")
+        led_supply_pad(fps[ref], site=site)
+    res["provenance"] = {"geometry": str(args.geometry), "geometry_sha256": hashlib.sha256(args.geometry.read_bytes()).hexdigest(),
+                         "tool_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "selected_led_sites": selected_sites}
+    res["limitations"] = ["Supply-path DC approximation; not PWM, inrush, thermal, or fabrication qualification",
+                          "Ground-return impedance omitted; pads and individual zone islands equipotential",
+                          "Via barrel model lumps inner-layer connections at the top node; internal span resistance approximated",
+                          "Run every mutually exclusive LED population separately; default site is nearest footprint origin"]
+    res["led_population"] = {f["ref"]: {k: led_supply_pad(f, site=selected_sites.get(f["ref"], 0))[k] for k in ("num", "x", "y")}
+                             for f in board["fps"] if f["ref"].startswith("LED")}
     paths = {}
     heavy = []
 
@@ -234,29 +343,29 @@ def main():
         for f in board["fps"]:
             if f["ref"].startswith("LED"):
                 # the land site at the footprint origin
-                p = min((q for q in f["pads"] if q["num"] == "2"), key=lambda q: math.hypot(q["x"] - f["x"], q["y"] - f["y"]))
+                p = led_supply_pad(f, site=selected_sites.get(f["ref"], 0))
                 layer = "F.Cu" if "F.Cu" in p["layers"] else "B.Cu"
-                leds.append((f["ref"], n.pad(f["ref"], "2", layer) if True else None, p["x"], p["y"]))
-        # pad() returns the first site; pick by position instead
-        fixed = []
-        for ref, _, x, y in leds:
-            best = min(((ref2, num, lay), node) for (ref2, num, lay), node in n.pad_node.items() if ref2 == ref and num == "2")
-            cands = [(math.hypot(n.pts[node][1] - x, n.pts[node][2] - y), n.find(node)) for (r2, num, lay), node in n.pad_node.items() if r2 == ref and num == "2"]
-            fixed.append((ref, min(cands)[1], x, y))
-        leds = fixed
+                leds.append((f["ref"], n.pad_at(f["ref"], p["num"], layer, p["x"], p["y"]), p["x"], p["y"]))
         ux, uy = fps["U7"]["x"], fps["U7"]["y"]
         far = sorted(leds, key=lambda l: -math.hypot(l[2] - ux, l[3] - uy))[:16]
         cases = {
-            "firmware cap: 38 mA static + 25 mA drive, even": {l[1]: 0.063 / len(leds) for l in leds},
-            "limiter maximum 234 mA, even": {l[1]: 0.234 / len(leds) for l in leds},
+            "firmware cap: 38 mA static + 25 mA drive, even": distribute_current([l[1] for l in leds], 0.063),
+            "limiter maximum 234 mA, even": distribute_current([l[1] for l in leds], 0.234),
             "38 mA static even + 196 mA in the 16 LEDs furthest from U7": None,
         }
+        reverse_count = sum(f["ref"].startswith("LED") and f["value"] == "SK6812MINI-E-012" for f in board["fps"])
+        if reverse_count:
+            del cases["firmware cap: 38 mA static + 25 mA drive, even"]
+            cases["DC screen: typical idle plus 58 mA PWM average; NOT peak qualification"] = distribute_current([l[1] for l in leds], (.6*reverse_count+.5*(len(leds)-reverse_count)+58)/1000)
+            cases["DC screen: assumed 1 mA/reverse LED idle plus 58 mA average; NOT guaranteed"] = distribute_current([l[1] for l in leds], (reverse_count+.5*(len(leds)-reverse_count)+58)/1000)
         worst = defaultdict(float)
         for l in leds:
             worst[l[1]] += 0.038 / len(leds)
         for l in far:
             worst[l[1]] += 0.196 / 16
         cases["38 mA static even + 196 mA in the 16 LEDs furthest from U7"] = dict(worst)
+        if reverse_count:
+            cases["DC stress allocation: 38 mA even + 196 mA in 16 remote LEDs; not an idle-current model"] = cases.pop("38 mA static even + 196 mA in the 16 LEDs furthest from U7")
         for name, sinks in cases.items():
             merged = defaultdict(float)
             for k, a in sinks.items():

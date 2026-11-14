@@ -1,0 +1,55 @@
+{
+  "reason": "Replace UG_LED_6 right-angle short stub with a 45-degree junction; remove thin ground-pour bridges by refilling with increased minimum thickness. Native DRC/connectivity required.",
+  "ops": [
+    {
+      "op": "remove_track_uuids",
+      "uuids": [
+        "b6cbff49-5d8e-4957-8bdc-ea1d1ad17d49"
+      ]
+    },
+    {
+      "op": "move_track_points",
+      "moves": [
+        {
+          "net": "UG_LED_6",
+          "layer": "B.Cu",
+          "from": [
+            27,
+            71.3
+          ],
+          "to": [
+            27.1,
+            71.4
+          ]
+        },
+        {
+          "net": "UG_LED_6",
+          "layer": "B.Cu",
+          "from": [
+            27,
+            71.4
+          ],
+          "to": [
+            27.1,
+            71.4
+          ]
+        }
+      ]
+    },
+    {
+      "op": "set_zone_min_thickness",
+      "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499",
+      "mm": 0.25
+    },
+    {
+      "op": "set_zone_min_thickness",
+      "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2",
+      "mm": 0.3
+    },
+    {
+      "op": "set_zone_min_thickness",
+      "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af",
+      "mm": 0.3
+    }
+  ]
+}

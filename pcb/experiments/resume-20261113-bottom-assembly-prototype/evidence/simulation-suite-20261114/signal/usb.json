@@ -1,0 +1,822 @@
+{
+ "spec": {
+  "VCRS": [
+   1.3,
+   2.0
+  ],
+  "TFR_ns": [
+   4,
+   20
+  ],
+  "TFF_ns": [
+   4,
+   20
+  ],
+  "TFRFM_pct": [
+   90,
+   111.11
+  ],
+  "ZDRV_ohm": [
+   28,
+   44
+  ],
+  "TDJ1_ns": 3.5,
+  "TDJ2_ns": 4.0,
+  "TJR1_ns": 18.5,
+  "TJR2_ns": 9.0,
+  "VDI_V": 0.2,
+  "VCM_V": [
+   0.8,
+   2.5
+  ],
+  "device_trace_delay_ns": 1.0
+ },
+ "impedance": {
+  "w0.25_gap0.20": {
+   "w_mm": 0.25,
+   "gap_mm": 0.2,
+   "Z_odd": 47.5613,
+   "Z_even": 68.8749,
+   "Z_diff": 95.1226,
+   "Z_common": 34.4374,
+   "er_eff_odd": 2.9939,
+   "er_eff_even": 3.5215,
+   "delay_odd_ps_per_mm": 5.7717,
+   "delay_even_ps_per_mm": 6.2595,
+   "C11_pF_per_mm": 0.1061,
+   "Cm_pF_per_mm": 0.0152,
+   "L11_nH_per_mm": 0.3528,
+   "Lm_nH_per_mm": 0.0783,
+   "kC": 0.1436,
+   "kL": 0.222
+  },
+  "w0.25_gap0.16": {
+   "w_mm": 0.25,
+   "gap_mm": 0.16,
+   "Z_odd": 45.0952,
+   "Z_even": 70.5959,
+   "Z_diff": 90.1904,
+   "Z_common": 35.298,
+   "er_eff_odd": 2.9811,
+   "er_eff_even": 3.5175,
+   "delay_odd_ps_per_mm": 5.7592,
+   "delay_even_ps_per_mm": 6.256,
+   "C11_pF_per_mm": 0.1082,
+   "Cm_pF_per_mm": 0.0195,
+   "L11_nH_per_mm": 0.3507,
+   "Lm_nH_per_mm": 0.091,
+   "kC": 0.1807,
+   "kL": 0.2594
+  },
+  "w0.25_gap0.25": {
+   "w_mm": 0.25,
+   "gap_mm": 0.25,
+   "Z_odd": 49.8401,
+   "Z_even": 67.1403,
+   "Z_diff": 99.6802,
+   "Z_common": 33.5701,
+   "er_eff_odd": 3.014,
+   "er_eff_even": 3.5211,
+   "delay_odd_ps_per_mm": 5.791,
+   "delay_even_ps_per_mm": 6.2592,
+   "C11_pF_per_mm": 0.1047,
+   "Cm_pF_per_mm": 0.0115,
+   "L11_nH_per_mm": 0.3544,
+   "Lm_nH_per_mm": 0.0658,
+   "kC": 0.1097,
+   "kL": 0.1857
+  },
+  "w0.15_gap0.20": {
+   "w_mm": 0.15,
+   "gap_mm": 0.2,
+   "Z_odd": 58.3115,
+   "Z_even": 87.3849,
+   "Z_diff": 116.6231,
+   "Z_common": 43.6925,
+   "er_eff_odd": 2.9544,
+   "er_eff_even": 3.4271,
+   "delay_odd_ps_per_mm": 5.7335,
+   "delay_even_ps_per_mm": 6.1751,
+   "C11_pF_per_mm": 0.0845,
+   "Cm_pF_per_mm": 0.0138,
+   "L11_nH_per_mm": 0.437,
+   "Lm_nH_per_mm": 0.1026,
+   "kC": 0.1637,
+   "kL": 0.2349
+  },
+  "w0.15_gap0.50": {
+   "w_mm": 0.15,
+   "gap_mm": 0.5,
+   "Z_odd": 68.6852,
+   "Z_even": 78.098,
+   "Z_diff": 137.3703,
+   "Z_common": 39.049,
+   "er_eff_odd": 3.0527,
+   "er_eff_even": 3.3922,
+   "delay_odd_ps_per_mm": 5.828,
+   "delay_even_ps_per_mm": 6.1436,
+   "C11_pF_per_mm": 0.0818,
+   "Cm_pF_per_mm": 0.0031,
+   "L11_nH_per_mm": 0.44,
+   "Lm_nH_per_mm": 0.0398,
+   "kC": 0.0378,
+   "kL": 0.0903
+  },
+  "single_0.15": {
+   "w_mm": 0.15,
+   "C_pF_per_mm": 0.08162885104620435,
+   "L_nH_per_mm": 0.44023753570336727,
+   "Z0_ohm": 73.43814402022585,
+   "er_eff": 3.2297741820012793,
+   "delay_ps_per_mm": 5.994671319336718
+  },
+  "single_0.25": {
+   "w_mm": 0.25,
+   "C_pF_per_mm": 0.10287633495444258,
+   "L_nH_per_mm": 0.3571564156313298,
+   "Z0_ohm": 58.921186815637135,
+   "er_eff": 3.3022910362258346,
+   "delay_ps_per_mm": 6.061595750758772
+  }
+ },
+ "cases": {
+  "device TX, test load 50 pF at J1 (Figure 7-9), ramp 4 ns": {
+   "VCRS_min_V": 1.634,
+   "VCRS_max_V": 1.668,
+   "TFR_ns": 4.75,
+   "TFF_ns": 4.76,
+   "TFRFM_pct": 99.8,
+   "DP_rise_fall_ns": [
+    4.85,
+    4.88
+   ],
+   "DM_rise_fall_ns": [
+    4.66,
+    4.65
+   ],
+   "nominal_swing_for_edge_measurement_V": [
+    0.0,
+    3.3
+   ],
+   "edge_pairing": {
+    "method": "10/90 around the same 50 percent crossing",
+    "DP": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 14,
+      "unpaired_edges": 1,
+      "extra_same_direction_crossings": 0
+     }
+    ],
+    "DM": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 14,
+      "unpaired_edges": 1,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ]
+   },
+   "jitter_pkpk_ns": 0.013,
+   "jitter_next_transition_ns": [
+    -0.013,
+    0.013
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 83.08,
+   "eye_width_UI": 0.997,
+   "overshoot_V": -0.008,
+   "undershoot_V": 0.0
+  },
+  "device TX, test load 50 pF at J1 (Figure 7-9), ramp 8 ns": {
+   "VCRS_min_V": 1.647,
+   "VCRS_max_V": 1.655,
+   "TFR_ns": 7.19,
+   "TFF_ns": 7.19,
+   "TFRFM_pct": 100.0,
+   "DP_rise_fall_ns": [
+    7.27,
+    7.28
+   ],
+   "DM_rise_fall_ns": [
+    7.11,
+    7.1
+   ],
+   "nominal_swing_for_edge_measurement_V": [
+    0.0,
+    3.3
+   ],
+   "edge_pairing": {
+    "method": "10/90 around the same 50 percent crossing",
+    "DP": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 14,
+      "unpaired_edges": 1,
+      "extra_same_direction_crossings": 0
+     }
+    ],
+    "DM": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 14,
+      "unpaired_edges": 1,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ]
+   },
+   "jitter_pkpk_ns": 0.025,
+   "jitter_next_transition_ns": [
+    -0.025,
+    0.025
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 82.92,
+   "eye_width_UI": 0.995,
+   "overshoot_V": -0.008,
+   "undershoot_V": 0.0
+  },
+  "device TX, test load 50 pF at J1 (Figure 7-9), ramp 16 ns": {
+   "VCRS_min_V": 1.651,
+   "VCRS_max_V": 1.651,
+   "TFR_ns": 13.09,
+   "TFF_ns": 13.09,
+   "TFRFM_pct": 100.0,
+   "DP_rise_fall_ns": [
+    13.17,
+    13.17
+   ],
+   "DM_rise_fall_ns": [
+    13.02,
+    13.02
+   ],
+   "nominal_swing_for_edge_measurement_V": [
+    0.0,
+    3.3
+   ],
+   "edge_pairing": {
+    "method": "10/90 around the same 50 percent crossing",
+    "DP": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 14,
+      "unpaired_edges": 1,
+      "extra_same_direction_crossings": 0
+     }
+    ],
+    "DM": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 14,
+      "unpaired_edges": 1,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ]
+   },
+   "jitter_pkpk_ns": 0.048,
+   "jitter_next_transition_ns": [
+    -0.048,
+    0.048
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 82.33,
+   "eye_width_UI": 0.988,
+   "overshoot_V": -0.008,
+   "undershoot_V": 0.0
+  },
+  "device TX, 1 m cable, eye at host, ramp 4 ns": {
+   "VCRS_min_V": 1.633,
+   "VCRS_max_V": 1.669,
+   "TFR_ns": 3.3,
+   "TFF_ns": 3.3,
+   "TFRFM_pct": 100.0,
+   "DP_rise_fall_ns": [
+    3.31,
+    3.3
+   ],
+   "DM_rise_fall_ns": [
+    3.29,
+    3.29
+   ],
+   "nominal_swing_for_edge_measurement_V": [
+    0.0,
+    3.3
+   ],
+   "edge_pairing": {
+    "method": "10/90 around the same 50 percent crossing",
+    "DP": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ],
+    "DM": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ]
+   },
+   "jitter_pkpk_ns": 0.012,
+   "jitter_next_transition_ns": [
+    -0.011,
+    0.011
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 83.12,
+   "eye_width_UI": 0.997,
+   "overshoot_V": 0.365,
+   "undershoot_V": 0.373
+  },
+  "device TX, 1 m cable, eye at host, ramp 8 ns": {
+   "VCRS_min_V": 1.641,
+   "VCRS_max_V": 1.661,
+   "TFR_ns": 5.99,
+   "TFF_ns": 5.99,
+   "TFRFM_pct": 100.0,
+   "DP_rise_fall_ns": [
+    6.0,
+    6.0
+   ],
+   "DM_rise_fall_ns": [
+    5.97,
+    5.97
+   ],
+   "nominal_swing_for_edge_measurement_V": [
+    0.0,
+    3.3
+   ],
+   "edge_pairing": {
+    "method": "10/90 around the same 50 percent crossing",
+    "DP": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ],
+    "DM": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ]
+   },
+   "jitter_pkpk_ns": 0.022,
+   "jitter_next_transition_ns": [
+    -0.022,
+    0.022
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.272,
+   "eye_width_above_VDI_ns": 83.13,
+   "eye_width_UI": 0.998,
+   "overshoot_V": 0.354,
+   "undershoot_V": 0.362
+  },
+  "device TX, 1 m cable, eye at host 150 pF, ramp 8 ns": {
+   "VCRS_min_V": 1.644,
+   "VCRS_max_V": 1.658,
+   "TFR_ns": 12.19,
+   "TFF_ns": 12.2,
+   "TFRFM_pct": 100.0,
+   "DP_rise_fall_ns": [
+    12.2,
+    12.24
+   ],
+   "DM_rise_fall_ns": [
+    12.18,
+    12.16
+   ],
+   "nominal_swing_for_edge_measurement_V": [
+    0.0,
+    3.3
+   ],
+   "edge_pairing": {
+    "method": "10/90 around the same 50 percent crossing",
+    "DP": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ],
+    "DM": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ]
+   },
+   "jitter_pkpk_ns": 0.034,
+   "jitter_next_transition_ns": [
+    -0.033,
+    0.033
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.258,
+   "eye_width_above_VDI_ns": 82.93,
+   "eye_width_UI": 0.995,
+   "overshoot_V": 0.156,
+   "undershoot_V": 0.164
+  },
+  "host TX, 1 m cable, eye at RP2350 pins, ramp 4 ns": {
+   "VCRS_min_V": 1.647,
+   "VCRS_max_V": 1.714,
+   "TFR_ns": 3.16,
+   "TFF_ns": 3.12,
+   "TFRFM_pct": 101.4,
+   "DP_rise_fall_ns": [
+    3.28,
+    3.19
+   ],
+   "DM_rise_fall_ns": [
+    3.04,
+    3.05
+   ],
+   "nominal_swing_for_edge_measurement_V": [
+    0.0,
+    3.3
+   ],
+   "edge_pairing": {
+    "method": "10/90 around the same 50 percent crossing",
+    "DP": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 15
+     }
+    ],
+    "DM": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ]
+   },
+   "jitter_pkpk_ns": 0.075,
+   "jitter_next_transition_ns": [
+    -0.075,
+    0.075
+   ],
+   "jitter_paired_ns": [
+    -0.001,
+    0.001
+   ],
+   "eye_height_at_centre_V": 3.145,
+   "eye_width_above_VDI_ns": 83.06,
+   "eye_width_UI": 0.997,
+   "overshoot_V": 0.385,
+   "undershoot_V": 0.393
+  },
+  "host TX, 1 m cable, eye at RP2350 pins, ramp 8 ns": {
+   "VCRS_min_V": 1.668,
+   "VCRS_max_V": 1.693,
+   "TFR_ns": 5.95,
+   "TFF_ns": 5.92,
+   "TFRFM_pct": 100.5,
+   "DP_rise_fall_ns": [
+    6.12,
+    6.06
+   ],
+   "DM_rise_fall_ns": [
+    5.78,
+    5.78
+   ],
+   "nominal_swing_for_edge_measurement_V": [
+    0.0,
+    3.3
+   ],
+   "edge_pairing": {
+    "method": "10/90 around the same 50 percent crossing",
+    "DP": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ],
+    "DM": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ]
+   },
+   "jitter_pkpk_ns": 0.15,
+   "jitter_next_transition_ns": [
+    -0.15,
+    0.15
+   ],
+   "jitter_paired_ns": [
+    -0.0,
+    0.0
+   ],
+   "eye_height_at_centre_V": 3.157,
+   "eye_width_above_VDI_ns": 82.93,
+   "eye_width_UI": 0.995,
+   "overshoot_V": 0.37,
+   "undershoot_V": 0.378
+  },
+  "host TX, 1 m cable, eye at RP2350 pins, ramp 16 ns": {
+   "VCRS_min_V": 1.676,
+   "VCRS_max_V": 1.684,
+   "TFR_ns": 12.38,
+   "TFF_ns": 12.43,
+   "TFRFM_pct": 99.6,
+   "DP_rise_fall_ns": [
+    12.65,
+    12.75
+   ],
+   "DM_rise_fall_ns": [
+    12.11,
+    12.1
+   ],
+   "nominal_swing_for_edge_measurement_V": [
+    0.0,
+    3.3
+   ],
+   "edge_pairing": {
+    "method": "10/90 around the same 50 percent crossing",
+    "DP": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 14,
+      "unpaired_edges": 1,
+      "extra_same_direction_crossings": 0
+     }
+    ],
+    "DM": [
+     {
+      "direction": "rise",
+      "midpoint_crossings": 15,
+      "measured_edges": 14,
+      "unpaired_edges": 1,
+      "extra_same_direction_crossings": 0
+     },
+     {
+      "direction": "fall",
+      "midpoint_crossings": 15,
+      "measured_edges": 15,
+      "unpaired_edges": 0,
+      "extra_same_direction_crossings": 0
+     }
+    ]
+   },
+   "jitter_pkpk_ns": 0.3,
+   "jitter_next_transition_ns": [
+    -0.3,
+    0.3
+   ],
+   "jitter_paired_ns": [
+    -0.001,
+    0.001
+   ],
+   "eye_height_at_centre_V": 3.155,
+   "eye_width_above_VDI_ns": 82.19,
+   "eye_width_UI": 0.986,
+   "overshoot_V": 0.146,
+   "undershoot_V": 0.154
+  }
+ },
+ "delay": {
+  "USB_DP_CONN": {
+   "coupled_mm": 39.62,
+   "breakout_mm": 6.54,
+   "vias": 4,
+   "phy_vias": 0,
+   "delay_ps_odd_mode": 370.9,
+   "delay_ps_single_ended_upper": 382.4
+  },
+  "USB_DM_CONN": {
+   "coupled_mm": 39.3,
+   "breakout_mm": 8.13,
+   "vias": 4,
+   "phy_vias": 2,
+   "delay_ps_odd_mode": 430.1,
+   "delay_ps_single_ended_upper": 441.4
+  },
+  "skew_ps": -59.2,
+  "simulated": {
+   "J1_to_RP2350_pins_ns": 0.4184,
+   "J1_to_27R_ns": 0.3354,
+   "skew_DP_minus_DM_ps": -38.76,
+   "limit_ns": 1.0
+  }
+ },
+ "pair_model_sections": [
+  {
+   "breakout_dp_mm": 3.07,
+   "breakout_dm_mm": 1.2,
+   "vias_dp": 1,
+   "vias_dm": 1
+  },
+  {
+   "coupled_mm": 12.68,
+   "extra_dp_mm": 0.28,
+   "extra_dm_mm": 0.0
+  },
+  {
+   "breakout_dp_mm": 0,
+   "breakout_dm_mm": 0,
+   "vias_dp": 1,
+   "vias_dm": 1
+  },
+  {
+   "coupled_mm": 7.02,
+   "extra_dp_mm": 0.0,
+   "extra_dm_mm": 0.28
+  },
+  {
+   "breakout_dp_mm": 0,
+   "breakout_dm_mm": 0,
+   "vias_dp": 1,
+   "vias_dm": 1
+  },
+  {
+   "coupled_mm": 19.32,
+   "extra_dp_mm": 0.32,
+   "extra_dm_mm": 0.0
+  },
+  {
+   "breakout_dp_mm": 0.41,
+   "breakout_dm_mm": 0.57,
+   "vias_dp": 1,
+   "vias_dm": 1
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+* crystal: drive-level upper bound, ESR 30.0 ohm, rail-to-rail square wave at XOUT
+Vx xo 0 AC 2.1008
+R108 xo xb 1k
+Cb xb 0 16.18p
+Ca xin 0 18.58p
+C0 xin xb 2.0p
+Lm xb m1 0.0439762082
+Cm m1 m2 4.0f
+Rm m2 m3 30.0
+Vi m3 xin 0
+.ac lin 40001 12.000meg 12.020meg
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=7
+run
+let xr = real(v(xin))
+let xi = imag(v(xin))
+let ir = real(i(vi))
+let ii = imag(i(vi))
+wrdata /out/xtal_drive_bound_esr30.txt xr xi ir ii
+quit 0
+.endc
+.end

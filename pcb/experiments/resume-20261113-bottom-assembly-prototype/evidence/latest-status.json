@@ -1,0 +1,80 @@
+{
+  "status": "Routed WIP; NOT FOR FABRICATION",
+  "board_sha256": "875ee106148f266e6fc24f938eddfaef901e4a263cc295df41cfb3e270a8301d",
+  "geometry_sha256": "9359f5505ebaee21363d35e8ebf7cbcf4857b7103d6ddb86cdc66652954e21d7",
+  "native_report": "evidence/final-cold-drc.json",
+  "unconnected_pairs": 0,
+  "schematic_parity_issues": 0,
+  "erc_violations": 0,
+  "violations_by_type": {},
+  "material_connectivity": {
+    "named_nets": 274,
+    "nets_with_multiple_pad_partitions": 0,
+    "unproved_guard_contacts_excluded": 7776,
+    "scope": "Positive-copper CAD graph including all routed windows and through drills; not strict-baseline promotion"
+  },
+  "preservation_invariants_pass": true,
+  "critical_return_centerline_preserved_at_1nm": true,
+  "top_smt_count": 0,
+  "reverse_key_leds": 64,
+  "outward_underglow_leds": 12,
+  "routed_windows": 66,
+  "dc_population_cases": [
+    {
+      "population": "LED14-0_LED15-1",
+      "selected_sites": {
+        "LED14": 0,
+        "LED15": 1
+      },
+      "max_LED_DC_drop_mV": 66.55,
+      "segments_exceeding_empirical_10C_screen": 0
+    },
+    {
+      "population": "LED14-1_LED15-0",
+      "selected_sites": {
+        "LED14": 1,
+        "LED15": 0
+      },
+      "max_LED_DC_drop_mV": 64.21,
+      "segments_exceeding_empirical_10C_screen": 0
+    },
+    {
+      "population": "LED14-1_LED15-1",
+      "selected_sites": {
+        "LED14": 1,
+        "LED15": 1
+      },
+      "max_LED_DC_drop_mV": 65.32,
+      "segments_exceeding_empirical_10C_screen": 0
+    },
+    {
+      "population": "primary",
+      "selected_sites": {
+        "LED14": 0,
+        "LED15": 0
+      },
+      "max_LED_DC_drop_mV": 65.44,
+      "segments_exceeding_empirical_10C_screen": 0
+    }
+  ],
+  "usb_board_delay_model_ns": 0.4184,
+  "regression_tests_passed": 19,
+  "unresolved": [
+    "Reverse-LED PWM transient supply design and qualification; existing firmware power interlock remains",
+    "Mixed LED signal recrossings under assumed drivers, physical buffer/LED models and 3D inner returns; USB metric corrected but hardware qualification outstanding",
+    "Assembler review of reverse placement, custom lands, paste and window tolerances; switch/stabilizer/receptacle physical fit",
+    "Fresh final manufacturing/export/readback validation after electrical and mechanical blockers close"
+  ],
+  "layout_policy": "All existing Caps Lock, Right Shift and Backspace options retained",
+  "promotion": "Not promoted in pcb/current.json; no order export, commit, push or merge in this task",
+  "simulation_suite": {
+    "report": "evidence/simulation-suite-20261114/REPORT.md",
+    "manifest": "evidence/simulation-suite-20261114/manifest.json",
+    "summary": "evidence/simulation-suite-20261114/summary.json",
+    "board_unchanged": true,
+    "RGB_qualification": 0,
+    "model_outcome": "LED synchronized PWM supply fails tested assumptions; fast output and full first-hop recrossing flags remain",
+    "regression_tests_passed": 21
+  },
+  "historical_manifest_note": "verification-manifest.json retains the prior CAD/analysis snapshot. Simulation geom.py, sim_usb.py and sim_xtal.py were changed; use simulation-suite-20261114/manifest.json for this campaign."
+}

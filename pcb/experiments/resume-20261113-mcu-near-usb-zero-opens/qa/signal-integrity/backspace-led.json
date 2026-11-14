@@ -1,0 +1,3411 @@
+{
+  "board_sha256": "86c4243dc112f308ab22614bf576716b77d9c33a38fea3776249dace63da6a5e",
+  "geometry_sha256": "0acf3f3fc2f9c23586dd4a5fd2564de0046186003b1cefd2903fd14e3ee7135e",
+  "lines_sha256": "ab2a22ef1def1e75befd6710438f97176f9b7c26f6dad39f7c9e657f832d21c4",
+  "scope": "Four changed LED hops, all source/destination population combinations, six assumed driver corners at 4 V; not hardware qualification or full-board SI.",
+  "cases": [
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        251.24249999999998,
+        9.67375
+      ],
+      "length_mm": 16.326,
+      "stub_mm": 18.501,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-5pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.61,
+          "width_max_ns": 300.65,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.32,
+          "delay_fall_ns": 1.8,
+          "high_min_after_peak_V": 3.989,
+          "low_max_after_trough_V": 0.013
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.6,
+          "width_max_ns": 900.65,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.32,
+          "delay_fall_ns": 1.8,
+          "high_min_after_peak_V": 3.989,
+          "low_max_after_trough_V": 0.013
+        },
+        "rise_10_90_ns": 2.55,
+        "fall_90_10_ns": 2.55,
+        "overshoot_V": 0.01,
+        "undershoot_V": 0.01,
+        "noise_margin_high_V": 0.869,
+        "noise_margin_low_V": 1.387,
+        "budget_ns": {
+          "T0H_above_min": 98.6,
+          "T0H_below_max": 99.4,
+          "T1H_above_min": 198.6,
+          "T0L_above_min": 199.4,
+          "T1L_above_min": 99.4
+        },
+        "pulse_width_error_ns": [
+          -1.4,
+          0.65
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        251.24249999999998,
+        9.67375
+      ],
+      "length_mm": 16.326,
+      "stub_mm": 18.501,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-15pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.28,
+          "width_max_ns": 301.33,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.93,
+          "delay_fall_ns": 2.94,
+          "high_min_after_peak_V": 3.997,
+          "low_max_after_trough_V": 0.003
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.28,
+          "width_max_ns": 901.33,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.94,
+          "delay_fall_ns": 2.94,
+          "high_min_after_peak_V": 3.997,
+          "low_max_after_trough_V": 0.003
+        },
+        "rise_10_90_ns": 4.78,
+        "fall_90_10_ns": 4.77,
+        "overshoot_V": 0.003,
+        "undershoot_V": 0.003,
+        "noise_margin_high_V": 0.877,
+        "noise_margin_low_V": 1.397,
+        "budget_ns": {
+          "T0H_above_min": 97.3,
+          "T0H_below_max": 98.7,
+          "T1H_above_min": 197.3,
+          "T0L_above_min": 198.7,
+          "T1L_above_min": 98.7
+        },
+        "pulse_width_error_ns": [
+          -2.72,
+          1.33
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        251.24249999999998,
+        9.67375
+      ],
+      "length_mm": 16.326,
+      "stub_mm": 18.501,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-5pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.45,
+          "width_max_ns": 300.72,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.53,
+          "delay_fall_ns": 1.93,
+          "high_min_after_peak_V": 3.992,
+          "low_max_after_trough_V": 0.008
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.45,
+          "width_max_ns": 900.72,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.53,
+          "delay_fall_ns": 1.93,
+          "high_min_after_peak_V": 3.992,
+          "low_max_after_trough_V": 0.008
+        },
+        "rise_10_90_ns": 2.74,
+        "fall_90_10_ns": 2.74,
+        "overshoot_V": 0.007,
+        "undershoot_V": 0.006,
+        "noise_margin_high_V": 0.872,
+        "noise_margin_low_V": 1.392,
+        "budget_ns": {
+          "T0H_above_min": 98.4,
+          "T0H_below_max": 99.3,
+          "T1H_above_min": 198.5,
+          "T0L_above_min": 199.3,
+          "T1L_above_min": 99.3
+        },
+        "pulse_width_error_ns": [
+          -1.55,
+          0.72
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        251.24249999999998,
+        9.67375
+      ],
+      "length_mm": 16.326,
+      "stub_mm": 18.501,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-15pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 296.98,
+          "width_max_ns": 301.47,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.3,
+          "delay_fall_ns": 3.19,
+          "high_min_after_peak_V": 3.997,
+          "low_max_after_trough_V": 0.003
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 896.98,
+          "width_max_ns": 901.46,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.3,
+          "delay_fall_ns": 3.19,
+          "high_min_after_peak_V": 3.997,
+          "low_max_after_trough_V": 0.003
+        },
+        "rise_10_90_ns": 5.31,
+        "fall_90_10_ns": 5.31,
+        "overshoot_V": 0.003,
+        "undershoot_V": 0.003,
+        "noise_margin_high_V": 0.877,
+        "noise_margin_low_V": 1.397,
+        "budget_ns": {
+          "T0H_above_min": 97.0,
+          "T0H_below_max": 98.5,
+          "T1H_above_min": 197.0,
+          "T0L_above_min": 198.5,
+          "T1L_above_min": 98.5
+        },
+        "pulse_width_error_ns": [
+          -3.02,
+          1.47
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        251.24249999999998,
+        9.67375
+      ],
+      "length_mm": 16.326,
+      "stub_mm": 18.501,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "nominal",
+      "assumptions": {
+        "r": 100.0,
+        "edge": 1e-08,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 294.05,
+          "width_max_ns": 303.15,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.25,
+          "delay_fall_ns": 8.92,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 894.05,
+          "width_max_ns": 903.15,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.25,
+          "delay_fall_ns": 8.92,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 9.3,
+        "fall_90_10_ns": 9.3,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 94.1,
+          "T0H_below_max": 96.9,
+          "T1H_above_min": 194.0,
+          "T0L_above_min": 196.9,
+          "T1L_above_min": 96.9
+        },
+        "pulse_width_error_ns": [
+          -5.95,
+          3.15
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        251.24249999999998,
+        9.67375
+      ],
+      "length_mm": 16.326,
+      "stub_mm": 18.501,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "weak",
+      "assumptions": {
+        "r": 1000.0,
+        "edge": 3e-08,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 265.47,
+          "width_max_ns": 316.14,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 55.73,
+          "delay_fall_ns": 43.77,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 865.47,
+          "width_max_ns": 916.14,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 55.73,
+          "delay_fall_ns": 43.77,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.001
+        },
+        "rise_10_90_ns": 62.27,
+        "fall_90_10_ns": 62.27,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.399,
+        "budget_ns": {
+          "T0H_above_min": 65.5,
+          "T0H_below_max": 83.9,
+          "T1H_above_min": 165.5,
+          "T0L_above_min": 183.9,
+          "T1L_above_min": 83.9
+        },
+        "pulse_width_error_ns": [
+          -34.53,
+          16.14
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        265.84749999999997,
+        4.59375
+      ],
+      "length_mm": 32.425,
+      "stub_mm": 1.54,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-5pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.75,
+          "width_max_ns": 300.56,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.22,
+          "delay_fall_ns": 1.74,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.75,
+          "width_max_ns": 900.56,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.22,
+          "delay_fall_ns": 1.74,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 2.24,
+        "fall_90_10_ns": 2.23,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 98.8,
+          "T0H_below_max": 99.4,
+          "T1H_above_min": 198.8,
+          "T0L_above_min": 199.4,
+          "T1L_above_min": 99.4
+        },
+        "pulse_width_error_ns": [
+          -1.25,
+          0.56
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        265.84749999999997,
+        4.59375
+      ],
+      "length_mm": 32.425,
+      "stub_mm": 1.54,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-15pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.44,
+          "width_max_ns": 301.28,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.84,
+          "delay_fall_ns": 2.9,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.44,
+          "width_max_ns": 901.28,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.84,
+          "delay_fall_ns": 2.9,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.49,
+        "fall_90_10_ns": 4.49,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.4,
+          "T0H_below_max": 98.7,
+          "T1H_above_min": 197.4,
+          "T0L_above_min": 198.7,
+          "T1L_above_min": 98.7
+        },
+        "pulse_width_error_ns": [
+          -2.56,
+          1.28
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        265.84749999999997,
+        4.59375
+      ],
+      "length_mm": 32.425,
+      "stub_mm": 1.54,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-5pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.61,
+          "width_max_ns": 300.63,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.4,
+          "delay_fall_ns": 1.88,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.61,
+          "width_max_ns": 900.64,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.4,
+          "delay_fall_ns": 1.88,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 2.5,
+        "fall_90_10_ns": 2.5,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 98.6,
+          "T0H_below_max": 99.4,
+          "T1H_above_min": 198.6,
+          "T0L_above_min": 199.4,
+          "T1L_above_min": 99.4
+        },
+        "pulse_width_error_ns": [
+          -1.39,
+          0.64
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        265.84749999999997,
+        4.59375
+      ],
+      "length_mm": 32.425,
+      "stub_mm": 1.54,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-15pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.14,
+          "width_max_ns": 301.42,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.2,
+          "delay_fall_ns": 3.14,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.14,
+          "width_max_ns": 901.42,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.2,
+          "delay_fall_ns": 3.14,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.99,
+        "fall_90_10_ns": 4.99,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.1,
+          "T0H_below_max": 98.6,
+          "T1H_above_min": 197.1,
+          "T0L_above_min": 198.6,
+          "T1L_above_min": 98.6
+        },
+        "pulse_width_error_ns": [
+          -2.86,
+          1.42
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        265.84749999999997,
+        4.59375
+      ],
+      "length_mm": 32.425,
+      "stub_mm": 1.54,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "nominal",
+      "assumptions": {
+        "r": 100.0,
+        "edge": 1e-08,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 294.08,
+          "width_max_ns": 303.13,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.19,
+          "delay_fall_ns": 8.88,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 894.08,
+          "width_max_ns": 903.13,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.19,
+          "delay_fall_ns": 8.88,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 9.17,
+        "fall_90_10_ns": 9.17,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 94.1,
+          "T0H_below_max": 96.9,
+          "T1H_above_min": 194.1,
+          "T0L_above_min": 196.9,
+          "T1L_above_min": 96.9
+        },
+        "pulse_width_error_ns": [
+          -5.92,
+          3.13
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_13",
+      "source_ref": "LED13",
+      "destination_ref": "LED14",
+      "source_mm": [
+        238.2225,
+        13.803749999999999
+      ],
+      "destination_mm": [
+        265.84749999999997,
+        4.59375
+      ],
+      "length_mm": 32.425,
+      "stub_mm": 1.54,
+      "series": "R189",
+      "series_ohms": 100.0,
+      "driver": "weak",
+      "assumptions": {
+        "r": 1000.0,
+        "edge": 3e-08,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 265.82,
+          "width_max_ns": 315.96,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 55.28,
+          "delay_fall_ns": 43.46,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 865.82,
+          "width_max_ns": 915.96,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 55.29,
+          "delay_fall_ns": 43.46,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.001
+        },
+        "rise_10_90_ns": 61.64,
+        "fall_90_10_ns": 61.64,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.399,
+        "budget_ns": {
+          "T0H_above_min": 65.8,
+          "T0H_below_max": 84.0,
+          "T1H_above_min": 165.8,
+          "T0L_above_min": 184.0,
+          "T1L_above_min": 84.0
+        },
+        "pulse_width_error_ns": [
+          -34.18,
+          15.96
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-5pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.8,
+          "width_max_ns": 300.51,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.27,
+          "delay_fall_ns": 1.8,
+          "high_min_after_peak_V": 3.987,
+          "low_max_after_trough_V": 0.013
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.8,
+          "width_max_ns": 900.51,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.27,
+          "delay_fall_ns": 1.8,
+          "high_min_after_peak_V": 3.987,
+          "low_max_after_trough_V": 0.013
+        },
+        "rise_10_90_ns": 2.09,
+        "fall_90_10_ns": 2.08,
+        "overshoot_V": 0.013,
+        "undershoot_V": 0.013,
+        "noise_margin_high_V": 0.867,
+        "noise_margin_low_V": 1.387,
+        "budget_ns": {
+          "T0H_above_min": 98.8,
+          "T0H_below_max": 99.5,
+          "T1H_above_min": 198.8,
+          "T0L_above_min": 199.5,
+          "T1L_above_min": 99.5
+        },
+        "pulse_width_error_ns": [
+          -1.2,
+          0.51
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-15pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.46,
+          "width_max_ns": 301.22,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.9,
+          "delay_fall_ns": 2.95,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.46,
+          "width_max_ns": 901.22,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.9,
+          "delay_fall_ns": 2.95,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.42,
+        "fall_90_10_ns": 4.42,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.5,
+          "T0H_below_max": 98.8,
+          "T1H_above_min": 197.5,
+          "T0L_above_min": 198.8,
+          "T1L_above_min": 98.8
+        },
+        "pulse_width_error_ns": [
+          -2.54,
+          1.22
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-5pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.67,
+          "width_max_ns": 300.63,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.47,
+          "delay_fall_ns": 2.01,
+          "high_min_after_peak_V": 3.988,
+          "low_max_after_trough_V": 0.012
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.67,
+          "width_max_ns": 900.63,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.47,
+          "delay_fall_ns": 2.01,
+          "high_min_after_peak_V": 3.988,
+          "low_max_after_trough_V": 0.012
+        },
+        "rise_10_90_ns": 2.35,
+        "fall_90_10_ns": 2.35,
+        "overshoot_V": 0.012,
+        "undershoot_V": 0.012,
+        "noise_margin_high_V": 0.868,
+        "noise_margin_low_V": 1.388,
+        "budget_ns": {
+          "T0H_above_min": 98.7,
+          "T0H_below_max": 99.4,
+          "T1H_above_min": 198.7,
+          "T0L_above_min": 199.4,
+          "T1L_above_min": 99.4
+        },
+        "pulse_width_error_ns": [
+          -1.33,
+          0.63
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-15pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.19,
+          "width_max_ns": 301.43,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.27,
+          "delay_fall_ns": 3.28,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.19,
+          "width_max_ns": 901.43,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.27,
+          "delay_fall_ns": 3.28,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.97,
+        "fall_90_10_ns": 4.97,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.2,
+          "T0H_below_max": 98.6,
+          "T1H_above_min": 197.2,
+          "T0L_above_min": 198.6,
+          "T1L_above_min": 98.6
+        },
+        "pulse_width_error_ns": [
+          -2.81,
+          1.43
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "nominal",
+      "assumptions": {
+        "r": 100.0,
+        "edge": 1e-08,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 294.0,
+          "width_max_ns": 303.17,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.62,
+          "delay_fall_ns": 9.29,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 894.0,
+          "width_max_ns": 903.17,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.62,
+          "delay_fall_ns": 9.29,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 9.52,
+        "fall_90_10_ns": 9.52,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 94.0,
+          "T0H_below_max": 96.8,
+          "T1H_above_min": 194.0,
+          "T0L_above_min": 196.8,
+          "T1L_above_min": 96.8
+        },
+        "pulse_width_error_ns": [
+          -6.0,
+          3.17
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "weak",
+      "assumptions": {
+        "r": 1000.0,
+        "edge": 3e-08,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 261.44,
+          "width_max_ns": 318.21,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 61.24,
+          "delay_fall_ns": 47.61,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 861.44,
+          "width_max_ns": 918.21,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 61.24,
+          "delay_fall_ns": 47.61,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.002
+        },
+        "rise_10_90_ns": 69.51,
+        "fall_90_10_ns": 69.51,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.398,
+        "budget_ns": {
+          "T0H_above_min": 61.4,
+          "T0H_below_max": 81.8,
+          "T1H_above_min": 161.4,
+          "T0L_above_min": 181.8,
+          "T1L_above_min": 81.8
+        },
+        "pulse_width_error_ns": [
+          -38.56,
+          18.21
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-5pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.88,
+          "width_max_ns": 300.5,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.24,
+          "delay_fall_ns": 1.79,
+          "high_min_after_peak_V": 3.981,
+          "low_max_after_trough_V": 0.019
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.88,
+          "width_max_ns": 900.5,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.24,
+          "delay_fall_ns": 1.78,
+          "high_min_after_peak_V": 3.987,
+          "low_max_after_trough_V": 0.013
+        },
+        "rise_10_90_ns": 1.78,
+        "fall_90_10_ns": 1.78,
+        "overshoot_V": 0.011,
+        "undershoot_V": 0.012,
+        "noise_margin_high_V": 0.861,
+        "noise_margin_low_V": 1.381,
+        "budget_ns": {
+          "T0H_above_min": 98.9,
+          "T0H_below_max": 99.5,
+          "T1H_above_min": 198.9,
+          "T0L_above_min": 199.5,
+          "T1L_above_min": 99.5
+        },
+        "pulse_width_error_ns": [
+          -1.12,
+          0.5
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-15pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.58,
+          "width_max_ns": 301.17,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.82,
+          "delay_fall_ns": 2.89,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.58,
+          "width_max_ns": 901.17,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.82,
+          "delay_fall_ns": 2.89,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.12,
+        "fall_90_10_ns": 4.11,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.6,
+          "T0H_below_max": 98.8,
+          "T1H_above_min": 197.6,
+          "T0L_above_min": 198.8,
+          "T1L_above_min": 98.8
+        },
+        "pulse_width_error_ns": [
+          -2.42,
+          1.17
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-5pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.71,
+          "width_max_ns": 300.59,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.46,
+          "delay_fall_ns": 1.97,
+          "high_min_after_peak_V": 3.999,
+          "low_max_after_trough_V": 0.001
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.71,
+          "width_max_ns": 900.59,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.46,
+          "delay_fall_ns": 1.97,
+          "high_min_after_peak_V": 3.999,
+          "low_max_after_trough_V": 0.001
+        },
+        "rise_10_90_ns": 2.26,
+        "fall_90_10_ns": 2.26,
+        "overshoot_V": 0.001,
+        "undershoot_V": 0.001,
+        "noise_margin_high_V": 0.879,
+        "noise_margin_low_V": 1.399,
+        "budget_ns": {
+          "T0H_above_min": 98.7,
+          "T0H_below_max": 99.4,
+          "T1H_above_min": 198.7,
+          "T0L_above_min": 199.4,
+          "T1L_above_min": 99.4
+        },
+        "pulse_width_error_ns": [
+          -1.29,
+          0.59
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-15pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.28,
+          "width_max_ns": 301.38,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.21,
+          "delay_fall_ns": 3.22,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.28,
+          "width_max_ns": 901.38,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.21,
+          "delay_fall_ns": 3.22,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.8,
+        "fall_90_10_ns": 4.8,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.3,
+          "T0H_below_max": 98.6,
+          "T1H_above_min": 197.3,
+          "T0L_above_min": 198.6,
+          "T1L_above_min": 98.6
+        },
+        "pulse_width_error_ns": [
+          -2.72,
+          1.38
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "nominal",
+      "assumptions": {
+        "r": 100.0,
+        "edge": 1e-08,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 294.01,
+          "width_max_ns": 303.16,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.59,
+          "delay_fall_ns": 9.27,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 894.01,
+          "width_max_ns": 903.16,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.59,
+          "delay_fall_ns": 9.27,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 9.46,
+        "fall_90_10_ns": 9.46,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 94.0,
+          "T0H_below_max": 96.8,
+          "T1H_above_min": 194.0,
+          "T0L_above_min": 196.8,
+          "T1L_above_min": 96.8
+        },
+        "pulse_width_error_ns": [
+          -5.99,
+          3.16
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        252.1925,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "weak",
+      "assumptions": {
+        "r": 1000.0,
+        "edge": 3e-08,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 261.59,
+          "width_max_ns": 318.13,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 61.05,
+          "delay_fall_ns": 47.48,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 861.59,
+          "width_max_ns": 918.13,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 61.05,
+          "delay_fall_ns": 47.48,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.002
+        },
+        "rise_10_90_ns": 69.25,
+        "fall_90_10_ns": 69.25,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.398,
+        "budget_ns": {
+          "T0H_above_min": 61.6,
+          "T0H_below_max": 81.9,
+          "T1H_above_min": 161.6,
+          "T0L_above_min": 181.9,
+          "T1L_above_min": 81.9
+        },
+        "pulse_width_error_ns": [
+          -38.41,
+          18.13
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-5pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.85,
+          "width_max_ns": 300.5,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.26,
+          "delay_fall_ns": 1.81,
+          "high_min_after_peak_V": 3.988,
+          "low_max_after_trough_V": 0.012
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.85,
+          "width_max_ns": 900.5,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.26,
+          "delay_fall_ns": 1.81,
+          "high_min_after_peak_V": 3.988,
+          "low_max_after_trough_V": 0.012
+        },
+        "rise_10_90_ns": 1.96,
+        "fall_90_10_ns": 1.96,
+        "overshoot_V": 0.011,
+        "undershoot_V": 0.011,
+        "noise_margin_high_V": 0.868,
+        "noise_margin_low_V": 1.388,
+        "budget_ns": {
+          "T0H_above_min": 98.9,
+          "T0H_below_max": 99.5,
+          "T1H_above_min": 198.9,
+          "T0L_above_min": 199.5,
+          "T1L_above_min": 99.5
+        },
+        "pulse_width_error_ns": [
+          -1.15,
+          0.5
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-15pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.51,
+          "width_max_ns": 301.2,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.88,
+          "delay_fall_ns": 2.95,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.51,
+          "width_max_ns": 901.2,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.88,
+          "delay_fall_ns": 2.95,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.38,
+        "fall_90_10_ns": 4.38,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.5,
+          "T0H_below_max": 98.8,
+          "T1H_above_min": 197.5,
+          "T0L_above_min": 198.8,
+          "T1L_above_min": 98.8
+        },
+        "pulse_width_error_ns": [
+          -2.49,
+          1.2
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-5pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.69,
+          "width_max_ns": 300.61,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.48,
+          "delay_fall_ns": 2.01,
+          "high_min_after_peak_V": 3.99,
+          "low_max_after_trough_V": 0.01
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.69,
+          "width_max_ns": 900.61,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.48,
+          "delay_fall_ns": 2.01,
+          "high_min_after_peak_V": 3.99,
+          "low_max_after_trough_V": 0.01
+        },
+        "rise_10_90_ns": 2.31,
+        "fall_90_10_ns": 2.31,
+        "overshoot_V": 0.01,
+        "undershoot_V": 0.01,
+        "noise_margin_high_V": 0.87,
+        "noise_margin_low_V": 1.39,
+        "budget_ns": {
+          "T0H_above_min": 98.7,
+          "T0H_below_max": 99.4,
+          "T1H_above_min": 198.7,
+          "T0L_above_min": 199.4,
+          "T1L_above_min": 99.4
+        },
+        "pulse_width_error_ns": [
+          -1.31,
+          0.61
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-15pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.21,
+          "width_max_ns": 301.41,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.27,
+          "delay_fall_ns": 3.28,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.21,
+          "width_max_ns": 901.41,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.27,
+          "delay_fall_ns": 3.28,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.91,
+        "fall_90_10_ns": 4.91,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.2,
+          "T0H_below_max": 98.6,
+          "T1H_above_min": 197.2,
+          "T0L_above_min": 198.6,
+          "T1L_above_min": 98.6
+        },
+        "pulse_width_error_ns": [
+          -2.79,
+          1.41
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "nominal",
+      "assumptions": {
+        "r": 100.0,
+        "edge": 1e-08,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 294.0,
+          "width_max_ns": 303.17,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.64,
+          "delay_fall_ns": 9.31,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 894.0,
+          "width_max_ns": 903.17,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.64,
+          "delay_fall_ns": 9.31,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 9.53,
+        "fall_90_10_ns": 9.53,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 94.0,
+          "T0H_below_max": 96.8,
+          "T1H_above_min": 194.0,
+          "T0L_above_min": 196.8,
+          "T1L_above_min": 96.8
+        },
+        "pulse_width_error_ns": [
+          -6.0,
+          3.17
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        268.525,
+        20.275
+      ],
+      "length_mm": 29.784,
+      "stub_mm": 16.435,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "weak",
+      "assumptions": {
+        "r": 1000.0,
+        "edge": 3e-08,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 261.15,
+          "width_max_ns": 318.36,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 61.62,
+          "delay_fall_ns": 47.88,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 861.15,
+          "width_max_ns": 918.36,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 61.62,
+          "delay_fall_ns": 47.88,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.002
+        },
+        "rise_10_90_ns": 70.02,
+        "fall_90_10_ns": 70.02,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.398,
+        "budget_ns": {
+          "T0H_above_min": 61.1,
+          "T0H_below_max": 81.6,
+          "T1H_above_min": 161.1,
+          "T0L_above_min": 181.6,
+          "T1L_above_min": 81.6
+        },
+        "pulse_width_error_ns": [
+          -38.85,
+          18.36
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-5pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.9,
+          "width_max_ns": 300.46,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.25,
+          "delay_fall_ns": 1.78,
+          "high_min_after_peak_V": 3.981,
+          "low_max_after_trough_V": 0.019
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.9,
+          "width_max_ns": 900.46,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.25,
+          "delay_fall_ns": 1.78,
+          "high_min_after_peak_V": 3.981,
+          "low_max_after_trough_V": 0.019
+        },
+        "rise_10_90_ns": 1.72,
+        "fall_90_10_ns": 1.72,
+        "overshoot_V": 0.017,
+        "undershoot_V": 0.017,
+        "noise_margin_high_V": 0.861,
+        "noise_margin_low_V": 1.381,
+        "budget_ns": {
+          "T0H_above_min": 98.9,
+          "T0H_below_max": 99.5,
+          "T1H_above_min": 198.9,
+          "T0L_above_min": 199.5,
+          "T1L_above_min": 99.5
+        },
+        "pulse_width_error_ns": [
+          -1.1,
+          0.46
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-15pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.57,
+          "width_max_ns": 301.17,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.86,
+          "delay_fall_ns": 2.89,
+          "high_min_after_peak_V": 3.998,
+          "low_max_after_trough_V": 0.002
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.57,
+          "width_max_ns": 901.17,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.86,
+          "delay_fall_ns": 2.89,
+          "high_min_after_peak_V": 3.998,
+          "low_max_after_trough_V": 0.002
+        },
+        "rise_10_90_ns": 4.09,
+        "fall_90_10_ns": 4.09,
+        "overshoot_V": 0.001,
+        "undershoot_V": 0.001,
+        "noise_margin_high_V": 0.878,
+        "noise_margin_low_V": 1.398,
+        "budget_ns": {
+          "T0H_above_min": 97.6,
+          "T0H_below_max": 98.8,
+          "T1H_above_min": 197.6,
+          "T0L_above_min": 198.8,
+          "T1L_above_min": 98.8
+        },
+        "pulse_width_error_ns": [
+          -2.43,
+          1.17
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-5pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.73,
+          "width_max_ns": 300.57,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.47,
+          "delay_fall_ns": 1.97,
+          "high_min_after_peak_V": 3.997,
+          "low_max_after_trough_V": 0.003
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.73,
+          "width_max_ns": 900.57,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.47,
+          "delay_fall_ns": 1.97,
+          "high_min_after_peak_V": 3.997,
+          "low_max_after_trough_V": 0.003
+        },
+        "rise_10_90_ns": 2.18,
+        "fall_90_10_ns": 2.18,
+        "overshoot_V": 0.001,
+        "undershoot_V": 0.001,
+        "noise_margin_high_V": 0.877,
+        "noise_margin_low_V": 1.397,
+        "budget_ns": {
+          "T0H_above_min": 98.7,
+          "T0H_below_max": 99.4,
+          "T1H_above_min": 198.7,
+          "T0L_above_min": 199.4,
+          "T1L_above_min": 99.4
+        },
+        "pulse_width_error_ns": [
+          -1.27,
+          0.57
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-15pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.32,
+          "width_max_ns": 301.35,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.19,
+          "delay_fall_ns": 3.2,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.32,
+          "width_max_ns": 901.35,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.19,
+          "delay_fall_ns": 3.2,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.77,
+        "fall_90_10_ns": 4.77,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.3,
+          "T0H_below_max": 98.6,
+          "T1H_above_min": 197.3,
+          "T0L_above_min": 198.6,
+          "T1L_above_min": 98.6
+        },
+        "pulse_width_error_ns": [
+          -2.68,
+          1.35
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "nominal",
+      "assumptions": {
+        "r": 100.0,
+        "edge": 1e-08,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 294.01,
+          "width_max_ns": 303.16,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.62,
+          "delay_fall_ns": 9.29,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 894.01,
+          "width_max_ns": 903.16,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.62,
+          "delay_fall_ns": 9.29,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 9.47,
+        "fall_90_10_ns": 9.47,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 94.0,
+          "T0H_below_max": 96.8,
+          "T1H_above_min": 194.0,
+          "T0L_above_min": 196.8,
+          "T1L_above_min": 96.8
+        },
+        "pulse_width_error_ns": [
+          -5.99,
+          3.16
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_14",
+      "source_ref": "LED14",
+      "destination_ref": "LED15",
+      "source_mm": [
+        266.7975,
+        3.64375
+      ],
+      "destination_mm": [
+        280.4525,
+        9.67375
+      ],
+      "length_mm": 39.993,
+      "stub_mm": 6.227,
+      "series": "R190",
+      "series_ohms": 100.0,
+      "driver": "weak",
+      "assumptions": {
+        "r": 1000.0,
+        "edge": 3e-08,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 261.3,
+          "width_max_ns": 318.27,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 61.43,
+          "delay_fall_ns": 47.74,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 861.3,
+          "width_max_ns": 918.27,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 61.43,
+          "delay_fall_ns": 47.75,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.002
+        },
+        "rise_10_90_ns": 69.76,
+        "fall_90_10_ns": 69.76,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.398,
+        "budget_ns": {
+          "T0H_above_min": 61.3,
+          "T0H_below_max": 81.7,
+          "T1H_above_min": 161.3,
+          "T0L_above_min": 181.7,
+          "T1L_above_min": 81.7
+        },
+        "pulse_width_error_ns": [
+          -38.7,
+          18.27
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        269.47499999999997,
+        19.325
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-5pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 299.09,
+          "width_max_ns": 300.4,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 1.75,
+          "delay_fall_ns": 1.43,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 899.08,
+          "width_max_ns": 900.4,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 1.75,
+          "delay_fall_ns": 1.43,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 1.55,
+        "fall_90_10_ns": 1.55,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 99.1,
+          "T0H_below_max": 99.6,
+          "T1H_above_min": 199.1,
+          "T0L_above_min": 199.6,
+          "T1L_above_min": 99.6
+        },
+        "pulse_width_error_ns": [
+          -0.92,
+          0.4
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        269.47499999999997,
+        19.325
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-15pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.81,
+          "width_max_ns": 301.1,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.38,
+          "delay_fall_ns": 2.58,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.81,
+          "width_max_ns": 901.1,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.38,
+          "delay_fall_ns": 2.58,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 3.9,
+        "fall_90_10_ns": 3.9,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.8,
+          "T0H_below_max": 98.9,
+          "T1H_above_min": 197.8,
+          "T0L_above_min": 198.9,
+          "T1L_above_min": 98.9
+        },
+        "pulse_width_error_ns": [
+          -2.19,
+          1.1
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        269.47499999999997,
+        19.325
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-5pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.97,
+          "width_max_ns": 300.45,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 1.93,
+          "delay_fall_ns": 1.56,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.97,
+          "width_max_ns": 900.45,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 1.93,
+          "delay_fall_ns": 1.56,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 1.83,
+        "fall_90_10_ns": 1.83,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 99.0,
+          "T0H_below_max": 99.6,
+          "T1H_above_min": 199.0,
+          "T0L_above_min": 199.5,
+          "T1L_above_min": 99.5
+        },
+        "pulse_width_error_ns": [
+          -1.03,
+          0.45
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        269.47499999999997,
+        19.325
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-15pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.55,
+          "width_max_ns": 301.21,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.71,
+          "delay_fall_ns": 2.8,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.55,
+          "width_max_ns": 901.21,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.71,
+          "delay_fall_ns": 2.8,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.34,
+        "fall_90_10_ns": 4.34,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.6,
+          "T0H_below_max": 98.8,
+          "T1H_above_min": 197.5,
+          "T0L_above_min": 198.8,
+          "T1L_above_min": 98.8
+        },
+        "pulse_width_error_ns": [
+          -2.45,
+          1.21
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        269.47499999999997,
+        19.325
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "nominal",
+      "assumptions": {
+        "r": 100.0,
+        "edge": 1e-08,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 294.21,
+          "width_max_ns": 303.07,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 9.8,
+          "delay_fall_ns": 8.49,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 894.21,
+          "width_max_ns": 903.07,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 9.8,
+          "delay_fall_ns": 8.49,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 8.66,
+        "fall_90_10_ns": 8.66,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 94.2,
+          "T0H_below_max": 96.9,
+          "T1H_above_min": 194.2,
+          "T0L_above_min": 196.9,
+          "T1L_above_min": 96.9
+        },
+        "pulse_width_error_ns": [
+          -5.79,
+          3.07
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        269.47499999999997,
+        19.325
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "weak",
+      "assumptions": {
+        "r": 1000.0,
+        "edge": 3e-08,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 267.37,
+          "width_max_ns": 315.2,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 53.35,
+          "delay_fall_ns": 42.18,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 867.37,
+          "width_max_ns": 915.2,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 53.35,
+          "delay_fall_ns": 42.18,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 58.81,
+        "fall_90_10_ns": 58.81,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 67.4,
+          "T0H_below_max": 84.8,
+          "T1H_above_min": 167.4,
+          "T0L_above_min": 184.8,
+          "T1L_above_min": 84.8
+        },
+        "pulse_width_error_ns": [
+          -32.63,
+          15.2
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        281.4025,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-5pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 299.17,
+          "width_max_ns": 300.4,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 1.7,
+          "delay_fall_ns": 1.45,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 899.17,
+          "width_max_ns": 900.4,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 1.7,
+          "delay_fall_ns": 1.45,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 1.51,
+        "fall_90_10_ns": 1.51,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 99.2,
+          "T0H_below_max": 99.6,
+          "T1H_above_min": 199.2,
+          "T0L_above_min": 199.6,
+          "T1L_above_min": 99.6
+        },
+        "pulse_width_error_ns": [
+          -0.83,
+          0.4
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        281.4025,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-15pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.85,
+          "width_max_ns": 301.06,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.36,
+          "delay_fall_ns": 2.56,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.85,
+          "width_max_ns": 901.06,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.36,
+          "delay_fall_ns": 2.56,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 3.83,
+        "fall_90_10_ns": 3.83,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.9,
+          "T0H_below_max": 98.9,
+          "T1H_above_min": 197.9,
+          "T0L_above_min": 198.9,
+          "T1L_above_min": 98.9
+        },
+        "pulse_width_error_ns": [
+          -2.15,
+          1.06
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        281.4025,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-5pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 299.01,
+          "width_max_ns": 300.44,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 1.92,
+          "delay_fall_ns": 1.57,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 899.01,
+          "width_max_ns": 900.44,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 1.92,
+          "delay_fall_ns": 1.57,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 1.74,
+        "fall_90_10_ns": 1.74,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 99.0,
+          "T0H_below_max": 99.6,
+          "T1H_above_min": 199.0,
+          "T0L_above_min": 199.6,
+          "T1L_above_min": 99.6
+        },
+        "pulse_width_error_ns": [
+          -0.99,
+          0.44
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        281.4025,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-15pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.58,
+          "width_max_ns": 301.2,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.7,
+          "delay_fall_ns": 2.81,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.58,
+          "width_max_ns": 901.2,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.7,
+          "delay_fall_ns": 2.81,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 4.28,
+        "fall_90_10_ns": 4.28,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.6,
+          "T0H_below_max": 98.8,
+          "T1H_above_min": 197.6,
+          "T0L_above_min": 198.8,
+          "T1L_above_min": 98.8
+        },
+        "pulse_width_error_ns": [
+          -2.42,
+          1.2
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        281.4025,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "nominal",
+      "assumptions": {
+        "r": 100.0,
+        "edge": 1e-08,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 294.21,
+          "width_max_ns": 303.07,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 9.84,
+          "delay_fall_ns": 8.53,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 894.21,
+          "width_max_ns": 903.07,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 9.84,
+          "delay_fall_ns": 8.53,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 8.68,
+        "fall_90_10_ns": 8.68,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 94.2,
+          "T0H_below_max": 96.9,
+          "T1H_above_min": 194.2,
+          "T0L_above_min": 196.9,
+          "T1L_above_min": 96.9
+        },
+        "pulse_width_error_ns": [
+          -5.79,
+          3.07
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "KEY_RGB_CHAIN_15",
+      "source_ref": "LED15",
+      "destination_ref": "LED29",
+      "source_mm": [
+        281.4025,
+        8.723749999999999
+      ],
+      "destination_mm": [
+        270.61,
+        33.80375
+      ],
+      "length_mm": 18.55,
+      "stub_mm": 0.736,
+      "series": "R191",
+      "series_ohms": 100.0,
+      "driver": "weak",
+      "assumptions": {
+        "r": 1000.0,
+        "edge": 3e-08,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 266.92,
+          "width_max_ns": 315.41,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 53.96,
+          "delay_fall_ns": 42.61,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 866.93,
+          "width_max_ns": 915.41,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 53.96,
+          "delay_fall_ns": 42.61,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 59.62,
+        "fall_90_10_ns": 59.62,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 66.9,
+          "T0H_below_max": 84.6,
+          "T1H_above_min": 166.9,
+          "T0L_above_min": 184.6,
+          "T1L_above_min": 84.6
+        },
+        "pulse_width_error_ns": [
+          -33.08,
+          15.41
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "UG_LED_5",
+      "source_ref": "LED67",
+      "destination_ref": "LED68",
+      "source_mm": [
+        218.52499999999998,
+        18.025
+      ],
+      "destination_mm": [
+        268.97499999999997,
+        18.974999999999998
+      ],
+      "length_mm": 75.983,
+      "stub_mm": 0.035,
+      "series": "R174",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-5pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.35,
+          "width_max_ns": 300.52,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.85,
+          "delay_fall_ns": 1.93,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.35,
+          "width_max_ns": 900.53,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 2.86,
+          "delay_fall_ns": 1.94,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 2.68,
+        "fall_90_10_ns": 2.69,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 98.4,
+          "T0H_below_max": 99.5,
+          "T1H_above_min": 198.4,
+          "T0L_above_min": 199.5,
+          "T1L_above_min": 99.5
+        },
+        "pulse_width_error_ns": [
+          -1.65,
+          0.53
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "UG_LED_5",
+      "source_ref": "LED67",
+      "destination_ref": "LED68",
+      "source_mm": [
+        218.52499999999998,
+        18.025
+      ],
+      "destination_mm": [
+        268.97499999999997,
+        18.974999999999998
+      ],
+      "length_mm": 75.983,
+      "stub_mm": 0.035,
+      "series": "R174",
+      "series_ohms": 100.0,
+      "driver": "strong-10ohm-15pF",
+      "assumptions": {
+        "r": 10.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 297.15,
+          "width_max_ns": 301.51,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.36,
+          "delay_fall_ns": 3.34,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 897.16,
+          "width_max_ns": 901.51,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.36,
+          "delay_fall_ns": 3.33,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 5.05,
+        "fall_90_10_ns": 5.06,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 97.1,
+          "T0H_below_max": 98.5,
+          "T1H_above_min": 197.2,
+          "T0L_above_min": 198.5,
+          "T1L_above_min": 98.5
+        },
+        "pulse_width_error_ns": [
+          -2.85,
+          1.51
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "UG_LED_5",
+      "source_ref": "LED67",
+      "destination_ref": "LED68",
+      "source_mm": [
+        218.52499999999998,
+        18.025
+      ],
+      "destination_mm": [
+        268.97499999999997,
+        18.974999999999998
+      ],
+      "length_mm": 75.983,
+      "stub_mm": 0.035,
+      "series": "R174",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-5pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 298.14,
+          "width_max_ns": 300.64,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.1,
+          "delay_fall_ns": 2.1,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 898.14,
+          "width_max_ns": 900.64,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 3.1,
+          "delay_fall_ns": 2.1,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 3.13,
+        "fall_90_10_ns": 3.14,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 98.1,
+          "T0H_below_max": 99.4,
+          "T1H_above_min": 198.1,
+          "T0L_above_min": 199.4,
+          "T1L_above_min": 99.4
+        },
+        "pulse_width_error_ns": [
+          -1.86,
+          0.64
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "UG_LED_5",
+      "source_ref": "LED67",
+      "destination_ref": "LED68",
+      "source_mm": [
+        218.52499999999998,
+        18.025
+      ],
+      "destination_mm": [
+        268.97499999999997,
+        18.974999999999998
+      ],
+      "length_mm": 75.983,
+      "stub_mm": 0.035,
+      "series": "R174",
+      "series_ohms": 100.0,
+      "driver": "strong-20ohm-15pF",
+      "assumptions": {
+        "r": 20.0,
+        "edge": 1e-09,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 296.79,
+          "width_max_ns": 301.72,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.77,
+          "delay_fall_ns": 3.61,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 896.79,
+          "width_max_ns": 901.72,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 4.77,
+          "delay_fall_ns": 3.61,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 5.64,
+        "fall_90_10_ns": 5.64,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 96.8,
+          "T0H_below_max": 98.3,
+          "T1H_above_min": 196.8,
+          "T0L_above_min": 198.3,
+          "T1L_above_min": 98.3
+        },
+        "pulse_width_error_ns": [
+          -3.21,
+          1.72
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "UG_LED_5",
+      "source_ref": "LED67",
+      "destination_ref": "LED68",
+      "source_mm": [
+        218.52499999999998,
+        18.025
+      ],
+      "destination_mm": [
+        268.97499999999997,
+        18.974999999999998
+      ],
+      "length_mm": 75.983,
+      "stub_mm": 0.035,
+      "series": "R174",
+      "series_ohms": 100.0,
+      "driver": "nominal",
+      "assumptions": {
+        "r": 100.0,
+        "edge": 1e-08,
+        "cin": 5e-12
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 293.87,
+          "width_max_ns": 303.23,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.81,
+          "delay_fall_ns": 9.45,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 893.87,
+          "width_max_ns": 903.23,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 10.81,
+          "delay_fall_ns": 9.45,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "rise_10_90_ns": 10.02,
+        "fall_90_10_ns": 10.02,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.4,
+        "budget_ns": {
+          "T0H_above_min": 93.9,
+          "T0H_below_max": 96.8,
+          "T1H_above_min": 193.9,
+          "T0L_above_min": 196.8,
+          "T1L_above_min": 96.8
+        },
+        "pulse_width_error_ns": [
+          -6.13,
+          3.23
+        ]
+      },
+      "pass": true
+    },
+    {
+      "net": "UG_LED_5",
+      "source_ref": "LED67",
+      "destination_ref": "LED68",
+      "source_mm": [
+        218.52499999999998,
+        18.025
+      ],
+      "destination_mm": [
+        268.97499999999997,
+        18.974999999999998
+      ],
+      "length_mm": 75.983,
+      "stub_mm": 0.035,
+      "series": "R174",
+      "series_ohms": 100.0,
+      "driver": "weak",
+      "assumptions": {
+        "r": 1000.0,
+        "edge": 3e-08,
+        "cin": 1.5e-11
+      },
+      "measurement": {
+        "0": {
+          "sent_ns": 300.0,
+          "width_min_ns": 262.32,
+          "width_max_ns": 317.75,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 59.79,
+          "delay_fall_ns": 46.52,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.0
+        },
+        "1": {
+          "sent_ns": 900.0,
+          "width_min_ns": 862.32,
+          "width_max_ns": 917.75,
+          "extra_threshold_crossings": 0,
+          "delay_rise_ns": 59.8,
+          "delay_fall_ns": 46.52,
+          "high_min_after_peak_V": 4.0,
+          "low_max_after_trough_V": 0.002
+        },
+        "rise_10_90_ns": 67.95,
+        "fall_90_10_ns": 67.95,
+        "overshoot_V": 0.0,
+        "undershoot_V": 0.0,
+        "noise_margin_high_V": 0.88,
+        "noise_margin_low_V": 1.398,
+        "budget_ns": {
+          "T0H_above_min": 62.3,
+          "T0H_below_max": 82.2,
+          "T1H_above_min": 162.3,
+          "T0L_above_min": 182.2,
+          "T1L_above_min": 82.2
+        },
+        "pulse_width_error_ns": [
+          -37.68,
+          17.75
+        ]
+      },
+      "pass": true
+    }
+  ],
+  "pass": true
+}

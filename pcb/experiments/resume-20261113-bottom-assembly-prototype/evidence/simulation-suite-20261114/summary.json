@@ -1,0 +1,192 @@
+{
+  "status": "Simulation campaign complete; electrical LED issues remain; NOT FOR FABRICATION",
+  "board_sha256": "875ee106148f266e6fc24f938eddfaef901e4a263cc295df41cfb3e270a8301d",
+  "geometry_sha256": "9359f5505ebaee21363d35e8ebf7cbcf4857b7103d6ddb86cdc66652954e21d7",
+  "fresh_netlist_sha256": "3c7ef4f3d6651cfe8e5cbc5594be1d8c4a1d565d2c04ae9b03dbaa6e79154392",
+  "counts": {
+    "power_SPICE": 30,
+    "LED_route_population_driver_line_SPICE": 810,
+    "buffer_to_first_LED_SPICE": 12,
+    "first_hop_timestep_sensitivity_SPICE": 2,
+    "crosstalk_SPICE": 24,
+    "LED_timestep_sensitivity_SPICE": 41,
+    "USB_transient_including_delay": 10,
+    "USB_dielectric_delay": 5,
+    "matrix_analog_SPICE": 9,
+    "crystal_AC_negative_resistance": 2,
+    "crystal_drive_level": 3,
+    "PWM_charge_cases": 1620,
+    "thermal_steady_grid_material_population_load_cases": 360,
+    "thermal_ambient_offsets_per_case": 4,
+    "thermal_transient_runs": 1,
+    "regression_tests": 21,
+    "ideal_matrix_pressed_subsets": 72100
+  },
+  "LED": {
+    "route_population_count": 81,
+    "initial_failed_corners": 37,
+    "failures_by_driver": {
+      "strong_assumed": 37
+    },
+    "time_refined_flagged_remaining": 35,
+    "time_refined_decision_changes": 2,
+    "first_hop_failed_assumed_corners": 2,
+    "first_hop_refined_flagged_remaining": 2,
+    "crosstalk_failed_assumed_corners": 0,
+    "crosstalk_minimum_margin_V": 0.7955999999999999
+  },
+  "PWM": {
+    "all_cases_below_spec": 467,
+    "selected": [
+      {
+        "keys": 64,
+        "RGB_code": 5,
+        "PWM_sum": 960,
+        "PWM_Hz_assumed": 1000,
+        "effective_cap_uF": 8.9,
+        "ESR_ohm_assumed": 0.005,
+        "limit_A": 0.174,
+        "phase": "aligned",
+        "stays_above_3p7": false,
+        "first_below_spec_us": 0.9178486788032075,
+        "min_valid_voltage": 3.7
+      },
+      {
+        "keys": 64,
+        "RGB_code": 5,
+        "PWM_sum": 960,
+        "PWM_Hz_assumed": 1000,
+        "effective_cap_uF": 12.5,
+        "ESR_ohm_assumed": 0.005,
+        "limit_A": 0.174,
+        "phase": "aligned",
+        "stays_above_3p7": false,
+        "first_below_spec_us": 1.2891133129257653,
+        "min_valid_voltage": 3.7
+      },
+      {
+        "keys": 64,
+        "RGB_code": 5,
+        "PWM_sum": 960,
+        "PWM_Hz_assumed": 1000,
+        "effective_cap_uF": 47,
+        "ESR_ohm_assumed": 0.005,
+        "limit_A": 0.174,
+        "phase": "aligned",
+        "stays_above_3p7": false,
+        "first_below_spec_us": 4.847066056600745,
+        "min_valid_voltage": 3.7
+      },
+      {
+        "keys": 64,
+        "RGB_code": 5,
+        "PWM_sum": 960,
+        "PWM_Hz_assumed": 1000,
+        "effective_cap_uF": 100,
+        "ESR_ohm_assumed": 0.005,
+        "limit_A": 0.174,
+        "phase": "aligned",
+        "stays_above_3p7": false,
+        "first_below_spec_us": 10.312906503405006,
+        "min_valid_voltage": 3.7
+      },
+      {
+        "keys": 64,
+        "RGB_code": 5,
+        "PWM_sum": 960,
+        "PWM_Hz_assumed": 1000,
+        "effective_cap_uF": 220,
+        "ESR_ohm_assumed": 0.005,
+        "limit_A": 0.174,
+        "phase": "aligned",
+        "stays_above_3p7": true,
+        "first_below_spec_us": null,
+        "min_valid_voltage": 3.7371667270907647
+      },
+      {
+        "keys": 64,
+        "RGB_code": 5,
+        "PWM_sum": 960,
+        "PWM_Hz_assumed": 1000,
+        "effective_cap_uF": 470,
+        "ESR_ohm_assumed": 0.005,
+        "limit_A": 0.174,
+        "phase": "aligned",
+        "stays_above_3p7": true,
+        "first_below_spec_us": null,
+        "min_valid_voltage": 3.862814607993223
+      }
+    ],
+    "instantaneous_key_peak_A": 2.784,
+    "aligned_on_time_us": 19.607843137254903
+  },
+  "USB_delay_ns": 0.4184,
+  "matrix": {
+    "select_worst_ns": 236.8,
+    "release_worst_us": 4.16
+  },
+  "thermal": {
+    "LED_off": {
+      "rise_range_C": [
+        5.859601247926265,
+        29.298006239631185
+      ],
+      "nominal_assumption_rise_range_C": [
+        11.71920249585253,
+        11.71920249585253
+      ]
+    },
+    "typical_idle_plus_PWM_average": {
+      "rise_range_C": [
+        6.668742013854528,
+        33.343795518680885
+      ],
+      "nominal_assumption_rise_range_C": [
+        13.337484027709056,
+        13.337518207472451
+      ]
+    },
+    "assumed_idle_stress": {
+      "rise_range_C": [
+        12.543049179514412,
+        62.7153527093323
+      ],
+      "nominal_assumption_rise_range_C": [
+        25.086098359028824,
+        25.086141083733075
+      ]
+    },
+    "limiter_maximum_DC": {
+      "rise_range_C": [
+        13.381650692410915,
+        66.90844872730396
+      ],
+      "nominal_assumption_rise_range_C": [
+        26.76330138482183,
+        26.763379490921782
+      ]
+    },
+    "LED_short_constant_limit_whatif": {
+      "rise_range_C": [
+        42.637410073168624,
+        213.18705036584262
+      ],
+      "nominal_assumption_rise_range_C": [
+        85.27482014633725,
+        85.27482014633725
+      ]
+    }
+  },
+  "thermal_grid_max_difference_C": 1.1301964943709848,
+  "thermal_grid_max_difference_percent": 3.1246197626749708,
+  "thermal_max_energy_error_W": 1.6211476605576536e-12,
+  "firmware_current_netlist_pass": true,
+  "firmware_RGB_qualification": 0,
+  "test_counts": {
+    "signal": 6,
+    "spice": 5,
+    "bottom": 7,
+    "reverse": 3
+  },
+  "hardware_measured": false
+}

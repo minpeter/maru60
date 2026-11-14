@@ -1,0 +1,252 @@
+{
+  "status": "routing plan; native checks still required",
+  "inputs": {
+    "geometry": "build/reverse-led-study/routed5.json",
+    "components": "build/reverse-led-study/routed5-components.json"
+  },
+  "ops": [
+    {
+      "op": "add_tracks",
+      "tracks": []
+    },
+    {
+      "op": "add_vias",
+      "vias": []
+    }
+  ],
+  "report": [
+    {
+      "index": 0,
+      "net": "COL9",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 1,
+      "net": "COL13",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 2,
+      "net": "COL13",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 3,
+      "net": "ROW2",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 4,
+      "net": "GND",
+      "status": "no-route",
+      "width": 0.25,
+      "attempts": []
+    },
+    {
+      "index": 5,
+      "net": "GND",
+      "status": "exact-screen-rejected",
+      "width": 0.25,
+      "attempts": [
+        {
+          "reasons": [
+            "copper clearance",
+            "via clearance"
+          ],
+          "bad_vias": [
+            {
+              "x": 43.13,
+              "y": 39.2066,
+              "reasons": [
+                "outer copper"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "net": "+3V3",
+      "status": "no-route",
+      "width": 0.4,
+      "attempts": []
+    },
+    {
+      "index": 7,
+      "net": "SWCLK",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 8,
+      "net": "UNDERGLOW",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 9,
+      "net": "LED_ENABLE",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 10,
+      "net": "LED_FAULT_N",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 11,
+      "net": "KEY_RGB_CHAIN_29",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 12,
+      "net": "KEY_RGB_CHAIN_27",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 13,
+      "net": "KEY_RGB_CHAIN_17",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 14,
+      "net": "KEY_RGB_CHAIN_57",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 15,
+      "net": "KEY_RGB_CHAIN_53",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 16,
+      "net": "+4V_LED",
+      "status": "exact-screen-rejected",
+      "width": 0.4,
+      "attempts": [
+        {
+          "reasons": [
+            "copper clearance"
+          ],
+          "bad_vias": []
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "net": "+4V_LED",
+      "status": "no-route",
+      "width": 0.4,
+      "attempts": []
+    },
+    {
+      "index": 18,
+      "net": "+4V_REG",
+      "status": "no-route",
+      "width": 0.4,
+      "attempts": []
+    },
+    {
+      "index": 19,
+      "net": "MCU_GPIO10",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 20,
+      "net": "MCU_GPIO24",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 21,
+      "net": "MCU_GPIO26",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 22,
+      "net": "MCU_GPIO27",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 23,
+      "net": "VBUS_FUSED",
+      "status": "exact-screen-rejected",
+      "width": 0.5,
+      "attempts": [
+        {
+          "reasons": [
+            "copper clearance"
+          ],
+          "bad_vias": []
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "net": "VBUS_FUSED",
+      "status": "no-route",
+      "width": 0.5,
+      "attempts": []
+    },
+    {
+      "index": 25,
+      "net": "KEY_RGB_CHAIN_57_SRC",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 26,
+      "net": "KEY_RGB_CHAIN_51_SRC",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    },
+    {
+      "index": 27,
+      "net": "VBUS_SNUB",
+      "status": "no-route",
+      "width": 0.5,
+      "attempts": []
+    },
+    {
+      "index": 28,
+      "net": "KEY_RGB_CHAIN_28_SRC",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+VBUS J1 -> F1 @20C                                  51.03 mOhm    25.52 mV @ 0.5 A  vias>30%: 0
+VBUS_FUSED F1 -> U8 @20C                            13.90 mOhm     6.95 mV @ 0.5 A  vias>30%: 2
+VBUS_PROTECTED_RAW U8 -> U18 @20C                  226.88 mOhm   113.44 mV @ 0.5 A  vias>30%: 12
++4V_REG L2 -> U2 @20C                               80.48 mOhm    12.07 mV @ 0.15 A  vias>30%: 4
++4V_REG L2 -> U7 @20C                               84.36 mOhm    19.74 mV @ 0.234 A  vias>30%: 4
++3V3 U2 -> U1 pin 49 (VREG_VIN) @20C               423.18 mOhm    63.48 mV @ 0.15 A  vias>30%: 20
++3V3 U2 -> U3 @20C                                 409.48 mOhm    20.47 mV @ 0.05 A  vias>30%: 18
+VBUS J1 -> F1 @60C                                  59.06 mOhm    29.53 mV @ 0.5 A  vias>30%: 0
+VBUS_FUSED F1 -> U8 @60C                            16.09 mOhm     8.04 mV @ 0.5 A  vias>30%: 2
+VBUS_PROTECTED_RAW U8 -> U18 @60C                  262.54 mOhm   131.27 mV @ 0.5 A  vias>30%: 12
++4V_REG L2 -> U2 @60C                               93.14 mOhm    13.97 mV @ 0.15 A  vias>30%: 4
++4V_REG L2 -> U7 @60C                               97.63 mOhm    22.84 mV @ 0.234 A  vias>30%: 4
++3V3 U2 -> U1 pin 49 (VREG_VIN) @60C               489.71 mOhm    73.46 mV @ 0.15 A  vias>30%: 20
++3V3 U2 -> U3 @60C                                 473.85 mOhm    23.69 mV @ 0.05 A  vias>30%: 18
+LED rail | limiter maximum 234 mA, even @20C                                      max drop   52.05 mV at LED1  (median 30.33)  max track current 0.234 A
+LED rail | DC screen: typical idle plus 58 mA PWM average; NOT peak qualification @20C max drop   22.78 mV at LED1  (median 13.27)  max track current 0.102 A
+LED rail | DC screen: assumed 1 mA/reverse LED idle plus 58 mA average; NOT guaranteed @20C max drop   28.47 mV at LED1  (median 16.59)  max track current 0.128 A
+LED rail | DC stress allocation: 38 mA even + 196 mA in 16 remote LEDs; not an idle-current model @20C max drop   56.44 mV at LED1  (median 33.95)  max track current 0.234 A
+LED rail | limiter maximum 234 mA, even @60C                                      max drop   60.23 mV at LED1  (median 35.1)  max track current 0.234 A
+LED rail | DC screen: typical idle plus 58 mA PWM average; NOT peak qualification @60C max drop   26.36 mV at LED1  (median 15.36)  max track current 0.102 A
+LED rail | DC screen: assumed 1 mA/reverse LED idle plus 58 mA average; NOT guaranteed @60C max drop   32.95 mV at LED1  (median 19.2)  max track current 0.128 A
+LED rail | DC stress allocation: 38 mA even + 196 mA in 16 remote LEDs; not an idle-current model @60C max drop   65.32 mV at LED1  (median 39.29)  max track current 0.234 A
+tracks over 50% of the IPC-2221 10 C limit: 100
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.25, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.875, 'x': 26.6, 'y': 17.0}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.25, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.875, 'x': 23.4, 'y': 10.9}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.25, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.875, 'x': 27.4, 'y': 15.4}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 20.1, 'y': 10.7}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 20.1, 'y': 9.6}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 18.0, 'y': 6.6}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 20.2, 'y': 7.0}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 15.8, 'y': 6.8}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.25, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.875, 'x': 21.0, 'y': 11.2}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.25, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.875, 'x': 20.1, 'y': 11.2}

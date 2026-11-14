@@ -1,0 +1,11 @@
+{
+  "ops": [
+    {"op": "move_footprint", "ref": "R102", "x": 19.0, "y": 35.1, "rot": 0},
+    {"op": "move_track_points", "moves": [
+      {"layer": "F.Cu", "net": "USB_DP_CONN", "from": [18.09, 34.9], "to": [18.49, 35.1]},
+      {"layer": "B.Cu", "net": "USB_DP_CONN", "from": [18.09, 34.9], "to": [18.49, 35.1]},
+      {"layer": "F.Cu", "net": "USB_DP", "from": [19.11, 34.9], "to": [19.51, 35.1]},
+      {"layer": "B.Cu", "net": "USB_DP", "from": [19.11, 34.9], "to": [19.51, 35.1]}
+    ]}
+  ]
+}

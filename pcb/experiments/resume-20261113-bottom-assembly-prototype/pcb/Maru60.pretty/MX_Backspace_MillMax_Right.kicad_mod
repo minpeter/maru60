@@ -1,0 +1,72 @@
+(footprint "MX_Backspace_MillMax_Right"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -3.8475 8.19875 180)
+		(layer "F.SilkS")
+		(uuid "1354ed59-2d1d-43f8-9817-943dcfbf4d0e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Backspace_R"
+		(at 0 0 180)
+		(layer "B.Fab")
+		(uuid "943f89bb-ff0d-426e-b7b9-207fdfc18555")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 180)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "08982899-8db6-4664-8d17-6d08866b02c2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "60f4dc36-4609-4238-8c8d-5b2c113a1ca3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -2.540001 -3.81 90)
+		(size 2.5 2.5)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a6396b2b-6582-4228-81c7-740e0fac5ca3")
+	)
+	(pad "2" thru_hole circle
+		(at -5.080001 2.54 90)
+		(size 2.5 2.5)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "848455e8-b482-46fa-9f26-31a5a1623476")
+	)
+	(embedded_fonts no)
+)

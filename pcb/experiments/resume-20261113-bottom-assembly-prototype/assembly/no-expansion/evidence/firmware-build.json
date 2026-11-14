@@ -1,0 +1,66 @@
+{
+  "pass": true,
+  "scope": "Both complete ARM QMK builds, default RGB qualification OFF; no flashing or hardware qualification",
+  "upstream_commit": "431ed9ade0684e98a66eabc949563c3be8f446e8",
+  "container_image": "sha256:d9e2c7f34f88f61cff5793ddad8b19dd5dfa737387d6169935173bf9ed60d4ca",
+  "submodules_match_prior_pinned_build": true,
+  "staged_overlay_matches_variant": true,
+  "layouts": [
+    {
+      "keymap": "via",
+      "exit": 0,
+      "macros": {
+        "MARU60_NO_EXPANSION": {
+          "value": "1",
+          "translation_unit_dumps": 5
+        },
+        "MARU60_LED_POWER_QUALIFIED": {
+          "value": "0",
+          "translation_unit_dumps": 5
+        },
+        "GPIO_INPUT_PIN_DELAY": {
+          "value": "120",
+          "translation_unit_dumps": 5
+        },
+        "MARU60_LAYOUT_HHKB": {
+          "value": "0",
+          "translation_unit_dumps": 5
+        }
+      },
+      "preinit_mode_calls": 9,
+      "artifacts_sha256": {
+        "maru60_rp2350_noexp_via.elf": "598ce66b28d02009d94044eb507e3617e0266d293b0969ec0764183e9e0bb0db",
+        "maru60_rp2350_noexp_via.uf2": "44f34b348898c3ba98ed646da01d5248f451d08c1e9d831b7a766e99b0c44840"
+      },
+      "build_log_uncompressed_sha256": "77758ab33fc1a2323933a2913a4cecceddc71084c6ff03a5459652289fa87601"
+    },
+    {
+      "keymap": "via_hhkb",
+      "exit": 0,
+      "macros": {
+        "MARU60_NO_EXPANSION": {
+          "value": "1",
+          "translation_unit_dumps": 5
+        },
+        "MARU60_LED_POWER_QUALIFIED": {
+          "value": "0",
+          "translation_unit_dumps": 5
+        },
+        "GPIO_INPUT_PIN_DELAY": {
+          "value": "120",
+          "translation_unit_dumps": 5
+        },
+        "MARU60_LAYOUT_HHKB": {
+          "value": "1",
+          "translation_unit_dumps": 5
+        }
+      },
+      "preinit_mode_calls": 9,
+      "artifacts_sha256": {
+        "maru60_rp2350_noexp_via_hhkb.elf": "ecb4a98238899ee1dd05cbf663f03b703be300d81560af8792e55ddc5617355e",
+        "maru60_rp2350_noexp_via_hhkb.uf2": "05c39f7317742ecb8cfc94a6addb4acd08acb5fce55917cc5a6336850854f566"
+      },
+      "build_log_uncompressed_sha256": "ffdf4f013c0ea88ecbbe66e89c2c6e5cfe343757853a268b0fa1be34c2341cd9"
+    }
+  ]
+}

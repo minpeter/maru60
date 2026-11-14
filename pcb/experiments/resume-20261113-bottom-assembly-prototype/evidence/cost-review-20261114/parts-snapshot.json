@@ -1,0 +1,3420 @@
+{
+  "observation_date": "2026-11-14",
+  "status": "Public catalog snapshot; not a purchasable quote. U13 stock below required quantity.",
+  "parts": [
+    {
+      "code": "C12891",
+      "mpn": "CL31A226KAHNNNE",
+      "refs": [
+        "C100"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 199,
+          "price": 0.1028
+        },
+        {
+          "start": 200,
+          "end": 599,
+          "price": 0.0828
+        },
+        {
+          "start": 600,
+          "end": 1999,
+          "price": 0.0724
+        },
+        {
+          "start": 2000,
+          "end": 9999,
+          "price": 0.064
+        },
+        {
+          "start": 10000,
+          "end": 19999,
+          "price": 0.0609
+        },
+        {
+          "start": 20000,
+          "end": -1,
+          "price": 0.059
+        }
+      ],
+      "published_attrition_qty": 4,
+      "stock_snapshot": 2757026,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C12891",
+      "source_path": "build/price-estimate-20261114/C12891.html",
+      "source_sha256": "bc882660d756a17c810837957f075b654c43aadf8769d9764e7c661bf137e12d",
+      "numbered_pads_by_ref": {
+        "C100": 2
+      }
+    },
+    {
+      "code": "C77096",
+      "mpn": "GRM31CR71H475KA12L",
+      "refs": [
+        "C101"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 49,
+          "price": 0.0845
+        },
+        {
+          "start": 50,
+          "end": 149,
+          "price": 0.0701
+        },
+        {
+          "start": 150,
+          "end": 499,
+          "price": 0.0625
+        },
+        {
+          "start": 500,
+          "end": 1999,
+          "price": 0.0565
+        },
+        {
+          "start": 2000,
+          "end": 3999,
+          "price": 0.0522
+        },
+        {
+          "start": 4000,
+          "end": -1,
+          "price": 0.0508
+        }
+      ],
+      "published_attrition_qty": 5,
+      "stock_snapshot": 415602,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C77096",
+      "source_path": "build/price-estimate-20261114/C77096.html",
+      "source_sha256": "af071baa1febb92f5b705c5616a6f3b41c9c2f8ec191fe4d9b5a415bd9ec392b",
+      "numbered_pads_by_ref": {
+        "C101": 2
+      }
+    },
+    {
+      "code": "C82453",
+      "mpn": "GRM155R60J475ME47D",
+      "refs": [
+        "C102",
+        "C103",
+        "C104",
+        "C109",
+        "C121"
+      ],
+      "count_per_board": 5,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 499,
+          "price": 0.0184
+        },
+        {
+          "start": 1500,
+          "end": 9999,
+          "price": 0.0136
+        },
+        {
+          "start": 10000,
+          "end": 19999,
+          "price": 0.0125
+        },
+        {
+          "start": 20000,
+          "end": 49999,
+          "price": 0.0121
+        },
+        {
+          "start": 50000,
+          "end": -1,
+          "price": 0.0118
+        },
+        {
+          "start": 500,
+          "end": 1499,
+          "price": 0.0151
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 403332,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C82453",
+      "source_path": "build/cost-down-20261114/C82453.html",
+      "source_sha256": "211c308739424b2ba2989f8378c8b26521b05e70ddd83a16b640c4b3a43251d7",
+      "numbered_pads_by_ref": {
+        "C102": 2,
+        "C103": 2,
+        "C104": 2,
+        "C109": 2,
+        "C121": 2
+      }
+    },
+    {
+      "code": "C1525",
+      "mpn": "CL05B104KO5NNNC",
+      "refs": [
+        "C105",
+        "C108",
+        "C110",
+        "C111",
+        "C112",
+        "C113",
+        "C114",
+        "C115",
+        "C116",
+        "C117",
+        "C118",
+        "C122",
+        "C123",
+        "C199",
+        "C200",
+        "C201",
+        "C202",
+        "C203",
+        "C204",
+        "C205",
+        "C206",
+        "C207",
+        "C208",
+        "C209",
+        "C210",
+        "C211",
+        "C212",
+        "C213",
+        "C214",
+        "C215",
+        "C216",
+        "C217",
+        "C218",
+        "C219",
+        "C220",
+        "C221",
+        "C222",
+        "C223",
+        "C224",
+        "C225",
+        "C226",
+        "C227",
+        "C228",
+        "C229",
+        "C230",
+        "C231",
+        "C232",
+        "C233",
+        "C234",
+        "C235",
+        "C236",
+        "C237",
+        "C238",
+        "C239",
+        "C240",
+        "C241",
+        "C242",
+        "C243",
+        "C244",
+        "C245",
+        "C246",
+        "C247",
+        "C248",
+        "C249",
+        "C250",
+        "C251",
+        "C252",
+        "C253",
+        "C254",
+        "C255",
+        "C256",
+        "C257",
+        "C258",
+        "C259",
+        "C260",
+        "C261",
+        "C262",
+        "C263",
+        "C264",
+        "C265",
+        "C266",
+        "C267",
+        "C268",
+        "C269",
+        "C270",
+        "C271",
+        "C272",
+        "C273",
+        "C274",
+        "C275"
+      ],
+      "count_per_board": 90,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0024
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0018
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0015
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0013
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0012
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0012
+        }
+      ],
+      "published_attrition_qty": 15,
+      "stock_snapshot": 3834,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C1525",
+      "source_path": "build/price-estimate-20261114/C1525.html",
+      "source_sha256": "0052df29a8c73355018b8ef2026297fdfff1b489670cc619d1814b594c38b6b0",
+      "numbered_pads_by_ref": {
+        "C105": 2,
+        "C108": 2,
+        "C110": 2,
+        "C111": 2,
+        "C112": 2,
+        "C113": 2,
+        "C114": 2,
+        "C115": 2,
+        "C116": 2,
+        "C117": 2,
+        "C118": 2,
+        "C122": 2,
+        "C123": 2,
+        "C199": 2,
+        "C200": 2,
+        "C201": 2,
+        "C202": 2,
+        "C203": 2,
+        "C204": 2,
+        "C205": 2,
+        "C206": 2,
+        "C207": 2,
+        "C208": 2,
+        "C209": 2,
+        "C210": 2,
+        "C211": 2,
+        "C212": 2,
+        "C213": 2,
+        "C214": 2,
+        "C215": 2,
+        "C216": 2,
+        "C217": 2,
+        "C218": 2,
+        "C219": 2,
+        "C220": 2,
+        "C221": 2,
+        "C222": 2,
+        "C223": 2,
+        "C224": 2,
+        "C225": 2,
+        "C226": 2,
+        "C227": 2,
+        "C228": 2,
+        "C229": 2,
+        "C230": 2,
+        "C231": 2,
+        "C232": 2,
+        "C233": 2,
+        "C234": 2,
+        "C235": 2,
+        "C236": 2,
+        "C237": 2,
+        "C238": 2,
+        "C239": 2,
+        "C240": 2,
+        "C241": 2,
+        "C242": 2,
+        "C243": 2,
+        "C244": 2,
+        "C245": 2,
+        "C246": 2,
+        "C247": 2,
+        "C248": 2,
+        "C249": 2,
+        "C250": 2,
+        "C251": 2,
+        "C252": 2,
+        "C253": 2,
+        "C254": 2,
+        "C255": 2,
+        "C256": 2,
+        "C257": 2,
+        "C258": 2,
+        "C259": 2,
+        "C260": 2,
+        "C261": 2,
+        "C262": 2,
+        "C263": 2,
+        "C264": 2,
+        "C265": 2,
+        "C266": 2,
+        "C267": 2,
+        "C268": 2,
+        "C269": 2,
+        "C270": 2,
+        "C271": 2,
+        "C272": 2,
+        "C273": 2,
+        "C274": 2,
+        "C275": 2
+      }
+    },
+    {
+      "code": "C86285",
+      "mpn": "CL05C150JB5NNNC",
+      "refs": [
+        "C106",
+        "C107"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0061
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.005
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0044
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.004
+        },
+        {
+          "start": 50000,
+          "end": 99999,
+          "price": 0.0037
+        },
+        {
+          "start": 100000,
+          "end": -1,
+          "price": 0.0035
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 196474,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C86285",
+      "source_path": "build/price-estimate-20261114/C86285.html",
+      "source_sha256": "a1526803f2dfbd3b9a5478a6ca51eedccdb1d6f1ea73c23b2cac013152a300b4",
+      "numbered_pads_by_ref": {
+        "C106": 2,
+        "C107": 2
+      }
+    },
+    {
+      "code": "C52923",
+      "mpn": "CL05A105KA5NQNC",
+      "refs": [
+        "C120"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0057
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0043
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0032
+        },
+        {
+          "start": 50000,
+          "end": 99999,
+          "price": 0.003
+        },
+        {
+          "start": 100000,
+          "end": -1,
+          "price": 0.0029
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0037
+        }
+      ],
+      "published_attrition_qty": 12,
+      "stock_snapshot": 10318902,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C52923",
+      "source_path": "build/cost-down-20261114/C52923.html",
+      "source_sha256": "19cfe0e991f77fb82a563d65e6629fe2cf9f0313db5be48509686fad1f9b2f31",
+      "numbered_pads_by_ref": {
+        "C120": 2
+      }
+    },
+    {
+      "code": "C60133",
+      "mpn": "CC0402KRX7R9BB103",
+      "refs": [
+        "C124"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0023
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0018
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0015
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0013
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0011
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0011
+        }
+      ],
+      "published_attrition_qty": 14,
+      "stock_snapshot": 6820040,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C60133",
+      "source_path": "build/price-estimate-20261114/C60133.html",
+      "source_sha256": "92c7590af1e7adc46c3456bb03384f490bb1d616a71c010a7e0db54bb46f36a7",
+      "numbered_pads_by_ref": {
+        "C124": 2
+      }
+    },
+    {
+      "code": "C559769",
+      "mpn": "CC0603KRX7R9BB105",
+      "refs": [
+        "C125",
+        "C126"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 199,
+          "price": 0.045
+        },
+        {
+          "start": 200,
+          "end": 599,
+          "price": 0.0385
+        },
+        {
+          "start": 600,
+          "end": 3999,
+          "price": 0.0349
+        },
+        {
+          "start": 4000,
+          "end": 7999,
+          "price": 0.0328
+        },
+        {
+          "start": 8000,
+          "end": 19999,
+          "price": 0.0308
+        },
+        {
+          "start": 20000,
+          "end": -1,
+          "price": 0.0298
+        }
+      ],
+      "published_attrition_qty": 8,
+      "stock_snapshot": 619833,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C559769",
+      "source_path": "build/price-estimate-20261114/C559769.html",
+      "source_sha256": "b466e873b90a0334e50c256370b9ee0e98eece007f119f236e76acf8ec10666c",
+      "numbered_pads_by_ref": {
+        "C125": 2,
+        "C126": 2
+      }
+    },
+    {
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "refs": [
+        "C128",
+        "C129",
+        "C138",
+        "C139"
+      ],
+      "count_per_board": 4,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0071
+        },
+        {
+          "start": 1000,
+          "end": 3999,
+          "price": 0.0053
+        },
+        {
+          "start": 4000,
+          "end": 7999,
+          "price": 0.0045
+        },
+        {
+          "start": 8000,
+          "end": 47999,
+          "price": 0.004
+        },
+        {
+          "start": 48000,
+          "end": 99999,
+          "price": 0.0037
+        },
+        {
+          "start": 100000,
+          "end": -1,
+          "price": 0.0036
+        }
+      ],
+      "published_attrition_qty": 14,
+      "stock_snapshot": 2331139,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C1591",
+      "source_path": "build/price-estimate-20261114/C1591.html",
+      "source_sha256": "7b22b555423cbae173a1d46a9d5069e4339e77ea883ac268c0cb50e31cab8d4f",
+      "numbered_pads_by_ref": {
+        "C128": 2,
+        "C129": 2,
+        "C138": 2,
+        "C139": 2
+      }
+    },
+    {
+      "code": "C96446",
+      "mpn": "CL10A106MA8NRNC",
+      "refs": [
+        "C136",
+        "C137"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 199,
+          "price": 0.0342
+        },
+        {
+          "start": 200,
+          "end": 599,
+          "price": 0.0272
+        },
+        {
+          "start": 600,
+          "end": 3999,
+          "price": 0.0236
+        },
+        {
+          "start": 4000,
+          "end": 7999,
+          "price": 0.0207
+        },
+        {
+          "start": 8000,
+          "end": 19999,
+          "price": 0.0195
+        },
+        {
+          "start": 20000,
+          "end": -1,
+          "price": 0.0189
+        }
+      ],
+      "published_attrition_qty": 8,
+      "stock_snapshot": 6193324,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C96446",
+      "source_path": "build/price-estimate-20261114/C96446.html",
+      "source_sha256": "74d6b2927456d501c932e92c632edd608730a4b0a6c2a8388c06e5084fee539d",
+      "numbered_pads_by_ref": {
+        "C136": 2,
+        "C137": 2
+      }
+    },
+    {
+      "code": "C86295",
+      "mpn": "CL10A226MP8NUNE",
+      "refs": [
+        "C140",
+        "C141"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 99,
+          "price": 0.0292
+        },
+        {
+          "start": 100,
+          "end": 299,
+          "price": 0.0225
+        },
+        {
+          "start": 300,
+          "end": 2999,
+          "price": 0.0195
+        },
+        {
+          "start": 3000,
+          "end": 5999,
+          "price": 0.0172
+        },
+        {
+          "start": 6000,
+          "end": 8999,
+          "price": 0.0164
+        },
+        {
+          "start": 9000,
+          "end": -1,
+          "price": 0.0158
+        }
+      ],
+      "published_attrition_qty": 6,
+      "stock_snapshot": 1403453,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C86295",
+      "source_path": "build/price-estimate-20261114/C86295.html",
+      "source_sha256": "849e695008b9b10e9e8a0e1e0728a742b1d13297419ad16b19501fea082cb6b1",
+      "numbered_pads_by_ref": {
+        "C140": 2,
+        "C141": 2
+      }
+    },
+    {
+      "code": "C1555",
+      "mpn": "0402CG220J500NT",
+      "refs": [
+        "C143"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0019
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0015
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0012
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.001
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0009
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0009
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 1445771,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C1555",
+      "source_path": "build/price-estimate-20261114/C1555.html",
+      "source_sha256": "301f0426f8e7a2f12ae5f1f9310268c499f21f48ef69e7a40743e4d45ead7d8a",
+      "numbered_pads_by_ref": {
+        "C143": 2
+      }
+    },
+    {
+      "code": "C98192",
+      "mpn": "CL21A475KBQNNNE",
+      "refs": [
+        "C144"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 99,
+          "price": 0.0447
+        },
+        {
+          "start": 100,
+          "end": 299,
+          "price": 0.0359
+        },
+        {
+          "start": 300,
+          "end": 1999,
+          "price": 0.0313
+        },
+        {
+          "start": 2000,
+          "end": 3999,
+          "price": 0.0234
+        },
+        {
+          "start": 4000,
+          "end": 9999,
+          "price": 0.0221
+        },
+        {
+          "start": 10000,
+          "end": -1,
+          "price": 0.0213
+        }
+      ],
+      "published_attrition_qty": 6,
+      "stock_snapshot": 122595,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C98192",
+      "source_path": "build/price-estimate-20261114/C98192.html",
+      "source_sha256": "d72501ce8be33824193d2334785aa18c88164ac069f1b8221f3ef12ef11f62c9",
+      "numbered_pads_by_ref": {
+        "C144": 2
+      }
+    },
+    {
+      "code": "C81598",
+      "mpn": "1N4148W",
+      "refs": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8",
+        "D9",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "D16",
+        "D17",
+        "D18",
+        "D19",
+        "D20",
+        "D21",
+        "D22",
+        "D23",
+        "D24",
+        "D25",
+        "D26",
+        "D27",
+        "D28",
+        "D29",
+        "D30",
+        "D31",
+        "D32",
+        "D33",
+        "D34",
+        "D35",
+        "D36",
+        "D37",
+        "D38",
+        "D39",
+        "D40",
+        "D41",
+        "D42",
+        "D43",
+        "D44",
+        "D45",
+        "D46",
+        "D47",
+        "D48",
+        "D49",
+        "D50",
+        "D51",
+        "D52",
+        "D53",
+        "D54",
+        "D55",
+        "D56",
+        "D57",
+        "D58",
+        "D59",
+        "D60",
+        "D61",
+        "D62"
+      ],
+      "count_per_board": 62,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 499,
+          "price": 0.0124
+        },
+        {
+          "start": 500,
+          "end": 2999,
+          "price": 0.0097
+        },
+        {
+          "start": 3000,
+          "end": 5999,
+          "price": 0.0075
+        },
+        {
+          "start": 6000,
+          "end": 23999,
+          "price": 0.0066
+        },
+        {
+          "start": 24000,
+          "end": 50999,
+          "price": 0.0063
+        },
+        {
+          "start": 51000,
+          "end": -1,
+          "price": 0.006
+        }
+      ],
+      "published_attrition_qty": 14,
+      "stock_snapshot": 3251719,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C81598",
+      "source_path": "build/price-estimate-20261114/C81598.html",
+      "source_sha256": "6ea5a5911972b350a244a89b11e3ad03cda8f9924d39a89b6e2cfb81cbb94196",
+      "numbered_pads_by_ref": {
+        "D1": 2,
+        "D2": 2,
+        "D3": 2,
+        "D4": 2,
+        "D5": 2,
+        "D6": 2,
+        "D7": 2,
+        "D8": 2,
+        "D9": 2,
+        "D10": 2,
+        "D11": 2,
+        "D12": 2,
+        "D13": 2,
+        "D14": 2,
+        "D15": 2,
+        "D16": 2,
+        "D17": 2,
+        "D18": 2,
+        "D19": 2,
+        "D20": 2,
+        "D21": 2,
+        "D22": 2,
+        "D23": 2,
+        "D24": 2,
+        "D25": 2,
+        "D26": 2,
+        "D27": 2,
+        "D28": 2,
+        "D29": 2,
+        "D30": 2,
+        "D31": 2,
+        "D32": 2,
+        "D33": 2,
+        "D34": 2,
+        "D35": 2,
+        "D36": 2,
+        "D37": 2,
+        "D38": 2,
+        "D39": 2,
+        "D40": 2,
+        "D41": 2,
+        "D42": 2,
+        "D43": 2,
+        "D44": 2,
+        "D45": 2,
+        "D46": 2,
+        "D47": 2,
+        "D48": 2,
+        "D49": 2,
+        "D50": 2,
+        "D51": 2,
+        "D52": 2,
+        "D53": 2,
+        "D54": 2,
+        "D55": 2,
+        "D56": 2,
+        "D57": 2,
+        "D58": 2,
+        "D59": 2,
+        "D60": 2,
+        "D61": 2,
+        "D62": 2
+      }
+    },
+    {
+      "code": "C389355",
+      "mpn": "PMEG4030ER,115",
+      "refs": [
+        "D100"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 49,
+          "price": 0.2736
+        },
+        {
+          "start": 50,
+          "end": 149,
+          "price": 0.2119
+        },
+        {
+          "start": 150,
+          "end": 499,
+          "price": 0.1854
+        },
+        {
+          "start": 500,
+          "end": 2999,
+          "price": 0.1524
+        },
+        {
+          "start": 3000,
+          "end": 5999,
+          "price": 0.1349
+        },
+        {
+          "start": 6000,
+          "end": -1,
+          "price": 0.126
+        }
+      ],
+      "published_attrition_qty": 2,
+      "stock_snapshot": 829,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C389355",
+      "source_path": "build/price-estimate-20261114/C389355.html",
+      "source_sha256": "43a108408d570ad922cbd91e6e6adab702e4980475133a144f39d57196dd1886",
+      "numbered_pads_by_ref": {
+        "D100": 2
+      }
+    },
+    {
+      "code": "C3164649",
+      "mpn": "SF-1206F100-2",
+      "refs": [
+        "F1"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 49,
+          "price": 0.2921
+        },
+        {
+          "start": 50,
+          "end": 149,
+          "price": 0.2299
+        },
+        {
+          "start": 150,
+          "end": 499,
+          "price": 0.2033
+        },
+        {
+          "start": 500,
+          "end": 2499,
+          "price": 0.17
+        },
+        {
+          "start": 2500,
+          "end": 4999,
+          "price": 0.1553
+        },
+        {
+          "start": 5000,
+          "end": -1,
+          "price": 0.1463
+        }
+      ],
+      "published_attrition_qty": 2,
+      "stock_snapshot": 4757,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C3164649",
+      "source_path": "build/price-estimate-20261114/C3164649.html",
+      "source_sha256": "7ba62c8bbb2cef714fb11890d8d0f7c67f598906d4d496653c1137e10961ea70",
+      "numbered_pads_by_ref": {
+        "F1": 2
+      }
+    },
+    {
+      "code": "C3020560",
+      "mpn": "USB4105-GF-A",
+      "refs": [
+        "J1"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 1.021
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 0.8279
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 0.733
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 0.6365
+        },
+        {
+          "start": 500,
+          "end": 799,
+          "price": 0.5792
+        },
+        {
+          "start": 800,
+          "end": -1,
+          "price": 0.5498
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 16957,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C3020560",
+      "source_path": "build/price-estimate-20261114/C3020560.html",
+      "source_sha256": "4c710dcc40ff86c264aa63a05216ece3f55de1360070fef94f609f0546c2732f",
+      "numbered_pads_by_ref": {
+        "J1": 17
+      }
+    },
+    {
+      "code": "C160409",
+      "mpn": "SM10B-SRSS-TB(LF)(SN)",
+      "refs": [
+        "J3"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 0.4336
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 0.3485
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 0.3109
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 0.2651
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 0.2455
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 0.2324
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 76077,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C160409",
+      "source_path": "build/price-estimate-20261114/C160409.html",
+      "source_sha256": "fac9c573c8b554aa05fc585b0dffd1df4ee9c6c27b99e9ba583a17c5e9b50608",
+      "numbered_pads_by_ref": {
+        "J3": 11
+      }
+    },
+    {
+      "code": "C42411119",
+      "mpn": "AOTA-B201610S3R3-101-T",
+      "refs": [
+        "L1"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 49,
+          "price": 0.3366
+        },
+        {
+          "start": 50,
+          "end": 149,
+          "price": 0.2662
+        },
+        {
+          "start": 150,
+          "end": 499,
+          "price": 0.2361
+        },
+        {
+          "start": 500,
+          "end": 2999,
+          "price": 0.1987
+        },
+        {
+          "start": 3000,
+          "end": 5999,
+          "price": 0.1818
+        },
+        {
+          "start": 6000,
+          "end": -1,
+          "price": 0.1718
+        }
+      ],
+      "published_attrition_qty": 1,
+      "stock_snapshot": 9,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C42411119",
+      "source_path": "build/price-estimate-20261114/C42411119.html",
+      "source_sha256": "28d4734ccb3e3f135f0603a5a40131b0d8539c4a82f38af74b196642340aa001",
+      "numbered_pads_by_ref": {
+        "L1": 2
+      }
+    },
+    {
+      "code": "C19191688",
+      "mpn": "XAL4030-472MEC",
+      "refs": [
+        "L2"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 8.2346
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 7.1286
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 6.4562
+        },
+        {
+          "start": 100,
+          "end": 101,
+          "price": 5.8917
+        },
+        {
+          "start": 102,
+          "end": 103,
+          "price": 5.8917
+        },
+        {
+          "start": 104,
+          "end": -1,
+          "price": 5.8917
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 4982,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C19191688",
+      "source_path": "build/price-estimate-20261114/C19191688.html",
+      "source_sha256": "97471a198c48b02ec8b4c05a319cf247e8705ef740a99980c53f35f89a77ce7e",
+      "numbered_pads_by_ref": {
+        "L2": 2
+      }
+    },
+    {
+      "code": "C5149201",
+      "mpn": "SK6812MINI-E",
+      "refs": [
+        "LED1",
+        "LED2",
+        "LED3",
+        "LED4",
+        "LED5",
+        "LED6",
+        "LED7",
+        "LED8",
+        "LED9",
+        "LED10",
+        "LED11",
+        "LED12",
+        "LED13",
+        "LED16",
+        "LED17",
+        "LED18",
+        "LED19",
+        "LED20",
+        "LED21",
+        "LED22",
+        "LED23",
+        "LED24",
+        "LED25",
+        "LED26",
+        "LED27",
+        "LED28",
+        "LED29",
+        "LED30",
+        "LED31",
+        "LED32",
+        "LED33",
+        "LED34",
+        "LED35",
+        "LED36",
+        "LED37",
+        "LED38",
+        "LED39",
+        "LED40",
+        "LED41",
+        "LED42",
+        "LED43",
+        "LED44",
+        "LED45",
+        "LED46",
+        "LED47",
+        "LED48",
+        "LED49",
+        "LED50",
+        "LED51",
+        "LED52",
+        "LED53",
+        "LED54",
+        "LED55",
+        "LED56",
+        "LED57",
+        "LED58",
+        "LED59",
+        "LED60",
+        "LED61",
+        "LED62",
+        "LED75",
+        "LED76",
+        "LED14",
+        "LED15"
+      ],
+      "count_per_board": 64,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 49,
+          "price": 0.0805
+        },
+        {
+          "start": 50,
+          "end": 149,
+          "price": 0.0648
+        },
+        {
+          "start": 150,
+          "end": 499,
+          "price": 0.0567
+        },
+        {
+          "start": 500,
+          "end": 1999,
+          "price": 0.05
+        },
+        {
+          "start": 2000,
+          "end": 3999,
+          "price": 0.0468
+        },
+        {
+          "start": 4000,
+          "end": -1,
+          "price": 0.0452
+        }
+      ],
+      "published_attrition_qty": 4,
+      "stock_snapshot": 206248,
+      "library_type": "extended",
+      "pcba_type": "Standard Only",
+      "source_url": "https://jlcpcb.com/partdetail/C5149201",
+      "source_path": "build/price-estimate-20261114/C5149201.html",
+      "source_sha256": "bd5eb159393b34dbbc1315c9f5ee23e183637f84b8bde76e24cb0fcb415eaaf3",
+      "numbered_pads_by_ref": {
+        "LED1": 4,
+        "LED2": 4,
+        "LED3": 4,
+        "LED4": 4,
+        "LED5": 4,
+        "LED6": 4,
+        "LED7": 4,
+        "LED8": 4,
+        "LED9": 4,
+        "LED10": 4,
+        "LED11": 4,
+        "LED12": 4,
+        "LED13": 4,
+        "LED16": 4,
+        "LED17": 4,
+        "LED18": 4,
+        "LED19": 4,
+        "LED20": 4,
+        "LED21": 4,
+        "LED22": 4,
+        "LED23": 4,
+        "LED24": 4,
+        "LED25": 4,
+        "LED26": 4,
+        "LED27": 4,
+        "LED28": 4,
+        "LED29": 4,
+        "LED30": 4,
+        "LED31": 4,
+        "LED32": 4,
+        "LED33": 4,
+        "LED34": 4,
+        "LED35": 4,
+        "LED36": 4,
+        "LED37": 4,
+        "LED38": 4,
+        "LED39": 4,
+        "LED40": 4,
+        "LED41": 4,
+        "LED42": 4,
+        "LED43": 4,
+        "LED44": 4,
+        "LED45": 4,
+        "LED46": 4,
+        "LED47": 4,
+        "LED48": 4,
+        "LED49": 4,
+        "LED50": 4,
+        "LED51": 4,
+        "LED52": 4,
+        "LED53": 4,
+        "LED54": 4,
+        "LED55": 4,
+        "LED56": 4,
+        "LED57": 4,
+        "LED58": 4,
+        "LED59": 4,
+        "LED60": 4,
+        "LED61": 4,
+        "LED62": 4,
+        "LED75": 4,
+        "LED76": 4,
+        "LED14": 4,
+        "LED15": 4
+      }
+    },
+    {
+      "code": "C2890035",
+      "mpn": "SK6805-EC15",
+      "refs": [
+        "LED63",
+        "LED64",
+        "LED65",
+        "LED66",
+        "LED67",
+        "LED68",
+        "LED69",
+        "LED70",
+        "LED71",
+        "LED72",
+        "LED73",
+        "LED74"
+      ],
+      "count_per_board": 12,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 49,
+          "price": 0.1093
+        },
+        {
+          "start": 50,
+          "end": 149,
+          "price": 0.0873
+        },
+        {
+          "start": 150,
+          "end": 499,
+          "price": 0.0763
+        },
+        {
+          "start": 500,
+          "end": 2499,
+          "price": 0.0681
+        },
+        {
+          "start": 2500,
+          "end": 4499,
+          "price": 0.057
+        },
+        {
+          "start": 4500,
+          "end": -1,
+          "price": 0.0537
+        }
+      ],
+      "published_attrition_qty": 2,
+      "stock_snapshot": 119594,
+      "library_type": "extended",
+      "pcba_type": "Standard Only",
+      "source_url": "https://jlcpcb.com/partdetail/C2890035",
+      "source_path": "build/price-estimate-20261114/C2890035.html",
+      "source_sha256": "17fd803462feb818b119438279735d816c2e54ab726b38432f14ede312093991",
+      "numbered_pads_by_ref": {
+        "LED63": 4,
+        "LED64": 4,
+        "LED65": 4,
+        "LED66": 4,
+        "LED67": 4,
+        "LED68": 4,
+        "LED69": 4,
+        "LED70": 4,
+        "LED71": 4,
+        "LED72": 4,
+        "LED73": 4,
+        "LED74": 4
+      }
+    },
+    {
+      "code": "C25905",
+      "mpn": "0402WGF5101TCE",
+      "refs": [
+        "R100",
+        "R101"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0014
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0011
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0009
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0008
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0008
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0008
+        }
+      ],
+      "published_attrition_qty": 15,
+      "stock_snapshot": 3965224,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25905",
+      "source_path": "build/cost-down-20261114/C25905.html",
+      "source_sha256": "0086593aad885b39415076445f488a081b597135e3662bf73ad6dfdad8c5b1bb",
+      "numbered_pads_by_ref": {
+        "R100": 2,
+        "R101": 2
+      }
+    },
+    {
+      "code": "C25100",
+      "mpn": "0402WGF270JTCE",
+      "refs": [
+        "R102",
+        "R103"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0012
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.001
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0009
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0008
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0006
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0006
+        }
+      ],
+      "published_attrition_qty": 12,
+      "stock_snapshot": 652443,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25100",
+      "source_path": "build/price-estimate-20261114/C25100.html",
+      "source_sha256": "92e76c4a1f7caa451513f5583226c2bdc31c05544458a459a9192618f2a0390b",
+      "numbered_pads_by_ref": {
+        "R102": 2,
+        "R103": 2
+      }
+    },
+    {
+      "code": "C25105",
+      "mpn": "0402WGF330JTCE",
+      "refs": [
+        "R104"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0011
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0008
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0007
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0006
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0005
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0005
+        }
+      ],
+      "published_attrition_qty": 15,
+      "stock_snapshot": 3478293,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25105",
+      "source_path": "build/price-estimate-20261114/C25105.html",
+      "source_sha256": "902f9259b68319c91dd199f47888eba3a7a5c44c3dd6d91ebc7a261722f3ecae",
+      "numbered_pads_by_ref": {
+        "R104": 2
+      }
+    },
+    {
+      "code": "C25744",
+      "mpn": "0402WGF1002TCE",
+      "refs": [
+        "R105",
+        "R113",
+        "R114"
+      ],
+      "count_per_board": 3,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.001
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0008
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0007
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0006
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0006
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0006
+        }
+      ],
+      "published_attrition_qty": 15,
+      "stock_snapshot": 21177601,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25744",
+      "source_path": "build/price-estimate-20261114/C25744.html",
+      "source_sha256": "0a219d4bbb9eef5000138fb8292156d395f9fbad6550c48fe958c1bc8cda65f8",
+      "numbered_pads_by_ref": {
+        "R105": 2,
+        "R113": 2,
+        "R114": 2
+      }
+    },
+    {
+      "code": "C11702",
+      "mpn": "0402WGF1001TCE",
+      "refs": [
+        "R106",
+        "R107",
+        "R108"
+      ],
+      "count_per_board": 3,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0013
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0011
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.001
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0009
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0009
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0009
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 31543821,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C11702",
+      "source_path": "build/price-estimate-20261114/C11702.html",
+      "source_sha256": "a03e78fe8e8dbc576da7f2a83b1a4971ac117ff5d5e1a4c5bf20203c7f67ea31",
+      "numbered_pads_by_ref": {
+        "R106": 2,
+        "R107": 2,
+        "R108": 2
+      }
+    },
+    {
+      "code": "C25741",
+      "mpn": "0402WGF1003TCE",
+      "refs": [
+        "R109"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0011
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0008
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0007
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0006
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0006
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0006
+        }
+      ],
+      "published_attrition_qty": 12,
+      "stock_snapshot": 8485493,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25741",
+      "source_path": "build/price-estimate-20261114/C25741.html",
+      "source_sha256": "d28f8537fccddfb729ad97b82fde716429dedcd09ef37a3e17b0b7595459bafd",
+      "numbered_pads_by_ref": {
+        "R109": 2
+      }
+    },
+    {
+      "code": "C25104",
+      "mpn": "0402WGF3300TCE",
+      "refs": [
+        "R110",
+        "R111"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0011
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0009
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0008
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0007
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0005
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0005
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 1499250,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25104",
+      "source_path": "build/price-estimate-20261114/C25104.html",
+      "source_sha256": "bd6082ab1cc7741336e6b6c80142a27d3fe010e26e3cfad55b6a6dbf7553c2fc",
+      "numbered_pads_by_ref": {
+        "R110": 2,
+        "R111": 2
+      }
+    },
+    {
+      "code": "C25753",
+      "mpn": "0402WGF1333TCE",
+      "refs": [
+        "R112"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0015
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0011
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.001
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0009
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0008
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0008
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 25040,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25753",
+      "source_path": "build/price-estimate-20261114/C25753.html",
+      "source_sha256": "c4538973c7b83e7f7cd364d06b8ed3a7ab9b7987c36d0e7b18fe4c648d724e25",
+      "numbered_pads_by_ref": {
+        "R112": 2
+      }
+    },
+    {
+      "code": "C25082",
+      "mpn": "0402WGF1500TCE",
+      "refs": [
+        "R115"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0012
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.0009
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0008
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0007
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0006
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0006
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 683659,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25082",
+      "source_path": "build/price-estimate-20261114/C25082.html",
+      "source_sha256": "ae4ef9cadbb28d351ae609bc240d547b01adc88cc12c40c0e547a7475b0105bf",
+      "numbered_pads_by_ref": {
+        "R115": 2
+      }
+    },
+    {
+      "code": "C25076",
+      "mpn": "0402WGF1000TCE",
+      "refs": [
+        "R116",
+        "R117",
+        "R118",
+        "R119",
+        "R125",
+        "R170",
+        "R171",
+        "R172",
+        "R173",
+        "R174",
+        "R175",
+        "R176",
+        "R177",
+        "R178",
+        "R179",
+        "R180",
+        "R181",
+        "R182",
+        "R183",
+        "R184",
+        "R185",
+        "R186",
+        "R188",
+        "R189",
+        "R190",
+        "R191",
+        "R192",
+        "R193"
+      ],
+      "count_per_board": 28,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0012
+        },
+        {
+          "start": 1000,
+          "end": 2999,
+          "price": 0.001
+        },
+        {
+          "start": 3000,
+          "end": 9999,
+          "price": 0.0009
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0008
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0007
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0007
+        }
+      ],
+      "published_attrition_qty": 15,
+      "stock_snapshot": 10878835,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25076",
+      "source_path": "build/price-estimate-20261114/C25076.html",
+      "source_sha256": "f40ffa83592904972d76406323725eb38d897f89ef83e6434abea77c564f481a",
+      "numbered_pads_by_ref": {
+        "R116": 2,
+        "R117": 2,
+        "R118": 2,
+        "R119": 2,
+        "R125": 2,
+        "R170": 2,
+        "R171": 2,
+        "R172": 2,
+        "R173": 2,
+        "R174": 2,
+        "R175": 2,
+        "R176": 2,
+        "R177": 2,
+        "R178": 2,
+        "R179": 2,
+        "R180": 2,
+        "R181": 2,
+        "R182": 2,
+        "R183": 2,
+        "R184": 2,
+        "R185": 2,
+        "R186": 2,
+        "R188": 2,
+        "R189": 2,
+        "R190": 2,
+        "R191": 2,
+        "R192": 2,
+        "R193": 2
+      }
+    },
+    {
+      "code": "C861479",
+      "mpn": "RT0603BRD07590KL",
+      "refs": [
+        "R120"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 199,
+          "price": 0.0269
+        },
+        {
+          "start": 200,
+          "end": 599,
+          "price": 0.0215
+        },
+        {
+          "start": 600,
+          "end": 4999,
+          "price": 0.0185
+        },
+        {
+          "start": 5000,
+          "end": 9999,
+          "price": 0.0167
+        },
+        {
+          "start": 10000,
+          "end": 19999,
+          "price": 0.0151
+        },
+        {
+          "start": 20000,
+          "end": -1,
+          "price": 0.0143
+        }
+      ],
+      "published_attrition_qty": 6,
+      "stock_snapshot": 6828,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C861479",
+      "source_path": "build/price-estimate-20261114/C861479.html",
+      "source_sha256": "71c63503fe5bd44a6220ded64162521cf1908eca139dba476e2e6dc7289bd8d5",
+      "numbered_pads_by_ref": {
+        "R120": 2
+      }
+    },
+    {
+      "code": "C852540",
+      "mpn": "RT0402BRD07154KL",
+      "refs": [
+        "R121"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 499,
+          "price": 0.027
+        },
+        {
+          "start": 500,
+          "end": 1499,
+          "price": 0.0226
+        },
+        {
+          "start": 1500,
+          "end": 9999,
+          "price": 0.0202
+        },
+        {
+          "start": 10000,
+          "end": 19999,
+          "price": 0.0187
+        },
+        {
+          "start": 20000,
+          "end": 49999,
+          "price": 0.0174
+        },
+        {
+          "start": 50000,
+          "end": -1,
+          "price": 0.0167
+        }
+      ],
+      "published_attrition_qty": 8,
+      "stock_snapshot": 15575,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C852540",
+      "source_path": "build/price-estimate-20261114/C852540.html",
+      "source_sha256": "1bd21696180d6872688cf187b290a668cd555d861b989b42cbfa08a6701eea68",
+      "numbered_pads_by_ref": {
+        "R121": 2
+      }
+    },
+    {
+      "code": "C861500",
+      "mpn": "RT0603BRD07620KL",
+      "refs": [
+        "R122"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 199,
+          "price": 0.0508
+        },
+        {
+          "start": 200,
+          "end": 599,
+          "price": 0.0428
+        },
+        {
+          "start": 600,
+          "end": 4999,
+          "price": 0.0383
+        },
+        {
+          "start": 5000,
+          "end": 9999,
+          "price": 0.0357
+        },
+        {
+          "start": 10000,
+          "end": 19999,
+          "price": 0.0334
+        },
+        {
+          "start": 20000,
+          "end": -1,
+          "price": 0.0321
+        }
+      ],
+      "published_attrition_qty": 8,
+      "stock_snapshot": 2895,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C861500",
+      "source_path": "build/price-estimate-20261114/C861500.html",
+      "source_sha256": "fadd850e2640972cd86d5645bddfaa471f9a762b8d1173e1e82bf5e6df94b3c8",
+      "numbered_pads_by_ref": {
+        "R122": 2
+      }
+    },
+    {
+      "code": "C861785",
+      "mpn": "RT0603BRE07267KL",
+      "refs": [
+        "R123"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 499,
+          "price": 0.0176
+        },
+        {
+          "start": 500,
+          "end": 1499,
+          "price": 0.0136
+        },
+        {
+          "start": 1500,
+          "end": 4999,
+          "price": 0.0115
+        },
+        {
+          "start": 5000,
+          "end": 24999,
+          "price": 0.0102
+        },
+        {
+          "start": 25000,
+          "end": 49999,
+          "price": 0.009
+        },
+        {
+          "start": 50000,
+          "end": -1,
+          "price": 0.0084
+        }
+      ],
+      "published_attrition_qty": 6,
+      "stock_snapshot": 842,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C861785",
+      "source_path": "build/price-estimate-20261114/C861785.html",
+      "source_sha256": "869c4ef57c921c1278f9d1c79faca76271e590348ba763e748ddc27f97b448c2",
+      "numbered_pads_by_ref": {
+        "R123": 2
+      }
+    },
+    {
+      "code": "C861536",
+      "mpn": "RT0603BRD076K65L",
+      "refs": [
+        "R124"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 199,
+          "price": 0.0392
+        },
+        {
+          "start": 200,
+          "end": 599,
+          "price": 0.0334
+        },
+        {
+          "start": 600,
+          "end": 4999,
+          "price": 0.0303
+        },
+        {
+          "start": 5000,
+          "end": 9999,
+          "price": 0.0284
+        },
+        {
+          "start": 10000,
+          "end": 19999,
+          "price": 0.0267
+        },
+        {
+          "start": 20000,
+          "end": -1,
+          "price": 0.0257
+        }
+      ],
+      "published_attrition_qty": 8,
+      "stock_snapshot": 11257,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C861536",
+      "source_path": "build/price-estimate-20261114/C861536.html",
+      "source_sha256": "684db6bb294729b7e3a0beafc447d0ce255db30256e6a9c32bfac835dca28da9",
+      "numbered_pads_by_ref": {
+        "R124": 2
+      }
+    },
+    {
+      "code": "C25803",
+      "mpn": "0603WAF1003T5E",
+      "refs": [
+        "R126",
+        "R128"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0029
+        },
+        {
+          "start": 1000,
+          "end": 4999,
+          "price": 0.0023
+        },
+        {
+          "start": 5000,
+          "end": 9999,
+          "price": 0.002
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0016
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0015
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0015
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 14841489,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25803",
+      "source_path": "build/price-estimate-20261114/C25803.html",
+      "source_sha256": "7b564790f9e7a4b1c73b375b385ebfd0f720eb1093162b7df713813d4ddba7c0",
+      "numbered_pads_by_ref": {
+        "R126": 2,
+        "R128": 2
+      }
+    },
+    {
+      "code": "C21190",
+      "mpn": "0603WAF1001T5E",
+      "refs": [
+        "R130",
+        "R131",
+        "R132",
+        "R133",
+        "R134",
+        "R135"
+      ],
+      "count_per_board": 6,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0017
+        },
+        {
+          "start": 1000,
+          "end": 4999,
+          "price": 0.0014
+        },
+        {
+          "start": 5000,
+          "end": 9999,
+          "price": 0.0012
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.001
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.0009
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.0009
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 27450992,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C21190",
+      "source_path": "build/price-estimate-20261114/C21190.html",
+      "source_sha256": "52349ec0ee47388a3741b27c55824bc0b201ad51e80e1d04ddf095d3503bd116",
+      "numbered_pads_by_ref": {
+        "R130": 2,
+        "R131": 2,
+        "R132": 2,
+        "R133": 2,
+        "R134": 2,
+        "R135": 2
+      }
+    },
+    {
+      "code": "C23153",
+      "mpn": "0603WAF3902T5E",
+      "refs": [
+        "R140",
+        "R141",
+        "R142",
+        "R143",
+        "R144",
+        "R145"
+      ],
+      "count_per_board": 6,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.002
+        },
+        {
+          "start": 1000,
+          "end": 4999,
+          "price": 0.0016
+        },
+        {
+          "start": 5000,
+          "end": 9999,
+          "price": 0.0013
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0011
+        },
+        {
+          "start": 50000,
+          "end": 50199,
+          "price": 0.001
+        },
+        {
+          "start": 50200,
+          "end": -1,
+          "price": 0.001
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 608679,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C23153",
+      "source_path": "build/price-estimate-20261114/C23153.html",
+      "source_sha256": "71824a649f54e7f14484f831b6ba19407a6cc98517c6296f14270358c64955de",
+      "numbered_pads_by_ref": {
+        "R140": 2,
+        "R141": 2,
+        "R142": 2,
+        "R143": 2,
+        "R144": 2,
+        "R145": 2
+      }
+    },
+    {
+      "code": "C861392",
+      "mpn": "RT0603BRD0740KL",
+      "refs": [
+        "R159"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 199,
+          "price": 0.0369
+        },
+        {
+          "start": 200,
+          "end": 599,
+          "price": 0.0303
+        },
+        {
+          "start": 600,
+          "end": 4999,
+          "price": 0.0267
+        },
+        {
+          "start": 5000,
+          "end": 9999,
+          "price": 0.0246
+        },
+        {
+          "start": 10000,
+          "end": 19999,
+          "price": 0.0228
+        },
+        {
+          "start": 20000,
+          "end": -1,
+          "price": 0.0218
+        }
+      ],
+      "published_attrition_qty": 8,
+      "stock_snapshot": 212303,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C861392",
+      "source_path": "build/price-estimate-20261114/C861392.html",
+      "source_sha256": "4fd826db6e441ae37e4672444e8313f93ad44761122cfeaa981a02dfeadeb6cb",
+      "numbered_pads_by_ref": {
+        "R159": 2
+      }
+    },
+    {
+      "code": "C95204",
+      "mpn": "RT0603BRD0710KL",
+      "refs": [
+        "R160"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 199,
+          "price": 0.0302
+        },
+        {
+          "start": 200,
+          "end": 599,
+          "price": 0.0252
+        },
+        {
+          "start": 600,
+          "end": 4999,
+          "price": 0.0231
+        },
+        {
+          "start": 5000,
+          "end": 9999,
+          "price": 0.0212
+        },
+        {
+          "start": 10000,
+          "end": 19999,
+          "price": 0.0205
+        },
+        {
+          "start": 20000,
+          "end": -1,
+          "price": 0.02
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 1879866,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C95204",
+      "source_path": "build/price-estimate-20261114/C95204.html",
+      "source_sha256": "814689d5f623bb600f5a79c544e046cfe83daf407caf2401c14ead6362f09e95",
+      "numbered_pads_by_ref": {
+        "R160": 2
+      }
+    },
+    {
+      "code": "C25271",
+      "mpn": "0805W8F100KT5E",
+      "refs": [
+        "R187"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 999,
+          "price": 0.0054
+        },
+        {
+          "start": 1000,
+          "end": 4999,
+          "price": 0.0044
+        },
+        {
+          "start": 5000,
+          "end": 9999,
+          "price": 0.0037
+        },
+        {
+          "start": 10000,
+          "end": 49999,
+          "price": 0.0033
+        },
+        {
+          "start": 50000,
+          "end": 99999,
+          "price": 0.003
+        },
+        {
+          "start": 100000,
+          "end": -1,
+          "price": 0.0029
+        }
+      ],
+      "published_attrition_qty": 10,
+      "stock_snapshot": 361764,
+      "library_type": "basic",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C25271",
+      "source_path": "build/price-estimate-20261114/C25271.html",
+      "source_sha256": "60782f93094b7bb4c4c118825feb00841b758d17e0cb6cff3d16f22060d1286d",
+      "numbered_pads_by_ref": {
+        "R187": 2
+      }
+    },
+    {
+      "code": "C2886897",
+      "mpn": "TL3342F450QG",
+      "refs": [
+        "SW100",
+        "SW101"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 0.9375
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 0.7478
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 0.6512
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 0.558
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 0.5007
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 0.4713
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 334,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C2886897",
+      "source_path": "build/price-estimate-20261114/C2886897.html",
+      "source_sha256": "535a52bbb148e533b715ae901ddb4c92a45c251c3d66633ed6176d005e0ed482",
+      "numbered_pads_by_ref": {
+        "SW100": 2,
+        "SW101": 2
+      }
+    },
+    {
+      "code": "C42411118",
+      "mpn": "RP2350A",
+      "refs": [
+        "U1"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 1.2942
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 1.2206
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 1.1731
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 1.1502
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 1.129
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 1.1192
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 5360,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C42411118",
+      "source_path": "build/price-estimate-20261114/C42411118.html",
+      "source_sha256": "bfb2c684ac43e68ef5b2127d215a330c9af6b1fcdb6ab05c583783c68e4843e9",
+      "numbered_pads_by_ref": {
+        "U1": 61
+      }
+    },
+    {
+      "code": "C51118",
+      "mpn": "AP2112K-3.3TRG1",
+      "refs": [
+        "U2"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 49,
+          "price": 0.1667
+        },
+        {
+          "start": 50,
+          "end": 149,
+          "price": 0.1288
+        },
+        {
+          "start": 150,
+          "end": 499,
+          "price": 0.1102
+        },
+        {
+          "start": 500,
+          "end": 2999,
+          "price": 0.0936
+        },
+        {
+          "start": 3000,
+          "end": 5999,
+          "price": 0.0843
+        },
+        {
+          "start": 6000,
+          "end": -1,
+          "price": 0.0817
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 30665,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C51118",
+      "source_path": "build/price-estimate-20261114/C51118.html",
+      "source_sha256": "6647cdeb61e511c3e06c753c83ff0a0ed1389d04567822fe64afb554c088593c",
+      "numbered_pads_by_ref": {
+        "U2": 5
+      }
+    },
+    {
+      "code": "C179173",
+      "mpn": "W25Q32JVSSIQ",
+      "refs": [
+        "U3"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 1.5069
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 1.3057
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 1.1617
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 1.0308
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 0.9719
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 0.9474
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 4102,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C179173",
+      "source_path": "build/price-estimate-20261114/C179173.html",
+      "source_sha256": "5047b8932105bc05368c99df8e0568f43db193abe8208d4bb56dbb5cb85ad720",
+      "numbered_pads_by_ref": {
+        "U3": 8
+      }
+    },
+    {
+      "code": "C473338",
+      "mpn": "SN74LV1T125DBVR",
+      "refs": [
+        "U5",
+        "U6"
+      ],
+      "count_per_board": 2,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 49,
+          "price": 0.1628
+        },
+        {
+          "start": 50,
+          "end": 149,
+          "price": 0.1344
+        },
+        {
+          "start": 150,
+          "end": 499,
+          "price": 0.1201
+        },
+        {
+          "start": 500,
+          "end": 2999,
+          "price": 0.1093
+        },
+        {
+          "start": 3000,
+          "end": 5999,
+          "price": 0.1008
+        },
+        {
+          "start": 6000,
+          "end": -1,
+          "price": 0.0966
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 88745,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C473338",
+      "source_path": "build/price-estimate-20261114/C473338.html",
+      "source_sha256": "8f02c92f13e15d6a611f9be2f91a620dfa1fa7ee53bc911798f4336e6bdf3b65",
+      "numbered_pads_by_ref": {
+        "U5": 5,
+        "U6": 5
+      }
+    },
+    {
+      "code": "C55266",
+      "mpn": "TPS2553DBVR",
+      "refs": [
+        "U7"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 0.5531
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 0.4582
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 0.3911
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 0.3355
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 0.3175
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 0.3076
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 48504,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C55266",
+      "source_path": "build/price-estimate-20261114/C55266.html",
+      "source_sha256": "9079b9ee31112c25862dfd1f8e67bbce2721ba5574c512875873fa6d2e4effff",
+      "numbered_pads_by_ref": {
+        "U7": 6
+      }
+    },
+    {
+      "code": "C3662799",
+      "mpn": "TPS259470ARPWR",
+      "refs": [
+        "U8"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 1.3106
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 1.0832
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 0.9588
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 0.8165
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 0.7543
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 0.7265
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 310,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C3662799",
+      "source_path": "build/price-estimate-20261114/C3662799.html",
+      "source_sha256": "ed511b1bdd89873ce1fcf6b9a08f652ebc6beb790c22559695a240a60f3fde62",
+      "numbered_pads_by_ref": {
+        "U8": 10
+      }
+    },
+    {
+      "code": "C97502",
+      "mpn": "TPD2EUSB30DRTR",
+      "refs": [
+        "U10"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 0.6839
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 0.54
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 0.4778
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 0.3993
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 0.3649
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 0.3436
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 17489,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C97502",
+      "source_path": "build/price-estimate-20261114/C97502.html",
+      "source_sha256": "09b6bb43009cbbe4bf8a68cc721911cca37d92b0d987d5f76b2d933357c3b336",
+      "numbered_pads_by_ref": {
+        "U10": 3
+      }
+    },
+    {
+      "code": "C15298",
+      "mpn": "SN74CB3T3245PWR",
+      "refs": [
+        "U11"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 2.0403
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 1.7687
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 1.5969
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 1.2762
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 1.1961
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 1.1633
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 3494,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C15298",
+      "source_path": "build/price-estimate-20261114/C15298.html",
+      "source_sha256": "52be516da11581e5b9ed8e4dd359a19a9a025b29d9ae0c6f6098f4f6e77e2e2e",
+      "numbered_pads_by_ref": {
+        "U11": 20
+      }
+    },
+    {
+      "code": "C2864432",
+      "mpn": "TLV810EA29DBZR",
+      "refs": [
+        "U12"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 0.3714
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 0.2913
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 0.252
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 0.2177
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 0.2078
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 0.2029
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 992,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C2864432",
+      "source_path": "build/price-estimate-20261114/C2864432.html",
+      "source_sha256": "c93dac8fc683f579bf3c6426e69da2784961519ad9c81608af4a206e847376b8",
+      "numbered_pads_by_ref": {
+        "U12": 3
+      }
+    },
+    {
+      "code": "C962978",
+      "mpn": "TPD6E05U06RVZR",
+      "refs": [
+        "U13"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 0.9048
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 0.7379
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 0.6529
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 0.5711
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 0.5203
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 0.4958
+        }
+      ],
+      "published_attrition_qty": 2,
+      "stock_snapshot": 2,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C962978",
+      "source_path": "build/cost-down-20261114/C962978.html",
+      "source_sha256": "7f658ec17606198372c42002ea6a4dea2498f44e679fa589a5673c77c9c9f028",
+      "numbered_pads_by_ref": {
+        "U13": 14
+      }
+    },
+    {
+      "code": "C3032935",
+      "mpn": "TPS62932DRLR",
+      "refs": [
+        "U18"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 9,
+          "price": 0.7494
+        },
+        {
+          "start": 10,
+          "end": 29,
+          "price": 0.6087
+        },
+        {
+          "start": 30,
+          "end": 99,
+          "price": 0.5383
+        },
+        {
+          "start": 100,
+          "end": 499,
+          "price": 0.468
+        },
+        {
+          "start": 500,
+          "end": 999,
+          "price": 0.4271
+        },
+        {
+          "start": 1000,
+          "end": -1,
+          "price": 0.4058
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 11191,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C3032935",
+      "source_path": "build/cost-down-20261114/C3032935.html",
+      "source_sha256": "9eebf32000395b835eddaadb7dd1e7ce90a87bd844fa12ec31989396b7b5cfbb",
+      "numbered_pads_by_ref": {
+        "U18": 8
+      }
+    },
+    {
+      "code": "C20625731",
+      "mpn": "ABM8-272-T3",
+      "refs": [
+        "Y1"
+      ],
+      "count_per_board": 1,
+      "price_tiers_usd": [
+        {
+          "start": 1,
+          "end": 49,
+          "price": 0.3963
+        },
+        {
+          "start": 50,
+          "end": 149,
+          "price": 0.3261
+        },
+        {
+          "start": 150,
+          "end": 499,
+          "price": 0.2962
+        },
+        {
+          "start": 500,
+          "end": 2999,
+          "price": 0.2586
+        },
+        {
+          "start": 3000,
+          "end": 5999,
+          "price": 0.2419
+        },
+        {
+          "start": 6000,
+          "end": -1,
+          "price": 0.2319
+        }
+      ],
+      "published_attrition_qty": 0,
+      "stock_snapshot": 679,
+      "library_type": "extended",
+      "pcba_type": "Economic and Standard",
+      "source_url": "https://jlcpcb.com/partdetail/C20625731",
+      "source_path": "build/price-estimate-20261114/C20625731.html",
+      "source_sha256": "6294fe98aeb9123c6f8d068e67aa7387e4af7ac94c0d8beab9d2029cb830a3c6",
+      "numbered_pads_by_ref": {
+        "Y1": 4
+      }
+    }
+  ],
+  "expansion_refs": [
+    "C128",
+    "C129",
+    "J3",
+    "R128",
+    "R130",
+    "R131",
+    "R132",
+    "R133",
+    "R134",
+    "R135",
+    "R140",
+    "R141",
+    "R142",
+    "R143",
+    "R144",
+    "R145",
+    "U11",
+    "U12",
+    "U13"
+  ],
+  "expansion_population_change_authorized": false,
+  "pins_and_prices_basis": "Baseline order BOM by reference, candidate reverse LED code override, LED14/15 added once each; current geometry and fresh netlist checked by calculate.py.",
+  "fees_usd": {
+    "standard_setup": 25.56,
+    "standard_stencil": 8.21,
+    "standard_per_part": 1.53,
+    "economic_setup": 8.18,
+    "economic_stencil": 1.53,
+    "economic_per_extended_part": 3.07,
+    "smt_per_joint": 0.0016
+  },
+  "fee_source_url": "https://jlcpcb.com/help/article/pcb-assembly-price",
+  "fee_source_sha256": "2fe0d0f16c84d0d963d94ff19d3b2de297fffb1bb434a0ee1b2bf8a612ecc182",
+  "budget_allocation_krw": {
+    "pcb_fabrication": 50000,
+    "parts": 70000,
+    "assembly_all_fees": 80000,
+    "shipping": 40000,
+    "contingency": 10000
+  },
+  "fx_usdkrw_assumption": 1400,
+  "tax_reserve_assumption": 0.1,
+  "quantity": 5,
+  "target_total_krw": 250000,
+  "current_inputs": {
+    "pcb/maru60.kicad_pcb": "875ee106148f266e6fc24f938eddfaef901e4a263cc295df41cfb3e270a8301d",
+    "evidence/final-geometry.json": "9359f5505ebaee21363d35e8ebf7cbcf4857b7103d6ddb86cdc66652954e21d7",
+    "evidence/simulation-suite-20261114/inputs/netlist.xml": "3c7ef4f3d6651cfe8e5cbc5594be1d8c4a1d565d2c04ae9b03dbaa6e79154392"
+  }
+}

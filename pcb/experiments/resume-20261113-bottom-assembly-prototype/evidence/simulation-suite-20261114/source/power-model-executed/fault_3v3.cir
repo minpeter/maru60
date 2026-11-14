@@ -1,0 +1,26 @@
+Maru60 power tree (c) short on +3V3, averaged buck model
+* 50 mOhm short to ground at the LDO output from 8 ms to 14 ms [ASSUMED
+* impedance], then released with the 3V3 load i33b still connected.
+.include models.lib
+.include params.inc
+.param cssx=10n
+.param kdvdtx=50
+.include board.inc
+Vsrc src 0 pwl(0 0 10u 0 11u {vsrc})
+XU18 vbk sw fb ss v4 0 tps62932_avg lnom={l2} kea={kea} vref={vref} iss={iss}
+Vlen len 0 0
+Vi33 i33cmd 0 {i33b}
+Vled ledcmd 0 0
+Vsh33 sh33 0 pwl(0 0 8m 0 8.0001m 1 14m 1 14.0001m 0)
+Vshl shled 0 0
+.options method=gear reltol=1e-3 abstol=1e-9 vntol=1e-6 chgtol=1e-15 itl4=200
+.ic v(v4)=0 v(v33)=0 v(vprot)=0
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 0.1u 22m 0 2u uic
+wrdata out.txt v(src) v(vbus) v(vfused) v(vprot) v(vbk) v(v4) v(v4b) v(v4c) v(v33) v(v33m) v(vled) i(Vsrc) i(L2) v(uvlo) v(ovlo) v(xu18.comp) v(xu8.en) v(dvdt) v(ss) i(S33)
+quit
+.endc
+.end

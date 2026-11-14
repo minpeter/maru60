@@ -1,0 +1,67 @@
+{
+  "method": "Fresh old/new USB delay simulations using the same current geometry extractor, model, line parameters and ngspice settings. No hardware measurements or keyboard input-latency measurement.",
+  "rows": {
+    "before": {
+      "board_sha256": "c371018deed3ed99cf36f0ce974fb4153ebf05a1c8f8d35df3d4e4224f936129",
+      "geometry_sha256": "165f7c0de8275c0bbb1b1a7792892b329e5d9fef3752205b08135884bc14985d",
+      "delay": {
+        "J1_to_RP2350_pins_ns": 0.9553,
+        "J1_to_27R_ns": 0.9146,
+        "skew_DP_minus_DM_ps": 10.53,
+        "limit_ns": 1.0
+      },
+      "paths": {
+        "USB_DP_CONN": {
+          "length_mm": 138.494,
+          "vias": 4
+        },
+        "USB_DM_CONN": {
+          "length_mm": 136.978,
+          "vias": 4
+        },
+        "USB_DP": {
+          "length_mm": 4.104,
+          "vias": 0
+        },
+        "USB_DM": {
+          "length_mm": 3.82,
+          "vias": 0
+        }
+      }
+    },
+    "after": {
+      "board_sha256": "2cc544c8e6eb00bd3f53fa480a0167dcb8e14dac687f7eb2af0c85946bda5584",
+      "geometry_sha256": "0acf3f3fc2f9c23586dd4a5fd2564de0046186003b1cefd2903fd14e3ee7135e",
+      "delay": {
+        "J1_to_RP2350_pins_ns": 0.427,
+        "J1_to_27R_ns": 0.337,
+        "skew_DP_minus_DM_ps": -46.75,
+        "limit_ns": 1.0
+      },
+      "paths": {
+        "USB_DP_CONN": {
+          "length_mm": 43.44,
+          "vias": 4
+        },
+        "USB_DM_CONN": {
+          "length_mm": 41.939,
+          "vias": 4
+        },
+        "USB_DP": {
+          "length_mm": 4.006,
+          "vias": 0
+        },
+        "USB_DM": {
+          "length_mm": 6.738,
+          "vias": 2
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "geom.py": "5d589c571cb825edeb791b3e20b8e2daa9c617928c7a9feed2af5db08858ff73",
+    "sim_usb.py": "3d07fbc8adcad1b7b5818213fcc5ba52ee1e107edbb995b8b4e81ffdf14e4f8f",
+    "spice.py": "a17aeb1181c102704ca28e7123e74685043310fcf18f177a73339cd7b361067a",
+    "fieldsolve.py": "9186e412a0a7021146e9f3856f29412c9a6f94d56e26758403501fcf60b0d2a9"
+  }
+}

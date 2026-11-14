@@ -119,6 +119,27 @@ def board_pair(d, board, table, dp_conn, dm_conn, dp_r, dm_r, pair_par):
     return info
 
 
+def phy_pair(d, board, table, max_section_mm=2.0):
+    """RP2350 pins to the 27R pads, including the actual routed vias."""
+    routes = (
+        ("pinp", "rp_a", board.route("USB_DP", ("U1", "52"), ("R102", "2"))),
+        ("pinm", "rm_a", board.route("USB_DM", ("U1", "51"), ("R103", "2"))),
+    )
+    for source, end, route in routes:
+        if route is None:
+            raise ValueError(f"No routed PHY path from {source} to {end}")
+        cur = source
+        for i, e in enumerate(route["elements"]):
+            nxt = end if i == len(route["elements"]) - 1 else d.uid("phy")
+            if e[0] == "via":
+                d.via(cur, nxt, table)
+            else:
+                d.ladder(cur, nxt, e[3], e[2], table, max_section_mm=max_section_mm)
+            cur = nxt
+        if not route["elements"]:
+            d.ladder(cur, end, 0, 0.15, table)
+
+
 def build(board, table, pair_par, direction, edge_ns, cable=True, test_load=False, rise_ns=None, fall_ns=None, host_c=20.0):
     d = spice.Deck(f"USB full speed, {direction}, source ramp {edge_ns} ns, cable {'1 m' if cable else 'none'}")
     dev_tx = direction == "device_tx"
@@ -130,8 +151,7 @@ def build(board, table, pair_par, direction, edge_ns, cable=True, test_load=Fals
     else:
         d.add("Rrxp pinp 0 10meg", "Rrxm pinm 0 10meg")
     d.add("Cpinp pinp 0 5p", "Cpinm pinm 0 5p", "Vpu vpu 0 3.3", "Rpu vpu pinp 1.5k")
-    d.ladder("pinp", "rp_a", 4.104, 0.15, table)
-    d.ladder("pinm", "rm_a", 3.82, 0.15, table)
+    phy_pair(d, board, table)
     d.add("R102 rp_a rp_b 27", "R103 rm_a rm_b 27")
     info = board_pair(d, board, table, "conp", "conm", "rp_b", "rm_b", pair_par)
     d.add("Cconp conp 0 0.6p", "Cconm conm 0 0.6p")
@@ -169,8 +189,7 @@ def sim_delay(board, table, pair_par):
     d = spice.Deck("USB: propagation delay from the J1 pads to the RP2350 pins (one differential edge, matched ends)")
     d.add("Vp sp 0 PWL(0 0 2n 0 3n 3.3)", "Vm sm 0 PWL(0 3.3 2n 3.3 3n 0)", "Rsp sp conp 45", "Rsm sm conm 45",
           "Rtp pinp 0 20", "Rtm pinm 0 20")   # 27 + 20 = 47 ohm: close to the odd-mode impedance
-    d.ladder("pinp", "rp_a", 4.104, 0.15, table, max_section_mm=1.0)
-    d.ladder("pinm", "rm_a", 3.82, 0.15, table, max_section_mm=1.0)
+    phy_pair(d, board, table, max_section_mm=1.0)
     d.add("R102 rp_a rp_b 27", "R103 rm_a rm_b 27")
     board_pair(d, board, table, "conp", "conm", "rp_b", "rm_b", pair_par)
     d.add("Cconp conp 0 0.6p", "Cconm conm 0 0.6p", ".options method=gear reltol=1e-3")
@@ -189,6 +208,34 @@ def sim_delay(board, table, pair_par):
     return {"J1_to_RP2350_pins_ns": round(float(t_pin - t_con), 4), "J1_to_27R_ns": round(float(t_res - t_con), 4),
             "skew_DP_minus_DM_ps": round(float(half(r["v(pinp)"]) - half(r["v(pinm)"])) * 1e3, 2),
             "limit_ns": SPEC["device_trace_delay_ns"]}
+
+
+def edge_times(t, v):
+    """Pair 10/90% crossings around the same 50% edge, with ringing diagnostics.
+
+    Times are in ns. A late 10% recrossing must not be paired with the next
+    data transition. The half-UI window is shorter than the minimum edge spacing.
+    """
+    durations = []
+    diagnostics = []
+    for rising in (True, False):
+        starts = np.asarray(spice.crossings(t, v, .33 if rising else 2.97, rising))
+        ends = np.asarray(spice.crossings(t, v, 2.97 if rising else .33, rising))
+        mids = spice.crossings(t, v, 1.65, rising)
+        values, extra, incomplete = [], 0, 0
+        for mid in mids:
+            before = starts[(starts <= mid) & (starts > mid - UI / 2)]
+            after = ends[(ends >= mid) & (ends < mid + UI / 2)]
+            if len(before) and len(after):
+                values.append(float(after[0] - before[-1]))
+                extra += len(before) + len(after) - 2
+            else:
+                incomplete += 1
+        durations.append(float(np.mean(values)) if values else float('nan'))
+        diagnostics.append({'direction': 'rise' if rising else 'fall',
+                            'midpoint_crossings': len(mids), 'measured_edges': len(values),
+                            'unpaired_edges': incomplete, 'extra_same_direction_crossings': int(extra)})
+    return durations, diagnostics
 
 
 def analyse(t, vp, vm, skip_bits=4):
@@ -220,27 +267,15 @@ def analyse(t, vp, vm, skip_bits=4):
     left = closed[closed < UI / 2].max() if (closed < UI / 2).any() else 0.0
     right = closed[closed > UI / 2].min() if (closed > UI / 2).any() else UI
     # single-ended edges 10-90 % of the settled swing
-    def edges(v):
-        lo, hi = 0.0, 3.3  # nominal swing; percentiles would follow the overshoot
-        a, b = lo + 0.1 * (hi - lo), lo + 0.9 * (hi - lo)
-        rise, fall = [], []
-        for x in spice.crossings(t, v, a, True):
-            y = [c for c in spice.crossings(t, v, b, True) if c > x]
-            if y and y[0] - x < UI:
-                rise.append(y[0] - x)
-        for x in spice.crossings(t, v, b, False):
-            y = [c for c in spice.crossings(t, v, a, False) if c > x]
-            if y and y[0] - x < UI:
-                fall.append(y[0] - x)
-        return float(np.mean(rise)), float(np.mean(fall)), float(lo), float(hi)
-    rp, fp, lop, hip = edges(vp)
-    rm, fm, lom, him = edges(vm)
+    (rp, fp), ep = edge_times(t, vp)
+    (rm, fm), em = edge_times(t, vm)
     tfr, tff = (rp + rm) / 2, (fp + fm) / 2
     return {
         "VCRS_min_V": round(float(min(vcrs)), 3), "VCRS_max_V": round(float(max(vcrs)), 3),
         "TFR_ns": round(tfr, 2), "TFF_ns": round(tff, 2), "TFRFM_pct": round(100 * tfr / tff, 1),
         "DP_rise_fall_ns": [round(rp, 2), round(fp, 2)], "DM_rise_fall_ns": [round(rm, 2), round(fm, 2)],
-        "levels_V": {"DP": [round(lop, 3), round(hip, 3)], "DM": [round(lom, 3), round(him, 3)]},
+        "nominal_swing_for_edge_measurement_V": [0.0, 3.3],
+        "edge_pairing": {"method": "10/90 around the same 50 percent crossing", "DP": ep, "DM": em},
         "jitter_pkpk_ns": round(float(off.max() - off.min()), 3),
         "jitter_next_transition_ns": [round(float(consec.min()), 3), round(float(consec.max()), 3)],
         "jitter_paired_ns": [round(float(paired.min()), 3), round(float(paired.max()), 3)],
@@ -276,8 +311,9 @@ def main():
         wide = sum(v for k, v in u[net]["by_layer_width"].items() if float(k.split(":")[1]) >= 0.24)
         narrow = u[net]["length_mm"] - wide + u[short]["length_mm"]
         ps = wide * pair_par["delay_odd_ps_per_mm"] + narrow * table["single"]["0.15"]["delay_ps_per_mm"]
-        via_ps = u[net]["vias"] * (table["via_L_nH"] * 1e-9 * table["via_C_pF"] * 1e-12) ** 0.5 * 1e12
+        via_ps = (u[net]["vias"] + u[short]["vias"]) * (table["via_L_nH"] * 1e-9 * table["via_C_pF"] * 1e-12) ** 0.5 * 1e12
         delay[net] = {"coupled_mm": round(wide, 2), "breakout_mm": round(narrow, 2), "vias": u[net]["vias"],
+                      "phy_vias": u[short]["vias"],
                       "delay_ps_odd_mode": round(ps + via_ps, 1),
                       "delay_ps_single_ended_upper": round(u[net]["delay_ps"] + u[short]["delay_ps"] + via_ps, 1)}
     out["delay"] = delay

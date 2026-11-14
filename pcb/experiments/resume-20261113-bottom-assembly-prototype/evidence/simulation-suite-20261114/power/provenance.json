@@ -1,0 +1,36 @@
+{
+  "inputs": {
+    "build/bottom-sim-20261114/geometry.json": "9359f5505ebaee21363d35e8ebf7cbcf4857b7103d6ddb86cdc66652954e21d7",
+    "build/bottom-sim-20261114/netlist.xml": "3c7ef4f3d6651cfe8e5cbc5594be1d8c4a1d565d2c04ae9b03dbaa6e79154392",
+    "pcb/experiments/resume-20261113-bottom-assembly-prototype/evidence/pdn/primary/results.json": "1b310f783d1c352792293daf8c6e1d1910d968a2856361750bc3e9cd3e52182e",
+    "/home/minpeter/github.com/minpeter/maru60/pcb/tools/run_bottom_power_suite.py": "8d1bd521c0a63c31c21c935383ef6bfa849e975ad906c8ce9bee304bc153113c"
+  },
+  "models": {
+    "fault_led.cir": "8479c98e494c50210d3373085b55919563a771d6e695a7d3e22275c8b32f5d2f",
+    "loadstep.inc": "91ad9148528b67fb6d90ae8ce25a988c74b65109e44da9ed13a474910f70651b",
+    "brownout.cir": "b70dc052b160d52f8734ba04247a8ca9634c2c0e62fd33679bc974113fe3ea13",
+    "loadstep_avg.cir": "4a40346beef2f539ff6074e6e5ff2f3e4690140edd78b525fabd706b49992fe4",
+    "params.inc": "ae95f116de652220e9db18aea7120231f603251b6ff12fad462ab5ded6e3a519",
+    "board.inc": "d8788370b6535f9d5ac4d0f2630cf6fadfec01bcd719d76dd0d26d359244bc63",
+    "steady.cir": "9580b27371f0e359eb8f44db661dd791b01cb7a258f7c6530d3bd7b7e7007ab3",
+    "runner.py": "c9084ed1ae3655135610e46400209c84ca1720c71735f5fdd0f408a34a096633",
+    "fault_3v3.cir": "f5fe61f7c44c4c50f4645a9e0c8aefec9db3548076ad7df9ddea23f2f3bd131a",
+    "plugin.cir": "96593201b8af39edd1b90dfbc8741ab7912b93003651d75ffadc00f1052a47e4",
+    "overvoltage.cir": "214a82da6158ae0fae023d85f55e67d2f992d205172fd08f1335713c53f071fe",
+    "models.lib": "ce11d3c24b03971e7dc28d142e3e6e6d0302ae1b5addc8af5815a00e16e38ca5",
+    "loop_ac.cir": "e380f4069bf54476ceec1a1752f4191ae0f86fc1bd332656e762fd3ca989433f",
+    "loadstep_sw.cir": "e135914a3720df95e1811dd22066452320767aafd2f985619312882f97ec36ba"
+  },
+  "LED_counts": {
+    "SK6812MINI-E-012": 64,
+    "SK6805-EC15-001": 12
+  },
+  "LED_idle_mA_typical": 44.4,
+  "PWM_average_drive_mA": 58,
+  "limitations": [
+    "Behavioral models, not vendor macros or measured dynamics",
+    "DC radial branch equivalents; shared copper and physical parasitic inductance approximated",
+    "Nominal effective capacitors and omitted LDO/buck thermal retry/PFM effects remain stated assumptions",
+    "This tree model uses average LED load; separate synchronized-PWM transient screen is required"
+  ]
+}

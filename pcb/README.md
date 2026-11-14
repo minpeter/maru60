@@ -4,6 +4,15 @@
 [../recovery/README.md](../recovery/README.md). Everything below describes earlier stages (A21/A22 foundation) and is
 kept for history.
 
+The [bottom-assembly experiment](experiments/resume-20261113-bottom-assembly-prototype/README.md)
+now retains every layout option with reverse key LEDs and zero top SMT. Native
+routing checks are clean; power-transient and assembly qualification remain open.
+It is not an order release and is not promoted in `current.json`.
+
+The preceding [MCU-near-USB candidate](experiments/resume-20261113-mcu-near-usb-zero-opens/README.md)
+has complete routing, clean native/DFM checks and its own 2U Backspace assembly
+package. Physical receptacle and stabilizer fit remain prerequisites to fabrication.
+
 ## Order candidate (2026-11-11)
 
 [`order/`](order/README.md) holds the files to upload to JLCPCB (Gerbers, BOM,

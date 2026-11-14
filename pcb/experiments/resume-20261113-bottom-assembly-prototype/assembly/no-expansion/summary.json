@@ -1,0 +1,95 @@
+{
+  "status": "Engineering population variant applied; NOT ORDER READY",
+  "cad_unchanged": true,
+  "excluded_refs": [
+    "C128",
+    "C129",
+    "J3",
+    "R128",
+    "R130",
+    "R131",
+    "R132",
+    "R133",
+    "R134",
+    "R135",
+    "R140",
+    "R141",
+    "R142",
+    "R143",
+    "R144",
+    "R145",
+    "U11",
+    "U12",
+    "U13"
+  ],
+  "assembled_per_board": 319,
+  "unique_parts": 50,
+  "library_types": {
+    "basic": 15,
+    "extended": 35
+  },
+  "all_assembled_on_bottom": true,
+  "parts_5_boards_usd": "132.3270",
+  "standard_fixed_usd": "110.27",
+  "parts_plus_standard_fixed_krw_assumed": 373599,
+  "parts_and_standard_fixed_savings_5_boards_krw_assumed": 46159,
+  "parts_and_standard_fixed_savings_per_board_krw_assumed": 9232,
+  "fx_assumption": 1400,
+  "tax_reserve_assumption": 0.1,
+  "procurement_savings_realized": false,
+  "unused_gpio": [
+    3,
+    10,
+    24,
+    25,
+    26,
+    27
+  ],
+  "preserved_gpio_count": 24,
+  "backspace_population_sites": {
+    "split": {
+      "LED14": {
+        "Reference": "LED14",
+        "X_mm_KiCad": "251.717500",
+        "Y_mm_KiCad": "9.198750",
+        "Rotation_deg_KiCad": "-45.000000",
+        "Layer": "B.Cu",
+        "Site": "split"
+      },
+      "LED15": {
+        "Reference": "LED15",
+        "X_mm_KiCad": "280.927500",
+        "Y_mm_KiCad": "9.198750",
+        "Rotation_deg_KiCad": "-90.000000",
+        "Layer": "B.Cu",
+        "Site": "split"
+      }
+    },
+    "2u": {
+      "LED14": {
+        "Reference": "LED14",
+        "X_mm_KiCad": "266.067500",
+        "Y_mm_KiCad": "4.118750",
+        "Rotation_deg_KiCad": "-0.000000",
+        "Layer": "B.Cu",
+        "Site": "2u"
+      },
+      "LED15": {
+        "Reference": "LED15",
+        "X_mm_KiCad": "263.250000",
+        "Y_mm_KiCad": "18.550000",
+        "Rotation_deg_KiCad": "-135.000000",
+        "Layer": "B.Cu",
+        "Site": "2u"
+      }
+    }
+  },
+  "bom_matches_both_position_lists": true,
+  "firmware_build_qualification": "See separate build evidence; no hardware qualification",
+  "cpl_status": "KiCad axes/angles only; not fitted to supplier rotation/origin; do not upload as final CPL",
+  "release_blockers": [
+    "Unresolved LED PWM power and signal findings",
+    "Supplier reverse-LED placement and aperture approval",
+    "Final complete landed quote"
+  ]
+}

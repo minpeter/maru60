@@ -19,7 +19,8 @@ def main():
     board_path, drc_path = sys.argv[1], sys.argv[2]
     nets = sys.argv[sys.argv.index("--nets") + 1].split(",") if "--nets" in sys.argv else ["GND", "+4V_LED"]
     max_len = float(sys.argv[sys.argv.index("--max-length") + 1]) if "--max-length" in sys.argv else 6.0
-    drc = json.load(open(drc_path))
+    with open(drc_path) as report:
+        drc = json.load(report)
     b = pcbnew.LoadBoard(board_path)
     mm = pcbnew.ToMM
     recs = []
@@ -52,10 +53,25 @@ def main():
                 continue
 
             def lonely(pt):
-                return not any(owner != i and owner not in done and math.hypot(ax - pt[0], ay - pt[1]) <= r["w"] / 2 + 1e-6
-                               for ax, ay, owner in anchors.get((r["net"], r["layer"]), []))
+                if any(owner != i and owner not in done and math.hypot(ax - pt[0], ay - pt[1]) <= r["w"] / 2 + 1e-6
+                       for ax, ay, owner in anchors.get((r["net"], r["layer"]), [])):
+                    return False
+                # A track endpoint can meet the middle of another segment.
+                # Endpoint-only anchors miss that T-junction and may delete
+                # its short branch before trimming the real overhang.
+                for j, other in enumerate(recs):
+                    if j == i or j in done or (other["net"], other["layer"]) != (r["net"], r["layer"]):
+                        continue
+                    ax, ay = other["s"]; bx, by = other["e"]
+                    ll = (bx-ax)**2+(by-ay)**2
+                    u = max(0, min(1, ((pt[0]-ax)*(bx-ax)+(pt[1]-ay)*(by-ay))/ll)) if ll else 0
+                    if math.hypot(pt[0]-(ax+u*(bx-ax)), pt[1]-(ay+u*(by-ay))) <= (r["w"]+other["w"])/2+1e-6:
+                        return False
+                return True
 
             ls, le = lonely(r["s"]), lonely(r["e"])
+            if not ls and not le:
+                continue  # no geometrically proved dangling end to remove
             if ls != le:
                 ds, de = (0.0, 1.0) if ls else (1.0, 0.0)
             else:

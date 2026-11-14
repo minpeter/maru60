@@ -65,6 +65,11 @@ for q in items:
 all_drills=p.SHAPE_POLY_SET()
 for _,_,h in drills:all_drills.Append(h)
 all_drills.Simplify()
+# Include the board outline and every actual routed internal Edge.Cuts window.
+# A conductor drawn across a slot is not electrically continuous after milling.
+board_material=p.SHAPE_POLY_SET()
+assert b.GetBoardPolygonOutlines(board_material), "invalid board material outline"
+board_window_count=sum(board_material.HoleCount(i)for i in range(board_material.OutlineCount()))
 cache={};components={};metadata={};objects={};uf={};material_edges=[];barrels=[];empty=[];multiple=[];guard_cache={};guard_failures=[]
 def guarded_area(a,c):
  for n in (a,c):
@@ -83,6 +88,7 @@ def cu(q,l):
   base=poly(p.SHAPE_CIRCLE(q.GetPosition(),q.GetWidth(l)//2)if isinstance(q,p.PCB_VIA)else q.GetEffectiveShape(l));s=p.SHAPE_POLY_SET(base);bb=bbox(base);holes=[]
   for owner,hb,h in drills:
    if hits(bb,hb):s.BooleanSubtract(h);holes.append(owner)
+  s.BooleanIntersection(board_material)
   ps=parts(s);cache[key]=s;componentlist=[]
   for i,part in enumerate(ps):
    n='object:'+uid(q)+':'+str(l)+':'+str(i);uf[n]=n;components[n]=part;metadata[n]=dict(kind='object',uuid=uid(q),layer=b.GetLayerName(l),index=i,area_mm2=part.Area()/1e12,net=q.GetNetname());componentlist.append(n)
@@ -146,7 +152,7 @@ for zone in b.Zones():
  contacts=[idx[uid(q)]for q in list(cn.GetConnectedTracks(zone))+list(cn.GetConnectedPads(zone))]
  for l in layers:
   if not zone.IsOnLayer(l):continue
-  ln=b.GetLayerName(l);original=zone.GetFilledPolysList(l);physical=p.SHAPE_POLY_SET(original);physical.BooleanSubtract(all_drills);ps=parts(physical);record=dict(uuid=uid(zone),net=zone.GetNetname(),layer=ln,native_outlines=original.OutlineCount(),physical_outlines=len(ps),components=[])
+  ln=b.GetLayerName(l);original=zone.GetFilledPolysList(l);physical=p.SHAPE_POLY_SET(original);physical.BooleanSubtract(all_drills);physical.BooleanIntersection(board_material);ps=parts(physical);record=dict(uuid=uid(zone),net=zone.GetNetname(),layer=ln,native_outlines=original.OutlineCount(),physical_outlines=len(ps),components=[])
   for i,part in enumerate(ps):
    n='zone:'+uid(zone)+':'+str(l)+':'+str(i);uf[n]=n;components[n]=part;metadata[n]=dict(kind='zone',uuid=uid(zone),layer=ln,index=i,area_mm2=part.Area()/1e12,net=zone.GetNetname());count=0
    for q in contacts:
@@ -180,5 +186,5 @@ npth=[]
 for q in items:
  if isinstance(q,p.PAD)and q.GetAttribute()==p.PAD_ATTRIB_NPTH:
   assert not q.GetNetname(),('unexpected net-bearing NPTH',uid(q),q.GetNetname());npth.append(dict(uuid=uid(q),ref=q.GetParentFootprint().GetReference(),nodes_by_layer=objects[uid(q)],material_roots=object_roots[uid(q)]))
-report=dict(revision='v2-all-through-drills-layer-island-material-graph',source_path=str(BP),board_sha256=before,native_version=p.GetBuildVersion(),method='Canonical native candidate-pair discovery; union compound primitives; subtract every actual asserted through drill from every object and zone; positive object/layer/island vertices; only proved intact plated annuli joined across layers. All positive fragments retained without area waiver; accepted contacts additionally require positive overlap after each component is guarded inward by 2 nm; guard failures are explicit and not joined. NPTH never receives barrel join.',scope_assumptions=dict(copper_layers=[b.GetLayerName(l)for l in layers],actual_drill_types=dict(types),all_physical_holes_through=True,unknown_via_or_drilled_pad_types_fail=True,no_foreign_drill_cut_to_plated_annuli=True,named_pads_unique_material_root=True),pad_inventory=pad_inventory,pad_partitions_by_net=partitions,direct_edges=direct,raw_unguarded_direct_edges=raw_direct,native_pairs_without_guarded_positive_copper=rejected,contact_guard=dict(inward_nm=2,corner_strategy="ROUND_ALL_CORNERS",max_error_nm=1,criterion="positive native overlap of both independently guarded material components",failure_policy="record as unproved; do not join or count as accepted physical contact"),guard_failing_material_edges=guard_failures,zones=zone_records,zone_edges=zone_edges,raw_unguarded_zone_edges=raw_zone_edges,material_nodes=metadata,material_edges=material_edges,material_roots=material_roots,object_nodes_by_layer=objects,object_material_roots=object_roots,barrel_joins=barrels,empty_object_layers=empty,multiple_component_object_layers=multiple,NPTH_material=npth,tracks=sum(not isinstance(q,p.PCB_VIA)for q in b.GetTracks()),vias=sum(isinstance(q,p.PCB_VIA)for q in b.GetTracks()),footprints=len(b.GetFootprints()),track_length_mm=math.fsum(q.GetLength()/1e6 for q in b.GetTracks()if not isinstance(q,p.PCB_VIA)),seconds=time.monotonic()-start,unchanged=hashlib.sha256(BP.read_bytes()).hexdigest()==before)
+report=dict(revision='v3-board-cutouts-all-through-drills-layer-island-material-graph',source_path=str(BP),board_sha256=before,native_version=p.GetBuildVersion(),method='Canonical native candidate-pair discovery; union compound primitives; subtract every actual asserted through drill from every object and zone, then intersect with native board material including routed Edge.Cuts windows; positive object/layer/island vertices; only proved intact plated annuli joined across layers. All positive fragments retained without area waiver; accepted contacts additionally require positive overlap after each component is guarded inward by 2 nm; guard failures are explicit and not joined. NPTH never receives barrel join.',scope_assumptions=dict(native_board_outline_clipped=True,internal_routed_window_count=board_window_count,copper_layers=[b.GetLayerName(l)for l in layers],actual_drill_types=dict(types),all_physical_holes_through=True,unknown_via_or_drilled_pad_types_fail=True,no_foreign_drill_cut_to_plated_annuli=True,named_pads_unique_material_root=True),pad_inventory=pad_inventory,pad_partitions_by_net=partitions,direct_edges=direct,raw_unguarded_direct_edges=raw_direct,native_pairs_without_guarded_positive_copper=rejected,contact_guard=dict(inward_nm=2,corner_strategy="ROUND_ALL_CORNERS",max_error_nm=1,criterion="positive native overlap of both independently guarded material components",failure_policy="record as unproved; do not join or count as accepted physical contact"),guard_failing_material_edges=guard_failures,zones=zone_records,zone_edges=zone_edges,raw_unguarded_zone_edges=raw_zone_edges,material_nodes=metadata,material_edges=material_edges,material_roots=material_roots,object_nodes_by_layer=objects,object_material_roots=object_roots,barrel_joins=barrels,empty_object_layers=empty,multiple_component_object_layers=multiple,NPTH_material=npth,tracks=sum(not isinstance(q,p.PCB_VIA)for q in b.GetTracks()),vias=sum(isinstance(q,p.PCB_VIA)for q in b.GetTracks()),footprints=len(b.GetFootprints()),track_length_mm=math.fsum(q.GetLength()/1e6 for q in b.GetTracks()if not isinstance(q,p.PCB_VIA)),seconds=time.monotonic()-start,unchanged=hashlib.sha256(BP.read_bytes()).hexdigest()==before)
 assert report['unchanged'];OUT.write_text(json.dumps(report,indent=2));print('DONE',OUT,'seconds',report['seconds'],flush=True)

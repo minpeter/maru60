@@ -1,0 +1,22 @@
+(version 1)
+# JLCPCB asks for 0.2 mm between a non-plated hole and copper
+# (https://jlcpcb.com/capabilities/pcb-capabilities, "NPTH to track").
+# The board minimum (0.15 mm) stays for plated holes and vias.
+# J1 is exempt against itself: the connector's own land pattern puts its GND
+# pads 0.194 mm from its locating-peg holes.
+
+(rule "npth_to_copper_0.20"
+	(condition "(A.Pad_Type == 'NPTH, mechanical' || B.Pad_Type == 'NPTH, mechanical') && !(A.memberOfFootprint('J1') && B.memberOfFootprint('J1'))")
+	(constraint hole_clearance (min 0.2mm)))
+
+# Zone fills keep 0.25 mm: a plane loses nothing by it.
+(rule "npth_to_zone_0.25"
+	(condition "(A.Type == 'Zone' && B.Pad_Type == 'NPTH, mechanical') || (B.Type == 'Zone' && A.Pad_Type == 'NPTH, mechanical')")
+	(constraint hole_clearance (min 0.25mm)))
+
+# The reverse LED lands alone use 0.30 mm nominal routed-edge clearance.
+# Other copper retains the 0.50 mm board rule. Land overlap and machining
+# tolerance require assembler review; this is not manufacturing approval.
+(rule "reverse_led_land_edge_0.30"
+  (condition "(A.Type == 'Pad' && A.memberOfFootprint('Maru60:LED_SK6812MINI_E_012_Reverse*')) || (B.Type == 'Pad' && B.memberOfFootprint('Maru60:LED_SK6812MINI_E_012_Reverse*'))")
+  (constraint edge_clearance (min 0.30mm)))

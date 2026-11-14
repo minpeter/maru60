@@ -1,0 +1,19 @@
+{
+  "parts": [
+    {
+      "ref": "R193",
+      "kind": "R",
+      "value": "100 1%",
+      "footprint": "Maru60:R_0402_1005Metric",
+      "net1": "KEY_RGB_CHAIN_29_SRC",
+      "net2": "KEY_RGB_CHAIN_29",
+      "note": "Damp LED16 DOUT before both mutually exclusive LED30 sites."
+    }
+  ],
+  "relabel": [
+    {
+      "net": "KEY_RGB_CHAIN_29",
+      "to": "KEY_RGB_CHAIN_29_SRC"
+    }
+  ]
+}

@@ -1,0 +1,2132 @@
+{
+  "format": "maru60-mechanical-fit/1",
+  "generated_by": "pcb/tools/check_mechanical_fit.py",
+  "board": {
+    "path": "build/mcu-near-usb/resume78-led-damped/pcb/maru60.kicad_pcb",
+    "sha256": "86c4243dc112f308ab22614bf576716b77d9c33a38fea3776249dace63da6a5e",
+    "footprints": 412
+  },
+  "assumptions": {
+    "board_top_z_p_mm": 12.5,
+    "board_bottom_z_p_mm": 14.1,
+    "board_thickness_mm": 1.6,
+    "mx_stack_mm": 5.0,
+    "plate_top_z_p_mm": 7.5,
+    "cavity_floor_z_p_mm": 18.2,
+    "gasket_travel_mm": 0.8,
+    "z_p_convention": "Z_p grows downward from the top-case top face; the board top is 12.50 and the cavity floor is 18.20.",
+    "board_to_plate": {
+      "dx_mm": 0.4525,
+      "y0_mm": 101.06775,
+      "source": "spec/boards.json frames.pcb_to_plate"
+    },
+    "plate_to_world": {
+      "x": "X_w = 142.95 - x_plate",
+      "y": "Y_w = y_plate + 84.82",
+      "source": "build_topcase_draft.pw / maru60.frames"
+    },
+    "case_mesh_frame": "3MF print frame; offset recovered from bottomcase-draft/bottom-*-world.stl; 3MF ray-cast directly.",
+    "case_mesh_frame_error_mm": 0.0
+  },
+  "method": {
+    "relocated_block": "B.CrtYd bounding box -> board -> plate -> world; 9x9 grid; first ray hit from Z 14.10 downward; min surface over the grid; free = surface - (14.10 + 0.80); clearance = free - nominal part height.",
+    "usb_c": "J1 B.Fab body box; stock 12.8 mm notch at plate X 19.35 and printed 14.75 mm notch at the PH60 centre; 12.35 mm max overmold; body box vs bottom-case mesh boolean intersection; vertical notch closed end from spec.",
+    "stabilizer_7u": "7U NPTH pads from the board; plate cutout from the INKC DXF (ezdxf flattening); circle-to-polygon-boundary distance minus radius."
+  },
+  "checks": {
+    "relocated_b_cu_block": {
+      "parts": [
+        {
+          "ref": "C102",
+          "footprint": "Maru60:C_0402_Official_R4_Wide",
+          "position_board_mm": [
+            21.34,
+            37.0,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            21.09,
+            36.5,
+            21.59,
+            37.5
+          ],
+          "courtyard_world_mm": [
+            120.9075,
+            148.5877,
+            121.4075,
+            149.5877
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C103",
+          "footprint": "Maru60:C_0402_Official_R4_Wide",
+          "position_board_mm": [
+            20.45,
+            37.0,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            20.2,
+            36.5,
+            20.7,
+            37.5
+          ],
+          "courtyard_world_mm": [
+            121.7975,
+            148.5877,
+            122.2975,
+            149.5877
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C104",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            20.95,
+            39.2,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            20.04,
+            38.74,
+            21.86,
+            39.66
+          ],
+          "courtyard_world_mm": [
+            120.6375,
+            146.4278,
+            122.4575,
+            147.3477
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C105",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            15.5,
+            33.5,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            15.04,
+            32.59,
+            15.96,
+            34.41
+          ],
+          "courtyard_world_mm": [
+            126.5375,
+            151.6778,
+            127.4575,
+            153.4977
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C106",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            35.0,
+            33.6,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            34.54,
+            32.69,
+            35.46,
+            34.51
+          ],
+          "courtyard_world_mm": [
+            107.0375,
+            151.5777,
+            107.9575,
+            153.3977
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C107",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            35.0,
+            36.58,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            34.54,
+            35.67,
+            35.46,
+            37.49
+          ],
+          "courtyard_world_mm": [
+            107.0375,
+            148.5978,
+            107.9575,
+            150.4178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C108",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            25.0,
+            28.52,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            24.54,
+            27.61,
+            25.46,
+            29.43
+          ],
+          "courtyard_world_mm": [
+            117.0375,
+            156.6578,
+            117.9575,
+            158.4778
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C109",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            32.88,
+            35.8,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            31.97,
+            35.34,
+            33.79,
+            36.26
+          ],
+          "courtyard_world_mm": [
+            108.7075,
+            149.8277,
+            110.5275,
+            150.7477
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C110",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            25.4,
+            42.08,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            24.94,
+            41.17,
+            25.86,
+            42.99
+          ],
+          "courtyard_world_mm": [
+            116.6375,
+            143.0978,
+            117.5575,
+            144.9178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C111",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            18.6,
+            32.9,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            17.69,
+            32.44,
+            19.51,
+            33.36
+          ],
+          "courtyard_world_mm": [
+            122.9875,
+            152.7278,
+            124.8075,
+            153.6478
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C112",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            22.6,
+            28.515,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            22.14,
+            27.605,
+            23.06,
+            29.425
+          ],
+          "courtyard_world_mm": [
+            119.4375,
+            156.6628,
+            120.3575,
+            158.4828
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C113",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            26.65,
+            42.085,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            26.19,
+            41.175,
+            27.11,
+            42.995
+          ],
+          "courtyard_world_mm": [
+            115.3875,
+            143.0927,
+            116.3075,
+            144.9127
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C114",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            27.4,
+            28.515,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            26.94,
+            27.605,
+            27.86,
+            29.425
+          ],
+          "courtyard_world_mm": [
+            114.6375,
+            156.6628,
+            115.5575,
+            158.4828
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C115",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            30.0,
+            40.685,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            29.54,
+            39.775,
+            30.46,
+            41.595
+          ],
+          "courtyard_world_mm": [
+            112.0375,
+            144.4928,
+            112.9575,
+            146.3127
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C116",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            23.0,
+            41.485,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            22.54,
+            40.575,
+            23.46,
+            42.395
+          ],
+          "courtyard_world_mm": [
+            119.0375,
+            143.6927,
+            119.9575,
+            145.5127
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C117",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            32.08,
+            33.2,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            31.17,
+            32.74,
+            32.99,
+            33.66
+          ],
+          "courtyard_world_mm": [
+            109.5075,
+            152.4278,
+            111.3275,
+            153.3478
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C118",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            15.5,
+            36.5,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            14.59,
+            36.04,
+            16.41,
+            36.96
+          ],
+          "courtyard_world_mm": [
+            126.0875,
+            149.1277,
+            127.9075,
+            150.0478
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "C128",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "position_board_mm": [
+            78.7,
+            81.875,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            77.22,
+            81.145,
+            80.18,
+            82.605
+          ],
+          "courtyard_world_mm": [
+            62.3175,
+            103.4827,
+            65.2775,
+            104.9428
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "C129",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "position_board_mm": [
+            75.75,
+            77.2,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            75.02,
+            75.72,
+            76.48,
+            78.68
+          ],
+          "courtyard_world_mm": [
+            66.0175,
+            107.4077,
+            67.4775,
+            110.3678
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "C199",
+          "footprint": "Maru60:C_0402_1005Metric",
+          "position_board_mm": [
+            22.8,
+            40.0,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            21.89,
+            39.54,
+            23.71,
+            40.46
+          ],
+          "courtyard_world_mm": [
+            118.7875,
+            145.6277,
+            120.6075,
+            146.5478
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "D16",
+          "footprint": "Maru60:D_SOD-123_D16_NoLeftSilk",
+          "position_board_mm": [
+            20.91,
+            28.35,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            19.76,
+            26.0,
+            22.06,
+            30.7
+          ],
+          "courtyard_world_mm": [
+            120.4375,
+            155.3877,
+            122.7375,
+            160.0877
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.35,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 1.95,
+          "nominal_clearance_mm": 1.95,
+          "status": "pass"
+        },
+        {
+          "ref": "J3",
+          "footprint": "Connector_JST:JST_SH_SM10B-SRSS-TB_1x10-1MP_P1.00mm_Horizontal",
+          "position_board_mm": [
+            44.25,
+            75.0,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            37.35,
+            71.72,
+            51.15,
+            78.28
+          ],
+          "courtyard_world_mm": [
+            91.3475,
+            107.8077,
+            105.1475,
+            114.3678
+          ],
+          "case_surface_z_p_mm": 18.7,
+          "case_surface_z_p_max_mm": 18.7,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.8,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 2.95,
+          "part_height_source": "JST SH SM10B-SRSS-TB side-entry body height; prior analysis .omo/evidence/pcb-routing-20261109/manual/sim/SUMMARY.json ('J3_margin_assuming_2.95mm'); datasheet nominal, not measured",
+          "clearance_mm": 0.85,
+          "nominal_clearance_mm": 0.35,
+          "status": "pass"
+        },
+        {
+          "ref": "L1",
+          "footprint": "Maru60:Abracon_AOTA_B201610S3R3_Official_R4",
+          "position_board_mm": [
+            18.8,
+            37.0,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            17.9,
+            35.9,
+            19.7,
+            38.1
+          ],
+          "courtyard_world_mm": [
+            122.7975,
+            147.9878,
+            124.5975,
+            150.1877
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.2,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.1,
+          "nominal_clearance_mm": 2.1,
+          "status": "pass"
+        },
+        {
+          "ref": "R102",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            19.0,
+            35.1,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            18.07,
+            34.63,
+            19.93,
+            35.57
+          ],
+          "courtyard_world_mm": [
+            122.5675,
+            150.5177,
+            124.4275,
+            151.4577
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "R103",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            18.6,
+            33.9,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            17.67,
+            33.43,
+            19.53,
+            34.37
+          ],
+          "courtyard_world_mm": [
+            122.9675,
+            151.7178,
+            124.8275,
+            152.6578
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "R104",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            19.1,
+            39.2,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            18.17,
+            38.73,
+            20.03,
+            39.67
+          ],
+          "courtyard_world_mm": [
+            122.4675,
+            146.4178,
+            124.3275,
+            147.3578
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "R105",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            15.5,
+            35.0,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            14.57,
+            34.53,
+            16.43,
+            35.47
+          ],
+          "courtyard_world_mm": [
+            126.0675,
+            150.6178,
+            127.9275,
+            151.5577
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "R106",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            15.5,
+            38.2,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            15.03,
+            37.27,
+            15.97,
+            39.13
+          ],
+          "courtyard_world_mm": [
+            126.5275,
+            146.9578,
+            127.4675,
+            148.8177
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "R108",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            32.9,
+            34.6,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            31.97,
+            34.13,
+            33.83,
+            35.07
+          ],
+          "courtyard_world_mm": [
+            108.6675,
+            151.0177,
+            110.5275,
+            151.9577
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "R128",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            77.7,
+            79.5,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            76.97,
+            78.02,
+            78.43,
+            80.98
+          ],
+          "courtyard_world_mm": [
+            64.0675,
+            105.1077,
+            65.5275,
+            108.0678
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R130",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            86.1,
+            84.0,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            84.62,
+            83.27,
+            87.58,
+            84.73
+          ],
+          "courtyard_world_mm": [
+            54.9175,
+            101.3577,
+            57.8775,
+            102.8178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R131",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            86.1,
+            85.6,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            84.62,
+            84.87,
+            87.58,
+            86.33
+          ],
+          "courtyard_world_mm": [
+            54.9175,
+            99.7578,
+            57.8775,
+            101.2178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R132",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            86.1,
+            87.2,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            84.62,
+            86.47,
+            87.58,
+            87.93
+          ],
+          "courtyard_world_mm": [
+            54.9175,
+            98.1577,
+            57.8775,
+            99.6178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R133",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            85.4,
+            81.7,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            84.67,
+            80.22,
+            86.13,
+            83.18
+          ],
+          "courtyard_world_mm": [
+            56.3675,
+            102.9077,
+            57.8275,
+            105.8678
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R134",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            87.4,
+            88.8,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            85.92,
+            88.07,
+            88.88,
+            89.53
+          ],
+          "courtyard_world_mm": [
+            53.6175,
+            96.5577,
+            56.5775,
+            98.0178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R135",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            92.3,
+            85.7,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            90.82,
+            84.97,
+            93.78,
+            86.43
+          ],
+          "courtyard_world_mm": [
+            48.7175,
+            99.6577,
+            51.6775,
+            101.1178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R140",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            89.2,
+            84.0,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            87.72,
+            83.27,
+            90.68,
+            84.73
+          ],
+          "courtyard_world_mm": [
+            51.8175,
+            101.3577,
+            54.7775,
+            102.8178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R141",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            89.2,
+            85.6,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            87.72,
+            84.87,
+            90.68,
+            86.33
+          ],
+          "courtyard_world_mm": [
+            51.8175,
+            99.7578,
+            54.7775,
+            101.2178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R142",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            89.2,
+            87.2,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            87.72,
+            86.47,
+            90.68,
+            87.93
+          ],
+          "courtyard_world_mm": [
+            51.8175,
+            98.1577,
+            54.7775,
+            99.6178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R143",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            90.4,
+            81.4,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            88.92,
+            80.67,
+            91.88,
+            82.13
+          ],
+          "courtyard_world_mm": [
+            50.6175,
+            103.9577,
+            53.5775,
+            105.4177
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R144",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            90.5,
+            88.8,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            89.02,
+            88.07,
+            91.98,
+            89.53
+          ],
+          "courtyard_world_mm": [
+            50.5175,
+            96.5577,
+            53.4775,
+            98.0178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R145",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "position_board_mm": [
+            95.4,
+            85.7,
+            0.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            93.92,
+            84.97,
+            96.88,
+            86.43
+          ],
+          "courtyard_world_mm": [
+            45.6175,
+            99.6577,
+            48.5775,
+            101.1178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "0603 resistor/capacitor max height 0.5 mm; standard package nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "R192",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            27.625,
+            21.725,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            26.695,
+            21.255,
+            28.555,
+            22.195
+          ],
+          "courtyard_world_mm": [
+            113.9425,
+            163.8927,
+            115.8025,
+            164.8327
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "R193",
+          "footprint": "Maru60:R_0402_1005Metric",
+          "position_board_mm": [
+            13.55,
+            33.6,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            13.08,
+            32.67,
+            14.02,
+            34.53
+          ],
+          "courtyard_world_mm": [
+            128.4775,
+            151.5577,
+            129.4175,
+            153.4178
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "U1",
+          "footprint": "Maru60:RP2350A_QFN60_Official_R4",
+          "position_board_mm": [
+            26.0,
+            35.0,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            22.5,
+            31.5,
+            29.5,
+            38.5
+          ],
+          "courtyard_world_mm": [
+            112.9975,
+            147.5877,
+            119.9975,
+            154.5877
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        },
+        {
+          "ref": "U11",
+          "footprint": "Maru60:Texas_PW0020A_TSSOP-20_4.4x6.5mm_P0.65mm",
+          "position_board_mm": [
+            80.6,
+            86.2,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            76.7,
+            82.7,
+            84.5,
+            89.7
+          ],
+          "courtyard_world_mm": [
+            57.9975,
+            96.3877,
+            65.7975,
+            103.3877
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.2,
+          "part_height_source": "TI SN74CB3T3245PWR TSSOP-20 (PW) max height 1.2 mm; datasheet nominal, not measured",
+          "clearance_mm": 2.1,
+          "nominal_clearance_mm": 2.1,
+          "status": "pass"
+        },
+        {
+          "ref": "U12",
+          "footprint": "Package_TO_SOT_SMD:SOT-23",
+          "position_board_mm": [
+            72.0,
+            77.8,
+            180.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            70.07,
+            76.1,
+            73.93,
+            79.5
+          ],
+          "courtyard_world_mm": [
+            68.5675,
+            106.5877,
+            72.4275,
+            109.9878
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.1,
+          "part_height_source": "TI TLV810EA29DBZR SOT-23 (DBZ) max height 1.1 mm; datasheet nominal, not measured",
+          "clearance_mm": 2.2,
+          "nominal_clearance_mm": 2.2,
+          "status": "pass"
+        },
+        {
+          "ref": "U13",
+          "footprint": "Protection_Study:TI_RVZ14_1p35x3p5mm_P0p5_TI4221500A",
+          "position_board_mm": [
+            47.1,
+            79.5,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            45.05,
+            78.375,
+            49.15,
+            80.625
+          ],
+          "courtyard_world_mm": [
+            93.3475,
+            105.4627,
+            97.4475,
+            107.7127
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.7,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 0.5,
+          "part_height_source": "TI TPD6E05U06RVZR RVZ14 package max height 0.5 mm; datasheet nominal, not measured",
+          "clearance_mm": 2.8,
+          "nominal_clearance_mm": 2.8,
+          "status": "pass"
+        },
+        {
+          "ref": "U3",
+          "footprint": "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm",
+          "position_board_mm": [
+            10.0,
+            35.0,
+            90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            7.1,
+            30.35,
+            12.9,
+            39.65
+          ],
+          "courtyard_world_mm": [
+            129.5975,
+            146.4377,
+            135.3975,
+            155.7378
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.75,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 1.55,
+          "nominal_clearance_mm": 1.55,
+          "status": "pass"
+        },
+        {
+          "ref": "Y1",
+          "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+          "position_board_mm": [
+            38.4,
+            35.0,
+            -90.0
+          ],
+          "layer": "B.Cu",
+          "courtyard_board_mm": [
+            36.65,
+            32.9,
+            40.15,
+            37.1
+          ],
+          "courtyard_world_mm": [
+            102.3475,
+            148.9878,
+            105.8475,
+            153.1877
+          ],
+          "case_surface_z_p_mm": 18.2,
+          "case_surface_z_p_max_mm": 18.2,
+          "nominal_cavity_floor_z_p_mm": 18.2,
+          "hit_fraction": 1.0,
+          "free_height_full_travel_mm": 3.3,
+          "nominal_free_height_full_travel_mm": 3.3,
+          "part_height_mm": 1.0,
+          "part_height_source": "Conservative package-height envelope for relocated MCU block; assumed, not measured",
+          "clearance_mm": 2.3,
+          "nominal_clearance_mm": 2.3,
+          "status": "pass"
+        }
+      ],
+      "j3_plug_corridor": {
+        "rect_board_mm": [
+          37.3,
+          68.2,
+          51.2,
+          71.7
+        ],
+        "case_surface_z_p_mm": 18.2,
+        "free_height_full_travel_mm": 3.3,
+        "hit_fraction": 1.0,
+        "status": "pass",
+        "note": "3.5 mm wide insertion corridor; the JST SH plug body height is not in CAD, so only the corridor free height is checked."
+      },
+      "counts": {
+        "pass": 50,
+        "tight": 0,
+        "fail": 0,
+        "unknown": 0
+      },
+      "minimum_clearance_mm": 0.85,
+      "minimum_clearance_ref": "J3"
+    },
+    "usb_c_j1": {
+      "j1": {
+        "position_board_mm": [
+          18.0,
+          3.8
+        ],
+        "position_plate_mm": [
+          18.4525,
+          97.2678
+        ],
+        "body_x_range_plate_mm": [
+          13.9825,
+          22.9225
+        ],
+        "body_y_range_plate_mm": [
+          93.5928,
+          100.9428
+        ],
+        "body_z_p_mm": [
+          14.1,
+          17.36
+        ],
+        "body_height_mm": 3.26,
+        "body_height_source": "bottom-case verification: 18.20 - 0.84 - 14.10; GCT USB4105 nominal"
+      },
+      "selected_notch": "j1centred",
+      "selected_notch_record": {
+        "width_mm": 14.75,
+        "centre_plate_x_mm": 18.4525,
+        "x_range_plate_mm": [
+          11.0775,
+          25.8275
+        ],
+        "j1_body_x_range_plate_mm": [
+          13.9825,
+          22.9225
+        ],
+        "j1_body_min_side_clearance_mm": 2.905,
+        "plug_12p35_x_range_plate_mm": [
+          12.2775,
+          24.6275
+        ],
+        "plug_12p35_min_side_clearance_mm": 1.2,
+        "status": "pass"
+      },
+      "stock_notch_12p8": {
+        "width_mm": 12.8,
+        "centre_plate_x_mm": 19.35,
+        "x_range_plate_mm": [
+          12.95,
+          25.75
+        ],
+        "j1_body_x_range_plate_mm": [
+          13.9825,
+          22.9225
+        ],
+        "j1_body_min_side_clearance_mm": 1.0325,
+        "plug_12p35_x_range_plate_mm": [
+          12.2775,
+          24.6275
+        ],
+        "plug_12p35_min_side_clearance_mm": -0.6725,
+        "status": "fail"
+      },
+      "printed_notch_14p75": {
+        "width_mm": 14.75,
+        "centre_plate_x_mm": 18.6525,
+        "x_range_plate_mm": [
+          11.2775,
+          26.0275
+        ],
+        "j1_body_x_range_plate_mm": [
+          13.9825,
+          22.9225
+        ],
+        "j1_body_min_side_clearance_mm": 2.705,
+        "plug_12p35_x_range_plate_mm": [
+          12.2775,
+          24.6275
+        ],
+        "plug_12p35_min_side_clearance_mm": 1.0,
+        "status": "pass"
+      },
+      "stock_notch_12p8_centred_on_j1": {
+        "width_mm": 12.8,
+        "centre_plate_x_mm": 18.4525,
+        "x_range_plate_mm": [
+          12.0525,
+          24.8525
+        ],
+        "j1_body_x_range_plate_mm": [
+          13.9825,
+          22.9225
+        ],
+        "j1_body_min_side_clearance_mm": 1.93,
+        "plug_12p35_x_range_plate_mm": [
+          12.2775,
+          24.6275
+        ],
+        "plug_12p35_min_side_clearance_mm": 0.225,
+        "status": "tight"
+      },
+      "j1_centred_14p75": {
+        "width_mm": 14.75,
+        "centre_plate_x_mm": 18.4525,
+        "x_range_plate_mm": [
+          11.0775,
+          25.8275
+        ],
+        "j1_body_x_range_plate_mm": [
+          13.9825,
+          22.9225
+        ],
+        "j1_body_min_side_clearance_mm": 2.905,
+        "plug_12p35_x_range_plate_mm": [
+          12.2775,
+          24.6275
+        ],
+        "plug_12p35_min_side_clearance_mm": 1.2,
+        "status": "pass"
+      },
+      "bottom_case_passage": {
+        "body_box_intersection_volume_mm3": 0.0,
+        "body_bottom_to_cavity_floor_mm": 0.84,
+        "status": "pass"
+      },
+      "vertical": {
+        "notch_depth_from_lip_mm": 8.7,
+        "notch_closed_end_z_p_mm": 11.31,
+        "j1_body_top_z_p_mm": 14.1,
+        "notch_closed_end_above_body_mm": 2.79,
+        "status": "pass",
+        "note": "The J1 body is below the board; the notch closed end is above the board top. The plug overmold height above the board is not in CAD."
+      },
+      "status": "pass",
+      "missing_inputs": [
+        "USB-C plug overmold height above the board (the 12.8 mm notch depth is 8.7 mm from the lip; the J1 body is below the board)",
+        "actual plug overmold width and corner radius (12.35 mm is the spec maximum, not a measured plug)"
+      ]
+    },
+    "stabilizer_7u": {
+      "footprint": "Maru60_Candidates:MX-Hotswap-7U-4L-NPTH-StabRot180_H305",
+      "position_board_mm": [
+        142.4975,
+        85.39875,
+        180.0
+      ],
+      "switch_plate_mm": [
+        142.95,
+        15.669
+      ],
+      "min_clearance_mm": 0.3,
+      "plate_cutout": {
+        "handle": "7D",
+        "bbox_plate_mm": [
+          81.5551,
+          8.669,
+          204.5051,
+          23.6395
+        ],
+        "vertices": 259,
+        "source": "models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.dxf"
+      },
+      "plate_outline_check": {
+        "spec_outline": "plate_gas_hhkb",
+        "spec_bbox_plate_mm": [
+          -0.0,
+          1.0176,
+          285.9,
+          106.4674
+        ],
+        "dxf_outer_bbox_plate_mm": [
+          0.0,
+          1.0176,
+          285.9,
+          106.4674
+        ],
+        "max_abs_delta_mm": 0.0,
+        "status": "pass"
+      },
+      "npth": [
+        {
+          "role": "stabilizer_screw",
+          "local_mm": [
+            -57.15,
+            -6.985
+          ],
+          "plate_mm": [
+            200.1,
+            8.684
+          ],
+          "diameter_mm": 3.048,
+          "distance_to_cutout_boundary_mm": 1.4555,
+          "clearance_mm": -0.0685,
+          "status": "fail"
+        },
+        {
+          "role": "stabilizer_insert",
+          "local_mm": [
+            -57.15,
+            8.255
+          ],
+          "plate_mm": [
+            200.1,
+            23.924
+          ],
+          "diameter_mm": 3.9878,
+          "distance_to_cutout_boundary_mm": 0.2845,
+          "clearance_mm": -1.7094,
+          "status": "fail"
+        },
+        {
+          "role": "switch",
+          "local_mm": [
+            -5.08,
+            0.0
+          ],
+          "plate_mm": [
+            148.03,
+            15.669
+          ],
+          "diameter_mm": 1.7018,
+          "distance_to_cutout_boundary_mm": 2.9875,
+          "clearance_mm": 2.1366,
+          "status": "pass"
+        },
+        {
+          "role": "switch",
+          "local_mm": [
+            -2.54,
+            5.08
+          ],
+          "plate_mm": [
+            145.49,
+            20.749
+          ],
+          "diameter_mm": 3.05,
+          "distance_to_cutout_boundary_mm": 1.92,
+          "clearance_mm": 0.395,
+          "status": "pass"
+        },
+        {
+          "role": "switch",
+          "local_mm": [
+            0.0,
+            0.0
+          ],
+          "plate_mm": [
+            142.95,
+            15.669
+          ],
+          "diameter_mm": 3.9878,
+          "distance_to_cutout_boundary_mm": 7.0,
+          "clearance_mm": 5.0061,
+          "status": "pass"
+        },
+        {
+          "role": "switch",
+          "local_mm": [
+            3.81,
+            2.54
+          ],
+          "plate_mm": [
+            139.14,
+            18.209
+          ],
+          "diameter_mm": 3.05,
+          "distance_to_cutout_boundary_mm": 3.2034,
+          "clearance_mm": 1.6784,
+          "status": "pass"
+        },
+        {
+          "role": "switch",
+          "local_mm": [
+            5.08,
+            0.0
+          ],
+          "plate_mm": [
+            137.87,
+            15.669
+          ],
+          "diameter_mm": 1.7018,
+          "distance_to_cutout_boundary_mm": 3.0047,
+          "clearance_mm": 2.1538,
+          "status": "pass"
+        },
+        {
+          "role": "stabilizer_screw",
+          "local_mm": [
+            57.15,
+            -6.985
+          ],
+          "plate_mm": [
+            85.8,
+            8.684
+          ],
+          "diameter_mm": 3.048,
+          "distance_to_cutout_boundary_mm": 1.4555,
+          "clearance_mm": -0.0685,
+          "status": "fail"
+        },
+        {
+          "role": "stabilizer_insert",
+          "local_mm": [
+            57.15,
+            8.255
+          ],
+          "plate_mm": [
+            85.8,
+            23.924
+          ],
+          "diameter_mm": 3.9878,
+          "distance_to_cutout_boundary_mm": 0.2845,
+          "clearance_mm": -1.7094,
+          "status": "fail"
+        }
+      ],
+      "worst_stabilizer_insert": {
+        "role": "stabilizer_insert",
+        "local_mm": [
+          -57.15,
+          8.255
+        ],
+        "plate_mm": [
+          200.1,
+          23.924
+        ],
+        "diameter_mm": 3.9878,
+        "distance_to_cutout_boundary_mm": 0.2845,
+        "clearance_mm": -1.7094,
+        "status": "fail"
+      },
+      "worst_stabilizer_screw": {
+        "role": "stabilizer_screw",
+        "local_mm": [
+          -57.15,
+          -6.985
+        ],
+        "plate_mm": [
+          200.1,
+          8.684
+        ],
+        "diameter_mm": 3.048,
+        "distance_to_cutout_boundary_mm": 1.4555,
+        "clearance_mm": -0.0685,
+        "status": "fail"
+      },
+      "worst_switch": {
+        "role": "switch",
+        "local_mm": [
+          -2.54,
+          5.08
+        ],
+        "plate_mm": [
+          145.49,
+          20.749
+        ],
+        "diameter_mm": 3.05,
+        "distance_to_cutout_boundary_mm": 1.92,
+        "clearance_mm": 0.395,
+        "status": "pass"
+      },
+      "status": "fail",
+      "compatibility_note": "The 7U footprint is a PCB-mount NPTH pattern; the INKC plate cutout is a plate-mount stabilizer cutout.  If the build uses the PCB-mount stabilizer, the plate cutout must clear the stabilizer housing/legs; the insert holes are outside the cutout as drawn.  If the build uses a plate-mount stabilizer, the PCB NPTH holes are unused and this geometric mismatch is not a build failure.",
+      "missing_inputs": [
+        "actual 7U stabilizer type (PCB-mount vs plate-mount) and housing dimensions",
+        "plate 3MF (only the DXF is available; the DXF cutout is used)"
+      ]
+    }
+  },
+  "summary": {
+    "relocated_block": {
+      "pass": 50,
+      "tight": 0,
+      "fail": 0,
+      "unknown": 0
+    },
+    "relocated_minimum_clearance_mm": 0.85,
+    "relocated_minimum_clearance_ref": "J3",
+    "usb_c_status": "pass",
+    "usb_c_selected_notch": "j1centred",
+    "stabilizer_7u_status": "fail",
+    "stabilizer_min_clearance_mm": 0.3,
+    "overall_minimum_clearance_mm": -1.7094,
+    "overall_minimum_clearance_check": "stabilizer_7u:stabilizer_insert@[200.1, 23.924]",
+    "overall": "ATTENTION"
+  },
+  "missing_inputs": [
+    "Actual J3, U13, U11, U12 and 0603 body heights (the values used are datasheet/package nominals, not caliper readings).",
+    "USB-C plug overmold height above the board and its actual width/corner radius (12.35 mm is the spec maximum).",
+    "7U stabilizer type (PCB-mount vs plate-mount) and housing dimensions; the plate 3MF is not available, only the DXF (the PCB-mount variant is a DXF/Gerber, not a 3MF).",
+    "Printed case floor Z and flatness (the CAD floor is 18.20; print tolerance and gasket compression are not modelled).",
+    "Solder/paste thickness and component placement tolerance (the clearance numbers are nominal CAD, not worst-case assembly)."
+  ],
+  "physical_measurements": [
+    "Caliper the JST SH SM10B-SRSS-TB body height above the PCB and the mating plug overmold height/width.",
+    "Caliper the 0603, SOT-23, TSSOP-20 and RVZ14 parts after reflow (or measure the assembled board).",
+    "Measure the printed bottom-case cavity floor Z under the relocated block and the USB passage.",
+    "Measure the 7U stabilizer housing and confirm whether the build uses PCB-mount or plate-mount stabilizers.",
+    "Measure the actual gasket compression at full travel and the resulting board Z.",
+    "Measure the USB-C plug overmold and test insertion in the 12.8 mm stock notch, the 14.75 mm printed notch, and the J1-centred 14.75 mm variant.",
+    "Test-fit the PCB-mount plate variant (models/rule60-v3-hhkb-gas-plate-pcb-mount.dxf) and the J3 relief bottom case (models/maru60-hhkb-bottomcase-j3-relief-left.3mf)."
+  ],
+  "sources": {
+    "board": "build/mcu-near-usb/resume78-led-damped/pcb/maru60.kicad_pcb",
+    "bottomcase_3mf": [
+      "models/maru60-hhkb-bottomcase-j3-relief-left.3mf",
+      "models/maru60-hhkb-bottomcase-j3-relief-right.3mf"
+    ],
+    "bottomcase_world_stl": [
+      "build/j3-relief/bottom-left-world.stl",
+      "build/j3-relief/bottom-right-world.stl"
+    ],
+    "plate_dxf": "models/maru60-hhkb-plate-7u-plate-mount-2u-backspace.dxf",
+    "spec": [
+      "spec/rule60-v3-outlines.json",
+      "spec/boards.json"
+    ],
+    "prior_j3_height": ".omo/evidence/pcb-routing-20261109/manual/sim/SUMMARY.json"
+  }
+}

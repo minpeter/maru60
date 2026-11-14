@@ -1,0 +1,56 @@
+{
+  "status": "INCOMPLETE_NOT_FOR_FABRICATION",
+  "board_sha256": "bdb8c355b302dd473c73684190f5b9cb064e1017d33581b1db056dfac49d3eed",
+  "source_board_sha256": "c371018deed3ed99cf36f0ce974fb4153ebf05a1c8f8d35df3d4e4224f936129",
+  "note": "Twenty-two open pairs remain. Native replay passes only with those 22 opens and 57 dangling track/via warnings explicitly expected. Further routing is blocked without more invasive placement changes; no manufacturing release is approved. The order-package dry run has no other failed checks.",
+  "native_unconnected": 22,
+  "native_violations": {
+    "track_dangling": 51,
+    "via_dangling": 6
+  },
+  "native_replay": {
+    "erc": 0,
+    "schematic_parity": 0,
+    "other_errors": 0,
+    "cold_refill_files_identical": 79,
+    "material_recomputed": true,
+    "guard_failures": 1589,
+    "report": "qa/native-incomplete/RESULT.json"
+  },
+  "usb_diagnostic": {
+    "geometry_sha256": "2094fa272b13c3dbd31bf931da1d1bed920cfa808864a563edf6d581dac9ad0f",
+    "model_delay_ns": 0.427,
+    "skew_dp_minus_dm_ps": -46.75,
+    "criterion_ns": 1.0,
+    "scope": "USB-only diagnostic on unfinished PCB; not acceptance",
+    "full_speed_cases": 9,
+    "report": "qa/usb-si/usb.json"
+  },
+  "dfm_geometry": {
+    "via_holes_in_smd_pads": 0,
+    "other_rule_violations": 0,
+    "report": "qa/dfm-incomplete.json"
+  },
+  "pdn": {
+    "vbus_u8_u18_mohm_20c": 250.34,
+    "source_baseline_mohm_20c": 234.67,
+    "report": "qa/pdn/results.json"
+  },
+  "order_dry_run": {
+    "failed_checks_excluding_incomplete_drc": 0,
+    "placement_refit": "pass"
+  },
+  "firmware": {
+    "via_build": "pass",
+    "via_hhkb_build": "pass",
+    "report": "qa/qmk-build/RESULT.json"
+  },
+  "mechanical_fit": {
+    "relocated_block_pass": 19,
+    "relocated_block_tight": 0,
+    "relocated_block_fail": 0,
+    "usb_selected_notch": "pass",
+    "stabilizer_pcbs_mount_pattern": "pass",
+    "report": "qa/mechanical-fit/REPORT.md"
+  }
+}

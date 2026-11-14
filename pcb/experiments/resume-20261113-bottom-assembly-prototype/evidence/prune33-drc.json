@@ -1,0 +1,131 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-13T15:47:54+0000",
+    "kicad_version": "9.0.2",
+    "schematic_parity": [],
+    "source": "maru60.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [COL5] on F.Cu, length 0.0571 mm",
+                    "pos": {
+                        "x": 25.196671,
+                        "y": 41.442787
+                    },
+                    "uuid": "ac676970-14e6-46b5-8daa-3d8369708a93"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [ROW2] on B.Cu, length 0.0873 mm",
+                    "pos": {
+                        "x": 111.2884,
+                        "y": 54.7487
+                    },
+                    "uuid": "c5d90aac-b2f0-4c07-ab57-8f30fd0de08e"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [ROW3] on B.Cu, length 0.0707 mm",
+                    "pos": {
+                        "x": 24.0,
+                        "y": 42.8
+                    },
+                    "uuid": "29c8b813-ba16-4640-93dc-c597ebf15a60"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [GND] on B.Cu, length 0.4604 mm",
+                    "pos": {
+                        "x": 151.434426,
+                        "y": 70.253126
+                    },
+                    "uuid": "0c4cfad5-4b67-4c37-9647-48ce873b6a04"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [KEY_RGB_CHAIN_27] on B.Cu, length 1.2530 mm",
+                    "pos": {
+                        "x": 61.0633,
+                        "y": 33.2
+                    },
+                    "uuid": "48ca66c6-2d0d-4536-8b47-7c45b2df8918"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [+4V_LED] on F.Cu, length 0.0721 mm",
+                    "pos": {
+                        "x": 17.0,
+                        "y": 77.29
+                    },
+                    "uuid": "a4710735-b0a0-494f-8f52-9ce89974c10f"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [+4V_REG] on B.Cu, length 1.1313 mm",
+                    "pos": {
+                        "x": 135.6,
+                        "y": 88.5
+                    },
+                    "uuid": "6cac8453-f8c0-4f64-9c94-14f8e1dbd26e"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [MCU_GPIO25] on B.Cu, length 0.0118 mm",
+                    "pos": {
+                        "x": 43.983333,
+                        "y": 39.842933
+                    },
+                    "uuid": "aabd23ad-7399-4f24-91da-61c811032af9"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        }
+    ]
+}

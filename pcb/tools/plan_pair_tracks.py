@@ -202,7 +202,7 @@ def main():
                 dd = g.distance(h)
                 if dd < 0.6:
                     worst.append((round(dd, 4), "the pair's own gap", lay or lay2, net2, "pair"))
-    worst.sort()
+    worst.sort(key=lambda item: item[0])
     length = {n: round(sum(math.hypot(t["x2"] - t["x1"], t["y2"] - t["y1"]) for t in new_t if t["net"] == n), 2) for n in (left, right)}
     print(f"removed {len(rm_t)} tracks and {len(rm_v)} vias, added {len(new_t)} tracks and {len(new_v)} vias; new copper {length} mm")
     print("smallest distances (other copper: 0.15 needed; holes: 0.20 needed, shown minus 0.05; own gap):")

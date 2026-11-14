@@ -1,0 +1,453 @@
+{
+  "status": "escape plan; rerouting and native DRC required",
+  "ops": [
+    {
+      "op": "remove_tracks",
+      "tracks": [
+        {
+          "x1": 18.9,
+          "y1": 77.2787,
+          "x2": 18.099999999999998,
+          "y2": 77.17869999999999,
+          "w": 0.39999999999999997,
+          "layer": "B.Cu",
+          "net": "+4V_LED"
+        },
+        {
+          "x1": 18.88,
+          "y1": 77.35,
+          "x2": 18.9,
+          "y2": 77.2787,
+          "w": 0.39999999999999997,
+          "layer": "B.Cu",
+          "net": "+4V_LED"
+        },
+        {
+          "x1": 18.875,
+          "y1": 76.5,
+          "x2": 19.675,
+          "y2": 75.7,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "UG_LED_6"
+        },
+        {
+          "x1": 24.0,
+          "y1": 27.45,
+          "x2": 24.0,
+          "y2": 30.95,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "ROW1"
+        },
+        {
+          "x1": 27.7306,
+          "y1": 36.7665,
+          "x2": 27.7306,
+          "y2": 42.1774,
+          "w": 0.15,
+          "layer": "F.Cu",
+          "net": "COL1"
+        },
+        {
+          "x1": 28.4,
+          "y1": 38.949999999999996,
+          "x2": 28.346899999999998,
+          "y2": 40.7451,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB"
+        },
+        {
+          "x1": 26.4,
+          "y1": 38.449999999999996,
+          "x2": 26.4,
+          "y2": 37.5233,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "MCU_GPIO25"
+        },
+        {
+          "x1": 26.4,
+          "y1": 37.5233,
+          "x2": 26.963099999999997,
+          "y2": 36.9602,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "MCU_GPIO25"
+        }
+      ]
+    },
+    {
+      "op": "add_tracks",
+      "tracks": [
+        {
+          "x1": 20.025,
+          "y1": 77.335,
+          "x2": 19.425,
+          "y2": 76.935,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_57_SRC"
+        },
+        {
+          "x1": 20.025,
+          "y1": 76.315,
+          "x2": 19.325,
+          "y2": 76.215,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB_CHAIN_57"
+        },
+        {
+          "x1": 34.199999,
+          "y1": 19.65,
+          "x2": 33.499999,
+          "y2": 19.45,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "+4V_REG"
+        },
+        {
+          "x1": 264.0,
+          "y1": 25.70875,
+          "x2": 264.0,
+          "y2": 24.20875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "COL13"
+        },
+        {
+          "x1": 27.3125,
+          "y1": 23.5,
+          "x2": 28.1125,
+          "y2": 23.5,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "VBUS_SNUB"
+        },
+        {
+          "x1": 42.2025,
+          "y1": 38.778749999999995,
+          "x2": 43.3025,
+          "y2": 39.27875,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "GND"
+        },
+        {
+          "x1": 21.25,
+          "y1": 10.424999999999999,
+          "x2": 22.05,
+          "y2": 10.625,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "VBUS_FUSED"
+        },
+        {
+          "x1": 24.4,
+          "y1": 31.549999999999997,
+          "x2": 24.3,
+          "y2": 29.55,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "ROW2"
+        },
+        {
+          "x1": 29.45,
+          "y1": 33.0,
+          "x2": 30.35,
+          "y2": 33.0,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "COL9"
+        },
+        {
+          "x1": 28.0,
+          "y1": 38.449999999999996,
+          "x2": 28.0,
+          "y2": 39.35,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "UNDERGLOW"
+        },
+        {
+          "x1": 27.599999999999998,
+          "y1": 38.449999999999996,
+          "x2": 27.6,
+          "y2": 37.75,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "LED_ENABLE"
+        },
+        {
+          "x1": 26.799999999999997,
+          "y1": 38.449999999999996,
+          "x2": 26.8,
+          "y2": 37.75,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "MCU_GPIO24"
+        }
+      ]
+    },
+    {
+      "op": "add_vias",
+      "vias": [
+        {
+          "x": 19.425,
+          "y": 76.935,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_57_SRC"
+        },
+        {
+          "x": 19.325,
+          "y": 76.215,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "KEY_RGB_CHAIN_57"
+        },
+        {
+          "x": 33.499999,
+          "y": 19.45,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "+4V_REG"
+        },
+        {
+          "x": 264.0,
+          "y": 24.20875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "COL13"
+        },
+        {
+          "x": 28.1125,
+          "y": 23.5,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "VBUS_SNUB"
+        },
+        {
+          "x": 43.3025,
+          "y": 39.27875,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "GND"
+        },
+        {
+          "x": 22.05,
+          "y": 10.625,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "VBUS_FUSED"
+        },
+        {
+          "x": 24.3,
+          "y": 29.55,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "ROW2"
+        },
+        {
+          "x": 30.35,
+          "y": 33.0,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "COL9"
+        },
+        {
+          "x": 28.0,
+          "y": 39.35,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "UNDERGLOW"
+        },
+        {
+          "x": 27.6,
+          "y": 37.75,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "LED_ENABLE"
+        },
+        {
+          "x": 26.8,
+          "y": 37.75,
+          "d": 0.5,
+          "drill": 0.25,
+          "net": "MCU_GPIO24"
+        }
+      ]
+    }
+  ],
+  "report": [
+    {
+      "ref": "R183",
+      "pad": "1",
+      "net": "KEY_RGB_CHAIN_57_SRC",
+      "status": "planned",
+      "via": [
+        19.425,
+        76.935
+      ],
+      "removed_tracks": 2,
+      "removed_nets": [
+        "+4V_LED"
+      ]
+    },
+    {
+      "ref": "R183",
+      "pad": "2",
+      "net": "KEY_RGB_CHAIN_57",
+      "status": "planned",
+      "via": [
+        19.325,
+        76.215
+      ],
+      "removed_tracks": 1,
+      "removed_nets": [
+        "UG_LED_6"
+      ]
+    },
+    {
+      "ref": "TP3",
+      "pad": "1",
+      "net": "+4V_REG",
+      "status": "planned",
+      "via": [
+        33.499999,
+        19.45
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "SW29",
+      "pad": "1",
+      "net": "COL13",
+      "status": "planned",
+      "via": [
+        264.0,
+        24.20875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "R187",
+      "pad": "2",
+      "net": "VBUS_SNUB",
+      "status": "planned",
+      "via": [
+        28.1125,
+        23.5
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "C216",
+      "pad": "2",
+      "net": "GND",
+      "status": "planned",
+      "via": [
+        43.3025,
+        39.27875
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "R120",
+      "pad": "1",
+      "net": "VBUS_FUSED",
+      "status": "planned",
+      "via": [
+        22.05,
+        10.625
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "U1",
+      "pad": "4",
+      "net": "ROW2",
+      "status": "planned",
+      "via": [
+        24.3,
+        29.55
+      ],
+      "removed_tracks": 1,
+      "removed_nets": [
+        "ROW1"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pad": "18",
+      "net": "COL9",
+      "status": "planned",
+      "via": [
+        30.35,
+        33.0
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "U1",
+      "pad": "24",
+      "net": "SWCLK",
+      "status": "no-local-escape"
+    },
+    {
+      "ref": "U1",
+      "pad": "33",
+      "net": "UNDERGLOW",
+      "status": "planned",
+      "via": [
+        28.0,
+        39.35
+      ],
+      "removed_tracks": 2,
+      "removed_nets": [
+        "COL1",
+        "KEY_RGB"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pad": "34",
+      "net": "LED_ENABLE",
+      "status": "planned",
+      "via": [
+        27.6,
+        37.75
+      ],
+      "removed_tracks": 0,
+      "removed_nets": []
+    },
+    {
+      "ref": "U1",
+      "pad": "36",
+      "net": "MCU_GPIO24",
+      "status": "planned",
+      "via": [
+        26.8,
+        37.75
+      ],
+      "removed_tracks": 2,
+      "removed_nets": [
+        "MCU_GPIO25"
+      ]
+    },
+    {
+      "ref": "U1",
+      "pad": "40",
+      "net": "MCU_GPIO26",
+      "status": "no-local-escape"
+    }
+  ]
+}

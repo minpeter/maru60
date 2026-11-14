@@ -1,0 +1,92 @@
+{
+  "pass": true,
+  "method": "Trapezoidal integration, unchanged electrical route except numerical-zero LC section replaced by existing 1 mOhm junction convention",
+  "max_pulse_width_change_ns": 0.0,
+  "max_noise_margin_change_V": 0.0,
+  "criteria": {
+    "pulse_width_delta_ns": 0.1,
+    "noise_margin_delta_V": 0.005,
+    "positive_timing_budgets": true,
+    "no_threshold_recrossings": true
+  },
+  "measurements": {
+    "0.2": {
+      "0": {
+        "sent_ns": 300.0,
+        "width_min_ns": 267.81,
+        "width_max_ns": 314.98,
+        "extra_threshold_crossings": 0,
+        "delay_rise_ns": 52.67,
+        "delay_fall_ns": 41.7,
+        "high_min_after_peak_V": 4.0,
+        "low_max_after_trough_V": 0.0
+      },
+      "1": {
+        "sent_ns": 900.0,
+        "width_min_ns": 867.81,
+        "width_max_ns": 914.98,
+        "extra_threshold_crossings": 0,
+        "delay_rise_ns": 52.68,
+        "delay_fall_ns": 41.7,
+        "high_min_after_peak_V": 4.0,
+        "low_max_after_trough_V": 0.0
+      },
+      "rise_10_90_ns": 57.99,
+      "fall_90_10_ns": 57.99,
+      "overshoot_V": 0.0,
+      "undershoot_V": 0.0,
+      "noise_margin_high_V": 0.88,
+      "noise_margin_low_V": 1.4,
+      "budget_ns": {
+        "T0H_above_min": 67.8,
+        "T0H_below_max": 85.0,
+        "T1H_above_min": 167.8,
+        "T0L_above_min": 185.0,
+        "T1L_above_min": 85.0
+      },
+      "pulse_width_error_ns": [
+        -32.19,
+        14.98
+      ]
+    },
+    "0.1": {
+      "0": {
+        "sent_ns": 300.0,
+        "width_min_ns": 267.81,
+        "width_max_ns": 314.98,
+        "extra_threshold_crossings": 0,
+        "delay_rise_ns": 52.67,
+        "delay_fall_ns": 41.7,
+        "high_min_after_peak_V": 4.0,
+        "low_max_after_trough_V": 0.0
+      },
+      "1": {
+        "sent_ns": 900.0,
+        "width_min_ns": 867.81,
+        "width_max_ns": 914.98,
+        "extra_threshold_crossings": 0,
+        "delay_rise_ns": 52.68,
+        "delay_fall_ns": 41.7,
+        "high_min_after_peak_V": 4.0,
+        "low_max_after_trough_V": 0.0
+      },
+      "rise_10_90_ns": 57.99,
+      "fall_90_10_ns": 57.99,
+      "overshoot_V": 0.0,
+      "undershoot_V": 0.0,
+      "noise_margin_high_V": 0.88,
+      "noise_margin_low_V": 1.4,
+      "budget_ns": {
+        "T0H_above_min": 67.8,
+        "T0H_below_max": 85.0,
+        "T1H_above_min": 167.8,
+        "T0L_above_min": 185.0,
+        "T1L_above_min": 85.0
+      },
+      "pulse_width_error_ns": [
+        -32.19,
+        14.98
+      ]
+    }
+  }
+}

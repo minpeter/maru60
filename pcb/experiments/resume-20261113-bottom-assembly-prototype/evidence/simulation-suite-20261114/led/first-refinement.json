@@ -1,0 +1,82 @@
+{
+  "scope": "Two flagged full first-hop cases: tighter time step/tolerance; same spatial ladder and behavioral buffer model.",
+  "tool_sha256": "873823dee415ddd83b34042852244cc36a2d322b3ee33e3c555551e2b5e431c2",
+  "cases": [
+    {
+      "case": "first_key_near_typical_assumed_dt025",
+      "original_deck_sha256": "8213a665ec647617240a1ef5bebee5c7154d02a21d29414818a8aa1ba919ef51",
+      "measurement": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 295.84997410247706,
+            "width_max_ns": 307.8239048204423,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999946999999997,
+            "low_margin_V": 1.19999977645075,
+            "timing_margins": {
+              "high_above_min_ns": 45.84997410247706,
+              "low_above_min_ns": 92.1760951795577,
+              "high_below_max_ns": 92.1760951795577
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 895.8499586210128,
+            "width_max_ns": 907.8239042801306,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999997999999998,
+            "low_margin_V": 1.1999939308068999,
+            "timing_margins": {
+              "high_above_min_ns": 195.84995862101277,
+              "low_above_min_ns": 92.17609571986941,
+              "high_below_max_ns": 92.17609571986941
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 45.84997410247706,
+        "unclamped_overshoot_V": 5.999999999062311e-07,
+        "unclamped_undershoot_V": 5.6130682e-07
+      }
+    },
+    {
+      "case": "first_key_far__typical_assumed_dt025",
+      "original_deck_sha256": "ebe41c3662af4db20102334b68e5ebaccb65e12ae56e2a22da377d7f3ddc4545",
+      "measurement": {
+        "meets_assumed_corner": false,
+        "pulses": [
+          {
+            "bit": "0",
+            "width_min_ns": 295.8542178171806,
+            "width_max_ns": 307.8186620943452,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999939000000001,
+            "low_margin_V": 1.19999987475648,
+            "timing_margins": {
+              "high_above_min_ns": 45.8542178171806,
+              "low_above_min_ns": 92.1813379056548,
+              "high_below_max_ns": 92.1813379056548
+            }
+          },
+          {
+            "bit": "1",
+            "width_min_ns": 895.8543318980433,
+            "width_max_ns": 907.8186585713347,
+            "extra_threshold_crossings": 2,
+            "high_margin_V": 1.3999999,
+            "low_margin_V": 1.1999939533757,
+            "timing_margins": {
+              "high_above_min_ns": 195.85433189804326,
+              "low_above_min_ns": 92.18134142866529,
+              "high_below_max_ns": 92.18134142866529
+            }
+          }
+        ],
+        "minimum_timing_margin_ns": 45.8542178171806,
+        "unclamped_overshoot_V": 4.0000000023354687e-07,
+        "unclamped_undershoot_V": 3.2112643e-07
+      }
+    }
+  ]
+}

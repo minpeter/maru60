@@ -1,0 +1,11 @@
+{
+  "latest_report": "evidence/final-cold-drc.json",
+  "board_sha256": "875ee106148f266e6fc24f938eddfaef901e4a263cc295df41cfb3e270a8301d",
+  "accepted": [
+    "prune32-drc.json",
+    "prune33-drc.json",
+    "final-stubs-drc.json",
+    "final-cold-drc.json"
+  ],
+  "note": "Pass 31 was rejected and rolled back. A native process failure during pass 33 left the board unchanged; retry completed. Short residual stubs were removed under fresh native connectivity checks. T-junction regression passed."
+}

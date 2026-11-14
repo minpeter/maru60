@@ -1,0 +1,31 @@
+{
+  "status": "escape plan; rerouting and native DRC required",
+  "ops": [
+    {
+      "op": "remove_tracks",
+      "tracks": []
+    },
+    {
+      "op": "add_tracks",
+      "tracks": []
+    },
+    {
+      "op": "add_vias",
+      "vias": []
+    }
+  ],
+  "report": [
+    {
+      "ref": "U1",
+      "pad": "24",
+      "net": "SWCLK",
+      "status": "no-local-escape"
+    },
+    {
+      "ref": "U1",
+      "pad": "40",
+      "net": "MCU_GPIO26",
+      "status": "no-local-escape"
+    }
+  ]
+}

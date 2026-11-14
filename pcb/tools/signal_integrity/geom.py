@@ -20,7 +20,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from shapely.geometry import LineString, Point, Polygon
-from shapely.ops import unary_union
+from shapely.ops import unary_union, nearest_points
 from shapely.strtree import STRtree
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -102,12 +102,16 @@ class Board:
         segs = self.by_net[net]
         # split segments where another endpoint of the same net/layer lies on them
         ends = defaultdict(set)
+        radii = defaultdict(dict)
         for t in segs:
             ends[t["layer"]].add((t["x1"], t["y1"]))
             ends[t["layer"]].add((t["x2"], t["y2"]))
+            for xy in [(t["x1"],t["y1"]),(t["x2"],t["y2"])]:
+                radii[t["layer"]][xy] = max(radii[t["layer"]].get(xy,0),t["w"]/2)
         for v in self.vias_by_net[net]:
             for layer in ("F.Cu", "B.Cu", "In1.Cu", "In2.Cu"):
                 ends[layer].add((v["x"], v["y"]))
+                radii[layer][(v["x"],v["y"])] = max(radii[layer].get((v["x"],v["y"]),0),v["d"]/2)
         adj = defaultdict(list)
 
         def link(a, b, length, layer, w, kind="track"):
@@ -119,17 +123,23 @@ class Board:
             L = math.hypot(b[0] - a[0], b[1] - a[1])
             cuts = [0.0, 1.0]
             if L > 0:
+                line = LineString([a,b])
+                for i,p in enumerate(self.pads_by_net[net]):
+                    if not p['poly'] or not (t['layer'] in p['layers'] or p['drill'][0]>0):
+                        continue
+                    shape = unary_union([Polygon(ring) for ring in p['poly'] if len(ring)>=3])
+                    if line.distance(shape) < t['w']/2-1e-6:
+                        contact = nearest_points(line,shape)[0]
+                        u = line.project(contact)/L
+                        cuts.append(u)
+                        link(('pad',p['ref'],p['num'],i),(t['layer'],)+_k(contact.x,contact.y),0.,t['layer'],0.,'pad')
                 for p in ends[t["layer"]]:
-                    u = ((p[0] - a[0]) * (b[0] - a[0]) + (p[1] - a[1]) * (b[1] - a[1])) / (L * L)
-                    if 1e-6 < u < 1 - 1e-6:
-                        px, py = a[0] + u * (b[0] - a[0]), a[1] + u * (b[1] - a[1])
-                        off = math.hypot(px - p[0], py - p[1])
-                        if off < 2 * Q:
-                            cuts.append(u)
-                        elif off < t["w"] / 2:
-                            # the other track ends inside this track's copper without
-                            # meeting its centre line: still one conductor
-                            cuts.append(u)
+                    u = max(0.,min(1.,((p[0] - a[0]) * (b[0] - a[0]) + (p[1] - a[1]) * (b[1] - a[1])) / (L * L)))
+                    px, py = a[0] + u * (b[0] - a[0]), a[1] + u * (b[1] - a[1])
+                    off = math.hypot(px - p[0], py - p[1])
+                    if off < t['w']/2+radii[t['layer']].get(p,0)-1e-6:
+                        cuts.append(u)
+                        if _k(px,py)!=_k(*p):
                             link((t["layer"],) + _k(px, py), (t["layer"],) + _k(*p), off, t["layer"], t["w"])
             cuts = sorted(set(cuts))
             for u0, u1 in zip(cuts, cuts[1:]):
@@ -234,9 +244,15 @@ class Board:
         for e in path:
             if e[5] == "track":
                 by[(e[3], round(e[4], 3))] += e[2]
-        vias = sum(1 for e in path if e[5] == "via" and e[0][0] in ("In1.Cu", "In2.Cu") and e[1][0] in ("In1.Cu", "In2.Cu"))
+        # A B.Cu <-> In2.Cu route also uses a physical through barrel.
+        # Count each barrel once, even when the path crosses several of its
+        # layer interfaces. The lumped model includes the full barrel (and
+        # therefore conservatively retains its unused section).
+        via_sites = {e[0][1:] for e in path if e[5] == "via"}
+        vias = len(via_sites)
         # distance of every path node from the source, and the path as ordered elements
         pos, run, elements = {a: 0.0}, 0.0, []
+        emitted_vias = set()
         for e in path:
             run += e[2]
             pos[e[1]] = run
@@ -245,17 +261,22 @@ class Board:
                     elements[-1][3] += e[2]
                 else:
                     elements.append(["track", e[3], round(e[4], 3), e[2]])
-            elif e[5] == "via" and {e[0][0], e[1][0]} == {"In1.Cu", "In2.Cu"}:
+            elif e[5] == "via" and e[0][1:] not in emitted_vias:
                 elements.append(["via", run])
+                emitted_vias.add(e[0][1:])
         # stubs: connected copper not on the path
         stubs = []
         seen = set(on_path)
-        for n in list(on_path):
+        # Assign off-path copper in source-to-destination order. Iterating
+        # the set changes branch ownership (and even measured stub length)
+        # with Python's hash seed when a branch touches several path nodes.
+        for n in [a] + [edge[1] for edge in path]:
             for m, Ledge, layer, w, kind in adj[n]:
                 if m in seen:
                     continue
                 # explore branch
-                stack, total, pads, bl, vcount = [m], Ledge, set(), defaultdict(float), 0
+                stack, total, pads, bl = [m], Ledge, set(), defaultdict(float)
+                branch_vias = {n[1:]} if kind == "via" else set()
                 bl[layer] += Ledge
                 seen.add(m)
                 while stack:
@@ -269,12 +290,12 @@ class Board:
                         total += L2
                         if kind2 == "track":
                             bl[layer2] += L2
-                        if kind2 == "via" and {x[0], y[0]} == {"In1.Cu", "In2.Cu"}:
-                            vcount += 1
+                        if kind2 == "via":
+                            branch_vias.add(x[1:])
                         stack.append(y)
                 if total > 1e-6 or pads:
                     at = pos.get(n, 0.0)
-                    stubs.append({"length_mm": round(total, 3), "pads": sorted(pads), "vias": vcount,
+                    stubs.append({"length_mm": round(total, 3), "pads": sorted(pads), "vias": len(branch_vias - via_sites),
                                   "from_src_mm": round(at, 2),
                                   "layers": {k: round(v, 3) for k, v in bl.items() if k != "via" and v > 0}})
         pts = []

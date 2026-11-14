@@ -1,0 +1,47 @@
+{
+  "status": "routing plan; native checks still required",
+  "inputs": {
+    "geometry": "build/reverse-led-study/routed10.json",
+    "components": "build/reverse-led-study/routed10-components.json"
+  },
+  "routing_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "critical_inner_return_corridor_mm": {
+    "signals_and_VREG": 1.5,
+    "DC_1V1": 0.4
+  },
+  "ops": [
+    {
+      "op": "remove_tracks",
+      "tracks": []
+    },
+    {
+      "op": "add_tracks",
+      "tracks": []
+    },
+    {
+      "op": "add_vias",
+      "vias": []
+    }
+  ],
+  "report": [
+    {
+      "index": 2,
+      "net": "KEY_RGB",
+      "status": "no-route",
+      "width": 0.15,
+      "attempts": [],
+      "search": {
+        "reason": "disconnected search graph",
+        "anchor_counts": [
+          12,
+          11
+        ]
+      }
+    }
+  ]
+}

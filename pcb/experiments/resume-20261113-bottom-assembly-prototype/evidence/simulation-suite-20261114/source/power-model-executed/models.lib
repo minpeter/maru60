@@ -1,0 +1,266 @@
+* Maru60 power tree - behavioural device models for ngspice (>= 42)
+*
+* Every model here is BEHAVIOURAL. None is a vendor model. The source of each
+* parameter is given as:
+*   [DS ...]   read from the named manufacturer document
+*   [AN ...]   TI application note SLUAAG4 (TPS62933 loop model)
+*   [CALC]     computed from datasheet numbers
+*   [ASSUMED]  not in any document; chosen, and swept where it matters
+*
+* Documents:
+*   TPS25947  = TI SLVSFC9C  (eFuse, U8)
+*   TPS6293x  = TI SLUSEA4D  (buck, U18);  SLUAAG4 = its stability app note
+*   AP2112    = Diodes Inc. DS39724 Rev. 2-2 (LDO, U2)
+*   TPS2553   = TI SLVS841G  (LED limiter, U7)
+*   PMEG4030ER = Nexperia data sheet 23 Jan 2023 (D100)
+
+* ---------------------------------------------------------------------------
+* Comparator with hysteresis. out = 1 above vr, 0 below vf, holds in between.
+* State is held on a capacitor; time constant 100 ns [ASSUMED, numerical].
+.subckt hystcmp in out params: vr=1.2 vf=1.09
+Bq 0 q I = V(in) > {vr} ? (1-V(q))*1m : ( V(in) < {vf} ? -V(q)*1m : 0 )
+Cq q 0 100p
+Rq q 0 1e12
+Bo out 0 V = V(q) > 0.5 ? 1 : 0
+.ends hystcmp
+
+* ---------------------------------------------------------------------------
+* U8  TPS259470A  eFuse, auto-retry, active current limit, OVLO variant
+*   ron   28.2 mOhm typ, 45 max                 [DS TPS25947 6.5 RON]
+*   ilim  0.425 / 0.500 / 0.575 A at 6.65 kOhm  [DS 6.5 ILIM]
+*   vuvr/vuvf, vovr/vovf 1.183/1.20/1.223 rising, 1.076/1.09/1.116 falling
+*                                               [DS 6.5 VUVLO, VOV]
+*   IN UVP 2.53 V rising / 2.42 V falling       [DS 6.5 VUVP]
+*   slew rate: SR[V/ms] = 2000 / CdVdt[pF]      [DS eq. 4] -> 2 uA * kdvdt
+*     into the external capacitor with unity gain to the output.
+*     kdvdt = 1 is the equation; IdVdt is 0.81 / 2.21 / 3.82 uA [DS 6.5], so
+*     kdvdt 0.37 .. 1.73 if SR scales with IdVdt [ASSUMED proportional].
+*   voff  ramp offset that reproduces the turn-on delay. tD,ON is 1.32 ms
+*     (1.8 nF) and 2.35 ms (3.3 nF) at 12 V, 0.60 / 0.97 ms at 2.7 V
+*     [DS 6.7]; extrapolated to 10 nF at 5 V: about 3.8 ms -> 0.76 V at
+*     0.2 V/ms [CALC by extrapolation, ASSUMED form].
+*   current limit: ITIMER open = no blanking [DS 7.3.5.3]; settles to ILIM
+*     in tLIM 400 us [DS 6.6] -> first-order, tau 133 us; before that the
+*     current is capped at the scalable fast-trip level 2 x ILIM [DS ISCGain].
+*   kfold  limit below VOUT = 1.9 V [DS VFB]; DS says "lower", no number
+*     [ASSUMED 0.5].
+*   reverse current blocked [DS 7.3.7] (ideal here).
+*   OVLO turns the FET off but does not discharge dVdt (fast recovery in
+*     current limit) [DS 7.3.3 and tSWOV]. UVLO / UVP discharge dVdt.
+*   IQ 428 uA on, 73 uA off [DS 6.5].
+*   NOT modelled: thermal shutdown and the 110 ms auto-retry, fast-trip
+*     turn-off/30 us re-enable, forward regulation (17 mV at light load).
+.subckt tps259470a in out uvlo ovlo dvdt gnd params: ilim=0.5 ron=0.0282 kdvdt=1 voff=0.76 kfold=0.5
++ vuvr=1.20 vuvf=1.09 vovr=1.20 vovf=1.09
+Xuv  uvlo uvok  hystcmp vr={vuvr} vf={vuvf}
+Xov  ovlo ovhi  hystcmp vr={vovr} vf={vovf}
+Euvp inr 0 in gnd 1
+Xuvp inr  uvpok hystcmp vr=2.53 vf=2.42
+Bsta sta 0 V = V(uvok)*V(uvpok)
+Ben  en  0 V = V(uvok)*V(uvpok)*(1-V(ovhi))
+Bdv  gnd dvdt I = V(sta) > 0.5 ? ( V(dvdt,gnd) < 12 ? {2e-6*kdvdt} : 0 ) : -V(dvdt,gnd)/200
+Rdv  dvdt gnd 1e12
+Bramp ramp 0 V = max(V(dvdt,gnd) - {voff}, 0)
+Biraw iraw 0 V = max( (min(V(in,gnd), V(ramp)) - V(out,gnd)) / {ron}, 0 )
+Bx   0 x I = ( V(iraw) > {ilim} ? (1-V(x)) : -V(x) ) * 1u
+Cx   x 0 133p
+Rx   x 0 1e12
+Bil  il 0 V = {ilim} * ( {kfold} + (1-{kfold})*0.5*(1+tanh((V(out,gnd)-1.9)/0.05)) ) * (2 - V(x))
+Bpass in out I = V(en) * min( V(iraw), V(il) )
+Biq  in gnd I = V(in,gnd) > 1 ? ( V(en) > 0.5 ? 428u : 73u ) : 0
+.ends tps259470a
+
+* ---------------------------------------------------------------------------
+* U18  TPS62932  buck - common control block (soft start, error amplifier)
+*   vref 0.8 V (0.788 .. 0.812, 0..85 C)        [DS TPS6293x 8.5 VFB]
+*   iss  5.5 uA (4.5 .. 6.5)                    [DS 8.5 ISS]; reference is
+*     min(VREF, V(SS))                          [DS 9.3.7]
+*   UVLO 3.6 V rising (3.4 .. 3.8), 3.3 V falling (3.1 .. 3.5) [DS 8.5]
+*   rhs 76 mOhm, rls 32 mOhm (25 C)             [DS 8.5]
+*   dmax 0.98                                   [DS features, 9.4.6]
+*   Error amplifier and modulator after SLUAAG4 (written for TPS62933):
+*     loop DC gain ADC = 352000 / IOUT          [AN eq. 1]
+*       -> A_EA * Gcs = 352000 / 0.8 = 440000 A/V (FB volts to inductor amps)
+*     fP1 = 1.2 Hz, fZ = 10.6 kHz, fP2 = 275 kHz [AN eq. 2]
+*     current-loop pole fP_ci = VIN*fsw / (pi*(4356000*L + VIN - 2*VO))
+*                                               [AN eq. 5]
+*       -> slope compensation Se = 2.178e6 A/s in inductor-current units
+*          [CALC from eq. 5]
+*     kea scales A_EA*Gcs. kea = 1 is the TPS62933 figure. The TPS62932 has a
+*     3.4 A instead of 5 A switch limit; if TI scaled the current-sense gain
+*     with it, kea = 0.68 [ASSUMED alternative, swept].
+*   The comp node is in amps of inductor-current command.
+*   NOT modelled: hiccup (UVP 65 %, 256 us, off 10.5 x tSS), OVP 115 %,
+*     spread spectrum, thermal shutdown.
+
+* --- averaged model -------------------------------------------------------
+* Duty from the peak-current-mode law
+*   d = (icomp - iL) / (Ts * (Se + (VIN - 2*VO)/(2*L)))   clamped 0 .. dmax
+* which reproduces fP_ci of AN eq. 5. The switch node is a voltage source
+* d*VIN minus the conduction drops; the real inductor is external. A series
+* ideal diode stops reverse inductor current (the part runs DCM / PFM at
+* light load, DS 9.3.2). PFM bursts are NOT reproduced by this model.
+*   effsw: fixed factor for switching and gate losses [ASSUMED 0.91 so that
+*     total efficiency is about 90 %; TI Figure 10-2 shows 93-96 % at
+*     6 V in / 5 V out, so input current is over-estimated by a few percent]
+.subckt tps62932_avg vin sw fb ss vo gnd params: fsw=500k lnom=4.7u se=2.178e6 kea=1 rhs=0.076 rls=0.032
++ iss=5.5u vref=0.8 uvr=3.6 uvf=3.3 ilimpk=3.4 dmax=0.98 effsw=0.91
+.param cc=100p
+.param cp=4.01p
+.param ro={1/(6.2831853*1.2*(cc+cp))}
+.param rc={1/(6.2831853*10.6k*cc)}
+.param gm={440000*kea/ro}
+Evs  vins 0 vin gnd 1
+Xuv  vins en hystcmp vr={uvr} vf={uvf}
+Bss  gnd ss I = V(en) > 0.5 ? ( V(ss,gnd) < 2.5 ? {iss} : 0 ) : -V(ss,gnd)/1k
+Bref ref 0 V = min({vref}, V(ss,gnd))
+Bgm  0 comp I = V(en) > 0.5 ? {gm}*(V(ref) - V(fb,gnd)) : -V(comp)*1m
+Ro   comp 0 {ro}
+Rc   comp cz {rc}
+Cc   cz 0 {cc}
+Cp   comp 0 {cp}
+Bclh comp 0 I = V(comp) > {ilimpk} ? (V(comp)-{ilimpk}) : 0
+Bcll 0 comp I = V(comp) < -0.02 ? (-0.02-V(comp)) : 0
+Bd   d 0 V = V(en) > 0.5 ? min( max( (V(comp) - I(Vil)) * {fsw} / max( {se} + (V(vin,gnd) - 2*V(vo,gnd))/(2*{lnom}), 2e5 ), 0 ), {dmax} ) : 0
+Bsw  swi gnd V = V(d)*V(vin,gnd) - I(Vil)*( V(d)*{rhs} + (1-V(d))*{rls} )
+Vil  swi swd 0
+Did  swd sw dideal
+Bin  vin gnd I = V(d)*I(Vil)/{effsw} + 50u
+.model dideal d(is=1e-9 n=0.02 rs=1m)
+.ends tps62932_avg
+
+* --- cycle-by-cycle switching model ---------------------------------------
+* 500 kHz clock, SR latch, peak comparator with the slope ramp above,
+* ideal high-side switch (rhs), low-side as an ideal diode with rls
+* (zero-current turn-off, DS 9.3.2).
+*   ipkmin 0.53 A minimum peak inductor current  [DS 8.5 IPEAK_MIN]
+*   tonmax 7 us maximum on time                  [DS 8.5 tON_MAX]
+*   PFM rule [ASSUMED - the data sheet does not describe the circuit]:
+*     a clock edge starts a pulse only if the commanded peak at the natural
+*     duty, comp - Se*D*Ts, is above ipkmin; a pulse ends when iL reaches
+*     max(comp - Se*t_on, ipkmin). The amplifier is clamped 0.3 A below the
+*     skip level so it leaves sleep quickly.
+*   tON_MIN / tOFF_MIN blanking are not modelled.
+.subckt tps62932_sw vin sw fb ss vo gnd params: fsw=500k lnom=4.7u se=2.178e6 kea=1 rhs=0.076 rls=0.032
++ iss=5.5u vref=0.8 uvr=3.6 uvf=3.3 ilimpk=3.4 dmax=0.98 ipkmin=0.53 tonmax=7 effsw=1
+.param cc=100p
+.param cp=4.01p
+.param ro={1/(6.2831853*1.2*(cc+cp))}
+.param rc={1/(6.2831853*10.6k*cc)}
+.param gm={440000*kea/ro}
+Evs  vins 0 vin gnd 1
+Xuv  vins en hystcmp vr={uvr} vf={uvf}
+Bss  gnd ss I = V(en) > 0.5 ? ( V(ss,gnd) < 2.5 ? {iss} : 0 ) : -V(ss,gnd)/1k
+Bref ref 0 V = min({vref}, V(ss,gnd))
+Bgm  0 comp I = V(en) > 0.5 ? {gm}*(V(ref) - V(fb,gnd)) : -V(comp)*1m
+Ro   comp 0 {ro}
+Rc   comp cz {rc}
+Cc   cz 0 {cc}
+Cp   comp 0 {cp}
+* skip level and clamps
+* (duty estimate from 20 us filtered voltages, to keep the skip level free of
+*  switching edges)
+Rfvo vo  vof 20k
+Cfvo vof gnd 1n
+Rfvi vin vif 20k
+Cfvi vif gnd 1n
+Bcth cth 0 V = {ipkmin} + {se}/{fsw} * min( max(V(vof,gnd),0) / max(V(vif,gnd),1), {dmax} )
+Bclh comp 0 I = V(comp) > V(cth)+{ilimpk} ? (V(comp)-V(cth)-{ilimpk}) : 0
+Bcll 0 comp I = V(comp) < V(cth)-0.3 ? (V(cth)-0.3-V(comp)) : 0
+* clock and latch
+Vclk clk 0 pulse(0 1 100n 5n 5n 30n {1/fsw})
+Bset set 0 V = ( V(clk) > 0.5 && V(en) > 0.5 && V(comp) > V(cth) ) ? 1 : 0
+Brst rst 0 V = ( I(Vil) >= min( max(V(comp) - V(ramp), {ipkmin}), {ilimpk} ) || V(tonv) > {tonmax} || V(en) < 0.5 ) ? 1 : 0
+* latch: reset has priority; with no input the state regenerates to its rail
+Bq   0 q I = V(rst) > 0.5 ? -V(q)*1m : ( V(set) > 0.5 ? (1-V(q))*1m : ( V(q) > 0.5 ? (1-V(q))*1m : -V(q)*1m ) )
+Cq   q 0 2p
+Rq   q 0 1e12
+* slope ramp (volts = amps) and on-timer (volts = microseconds)
+Bramp 0 ramp I = V(q) > 0.5 ? {se*1e-9} : -V(ramp)*20m
+Cramp ramp 0 1n
+Rramp ramp 0 1e12
+Bton 0 tonv I = V(q) > 0.5 ? 1m : -V(tonv)*20m
+Cton tonv 0 1n
+Rton tonv 0 1e12
+* power stage
+Shs  vin swi q 0 swhs
+Dls  gnd swi dls
+Csw  swi gnd 100p
+Rsw  swi swr 100
+Csr  swr gnd 1n
+Vil  swi sw 0
+Biq  vin gnd I = 50u
+.model swhs sw(vt=0.5 vh=0.2 ron={rhs} roff=10meg)
+* low-side FET in diode emulation: 45 mV + rls [ASSUMED drop, numerical]
+.model dls d(is=1e-8 n=0.1 rs={rls})
+.ends tps62932_sw
+
+* ---------------------------------------------------------------------------
+* U2  AP2112K-3.3  LDO, EN tied to VIN on the board
+*   vset 3.3 V +-1.5 %                           [DS AP2112 p.8]
+*   rdo  dropout 125 mV typ / 200 mV max at 300 mA -> 0.417 / 0.667 Ohm
+*                                                [DS p.8 VDROP]
+*   current limit with foldback: about 0.8 A at VOUT near 3.3 V, falling
+*     in a straight line to 0.07 A at VOUT = 0 for VIN = 4.0 V, 25 C
+*     [read from DS p.10 "Output Voltage vs. Output Current"; ISHORT 50 mA
+*     typ in the table]. ilim(v) = min(ilmax, ishort + kfold*v).
+*   ven  input voltage at which the regulator starts when EN = VIN. VIH is
+*     1.5 V max, VIL 0.4 V; operation is specified from 2.5 V [DS p.8, p.3].
+*     Start level [ASSUMED 1.5 V].
+*   loop: PI with unity-gain frequency fugb at the capacitance cout
+*     [ASSUMED 100 kHz; the data sheet gives no loop data; swept 30-300 kHz]
+*   ground current 60 uA + 250 uA/A              [read from DS p.10 graph]
+*   reverse: PMOS body diode from VOUT to VIN, and the channel conducts
+*     backwards while the loop is asking for current [ASSUMED - the data
+*     sheet says nothing about reverse current]
+*   NOT modelled: thermal shutdown (160 C), output discharge (60 Ohm, EN low)
+.subckt ap2112k33 vin out gnd params: vset=3.3 rdo=0.417 ishort=0.07 kfold=0.265 ilmax=0.8 fugb=100k cout=8.4u ven=1.5
+.param gm={6.2831853*fugb*cout}
+.param wi={6.2831853*fugb/10}
+Ben   en 0 V = 0.5*(1+tanh((V(vin,gnd)-{ven})/0.05))
+Berr  err 0 V = {vset}*V(en) - V(out,gnd)
+Bxi   0 xi I = ( (V(xi) > 0.9 && V(err) > 0) || (V(xi) < -0.02 && V(err) < 0) ) ? 0 : V(err)*{gm*wi}
+Cxi   xi 0 1
+Rxi   xi 0 1e9
+Bwant want 0 V = max( {gm}*V(err) + V(xi), 0 )
+Blim  lim 0 V = min( {ilmax}, {ishort} + {kfold}*max(V(out,gnd),0) )
+Bhead head 0 V = (V(vin,gnd) - V(out,gnd))/{rdo}
+Bpass vin out I = V(en) * min( min(V(want), V(lim)), V(head) * min(1, V(want)/0.005) )
+Bgnd  vin gnd I = V(en) * ( 60u + 250u*abs(I(Bpass)) )
+Dbody out vin dbody
+.model dbody d(is=1e-13 n=1 rs=0.2)
+.ends ap2112k33
+
+* ---------------------------------------------------------------------------
+* U7  TPS2553 (not -1)  current-limited switch, constant current
+*   ios  174 / 202 / 234 mA at 133 kOhm 1 %     [DS TPS2553 eq. 1-3, CALC]
+*   rds  85 mOhm typ, 135 max                   [DS 6.5]
+*   turn-on: about 1.2 ms delay then about 1.4 ms rise (VIN 5 V, 5 Ohm)
+*     [read from DS Figure 6-1; tr 0.7-1.5 ms, ton <= 3 ms in the table]
+*   tIOS 2 us short-circuit response            [DS 6.5] -> tau 1 us; until
+*     the limiter acts the current is (VIN-VOUT)/rds.
+*   EN threshold 0.66 .. 1.1 V, UVLO 2.35 V     [DS 6.5]
+*   NOT modelled: thermal cycling (135 C in current limit), the 4 ms
+*     reverse-voltage turn-off (VOUT - VIN > 135 mV), FAULT.
+.subckt tps2553 in out en gnd params: ios=0.2015 rds=0.085
+Een  enr 0 en gnd 1
+Xen  enr eno hystcmp vr=0.9 vf=0.8
+Evi  inr 0 in gnd 1
+Xuv  inr uvo hystcmp vr=2.35 vf=2.325
+Bon  on 0 V = V(eno)*V(uvo)
+Bg   0 g I = V(on) > 0.5 ? ( V(g) < 12 ? 1u : 0 ) : -V(g)*1m
+Cg   g 0 350p
+Rg   g 0 1e12
+Bramp ramp 0 V = max(V(g) - 3.43, 0)
+Bires ires 0 V = (min(V(in,gnd), V(ramp)) - V(out,gnd))/{rds}
+Bs   0 s I = ( V(ires) > {ios} ? (1-V(s)) : -V(s) ) * 1u
+Cs   s 0 1p
+Rs   s 0 1e12
+Bpass in out I = V(on) * ( V(ires) > 0 ? ( V(ires)*(1-V(s)) + min(V(ires),{ios})*V(s) ) : ( V(ramp) > V(in,gnd) ? V(ires) : 0 ) )
+Biq  in gnd I = V(on)*100u
+.ends tps2553
+
+* ---------------------------------------------------------------------------
+* D100 PMEG4030ER: VF about 0.42 V at 3 A [DS Table 7]; IS chosen for that
+* [CALC]; reverse leakage of this order at 25 C [ASSUMED].
+.model pmeg4030 d(is=2e-5 n=1.05 rs=0.04 cjo=300p)

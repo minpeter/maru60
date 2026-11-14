@@ -1,0 +1,421 @@
+{
+  "status": "routing plan; native checks still required",
+  "inputs": {
+    "geometry": "build/reverse-led-study/routed10.json",
+    "components": "build/reverse-led-study/routed10-components.json"
+  },
+  "routing_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "critical_inner_return_corridor_mm": {
+    "signals_and_VREG": 1.5,
+    "DC_1V1": "physical copper and native switching keepouts preserved; no synthetic projection exclusion"
+  },
+  "ops": [
+    {
+      "op": "add_tracks",
+      "tracks": [
+        {
+          "x1": 28.4,
+          "y1": 38.94,
+          "x2": 28.5,
+          "y2": 39.19,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB"
+        },
+        {
+          "x1": 28.5,
+          "y1": 39.19,
+          "x2": 28.7,
+          "y2": 39.89,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB"
+        },
+        {
+          "x1": 28.7,
+          "y1": 39.89,
+          "x2": 28.7,
+          "y2": 40.24,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB"
+        },
+        {
+          "x1": 28.7,
+          "y1": 40.24,
+          "x2": 28.35,
+          "y2": 40.74,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB"
+        },
+        {
+          "x1": 28.4,
+          "y1": 38.95,
+          "x2": 28.4,
+          "y2": 38.94,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB"
+        },
+        {
+          "x1": 28.35,
+          "y1": 40.74,
+          "x2": 28.3469,
+          "y2": 40.7451,
+          "w": 0.15,
+          "layer": "B.Cu",
+          "net": "KEY_RGB"
+        }
+      ]
+    },
+    {
+      "op": "add_vias",
+      "vias": []
+    }
+  ],
+  "report": [
+    {
+      "index": 0,
+      "status": "orphan-copper; review removal instead of adding a connection"
+    },
+    {
+      "index": 1,
+      "net": "SWCLK",
+      "status": "exact-screen-rejected",
+      "width": 0.15,
+      "attempts": [
+        {
+          "reasons": [
+            "copper clearance",
+            "via clearance"
+          ],
+          "bad_vias": [
+            {
+              "x": 28.79,
+              "y": 43.075,
+              "reasons": [
+                "outer copper"
+              ]
+            }
+          ],
+          "rejected_tracks": [
+            {
+              "x1": 30.94,
+              "y1": 35.975,
+              "x2": 29.09,
+              "y2": 33.775,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 29.09,
+              "y1": 33.775,
+              "x2": 28.84,
+              "y2": 33.525,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 28.84,
+              "y1": 33.525,
+              "x2": 28.44,
+              "y2": 33.525,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 28.44,
+              "y1": 33.525,
+              "x2": 27.39,
+              "y2": 34.325,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 27.39,
+              "y1": 34.325,
+              "x2": 26.94,
+              "y2": 34.425,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 26.94,
+              "y1": 34.425,
+              "x2": 26.69,
+              "y2": 34.675,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 26.69,
+              "y1": 34.675,
+              "x2": 26.64,
+              "y2": 34.825,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 26.64,
+              "y1": 34.825,
+              "x2": 26.49,
+              "y2": 37.125,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 26.49,
+              "y1": 37.125,
+              "x2": 26.29,
+              "y2": 37.525,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 26.29,
+              "y1": 37.525,
+              "x2": 26.44,
+              "y2": 40.875,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 26.44,
+              "y1": 40.875,
+              "x2": 27.19,
+              "y2": 42.375,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 27.19,
+              "y1": 42.375,
+              "x2": 27.49,
+              "y2": 42.675,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 27.49,
+              "y1": 42.675,
+              "x2": 28.79,
+              "y2": 43.075,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 28.79,
+              "y1": 43.075,
+              "x2": 29.79,
+              "y2": 42.925,
+              "w": 0.15,
+              "layer": "In2.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 29.79,
+              "y1": 42.925,
+              "x2": 35.59,
+              "y2": 42.325,
+              "w": 0.15,
+              "layer": "In2.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 35.59,
+              "y1": 42.325,
+              "x2": 36.19,
+              "y2": 42.025,
+              "w": 0.15,
+              "layer": "In2.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 36.19,
+              "y1": 42.025,
+              "x2": 38.29,
+              "y2": 40.725,
+              "w": 0.15,
+              "layer": "F.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 38.29,
+              "y1": 40.725,
+              "x2": 40.09,
+              "y2": 40.825,
+              "w": 0.15,
+              "layer": "F.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 40.09,
+              "y1": 40.825,
+              "x2": 40.34,
+              "y2": 40.925,
+              "w": 0.15,
+              "layer": "F.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 40.34,
+              "y1": 40.925,
+              "x2": 43.59,
+              "y2": 40.725,
+              "w": 0.15,
+              "layer": "F.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 43.59,
+              "y1": 40.725,
+              "x2": 46.29,
+              "y2": 39.375,
+              "w": 0.15,
+              "layer": "F.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 46.29,
+              "y1": 39.375,
+              "x2": 60.29,
+              "y2": 38.025,
+              "w": 0.15,
+              "layer": "In2.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 60.29,
+              "y1": 38.025,
+              "x2": 60.89,
+              "y2": 37.975,
+              "w": 0.15,
+              "layer": "In2.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 60.89,
+              "y1": 37.975,
+              "x2": 62.19,
+              "y2": 37.325,
+              "w": 0.15,
+              "layer": "B.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 30.95,
+              "y1": 36.0,
+              "x2": 30.94,
+              "y2": 35.975,
+              "w": 0.15,
+              "layer": "B.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 62.19,
+              "y1": 37.325,
+              "x2": 62.2062,
+              "y2": 37.349,
+              "w": 0.15,
+              "layer": "B.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 30.94,
+              "y1": 35.975,
+              "x2": 30.95,
+              "y2": 36.0,
+              "w": 0.15,
+              "layer": "B.Cu",
+              "net": "SWCLK"
+            },
+            {
+              "x1": 30.94,
+              "y1": 35.975,
+              "x2": 30.95,
+              "y2": 36.0,
+              "w": 0.15,
+              "layer": "In1.Cu",
+              "net": "SWCLK"
+            }
+          ],
+          "rejected_vias": [
+            {
+              "x": 28.79,
+              "y": 43.075,
+              "d": 0.5,
+              "drill": 0.25,
+              "net": "SWCLK"
+            },
+            {
+              "x": 36.19,
+              "y": 42.025,
+              "d": 0.5,
+              "drill": 0.25,
+              "net": "SWCLK"
+            },
+            {
+              "x": 46.29,
+              "y": 39.375,
+              "d": 0.5,
+              "drill": 0.25,
+              "net": "SWCLK"
+            },
+            {
+              "x": 60.89,
+              "y": 37.975,
+              "d": 0.5,
+              "drill": 0.25,
+              "net": "SWCLK"
+            }
+          ]
+        }
+      ],
+      "search": {
+        "reason": "path found",
+        "anchor_counts": [
+          28,
+          12
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "net": "KEY_RGB",
+      "status": "routed",
+      "width": 0.15,
+      "attempts": [
+        {
+          "reasons": [],
+          "bad_vias": []
+        }
+      ],
+      "search": {
+        "reason": "path found",
+        "anchor_counts": [
+          12,
+          11
+        ]
+      }
+    }
+  ]
+}

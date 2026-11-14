@@ -1,0 +1,1382 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-13T14:41:31+0000",
+    "kicad_version": "9.0.2",
+    "schematic_parity": [],
+    "source": "maru60.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 18 [COL9] of U1 on B.Cu",
+                    "pos": {
+                        "x": 29.45,
+                        "y": 33.0
+                    },
+                    "uuid": "f63ba35d-8c0e-4bab-a6f0-64e54471e997"
+                },
+                {
+                    "description": "Track [COL9] on B.Cu, length 13.4704 mm",
+                    "pos": {
+                        "x": 173.5125,
+                        "y": 13.4643
+                    },
+                    "uuid": "d75b6909-3642-4253-a97d-7371f5ad6f85"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [COL12] on B.Cu, length 13.1177 mm",
+                    "pos": {
+                        "x": 230.6625,
+                        "y": 16.4331
+                    },
+                    "uuid": "a226b156-081b-40df-a2cb-e23c4c37e997"
+                },
+                {
+                    "description": "Track [COL12] on In2.Cu, length 2.3420 mm",
+                    "pos": {
+                        "x": 51.1,
+                        "y": 40.4
+                    },
+                    "uuid": "10183cc2-746d-4d90-a237-9e3f2e42032a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [COL13] on B.Cu, length 0.7293 mm",
+                    "pos": {
+                        "x": 270.1322,
+                        "y": 11.7387
+                    },
+                    "uuid": "3d91ec40-ed88-4abc-9cd0-0abf81aa3195"
+                },
+                {
+                    "description": "Track [COL13] on B.Cu, length 0.0005 mm",
+                    "pos": {
+                        "x": 259.3375,
+                        "y": 5.3887
+                    },
+                    "uuid": "722ad564-5b57-4b8e-9d33-4317fa8b6f1c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [COL13] on B.Cu, length 0.7295 mm",
+                    "pos": {
+                        "x": 269.61665,
+                        "y": 12.25455
+                    },
+                    "uuid": "39fa2c26-80fc-4a8c-9bdb-3134c7ea4dad"
+                },
+                {
+                    "description": "Pad 1 [COL13] of SW29 on B.Cu",
+                    "pos": {
+                        "x": 264.0,
+                        "y": 25.70875
+                    },
+                    "uuid": "25678c1d-1643-4dc8-9b26-56a24cc4e7dd"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [ROW2] of U1 on B.Cu",
+                    "pos": {
+                        "x": 24.4,
+                        "y": 31.55
+                    },
+                    "uuid": "842d4067-715e-4704-bfc9-34a716c9ae7b"
+                },
+                {
+                    "description": "Track [ROW2] on B.Cu, length 4.8845 mm",
+                    "pos": {
+                        "x": 31.3845,
+                        "y": 54.75
+                    },
+                    "uuid": "6e2563bf-b11f-496c-b5cb-a10e730cb65a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [GND] on B.Cu, length 1.0000 mm",
+                    "pos": {
+                        "x": 26.4,
+                        "y": 42.56
+                    },
+                    "uuid": "11ee4a8d-68e1-4167-a8bd-db96035a4d73"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 0.7071 mm",
+                    "pos": {
+                        "x": 22.5,
+                        "y": 42.6
+                    },
+                    "uuid": "da274181-4683-4d85-bda8-633c5ce29e42"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 0.0305 mm",
+                    "pos": {
+                        "x": 208.9,
+                        "y": 71.4
+                    },
+                    "uuid": "95cfd0c0-e054-4834-af8c-101737aca10f"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 0.4243 mm",
+                    "pos": {
+                        "x": 208.09,
+                        "y": 74.1787
+                    },
+                    "uuid": "e278a2c7-5cbe-431b-b476-ca6d505c4edf"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C216 on B.Cu",
+                    "pos": {
+                        "x": 42.2025,
+                        "y": 38.77875
+                    },
+                    "uuid": "2d4a6607-e3bd-4391-9798-7a4181af2429"
+                },
+                {
+                    "description": "Zone [GND] on B.Cu",
+                    "pos": {
+                        "x": 34.0,
+                        "y": 32.2
+                    },
+                    "uuid": "4568b524-9e43-496b-a69d-6a08336db9f4"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [KEY_RGB_5V] on F.Cu, length 1.1180 mm",
+                    "pos": {
+                        "x": 56.9944,
+                        "y": 48.3944
+                    },
+                    "uuid": "efa7680c-c3c5-48e8-8ea9-3718a275ceab"
+                },
+                {
+                    "description": "Track [KEY_RGB_5V] on B.Cu, length 0.2062 mm",
+                    "pos": {
+                        "x": 20.8,
+                        "y": 9.35
+                    },
+                    "uuid": "ae60d873-1a25-469a-8d3e-51cab752f894"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [+3V3] on B.Cu, length 0.0500 mm",
+                    "pos": {
+                        "x": 38.8,
+                        "y": 31.85
+                    },
+                    "uuid": "72a53bd0-a5b9-4151-9f9f-4cb1c18dcb40"
+                },
+                {
+                    "description": "Track [+3V3] on B.Cu, length 3.7483 mm",
+                    "pos": {
+                        "x": 64.1,
+                        "y": 36.675
+                    },
+                    "uuid": "c2eb1413-ad89-4684-898a-7a8fbdd53fc3"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [SWCLK] on B.Cu, length 2.3707 mm",
+                    "pos": {
+                        "x": 64.3062,
+                        "y": 38.449
+                    },
+                    "uuid": "191c6f03-71db-49b0-973a-9c318d425239"
+                },
+                {
+                    "description": "Pad 24 [SWCLK] of U1 on B.Cu",
+                    "pos": {
+                        "x": 29.45,
+                        "y": 35.4
+                    },
+                    "uuid": "bdb19307-ba91-4618-a986-dbddeaa32c3d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 33 [UNDERGLOW] of U1 on B.Cu",
+                    "pos": {
+                        "x": 28.0,
+                        "y": 38.45
+                    },
+                    "uuid": "d57fb346-fd9f-42a8-a9b4-2a4f15d3ae54"
+                },
+                {
+                    "description": "Track [UNDERGLOW] on B.Cu, length 7.7413 mm",
+                    "pos": {
+                        "x": 77.503,
+                        "y": 71.5557
+                    },
+                    "uuid": "e0dff93a-fc69-426e-a9b1-c64efaad518a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 34 [LED_ENABLE] of U1 on B.Cu",
+                    "pos": {
+                        "x": 27.6,
+                        "y": 38.45
+                    },
+                    "uuid": "208c1305-e356-4490-a725-924a9500b9e0"
+                },
+                {
+                    "description": "Track [LED_ENABLE] on B.Cu, length 0.0005 mm",
+                    "pos": {
+                        "x": 136.6375,
+                        "y": 89.95
+                    },
+                    "uuid": "c19c6ef4-dc05-49fe-b20a-f99f21853da9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [LED_FAULT_N] on In2.Cu, length 0.3162 mm",
+                    "pos": {
+                        "x": 27.1,
+                        "y": 39.2
+                    },
+                    "uuid": "2f210f02-2dce-47a7-ab49-44a22ed609a5"
+                },
+                {
+                    "description": "Track [LED_FAULT_N] on B.Cu, length 4.0000 mm",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 58.15
+                    },
+                    "uuid": "c26da067-1335-4121-b9da-0820f85b1371"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [KEY_RGB_CHAIN_29] of LED30 on B.Cu",
+                    "pos": {
+                        "x": 23.04875,
+                        "y": 45.96875
+                    },
+                    "uuid": "23af3932-e75a-421c-82b5-5884b6c57838"
+                },
+                {
+                    "description": "Track [KEY_RGB_CHAIN_29] on F.Cu, length 1.2207 mm",
+                    "pos": {
+                        "x": 18.05,
+                        "y": 42.3
+                    },
+                    "uuid": "7361a6eb-6fd7-4e1f-a03f-d754bc775282"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [KEY_RGB_CHAIN_27] on B.Cu, length 1.1180 mm",
+                    "pos": {
+                        "x": 40.7238,
+                        "y": 30.8788
+                    },
+                    "uuid": "1362a618-fe94-4d3f-bfa9-fdef05921334"
+                },
+                {
+                    "description": "Track [KEY_RGB_CHAIN_27] on B.Cu, length 6.1855 mm",
+                    "pos": {
+                        "x": 58.8633,
+                        "y": 27.0
+                    },
+                    "uuid": "6f9425d5-661b-4c90-a1d6-68b6932f1bf3"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_24] of LED21 on B.Cu",
+                    "pos": {
+                        "x": 117.1225,
+                        "y": 32.57875
+                    },
+                    "uuid": "4685570d-7061-4482-9e1b-6d74b4e0c43d"
+                },
+                {
+                    "description": "Track [KEY_RGB_CHAIN_24] on F.Cu, length 3.2016 mm",
+                    "pos": {
+                        "x": 91.8725,
+                        "y": 34.8
+                    },
+                    "uuid": "6155ce0e-1d09-49fe-817a-660b99b25730"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_23] of LED22 on B.Cu",
+                    "pos": {
+                        "x": 136.1725,
+                        "y": 32.57875
+                    },
+                    "uuid": "807c2c55-4d92-43a7-849d-0dab6af15b8b"
+                },
+                {
+                    "description": "Pad 2 [KEY_RGB_CHAIN_23] of LED21 on B.Cu",
+                    "pos": {
+                        "x": 110.7225,
+                        "y": 34.07875
+                    },
+                    "uuid": "8ad22e80-c04a-418a-bdc6-3e4142686988"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_18] of LED27 on B.Cu",
+                    "pos": {
+                        "x": 231.4225,
+                        "y": 32.57875
+                    },
+                    "uuid": "56598a91-752d-4deb-8b04-5d61288d1874"
+                },
+                {
+                    "description": "Pad 2 [KEY_RGB_CHAIN_18] of LED26 on B.Cu",
+                    "pos": {
+                        "x": 205.9725,
+                        "y": 34.07875
+                    },
+                    "uuid": "133fc751-6c10-4c91-a91e-a0472df874f5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_17] of LED28 on B.Cu",
+                    "pos": {
+                        "x": 250.4725,
+                        "y": 32.57875
+                    },
+                    "uuid": "9f4300c5-cf73-47fd-9b8a-7d22ecd35fe0"
+                },
+                {
+                    "description": "Pad 2 [KEY_RGB_CHAIN_17] of LED27 on B.Cu",
+                    "pos": {
+                        "x": 225.0225,
+                        "y": 34.07875
+                    },
+                    "uuid": "fc45aa2b-e63c-4c6e-a908-aaa6b7cff39a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [KEY_RGB_CHAIN_57] of LED56 on B.Cu",
+                    "pos": {
+                        "x": 10.71,
+                        "y": 91.22875
+                    },
+                    "uuid": "99e02469-2b39-4d14-a92f-62e6eb1813c6"
+                },
+                {
+                    "description": "Pad 2 [KEY_RGB_CHAIN_57] of R183 on B.Cu",
+                    "pos": {
+                        "x": 20.025,
+                        "y": 76.315
+                    },
+                    "uuid": "9b0a9eb9-f59d-4cc1-954f-e62c127da1cb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_53] of LED47 on B.Cu",
+                    "pos": {
+                        "x": 112.36,
+                        "y": 70.67875
+                    },
+                    "uuid": "2ef12e08-cf73-4746-9a0a-0d976359d2f1"
+                },
+                {
+                    "description": "Track [KEY_RGB_CHAIN_53] on B.Cu, length 0.0213 mm",
+                    "pos": {
+                        "x": 86.91,
+                        "y": 72.17875
+                    },
+                    "uuid": "fe9182a9-e933-4abc-a955-d007907bad99"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [KEY_RGB_CHAIN_61] of R118 on B.Cu",
+                    "pos": {
+                        "x": 151.385,
+                        "y": 88.15
+                    },
+                    "uuid": "8fb5235d-5e76-4856-b4ee-3d6405dce192"
+                },
+                {
+                    "description": "Pad 2 [KEY_RGB_CHAIN_61] of LED60 on B.Cu",
+                    "pos": {
+                        "x": 220.26,
+                        "y": 91.22875
+                    },
+                    "uuid": "89c48bed-de42-4440-b89a-e345976712ec"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [+4V_LED] on B.Cu, length 0.2000 mm",
+                    "pos": {
+                        "x": 150.5,
+                        "y": 75.15
+                    },
+                    "uuid": "68cd729a-faae-462e-af0c-b5155f9ca739"
+                },
+                {
+                    "description": "Track [+4V_LED] on B.Cu, length 1.7720 mm",
+                    "pos": {
+                        "x": 147.78,
+                        "y": 75.8787
+                    },
+                    "uuid": "d4974f11-73c0-42ff-b98e-0653a1ed6883"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [+4V_LED] on B.Cu, length 1.2728 mm",
+                    "pos": {
+                        "x": 267.7725,
+                        "y": 7.0688
+                    },
+                    "uuid": "005590fc-29f2-4149-b5ac-801c5f0554d3"
+                },
+                {
+                    "description": "Track [+4V_LED] on F.Cu, length 0.7071 mm",
+                    "pos": {
+                        "x": 274.298,
+                        "y": 15.9287
+                    },
+                    "uuid": "666534c4-8a1b-49df-aafd-ef9edaab0166"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [+4V_REG] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 55.3,
+                        "y": 50.35
+                    },
+                    "uuid": "f980718e-fe08-4dcb-87c2-06c75052919b"
+                },
+                {
+                    "description": "Pad 1 [+4V_REG] of TP3 on B.Cu",
+                    "pos": {
+                        "x": 34.199999,
+                        "y": 19.65
+                    },
+                    "uuid": "63b6ad78-ea99-409c-ae95-f861249c5bf6"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [MCU_GPIO10] on B.Cu, length 0.9014 mm",
+                    "pos": {
+                        "x": 28.4,
+                        "y": 31.55
+                    },
+                    "uuid": "1bbd5e4f-b94d-4131-ba72-b5dc1caeec82"
+                },
+                {
+                    "description": "Track [MCU_GPIO10] on B.Cu, length 1.4500 mm",
+                    "pos": {
+                        "x": 88.375,
+                        "y": 85.6
+                    },
+                    "uuid": "e7106c02-c41c-4798-93ac-7b807de62774"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 36 [MCU_GPIO24] of U1 on B.Cu",
+                    "pos": {
+                        "x": 26.8,
+                        "y": 38.45
+                    },
+                    "uuid": "c1939946-4449-4887-9393-3ef03908d4dd"
+                },
+                {
+                    "description": "Track [MCU_GPIO24] on B.Cu, length 0.0517 mm",
+                    "pos": {
+                        "x": 86.925,
+                        "y": 87.2
+                    },
+                    "uuid": "6d016abd-6a1f-4bab-b5c0-81813aa2c4eb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 40 [MCU_GPIO26] of U1 on B.Cu",
+                    "pos": {
+                        "x": 25.2,
+                        "y": 38.45
+                    },
+                    "uuid": "a71398b4-f7e8-4d77-820d-99a4c9a4d9df"
+                },
+                {
+                    "description": "Track [MCU_GPIO26] on In2.Cu, length 12.6568 mm",
+                    "pos": {
+                        "x": 70.1932,
+                        "y": 76.2615
+                    },
+                    "uuid": "344fe01e-6907-4e0f-b96b-0319f789097d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [MCU_GPIO27] on B.Cu, length 0.6500 mm",
+                    "pos": {
+                        "x": 24.8,
+                        "y": 38.45
+                    },
+                    "uuid": "4ca9af54-8b81-4366-9855-897e70492573"
+                },
+                {
+                    "description": "Track [MCU_GPIO27] on F.Cu, length 2.0125 mm",
+                    "pos": {
+                        "x": 43.5,
+                        "y": 59.75
+                    },
+                    "uuid": "7f01add5-587a-4860-a578-047c50d11075"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VBUS_FUSED] of R120 on B.Cu",
+                    "pos": {
+                        "x": 21.25,
+                        "y": 10.425
+                    },
+                    "uuid": "da16014b-1856-4ed2-8a9f-ac60f5a48391"
+                },
+                {
+                    "description": "Track [VBUS_FUSED] on B.Cu, length 1.5660 mm",
+                    "pos": {
+                        "x": 18.775,
+                        "y": 16.0
+                    },
+                    "uuid": "e89f80d4-49f2-40e7-8e3f-1d3178ee6d1a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [VBUS_FUSED] on F.Cu, length 0.9220 mm",
+                    "pos": {
+                        "x": 23.9875,
+                        "y": 22.1
+                    },
+                    "uuid": "efe85a48-904c-4a41-a179-873c62a43f9e"
+                },
+                {
+                    "description": "Track [VBUS_FUSED] on B.Cu, length 1.3000 mm",
+                    "pos": {
+                        "x": 18.25,
+                        "y": 17.2
+                    },
+                    "uuid": "08a615b3-aad3-4adb-a9cc-393e9892420b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [KEY_RGB_CHAIN_57_SRC] of R183 on B.Cu",
+                    "pos": {
+                        "x": 20.025,
+                        "y": 77.335
+                    },
+                    "uuid": "c4b48b0e-d0e7-4101-b33c-08cfcd7e0127"
+                },
+                {
+                    "description": "Track [KEY_RGB_CHAIN_57_SRC] on B.Cu, length 0.0213 mm",
+                    "pos": {
+                        "x": 24.25375,
+                        "y": 70.67875
+                    },
+                    "uuid": "9f1b12c3-a85d-4c54-9d7f-e55626123be7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [KEY_RGB_CHAIN_44_SRC] of R185 on B.Cu",
+                    "pos": {
+                        "x": 266.25,
+                        "y": 65.16
+                    },
+                    "uuid": "71b3d202-d644-4617-aeb2-7b419e65eb00"
+                },
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_44_SRC] of LED55 on B.Cu",
+                    "pos": {
+                        "x": 279.0475,
+                        "y": 70.42875
+                    },
+                    "uuid": "944b3333-e4f0-40eb-9ed2-a0861d55dbae"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_51_SRC] of LED49 on B.Cu",
+                    "pos": {
+                        "x": 149.26,
+                        "y": 75.87875
+                    },
+                    "uuid": "88b2000d-976c-4421-866c-d1a9967d0662"
+                },
+                {
+                    "description": "Pad 1 [KEY_RGB_CHAIN_51_SRC] of R182 on B.Cu",
+                    "pos": {
+                        "x": 151.4,
+                        "y": 71.365
+                    },
+                    "uuid": "0b97a5ce-fb91-4c21-afd9-aa0e953b966e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_46_SRC] of LED54 on B.Cu",
+                    "pos": {
+                        "x": 249.60375,
+                        "y": 69.42875
+                    },
+                    "uuid": "277be2d2-b0f7-472f-8cc9-87df2d28a6d6"
+                },
+                {
+                    "description": "Track [KEY_RGB_CHAIN_46_SRC] on F.Cu, length 0.0002 mm",
+                    "pos": {
+                        "x": 250.1288,
+                        "y": 70.9537
+                    },
+                    "uuid": "37f2b836-2fbb-47f2-b428-32875314f745"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_46_SRC] of LED54 on B.Cu",
+                    "pos": {
+                        "x": 249.60375,
+                        "y": 69.42875
+                    },
+                    "uuid": "277be2d2-b0f7-472f-8cc9-87df2d28a6d6"
+                },
+                {
+                    "description": "Track [KEY_RGB_CHAIN_46_SRC] on B.Cu, length 3.3240 mm",
+                    "pos": {
+                        "x": 241.8,
+                        "y": 74.624
+                    },
+                    "uuid": "7abef6af-e91c-4613-a526-f2dc3d5cac2a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VBUS_SNUB] of C144 on B.Cu",
+                    "pos": {
+                        "x": 29.6,
+                        "y": 17.55
+                    },
+                    "uuid": "f7d5cb74-59b4-45e2-b513-53ad050864f9"
+                },
+                {
+                    "description": "Pad 2 [VBUS_SNUB] of R187 on B.Cu",
+                    "pos": {
+                        "x": 27.3125,
+                        "y": 23.5
+                    },
+                    "uuid": "225cf497-45da-4eb7-879b-aa200e71919f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 4 [KEY_RGB_CHAIN_28_SRC] of LED17 on B.Cu",
+                    "pos": {
+                        "x": 43.2225,
+                        "y": 36.77875
+                    },
+                    "uuid": "4ee8857d-2325-4d9d-b080-1cd509ef1050"
+                },
+                {
+                    "description": "Track [KEY_RGB_CHAIN_28_SRC] on F.Cu, length 1.3416 mm",
+                    "pos": {
+                        "x": 31.7,
+                        "y": 22.0
+                    },
+                    "uuid": "09f1a2af-aff5-4bc9-86d4-9f4a6fb0907e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [COL12] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 53.35,
+                        "y": 41.05
+                    },
+                    "uuid": "74945743-f811-4785-876d-f607948b3a05"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [ROW2] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 110.3281,
+                        "y": 54.4856
+                    },
+                    "uuid": "08945ecc-7577-4af3-85a6-4f6d15326426"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [KEY_RGB_5V] on F.Cu, length 0.0079 mm",
+                    "pos": {
+                        "x": 55.9944,
+                        "y": 48.8944
+                    },
+                    "uuid": "803679fd-18e2-41d9-bfdb-141d07dd8875"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [+3V3] on F.Cu, length 2.0518 mm",
+                    "pos": {
+                        "x": 71.1,
+                        "y": 32.375
+                    },
+                    "uuid": "688c1f7c-c6c9-450a-bf93-6b022a060ecb"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [SWCLK] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 62.2062,
+                        "y": 37.349
+                    },
+                    "uuid": "0a6fab70-cf71-4ae1-943f-1bebd69558b1"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [UNDERGLOW] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 77.503,
+                        "y": 71.5557
+                    },
+                    "uuid": "d4b6364e-4f08-4048-b9d7-c4fbed255166"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [LED_ENABLE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 136.7,
+                        "y": 90.45
+                    },
+                    "uuid": "f7867fbb-cbfc-4d1e-8c44-fbc0e0dd612d"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [LED_FAULT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 58.15
+                    },
+                    "uuid": "6ae9aad2-eeaa-48ad-bc7e-70eef7fac069"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [KEY_RGB_CHAIN_27] on B.Cu, length 6.1855 mm",
+                    "pos": {
+                        "x": 58.8633,
+                        "y": 27.0
+                    },
+                    "uuid": "6f9425d5-661b-4c90-a1d6-68b6932f1bf3"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [KEY_RGB_CHAIN_24] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 91.9725,
+                        "y": 31.6
+                    },
+                    "uuid": "227671d0-2dac-43e3-9429-acb1849a141d"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [+4V_LED] on B.Cu, length 1.2728 mm",
+                    "pos": {
+                        "x": 267.7725,
+                        "y": 7.0688
+                    },
+                    "uuid": "005590fc-29f2-4149-b5ac-801c5f0554d3"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [+4V_REG] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 138.8,
+                        "y": 90.2
+                    },
+                    "uuid": "6c34e148-fcaa-4adc-bb68-33c603407a38"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [+4V_REG] on B.Cu, length 0.1414 mm",
+                    "pos": {
+                        "x": 55.3,
+                        "y": 50.35
+                    },
+                    "uuid": "f980718e-fe08-4dcb-87c2-06c75052919b"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [MCU_GPIO10] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 88.0,
+                        "y": 84.85
+                    },
+                    "uuid": "40630418-66d9-46b9-9851-714ae0a5fc4d"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [MCU_GPIO25] on F.Cu, length 0.5125 mm",
+                    "pos": {
+                        "x": 69.1603,
+                        "y": 61.9727
+                    },
+                    "uuid": "a90cf1d6-b7e8-48b5-af67-41bd117d8d2e"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [MCU_GPIO26] on In2.Cu, length 12.6568 mm",
+                    "pos": {
+                        "x": 70.1932,
+                        "y": 76.2615
+                    },
+                    "uuid": "344fe01e-6907-4e0f-b96b-0319f789097d"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [MCU_GPIO27] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 44.4,
+                        "y": 57.95
+                    },
+                    "uuid": "bf68aeeb-2c28-4fcf-886c-15f26b6c91e1"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [MCU_GPIO27] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 24.8,
+                        "y": 37.8
+                    },
+                    "uuid": "d342faae-5702-4be7-a728-e1e7d07314f1"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [KEY_RGB_CHAIN_57_SRC] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 17.675,
+                        "y": 68.9787
+                    },
+                    "uuid": "927389db-a3bf-4526-a692-c9e6f0183f79"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [KEY_RGB_CHAIN_28_SRC] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 32.9,
+                        "y": 22.6
+                    },
+                    "uuid": "840ba731-d83e-46cd-b75b-6a547ef5bd15"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1359 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Track [UG_LED_6] on B.Cu, length 9.0000 mm",
+                    "pos": {
+                        "x": 27.0,
+                        "y": 71.4
+                    },
+                    "uuid": "7b8dcd1b-1fe6-48ff-8fc7-32b24cc94c0d"
+                },
+                {
+                    "description": "Track [UG_LED_6] on B.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 27.0,
+                        "y": 71.3
+                    },
+                    "uuid": "b6cbff49-5d8e-4957-8bdc-ea1d1ad17d49"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1153 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu",
+                    "pos": {
+                        "x": 7.5,
+                        "y": 26.8
+                    },
+                    "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1460 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu",
+                    "pos": {
+                        "x": 7.5,
+                        "y": 26.8
+                    },
+                    "uuid": "abadb040-0e38-4dde-9ed2-fe817c008499"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1314 mm) (In1.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on In1.Cu",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1215 mm) (In1.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on In1.Cu",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1324 mm) (In1.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on In1.Cu",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1314 mm) (In2.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on In2.Cu",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1215 mm) (In2.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on In2.Cu",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1412 mm) (In1.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on In1.Cu",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "7a0e11fe-4433-4b0d-914b-0fa7262b6aa2"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1324 mm) (In2.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on In2.Cu",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (board setup constraints minimum connection width 0.1500 mm; actual 0.1412 mm) (In2.Cu)",
+            "items": [
+                {
+                    "description": "Zone [GND] on In2.Cu",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "3a23a46c-3272-47d8-86cd-03a9240b82af"
+                }
+            ],
+            "severity": "warning",
+            "type": "connection_width"
+        }
+    ]
+}

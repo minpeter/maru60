@@ -65,7 +65,7 @@ def neg_resistance(geo, c_pin, c0, gms, ro=20e3):
               f"Rf{i} xin{i} xo{i} 1meg")
     d.add(".ac lin 1 12meg 12meg")
     lets = "\n".join(f"let zr{i} = real(v(xin{i})-v(xb{i}))\nlet zi{i} = imag(v(xin{i})-v(xb{i}))" for i in range(len(gms)))
-    r = d.run("xtal_negative_resistance", [f"zr{i}" for i in range(len(gms))] + [f"zi{i}" for i in range(len(gms))], control_extra=lets)
+    r = d.run(f"xtal_negative_resistance_pin{c_pin:g}_c0{c0:g}", [f"zr{i}" for i in range(len(gms))] + [f"zi{i}" for i in range(len(gms))], control_extra=lets)
     return [{"gm_mS": gm * 1e3, "R_ohm": float(r[f"zr{i}"][0]), "X_ohm": float(r[f"zi{i}"][0])} for i, gm in enumerate(gms)]
 
 

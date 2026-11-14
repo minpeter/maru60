@@ -1,0 +1,51 @@
+{
+  "pass": true,
+  "bom_rows": 50,
+  "placements_each": 319,
+  "same_refs_in_bom_and_both_placements": true,
+  "omitted_refs": [
+    "C128",
+    "C129",
+    "J3",
+    "R128",
+    "R130",
+    "R131",
+    "R132",
+    "R133",
+    "R134",
+    "R135",
+    "R140",
+    "R141",
+    "R142",
+    "R143",
+    "R144",
+    "R145",
+    "U11",
+    "U12",
+    "U13"
+  ],
+  "backspace_only_placement_differences": [
+    "LED14",
+    "LED15"
+  ],
+  "cad_hashes_unchanged": true,
+  "preinit_host_results": [
+    {
+      "case": "actual",
+      "exit": 0,
+      "expected_result": true
+    },
+    {
+      "case": "missing_gpio26_preload",
+      "exit": -6,
+      "expected_result": true
+    },
+    {
+      "case": "accidental_row3_gpio29",
+      "exit": -6,
+      "expected_result": true
+    }
+  ],
+  "scope": "Host GPIO calls mocked; full ARM builds and physical behavior are separate checks",
+  "firmware_sha256": "055755a21415e447258a0823ab6230e13fa6afd56b7117e4bafc24071c556dc7"
+}

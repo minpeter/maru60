@@ -1,0 +1,19 @@
+{
+  "parts": [
+    {
+      "ref": "R192",
+      "kind": "R",
+      "value": "100 1%",
+      "footprint": "Maru60:R_0402_1005Metric",
+      "net1": "KEY_RGB_CHAIN_28_SRC",
+      "net2": "KEY_RGB_CHAIN_28",
+      "note": "Damp the strongest assumed LED output at the relocated MCU crossing."
+    }
+  ],
+  "relabel": [
+    {
+      "net": "KEY_RGB_CHAIN_28",
+      "to": "KEY_RGB_CHAIN_28_SRC"
+    }
+  ]
+}

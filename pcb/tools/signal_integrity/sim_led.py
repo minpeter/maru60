@@ -29,7 +29,9 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import numpy as np
@@ -176,6 +178,14 @@ def sim_hop(name, route, table, drv, pre=None):
     return m, r
 
 
+def run_hops(jobs):
+    """Independent corners; each job must have a distinct deck/output name."""
+    if len({job[0] for job in jobs}) != len(jobs):
+        raise ValueError("LED corner deck names must be unique")
+    with ThreadPoolExecutor(max_workers=max(1, int(os.environ.get("MARU60_SI_WORKERS", "1")))) as pool:
+        return list(pool.map(lambda job: sim_hop(*job)[0], jobs))
+
+
 def sim_first_hop(name, board, table, mcu_net, mcu_pads, buf_net, buf_pads, led_net, led_pads, case):
     d = spice.Deck(f"{name}: RP2350 GPIO -> SN74LV1T125 at 4.0 V -> 330R -> first LED ({case['label']})")
     wave, tend = pwl(BITS, 3.3, 1.5e-9)
@@ -224,6 +234,8 @@ def main():
     table = spice.lines()
     geo = spice.geometry()
     board = Board()
+    if any(f.get("value") == "SK6812MINI-E-012" for f in board.raw["fps"]):
+        raise ValueError("Legacy SK6805-only LED simulation does not qualify SK6812MINI-E-012: receiver thresholds/timing, population sites and inner-layer line models must be updated before a mixed-part simulation.")
     out = {"thresholds": {"VDD": VDD, "VIH": VIH, "VIL": VIL}, "limits_ns": {k: v * 1e9 for k, v in LIMITS.items()},
            "driver_cases_assumed": DRIVERS, "hops": {}, "first_hop": {}, "crosstalk": {}}
 
@@ -323,13 +335,15 @@ def main():
             f"{bare['net']} {bare['length_mm']:.0f} mm, no series part": (*bare_spec[:3], None)}.items():
         route = board.route(net, a, b)
         rows = []
-        for rr in (10.0, 20.0, 35.0, 50.0, 75.0, 100.0):
-            for ee in (1e-9, 2e-9, 4e-9, 6e-9, 10e-9):
-                m, _ = sim_hop("led_sweep", route, table, {"r": rr, "edge": ee, "cin": 5e-12}, pre)
-                rows.append({"r_ohm": rr, "edge_ns": ee * 1e9, "NM_high_V": m.get("noise_margin_high_V"), "NM_low_V": m.get("noise_margin_low_V"),
-                             "overshoot_V": m["overshoot_V"], "undershoot_V": m["undershoot_V"],
-                             "extra_threshold_crossings": m.get("extra_threshold_crossings")})
+        corners = [(rr, ee) for rr in (10., 20., 35., 50., 75., 100.) for ee in (1e-9, 2e-9, 4e-9, 6e-9, 10e-9)]
+        jobs = [(f"led_sweep_{len(sweep):02d}_{i:02d}", route, table,
+                 {"r": rr, "edge": ee, "cin": 5e-12}, pre) for i, (rr, ee) in enumerate(corners)]
+        for (rr, ee), m in zip(corners, run_hops(jobs)):
+            rows.append({"r_ohm": rr, "edge_ns": ee * 1e9, "NM_high_V": m.get("noise_margin_high_V"), "NM_low_V": m.get("noise_margin_low_V"),
+                         "overshoot_V": m["overshoot_V"], "undershoot_V": m["undershoot_V"],
+                         "extra_threshold_crossings": sum(m[bit].get("extra_threshold_crossings", 0) for bit in ("0", "1"))})
         sweep[label] = rows
+        print("completed strength sweep:", label, flush=True)
     out["dout_strength_sweep"] = sweep
 
     # ---- every LED-to-LED hop at the four strongest outputs of the sweep ----
@@ -342,11 +356,15 @@ def main():
         if route is None:
             continue
         cases = {}
-        for rr, ee in ((10.0, 1e-9), (10.0, 2e-9), (20.0, 1e-9), (20.0, 2e-9)):
-            m, _ = sim_hop("led_screen", route, table, {"r": rr, "edge": ee, "cin": 5e-12}, pres[k["built"]] if k else None)
-            cases[f"{rr:g} ohm / {ee * 1e9:g} ns"] = {"NM_high_V": m.get("noise_margin_high_V"), "NM_low_V": m.get("noise_margin_low_V")}
+        corners = ((10.0, 1e-9), (10.0, 2e-9), (20.0, 1e-9), (20.0, 2e-9))
+        jobs = [(f"led_screen_{len(screen):02d}_{i}", route, table, {"r": rr, "edge": ee, "cin": 5e-12},
+                 pres[k["built"]] if k else None) for i, (rr, ee) in enumerate(corners)]
+        for (rr, ee), m in zip(corners, run_hops(jobs)):
+            cases[f"{rr:g} ohm / {ee * 1e9:g} ns"] = {"NM_high_V": m.get("noise_margin_high_V"), "NM_low_V": m.get("noise_margin_low_V"),
+                "extra_threshold_crossings": sum(m[bit].get("extra_threshold_crossings", 1) for bit in ("0", "1")),
+                "minimum_timing_budget_ns": min(m.get("budget_ns", {"missing": -1}).values())}
         screen.append({"net": x["net"], "length_mm": x["length_mm"], "vias": x["vias"], "series_part": k["ser"]["ref"] if k else None,
-                       "worst_NM_V": min(v for c in cases.values() for v in c.values() if v is not None), "cases": cases})
+                       "worst_NM_V": min(c[key] for c in cases.values() for key in ("NM_high_V", "NM_low_V") if c[key] is not None), "cases": cases})
     # the two-site options (stepped Caps Lock): the same four outputs on each fitted combination
     for label, (net, a, b, pick) in hops.items():
         if pick is None:
@@ -354,11 +372,15 @@ def main():
         route = board.route(net, a, b, pick)
         k = ser_hop.get(net)
         cases = {}
-        for rr, ee in ((10.0, 1e-9), (10.0, 2e-9), (20.0, 1e-9), (20.0, 2e-9)):
-            m, _ = sim_hop("led_screen", route, table, {"r": rr, "edge": ee, "cin": 5e-12}, pres.get(label))
-            cases[f"{rr:g} ohm / {ee * 1e9:g} ns"] = {"NM_high_V": m.get("noise_margin_high_V"), "NM_low_V": m.get("noise_margin_low_V")}
+        corners = ((10.0, 1e-9), (10.0, 2e-9), (20.0, 1e-9), (20.0, 2e-9))
+        jobs = [(f"led_screen_{len(screen):02d}_{i}", route, table, {"r": rr, "edge": ee, "cin": 5e-12},
+                 pres.get(label)) for i, (rr, ee) in enumerate(corners)]
+        for (rr, ee), m in zip(corners, run_hops(jobs)):
+            cases[f"{rr:g} ohm / {ee * 1e9:g} ns"] = {"NM_high_V": m.get("noise_margin_high_V"), "NM_low_V": m.get("noise_margin_low_V"),
+                "extra_threshold_crossings": sum(m[bit].get("extra_threshold_crossings", 1) for bit in ("0", "1")),
+                "minimum_timing_budget_ns": min(m.get("budget_ns", {"missing": -1}).values())}
         screen.append({"net": net, "variant": label, "length_mm": route["length_mm"], "vias": route["vias"], "series_part": k["ser"]["ref"] if k else None,
-                       "worst_NM_V": min(v for c in cases.values() for v in c.values() if v is not None), "cases": cases})
+                       "worst_NM_V": min(c[key] for c in cases.values() for key in ("NM_high_V", "NM_low_V") if c[key] is not None), "cases": cases})
     screen.sort(key=lambda r: r["worst_NM_V"])
     out["strong_driver_screen"] = screen
     print("strong-driver screen, worst five:", [(r["net"], r["series_part"], r["worst_NM_V"]) for r in screen[:5]])
@@ -381,8 +403,8 @@ def main():
     # ---- crosstalk ----
     xt = {}
     for label, args in {
-        "UG_LED_6 beside COL10: 49 mm at 0.25 mm (routed)": (ug6["hop"]["length_mm"], 49.0, 0.25, 0.2, 0.2),
-        "UG_LED_3 beside COL13: 32 mm at 0.20 mm (routed)": (60.2, 31.8, 0.20, 0.2, 0.2),
+        "historical sensitivity envelope: UG_LED_6, 49 mm at 0.25 mm": (ug6["hop"]["length_mm"], 49.0, 0.25, 0.2, 0.2),
+        "historical sensitivity envelope: UG_LED_3, 32 mm at 0.20 mm": (60.2, 31.8, 0.20, 0.2, 0.2),
         "bound: 80 mm at 0.15 mm (minimum clearance, longer than any routed pair)": (ug6["hop"]["length_mm"], 80.0, 0.15, 0.2, 0.2),
     }.items():
         xt[label] = {}

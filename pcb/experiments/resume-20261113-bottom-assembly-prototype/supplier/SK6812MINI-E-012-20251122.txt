@@ -1,0 +1,757 @@
+      东莞市欧思科光电科技有限公司
+                                                                                           文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+                                    产品规格书
+
+     SAP料号 SAP part No. :                                    10201T6812E28002A0
+
+     产品型号 Product P/N :                                        SK6812MINI-E-012
+
+     样 品 号 SAP part No. :                                         OP00153A-006
+
+     客户料号               Client P/N :                                       NA
+
+     版 本 号 Version No.：                                                    B/2
+
+     时         间 Sending Date :                                      2025-11-22
+
+
+
+            Customer approval                                               Opsco approval
+  CHECK             APPROVE                CONFIRM              DRAW               CHECK                APPROVE
+
+                                                               张维友                  周凯                    朱更生
+
+                       Stamp                                                        Stamp
+
+
+
+
+                        ELECTROSTATIC
+                       SENSITIVE DEVICES
+
+
+
+
+*使用我司产品前，请检索我司官网核对规格书版本，产品规格书版本更新，恕不能及时相告，请以官网最新资料为准。
+*Before using our products, please search our official website to verify the version of the specification sheet. The
+product specification sheet version is updated, and we apologize for any inconvenience caused. Please refer to
+the latest information on the official website for accuracy.
+*该版权及产品最终解释权归东莞市欧思科光电科技有限公司所有，如有特殊规格要求，请联系我司工程人员。
+*The copyright and final interpretation rights of the product belong to Dongguan OPSCO Optoelectronic
+Technology Co., Ltd. If there are special specification requirements, please contact our engineering personnel.
+
+
+电话: (769)82632725        传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                     1 / 13
+     东莞市欧思科光电科技有限公司
+                                                                                        文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+                                          目 录 Catalogue
+    1、产品概述 Overview ......................................................................................3
+
+    2、主要应用 Main applications ..........................................................................3
+
+    3、产品命名一般说明 General instructions for product naming .........................4
+
+    4、机械尺寸 Mechanical dimensions ..................................................................4
+
+    5、引脚功能说明 Pin Function Description ...........................................................5
+
+    6、PCB建议焊盘尺寸 PCB recommended pad size ...........................................5
+
+    7、IC极限参数 IC limit parameter ...............................................................5
+
+    8、RGB LED光电参数 RGB LED Optoelectronic parameters .........................6
+
+    9、IC电气参数 IC electrical parameters ............................................................6
+
+    10、控制器建议数据传输时间 Controller suggested data transmission time.......7
+
+    11、数据传输方式 Data transmission method ..............................................7
+
+    12、时序波形图 Time series waveform diagram .................................................8
+
+    13、24bit数据结构 24 bit data structure ............................................................8
+
+    14、典型应用电路 Typical application circuit ....................................................9
+
+    15、光电特性 Photoelectric characteristic ..........................................................10
+
+    16、包装标准 Packaging standards ....................................................................11
+
+    17、可靠性测试 Reliability testing .....................................................................12
+
+
+
+
+电话: (769)82632725      传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                  2 / 13
+      东莞市欧思科光电科技有限公司
+                                                                                    文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+   1.产品概述 Product overview:
+   ● 工作电压：5V@12mA (OUT GRB) ；
+   Forward voltage: 5V@12mA (OUT GRB) ；
+   ● 12mA电流版本应用注意事项：
+     Precautions for the application of the 12mA current version
+     1.当点亮单色光时，可100%灰阶使用；
+      When monochromatic light is lit, it can be used in 100% grayscale;
+     2.当点亮三色光时，70%灰阶使用；
+      When illuminating the tricolor light, use 70% grayscale;
+   ● 发光角度：120°；
+   Typical view angle 50%:120 ° ；
+   ● 胶体颜色：半透明；
+   Lens color: translucent ；
+   ● 内置复位电路，上电不亮灯；
+   Built-in reset circuit, power does not light ；
+   ● 灰度调节：256级；
+   Grayscale adjustment：256 levels ；
+   ● 单线归零码传输协议，可无限级联；
+   Single-line zero code transmission protocol, can be infinite cascade；
+   ● 数据传输频率可达800Kbps， 当刷新速30帧/秒时，级联数小于1024点；
+   The data transmission frequency can reach 800Kbps, and when the refresh speed is 30 frames per
+   second, the cascade number is less than 1024 points. ；
+   ● 湿敏等级：5a ；
+   MSL：5a ；
+   ● 静电ESD：2KV；
+   ESD level: 2KV；
+   ●符合RoHS REACH；
+   RoHS and REACH-compliant；
+
+
+
+
+   2.主要应用 Main applications:
+   ● 消费电子产品
+   Consumer electronics
+   ● 电竞产品
+   Esports products
+
+
+
+
+电话: (769)82632725          传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                              3 / 13
+     东莞市欧思科光电科技有限公司
+                                                                                               文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+     3. 产品命名一般说明 General instructions for product naming：
+                                             SK 6812 MINI-E-012
+                                              ①      ②             ③         ④
+
+                ①                            ②                                     ③                             ④
+
+               系列                    Ic系列与电流代码                                 封装外形                           内部编码
+               Series            IC series and current codes           Package outline dimensions           Internal code
+
+        默认为RGB晶片与 IC           6812：指68系列IC ；12mA电
+                                                                   MINI-E:指封装尺寸为
+             集成在一起             流版本                                                                         012:内部编码
+                                                                   3.2*2.8*1.78mm
+         Default to RGB chip   Refers to the 68 series IC;                                                  Internal code
+                                                                   The package size is 3.2*2.8*1.78mm
+          integrated with IC   12mA current version
+
+
+
+
+  4.机械尺寸 Mechanical dimensions:
+
+
+
+                                                                                  BOTTOM VIEW
+
+    3VDD                                               2DIN 2                                                         3
+
+    4DOUT                                             1GND             1                                                    4
+                                                               角
+
+
+
+
+                                                                           备注 notes:
+                                                                            1. 以上标示单位为毫米.
+                                                                           The above markings are in millimeters
+                                                                            2. 除非另外注明，尺寸公差为 ±0.1毫米.
+                                                                           Unless otherwise specified, the
+                                                                           dimensional tolerance is ± 0.1 millimeters
+
+
+
+
+电话: (769)82632725       传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                          4 / 13
+     东莞市欧思科光电科技有限公司
+                                                                                        文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+  5. 引脚功能说明 Pin Function Description：
+
+             序号                       符号                 管脚名                           功能描述
+        Serial number                Symbol             Pin name                  Function description
+
+                                                           地                             电源接地
+               1                      GND
+                                                         Grounds                      Power grounding
+
+                                                        数据输入                        控制数据信号输入
+               2                      DIN
+                                                        Data input                Control data signal input
+
+                                                          电源                            供电管脚
+               3                      VDD
+                                                       Power supply                  Power supply pins
+
+                                                       数据输出                         控制数据信号输出
+               4                     DOUT
+                                                       Data output                Control data signal output
+
+
+
+
+ 6.PCB建议焊盘尺寸 PCB recommended pad size：
+
+
+
+
+     3VDD                                                                                    2DIN
+
+
+    4DOUT                                                                                    1GND
+
+
+
+ 7.IC极限参数 IC limit parameter ：（Ta=25℃）
+
+                       参数                      符号                      范围                           单位
+                     Parameter                Symbol                   Range                        Unit
+
+                   逻辑电源电压
+                                               VDD                    +3.7～+5.5                      V
+                   Working voltage
+
+                  工作温度
+                                               Topt                    -40~+80                       ℃
+             Operation temperature
+
+                    储存温度
+                                               Tstg                    -40~+80                       ℃
+               Storage temperature
+
+            ESD耐压（人体模式）
+                                               VESD                      2K                          V
+       ESD withstand voltage (human mode)
+
+
+电话: (769)82632725         传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                  5 / 13
+     东莞市欧思科光电科技有限公司
+                                                                                        文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+  8. RGB LED 光电参数 Optoelectronic parameters：
+
+                                                                       SK6812MINI-E-012 12mA
+                            颜色
+                           Colour                           波长（nm)                       亮度（mcd)
+                                                          Wavelength（nm)               Brightness（mcd)
+
+                       红色（RED)                               620-625                         160-320
+
+                      绿色（GREEN)                              515-525                         815-1275
+
+                       蓝色（BLUE)                              460-470                         120-240
+
+     注：亮度误差±10%，波长误差±1.0nm
+     Note:Luminous Intensity: ±10%Iv, Dominant Wavelength: ±1.0nm
+
+
+  9. IC电气参数 IC electrical parameters：（TA=25℃）
+
+              参数                     符号          最小          典型            最大         单位         测试条件
+            Parameter               Symbol     Minimum      Typical      Maximum      Unit     Test conditions
+             工作电压
+                                     VDD         3.7           5.0           5.5       V                ---
+         Chip input voltage
+
+                                     VIH       0.65*VDD        ---           ---       V
+         信号输入翻转阀值
+                                                                                                 +VDD=5.0V
+      Signal input flip threshold
+                                     VIL          ---          ---         0.3*VDD     V
+
+       B/G/R输出驱动电流                                                                                VDD=5.0V
+                                     IDOUT        10           12           14.5      mA
+     B/G/R output drive current                                                                   VDS=5.0V
+
+                                                                                                IOUT=12mA，
+                                                                                                OUT 端口串接
+                                                                                                  200Ω 电阻
+            PWM频率
+                                     FPWM         ---          1.0           ---      KHz       至 VDD OUT
+          PWM frequency
+                                                                                                 port connects
+                                                                                                200Ω resistor to
+                                                                                                 VDD in series
+
+              静态功耗                                                                                VDD=4.5V
+                                      IDD         ---          0.6           ---      mA
+      Static power consumption                                                                    Iout”OFF”
+
+           数据传输速率
+                                     FDIN         ---         800            ---      Kbps              ---
+           Transfer rate
+
+
+
+
+电话: (769)82632725          传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                  6 / 13
+      东莞市欧思科光电科技有限公司
+                                                                                                                                                                    文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+  10. 控制器建议数据传输时间 Controller suggested data transmission time：
+
+                             时序表名称                                                                                        实际值                                                             单位
+                                                                                                Min.                                                      Max.
+                            Timeline name                                                                               Actual value                                                      Unit
+                                            码元周期
+            T                                                                                   1.20                              --                         --                                µs
+                                          Symbol period
+                                      0码， 高电平时间
+           T0H                                                                                  0.25                            0.30                       0.40                                µs
+                                    0 code, high-level time
+                                      0码， 低电平时间
+           T0L                                                                                  0.80                            0.90                         --                                µs
+                                     0 code, low-level time
+                                      1码， 高电平时间
+           T1H                                                                                  0.70                            0.90                       1.00                                µs
+                                    1 code, high-level time
+                                      1码， 低电平时间
+           T1L                                                                                  0.2                             0.30                         --                                µs
+                                     1 code, low-level time
+
+                                    Reset码，低电平时间
+           Reset                                                                                >200                              --                         --                                µs
+                                   Reset code, low-level time
+
+
+  1. 协议采用单极性归零码，每个码元必须有低电平，本协议的每个码元起始为高电平，高电平时间宽度决定“0”码或
+  “1”码。
+  The protocol adopts unipolar zeroing code, and each symbol must have a low level. Each symbol in this protocol starts with a
+  high level, and the duration of the high level determines the "0" or "1" code.
+
+  2. 书写程序时，码元周期最低要求为1.2µs。
+  When writing a program, the minimum required code period is 1.2 µ s.
+
+  3. “0”码、 “1”码的高电平时间需按照上表的规定范围， “0”码、 “1”码的低电平时间要求小于20µs。
+  The high-level time of "0" and "1" codes should be within the specified range in the table above, and the low-level time of "0" and
+  "1" codes should be less than 20 µ s.
+
+
+
+
+ 11.数据传输方式 Data transmission method：（Ta=25℃）
+
+                                                                                                                                                                                R eset co de
+                                                                                                R eset cod e
+                                                                                                >200us
+                                      D ata refresh cycle table1                                                                       D ata refresh cycle table2
+
+            T he first grou p of      The second group of          T he third gro up of 24bit                  Th e first gro up of     The second group of          T he third group of 2 4bit
+      D1    24bit data                24b it data                  data                                        2 4bit data              24bit d ata                  data
+
+
+
+                                      The second group of          T he third gro up of 24bit                                           The second group of          T he third group of 2 4bit
+      D2                              24b it data                  data                                                                 24bit d ata                  data
+
+
+                                                                   T he third gro up of 24bit                                                                        T he third group of 2 4bit
+      D3                                                           data                                                                                              data
+
+
+      D4
+
+
+
+
+      注Note： 其中D1为MCU端发送的数据，D2、D3、D4为级联电路自动整形转发的数据。
+      Among them, D1 is the data sent by the MCU end, and D2, D3, and D4 are the data automatically shaped and forwarded by
+      the cascaded circuit.
+
+
+
+
+电话: (769)82632725                      传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                                                                                      7 / 13
+     东莞市欧思科光电科技有限公司
+                                                                                         文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+    12.时序波形图 Time series waveform diagram：（Ta=25℃）
+
+      输入码型 Input code type：
+
+
+
+
+                      Symbol period                          T
+
+                          0 code                                 T0L
+                                                  T0H
+                          1 code                                    T1L
+                                                      T1H
+                                                                         Trst
+                        Reset code
+
+        连接方式 Connection method：
+
+
+                         D1                     D2                       D3              D4
+                                  DIN DO                 DIN DO                 DIN DO
+
+                                    PIX1                   PIX2                  PIX3
+
+
+
+   13. 24bit数据结构 24 bit data structure：（Ta=25℃）
+
+         G7        G6       G5        G4        G3       G2        G1      G0     R7       R6         R5         R4
+         R3        R2        R1       R0        B7        B6       B5       B4    B3       B2         B1         B0
+        注Note：高位先发，按照GRB的顺序发送数据(G7 → G6 →……..B0)
+        High bit first send, send data in GRB order (G7 → G6 →.... B0)
+
+
+
+
+电话: (769)82632725       传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                   8 / 13
+       东莞市欧思科光电科技有限公司
+                                                                                                             文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+    14.应用电路原理图 Principles of Applied Circuits：
+
+
+   GND
+                      GND               DOUT                 GND               DOUT                 GND              DOUT             R2
+
+Data             R1 DIN                 VDD                  DIN               VDD                  DIN              VDD
+
+       5V
+                                                    C1                                    C1                                     C1
+
+
+    在实际应用电路中，为防止产品在测试时带电插拔产生的瞬间高压损伤IC内部信号输入输出引脚，应在信号输入及
+  输出端串接保护电阻。此外，为了使各IC芯片间更稳定工作，各灯珠间的退偶电容则必不可少；
+  In practical application circuits, to prevent instantaneous high voltage damage to the internal signal input and output pins of the IC
+  caused by live plugging and unplugging during testing, protective resistors should be connected in series at the signal input and
+  output terminals. In addition, in order to ensure more stable operation between IC chips, the decoupling capacitance between each
+  LED is essential;
+
+
+    应用一：用于软灯条或硬灯条的，灯珠间传输距离短的，建议在信号输入输出端各串接保护电阻，即R1、R2约500欧,
+  以实际测试信号数据为准；
+  Application 1: For soft light strips or hard light strips, the transmission distance between the lamp beads is short. It is recommended
+  to connect the protective resistors in series at the signal input and output ends, that is, about 500 ohms for R1 and R2, subject to the
+  actual test signal data;
+    应用二：用于模组或一般异形产品，灯珠间传输距离长，因线材及传输距离不同，在信号两端串接的保护电阻会略
+  有不同；以实际使用情况定.
+  Application 2: Used for modules or general shaped products. The transmission distance between lamp beads is long. Due to
+  different wire materials and transmission distances, the protective resistance of the signal line connected in series at both ends will
+  be slightly different; Based on actual usage.
+
+
+
+
+电话: (769)82632725             传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                        9 / 13
+     东莞市欧思科光电科技有限公司
+                                                                                                                                      文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+   15. 光电特性 Photoelectric characteristic：
+
+                                                              焊盘温度与光通量输出的相对关系
+                                                              The relative relationship between pad
+                                                              temperature and luminous flux output
+                                                       120%
+
+
+
+
+                              Relative luminous flux
+                                                       100%
+
+                                                       80%                                                                    GREEN/BLUE
+
+                                                       60%
+                                                                                                                   RED
+
+
+                      相对光通量
+                                                       40%
+
+                                                       20%
+
+                                                       0.00
+                                                              0          20       40          60      80         100       120
+
+                                                                                    焊盘温度
+                                                                                    Pad temperature
+
+                                                                  波长特性
+                                                                  Wavelength characteristics
+                                                        100%
+                                                                  BLUE              GREEN
+                                                        80%                                                RED
+
+
+                          Relative spectral
+
+                    相对光谱分布图
+                                                        60%
+
+
+
+
+                          distribution map
+                                                        40%
+
+                                                        20%
+
+
+                                                        0.00
+                                                            400       450     500      550    600    650    700        750 800
+                                                                                波长wavelength (nm)
+
+
+
+
+                                                                  典型的辐射方向图 120
+                                                                  Typical radiation pattern 120
+                                                                                               0
+                                                                                                            30
+
+
+
+                                                                                                                        60°
+
+
+
+
+                                                                                                                      90
+                                                              90    75    60 45     30   15    0    0.2 0.4 0.6 0.8 1.0
+
+                                                                               辐射角度
+                                                                               Radiation angle
+
+
+电话: (769)82632725         传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                                               10 / 13
+      东莞市欧思科光电科技有限公司
+                                                                                                                文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+   16. 包装标准 Packaging standards：
+
+                                          SK6812MINI-E-012
+                                                  包装标示 Packaging labeling
+
+
+
+
+                                                                                  载带 Carrier belt
+                                                  载带进料方向
+                                                                         盖带 Cover tape
+                                                  Carrier feeding direction
+
+
+
+
+                  卷盘reel(165/327x12mm)
+                                                                                  PN:SK6812MINI-E-012
+          (每卷最多装2000/9000个灯                                                       PC:10201T6812E28002A0
+          珠)                                                                      QTY:2000/9000PCS
+          (Each roll can hold up to                                               CCT:              BIN:1
+          2000/9000 lamp beads)                                                   TP:IC             XY:
+                                                                                  DT:2024/06/15
+          防静电的聚乙烯袋                                                                SN:8600001902-L0001
+          Anti static polyethylene bag                                                                      RoHS 2.0   HF
+          防潮珠
+          DESICCANT                                                                                 标签图示Label
+          湿度卡                                                                                       diagram
+
+          humidity indicator
+
+
+
+
+                       硬纸箱 (内部最大放40袋)
+                       Hard cardboard box
+                       (maximum capacity for 40
+                       bags inside)
+
+
+
+
+   表面贴装LED采用卷盘包装，LED在用普通或防静电袋包装后再装在纸箱中. 纸箱用于保护运输途中LED不受机械冲击，
+   纸箱不防水，因此请注意防潮防水。
+   Surface mounted LEDs are packaged in rolls, and the LEDs are packaged in regular or anti-static bags before being packed in
+   cardboard boxes The cardboard box is used to protect the LED from mechanical impact during transportation. The cardboard box is
+   not waterproof, so please pay attention to moisture-proof and waterproof.
+
+
+电话: (769)82632725            传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                         11 / 13
+     东莞市欧思科光电科技有限公司
+                                                                                                      文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+   17. 可靠性测试 Reliability testing:
+
+     序号                                                                                          参考标准
+                         实验项目                               实验条件                                                       判断
+     Serial                                                                                      Reference
+                       Pilot projects                 Experimental condition                                         Determine
+    number                                                                                       standards
+
+                        冷热冲击                          100 ± 5°C ~ -40°C ± 5°C
+       1                                                                                       MIL-STD-202G                0/22
+                      Thermal Shock                   15min~15min 100cycles
+
+
+
+                         高温储藏                                                                  JEITA ED-4701
+       2                                                Ta= +100ºC 1000hrs                                                 0/22
+                  High temperature storage                                                         200 201
+
+
+
+                        低温储藏                                                                   JEITA ED-4701
+       3                                                 Ta= -40ºC 1000hrs                                                 0/22
+                  Low temperature storage                                                          200 202
+
+
+                      高温高湿储藏
+                                                                                               JEITA ED-4701
+       4         High temperature and high           Ta=60ºC RH=90% 1000hrs                                                0/22
+                                                                                                   100 103
+                     humidity storage
+
+
+                                                      -40ºC~25ºC~100ºC~25ºC
+                        温度循环                                                                   JEITA ED-4701
+       5                                              30min~5min~30min~5min                                                0/22
+                    Temperature cycling                                                            100 105
+                                                            100 cycles
+
+
+                         耐焊接热
+                                                                                               JEITA ED-4701
+       6          Resistance to Soldering            Tsld = 260°C, 10sec. 2 times                                          0/22
+                                                                                                   300 301
+                           Heat
+
+
+                     常温寿命测试
+       7          Normal temperature life         25°C, IF: Typical current , 1000hrs         JESD22-A 108D                0/22
+                           test
+
+
+
+
+   失效判定标准 Failure criteria:
+
+                                                                                          判断标准Judgment criteria
+        项目                符号                      测试条件
+       Project           Symbol                 Test conditions                     最小值                         最大值
+                                                                                 Minimum value               Maximum value
+                                             DC=5V,规格典型电流
+      发光强度                                                                        初始数据X0.7
+                            IV               DC=5V, Typical current                                                  ---
+      Intensity                                                                  Initial data X0.7
+                                                 specification
+
+      耐焊接热                                   DC=5V,规格典型电流
+                                                                                              无死灯或明显损坏
+     Resistance to          ---              DC=5V, Typical current
+                                                                                        No dead lights or obvious damage
+    Soldering Heat                               specification
+
+
+
+电话: (769)82632725         传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                12 / 13
+     东莞市欧思科光电科技有限公司
+                                                                                  文件编号:SK6812MINI-E-012 Rev. No.: B/1
+
+
+
+
+   修订记录 Revision record
+         日期                                         修改/改变的原因                                   签名
+                       Rev. No.
+         Date                                 Reason for modification/change                Signature
+
+      2022-04-07         A/0       首次发行 First issue                                         Kevin Zhu
+
+                                   1.更改规格书版式
+                                   Change the layout of the specification sheet
+      2024-06-15          B/0                                                                Tony Wu
+                                   2.升级IC 电气参数
+                                   Upgrade IC electrical parameters
+
+
+      2025-07-22          B/1     更新电性参数 Update electrical parameters                    Zhang Wei You
+
+
+      2025-11-22          B/2     更新电性参数 Update electrical parameters                    Zhang Wei You
+
+
+
+
+电话: (769)82632725     传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                           13 / 13
+

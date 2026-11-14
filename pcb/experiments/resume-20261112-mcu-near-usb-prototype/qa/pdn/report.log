@@ -1,0 +1,31 @@
+VBUS J1 -> F1 @20C                                  33.94 mOhm    16.97 mV @ 0.5 A  vias>30%: 1
+VBUS_FUSED F1 -> U8 @20C                             8.56 mOhm     4.28 mV @ 0.5 A  vias>30%: 1
+VBUS_PROTECTED_RAW U8 -> U18 @20C                  250.34 mOhm   125.17 mV @ 0.5 A  vias>30%: 12
++4V_REG L2 -> U2 @20C                               63.07 mOhm     9.46 mV @ 0.15 A  vias>30%: 2
++4V_REG L2 -> U7 @20C                               89.51 mOhm    20.95 mV @ 0.234 A  vias>30%: 6
++3V3 U2 -> U1 pin 49 (VREG_VIN) @20C             1000000000000000.00 mOhm  150000000000000.00 mV @ 0.15 A  vias>30%: 0
++3V3 U2 -> U3 @20C                               52513988192286.09 mOhm  2625699409614.30 mV @ 0.05 A  vias>30%: 1
+VBUS J1 -> F1 @60C                                  39.27 mOhm    19.64 mV @ 0.5 A  vias>30%: 1
+VBUS_FUSED F1 -> U8 @60C                             9.90 mOhm     4.95 mV @ 0.5 A  vias>30%: 1
+VBUS_PROTECTED_RAW U8 -> U18 @60C                  289.69 mOhm   144.85 mV @ 0.5 A  vias>30%: 12
++4V_REG L2 -> U2 @60C                               72.99 mOhm    10.95 mV @ 0.15 A  vias>30%: 2
++4V_REG L2 -> U7 @60C                              103.58 mOhm    24.24 mV @ 0.234 A  vias>30%: 6
++3V3 U2 -> U1 pin 49 (VREG_VIN) @60C             1000000000000000.00 mOhm  150000000000000.00 mV @ 0.15 A  vias>30%: 0
++3V3 U2 -> U3 @60C                               34974524939195.85 mOhm  1748726246959.79 mV @ 0.05 A  vias>30%: 0
+LED rail | firmware cap: 38 mA static + 25 mA drive, even @20C                    max drop 34556863332.45 mV at LED30  (median 5.62)  max track current 0.062 A
+LED rail | limiter maximum 234 mA, even @20C                                      max drop 128354063806.24 mV at LED30  (median 20.86)  max track current 0.231 A
+LED rail | 38 mA static even + 196 mA in the 16 LEDs furthest from U7 @20C        max drop 531517469351.49 mV at LED30  (median 21.77)  max track current 0.221 A
+LED rail | firmware cap: 38 mA static + 25 mA drive, even @60C                    max drop    7.61 mV at LED22  (median 6.49)  max track current 0.062 A
+LED rail | limiter maximum 234 mA, even @60C                                      max drop   28.26 mV at LED22  (median 24.1)  max track current 0.231 A
+LED rail | 38 mA static even + 196 mA in the 16 LEDs furthest from U7 @60C        max drop   31.89 mV at LED14  (median 25.06)  max track current 0.221 A
+tracks over 50% of the IPC-2221 10 C limit: 82
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'F.Cu', 'width_mm': 0.3, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.999, 'x': 20.1, 'y': 15.4}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'F.Cu', 'width_mm': 0.3, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.999, 'x': 20.2, 'y': 12.5}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'F.Cu', 'width_mm': 0.3, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.999, 'x': 18.9, 'y': 16.0}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'F.Cu', 'width_mm': 0.3, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.999, 'x': 20.3, 'y': 13.9}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 20.1, 'y': 10.7}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 20.1, 'y': 9.6}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 18.0, 'y': 6.6}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 20.2, 'y': 7.1}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.19999999999999998, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.745, 'x': 15.8, 'y': 6.8}
+   {'path': 'VBUS J1 -> F1 @20C', 'layer': 'B.Cu', 'width_mm': 0.3, 'amps': 0.5, 'ipc2221_10C_limit_a': 0.999, 'x': 20.1, 'y': 11.7}

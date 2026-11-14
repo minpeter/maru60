@@ -1,0 +1,45 @@
+{
+  "board_sha256": "2cc544c8e6eb00bd3f53fa480a0167dcb8e14dac687f7eb2af0c85946bda5584",
+  "geometry_sha256": "0acf3f3fc2f9c23586dd4a5fd2564de0046186003b1cefd2903fd14e3ee7135e",
+  "simulation_input_board_sha256": "86c4243dc112f308ab22614bf576716b77d9c33a38fea3776249dace63da6a5e",
+  "geometry_equivalence": "../geometry-equivalence.json",
+  "scope": "Computed evidence at the recorded assumptions. No global SI, USB compliance or hardware qualification claim.",
+  "led": {
+    "as_built_hop_cases": 148,
+    "first_hop_cases": 6,
+    "timing_or_recrossing_failures": [],
+    "strong_driver_screen_rows": 81,
+    "strong_driver_screen_cases": 324,
+    "strong_driver_screen_failures": [],
+    "strong_driver_screen_min_noise_margin_V": 0.106,
+    "as_built_strength_sweep_cases": 180,
+    "strength_sweep_noise_margin_failures": [],
+    "counterfactual_resistor_removal_included_in_raw_report": true,
+    "crosstalk_scope": "Legacy length/gap sensitivity envelopes; historical envelopes, not final-board neighbor qualification"
+  },
+  "backspace": {
+    "cases": 54,
+    "pass": true
+  },
+  "usb": {
+    "simulated_cases": 9,
+    "test_load_cases": 3,
+    "test_load_failures": [],
+    "trace_delay_ns": 0.427,
+    "trace_delay_limit_ns": 1.0,
+    "receiver_eye_height_min_V": 3.145,
+    "receiver_eye_width_min_UI": 0.987,
+    "receiver_4ns_raw_rise_fall_ratio_pct": 519.3,
+    "receiver_edge_metrics_are_not_transmitter_test_load_compliance": true
+  },
+  "matrix": {
+    "cases": 9,
+    "worst_settle_ns": 208.3,
+    "configured_wait_ns": 800,
+    "minimum_select_margin_x": 3.8
+  },
+  "crystal": {
+    "status": "conditional_on_assumed_gm_and_capacitances",
+    "hardware_startup_verified": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "condition": "Assumed 10 ohm / 1 ns output, 5 pF input, 4 V supply; KEY_RGB_CHAIN_29 uses default LED30 site.",
+  "baseline": "MCU already relocated, before R192/R193 damping",
+  "rows": [
+    {
+      "net": "KEY_RGB_CHAIN_28",
+      "before": -0.907,
+      "after": 0.847
+    },
+    {
+      "net": "KEY_RGB_CHAIN_29",
+      "before": -0.426,
+      "after": 0.877
+    }
+  ]
+}

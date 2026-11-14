@@ -1,0 +1,23 @@
+{
+  "pass": true,
+  "tests": 41,
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_order_package",
+    "tests.test_export_provenance",
+    "tests.test_dfm_thermal",
+    "tests.test_backspace_plate",
+    "tests.test_backspace_candidate",
+    "tests.test_signal_geometry",
+    "tests.test_spice_runner",
+    "tests.test_pdn_network",
+    "tests.test_mcu_candidate"
+  ],
+  "board_sha256": "2cc544c8e6eb00bd3f53fa480a0167dcb8e14dac687f7eb2af0c85946bda5584",
+  "checked_utc": "2026-11-13T11:01:37.454377+00:00",
+  "git_diff_check": "pass",
+  "primary_selection_identity_check": "10 pinned CAD files pass; historical selection unchanged",
+  "notes": "Existing test_order_package file-handle ResourceWarnings were emitted; all tests passed. No hardware measurements."
+}

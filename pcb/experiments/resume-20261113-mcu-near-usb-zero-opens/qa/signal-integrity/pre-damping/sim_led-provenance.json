@@ -1,0 +1,23 @@
+{
+  "board": "pcb/experiments/resume-20261113-mcu-near-usb-zero-opens/pcb/maru60.kicad_pcb",
+  "board_sha256": "b311e4629bf1e899d16efb379da3bbeef3c3f805ab8d8be87e84dc8c9ce46343",
+  "geometry": "build/mcu-near-usb/resume78-final-qa/geometry.json",
+  "geometry_sha256": "cb9a49a70a6b80b824ce8ae5e86e8bb5ed8454aa53600f9aa01abcc6aad56a7f",
+  "step": "sim_led",
+  "code_sha256": {
+    "extract_geometry.py": "87aaf17e603c961b8457c10a635065da62060105a6f87dcba64cb802ed08d271",
+    "run_all.py": "7e436c01b5cd4db3de10c7ff6ff0e1480b0233f6c0c17ac90d9f77a873033291",
+    "check_misc.py": "04ea3a97f6becc9217ad96109fa227e690bf75105c22c6c22ce82abe192ae665",
+    "run_candidate.py": "a5ecbf64b315a69f2c3365952b7b64a16701a8d452d35f21070cd3a8c92192be",
+    "sim_led.py": "a8f707a99a2d08ad0c704c60c12bf63a3188f9d59122b3dd75adb108504f9e39",
+    "sim_xtal.py": "1387c27b240af1973a9d00c64ca06eee2cc29e6f5ee3c7a89d32fffa80cfa049",
+    "spice.py": "a17aeb1181c102704ca28e7123e74685043310fcf18f177a73339cd7b361067a",
+    "sim_matrix.py": "ae4723d2f8d0724f8cd46e738c7e2a20ea0ced896b21ea548e1bda55c2d50096",
+    "fieldsolve.py": "9186e412a0a7021146e9f3856f29412c9a6f94d56e26758403501fcf60b0d2a9",
+    "geom.py": "5d589c571cb825edeb791b3e20b8e2daa9c617928c7a9feed2af5db08858ff73",
+    "check_backspace_leds.py": "4514ba4848010c605b854b59af6056af637a5745467ee622a17f1d128d90c3fb",
+    "sim_usb.py": "3d07fbc8adcad1b7b5818213fcc5ba52ee1e107edbb995b8b4e81ffdf14e4f8f",
+    "check_usb_dielectric.py": "0b879e83826bbfe05d3cfdc21c5836316d4ab8d09205e379b1b918d9275ec9bc"
+  },
+  "scope": "Computed/model evidence; no hardware measurements"
+}

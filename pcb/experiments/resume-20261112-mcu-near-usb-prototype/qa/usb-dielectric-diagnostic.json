@@ -1,0 +1,62 @@
+{
+  "scope": "Assumed dielectric sensitivity only; no measured or supplier-guaranteed corners",
+  "inputs": [
+    {
+      "path": "build/mcu-near-usb/preauto.json",
+      "sha256": "1f11fc59bcc80f5b70b96618e3fa51bb4f8bb32f71348a237929a6ce7e1886a9"
+    },
+    {
+      "path": "pcb/experiments/resume-20261112-backspace-2u/qa/lines.json",
+      "sha256": "ab2a22ef1def1e75befd6710438f97176f9b7c26f6dad39f7c9e657f832d21c4"
+    }
+  ],
+  "held_constant": "Geometry, copper thickness, mask, plane spacing, via L/C, ESD and connector capacitance",
+  "cases": [
+    {
+      "J1_to_RP2350_pins_ns": 0.389,
+      "J1_to_27R_ns": 0.348,
+      "skew_DP_minus_DM_ps": 13.69,
+      "limit_ns": 1.0,
+      "assumed_er": 3.8,
+      "Zdiff_ohm": 100.308,
+      "pass": true
+    },
+    {
+      "J1_to_RP2350_pins_ns": 0.3916,
+      "J1_to_27R_ns": 0.3505,
+      "skew_DP_minus_DM_ps": 13.96,
+      "limit_ns": 1.0,
+      "assumed_er": 4.1,
+      "Zdiff_ohm": 97.609,
+      "pass": true
+    },
+    {
+      "J1_to_RP2350_pins_ns": 0.3942,
+      "J1_to_27R_ns": 0.3529,
+      "skew_DP_minus_DM_ps": 14.19,
+      "limit_ns": 1.0,
+      "assumed_er": 4.4,
+      "Zdiff_ohm": 95.123,
+      "pass": true
+    },
+    {
+      "J1_to_RP2350_pins_ns": 0.3969,
+      "J1_to_27R_ns": 0.3554,
+      "skew_DP_minus_DM_ps": 14.41,
+      "limit_ns": 1.0,
+      "assumed_er": 4.7,
+      "Zdiff_ohm": 92.821,
+      "pass": true
+    },
+    {
+      "J1_to_RP2350_pins_ns": 0.3997,
+      "J1_to_27R_ns": 0.3579,
+      "skew_DP_minus_DM_ps": 14.64,
+      "limit_ns": 1.0,
+      "assumed_er": 5.0,
+      "Zdiff_ohm": 90.682,
+      "pass": true
+    }
+  ],
+  "pass": true
+}
